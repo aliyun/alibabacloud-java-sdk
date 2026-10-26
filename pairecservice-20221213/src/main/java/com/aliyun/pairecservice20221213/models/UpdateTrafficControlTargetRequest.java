@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTrafficControlTargetRequest extends TeaModel {
     /**
-     * <p>The end time of the traffic control target.</p>
+     * <p>The end time of the control target. The value is in YYYY-MM-DD format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-04-25</p>
@@ -14,7 +14,7 @@ public class UpdateTrafficControlTargetRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The event for the traffic control target.</p>
+     * <p>The event of the control target.</p>
      * 
      * <strong>example:</strong>
      * <p>click</p>
@@ -41,7 +41,7 @@ public class UpdateTrafficControlTargetRequest extends TeaModel {
     public String itemConditionExpress;
 
     /**
-     * <p>The item condition type.</p>
+     * <p>The condition type for item control.</p>
      * 
      * <strong>example:</strong>
      * <p>Array</p>
@@ -50,7 +50,7 @@ public class UpdateTrafficControlTargetRequest extends TeaModel {
     public String itemConditionType;
 
     /**
-     * <p>The traffic control target name.</p>
+     * <p>The name of the traffic control target.</p>
      * 
      * <strong>example:</strong>
      * <p>target-1</p>
@@ -59,7 +59,7 @@ public class UpdateTrafficControlTargetRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether the control rule applies to a new product.</p>
+     * <p>Specifies whether the control rule applies to new products.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -68,7 +68,7 @@ public class UpdateTrafficControlTargetRequest extends TeaModel {
     public Boolean newProductRegulation;
 
     /**
-     * <p>The recall strategy name.</p>
+     * <p>The Policy Name of the recall.</p>
      * 
      * <strong>example:</strong>
      * <p>recall-1</p>
@@ -77,7 +77,7 @@ public class UpdateTrafficControlTargetRequest extends TeaModel {
     public String recallName;
 
     /**
-     * <p>The start time of the traffic control target.</p>
+     * <p>The start time of the control target. The value is in YYYY-MM-DD format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-25</p>
@@ -86,7 +86,7 @@ public class UpdateTrafficControlTargetRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The statistics period.</p>
+     * <p>The statistical period.</p>
      * 
      * <strong>example:</strong>
      * <p>Daily</p>
@@ -95,7 +95,7 @@ public class UpdateTrafficControlTargetRequest extends TeaModel {
     public String statisPeriod;
 
     /**
-     * <p>The traffic control target status.</p>
+     * <p>The status of the control target.</p>
      * 
      * <strong>example:</strong>
      * <p>Opened</p>
@@ -104,7 +104,7 @@ public class UpdateTrafficControlTargetRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tolerance range for the traffic control target.</p>
+     * <p>The tolerance range of the control target.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -113,7 +113,7 @@ public class UpdateTrafficControlTargetRequest extends TeaModel {
     public Long toleranceValue;
 
     /**
-     * <p>The traffic control target value.</p>
+     * <p>The value of the control target.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -122,7 +122,7 @@ public class UpdateTrafficControlTargetRequest extends TeaModel {
     public Float value;
 
     /**
-     * <p>This parameter is invalid.</p>
+     * <p>The invalid parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCalculationJobsRequest extends TeaModel {
     /**
-     * <p>The instance ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListCalculationJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The scene ID. To obtain this ID, call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</p>
+     * <p>The scene ID. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to query the scene ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,16 +43,12 @@ public class ListCalculationJobsRequest extends TeaModel {
     public String sceneId;
 
     /**
-     * <p>The status of the calculation job. Valid values:</p>
+     * <p>The status. Valid values:</p>
      * <ul>
-     * <li><p>Success</p>
-     * </li>
-     * <li><p>Failure</p>
-     * </li>
-     * <li><p>Initializing</p>
-     * </li>
-     * <li><p>Running</p>
-     * </li>
+     * <li>Success: Succeeded.</li>
+     * <li>Failure: Failed.</li>
+     * <li>Initializing: Initializing.</li>
+     * <li>Running: Running.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataDiagnosisResponseBody extends TeaModel {
     /**
-     * <p>The ID of the data diagnosis task.</p>
+     * <p>The ID of the data modeling diagnostic configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -33,7 +33,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String datasetMountPath;
 
     /**
-     * <p>The dataset name.</p>
+     * <p>The name of the dataset.</p>
      * 
      * <strong>example:</strong>
      * <p>dateset-test</p>
@@ -60,11 +60,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String datasetUri;
 
     /**
-     * <p>The default gateway. Valid values:</p>
-     * <ul>
-     * <li>Eth0: public gateway.</li>
-     * <li>Eth1: dedicated gateway.</li>
-     * </ul>
+     * <p>The default gateway. Valid values: Eth0: public gateway. Eth1: dedicated gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>Eth0</p>
@@ -83,7 +79,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String easServiceName;
 
     /**
-     * <p>The EasyRec package path.</p>
+     * <p>The path of the EasyRec package.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://********</p>
@@ -101,7 +97,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String easyRecVersion;
 
     /**
-     * <p>The features to exclude from display. Separate multiple features with commas (,).</p>
+     * <p>The feature display filter. Separate multiple features with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>feature1,feature2</p>
@@ -110,7 +106,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String featureDisplayExclude;
 
     /**
-     * <p>The data fallback data source ID.</p>
+     * <p>The data landing data source ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -129,7 +125,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String featurePriority;
 
     /**
-     * <p>The Feature Store item-side primary key.</p>
+     * <p>The item-side primary key in Feature Store.</p>
      * 
      * <strong>example:</strong>
      * <p>item</p>
@@ -147,7 +143,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String featureStoreModelId;
 
     /**
-     * <p>The Feature Store project ID.</p>
+     * <p>The ID of the Feature Store project.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -156,7 +152,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String featureStoreProjectId;
 
     /**
-     * <p>The Feature Store project name.</p>
+     * <p>The name of the Feature Store project.</p>
      * 
      * <strong>example:</strong>
      * <p>project-1</p>
@@ -165,7 +161,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String featureStoreProjectName;
 
     /**
-     * <p>The name of the feature view that contains the item features in the sequence feature.</p>
+     * <p>The name of the feature view where the item features in the sequence features are located.</p>
      * 
      * <strong>example:</strong>
      * <p>seq_item_view</p>
@@ -174,7 +170,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String featureStoreSeqFeatureView;
 
     /**
-     * <p>The Feature Store user-side primary key.</p>
+     * <p>The user-side primary key in Feature Store.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -192,7 +188,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String fgJarVersion;
 
     /**
-     * <p>The fg_json file name.</p>
+     * <p>The name of the fg_json file.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -228,7 +224,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public Boolean isUseFeatureStore;
 
     /**
-     * <p>The item_id field name.</p>
+     * <p>The name of the item_id field.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -238,7 +234,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String itemIdField;
 
     /**
-     * <p>The item table name.</p>
+     * <p>The name of the item table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -248,7 +244,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String itemTable;
 
     /**
-     * <p>The item table partition field.</p>
+     * <p>The partition field of the item table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -258,7 +254,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String itemTablePartitionField;
 
     /**
-     * <p>The item table partition field format. Valid values:</p>
+     * <p>The partition field format of the item table. Valid values:</p>
      * <ul>
      * <li>yyyymmdd</li>
      * <li>yyyy-mm-dd</li>
@@ -281,7 +277,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String maxcomputeSchema;
 
     /**
-     * <p>The feature consistency check name.</p>
+     * <p>The name of the feature consistency check job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -300,7 +296,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String ossResourceId;
 
     /**
-     * <p>The number of workers for running the prediction script.</p>
+     * <p>The number of workers used to execute the prediction script.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -309,7 +305,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public Integer predictWorkerCount;
 
     /**
-     * <p>The CPU specification of workers for running the prediction script.</p>
+     * <p>The CPU resources allocated to each worker for executing the prediction script.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -318,10 +314,10 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public Integer predictWorkerCpu;
 
     /**
-     * <p>The memory specification of workers for running the prediction script.</p>
+     * <p>The memory allocated to each worker for executing the prediction script.</p>
      * 
      * <strong>example:</strong>
-     * <p>32000(32G)</p>
+     * <p>32000</p>
      */
     @NameInMap("PredictWorkerMemory")
     public Integer predictWorkerMemory;
@@ -336,7 +332,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String resourceConfig;
 
     /**
-     * <p>The sampling ratio (0-1).</p>
+     * <p>The sampling ratio, which ranges from 0 to 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -383,7 +379,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String switchId;
 
     /**
-     * <p>The user_id field name.</p>
+     * <p>The name of the user_id field.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -393,7 +389,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String userIdField;
 
     /**
-     * <p>The user table name.</p>
+     * <p>The name of the user table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -403,7 +399,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String userTable;
 
     /**
-     * <p>The user table partition field.</p>
+     * <p>The partition field of the user table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -413,7 +409,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String userTablePartitionField;
 
     /**
-     * <p>The user table partition field format. Valid values:</p>
+     * <p>The partition field format of the user table. Valid values:</p>
      * <ul>
      * <li>yyyymmdd</li>
      * <li>yyyy-mm-dd</li>
@@ -427,7 +423,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String userTablePartitionFieldFormat;
 
     /**
-     * <p>VpcID。</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-xxx</p>
@@ -436,7 +432,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The workflow name.</p>
+     * <p>The name of the workflow.</p>
      * 
      * <strong>example:</strong>
      * <p>work_flow_1</p>
@@ -445,7 +441,7 @@ public class UpdateFeatureConsistencyCheckJobConfigRequest extends TeaModel {
     public String workflowName;
 
     /**
-     * <p>The PAI workspace ID.</p>
+     * <p>The ID of the PAI workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>34597***</p>

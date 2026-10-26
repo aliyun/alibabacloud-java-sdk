@@ -14,10 +14,10 @@ public class GetLayerResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The time when the experiment layer was created.</p>
+     * <p>The time when the experiment layer was created. The time follows the ISO 8601 standard and includes a time zone offset.</p>
      * 
      * <strong>example:</strong>
-     * <p>2022-10-13 17:34:52.0</p>
+     * <p>2022-10-13T17:34:52.232+08:00</p>
      */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
@@ -41,7 +41,7 @@ public class GetLayerResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>EE97D06A-2AA0-5AD9-B6CF-8A267924D691</p>
@@ -50,7 +50,7 @@ public class GetLayerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The residual traffic in the experiment layer.</p>
+     * <p>The remaining traffic on the experiment layer.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

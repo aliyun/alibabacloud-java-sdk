@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRecallManagementServicesResponseBody extends TeaModel {
     /**
-     * <p>This parameter is not currently in effect.</p>
+     * <p>This parameter does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>This parameter is not currently in effect.</p>
+     * <p>This parameter does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,7 +23,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The list of recall management services.</p>
+     * <p>The recall management services.</p>
      */
     @NameInMap("RecallManagementServices")
     public java.util.List<ListRecallManagementServicesResponseBodyRecallManagementServices> recallManagementServices;
@@ -93,7 +93,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
 
     public static class ListRecallManagementServicesResponseBodyRecallManagementServices extends TeaModel {
         /**
-         * <p>The ID of the currently active recall management service version.</p>
+         * <p>The ID of the active recall management service version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -102,7 +102,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         public String currentRecallManagementServiceVersionId;
 
         /**
-         * <p>The name of the currently active recall management service version.</p>
+         * <p>The name of the active recall management service version.</p>
          * 
          * <strong>example:</strong>
          * <p>version-1</p>
@@ -120,7 +120,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in ISO 8601 format, including the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -129,7 +129,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time in ISO 8601 format, including the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -138,7 +138,7 @@ public class ListRecallManagementServicesResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>The service name of the recall management service.</p>
+         * <p>The name of the recall management service.</p>
          * 
          * <strong>example:</strong>
          * <p>hot_group_recall</p>

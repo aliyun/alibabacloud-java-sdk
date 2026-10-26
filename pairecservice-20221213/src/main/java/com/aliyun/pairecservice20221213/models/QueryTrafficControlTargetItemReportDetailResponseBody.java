@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaModel {
     /**
-     * <p>The unique identifier for the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
@@ -14,7 +14,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
     public String requestId;
 
     /**
-     * <p>Traffic control details for an item.</p>
+     * <p>The item traffic control details.</p>
      */
     @NameInMap("TrafficControlTargetItemReportDetail")
     public QueryTrafficControlTargetItemReportDetailResponseBodyTrafficControlTargetItemReportDetail trafficControlTargetItemReportDetail;
@@ -42,7 +42,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
 
     public static class QueryTrafficControlTargetItemReportDetailResponseBodyTrafficControlTargetItemReportDetailItemControlTailReportDetails extends TeaModel {
         /**
-         * <p>Key-value pairs for the traffic control target.</p>
+         * <p>The key-value pairs restricted in the traffic control target.</p>
          */
         @NameInMap("Features")
         public java.util.Map<String, ?> features;
@@ -57,7 +57,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
         public String itemId;
 
         /**
-         * <p>The progress toward the target.</p>
+         * <p>The completion progress.</p>
          * 
          * <strong>example:</strong>
          * <p>49%</p>
@@ -66,7 +66,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
         public String targetProgress;
 
         /**
-         * <p>The target traffic.</p>
+         * <p>The actual traffic.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -115,7 +115,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
 
     public static class QueryTrafficControlTargetItemReportDetailResponseBodyTrafficControlTargetItemReportDetailItemControlTopReportDetails extends TeaModel {
         /**
-         * <p>Key-value pairs for the traffic control target.</p>
+         * <p>The key-value pairs restricted in the traffic control target.</p>
          */
         @NameInMap("Features")
         public java.util.Map<String, ?> features;
@@ -130,7 +130,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
         public String itemId;
 
         /**
-         * <p>The progress toward the target.</p>
+         * <p>The completion progress.</p>
          * 
          * <strong>example:</strong>
          * <p>49%</p>
@@ -139,7 +139,7 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
         public String targetProgress;
 
         /**
-         * <p>The target traffic.</p>
+         * <p>The actual traffic.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -188,13 +188,13 @@ public class QueryTrafficControlTargetItemReportDetailResponseBody extends TeaMo
 
     public static class QueryTrafficControlTargetItemReportDetailResponseBodyTrafficControlTargetItemReportDetail extends TeaModel {
         /**
-         * <p>Report details for the tail 100 controlled items.</p>
+         * <p>The list of details for the bottom 100 items after traffic control.</p>
          */
         @NameInMap("ItemControlTailReportDetails")
         public java.util.List<QueryTrafficControlTargetItemReportDetailResponseBodyTrafficControlTargetItemReportDetailItemControlTailReportDetails> itemControlTailReportDetails;
 
         /**
-         * <p>Report details for the top 100 controlled items.</p>
+         * <p>The list of details for the top 100 items before traffic control.</p>
          */
         @NameInMap("ItemControlTopReportDetails")
         public java.util.List<QueryTrafficControlTargetItemReportDetailResponseBodyTrafficControlTargetItemReportDetailItemControlTopReportDetails> itemControlTopReportDetails;

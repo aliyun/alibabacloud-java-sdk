@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceResponseBody extends TeaModel {
     /**
-     * <p>The billing type of the instance. Currently, only Subscription (prepayment) is supported.</p>
+     * <p>The billing method of the instance. Only subscription is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Subscription</p>
@@ -23,43 +23,46 @@ public class GetInstanceResponseBody extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The instance configuration.</p>
+     * <p>The configuration of the instance.</p>
      */
     @NameInMap("Config")
     public GetInstanceResponseBodyConfig config;
 
     /**
-     * <p>The time when the instance expires.</p>
+     * <p>The time when the instance expires. The time is displayed in UTC and follows the ISO 8601 standard.</p>
      * 
      * <strong>example:</strong>
-     * <p>2022-12-14 00:00:00.0</p>
+     * <p>2022-12-14T00:00:00Z</p>
      */
     @NameInMap("ExpiredTime")
     public String expiredTime;
 
+    /**
+     * <p>The Feature Store information.</p>
+     */
     @NameInMap("FeatureStoreInfo")
     public GetInstanceResponseBodyFeatureStoreInfo featureStoreInfo;
 
     /**
-     * <p>The time when the instance was created.</p>
+     * <p>The time when the instance was created. The time is displayed in UTC and follows the ISO 8601 standard.</p>
      * 
      * <strong>example:</strong>
-     * <p>2022-10-13 17:34:52.0</p>
+     * <p>2022-10-13T04:55:12Z</p>
      */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
     /**
-     * <p>The time when the instance was last updated.</p>
+     * <p>The time when the instance was updated. The time is displayed in UTC and follows the ISO 8601 standard.</p>
      * 
      * <strong>example:</strong>
-     * <p>2022-11-05 09:02:30.0</p>
+     * <p>2022-11-05T09:02:30Z</p>
      */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-test1</p>
@@ -68,21 +71,24 @@ public class GetInstanceResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The configuration of the operations tool.</p>
+     * <p>The configurations of the operations tool.</p>
      */
     @NameInMap("OperatingTool")
     public GetInstanceResponseBodyOperatingTool operatingTool;
 
+    /**
+     * <p>The recommendation customization configurations.</p>
+     */
     @NameInMap("RecommendCustomization")
     public GetInstanceResponseBodyRecommendCustomization recommendCustomization;
 
     /**
      * <p>The region ID. Valid values:</p>
      * <ul>
-     * <li>cn-shenzhen: China (Shenzhen).</li>
-     * <li>cn-hangzhou: China (Hangzhou).</li>
-     * <li>cn-beijing: China (Beijing).</li>
-     * <li>cn-shanghai: China (Shanghai).</li>
+     * <li>cn-shenzhen: Shenzhen.</li>
+     * <li>cn-hangzhou: Hangzhou.</li>
+     * <li>cn-beijing: Beijing.</li>
+     * <li>cn-shanghai: Shanghai.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +98,7 @@ public class GetInstanceResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
@@ -103,9 +109,9 @@ public class GetInstanceResponseBody extends TeaModel {
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li>Initializing: The instance is being initialized.</li>
-     * <li>Stopped: The instance is stopped.</li>
-     * <li>Running: The instance is running.</li>
+     * <li>Initializing: Initializing.</li>
+     * <li>Stopped: Stopped.</li>
+     * <li>Running: Running.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -248,7 +254,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyConfigDataManagements extends TeaModel {
         /**
-         * <p>The component code.</p>
+         * <p>The code of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>storage</p>
@@ -263,7 +269,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public java.util.Map<String, ?> meta;
 
         /**
-         * <p>The component type.</p>
+         * <p>The type of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -304,7 +310,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyConfigEngines extends TeaModel {
         /**
-         * <p>The component code.</p>
+         * <p>The code of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>feature</p>
@@ -319,7 +325,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public java.util.Map<String, ?> meta;
 
         /**
-         * <p>The component type.</p>
+         * <p>The type of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>Hologres</p>
@@ -360,7 +366,7 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyConfigMonitors extends TeaModel {
         /**
-         * <p>The component code.</p>
+         * <p>The code of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>featuresets</p>
@@ -375,7 +381,7 @@ public class GetInstanceResponseBody extends TeaModel {
         public java.util.Map<String, ?> meta;
 
         /**
-         * <p>The component type.</p>
+         * <p>The type of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>Platform</p>
@@ -416,19 +422,19 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyConfig extends TeaModel {
         /**
-         * <p>The list of modeling environments.</p>
+         * <p>The modeling environments.</p>
          */
         @NameInMap("DataManagements")
         public java.util.List<GetInstanceResponseBodyConfigDataManagements> dataManagements;
 
         /**
-         * <p>The list of service engines.</p>
+         * <p>The service engines.</p>
          */
         @NameInMap("Engines")
         public java.util.List<GetInstanceResponseBodyConfigEngines> engines;
 
         /**
-         * <p>The list of supporting features.</p>
+         * <p>The supporting features.</p>
          */
         @NameInMap("Monitors")
         public java.util.List<GetInstanceResponseBodyConfigMonitors> monitors;
@@ -465,9 +471,15 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyFeatureStoreInfo extends TeaModel {
+        /**
+         * <p>The status of FeatureDB.</p>
+         */
         @NameInMap("FeatureDBStatus")
         public String featureDBStatus;
 
+        /**
+         * <p>The ID of the Feature Store instance.</p>
+         */
         @NameInMap("InstanceId")
         public String instanceId;
 
@@ -496,10 +508,10 @@ public class GetInstanceResponseBody extends TeaModel {
 
     public static class GetInstanceResponseBodyOperatingTool extends TeaModel {
         /**
-         * <p>Indicates whether the operations tool is enabled for the instance. Valid values:</p>
+         * <p>Specifies whether the operations tool is enabled for the instance. Valid values:</p>
          * <ul>
          * <li>True: Enabled.</li>
-         * <li>False: Not enabled.</li>
+         * <li>False: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -524,6 +536,9 @@ public class GetInstanceResponseBody extends TeaModel {
     }
 
     public static class GetInstanceResponseBodyRecommendCustomization extends TeaModel {
+        /**
+         * <p>Specifies whether recommendation customization is enabled.</p>
+         */
         @NameInMap("IsEnable")
         public Boolean isEnable;
 

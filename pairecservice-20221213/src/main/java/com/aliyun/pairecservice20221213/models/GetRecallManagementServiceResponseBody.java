@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRecallManagementServiceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the active version of the recall management service.</p>
+     * <p>The ID of the active recall management service version.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class GetRecallManagementServiceResponseBody extends TeaModel {
     public String currentRecallManagementServiceVersionId;
 
     /**
-     * <p>The name of the active version of the recall management service.</p>
+     * <p>The name of the active recall management service version.</p>
      * 
      * <strong>example:</strong>
      * <p>version-1</p>
@@ -32,7 +32,7 @@ public class GetRecallManagementServiceResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The time is in ISO 8601 format and includes a time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -41,7 +41,7 @@ public class GetRecallManagementServiceResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The modification time.</p>
+     * <p>The update time. The time is in ISO 8601 format and includes a time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -77,12 +77,10 @@ public class GetRecallManagementServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the recall management service. Valid values:</p>
+     * <p>The status. Valid values:</p>
      * <ul>
-     * <li><p>Online: The service is running and available.</p>
-     * </li>
-     * <li><p>Offline: The service is stopped or unavailable.</p>
-     * </li>
+     * <li>Online: Online.</li>
+     * <li>Offline: Offline.</li>
      * </ul>
      * 
      * <strong>example:</strong>

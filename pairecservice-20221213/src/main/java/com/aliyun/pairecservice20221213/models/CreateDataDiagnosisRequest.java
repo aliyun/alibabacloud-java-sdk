@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateDataDiagnosisRequest extends TeaModel {
     /**
-     * <p>The configuration for the data diagnosis task, specified as a JSON string. The required fields in this object depend on the value of the <code>Type</code> parameter.</p>
+     * <p>The configuration content of the data modeling diagnostic task.</p>
      * <ul>
-     * <li><p>If <code>Type</code> is set to <code>ChangeRate</code>, specify the following fields: <code>AnalysisField</code> and <code>PartitionFieldFormat</code>.</p>
+     * <li><p>If Type is set to ChangeRate, the configuration must include: analysis field (AnalysisField) and partition field format (PartitionFieldFormat).</p>
      * </li>
-     * <li><p>If <code>Type</code> is set to <code>PreferenceStatisticsCycle</code>, specify the following fields: <code>UserIdField</code>, <code>RemainDays</code>, <code>EverAppearedDays</code>, <code>RemainRatePeriods</code>, and <code>PartitionFieldFormat</code>.</p>
+     * <li><p>If Type is set to PreferenceStatisticsCycle, the configuration must include: user ID field (UserIdField), single-day retention rate statistical period (RemainDays), ever-appeared rate statistical period (EverAppearedDays), periodic retention rate statistical period (RemainRatePeriods), and partition field format (PartitionFieldFormat).</p>
      * </li>
-     * <li><p>If <code>Type</code> is set to <code>JoinTables</code>, specify the following fields: <code>LeftTableAnalysisField</code>, <code>RightTableAnalysisField</code>, <code>LeftJoinField</code>, <code>RightJoinField</code>, <code>SampleQuantity</code>, <code>LeftTablePartitionFieldFormat</code>, and <code>RightTablePartitionFieldFormat</code>.</p>
+     * <li><p>If Type is set to JoinTables, the configuration must include: left table analysis field (LeftTableAnalysisField), right table analysis field (RightTableAnalysisField), left table JOIN field (LeftJoinField), right table JOIN field (RightJoinField), display sample quantity (SampleQuantity), left table partition field format (LeftTablePartitionFieldFormat), and right table partition field format (RightTablePartitionFieldFormat).</p>
      * </li>
-     * <li><p>If <code>Type</code> is set to <code>BaseStatistics</code>, specify the following fields: <code>TagField</code>, <code>TagFieldSeparator</code>, <code>KVField</code>, <code>KVFieldSeparator</code>, <code>KVPairSeparator</code>, <code>TextField</code>, <code>Quantiles</code>, <code>DefaultValueOfString</code>, <code>NullStringField</code>, and <code>PartitionFieldFormat</code>.</p>
+     * <li><p>If Type is set to BaseStatistics, the configuration must include: tag field (TagField), tag field separator (TagFieldSeparator), KV field (KVField), KV field separator (KVFieldSeparator), KV pair separator (KVPairSeparator), text field (TextField), data percentile distribution (Quantiles), default value for string type (DefaultValueOfString), null string field for string type (NullStringField), and partition field format (PartitionFieldFormat).</p>
      * </li>
-     * <li><p>If <code>Type</code> is set to <code>AbnormalBehavior</code>, specify the following fields: <code>UserId</code>, <code>ItemId</code>, <code>EventField</code>, <code>UpStreamBehavior</code>, <code>DownstreamBehavior</code>, <code>NumericHistogramBins</code>, and <code>PartitionFieldFormat</code>.</p>
+     * <li><p>If Type is set to AbnormalBehavior, the configuration must include: user ID field (UserId), item ID field (ItemId), behavior field (EventField), upstream behavior value (UpStreamBehavior), downstream behavior value (DownstreamBehavior), number of histogram bins (NumericHistogramBins), and partition field format (PartitionFieldFormat).</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -27,7 +27,7 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The scheduled time to run the task. If this parameter is omitted, the task runs only once.</p>
+     * <p>The periodic run time. If this field is empty, the task does not run periodically. The format is HH:mm.</p>
      * 
      * <strong>example:</strong>
      * <p>08:00</p>
@@ -55,7 +55,7 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String leftTableMetaId;
 
     /**
-     * <p>The partition field for the left data table.</p>
+     * <p>The partition field of the left table.</p>
      * 
      * <strong>example:</strong>
      * <p>dt</p>
@@ -64,7 +64,7 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String leftTablePartitionField;
 
     /**
-     * <p>The name of the data diagnosis task.</p>
+     * <p>The name of the data modeling diagnostic task configuration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String rightTableMetaId;
 
     /**
-     * <p>The partition field for the right data table.</p>
+     * <p>The partition field of the right table.</p>
      * 
      * <strong>example:</strong>
      * <p>dt</p>
@@ -110,7 +110,7 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public String tableMetaId;
 
     /**
-     * <p>The number of top results to return.</p>
+     * <p>The number of top N results.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -119,17 +119,17 @@ public class CreateDataDiagnosisRequest extends TeaModel {
     public Long topNQuantity;
 
     /**
-     * <p>The type of the data diagnosis task. Valid values:</p>
+     * <p>The type of the data diagnostic task. Valid values:</p>
      * <ul>
-     * <li><p>ChangeRate: Item or user change rate analysis.</p>
+     * <li><p>ChangeRate: item/user change rate analysis.</p>
      * </li>
-     * <li><p>PreferenceStatisticsCycle: User preference statistics cycle analysis.</p>
+     * <li><p>PreferenceStatisticsCycle: user preference statistical period analysis.</p>
      * </li>
-     * <li><p>JoinTables: Two-table join analysis.</p>
+     * <li><p>JoinTables: join table analysis.</p>
      * </li>
-     * <li><p>BaseStatistics: Basic statistical analysis.</p>
+     * <li><p>BaseStatistics: basic statistics analysis.</p>
      * </li>
-     * <li><p>AbnormalBehavior: Abnormal behavior analysis.</p>
+     * <li><p>AbnormalBehavior: abnormal behavior analysis.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

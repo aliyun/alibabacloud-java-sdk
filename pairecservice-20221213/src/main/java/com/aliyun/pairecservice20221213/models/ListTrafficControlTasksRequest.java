@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTrafficControlTasksRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return all results without pagination.</p>
+     * <p>Specifies whether to return all data without pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -16,11 +16,11 @@ public class ListTrafficControlTasksRequest extends TeaModel {
     /**
      * <p>The filter for traffic control targets. Valid values:</p>
      * <ul>
-     * <li><p><code>All</code>: Returns all traffic control targets.</p>
+     * <li><p>All: all targets.</p>
      * </li>
-     * <li><p><code>Valid</code>: Returns only active traffic control targets. A traffic control target is active if the current time is within the specified start and end time.</p>
+     * <li><p>Valid: valid targets (in the enabling status within the start and end time period).</p>
      * </li>
-     * <li><p><code>None</code>: Does not return any traffic control targets.</p>
+     * <li><p>None: no targets.</p>
      * </li>
      * </ul>
      * 
@@ -31,13 +31,13 @@ public class ListTrafficControlTasksRequest extends TeaModel {
     public String controlTargetFilter;
 
     /**
-     * <p>The environment. Valid values:</p>
+     * <p>The runtime environment. Valid values:</p>
      * <ul>
-     * <li><p><code>Daily</code>: the daily environment</p>
+     * <li><p>Daily: daily environment.</p>
      * </li>
-     * <li><p><code>Pre</code>: the pre-production environment</p>
+     * <li><p>Pre: pre-release environment.</p>
      * </li>
-     * <li><p><code>Prod</code>: the production environment</p>
+     * <li><p>Prod: production environment.</p>
      * </li>
      * </ul>
      * 
@@ -48,7 +48,7 @@ public class ListTrafficControlTasksRequest extends TeaModel {
     public String environment;
 
     /**
-     * <p>The instance ID. You can obtain this ID by calling the <a href="https://icms.alibaba-inc.com/content/learn/pai?l=1%5C&m=16768%5C&n=4300782">ListInstances</a> operation.</p>
+     * <p>The instance ID. You can obtain the ID by calling the <a href="https://icms.alibaba-inc.com/content/learn/pai?l=1&m=16768&n=4300782">ListInstances</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-********</p>
@@ -66,12 +66,10 @@ public class ListTrafficControlTasksRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The sort order. Valid values:</p>
+     * <p>The sorting order. Valid values:</p>
      * <ul>
-     * <li><p><code>ASC</code>: ascending order</p>
-     * </li>
-     * <li><p><code>DESC</code>: descending order</p>
-     * </li>
+     * <li>ASC: ascending order.</li>
+     * <li>DESC: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -99,7 +97,7 @@ public class ListTrafficControlTasksRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The ID of the scene. You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</p>
+     * <p>The ID of the scene. You can obtain the ID by calling the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -108,12 +106,10 @@ public class ListTrafficControlTasksRequest extends TeaModel {
     public String sceneId;
 
     /**
-     * <p>The field by which to sort the results. Valid values:</p>
+     * <p>The sorting criterion. Valid values:</p>
      * <ul>
-     * <li><p><code>GmtCreateTime</code>: Sorts the results by creation time.</p>
-     * </li>
-     * <li><p><code>GmtModifiedTime</code>: Sorts the results by modification time.</p>
-     * </li>
+     * <li>GmtCreateTime: creation time.</li>
+     * <li>GmtModifiedTime: update time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,15 +119,15 @@ public class ListTrafficControlTasksRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The status of the task. Valid values:</p>
+     * <p>The status. Valid values:</p>
      * <ul>
-     * <li><p><code>NotRunning</code>: The task is not running.</p>
+     * <li><p>NotRunning: not running.</p>
      * </li>
-     * <li><p><code>Ready</code>: The task is ready to run.</p>
+     * <li><p>Ready: pending.</p>
      * </li>
-     * <li><p><code>Running</code>: The task is running.</p>
+     * <li><p>Running: running.</p>
      * </li>
-     * <li><p><code>Finished</code>: The task is finished.</p>
+     * <li><p>Finished: finished.</p>
      * </li>
      * </ul>
      * 
@@ -153,9 +149,9 @@ public class ListTrafficControlTasksRequest extends TeaModel {
     /**
      * <p>The version. Valid values:</p>
      * <ul>
-     * <li><p><code>Latest</code>: The latest version. This is the default value.</p>
+     * <li><p>Latest: latest version. Default value.</p>
      * </li>
-     * <li><p><code>Released</code>: the released version</p>
+     * <li><p>Released: released version.</p>
      * </li>
      * </ul>
      * 

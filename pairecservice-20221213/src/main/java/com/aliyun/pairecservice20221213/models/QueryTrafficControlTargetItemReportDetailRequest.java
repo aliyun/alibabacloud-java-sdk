@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTrafficControlTargetItemReportDetailRequest extends TeaModel {
     /**
-     * <p>The report date.</p>
+     * <p>The date of the report. Format: YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01</p>
@@ -14,7 +14,12 @@ public class QueryTrafficControlTargetItemReportDetailRequest extends TeaModel {
     public String date;
 
     /**
-     * <p>The deployment environment. Valid values are Daily (daily environment), Pre (staging environment), and Prod (production environment).</p>
+     * <p>The environment. Valid values:</p>
+     * <ul>
+     * <li>Daily: daily environment</li>
+     * <li>Pre: staging environment</li>
+     * <li>Prod: production environment</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

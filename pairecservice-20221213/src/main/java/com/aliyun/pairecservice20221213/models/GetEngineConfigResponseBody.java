@@ -25,12 +25,9 @@ public class GetEngineConfigResponseBody extends TeaModel {
     /**
      * <p>The runtime environment. Valid values:</p>
      * <ul>
-     * <li><p>Daily: daily environment.</p>
-     * </li>
-     * <li><p>Pre: staging environment.</p>
-     * </li>
-     * <li><p>Prod: production environment.</p>
-     * </li>
+     * <li>Daily: daily environment</li>
+     * <li>Pre: staging environment</li>
+     * <li>Prod: production environment</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +37,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
     public String environment;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The time is in ISO 8601 format, where Z indicates the UTC time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-03T02:28:00.000Z</p>
@@ -49,7 +46,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The update time.</p>
+     * <p>The update time. The time is in ISO 8601 format, where Z indicates the UTC time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-08-27T12:00:00Z</p>
@@ -58,7 +55,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The publish time.</p>
+     * <p>The release time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-03 02:28:00</p>
@@ -67,7 +64,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
     public String gmtReleasedTime;
 
     /**
-     * <p>The engine configuration name.</p>
+     * <p>The name of the engine configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>engine_config_v1</p>
@@ -85,6 +82,8 @@ public class GetEngineConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The scenario.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -94,10 +93,8 @@ public class GetEngineConfigResponseBody extends TeaModel {
     /**
      * <p>The status. Valid values:</p>
      * <ul>
-     * <li><p>Released: published.</p>
-     * </li>
-     * <li><p>UnReleased: not published.</p>
-     * </li>
+     * <li>Released: released</li>
+     * <li>UnReleased: unreleased</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -107,7 +104,7 @@ public class GetEngineConfigResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The engine configuration type.</p>
+     * <p>The type of the engine configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>

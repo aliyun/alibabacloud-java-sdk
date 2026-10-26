@@ -5,37 +5,37 @@ import com.aliyun.tea.*;
 
 public class ListDataDiagnosisReportsResponseBody extends TeaModel {
     /**
-     * <p>The exception report list.</p>
+     * <p>The list of exception reports.</p>
      */
     @NameInMap("ExceptionRate")
     public java.util.List<ListDataDiagnosisReportsResponseBodyExceptionRate> exceptionRate;
 
     /**
-     * <p>Reports for the abnormal behavior analysis task.</p>
+     * <p>The list of diagnostic reports for abnormal behavior analysis diagnosis nodes.</p>
      */
     @NameInMap("ReportsOfAbnormalBehavior")
     public java.util.List<java.util.List<ListDataDiagnosisReportsResponseBodyReportsOfAbnormalBehavior>> reportsOfAbnormalBehavior;
 
     /**
-     * <p>Reports for the basic statistical analysis task.</p>
+     * <p>The list of diagnostic reports for basic statistics analysis diagnosis nodes.</p>
      */
     @NameInMap("ReportsOfBaseStatistics")
     public java.util.List<java.util.List<ListDataDiagnosisReportsResponseBodyReportsOfBaseStatistics>> reportsOfBaseStatistics;
 
     /**
-     * <p>Reports for the item/user change rate analysis task.</p>
+     * <p>The list of diagnostic reports for item/user change rate analysis diagnosis nodes.</p>
      */
     @NameInMap("ReportsOfChangeRateData")
     public java.util.List<java.util.List<ListDataDiagnosisReportsResponseBodyReportsOfChangeRateData>> reportsOfChangeRateData;
 
     /**
-     * <p>Reports for the table join analysis task.</p>
+     * <p>The list of diagnostic reports for join table associate analysis diagnosis nodes.</p>
      */
     @NameInMap("ReportsOfJoinTables")
     public java.util.List<java.util.List<ListDataDiagnosisReportsResponseBodyReportsOfJoinTables>> reportsOfJoinTables;
 
     /**
-     * <p>Reports for the user preference statistics cycle analysis task.</p>
+     * <p>The list of diagnostic reports for user preference statistical period analysis diagnosis nodes.</p>
      */
     @NameInMap("ReportsOfPreferenceStatisticsCycle")
     public java.util.List<java.util.List<ListDataDiagnosisReportsResponseBodyReportsOfPreferenceStatisticsCycle>> reportsOfPreferenceStatisticsCycle;
@@ -50,17 +50,17 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The data diagnosis task type. Valid values:</p>
+     * <p>The data diagnosis node type.</p>
      * <ul>
-     * <li><p><code>ChangeRate</code>: item/user change rate analysis.</p>
+     * <li><p>ChangeRate: item/user change rate analysis.</p>
      * </li>
-     * <li><p><code>PreferenceStatisticsCycle</code>: user preference statistics cycle analysis.</p>
+     * <li><p>PreferenceStatisticsCycle: user preference statistical period analysis.</p>
      * </li>
-     * <li><p><code>JoinTables</code>: table join analysis.</p>
+     * <li><p>JoinTables: join table associate analysis.</p>
      * </li>
-     * <li><p><code>BaseStatistics</code>: basic statistical analysis.</p>
+     * <li><p>BaseStatistics: basic statistics analysis.</p>
      * </li>
-     * <li><p><code>AbnormalBehavior</code>: abnormal behavior analysis.</p>
+     * <li><p>AbnormalBehavior: abnormal behavior analysis.</p>
      * </li>
      * </ul>
      * 
@@ -153,13 +153,13 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
          * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
-         * <p>change_rate 大于 0.2，请确认是否正常</p>
+         * <p>change_rate is greater than 0.2. Verify that this is expected</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The type or level of the exception.</p>
+         * <p>The exception type or severity level.</p>
          * 
          * <strong>example:</strong>
          * <p>WARN</p>
@@ -209,7 +209,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String ds;
 
         /**
-         * <p>The rank.</p>
+         * <p>The rank of the statistical metric.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -227,7 +227,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String conversionRate;
 
         /**
-         * <p>The ID corresponding to the statistical granularity.</p>
+         * <p>The ID corresponding to the statistical granularity of the conversion rate.</p>
          * 
          * <strong>example:</strong>
          * <p>100010050+259203779</p>
@@ -236,7 +236,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String conversionRateIds;
 
         /**
-         * <p>The count of downstream behaviors.</p>
+         * <p>The downstream behavior count.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -245,7 +245,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String downStreamCount;
 
         /**
-         * <p>The ID corresponding to the granularity of the downstream behavior.</p>
+         * <p>The ID corresponding to the statistical granularity of the downstream behavior.</p>
          * 
          * <strong>example:</strong>
          * <p>189814043+272292277</p>
@@ -263,7 +263,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String granularity;
 
         /**
-         * <p>The count of upstream behaviors.</p>
+         * <p>The upstream behavior count.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -272,7 +272,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String upStreamCount;
 
         /**
-         * <p>The ID corresponding to the granularity of the upstream behavior.</p>
+         * <p>The ID corresponding to the statistical granularity of the upstream behavior.</p>
          * 
          * <strong>example:</strong>
          * <p>104684044+249445882</p>
@@ -290,7 +290,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String distribution;
 
         /**
-         * <p>The indicator name.</p>
+         * <p>The name of the statistical metric.</p>
          * 
          * <strong>example:</strong>
          * <p>conversion_rate</p>
@@ -412,7 +412,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
 
     public static class ListDataDiagnosisReportsResponseBodyReportsOfBaseStatistics extends TeaModel {
         /**
-         * <p>The equivalent null count. This refers to the count of specific characters, such as <code>\\N</code>, that are treated as null values.</p>
+         * <p>The equivalent null value count.</p>
          * 
          * <strong>example:</strong>
          * <p>\\N</p>
@@ -421,7 +421,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String defaultNullCount;
 
         /**
-         * <p>The equivalent null rate.</p>
+         * <p>The equivalent null value rate.</p>
          * 
          * <strong>example:</strong>
          * <p>\\N</p>
@@ -457,7 +457,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String featureType;
 
         /**
-         * <p>The null count.</p>
+         * <p>The null value count.</p>
          * 
          * <strong>example:</strong>
          * <p>55095</p>
@@ -466,7 +466,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String nullCount;
 
         /**
-         * <p>The null rate.</p>
+         * <p>The null value rate.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5580879448141732</p>
@@ -475,7 +475,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String nullRate;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total number of data records.</p>
          * 
          * <strong>example:</strong>
          * <p>98721</p>
@@ -493,7 +493,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String uniqueCount;
 
         /**
-         * <p>The maximum value.</p>
+         * <p>The maximum value of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>52.0</p>
@@ -502,7 +502,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String valueMax;
 
         /**
-         * <p>The median value.</p>
+         * <p>The median value of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>35.0</p>
@@ -511,7 +511,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String valueMedian;
 
         /**
-         * <p>The minimum value.</p>
+         * <p>The minimum value of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>18.0</p>
@@ -520,7 +520,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String valueMin;
 
         /**
-         * <p>The 1st percentile value.</p>
+         * <p>The 1st percentile of the field values.</p>
          * 
          * <strong>example:</strong>
          * <p>18.0</p>
@@ -529,7 +529,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String valueQuantile1;
 
         /**
-         * <p>The 5th percentile value.</p>
+         * <p>The 5th percentile of the field values.</p>
          * 
          * <strong>example:</strong>
          * <p>18.0</p>
@@ -538,7 +538,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String valueQuantile5;
 
         /**
-         * <p>The 25th percentile value.</p>
+         * <p>The 25th percentile of the field values.</p>
          * 
          * <strong>example:</strong>
          * <p>18.0</p>
@@ -547,7 +547,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String valueQuantile25;
 
         /**
-         * <p>The 75th percentile value.</p>
+         * <p>The 75th percentile of the field values.</p>
          * 
          * <strong>example:</strong>
          * <p>18.0</p>
@@ -556,7 +556,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String valueQuantile75;
 
         /**
-         * <p>The 95th percentile value.</p>
+         * <p>The 95th percentile of the field values.</p>
          * 
          * <strong>example:</strong>
          * <p>18.0</p>
@@ -565,7 +565,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String valueQuantile95;
 
         /**
-         * <p>The 99th percentile value.</p>
+         * <p>The 99th percentile of the field values.</p>
          * 
          * <strong>example:</strong>
          * <p>18.0</p>
@@ -574,7 +574,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String valueQuantile99;
 
         /**
-         * <p>The rank.</p>
+         * <p>The rank position.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -583,7 +583,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String rn;
 
         /**
-         * <p>The maximum frequency.</p>
+         * <p>The maximum frequency of the field values.</p>
          * 
          * <strong>example:</strong>
          * <p>91149.0</p>
@@ -592,7 +592,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String frequencyMax;
 
         /**
-         * <p>The median frequency.</p>
+         * <p>The median frequency of the field values.</p>
          * 
          * <strong>example:</strong>
          * <p>1349.0</p>
@@ -601,7 +601,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String frequencyMedian;
 
         /**
-         * <p>The minimum frequency.</p>
+         * <p>The minimum frequency of the field values.</p>
          * 
          * <strong>example:</strong>
          * <p>289.0</p>
@@ -610,7 +610,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String frequencyMin;
 
         /**
-         * <p>The 1st frequency percentile.</p>
+         * <p>The 1st percentile of the field value frequencies.</p>
          * 
          * <strong>example:</strong>
          * <p>289.0</p>
@@ -619,7 +619,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String frequencyQuantile1;
 
         /**
-         * <p>The 5th frequency percentile.</p>
+         * <p>The 5th percentile of the field value frequencies.</p>
          * 
          * <strong>example:</strong>
          * <p>289.0</p>
@@ -628,7 +628,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String frequencyQuantile5;
 
         /**
-         * <p>The 25th frequency percentile.</p>
+         * <p>The 25th percentile of the field value frequencies.</p>
          * 
          * <strong>example:</strong>
          * <p>289.0</p>
@@ -637,7 +637,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String frequencyQuantile25;
 
         /**
-         * <p>The 75th frequency percentile.</p>
+         * <p>The 75th percentile of the field value frequencies.</p>
          * 
          * <strong>example:</strong>
          * <p>289.0</p>
@@ -646,7 +646,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String frequencyQuantile75;
 
         /**
-         * <p>The 95th frequency percentile.</p>
+         * <p>The 95th percentile of the field value frequencies.</p>
          * 
          * <strong>example:</strong>
          * <p>289.0</p>
@@ -655,7 +655,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String frequencyQuantile95;
 
         /**
-         * <p>The 99th frequency percentile.</p>
+         * <p>The 99th percentile of the field value frequencies.</p>
          * 
          * <strong>example:</strong>
          * <p>289.0</p>
@@ -673,7 +673,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String distribution;
 
         /**
-         * <p>The rank of the statistical indicator.</p>
+         * <p>The rank of the statistical metric.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -718,7 +718,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String valueQuantile;
 
         /**
-         * <p>The frequency of the feature value.</p>
+         * <p>The frequency of feature values.</p>
          * 
          * <strong>example:</strong>
          * <p>427</p>
@@ -727,7 +727,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String featureFrequency;
 
         /**
-         * <p>The number of feature values with this frequency.</p>
+         * <p>The count of feature value frequencies.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -736,7 +736,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String frequencyCount;
 
         /**
-         * <p>The percentage of feature values with this frequency.</p>
+         * <p>The percentage of feature value frequencies.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -745,7 +745,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String frequencyPercent;
 
         /**
-         * <p>The percentile of the frequency of field values.</p>
+         * <p>The quantile of the field value frequencies.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -1075,7 +1075,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String ds;
 
         /**
-         * <p>A flag that indicates the type of change.</p>
+         * <p>The report flag.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -1084,7 +1084,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String flag;
 
         /**
-         * <p>The item/user change count.</p>
+         * <p>The number of changed items or users.</p>
          * 
          * <strong>example:</strong>
          * <p>1231</p>
@@ -1093,7 +1093,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String changeCount;
 
         /**
-         * <p>The item/user change rate.</p>
+         * <p>The change rate of items or users.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1231</p>
@@ -1160,7 +1160,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String joinField;
 
         /**
-         * <p>The left table join exception rate.</p>
+         * <p>The join exception rate of the left table.</p>
          * 
          * <strong>example:</strong>
          * <p>0.53</p>
@@ -1169,7 +1169,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String leftExceptRate;
 
         /**
-         * <p>The right table join exception rate.</p>
+         * <p>The join exception rate of the right table.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -1178,7 +1178,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String rightExceptRate;
 
         /**
-         * <p>A flag that indicates the type of change.</p>
+         * <p>The report flag.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -1205,7 +1205,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String featureValue;
 
         /**
-         * <p>The feature percentage.</p>
+         * <p>The percentage of the feature.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1354,7 +1354,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
 
     public static class ListDataDiagnosisReportsResponseBodyReportsOfPreferenceStatisticsCycle extends TeaModel {
         /**
-         * <p>The periodic user retention rate.</p>
+         * <p>The cycle retention rate of users.</p>
          * 
          * <strong>example:</strong>
          * <p>0.73</p>
@@ -1363,7 +1363,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String cycleRemainRate;
 
         /**
-         * <p>The daily user retention rate.</p>
+         * <p>The single-day retention rate of users.</p>
          * 
          * <strong>example:</strong>
          * <p>0.52</p>
@@ -1399,7 +1399,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String everAppearedRate;
 
         /**
-         * <p>The statistical period.</p>
+         * <p>The statistical period for the cycle retention rate.</p>
          * 
          * <strong>example:</strong>
          * <p>week</p>
@@ -1408,7 +1408,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String period;
 
         /**
-         * <p>The periodic retention rate.</p>
+         * <p>The cycle retention rate.</p>
          * 
          * <strong>example:</strong>
          * <p>0.33</p>
@@ -1417,7 +1417,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public String periodRemainRate;
 
         /**
-         * <p>The periodic retention count.</p>
+         * <p>The number of users retained within the cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1426,7 +1426,7 @@ public class ListDataDiagnosisReportsResponseBody extends TeaModel {
         public Long periodRemainCount;
 
         /**
-         * <p>The number of period intervals.</p>
+         * <p>The number of cycle intervals.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

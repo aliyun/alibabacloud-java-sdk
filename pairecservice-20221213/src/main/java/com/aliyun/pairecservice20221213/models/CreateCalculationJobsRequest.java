@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCalculationJobsRequest extends TeaModel {
     /**
-     * <p>A comma-separated list of A/B metric IDs.</p>
+     * <p>The list of ABTest metric IDs, separated by commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateCalculationJobsRequest extends TeaModel {
     public String ABMetricIds;
 
     /**
-     * <p>The end date.</p>
+     * <p>The end date. The format is YYYY-MM-DD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateCalculationJobsRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>The instance ID. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to get this ID.</p>
+     * <p>The instance ID. You can obtain the instance ID by calling <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateCalculationJobsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The start date.</p>
+     * <p>The start date. The format is YYYY-MM-DD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

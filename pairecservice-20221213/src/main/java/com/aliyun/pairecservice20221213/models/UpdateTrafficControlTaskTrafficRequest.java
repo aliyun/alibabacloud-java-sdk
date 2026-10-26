@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateTrafficControlTaskTrafficRequest extends TeaModel {
     /**
-     * <p>The environment. Valid values: <code>Daily</code> (daily environment), <code>Pre</code> (pre-release environment), and <code>Prod</code> (production environment).</p>
+     * <p>The environment to which the task belongs. Valid values:</p>
+     * <ul>
+     * <li>Daily: daily environment</li>
+     * <li>Pre: pre-release environment</li>
+     * <li>Prod: production environment</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Daily</p>
@@ -23,13 +28,13 @@ public class UpdateTrafficControlTaskTrafficRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>A list of traffic objects to report.</p>
+     * <p>The list of reported traffic information.</p>
      */
     @NameInMap("Traffics")
     public java.util.List<UpdateTrafficControlTaskTrafficRequestTraffics> traffics;
 
     /**
-     * <p>This parameter is invalid and should be ignored.</p>
+     * <p>Invalid parameter. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -76,7 +81,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends TeaModel {
 
     public static class UpdateTrafficControlTaskTrafficRequestTraffics extends TeaModel {
         /**
-         * <p>The identifier for the traffic object. This can be an item ID, such as <code>item1</code>, an experiment ID, a global identifier (<code>ER_ALL</code>), or a value in <code>L1_EG1_E1</code> format.</p>
+         * <p>The traffic object, which can be an item or an experiment item. Valid values: item1, ER_ALL (global), or a value in the L1_EG1_E1 format.</p>
          * 
          * <strong>example:</strong>
          * <p>item1</p>
@@ -85,7 +90,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends TeaModel {
         public String itemOrExperimentId;
 
         /**
-         * <p>The timestamp from the behavior log. This indicates that the log data is current as of this timestamp.</p>
+         * <p>The timestamp from the behavior log, indicating the log cutoff time. The value is in ISO 8601 format, using Z to indicate the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-01-01T02:05:06.111Z</p>
@@ -94,7 +99,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends TeaModel {
         public String recordTime;
 
         /**
-         * <p>The configured target traffic for the traffic control target.</p>
+         * <p>The target traffic of the traffic control target.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0</p>
@@ -103,7 +108,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends TeaModel {
         public Double trafficControlTargetAimTraffic;
 
         /**
-         * <p>The traffic control target ID.</p>
+         * <p>The ID of the traffic control target.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -112,7 +117,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends TeaModel {
         public String trafficControlTargetId;
 
         /**
-         * <p>The actual traffic volume observed for the traffic control target.</p>
+         * <p>The actual traffic of the traffic control target.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -121,7 +126,7 @@ public class UpdateTrafficControlTaskTrafficRequest extends TeaModel {
         public Long trafficControlTargetTraffic;
 
         /**
-         * <p>The total traffic for the traffic control task.</p>
+         * <p>The overall traffic under the traffic control plan.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTableMetaResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the table can be deleted. The value is <code>false</code> if other resources reference the table.</p>
+     * <p>Indicates whether the data table can be deleted. If the table is referenced elsewhere, false is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class GetTableMetaResponseBody extends TeaModel {
     public Boolean canDelete;
 
     /**
-     * <p>Additional configurations for the table, provided as a JSON string.</p>
+     * <p>The additional configurations of the data table.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;table_type&quot;:&quot;item&quot;}</p>
@@ -23,7 +23,7 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The table description.</p>
+     * <p>The description of the data table.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a test table</p>
@@ -32,7 +32,7 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The fields in the table.</p>
+     * <p>The list of fields in the table.</p>
      */
     @NameInMap("Fields")
     public java.util.List<GetTableMetaResponseBodyFields> fields;
@@ -47,7 +47,7 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The import time.</p>
+     * <p>The time when the field was imported. The time is in ISO 8601 format and includes the time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -56,7 +56,7 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String gmtImportedTime;
 
     /**
-     * <p>The modification time.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15:24:33</p>
@@ -65,13 +65,13 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The table module. Valid values:</p>
+     * <p>The module of the data table. Valid values:</p>
      * <ul>
-     * <li><p><code>ABTest</code>: An A/B testing data table.</p>
+     * <li><p>ABTest: experiment data table.</p>
      * </li>
-     * <li><p><code>ExperimentTool</code>: An experiment tool table.</p>
+     * <li><p>ExperimentTool: experiment tool table.</p>
      * </li>
-     * <li><p><code>DataDiagnosis</code>: A table for data diagnosis.</p>
+     * <li><p>DataDiagnosis: data diagnostics.</p>
      * </li>
      * </ul>
      * 
@@ -82,7 +82,7 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String module;
 
     /**
-     * <p>The table name.</p>
+     * <p>The name of the data table.</p>
      * 
      * <strong>example:</strong>
      * <p>test_table</p>
@@ -91,7 +91,7 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>28C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
@@ -100,7 +100,7 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The ID of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>reso-wkgo***</p>
@@ -109,6 +109,8 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The type of the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>Maxcompute</p>
      */
@@ -116,6 +118,8 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The URI of the resource.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -123,7 +127,7 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String resourceUri;
 
     /**
-     * <p>The table ID.</p>
+     * <p>The ID of the data table.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -141,11 +145,11 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String tableName;
 
     /**
-     * <p>The table type. Valid values:</p>
+     * <p>The type of the data table. Valid values:</p>
      * <ul>
-     * <li><p><code>MaxCompute</code></p>
+     * <li><p>MaxCompute</p>
      * </li>
-     * <li><p><code>Hologres</code></p>
+     * <li><p>Hologres</p>
      * </li>
      * </ul>
      * 
@@ -156,7 +160,7 @@ public class GetTableMetaResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>The URL of the table in Data Map. This parameter is returned only for MaxCompute tables.</p>
+     * <p>The URL of the table in Data Map if the table is a MaxCompute table. Otherwise, this field is empty.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://dmc-xxx.com/dm/table/xxx">https://dmc-xxx.com/dm/table/xxx</a></p>
@@ -307,7 +311,7 @@ public class GetTableMetaResponseBody extends TeaModel {
 
     public static class GetTableMetaResponseBodyFields extends TeaModel {
         /**
-         * <p>Whether the field is a dimension field.</p>
+         * <p>Indicates whether the field is a dimension field.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -316,7 +320,7 @@ public class GetTableMetaResponseBody extends TeaModel {
         public Boolean isDimensionField;
 
         /**
-         * <p>The field meaning.</p>
+         * <p>The meaning of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>the gender of people</p>
@@ -325,7 +329,7 @@ public class GetTableMetaResponseBody extends TeaModel {
         public String meaning;
 
         /**
-         * <p>The field name.</p>
+         * <p>The name of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>gender</p>
@@ -334,7 +338,7 @@ public class GetTableMetaResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The field type.</p>
+         * <p>The type of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>BIGINT</p>

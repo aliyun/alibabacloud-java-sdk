@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     /**
-     * <p>The feature consistency check job configuration ID. To obtain the configuration ID, call the <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a> operation.</p>
+     * <p>The ID of the feature consistency check job configuration. For more information about how to obtain the configuration ID, see <a href="https://help.aliyun.com/document_detail/2557567.html">ListFeatureConsistencyCheckJobConfigs</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     public String featureConsistencyCheckJobConfigId;
 
     /**
-     * <p>The instance ID. To obtain the instance ID, call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+     * <p>The instance ID. For more information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     public String logRequestId;
 
     /**
-     * <p>The log request time (UNIX epoch timestamp).</p>
+     * <p>The log request time (UNIX timestamp).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -94,6 +94,12 @@ public class BackflowFeatureConsistencyCheckJobDataRequest extends TeaModel {
     @NameInMap("Scores")
     public String scores;
 
+    /**
+     * <p>The service name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>se_demorec</p>
+     */
     @NameInMap("ServiceName")
     public String serviceName;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCalculationJobsResponseBody extends TeaModel {
     /**
-     * <p>A list of calculation job IDs.</p>
+     * <p>The list of compute task IDs.</p>
      */
     @NameInMap("CalculationJobIds")
     public java.util.List<String> calculationJobIds;

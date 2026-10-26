@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRecallManagementTableResponseBody extends TeaModel {
     /**
-     * <p>Specifies whether the table can be deleted.</p>
+     * <p>Indicates whether the table can be deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public Boolean canDelete;
 
     /**
-     * <p>Additional configurations for the table.</p>
+     * <p>The additional configurations of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;item_id&quot;:&quot;&quot;}</p>
@@ -32,7 +32,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public String dataSource;
 
     /**
-     * <p>The data table description.</p>
+     * <p>The table description.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a test</p>
@@ -41,7 +41,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable the fluctuation threshold for the data size.</p>
+     * <p>Indicates whether the fluctuation threshold for the size of the table is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -50,7 +50,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public Boolean enableDataSizeFluctuationThreshold;
 
     /**
-     * <p>Specifies whether to enable the fluctuation threshold for the row count.</p>
+     * <p>Indicates whether the fluctuation threshold for the row count of the table is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,13 +59,13 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public Boolean enableRowCountFluctuationThreshold;
 
     /**
-     * <p>A list of fields.</p>
+     * <p>The list of fields.</p>
      */
     @NameInMap("Fields")
     public java.util.List<GetRecallManagementTableResponseBodyFields> fields;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The time is displayed in ISO 8601 format and includes the time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -74,7 +74,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The modification time.</p>
+     * <p>The update time. The time is displayed in ISO 8601 format and includes the time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -83,7 +83,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The index effective time.</p>
+     * <p>The effective period of the index. The time is displayed in ISO 8601 format and includes the time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -101,7 +101,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public String indexVersionId;
 
     /**
-     * <p>The maximum data size fluctuation threshold.</p>
+     * <p>The maximum fluctuation threshold for the size of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -110,7 +110,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public Integer maxDataSizeFluctuationThreshold;
 
     /**
-     * <p>The maximum row count fluctuation threshold.</p>
+     * <p>The maximum fluctuation threshold for the row count of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -119,7 +119,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public Integer maxRowCountFluctuationThreshold;
 
     /**
-     * <p>The MaxCompute project name.</p>
+     * <p>The name of the MaxCompute project.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -137,7 +137,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public String maxcomputeSchema;
 
     /**
-     * <p>The MaxCompute table name.</p>
+     * <p>The name of the table in MaxCompute.</p>
      * 
      * <strong>example:</strong>
      * <p>table-1</p>
@@ -146,7 +146,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public String maxcomputeTableName;
 
     /**
-     * <p>The minimum data size fluctuation threshold.</p>
+     * <p>The minimum fluctuation threshold for the size of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -155,7 +155,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public Integer minDataSizeFluctuationThreshold;
 
     /**
-     * <p>The minimum row count fluctuation threshold.</p>
+     * <p>The minimum fluctuation threshold for the row count of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -164,7 +164,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public Integer minRowCountFluctuationThreshold;
 
     /**
-     * <p>The data table name.</p>
+     * <p>The table name.</p>
      * 
      * <strong>example:</strong>
      * <p>table-123</p>
@@ -173,7 +173,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The partition fields.</p>
+     * <p>The partition fields of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>dt</p>
@@ -182,7 +182,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public String partitionFields;
 
     /**
-     * <p>The data table ID.</p>
+     * <p>The table ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -191,7 +191,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
     public String recallManagementTableId;
 
     /**
-     * <p>The recall type.</p>
+     * <p>The recall type of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>X2I</p>
@@ -416,7 +416,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
 
     public static class GetRecallManagementTableResponseBodyFields extends TeaModel {
         /**
-         * <p>A list of field attributes.</p>
+         * <p>The list of attributes for the field.</p>
          */
         @NameInMap("Attributes")
         public java.util.List<String> attributes;
@@ -440,7 +440,7 @@ public class GetRecallManagementTableResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The vector dimension.</p>
+         * <p>The vector dimensions.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>

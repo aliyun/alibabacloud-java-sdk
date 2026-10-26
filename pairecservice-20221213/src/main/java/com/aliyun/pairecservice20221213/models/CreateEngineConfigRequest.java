@@ -40,7 +40,7 @@ public class CreateEngineConfigRequest extends TeaModel {
     public String environment;
 
     /**
-     * <p>The instance ID. You can obtain the ID from the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+     * <p>The instance ID. You can obtain the instance ID from the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-***test</p>
@@ -58,6 +58,8 @@ public class CreateEngineConfigRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The scene ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -65,7 +67,7 @@ public class CreateEngineConfigRequest extends TeaModel {
     public String sceneId;
 
     /**
-     * <p>The type of the engine configuration.</p>
+     * <p>The engine configuration type.</p>
      * 
      * <strong>example:</strong>
      * <p>Normal</p>

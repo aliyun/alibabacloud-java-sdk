@@ -8,7 +8,7 @@ public class ChatConversationResponseBody extends TeaModel {
      * <p>The reply content.</p>
      * 
      * <strong>example:</strong>
-     * <p>FeatureDB近7天读写量为xxx</p>
+     * <p>The read and write volume of FeatureDB in the last 7 days is xxx</p>
      */
     @NameInMap("Answer")
     public String answer;
@@ -68,7 +68,7 @@ public class ChatConversationResponseBody extends TeaModel {
     public String func;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The format is ISO 8601, including the time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>

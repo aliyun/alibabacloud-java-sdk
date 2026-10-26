@@ -20,7 +20,7 @@ public class ListTableMetasResponseBody extends TeaModel {
     public java.util.List<ListTableMetasResponseBodyTableMetas> tableMetas;
 
     /**
-     * <p>The total number of data tables.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -68,7 +68,7 @@ public class ListTableMetasResponseBody extends TeaModel {
         public Boolean isDimensionField;
 
         /**
-         * <p>The business meaning of the field.</p>
+         * <p>The meaning of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>the gender of people</p>
@@ -86,7 +86,7 @@ public class ListTableMetasResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The data type of the field.</p>
+         * <p>The field type.</p>
          * 
          * <strong>example:</strong>
          * <p>BIGINT</p>
@@ -135,7 +135,7 @@ public class ListTableMetasResponseBody extends TeaModel {
 
     public static class ListTableMetasResponseBodyTableMetas extends TeaModel {
         /**
-         * <p>Indicates whether the data table can be deleted. A value of <code>false</code> indicates that the table is in use by other resources.</p>
+         * <p>Indicates whether the data table can be deleted. The value is false if the table is referenced elsewhere.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -144,7 +144,7 @@ public class ListTableMetasResponseBody extends TeaModel {
         public Boolean canDelete;
 
         /**
-         * <p>The additional configurations for the data table.</p>
+         * <p>The additional configurations of the data table.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;table_type&quot;:&quot;item&quot;}</p>
@@ -162,13 +162,13 @@ public class ListTableMetasResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The fields in the data table.</p>
+         * <p>The list of fields in the table.</p>
          */
         @NameInMap("Fields")
         public java.util.List<ListTableMetasResponseBodyTableMetasFields> fields;
 
         /**
-         * <p>The time when the data table was created.</p>
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-12 12:24:33</p>
@@ -186,7 +186,7 @@ public class ListTableMetasResponseBody extends TeaModel {
         public String gmtImportedTime;
 
         /**
-         * <p>The time when the data table was last modified.</p>
+         * <p>The update time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-12 12:24:33</p>
@@ -195,13 +195,13 @@ public class ListTableMetasResponseBody extends TeaModel {
         public String gmtModifiedTime;
 
         /**
-         * <p>The module of the data table. Valid values:</p>
+         * <p>The module of the data table.</p>
          * <ul>
-         * <li><p>ABTest: A/B testing</p>
+         * <li><p>ABTest: Experiment data tables</p>
          * </li>
-         * <li><p>ExperimentTool: Experiment tool</p>
+         * <li><p>ExperimentTool: Experiment tool tables</p>
          * </li>
-         * <li><p>DataDiagnosis: data diagnosis</p>
+         * <li><p>DataDiagnosis: Data diagnosis</p>
          * </li>
          * </ul>
          * 
@@ -230,6 +230,8 @@ public class ListTableMetasResponseBody extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Maxcompute</p>
          */
@@ -237,6 +239,8 @@ public class ListTableMetasResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The resource URI.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -262,7 +266,7 @@ public class ListTableMetasResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The type of the data table. Valid values:</p>
+         * <p>The type of the data table.</p>
          * <ul>
          * <li><p>MaxCompute</p>
          * </li>
@@ -277,7 +281,7 @@ public class ListTableMetasResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The URL of the table in Data Map. This parameter is returned only for MaxCompute data tables.</p>
+         * <p>The URL of the table in DataWorks Data Map. This parameter is returned only if the table is a MaxCompute table.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://dmc-xxx.com/dm/table/xxx">https://dmc-xxx.com/dm/table/xxx</a></p>

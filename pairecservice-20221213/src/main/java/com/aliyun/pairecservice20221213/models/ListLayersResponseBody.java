@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListLayersResponseBody extends TeaModel {
     /**
-     * <p>An array of layers.</p>
+     * <p>The list of layers.</p>
      */
     @NameInMap("Layers")
     public java.util.List<ListLayersResponseBodyLayers> layers;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>518C64F6-DFF7-11ED-85B0-00163E14B3D1</p>
@@ -20,7 +20,7 @@ public class ListLayersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count of layers.</p>
+     * <p>The total number of elements in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -68,7 +68,7 @@ public class ListLayersResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the layer was created.</p>
+         * <p>The creation time in ISO 8601 format, using Z to indicate the UTC time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-30T02:02:28.000Z</p>
@@ -104,7 +104,7 @@ public class ListLayersResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The remaining traffic for the layer.</p>
+         * <p>The remaining traffic for the current experimental layer.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

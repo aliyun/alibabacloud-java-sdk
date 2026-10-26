@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFeatureConsistencyCheckJobRequest extends TeaModel {
     /**
-     * <p>The instance ID. To obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+     * <p>The ID of the instance. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-********</p>

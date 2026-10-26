@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLayersRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can obtain this ID by calling the ListInstances API.</p>
+     * <p>The instance ID. You can obtain this ID by calling the ListInstances operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListLayersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The laboratory ID. You can obtain this ID by calling the ListLaboratories API.</p>
+     * <p>The laboratory ID. You can obtain this ID by calling the ListLaboratories operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

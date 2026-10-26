@@ -33,15 +33,15 @@ public class ListDataDiagnosisJobsShrinkRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The task status. Valid values:</p>
+     * <p>The task status. Valid values: </p>
      * <ul>
-     * <li><p>Initializing: The job is being initialized.</p>
+     * <li><p>Initializing: The task is being initialized.</p>
      * </li>
-     * <li><p>Running: The job is in progress.</p>
+     * <li><p>Running: The task is running.</p>
      * </li>
-     * <li><p>Success: The job succeeded.</p>
+     * <li><p>Success: The task succeeded.</p>
      * </li>
-     * <li><p>Failure: The job failed to complete.</p>
+     * <li><p>Failure: The task failed.</p>
      * </li>
      * </ul>
      * 
@@ -52,7 +52,7 @@ public class ListDataDiagnosisJobsShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>A list of data diagnosis types.</p>
+     * <p>The list of data diagnostic types.</p>
      */
     @NameInMap("Types")
     public String typesShrink;

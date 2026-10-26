@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRecallManagementJobsResponseBody extends TeaModel {
     /**
-     * <p>Reserved.</p>
+     * <p>This parameter does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Reserved.</p>
+     * <p>This parameter does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -23,7 +23,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>A list of synchronization jobs.</p>
+     * <p>The list of synchronization tasks.</p>
      */
     @NameInMap("RecallManagementJobs")
     public java.util.List<ListRecallManagementJobsResponseBodyRecallManagementJobs> recallManagementJobs;
@@ -38,7 +38,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total count of synchronization jobs.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -93,7 +93,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
 
     public static class ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo extends TeaModel {
         /**
-         * <p>The data version.</p>
+         * <p>The data version number.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=20250701</p>
@@ -102,7 +102,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         public String dataVersion;
 
         /**
-         * <p>The table version ID.</p>
+         * <p>The ID of the table version.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -111,7 +111,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         public String recallManagementTableVersionId;
 
         /**
-         * <p>The source table data size.</p>
+         * <p>The data size of the source table.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -120,7 +120,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         public String sourceTableDataSize;
 
         /**
-         * <p>The source table row count.</p>
+         * <p>The number of data rows in the source table.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -169,7 +169,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
 
     public static class ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagerTableInfo extends TeaModel {
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>ds=20250701</p>
@@ -178,7 +178,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         public String dataVersion;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -187,7 +187,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         public String recallManagementTableVersionId;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -196,7 +196,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         public String sourceTableDataSize;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong></p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -245,7 +245,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
 
     public static class ListRecallManagementJobsResponseBodyRecallManagementJobs extends TeaModel {
         /**
-         * <p>The end time of the synchronization job.</p>
+         * <p>The end time of the task. The time follows the ISO 8601 standard and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-03-28T10:24Z</p>
@@ -254,7 +254,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The synchronization job ID.</p>
+         * <p>The ID of the synchronization task.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -263,19 +263,19 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         public String recallManagementJobId;
 
         /**
-         * <p>Information about the recall management table.</p>
+         * <p>The task information of the recall management table.</p>
          */
         @NameInMap("RecallManagementTableInfo")
         public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagementTableInfo recallManagementTableInfo;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong></p>
          */
         @NameInMap("RecallManagerTableInfo")
         public ListRecallManagementJobsResponseBodyRecallManagementJobsRecallManagerTableInfo recallManagerTableInfo;
 
         /**
-         * <p>The start time of the synchronization job.</p>
+         * <p>The start time of the task. The time follows the ISO 8601 standard and is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-28T10:00:00Z</p>
@@ -284,7 +284,7 @@ public class ListRecallManagementJobsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The status of the synchronization job. Valid values: <code>Init</code> (initializing), <code>Running</code> (running), <code>Success</code> (succeeded), and <code>Failed</code> (failed).</p>
+         * <p>The status. Valid values: <code>Init</code> (initializing), <code>Running</code> (running), <code>Success</code> (successful), and <code>Failed</code> (failed).</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>

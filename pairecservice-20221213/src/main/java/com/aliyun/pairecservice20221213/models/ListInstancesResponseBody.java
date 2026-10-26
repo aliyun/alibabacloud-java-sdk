@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstancesResponseBody extends TeaModel {
     /**
-     * <p>A list of instances.</p>
+     * <p>The instance list.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListInstancesResponseBodyInstances> instances;
@@ -20,7 +20,7 @@ public class ListInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned instances.</p>
+     * <p>The total number of items in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -68,7 +68,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String componentCode;
 
         /**
-         * <p>The metadata of the component.</p>
+         * <p>The metadata.</p>
          */
         @NameInMap("Meta")
         public java.util.Map<String, ?> meta;
@@ -124,7 +124,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String componentCode;
 
         /**
-         * <p>The metadata of the component.</p>
+         * <p>The metadata.</p>
          */
         @NameInMap("Meta")
         public java.util.Map<String, ?> meta;
@@ -180,7 +180,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String componentCode;
 
         /**
-         * <p>The metadata of the component.</p>
+         * <p>The metadata.</p>
          */
         @NameInMap("Meta")
         public java.util.Map<String, ?> meta;
@@ -227,19 +227,19 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesConfig extends TeaModel {
         /**
-         * <p>A list of data management configurations.</p>
+         * <p>The list of modeling environments.</p>
          */
         @NameInMap("DataManagements")
         public java.util.List<ListInstancesResponseBodyInstancesConfigDataManagements> dataManagements;
 
         /**
-         * <p>A list of service engines.</p>
+         * <p>The list of service engines.</p>
          */
         @NameInMap("Engines")
         public java.util.List<ListInstancesResponseBodyInstancesConfigEngines> engines;
 
         /**
-         * <p>A list of monitoring components.</p>
+         * <p>The list of supporting features.</p>
          */
         @NameInMap("Monitors")
         public java.util.List<ListInstancesResponseBodyInstancesConfigMonitors> monitors;
@@ -277,12 +277,10 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstancesOperatingTool extends TeaModel {
         /**
-         * <p>Specifies whether the operating tool is enabled for the instance. Valid values:</p>
+         * <p>Specifies whether the operations tool is enabled for the instance. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: The tool is enabled.</p>
-         * </li>
-         * <li><p><code>false</code>: The tool is disabled.</p>
-         * </li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,7 +306,7 @@ public class ListInstancesResponseBody extends TeaModel {
 
     public static class ListInstancesResponseBodyInstances extends TeaModel {
         /**
-         * <p>The billing method of the instance. Only <code>Subscription</code> (prepaid) is supported.</p>
+         * <p>The billing method of the instance. Only subscription is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Subscription</p>
@@ -332,28 +330,28 @@ public class ListInstancesResponseBody extends TeaModel {
         public ListInstancesResponseBodyInstancesConfig config;
 
         /**
-         * <p>The time when the instance expires.</p>
+         * <p>The instance expiration time. The time follows the ISO 8601 standard and is displayed in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-12-14 00:00:00.0</p>
+         * <p>2022-12-14T00:00:00Z</p>
          */
         @NameInMap("ExpiredTime")
         public String expiredTime;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The instance creation time. The time follows the ISO 8601 standard and is displayed in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-10-13 17:34:52.0</p>
+         * <p>2022-10-13T17:34:52Z</p>
          */
         @NameInMap("GmtCreateTime")
         public String gmtCreateTime;
 
         /**
-         * <p>The time when the instance was last modified.</p>
+         * <p>The instance update time. The time follows the ISO 8601 standard and is displayed in the UTC time zone.</p>
          * 
          * <strong>example:</strong>
-         * <p>2022-11-05 09:02:30.0</p>
+         * <p>2022-11-05T09:02:30Z</p>
          */
         @NameInMap("GmtModifiedTime")
         public String gmtModifiedTime;
@@ -368,7 +366,7 @@ public class ListInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The configuration of the operating tool.</p>
+         * <p>The configuration related to the operations tool.</p>
          */
         @NameInMap("OperatingTool")
         public ListInstancesResponseBodyInstancesOperatingTool operatingTool;
@@ -376,14 +374,10 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The region ID. Valid values:</p>
          * <ul>
-         * <li><p><code>cn-shenzhen</code>: China (Shenzhen)</p>
-         * </li>
-         * <li><p><code>cn-hangzhou</code>: China (Hangzhou)</p>
-         * </li>
-         * <li><p><code>cn-beijing</code>: China (Beijing)</p>
-         * </li>
-         * <li><p><code>cn-shanghai</code>: China (Shanghai)</p>
-         * </li>
+         * <li>cn-shenzhen: Shenzhen.</li>
+         * <li>cn-hangzhou: Hangzhou.</li>
+         * <li>cn-beijing: Beijing.</li>
+         * <li>cn-shanghai: Shanghai.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -395,12 +389,9 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li><p><code>Initializing</code>: The instance is initializing.</p>
-         * </li>
-         * <li><p><code>Stopped</code>: The instance is stopped.</p>
-         * </li>
-         * <li><p><code>Running</code>: The instance is running.</p>
-         * </li>
+         * <li>Initializing: Initializing.</li>
+         * <li>Stopped: Stopped.</li>
+         * <li>Running: Running.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -412,14 +403,10 @@ public class ListInstancesResponseBody extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><p><code>basic</code>: Basic Edition</p>
-         * </li>
-         * <li><p><code>high-level</code>: High-level Edition</p>
-         * </li>
-         * <li><p><code>advanced</code>: Advanced Edition</p>
-         * </li>
-         * <li><p><code>standard</code>: Standard Edition</p>
-         * </li>
+         * <li>basic: Basic Edition.</li>
+         * <li>highleve: Upgraded Edition.</li>
+         * <li>advance: Advanced Edition.</li>
+         * <li>standard: Standard Edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -15,9 +15,9 @@ public class PublishRecallManagementTableRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p><strong>The synchronization mode.</strong> Valid values:</p>
+     * <p><strong>The enumeration value for the table synchronization mode</strong>:</p>
      * <ul>
-     * <li><code>Merge</code>: Adds new data and updates existing data.</li>
+     * <li><code>Merge</code>: Merge.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,25 +27,34 @@ public class PublishRecallManagementTableRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The table partitions to publish.</p>
+     * <p>The partition of the table to be published.</p>
      */
     @NameInMap("Partition")
     public java.util.Map<String, String> partition;
 
     /**
-     * <p>The table partitions to publish.</p>
+     * <p>The partition of the table to be published.</p>
      */
     @NameInMap("Partitions")
     public java.util.Map<String, String> partitions;
 
     /**
-     * <p><strong>Specifies whether to skip the threshold check during table synchronization.</strong></p>
+     * <p><strong>Specifies whether to skip the threshold check when synchronizing the table.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
      */
     @NameInMap("SkipThresholdCheck")
     public Boolean skipThresholdCheck;
+
+    /**
+     * <p>The start time of incremental data playback (UNIX milliseconds).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1792512000000</p>
+     */
+    @NameInMap("StartTimestampMs")
+    public Long startTimestampMs;
 
     public static PublishRecallManagementTableRequest build(java.util.Map<String, ?> map) throws Exception {
         PublishRecallManagementTableRequest self = new PublishRecallManagementTableRequest();
@@ -90,6 +99,14 @@ public class PublishRecallManagementTableRequest extends TeaModel {
     }
     public Boolean getSkipThresholdCheck() {
         return this.skipThresholdCheck;
+    }
+
+    public PublishRecallManagementTableRequest setStartTimestampMs(Long startTimestampMs) {
+        this.startTimestampMs = startTimestampMs;
+        return this;
+    }
+    public Long getStartTimestampMs() {
+        return this.startTimestampMs;
     }
 
 }

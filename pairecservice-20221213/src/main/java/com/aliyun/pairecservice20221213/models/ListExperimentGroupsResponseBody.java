@@ -11,7 +11,7 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
     public java.util.List<ListExperimentGroupsResponseBodyExperimentGroups> experimentGroups;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>59CE7EC6-F268-5D71-9215-32922CC50D72</p>
@@ -20,7 +20,7 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of elements in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
 
     public static class ListExperimentGroupsResponseBodyExperimentGroups extends TeaModel {
         /**
-         * <p>The configuration for the experiment group, in JSON format.</p>
+         * <p>The experiment group configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -77,16 +77,12 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String crowdId;
 
         /**
-         * <p>The traffic targeting method for the experiment group. Valid values:</p>
+         * <p>The traffic targeting type of the experiment group. Valid values:</p>
          * <ul>
-         * <li><p><code>All</code>: All traffic.</p>
-         * </li>
-         * <li><p><code>Filter</code>: Traffic that matches the filter.</p>
-         * </li>
-         * <li><p><code>CrowdId</code>: Traffic from a specified crowd.</p>
-         * </li>
-         * <li><p><code>Random</code>: A random percentage of traffic.</p>
-         * </li>
+         * <li>All: All traffic.</li>
+         * <li>Filter: Traffic that matches the filter condition.</li>
+         * <li>CrowdId: Traffic targeted by a specified crowd ID.</li>
+         * <li>Random: Traffic randomly selected by percentage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -105,7 +101,7 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String debugCrowdId;
 
         /**
-         * <p>The IDs of debug users, separated by commas.</p>
+         * <p>The debug users.</p>
          * 
          * <strong>example:</strong>
          * <p>1124512470******,1124512471******,1124512472******</p>
@@ -123,7 +119,7 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The distribution duration. This parameter is required only when <code>DistributionType</code> is <code>TimeDuration</code>.</p>
+         * <p>The distribution time period.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -132,7 +128,9 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public Integer distributionTimeDuration;
 
         /**
-         * <p>The traffic distribution method.<br>● <code>UserId</code>: by user ID<br>● <code>TimeDuration</code>: by time duration<br><br></p>
+         * <p>The traffic distribution method. Valid values:
+         * ● UserId: User ID.
+         * ● TimeDuration: Time period.</p>
          * 
          * <strong>example:</strong>
          * <p>UserId</p>
@@ -159,7 +157,7 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String filter;
 
         /**
-         * <p>If <code>CrowdTargetType</code> is set to <code>Random</code>, this parameter returns the comma-separated IDs of buckets allocated based on the <code>RandomFlow</code> value.</p>
+         * <p>When the traffic targeting type of the experiment group is Random, this field returns the specific bucket numbers assigned based on the RandomFlow value.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3,4</p>
@@ -195,7 +193,7 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Specifies whether to enable A/B testing for the experiment group.</p>
+         * <p>Specifies whether an AB experiment group is required.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -213,7 +211,7 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>If <code>CrowdTargetType</code> is set to <code>Random</code>, this parameter specifies the percentage of traffic (an integer from 0 to 100) randomly allocated to the experiment group.</p>
+         * <p>When the traffic targeting type of the experiment group is Random, this field specifies the percentage of random traffic matched to the experiment group. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -222,7 +220,7 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public Long randomFlow;
 
         /**
-         * <p>The IDs of reserved buckets, separated by commas.</p>
+         * <p>The reserved bucket numbers.</p>
          * 
          * <strong>example:</strong>
          * <p>1,2,3,4</p>
@@ -240,7 +238,10 @@ public class ListExperimentGroupsResponseBody extends TeaModel {
         public String sceneId;
 
         /**
-         * <p>The status of the experiment group. Valid values:<br>● <code>Offline</code>: The experiment group is inactive.<br>● <code>Online</code>: The experiment group is active.<br>● <code>Pushed</code>: The experiment group is fully rolled out.<br><br><br></p>
+         * <p>The experiment group status. Valid values:
+         * ● Offline: Not online.
+         * ● Online: Online.
+         * ● Pushed: Fully pushed.</p>
          * 
          * <strong>example:</strong>
          * <p>Offline</p>

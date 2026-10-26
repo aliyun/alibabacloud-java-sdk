@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListExperimentsRequest extends TeaModel {
     /**
-     * <p>The ID of the experiment group.</p>
+     * <p>The experiment group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -14,7 +14,7 @@ public class ListExperimentsRequest extends TeaModel {
     public String experimentGroupId;
 
     /**
-     * <p>The instance ID. You can call the ListInstances operation to obtain the ID.</p>
+     * <p>The instance ID. You can call ListInstances to retrieve the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListExperimentsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The filter parameter for quick search. All experiments that match the names or tags are returned.</p>
+     * <p>The filter parameter for quick search. Returns all experiments whose name or label matches the specified value.</p>
      * 
      * <strong>example:</strong>
      * <p>experiment_test1</p>
@@ -33,12 +33,10 @@ public class ListExperimentsRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The status of the experiment. Valid values:</p>
+     * <p>The status filter. Valid values:</p>
      * <ul>
-     * <li><p>Offline</p>
-     * </li>
-     * <li><p>Online</p>
-     * </li>
+     * <li>Offline: Not online.</li>
+     * <li>Online: Online.</li>
      * </ul>
      * 
      * <strong>example:</strong>

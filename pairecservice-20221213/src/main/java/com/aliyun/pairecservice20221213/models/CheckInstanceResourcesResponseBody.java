@@ -14,7 +14,7 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of resources.</p>
+     * <p>The list of resources.</p>
      */
     @NameInMap("Resources")
     public java.util.List<CheckInstanceResourcesResponseBodyResources> resources;
@@ -44,10 +44,8 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
         /**
          * <p>The access status. Valid values:</p>
          * <ul>
-         * <li><p>Success</p>
-         * </li>
-         * <li><p>Failure</p>
-         * </li>
+         * <li>Success</li>
+         * <li>Failure</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -59,38 +57,22 @@ public class CheckInstanceResourcesResponseBody extends TeaModel {
         /**
          * <p>The resource type. Valid values:</p>
          * <ul>
-         * <li><p>Hologres</p>
-         * </li>
-         * <li><p>EAS</p>
-         * </li>
-         * <li><p>BE</p>
-         * </li>
-         * <li><p>Rec</p>
-         * </li>
-         * <li><p>Platform</p>
-         * </li>
-         * <li><p>SLS</p>
-         * </li>
-         * <li><p>DataHub</p>
-         * </li>
-         * <li><p>Kafka</p>
-         * </li>
-         * <li><p>Flinkvvp</p>
-         * </li>
-         * <li><p>ACR</p>
-         * </li>
-         * <li><p>OSS</p>
-         * </li>
-         * <li><p>DataWorks</p>
-         * </li>
-         * <li><p>PAI</p>
-         * </li>
-         * <li><p>MaxCompute</p>
-         * </li>
-         * <li><p>GraphCompute</p>
-         * </li>
-         * <li><p>Redis</p>
-         * </li>
+         * <li>Hologres</li>
+         * <li>EAS</li>
+         * <li>BE</li>
+         * <li>Rec</li>
+         * <li>Platform</li>
+         * <li>SLS</li>
+         * <li>DataHub</li>
+         * <li>Kafka</li>
+         * <li>Flinkvvp</li>
+         * <li>ACR</li>
+         * <li>OSS</li>
+         * <li>DataWorks</li>
+         * <li>PAI</li>
+         * <li>MaxCompute</li>
+         * <li>GraphCompute</li>
+         * <li>Redis</li>
          * </ul>
          * 
          * <strong>example:</strong>

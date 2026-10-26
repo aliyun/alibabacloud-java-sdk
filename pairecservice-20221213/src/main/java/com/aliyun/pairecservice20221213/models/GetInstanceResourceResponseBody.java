@@ -7,12 +7,9 @@ public class GetInstanceResourceResponseBody extends TeaModel {
     /**
      * <p>The resource category. Valid values:</p>
      * <ul>
-     * <li><p>DataManagement</p>
-     * </li>
-     * <li><p>Engine</p>
-     * </li>
-     * <li><p>Monitor</p>
-     * </li>
+     * <li>DataManagement</li>
+     * <li>Engine</li>
+     * <li>Monitor</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +19,7 @@ public class GetInstanceResourceResponseBody extends TeaModel {
     public String category;
 
     /**
-     * <p>The resource configuration.</p>
+     * <p>The configuration information of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -31,7 +28,7 @@ public class GetInstanceResourceResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-10-13 17:34:52</p>
@@ -40,7 +37,7 @@ public class GetInstanceResourceResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The last modification time.</p>
+     * <p>The update time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-10-13 17:34:52</p>
@@ -50,38 +47,26 @@ public class GetInstanceResourceResponseBody extends TeaModel {
 
     /**
      * <p>The resource group.</p>
-     * <p>If <code>Category</code> is <code>DataManagement</code>, the valid values are:</p>
+     * <p>If the resource category is DataManagement, valid values are:</p>
      * <ul>
-     * <li><p>storage</p>
-     * </li>
-     * <li><p>modelpipeline</p>
-     * </li>
-     * <li><p>datastorage</p>
-     * </li>
-     * <li><p>modeltrain</p>
-     * </li>
+     * <li>storage</li>
+     * <li>modelpipeline</li>
+     * <li>datastorage</li>
+     * <li>modeltrain</li>
      * </ul>
-     * <p>If <code>Category</code> is <code>Engine</code>, the valid values are:</p>
+     * <p>If the resource category is Engine, valid values are:</p>
      * <ul>
-     * <li><p>feature</p>
-     * </li>
-     * <li><p>predict</p>
-     * </li>
-     * <li><p>recall</p>
-     * </li>
-     * <li><p>recengine</p>
-     * </li>
+     * <li>feature</li>
+     * <li>predict</li>
+     * <li>recall</li>
+     * <li>recengine</li>
      * </ul>
-     * <p>If <code>Category</code> is <code>Monitor</code>, the valid values are:</p>
+     * <p>If the resource category is Monitor, valid values are:</p>
      * <ul>
-     * <li><p>logs</p>
-     * </li>
-     * <li><p>logsback</p>
-     * </li>
-     * <li><p>coldstart</p>
-     * </li>
-     * <li><p>deploy</p>
-     * </li>
+     * <li>logs</li>
+     * <li>logsback</li>
+     * <li>coldstart</li>
+     * <li>deploy</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -91,7 +76,7 @@ public class GetInstanceResourceResponseBody extends TeaModel {
     public String group;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D75C43DC-3D3A-5CC8-9AAC-8C77306C433B</p>
@@ -100,7 +85,7 @@ public class GetInstanceResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The ID of the resource.</p>
      * 
      * <strong>example:</strong>
      * <p>reso-2s416t***</p>
@@ -111,38 +96,22 @@ public class GetInstanceResourceResponseBody extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><p>Hologres</p>
-     * </li>
-     * <li><p>EAS</p>
-     * </li>
-     * <li><p>BE</p>
-     * </li>
-     * <li><p>Rec</p>
-     * </li>
-     * <li><p>Platform</p>
-     * </li>
-     * <li><p>SLS</p>
-     * </li>
-     * <li><p>DataHub</p>
-     * </li>
-     * <li><p>ApsaraMQ for Kafka</p>
-     * </li>
-     * <li><p>Realtime Compute for Apache Flink</p>
-     * </li>
-     * <li><p>ACR</p>
-     * </li>
-     * <li><p>OSS</p>
-     * </li>
-     * <li><p>DataWorks</p>
-     * </li>
-     * <li><p>PAI</p>
-     * </li>
-     * <li><p>MaxCompute</p>
-     * </li>
-     * <li><p>Graph Compute Service</p>
-     * </li>
-     * <li><p>ApsaraDB for Redis</p>
-     * </li>
+     * <li>Hologres</li>
+     * <li>EAS</li>
+     * <li>BE</li>
+     * <li>Rec</li>
+     * <li>Platform</li>
+     * <li>SLS</li>
+     * <li>DataHub</li>
+     * <li>Kafka</li>
+     * <li>Flinkvvp</li>
+     * <li>ACR</li>
+     * <li>OSS</li>
+     * <li>DataWorks</li>
+     * <li>PAI</li>
+     * <li>MaxCompute</li>
+     * <li>GraphCompute</li>
+     * <li>Redis</li>
      * </ul>
      * 
      * <strong>example:</strong>

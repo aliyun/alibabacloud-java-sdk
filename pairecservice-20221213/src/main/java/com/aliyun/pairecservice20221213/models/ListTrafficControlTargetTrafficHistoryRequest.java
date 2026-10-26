@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     /**
-     * <p>The end of the time range.</p>
+     * <p>The end time. The format is YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-10 13:13:20</p>
@@ -14,7 +14,7 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The target environment. Valid values: Daily, Pre, and Prod.</p>
+     * <p>The environment to which the parameter belongs. Valid values: Daily: daily environment. Pre: staging environment. Prod: production environment.</p>
      * 
      * <strong>example:</strong>
      * <p>Pre</p>
@@ -41,7 +41,7 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     public String experimentId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-1324***</p>
@@ -59,7 +59,7 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     public String itemId;
 
     /**
-     * <p>The start of the time range.</p>
+     * <p>The start time. The format is YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-01 13:13:20</p>
@@ -68,7 +68,7 @@ public class ListTrafficControlTargetTrafficHistoryRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The threshold value.</p>
+     * <p>The threshold.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

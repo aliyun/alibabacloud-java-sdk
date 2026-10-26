@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetRecallManagementServiceVersionConfigResponseBody extends TeaModel {
     /**
-     * <p>The configuration type. Valid values: Recall (recall configuration) and Merge (merge configuration).</p>
+     * <p>The recall management version configuration type. Valid values:</p>
+     * <ul>
+     * <li>Recall: recall configuration.</li>
+     * <li>Merge: merge configuration.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Recall</p>
@@ -14,7 +18,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
     public String configType;
 
     /**
-     * <p>The creation time, in ISO 8601 format.</p>
+     * <p>The creation time in ISO 8601 format, including the time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -23,7 +27,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
     public String gmtCreateTime;
 
     /**
-     * <p>The last modification time, in ISO 8601 format.</p>
+     * <p>The update time in ISO 8601 format, including the time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -71,7 +75,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
     public String recallManagementServiceVersionId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>728C5E01-ABF6-5AA8-B9FC-B3BA05DECC77</p>
@@ -158,7 +162,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
 
     public static class GetRecallManagementServiceVersionConfigResponseBodyMergeConfig extends TeaModel {
         /**
-         * <p>Additional configuration for the merge operation, reserved for future enhancements.</p>
+         * <p>The additional merge configuration for future feature extensions.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;&quot;:&quot;&quot;}</p>
@@ -176,7 +180,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         public String filterExpression;
 
         /**
-         * <p>A list of filter table IDs.</p>
+         * <p>The filter table IDs.</p>
          */
         @NameInMap("FilterRecallManagementTableIds")
         public java.util.List<String> filterRecallManagementTableIds;
@@ -191,7 +195,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         public String itemRecallManagementTableId;
 
         /**
-         * <p>A list of output fields from the item table.</p>
+         * <p>The item table output fields.</p>
          */
         @NameInMap("ItemTableFields")
         public java.util.List<String> itemTableFields;
@@ -199,10 +203,8 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         /**
          * <p>The merge type. Valid values:</p>
          * <ul>
-         * <li><p>Weight: Merges items based on assigned weights.</p>
-         * </li>
-         * <li><p>Alternate: Merges items in an alternating sequence.</p>
-         * </li>
+         * <li>Weight: weight.</li>
+         * <li>Alternate: alternate.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -378,7 +380,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         public String field;
 
         /**
-         * <p>The output fields.</p>
+         * <p>The list of returned fields.</p>
          */
         @NameInMap("OutputFields")
         public java.util.List<String> outputFields;
@@ -443,7 +445,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         public Integer fieldQuantityLimit;
 
         /**
-         * <p>Indicates whether to randomly sort the items.</p>
+         * <p>Specifies whether random sorting is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -452,7 +454,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         public Boolean isRandSort;
 
         /**
-         * <p>The sort field.</p>
+         * <p>The sort fields.</p>
          * 
          * <strong>example:</strong>
          * <p>create_time</p>
@@ -501,19 +503,19 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
 
     public static class GetRecallManagementServiceVersionConfigResponseBodyRecallConfigOperators extends TeaModel {
         /**
-         * <p>The configuration for the feature operator.</p>
+         * <p>The configuration of the Feature operator.</p>
          */
         @NameInMap("FeatureConfig")
         public GetRecallManagementServiceVersionConfigResponseBodyRecallConfigOperatorsFeatureConfig featureConfig;
 
         /**
-         * <p>The configuration for the filter operator.</p>
+         * <p>The configuration of the Filter operator.</p>
          */
         @NameInMap("FilterConfig")
         public GetRecallManagementServiceVersionConfigResponseBodyRecallConfigOperatorsFilterConfig filterConfig;
 
         /**
-         * <p>The configuration for the Join operator.</p>
+         * <p>The configuration of the Join operator.</p>
          */
         @NameInMap("JoinConfig")
         public GetRecallManagementServiceVersionConfigResponseBodyRecallConfigOperatorsJoinConfig joinConfig;
@@ -528,7 +530,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         public String operatorType;
 
         /**
-         * <p>The configuration for the Trigger operator.</p>
+         * <p>The configuration of the Trigger operator.</p>
          */
         @NameInMap("TriggerConfig")
         public GetRecallManagementServiceVersionConfigResponseBodyRecallConfigOperatorsTriggerConfig triggerConfig;
@@ -591,7 +593,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         public String description;
 
         /**
-         * <p>Extended configuration, reserved for future use.</p>
+         * <p>The additional configuration for future feature extensions.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;&quot;:&quot;&quot;}</p>
@@ -600,7 +602,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         public String extendedConfig;
 
         /**
-         * <p>The item conditions, as a JSON array string.</p>
+         * <p>The item conditions in array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;option&quot;:&quot;&lt;&quot;,&quot;field&quot;:&quot;category&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;value&quot;:&quot;10&quot;}]</p>
@@ -609,7 +611,7 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         public String itemConditionArray;
 
         /**
-         * <p>The item condition expression.</p>
+         * <p>The item conditional expression.</p>
          * 
          * <strong>example:</strong>
          * <p>age&gt;20</p>
@@ -645,13 +647,13 @@ public class GetRecallManagementServiceVersionConfigResponseBody extends TeaMode
         public String name;
 
         /**
-         * <p>A list of operators.</p>
+         * <p>The list of operators.</p>
          */
         @NameInMap("Operators")
         public java.util.List<GetRecallManagementServiceVersionConfigResponseBodyRecallConfigOperators> operators;
 
         /**
-         * <p>The priority. A lower value indicates a higher priority.</p>
+         * <p>The priority. A smaller number indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

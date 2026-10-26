@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDataDiagnosisJobsResponseBody extends TeaModel {
     /**
-     * <p>A list of data diagnosis job IDs.</p>
+     * <p>The list of data modeling diagnostics node IDs.</p>
      */
     @NameInMap("DataDiagnosisJobIds")
     public java.util.List<String> dataDiagnosisJobIds;

@@ -14,7 +14,7 @@ public class QueryDataDiagnosisStatisticsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The statistics for the data diagnosis task.</p>
+     * <p>The list of data diagnostic nodes.</p>
      */
     @NameInMap("Statistics")
     public QueryDataDiagnosisStatisticsResponseBodyStatistics statistics;
@@ -42,13 +42,13 @@ public class QueryDataDiagnosisStatisticsResponseBody extends TeaModel {
 
     public static class QueryDataDiagnosisStatisticsResponseBodyStatistics extends TeaModel {
         /**
-         * <p>The dates of task failures.</p>
+         * <p>The list of dates when tasks failed.</p>
          */
         @NameInMap("FailedDates")
         public java.util.List<String> failedDates;
 
         /**
-         * <p>The dates with missing task data.</p>
+         * <p>The list of dates with missing tasks.</p>
          */
         @NameInMap("NoDataDates")
         public java.util.List<String> noDataDates;

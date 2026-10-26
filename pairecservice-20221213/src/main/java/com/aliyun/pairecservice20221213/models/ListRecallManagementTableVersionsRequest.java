@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRecallManagementTableVersionsRequest extends TeaModel {
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,11 @@ public class ListRecallManagementTableVersionsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The sort order. Valid values: <code>ASC</code> (ascending order) and <code>DESC</code> (descending order).</p>
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><code>ASC</code>: ascending order</li>
+     * <li><code>DESC</code>: descending order</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ASC</p>
@@ -42,7 +46,11 @@ public class ListRecallManagementTableVersionsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The field to sort by. Valid values: <code>GmtCreateTime</code> (creation time) and <code>GmtModifiedTime</code> (update time).</p>
+     * <p>The sort criterion. Valid values:</p>
+     * <ul>
+     * <li><code>GmtCreateTime</code>: creation time</li>
+     * <li><code>GmtModifiedTime</code>: update time</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>

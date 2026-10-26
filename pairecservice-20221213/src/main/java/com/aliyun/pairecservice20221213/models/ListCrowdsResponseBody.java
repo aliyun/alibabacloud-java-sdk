@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCrowdsResponseBody extends TeaModel {
     /**
-     * <p>The list of Crowds.</p>
+     * <p>The list of crowds.</p>
      */
     @NameInMap("Crowds")
     public java.util.List<ListCrowdsResponseBodyCrowds> crowds;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>9763624B-5FBB-5E3A-9193-B1ADB554CEAE</p>
@@ -20,7 +20,7 @@ public class ListCrowdsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of Crowds.</p>
+     * <p>The total number of elements in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class ListCrowdsResponseBody extends TeaModel {
 
     public static class ListCrowdsResponseBodyCrowds extends TeaModel {
         /**
-         * <p>The Crowd ID.</p>
+         * <p>The ID of the crowd.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -68,7 +68,7 @@ public class ListCrowdsResponseBody extends TeaModel {
         public String crowdId;
 
         /**
-         * <p>The Crowd description.</p>
+         * <p>The description of the crowd.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a test.</p>
@@ -77,7 +77,7 @@ public class ListCrowdsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the Crowd was created.</p>
+         * <p>The time when the crowd was created. The time is in ISO 8601 format and includes the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -86,7 +86,7 @@ public class ListCrowdsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The label of the Crowd.</p>
+         * <p>The label of the crowd.</p>
          * 
          * <strong>example:</strong>
          * <p>os=android</p>
@@ -95,7 +95,7 @@ public class ListCrowdsResponseBody extends TeaModel {
         public String label;
 
         /**
-         * <p>The Crowd name.</p>
+         * <p>The name of the crowd.</p>
          * 
          * <strong>example:</strong>
          * <p>crowd1</p>
@@ -104,7 +104,7 @@ public class ListCrowdsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The number of users in the Crowd.</p>
+         * <p>The quantity.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -113,12 +113,10 @@ public class ListCrowdsResponseBody extends TeaModel {
         public String quantity;
 
         /**
-         * <p>The source of the Crowd. Valid values:</p>
+         * <p>The source of the crowd.</p>
          * <ul>
-         * <li><p><code>ManualInput</code>: The Crowd is created from a manual entry of users.</p>
-         * </li>
-         * <li><p><code>UploadFile</code>: The Crowd is created from an uploaded file.</p>
-         * </li>
+         * <li>ManualInput: Manual input</li>
+         * <li>UploadFile: File upload</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -128,7 +126,7 @@ public class ListCrowdsResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The user IDs in the Crowd, separated by commas.</p>
+         * <p>The users included in the crowd. Multiple users are separated by commas.</p>
          * 
          * <strong>example:</strong>
          * <p>user1,user2</p>

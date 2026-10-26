@@ -75,7 +75,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs data backflow for the latest job of a specified feature consistency check job configuration.</p>
+     * <p>Performs data backflow for the most recently created task under the specified feature consistency check job configuration.</p>
      * 
      * @param request BackflowFeatureConsistencyCheckJobDataRequest
      * @param headers map
@@ -149,7 +149,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs data backflow for the latest job of a specified feature consistency check job configuration.</p>
+     * <p>Performs data backflow for the most recently created task under the specified feature consistency check job configuration.</p>
      * 
      * @param request BackflowFeatureConsistencyCheckJobDataRequest
      * @return BackflowFeatureConsistencyCheckJobDataResponse
@@ -233,16 +233,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Call this API operation to send a conversation message to an agent. Server-Sent Events (SSE) is supported.</li>
-     * <li>If the <code>ConversationId</code> parameter is specified, the conversation continues in the context of the specified existing session. If this parameter is not specified, automatic creation of a new session is performed.</li>
-     * <li>The <code>Config</code> field allows you to pass additional information input. The value must be in JSON format.</li>
-     * <li>If the request succeeds, the response includes the message ID, reply content, and other information for this conversation. If a fault occurs, the corresponding error code and error message are returned.</li>
+     * <li>This API sends a conversation message to an agent and supports Server-Sent Events (SSE).</li>
+     * <li>If the ConversationId parameter is provided, the conversation continues in the context of the specified existing session. If this parameter is not provided, automatic creation of a new session is triggered.</li>
+     * <li>The Config field allows you to pass additional information input, which must be in JSON format.</li>
+     * <li>If the request is successful, the response includes the message ID and reply content of the current conversation. If a fault occurs, the corresponding error code and error message are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues a conversation in an existing session.</p>
+     * <p>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues an existing session.</p>
      * 
      * @param request ChatConversationRequest
      * @param headers map
@@ -288,16 +288,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Call this API operation to send a conversation message to an agent. Server-Sent Events (SSE) is supported.</li>
-     * <li>If the <code>ConversationId</code> parameter is specified, the conversation continues in the context of the specified existing session. If this parameter is not specified, automatic creation of a new session is performed.</li>
-     * <li>The <code>Config</code> field allows you to pass additional information input. The value must be in JSON format.</li>
-     * <li>If the request succeeds, the response includes the message ID, reply content, and other information for this conversation. If a fault occurs, the corresponding error code and error message are returned.</li>
+     * <li>This API sends a conversation message to an agent and supports Server-Sent Events (SSE).</li>
+     * <li>If the ConversationId parameter is provided, the conversation continues in the context of the specified existing session. If this parameter is not provided, automatic creation of a new session is triggered.</li>
+     * <li>The Config field allows you to pass additional information input, which must be in JSON format.</li>
+     * <li>If the request is successful, the response includes the message ID and reply content of the current conversation. If a fault occurs, the corresponding error code and error message are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues a conversation in an existing session.</p>
+     * <p>Sends a conversation message to an agent. Supports Server-Sent Events (SSE). Creates a new session or continues an existing session.</p>
      * 
      * @param request ChatConversationRequest
      * @return ChatConversationResponse
@@ -310,7 +310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies access to resources configured for an instance.</p>
+     * <p>Checks the connection status of the resources configured for an instance.</p>
      * 
      * @param request CheckInstanceResourcesRequest
      * @param headers map
@@ -352,7 +352,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Verifies access to resources configured for an instance.</p>
+     * <p>Checks the connection status of the resources configured for an instance.</p>
      * 
      * @param request CheckInstanceResourcesRequest
      * @return CheckInstanceResourcesResponse
@@ -981,7 +981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates multiple calculation jobs.</p>
+     * <p>Creates compute tasks in batches.</p>
      * 
      * @param request CreateCalculationJobsRequest
      * @param headers map
@@ -1027,7 +1027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates multiple calculation jobs.</p>
+     * <p>Creates compute tasks in batches.</p>
      * 
      * @param request CreateCalculationJobsRequest
      * @return CreateCalculationJobsResponse
@@ -1107,16 +1107,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API creates a data diagnosis task. It supports various analysis types, including item or user change rate analysis, user preference statistics cycle analysis, two-table join analysis, basic statistical analysis, and abnormal behavior analysis.</li>
-     * <li>The content of the <code>Config</code> parameter depends on the value of the <code>Type</code> parameter. For more information, see the example configurations in this topic.</li>
-     * <li>To run the task on a schedule, specify the <code>CycleTime</code> parameter. If this parameter is omitted, the task runs only once.</li>
-     * <li>The optional <code>TopNQuantity</code> parameter specifies the number of top results to return.</li>
+     * <li>This API creates data diagnostic tasks and supports multiple analysis types, including item/user change rate analysis, user preference statistical period analysis, join table analysis, basic statistics analysis, and abnormal behavior analysis.</li>
+     * <li>The content of the Config field varies depending on the Type value. Set this field correctly by referring to the sample configurations in the References.</li>
+     * <li>To execute the diagnostic task periodically, set the CycleTime field. If this field is not set, the diagnostic task does not execute periodically.</li>
+     * <li>The TopNQuantity field specifies the number of top N results to display. This field is default optional.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data diagnosis task. This API supports various analysis types.</p>
+     * <p>Creates data modeling diagnostic tasks of different types and supports multiple analysis types.</p>
      * 
      * @param request CreateDataDiagnosisRequest
      * @param headers map
@@ -1194,16 +1194,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API creates a data diagnosis task. It supports various analysis types, including item or user change rate analysis, user preference statistics cycle analysis, two-table join analysis, basic statistical analysis, and abnormal behavior analysis.</li>
-     * <li>The content of the <code>Config</code> parameter depends on the value of the <code>Type</code> parameter. For more information, see the example configurations in this topic.</li>
-     * <li>To run the task on a schedule, specify the <code>CycleTime</code> parameter. If this parameter is omitted, the task runs only once.</li>
-     * <li>The optional <code>TopNQuantity</code> parameter specifies the number of top results to return.</li>
+     * <li>This API creates data diagnostic tasks and supports multiple analysis types, including item/user change rate analysis, user preference statistical period analysis, join table analysis, basic statistics analysis, and abnormal behavior analysis.</li>
+     * <li>The content of the Config field varies depending on the Type value. Set this field correctly by referring to the sample configurations in the References.</li>
+     * <li>To execute the diagnostic task periodically, set the CycleTime field. If this field is not set, the diagnostic task does not execute periodically.</li>
+     * <li>The TopNQuantity field specifies the number of top N results to display. This field is default optional.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data diagnosis task. This API supports various analysis types.</p>
+     * <p>Creates data modeling diagnostic tasks of different types and supports multiple analysis types.</p>
      * 
      * @param request CreateDataDiagnosisRequest
      * @return CreateDataDiagnosisResponse
@@ -1216,11 +1216,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation creates a data diagnosis (rerun) job for a specific instance within a specified time frame. To ensure the job runs correctly, provide accurate values for the <code>DataDiagnosisId</code>, <code>InstanceId</code>, <code>StartDate</code>, and <code>EndDate</code> parameters.</p>
+     * <h2>Request description</h2>
+     * <p>By invoking this API, you can start a new data modeling diagnostics node for a specific instance within a given time range. Make sure the values of the <code>DataDiagnosisId</code>, <code>InstanceId</code>, <code>StartDate</code>, and <code>EndDate</code> parameters are accurate to ensure the node executes correctly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data diagnosis (rerun) job for a specified time period.</p>
+     * <p>Creates a data modeling diagnostics (rerun) task for a specified time range.</p>
      * 
      * @param request CreateDataDiagnosisJobsRequest
      * @param headers map
@@ -1266,11 +1266,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation creates a data diagnosis (rerun) job for a specific instance within a specified time frame. To ensure the job runs correctly, provide accurate values for the <code>DataDiagnosisId</code>, <code>InstanceId</code>, <code>StartDate</code>, and <code>EndDate</code> parameters.</p>
+     * <h2>Request description</h2>
+     * <p>By invoking this API, you can start a new data modeling diagnostics node for a specific instance within a given time range. Make sure the values of the <code>DataDiagnosisId</code>, <code>InstanceId</code>, <code>StartDate</code>, and <code>EndDate</code> parameters are accurate to ensure the node executes correctly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a data diagnosis (rerun) job for a specified time period.</p>
+     * <p>Creates a data modeling diagnostics (rerun) task for a specified time range.</p>
      * 
      * @param request CreateDataDiagnosisJobsRequest
      * @return CreateDataDiagnosisJobsResponse
@@ -2949,16 +2949,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request notes</h2>
      * <ul>
-     * <li>The <code>ItemConditionType</code> parameter supports two formats: array format (Array) and expression format (Expression). Based on the format you select, you must provide either <code>ItemConditionArray</code> or <code>ItemConditionExpress</code>.</li>
-     * <li>The <code>StatisPeriod</code> parameter defaults to daily. For hourly statistics, you must set this parameter explicitly.</li>
-     * <li>The <code>ToleranceValue</code> and <code>NewProductRegulation</code> parameters are optional.</li>
-     * <li>The <code>Status</code> parameter controls whether a new traffic control target takes effect immediately. By default, new targets are inactive.</li>
+     * <li><code>ItemConditionType</code> supports two formats: array format (Array) and expression format (Expression). Depending on your selection, you must provide the corresponding <code>ItemConditionArray</code> or <code>ItemConditionExpress</code>.</li>
+     * <li>The default value of <code>StatisPeriod</code> is daily. If you require hourly statistics, explicitly specify this parameter.</li>
+     * <li><code>ToleranceValue</code> and <code>NewProductRegulation</code> are optional parameters. Specify them only when you have specific requirements.</li>
+     * <li>The <code>Status</code> field allows you to control whether the newly created traffic control target takes effect immediately. By default, it may be in the disabled state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new traffic control target and sets its parameters, such as the item condition, event, and value.</p>
+     * <p>Creates a traffic control target and configures parameters such as control conditions, events, and target values.</p>
      * 
      * @param request CreateTrafficControlTargetRequest
      * @param headers map
@@ -3044,16 +3044,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request notes</h2>
      * <ul>
-     * <li>The <code>ItemConditionType</code> parameter supports two formats: array format (Array) and expression format (Expression). Based on the format you select, you must provide either <code>ItemConditionArray</code> or <code>ItemConditionExpress</code>.</li>
-     * <li>The <code>StatisPeriod</code> parameter defaults to daily. For hourly statistics, you must set this parameter explicitly.</li>
-     * <li>The <code>ToleranceValue</code> and <code>NewProductRegulation</code> parameters are optional.</li>
-     * <li>The <code>Status</code> parameter controls whether a new traffic control target takes effect immediately. By default, new targets are inactive.</li>
+     * <li><code>ItemConditionType</code> supports two formats: array format (Array) and expression format (Expression). Depending on your selection, you must provide the corresponding <code>ItemConditionArray</code> or <code>ItemConditionExpress</code>.</li>
+     * <li>The default value of <code>StatisPeriod</code> is daily. If you require hourly statistics, explicitly specify this parameter.</li>
+     * <li><code>ToleranceValue</code> and <code>NewProductRegulation</code> are optional parameters. Specify them only when you have specific requirements.</li>
+     * <li>The <code>Status</code> field allows you to control whether the newly created traffic control target takes effect immediately. By default, it may be in the disabled state.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new traffic control target and sets its parameters, such as the item condition, event, and value.</p>
+     * <p>Creates a traffic control target and configures parameters such as control conditions, events, and target values.</p>
      * 
      * @param request CreateTrafficControlTargetRequest
      * @return CreateTrafficControlTargetResponse
@@ -3066,18 +3066,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use this API to create a new traffic control task. You can define a traffic control policy for different scenarios, time ranges, and conditions for users or items.</li>
-     * <li>The <code>ExecutionTime</code> parameter specifies the execution time mode for the task. If you select the <code>TimeRange</code> mode, you must provide both the <code>StartTime</code> and <code>EndTime</code> parameters.</li>
-     * <li>The <code>TrafficControlTargets</code> parameter is required. For each traffic control target, you must specify its name, time range, event type, and expected value.</li>
-     * <li>You can use the <code>UserConditionType</code> and <code>ItemConditionType</code> parameters to define conditions for the target user group and items.</li>
-     * <li>Set the <code>ControlLogic</code> parameter to <code>Guaranteed</code> for guaranteed control or to <code>Approach</code> for approach control.</li>
-     * <li>To configure new product regulation, use the <code>NewProductRegulation</code> field.</li>
+     * <li>This API operation creates a traffic control task. You can define traffic control policies based on different scenarios, time ranges, and specific user or item conditions.</li>
+     * <li>The <code>ExecutionTime</code> parameter specifies the time mode for task execution. If you select the <code>TimeRange</code> mode, you must specify both <code>StartTime</code> and <code>EndTime</code>.</li>
+     * <li>The traffic control target list (<code>TrafficControlTargets</code>) is required. For each target, you must specify its name, time range, event type, and expected value.</li>
+     * <li>You can use <code>UserConditionType</code> and <code>ItemConditionType</code> to flexibly set specific conditions for the target users and items. Both array and expression formats are supported.</li>
+     * <li>The <code>ControlLogic</code> parameter can be set to <code>Guaranteed</code> or <code>Approach</code>, which indicates guaranteed traffic control or approximate traffic control, respectively.</li>
+     * <li>When you configure new product regulation, make sure that the <code>NewProductRegulation</code> field is correctly specified.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new traffic control task with multiple conditions and target configurations.</p>
+     * <p>Creates a traffic control task with various condition settings and target configurations.</p>
      * 
      * @param request CreateTrafficControlTaskRequest
      * @param headers map
@@ -3223,18 +3223,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use this API to create a new traffic control task. You can define a traffic control policy for different scenarios, time ranges, and conditions for users or items.</li>
-     * <li>The <code>ExecutionTime</code> parameter specifies the execution time mode for the task. If you select the <code>TimeRange</code> mode, you must provide both the <code>StartTime</code> and <code>EndTime</code> parameters.</li>
-     * <li>The <code>TrafficControlTargets</code> parameter is required. For each traffic control target, you must specify its name, time range, event type, and expected value.</li>
-     * <li>You can use the <code>UserConditionType</code> and <code>ItemConditionType</code> parameters to define conditions for the target user group and items.</li>
-     * <li>Set the <code>ControlLogic</code> parameter to <code>Guaranteed</code> for guaranteed control or to <code>Approach</code> for approach control.</li>
-     * <li>To configure new product regulation, use the <code>NewProductRegulation</code> field.</li>
+     * <li>This API operation creates a traffic control task. You can define traffic control policies based on different scenarios, time ranges, and specific user or item conditions.</li>
+     * <li>The <code>ExecutionTime</code> parameter specifies the time mode for task execution. If you select the <code>TimeRange</code> mode, you must specify both <code>StartTime</code> and <code>EndTime</code>.</li>
+     * <li>The traffic control target list (<code>TrafficControlTargets</code>) is required. For each target, you must specify its name, time range, event type, and expected value.</li>
+     * <li>You can use <code>UserConditionType</code> and <code>ItemConditionType</code> to flexibly set specific conditions for the target users and items. Both array and expression formats are supported.</li>
+     * <li>The <code>ControlLogic</code> parameter can be set to <code>Guaranteed</code> or <code>Approach</code>, which indicates guaranteed traffic control or approximate traffic control, respectively.</li>
+     * <li>When you configure new product regulation, make sure that the <code>NewProductRegulation</code> field is correctly specified.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a new traffic control task with multiple conditions and target configurations.</p>
+     * <p>Creates a traffic control task with various condition settings and target configurations.</p>
      * 
      * @param request CreateTrafficControlTaskRequest
      * @return CreateTrafficControlTaskResponse
@@ -4812,7 +4812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of an A/B metric.</p>
+     * <p>Retrieves the details of an ABTest metric.</p>
      * 
      * @param request GetABMetricRequest
      * @param headers map
@@ -4846,7 +4846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of an A/B metric.</p>
+     * <p>Retrieves the details of an ABTest metric.</p>
      * 
      * @param request GetABMetricRequest
      * @return GetABMetricResponse
@@ -4906,7 +4906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a specified calculation job.</p>
+     * <p>Retrieves the details of a specified compute task.</p>
      * 
      * @param request GetCalculationJobRequest
      * @param headers map
@@ -4940,7 +4940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a specified calculation job.</p>
+     * <p>Retrieves the details of a specified compute task.</p>
      * 
      * @param request GetCalculationJobRequest
      * @return GetCalculationJobResponse
@@ -4953,16 +4953,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves the details of a specific data diagnosis task using the provided <code>DataDiagnosisId</code> (data diagnosis task configuration ID) and <code>InstanceId</code> (instance ID).</li>
-     * <li>The <code>CycleTime</code> field specifies the time for periodic execution. If this field is empty, the task does not execute periodically.</li>
-     * <li>The value of <code>Type</code> determines the content of the <code>Config</code> field. For details about the required configuration for each type, see the relevant documentation.</li>
-     * <li><code>GmtCreateTime</code> and <code>GmtModifiedTime</code> are timestamps for the record\&quot;s creation and modification times, respectively.</li>
+     * <li>This API retrieves detailed information about a specific diagnostic node based on the provided <code>DataDiagnosisId</code> (diagnostic node configuration ID) and <code>InstanceId</code> (instance ID).</li>
+     * <li>The <code>CycleTime</code> field indicates the epoch runtime. If this field is empty, no scheduled runs are performed.</li>
+     * <li>The content of the <code>Config</code> field varies depending on the <code>Type</code> value. Refer to the References for the specific configuration items required for each type.</li>
+     * <li><code>GmtCreateTime</code> and <code>GmtModifiedTime</code> represent the UNIX timestamps for when the record was created and last modified, respectively.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves details of a data diagnosis task using its data diagnosis task ID and instance ID.</p>
+     * <p>Retrieves detailed data modeling diagnostics information by diagnostic node ID and instance ID.</p>
      * 
      * @param request GetDataDiagnosisRequest
      * @param headers map
@@ -4996,16 +4996,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves the details of a specific data diagnosis task using the provided <code>DataDiagnosisId</code> (data diagnosis task configuration ID) and <code>InstanceId</code> (instance ID).</li>
-     * <li>The <code>CycleTime</code> field specifies the time for periodic execution. If this field is empty, the task does not execute periodically.</li>
-     * <li>The value of <code>Type</code> determines the content of the <code>Config</code> field. For details about the required configuration for each type, see the relevant documentation.</li>
-     * <li><code>GmtCreateTime</code> and <code>GmtModifiedTime</code> are timestamps for the record\&quot;s creation and modification times, respectively.</li>
+     * <li>This API retrieves detailed information about a specific diagnostic node based on the provided <code>DataDiagnosisId</code> (diagnostic node configuration ID) and <code>InstanceId</code> (instance ID).</li>
+     * <li>The <code>CycleTime</code> field indicates the epoch runtime. If this field is empty, no scheduled runs are performed.</li>
+     * <li>The content of the <code>Config</code> field varies depending on the <code>Type</code> value. Refer to the References for the specific configuration items required for each type.</li>
+     * <li><code>GmtCreateTime</code> and <code>GmtModifiedTime</code> represent the UNIX timestamps for when the record was created and last modified, respectively.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves details of a data diagnosis task using its data diagnosis task ID and instance ID.</p>
+     * <p>Retrieves detailed data modeling diagnostics information by diagnostic node ID and instance ID.</p>
      * 
      * @param request GetDataDiagnosisRequest
      * @return GetDataDiagnosisResponse
@@ -5159,7 +5159,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a feature consistency check job.</p>
+     * <p>Retrieves the details of a feature consistency check task.</p>
      * 
      * @param request GetFeatureConsistencyCheckJobRequest
      * @param headers map
@@ -5193,7 +5193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets the details of a feature consistency check job.</p>
+     * <p>Retrieves the details of a feature consistency check task.</p>
      * 
      * @param request GetFeatureConsistencyCheckJobRequest
      * @return GetFeatureConsistencyCheckJobResponse
@@ -5206,7 +5206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the configuration details of a feature consistency check task.</p>
+     * <p>Retrieves the configuration details of a feature consistency check job.</p>
      * 
      * @param request GetFeatureConsistencyCheckJobConfigRequest
      * @param headers map
@@ -5240,7 +5240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the configuration details of a feature consistency check task.</p>
+     * <p>Retrieves the configuration details of a feature consistency check job.</p>
      * 
      * @param request GetFeatureConsistencyCheckJobConfigRequest
      * @return GetFeatureConsistencyCheckJobConfigResponse
@@ -5253,7 +5253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified PAIRec instance.</p>
+     * <p>Queries the details of a specified PAIRec instance.</p>
      * 
      * @param request GetInstanceRequest
      * @param headers map
@@ -5281,7 +5281,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified PAIRec instance.</p>
+     * <p>Queries the details of a specified PAIRec instance.</p>
      * 
      * @param request GetInstanceRequest
      * @return GetInstanceResponse
@@ -5294,7 +5294,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific resource in a specified instance.</p>
+     * <p>Retrieves the details of a specified resource in a specified instance.</p>
      * 
      * @param request GetInstanceResourceRequest
      * @param headers map
@@ -5322,7 +5322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific resource in a specified instance.</p>
+     * <p>Retrieves the details of a specified resource in a specified instance.</p>
      * 
      * @param request GetInstanceResourceRequest
      * @return GetInstanceResourceResponse
@@ -5517,11 +5517,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>Retrieves the details of a specific recall management job using its <code>RecallManagementJobId</code> and <code>InstanceId</code>. The response includes the job\&quot;s status (such as Init, Running, Success, or Failed), start and end times, related table information, and operation log. To make a request, specify the <code>RecallManagementJobId</code> as a path parameter and the <code>InstanceId</code> as a query parameter.</p>
+     * <h2>Request description</h2>
+     * <p>Provides the details of a specified recall management task by using RecallManagementJobId and InstanceId. This API returns the task status (such as init, running, success, or failed), start and end times, related table information, and operation logs. Make sure to specify the path parameter RecallManagementJobId and the query parameter InstanceId in the request.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific recall management job, including its status and log.</p>
+     * <p>Queries the details of a specific recall management task, including the status and logs.</p>
      * 
      * @param request GetRecallManagementJobRequest
      * @param headers map
@@ -5555,11 +5555,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>Retrieves the details of a specific recall management job using its <code>RecallManagementJobId</code> and <code>InstanceId</code>. The response includes the job\&quot;s status (such as Init, Running, Success, or Failed), start and end times, related table information, and operation log. To make a request, specify the <code>RecallManagementJobId</code> as a path parameter and the <code>InstanceId</code> as a query parameter.</p>
+     * <h2>Request description</h2>
+     * <p>Provides the details of a specified recall management task by using RecallManagementJobId and InstanceId. This API returns the task status (such as init, running, success, or failed), start and end times, related table information, and operation logs. Make sure to specify the path parameter RecallManagementJobId and the query parameter InstanceId in the request.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specific recall management job, including its status and log.</p>
+     * <p>Queries the details of a specific recall management task, including the status and logs.</p>
      * 
      * @param request GetRecallManagementJobRequest
      * @return GetRecallManagementJobResponse
@@ -5572,10 +5572,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified recall management service, including its status and version.</p>
+     * <p>Queries the details of a specified recall management service, including the status and version.</p>
      * 
      * @param request GetRecallManagementServiceRequest
      * @param headers map
@@ -5609,10 +5609,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description.</h2>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified recall management service, including its status and version.</p>
+     * <p>Queries the details of a specified recall management service, including the status and version.</p>
      * 
      * @param request GetRecallManagementServiceRequest
      * @return GetRecallManagementServiceResponse
@@ -5625,7 +5625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the version details of the recall management service.</p>
+     * <p>Retrieves the details of a recall management service version.</p>
      * 
      * @param request GetRecallManagementServiceVersionRequest
      * @param headers map
@@ -5659,7 +5659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the version details of the recall management service.</p>
+     * <p>Retrieves the details of a recall management service version.</p>
      * 
      * @param request GetRecallManagementServiceVersionRequest
      * @return GetRecallManagementServiceVersionResponse
@@ -5672,15 +5672,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Retrieves the configuration details for a specific version of a Recall Management Service by specifying its service, version, and configuration IDs. Ensure the parameter values are correct. The <code>InstanceId</code> is crucial for locating the correct instance.</p>
+     * <h2>Request description</h2>
+     * <p>Specify the recall management service ID, version ID, and configuration ID to retrieve the configuration details of the recall service version. Ensure that the parameter values are accurate, especially <code>InstanceId</code>, which is crucial for locating the correct instance.</p>
      * <ul>
-     * <li><strong>Note</strong>: All path parameters (<code>RecallManagementServiceId</code>, <code>RecallManagementServiceVersionId</code>, and <code>RecallManagementServiceVersionConfigId</code>) are required and must reference an existing resource.</li>
-     * <li><strong>Extended configuration</strong>: The response includes the <code>ExtendedConfig</code> field, which is used for future extensions and custom settings. Parse this field as needed.</li>
+     * <li><strong>Note</strong>: All path parameters (<code>RecallManagementServiceId</code>, <code>RecallManagementServiceVersionId</code>, and <code>RecallManagementServiceVersionConfigId</code>) are required and must match existing resources.</li>
+     * <li><strong>Extended configuration</strong>: The returned data includes the <code>ExtendedConfig</code> field for future feature extensions or custom settings. Parse and use it as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This API retrieves the configuration details of a specific recall management service version.</p>
+     * <p>Queries the configuration details of a specific recall management service version.</p>
      * 
      * @param request GetRecallManagementServiceVersionConfigRequest
      * @param headers map
@@ -5714,15 +5714,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Retrieves the configuration details for a specific version of a Recall Management Service by specifying its service, version, and configuration IDs. Ensure the parameter values are correct. The <code>InstanceId</code> is crucial for locating the correct instance.</p>
+     * <h2>Request description</h2>
+     * <p>Specify the recall management service ID, version ID, and configuration ID to retrieve the configuration details of the recall service version. Ensure that the parameter values are accurate, especially <code>InstanceId</code>, which is crucial for locating the correct instance.</p>
      * <ul>
-     * <li><strong>Note</strong>: All path parameters (<code>RecallManagementServiceId</code>, <code>RecallManagementServiceVersionId</code>, and <code>RecallManagementServiceVersionConfigId</code>) are required and must reference an existing resource.</li>
-     * <li><strong>Extended configuration</strong>: The response includes the <code>ExtendedConfig</code> field, which is used for future extensions and custom settings. Parse this field as needed.</li>
+     * <li><strong>Note</strong>: All path parameters (<code>RecallManagementServiceId</code>, <code>RecallManagementServiceVersionId</code>, and <code>RecallManagementServiceVersionConfigId</code>) are required and must match existing resources.</li>
+     * <li><strong>Extended configuration</strong>: The returned data includes the <code>ExtendedConfig</code> field for future feature extensions or custom settings. Parse and use it as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This API retrieves the configuration details of a specific recall management service version.</p>
+     * <p>Queries the configuration details of a specific recall management service version.</p>
      * 
      * @param request GetRecallManagementServiceVersionConfigRequest
      * @return GetRecallManagementServiceVersionConfigResponse
@@ -5735,16 +5735,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API retrieves details of a specific recall management table using the provided <code>RecallManagementTableId</code> and <code>InstanceId</code>. Ensure you provide the correct values for these parameters.</p>
+     * <h2>Request description</h2>
+     * <p>This operation retrieves the details of a recall management table based on the specified table ID (<code>RecallManagementTableId</code>) and instance ID (<code>InstanceId</code>). Make sure to provide valid values for these two parameters in the request.</p>
      * <ul>
-     * <li><strong>Note</strong>: The <code>CanDelete</code> field indicates whether the data table supports delete operations. Use this value to control delete functionality in your application.</li>
-     * <li>The <code>Fields</code> list contains the definitions for each field in the data table, including their name, type, and properties.</li>
-     * <li>To monitor data changes, you can configure or query the fluctuation thresholds for row count and size using the corresponding fields.</li>
+     * <li><strong>Note</strong>: The <code>CanDelete</code> field indicates whether the table supports deletion. Handle the related logic with caution.</li>
+     * <li>The <code>Fields</code> list contains the specific definitions of the fields in the table, such as the name, type, and attributes.</li>
+     * <li>The fluctuation threshold settings for the table (row count and size) can be configured or queried through the corresponding fields to monitor data changes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified recall management table, including its table structure and configuration.</p>
+     * <p>Queries the details of a specified recall management table, including the table schema and configurations.</p>
      * 
      * @param request GetRecallManagementTableRequest
      * @param headers map
@@ -5778,16 +5778,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API retrieves details of a specific recall management table using the provided <code>RecallManagementTableId</code> and <code>InstanceId</code>. Ensure you provide the correct values for these parameters.</p>
+     * <h2>Request description</h2>
+     * <p>This operation retrieves the details of a recall management table based on the specified table ID (<code>RecallManagementTableId</code>) and instance ID (<code>InstanceId</code>). Make sure to provide valid values for these two parameters in the request.</p>
      * <ul>
-     * <li><strong>Note</strong>: The <code>CanDelete</code> field indicates whether the data table supports delete operations. Use this value to control delete functionality in your application.</li>
-     * <li>The <code>Fields</code> list contains the definitions for each field in the data table, including their name, type, and properties.</li>
-     * <li>To monitor data changes, you can configure or query the fluctuation thresholds for row count and size using the corresponding fields.</li>
+     * <li><strong>Note</strong>: The <code>CanDelete</code> field indicates whether the table supports deletion. Handle the related logic with caution.</li>
+     * <li>The <code>Fields</code> list contains the specific definitions of the fields in the table, such as the name, type, and attributes.</li>
+     * <li>The fluctuation threshold settings for the table (row count and size) can be configured or queried through the corresponding fields to monitor data changes.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified recall management table, including its table structure and configuration.</p>
+     * <p>Queries the details of a specified recall management table, including the table schema and configurations.</p>
      * 
      * @param request GetRecallManagementTableRequest
      * @return GetRecallManagementTableResponse
@@ -5988,7 +5988,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a sub-crowd.</p>
+     * <p>Retrieves the details of a specified sub-crowd.</p>
      * 
      * @param request GetSubCrowdRequest
      * @param headers map
@@ -6022,7 +6022,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a sub-crowd.</p>
+     * <p>Retrieves the details of a specified sub-crowd.</p>
      * 
      * @param request GetSubCrowdRequest
      * @return GetSubCrowdResponse
@@ -6035,7 +6035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns the details of a table.</p>
+     * <p>Retrieves the details of a data table.</p>
      * 
      * @param request GetTableMetaRequest
      * @param headers map
@@ -6069,7 +6069,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns the details of a table.</p>
+     * <p>Retrieves the details of a data table.</p>
      * 
      * @param request GetTableMetaRequest
      * @return GetTableMetaResponse
@@ -6082,11 +6082,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Retrieves the detailed configuration of a traffic control target. The configuration includes the target name, time range, and condition settings. This operation requires the <code>TrafficControlTargetId</code> and <code>InstanceId</code> parameters.</p>
+     * <h2>Request description</h2>
+     * <p>Provide the traffic control target ID and instance ID to retrieve the detailed configuration of the traffic control target, including the target name, time range, and condition settings. Note that TrafficControlTargetId and InstanceId are required parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>Gets the details of a traffic throttling objective by its ID.</p>
+     * <p>Queries the details of a traffic control target with a specified ID.</p>
      * 
      * @param request GetTrafficControlTargetRequest
      * @param headers map
@@ -6120,11 +6120,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Retrieves the detailed configuration of a traffic control target. The configuration includes the target name, time range, and condition settings. This operation requires the <code>TrafficControlTargetId</code> and <code>InstanceId</code> parameters.</p>
+     * <h2>Request description</h2>
+     * <p>Provide the traffic control target ID and instance ID to retrieve the detailed configuration of the traffic control target, including the target name, time range, and condition settings. Note that TrafficControlTargetId and InstanceId are required parameters.</p>
      * 
      * <b>summary</b> : 
-     * <p>Gets the details of a traffic throttling objective by its ID.</p>
+     * <p>Queries the details of a traffic control target with a specified ID.</p>
      * 
      * @param request GetTrafficControlTargetRequest
      * @return GetTrafficControlTargetResponse
@@ -6360,7 +6360,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists A/B testing metrics.</p>
+     * <p>Retrieves a list of AB test metrics.</p>
      * 
      * @param request ListABMetricsRequest
      * @param headers map
@@ -6422,7 +6422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists A/B testing metrics.</p>
+     * <p>Retrieves a list of AB test metrics.</p>
      * 
      * @param request ListABMetricsRequest
      * @return ListABMetricsResponse
@@ -6435,7 +6435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists calculation jobs.</p>
+     * <p>Queries a list of calculation tasks.</p>
      * 
      * @param request ListCalculationJobsRequest
      * @param headers map
@@ -6485,7 +6485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists calculation jobs.</p>
+     * <p>Queries a list of calculation tasks.</p>
      * 
      * @param request ListCalculationJobsRequest
      * @return ListCalculationJobsResponse
@@ -6545,7 +6545,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the Crowds in a specified instance.</p>
+     * <p>Retrieves a list of crowds.</p>
      * 
      * @param request ListCrowdsRequest
      * @param headers map
@@ -6579,7 +6579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the Crowds in a specified instance.</p>
+     * <p>Retrieves a list of crowds.</p>
      * 
      * @param request ListCrowdsRequest
      * @return ListCrowdsResponse
@@ -6673,16 +6673,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This API retrieves data diagnosis jobs for a specific instance. You can filter the jobs by parameters such as <code>InstanceId</code> and <code>Status</code>, and use the <code>PageNumber</code> and <code>PageSize</code> parameters to control pagination.</p>
+     * <h2>Request description</h2>
+     * <p>This API allows you to retrieve a list of data diagnostic tasks for a specific instance based on provided parameters such as InstanceId and Status. You can filter tasks by status and type, and control the amount of returned data by using pagination parameters such as PageNumber and PageSize.</p>
      * <ul>
-     * <li>The <strong>InstanceId</strong> parameter is required and specifies the instance to query.</li>
-     * <li>Optional parameters include <strong>Status</strong>, <strong>Types</strong>, <strong>PageNumber</strong>, and <strong>PageSize</strong>.</li>
-     * <li>Note: If you omit filter conditions, the operation returns all matching data diagnosis jobs.</li>
+     * <li><strong>InstanceId</strong> is required and specifies the instance to which the tasks to be queried belong.</li>
+     * <li>Optional parameters include <strong>Status</strong>, <strong>Types</strong>, <strong>PageNumber</strong>, and <strong>PageSize</strong>, which allow you to filter the required information more precisely.</li>
+     * <li>Note: If no filter conditions are provided, all eligible data diagnostic tasks are returned by default.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries data diagnosis jobs for a specified instance.</p>
+     * <p>Queries the data diagnostic tasks and their statuses for a specified instance.</p>
      * 
      * @param tmpReq ListDataDiagnosisJobsRequest
      * @param headers map
@@ -6738,16 +6738,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This API retrieves data diagnosis jobs for a specific instance. You can filter the jobs by parameters such as <code>InstanceId</code> and <code>Status</code>, and use the <code>PageNumber</code> and <code>PageSize</code> parameters to control pagination.</p>
+     * <h2>Request description</h2>
+     * <p>This API allows you to retrieve a list of data diagnostic tasks for a specific instance based on provided parameters such as InstanceId and Status. You can filter tasks by status and type, and control the amount of returned data by using pagination parameters such as PageNumber and PageSize.</p>
      * <ul>
-     * <li>The <strong>InstanceId</strong> parameter is required and specifies the instance to query.</li>
-     * <li>Optional parameters include <strong>Status</strong>, <strong>Types</strong>, <strong>PageNumber</strong>, and <strong>PageSize</strong>.</li>
-     * <li>Note: If you omit filter conditions, the operation returns all matching data diagnosis jobs.</li>
+     * <li><strong>InstanceId</strong> is required and specifies the instance to which the tasks to be queried belong.</li>
+     * <li>Optional parameters include <strong>Status</strong>, <strong>Types</strong>, <strong>PageNumber</strong>, and <strong>PageSize</strong>, which allow you to filter the required information more precisely.</li>
+     * <li>Note: If no filter conditions are provided, all eligible data diagnostic tasks are returned by default.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries data diagnosis jobs for a specified instance.</p>
+     * <p>Queries the data diagnostic tasks and their statuses for a specified instance.</p>
      * 
      * @param request ListDataDiagnosisJobsRequest
      * @return ListDataDiagnosisJobsResponse
@@ -6760,17 +6760,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves data diagnosis reports based on parameters such as the data diagnosis ID, instance ID, and a date range.</li>
-     * <li>The <code>FeatureName</code> parameter filters reports by a specific feature, and the <code>TopN</code> parameter limits the number of results.</li>
-     * <li>The <code>RemainRateType</code> parameter specifies the type of retention rate report, such as a periodic report.</li>
-     * <li>Report content includes item and user change rate analysis, periodic user preference analysis, correlation analysis, basic statistical analysis, and anomaly detection.</li>
-     * <li>Important: All date values must use the <code>YYYY-MM-DD</code> format.</li>
+     * <li>This API retrieves a diagnostic report based on the provided data diagnosis ID, instance ID, and date range.</li>
+     * <li>Use Settings for FeatureName to filter reports for a specific feature. Use the TopN parameter to limit the number of returned results.</li>
+     * <li>RemainRateType allows you to select the type of retention rate report, such as a periodic report.</li>
+     * <li>Report content includes, but is not limited to, item/user change rate analysis, user preference statistical period analysis, join table associate analysis, basic statistics analysis, and abnormal behavior analysis.</li>
+     * <li>Note: All dates must follow the YYYY-MM-DD format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Specify parameters to retrieve data diagnosis reports for a specific time range.</p>
+     * <p>Retrieves a diagnostic report for a specified time period based on the given parameters.</p>
      * 
      * @param request ListDataDiagnosisReportsRequest
      * @param headers map
@@ -6824,17 +6824,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves data diagnosis reports based on parameters such as the data diagnosis ID, instance ID, and a date range.</li>
-     * <li>The <code>FeatureName</code> parameter filters reports by a specific feature, and the <code>TopN</code> parameter limits the number of results.</li>
-     * <li>The <code>RemainRateType</code> parameter specifies the type of retention rate report, such as a periodic report.</li>
-     * <li>Report content includes item and user change rate analysis, periodic user preference analysis, correlation analysis, basic statistical analysis, and anomaly detection.</li>
-     * <li>Important: All date values must use the <code>YYYY-MM-DD</code> format.</li>
+     * <li>This API retrieves a diagnostic report based on the provided data diagnosis ID, instance ID, and date range.</li>
+     * <li>Use Settings for FeatureName to filter reports for a specific feature. Use the TopN parameter to limit the number of returned results.</li>
+     * <li>RemainRateType allows you to select the type of retention rate report, such as a periodic report.</li>
+     * <li>Report content includes, but is not limited to, item/user change rate analysis, user preference statistical period analysis, join table associate analysis, basic statistics analysis, and abnormal behavior analysis.</li>
+     * <li>Note: All dates must follow the YYYY-MM-DD format.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Specify parameters to retrieve data diagnosis reports for a specific time range.</p>
+     * <p>Retrieves a diagnostic report for a specified time period based on the given parameters.</p>
      * 
      * @param request ListDataDiagnosisReportsRequest
      * @return ListDataDiagnosisReportsResponse
@@ -6922,7 +6922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a list of experiment groups.</p>
+     * <p>Retrieves a list of experiment groups.</p>
      * 
      * @param request ListExperimentGroupsRequest
      * @param headers map
@@ -6972,7 +6972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns a list of experiment groups.</p>
+     * <p>Retrieves a list of experiment groups.</p>
      * 
      * @param request ListExperimentGroupsRequest
      * @return ListExperimentGroupsResponse
@@ -6985,7 +6985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the experiments in the specified experiment group.</p>
+     * <p>Retrieves the list of experiments in a specified experiment group.</p>
      * 
      * @param request ListExperimentsRequest
      * @param headers map
@@ -7031,7 +7031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the experiments in the specified experiment group.</p>
+     * <p>Retrieves the list of experiments in a specified experiment group.</p>
      * 
      * @param request ListExperimentsRequest
      * @return ListExperimentsResponse
@@ -7044,7 +7044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of feature consistency check task configurations.</p>
+     * <p>Retrieves a list of feature consistency check task configurations.</p>
      * 
      * @param request ListFeatureConsistencyCheckJobConfigsRequest
      * @param headers map
@@ -7098,7 +7098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of feature consistency check task configurations.</p>
+     * <p>Retrieves a list of feature consistency check task configurations.</p>
      * 
      * @param request ListFeatureConsistencyCheckJobConfigsRequest
      * @return ListFeatureConsistencyCheckJobConfigsResponse
@@ -7349,11 +7349,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of data tables from the specified data source. Use the optional <code>MaxcomputeSchema</code> parameter to filter the results by a MaxCompute schema.</p>
+     * <h2>Request description</h2>
+     * <p>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <code>MaxcomputeSchema</code> parameter to specify a MaxCompute schema to further filter the results.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of data tables for a specified instance and data source.</p>
+     * <p>Queries all tables in a specified instance and data source.</p>
      * 
      * @param request ListInstanceResourceTablesRequest
      * @param headers map
@@ -7387,11 +7387,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of data tables from the specified data source. Use the optional <code>MaxcomputeSchema</code> parameter to filter the results by a MaxCompute schema.</p>
+     * <h2>Request description</h2>
+     * <p>Provide the instance ID (InstanceId) and data source ID (ResourceId) to retrieve a list of all tables in the data source. You can use the optional <code>MaxcomputeSchema</code> parameter to specify a MaxCompute schema to further filter the results.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of data tables for a specified instance and data source.</p>
+     * <p>Queries all tables in a specified instance and data source.</p>
      * 
      * @param request ListInstanceResourceTablesRequest
      * @return ListInstanceResourceTablesResponse
@@ -7459,7 +7459,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets a list of PAIRec instances.</p>
+     * <p>Retrieves a list of PAIRec instances.</p>
      * 
      * @param request ListInstancesRequest
      * @param headers map
@@ -7513,7 +7513,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Gets a list of PAIRec instances.</p>
+     * <p>Retrieves a list of PAIRec instances.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -7585,7 +7585,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of layers in a specified laboratory.</p>
+     * <p>Retrieves the list of layers in a laboratory.</p>
      * 
      * @param request ListLayersRequest
      * @param headers map
@@ -7623,7 +7623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of layers in a specified laboratory.</p>
+     * <p>Retrieves the list of layers in a laboratory.</p>
      * 
      * @param request ListLayersRequest
      * @return ListLayersResponse
@@ -7636,7 +7636,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists parameters.</p>
+     * <p>Retrieves a list of parameters.</p>
      * 
      * @param request ListParamsRequest
      * @param headers map
@@ -7694,7 +7694,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists parameters.</p>
+     * <p>Retrieves a list of parameters.</p>
      * 
      * @param request ListParamsRequest
      * @return ListParamsResponse
@@ -7707,18 +7707,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use this API operation to retrieve a list of recall management tasks.</li>
-     * <li>The <code>InstanceId</code> and <code>Type</code> parameters are required. All other parameters are optional.</li>
-     * <li>Use the <code>Condition</code> parameter to set filter conditions on specific table types, such as filtering by <code>RecallManagementTableId</code>.</li>
-     * <li>Use the <code>SortBy</code> and <code>Order</code> parameters to control the sort order of the results. The default sort order is ascending by creation time.</li>
-     * <li>Use the <code>PageNumber</code> and <code>PageSize</code> parameters for pagination. The <code>PageNumber</code> parameter defaults to 1, and the <code>PageSize</code> parameter defaults to 10.</li>
-     * <li>The response includes details about each recall management task, such as its basic information and status.</li>
+     * <li>This operation retrieves a list of recall management tasks.</li>
+     * <li><code>InstanceId</code> and <code>Type</code> are required parameters. Other parameters are optional.</li>
+     * <li>The <code>Condition</code> parameter supports filtering by specific table types, such as filtering by <code>RecallManagementTableId</code>.</li>
+     * <li>You can use the <code>SortBy</code> and <code>Order</code> parameters to control the sorting of the returned results. By default, the results are sorted in ascending order of creation time.</li>
+     * <li>Pagination is implemented through the <code>PageNumber</code> and <code>PageSize</code> parameters. The default value of <code>PageNumber</code> is 1, and the default value of <code>PageSize</code> is 10.</li>
+     * <li>The returned data includes the basic information and status details of each recall management task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of recall management tasks that match specified conditions.</p>
+     * <p>Queries a list of recall management tasks based on specified conditions.</p>
      * 
      * @param request ListRecallManagementJobsRequest
      * @param headers map
@@ -7784,18 +7784,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use this API operation to retrieve a list of recall management tasks.</li>
-     * <li>The <code>InstanceId</code> and <code>Type</code> parameters are required. All other parameters are optional.</li>
-     * <li>Use the <code>Condition</code> parameter to set filter conditions on specific table types, such as filtering by <code>RecallManagementTableId</code>.</li>
-     * <li>Use the <code>SortBy</code> and <code>Order</code> parameters to control the sort order of the results. The default sort order is ascending by creation time.</li>
-     * <li>Use the <code>PageNumber</code> and <code>PageSize</code> parameters for pagination. The <code>PageNumber</code> parameter defaults to 1, and the <code>PageSize</code> parameter defaults to 10.</li>
-     * <li>The response includes details about each recall management task, such as its basic information and status.</li>
+     * <li>This operation retrieves a list of recall management tasks.</li>
+     * <li><code>InstanceId</code> and <code>Type</code> are required parameters. Other parameters are optional.</li>
+     * <li>The <code>Condition</code> parameter supports filtering by specific table types, such as filtering by <code>RecallManagementTableId</code>.</li>
+     * <li>You can use the <code>SortBy</code> and <code>Order</code> parameters to control the sorting of the returned results. By default, the results are sorted in ascending order of creation time.</li>
+     * <li>Pagination is implemented through the <code>PageNumber</code> and <code>PageSize</code> parameters. The default value of <code>PageNumber</code> is 1, and the default value of <code>PageSize</code> is 10.</li>
+     * <li>The returned data includes the basic information and status details of each recall management task.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of recall management tasks that match specified conditions.</p>
+     * <p>Queries a list of recall management tasks based on specified conditions.</p>
      * 
      * @param request ListRecallManagementJobsRequest
      * @return ListRecallManagementJobsResponse
@@ -7808,16 +7808,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation queries the details of all versions for a specific Recall Management Service, including the version ID, name, effective status, creation time, and modification time. For accurate results, provide the correct <code>RecallManagementServiceId</code> and <code>InstanceId</code>.</p>
+     * <h2>Operation description</h2>
+     * <p>You can call this API operation to query the details of all versions for a specific recall management service, including the version ID, name, effective status, and creation and update times. Make sure to provide the correct RecallManagementServiceId and InstanceId to obtain accurate data.</p>
      * <ul>
-     * <li>Use the <code>PageNumber</code> and <code>PageSize</code> parameters for pagination. By default, the query starts from the first page and returns 50 entries per page.</li>
-     * <li>Use the <code>SortBy</code> parameter to sort the results by creation time or modification time. By default, the results are sorted by creation time in ascending order.</li>
-     * <li>The <code>Order</code> parameter specifies the sort order. Valid values are <code>ASC</code> for ascending order and <code>DESC</code> for descending order.</li>
+     * <li>The PageNumber and PageSize parameters are used for pagination. By default, the first page is returned, and each page contains 50 entries.</li>
+     * <li>You can use the SortBy parameter to sort the results by creation time or update time. By default, the results are sorted in ascending order of creation time.</li>
+     * <li>The Order parameter specifies the sort order. Valid values: ASC (ascending order) and DESC (descending order).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of all versions for a specified Recall Management Service.</p>
+     * <p>Retrieves all version information for a specified recall management service.</p>
      * 
      * @param request ListRecallManagementServiceVersionsRequest
      * @param headers map
@@ -7867,16 +7867,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation queries the details of all versions for a specific Recall Management Service, including the version ID, name, effective status, creation time, and modification time. For accurate results, provide the correct <code>RecallManagementServiceId</code> and <code>InstanceId</code>.</p>
+     * <h2>Operation description</h2>
+     * <p>You can call this API operation to query the details of all versions for a specific recall management service, including the version ID, name, effective status, and creation and update times. Make sure to provide the correct RecallManagementServiceId and InstanceId to obtain accurate data.</p>
      * <ul>
-     * <li>Use the <code>PageNumber</code> and <code>PageSize</code> parameters for pagination. By default, the query starts from the first page and returns 50 entries per page.</li>
-     * <li>Use the <code>SortBy</code> parameter to sort the results by creation time or modification time. By default, the results are sorted by creation time in ascending order.</li>
-     * <li>The <code>Order</code> parameter specifies the sort order. Valid values are <code>ASC</code> for ascending order and <code>DESC</code> for descending order.</li>
+     * <li>The PageNumber and PageSize parameters are used for pagination. By default, the first page is returned, and each page contains 50 entries.</li>
+     * <li>You can use the SortBy parameter to sort the results by creation time or update time. By default, the results are sorted in ascending order of creation time.</li>
+     * <li>The Order parameter specifies the sort order. Valid values: ASC (ascending order) and DESC (descending order).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of all versions for a specified Recall Management Service.</p>
+     * <p>Retrieves all version information for a specified recall management service.</p>
      * 
      * @param request ListRecallManagementServiceVersionsRequest
      * @return ListRecallManagementServiceVersionsResponse
@@ -7889,16 +7889,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>By calling the <code>ListRecallManagementServices</code> operation, you can retrieve the list of recall management services under a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort results by creation time or update time in ascending or descending order.</p>
+     * <h2>Request description</h2>
+     * <p>By calling the ListRecallManagementServices operation, you can retrieve a list of recall management services for a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort the results by creation time or update time in ascending or descending order.</p>
      * <ul>
      * <li><strong>InstanceId</strong> is required and specifies the instance to which the services belong.</li>
-     * <li>The pagination parameters <strong>PageNumber</strong> and <strong>PageSize</strong> allow you to control the amount of returned data and the page from which to start displaying results. By default, data from the first page is returned.</li>
-     * <li>Use the <strong>SortBy</strong> and <strong>Order</strong> parameters to customize the sorting of the list.</li>
+     * <li>The pagination parameters <strong>PageNumber</strong> and <strong>PageSize</strong> allow you to control the number of returned entries and the starting page. By default, the first page is returned.</li>
+     * <li>You can use the <strong>SortBy</strong> and <strong>Order</strong> parameters to customize the sorting method of the list.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of recall management services under a specified instance.</p>
+     * <p>Queries the recall management services of a specified instance.</p>
      * 
      * @param request ListRecallManagementServicesRequest
      * @param headers map
@@ -7960,16 +7960,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>By calling the <code>ListRecallManagementServices</code> operation, you can retrieve the list of recall management services under a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort results by creation time or update time in ascending or descending order.</p>
+     * <h2>Request description</h2>
+     * <p>By calling the ListRecallManagementServices operation, you can retrieve a list of recall management services for a specific instance based on given parameters such as InstanceId, PageNumber, and PageSize. You can sort the results by creation time or update time in ascending or descending order.</p>
      * <ul>
      * <li><strong>InstanceId</strong> is required and specifies the instance to which the services belong.</li>
-     * <li>The pagination parameters <strong>PageNumber</strong> and <strong>PageSize</strong> allow you to control the amount of returned data and the page from which to start displaying results. By default, data from the first page is returned.</li>
-     * <li>Use the <strong>SortBy</strong> and <strong>Order</strong> parameters to customize the sorting of the list.</li>
+     * <li>The pagination parameters <strong>PageNumber</strong> and <strong>PageSize</strong> allow you to control the number of returned entries and the starting page. By default, the first page is returned.</li>
+     * <li>You can use the <strong>SortBy</strong> and <strong>Order</strong> parameters to customize the sorting method of the list.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of recall management services under a specified instance.</p>
+     * <p>Queries the recall management services of a specified instance.</p>
      * 
      * @param request ListRecallManagementServicesRequest
      * @return ListRecallManagementServicesResponse
@@ -7982,16 +7982,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>To retrieve the version history of a specific RecallManagementTable, provide the <code>RecallManagementTableId</code> and <code>InstanceId</code>.</li>
-     * <li>Use the <code>SortBy</code> parameter to sort the results by creation time or update time. By default, the results are sorted by creation time in ascending order.</li>
-     * <li>The <code>PageNumber</code> and <code>PageSize</code> parameters enable pagination, which allows you to control the number of items to return and the page to display.</li>
-     * <li>If the <code>Order</code> parameter is not specified, the results are sorted in ascending order by default.</li>
+     * <li>Provide <code>RecallManagementTableId</code> and <code>InstanceId</code> to retrieve the version history of a specific recall management table.</li>
+     * <li>Use the <code>SortBy</code> parameter for sorting the results by creation time or update time. By default, the results are sorted in ascending order by creation time.</li>
+     * <li>The <code>PageNumber</code> and <code>PageSize</code> parameters support the paged query feature, allowing you to control the number of returned entries and the specific page to view during paging.</li>
+     * <li>If you do not specify the <code>Order</code> parameter, the results are sorted in ascending order by default.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists all versions of a specified RecallManagementTable.</p>
+     * <p>Queries all versions of a specified recall management table.</p>
      * 
      * @param request ListRecallManagementTableVersionsRequest
      * @param headers map
@@ -8041,16 +8041,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>To retrieve the version history of a specific RecallManagementTable, provide the <code>RecallManagementTableId</code> and <code>InstanceId</code>.</li>
-     * <li>Use the <code>SortBy</code> parameter to sort the results by creation time or update time. By default, the results are sorted by creation time in ascending order.</li>
-     * <li>The <code>PageNumber</code> and <code>PageSize</code> parameters enable pagination, which allows you to control the number of items to return and the page to display.</li>
-     * <li>If the <code>Order</code> parameter is not specified, the results are sorted in ascending order by default.</li>
+     * <li>Provide <code>RecallManagementTableId</code> and <code>InstanceId</code> to retrieve the version history of a specific recall management table.</li>
+     * <li>Use the <code>SortBy</code> parameter for sorting the results by creation time or update time. By default, the results are sorted in ascending order by creation time.</li>
+     * <li>The <code>PageNumber</code> and <code>PageSize</code> parameters support the paged query feature, allowing you to control the number of returned entries and the specific page to view during paging.</li>
+     * <li>If you do not specify the <code>Order</code> parameter, the results are sorted in ascending order by default.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists all versions of a specified RecallManagementTable.</p>
+     * <p>Queries all versions of a specified recall management table.</p>
      * 
      * @param request ListRecallManagementTableVersionsRequest
      * @return ListRecallManagementTableVersionsResponse
@@ -8063,16 +8063,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>InstanceId</strong> is a required parameter specifying the instance to query.</li>
-     * <li>The <strong>Name</strong> and <strong>Type</strong> parameters filter recall management tables by name or type.</li>
-     * <li>The <strong>PageNumber</strong> and <strong>PageSize</strong> parameters control pagination. By default, the query returns the first 50 records.</li>
-     * <li>You can sort results by creation time (GmtCreateTime) or modification time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</li>
+     * <li><strong>InstanceId</strong> is a required parameter that specifies the instance to query.</li>
+     * <li>Use the <strong>Name</strong> and <strong>Type</strong> parameters to filter recall management tables by name or type.</li>
+     * <li>Pagination is controlled by <strong>PageNumber</strong> and <strong>PageSize</strong>. By default, the query starts from page 1 and returns 50 records per page.</li>
+     * <li>Supports sorting by creation time (GmtCreateTime) or update time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the recall management tables for a specified instance. Pagination and sorting are supported.</p>
+     * <p>Queries the recall management table information for a specified instance, with support for pagination and sorting.</p>
      * 
      * @param request ListRecallManagementTablesRequest
      * @param headers map
@@ -8138,16 +8138,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>InstanceId</strong> is a required parameter specifying the instance to query.</li>
-     * <li>The <strong>Name</strong> and <strong>Type</strong> parameters filter recall management tables by name or type.</li>
-     * <li>The <strong>PageNumber</strong> and <strong>PageSize</strong> parameters control pagination. By default, the query returns the first 50 records.</li>
-     * <li>You can sort results by creation time (GmtCreateTime) or modification time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</li>
+     * <li><strong>InstanceId</strong> is a required parameter that specifies the instance to query.</li>
+     * <li>Use the <strong>Name</strong> and <strong>Type</strong> parameters to filter recall management tables by name or type.</li>
+     * <li>Pagination is controlled by <strong>PageNumber</strong> and <strong>PageSize</strong>. By default, the query starts from page 1 and returns 50 records per page.</li>
+     * <li>Supports sorting by creation time (GmtCreateTime) or update time (GmtModifiedTime) in ascending (ASC) or descending (DESC) order.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the recall management tables for a specified instance. Pagination and sorting are supported.</p>
+     * <p>Queries the recall management table information for a specified instance, with support for pagination and sorting.</p>
      * 
      * @param request ListRecallManagementTablesRequest
      * @return ListRecallManagementTablesResponse
@@ -8353,7 +8353,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the subcrowds for a specified crowd.</p>
+     * <p>Retrieves the list of sub-crowds under a specified crowd.</p>
      * 
      * @param request ListSubCrowdsRequest
      * @param headers map
@@ -8387,7 +8387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the subcrowds for a specified crowd.</p>
+     * <p>Retrieves the list of sub-crowds under a specified crowd.</p>
      * 
      * @param request ListSubCrowdsRequest
      * @return ListSubCrowdsResponse
@@ -8467,18 +8467,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>The <code>TrafficControlTargetId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters are required.</li>
-     * <li>You can use <code>StartTime</code> and <code>EndTime</code> to specify the time range.</li>
-     * <li>The <code>Threshold</code> parameter is optional.</li>
-     * <li>Use <code>ExperimentId</code> and <code>ExperimentGroupId</code> to filter data for a specific experiment or experiment group.</li>
-     * <li>Use <code>ItemId</code> to filter traffic data for a specific item.</li>
-     * <li>The supported environments are the Daily environment, pre-production environment (Pre), and production environment (Prod).</li>
+     * <li><code>TrafficControlTargetId</code>, <code>InstanceId</code>, and <code>Environment</code> are required parameters.</li>
+     * <li>You can use <code>StartTime</code> and <code>EndTime</code> to specify the time range for the query. The format is <code>YYYY-MM-DD HH:MM:SS</code>.</li>
+     * <li>The <code>Threshold</code> parameter is optional and used to set the threshold.</li>
+     * <li><code>ExperimentId</code> and <code>ExperimentGroupId</code> are used to filter data for specific experiments or experiment groups.</li>
+     * <li><code>ItemId</code> is used to filter traffic data for specific items.</li>
+     * <li>Supported environments include Daily (daily environment), Pre (staging environment), and Prod (production environment).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the historical traffic records for a specific traffic control target.</p>
+     * <p>Queries the historical traffic change records of a specified traffic control target.</p>
      * 
      * @param request ListTrafficControlTargetTrafficHistoryRequest
      * @param headers map
@@ -8540,18 +8540,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>The <code>TrafficControlTargetId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters are required.</li>
-     * <li>You can use <code>StartTime</code> and <code>EndTime</code> to specify the time range.</li>
-     * <li>The <code>Threshold</code> parameter is optional.</li>
-     * <li>Use <code>ExperimentId</code> and <code>ExperimentGroupId</code> to filter data for a specific experiment or experiment group.</li>
-     * <li>Use <code>ItemId</code> to filter traffic data for a specific item.</li>
-     * <li>The supported environments are the Daily environment, pre-production environment (Pre), and production environment (Prod).</li>
+     * <li><code>TrafficControlTargetId</code>, <code>InstanceId</code>, and <code>Environment</code> are required parameters.</li>
+     * <li>You can use <code>StartTime</code> and <code>EndTime</code> to specify the time range for the query. The format is <code>YYYY-MM-DD HH:MM:SS</code>.</li>
+     * <li>The <code>Threshold</code> parameter is optional and used to set the threshold.</li>
+     * <li><code>ExperimentId</code> and <code>ExperimentGroupId</code> are used to filter data for specific experiments or experiment groups.</li>
+     * <li><code>ItemId</code> is used to filter traffic data for specific items.</li>
+     * <li>Supported environments include Daily (daily environment), Pre (staging environment), and Prod (production environment).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the historical traffic records for a specific traffic control target.</p>
+     * <p>Queries the historical traffic change records of a specified traffic control target.</p>
      * 
      * @param request ListTrafficControlTargetTrafficHistoryRequest
      * @return ListTrafficControlTargetTrafficHistoryResponse
@@ -8564,16 +8564,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves a list of traffic control tasks.</li>
-     * <li>Use query parameters to filter and sort the results.</li>
-     * <li>This operation supports pagination. You can also retrieve all results in a single response.</li>
-     * <li>Note: The <code>InstanceId</code> is a required parameter. All other parameters are optional.</li>
+     * <li>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</li>
+     * <li>You can filter the returned nodes and apply sorting by specifying different query parameters.</li>
+     * <li>Paged query is supported. You can also choose to return all data at once without paging.</li>
+     * <li>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists traffic control tasks that meet specified conditions.</p>
+     * <p>Queries traffic control tasks that meet specified conditions.</p>
      * 
      * @param request ListTrafficControlTasksRequest
      * @param headers map
@@ -8655,16 +8655,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves a list of traffic control tasks.</li>
-     * <li>Use query parameters to filter and sort the results.</li>
-     * <li>This operation supports pagination. You can also retrieve all results in a single response.</li>
-     * <li>Note: The <code>InstanceId</code> is a required parameter. All other parameters are optional.</li>
+     * <li>This operation retrieves a list of traffic control nodes that meet specific conditional requirements.</li>
+     * <li>You can filter the returned nodes and apply sorting by specifying different query parameters.</li>
+     * <li>Paged query is supported. You can also choose to return all data at once without paging.</li>
+     * <li>Note: InstanceId is required, and other parameters are options. Specify other parameters as needed to obtain more precise results.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists traffic control tasks that meet specified conditions.</p>
+     * <p>Queries traffic control tasks that meet specified conditions.</p>
      * 
      * @param request ListTrafficControlTasksRequest
      * @return ListTrafficControlTasksResponse
@@ -9077,11 +9077,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request details</h2>
-     * <p>This API synchronizes a specified MaxCompute table with the recall engine. You must provide the correct <code>RecallManagementTableId</code> in the path parameter and the instance ID in the request body. You can also specify the table partitions to publish, whether to skip the threshold check, and the synchronization mode. To publish specific partitions, provide them as key-value pairs in the <code>Partitions</code> field.</p>
+     * <h2>Request description</h2>
+     * <p>This operation synchronizes a specified MaxCompute table to the recall engine. It allows you to specify the table partition to publish, whether to skip the threshold check, and the synchronous mode (merge or overwrite). Ensure that you correctly specify the instance ID and table ID in the request body, and provide the correct <code>RecallManagementTableId</code> in the path parameters. To specify a particular table partition for publishing, provide it as key-value pairs in the <code>Partitions</code> field. You can also choose whether to skip the data volume threshold check and configure the synchronous mode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Synchronizes a MaxCompute table with the recall engine. This operation allows you to publish specific partitions and select a synchronization mode.</p>
+     * <p>Synchronizes a MaxCompute table to the recall engine, supporting partition publishing and mode selection.</p>
      * 
      * @param request PublishRecallManagementTableRequest
      * @param headers map
@@ -9111,6 +9111,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("SkipThresholdCheck", request.skipThresholdCheck);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimestampMs)) {
+            body.put("StartTimestampMs", request.startTimestampMs);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -9131,11 +9135,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request details</h2>
-     * <p>This API synchronizes a specified MaxCompute table with the recall engine. You must provide the correct <code>RecallManagementTableId</code> in the path parameter and the instance ID in the request body. You can also specify the table partitions to publish, whether to skip the threshold check, and the synchronization mode. To publish specific partitions, provide them as key-value pairs in the <code>Partitions</code> field.</p>
+     * <h2>Request description</h2>
+     * <p>This operation synchronizes a specified MaxCompute table to the recall engine. It allows you to specify the table partition to publish, whether to skip the threshold check, and the synchronous mode (merge or overwrite). Ensure that you correctly specify the instance ID and table ID in the request body, and provide the correct <code>RecallManagementTableId</code> in the path parameters. To specify a particular table partition for publishing, provide it as key-value pairs in the <code>Partitions</code> field. You can also choose whether to skip the data volume threshold check and configure the synchronous mode.</p>
      * 
      * <b>summary</b> : 
-     * <p>Synchronizes a MaxCompute table with the recall engine. This operation allows you to publish specific partitions and select a synchronization mode.</p>
+     * <p>Synchronizes a MaxCompute table to the recall engine, supporting partition publishing and mode selection.</p>
      * 
      * @param request PublishRecallManagementTableRequest
      * @return PublishRecallManagementTableResponse
@@ -9254,15 +9258,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>The <code>DataDiagnosisId</code> parameter is required and specifies the data diagnosis task.</li>
-     * <li>The <code>InstanceId</code> parameter is also required and specifies the instance.</li>
-     * <li>The <code>StartDate</code> and <code>EndDate</code> parameters specify the start and end dates of the time range. The format is YYYY-MM-DD.</li>
-     * <li>The <code>RemainRateType</code> parameter is optional. It specifies the retention rate report type. The default value is \&quot;Period\&quot;, which indicates a periodic report.</li>
-     * <li>The response includes the request ID (<code>RequestId</code>) and a <code>Statistics</code> object. This object contains the dates of task failures (<code>FailedDates</code>) and dates with missing task data (<code>NoDataDates</code>).</li>
+     * <li><code>DataDiagnosisId</code> is required and specifies the data diagnostic node to query.</li>
+     * <li><code>InstanceId</code> is also required and identifies the specific instance.</li>
+     * <li><code>StartDate</code> and <code>EndDate</code> specify the start and end dates for the statistics, respectively. The format is YYYY-MM-DD.</li>
+     * <li>The <code>RemainRateType</code> parameter is optional. If provided, it specifies the retention rate report type. The default value is Period, which indicates a periodic report.</li>
+     * <li>The response includes the request ID (<code>RequestId</code>) and the statistics object (<code>Statistics</code>), which lists the dates when nodes failed (<code>FailedDates</code>) and the dates with missing nodes (<code>NoDataDates</code>).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves statistics for a specified data diagnosis task within a time range.</p>
+     * <p>Retrieves the statistics of a specified data diagnostics within a specific time range.</p>
      * 
      * @param request QueryDataDiagnosisStatisticsRequest
      * @param headers map
@@ -9310,15 +9314,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>The <code>DataDiagnosisId</code> parameter is required and specifies the data diagnosis task.</li>
-     * <li>The <code>InstanceId</code> parameter is also required and specifies the instance.</li>
-     * <li>The <code>StartDate</code> and <code>EndDate</code> parameters specify the start and end dates of the time range. The format is YYYY-MM-DD.</li>
-     * <li>The <code>RemainRateType</code> parameter is optional. It specifies the retention rate report type. The default value is \&quot;Period\&quot;, which indicates a periodic report.</li>
-     * <li>The response includes the request ID (<code>RequestId</code>) and a <code>Statistics</code> object. This object contains the dates of task failures (<code>FailedDates</code>) and dates with missing task data (<code>NoDataDates</code>).</li>
+     * <li><code>DataDiagnosisId</code> is required and specifies the data diagnostic node to query.</li>
+     * <li><code>InstanceId</code> is also required and identifies the specific instance.</li>
+     * <li><code>StartDate</code> and <code>EndDate</code> specify the start and end dates for the statistics, respectively. The format is YYYY-MM-DD.</li>
+     * <li>The <code>RemainRateType</code> parameter is optional. If provided, it specifies the retention rate report type. The default value is Period, which indicates a periodic report.</li>
+     * <li>The response includes the request ID (<code>RequestId</code>) and the statistics object (<code>Statistics</code>), which lists the dates when nodes failed (<code>FailedDates</code>) and the dates with missing nodes (<code>NoDataDates</code>).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves statistics for a specified data diagnosis task within a time range.</p>
+     * <p>Retrieves the statistics of a specified data diagnostics within a specific time range.</p>
      * 
      * @param request QueryDataDiagnosisStatisticsRequest
      * @return QueryDataDiagnosisStatisticsResponse
@@ -9449,11 +9453,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Use this API to query the details of single-item control for a given traffic control target on a specified date and for a specific instance ID and environment. The details include traffic data and feature information for the top 100 items before and after the control is applied. Ensure that the <code>TrafficControlTargetId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters are accurate, and that the <code>Date</code> is in YYYY-MM-DD format. Although the <code>Date</code> parameter is optional, we recommend specifying a date for meaningful results.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation queries the traffic control details for individual items of a specified traffic control target on a specified date, for a specified instance ID, and in a specified environment. The details include the traffic conditions and feature information of the top 100 items before traffic control and the bottom 100 items after traffic control. Ensure that the <code>TrafficControlTargetId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters are accurate, and the <code>Date</code> format is correct (YYYY-MM-DD). Note: Although the <code>Date</code> parameter is optional, always specify a date to obtain meaningful results.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the traffic control details of a target item for a given environment and date range.</p>
+     * <p>Retrieves the traffic control details for individual items of a specific traffic control target in a specified environment on a specified date.</p>
      * 
      * @param request QueryTrafficControlTargetItemReportDetailRequest
      * @param headers map
@@ -9495,11 +9499,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Use this API to query the details of single-item control for a given traffic control target on a specified date and for a specific instance ID and environment. The details include traffic data and feature information for the top 100 items before and after the control is applied. Ensure that the <code>TrafficControlTargetId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters are accurate, and that the <code>Date</code> is in YYYY-MM-DD format. Although the <code>Date</code> parameter is optional, we recommend specifying a date for meaningful results.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation queries the traffic control details for individual items of a specified traffic control target on a specified date, for a specified instance ID, and in a specified environment. The details include the traffic conditions and feature information of the top 100 items before traffic control and the bottom 100 items after traffic control. Ensure that the <code>TrafficControlTargetId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters are accurate, and the <code>Date</code> format is correct (YYYY-MM-DD). Note: Although the <code>Date</code> parameter is optional, always specify a date to obtain meaningful results.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the traffic control details of a target item for a given environment and date range.</p>
+     * <p>Retrieves the traffic control details for individual items of a specific traffic control target in a specified environment on a specified date.</p>
      * 
      * @param request QueryTrafficControlTargetItemReportDetailRequest
      * @return QueryTrafficControlTargetItemReportDetailResponse
@@ -9571,18 +9575,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves the item control results for a specific traffic control task within a given time range.</li>
-     * <li><code>TrafficControlTaskId</code> is the unique identifier for a traffic control task.</li>
-     * <li><code>InstanceId</code> specifies the instance that runs the task.</li>
-     * <li>The <code>Environment</code> parameter specifies the task\&quot;s execution environment. Valid values are Daily (development environment), Pre (staging environment), and Prod (production environment).</li>
-     * <li><code>StartTime</code> and <code>EndTime</code> specify the start and end of the time range for the report, respectively. The format is &quot;YYYY-MM-DD HH:MM:SS&quot;.</li>
-     * <li>The specified start and end times must be valid and span no more than two consecutive calendar days.</li>
+     * <li>This API queries the item-level traffic control effect of a specific traffic control task within a given time range.</li>
+     * <li>TrafficControlTaskId is the ID that uniquely identifies a traffic control task.</li>
+     * <li>InstanceId specifies the instance that runs the task.</li>
+     * <li>The Environment parameter defines the environment in which the task runs. Valid values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment).</li>
+     * <li>StartTime and EndTime represent the start and end points of the query time range, respectively. The format is YYYY-MM-DD HH:MM:SS.</li>
+     * <li>Make sure that the start time and end time are valid and fall within the same calendar day or consecutive calendar days.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a detailed report on item control for a specified traffic control task.</p>
+     * <p>Retrieves the item-level traffic control details report for a specified traffic control task.</p>
      * 
      * @param request QueryTrafficControlTaskItemReportRequest
      * @param headers map
@@ -9628,18 +9632,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API retrieves the item control results for a specific traffic control task within a given time range.</li>
-     * <li><code>TrafficControlTaskId</code> is the unique identifier for a traffic control task.</li>
-     * <li><code>InstanceId</code> specifies the instance that runs the task.</li>
-     * <li>The <code>Environment</code> parameter specifies the task\&quot;s execution environment. Valid values are Daily (development environment), Pre (staging environment), and Prod (production environment).</li>
-     * <li><code>StartTime</code> and <code>EndTime</code> specify the start and end of the time range for the report, respectively. The format is &quot;YYYY-MM-DD HH:MM:SS&quot;.</li>
-     * <li>The specified start and end times must be valid and span no more than two consecutive calendar days.</li>
+     * <li>This API queries the item-level traffic control effect of a specific traffic control task within a given time range.</li>
+     * <li>TrafficControlTaskId is the ID that uniquely identifies a traffic control task.</li>
+     * <li>InstanceId specifies the instance that runs the task.</li>
+     * <li>The Environment parameter defines the environment in which the task runs. Valid values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment).</li>
+     * <li>StartTime and EndTime represent the start and end points of the query time range, respectively. The format is YYYY-MM-DD HH:MM:SS.</li>
+     * <li>Make sure that the start time and end time are valid and fall within the same calendar day or consecutive calendar days.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a detailed report on item control for a specified traffic control task.</p>
+     * <p>Retrieves the item-level traffic control details report for a specified traffic control task.</p>
      * 
      * @param request QueryTrafficControlTaskItemReportRequest
      * @return QueryTrafficControlTaskItemReportResponse
@@ -9723,7 +9727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve a metric group\&quot;s report.</p>
+     * <p>Queries the reports of a metric group.</p>
      * 
      * @param request ReportABMetricGroupRequest
      * @param headers map
@@ -9793,7 +9797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieve a metric group\&quot;s report.</p>
+     * <p>Queries the reports of a metric group.</p>
      * 
      * @param request ReportABMetricGroupRequest
      * @return ReportABMetricGroupResponse
@@ -10776,19 +10780,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API updates the configuration of an existing data diagnosis task, including the instance ID, task name, task type, and specific configuration content. Provide the <code>DataDiagnosisId</code> in the request path to identify the task to update. You must also specify the <code>Config</code> parameter based on the task <code>Type</code>. For periodic runs, set the execution time in the <code>CycleTime</code> field. If a periodic run is not required, omit this field.</p>
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
+     * <p>This operation allows you to update the configuration of an existing data diagnostic task, including the instance ID, task name, task type, and specific configuration details. Ensure that you provide the correct <code>DataDiagnosisId</code> in the request body to locate the specific task to be updated, and specify the corresponding configuration parameters (<code>Config</code>) based on the selected task type (<code>Type</code>). For periodic tasks, set the desired execution time by using the <code>CycleTime</code> field. If periodic execution is not required, omit this field.</p>
+     * <h2>Precautions</h2>
      * <ul>
-     * <li><code>DataDiagnosisId</code> is a required path parameter that uniquely identifies a data diagnosis task.</li>
-     * <li>The structure of the <code>Config</code> field varies depending on the value of <code>Type</code>. Refer to the examples in this document for configuration details.</li>
-     * <li>To disable periodic runs, omit the <code>CycleTime</code> field.</li>
-     * <li>When updating a task for two-table join analysis (<code>JoinTables</code>), provide the information for the left and right tables, including <code>LeftTableMetaId</code> and <code>RightTableMetaId</code>.</li>
-     * <li>The <code>InstanceId</code>, <code>Name</code>, and <code>Type</code> parameters are required for all types of data diagnosis tasks.</li>
+     * <li><code>DataDiagnosisId</code> is a path parameter and must be provided to uniquely identify a data diagnostic task.</li>
+     * <li>The content structure of the <code>Config</code> field varies depending on the <code>Type</code> value. Refer to the documentation examples for configuration details.</li>
+     * <li>If periodic execution is not required, you can omit the <code>CycleTime</code> field.</li>
+     * <li>When the update involves join table analysis (<code>JoinTables</code>), ensure that you correctly specify the information for the left and right tables, including <code>LeftTableMetaId</code> and <code>RightTableMetaId</code>.</li>
+     * <li>For all types of data diagnostic tasks, <code>InstanceId</code>, <code>Name</code>, and <code>Type</code> are required.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of a specified data diagnosis task.</p>
+     * <p>Updates the configuration of a specified data diagnostic task.</p>
      * 
      * @param request UpdateDataDiagnosisRequest
      * @param headers map
@@ -10866,19 +10870,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API updates the configuration of an existing data diagnosis task, including the instance ID, task name, task type, and specific configuration content. Provide the <code>DataDiagnosisId</code> in the request path to identify the task to update. You must also specify the <code>Config</code> parameter based on the task <code>Type</code>. For periodic runs, set the execution time in the <code>CycleTime</code> field. If a periodic run is not required, omit this field.</p>
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
+     * <p>This operation allows you to update the configuration of an existing data diagnostic task, including the instance ID, task name, task type, and specific configuration details. Ensure that you provide the correct <code>DataDiagnosisId</code> in the request body to locate the specific task to be updated, and specify the corresponding configuration parameters (<code>Config</code>) based on the selected task type (<code>Type</code>). For periodic tasks, set the desired execution time by using the <code>CycleTime</code> field. If periodic execution is not required, omit this field.</p>
+     * <h2>Precautions</h2>
      * <ul>
-     * <li><code>DataDiagnosisId</code> is a required path parameter that uniquely identifies a data diagnosis task.</li>
-     * <li>The structure of the <code>Config</code> field varies depending on the value of <code>Type</code>. Refer to the examples in this document for configuration details.</li>
-     * <li>To disable periodic runs, omit the <code>CycleTime</code> field.</li>
-     * <li>When updating a task for two-table join analysis (<code>JoinTables</code>), provide the information for the left and right tables, including <code>LeftTableMetaId</code> and <code>RightTableMetaId</code>.</li>
-     * <li>The <code>InstanceId</code>, <code>Name</code>, and <code>Type</code> parameters are required for all types of data diagnosis tasks.</li>
+     * <li><code>DataDiagnosisId</code> is a path parameter and must be provided to uniquely identify a data diagnostic task.</li>
+     * <li>The content structure of the <code>Config</code> field varies depending on the <code>Type</code> value. Refer to the documentation examples for configuration details.</li>
+     * <li>If periodic execution is not required, you can omit the <code>CycleTime</code> field.</li>
+     * <li>When the update involves join table analysis (<code>JoinTables</code>), ensure that you correctly specify the information for the left and right tables, including <code>LeftTableMetaId</code> and <code>RightTableMetaId</code>.</li>
+     * <li>For all types of data diagnostic tasks, <code>InstanceId</code>, <code>Name</code>, and <code>Type</code> are required.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of a specified data diagnosis task.</p>
+     * <p>Updates the configuration of a specified data diagnostic task.</p>
      * 
      * @param request UpdateDataDiagnosisRequest
      * @return UpdateDataDiagnosisResponse
@@ -11140,18 +11144,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation allows you to update the configuration of an existing feature consistency check task. By providing new configuration parameters, you can modify multiple properties including the instance ID, name, and scene ID. Ensure that all required parameters are included in the request, and provide optional parameters as needed.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation allows you to update the configuration of an existing feature consistency check job. By providing new configuration parameters, you can modify multiple properties, including the instance ID, name, and scene ID. Make sure that all required parameters are included in the request, and provide optional parameters as needed.</p>
      * <ul>
-     * <li><strong>FeatureConsistencyCheckJobConfigId</strong> is a path parameter that specifies the feature consistency check task to update.</li>
-     * <li>All other parameters are in the request body. Some are required (such as InstanceId and Name), and the rest are optional.</li>
-     * <li>The SampleRate value must be a floating-point number between 0 and 1, which indicates the sampling ratio.</li>
-     * <li>If you use FeatureStore-related features, make sure that you correctly set the IsUseFeatureStore flag and the related FeatureStore* fields.</li>
-     * <li>For network configuration parameters (such as VpcId and SwitchId), make sure that the values match your Alibaba Cloud environment.</li>
+     * <li><strong>FeatureConsistencyCheckJobConfigId</strong> is a path parameter used to specify the feature consistency check job to be updated.</li>
+     * <li>All other parameters are located in the request body. Some of them are required (such as InstanceId and Name), while others are optional.</li>
+     * <li>Note that <code>SampleRate</code> must be a floating-point number between 0 and 1, which represents the sampling ratio.</li>
+     * <li>If you use <code>FeatureStore</code>-related features, make sure to correctly set the <code>IsUseFeatureStore</code> flag and the related <code>FeatureStore*</code> fields.</li>
+     * <li>For network configuration parameters (such as VpcId and SwitchId), make sure that the provided values match your Alibaba Cloud environment.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration details of a feature consistency check task, such as the name.</p>
+     * <p>Updates the detailed configuration of a feature consistency check job, such as the name.</p>
      * 
      * @param request UpdateFeatureConsistencyCheckJobConfigRequest
      * @param headers map
@@ -11369,18 +11373,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation allows you to update the configuration of an existing feature consistency check task. By providing new configuration parameters, you can modify multiple properties including the instance ID, name, and scene ID. Ensure that all required parameters are included in the request, and provide optional parameters as needed.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation allows you to update the configuration of an existing feature consistency check job. By providing new configuration parameters, you can modify multiple properties, including the instance ID, name, and scene ID. Make sure that all required parameters are included in the request, and provide optional parameters as needed.</p>
      * <ul>
-     * <li><strong>FeatureConsistencyCheckJobConfigId</strong> is a path parameter that specifies the feature consistency check task to update.</li>
-     * <li>All other parameters are in the request body. Some are required (such as InstanceId and Name), and the rest are optional.</li>
-     * <li>The SampleRate value must be a floating-point number between 0 and 1, which indicates the sampling ratio.</li>
-     * <li>If you use FeatureStore-related features, make sure that you correctly set the IsUseFeatureStore flag and the related FeatureStore* fields.</li>
-     * <li>For network configuration parameters (such as VpcId and SwitchId), make sure that the values match your Alibaba Cloud environment.</li>
+     * <li><strong>FeatureConsistencyCheckJobConfigId</strong> is a path parameter used to specify the feature consistency check job to be updated.</li>
+     * <li>All other parameters are located in the request body. Some of them are required (such as InstanceId and Name), while others are optional.</li>
+     * <li>Note that <code>SampleRate</code> must be a floating-point number between 0 and 1, which represents the sampling ratio.</li>
+     * <li>If you use <code>FeatureStore</code>-related features, make sure to correctly set the <code>IsUseFeatureStore</code> flag and the related <code>FeatureStore*</code> fields.</li>
+     * <li>For network configuration parameters (such as VpcId and SwitchId), make sure that the provided values match your Alibaba Cloud environment.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration details of a feature consistency check task, such as the name.</p>
+     * <p>Updates the detailed configuration of a feature consistency check job, such as the name.</p>
      * 
      * @param request UpdateFeatureConsistencyCheckJobConfigRequest
      * @return UpdateFeatureConsistencyCheckJobConfigResponse
@@ -12217,18 +12221,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Updates a traffic control target specified by its ID.</li>
-     * <li><code>TrafficControlTargetId</code> is a path parameter that specifies the ID of the traffic control target to update.</li>
-     * <li>The <code>ItemConditionType</code> parameter specifies the format of the item condition, which can be either <code>Array</code> or <code>Expression</code>. Based on your selection, you must provide a value for either the <code>ItemConditionArray</code> or <code>ItemConditionExpress</code> parameter.</li>
-     * <li>If <code>NewProductRegulation</code> is set to <code>true</code>, the control rule applies to a new product.</li>
-     * <li>The <code>StatisPeriod</code> parameter specifies the statistics period. Valid values are <code>Daily</code> and <code>hourly</code>.</li>
-     * <li>Ensure that the time interval between <code>StartTime</code> and <code>EndTime</code> is reasonable and meets your business requirements.</li>
+     * <li>This operation allows you to update a traffic control target by its ID.</li>
+     * <li><code>TrafficControlTargetId</code> is a path parameter. You must provide a specific traffic control target ID.</li>
+     * <li><code>ItemConditionType</code> defines the format of the item control condition. Valid values: <code>Array</code> and <code>Expression</code>. Based on the selected type, fill in the <code>ItemConditionArray</code> or <code>ItemConditionExpress</code> field accordingly.</li>
+     * <li>If <code>NewProductRegulation</code> is set to <code>true</code>, the control rule applies specifically to new products.</li>
+     * <li><code>StatisPeriod</code> supports <code>Daily</code> and <code>Hour</code> options. The default value is determined by the system.</li>
+     * <li>Ensure that the interval between <code>StartTime</code> and <code>EndTime</code> is reasonable and meets your business requirements.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of a traffic control target, including its control period, conditions, and value.</p>
+     * <p>Updates the configuration of an existing traffic control target, including the control time, conditions, and target values.</p>
      * 
      * @param request UpdateTrafficControlTargetRequest
      * @param headers map
@@ -12316,18 +12320,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Updates a traffic control target specified by its ID.</li>
-     * <li><code>TrafficControlTargetId</code> is a path parameter that specifies the ID of the traffic control target to update.</li>
-     * <li>The <code>ItemConditionType</code> parameter specifies the format of the item condition, which can be either <code>Array</code> or <code>Expression</code>. Based on your selection, you must provide a value for either the <code>ItemConditionArray</code> or <code>ItemConditionExpress</code> parameter.</li>
-     * <li>If <code>NewProductRegulation</code> is set to <code>true</code>, the control rule applies to a new product.</li>
-     * <li>The <code>StatisPeriod</code> parameter specifies the statistics period. Valid values are <code>Daily</code> and <code>hourly</code>.</li>
-     * <li>Ensure that the time interval between <code>StartTime</code> and <code>EndTime</code> is reasonable and meets your business requirements.</li>
+     * <li>This operation allows you to update a traffic control target by its ID.</li>
+     * <li><code>TrafficControlTargetId</code> is a path parameter. You must provide a specific traffic control target ID.</li>
+     * <li><code>ItemConditionType</code> defines the format of the item control condition. Valid values: <code>Array</code> and <code>Expression</code>. Based on the selected type, fill in the <code>ItemConditionArray</code> or <code>ItemConditionExpress</code> field accordingly.</li>
+     * <li>If <code>NewProductRegulation</code> is set to <code>true</code>, the control rule applies specifically to new products.</li>
+     * <li><code>StatisPeriod</code> supports <code>Daily</code> and <code>Hour</code> options. The default value is determined by the system.</li>
+     * <li>Ensure that the interval between <code>StartTime</code> and <code>EndTime</code> is reasonable and meets your business requirements.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration of a traffic control target, including its control period, conditions, and value.</p>
+     * <p>Updates the configuration of an existing traffic control target, including the control time, conditions, and target values.</p>
      * 
      * @param request UpdateTrafficControlTargetRequest
      * @return UpdateTrafficControlTargetResponse
@@ -12340,18 +12344,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use this API to update an existing traffic control task.</li>
-     * <li>When <code>ExecutionTime</code> is set to <code>TimeRange</code>, you must also provide <code>StartTime</code> and <code>EndTime</code>.</li>
-     * <li>Each element in the <code>TrafficControlTargets</code> array is a traffic control target. Ensure each target\&quot;s time range, condition type, and other information are complete and valid.</li>
-     * <li>If you set <code>UserConditionType</code> or <code>ItemConditionType</code> to <code>Expression</code>, you must specify the corresponding expression field (for example, <code>UserConditionExpress</code>).</li>
-     * <li><code>ServiceIds</code> and <code>EffectiveSceneIds</code> are optional parameters. If you include them, ensure the ID lists are correctly formatted.</li>
-     * <li>Ensure you complete all required fields to avoid a failed request.</li>
+     * <li>This API updates an existing traffic control task.</li>
+     * <li>When <code>ExecutionTime</code> is set to <code>TimeRange</code>, you must provide both <code>StartTime</code> and <code>EndTime</code>.</li>
+     * <li>Each element in the <code>TrafficControlTargets</code> array represents a specific traffic control target. Make sure that the time range, condition type, and other information for each target are complete and valid.</li>
+     * <li>If <code>UserConditionType</code> or <code>ItemConditionType</code> is set to <code>Expression</code>, the corresponding expression field (such as <code>UserConditionExpress</code>) cannot be empty.</li>
+     * <li><code>ServiceIds</code> and <code>EffectiveSceneIds</code> are optional parameters. If you use them, make sure that the provided ID lists are in the correct format.</li>
+     * <li>During the update, make sure that all required fields are correctly filled in. Otherwise, the request may fail.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration and target of a specified traffic control task.</p>
+     * <p>Updates a specified traffic control task, including its configuration and targets.</p>
      * 
      * @param request UpdateTrafficControlTaskRequest
      * @param headers map
@@ -12501,18 +12505,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Usage notes</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use this API to update an existing traffic control task.</li>
-     * <li>When <code>ExecutionTime</code> is set to <code>TimeRange</code>, you must also provide <code>StartTime</code> and <code>EndTime</code>.</li>
-     * <li>Each element in the <code>TrafficControlTargets</code> array is a traffic control target. Ensure each target\&quot;s time range, condition type, and other information are complete and valid.</li>
-     * <li>If you set <code>UserConditionType</code> or <code>ItemConditionType</code> to <code>Expression</code>, you must specify the corresponding expression field (for example, <code>UserConditionExpress</code>).</li>
-     * <li><code>ServiceIds</code> and <code>EffectiveSceneIds</code> are optional parameters. If you include them, ensure the ID lists are correctly formatted.</li>
-     * <li>Ensure you complete all required fields to avoid a failed request.</li>
+     * <li>This API updates an existing traffic control task.</li>
+     * <li>When <code>ExecutionTime</code> is set to <code>TimeRange</code>, you must provide both <code>StartTime</code> and <code>EndTime</code>.</li>
+     * <li>Each element in the <code>TrafficControlTargets</code> array represents a specific traffic control target. Make sure that the time range, condition type, and other information for each target are complete and valid.</li>
+     * <li>If <code>UserConditionType</code> or <code>ItemConditionType</code> is set to <code>Expression</code>, the corresponding expression field (such as <code>UserConditionExpress</code>) cannot be empty.</li>
+     * <li><code>ServiceIds</code> and <code>EffectiveSceneIds</code> are optional parameters. If you use them, make sure that the provided ID lists are in the correct format.</li>
+     * <li>During the update, make sure that all required fields are correctly filled in. Otherwise, the request may fail.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Updates the configuration and target of a specified traffic control task.</p>
+     * <p>Updates a specified traffic control task, including its configuration and targets.</p>
      * 
      * @param request UpdateTrafficControlTaskRequest
      * @return UpdateTrafficControlTaskResponse
@@ -12525,11 +12529,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API updates the traffic configuration for a specific traffic control task. The configuration includes the traffic control target ID, record time, target traffic, and overall traffic. Ensure that the provided<code>TrafficControlTaskId</code> is valid and within your permission scope. Additionally, each object in the<code>Traffics</code> array must contain the required fields.</p>
+     * <h2>Request description</h2>
+     * <p>This API allows you to update the traffic configuration of a specific traffic control task, including but not limited to the traffic control target ID, record time, target traffic, and overall traffic. Make sure that the provided <code>TrafficControlTaskId</code> is valid and within the permission scope of the current user. In addition, each object in the <code>Traffics</code> array must contain the required fields to ensure successful request processing.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the traffic parameters for a specified traffic control task, including target traffic and actual traffic.</p>
+     * <p>Updates the traffic parameters of a specified traffic control task, including the target traffic and actual traffic.</p>
      * 
      * @param request UpdateTrafficControlTaskTrafficRequest
      * @param headers map
@@ -12577,11 +12581,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API updates the traffic configuration for a specific traffic control task. The configuration includes the traffic control target ID, record time, target traffic, and overall traffic. Ensure that the provided<code>TrafficControlTaskId</code> is valid and within your permission scope. Additionally, each object in the<code>Traffics</code> array must contain the required fields.</p>
+     * <h2>Request description</h2>
+     * <p>This API allows you to update the traffic configuration of a specific traffic control task, including but not limited to the traffic control target ID, record time, target traffic, and overall traffic. Make sure that the provided <code>TrafficControlTaskId</code> is valid and within the permission scope of the current user. In addition, each object in the <code>Traffics</code> array must contain the required fields to ensure successful request processing.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the traffic parameters for a specified traffic control task, including target traffic and actual traffic.</p>
+     * <p>Updates the traffic parameters of a specified traffic control task, including the target traffic and actual traffic.</p>
      * 
      * @param request UpdateTrafficControlTaskTrafficRequest
      * @return UpdateTrafficControlTaskTrafficResponse

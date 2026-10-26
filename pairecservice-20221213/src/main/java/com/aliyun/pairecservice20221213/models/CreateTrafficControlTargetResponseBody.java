@@ -14,7 +14,7 @@ public class CreateTrafficControlTargetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The traffic control target ID.</p>
+     * <p>The ID of the traffic control target.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

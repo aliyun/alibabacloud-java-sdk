@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTableMetasRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can get this ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
+     * <p>The instance ID. You can obtain the instance ID by calling the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,13 +15,13 @@ public class ListTableMetasRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The module of the data table. Valid values:</p>
+     * <p>The module of the data table.</p>
      * <ul>
-     * <li><p>ABTest: A/B testing data tables</p>
+     * <li><p>ABTest: Experiment data tables</p>
      * </li>
-     * <li><p>ExperimentTool: experiment tool tables</p>
+     * <li><p>ExperimentTool: Experiment tool tables</p>
      * </li>
-     * <li><p>DataDiagnosis: data diagnosis tables</p>
+     * <li><p>DataDiagnosis: Data diagnosis</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -33,7 +33,7 @@ public class ListTableMetasRequest extends TeaModel {
     public String module;
 
     /**
-     * <p>The table name to filter on.</p>
+     * <p>The table name filter.</p>
      * 
      * <strong>example:</strong>
      * <p>test1</p>
@@ -51,7 +51,7 @@ public class ListTableMetasRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -60,7 +60,7 @@ public class ListTableMetasRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the data table. Valid values:</p>
+     * <p>The type of the data table.</p>
      * <ul>
      * <li><p>MaxCompute</p>
      * </li>

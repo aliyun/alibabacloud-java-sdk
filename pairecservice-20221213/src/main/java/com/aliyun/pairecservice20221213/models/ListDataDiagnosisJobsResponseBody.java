@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataDiagnosisJobsResponseBody extends TeaModel {
     /**
-     * <p>The returned data diagnosis jobs.</p>
+     * <p>The list of data diagnostic tasks.</p>
      */
     @NameInMap("DataDiagnosisJobs")
     public java.util.List<ListDataDiagnosisJobsResponseBodyDataDiagnosisJobs> dataDiagnosisJobs;
@@ -20,7 +20,7 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of entries in the list.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -59,7 +59,7 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
 
     public static class ListDataDiagnosisJobsResponseBodyDataDiagnosisJobs extends TeaModel {
         /**
-         * <p>The business date.</p>
+         * <p>The business date. The format is YYYY-MM-DD.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-28</p>
@@ -68,7 +68,7 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
         public String bizDate;
 
         /**
-         * <p>The job configuration.</p>
+         * <p>The task configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -77,7 +77,7 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
         public String config;
 
         /**
-         * <p>The data diagnosis configuration ID.</p>
+         * <p>The ID of the data diagnostic configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -86,16 +86,16 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
         public String dataDiagnosisConfigId;
 
         /**
-         * <p>The data diagnosis configuration name.</p>
+         * <p>The name of the data diagnostic configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>异常行为分析-xxx</p>
+         * <p>Abnormal behavior analysis-xxx</p>
          */
         @NameInMap("DataDiagnosisConfigName")
         public String dataDiagnosisConfigName;
 
         /**
-         * <p>The data diagnosis job ID.</p>
+         * <p>The ID of the data diagnostic task.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -104,7 +104,7 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
         public String dataDiagnosisJobId;
 
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The creation time. The format is ISO 8601 and includes the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -113,7 +113,7 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The time when the job started.</p>
+         * <p>The execution time. The format is ISO 8601 and includes the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -122,13 +122,13 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
         public String gmtStartTime;
 
         /**
-         * <p>The job source. Valid values:</p>
+         * <p>The task source. Valid values:</p>
          * <ul>
-         * <li><p>Rerun: A manual rerun.</p>
+         * <li><p>Rerun: Manual rerun.</p>
          * </li>
-         * <li><p>Cycle: A periodic run.</p>
+         * <li><p>Cycle: Periodic generation.</p>
          * </li>
-         * <li><p>ByInitializing: Generated during initialization.</p>
+         * <li><p>ByInitializing: Initialization generation.</p>
          * </li>
          * </ul>
          * 
@@ -139,7 +139,7 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
         public String jobSource;
 
         /**
-         * <p>The log messages.</p>
+         * <p>The list of log information.</p>
          */
         @NameInMap("Logs")
         public java.util.List<String> logs;
@@ -154,7 +154,7 @@ public class ListDataDiagnosisJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The data diagnosis type.</p>
+         * <p>The data diagnostic type.</p>
          * 
          * <strong>example:</strong>
          * <p>ChangeRate</p>

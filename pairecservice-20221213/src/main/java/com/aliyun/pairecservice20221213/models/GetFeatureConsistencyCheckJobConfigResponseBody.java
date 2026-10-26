@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     /**
-     * <p>Whether to enable feature comparison.</p>
+     * <p>Indicates whether feature comparison is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -13,21 +13,57 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     @NameInMap("CompareFeature")
     public Boolean compareFeature;
 
+    /**
+     * <p>The dataset ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>s-xxx</p>
+     */
     @NameInMap("DatasetId")
     public String datasetId;
 
+    /**
+     * <p>The mount path of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mnt/xxx</p>
+     */
     @NameInMap("DatasetMountPath")
     public String datasetMountPath;
 
+    /**
+     * <p>The name of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("DatasetName")
     public String datasetName;
 
+    /**
+     * <p>The dataset type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("DatasetType")
     public String datasetType;
 
+    /**
+     * <p>The URI of the dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss-xxx</p>
+     */
     @NameInMap("DatasetUri")
     public String datasetUri;
 
+    /**
+     * <p>The default gateway. Eth0 indicates the public gateway. Eth1 indicates the dedicated gateway.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Eth0</p>
+     */
     @NameInMap("DefaultRoute")
     public String defaultRoute;
 
@@ -59,7 +95,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String easyRecVersion;
 
     /**
-     * <p>A comma-separated list of features to exclude from the display.</p>
+     * <p>The feature display filter. Separate multiple features with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>feature1,feature2</p>
@@ -68,7 +104,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String featureDisplayExclude;
 
     /**
-     * <p>The ID of the data source for feature fallback.</p>
+     * <p>The ID of the data source for data backflow.</p>
      * 
      * <strong>example:</strong>
      * <p>reso-********</p>
@@ -77,7 +113,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String featureLandingResourceId;
 
     /**
-     * <p>The URI of the data source for feature fallback.</p>
+     * <p>The URI of the data source for data backflow.</p>
      * 
      * <strong>example:</strong>
      * <p>mc_project_1</p>
@@ -86,7 +122,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String featureLandingResourceUri;
 
     /**
-     * <p>A comma-separated list of features, ordered by priority.</p>
+     * <p>The feature priority. Separate multiple features with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>feature1,feature2,feature3</p>
@@ -95,7 +131,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String featurePriority;
 
     /**
-     * <p>The primary key for items in the Feature Store.</p>
+     * <p>The primary key on the item side in Feature Store.</p>
      * 
      * <strong>example:</strong>
      * <p>item</p>
@@ -104,7 +140,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String featureStoreItemId;
 
     /**
-     * <p>The Feature Store model ID.</p>
+     * <p>The feature store model ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -113,7 +149,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String featureStoreModelId;
 
     /**
-     * <p>The Feature Store project ID.</p>
+     * <p>The ID of the Feature Store project.</p>
      * 
      * <strong>example:</strong>
      * <p>prj-01</p>
@@ -122,7 +158,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String featureStoreProjectId;
 
     /**
-     * <p>The Feature Store project name.</p>
+     * <p>The name of the Feature Store project.</p>
      * 
      * <strong>example:</strong>
      * <p>project-1</p>
@@ -131,7 +167,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String featureStoreProjectName;
 
     /**
-     * <p>The name of the feature view that contains item features within sequence features.</p>
+     * <p>The name of the feature view to which the item feature belongs in the sequence feature.</p>
      * 
      * <strong>example:</strong>
      * <p>item-1</p>
@@ -140,7 +176,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String featureStoreSeqFeatureView;
 
     /**
-     * <p>The primary key for users in the Feature Store.</p>
+     * <p>The primary key on the user side in Feature Store.</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -149,7 +185,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String featureStoreUserId;
 
     /**
-     * <p>The version of the <code>fg_jar</code> file.</p>
+     * <p>The fg_jar version.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
@@ -158,7 +194,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String fgJarVersion;
 
     /**
-     * <p>The name of the <code>fg_json</code> file.</p>
+     * <p>The name of the fg_json file.</p>
      * 
      * <strong>example:</strong>
      * <p>file.json</p>
@@ -167,7 +203,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String fgJsonFileName;
 
     /**
-     * <p>Whether to generate a ZIP package.</p>
+     * <p>Indicates whether a ZIP package needs to be generated.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -176,7 +212,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public Boolean generateZip;
 
     /**
-     * <p>The time the configuration was created.</p>
+     * <p>The creation time. The time is in ISO 8601 format and includes a time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -185,7 +221,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String gmtCreateTime;
 
     /**
-     * <p>The time the configuration was last updated.</p>
+     * <p>The update time. The time is in ISO 8601 format and includes a time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -194,7 +230,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The name of the <code>item_id</code> field.</p>
+     * <p>The name of the item_id field.</p>
      * 
      * <strong>example:</strong>
      * <p>item_id</p>
@@ -203,7 +239,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String itemIdField;
 
     /**
-     * <p>The item table name.</p>
+     * <p>The name of the item table.</p>
      * 
      * <strong>example:</strong>
      * <p>item_table</p>
@@ -223,10 +259,8 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     /**
      * <p>The format of the partition field in the item table. Valid values:</p>
      * <ul>
-     * <li><p><code>yyyymmdd</code></p>
-     * </li>
-     * <li><p><code>yyyy-mm-dd</code></p>
-     * </li>
+     * <li>yyyymmdd</li>
+     * <li>yyyy-mm-dd</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -236,7 +270,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String itemTablePartitionFieldFormat;
 
     /**
-     * <p>The end time of the most recent job.</p>
+     * <p>The end time of the latest job. The time is in ISO 8601 format and includes a time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -245,7 +279,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String latestJobGmtSamplingEndTime;
 
     /**
-     * <p>The start time of the most recent job.</p>
+     * <p>The start time of the latest job. The time is in ISO 8601 format and includes a time zone offset.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-12-15T23:24:33.132+08:00</p>
@@ -254,7 +288,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String latestJobGmtSamplingStartTime;
 
     /**
-     * <p>The ID of the most recent job created from this configuration.</p>
+     * <p>The ID of the latest job created based on this configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -272,7 +306,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The OSS bucket name.</p>
+     * <p>The name of the OSS bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>oss_bucket_1</p>
@@ -289,12 +323,30 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     @NameInMap("OssResourceId")
     public String ossResourceId;
 
+    /**
+     * <p>The number of workers used to execute the prediction script.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PredictWorkerCount")
     public Integer predictWorkerCount;
 
+    /**
+     * <p>The CPU resources allocated to workers when executing the prediction script.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("PredictWorkerCpu")
     public Integer predictWorkerCpu;
 
+    /**
+     * <p>The memory resources allocated to workers when executing the prediction script.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32000</p>
+     */
     @NameInMap("PredictWorkerMemory")
     public Integer predictWorkerMemory;
 
@@ -307,11 +359,17 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The resource configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("ResourceConfig")
     public String resourceConfig;
 
     /**
-     * <p>The sample rate. The value must be between 0 and 1.</p>
+     * <p>The sampling rate. Valid values: 0 to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>0.89</p>
@@ -337,6 +395,12 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     @NameInMap("SceneName")
     public String sceneName;
 
+    /**
+     * <p>The security group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-xxx</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
@@ -359,12 +423,10 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The status of the configuration. Valid values:</p>
+     * <p>The status. Valid values:</p>
      * <ul>
-     * <li><p><code>Editable</code>: The configuration can be edited.</p>
-     * </li>
-     * <li><p><code>Uneditable</code>: The configuration cannot be edited.</p>
-     * </li>
+     * <li>Editable: The configuration is editable.</li>
+     * <li>Uneditable: The configuration is not editable.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -373,16 +435,20 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The vSwitch ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vswitch-xxx</p>
+     */
     @NameInMap("SwitchId")
     public String switchId;
 
     /**
-     * <p>Whether to use a Feature Store. Valid values:</p>
+     * <p>Indicates whether to use Feature Store. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: A Feature Store is used. In this case, the response also returns <code>FeatureStoreProjectId</code>, <code>FeatureStoreProjectName</code>, <code>FeatureStoreModelId</code>, <code>FeatureStoreUserId</code>, and <code>FeatureStoreItemId</code>.</p>
-     * </li>
-     * <li><p><code>false</code>: A Feature Store is not used. In this case, the <code>UserTable</code>, <code>UserIdField</code>, <code>UserTablePartitionField</code>, <code>UserTablePartitionFieldFormat</code>, <code>ItemTable</code>, <code>ItemIdField</code>, <code>ItemTablePartitionField</code>, and <code>ItemTablePartitionFieldFormat</code> parameters are returned.</p>
-     * </li>
+     * <li>true: Feature Store is used. In this case, FeatureStoreProjectId, FeatureStoreProjectName, FeatureStoreModelId, FeatureStoreUserId, and FeatureStoreItemId are returned.</li>
+     * <li>false: Feature Store is not used. In this case, UserTable, UserIdField, UserTablePartitionField, UserTablePartitionFieldFormat, ItemTable, ItemIdField, ItemTablePartitionField, and ItemTablePartitionFieldFormat are required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -392,7 +458,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public Boolean useFeatureStore;
 
     /**
-     * <p>The name of the <code>user_id</code> field.</p>
+     * <p>The name of the user_id field.</p>
      * 
      * <strong>example:</strong>
      * <p>user_id</p>
@@ -401,7 +467,7 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     public String userIdField;
 
     /**
-     * <p>The user table name.</p>
+     * <p>The name of the user table.</p>
      * 
      * <strong>example:</strong>
      * <p>user_table</p>
@@ -421,10 +487,8 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     /**
      * <p>The format of the partition field in the user table. Valid values:</p>
      * <ul>
-     * <li><p><code>yyyymmdd</code></p>
-     * </li>
-     * <li><p><code>yyyy-mm-dd</code></p>
-     * </li>
+     * <li>yyyymmdd</li>
+     * <li>yyyy-mm-dd</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -433,6 +497,12 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     @NameInMap("UserTablePartitionFieldFormat")
     public String userTablePartitionFieldFormat;
 
+    /**
+     * <p>The VPC ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-xxx</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -445,6 +515,12 @@ public class GetFeatureConsistencyCheckJobConfigResponseBody extends TeaModel {
     @NameInMap("WorkflowName")
     public String workflowName;
 
+    /**
+     * <p>The ID of the PAI workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
