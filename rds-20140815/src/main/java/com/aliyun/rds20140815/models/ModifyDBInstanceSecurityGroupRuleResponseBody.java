@@ -14,7 +14,7 @@ public class ModifyDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response code message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

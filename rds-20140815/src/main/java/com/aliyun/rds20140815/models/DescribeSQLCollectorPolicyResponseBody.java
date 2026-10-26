@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLCollectorPolicyResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -16,8 +16,8 @@ public class DescribeSQLCollectorPolicyResponseBody extends TeaModel {
     /**
      * <p>The status of the SQL Explorer (SQL Audit) feature. Valid values:</p>
      * <ul>
-     * <li><strong>Enable</strong>: enabled.</li>
-     * <li><strong>Disabled</strong>: disabled.</li>
+     * <li><strong>Enable</strong>: Enabled.</li>
+     * <li><strong>Disabled</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

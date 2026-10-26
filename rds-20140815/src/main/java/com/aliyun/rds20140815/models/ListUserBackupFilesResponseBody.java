@@ -42,7 +42,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
 
     public static class ListUserBackupFilesResponseBodyRecords extends TeaModel {
         /**
-         * <p>The user backup ID.</p>
+         * <p>The ID of the user backup.</p>
          * 
          * <strong>example:</strong>
          * <p>b-kwwvr7v8t7of****</p>
@@ -51,7 +51,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String backupId;
 
         /**
-         * <p>The binary log file information in the backup file. This parameter is returned if incremental data exists during the backup process.</p>
+         * <p>The information about the binlog files in the backup file. This parameter is returned if incremental data is generated during the backup process.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;binlogPosition\&quot;:\&quot;154\&quot;,\&quot;binlogFile\&quot;:\&quot;0.000002\&quot;}</p>
@@ -69,7 +69,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The time when the user backup import started. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the import of the user backup started. The time is in the UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1623231084000</p>
@@ -96,7 +96,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String engineVersion;
 
         /**
-         * <p>The time when the user backup was successfully imported. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the user backup was successfully imported. The time is in the UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1623231750000</p>
@@ -105,7 +105,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The time when the user backup import was completed. The value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the import of the user backup was completed. The time is in the UNIX timestamp format. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1623231750000</p>
@@ -114,7 +114,7 @@ public class ListUserBackupFilesResponseBody extends TeaModel {
         public String modificationTime;
 
         /**
-         * <p>The name of the OSS bucket in which the user backup file is stored.</p>
+         * <p>The name of the OSS bucket where the user backup file is stored.</p>
          * 
          * <strong>example:</strong>
          * <p>BackupTest</p>

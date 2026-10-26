@@ -14,7 +14,7 @@ public class DescribeSlowLogRecordsResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database engine type.</p>
+     * <p>The database engine.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>

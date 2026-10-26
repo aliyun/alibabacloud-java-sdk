@@ -9,8 +9,8 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
      * <ul>
      * <li><strong>200</strong>: Normal.</li>
      * <li><strong>400</strong>: Client fault.</li>
-     * <li><strong>401</strong>: Authentication failed.</li>
-     * <li><strong>404</strong>: Request page not found.</li>
+     * <li><strong>401</strong>: Failed to authenticate.</li>
+     * <li><strong>404</strong>: The requested page is not found.</li>
      * <li><strong>500</strong>: Server fault.</li>
      * </ul>
      * 
@@ -21,7 +21,7 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The list of returned data.</p>
      */
     @NameInMap("Data")
     public DetachWhitelistTemplateToInstanceResponseBodyData data;
@@ -29,7 +29,7 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>200</strong>: Success.</li>
+     * <li><strong>200</strong>: Successful.</li>
      * <li><strong>400</strong>: Client error.</li>
      * <li><strong>500</strong>: Server error.</li>
      * </ul>
@@ -41,7 +41,7 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -50,7 +50,7 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>224DB9F7-3100-4899-AB9C-C938BCCB43E7</p>
@@ -61,8 +61,8 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Success.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,10 +126,10 @@ public class DetachWhitelistTemplateToInstanceResponseBody extends TeaModel {
 
     public static class DetachWhitelistTemplateToInstanceResponseBodyData extends TeaModel {
         /**
-         * <p>The return status. Valid values:</p>
+         * <p>The returned status. Valid values:</p>
          * <ul>
-         * <li><strong>ok</strong>: Success.</li>
-         * <li><strong>error</strong>: Error.</li>
+         * <li><strong>ok</strong>: Successful.</li>
+         * <li><strong>error</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

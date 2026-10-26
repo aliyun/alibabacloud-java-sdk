@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchDBInstanceVpcRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class SwitchDBInstanceVpcRequest extends TeaModel {
     /**
      * <p>The private IP address of the instance. The IP address must be within the CIDR block of the vSwitch specified by the <strong>VSwitchId</strong> parameter.</p>
      * <blockquote>
-     * <p>You can call DescribeVSwitches to query the CIDR block of the target vSwitch.</p>
+     * <p>You can call the DescribeVSwitches operation to query the CIDR block of the vSwitch.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class SwitchDBInstanceVpcRequest extends TeaModel {
     /**
      * <p>The VPC ID.</p>
      * <blockquote>
-     * <p>The VPC must be in the same region as the ApsaraDB RDS instance.</p>
+     * <p>The VPC and the ApsaraDB RDS instance must be in the same region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -45,7 +45,7 @@ public class SwitchDBInstanceVpcRequest extends TeaModel {
     /**
      * <p>The vSwitch ID.</p>
      * <blockquote>
-     * <p>The vSwitch must be in the same zone as the ApsaraDB RDS instance.</p>
+     * <p>The vSwitch and the ApsaraDB RDS instance must be in the same zone.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

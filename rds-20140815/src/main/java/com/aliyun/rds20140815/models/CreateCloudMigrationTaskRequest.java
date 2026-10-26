@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudMigrationTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the target instance. You can invoke the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID of the destination instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class CreateCloudMigrationTaskRequest extends TeaModel {
     public String sourceAccount;
 
     /**
-     * <p>The category of the source instance.</p>
+     * <p>The category of the source instance. Valid values:</p>
      * <ul>
-     * <li><strong>aliyunRDS</strong>: ApsaraDB RDS instance.</li>
-     * <li><strong>other</strong>: other.</li>
+     * <li><strong>aliyunRDS</strong>: Alibaba Cloud RDS instance.</li>
+     * <li><strong>other</strong>: Other.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,8 +44,8 @@ public class CreateCloudMigrationTaskRequest extends TeaModel {
     /**
      * <p>The internal or public IP address of the self-managed PostgreSQL database.</p>
      * <ul>
-     * <li>To migrate a self-managed PostgreSQL database on an ECS instance to the cloud, set this parameter to the private IP address of the ECS instance. For more information about how to obtain the IP address, see <a href="https://help.aliyun.com/document_detail/98677.html">View IP addresses</a>.</li>
-     * <li>To migrate a self-managed PostgreSQL database in an Internet Data Center (IDC) to the cloud, set this parameter to the internal IP address of the IDC.</li>
+     * <li>For the one-click cloud migration scenario of a self-managed PostgreSQL database on an ECS instance, set this parameter to the private IP address of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/98677.html">View IP addresses</a>.</li>
+     * <li>For the one-click cloud migration scenario of a self-managed PostgreSQL database in an IDC, set this parameter to the internal IP address of the IDC.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -76,7 +76,7 @@ public class CreateCloudMigrationTaskRequest extends TeaModel {
     public Long sourcePort;
 
     /**
-     * <p>The task name. You can specify a custom name. If you do not specify this parameter, the system automatically generates a name.</p>
+     * <p>The name of the task. You can specify a custom name. If you do not specify a name, the system automatically generates one.</p>
      * 
      * <strong>example:</strong>
      * <p>362c6c7a-4d20-4eac-898c-1495ceab374c</p>

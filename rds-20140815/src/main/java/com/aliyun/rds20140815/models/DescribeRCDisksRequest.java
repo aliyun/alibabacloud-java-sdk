@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRCDisksRequest extends TeaModel {
     /**
-     * <p>The disk IDs. The value is a JSON array that contains up to 100 IDs separated by commas (,). Format: <code>[&quot;Disk ID1&quot;,&quot;Disk ID2&quot;]</code>.</p>
+     * <p>The disk IDs. The value is a JSON array that supports up to 100 IDs separated by commas (,). Example: [&quot;DiskId1&quot;, &quot;DiskId2&quot;].</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;rcd-bp67acfmxazb4p****&quot;, &quot;rcd-bp67acfmxazb4g****&quot;, … &quot;rcd-bp67acfmxazb4d****&quot;]</p>
@@ -14,11 +14,13 @@ public class DescribeRCDisksRequest extends TeaModel {
     public String diskIds;
 
     /**
-     * <p>The type of cloud disk or elastic ephemeral disk to query. Valid values:
-     * ● all: queries both system cloud disks and data cloud disks.
-     * ● system: queries only system cloud disks.
-     * ● data: queries only data cloud disks.
-     * Default value: all.</p>
+     * <p>The type of the cloud disk or elastic ephemeral disk to query. Valid values:</p>
+     * <ul>
+     * <li>all: Queries both system cloud disks and data cloud disks.</li>
+     * <li>system: Queries only system cloud disks.</li>
+     * <li>data: Queries only data cloud disks.
+     * Default value: all.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>data</p>
@@ -64,15 +66,17 @@ public class DescribeRCDisksRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The disk status. Valid values:
-     * ● In_use: in use.
-     * ● Available: to be attached.
-     * ● Attaching: being attached.
-     * ● Detaching: being detached.
-     * ● Creating: being created.
-     * ● ReIniting: being initialized.
-     * ● All: all statuses.
-     * Default value: All.</p>
+     * <p>The disk status. Valid values:</p>
+     * <ul>
+     * <li>In_use: In use.</li>
+     * <li>Available: Available.</li>
+     * <li>Attaching: Attaching.</li>
+     * <li>Detaching: Detaching.</li>
+     * <li>Creating: Creating.</li>
+     * <li>ReIniting: Initializing.</li>
+     * <li>All: All statuses.
+     * Default value: All.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>All</p>
@@ -157,7 +161,7 @@ public class DescribeRCDisksRequest extends TeaModel {
 
     public static class DescribeRCDisksRequestTag extends TeaModel {
         /**
-         * <p>The tag key. Empty values and duplicate values are <strong>not allowed</strong>.</p>
+         * <p>The tag key. Empty values and duplicates are not allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>testkey1</p>
@@ -166,7 +170,7 @@ public class DescribeRCDisksRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. Empty values are <strong>allowed</strong>.</p>
+         * <p>The tag value. Empty values are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>testvalue1</p>

@@ -14,7 +14,7 @@ public class CreateDBInstanceForRebuildResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

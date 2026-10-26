@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>This parameter is supported only for dedicated cluster instances. The migration task ID.</p>
+     * <p>The ID of the migration task. This parameter is only supported for instances in a dedicated cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>740</p>

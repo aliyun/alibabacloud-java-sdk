@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRCMetricListRequest extends TeaModel {
     /**
-     * <p>Queries the monitoring data of specified resources in batches for Custom for SQL Server.
-     * Format: a collection of <code>key:value</code> pairs.</p>
+     * <p>The dimensions used to query the monitoring data of specified resources in batches for Custom for SQL Server. Format: a collection of <code>key:value</code> pairs.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;instanceId&quot;:&quot;rc-l9hv3rv74ql7oa******&quot;},{&quot;instanceId&quot;:&quot;rc-b532l1uj8n6sex******&quot;}]</p>
@@ -15,7 +14,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public String dimensions;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the <code>2024-08-06 10:15:00</code> format. The end time must be later than the start time.</p>
+     * <p>The end time of the query. Format: <code>2024-08-06 10:15:00</code>. The end time must be later than the start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-08-06 10:15:00</p>
@@ -24,7 +23,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -42,7 +41,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of records per page for paging query.</p>
+     * <p>The number of records to return on each page for paging in a paged query.</p>
      * <p>Default value: 1000.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +51,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public String length;
 
     /**
-     * <p>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">monitoring metric</a>.</p>
+     * <p>The <a href="https://cms.console.aliyun.com/metric-meta/acs_ecs_dashboard/ecs">monitored metrics</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,7 +73,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
      * <p>The statistical period of the monitoring data. Unit: seconds. Valid values:</p>
      * <ul>
      * <li>60 (default)</li>
-     * <li>An integer multiple of 60</li>
+     * <li>Any integer multiple of 60</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -93,7 +92,7 @@ public class DescribeRCMetricListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <code>2024-08-06 10:05:00</code> format.</p>
+     * <p>The start time of the query. Format: <code>2024-08-06 10:05:00</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-08-06 10:05:00</p>

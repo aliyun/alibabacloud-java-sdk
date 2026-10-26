@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateUserBackupFileRequest extends TeaModel {
     /**
-     * <p>The user backup ID. You can call ListUserBackupFiles to obtain the ID.</p>
+     * <p>The ID of the user backup. You can call the ListUserBackupFiles operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateUserBackupFileRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The new description to set for the user backup.</p>
+     * <p>The new description of the user backup.</p>
      * 
      * <strong>example:</strong>
      * <p>CommentTest</p>
@@ -27,7 +27,7 @@ public class UpdateUserBackupFileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to obtain the ID.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class UpdateUserBackupFileRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to obtain the ID.</p>
+     * <p>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>

@@ -5,14 +5,15 @@ import com.aliyun.tea.*;
 
 public class ImportUserBackupFileRequest extends TeaModel {
     /**
-     * <p>A JSON array that describes the backup file information in the OSS bucket. Example:
+     * <p>The JSON array that describes the information about the backup file in the OSS bucket. Example:
      * <code>{&quot;Bucket&quot;:&quot;test&quot;, &quot;Object&quot;:&quot;test/test_db_employees.xb&quot;,&quot;Location&quot;:&quot;ap-southeast-1&quot;}</code></p>
-     * <p>The following list describes the parameters in the array:</p>
+     * <p>Parameters in the array:</p>
      * <ul>
-     * <li><strong>Bucket</strong>: the name of the OSS bucket that stores the backup file. You can call <a href="https://help.aliyun.com/document_detail/31965.html">GetBucket</a> to query the bucket name.</li>
-     * <li><strong>Object</strong>: the full path of the backup file in the directory. You can call <a href="https://help.aliyun.com/document_detail/31980.html">GetObject</a> to query the path.</li>
-     * <li><strong>Location</strong>: the region ID of the OSS bucket. You can call <a href="https://help.aliyun.com/document_detail/31967.html">GetBucketLocation</a> to query the region ID.</li>
+     * <li><strong>Bucket</strong>: the name of the OSS bucket where the backup file is stored. You can call the <a href="https://help.aliyun.com/document_detail/31965.html">GetBucket</a> operation to query the name.</li>
+     * <li><strong>Object</strong>: the detailed path of the directory where the backup file is stored. You can call the <a href="https://help.aliyun.com/document_detail/31980.html">GetObject</a> operation to query the path.</li>
+     * <li><strong>Location</strong>: the region ID of the OSS bucket. You can call the <a href="https://help.aliyun.com/document_detail/31967.html">GetBucketLocation</a> operation to query the region ID.</li>
      * </ul>
+     * <p>This parameter is required when <strong>Mode</strong> is set to <strong>oss</strong>. For <strong>Location</strong>, specify the region ID of the OSS bucket. You can call the GetBucketLocation operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Bucket&quot;:&quot;test&quot;, &quot;Object&quot;:&quot;test/test_db_employees.xb&quot;,&quot;Location&quot;:&quot;ap-southeast-1&quot;}</p>
@@ -21,7 +22,7 @@ public class ImportUserBackupFileRequest extends TeaModel {
     public String backupFile;
 
     /**
-     * <p>The region ID of the OSS bucket that stores the backup file of the self-managed MySQL 5.7 database. You can call DescribeRegions to query the region ID.</p>
+     * <p>The region ID of the OSS bucket where the backup file of the self-managed MySQL 5.7 database is stored. You can call the DescribeRegions operation to query the most recent region list.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,11 +33,11 @@ public class ImportUserBackupFileRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically set up replication. Valid values:</p>
      * <ul>
-     * <li>true: automatically sets up replication. The <code>MasterInfo</code> parameter is required.</li>
-     * <li>false: does not set up replication.</li>
+     * <li>true: yes. The MasterInfo parameter is required.</li>
+     * <li>false: no.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter takes effect only for native replication instances. You must specify the <code>DBInstanceId</code> parameter when you call this operation.</p>
+     * <p>This parameter takes effect only for native replication instances. You must specify the DBInstanceId parameter when you call this operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,7 +65,7 @@ public class ImportUserBackupFileRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The version of the MySQL database engine. Valid values: <strong>5.7</strong> and <strong>8.0</strong>.</p>
+     * <p>The version of the MySQL database. Valid values: <strong>5.7</strong> and <strong>8.0</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>5.7</p>
@@ -73,18 +74,18 @@ public class ImportUserBackupFileRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>A JSON array that contains the master information for setting up MySQL replication (case-sensitive). Example:</p>
+     * <p>The case-sensitive JSON array that provides the master information for setting up MySQL replication. Example:</p>
      * <pre><code>{&quot;masterIp&quot;:&quot;172.20.xx.xx&quot;,&quot;masterPort&quot;:&quot;3306&quot;,&quot;masterUser&quot;:&quot;replica&quot;,&quot;masterPassword&quot;:&quot;W33uopkehBQ=&quot;}
      * </code></pre>
-     * <p>The following list describes the parameters in the array:</p>
+     * <p>Parameters in the array:</p>
      * <ul>
-     * <li><code>masterIp</code>: the IP address of the primary database.</li>
-     * <li><code>masterPort</code>: the port of the primary database.</li>
-     * <li><code>masterUser</code>: the replication account of the primary database.</li>
-     * <li><code>masterPassword</code>: the password of the replication account for the primary database. The password must be Base64-encoded.</li>
+     * <li>masterIp: the IP address of the primary database.</li>
+     * <li>masterPort: the port of the primary database.</li>
+     * <li>masterUser: the replication account of the primary database.</li>
+     * <li>masterPassword: the password of the replication account of the primary database. The password must be Base64-encoded.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter takes effect only for native replication instances. You must specify the <code>DBInstanceId</code> parameter when you call this operation.</p>
+     * <p>This parameter takes effect only for native replication instances. You must specify the DBInstanceId parameter when you call this operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,7 +97,7 @@ public class ImportUserBackupFileRequest extends TeaModel {
     /**
      * <p>The import mode. Valid values:</p>
      * <ul>
-     * <li>oss: imports the backup from OSS.</li>
+     * <li>oss: downloads the backup from OSS and imports it.</li>
      * <li>stream: imports the backup over the network.</li>
      * </ul>
      * 
@@ -110,10 +111,10 @@ public class ImportUserBackupFileRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the ApsaraDB RDS instance. You can call DescribeRegions to query the region ID.</p>
+     * <p>The region ID of the ApsaraDB RDS instance. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <blockquote>
      * <ul>
-     * <li>The value of this parameter specifies the region ID in which you want to create the ApsaraDB RDS instance.</li>
+     * <li>The value of this parameter is the region ID where you want to create the ApsaraDB RDS instance.</li>
      * <li>The value must be the same as the value of the <strong>BucketRegion</strong> parameter.</li>
      * </ul>
      * </blockquote>
@@ -126,7 +127,7 @@ public class ImportUserBackupFileRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can call DescribeDBInstanceAttribute to query the resource group ID.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>
@@ -165,19 +166,18 @@ public class ImportUserBackupFileRequest extends TeaModel {
     public Integer retention;
 
     /**
-     * <p>A JSON array that provides the source information for the full backup (case-sensitive). Example:</p>
-     * <pre><code>{&quot;sourceIp&quot;:&quot;172.20.xx
-     * .xx&quot;,&quot;sourcePort&quot;:&quot;9999&quot;}
+     * <p>The case-sensitive JSON array that provides the source information of the full backup. Example:</p>
+     * <pre><code>{&quot;sourceIp&quot;:&quot;172.20.xx.xx&quot;,&quot;sourcePort&quot;:&quot;9999&quot;}
      * </code></pre>
-     * <p>The following list describes the parameters in the array:</p>
+     * <p>Parameters in the array:</p>
      * <ul>
-     * <li><p><code>sourceIp</code>: the source IP address.</p>
+     * <li><p>sourceIp: the source IP address.</p>
      * </li>
-     * <li><p><code>sourcePort</code>: the Netcat listening port on the source.</p>
+     * <li><p>sourcePort: the port listened by Netcat on the source.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter takes effect only for native replication instances. You must specify the <code>DBInstanceId</code> parameter when you call this operation.</p>
+     * <p>This parameter takes effect only for native replication instances. You must specify the DBInstanceId parameter when you call this operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -187,11 +187,11 @@ public class ImportUserBackupFileRequest extends TeaModel {
     public String sourceInfo;
 
     /**
-     * <p>The zone ID. You can call DescribeRegions to query the zone ID.</p>
+     * <p>The zone ID. You can call the DescribeRegions operation to query the most recent zone list.</p>
      * <blockquote>
      * <ul>
-     * <li>After you specify a zone, the system creates a second-level snapshot in the zone, which significantly reduces the time required for backup import.</li>
-     * <li>When you call CreateDBInstance to create an instance from the user backup, this zone is the zone in which the new instance resides.</li>
+     * <li>After you specify a zone, the system creates a snapshot within seconds in the zone, which significantly reduces the time required to import the backup.</li>
+     * <li>When you call the CreateDBInstance operation to create an instance by using the user backup, the instance is created in this zone.</li>
      * </ul>
      * </blockquote>
      * 

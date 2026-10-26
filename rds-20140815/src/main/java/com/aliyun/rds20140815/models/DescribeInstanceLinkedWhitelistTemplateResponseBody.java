@@ -8,10 +8,10 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
      * <p>The response code. Valid values:</p>
      * <ul>
      * <li><strong>200</strong>: Normal.</li>
-     * <li><strong>400</strong>: Client fault.</li>
+     * <li><strong>400</strong>: Client error.</li>
      * <li><strong>401</strong>: Authentication failed.</li>
-     * <li><strong>404</strong>: Request page not found.</li>
-     * <li><strong>500</strong>: Server fault.</li>
+     * <li><strong>404</strong>: The requested page is not found.</li>
+     * <li><strong>500</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
     public String code;
 
     /**
-     * <p>The returned data list.</p>
+     * <p>The list of returned data.</p>
      */
     @NameInMap("Data")
     public DescribeInstanceLinkedWhitelistTemplateResponseBodyData data;
@@ -29,7 +29,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>200</strong>: Success.</li>
+     * <li><strong>200</strong>: Normal.</li>
      * <li><strong>400</strong>: Client error.</li>
      * <li><strong>500</strong>: Server error.</li>
      * </ul>
@@ -50,7 +50,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1E43AAE0-BEE8-43DA-860D-EAF2AA0724DC</p>
@@ -59,9 +59,9 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>true</strong>: The request is successful.</li>
      * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
@@ -135,7 +135,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         public Integer id;
 
         /**
-         * <p>The IP address list.</p>
+         * <p>The list of IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>12.0.X.X,10.2.X.X</p>
@@ -144,7 +144,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         public String ips;
 
         /**
-         * <p>The whitelist template ID.</p>
+         * <p>The ID of the whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>412</p>
@@ -153,7 +153,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         public Integer templateId;
 
         /**
-         * <p>The whitelist template name.</p>
+         * <p>The name of the whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>template_123</p>
@@ -162,7 +162,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         public String templateName;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>16****</p>
@@ -219,7 +219,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
 
     public static class DescribeInstanceLinkedWhitelistTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp191w771k******</p>
@@ -228,7 +228,7 @@ public class DescribeInstanceLinkedWhitelistTemplateResponseBody extends TeaMode
         public String insName;
 
         /**
-         * <p>The whitelist template information returned in a paged manner.</p>
+         * <p>The paginated whitelist template information.</p>
          */
         @NameInMap("Templates")
         public java.util.List<DescribeInstanceLinkedWhitelistTemplateResponseBodyDataTemplates> templates;

@@ -26,7 +26,7 @@ public class DescribeOssDownloadsResponseBody extends TeaModel {
     public String migrateTaskId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A5409D02-D661-4BF3-8F3D-0A814D0574E7</p>

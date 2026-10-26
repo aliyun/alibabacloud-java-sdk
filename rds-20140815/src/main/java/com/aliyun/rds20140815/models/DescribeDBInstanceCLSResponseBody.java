@@ -28,10 +28,9 @@ public class DescribeDBInstanceCLSResponseBody extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The custom KMS master key ID.</p>
-     * <blockquote>
-     * <p> This parameter takes effect only when the column encryption key pattern is set to kms_key. If this parameter is not specified, the current column encryption key settings of the database remain unchanged.</p>
-     * </blockquote>
+     * <p>The custom Key Management Service (KMS) master key ID.
+     * Note
+     * This parameter takes effect only when the column encryption key pattern is set to kms_key. If this parameter is not specified, the current column encryption key settings of the database remain unchanged.</p>
      * 
      * <strong>example:</strong>
      * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
@@ -43,11 +42,10 @@ public class DescribeDBInstanceCLSResponseBody extends TeaModel {
      * <p>The column encryption key mode. Valid values:</p>
      * <ul>
      * <li>client_key: configures a user-generated random key on the client side.</li>
-     * <li>kms_key: configures a custom key by using Alibaba Cloud Key Management Service (KMS).</li>
+     * <li>kms_key: configures a custom key by using Alibaba Cloud KMS.</li>
      * </ul>
-     * <blockquote>
-     * <p> After an instance is configured to use KMS for key management, you can no longer switch back to the client-side random key mode.</p>
-     * </blockquote>
+     * <p>Note
+     * After an instance is configured to use a KMS key, you can no longer configure a random key on the client side.</p>
      * 
      * <strong>example:</strong>
      * <p>kms_key</p>
@@ -65,7 +63,7 @@ public class DescribeDBInstanceCLSResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the whitelist mode is enabled.</p>
+     * <p>Specifies whether the whitelist mode is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

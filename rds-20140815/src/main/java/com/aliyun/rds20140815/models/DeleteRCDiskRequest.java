@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRCDiskRequest extends TeaModel {
     /**
-     * <p>The ID of the cloud disk that you want to release.</p>
+     * <p>The ID of the cloud disk to be released.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyBackupSetExpireTimeRequest extends TeaModel {
     /**
-     * <p>The backup set ID. You can invoke DescribeBackups to query the backup set ID. The backup set must meet the following conditions:</p>
+     * <p>The ID of the backup set. You can call the DescribeBackups operation to query the ID. The supported backup set must meet the following conditions:</p>
      * <ul>
      * <li>Engine (database type): SQLServer</li>
-     * <li>BackupMode (backup pattern): Manual (manual backup)</li>
-     * <li>BackupMethod: Physical (physical backup)</li>
-     * <li>BackupType: FullBackup (full backup)</li>
-     * <li>BackupStatus: Success (backup completed)</li>
+     * <li>BackupMode (backup mode): Manual (manual backup)</li>
+     * <li>BackupMethod (backup method): Physical (physical backup)</li>
+     * <li>BackupType (backup type): FullBackup (full backup)</li>
+     * <li>BackupStatus (backup set status): Success (backup completed)</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -22,7 +22,7 @@ public class ModifyBackupSetExpireTimeRequest extends TeaModel {
     public Long backupId;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,8 +32,8 @@ public class ModifyBackupSetExpireTimeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The time to which you want to extend the expiration time of the backup set. Specify the time in the yyyy-MM-ddTHH:mmZ format (UTC).</p>
-     * <p>The specified time cannot be earlier than the current expiration time. You can call DescribeBackups to query the current expiration time (ExpectExpireTime).</p>
+     * <p>The new expiration time of the backup set. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * <p>The specified time cannot be earlier than the current expiration time. You can call the DescribeBackups operation to query the current expiration time (ExpectExpireTime).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

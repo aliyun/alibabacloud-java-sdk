@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to unbind all tags from the instance. Valid values:</p>
+     * <p>Specifies whether to remove all tags from the instance. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>
@@ -35,7 +35,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of instance IDs. You can unbind tags from up to N instances at a time. Valid values of N: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The list of instance IDs. You can remove labels from N instances at a time. Valid values of N: <strong>1</strong> to <strong>50</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,11 +53,11 @@ public class UntagResourcesRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><strong>INSTANCE</strong>: regular ApsaraDB RDS instance.</li>
-     * <li><strong>CUSTOM</strong>: RDS Custom instance.</li>
-     * <li><strong>CUSTOMDEPLOYMENTSET</strong>: RDS Custom deployment set.</li>
-     * <li><strong>CUSTOMDISK</strong>: RDS Custom cloud disk.</li>
-     * <li><strong>CUSTOMSNAPSHOT</strong>: RDS Custom snapshot.</li>
+     * <li><strong>INSTANCE</strong>: Regular ApsaraDB RDS instance.</li>
+     * <li><strong>CUSTOM</strong>: ApsaraDB RDS Custom instance.</li>
+     * <li><strong>CUSTOMDEPLOYMENTSET</strong>: ApsaraDB RDS Custom deployment set.</li>
+     * <li><strong>CUSTOMDISK</strong>: ApsaraDB RDS Custom cloud disk.</li>
+     * <li><strong>CUSTOMSNAPSHOT</strong>: ApsaraDB RDS Custom snapshot.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -68,7 +68,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tag keys. You can remove up to N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. Empty strings are not allowed.</p>
+     * <p>The tag keys. You can remove N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. Empty strings are not allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>testkey1</p>

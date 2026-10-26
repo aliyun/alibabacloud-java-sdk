@@ -27,10 +27,10 @@ public class QueryRecommendByCodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Specifies whether the request is successful. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: The request is successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

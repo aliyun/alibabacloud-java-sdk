@@ -7,8 +7,8 @@ public class ModifySecurityIpsRequest extends TeaModel {
     /**
      * <p>The attribute of the whitelist group.</p>
      * <ul>
-     * <li>(Default) If you do not specify this parameter, the group is a common group.</li>
-     * <li>If you set this parameter to <code>hidden</code>, the group is a system default group used by services such as DMS, DTS, and DAS. These groups are not displayed in the console. Deleting or modifying these groups may prevent DMS, DTS, and DAS from accessing ApsaraDB RDS. Proceed with caution.</li>
+     * <li>If you do not specify this parameter, the group is a regular group. This is the default value.</li>
+     * <li>If you set this parameter to <code>hidden</code>, the group is a hidden group that is automatically created by the system for services such as DMS, DTS, and DAS. Hidden groups are not displayed in the console. If you delete or modify a hidden group, services such as DMS, DTS, and DAS cannot access the ApsaraDB RDS instance. Proceed with caution.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String DBInstanceIPArrayAttribute;
 
     /**
-     * <p>The name of the whitelist group to modify. Default value: Default. If the specified group does not exist, a new group is automatically created.</p>
+     * <p>The name of the IP address whitelist group to be modified. Default value: Default. If the specified group does not exist, the system automatically creates the group.</p>
      * <blockquote>
-     * <p>Each instance supports up to 200 whitelist groups.</p>
+     * <p>You can create up to 200 whitelist groups for a single instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String DBInstanceIPArrayName;
 
     /**
-     * <p>The target instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,10 +40,10 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The list of read-only instances to which the whitelist is synchronized.</p>
+     * <p>The read-only instances to which the whitelist is synchronized.</p>
      * <ul>
      * <li>This parameter is applicable only to ApsaraDB RDS for PostgreSQL instances that have read-only instances.</li>
-     * <li>Separate multiple read-only instances with commas (,).</li>
+     * <li>If multiple read-only instances exist, separate their IDs with commas (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,9 +55,9 @@ public class ModifySecurityIpsRequest extends TeaModel {
     /**
      * <p>The modification mode. Valid values:</p>
      * <ul>
-     * <li><strong>Cover</strong> (default): overwrites the original IP whitelist with the value of the <strong>SecurityIps</strong> parameter.</li>
-     * <li><strong>Append</strong>: appends the IP addresses specified in the <strong>SecurityIps</strong> parameter to the original IP whitelist.</li>
-     * <li><strong>Delete</strong>: removes the IP addresses specified in the <strong>SecurityIps</strong> parameter from the original IP whitelist. At least one IP address must be retained.</li>
+     * <li><strong>Cover</strong>: overwrites the original IP address whitelist with the IP addresses specified by the <strong>SecurityIps</strong> parameter. This is the default value.</li>
+     * <li><strong>Append</strong>: appends the IP addresses specified by the <strong>SecurityIps</strong> parameter to the original IP address whitelist.</li>
+     * <li><strong>Delete</strong>: deletes the IP addresses specified by the <strong>SecurityIps</strong> parameter from the original IP address whitelist. You must retain at least one IP address in the whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of IP address. The value is fixed as IPv4. IPv6 is not supported.</p>
+     * <p>The type of the IP address. Set the value to IPv4. IPv6 is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>IPv4</p>
@@ -79,16 +79,16 @@ public class ModifySecurityIpsRequest extends TeaModel {
     public String securityIPType;
 
     /**
-     * <p>The IP whitelist. Before you modify the IP whitelist, call the <a href="https://help.aliyun.com/document_detail/610518.html">DescribeDBInstanceIPArrayList</a> operation to query the existing IP whitelist information of the instance.</p>
+     * <p>The IP address whitelist. Before you modify the IP address whitelist, call the <a href="https://help.aliyun.com/document_detail/610518.html">DescribeDBInstanceIPArrayList</a> operation to query the existing IP address whitelist of the instance.</p>
      * <details>
      * <summary>Configuration rules</summary>
      * 
      * <ul>
-     * <li><p>IP addresses (such as 10.23.XX.XX) and CIDR blocks (such as 10.23.XX.XX/24) are supported.</p>
+     * <li><p>You can enter IP addresses (such as 10.23.XX.XX) or CIDR blocks (such as 10.23.XX.XX/24).</p>
      * </li>
-     * <li><p>Separate multiple IP addresses or CIDR blocks with commas (,). No spaces are allowed before or after the commas.</p>
+     * <li><p>Separate multiple IP addresses or CIDR blocks with commas (,). Do not add spaces before or after the commas.</p>
      * </li>
-     * <li><p>Each instance can contain up to 1,000 IP addresses or CIDR blocks. If you have a large number of IP addresses, merge them into CIDR blocks, such as 10.23.XX.XX/24.</p>
+     * <li><p>You can add up to 1,000 IP addresses or CIDR blocks to the whitelist of a single instance. If you have a large number of IP addresses, we recommend that you merge them into CIDR blocks, such as 10.23.XX.XX/24.</p>
      * </details></li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -102,14 +102,14 @@ public class ModifySecurityIpsRequest extends TeaModel {
     /**
      * <p>The network type of the whitelist. Valid values:</p>
      * <ul>
-     * <li><strong>MIX</strong> (default): general mode.</li>
-     * <li><strong>Classic</strong>: the classic network in enhanced whitelist mode.</li>
-     * <li><strong>VPC</strong>: the virtual private cloud (VPC) in enhanced whitelist mode.</li>
+     * <li><strong>MIX</strong>: the general mode. This is the default value.</li>
+     * <li><strong>Classic</strong>: the classic network in the enhanced whitelist mode.</li>
+     * <li><strong>VPC</strong>: the VPC in the enhanced whitelist mode.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>ApsaraDB RDS for PostgreSQL instances with cloud disks use only the general mode (MIX). If you set this parameter to another mode, the value is automatically converted to MIX.</li>
-     * <li>Only ApsaraDB RDS for MySQL 5.1, 5.5, 5.6, and 5.7 instances with Premium Local SSDs and ApsaraDB RDS for PostgreSQL 9.4 and 10 instances with Premium Local SSDs support the enhanced whitelist mode.</li>
+     * <li>For ApsaraDB RDS for PostgreSQL instances with cloud disks, the network type is fixed to the general mode (MIX). If you configure another mode, the system automatically changes it to the general mode.</li>
+     * <li>The enhanced whitelist mode is supported only by ApsaraDB RDS for MySQL 5.1, 5.5, 5.6, and 5.7 instances with premium local SSDs, and ApsaraDB RDS for PostgreSQL 9.4 and 10 instances with premium local SSDs.</li>
      * </ul>
      * </blockquote>
      * 

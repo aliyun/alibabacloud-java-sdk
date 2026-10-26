@@ -8,7 +8,7 @@ public class CheckCloudResourceAuthorizedResponseBody extends TeaModel {
      * <p>The authorization status. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: Authorized.</li>
-     * <li><strong>0</strong>: Not authorized.</li>
+     * <li><strong>0</strong>: Unauthorized.</li>
      * </ul>
      * 
      * <strong>example:</strong>

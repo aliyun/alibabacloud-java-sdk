@@ -14,7 +14,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
+     * <p>The end time of the query. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2012-06-19T15:00Z</p>
@@ -35,7 +35,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public DescribeDBInstancePerformanceResponseBodyPerformanceKeys performanceKeys;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A5409D02-D661-4BF3-8F3D-0A814D0574E7</p>
@@ -44,7 +44,7 @@ public class DescribeDBInstancePerformanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
+     * <p>The start time of the query. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2012-06-10T15:00Z</p>

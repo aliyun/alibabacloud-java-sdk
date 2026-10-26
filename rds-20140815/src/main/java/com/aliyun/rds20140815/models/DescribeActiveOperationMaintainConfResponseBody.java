@@ -11,7 +11,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     public DescribeActiveOperationMaintainConfResponseBodyConfig config;
 
     /**
-     * <p>Indicates whether the configuration has been set. The value is 0 for the first access. Valid values:</p>
+     * <p>Specifies whether the configuration has been set. The value is 0 when you access the configuration for the first time. Valid values:</p>
      * <ul>
      * <li>1: Yes. </li>
      * <li>0: No.</li>
@@ -63,7 +63,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationMaintainConfResponseBodyConfig extends TeaModel {
         /**
-         * <p>The creation time in the format of YYYY-MM-DDTHH:mm:ssZ.</p>
+         * <p>The creation time. The format is YYYY-MM-DDTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-05-30T14:30:00Z</p>
@@ -72,11 +72,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The cycle time. Multiple values are separated by commas (,).</p>
-         * <ul>
-         * <li>If cycleType is set to Week, valid values are 1 to 7, which represent Monday to Sunday.</li>
-         * <li>If cycleType is set to Month, valid values are 1 to 28.</li>
-         * </ul>
+         * <p>The cycle time. Multiple values are separated by commas. If cycleType is Week, valid values are 1 to 7, which represent Monday to Sunday. If cycleType is Month, valid values are 1 to 28.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -94,8 +90,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String cycleType;
 
         /**
-         * <p>The end time of the O&amp;M time window in UTC.
-         * Default value: 20:00:00Z.</p>
+         * <p>The end time of the O&amp;M time window in UTC. Default value: 20:00:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>20:00:00Z</p>
@@ -104,8 +99,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
-         * <p>The start time of the O&amp;M time window in UTC.
-         * Default value: 18:00:00Z.</p>
+         * <p>The start time of the O&amp;M time window in UTC. Default value: 18:00:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>18:00:00Z</p>
@@ -114,7 +108,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainStartTime;
 
         /**
-         * <p>The modification time in the format of YYYY-MM-DDTHH:mm:ssZ, such as 2018-05-30T14:30:00Z.</p>
+         * <p>The modification time. The format is YYYY-MM-DDTHH:mm:ssZ, such as 2018-05-30T14:30:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2018-05-30T14:30:00Z</p>
@@ -123,7 +117,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>Indicates whether the configuration is effective. Valid values: </p>
+         * <p>Specifies whether the configuration takes effect. Valid values: </p>
          * <ul>
          * <li>1: Valid. </li>
          * <li>2: Invalid.</li>

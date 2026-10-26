@@ -15,7 +15,7 @@ public class ActivateMigrationTargetInstanceRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>Set this parameter to 1, which specifies a forced switchover.</p>
+     * <p>Set the value to 1, which specifies a forced switchover.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,7 +27,7 @@ public class ActivateMigrationTargetInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>A reserved parameter. This parameter does not take effect.</p>
+     * <p>The reserved parameter. This parameter does not take effect.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-02-25T06:57:41Z</p>
@@ -37,7 +37,7 @@ public class ActivateMigrationTargetInstanceRequest extends TeaModel {
 
     /**
      * <p>The switchover time mode for cloud migration.</p>
-     * <p>Set this parameter to 0, which specifies an immediate switchover.</p>
+     * <p>Set the value to 0, which specifies an immediate switchover.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

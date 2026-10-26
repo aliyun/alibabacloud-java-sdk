@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyParameterTimedScheduleTaskRequest extends TeaModel {
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-bp102g323jd4****</p>
@@ -14,7 +14,7 @@ public class ModifyParameterTimedScheduleTaskRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The scheduled switchover time to set. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+     * <p>The scheduled switchover time to set. Specify the time in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-05-06T09:24:00Z</p>
@@ -23,7 +23,7 @@ public class ModifyParameterTimedScheduleTaskRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>440437220</p>

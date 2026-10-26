@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHostWebShellRequest extends TeaModel {
     /**
-     * <p>The name of the account that is used to log on to the host of the RDS instance.</p>
+     * <p>The name of the account used to log on to the host of the ApsaraDB RDS instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

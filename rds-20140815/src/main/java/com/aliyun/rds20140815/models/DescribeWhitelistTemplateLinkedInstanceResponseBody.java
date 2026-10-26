@@ -9,8 +9,8 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
      * <ul>
      * <li><strong>200</strong>: Normal.</li>
      * <li><strong>400</strong>: Client fault.</li>
-     * <li><strong>401</strong>: Failed to authenticate.</li>
-     * <li><strong>404</strong>: Request page not found.</li>
+     * <li><strong>401</strong>: Authentication failed.</li>
+     * <li><strong>404</strong>: The requested page is not found.</li>
      * <li><strong>500</strong>: Server fault.</li>
      * </ul>
      * 
@@ -21,7 +21,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The list of returned data.</p>
      */
     @NameInMap("Data")
     public DescribeWhitelistTemplateLinkedInstanceResponseBodyData data;
@@ -29,7 +29,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>200</strong>: Success.</li>
+     * <li><strong>200</strong>: Normal.</li>
      * <li><strong>400</strong>: Client error.</li>
      * <li><strong>500</strong>: Server error.</li>
      * </ul>
@@ -50,7 +50,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9F8C06AD-3F37-57A0-ABBF-ABD7824F55CE</p>
@@ -59,10 +59,10 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class DescribeWhitelistTemplateLinkedInstanceResponseBody extends TeaMode
         public java.util.List<String> insName;
 
         /**
-         * <p>The whitelist template ID.</p>
+         * <p>The ID of the whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>412</p>

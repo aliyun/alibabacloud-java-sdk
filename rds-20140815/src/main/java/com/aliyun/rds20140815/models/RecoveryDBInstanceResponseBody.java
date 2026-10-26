@@ -14,7 +14,7 @@ public class RecoveryDBInstanceResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
      * <p>2270972****</p>
@@ -23,7 +23,7 @@ public class RecoveryDBInstanceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E4CDD460-2618-51FE-BD0B-A1****</p>

@@ -7,8 +7,10 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
     /**
      * <p>The commodity code. Valid values:</p>
      * <ul>
-     * <li>rds: subscription</li>
-     * <li>bards: pay-as-you-go</li>
+     * <li><p>rds: subscription</p>
+     * </li>
+     * <li><p>bards: pay-as-you-go</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeQuickSaleConfigResponseBody extends TeaModel {
     public String commodity;
 
     /**
-     * <p>The commodity configuration details.</p>
+     * <p>The product configuration details.</p>
      */
     @NameInMap("Items")
     public java.util.Map<String, ?> items;

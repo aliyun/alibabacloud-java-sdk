@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     /**
-     * <p>The timeout period for consistency reads. Unit: milliseconds. Default value: <strong>10</strong>. Valid values: <strong>0 to 60000</strong>.</p>
+     * <p>The timeout period for consistent reads. Unit: milliseconds. Default value: <strong>10</strong>. Valid values: <strong>0</strong> to <strong>60000</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,6 +44,12 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     @NameInMap("DBProxyConnectStringPort")
     public String DBProxyConnectStringPort;
 
+    /**
+     * <p>The execution cost threshold for SQL statements in automatic request distribution among row store and column store nodes for HTAP.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30000</p>
+     */
     @NameInMap("DBProxyEndpointCostThresholdForDuckdb")
     public String DBProxyEndpointCostThresholdForDuckdb;
 
@@ -75,18 +81,18 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     public String DBProxyEngineType;
 
     /**
-     * <p>The settings of the proxy endpoint in JSON format. The following parameters are included:</p>
+     * <p>The settings of the proxy endpoint. The value is in JSON format and includes the following parameters:</p>
      * <ul>
-     * <li><strong>TransactionReadSqlRouteOptimizeStatus</strong>: the transaction splitting setting. The value is <strong>0</strong> (disabled) or <strong>1</strong> (enabled).</li>
-     * <li><strong>ConnectionPersist</strong>: the connection pool setting. The value is <strong>0</strong> (disabled), <strong>1</strong> (session-level connection pool), or <strong>2</strong> (transaction-level connection pooling).</li>
-     * <li><strong>ReadWriteSpliting</strong>: the read/write splitting setting. The value is <strong>0</strong> (disabled) or <strong>1</strong> (enabled).</li>
-     * <li><strong>AZProximityAccess</strong>: the nearest access feature. The value is <strong>0</strong> (disabled) or <strong>1</strong> (enabled).</li>
-     * <li><strong>CausalConsistRead</strong>: the read consistency setting. The value is <strong>0</strong> (eventual consistency), <strong>1</strong> (session consistency), or <strong>2</strong> (global consistency).</li>
-     * <li><strong>HtapFilter</strong>: the automatic request distribution among row store and column store nodes setting. The value is <strong>0</strong> (disabled) or <strong>1</strong> (enabled).</li>
-     * <li><strong>PinPreparedStmt</strong>: visible only for ApsaraDB RDS for PostgreSQL. This is an internal parameter.</li>
+     * <li><strong>TransactionReadSqlRouteOptimizeStatus</strong>: the transaction splitting setting. Valid values: <strong>0</strong> (disabled) and <strong>1</strong> (enabled).</li>
+     * <li><strong>ConnectionPersist</strong>: the connection pool setting. Valid values: <strong>0</strong> (disabled), <strong>1</strong> (session-level connection pool), and <strong>2</strong> (transaction-level connection pooling).</li>
+     * <li><strong>ReadWriteSpliting</strong>: the read/write splitting setting. Valid values: <strong>0</strong> (disabled) and <strong>1</strong> (enabled).</li>
+     * <li><strong>AZProximityAccess</strong>: the nearest access setting. Valid values: <strong>0</strong> (disabled) and <strong>1</strong> (enabled).</li>
+     * <li><strong>CausalConsistRead</strong>: the read consistency setting. Valid values: <strong>0</strong> (eventual consistency), <strong>1</strong> (session consistency), and <strong>2</strong> (global consistency).</li>
+     * <li><strong>HtapFilter</strong>: the automatic request distribution among row store and column store nodes for HTAP setting. Valid values: <strong>0</strong> (disabled) and <strong>1</strong> (enabled).</li>
+     * <li><strong>PinPreparedStmt</strong>: an internal parameter visible only in ApsaraDB RDS for PostgreSQL.</li>
      * </ul>
      * <blockquote>
-     * <p>ApsaraDB RDS for PostgreSQL supports modification of only <strong>ReadWriteSpliting</strong>. <strong>TransactionReadSqlRouteOptimizeStatus</strong> and <strong>PinPreparedStmt</strong> are set to 1 by default.</p>
+     * <p>For ApsaraDB RDS for PostgreSQL, only <strong>ReadWriteSpliting</strong> can be modified. <strong>TransactionReadSqlRouteOptimizeStatus</strong> and <strong>PinPreparedStmt</strong> are set to 1 by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -108,9 +114,9 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     public String dbProxyEndpointAliases;
 
     /**
-     * <p>The read/write type of the proxy endpoint. Valid values:</p>
+     * <p>The read/write mode of the proxy endpoint. Valid values:</p>
      * <ul>
-     * <li><strong>ReadWrite</strong>: read/write splitting mode.</li>
+     * <li><strong>ReadWrite</strong>: read/write mode.</li>
      * <li><strong>ReadOnly</strong>: read-only mode.</li>
      * </ul>
      * 
@@ -153,8 +159,8 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     /**
      * <p>The read weight distribution mode. For more information, see <a href="https://help.aliyun.com/document_detail/96076.html">Read weight distribution</a>. Valid values:</p>
      * <ul>
-     * <li><strong>Standard</strong>: automatically distributes weights based on instance specifications.</li>
-     * <li><strong>Custom</strong>: uses custom weight distribution.</li>
+     * <li><strong>Standard</strong>: automatic allocation based on instance specifications</li>
+     * <li><strong>Custom</strong>: custom weight allocation</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -164,7 +170,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     public String readOnlyInstanceDistributionType;
 
     /**
-     * <p>The latency threshold for read/write splitting. When the latency of a read-only instance exceeds this threshold, read traffic is not routed to the instance. Unit: seconds.</p>
+     * <p>The latency threshold for read/write splitting. If the latency of a read-only instance exceeds this threshold, read traffic is not routed to the instance. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -173,13 +179,13 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     public String readOnlyInstanceMaxDelayTime;
 
     /**
-     * <p>The read weight distribution information, which specifies the read request weights of the primary instance and read-only instances. The value is in JSON format and includes the following parameters:</p>
+     * <p>The read weight distribution information, which specifies the read request weights of the primary and read-only instances. The value is in JSON format and includes the following parameters:</p>
      * <ul>
-     * <li><strong>DBInstanceId</strong>: the instance ID.</li>
-     * <li><strong>DBInstanceType</strong>: the instance type. The value is <strong>Master</strong> (primary instance) or <strong>ReadOnly</strong> (read-only instance).</li>
-     * <li><strong>NodeID</strong>: the node ID of the primary node or secondary node of the primary instance in the Cluster Edition.</li>
-     * <li><strong>NodeType</strong>: the node type in the Cluster Edition. The value is <strong>Primary</strong> (primary node of the primary instance) or <strong>Secondary</strong> (secondary node of the primary instance).</li>
-     * <li><strong>Weight</strong>: the read request weight. The value increases in increments of <strong>100</strong>. Maximum value: <strong>10000</strong>.</li>
+     * <li><strong>DBInstanceId</strong>: instance ID of the instance.</li>
+     * <li><strong>DBInstanceType</strong>: the type of the instance. Valid values: <strong>Master</strong> (primary instance) and <strong>ReadOnly</strong> (read-only instance).</li>
+     * <li><strong>NodeID</strong>: instance IDs of the primary and secondary nodes of the primary instance in the Cluster Edition.</li>
+     * <li><strong>NodeType</strong>: the type of the node in the Cluster Edition. Valid values: <strong>Primary</strong> (primary node of the primary instance) and <strong>Secondary</strong> (secondary node of the primary instance).</li>
+     * <li><strong>Weight</strong>: the read request weight. The weight increases in increments of <strong>100</strong>, and the maximum value is <strong>10000</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -189,7 +195,7 @@ public class DescribeDBProxyEndpointResponseBody extends TeaModel {
     public String readOnlyInstanceWeight;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>847BA085-B377-4BFA-8267-F82345ECE1D2</p>

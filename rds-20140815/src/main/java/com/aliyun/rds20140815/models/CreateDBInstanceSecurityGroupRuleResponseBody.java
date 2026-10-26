@@ -14,7 +14,7 @@ public class CreateDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response code message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -23,7 +23,7 @@ public class CreateDBInstanceSecurityGroupRuleResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>07F6177E-6DE4-408A-BB4F-0723301340F4</p>

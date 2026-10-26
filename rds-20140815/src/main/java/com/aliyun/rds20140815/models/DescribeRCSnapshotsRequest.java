@@ -13,6 +13,12 @@ public class DescribeRCSnapshotsRequest extends TeaModel {
     @NameInMap("DiskId")
     public String diskId;
 
+    /**
+     * <p>The ID of the RDS Custom instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rc-dh2jf9n6j4s14926****</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
@@ -35,7 +41,7 @@ public class DescribeRCSnapshotsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query available regions.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -44,8 +50,7 @@ public class DescribeRCSnapshotsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of snapshots.</p>
-     * <p>You can specify multiple snapshot IDs separated by commas (,). A maximum of 100 IDs can be specified.</p>
+     * <p>The snapshot IDs. You can specify up to 100 IDs. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;rcds-bp67acfmxazb4p****&quot;, &quot;rcds-bp67acfmxazb5p****&quot;, … &quot;rcds-bp67acfmxazb6p****&quot;]</p>
@@ -122,7 +127,7 @@ public class DescribeRCSnapshotsRequest extends TeaModel {
 
     public static class DescribeRCSnapshotsRequestTag extends TeaModel {
         /**
-         * <p>The tag value.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>testRC</p>
@@ -131,7 +136,7 @@ public class DescribeRCSnapshotsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag key.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test01</p>

@@ -14,7 +14,7 @@ public class ModifyTaskInfoResponseBody extends TeaModel {
     public String errorCode;
 
     /**
-     * <p>The ID of the failed task. The first failed task ID is returned.</p>
+     * <p>The ID of the failed task. The ID is returned when a failure occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>t-83br18hlw11ue610yo</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogsRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,9 +24,9 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The end date of the query. The end date must be later than or equal to the start date, and the interval between the start date and the end date cannot exceed 31 days. Format: <i>yyyy-MM-dd</i>Z (UTC).</p>
+     * <p>The end date of the query. The end date cannot be earlier than the start date, and the interval between the start date and the end date cannot exceed 31 days. Format: <i>yyyy-MM-dd</i>Z (UTC).</p>
      * <blockquote>
-     * <p>If the end date is the same as the start date, the query starts from 08:00 on the start date and covers up to 24 hours of slow query log statistics.</p>
+     * <p>If the end date is the same as the start date, the query starts from 08:00 on the start date by default, and slow query log statistics for up to 24 hours are queried.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +43,7 @@ public class DescribeSlowLogsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
+     * <p>The page number. Valid values: any positive integer up to the maximum value of the Integer type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -70,13 +70,13 @@ public class DescribeSlowLogsRequest extends TeaModel {
     /**
      * <p>The sorting criterion. Valid values:</p>
      * <ul>
-     * <li><strong>TotalExecutionCounts</strong>: sorted by total number of executions in descending order.</li>
-     * <li><strong>TotalQueryTimes</strong>: sorted by total execution duration in descending order.</li>
-     * <li><strong>TotalLogicalReads</strong>: sorted by total number of logical reads in descending order.</li>
-     * <li><strong>TotalPhysicalReads</strong>: sorted by total number of physical reads in descending order.</li>
+     * <li><strong>TotalExecutionCounts</strong>: total number of executions</li>
+     * <li><strong>TotalQueryTimes</strong>: total execution time</li>
+     * <li><strong>TotalLogicalReads</strong>: total number of logical reads</li>
+     * <li><strong>TotalPhysicalReads</strong>: total number of physical reads</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is supported only for SQL Server 2008 R2 instances.</p>
+     * <p>This parameter is supported only for ApsaraDB RDS for SQL Server 2008 R2 instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

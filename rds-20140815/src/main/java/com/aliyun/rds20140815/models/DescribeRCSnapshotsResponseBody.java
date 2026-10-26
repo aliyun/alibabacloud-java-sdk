@@ -32,7 +32,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The snapshot information.</p>
+     * <p>The list of snapshots.</p>
      */
     @NameInMap("Snapshots")
     public java.util.List<DescribeRCSnapshotsResponseBodySnapshots> snapshots;
@@ -93,7 +93,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeRCSnapshotsResponseBodySnapshotsTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>testRC</p>
@@ -102,7 +102,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>test01</p>
@@ -135,10 +135,10 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeRCSnapshotsResponseBodySnapshots extends TeaModel {
         /**
-         * <p>Indicates whether the snapshot can be used to create cloud disks, roll back cloud disks, or share snapshots. Valid values:</p>
+         * <p>Specifies whether the snapshot can be used to create cloud disks, roll back cloud disks, and share snapshots. Valid values:</p>
          * <ul>
-         * <li>true: Available.</li>
-         * <li>false: Not available.</li>
+         * <li>true: The snapshot is available.</li>
+         * <li>false: The snapshot is unavailable.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,11 +148,11 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         public Boolean available;
 
         /**
-         * <p>The snapshot type. Valid values:</p>
+         * <p>The snapshot category. Valid values:</p>
          * <ul>
-         * <li>Standard: standard snapshot.</li>
-         * <li>Flash: local snapshot. This value will be deprecated. Local snapshots have been replaced by the instant access feature.</li>
-         * <li>archive: archived snapshot.</li>
+         * <li>Standard: Standard snapshot.</li>
+         * <li>Flash: Local snapshot. This value will be deprecated. Local snapshots are replaced by the instant access feature.</li>
+         * <li>archive: Archive snapshot.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The creation time. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The creation time. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in accordance with the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-18T09:37:14Z</p>
@@ -180,10 +180,10 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the snapshot is encrypted. Valid values:</p>
+         * <p>Specifies whether the snapshot is encrypted. Valid values:</p>
          * <ul>
-         * <li>true: Encrypted.</li>
-         * <li>false: Not encrypted.</li>
+         * <li>true: The snapshot is encrypted.</li>
+         * <li>false: The snapshot is not encrypted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -201,11 +201,17 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         @NameInMap("InstantAccess")
         public Boolean instantAccess;
 
+        /**
+         * <p>The last modified time of the snapshot. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in accordance with the ISO 8601 standard. The time is displayed in UTC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01T00:00:00Z</p>
+         */
         @NameInMap("LastModifiedTime")
         public String lastModifiedTime;
 
         /**
-         * <p>The progress of snapshot creation, in percentage.</p>
+         * <p>The creation progress of the snapshot, in percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -244,17 +250,17 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
          * <p>The snapshot name.</p>
          * 
          * <strong>example:</strong>
-         * <p>csw-37-SystemDisk</p>
+         * <p>csw-37-system cloud disk</p>
          */
         @NameInMap("SnapshotName")
         public String snapshotName;
 
         /**
-         * <p>The type of automatic creation. Valid values:</p>
+         * <p>The automatic creation type. Valid values:</p>
          * <ul>
-         * <li>auto or timer: automatic snapshot.</li>
-         * <li>user: manual snapshot.</li>
-         * <li>all: all automatic creation types.</li>
+         * <li>auto or timer: Automatic snapshot.</li>
+         * <li>user: Manual snapshot.</li>
+         * <li>all: All automatic creation types.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -264,7 +270,7 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         public String snapshotType;
 
         /**
-         * <p>The ID of the source cloud disk. This field is retained even if the source cloud disk of the snapshot has been released.</p>
+         * <p>The ID of the source cloud disk. If the source cloud disk of the snapshot has been released, this field is still retained.</p>
          * 
          * <strong>example:</strong>
          * <p>rcd-bp67acfmxazb4ph****</p>
@@ -284,8 +290,8 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The type of the source cloud disk. Valid values:</p>
          * <ul>
-         * <li>SYSTEM: system cloud disk.</li>
-         * <li>DATA: data cloud disk.</li>
+         * <li>SYSTEM: System cloud disk.</li>
+         * <li>DATA: Data cloud disk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,9 +301,9 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         public String sourceDiskType;
 
         /**
-         * <p>The type of the source cloud disk.</p>
+         * <p>The category of the source cloud disk.</p>
          * <blockquote>
-         * <p>This parameter will be deprecated. To ensure compatibility, use other parameters instead.</p>
+         * <p>This parameter will be deprecated. To improve compatibility, use other parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -309,9 +315,9 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The snapshot status. Valid values:</p>
          * <ul>
-         * <li>progressing: The snapshot is being created.</li>
-         * <li>accomplished: The snapshot is created.</li>
-         * <li>failed: The snapshot failed to be created.</li>
+         * <li>progressing: snapshot being created</li>
+         * <li>accomplished: successfully created snapshot</li>
+         * <li>failed: snapshot that failed to be created</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -327,12 +333,12 @@ public class DescribeRCSnapshotsResponseBody extends TeaModel {
         public java.util.List<DescribeRCSnapshotsResponseBodySnapshotsTag> tag;
 
         /**
-         * <p>Indicates whether the snapshot has been used to create images or cloud disks. Valid values:</p>
+         * <p>The usage of the snapshot. Valid values:</p>
          * <ul>
-         * <li>image: The snapshot has been used to create custom images.</li>
-         * <li>disk: The snapshot has been used to create cloud disks.</li>
-         * <li>image_disk: The snapshot has been used to create both data cloud disks and custom images.</li>
-         * <li>none: The snapshot has not been used.</li>
+         * <li>image: The snapshot is used to create a custom image.</li>
+         * <li>disk: The snapshot is used to create a cloud disk.</li>
+         * <li>image_disk: The snapshot is used to create a data cloud disk and a custom image.</li>
+         * <li>none: The snapshot is not used.</li>
          * </ul>
          * 
          * <strong>example:</strong>

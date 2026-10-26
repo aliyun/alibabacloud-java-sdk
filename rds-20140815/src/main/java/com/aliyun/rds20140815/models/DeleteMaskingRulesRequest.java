@@ -15,7 +15,7 @@ public class DeleteMaskingRulesRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The database name.</p>
+     * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>myDB</p>

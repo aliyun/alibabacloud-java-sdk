@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyTaskInfoRequest extends TeaModel {
     /**
-     * <p>The action-related parameters, which can be extended as needed. When taskAction is set to modifySwitchTime, set ActionParams to <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code>.</p>
+     * <p>The parameters related to the action. You can add extensions based on your business requirements. When TaskAction is set to modifySwitchTime, set ActionParams to <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code>.</p>
      * <p>recoverMode specifies the task recovery pattern. Valid values:</p>
      * <ul>
-     * <li><strong>timePoint</strong>: Execute at a specified point in time.</li>
-     * <li><strong>immediate</strong>: Execute immediately.</li>
+     * <li><strong>timePoint</strong>: executes the task at a specified point in time.</li>
+     * <li><strong>immediate</strong>: executes the task immediately.</li>
      * </ul>
-     * <p>recoverTime specifies the recovery time in UTC+0. Format: yyyy-MM-ddTHH:mm:ssZ. This parameter is required when recoverMode is set to timePoint.</p>
+     * <p>recoverTime specifies the recovery time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ. When recoverMode is set to timePoint, recoverTime is required.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;recoverTime&quot;:&quot;2023-04-12T18:30:00Z&quot;,&quot;recoverMode&quot;:&quot;timePoint&quot;}</p>

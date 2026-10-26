@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsRequest extends TeaModel {
     /**
-     * <p>The backup set ID.</p>
+     * <p>The ID of the backup set.</p>
      * 
      * <strong>example:</strong>
      * <p>327329803</p>
@@ -29,7 +29,7 @@ public class DescribeBackupsRequest extends TeaModel {
     /**
      * <p>The status of the backup set. Valid values:</p>
      * <ul>
-     * <li><strong>Success</strong>: The backup is complete.</li>
+     * <li><strong>Success</strong>: The backup is completed.</li>
      * <li><strong>Failed</strong>: The backup failed.</li>
      * </ul>
      * 
@@ -53,7 +53,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String backupType;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,9 +63,9 @@ public class DescribeBackupsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>Narrow down the time range when you use this operation to query backup sets. A large time range may cause a timeout.</p>
+     * <p>When you call this operation to query backup sets, keep the time range short. A long time range may cause a timeout.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
+     * <p>The page number. Valid values: an integer greater than 0 and less than or equal to the maximum integer value.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class DescribeBackupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z (UTC).</p>
+     * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2011-06-01T16:00Z</p>

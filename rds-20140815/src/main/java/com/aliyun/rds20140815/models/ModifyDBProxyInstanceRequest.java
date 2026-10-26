@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBProxyInstanceRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be configured.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -24,9 +24,9 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     public String DBProxyEngineType;
 
     /**
-     * <p>The number of proxy instances. If this parameter is set to 0, the proxy service of this type is disabled for the instance. Valid values: <strong>1</strong> to <strong>16</strong>.</p>
+     * <p>The number of proxy instances. A value of 0 indicates that the proxy service of this type is disabled for the instance. Valid values: <strong>1</strong> to <strong>16</strong>.</p>
      * <blockquote>
-     * <p>More proxy instances can handle more requests. You can check the load of proxy instances based on monitoring data and then specify an appropriate number of proxy instances.</p>
+     * <p>More proxy instances can process more requests. You can check the load of the proxy instances based on monitoring data and specify an appropriate number of proxy instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -53,14 +53,14 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     /**
      * <p>The list of proxy nodes.</p>
      * <blockquote>
-     * <p>This parameter is required when the current proxy instance uses multi-active zone deployment.</p>
+     * <p>This parameter is required when the current proxy instance is active in a multi-zone deployment.</p>
      * </blockquote>
      */
     @NameInMap("DBProxyNodes")
     public java.util.List<ModifyDBProxyInstanceRequestDBProxyNodes> DBProxyNodes;
 
     /**
-     * <p>The specified time for the modification to take effect. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * <p>The specified time when the modifications take effect. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <blockquote>
      * <p>This parameter is required when <strong>EffectiveTime</strong> is set to <strong>SpecificTime</strong>.</p>
      * </blockquote>
@@ -72,11 +72,11 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     public String effectiveSpecificTime;
 
     /**
-     * <p>The effective period. Valid values:</p>
+     * <p>The time when the modifications take effect. Valid values:</p>
      * <ul>
-     * <li><strong>Immediate</strong>: The modification takes effect immediately.</li>
-     * <li><strong>MaintainTime</strong>: The modification takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
-     * <li><strong>SpecificTime</strong>: The modification takes effect at a specified time.</li>
+     * <li><strong>Immediate</strong>: The modifications take effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: The modifications take effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+     * <li><strong>SpecificTime</strong>: The modifications take effect at a specified time.</li>
      * </ul>
      * <p>Default value: <strong>MaintainTime</strong>.</p>
      * 
@@ -87,9 +87,9 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The list of active zones for proxy migration.</p>
+     * <p>The list of zones to which the proxy is migrated.</p>
      * <blockquote>
-     * <p>Currently, only ApsaraDB RDS for MySQL proxy instances with cloud disks support active zone migration.</p>
+     * <p>Currently, only ApsaraDB RDS for MySQL instances with cloud disks support proxy instance migration across zones.</p>
      * </blockquote>
      */
     @NameInMap("MigrateAZ")
@@ -99,7 +99,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -114,7 +114,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be configured.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-uf6adz52c2p****</p>
@@ -245,7 +245,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
         public String cpuCores;
 
         /**
-         * <p>The number of proxy nodes in the zone. Valid values: <strong>1</strong> to <strong>2</strong>.</p>
+         * <p>The number of proxy nodes in the zone. Valid values: <strong>1</strong> and <strong>2</strong>.</p>
          * <blockquote>
          * <p>This parameter is required when <strong>DBProxyNodes</strong> is specified.</p>
          * </blockquote>
@@ -301,7 +301,7 @@ public class ModifyDBProxyInstanceRequest extends TeaModel {
 
     public static class ModifyDBProxyInstanceRequestMigrateAZ extends TeaModel {
         /**
-         * <p>The proxy endpoint ID. You can call DescribeDBProxyEndpoint to obtain the proxy endpoint ID.</p>
+         * <p>The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID.</p>
          * <blockquote>
          * <p>This parameter is required when <strong>MigrateAZ</strong> is specified.</p>
          * </blockquote>

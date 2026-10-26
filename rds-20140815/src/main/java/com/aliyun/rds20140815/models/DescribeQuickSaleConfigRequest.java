@@ -7,8 +7,10 @@ public class DescribeQuickSaleConfigRequest extends TeaModel {
     /**
      * <p>The commodity code. Valid values:</p>
      * <ul>
-     * <li>rds: subscription</li>
-     * <li>bards: pay-as-you-go</li>
+     * <li><p>rds: subscription</p>
+     * </li>
+     * <li><p>bards: pay-as-you-go</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +20,7 @@ public class DescribeQuickSaleConfigRequest extends TeaModel {
     public String commodity;
 
     /**
-     * <p>The database engine. Valid values:</p>
+     * <p>The database engine type. Valid values:</p>
      * <ul>
      * <li><strong>MySQL</strong></li>
      * <li><strong>SQLServer</strong></li>
@@ -33,7 +35,7 @@ public class DescribeQuickSaleConfigRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the available regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

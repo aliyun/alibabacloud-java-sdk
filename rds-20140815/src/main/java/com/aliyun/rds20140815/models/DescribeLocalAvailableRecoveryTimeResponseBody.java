@@ -14,7 +14,7 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The start time of the restorable time range for backups.</p>
+     * <p>The start time of the restorable time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-09-11T09:48:52Z</p>
@@ -23,7 +23,7 @@ public class DescribeLocalAvailableRecoveryTimeResponseBody extends TeaModel {
     public String recoveryBeginTime;
 
     /**
-     * <p>The end time of the restorable time range for backups.</p>
+     * <p>The end time of the restorable time range.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-09-18T08:03:09Z</p>

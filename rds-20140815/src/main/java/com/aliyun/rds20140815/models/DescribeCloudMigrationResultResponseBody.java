@@ -38,7 +38,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of queried entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -111,7 +111,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The time when the task was last modified.</p>
+         * <p>The time when the task was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-01T06:39:51Z</p>
@@ -122,12 +122,12 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         /**
          * <p>The migration stage. Valid values:</p>
          * <ul>
-         * <li><strong>precheck</strong>: Precheck.</li>
-         * <li><strong>basebackup</strong>: Full backup.</li>
-         * <li><strong>startup</strong>: Link setup.</li>
-         * <li><strong>increment</strong>: Incremental synchronization.</li>
-         * <li><strong>switch</strong>: Cloud switchover.</li>
-         * <li><strong>success</strong>: Migration completed.</li>
+         * <li><strong>precheck</strong>: precheck</li>
+         * <li><strong>basebackup</strong>: full backup</li>
+         * <li><strong>startup</strong>: link setup</li>
+         * <li><strong>increment</strong>: incremental synchronization</li>
+         * <li><strong>switch</strong>: cloud cutover</li>
+         * <li><strong>success</strong>: cloud migration completed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -146,13 +146,13 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         public String replicationInfo;
 
         /**
-         * <p>The replication status. Valid values:</p>
+         * <p>The replication state. Valid values:</p>
          * <ul>
-         * <li><strong>unstarted</strong>: Not started.</li>
-         * <li><strong>catchup</strong>: Catching up.</li>
-         * <li><strong>streaming</strong>: Streaming.</li>
-         * <li><strong>disconnect</strong>: Disconnected.</li>
-         * <li><strong>finish</strong>: Completed.</li>
+         * <li><strong>unstarted</strong>: not started</li>
+         * <li><strong>catchup</strong>: catching up</li>
+         * <li><strong>streaming</strong>: streaming</li>
+         * <li><strong>disconnect</strong>: disconnected</li>
+         * <li><strong>finish</strong>: completed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -173,8 +173,8 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         /**
          * <p>The type of the self-managed PostgreSQL database. Valid values:</p>
          * <ul>
-         * <li><strong>idcOnVpc</strong>: A self-managed PostgreSQL database in an IDC that is connected to a VPC.</li>
-         * <li><strong>ecsOnVpc</strong>: A self-managed PostgreSQL database on an Alibaba Cloud ECS instance.</li>
+         * <li><strong>idcOnVpc</strong>: self-managed PostgreSQL database in an on-premises data center that is connected to a VPC</li>
+         * <li><strong>ecsOnVpc</strong>: self-managed PostgreSQL database on an Alibaba Cloud ECS instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,7 +211,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         public Long sourcePort;
 
         /**
-         * <p>The switchover time.</p>
+         * <p>The cutover time.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-01T06:40:51Z</p>
@@ -220,7 +220,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         public String switchTime;
 
         /**
-         * <p>A reserved parameter. The query result is empty.</p>
+         * <p>A reserved parameter. The value is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -238,7 +238,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         public String targetInstanceName;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>440437220</p>
@@ -247,7 +247,7 @@ public class DescribeCloudMigrationResultResponseBody extends TeaModel {
         public Long taskId;
 
         /**
-         * <p>The task name.</p>
+         * <p>The name of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>362c6c7a-4d20-4eac-898c-1495ceab374c</p>

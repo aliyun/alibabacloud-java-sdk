@@ -17,7 +17,7 @@ public class ModifyDatabaseConfigRequest extends TeaModel {
     /**
      * <p>The database name.</p>
      * <blockquote>
-     * <p>Specifying multiple database names is not supported.</p>
+     * <p>You cannot specify multiple database names.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -28,10 +28,10 @@ public class ModifyDatabaseConfigRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The database attribute that you want to modify.</p>
+     * <p>The database attribute to be modified.</p>
      * <ul>
-     * <li><strong>Modify database attributes feature</strong>: Enter the attribute name of the target database.</li>
-     * <li><strong>Data archiving to OSS feature</strong>: Enter the status of the target database. Set this parameter to <code>covert_online_db_to_cold_storage</code> to convert an online database to a cold storage database, or set this parameter to <code>convert_cold_storage_db_to_online</code> to convert a cold storage database to an online database.</li>
+     * <li><strong>Modify database attributes feature</strong>: Specify the name of the attribute for the destination database.</li>
+     * <li><strong>Data archiving to OSS feature</strong>: Specify the status of the destination database. Set the value to <code>covert_online_db_to_cold_storage</code> to convert an online database to a cold storage database, or set the value to <code>convert_cold_storage_db_to_online</code> to convert a cold storage database to an online database.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,10 +42,10 @@ public class ModifyDatabaseConfigRequest extends TeaModel {
     public String databasePropertyName;
 
     /**
-     * <p>The value of the database attribute that you want to modify.</p>
+     * <p>The expected value of the database attribute.</p>
      * <ul>
-     * <li><strong>Modify database attributes feature</strong>: Enter the attribute value of the target database.</li>
-     * <li><strong>Data archiving to OSS feature</strong>: Set this parameter to <strong>1</strong> to convert the target database to cold storage or online status.</li>
+     * <li><strong>Modify database attributes feature</strong>: Specify the value of the attribute for the destination database.</li>
+     * <li><strong>Data archiving to OSS feature</strong>: Set the value to <strong>1</strong> to convert the destination database to a cold storage or online state.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

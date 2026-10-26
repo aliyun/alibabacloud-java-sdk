@@ -14,7 +14,7 @@ public class DetachRCDiskRequest extends TeaModel {
     public Boolean deleteWithInstance;
 
     /**
-     * <p>The ID of the cloud disk to be detached.</p>
+     * <p>The ID of the cloud disk to detach.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DetachRCDiskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query available region IDs.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to view available region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

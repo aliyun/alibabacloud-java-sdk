@@ -7,11 +7,11 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     /**
      * <p>The instance edition. Valid values:</p>
      * <ul>
-     * <li><strong>Basic</strong>: Basic Edition</li>
-     * <li><strong>HighAvailability</strong>: High-availability Edition</li>
-     * <li><strong>AlwaysOn</strong>: SQL Server Cluster Edition</li>
-     * <li><strong>cluster</strong>: MySQL Cluster Edition</li>
-     * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
+     * <li><strong>Basic</strong>: Basic Edition.</li>
+     * <li><strong>HighAvailability</strong>: High-availability Edition.</li>
+     * <li><strong>AlwaysOn</strong>: Cluster Edition for SQL Server.</li>
+     * <li><strong>cluster</strong>: Cluster Edition for MySQL.</li>
+     * <li><strong>Finance</strong>: RDS Enterprise Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,9 +24,9 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String customExtraInfo;
 
     /**
-     * <p>The target instance type of the destination instance. Only the instance type can be changed. The storage type cannot be changed.
-     * When the <strong>IsModifySpec</strong> parameter settings require <strong>true</strong>, you must specify at least one of this parameter and <strong>DBInstanceStorage</strong>.</p>
-     * <p>For more information about instance types, see <a href="https://help.aliyun.com/document_detail/276975.html">Primary ApsaraDB RDS for MySQL instance types</a>.</p>
+     * <p>The instance type code of the destination instance. Only instance type changes are supported. Storage type changes are not supported.
+     * When the <strong>IsModifySpec</strong> parameter settings are <strong>true</strong>, you must specify at least one of this parameter and <strong>DBInstanceStorage</strong>.</p>
+     * <p>For more information about instance type codes, see <a href="https://help.aliyun.com/document_detail/276975.html">ApsaraDB RDS for MySQL primary instance types</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql.x4.xlarge.2</p>
@@ -35,7 +35,7 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,9 +45,9 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The destination storage capacity. When the <strong>IsModifySpec</strong> parameter settings require <strong>true</strong>, you must specify at least one of this parameter and <strong>DBInstanceClass</strong>.</p>
+     * <p>The destination storage capacity. When the <strong>IsModifySpec</strong> parameter settings are <strong>true</strong>, you must specify at least one of this parameter and <strong>DBInstanceClass</strong>.</p>
      * <p>Unit: GB.
-     * Valid values: The storage capacity varies based on the instance type. For more information, see <a href="https://help.aliyun.com/document_detail/276975.html">Primary ApsaraDB RDS for MySQL instance types</a>.</p>
+     * Valid values: The storage capacity that can be expanded varies by instance type. For more information, see <a href="https://help.aliyun.com/document_detail/276975.html">ApsaraDB RDS for MySQL primary instance types</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -58,10 +58,10 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     /**
      * <p>The instance storage type. Valid values:</p>
      * <ul>
-     * <li>cloud_essd: PL1 ESSD cloud disk.</li>
-     * <li>cloud_essd2: PL2 ESSD cloud disk.</li>
-     * <li>cloud_essd3: PL3 ESSD cloud disk.</li>
-     * <li>cloud_ssd: standard SSD (not recommended because standard SSDs are no longer available for purchase in some regions).</li>
+     * <li>cloud_essd: PL1 ESSD.</li>
+     * <li>cloud_essd2: PL2 ESSD.</li>
+     * <li>cloud_essd3: PL3 ESSD.</li>
+     * <li>cloud_ssd: standard SSD. This is not recommended because standard SSDs are no longer available in some regions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,9 +73,9 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     /**
      * <p>The effective period. Valid values:</p>
      * <ul>
-     * <li><strong>Immediate</strong>: The migration takes effect immediately. This is the default value.</li>
-     * <li><strong>MaintainTime</strong>: The migration takes effect during the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
-     * <li><strong>ScheduleTime</strong>: The migration takes effect at a custom time.</li>
+     * <li><strong>Immediate</strong>: Takes effect immediately. This is the default value.</li>
+     * <li><strong>MaintainTime</strong>: Takes effect within the maintenance window. For more information, see ModifyDBInstanceMaintainTime.</li>
+     * <li><strong>ScheduleTime</strong>: Takes effect at a specified time.</li>
      * </ul>
      * <blockquote>
      * <p>If you set this parameter to <strong>ScheduleTime</strong>, you must also specify the <strong>SwitchTime</strong> parameter.</p>
@@ -88,10 +88,10 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>Specifies whether to enable the Buffer Pool Extension (BPE) feature for premium performance disks. Valid values:</p>
+     * <p>The Buffer Pool Extension (BPE) feature switch for premium cloud disks. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: Enable.</li>
-     * <li><strong>0</strong>: Disable.</li>
+     * <li><strong>1</strong>: Enables the feature.</li>
+     * <li><strong>0</strong>: Disables the feature.</li>
      * </ul>
      * <blockquote>
      * <p>For more information about the BPE feature, see <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE)</a>.</p>
@@ -104,13 +104,13 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String ioAccelerationEnabled;
 
     /**
-     * <p>Specifies whether to change the instance specifications during zone migration.</p>
+     * <p>Specifies whether to change the specifications during zone migration. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Change the specifications. When this parameter is set to <strong>true</strong>, you must specify at least one of the <strong>DBInstanceClass</strong> and <strong>DBInstanceStorage</strong> parameters.</li>
-     * <li><strong>false</strong>: Do not change the specifications. This is the default value.</li>
+     * <li><strong>true</strong>: Changes the specifications. If you set this parameter to <strong>true</strong>, you must specify at least one of the <strong>DBInstanceClass</strong> or <strong>DBInstanceStorage</strong> parameters.</li>
+     * <li><strong>false</strong>: Does not change the specifications. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is applicable only to ApsaraDB RDS for MySQL instances.</p>
+     * <p>This parameter is only applicable to ApsaraDB RDS for MySQL instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The custom time at which the zone switch takes effect. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <p>The custom effective time for switching zones. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
      * <blockquote>
      * <p>This parameter is used together with the <strong>EffectiveTime</strong> parameter and is required only when <strong>EffectiveTime</strong> is set to <strong>ScheduleTime</strong>.</p>
      * </blockquote>
@@ -144,10 +144,10 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The virtual private cloud (VPC) ID. The VPC cannot be changed during instance migration and must remain the same.</p>
+     * <p>The ID of the virtual private cloud (VPC). The VPC cannot be changed during instance migration and must remain the same.</p>
      * <ul>
-     * <li>This parameter is required when you migrate a VPC-connected instance to a different zone.</li>
-     * <li>If the instance engine is SQL Server, the VPC can be changed during instance migration.</li>
+     * <li>This parameter is required when you migrate a VPC-connected instance across zones.</li>
+     * <li>If the instance runs SQL Server, the VPC can be changed during instance migration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -159,8 +159,8 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     /**
      * <p>The vSwitch ID.</p>
      * <ul>
-     * <li>This parameter is required when you migrate a VPC-connected instance to a different zone. You can invoke DescribeVSwitches to query the vSwitches that have been created.</li>
-     * <li>When you perform instance migration for an ApsaraDB RDS for PostgreSQL or SQL Server instance to a different zone with a secondary zone configured, you can specify multiple vSwitch IDs separated by commas (,), corresponding to the zones.</li>
+     * <li>This parameter is required when you migrate a VPC-connected instance across zones. You can call the DescribeVSwitches operation to query the created vSwitches.</li>
+     * <li>When you migrate an ApsaraDB RDS for PostgreSQL or ApsaraDB RDS for SQL Server instance across zones and configure a secondary zone, you can specify multiple vSwitch IDs separated by commas (,). The vSwitch IDs must correspond to the zones.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,7 +170,7 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the destination zone. You can call DescribeRegions to query the zone ID.</p>
+     * <p>The ID of the destination zone. You can call the DescribeRegions operation to query the zone ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -180,9 +180,9 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>The secondary zone 1.</p>
+     * <p>The ID of secondary zone 1.</p>
      * <blockquote>
-     * <p>This parameter is required for instances that are not of the Basic Edition.</p>
+     * <p>This parameter is required for instances that are not Basic Edition.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -192,9 +192,9 @@ public class MigrateToOtherZoneRequest extends TeaModel {
     public String zoneIdSlave1;
 
     /**
-     * <p>The secondary zone 2.</p>
+     * <p>The ID of secondary zone 2.</p>
      * <blockquote>
-     * <p>This parameter is applicable only to RDS Enterprise Edition instances.</p>
+     * <p>This parameter is only applicable to RDS Enterprise Edition instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

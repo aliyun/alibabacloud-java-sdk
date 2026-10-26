@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     /**
-     * <p>Reserved parameter. Not supported.</p>
+     * <p>The reserved parameter. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -16,13 +16,13 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enabled (default).</li>
-     * <li><strong>false</strong>: Disabled.</li>
+     * <li><strong>true</strong>: enables auto-renewal (default)</li>
+     * <li><strong>false</strong>: disables auto-renewal</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>This parameter takes effect only when you switch from pay-as-you-go to subscription.</li>
-     * <li>All non-<strong>true</strong> strings are treated as <strong>false</strong>.</li>
+     * <li>This parameter takes effect only when you change the billing method from pay-as-you-go to subscription.</li>
+     * <li>Any string other than <strong>true</strong> is processed as <strong>false</strong>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -33,10 +33,10 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>Specifies whether to use coupons. Valid values:</p>
+     * <p>Specifies whether to use vouchers. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): Coupons are used.</li>
-     * <li><strong>false</strong>: Coupons are not used.</li>
+     * <li><strong>true</strong> (default): uses vouchers.</li>
+     * <li><strong>false</strong>: does not use vouchers.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The business extension parameter.</p>
+     * <p>The business extension parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -55,7 +55,7 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The custom token that is used to ensure the idempotence of the request. </p>
+     * <p>The client token that is used to ensure the idempotence of the request. </p>
      * <blockquote>
      * <p>The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * </blockquote>
@@ -67,7 +67,7 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Reserved parameter. Not supported.</p>
+     * <p>The reserved parameter. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -76,7 +76,7 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Reserved parameter. Not supported.</p>
+     * <p>The reserved parameter. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -85,7 +85,7 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     public Boolean includeDataDisks;
 
     /**
-     * <p>Reserved parameter. Not supported.</p>
+     * <p>The reserved parameter. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -104,7 +104,7 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Reserved parameter. Not supported.</p>
+     * <p>The reserved parameter. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -115,8 +115,8 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     /**
      * <p>The billing method of the instance after the change. Valid values:</p>
      * <ul>
-     * <li><strong>Prepaid</strong>: subscription.</li>
-     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * <li><strong>Prepaid</strong>: subscription</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,10 +126,10 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit of the subscription duration. Valid values:</p>
+     * <p>Specifies the subscription period unit. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong>: yearly subscription.</li>
-     * <li><strong>Month</strong>: monthly subscription.</li>
+     * <li><strong>Year</strong>: year</li>
+     * <li><strong>Month</strong>: month</li>
      * </ul>
      * <blockquote>
      * <p>This parameter is required if <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
@@ -164,13 +164,13 @@ public class ModifyRCInstanceChargeTypeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The subscription duration. Valid values:</p>
+     * <p>Specifies the subscription duration. Valid values:</p>
      * <ul>
-     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, the valid values of UsedTime are <strong>1 to 5</strong>.</li>
-     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, the valid values of UsedTime are <strong>1 to 11</strong>.</li>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Year</strong>, the value of UsedTime ranges from <strong>1</strong> to <strong>5</strong>.</li>
+     * <li>If the <strong>Period</strong> parameter is set to <strong>Month</strong>, the value of UsedTime ranges from <strong>1</strong> to <strong>11</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required if PayType is set to <strong>Prepaid</strong>.</p>
+     * <p>This parameter is required if the billing method is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

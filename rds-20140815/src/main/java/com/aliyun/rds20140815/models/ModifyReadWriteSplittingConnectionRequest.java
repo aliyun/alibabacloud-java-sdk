@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyReadWriteSplittingConnectionRequest extends TeaModel {
     /**
-     * <p>The prefix of the read/write splitting endpoint. The prefix must be unique and can contain lowercase letters and hyphens (-). It must start with a letter and cannot exceed 30 characters in length.</p>
+     * <p>The prefix of the read/write splitting endpoint. The prefix must be unique and can contain only lowercase letters and hyphens. It must start with a letter and be up to 30 characters in length.</p>
      * <blockquote>
-     * <p>By default, the prefix is in the format of &quot;instance name + rw&quot;.</p>
+     * <p>By default, the prefix consists of the instance name and the &quot;rw&quot; string.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ModifyReadWriteSplittingConnectionRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>The primary instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>Instance ID of the primary instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,11 +29,11 @@ public class ModifyReadWriteSplittingConnectionRequest extends TeaModel {
     /**
      * <p>The read weight distribution mode. Valid values:</p>
      * <ul>
-     * <li><strong>Standard</strong>: Read weights are automatically assigned based on instance specifications.</li>
-     * <li><strong>Custom</strong>: Read weights are manually assigned.</li>
+     * <li><strong>Standard</strong>: automatically distributes weights based on instance specifications.</li>
+     * <li><strong>Custom</strong>: uses custom weights.</li>
      * </ul>
      * <blockquote>
-     * <p>You must specify at least one of <strong>MaxDelayTime</strong> or <strong>DistributionType</strong>.</p>
+     * <p>You must specify at least one of the <strong>MaxDelayTime</strong> and <strong>DistributionType</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,11 +43,11 @@ public class ModifyReadWriteSplittingConnectionRequest extends TeaModel {
     public String distributionType;
 
     /**
-     * <p>The latency threshold, in seconds. If the latency of a read-only instance exceeds this threshold, read traffic is not routed to the instance. If you do not specify this parameter, the current value is retained.</p>
+     * <p>The latency threshold, in seconds. If the latency of a read-only instance exceeds this threshold, read traffic is not routed to the instance. If you do not specify this parameter, the original value is retained.</p>
      * <blockquote>
      * <ul>
-     * <li>The <strong>MaxDelayTime</strong> parameter is not applicable to SQL Server 2017 on RDS Cluster Edition instances.</li>
-     * <li>You must specify at least one of <strong>MaxDelayTime</strong> or <strong>DistributionType</strong>.</li>
+     * <li>The <strong>MaxDelayTime</strong> parameter does not apply to SQL Server 2017 Cluster Edition instances.</li>
+     * <li>You must specify at least one of the <strong>MaxDelayTime</strong> and <strong>DistributionType</strong> parameters.</li>
      * </ul>
      * </blockquote>
      * 
@@ -79,15 +79,15 @@ public class ModifyReadWriteSplittingConnectionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The read weight distribution. This parameter specifies the read request weights for the primary instance and read-only instances. The value must be a multiple of 100 and cannot exceed 10000.</p>
+     * <p>The read weights of the primary and read-only instances. The weight value must be a multiple of 100 and can be up to 10000.</p>
      * <ul>
      * <li>Format for ApsaraDB RDS instances: <code>{&quot;&lt;Read-only instance ID&gt;&quot;:&lt;Weight&gt;,&quot;master&quot;:&lt;Weight&gt;,&quot;slave&quot;:&lt;Weight&gt;}</code></li>
-     * <li>Format for MyBASE instances: <code>[{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;},{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;slave&quot;},{&quot;instanceName&quot;:&quot;&lt;Read-only instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;}]</code></li>
+     * <li>Format for MyBase instances: <code>[{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;},{&quot;instanceName&quot;:&quot;&lt;Primary instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;slave&quot;},{&quot;instanceName&quot;:&quot;&lt;Read-only instance ID&gt;&quot;,&quot;weight&quot;:&lt;Weight&gt;,&quot;role&quot;:&quot;master&quot;}]</code></li>
      * </ul>
      * <blockquote>
      * <ul>
      * <li>This parameter is required when <strong>DistributionType</strong> is set to <strong>Custom</strong>.</li>
-     * <li>This parameter is invalid when <strong>DistributionType</strong> is set to <strong>Standard</strong>.</li>
+     * <li>This parameter does not take effect when <strong>DistributionType</strong> is set to <strong>Standard</strong>.</li>
      * </ul>
      * </blockquote>
      * 

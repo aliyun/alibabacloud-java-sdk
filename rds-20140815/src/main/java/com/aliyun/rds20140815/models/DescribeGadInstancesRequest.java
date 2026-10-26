@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeGadInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the active geo-redundancy database cluster.</p>
+     * <p>The ID of the GAD cluster.</p>
      * <ul>
-     * <li>If you do not specify this parameter, the IDs of all clusters under the current account are returned.</li>
+     * <li>If you do not specify this parameter, the IDs of all GAD clusters under the current account are returned.</li>
      * <li>If you specify this parameter, the details of the specified cluster are returned.</li>
      * </ul>
      * <blockquote>
-     * <p>You can call this operation without specifying this parameter to obtain the IDs of all clusters under the current account, and then specify a cluster ID to query the details of the cluster.</p>
+     * <p>You can leave this parameter empty in the first call to obtain the IDs of all GAD clusters under the current account, and then specify a cluster ID to view the details of the cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DescribeGadInstancesRequest extends TeaModel {
     public String gadInstanceName;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

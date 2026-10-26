@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRCDiskResponseBody extends TeaModel {
     /**
-     * <p>The cloud disk ID.</p>
+     * <p>The ID of the cloud disk.</p>
      * 
      * <strong>example:</strong>
      * <p>rcd-2zegrjtnkp6dqbe1****</p>
@@ -14,7 +14,7 @@ public class CreateRCDiskResponseBody extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
      * <p>100789370230206</p>
@@ -23,7 +23,7 @@ public class CreateRCDiskResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F2911788-25E8-42E5-A3A3-1B38D263F01E</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyParameterTimedScheduleTaskResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6EF82B07-28D2-48D1-B5D6-7E78FED277C7</p>

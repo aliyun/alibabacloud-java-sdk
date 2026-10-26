@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryNotifyRequest extends TeaModel {
     /**
-     * <p>The beginning of the time range to query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class QueryNotifyRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
+     * <p>The page number. Valid values: integers greater than <strong>0</strong> and less than or equal to the maximum value of the Integer type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class QueryNotifyRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,11 +50,11 @@ public class QueryNotifyRequest extends TeaModel {
     public String to;
 
     /**
-     * <p>Specifies whether to include confirmed notifications in the query results. Valid values:</p>
+     * <p>Specifies whether the query results include confirmed notifications. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Include confirmed notifications.</li>
-     * <li><strong>false</strong>: Do not include confirmed notifications.<blockquote>
-     * <p>Confirmed notifications are notifications that have been marked as confirmed by calling the ConfirmNotify operation.</p>
+     * <li><strong>true</strong>: Includes confirmed notifications.</li>
+     * <li><strong>false</strong>: Does not include confirmed notifications.<blockquote>
+     * <p>Confirmed notifications are those that have been marked as confirmed by calling the ConfirmNotify operation.</p>
      * </blockquote>
      * </li>
      * </ul>

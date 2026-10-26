@@ -27,7 +27,7 @@ public class CheckBackupEncryptionAuthorizedResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The Alibaba Resource Name (ARN) of the service-linked role associated with Cloud Hardware Security Module (CloudHSM) for backup encryption.</p>
+     * <p>The ARN of the backup encryption service-linked role.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1139916************:role/AliyunServiceRoleForRdsBackupEncryption</p>

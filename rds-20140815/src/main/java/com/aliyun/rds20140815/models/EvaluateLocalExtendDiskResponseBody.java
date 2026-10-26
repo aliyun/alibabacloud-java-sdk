@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the expansion is available. Valid values:</p>
+     * <p>Indicates whether the resource is available. Valid values:</p>
      * <ul>
      * <li><p><strong>true</strong>: Available.</p>
      * </li>
-     * <li><p><strong>false</strong>: Not available.</p>
+     * <li><p><strong>false</strong>: Unavailable.</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The transfer type of the database instance.</p>
+     * <p>The transmission type of the database instance.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -47,7 +47,7 @@ public class EvaluateLocalExtendDiskResponseBody extends TeaModel {
     public Long localUpgradeDiskLimit;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A4C4D26F-E5CE-5A28-8C54-46A6FB318223</p>

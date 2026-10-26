@@ -14,7 +14,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String creator;
 
     /**
-     * <p>The scheduled time when the key is to be deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The estimated time when the key is deleted. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2022-05-08T08:14:16Z</p>
@@ -49,8 +49,8 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     /**
      * <p>The status of the key. Valid values:</p>
      * <ul>
-     * <li><strong>Enabled</strong>: Enabled.</li>
-     * <li><strong>Disabled</strong>: Disabled.</li>
+     * <li><strong>Enabled</strong>: The key is enabled.</li>
+     * <li><strong>Disabled</strong>: The key is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String encryptionKeyStatus;
 
     /**
-     * <p>The purpose of the key.</p>
+     * <p>The usage of the key.</p>
      * 
      * <strong>example:</strong>
      * <p>ENCRYPT/DECRYPT</p>
@@ -69,7 +69,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
     public String keyUsage;
 
     /**
-     * <p>The expiration time of the key material. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+     * <p>The expiration time of the key material. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-18T08:14:16Z</p>
@@ -200,7 +200,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The scheduled time when the key is to be deleted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The estimated time when the key is deleted. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-08T08:14:16Z</p>
@@ -229,8 +229,8 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         /**
          * <p>The status of the key. Valid values:</p>
          * <ul>
-         * <li><strong>Enabled</strong>: Enabled.</li>
-         * <li><strong>Disabled</strong>: Disabled.</li>
+         * <li><strong>Enabled</strong>: The key is enabled.</li>
+         * <li><strong>Disabled</strong>: The key is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -242,8 +242,8 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         /**
          * <p>The type of the key. Valid values:</p>
          * <ul>
-         * <li>CMK: customer master key (CMK).</li>
-         * <li>ServiceKey: service key.</li>
+         * <li>CMK: customer master key</li>
+         * <li>ServiceKey: service key</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -253,7 +253,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         public String keyType;
 
         /**
-         * <p>The purpose of the key.</p>
+         * <p>The usage of the key.</p>
          * 
          * <strong>example:</strong>
          * <p>ENCRYPT/DECRYPT</p>
@@ -262,7 +262,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         public String keyUsage;
 
         /**
-         * <p>The expiration time of the key material. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The expiration time of the key material. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-18T08:14:16Z</p>
@@ -280,7 +280,7 @@ public class DescribeDBInstanceEncryptionKeyResponseBody extends TeaModel {
         public String origin;
 
         /**
-         * <p>The usage of the key. Valid values:</p>
+         * <p>The usage of the key:</p>
          * <ul>
          * <li><strong>TDE</strong>: transparent data encryption.</li>
          * <li><strong>DiskEncryption</strong>: cloud disk encryption.</li>

@@ -14,7 +14,7 @@ public class ValidateImportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the precheck task.</p>
+     * <p>The ID of the pre-check task.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>

@@ -26,7 +26,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
@@ -35,7 +35,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The size of the snapshot chain of the instance. Unit: bytes.</p>
+     * <p>The size of the snapshot chain for the instance. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -44,7 +44,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public Long totalEcsSnapshotSize;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

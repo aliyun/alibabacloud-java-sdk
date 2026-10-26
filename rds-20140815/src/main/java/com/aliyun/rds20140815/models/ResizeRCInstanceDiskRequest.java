@@ -8,8 +8,8 @@ public class ResizeRCInstanceDiskRequest extends TeaModel {
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
      * <li><strong>true</strong> (default): Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
-     * <li><strong>false</strong>: Only an order is generated. No payment is made.<blockquote>
-     * <p>If your payment method has an insufficient balance, set AutoPay to false. An unpaid order is generated. You can log on to the ApsaraDB RDS console to complete the payment.</p>
+     * <li><strong>false</strong>: Only an order is generated and no payment is deducted.<blockquote>
+     * <p>If your payment method has an insufficient balance, you can set AutoPay to false. An unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -30,10 +30,10 @@ public class ResizeRCInstanceDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a precheck on the operation. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without creating the instance. The system checks items such as the request parameters, request format, service limits, and available resources.</li>
-     * <li><strong>false</strong> (default): sends the request. If the request passes the check, the instance is created.</li>
+     * <li><strong>true</strong>: A precheck is performed, and the operation is not executed. Check items include request parameters, request format, business limits, and inventory.</li>
+     * <li><strong>false</strong> (default): A normal request is sent, and the operation is executed immediately after the precheck is passed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ResizeRCInstanceDiskRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The size of the disk after expansion. Unit: GiB.</p>
+     * <p>The new size of the disk after expansion. Unit: GiB.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

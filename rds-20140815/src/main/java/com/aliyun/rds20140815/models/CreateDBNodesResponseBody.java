@@ -14,7 +14,7 @@ public class CreateDBNodesResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The IDs of the created nodes. The value is of the String type. Multiple node IDs are separated by commas (,).</p>
+     * <p>The IDs of the created nodes. The value is a string. Multiple node IDs are separated by commas (<code>,</code>).</p>
      * 
      * <strong>example:</strong>
      * <p>rn-abcd2****</p>
@@ -23,7 +23,7 @@ public class CreateDBNodesResponseBody extends TeaModel {
     public String nodeIds;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
      * <p>2133400000****</p>
@@ -32,7 +32,7 @@ public class CreateDBNodesResponseBody extends TeaModel {
     public Long orderId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7A41C147-C8D0-4DAE-A1A2-17EBCD60DFA1</p>

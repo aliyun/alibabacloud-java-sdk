@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GrantOperatorPermissionResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>842B73C8-5776-4BD9-9872-69C8C46DD7D3</p>

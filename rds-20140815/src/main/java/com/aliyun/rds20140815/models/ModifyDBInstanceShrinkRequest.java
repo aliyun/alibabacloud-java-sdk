@@ -7,11 +7,11 @@ public class ModifyDBInstanceShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically use coupons. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): Automatically uses coupons.</li>
-     * <li><strong>false</strong>: Does not automatically use coupons.</li>
+     * <li><strong>true</strong> (default): Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * <blockquote>
-     * <p>After a coupon is used, the amount deducted by the coupon is not refunded if you downgrade the instance specifications.</p>
+     * <p>After a coupon is used, if a downgrade is required, the amount deducted by the coupon will not be refunded.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class ModifyDBInstanceShrinkRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2340501.html">I/O burst feature for premium performance disks</a>. Valid values:</p>
+     * <p>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2340501.html">I/O performance burst feature for Premium ESSD cloud disks</a>. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Enabled.</li>
      * <li><strong>false</strong>: Disabled.</li>
@@ -48,7 +48,7 @@ public class ModifyDBInstanceShrinkRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2701832.html">cold data archiving feature</a> for general-purpose cloud disks. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2701832.html">data archiving feature for general cloud disks</a>. Valid values:</p>
      * <ul>
      * <li><p>&lt;props=&quot;china&quot;&gt;<strong>true</strong>: Enabled.</p>
      * </li>
@@ -73,7 +73,7 @@ public class ModifyDBInstanceShrinkRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,11 +83,11 @@ public class ModifyDBInstanceShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/26312.html">target storage capacity</a>, in GB. You can call the <a href="https://help.aliyun.com/document_detail/610393.html">DescribeAvailableClasses</a> operation to query the available storage capacity range for the target instance type.</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/26312.html">target storage capacity</a>. Unit: GB. You can call the <a href="https://help.aliyun.com/document_detail/610393.html">DescribeAvailableClasses</a> operation to query the available storage capacity range for the target instance type.</p>
      * <blockquote>
      * <ul>
      * <li>You must specify at least one of this parameter and the <strong>DBInstanceClass</strong> parameter.</li>
-     * <li>You can call <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> to query the current storage capacity of the instance.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to view the current storage capacity of the instance.</li>
      * </ul>
      * </blockquote>
      * 
@@ -100,7 +100,7 @@ public class ModifyDBInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The instance storage type. Valid values:</p>
      * <ul>
-     * <li><strong>general_essd</strong>: premium performance disk (recommended)</li>
+     * <li><strong>general_essd</strong>: Premium ESSD (recommended)</li>
      * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
      * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
      * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
@@ -119,9 +119,9 @@ public class ModifyDBInstanceShrinkRequest extends TeaModel {
     public String DBNodesShrink;
 
     /**
-     * <p>The type of specification change. Valid values:</p>
+     * <p>The type of specification change for the instance. Valid values:</p>
      * <ul>
-     * <li><strong>Up</strong> (default): Upgrades a subscription instance or upgrades/downgrades a pay-as-you-go instance.</li>
+     * <li><strong>Up</strong> (default): Upgrades a subscription instance, or upgrades or downgrades a pay-as-you-go instance.</li>
      * <li><strong>Down</strong>: Downgrades a subscription instance.</li>
      * </ul>
      * 
@@ -132,14 +132,14 @@ public class ModifyDBInstanceShrinkRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The time when the new configurations take effect. Valid values:</p>
+     * <p>The effective period for the new configurations. Valid values:</p>
      * <blockquote>
-     * <p><strong>Changing some configurations may affect the instance</strong>. Read the impact section in the <a href="https://help.aliyun.com/document_detail/96061.html">feature documentation</a> before you configure this parameter. Perform the operation during off-peak hours.</p>
+     * <p><strong>Changing some configurations may affect the instance</strong>. Read the <a href="https://help.aliyun.com/document_detail/96061.html">Impact section in the feature documentation</a> carefully before you configure this parameter, and perform the operation during off-peak hours.</p>
      * </blockquote>
      * <ul>
-     * <li><strong>Immediate</strong> (default): The new configurations take effect immediately.</li>
-     * <li><strong>MaintainTime</strong>: The new configurations take effect during the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a>.</li>
-     * <li><strong>ScheduleTime</strong>: The new configurations take effect at a specified time. The specified time must be at least 12 hours later than the current time. The actual switchover time follows the formula: EffectiveTime = ScheduleTime + SwitchTime.</li>
+     * <li><strong>Immediate</strong> (default): Takes effect immediately.</li>
+     * <li><strong>MaintainTime</strong>: Takes effect within the <a href="https://help.aliyun.com/document_detail/610402.html">maintenance window</a>.</li>
+     * <li><strong>ScheduleTime</strong>: Specifies a time for the switchover. The time must be at least 12 hours later than the current time, and the actual switch time follows the formula: EffectiveTime = ScheduleTime + SwitchTime.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class ModifyDBInstanceShrinkRequest extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE) feature</a> for premium performance disks. Valid values:</p>
+     * <p>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE) feature for Premium ESSD cloud disks</a>. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: Enabled.</li>
      * <li><strong>0</strong>: Disabled.</li>
@@ -177,9 +177,9 @@ public class ModifyDBInstanceShrinkRequest extends TeaModel {
     public String parameterGroupId;
 
     /**
-     * <p>The parameters and their values. All parameter values are of the STRING type. You can call DescribeParameterTemplates to query parameter names and values.</p>
+     * <p>The parameters and their values. All parameter values are of the string type. You can call the DescribeParameterTemplates operation to query parameter names and values.</p>
      * <blockquote>
-     * <p>If you specify the <strong>ParameterGroupId</strong> parameter and both the ParameterGroupId and Parameters parameters modify the same parameter, the modification specified by the Parameters parameter takes precedence.</p>
+     * <p>If you specify the <strong>ParameterGroupId</strong> parameter and a parameter is modified by both the ParameterGroupId and Parameters parameters, the modification in the Parameters parameter takes precedence.</p>
      * </blockquote>
      */
     @NameInMap("Parameters")
@@ -210,9 +210,9 @@ public class ModifyDBInstanceShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scheduled time for executing the parameter modification. The EffectiveTime parameter must be set to ScheduleTime. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * <p>Specifies the execution time for modifying the parameter. This parameter is required when EffectiveTime is set to ScheduleTime. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC time).</p>
      * <blockquote>
-     * <p>The specified time must be later than the current time (the time when the call is made).</p>
+     * <p>The time must be later than the current time (the time when the API call is executed).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -222,8 +222,8 @@ public class ModifyDBInstanceShrinkRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/126002.html">minor engine version</a> of the PostgreSQL instance. If the specification change fails because the current minor engine version is not supported, specify the minor engine version to <strong>upgrade the minor engine version during the specification change</strong>.</p>
-     * <p>Format: <code>rds_postgres_&lt;major version&gt;00_&lt;minor version&gt;</code>. Example for version 12 with minor version 20200830: <code>rds_postgres_1200_20200830</code>.</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/126002.html">minor engine version</a> of the PostgreSQL instance. When you change the instance type and an error indicates that the minor engine version is not supported, you must specify this parameter <strong>to upgrade the minor engine version during the instance type change</strong>.</p>
+     * <p>Format: <code>rds_postgres_&lt;Major version number&gt;00_&lt;Minor version number&gt;</code>. Example for version 12 on 20200830: <code>rds_postgres_1200_20200830</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>rds_postgres_1200_20200830</p>

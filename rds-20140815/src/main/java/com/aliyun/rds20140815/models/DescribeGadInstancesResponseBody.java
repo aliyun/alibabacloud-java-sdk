@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGadInstancesResponseBody extends TeaModel {
     /**
-     * <p>The list of active geo-redundancy database clusters.</p>
+     * <p>The list of GAD clusters.</p>
      */
     @NameInMap("GadInstances")
     public java.util.List<DescribeGadInstancesResponseBodyGadInstances> gadInstances;
@@ -51,9 +51,9 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String DBInstanceID;
 
         /**
-         * <p>A JSON array that contains DTS synchronization information.</p>
+         * <p>The JSON array that contains the Data Transmission Service (DTS) synchronization information.</p>
          * <blockquote>
-         * <p>Each unit node (secondary node) synchronizes data with the central node (primary node) through DTS. This parameter contains the synchronization task ID and request ID of DTS.</p>
+         * <p>Each unit node (secondary node) synchronizes data with the central node (primary node) through DTS. This parameter contains the DTS synchronization link ID and request ID.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -102,10 +102,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The node type in the active geo-redundancy database cluster. Valid values:</p>
+         * <p>The role of the node in the GAD cluster. Valid values:</p>
          * <ul>
-         * <li><strong>CENTRAL</strong>: central node. The only primary node in the cluster. All unit nodes synchronize data from this node.</li>
-         * <li><strong>UNIT</strong>: unit node. A cluster can contain up to 10 unit nodes. All unit nodes synchronize data from the central node.</li>
+         * <li><strong>CENTRAL</strong>: the central node, which is the only primary node in the cluster. All unit nodes synchronize data from this node.</li>
+         * <li><strong>UNIT</strong>: the unit node. A cluster can have up to 10 unit nodes, and all unit nodes synchronize data from the central node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,10 +115,10 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String role;
 
         /**
-         * <p>The node status. Valid values:</p>
+         * <p>The status of the node. Valid values:</p>
          * <ul>
-         * <li><strong>activation</strong>: running.</li>
-         * <li><strong>creating</strong>: being created.</li>
+         * <li><strong>activation</strong>: running</li>
+         * <li><strong>creating</strong>: being created</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The cluster name.</p>
+         * <p>The name of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>GadTest</p>
@@ -224,7 +224,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public java.util.List<DescribeGadInstancesResponseBodyGadInstancesGadInstanceMembers> gadInstanceMembers;
 
         /**
-         * <p>The ID of the active geo-redundancy database cluster.</p>
+         * <p>The ID of the GAD cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>gad-rm-bp1npi2j8****</p>
@@ -242,7 +242,7 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String modificationTime;
 
         /**
-         * <p>The engine of the active geo-redundancy database cluster.</p>
+         * <p>The database engine of the GAD cluster.</p>
          * <blockquote>
          * <p>Only <strong>mysql</strong> is supported.</p>
          * </blockquote>
@@ -254,11 +254,11 @@ public class DescribeGadInstancesResponseBody extends TeaModel {
         public String service;
 
         /**
-         * <p>The cluster status. Valid values:</p>
+         * <p>The status of the cluster. Valid values:</p>
          * <ul>
-         * <li><strong>activation</strong>: running.</li>
-         * <li><strong>creating</strong>: being created.</li>
-         * <li><strong>replica_adding</strong>: a node is being added.</li>
+         * <li><strong>activation</strong>: running</li>
+         * <li><strong>creating</strong>: being created</li>
+         * <li><strong>replica_adding</strong>: adding nodes</li>
          * </ul>
          * 
          * <strong>example:</strong>

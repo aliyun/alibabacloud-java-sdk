@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDatabaseConfigResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ModifyDatabaseConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

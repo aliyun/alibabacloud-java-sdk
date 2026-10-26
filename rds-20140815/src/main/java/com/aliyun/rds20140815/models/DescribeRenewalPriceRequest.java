@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRenewalPriceRequest extends TeaModel {
     /**
-     * <p>The business extension parameter.</p>
+     * <p>The business extension parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>121436975448952</p>
@@ -14,7 +14,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>Ensures the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -23,7 +23,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. Default value: the current instance type.</p>
+     * <p>The instance type. For more information about instance types, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. Default value: the current instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>mysql.n2.medium.2c</p>
@@ -32,7 +32,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to obtain instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The order type. The only valid value is <strong>BUY</strong>.</p>
+     * <p>The order type. Valid value: <strong>BUY</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>
@@ -59,8 +59,8 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     /**
      * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>Postpaid</strong>: pay-as-you-go</li>
-     * <li><strong>Prepaid</strong>: subscription</li>
+     * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+     * <li><strong>Prepaid</strong>: subscription.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public Integer quantity;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
+     * <p>The ID of the region. You can call the DescribeRegions operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -88,7 +88,7 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</p>
+     * <p>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmx****</p>
@@ -103,10 +103,10 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The subscription type of the instance. Valid values:</p>
+     * <p>The unit of the subscription duration. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong>: yearly subscription</li>
-     * <li><strong>Month</strong>: monthly subscription</li>
+     * <li><strong>Year</strong>: year.</li>
+     * <li><strong>Month</strong>: month.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -119,8 +119,8 @@ public class DescribeRenewalPriceRequest extends TeaModel {
     /**
      * <p>The subscription duration of the instance. Valid values:</p>
      * <ul>
-     * <li>If <strong>TimeType</strong> is set to <strong>Year</strong>, the value ranges from <strong>1 to 3</strong>.</li>
-     * <li>If <strong>TimeType</strong> is set to <strong>Month</strong>, the value ranges from <strong>1 to 9</strong>.</li>
+     * <li>If the <strong>TimeType</strong> parameter is set to <strong>Year</strong>, valid values are <strong>1 to 3</strong>.</li>
+     * <li>If the <strong>TimeType</strong> parameter is set to <strong>Month</strong>, valid values are <strong>1 to 9</strong>.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

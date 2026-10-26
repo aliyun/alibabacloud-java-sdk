@@ -110,7 +110,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         public String enabled;
 
         /**
-         * <p>The rule algorithms. You can specify multiple algorithms. Masking algorithms can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {masking position, masking length}}.</p>
+         * <p>The algorithms for the rule. Multiple algorithms are supported. Additional parameters can be added for masking algorithms. Format: {name: Algorithm 1}, {name: Algorithm 2, params: {encryption position, number of encrypted digits}}.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;name&quot;: &quot;aes-128-gcm&quot;},
@@ -126,7 +126,7 @@ public class DescribeMaskingRulesResponseBody extends TeaModel {
         public DescribeMaskingRulesResponseBodyDataRulesRuleConfig ruleConfig;
 
         /**
-         * <p>The rule name.</p>
+         * <p>The name of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

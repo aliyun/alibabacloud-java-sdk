@@ -11,7 +11,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
     public java.util.List<DescribeCustinsResourceInfoResponseBodyData> data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>D4D4BE8A-DD46-440A-BFCD-EE31DA81C9DD</p>
@@ -51,7 +51,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String cpuAdjustDeadline;
 
         /**
-         * <p>The maximum adjustable CPU ratio.</p>
+         * <p>The maximum adjustable ratio for the CPU.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -69,7 +69,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String cpuAdjustableMaxValue;
 
         /**
-         * <p>The CPU usage.</p>
+         * <p>The CPU increase ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -168,7 +168,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String maxIopsIncreaseRatioValue;
 
         /**
-         * <p>The maximum adjustable memory ratio.</p>
+         * <p>The maximum adjustable ratio for the memory.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -213,7 +213,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String memoryIncreaseRatioValue;
 
         /**
-         * <p>The number of CPU cores of the instance.</p>
+         * <p>The number of CPUs of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -240,7 +240,7 @@ public class DescribeCustinsResourceInfoResponseBody extends TeaModel {
         public String originMaxIops;
 
         /**
-         * <p>The actual memory usage. Unit: MB.</p>
+         * <p>The actual memory used. Unit: MB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

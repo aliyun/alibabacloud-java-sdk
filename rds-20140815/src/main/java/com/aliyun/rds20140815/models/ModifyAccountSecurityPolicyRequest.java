@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountSecurityPolicyRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -14,7 +14,7 @@ public class ModifyAccountSecurityPolicyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,11 +24,11 @@ public class ModifyAccountSecurityPolicyRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The custom password policy for ApsaraDB RDS for SQL Server accounts. The following policies are supported:</p>
+     * <p>The custom account password policy for ApsaraDB RDS for SQL Server. Supported policies:</p>
      * <ul>
-     * <li>Set only the maximum password age. After this period expires, the password must be changed: <code>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: Specify the maximum age}}</code></li>
-     * <li>Set only the minimum password age. The password cannot be changed again within this period: <code>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: Specify the minimum age}}</code></li>
-     * <li>Set both the maximum and minimum password ages: <code>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: Specify the maximum age, &quot;MinimumPasswordAge&quot;: Specify the minimum age}}</code></li>
+     * <li>Set only the maximum password age. The password must be changed after this period: <code>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: &lt;maximum_age&gt;}}</code></li>
+     * <li>Set only the minimum password age. The password cannot be changed again within this period: <code>{&quot;accountSecurityPolicy&quot;: {&quot;MinimumPasswordAge&quot;: &lt;minimum_age&gt;}}</code></li>
+     * <li>Set both the maximum and minimum password ages: <code>{&quot;accountSecurityPolicy&quot;: {&quot;MaximumPasswordAge&quot;: &lt;maximum_age&gt;, &quot;MinimumPasswordAge&quot;: &lt;minimum_age&gt;}}</code></li>
      * </ul>
      * <blockquote>
      * <p>The minimum password age (valid values: 0 to 998) cannot be greater than the maximum password age (valid values: 0 to 999).</p>
@@ -48,7 +48,7 @@ public class ModifyAccountSecurityPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>

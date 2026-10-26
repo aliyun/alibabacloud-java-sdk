@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLCollectorPolicyRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate request submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -14,7 +14,7 @@ public class DescribeSQLCollectorPolicyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class DescribeSQLCollectorPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The resource group ID. You can call DescribeDBInstanceAttribute to query the resource group ID.</p>
+     * <p>The ID of the resource group. You can call the DescribeDBInstanceAttribute operation to query the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>

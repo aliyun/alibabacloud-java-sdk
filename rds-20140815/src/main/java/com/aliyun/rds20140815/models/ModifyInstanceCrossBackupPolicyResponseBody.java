@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     /**
-     * <p>The status of the cross-region backup feature. Valid values:</p>
+     * <p>Indicates whether the overall cross-region backup feature is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>Disable</strong>: Disabled.</li>
-     * <li><strong>Enable</strong>: Enabled.</li>
+     * <li><strong>Disable</strong>: The feature is disabled.</li>
+     * <li><strong>Enable</strong>: The feature is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     public String crossBackupRegion;
 
     /**
-     * <p>The type of cross-region backup retention. Default value: <strong>1</strong>, which indicates that all backups are retained.</p>
+     * <p>The retention type of cross-region backups. Default value: <strong>1</strong>, which indicates that all backups are retained.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -45,10 +45,10 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The status of cross-region log backup. Valid values:</p>
+     * <p>Indicates whether cross-region log backup is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>Disable</strong>: Disabled.</li>
-     * <li><strong>Enable</strong>: Enabled.</li>
+     * <li><strong>Disable</strong>: Cross-region log backup is disabled.</li>
+     * <li><strong>Enable</strong>: Cross-region log backup is enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     public String logBackupEnabled;
 
     /**
-     * <p>The region ID of the source instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the source instance. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -76,7 +76,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The cross-region backup retention method. Default value: <strong>1</strong>, which indicates retention by duration.</p>
+     * <p>The retention method for cross-region backups. Default value: <strong>1</strong>, which indicates that backups are retained based on a specified retention period.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,7 +85,7 @@ public class ModifyInstanceCrossBackupPolicyResponseBody extends TeaModel {
     public Integer retentType;
 
     /**
-     * <p>The number of days for which cross-region backups are retained. Valid values: <strong>7 to 1825</strong>.</p>
+     * <p>The retention period of cross-region backups. Valid values: <strong>7 to 1825</strong>. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

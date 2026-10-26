@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSecretsRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>Specifies the language of the response. Valid values:</p>
      * <ul>
-     * <li><strong>zh-CN</strong>: Chinese</li>
-     * <li><strong>en-US</strong>: English</li>
+     * <li><strong>zh-CN</strong>: Chinese.</li>
+     * <li><strong>en-US</strong>: English.</li>
      * </ul>
      * <blockquote>
      * <p>Default value: <strong>en-US</strong>.</p>
@@ -21,7 +21,7 @@ public class DescribeSecretsRequest extends TeaModel {
     public String acceptLanguage;
 
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -30,7 +30,7 @@ public class DescribeSecretsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-xjkljj****</p>
@@ -41,7 +41,7 @@ public class DescribeSecretsRequest extends TeaModel {
     /**
      * <p>The database engine type.</p>
      * <blockquote>
-     * <p>This parameter currently supports only the value MySQL.</p>
+     * <p>This parameter currently only supports the value MySQL.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -58,7 +58,7 @@ public class DescribeSecretsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
+     * <p>The page number of the query result. Valid values: any integer greater than 0 and less than or equal to the maximum integer value.</p>
      * <blockquote>
      * <p>Default value: 1.</p>
      * </blockquote>
@@ -91,7 +91,7 @@ public class DescribeSecretsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID of the instance.</p>
+     * <p>The ID of the resource group to which the instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxypivk***</p>

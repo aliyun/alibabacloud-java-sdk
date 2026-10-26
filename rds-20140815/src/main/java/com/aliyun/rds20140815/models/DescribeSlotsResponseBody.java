@@ -14,7 +14,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of replication slots of the instance.</p>
+     * <p>The list of replication slots for the instance.</p>
      */
     @NameInMap("Slots")
     public java.util.List<DescribeSlotsResponseBodySlots> slots;
@@ -42,7 +42,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
 
     public static class DescribeSlotsResponseBodySlots extends TeaModel {
         /**
-         * <p>The name of the database in which the replication slot resides.</p>
+         * <p>The name of the database where the replication slot resides.</p>
          * 
          * <strong>example:</strong>
          * <p>db_test01</p>
@@ -71,8 +71,8 @@ public class DescribeSlotsResponseBody extends TeaModel {
         /**
          * <p>The status of the replication slot. Valid values:</p>
          * <ul>
-         * <li>ACTIVE: Active.</li>
-         * <li>INACTIVE: Inactive.</li>
+         * <li>ACTIVE: active</li>
+         * <li>INACTIVE: inactive</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -84,8 +84,8 @@ public class DescribeSlotsResponseBody extends TeaModel {
         /**
          * <p>The type of the replication slot. Valid values:</p>
          * <ul>
-         * <li>physical: Physical.</li>
-         * <li>logical: Logical.</li>
+         * <li>physical: physical</li>
+         * <li>logical: logical</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
         public String slotType;
 
         /**
-         * <p>The specific latency of the logical subscription on the subscriber corresponding to the current replication slot. Unit: seconds.</p>
+         * <p>The latency of the logical subscription for the subscriber that corresponds to the current replication slot, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -106,8 +106,8 @@ public class DescribeSlotsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the replication slot is temporary. Valid values:</p>
          * <ul>
-         * <li>true: The replication slot is temporary.</li>
-         * <li>false: The replication slot is not temporary.</li>
+         * <li>true: Yes.</li>
+         * <li>false: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class DescribeSlotsResponseBody extends TeaModel {
         public String temporary;
 
         /**
-         * <p>The amount of logs accumulated by the replication slot.</p>
+         * <p>The volume of accumulated logs in the replication slot.</p>
          * 
          * <strong>example:</strong>
          * <p>16 MB</p>

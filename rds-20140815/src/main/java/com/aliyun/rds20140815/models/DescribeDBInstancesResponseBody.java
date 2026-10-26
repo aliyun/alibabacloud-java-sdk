@@ -8,7 +8,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     public DescribeDBInstancesResponseBodyItems items;
 
     /**
-     * <p>The pagination token. If the results are displayed on multiple pages, pass this value in the <strong>NextToken</strong> parameter in the next request to display the next page.</p>
+     * <p>The pagination token. If the response is paginated, you can pass this value to the <strong>NextToken</strong> parameter in the next call to retrieve the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>o7PORW5o2TJg****</p>
@@ -19,7 +19,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     /**
      * <p>The page number.</p>
      * <blockquote>
-     * <p>If you specify the <strong>MaxResults</strong> or <strong>NextToken</strong> parameter, only <strong>1</strong> is returned for this parameter. You can ignore this return value.</p>
+     * <p>If you specify the <strong>MaxResults</strong> or <strong>NextToken</strong> parameter, this parameter returns only <strong>1</strong> and can be ignored.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribeDBInstancesResponseBody extends TeaModel {
     /**
      * <p>The total number of records.</p>
      * <blockquote>
-     * <p>If you specify the <strong>MaxResults</strong> or <strong>NextToken</strong> parameter, only the number of records on the current page is returned for this parameter. You can ignore this return value.</p>
+     * <p>If you specify the <strong>MaxResults</strong> or <strong>NextToken</strong> parameter, this parameter returns only the number of records on the current page and can be ignored.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

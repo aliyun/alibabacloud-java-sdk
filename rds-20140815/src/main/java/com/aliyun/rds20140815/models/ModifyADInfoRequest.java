@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyADInfoRequest extends TeaModel {
     /**
-     * <p>The account of the AD domain.</p>
+     * <p>The username of the Active Directory (AD) domain.</p>
      * 
      * <strong>example:</strong>
      * <p>test_account</p>
@@ -14,7 +14,7 @@ public class ModifyADInfoRequest extends TeaModel {
     public String ADAccountName;
 
     /**
-     * <p>The DNS domain name of the AD domain.</p>
+     * <p>The Domain Name System (DNS) name of the Active Directory (AD) domain.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -23,7 +23,7 @@ public class ModifyADInfoRequest extends TeaModel {
     public String ADDNS;
 
     /**
-     * <p>The password of the AD domain.</p>
+     * <p>The password of the Active Directory (AD) domain.</p>
      * 
      * <strong>example:</strong>
      * <p>test_password</p>
@@ -32,7 +32,7 @@ public class ModifyADInfoRequest extends TeaModel {
     public String ADPassword;
 
     /**
-     * <p>The IP address of the AD domain.</p>
+     * <p>The IP address of the Active Directory (AD) domain.</p>
      * 
      * <strong>example:</strong>
      * <p>47.100.XX.XX</p>
@@ -41,7 +41,7 @@ public class ModifyADInfoRequest extends TeaModel {
     public String ADServerIpAddress;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -50,7 +50,7 @@ public class ModifyADInfoRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ModifyADInfoRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

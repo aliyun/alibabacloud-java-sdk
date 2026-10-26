@@ -59,7 +59,7 @@ public class AttachRCInstancesResponseBody extends TeaModel {
 
     public static class AttachRCInstancesResponseBodyResponses extends TeaModel {
         /**
-         * <p>The status code returned.</p>
+         * <p>The returned status code.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -68,7 +68,7 @@ public class AttachRCInstancesResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The RDS Custom instance ID.</p>
+         * <p>The instance ID of the RDS Custom instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rc-e2g521l55k038cr8****</p>
@@ -77,9 +77,9 @@ public class AttachRCInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The message returned for the request.</p>
+         * <p>The returned message of the request.</p>
          * <blockquote>
-         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, exception information such as an error code is returned.</p>
+         * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PrecheckDuckDBDependencyRequest extends TeaModel {
     /**
-     * <p>The instance ID of the primary instance.</p>
+     * <p>The primary instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +24,8 @@ public class PrecheckDuckDBDependencyRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
+     * <p>The target node mode for the precheck. primary indicates the primary node. readOnly indicates a read-only node. If you do not specify this parameter, the default value is readOnly.</p>
+     * 
      * <strong>example:</strong>
      * <p>readOnly</p>
      */

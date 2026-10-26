@@ -15,7 +15,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The database name.</p>
+     * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>myDB</p>
@@ -24,7 +24,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The permission expiration time in UTC format. This parameter is required only for the fullAccess privilege.</p>
+     * <p>The expiration time of the permission in UTC format. This parameter is required only for the fullAccess permission.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-22T02:01:20Z</p>
@@ -36,7 +36,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The privilege type. Valid values: noneAccess, restrictedAccess, and fullAccess.</p>
+     * <p>The permission type. Valid values: noneAccess, restrictedAccess, and fullAccess.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class ModifyAccountMaskingPrivilegeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The account name. You can specify multiple accounts separated by commas.</p>
+     * <p>The name of the account. You can specify multiple account names separated by commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyComputeBurstConfigRequest extends TeaModel {
     /**
-     * <p>Set this parameter to <strong>disabled</strong> to disable the committed serverless feature.</p>
+     * <p>To disable the provisioned Serverless feature, set this parameter to <strong>disabled</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>disabled</p>
@@ -14,7 +14,7 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String burstStatus;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can contain a maximum of 64 ASCII characters. The value cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCziJZNwH****</p>
@@ -41,7 +41,7 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String cpuShrinkThreshold;
 
     /**
-     * <p>A reserved parameter. This parameter is not supported.</p>
+     * <p>The reserved parameter. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -96,7 +96,7 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String resourceOwnerAccount;
 
     /**
-     * <p>The maximum number of CPUs for elastic scale-out. The value can be up to twice the initial CPU configuration of the instance.</p>
+     * <p>The upper limit of CPUs for elastic scale-out. The value can be up to twice the initial CPU configuration of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -105,7 +105,7 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String scaleMaxCpus;
 
     /**
-     * <p>The maximum memory for elastic scale-out. The value can be up to twice the initial memory configuration of the instance. Unit: GB. The value is adjusted in increments of 2 GB.</p>
+     * <p>The upper limit of memory for elastic scale-out. The value can be up to twice the initial memory configuration of the instance. Unit: GB. The adjustment increment is 2 GB.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -113,14 +113,26 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     @NameInMap("ScaleMaxMemory")
     public String scaleMaxMemory;
 
+    /**
+     * <p>The upper limit of RCU scaling for ApsaraDB RDS for MySQL provisioned Serverless.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8.0</p>
+     */
     @NameInMap("ScaleMaxRcu")
     public Double scaleMaxRcu;
 
+    /**
+     * <p>The lower limit of RCU scaling for ApsaraDB RDS for MySQL provisioned Serverless.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.5</p>
+     */
     @NameInMap("ScaleMinRcu")
     public Double scaleMinRcu;
 
     /**
-     * <p>The specified time at which the modification takes effect. Format: <code>yyyy-MM-ddTHH:mm:ssZ</code> (UTC).</p>
+     * <p>The specified time when the modification takes effect. Specify the time in the <code>yyyy-MM-ddTHH:mm:ssZ</code> format. The time must be in UTC.</p>
      * <blockquote>
      * <p>This parameter is required when <strong>SwitchTimeMode</strong> is set to <strong>2</strong>.</p>
      * </blockquote>
@@ -134,9 +146,9 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     /**
      * <p>The effective policy. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: The modification takes effect immediately.</li>
-     * <li><strong>1</strong>: The modification takes effect during the maintenance window. You can call the <strong>ModifyDBInstanceMaintainTime</strong> operation to modify the maintenance window.</li>
-     * <li><strong>2</strong>: The modification takes effect at a specified point in time.</li>
+     * <li><strong>0</strong>: Takes effect immediately.</li>
+     * <li><strong>1</strong>: Takes effect within the maintenance window. You can call the <strong>ModifyDBInstanceMaintainTime</strong> operation to modify the maintenance window.</li>
+     * <li><strong>2</strong>: Takes effect at a specified point in time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -146,7 +158,7 @@ public class ModifyComputeBurstConfigRequest extends TeaModel {
     public String switchTimeMode;
 
     /**
-     * <p>A reserved parameter. This parameter is not supported.</p>
+     * <p>The reserved parameter. This parameter is not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>

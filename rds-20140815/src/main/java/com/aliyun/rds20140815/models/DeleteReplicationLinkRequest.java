@@ -15,7 +15,7 @@ public class DeleteReplicationLinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Specifies whether to delete the data synchronization link between the primary instance and the disaster recovery instance and promote the disaster recovery instance to a primary instance. Valid values:</p>
+     * <p>Specifies whether to delete the data synchronization link between the primary instance and the disaster recovery instance, and promote the disaster recovery instance to a primary instance. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Yes.</li>
      * <li><strong>false</strong>: No.</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceLinkedWhitelistTemplateRequest extends TeaModel {
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends TeaModel {
     public String insName;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query available regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -24,7 +24,7 @@ public class DescribeInstanceLinkedWhitelistTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. This parameter can be left empty.</p>
+     * <p>The ID of the resource group. This parameter can be left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek3dbzqb******</p>

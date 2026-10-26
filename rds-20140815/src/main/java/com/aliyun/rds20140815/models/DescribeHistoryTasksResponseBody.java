@@ -11,7 +11,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public java.util.List<DescribeHistoryTasksResponseBodyItems> items;
 
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number of the query result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID. If you encounter an issue, provide this request ID for troubleshooting.</p>
+     * <p>The unique request ID. If you encounter any issues, provide this request ID for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>5CD61041-35F7-10F7-BE94-33A48B22****</p>
@@ -38,7 +38,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of tasks that meet the filter conditions, regardless of pagination.</p>
+     * <p>The total number of tasks that meet the specified conditions, regardless of pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -93,21 +93,21 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
 
     public static class DescribeHistoryTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>The allowed operation information. When used, the system matches the Action based on currentStepName and status in this information. If no Action is matched, the task does not support operations in its current state. Example:</p>
+         * <p>The allowed operation information. In actual use, the operation action is matched in this information based on currentStepName and status. If no action is matched, the current status of the task does not support the operation. Example:</p>
          * <pre><code>  &quot;steps&quot;: [
          *     {
-         *       &quot;step_name&quot;: &quot;exec_task&quot;, // Step name, matched with currentStepName
-         *       &quot;action_info&quot;: {    // Operations supported by the step
-         *         &quot;Waiting&quot;: [      // Status, matched with status
-         *           &quot;modifySwitchTime&quot; // Action. Multiple actions may be available.
+         *       &quot;step_name&quot;: &quot;exec_task&quot;, // The step name, which matches currentStepName.
+         *       &quot;action_info&quot;: {    // The operations supported by the step.
+         *         &quot;Waiting&quot;: [      // The status, which matches status.
+         *           &quot;modifySwitchTime&quot; // The operation action. Multiple actions indicate that multiple operations are supported.
          *         ]
          *       }
          *     },
          *     {
-         *       &quot;step_name&quot;: &quot;init_task&quot;, // Step name
-         *       &quot;action_info&quot;: {    // Operations supported by the step
-         *         &quot;Running&quot;: [      // Status
-         *           &quot;cancel&quot;,       // Action
+         *       &quot;step_name&quot;: &quot;init_task&quot;, // The step name.
+         *       &quot;action_info&quot;: {    // The operations supported by the step.
+         *         &quot;Running&quot;: [      // The status.
+         *           &quot;cancel&quot;,       // The operation.
          *           &quot;pause&quot;
          *         ]
          *       }
@@ -115,7 +115,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
          *   ]
          * }
          * </code></pre>
-         * <p>Supported operations:</p>
+         * <p>Operations supported by the system:</p>
          * <ul>
          * <li><strong>retry</strong>: Retry.</li>
          * <li><strong>cancel</strong>: Cancel.</li>
@@ -129,7 +129,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String actionInfo;
 
         /**
-         * <p>The request user ID. If callerSource is User, this value indicates the user UID.</p>
+         * <p>The ID of the requesting user. If callerSource is User, this parameter represents the user UID.</p>
          * 
          * <strong>example:</strong>
          * <p>141345906006****</p>
@@ -151,7 +151,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String callerUid;
 
         /**
-         * <p>The name of the current step being executed. An empty value indicates that the task has not started.</p>
+         * <p>The name of the current step. If this parameter is empty, the task has not started.</p>
          * 
          * <strong>example:</strong>
          * <p>exec_task</p>
@@ -169,7 +169,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String dbType;
 
         /**
-         * <p>The task end time.</p>
+         * <p>The end time of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-03T12:06:17Z</p>
@@ -223,7 +223,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public Float progress;
 
         /**
-         * <p>The reason why the current task was initiated.</p>
+         * <p>The cause of the current task.</p>
          * 
          * <strong>example:</strong>
          * <hr>
@@ -250,7 +250,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public Integer remainTime;
 
         /**
-         * <p>The task start time.</p>
+         * <p>The start time of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-03T11:31:03Z</p>
@@ -261,12 +261,12 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li>Scheduled: Waiting to be executed.</li>
+         * <li>Scheduled: Pending execution.</li>
          * <li>Running: Running.</li>
          * <li>Succeed: Succeeded.</li>
          * <li>Failed: Failed.</li>
-         * <li>Cancelling: Being terminated.</li>
-         * <li>Canceled: Terminated.</li>
+         * <li>Cancelling: Cancelling.</li>
+         * <li>Canceled: Canceled.</li>
          * <li>Waiting: Waiting for the scheduled time.</li>
          * </ul>
          * 
@@ -304,7 +304,7 @@ public class DescribeHistoryTasksResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The user ID of the resource owner.</p>
+         * <p>The ID of the user to which the resource belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>141345906006****</p>

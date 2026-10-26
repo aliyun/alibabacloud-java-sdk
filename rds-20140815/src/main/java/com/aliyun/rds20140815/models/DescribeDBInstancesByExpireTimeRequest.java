@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
     /**
-     * <p>The remaining available days of the instance. Valid values: <strong>0</strong> to <strong>180</strong>.</p>
+     * <p>The number of remaining available days of the instance. Valid values: <strong>0</strong> to <strong>180</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>180</p>
@@ -33,7 +33,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be greater than <strong>0</strong> and must not exceed the maximum value of the Integer data type.</p>
+     * <p>The page number. Valid values: an integer greater than <strong>0</strong> and less than or equal to the maximum value of the Integer data type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -62,7 +62,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can call DescribeDBInstanceAttribute to obtain the resource group ID.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>
@@ -77,7 +77,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags that are bound to the instance, including TagKey and TagValue. You can specify up to 5 tag pairs at a time. Format: <code>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}</code>.</p>
+     * <p>The tags added to the instances to be queried, including TagKey and TagValue. You can specify up to 5 tags in a single request. Format: <code>{&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
@@ -86,7 +86,7 @@ public class DescribeDBInstancesByExpireTimeRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be configured.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>

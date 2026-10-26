@@ -5,14 +5,16 @@ import com.aliyun.tea.*;
 
 public class AttachRCDiskRequest extends TeaModel {
     /**
-     * <p>Specifies whether the cloud disk is released when the instance is released. Valid values:</p>
-     * <p>true: The cloud disk is released when the instance is released.
-     * false: The cloud disk is not released when the instance is released. The cloud disk is retained as a pay-as-you-go data cloud disk.
-     * Default value: false.</p>
+     * <p>Specifies whether to release the cloud disk when the instance is released. Valid values:</p>
+     * <ul>
+     * <li>true: The cloud disk is released.</li>
+     * <li>false: The cloud disk is not released. The cloud disk is retained and converted to a pay-as-you-go data cloud disk.</li>
+     * </ul>
+     * <p>Default value: false.</p>
      * <p>When you configure this parameter, take note of the following items:</p>
-     * <p>If you set DeleteWithInstance to false and the instance is locked for security reasons, meaning that OperationLocks contains &quot;LockReason&quot; : &quot;security&quot;, this parameter is ignored and the cloud disk is released along with the instance.</p>
-     * <p>If the cloud disk to be attached is an elastic ephemeral disk, you must set DeleteWithInstance to true.</p>
-     * <p>This parameter is not supported for cloud disks that have the multi-attach feature enabled.</p>
+     * <p>If you set DeleteWithInstance to false and the instance is locked for security reasons (the &quot;LockReason&quot; : &quot;security&quot; attribute is included in OperationLocks), the cloud disk is released along with the instance regardless of this parameter setting.</p>
+     * <p>If the cloud disk you want to attach is an elastic ephemeral disk, you must set DeleteWithInstance to true.</p>
+     * <p>This parameter cannot be configured for cloud disks that have the multi-attach feature enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

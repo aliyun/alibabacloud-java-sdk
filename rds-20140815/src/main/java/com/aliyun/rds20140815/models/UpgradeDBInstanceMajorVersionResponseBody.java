@@ -32,7 +32,7 @@ public class UpgradeDBInstanceMajorVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Reserved parameter.</p>
+     * <p>A reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>416980000</p>

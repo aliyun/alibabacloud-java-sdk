@@ -38,7 +38,7 @@ public class ModifyDBInstanceCLSRequest extends TeaModel {
     public String encryptionAlgorithm;
 
     /**
-     * <p>The encryption key ID. This parameter is required when you use a KMS key.</p>
+     * <p>The ID of the encryption key. This parameter is required when you use a KMS key.</p>
      * 
      * <strong>example:</strong>
      * <p>749c1df7-<strong><strong>-</strong></strong>-<strong><strong>-</strong></strong></p>
@@ -49,12 +49,11 @@ public class ModifyDBInstanceCLSRequest extends TeaModel {
     /**
      * <p>The column encryption key mode. Valid values:</p>
      * <ul>
-     * <li>client_key: configures a user-generated random key on the client side.</li>
-     * <li>kms_key: configures a custom key by using Alibaba Cloud Key Management Service (KMS).</li>
+     * <li>client_key: A user-generated random key configured on the client side.</li>
+     * <li>kms_key: A custom key configured by using Alibaba Cloud KMS.</li>
      * </ul>
-     * <blockquote>
-     * <p> After an instance is configured to use KMS for key management, you can no longer switch to the client-side random key mode.</p>
-     * </blockquote>
+     * <p>Note
+     * After an instance is configured to use a KMS key, you can no longer use a random key configured on the client side.</p>
      * 
      * <strong>example:</strong>
      * <p>kms_key</p>
@@ -98,10 +97,9 @@ public class ModifyDBInstanceCLSRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The global resource descriptor of the RAM role, used to specify the role to assume. For details, see RAM role overview.</p>
-     * <blockquote>
-     * <p> This parameter takes effect only when the column encryption key pattern is set to kms_key. If you do not specify this parameter, the internal default value is used.</p>
-     * </blockquote>
+     * <p>The global resource descriptor of the role, used to specify the specific role. For details, see RAM role overview.
+     * Note
+     * This parameter takes effect only when the column encryption key pattern is set to kms_key. If you do not specify this parameter, the internal default value is used.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::1406926****:role/aliyunrdsinstanceencryptiondefaultrole</p>

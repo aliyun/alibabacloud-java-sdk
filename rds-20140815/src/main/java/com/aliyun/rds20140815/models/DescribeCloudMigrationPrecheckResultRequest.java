@@ -15,7 +15,7 @@ public class DescribeCloudMigrationPrecheckResultRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The page number. Valid values: integers greater than 0 and up to the maximum value of the Integer type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Valid values: any positive integer up to the maximum value of the Integer type. Default value: <strong>1</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeCloudMigrationPrecheckResultRequest extends TeaModel {
      * <p>The internal IP address or public IP address of the self-managed PostgreSQL database.</p>
      * <ul>
      * <li>In the one-click cloud migration scenario for a self-managed PostgreSQL database on an ECS instance, set this parameter to the private IP address of the ECS instance. For more information about how to obtain the IP address, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</li>
-     * <li>In the one-click cloud migration scenario for a self-managed PostgreSQL database in an on-premises data center, set this parameter to the internal IP address of the on-premises data center.</li>
+     * <li>In the one-click cloud migration scenario for a self-managed PostgreSQL database in a data center, set this parameter to the internal IP address of the data center.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class DescribeCloudMigrationPrecheckResultRequest extends TeaModel {
     public String sourceIpAddress;
 
     /**
-     * <p>The port of the self-managed PostgreSQL database. You can run the netstat -a | grep PGSQL command to view the port.</p>
+     * <p>The port of the self-managed PostgreSQL database. You can run the <code>netstat -a | grep PGSQL</code> command to view the port.</p>
      * 
      * <strong>example:</strong>
      * <p>5432</p>
@@ -61,7 +61,7 @@ public class DescribeCloudMigrationPrecheckResultRequest extends TeaModel {
     public Long sourcePort;
 
     /**
-     * <p>The ID of the task. You can obtain the task ID from the response message after you call the CreateCloudMigrationPrecheckTask operation to create a pre-check task for one-click cloud migration.</p>
+     * <p>The ID of the task. You can obtain the task ID from the response message when you call the CreateCloudMigrationPrecheckTask operation to create a pre-check task for one-click cloud migration.</p>
      * 
      * <strong>example:</strong>
      * <p>439946016</p>
@@ -70,7 +70,7 @@ public class DescribeCloudMigrationPrecheckResultRequest extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>The name of the task. You can obtain the task name from the response message after you call the CreateCloudMigrationPrecheckTask operation to create a pre-check task for one-click cloud migration.</p>
+     * <p>The name of the task. You can obtain the task name from the response message when you call the CreateCloudMigrationPrecheckTask operation to create a pre-check task for one-click cloud migration.</p>
      * 
      * <strong>example:</strong>
      * <p>slf7w7wj3g</p>

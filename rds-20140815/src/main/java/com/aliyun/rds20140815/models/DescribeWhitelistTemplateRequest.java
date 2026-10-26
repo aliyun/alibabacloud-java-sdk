@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWhitelistTemplateRequest extends TeaModel {
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query the region ID.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -14,7 +14,7 @@ public class DescribeWhitelistTemplateRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>
@@ -29,7 +29,7 @@ public class DescribeWhitelistTemplateRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The whitelist template ID. You can call <a href="~~2aboralibabacloud~~">DescribeAllWhitelistTemplate</a> to obtain the ID.</p>
+     * <p>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

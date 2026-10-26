@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>A reserved parameter. No configuration is required.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -14,7 +14,7 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     public String DBProxyEngineType;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
-     * <p>The endpoint for which you want to enable SSL encryption.</p>
+     * <p>The endpoint for which you want to enable Secure Sockets Layer (SSL) encryption.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     public String dbProxyConnectString;
 
     /**
-     * <p>The ID of the database proxy endpoint. You can call DescribeDBProxyEndpoint to query the ID.</p>
+     * <p>The ID of the proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,14 +44,14 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     public String dbProxyEndpointId;
 
     /**
-     * <p>The operation that you want to perform on SSL encryption. Valid values:</p>
+     * <p>The operation to perform on Secure Sockets Layer (SSL) encryption. Valid values:</p>
      * <ul>
-     * <li>0: Disables SSL encryption.</li>
-     * <li>1: Enables SSL encryption or changes the endpoint for which SSL encryption is enabled.</li>
-     * <li>2: Updates the validity period of the SSL certificate.</li>
+     * <li>0: Disables Secure Sockets Layer (SSL) encryption.</li>
+     * <li>1: Enables Secure Sockets Layer (SSL) encryption or modifies the Secure Sockets Layer (SSL) encryption endpoint.</li>
+     * <li>2: Updates the certificate validity period.</li>
      * </ul>
      * <blockquote>
-     * <p>The preceding operations restart the instance. Proceed with caution.</p>
+     * <p>Performing the preceding operations restarts the instance. Proceed with caution.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -62,7 +62,7 @@ public class ModifyDbProxyInstanceSslRequest extends TeaModel {
     public String dbProxySslEnabled;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

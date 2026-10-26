@@ -20,7 +20,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -93,7 +93,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
 
     public static class DescribeUpgradeMajorVersionTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>The statistics information collection pattern.</p>
+         * <p>The statistics collection mode.</p>
          * <p>Valid values:</p>
          * <ul>
          * <li><strong>After</strong>: Upgrade after the cutover.</li>
@@ -107,7 +107,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         public String collectStatMode;
 
         /**
-         * <p>The detailed information about the task.</p>
+         * <p>The detailed information of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-27 15:03:05 --- do upgrade precheck on slave succcess.\n2021-10-27 15:03:11 --- begin to upgrade major version, source instance will locked in readonly mode.\n2021-10-27 15:03:21 --- upgrade master success.\n2021-10-27 15:06:10 --- exchange source and target instance dns success.\n</p>
@@ -126,11 +126,11 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The final result of the task. Valid values:</p>
+         * <p>The final result of the task.</p>
          * <ul>
-         * <li><strong>Success</strong>: The task is successful.</li>
-         * <li><strong>Failed</strong>: The task failed.</li>
-         * <li><strong>Running</strong>: The migration is in progress.</li>
+         * <li><strong>Success</strong>: Successful.</li>
+         * <li><strong>Failed</strong>: Failed.</li>
+         * <li><strong>Running</strong>: In progress.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         public String sourceInsName;
 
         /**
-         * <p>The version of the original instance before the upgrade.</p>
+         * <p>The major engine version of the original instance before the upgrade.</p>
          * 
          * <strong>example:</strong>
          * <p>11.0</p>
@@ -168,7 +168,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The end time of the instance switchover from the original instance to the new instance.</p>
+         * <p>The end time of the switchover from the original instance to the new instance.</p>
          * <p>The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         public String switchEndTime;
 
         /**
-         * <p>The time of the instance switchover from the original instance to the new instance.</p>
+         * <p>The time when the service is switched over from the original instance to the new instance.</p>
          * <p>The value is a UNIX timestamp. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -226,8 +226,8 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
          * <p>The upgrade mode.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><strong>clone</strong>: no cutover</li>
-         * <li><strong>switch</strong>: cutover</li>
+         * <li><strong>clone</strong>: No cutover.</li>
+         * <li><strong>switch</strong>: Cutover.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,8 +239,8 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         /**
          * <p>Indicates whether a cutover is performed.</p>
          * <ul>
-         * <li><strong>true</strong>: A cutover is performed.</li>
-         * <li><strong>false</strong>: No cutover is performed.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -250,9 +250,9 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         public Boolean cutOver;
 
         /**
-         * <p>The estimated synchronization time for the logical replication lag. Unit: seconds.</p>
+         * <p>The estimated synchronization time for the logical replication latency. Unit: seconds.</p>
          * <blockquote>
-         * <p>This parameter is used only for <strong>zero-downtime</strong> major engine version upgrades.</p>
+         * <p>This parameter is only applicable to <strong>zero-downtime</strong> major engine version upgrades.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -262,9 +262,9 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         public Integer totalLogicRepDelayTime;
 
         /**
-         * <p>The size of the logical replication lag. Unit: MB.</p>
+         * <p>The logical replication latency. Unit: MB.</p>
          * <blockquote>
-         * <p>This parameter is used only for <strong>zero-downtime</strong> major engine version upgrades.</p>
+         * <p>This parameter is only applicable to <strong>zero-downtime</strong> major engine version upgrades.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -274,9 +274,9 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         public Integer totalLogicRepLatencyMB;
 
         /**
-         * <p>The temporary internal endpoint of the higher-version instance for the zero-downtime major engine version upgrade. The format is <code>****.pg.rds.aliyuncs.com</code>.</p>
+         * <p>The temporary <strong>internal endpoint</strong> of the higher-version instance for zero-downtime major engine version upgrades. The format is <code>****.pg.rds.aliyuncs.com</code>.</p>
          * <blockquote>
-         * <p>This parameter is used only for <strong>zero-downtime</strong> major engine version upgrades.</p>
+         * <p>This parameter is only applicable to <strong>zero-downtime</strong> major engine version upgrades.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -288,7 +288,7 @@ public class DescribeUpgradeMajorVersionTasksResponseBody extends TeaModel {
         /**
          * <p>The port of the higher-version instance, which is the same as the port of the source instance.</p>
          * <blockquote>
-         * <p>This parameter is used only for <strong>zero-downtime</strong> major engine version upgrades.</p>
+         * <p>This parameter is only applicable to <strong>zero-downtime</strong> major engine version upgrades.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

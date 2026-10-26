@@ -4,17 +4,35 @@ package com.aliyun.rds20140815.models;
 import com.aliyun.tea.*;
 
 public class DescribeRCInstancesRequest extends TeaModel {
+    /**
+     * <p>The RDS Custom container cluster ID used to filter instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c463aaa89e2b84cacacfbf23c4867****</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The description used to filter instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance_Description</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The keyword used to perform a fuzzy match on the instance description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Instance</p>
+     */
     @NameInMap("DescriptionForFuzzy")
     public String descriptionForFuzzy;
 
     /**
-     * <p>Queries instances by host IP address.</p>
+     * <p>The host IP address used to filter instances.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.XX.XX</p>
@@ -22,13 +40,19 @@ public class DescribeRCInstancesRequest extends TeaModel {
     @NameInMap("HostIp")
     public String hostIp;
 
+    /**
+     * <p>The image ID used to filter instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>image-dsvjzw2ii8n4******</p>
+     */
     @NameInMap("ImageId")
     public String imageId;
 
     /**
      * <p>The instance ID. This parameter is used to query a single instance.</p>
      * <blockquote>
-     * <p>If no instance ID is specified (neither <strong>InstanceId</strong> nor <strong>InstanceIds</strong> is passed), the operation returns detailed information about all RDS Custom instances in the specified region.</p>
+     * <p>If no instance ID is specified (neither <strong>InstanceId</strong> nor <strong>InstanceIds</strong> is specified), the details of all RDS Custom instances in the specified region are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,9 +63,9 @@ public class DescribeRCInstancesRequest extends TeaModel {
 
     /**
      * <p>The instance IDs.</p>
-     * <p>This parameter is used to query multiple instances at a time. Separate multiple instance IDs with commas (,). A maximum of 100 IDs are supported. Input format: <code>[&quot;InstanceID1&quot;,&quot;InstanceID2&quot;]</code>.</p>
+     * <p>This parameter is used to query multiple instances at a time. Separate multiple instance IDs with commas (,). You can specify up to 100 instance IDs. Input format: <code>[&quot;InstanceId1&quot;,&quot;InstanceId2&quot;]</code>.</p>
      * <blockquote>
-     * <p>If both <strong>InstanceIds</strong> and <strong>InstanceId</strong> are specified, the value of <strong>InstanceIds</strong> takes precedence.</p>
+     * <p>If both <strong>InstanceIds</strong> and <strong>InstanceId</strong> are specified, the value of <strong>InstanceIds</strong> prevails.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,7 +85,7 @@ public class DescribeRCInstancesRequest extends TeaModel {
 
     /**
      * <p>The page number of the instance status list.</p>
-     * <p>Minimum value: 1. Default value: 1.</p>
+     * <p>Starting value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -70,7 +94,7 @@ public class DescribeRCInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * <p>Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -80,7 +104,7 @@ public class DescribeRCInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Queries instances by public IP address.</p>
+     * <p>The public IP address used to filter instances.</p>
      * 
      * <strong>example:</strong>
      * <p>121.89.XX.XX</p>
@@ -100,11 +124,11 @@ public class DescribeRCInstancesRequest extends TeaModel {
     /**
      * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><strong>Pending</strong>: Being created.</li>
-     * <li><strong>Running</strong>: Running.</li>
-     * <li><strong>Starting</strong>: Being started.</li>
-     * <li><strong>Stopping</strong>: Being stopped.</li>
-     * <li><strong>Stopped</strong>: Stopped.</li>
+     * <li><strong>Pending</strong>: The instance is being created.</li>
+     * <li><strong>Running</strong>: The instance is running.</li>
+     * <li><strong>Starting</strong>: The instance is starting.</li>
+     * <li><strong>Stopping</strong>: The instance is being stopped.</li>
+     * <li><strong>Stopped</strong>: The instance is stopped.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +138,7 @@ public class DescribeRCInstancesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Queries instances by the specified tag. Input format: <code>{&quot;TagKey&quot;:&quot;TagValue&quot;}</code>.</p>
+     * <p>The tags used to filter instances. Input format: <code>{&quot;TagKey&quot;:&quot;TagValue&quot;}</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;testRC&quot;:&quot;test01&quot;}</p>
@@ -123,7 +147,7 @@ public class DescribeRCInstancesRequest extends TeaModel {
     public String tag;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC).</p>
+     * <p>The ID of the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-uf6f7l4fg90****</p>

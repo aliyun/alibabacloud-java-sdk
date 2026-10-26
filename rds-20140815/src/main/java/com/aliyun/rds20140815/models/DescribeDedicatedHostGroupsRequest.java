@@ -14,7 +14,7 @@ public class DescribeDedicatedHostGroupsRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>The host image based on which you want to query dedicated clusters. Valid values:</p>
+     * <p>The host image category used to query dedicated clusters. Valid values:</p>
      * <ul>
      * <li><strong>WindowsWithMssqlStdLicense</strong>: Windows (with SQL Server Standard Edition license).</li>
      * <li><strong>WindowsWithMssqlEntLisence</strong>: Windows (with SQL Server Enterprise Edition license).</li>

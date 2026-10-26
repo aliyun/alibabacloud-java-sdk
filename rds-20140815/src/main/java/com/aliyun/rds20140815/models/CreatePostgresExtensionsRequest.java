@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePostgresExtensionsRequest extends TeaModel {
     /**
-     * <p>The user to which the extension belongs. Only privileged accounts are supported.</p>
+     * <p>The user to which the plug-in belongs. Only privileged accounts are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate requests. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -24,7 +24,7 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to obtain instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database name of the instance. You can call DescribeDatabases to query the database name.</p>
+     * <p>The name of the database on the instance. You can call the DescribeDatabases operation to obtain the name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,8 +44,8 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
     public String DBNames;
 
     /**
-     * <p>The plugins to install. Separate multiple plugins with commas (,).
-     * If you do not specify the request parameter <strong>SourceDatabase</strong>, this parameter is required.</p>
+     * <p>The plug-ins to be installed. Separate multiple plug-ins with commas (,).
+     * If you do not specify the <strong>SourceDatabase</strong> request parameter, you must specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>citext,pg_profile</p>
@@ -60,7 +60,7 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>
@@ -75,12 +75,12 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to confirm the security risk of installing specific extensions on instances that run minor engine versions that are too early. After you confirm the risk, the extensions can be installed.
+     * <p>Specifies whether security risk of installing specific plug-ins on instances with outdated minor engine versions is confirmed. You can install the plug-ins only after you confirm security risk.
      * Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false<blockquote>
-     * <p>For information about related risks, see <a href="https://help.aliyun.com/document_detail/2587815.html">Restrictions on creating extensions in ApsaraDB RDS for PostgreSQL</a>.</p>
+     * <p>For information about the related risks, see <a href="https://help.aliyun.com/document_detail/2587815.html">Limits on creating plug-ins in ApsaraDB RDS for PostgreSQL</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -92,7 +92,7 @@ public class CreatePostgresExtensionsRequest extends TeaModel {
     public Boolean riskConfirmed;
 
     /**
-     * <p>The source database from which plugins are synchronized to the target database. If you do not specify the request parameter <strong>Extensions</strong>, this parameter is required.</p>
+     * <p>The source database from which plug-ins are synchronized to the destination database. If you do not specify the <strong>Extensions</strong> request parameter, you must specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>source_db</p>

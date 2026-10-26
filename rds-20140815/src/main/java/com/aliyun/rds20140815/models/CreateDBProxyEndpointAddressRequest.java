@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     /**
-     * <p>The prefix of the new database proxy endpoint. Specify a custom value.</p>
+     * <p>The prefix of the new database proxy endpoint. You can customize the prefix.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
      * <p>The network type of the new database proxy endpoint. Valid values:</p>
      * <ul>
      * <li><strong>Public</strong>: Internet</li>
-     * <li><strong>VPC</strong> (default): virtual private cloud (VPC)</li>
+     * <li><strong>VPC</strong> (default): VPC</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +39,7 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyConnectStringNetType;
 
     /**
-     * <p>The ID of the database proxy endpoint. You can call DescribeDBProxyEndpoint to query the ID.</p>
+     * <p>The ID of the database proxy endpoint. You can call the DescribeDBProxyEndpoint operation to query the database proxy endpoint ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyEndpointId;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>The reserved parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -58,7 +58,7 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyEngineType;
 
     /**
-     * <p>The port of the new database proxy endpoint. Default value:</p>
+     * <p>The port of the new database proxy endpoint. Default values:</p>
      * <ul>
      * <li>MySQL: <strong>3306</strong></li>
      * <li>PostgreSQL: <strong>5432</strong></li>
@@ -71,7 +71,7 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     public String DBProxyNewConnectStringPort;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -89,7 +89,7 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The VPC ID of the new database proxy endpoint. You can call DescribeDBInstanceAttribute to query the VPC ID.</p>
+     * <p>The VPC ID of the new database proxy endpoint. You can call the DescribeDBInstanceAttribute operation to query the VPC ID.</p>
      * <blockquote>
      * <p>This parameter is required when <strong>DBProxyConnectStringNetType</strong> is set to <strong>VPC</strong>.</p>
      * </blockquote>
@@ -101,7 +101,7 @@ public class CreateDBProxyEndpointAddressRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The vSwitch ID of the new database proxy endpoint. You can call DescribeDBInstanceAttribute to query the vSwitch ID.</p>
+     * <p>The vSwitch ID of the new database proxy endpoint. You can call the DescribeDBInstanceAttribute operation to query the vSwitch ID.</p>
      * <blockquote>
      * <p>This parameter is required when <strong>DBProxyConnectStringNetType</strong> is set to <strong>VPC</strong>.</p>
      * </blockquote>

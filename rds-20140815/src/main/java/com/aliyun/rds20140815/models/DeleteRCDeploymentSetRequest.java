@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRCDeploymentSetRequest extends TeaModel {
     /**
-     * <p>The deployment set ID.</p>
+     * <p>The ID of the deployment set.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

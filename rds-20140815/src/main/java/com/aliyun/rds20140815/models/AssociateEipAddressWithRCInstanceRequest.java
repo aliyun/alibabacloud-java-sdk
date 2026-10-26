@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateEipAddressWithRCInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the EIP.</p>
+     * <p>The ID of the elastic IP address (EIP).</p>
      * <blockquote>
      * <p>If you do not have an EIP, <a href="https://help.aliyun.com/document_detail/292841.html">create an EIP</a> first.</p>
      * </blockquote>
@@ -17,7 +17,7 @@ public class AssociateEipAddressWithRCInstanceRequest extends TeaModel {
     public String allocationId;
 
     /**
-     * <p>The instance ID of the RDS Custom instance.</p>
+     * <p>The RDS Custom instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rc-i322y2t562oh7o******</p>
@@ -26,7 +26,7 @@ public class AssociateEipAddressWithRCInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query available regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

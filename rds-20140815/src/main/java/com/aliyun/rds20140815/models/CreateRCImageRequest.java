@@ -14,7 +14,7 @@ public class CreateRCImageRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The instance ID of the RDS Custom instance.</p>
+     * <p>The RDS Custom instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rc-vma9w5z699x93204****</p>
@@ -23,7 +23,7 @@ public class CreateRCImageRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -32,7 +32,7 @@ public class CreateRCImageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The snapshot ID used to create the custom image. You can call DescribeRCSnapshots to query snapshot IDs.</p>
+     * <p>The ID of the snapshot used to create the custom image. You can call the DescribeRCSnapshots operation to query the snapshot ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rcds-c9bjdl79vz5dx********</p>

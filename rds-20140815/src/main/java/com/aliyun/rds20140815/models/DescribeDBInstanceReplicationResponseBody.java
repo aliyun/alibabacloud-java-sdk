@@ -72,7 +72,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     public String replicationPort;
 
     /**
-     * <p>The replication source of native replication.</p>
+     * <p>The replication source for native replication.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -81,7 +81,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     public String replicationSource;
 
     /**
-     * <p>The current replication status. Valid values:</p>
+     * <p>The current replication state. Valid values:</p>
      * <ul>
      * <li><strong>Running</strong>: Running.</li>
      * <li><strong>Connecting</strong>: Connecting.</li>
@@ -105,6 +105,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The replication status information returned by the SHOW SLAVE STATUS statement for the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>[{&quot;SlaveIoRunning&quot;: &quot;Yes&quot;, &quot;SlaveSqlRunning&quot;: &quot;Yes&quot;, &quot;SecondsBehindMaster&quot;: 0, &quot;SlaveIoState&quot;: &quot;Waiting for master to send event&quot;, &quot;SlaveSqlRunningState&quot;: &quot;Slave has read all relay log; waiting for more updates&quot;, &quot;ExecutedGtidSet&quot;: &quot;bd2a34b9-8b8d-11ef-8917-00163e1298b9:1-20567&quot;, &quot;MasterHost&quot;: &quot;192.168.10.100&quot;, &quot;MasterUser&quot;: &quot;repl_user&quot;, &quot;MasterUuid&quot;: &quot;bd2a34b9-8b8d-11ef-8917-00163e1298b9&quot;, &quot;LastErrno&quot;: 0, &quot;LastSqlErrno&quot;: 0, &quot;LastIoErrno&quot;: 0, &quot;LastSqlError&quot;: &quot;&quot;, &quot;LastIoError&quot;: &quot;&quot;, &quot;ChannelName&quot;: &quot;my_test_channel&quot;, &quot;ReplicateDoDb&quot;: &quot;test_db,test_db_1&quot;, &quot;ReplicateIgnoreDb&quot;: &quot;information_schema,performance_schema&quot;, &quot;ReplicateDoTable&quot;: &quot;test_table,test_table_1&quot;, &quot;ReplicateIgnoreTable&quot;: &quot;temp_table,temp_table_1&quot;, &quot;ReplicateWildDoTable&quot;: &quot;test_table.%&quot;, &quot;ReplicateWildIgnoreTable&quot;: &quot;temp_table.%&quot;}]</p>
      */
@@ -206,6 +208,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceReplicationResponseBodySlaveStatusList extends TeaModel {
         /**
+         * <p>The name of the replication channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>my_test_channel</p>
          */
@@ -213,6 +217,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String channelName;
 
         /**
+         * <p>The executed GTID set.</p>
+         * 
          * <strong>example:</strong>
          * <p>bd2a34b9-8b8d-11ef-8917-00163e1298b9:1-20567</p>
          */
@@ -220,7 +226,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String executedGtidSet;
 
         /**
-         * <p>A value of 0 indicates no error. Other values indicate specific error codes.</p>
+         * <p>The last error code.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -229,7 +235,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public Integer lastErrno;
 
         /**
-         * <p>A value of 0 indicates no error. Other values indicate error codes of the I/O thread.</p>
+         * <p>The last error code of the I/O thread.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -238,13 +244,16 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public Integer lastIoErrno;
 
         /**
-         * <p>The error message description of the I/O thread.</p>
+         * <p>The last error message of the I/O thread.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>error connecting to master \&quot;<a href="mailto:user@192.0.2.1">user@192.0.2.1</a>:3306\&quot; - retry-time: 60  retries: 5</p>
          */
         @NameInMap("LastIoError")
         public String lastIoError;
 
         /**
-         * <p>A value of 0 indicates no error. Other values indicate error codes of the SQL thread.</p>
+         * <p>The last error code of the SQL thread.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -253,12 +262,17 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public Integer lastSqlErrno;
 
         /**
-         * <p>The error message description of the SQL thread.</p>
+         * <p>The last error message of the SQL thread.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Coordinator stopped because there were error(s) in the worker(s). The most recent failure being: Worker 1 failed executing transaction \&quot;00000000-0000-0000-0000-000000000000:1\&quot; at source log mysql-bin.000001, end_log_pos 12345. See error log and/or performance_schema.replication_applier_status_by_worker table for more details about this failure or others, if any.</p>
          */
         @NameInMap("LastSqlError")
         public String lastSqlError;
 
         /**
+         * <p>The address of the primary database.</p>
+         * 
          * <strong>example:</strong>
          * <p>192.168.10.100</p>
          */
@@ -266,6 +280,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String masterHost;
 
         /**
+         * <p>The account of the primary database.</p>
+         * 
          * <strong>example:</strong>
          * <p>repl_user</p>
          */
@@ -273,6 +289,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String masterUser;
 
         /**
+         * <p>The UUID of the primary database.</p>
+         * 
          * <strong>example:</strong>
          * <p>bd2a34b9-8b8d-11ef-8917-00163e1298b9</p>
          */
@@ -280,6 +298,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String masterUuid;
 
         /**
+         * <p>The databases included in replication.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_db,test_db_1</p>
          */
@@ -287,6 +307,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String replicateDoDb;
 
         /**
+         * <p>The tables included in replication.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_table,test_table_1</p>
          */
@@ -294,6 +316,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String replicateDoTable;
 
         /**
+         * <p>The databases ignored in replication.</p>
+         * 
          * <strong>example:</strong>
          * <p>information_schema,performance_schema</p>
          */
@@ -301,6 +325,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String replicateIgnoreDb;
 
         /**
+         * <p>The tables ignored in replication.</p>
+         * 
          * <strong>example:</strong>
          * <p>temp_table,temp_table_1</p>
          */
@@ -308,6 +334,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String replicateIgnoreTable;
 
         /**
+         * <p>The tables included in replication. Wildcards are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_table.%</p>
          */
@@ -315,6 +343,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String replicateWildDoTable;
 
         /**
+         * <p>The tables ignored in replication. Wildcards are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p>temp_table.%</p>
          */
@@ -322,6 +352,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String replicateWildIgnoreTable;
 
         /**
+         * <p>The data delay, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -329,7 +361,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public Integer secondsBehindMaster;
 
         /**
-         * <p>Valid values: Yes (running) and No (stopped).</p>
+         * <p>The running status of the replication I/O thread.</p>
          * 
          * <strong>example:</strong>
          * <p>Yes</p>
@@ -338,6 +370,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String slaveIoRunning;
 
         /**
+         * <p>The state of the replication I/O thread.</p>
+         * 
          * <strong>example:</strong>
          * <p>Waiting for master to send event</p>
          */
@@ -345,7 +379,7 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String slaveIoState;
 
         /**
-         * <p>Valid values: Yes (running) and No (stopped).</p>
+         * <p>The running status of the replication SQL thread.</p>
          * 
          * <strong>example:</strong>
          * <p>Yes</p>
@@ -354,6 +388,8 @@ public class DescribeDBInstanceReplicationResponseBody extends TeaModel {
         public String slaveSqlRunning;
 
         /**
+         * <p>The running status of the replication SQL thread.</p>
+         * 
          * <strong>example:</strong>
          * <p>Slave has read all relay log; waiting for more updates</p>
          */

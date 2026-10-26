@@ -8,7 +8,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     public DescribeDBInstancesByExpireTimeResponseBodyItems items;
 
     /**
-     * <p>The page number. The value must be greater than <strong>0</strong> and must not exceed the maximum value of the Integer data type.</p>
+     * <p>The page number. Valid values: an integer greater than <strong>0</strong> and less than or equal to the maximum value of the Integer data type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class DescribeDBInstancesByExpireTimeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

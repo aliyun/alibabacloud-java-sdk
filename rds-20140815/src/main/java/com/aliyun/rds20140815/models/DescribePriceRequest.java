@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePriceRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -16,17 +16,17 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The commodity code of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>bards</strong>: pay-as-you-go primary instance (China site)</li>
-     * <li><strong>rds</strong> (default): subscription primary instance (China site)</li>
-     * <li><strong>rords</strong>: pay-as-you-go read-only instance (China site)</li>
-     * <li><strong>rds_rordspre_public_cn</strong>: subscription read-only instance (China site)</li>
-     * <li><strong>bards_intl</strong>: pay-as-you-go primary instance (international site)</li>
-     * <li><strong>rds_intl</strong>: subscription primary instance (international site)</li>
-     * <li><strong>rords_intl</strong>: pay-as-you-go read-only instance (international site)</li>
-     * <li><strong>rds_rordspre_public_intl</strong>: subscription read-only instance (international site)</li>
+     * <li><strong>bards</strong>: pay-as-you-go primary instance (Chinese site)</li>
+     * <li><strong>rds</strong> (default): subscription primary instance (Chinese site)</li>
+     * <li><strong>rords</strong>: pay-as-you-go read-only instance (Chinese site)</li>
+     * <li><strong>rds_rordspre_public_cn</strong>: subscription read-only instance (Chinese site)</li>
+     * <li><strong>bards_intl</strong>: pay-as-you-go primary instance (International site)</li>
+     * <li><strong>rds_intl</strong>: subscription primary instance (International site)</li>
+     * <li><strong>rords_intl</strong>: pay-as-you-go read-only instance (International site)</li>
+     * <li><strong>rds_rordspre_public_intl</strong>: subscription read-only instance (International site)</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when you query the price of a read-only instance.</p>
+     * <p>This parameter is required when you query the pricing of a read-only instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,11 +46,11 @@ public class DescribePriceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>Instance ID of the instance for which you want to change the specifications or renew.</p>
+     * <p>Instance ID of the instance for which you want to change the specifications or renew the subscription.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is required when you query the price for a specification change or renewal.</li>
-     * <li>If the instance is a read-only instance, specify instance ID of its primary instance.</li>
+     * <li>This parameter is required when you query the price for changing the specifications or renewing the subscription of an instance.</li>
+     * <li>If the instance is a read-only instance, you must specify instance ID of its primary instance.</li>
      * </ul>
      * </blockquote>
      * 
@@ -61,7 +61,7 @@ public class DescribePriceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The instance storage space. Unit: GB. The value increases in increments of 5 GB. For more information about the value range, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
+     * <p>Instance storage capacity of the instance. Unit: GB. Instance storage capacity increases in increments of 5 GB. For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/26312.html">Instance types</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,11 +74,11 @@ public class DescribePriceRequest extends TeaModel {
      * <p>The instance storage type. Valid values:</p>
      * <ul>
      * <li><strong>general_essd</strong>: Premium ESSD</li>
-     * <li><strong>local_ssd</strong>: Premium Local SSDs</li>
+     * <li><strong>local_ssd</strong>: Premium Local SSD</li>
      * <li><strong>cloud_ssd</strong>: standard SSD</li>
-     * <li><strong>cloud_essd</strong>: PL1 ESSD cloud disk</li>
-     * <li><strong>cloud_essd2</strong>: PL2 ESSD cloud disk</li>
-     * <li><strong>cloud_essd3</strong>: PL3 ESSD cloud disk</li>
+     * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The node information.</p>
      * <blockquote>
-     * <p>This parameter is used for ApsaraDB RDS for MySQL instances in the cluster edition.</p>
+     * <p>This parameter is applicable to ApsaraDB RDS for MySQL Cluster Edition instances.</p>
      * </blockquote>
      * 
      * <strong>if can be null:</strong>
@@ -118,20 +118,20 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>&lt;props=&quot;china&quot;&gt;The database engine version. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong>: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, <strong>8.0</strong></li>
-     * <li><strong>SQL Server</strong>: <strong>08r2_ent_ha</strong> (cloud disk, discontinued), <strong>2008r2</strong> (Premium Local SSDs, discontinued), <strong>2012</strong> (Enterprise Edition Basic), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2014_ent_ha</strong>, <strong>2014_std_ha</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, <strong>2022_web</strong></li>
-     * <li><strong>PostgreSQL</strong>: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, <strong>15.0</strong></li>
+     * <li><strong>MySQL</strong>: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong></li>
+     * <li><strong>SQL Server</strong>: <strong>08r2_ent_ha</strong> (cloud disk edition, discontinued), <strong>2008r2</strong> (high-performance local disk, discontinued), <strong>2012</strong> (Enterprise Edition Basic), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2014_ent_ha</strong>, <strong>2014_std_ha</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, and <strong>2022_web</strong></li>
+     * <li><strong>PostgreSQL</strong>: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, and <strong>15.0</strong></li>
      * <li><strong>MariaDB</strong>: <strong>10.3</strong></li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;The database engine version. Valid values:</p>
      * <ul>
-     * <li><strong>MySQL</strong>: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, <strong>8.0</strong></li>
-     * <li><strong>SQL Server</strong>: <strong>08r2_ent_ha</strong> (cloud disk, discontinued), <strong>2008r2</strong> (Premium Local SSDs, discontinued), <strong>2012</strong> (Enterprise Edition Basic), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2014_ent_ha</strong>, <strong>2014_std_ha</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, <strong>2022_web</strong></li>
-     * <li><strong>PostgreSQL</strong>: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, <strong>15.0</strong></li>
+     * <li><strong>MySQL</strong>: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong></li>
+     * <li><strong>SQL Server</strong>: <strong>08r2_ent_ha</strong> (cloud disk edition, discontinued), <strong>2008r2</strong> (high-performance local disk, discontinued), <strong>2012</strong> (Enterprise Edition Basic), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, and <strong>2022_web</strong></li>
+     * <li><strong>PostgreSQL</strong>: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, and <strong>15.0</strong></li>
      * <li><strong>MariaDB</strong>: <strong>10.3</strong></li>
      * </ul>
      * <blockquote>
-     * <p>For SQL Server instances, <code>_ent</code> indicates Enterprise Edition (Cluster), <code>_ent_ha</code> indicates Enterprise Edition, <code>_std_ha</code> indicates Standard Edition, and <code>_web</code> indicates Web Edition.</p>
+     * <p>For an ApsaraDB RDS for SQL Server instance, <code>_ent</code> indicates the Enterprise Cluster Edition, <code>_ent_ha</code> indicates the Enterprise Edition, <code>_std_ha</code> indicates the Standard Edition, and <code>_web</code> indicates the Web Edition.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -142,7 +142,7 @@ public class DescribePriceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The instance type. Valid values:</p>
+     * <p>The instance role. Valid values:</p>
      * <ul>
      * <li><strong>0</strong>: primary instance</li>
      * <li><strong>3</strong>: read-only instance</li>
@@ -189,7 +189,7 @@ public class DescribePriceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The number of instances to purchase. Valid values: <strong>0 to 30</strong>.</p>
+     * <p>The number of instances that you want to purchase. Valid values: <strong>0</strong> to <strong>30</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class DescribePriceRequest extends TeaModel {
     public Integer quantity;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to obtain the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -216,17 +216,17 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The settings of the serverless ApsaraDB RDS instance.</p>
      * <blockquote>
-     * <p>MariaDB does not support serverless instances.</p>
+     * <p>ApsaraDB RDS for MariaDB does not support serverless instances.</p>
      * </blockquote>
      */
     @NameInMap("ServerlessConfig")
     public DescribePriceRequestServerlessConfig serverlessConfig;
 
     /**
-     * <p>The subscription type. This parameter is required when <strong>CommodityCode</strong> is set to <strong>rds</strong>, <strong>rds_rordspre_public_cn</strong>, <strong>rds_intl</strong>, or <strong>rds_rordspre_public_intl</strong>. Valid values:</p>
+     * <p>The subscription period unit. This parameter is required when the <strong>CommodityCode</strong> parameter is set to <strong>rds</strong>, <strong>rds_rordspre_public_cn</strong>, <strong>rds_intl</strong>, or <strong>rds_rordspre_public_intl</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong>: yearly subscription</li>
-     * <li><strong>Month</strong>: monthly subscription</li>
+     * <li><strong>Year</strong>: year</li>
+     * <li><strong>Month</strong>: month</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -238,8 +238,8 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The subscription duration. Valid values:</p>
      * <ul>
-     * <li>If <strong>TimeType</strong> is set to <strong>Year</strong>, the value of UsedTime ranges from <strong>1 to 100</strong>.</li>
-     * <li>If <strong>TimeType</strong> is set to <strong>Month</strong>, the value of UsedTime ranges from <strong>1 to 999</strong>.</li>
+     * <li>If the <strong>TimeType</strong> parameter is set to <strong>Year</strong>, the value of the UsedTime parameter ranges from <strong>1</strong> to <strong>100</strong>.</li>
+     * <li>If the <strong>TimeType</strong> parameter is set to <strong>Month</strong>, the value of the UsedTime parameter ranges from <strong>1</strong> to <strong>999</strong>.</li>
      * </ul>
      * <p>Default value: <strong>1</strong>.</p>
      * 
@@ -250,9 +250,9 @@ public class DescribePriceRequest extends TeaModel {
     public Integer usedTime;
 
     /**
-     * <p>The zone ID of the primary node. You can call DescribeRegions to query the most recent zone list.</p>
+     * <p>The zone ID of the primary node. You can call the DescribeRegions operation to query the zone ID.</p>
      * <blockquote>
-     * <p>If you specify a VPC and a vSwitch, this parameter is required to match the zone of the specified vSwitch.</p>
+     * <p>If you specify a VPC and a vSwitch, this parameter is required to match the zone of the vSwitch.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -486,7 +486,7 @@ public class DescribePriceRequest extends TeaModel {
 
     public static class DescribePriceRequestServerlessConfig extends TeaModel {
         /**
-         * <p>The maximum value of the automatic scaling range for the RDS Capacity Unit (RCU) of the instance.</p>
+         * <p>The maximum number of RDS capacity units (RCUs) allowed for automatic scaling of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -495,7 +495,7 @@ public class DescribePriceRequest extends TeaModel {
         public Double maxCapacity;
 
         /**
-         * <p>The minimum value of the automatic scaling range for the RDS Capacity Unit (RCU) of the instance.</p>
+         * <p>The minimum number of RCUs allowed for automatic scaling of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>

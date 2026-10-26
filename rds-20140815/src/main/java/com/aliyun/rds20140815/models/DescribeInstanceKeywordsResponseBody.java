@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceKeywordsResponseBody extends TeaModel {
     /**
-     * <p>The type of reserved keywords, which indicates whether the reserved keywords are for account names or database names.</p>
+     * <p>The type of the reserved keyword, which indicates whether the keyword is reserved for account names or database names.</p>
      * 
      * <strong>example:</strong>
      * <p>account</p>

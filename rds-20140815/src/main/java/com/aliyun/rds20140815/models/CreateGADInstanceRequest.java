@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateGADInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the primary instance. You can call the DescribeDBInstances operation to query the instance ID. This instance serves as the central node (primary node) of the GAD cluster.</p>
+     * <p>The ID of the primary instance. You can call the DescribeDBInstances operation to query the ID. This instance serves as the central node (primary node) of the ApsaraDB RDS global active database cluster.</p>
      * <blockquote>
      * <ul>
-     * <li>A primary instance ID can serve as the central node of only one GAD cluster.</li>
-     * <li>Only ApsaraDB RDS for MySQL primary instances in the China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu) regions can serve as the central node of a GAD cluster.</li>
+     * <li>A primary instance ID can serve as the central node of only one ApsaraDB RDS global active database cluster.</li>
+     * <li>Only primary ApsaraDB RDS for MySQL instances in the China (Hangzhou), China (Shanghai), China (Qingdao), China (Beijing), China (Zhangjiakou), China (Shenzhen), and China (Chengdu) regions can serve as the central node of an ApsaraDB RDS global active database cluster.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -51,11 +51,11 @@ public class CreateGADInstanceRequest extends TeaModel {
     public String centralRegionId;
 
     /**
-     * <p>A JSON array that contains the database information of the central node. All database information in this array is synchronized to the current unit node (secondary node). Parameter description:</p>
+     * <p>The JSON array of database information in the central node. All database information in the array is used for synchronization to the current unit node (secondary node). Parameter description:</p>
      * <ul>
-     * <li><strong>name</strong>: the database name.</li>
-     * <li><strong>all</strong>: specifies whether to synchronize all data in the current database or table. Valid values: <strong>true</strong> | <strong>false</strong>.</li>
-     * <li><strong>Table</strong>: the table name. If the <strong>all</strong> parameter is set to <strong>false</strong>, you must also specify the names of the tables to be synchronized in the JSON array.</li>
+     * <li><strong>name</strong>: the name of the database.</li>
+     * <li><strong>all</strong>: specifies whether to synchronize all data in the current database or table. Valid values: <strong>true</strong> and <strong>false</strong>.</li>
+     * <li><strong>Table</strong>: the name of the table. If the <strong>all</strong> parameter is set to <strong>false</strong>, you must also include the names of the tables to be synchronized in the JSON array.</li>
      * </ul>
      * <p>Example: <code>{    &quot;testdb&quot;: {     &quot;name&quot;: &quot;testdb&quot;,     &quot;all&quot;: false,     &quot;Table&quot;: {       &quot;order&quot;: {         &quot;name&quot;: &quot;order&quot;,         &quot;all&quot;: true       },       &quot;ordernew&quot;: {         &quot;name&quot;: &quot;ordernew&quot;,         &quot;all&quot;: true       }     }   } }</code></p>
      * <p>This parameter is required.</p>
@@ -67,7 +67,7 @@ public class CreateGADInstanceRequest extends TeaModel {
     public String DBList;
 
     /**
-     * <p>The name of the GAD cluster.</p>
+     * <p>The name of the ApsaraDB RDS global active database cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -85,13 +85,13 @@ public class CreateGADInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateGADInstanceRequestTag> tag;
 
     /**
-     * <p>The unit node information.</p>
+     * <p>The information about the unit node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UnitNode")
@@ -176,7 +176,7 @@ public class CreateGADInstanceRequest extends TeaModel {
 
     public static class CreateGADInstanceRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can create up to N tag keys at a time. Valid values of N: <strong>1 to 20</strong>. The tag key cannot be an empty string.</p>
+         * <p>The tag key. You can create up to N tag keys at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. Empty strings are not allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>testkey1</p>
@@ -185,7 +185,7 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value that corresponds to the tag key. You can create up to N tag values at a time. Valid values of N: <strong>1 to 20</strong>. The tag value can be an empty string.</p>
+         * <p>The tag value that corresponds to the tag key. You can create up to N tag values at a time. Valid values of N: <strong>1</strong> to <strong>20</strong>. Empty strings are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>testvalue1</p>
@@ -218,10 +218,10 @@ public class CreateGADInstanceRequest extends TeaModel {
 
     public static class CreateGADInstanceRequestUnitNode extends TeaModel {
         /**
-         * <p>The name of the new unit node. The name must meet the following requirements:</p>
+         * <p>The name of the new unit node. The name must meet the following rules:</p>
          * <ul>
-         * <li>The name must be <strong>2 to 255</strong> characters in length.</li>
-         * <li>The name must start with a letter or a Chinese character. It can contain digits, Chinese characters, letters, underscores (_), and hyphens (-).</li>
+         * <li>The name must be <strong>2</strong> to <strong>255</strong> characters in length.</li>
+         * <li>The name must start with a letter or a Chinese character and can contain letters, Chinese characters, digits, underscores (_), and hyphens (-).</li>
          * <li>The name cannot start with <code>http://</code> or <code>https://</code>.</li>
          * </ul>
          * 
@@ -232,7 +232,7 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String DBInstanceDescription;
 
         /**
-         * <p>The storage capacity of the new unit node. Unit: GB. The value is incremented in 5 GB increments. For the value range, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. You can also call the DescribeAvailableResource operation to query the available storage capacity range for the target instance type.</p>
+         * <p>The storage capacity of the new unit node. Unit: GB. The storage capacity increases in increments of 5 GB. For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. You can also call the DescribeAvailableResource operation to query the available storage capacity range for the target instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -244,15 +244,15 @@ public class CreateGADInstanceRequest extends TeaModel {
          * <p>The instance storage type. Valid values:</p>
          * <ul>
          * <li><strong>local_ssd</strong>: Premium Local SSD (recommended).</li>
-         * <li><strong>cloud_ssd</strong>: standard SSD (not recommended because standard SSDs are no longer available for purchase in some regions).</li>
+         * <li><strong>cloud_ssd</strong>: standard SSD (not recommended, and no longer available in some regions).</li>
          * <li><strong>cloud_essd</strong>: PL1 ESSD.</li>
          * <li><strong>cloud_essd2</strong>: PL2 ESSD.</li>
          * <li><strong>cloud_essd3</strong>: PL3 ESSD.</li>
          * </ul>
-         * <p>The default value of this parameter is determined by the instance type specified in the <strong>DBInstanceClass</strong> parameter:</p>
+         * <p>The default value of this parameter is automatically determined based on the instance type code specified in the <strong>DBInstanceClass</strong> parameter:</p>
          * <ul>
-         * <li>If the instance type is a Premium Local SSD instance type, the default value is <strong>local_ssd</strong>.</li>
-         * <li>If the instance type is a cloud disk instance type, the default value is <strong>cloud_essd</strong>.</li>
+         * <li>If the instance type code is for a Premium Local SSD, the default value is <strong>local_ssd</strong>.</li>
+         * <li>If the instance type code is for a cloud disk, the default value is <strong>cloud_essd</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,7 +262,7 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String DBInstanceStorageType;
 
         /**
-         * <p>The instance type of the new unit node. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. You can also call the DescribeAvailableResource operation to query the available instance types in the target region.</p>
+         * <p>The instance type of the new unit node. For more information about the valid values, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary instance types</a>. You can also call the DescribeAvailableResource operation to query the available instance types in the target region.</p>
          * 
          * <strong>example:</strong>
          * <p>rds.mysql.t1.small</p>
@@ -271,11 +271,11 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String dbInstanceClass;
 
         /**
-         * <p>The conflict resolution policy used when a primary key conflict occurs during data synchronization for the new unit node. Valid values:</p>
+         * <p>The resolution policy for primary key conflicts that occur during synchronization on the new unit node. Valid values:</p>
          * <ul>
-         * <li><strong>overwrite</strong>: overwrites the conflicting primary key on the destination node.</li>
-         * <li><strong>interrupt</strong>: stops the synchronization task and reports an error.</li>
-         * <li><strong>ignore</strong>: ignores the conflicting primary key on the current node.</li>
+         * <li><strong>overwrite</strong>: overwrites the conflicting primary keys in the destination node.</li>
+         * <li><strong>interrupt</strong>: interrupts the synchronization task, reports an error, and exits.</li>
+         * <li><strong>ignore</strong>: ignores the conflicting primary keys in the current node.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -286,7 +286,7 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String dtsConflict;
 
         /**
-         * <p>The specification of the data synchronization link for the new unit node. Valid values:</p>
+         * <p>The data synchronization link specification for the new unit node. Valid values:</p>
          * <ul>
          * <li><strong>small</strong></li>
          * <li><strong>medium</strong></li>
@@ -335,7 +335,7 @@ public class CreateGADInstanceRequest extends TeaModel {
          * <li><strong>Prepaid</strong>: subscription.</li>
          * </ul>
          * <blockquote>
-         * <p>The system automatically generates and completes the payment for the order. You do not need to manually confirm the payment.</p>
+         * <p>The system automatically generates an order and completes the payment. Manual payment confirmation is not required.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -355,10 +355,10 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String regionID;
 
         /**
-         * <p>The <a href="https://help.aliyun.com/document_detail/43185.html">IP address whitelist</a> of the new unit node. Separate multiple entries with commas (,). Entries cannot be duplicated. A maximum of 1,000 entries are allowed. The following two formats are supported:</p>
+         * <p>The <a href="https://help.aliyun.com/document_detail/43185.html">IP whitelist</a> of the new unit node. Separate multiple entries with commas (,). Duplicate entries are not allowed. A maximum of 1,000 entries are supported. The following two formats are supported:</p>
          * <ul>
          * <li>IP address format, such as <code>10.10.10.10</code>.</li>
-         * <li>CIDR format, such as <code>10.10.10.10/24</code> (Classless Inter-Domain Routing, where <strong>24</strong> indicates the length of the prefix, ranging from <strong>1 to 32</strong>).</li>
+         * <li>CIDR block format, such as <code>10.10.10.10/24</code> (Classless Inter-Domain Routing, where <strong>24</strong> indicates the length of the prefix in the address, ranging from <strong>1</strong> to <strong>32</strong>).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -377,7 +377,7 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String vSwitchID;
 
         /**
-         * <p>The virtual private cloud (VPC) ID of the new unit node.</p>
+         * <p>The VPC ID of the new unit node.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp19ame5m1r3o****</p>
@@ -395,10 +395,10 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String zoneID;
 
         /**
-         * <p>The zone ID of the secondary node for the new unit node. You can call the DescribeRegions operation to query the zone ID.</p>
+         * <p>The active zone ID of the secondary node for the new unit node. You can call the DescribeRegions operation to query the active zone ID.</p>
          * <ul>
-         * <li>If this value is the same as the <strong>ZoneId</strong> of the current unit node, the single-zone deployment is used.</li>
-         * <li>If this value is different from the <strong>ZoneId</strong> of the current unit node, the multi-zone deployment is used.</li>
+         * <li>If this value is the same as the <strong>ZoneId</strong> of the current unit node, it is a single-zone deployment.</li>
+         * <li>If this value is different from the <strong>ZoneId</strong> of the current unit node, it is a multi-zone deployment.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -408,10 +408,10 @@ public class CreateGADInstanceRequest extends TeaModel {
         public String zoneIDSlave1;
 
         /**
-         * <p>The zone ID of the logger node for the new unit node. You can call the DescribeRegions operation to query the zone ID.</p>
+         * <p>The active zone ID of the logger node for the new unit node. You can call the DescribeRegions operation to query the active zone ID.</p>
          * <ul>
-         * <li>If this value is the same as the <strong>ZoneId</strong> of the current unit node, the single-zone deployment is used.</li>
-         * <li>If this value is different from the <strong>ZoneId</strong> of the current unit node, the multi-zone deployment is used.</li>
+         * <li>If this value is the same as the <strong>ZoneId</strong> of the current unit node, it is a single-zone deployment.</li>
+         * <li>If this value is different from the <strong>ZoneId</strong> of the current unit node, it is a multi-zone deployment.</li>
          * </ul>
          * 
          * <strong>example:</strong>

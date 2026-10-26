@@ -11,7 +11,7 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
      * <p>The network type. Valid values:</p>
      * <ul>
      * <li><strong>Classic</strong>: classic network.</li>
-     * <li><strong>VPC</strong>: virtual private cloud (VPC).</li>
+     * <li><strong>VPC</strong>: VPC.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,8 +32,8 @@ public class DescribeDBInstanceNetInfoResponseBody extends TeaModel {
     /**
      * <p>The whitelist mode. Valid values:</p>
      * <ul>
-     * <li><strong>normal</strong>: standard whitelist mode.</li>
-     * <li><strong>safety</strong>: enhanced whitelist.</li>
+     * <li><strong>normal</strong>: general mode.</li>
+     * <li><strong>safety</strong>: enhanced whitelist mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>

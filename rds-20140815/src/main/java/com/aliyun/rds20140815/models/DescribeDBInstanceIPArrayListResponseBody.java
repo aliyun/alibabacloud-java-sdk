@@ -8,7 +8,7 @@ public class DescribeDBInstanceIPArrayListResponseBody extends TeaModel {
     public DescribeDBInstanceIPArrayListResponseBodyItems items;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E2B6AF71-DC32-4055-B477-43B348798D10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudMigrationResultRequest extends TeaModel {
     /**
-     * <p>The target instance ID. You can invoke the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>The ID of the target instance. You can invoke the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,8 +40,8 @@ public class DescribeCloudMigrationResultRequest extends TeaModel {
     /**
      * <p>The internal IP address of the self-managed PostgreSQL database.</p>
      * <ul>
-     * <li>For a one-click cloud migration of a self-managed PostgreSQL database on an ECS instance, set this parameter to the private IP address of the ECS instance. For more information, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</li>
-     * <li>For a one-click cloud migration of a self-managed PostgreSQL database in an IDC, set this parameter to the internal IP address of the IDC.</li>
+     * <li>In the scenario of migrating a self-managed PostgreSQL database on an ECS instance to the cloud with one click, set this parameter to the private IP address of the ECS instance. For more information about how to obtain the IP address, see <a href="https://help.aliyun.com/document_detail/273914.html">View IP addresses</a>.</li>
+     * <li>In the scenario of migrating a self-managed PostgreSQL database in an on-premises data center to the cloud with one click, set this parameter to the internal IP address of the data center.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class DescribeCloudMigrationResultRequest extends TeaModel {
     public String sourceIpAddress;
 
     /**
-     * <p>The port of the self-managed PostgreSQL database. You can run the netstat -a | grep PGSQL command to query the port.</p>
+     * <p>The port of the self-managed PostgreSQL database. You can run the netstat -a | grep PGSQL command to view the port.</p>
      * 
      * <strong>example:</strong>
      * <p>5432</p>
@@ -60,7 +60,7 @@ public class DescribeCloudMigrationResultRequest extends TeaModel {
     public Long sourcePort;
 
     /**
-     * <p>The task ID. You can obtain the task ID from the response of the CreateCloudMigrationTask operation when you create an RDS PostgreSQL cloud migration task.</p>
+     * <p>The ID of the task. You can obtain the task ID from the response when you call the CreateCloudMigrationTask operation to create an ApsaraDB RDS for PostgreSQL cloud migration task.</p>
      * 
      * <strong>example:</strong>
      * <p>440437220</p>
@@ -69,7 +69,7 @@ public class DescribeCloudMigrationResultRequest extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>The task name. You can obtain the task name from the response of the CreateCloudMigrationTask operation when you create an RDS PostgreSQL cloud migration task.</p>
+     * <p>The name of the task. You can obtain the task name from the response when you call the CreateCloudMigrationTask operation to create an ApsaraDB RDS for PostgreSQL cloud migration task.</p>
      * 
      * <strong>example:</strong>
      * <p>362c6c7a-4d20-4eac-898c-1495ceab374c</p>

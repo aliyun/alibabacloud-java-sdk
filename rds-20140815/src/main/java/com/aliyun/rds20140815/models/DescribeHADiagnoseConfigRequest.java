@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHADiagnoseConfigRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+     * <p>The ID of the instance. You can call the DescribeDBInstances operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeHADiagnoseConfigRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -20,7 +20,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
     public java.util.List<DescribeAvailableMetricsResponseBodyItems> items;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5CD61041-35F7-10F7-BE94-33A48B221218</p>
@@ -79,7 +79,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
          * <p>The description of the enhanced monitoring metric.</p>
          * 
          * <strong>example:</strong>
-         * <p>sys cpu usage, sys cpu usage / total cpu</p>
+         * <p>sys CPU usage, sys CPU used / total CPU</p>
          */
         @NameInMap("Description")
         public String description;
@@ -87,8 +87,8 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         /**
          * <p>The category of the enhanced monitoring metric. Valid values:</p>
          * <ul>
-         * <li><strong>os</strong>: operating system metric.</li>
-         * <li><strong>db</strong>: database metric.</li>
+         * <li><strong>os</strong>: operating system metrics</li>
+         * <li><strong>db</strong>: database metrics</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
          * <p>The name of the group to which the enhanced monitoring metric belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>CPU Usage</p>
+         * <p>CPU usage</p>
          */
         @NameInMap("GroupKeyType")
         public String groupKeyType;
@@ -118,9 +118,9 @@ public class DescribeAvailableMetricsResponseBody extends TeaModel {
         /**
          * <p>The statistical method of the enhanced monitoring metric. Valid values:</p>
          * <ul>
-         * <li><strong>avg</strong>: average value.</li>
-         * <li><strong>min</strong>: minimum value.</li>
-         * <li><strong>max</strong>: maximum value.</li>
+         * <li><strong>avg</strong>: average value</li>
+         * <li><strong>min</strong>: minimum value</li>
+         * <li><strong>max</strong>: maximum value</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateBackupRequest extends TeaModel {
     /**
-     * <p>The backup type. Valid values:</p>
+     * <p>The backup method. Valid values:</p>
      * <ul>
-     * <li><strong>Logical</strong>: logical backup. Only MySQL instances with local disks support this type.</li>
-     * <li><strong>Physical</strong>: physical backup. MySQL instances with local disks, SQL Server instances, and PostgreSQL instances support this type.</li>
-     * <li><strong>Snapshot</strong>: snapshot backup. MySQL instances with cloud disks, SQL Server instances, PostgreSQL instances, and MariaDB instances support this type.</li>
+     * <li><strong>Logical</strong>: logical backup (supported only for ApsaraDB RDS for MySQL instances with local SSDs)</li>
+     * <li><strong>Physical</strong>: physical backup (supported for ApsaraDB RDS for MySQL instances with local SSDs, ApsaraDB RDS for SQL Server, and ApsaraDB RDS for PostgreSQL)</li>
+     * <li><strong>Snapshot</strong>: snapshot backup (supported for ApsaraDB RDS for MySQL instances with cloud disks, ApsaraDB RDS for SQL Server, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for MariaDB)</li>
      * </ul>
      * <p>Default value: <strong>Physical</strong>.</p>
      * <blockquote>
      * <ul>
-     * <li>When you use logical backup, the database must contain data (the data cannot be empty).</li>
-     * <li>MariaDB instances support only snapshot backup. However, set this parameter to <strong>Physical</strong>.</li>
+     * <li>When you use logical backup, the database must contain data.</li>
+     * <li>ApsaraDB RDS for MariaDB instances support only snapshot backup, but you must set this parameter to <strong>Physical</strong>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -27,8 +27,8 @@ public class CreateBackupRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><strong>SQL Server</strong>: When the BackupStrategy parameter is set to db, the BackupMethod parameter is set to Physical, and the BackupType parameter is set to FullBackup, you can specify the retention period of the backup set. Valid values: 7 to 730 days, or -1 (long-term retention (LTR)).</li>
-     * <li><strong>MySQL</strong>: You can specify the retention period of the backup set. Valid values: 7 to 730 days, or -1 (long-term retention (LTR)).</li>
+     * <li><strong>SQL Server</strong>: When the BackupStrategy parameter is set to db, the BackupMethod parameter is set to Physical, and the BackupType parameter is set to FullBackup, you can specify the retention period of the backup set. Valid values: 7 to 730 days, and -1 (long-term retention (LTR)).</li>
+     * <li><strong>MySQL</strong>: You can specify the retention period of the backup set. Valid values: 7 to 730 days, and -1 (long-term retention (LTR)).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,14 +40,14 @@ public class CreateBackupRequest extends TeaModel {
     /**
      * <p>The backup strategy. Valid values:</p>
      * <ul>
-     * <li><strong>db</strong>: single-database backup</li>
-     * <li><strong>instance</strong>: instance backup</li>
+     * <li><strong>db</strong>: database-level backup</li>
+     * <li><strong>instance</strong>: instance-level backup</li>
      * </ul>
      * <blockquote>
      * <p>This parameter takes effect only when the following conditions are met:</p>
      * <ul>
-     * <li>MySQL: The <strong>BackupMethod</strong> parameter is set to <strong>Logical</strong>.</li>
-     * <li>SQL Server: The <strong>BackupType</strong> parameter is set to <strong>FullBackup</strong>.</li>
+     * <li>For ApsaraDB RDS for MySQL: The <strong>BackupMethod</strong> parameter is set to <strong>Logical</strong>.</li>
+     * <li>For ApsaraDB RDS for SQL Server: The <strong>BackupType</strong> parameter is set to <strong>FullBackup</strong>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -58,10 +58,10 @@ public class CreateBackupRequest extends TeaModel {
     public String backupStrategy;
 
     /**
-     * <p>The backup method for SQL Server instances. Valid values:</p>
+     * <p>The backup type for ApsaraDB RDS for SQL Server instances. Valid values:</p>
      * <ul>
-     * <li><strong>Auto</strong> (default): automatically selects full backup or incremental backup.</li>
-     * <li><strong>FullBackup</strong>: full backup.</li>
+     * <li><strong>Auto</strong> (default): automatically selects full backup or incremental backup</li>
+     * <li><strong>FullBackup</strong>: full backup</li>
      * </ul>
      * <blockquote>
      * <p>This parameter takes effect only when the <strong>BackupMethod</strong> parameter is set to <strong>Physical</strong>.</p>
@@ -74,7 +74,7 @@ public class CreateBackupRequest extends TeaModel {
     public String backupType;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

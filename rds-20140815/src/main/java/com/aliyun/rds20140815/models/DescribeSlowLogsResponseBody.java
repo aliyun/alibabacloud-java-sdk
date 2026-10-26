@@ -23,7 +23,7 @@ public class DescribeSlowLogsResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The database engine type.</p>
+     * <p>The database engine.</p>
      * 
      * <strong>example:</strong>
      * <p>SQLServer</p>

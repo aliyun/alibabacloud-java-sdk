@@ -69,10 +69,10 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         public String dbInstanceId;
 
         /**
-         * <p>The effective period. Valid values:</p>
+         * <p>The effective time. Valid values:</p>
          * <ul>
-         * <li><strong>Immediate</strong> (default): The changes take effect immediately.</li>
-         * <li><strong>MaintainTime</strong>: The changes take effect within the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</li>
+         * <li><strong>Immediate</strong> (default): takes effect immediately.</li>
+         * <li><strong>MaintainTime</strong>: takes effect within the maintenance window. For more information, see <a href="https://help.aliyun.com/document_detail/610402.html">ModifyDBInstanceMaintainTime</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class DescribeCurrentModifyOrderResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The storage information.</p>
+         * <p>The storage description.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

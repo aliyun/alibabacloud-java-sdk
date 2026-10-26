@@ -16,11 +16,11 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
     /**
      * <p>The High-availability Mode. Valid values:</p>
      * <ul>
-     * <li><strong>RPO</strong>: Data consistency is preferred. The instance prioritizes data reliability to minimize data loss. Use RPO mode if you have high requirements for data consistency.</li>
-     * <li><strong>RTO</strong>: Instance availability is preferred. The instance recovers services as soon as possible to maximize available time. Use RTO mode if you have high requirements for database uptime.</li>
+     * <li><strong>RPO</strong>: Data consistency is prioritized. The instance ensures data reliability to minimize data loss. This mode is suitable for users who have high requirements for data consistency.</li>
+     * <li><strong>RTO</strong>: Instance availability is prioritized. The instance recovers services as quickly as possible to maximize uptime. This mode is suitable for users who have high requirements for database uptime.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is returned only for ApsaraDB RDS for MySQL instances.</p>
+     * <p>This parameter is returned only for MySQL instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,12 +44,12 @@ public class DescribeDBInstanceHAConfigResponseBody extends TeaModel {
     /**
      * <p>The data replication mode. Valid values:</p>
      * <ul>
-     * <li><strong>Sync</strong>: synchronous replication</li>
-     * <li><strong>Semi-sync</strong>: semi-synchronous replication</li>
-     * <li><strong>Async</strong>: asynchronous replication</li>
+     * <li><strong>Sync</strong>: Synchronous.</li>
+     * <li><strong>Semi-sync</strong>: Semi-synchronous.</li>
+     * <li><strong>Async</strong>: Asynchronous.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is returned only for ApsaraDB RDS for MySQL instances.</p>
+     * <p>This parameter is returned only for MySQL instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

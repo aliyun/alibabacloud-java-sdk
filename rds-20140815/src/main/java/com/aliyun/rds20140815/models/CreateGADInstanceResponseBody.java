@@ -51,7 +51,7 @@ public class CreateGADInstanceResponseBody extends TeaModel {
         public String createMemberCount;
 
         /**
-         * <p>The GAD cluster ID.</p>
+         * <p>The ID of the global active database cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>gad-rm-bp1npi2j8****</p>

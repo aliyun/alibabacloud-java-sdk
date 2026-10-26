@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestoreDdrTableRequest extends TeaModel {
     /**
-     * <p>The cross-region backup set ID. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</p>
+     * <p>The ID of the cross-region backup set. You can call the DescribeCrossRegionBackups operation to query the ID.</p>
      * <blockquote>
      * <p>This parameter is required when <strong>RestoreType</strong> is set to <strong>0</strong>.</p>
      * </blockquote>
@@ -17,7 +17,7 @@ public class RestoreDdrTableRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -26,7 +26,7 @@ public class RestoreDdrTableRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID of the existing instance to which you want to recover data.</p>
+     * <p>The instance ID of the existing instance to be recovered.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class RestoreDdrTableRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>
@@ -63,7 +63,7 @@ public class RestoreDdrTableRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which you want to restore data. The point in time must be earlier than the current time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * <p>The point in time to which you want to restore data. The specified point in time must be earlier than the current time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <blockquote>
      * <p>This parameter is required when <strong>RestoreType</strong> is set to <strong>1</strong>.</p>
      * </blockquote>
@@ -77,8 +77,8 @@ public class RestoreDdrTableRequest extends TeaModel {
     /**
      * <p>The restoration method. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: restores data from a backup set. You must also specify the <strong>BackupId</strong> parameter.</li>
-     * <li><strong>1</strong>: restores data to a point in time. You must also specify the <strong>RestoreTime</strong>, <strong>SourceRegion</strong>, and <strong>SourceDBInstanceName</strong> parameters.</li>
+     * <li><strong>0</strong>: restores data based on a backup set. If you set this parameter to 0, you must also specify the <strong>BackupId</strong> parameter.</li>
+     * <li><strong>1</strong>: restores data to a point in time. If you set this parameter to 1, you must also specify the <strong>RestoreTime</strong>, <strong>SourceRegion</strong>, and <strong>SourceDBInstanceName</strong> parameters.</li>
      * </ul>
      * <p>Default value: <strong>0</strong>.</p>
      * <p>This parameter is required.</p>
@@ -90,7 +90,7 @@ public class RestoreDdrTableRequest extends TeaModel {
     public String restoreType;
 
     /**
-     * <p>The instance ID of the source instance from which you want to recover data to a point in time.</p>
+     * <p>The instance ID of the source instance to recover data to a point in time.</p>
      * <blockquote>
      * <p>This parameter is required when <strong>RestoreType</strong> is set to <strong>1</strong>.</p>
      * </blockquote>
@@ -102,7 +102,7 @@ public class RestoreDdrTableRequest extends TeaModel {
     public String sourceDBInstanceName;
 
     /**
-     * <p>The region ID of the source instance for point-in-time restoration.</p>
+     * <p>The ID of the source region for point-in-time restoration.</p>
      * <blockquote>
      * <p>This parameter is required when <strong>RestoreType</strong> is set to <strong>1</strong>.</p>
      * </blockquote>
@@ -115,7 +115,7 @@ public class RestoreDdrTableRequest extends TeaModel {
 
     /**
      * <p>The databases and tables that you want to restore. Format:
-     * <code>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Database 1 name&gt;&quot;,&quot;newname&quot;:&quot;&lt;New database 1 name&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 1 name in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 1 name&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 2 name in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 2 name&gt;&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Database 2 name&gt;&quot;,&quot;newname&quot;:&quot;&lt;New database 2 name&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 3 name in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 3 name&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Table 4 name in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New table 4 name&gt;&quot;}]}]</code></p>
+     * <code>[{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Name of database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of database 1&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of table 1 in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of table 1&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of table 2 in database 1&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of table 2&gt;&quot;}]},{&quot;type&quot;:&quot;db&quot;,&quot;name&quot;:&quot;&lt;Name of database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of database 2&gt;&quot;,&quot;tables&quot;:[{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of table 3 in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of table 3&gt;&quot;},{&quot;type&quot;:&quot;table&quot;,&quot;name&quot;:&quot;&lt;Name of table 4 in database 2&gt;&quot;,&quot;newname&quot;:&quot;&lt;New name of table 4&gt;&quot;}]}]</code></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class CreateMaskingRulesRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The database name.</p>
+     * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>testdb</p>
@@ -33,7 +33,7 @@ public class CreateMaskingRulesRequest extends TeaModel {
     public String defaultAlgo;
 
     /**
-     * <p>The rule algorithms. You can specify multiple algorithms. Masking algorithms can include additional parameters. Format: {name: algorithm1}, {name: algorithm2, params: {encryption position, encryption length}}.</p>
+     * <p>The rule algorithm. You can specify multiple algorithms. Additional parameters can be added for masking algorithms. Format: {name: Algorithm 1}, {name: Algorithm 2, params: {encryption position, number of encrypted digits}}.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;name&quot;: &quot;aes-128-gcm&quot;},
@@ -61,13 +61,13 @@ public class CreateMaskingRulesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The rule configuration in JSON string format, which contains matching rules for databases, tables, and columns.</p>
+     * <p>The rule configuration. The value is a JSON string that contains the matching rules for databases, tables, and columns.</p>
      */
     @NameInMap("RuleConfig")
     public CreateMaskingRulesRequestRuleConfig ruleConfig;
 
     /**
-     * <p>The rule name. Only one rule name can be specified at a time.</p>
+     * <p>The name of the rule. Only one rule name can be specified at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

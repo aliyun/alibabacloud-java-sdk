@@ -8,10 +8,10 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
      * <p>The response code. Valid values:</p>
      * <ul>
      * <li><strong>200</strong>: Normal.</li>
-     * <li><strong>400</strong>: Client fault.</li>
-     * <li><strong>401</strong>: Authentication failed.</li>
-     * <li><strong>404</strong>: Request page not found.</li>
-     * <li><strong>500</strong>: Server fault.</li>
+     * <li><strong>400</strong>: Client error.</li>
+     * <li><strong>401</strong>: Failed to authenticate.</li>
+     * <li><strong>404</strong>: Requested page not found.</li>
+     * <li><strong>500</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>200</strong>: Success.</li>
+     * <li><strong>200</strong>: Normal.</li>
      * <li><strong>400</strong>: Client error.</li>
      * <li><strong>500</strong>: Server error.</li>
      * </ul>
@@ -50,7 +50,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>16C62438-491B-5C02-9B49-BA924A1372A2</p>
@@ -135,7 +135,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>The IP address list.</p>
+         * <p>The list of IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>12.2.X.X,10.0.X.X</p>
@@ -144,7 +144,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         public String ips;
 
         /**
-         * <p>The whitelist template ID.</p>
+         * <p>The ID of the whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>412</p>
@@ -153,7 +153,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         public Integer templateId;
 
         /**
-         * <p>The whitelist template name.</p>
+         * <p>The name of the whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>template_123</p>
@@ -162,7 +162,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>168****</p>
@@ -219,7 +219,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
 
     public static class DescribeAllWhitelistTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The page number.</p>
+         * <p>The current page number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +228,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         public Integer currPageNumbers;
 
         /**
-         * <p>Indicates whether there is a next page of data that meets the conditions. Valid values:</p>
+         * <p>Indicates whether the queried data has a next page. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Yes.</li>
          * <li><strong>false</strong>: No.</li>
@@ -241,7 +241,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         public Boolean hasNext;
 
         /**
-         * <p>Indicates whether there is a previous page of data that meets the conditions. Valid values:</p>
+         * <p>Indicates whether the queried data has a previous page. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Yes.</li>
          * <li><strong>false</strong>: No.</li>
@@ -254,7 +254,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         public Boolean hasPrev;
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -263,7 +263,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         public Integer maxRecordsPerPage;
 
         /**
-         * <p>The whitelist template information returned by page.</p>
+         * <p>The whitelist templates returned on the current page.</p>
          */
         @NameInMap("Templates")
         public java.util.List<DescribeAllWhitelistTemplateResponseBodyDataTemplates> templates;
@@ -278,7 +278,7 @@ public class DescribeAllWhitelistTemplateResponseBody extends TeaModel {
         public Integer totalPageNumbers;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>402</p>

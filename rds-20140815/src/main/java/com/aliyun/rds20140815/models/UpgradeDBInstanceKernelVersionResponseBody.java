@@ -14,7 +14,7 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>DA2ECBA0-4745-4491-9166-799FF8984AC9</p>
@@ -23,7 +23,7 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The target minor engine version to which the instance is upgraded.</p>
+     * <p>The target minor engine version.</p>
      * 
      * <strong>example:</strong>
      * <p>xcluster80_20210305</p>
@@ -32,7 +32,7 @@ public class UpgradeDBInstanceKernelVersionResponseBody extends TeaModel {
     public String targetMinorVersion;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>226917711</p>

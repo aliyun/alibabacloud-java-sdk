@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyDatabaseBetweenInstancesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>803D11AF-C370-465B-AB46-CB3A642DC303</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOC****</p>
@@ -14,7 +14,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The type of the endpoint. Valid values:</p>
+     * <p>The endpoint type. Valid values:</p>
      * <ul>
      * <li><strong>Normal</strong>: regular endpoint.</li>
      * <li><strong>ReadWriteSplitting</strong>: read/write splitting endpoint.</li>
@@ -40,7 +40,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     public String DBInstanceNetRWSplitType;
 
     /**
-     * <p>A reserved parameter. You do not need to specify this parameter.</p>
+     * <p>The reserved parameter. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -49,7 +49,7 @@ public class DescribeDBInstanceNetInfoRequest extends TeaModel {
     public Integer flag;
 
     /**
-     * <p>The name of the group to which the general-purpose ApsaraDB RDS for MySQL instance in a dedicated cluster belongs.</p>
+     * <p>The name of the group to which the general-purpose ApsaraDB RDS for MySQL instance in the dedicated cluster belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rgc-2ze****</p>

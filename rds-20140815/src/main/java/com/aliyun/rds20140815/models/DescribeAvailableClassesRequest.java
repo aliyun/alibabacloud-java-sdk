@@ -10,16 +10,16 @@ public class DescribeAvailableClassesRequest extends TeaModel {
      * <li><p>Regular instances</p>
      * <ul>
      * <li><strong>Basic</strong>: Basic Edition</li>
-     * <li><strong>HighAvailability</strong>: high-availability series</li>
-     * <li><strong>cluster</strong>: Cluster Edition (applicable only to MySQL and PostgreSQL)</li>
-     * <li><strong>AlwaysOn</strong>: SQL Server Cluster Edition</li>
+     * <li><strong>HighAvailability</strong>: high availability series</li>
+     * <li><strong>cluster</strong>: Cluster Edition (only applicable to MySQL and PostgreSQL)</li>
+     * <li><strong>AlwaysOn</strong>: AlwaysOn</li>
      * <li><strong>Finance</strong>: RDS Enterprise Edition</li>
      * </ul>
      * </li>
      * <li><p>Serverless instances</p>
      * <ul>
-     * <li><strong>serverless_basic</strong>: Serverless Basic Edition (applicable only to MySQL and PostgreSQL)</li>
-     * <li><strong>serverless_standard</strong>: Serverless high availability series (applicable only to MySQL and PostgreSQL)</li>
+     * <li><strong>serverless_basic</strong>: Serverless Basic Edition (only applicable to MySQL and PostgreSQL)</li>
+     * <li><strong>serverless_standard</strong>: Serverless high availability series (only applicable to MySQL and PostgreSQL)</li>
      * <li><strong>serverless_ha</strong>: SQL Server Serverless high availability series</li>
      * </ul>
      * <blockquote>
@@ -38,19 +38,19 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     /**
      * <p>The commodity code of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>bards</strong>: pay-as-you-go primary instance (China site)</li>
-     * <li><strong>rds</strong>: subscription primary instance (China site)</li>
-     * <li><strong>rords</strong>: pay-as-you-go read-only instance (China site)</li>
-     * <li><strong>rds_rordspre_public_cn</strong>: subscription read-only instance (China site)</li>
-     * <li><strong>bards_intl</strong>: pay-as-you-go primary instance (international site)</li>
-     * <li><strong>rds_intl</strong>: subscription primary instance (international site)</li>
-     * <li><strong>rords_intl</strong>: pay-as-you-go read-only instance (international site)</li>
-     * <li><strong>rds_rordspre_public_intl</strong>: subscription read-only instance (international site)</li>
-     * <li><strong>rds_serverless_public_cn</strong>: serverless (China site)</li>
-     * <li><strong>rds_serverless_public_intl</strong>: serverless (international site)</li>
+     * <li><strong>bards</strong>: pay-as-you-go primary instances on the China site</li>
+     * <li><strong>rds</strong>: subscription primary instances on the China site</li>
+     * <li><strong>rords</strong>: pay-as-you-go read-only instances on the China site</li>
+     * <li><strong>rds_rordspre_public_cn</strong>: subscription read-only instances on the China site</li>
+     * <li><strong>bards_intl</strong>: pay-as-you-go primary instances on the international site</li>
+     * <li><strong>rds_intl</strong>: subscription primary instances on the international site</li>
+     * <li><strong>rords_intl</strong>: pay-as-you-go read-only instances on the international site</li>
+     * <li><strong>rds_rordspre_public_intl</strong>: subscription read-only instances on the international site</li>
+     * <li><strong>rds_serverless_public_cn</strong>: serverless instances on the China site</li>
+     * <li><strong>rds_serverless_public_intl</strong>: serverless instances on the international site</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when you query a read-only instance.</p>
+     * <p>This parameter is required when you query read-only instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,16 +71,16 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     /**
      * <p>The instance storage type. Valid values:</p>
      * <ul>
-     * <li><strong>general_essd</strong>: premium performance disk</li>
-     * <li><strong>local_ssd</strong>: local SSD</li>
+     * <li><strong>general_essd</strong>: Premium ESSD</li>
+     * <li><strong>local_ssd</strong>: premium local SSD</li>
      * <li><strong>cloud_ssd</strong>: standard SSD</li>
-     * <li><strong>cloud_essd0</strong>: PL0 ESSD cloud disk</li>
-     * <li><strong>cloud_essd</strong>: PL1 ESSD cloud disk</li>
-     * <li><strong>cloud_essd2</strong>: PL2 ESSD cloud disk</li>
-     * <li><strong>cloud_essd3</strong>: PL3 ESSD cloud disk</li>
+     * <li><strong>cloud_essd0</strong>: PL0 ESSD</li>
+     * <li><strong>cloud_essd</strong>: PL1 ESSD</li>
+     * <li><strong>cloud_essd2</strong>: PL2 ESSD</li>
+     * <li><strong>cloud_essd3</strong>: PL3 ESSD</li>
      * </ul>
      * <blockquote>
-     * <p>Serverless instances support only PL1 ESSD cloud disks. Set this parameter to <strong>cloud_essd</strong>.</p>
+     * <p>Serverless instances support only PL1 ESSDs. You must set this parameter to <strong>cloud_essd</strong>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -111,17 +111,17 @@ public class DescribeAvailableClassesRequest extends TeaModel {
      * <ul>
      * <li><p>Regular instances</p>
      * <ul>
-     * <li>MySQL: <strong>5.5, 5.6, 5.7, 8.0</strong></li>
-     * <li>SQL Server: <strong>2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, 2019_ent</strong></li>
-     * <li>PostgreSQL: <strong>10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, 17.0</strong></li>
+     * <li>MySQL: <strong>5.5, 5.6, 5.7, and 8.0</strong></li>
+     * <li>SQL Server: <strong>2008r2, 08r2_ent_ha, 2012, 2012_ent_ha, 2012_std_ha, 2012_web, 2014_std_ha, 2016_ent_ha, 2016_std_ha, 2016_web, 2017_std_ha, 2017_ent, 2019_std_ha, and 2019_ent</strong></li>
+     * <li>PostgreSQL: <strong>10.0, 11.0, 12.0, 13.0, 14.0, 15.0, 16.0, and 17.0</strong></li>
      * <li>MariaDB: <strong>10.3</strong></li>
      * </ul>
      * </li>
      * <li><p>Serverless instances</p>
      * <ul>
-     * <li>MySQL: <strong>5.7</strong>, <strong>8.0</strong></li>
-     * <li>SQL Server: <strong>2016_std_sl</strong>, <strong>2017_std_sl</strong>, <strong>2019_std_sl</strong></li>
-     * <li>PostgreSQL: <strong>14.0, 15.0, 16.0, 17.0</strong></li>
+     * <li>MySQL: <strong>5.7</strong> and <strong>8.0</strong></li>
+     * <li>SQL Server: <strong>2016_std_sl</strong>, <strong>2017_std_sl</strong>, and <strong>2019_std_sl</strong></li>
+     * <li>PostgreSQL: <strong>14.0, 15.0, 16.0, and 17.0</strong></li>
      * </ul>
      * <blockquote>
      * <p>ApsaraDB RDS for MariaDB does not support serverless instances.</p>
@@ -154,7 +154,7 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The order type. The only valid value is <strong>BUY</strong>.</p>
+     * <p>The order type. Set the value to <strong>BUY</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>BUY</p>
@@ -178,7 +178,7 @@ public class DescribeAvailableClassesRequest extends TeaModel {
     /**
      * <p>The zone ID of the instance. You can call the DescribeDBInstanceAttribute operation to query the zone ID.</p>
      * <blockquote>
-     * <p>If DescribeDBInstanceAttribute returns a multi-zone value (such as <code>cn-hangzhou-MAZ9(g,h)</code>), specify a single zone. Example: <code>cn-hangzhou-g</code> or <code>cn-hangzhou-j</code>.</p>
+     * <p>If the DescribeDBInstanceAttribute operation returns multiple zones (for example, <code>cn-hangzhou-MAZ9(g,h)</code>), specify a single zone. Example: <code>cn-hangzhou-g</code> or <code>cn-hangzhou-j</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

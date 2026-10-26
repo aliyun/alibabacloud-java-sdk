@@ -85,7 +85,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The creation time in UTC.</p>
+         * <p>The creation time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-25T06:57:41Z</p>
@@ -94,7 +94,7 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The modification time in UTC.</p>
+         * <p>The modification time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-01T06:39:51Z</p>
@@ -112,11 +112,11 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         public String replicationInfo;
 
         /**
-         * <p>The synchronization status. Valid values:</p>
+         * <p>The synchronization state. Valid values:</p>
          * <ul>
-         * <li><strong>steaming</strong>: Synchronizing.</li>
-         * <li><strong>finish</strong>: Completed.</li>
-         * <li><strong>disconnect</strong>: Disconnected.</li>
+         * <li><strong>steaming</strong>: Synchronization is in progress.</li>
+         * <li><strong>finish</strong>: Synchronization is completed.</li>
+         * <li><strong>disconnect</strong>: Synchronization is disconnected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -155,8 +155,8 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         /**
          * <p>The category of the source instance. Valid values:</p>
          * <ul>
-         * <li>other: Other.</li>
-         * <li>aliyunRDS: ApsaraDB RDS instance.</li>
+         * <li>other: The source instance is of another type.</li>
+         * <li>aliyunRDS: The source instance is an ApsaraDB RDS instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,12 +202,12 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The task stage. Valid values:</p>
+         * <p>The node stage. Valid values:</p>
          * <ul>
-         * <li><strong>precheck</strong>: Dry run.</li>
-         * <li><strong>basebackup</strong>: Basic backup.</li>
-         * <li><strong>startup</strong>: Startup.</li>
-         * <li><strong>increment</strong>: Incremental synchronization.</li>
+         * <li><strong>precheck</strong>: The node is in the dry run stage.</li>
+         * <li><strong>basebackup</strong>: The node is in the basic backup stage.</li>
+         * <li><strong>startup</strong>: The node is in the startup stage.</li>
+         * <li><strong>increment</strong>: The node is in the incremental synchronization stage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -219,9 +219,9 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>success</strong>: Succeeded.</li>
-         * <li><strong>failure</strong>: Failed.</li>
-         * <li><strong>running</strong>: Running.</li>
+         * <li><strong>success</strong>: The task is successful.</li>
+         * <li><strong>failure</strong>: The task failed.</li>
+         * <li><strong>running</strong>: The task is running.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,8 +233,8 @@ public class DescribeReplicationLinkLogsResponseBody extends TeaModel {
         /**
          * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><strong>create</strong>: Create a replication link.</li>
-         * <li><strong>create-dryrun</strong>: Dry run for creating a replication link.</li>
+         * <li><strong>create</strong>: Creates a synchronization link.</li>
+         * <li><strong>create-dryrun</strong>: Performs a precheck for creating a synchronization link.</li>
          * </ul>
          * 
          * <strong>example:</strong>

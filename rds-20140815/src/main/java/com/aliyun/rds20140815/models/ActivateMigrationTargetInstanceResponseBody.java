@@ -14,7 +14,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>76364A52-E0AB-5CC8-9818-CF1DC482C092</p>
@@ -32,7 +32,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
     public String sourceIpAddress;
 
     /**
-     * <p>The port of the self-managed PostgreSQL database.</p>
+     * <p>The port number of the self-managed PostgreSQL database.</p>
      * 
      * <strong>example:</strong>
      * <p>5432</p>
@@ -41,7 +41,7 @@ public class ActivateMigrationTargetInstanceResponseBody extends TeaModel {
     public Long sourcePort;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>440913675</p>

@@ -17,7 +17,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
     public DescribeCrossRegionBackupsResponseBodyItems items;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
+     * <p>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum value of the Integer type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribeCrossRegionBackupsResponseBody extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

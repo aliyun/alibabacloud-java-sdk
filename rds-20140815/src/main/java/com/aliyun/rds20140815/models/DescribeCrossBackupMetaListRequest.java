@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossBackupMetaListRequest extends TeaModel {
     /**
-     * <p>The cross-region backup set ID. You can call the DescribeCrossRegionBackups operation to query the ID.</p>
+     * <p>The ID of the cross-region backup set. You can call the DescribeCrossRegionBackups operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     public String backupSetId;
 
     /**
-     * <p>The name of the database to query. Exact match is used. The specific database name and the table names within the database are returned.</p>
+     * <p>The name of the database to query. Exact match is used. The specific database name and the names of tables in the database are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>testdb1</p>
@@ -27,9 +27,9 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: greater than 0 and up to the maximum value of Integer.</p>
+     * <p>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum value of the Integer type.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when it is specified together with <strong>PageSize</strong>.</p>
+     * <p>This parameter must be used together with <strong>PageSize</strong> to take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Default value: <strong>1</strong>.</p>
      * <blockquote>
-     * <p>This parameter takes effect only when it is specified together with <strong>PageIndex</strong>.</p>
+     * <p>This parameter must be used together with <strong>PageIndex</strong> to take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     /**
      * <p>The name of the database to query. Fuzzy match is used. Only the matched database names are returned, and table names are not returned.</p>
      * <blockquote>
-     * <p>You can use fuzzy match first. For example, pass in test to match testdb1 and testdb2. After you determine the target database name, use exact match by passing in <strong>GetDbName</strong> to view the specific database name and table names.</p>
+     * <p>You can use fuzzy match first. For example, enter test to match testdb1 and testdb2. After you determine the target database name, use exact match by specifying <strong>GetDbName</strong> to view the specific database name and table names.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     public String pattern;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region where the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -72,7 +72,7 @@ public class DescribeCrossBackupMetaListRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>

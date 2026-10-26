@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyEventInfoRequest extends TeaModel {
     /**
-     * <p>The action-related parameters, which can be an extension based on business requirements. When taskAction is set to modifySwitchTime, set ActionParams to <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code>.</p>
-     * <p>recoverMode specifies the task recovery pattern. Valid values:</p>
+     * <p>The parameters related to the action. You can add extensions based on your business requirements. When the taskAction parameter is set to modifySwitchTime, set the ActionParams parameter to <code>{&quot;recoverMode&quot;: &quot;xxx&quot;, &quot;recoverTime&quot;: &quot;xxx&quot;}</code>.</p>
+     * <p>The recoverMode parameter specifies the task recovery pattern. Valid values:</p>
      * <ul>
-     * <li><strong>timePoint</strong>: Executes at a specified point in time.</li>
-     * <li><strong>immediate</strong>: Executes immediately.</li>
+     * <li><strong>timePoint</strong>: Executes the task at a specified point in time.</li>
+     * <li><strong>immediate</strong>: Executes the task immediately.</li>
      * </ul>
-     * <p>recoverTime specifies the recovery time in UTC+0. Format: yyyy-MM-ddTHH:mm:ssZ. This parameter is required when recoverMode is set to timePoint.</p>
+     * <p>The recoverTime parameter specifies the recovery time. The time must be in UTC+0 and in the yyyy-MM-ddTHH:mm:ssZ format. When the recoverMode parameter is set to timePoint, the recoverTime parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;recoverTime&quot;:&quot;2023-04-17T14:02:35Z&quot;,&quot;recoverMode&quot;:&quot;timePoint&quot;}</p>
@@ -20,7 +20,7 @@ public class ModifyEventInfoRequest extends TeaModel {
     public String actionParams;
 
     /**
-     * <p>The event action. Valid values:</p>
+     * <p>The action to process the event. Valid values:</p>
      * <ul>
      * <li><strong>archive</strong>: Archives the event.</li>
      * <li><strong>undo</strong>: Does not process the event.<blockquote>
@@ -36,7 +36,7 @@ public class ModifyEventInfoRequest extends TeaModel {
     public String eventAction;
 
     /**
-     * <p>The event ID. You can call the DescribeEvents operation to query event IDs. To query multiple events, separate the event IDs with commas (,). A maximum of 20 event IDs are supported.</p>
+     * <p>The event IDs. You can call the DescribeEvents operation to query the event IDs. Separate multiple event IDs with commas (,). You can specify up to 20 event IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class ModifyEventInfoRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateRCSnapshotRequest extends TeaModel {
     /**
      * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * <p>Default value: null.</p>
+     * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -24,7 +24,7 @@ public class CreateRCSnapshotRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>This parameter is deprecated and does not need to be specified.</p>
+     * <p>This parameter is deprecated. You do not need to specify it.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -33,7 +33,7 @@ public class CreateRCSnapshotRequest extends TeaModel {
     public Boolean instantAccess;
 
     /**
-     * <p>This parameter is deprecated and does not need to be specified.</p>
+     * <p>This parameter is deprecated. You do not need to specify it.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -60,8 +60,8 @@ public class CreateRCSnapshotRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Settings for the retention period of the snapshot. Unit: days. The snapshot is subject to automatic release after the retention period expires. Valid values: 1 to 65536.</p>
-     * <p>Default value: null, which indicates that the snapshot is not subject to automatic release.</p>
+     * <p>Settings for the retention period of the snapshot. Unit: days. After the retention period expires, the snapshot is subject to automatic release. Valid values: 1 to 65536.</p>
+     * <p>Default value: empty, which indicates that the snapshot is not subject to automatic release.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -76,7 +76,7 @@ public class CreateRCSnapshotRequest extends TeaModel {
     public java.util.List<CreateRCSnapshotRequestTag> tag;
 
     /**
-     * <p>This parameter is deprecated and does not need to be specified.</p>
+     * <p>This parameter is deprecated. You do not need to specify it.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>

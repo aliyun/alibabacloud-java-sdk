@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateDBNodesRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotency of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -14,7 +14,7 @@ public class MigrateDBNodesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/26232.html">DescribeDBInstances</a> operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,17 +24,17 @@ public class MigrateDBNodesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The list of cluster nodes.</p>
+     * <p>The list of nodes in the cluster.</p>
      */
     @NameInMap("DBNode")
     public java.util.List<MigrateDBNodesRequestDBNode> DBNode;
 
     /**
-     * <p>The migration time. Valid values:</p>
+     * <p>The time when the migration takes effect. Valid values:</p>
      * <ul>
-     * <li><strong>Immediately</strong>: The migration is performed immediately. This is the default value.</li>
-     * <li><strong>MaintainTime</strong>: The migration is performed during the maintenance window.</li>
-     * <li><strong>ScheduleTime</strong>: The migration is performed at the specified time.</li>
+     * <li><strong>Immediately</strong>: The migration takes effect immediately. This is the default value.</li>
+     * <li><strong>MaintainTime</strong>: The migration takes effect during the maintenance window.</li>
+     * <li><strong>ScheduleTime</strong>: The migration takes effect at a specified time.</li>
      * </ul>
      * <blockquote>
      * <p>If you set this parameter to <strong>ScheduleTime</strong>, you must also specify the SwitchTime parameter.</p>
@@ -59,7 +59,7 @@ public class MigrateDBNodesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The scheduled time for the migration. Perform the migration during off-peak hours. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
+     * <p>The time when the modification is performed. Perform the modification during off-peak hours. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-05-06T09:24:00Z</p>
@@ -68,7 +68,7 @@ public class MigrateDBNodesRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The vSwitch ID.</p>
+     * <p>The ID of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-****</p>
@@ -163,7 +163,7 @@ public class MigrateDBNodesRequest extends TeaModel {
 
     public static class MigrateDBNodesRequestDBNode extends TeaModel {
         /**
-         * <p>The node ID.</p>
+         * <p>The ID of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>rn-6256r4a87xvv7****</p>
@@ -172,7 +172,7 @@ public class MigrateDBNodesRequest extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The zone ID of the node.</p>
+         * <p>The ID of the zone where the node resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-f</p>

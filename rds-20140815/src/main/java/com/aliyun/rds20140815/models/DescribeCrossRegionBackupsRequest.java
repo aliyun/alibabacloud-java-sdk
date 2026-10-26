@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCrossRegionBackupsRequest extends TeaModel {
     /**
-     * <p>The user backup ID.</p>
+     * <p>The ID of the user backup.</p>
      * 
      * <strong>example:</strong>
      * <p>603524****</p>
@@ -14,9 +14,9 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public Integer backupId;
 
     /**
-     * <p>The cross-region backup file ID.</p>
+     * <p>The ID of the cross-region backup file.</p>
      * <blockquote>
-     * <p>You must specify either <strong>CrossBackupId</strong> or the time range parameters (<strong>StartTime</strong> and <strong>EndTime</strong>).</p>
+     * <p>You must specify either <strong>CrossBackupId</strong> or the start and end time parameters (<strong>StartTime</strong> and <strong>EndTime</strong>).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,9 +45,9 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end time of the query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format (UTC).</p>
+     * <p>The end time of the query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>For non-UTC+0 time zones, subtract 8 hours from the actual time before passing the value.</p>
+     * <p>If the time zone is not UTC+0, you must subtract 8 hours from the actual time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type.</p>
+     * <p>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum value of the Integer type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>
@@ -110,9 +110,9 @@ public class DescribeCrossRegionBackupsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time of the query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format (UTC).</p>
+     * <p>The start time of the query. Specify the time in the <em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>For non-UTC+0 time zones, subtract 8 hours from the actual time before passing the value.</p>
+     * <p>If the time zone is not UTC+0, you must subtract 8 hours from the actual time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

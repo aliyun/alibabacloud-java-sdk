@@ -13,8 +13,8 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
     /**
      * <p>Indicates whether associated ApsaraDB RDS instances exist.</p>
      * <ul>
-     * <li><strong>true</strong>: Associated instances exist.</li>
-     * <li><strong>false</strong>: No associated instances exist.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
     public Boolean associateStatus;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>38F6B598-A6D7-508A-8401-12BB9936****</p>
@@ -86,9 +86,9 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The purpose of the key. Valid values:</p>
+         * <p>The usage of the key. Valid values:</p>
          * <ul>
-         * <li><strong>DiskEncryption</strong>: cloud disk data encryption.</li>
+         * <li><strong>DiskEncryption</strong>: cloud disk encryption.</li>
          * <li><strong>TDE</strong>: transparent data encryption.</li>
          * </ul>
          * 
@@ -105,10 +105,10 @@ public class DescribeKmsAssociateResourcesResponseBody extends TeaModel {
          * <li><strong>ACTIVATION</strong>: The instance is running.</li>
          * <li><strong>DELETING</strong>: The instance is being deleted.</li>
          * <li><strong>RESTARTING</strong>: The instance is being restarted.</li>
-         * <li><strong>CLASS_CHANGING</strong>: The instance specifications are being changed.</li>
-         * <li><strong>INS_MAINTAINING</strong>: The instance is being maintained.</li>
-         * <li><strong>BACKUP_RECOVERING</strong>: A backup is being restored.</li>
-         * <li><strong>NET_MODIFYING</strong>: The network is being changed.</li>
+         * <li><strong>CLASS_CHANGING</strong>: The instance is undergoing a specification change.</li>
+         * <li><strong>INS_MAINTAINING</strong>: The instance is undergoing maintenance.</li>
+         * <li><strong>BACKUP_RECOVERING</strong>: The instance is being restored from a backup.</li>
+         * <li><strong>NET_MODIFYING</strong>: The network configuration of the instance is being changed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

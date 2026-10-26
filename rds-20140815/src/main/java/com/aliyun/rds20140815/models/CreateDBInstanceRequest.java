@@ -10,8 +10,8 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>When you create multiple ApsaraDB RDS for MySQL instances, you can use the <strong>Tag.Key</strong> and <strong>Tag.Value</strong> parameters to add tags to the instances in the same batch. This facilitates instance management by tag after creation.</li>
-     * <li>After multiple instances are created, the API operation returns only the <strong>TaskId</strong>, <strong>RequestId</strong>, and <strong>Message</strong> parameters. Other detail parameters are not returned. To query the details of a specific instance, call the DescribeDBInstanceAttribute operation.</li>
-     * <li>If <strong>Engine</strong> is not set to <strong>MySQL</strong> and the value of this parameter is greater than <strong>1</strong>, the API operation fails and returns the error code <code>InvalidParam.Engine</code>.</li>
+     * <li>After multiple instances are created, the operation returns only the <strong>TaskId</strong>, <strong>RequestId</strong>, and <strong>Message</strong> parameters, and does not return other detail parameters. To query the details of a specific instance, you can call the DescribeDBInstanceAttribute operation.</li>
+     * <li>If <strong>Engine</strong> is not set to <strong>MySQL</strong> and the value of this parameter is greater than <strong>1</strong>, the operation fails and returns the error code <code>InvalidParam.Engine</code>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -37,11 +37,11 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables automatic payment. Make sure that your account balance is sufficient.</li>
+     * <li><strong>true</strong>: enables automatic payment. You must ensure that your account balance is sufficient.</li>
      * <li><strong>false</strong>: generates an order without deducting fees.</li>
      * </ul>
      * <blockquote>
-     * <p>The default value is true. If your payment method has an insufficient balance, you can set AutoPay to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to complete the payment.</p>
+     * <p>The default value is true. If your payment method has an insufficient balance, you can set AutoPay to false. In this case, an unpaid order is generated, and you can log on to the ApsaraDB RDS console to pay the order manually.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,13 +70,26 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String autoRenew;
 
     /**
-     * <p>Specifies whether to use a voucher. Valid values:</p>
+     * <p>Specifies whether to enable or disable automatic minor version upgrades. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: uses a voucher.</li>
-     * <li><strong>false</strong>: does not use a voucher. This is the default value.</li>
+     * <li><strong>Auto</strong>: Enabled.</li>
+     * <li><strong>Manual</strong>: Disabled.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Auto</p>
+     */
+    @NameInMap("AutoUpgradeMinorVersion")
+    public String autoUpgradeMinorVersion;
+
+    /**
+     * <p>Specifies whether to use vouchers. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: uses vouchers.</li>
+     * <li><strong>false</strong>: does not use vouchers. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>If you use a voucher and later need to downgrade the instance configuration, the amount deducted by the voucher will not be refunded.</p>
+     * <p>If you use vouchers and later need to downgrade the instance configuration, the amount deducted by the vouchers will not be refunded.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -86,7 +99,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Boolean autoUseCoupon;
 
     /**
-     * <p>The configuration information for Babelfish for ApsaraDB RDS for PostgreSQL.</p>
+     * <p>The configuration information of Babelfish for ApsaraDB RDS for PostgreSQL.</p>
      * <p>Configuration format: {&quot;babelfishEnabled&quot;:&quot;true&quot;,&quot;migrationMode&quot;:&quot;xxxxxxx&quot;,&quot;masterUsername&quot;:&quot;xxxxxxx&quot;,&quot;masterUserPassword&quot;:&quot;xxxxxxxx&quot;}</p>
      * <p>Parameter description:</p>
      * <ul>
@@ -109,11 +122,11 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String bpeEnabled;
 
     /**
-     * <p>Specifies whether to enable the I/O performance burst feature for Premium ESSD cloud disks. Valid values:</p>
+     * <p>Specifies whether to enable the I/O performance burst feature for premium cloud disks. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: enables the feature.</li>
      * <li><strong>false</strong>: disables the feature.<blockquote>
-     * <p>For more information about the I/O performance burst feature for Premium ESSD cloud disks, see <a href="https://help.aliyun.com/document_detail/2340501.html">What is a Premium ESSD cloud disk?</a>.</p>
+     * <p>For more information about the I/O performance burst feature for premium cloud disks, see <a href="https://help.aliyun.com/document_detail/2340501.html">What is a premium cloud disk?</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -143,7 +156,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <li><strong>cluster</strong>: Cluster Edition for MySQL or PostgreSQL.</li>
      * <li><strong>AlwaysOn</strong>: Cluster Edition for SQL Server.</li>
      * <li><strong>Finance</strong>: RDS Enterprise Edition.<blockquote>
-     * <p>This parameter is required when you create a SQL Server Enterprise Edition Cluster&lt;props=&quot;china&quot;&gt;, Basic Edition Standard, or Basic Edition Enterprise instance. For example, when you create a Basic Edition 2022 Enterprise Edition Cluster (2022_ent) instance, you must set this parameter to Basic.</p>
+     * <p>This parameter is required when you create a SQL Server RDS Enterprise Edition&lt;props=&quot;china&quot;&gt;, Basic Edition Standard Edition, or Basic Edition Enterprise Edition instance. For example, when you create a Basic Edition 2022 RDS Enterprise Edition (2022_ent) instance, you must set this parameter to Basic.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -167,7 +180,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that the value is unique across different requests. The value can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -176,7 +189,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2701832.html">data archiving</a> feature for Premium ESSD cloud disks. Valid values:</p>
+     * <p>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2701832.html">data archiving</a> feature for premium cloud disks. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: enables the feature.</li>
      * <li><strong>false</strong>: disables the feature.</li>
@@ -218,7 +231,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The strategy for creating multiple instances at a time. This parameter takes effect only when <strong>Amount</strong> is greater than 1. Valid values:</p>
      * <ul>
-     * <li><strong>Atomicity</strong>: atomicity. All instances in the same batch are created successfully, or none of them are created if one fails. This is the default value.</li>
+     * <li><strong>Atomicity</strong>: atomicity. All instances in the same batch are created successfully, or if one instance fails to be created, all instances fail to be created. This is the default value.</li>
      * <li><strong>Partial</strong>: non-atomicity. The creation of an instance is not affected by other instances in the same batch.</li>
      * </ul>
      * 
@@ -232,7 +245,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String customExtraInfo;
 
     /**
-     * <p>The instance type. You can specify a standard or Yitian instance type. For more information, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
+     * <p>The instance type. You can specify a standard or YiTian instance type. For details, see <a href="https://help.aliyun.com/document_detail/26312.html">Primary ApsaraDB RDS instance types</a>.</p>
      * <p>To create a Serverless instance, specify one of the following values:</p>
      * <ul>
      * <li>MySQL Basic Edition: <strong>mysql.n2.serverless.1c</strong></li>
@@ -250,9 +263,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>The name of the instance. The name must be 2 to 255 characters in length. It must start with a letter and can contain digits, letters, and hyphens (-).</p>
+     * <p>The description of the instance. The description must be 2 to 255 characters in length. It must start with a letter and can contain letters, digits, Chinese characters, and hyphens (-).</p>
      * <blockquote>
-     * <p>The name cannot start with http:// or https://.</p>
+     * <p>The description cannot start with http:// or https://.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -282,22 +295,22 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer DBInstanceStorage;
 
     /**
-     * <p>The storage type of the instance. Valid values:</p>
+     * <p>The instance storage type. Valid values:</p>
      * <ul>
-     * <li><strong>local_ssd</strong>: high-performance local SSD (recommended).</li>
-     * <li><strong>general_essd</strong>: Premium ESSD cloud disk (recommended).</li>
+     * <li><strong>local_ssd</strong>: premium local SSD (recommended).</li>
+     * <li><strong>general_essd</strong>: premium cloud disk (recommended).</li>
      * <li><strong>cloud_essd</strong>: PL1 ESSD.</li>
      * <li><strong>cloud_essd2</strong>: PL2 ESSD.</li>
      * <li><strong>cloud_essd3</strong>: PL3 ESSD.</li>
-     * <li><strong>cloud_ssd</strong>: standard SSD (not recommended, discontinued in some regions).</li>
+     * <li><strong>cloud_ssd</strong>: standard SSD (not recommended, and no longer available in some regions).</li>
      * </ul>
      * <p>The default value of this parameter is automatically determined based on the instance type specified by <strong>DBInstanceClass</strong>:</p>
      * <ul>
-     * <li>If the instance type is a high-performance local SSD type, the default value is <strong>local_ssd</strong>.</li>
-     * <li>If the instance type is a cloud disk type, the default value is <strong>cloud_essd</strong>.</li>
+     * <li>If the instance type code indicates a premium local SSD, the default value is <strong>local_ssd</strong>.</li>
+     * <li>If the instance type code indicates a cloud disk, the default value is <strong>cloud_essd</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>Serverless instances support only PL1 ESSDs and Premium ESSD cloud disks.</p>
+     * <p>Serverless instances support only PL1 ESSDs and premium cloud disks.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -335,19 +348,19 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>The time zone of the instance. This parameter takes effect only when <strong>Engine</strong> is set to <strong>MySQL</strong> or <strong>PostgreSQL</strong>.</p>
      * <ul>
      * <li>If <strong>Engine</strong> is set to <strong>MySQL</strong>:<ul>
-     * <li>This parameter specifies the UTC time zone. Valid values: <strong>-12:59</strong> to <strong>+13:00</strong>.</li>
-     * <li>For an instance with Premium Local SSDs, you can specify a named time zone, such as Asia/Hong_Kong. For more information about named time zones, see <a href="https://help.aliyun.com/document_detail/297356.html">Named time zones</a>.</li>
+     * <li>This parameter configures the UTC time zone. Valid values: <strong>-12:59</strong> to <strong>+13:00</strong>.</li>
+     * <li>For an instance with premium local SSDs, you can specify a named time zone, such as Asia/Hong_Kong. For more information about named time zones, see <a href="https://help.aliyun.com/document_detail/297356.html">Named time zones</a>.</li>
      * </ul>
      * </li>
      * <li>If <strong>Engine</strong> is set to <strong>PostgreSQL</strong>:<ul>
-     * <li>This parameter specifies a named time zone. UTC time zones are not supported. For more information about named time zones, see <a href="https://help.aliyun.com/document_detail/297356.html">Named time zones</a>.</li>
+     * <li>This parameter configures a named time zone. UTC time zones are not supported. For more information about named time zones, see <a href="https://help.aliyun.com/document_detail/297356.html">Named time zones</a>.</li>
      * <li>This parameter can be configured only for ApsaraDB RDS for PostgreSQL instances with cloud disks.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You can set the time zone when you purchase a primary instance. Read-only instances do not support parameter settings for the time zone and inherit the time zone of the primary instance.</li>
+     * <li>You can set the time zone when you purchase a primary instance. Read-only instances do not support time zone settings and inherit the time zone of the primary instance.</li>
      * <li>If you do not specify this parameter, the system selects the default time zone based on the region where the instance is created.</li>
      * </ul>
      * </blockquote>
@@ -373,10 +386,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>Specifies whether to enable release protection for the instance. This feature is supported only for pay-as-you-go instances. Valid values:</p>
+     * <p>Specifies whether to enable the release protection feature for the ApsaraDB RDS instance. This feature is supported only for pay-as-you-go instances. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables release protection.</li>
-     * <li><strong>false</strong>: disables release protection. This is the default value.</li>
+     * <li><strong>true</strong>: enables the feature.</li>
+     * <li><strong>false</strong>: disables the feature. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -386,10 +399,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Boolean deletionProtection;
 
     /**
-     * <p>Specifies whether to perform a precheck before creating the instance. Valid values:</p>
+     * <p>Specifies whether to perform a precheck for the instance creation operation. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a precheck but does not create the instance. The system checks the request parameters, request format, service limits, and inventory.</li>
-     * <li><strong>false</strong>: sends a normal request and creates the instance after the request passes the precheck. This is the default value.</li>
+     * <li><strong>true</strong>: performs a precheck but does not create the instance. The check items include request parameters, request format, business limits, and inventory.</li>
+     * <li><strong>false</strong>: sends a normal request and creates the instance directly after the check passes. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -400,10 +413,10 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the key used for cloud disk encryption in the same region. If you specify this parameter, cloud disk encryption is enabled and cannot be disabled. You must also specify <strong>RoleARN</strong>.</p>
-     * <p>You can view the key ID or create a new key in the Key Management Service (KMS) console. For more information, see <a href="https://help.aliyun.com/document_detail/181610.html">Create a key</a>.</p>
+     * <p>You can view the key ID in the Key Management Service (KMS) console or create a new key. For more information, see <a href="https://help.aliyun.com/document_detail/181610.html">Create a CMK</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>For ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server, you do not need to specify this parameter. You only need to specify <strong>RoleARN</strong> to use the service key to create an instance with cloud disk encryption enabled.</li>
+     * <li>For ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server instances, you do not need to specify this parameter. You only need to specify <strong>RoleARN</strong> to use the service key to create an instance with cloud disk encryption enabled.</li>
      * <li>If RAM authorization requires RAM users to enable cloud disk encryption when creating instances, the instances cannot be created if cloud disk encryption is not enabled. Configure the following RAM policy for the RAM user:
      * <code>{&quot;Version&quot;:&quot;1&quot;,&quot;Statement&quot;:[{&quot;Effect&quot;:&quot;Deny&quot;,&quot;Action&quot;:&quot;rds:CreateDBInstance&quot;,&quot;Resource&quot;:&quot;*&quot;,&quot;Condition&quot;:{&quot;StringEquals&quot;:{&quot;rds:DiskEncryptionRequired&quot;:&quot;false&quot;}}}]}</code>
      * Warning: This configuration also affects the CreateOrder operation for creating instances in the console.</li>
@@ -437,7 +450,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <ul>
      * <li>Regular instances<ul>
      * <li>MySQL: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong></li>
-     * <li>SQL Server: <strong>08r2_ent_ha</strong> (cloud disk edition, discontinued), <strong>2008r2</strong> (high-performance local SSD, discontinued), <strong>2012</strong> (Enterprise Edition Standalone), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2014_ent_ha</strong>, <strong>2014_std_ha</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, <strong>2022_web</strong>, <strong>2025_ent</strong>, and <strong>2025_std</strong></li>
+     * <li>SQL Server: <strong>08r2_ent_ha</strong> (cloud disk edition, discontinued), <strong>2008r2</strong> (premium local SSD, discontinued), <strong>2012</strong> (Enterprise Edition standalone), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2014_ent_ha</strong>, <strong>2014_std_ha</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, <strong>2022_web</strong>, <strong>2025_ent</strong>, and <strong>2025_std</strong></li>
      * <li>PostgreSQL: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, <strong>15.0</strong>, <strong>16.0</strong>, <strong>17.0</strong>, and <strong>18.0</strong></li>
      * <li>MariaDB: <strong>10.3</strong> and <strong>10.6</strong></li>
      * </ul>
@@ -452,7 +465,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>MariaDB does not support Serverless instances.</li>
-     * <li>For SQL Server instances, <code>_ent</code> indicates the Enterprise Edition Cluster, <code>_ent_ha</code> indicates the Enterprise Edition, <code>_std_ha</code> indicates the Standard Edition, and <code>_web</code> indicates the Web Edition.</li>
+     * <li>For SQL Server instances, <code>_ent</code> indicates Enterprise Cluster Edition, <code>_ent_ha</code> indicates Enterprise Edition, <code>_std_ha</code> indicates Standard Edition, and <code>_web</code> indicates Web Edition.</li>
      * <li>SQL Server 2014 instances are not available on the international site.</li>
      * <li>Babelfish for ApsaraDB RDS for PostgreSQL instances support only major version 15.0.</li>
      * </ul>
@@ -468,8 +481,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable <a href="https://help.aliyun.com/document_detail/2856526.html">native replication for ApsaraDB RDS for MySQL</a>. Valid values:</p>
      * <ul>
-     * <li><strong>ON</strong>: enables native replication.</li>
-     * <li><strong>OFF</strong>: disables native replication.</li>
+     * <li><strong>ON</strong>: enables the feature.</li>
+     * <li><strong>OFF</strong>: disables the feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -481,7 +494,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: Virtual Private Cloud (VPC).</li>
+     * <li><strong>VPC</strong>: VPC.</li>
      * <li><strong>Classic</strong>: classic network.</li>
      * </ul>
      * <blockquote>
@@ -499,7 +512,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE)</a> feature for Premium ESSD cloud disks. Valid values:</p>
+     * <p>Specifies whether to enable the <a href="https://help.aliyun.com/document_detail/2527067.html">Buffer Pool Extension (BPE)</a> feature for premium cloud disks. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: enables the feature.</li>
      * <li><strong>0</strong>: disables the feature.</li>
@@ -529,7 +542,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <ul>
      * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
      * <li><strong>Prepaid</strong>: subscription.</li>
-     * <li><strong>Serverless</strong>: Serverless billing method. MariaDB instances are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of ApsaraDB RDS for MySQL Serverless instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of ApsaraDB RDS for SQL Server Serverless instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of ApsaraDB RDS for PostgreSQL Serverless instances</a>.<blockquote>
+     * <li><strong>Serverless</strong>: serverless billing method. MariaDB instances are not supported. For more information, see <a href="https://help.aliyun.com/document_detail/411291.html">Overview of ApsaraDB RDS for MySQL Serverless instances</a>, <a href="https://help.aliyun.com/document_detail/604344.html">Overview of ApsaraDB RDS for SQL Server Serverless instances</a>, and <a href="https://help.aliyun.com/document_detail/607742.html">Overview of ApsaraDB RDS for PostgreSQL Serverless instances</a>.<blockquote>
      * <p>The system automatically generates an order and completes the payment. You do not need to manually confirm the payment.</p>
      * </blockquote>
      * </li>
@@ -543,10 +556,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The subscription period unit. Valid values:</p>
+     * <p>The subscription period of the subscription instance. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong>: year.</li>
-     * <li><strong>Month</strong>: month.</li>
+     * <li><strong>Year</strong>: yearly subscription.</li>
+     * <li><strong>Month</strong>: monthly subscription.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
@@ -559,7 +572,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The port used to initialize the instance upon creation. Valid values:</p>
+     * <p>The port used to initialize the instance during creation. Valid values:</p>
      * <ul>
      * <li>MySQL: 1000 to 65534</li>
      * <li>PostgreSQL, SQL Server, and MariaDB: 1000 to 5999</li>
@@ -600,7 +613,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>
@@ -612,9 +625,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The global resource descriptor (ARN) used for the authorization of the ApsaraDB RDS service account by the primary account to access KMS. You can call the CheckCloudResourceAuthorized operation to query the descriptor.</p>
+     * <p>The global resource descriptor (ARN) used for the authorization of the ApsaraDB RDS service account to access KMS. You can invoke the CheckCloudResourceAuthorized operation to query the ARN.</p>
      * <blockquote>
-     * <p>Notice: You must specify <strong>RoleARN</strong> when you enable cloud disk encryption.</p>
+     * <p>Notice: When you enable cloud disk encryption, you must specify <strong>RoleARN</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -624,10 +637,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String roleARN;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/43185.html">IP address whitelist</a> of the instance. Separate multiple IP addresses or CIDR blocks with commas (,). Each IP address or CIDR block must be unique. You can add up to 1,000 IP addresses or CIDR blocks to the whitelist of a single instance. The following formats are supported:</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/43185.html">IP address whitelist</a> of the instance. Separate multiple IP addresses or CIDR blocks with commas (,). Duplicate IP addresses or CIDR blocks are not allowed. You can add up to 1,000 IP addresses or CIDR blocks to the whitelist of a single instance. The following formats are supported:</p>
      * <ul>
      * <li>IP addresses, such as 10.10.XX.XX.</li>
-     * <li>CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates that the prefix of the CIDR block is 24 bits long. The prefix length ranges from 1 to 32 bits.</li>
+     * <li>CIDR blocks, such as 10.10.XX.XX/24. In this example, 24 indicates the length of the prefix in the CIDR block, and the prefix length ranges from 1 to 32.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -638,7 +651,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The settings for the Serverless instance. This parameter is required when you create a Serverless instance.</p>
+     * <p>The settings for the ApsaraDB RDS Serverless instance. This parameter is required when you create a Serverless instance.</p>
      * <blockquote>
      * <p>MariaDB does not support Serverless instances.</p>
      * </blockquote>
@@ -653,7 +666,7 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <li><strong>Disable</strong>: disables automatic storage expansion. This is the default value.</li>
      * </ul>
      * <blockquote>
-     * <p>You can also call the ModifyDasInstanceConfig operation to adjust this setting after the instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/173826.html">Configure automatic storage expansion</a>.</p>
+     * <p>You can also call the ModifyDasInstanceConfig operation to adjust this setting after the instance is created. For more information, see <a href="https://help.aliyun.com/document_detail/173826.html">Enable automatic storage expansion</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -663,7 +676,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String storageAutoScale;
 
     /**
-     * <p>The threshold that triggers automatic storage expansion. Unit: %. Valid values:</p>
+     * <p>The threshold percentage that triggers automatic storage expansion. Valid values:</p>
      * <ul>
      * <li><strong>10</strong></li>
      * <li><strong>20</strong></li>
@@ -682,7 +695,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer storageThreshold;
 
     /**
-     * <p>The maximum storage capacity after automatic storage expansion. Automatic storage expansion does not increase the total storage capacity of the instance beyond this value. Unit: GB.</p>
+     * <p>The upper limit of the total storage capacity for automatic storage expansion. The automatic expansion does not cause the total storage capacity of the instance to exceed this value. Unit: GB.</p>
      * <blockquote>
      * <ul>
      * <li>The value must be greater than or equal to 0.</li>
@@ -697,7 +710,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer storageUpperBound;
 
     /**
-     * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be configured.</p>
+     * <p>Deprecated. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>gbk</p>
@@ -706,17 +719,17 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String systemDBCharset;
 
     /**
-     * <p>The list of tags.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateDBInstanceRequestTag> tag;
 
     /**
-     * <p>The ID of the host for the logger node in the dedicated cluster.</p>
+     * <p>The ID of the host on which the logger instance is created in the dedicated cluster.</p>
      * <p>This parameter is required when you create an RDS Enterprise Edition instance in a dedicated cluster. If you do not specify this parameter, the system automatically allocates a host by default.</p>
      * <ul>
-     * <li>You can call the DescribeDedicatedHosts operation to query the host information in the dedicated cluster.</li>
-     * <li>If you do not have a host, you can call the CreateDedicatedHost operation to add one.</li>
+     * <li>You can invoke the DescribeDedicatedHosts operation to query the host information in the dedicated cluster.</li>
+     * <li>If you do not have a host, you can invoke the CreateDedicatedHost operation to add one.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -743,8 +756,8 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <p>The ID of the host on which the secondary instance is created in the dedicated cluster.</p>
      * <p>This parameter is required when you create a high-availability series or RDS Enterprise Edition instance in a dedicated cluster. If you do not specify this parameter, the system automatically allocates a host by default.</p>
      * <ul>
-     * <li>You can call the DescribeDedicatedHosts operation to query the host information in the dedicated cluster.</li>
-     * <li>If you do not have a host, you can call the CreateDedicatedHost operation to add one.</li>
+     * <li>You can invoke the DescribeDedicatedHosts operation to query the host information in the dedicated cluster.</li>
+     * <li>If you do not have a host, you can invoke the CreateDedicatedHost operation to add one.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -754,7 +767,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String targetDedicatedHostIdForSlave;
 
     /**
-     * <p>The minor engine version of the RDS instance to be created. This parameter is required only when you create a MySQL or PostgreSQL instance.
+     * <p>The minor engine version of the ApsaraDB RDS instance. This parameter is required only when you create a MySQL or PostgreSQL instance.
      * Format:</p>
      * <ul>
      * <li><p>MySQL: <code>&lt;Instance version&gt;_&lt;Numeric version number&gt;</code>. Examples: <code>rds_20200229</code>, <code>xcluster_20200229</code>, and <code>xcluster80_20200229</code>. Description:</p>
@@ -764,16 +777,16 @@ public class CreateDBInstanceRequest extends TeaModel {
      * <li>xcluster80: MySQL 8.0 RDS Enterprise Edition.</li>
      * </ul>
      * <blockquote>
-     * <p>You can call the DescribeDBMiniEngineVersions operation to query the numeric version number. For more information about the differences between versions, see <a href="https://help.aliyun.com/document_detail/96060.html">AliSQL release notes</a>.</p>
+     * <p>You can invoke the DescribeDBMiniEngineVersions operation to query the numeric version number. For more information about the differences between versions, see <a href="https://help.aliyun.com/document_detail/96060.html">AliSQL release notes</a>.</p>
      * </blockquote>
      * </li>
-     * <li><p>PostgreSQL: <code>rds_postgres_&lt;Major version&gt;00_&lt;Minor engine version number&gt;</code>. Example: <code>rds_postgres_1400_20220830</code>. Description:</p>
+     * <li><p>PostgreSQL: <code>rds_postgres_&lt;Major version&gt;00_&lt;Minor version number&gt;</code>. Example: <code>rds_postgres_1400_20220830</code>. Description:</p>
      * <ul>
      * <li>1400: PostgreSQL major version 14.</li>
-     * <li>20220830: AliPG minor engine version. You can call the DescribeDBMiniEngineVersions operation to query the minor engine version. For more information about the differences between versions, see <a href="https://help.aliyun.com/document_detail/126002.html">PostgreSQL release notes</a>.</li>
+     * <li>20220830: AliPG minor engine version. You can invoke the DescribeDBMiniEngineVersions operation to query the minor engine version. For more information about the differences between versions, see <a href="https://help.aliyun.com/document_detail/126002.html">PostgreSQL release notes</a>.</li>
      * </ul>
      * <blockquote>
-     * <p>If Babelfish is enabled in <strong>BabelfishConfig</strong>, the minor engine version format for ApsaraDB RDS for PostgreSQL is: <code>rds_postgres_&lt;Major version&gt;00_&lt;AliPG minor engine version&gt;_babelfish</code>.</p>
+     * <p>If Babelfish is enabled in <strong>BabelfishConfig</strong>, the minor engine version format for the ApsaraDB RDS for PostgreSQL instance is <code>rds_postgres_&lt;Major version&gt;00_&lt;AliPG minor engine version&gt;_babelfish</code>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -802,7 +815,7 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     /**
      * <p>The ID of the user backup. You can call the ListUserBackupFiles operation to query the backup ID. If you specify this parameter, the instance is created based on the user backup.</p>
-     * <p>To specify this parameter, the following limits apply:</p>
+     * <p>If you specify this parameter, the following limits apply:</p>
      * <ul>
      * <li><strong>PayType</strong> must be set to <strong>Postpaid</strong>.</li>
      * <li><strong>Engine</strong> must be set to <strong>MySQL</strong>.</li>
@@ -817,7 +830,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String userBackupId;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC ID.</p>
      * <blockquote>
      * <p>This parameter takes effect only when the network type <strong>InstanceNetworkType</strong> is set to <strong>VPC</strong>.</p>
      * </blockquote>
@@ -829,12 +842,12 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String VPCId;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * <ul>
-     * <li><strong>Zone mapping</strong>: The zone of the vSwitch must match the zone of the primary node (<strong>ZoneId</strong>) and the zone of the secondary node (<strong>ZoneIdSlave1</strong>). If you specify two vSwitch IDs, their order must match the order of <strong>ZoneId</strong> and <strong>ZoneIdSlave1</strong>.</li>
+     * <li><strong>Zone mapping</strong>: The zone of the vSwitch specified by VSwitchId must correspond to the zone of the primary node (ZoneId) and the zone of the secondary node (ZoneIdSlave1). If you specify two vSwitch IDs, their sequence must match the sequence of ZoneId and ZoneIdSlave1.</li>
      * <li><strong>Network type limit</strong>: <strong>InstanceNetworkType</strong> must be set to <strong>VPC</strong>.</li>
      * <li><strong>Multiple vSwitches</strong>: If you specify <strong>ZoneIdSlave1</strong> and the value is not <strong>Auto</strong>, you must specify two vSwitch IDs and separate them with a comma (,).</li>
-     * <li><strong>Character limit</strong>: <strong>VSwitchId</strong> cannot contain special characters such as spaces, exclamation marks (!), number signs (#), currency symbols (¥), ampersands (&amp;), and percent signs (%).</li>
+     * <li><strong>Character limit</strong>: VSwitchId cannot contain special characters such as spaces, exclamation marks (!), number signs (#), yen signs (¥), ampersands (&amp;), or percent signs (%).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -844,8 +857,8 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The list of whitelists.
-     * To configure multiple IP addresses, separate them with commas (,). Do not add spaces before or after the commas. Example: <code>192.168.0.1,172.16.213.9</code>.</p>
+     * <p>The whitelist templates.
+     * When you need to configure multiple IP addresses, separate multiple IP addresses or CIDR blocks with commas (,). Do not include spaces before or after the commas. Example: <code>192.168.0.1,172.16.213.9</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.1,172.16.213.9</p>
@@ -856,10 +869,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The zone ID of the primary node.</p>
      * <ul>
-     * <li>If you specify a VPC and a vSwitch, you must specify the zone ID of the vSwitch. Otherwise, the instance cannot be created.</li>
-     * <li>For a high-availability series instance, you must also specify <strong>ZoneIdSlave1</strong> to determine whether the instance uses a single-zone deployment or multi-zone deployment.</li>
-     * <li>For an RDS Enterprise Edition instance, you must also specify <strong>ZoneIdSlave1</strong> and <strong>ZoneIdSlave2</strong> to determine whether the instance uses a single-zone deployment or multi-zone deployment.</li>
-     * <li>For an ApsaraDB RDS Cluster Edition instance, you must also specify <strong>ZoneIdSlave1</strong> for a two-node instance, and both <strong>ZoneIdSlave1</strong> and <strong>ZoneIdSlave2</strong> for a three-node instance.</li>
+     * <li>If you specify a VPC and a vSwitch, you must specify the zone ID of the target vSwitch. Otherwise, the instance cannot be created.</li>
+     * <li>For a high-availability series instance, you must also specify <strong>ZoneIdSlave1</strong> to determine whether the instance uses a single-zone deployment or a multi-zone deployment.</li>
+     * <li>For an RDS Enterprise Edition instance, you must also specify <strong>ZoneIdSlave1</strong> and <strong>ZoneIdSlave2</strong> to determine whether the instance uses a single-zone deployment or a multi-zone deployment.</li>
+     * <li>For an ApsaraDB RDS for MySQL Cluster Edition instance, you must also specify <strong>ZoneIdSlave1</strong> for a two-node instance, and <strong>ZoneIdSlave1</strong> and <strong>ZoneIdSlave2</strong> for a three-node instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -871,7 +884,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     /**
      * <p>The zone ID of the secondary node.</p>
      * <ul>
-     * <li>If you set this parameter to <strong>Auto</strong>, the instance uses a multi-zone deployment and the system automatically selects a zone for the secondary node.</li>
+     * <li>If you set this parameter to <strong>Auto</strong>, the instance uses a multi-zone deployment, and the system automatically selects a zone for the secondary node.</li>
      * <li>If you set this parameter to the same value as <strong>ZoneId</strong>, the instance uses a single-zone deployment.</li>
      * <li>If you set this parameter to a value different from <strong>ZoneId</strong>, the instance uses a multi-zone deployment.</li>
      * </ul>
@@ -883,7 +896,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String zoneIdSlave1;
 
     /**
-     * <p>The zone ID of the second secondary node. ApsaraDB RDS for MySQL Cluster Edition instances support the creation of one or two secondary nodes when you create an instance. You can use this parameter to specify the zone of the second secondary node.</p>
+     * <p>The zone ID of the second secondary node. ApsaraDB RDS for MySQL Cluster Edition instances support the creation of one or two secondary nodes when you create the instance. If you want to create a second secondary node, you can use this parameter to specify the zone of the second secondary node.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-d</p>
@@ -926,6 +939,14 @@ public class CreateDBInstanceRequest extends TeaModel {
     }
     public String getAutoRenew() {
         return this.autoRenew;
+    }
+
+    public CreateDBInstanceRequest setAutoUpgradeMinorVersion(String autoUpgradeMinorVersion) {
+        this.autoUpgradeMinorVersion = autoUpgradeMinorVersion;
+        return this;
+    }
+    public String getAutoUpgradeMinorVersion() {
+        return this.autoUpgradeMinorVersion;
     }
 
     public CreateDBInstanceRequest setAutoUseCoupon(Boolean autoUseCoupon) {
@@ -1394,13 +1415,13 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     public static class CreateDBInstanceRequestServerlessConfig extends TeaModel {
         /**
-         * <p>Specifies whether to enable the smart pause and resume feature for the Serverless instance. Valid values:</p>
+         * <p>Specifies whether to enable the smart pause and start feature for the Serverless instance. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: enables the feature.</li>
          * <li><strong>false</strong>: disables the feature. This is the default value.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter is required only for MySQL and PostgreSQL Serverless instances. If no connections are established within 10 minutes, the instance enters the paused state and automatically resumes when a new connection is established.</p>
+         * <p>This parameter is required only for MySQL and PostgreSQL Serverless instances. If no connections are established within 10 minutes, the instance enters the paused state. When a connection is established, the instance is automatically awakened.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1417,7 +1438,7 @@ public class CreateDBInstanceRequest extends TeaModel {
          * <li>PostgreSQL: <strong>1</strong> to <strong>14</strong></li>
          * </ul>
          * <blockquote>
-         * <p>The value of this parameter must be greater than or equal to the value of <strong>MinCapacity</strong>. Only <strong>integers</strong> are supported.</p>
+         * <p>The value of this parameter must be greater than or equal to the value of <strong>MinCapacity</strong>, and only <strong>integers</strong> are supported.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1446,13 +1467,13 @@ public class CreateDBInstanceRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable forced elastic scaling for the Serverless instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: enables forced elastic scaling.</li>
-         * <li><strong>false</strong>: disables forced elastic scaling. This is the default value.</li>
+         * <li><strong>true</strong>: enables the feature.</li>
+         * <li><strong>false</strong>: disables the feature. This is the default value.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>This parameter is required only for MySQL and PostgreSQL Serverless instances. If you enable this parameter, the instance will be unavailable for 30 to 120 seconds during forced scaling. Use this parameter with caution based on your business requirements.</li>
-         * <li>Elastic scaling of RCUs usually takes effect immediately. However, in some special cases (such as during the execution of a large transaction), scaling cannot be completed immediately. In this case, you can enable this parameter to force scaling.</li>
+         * <li>This parameter is required only for MySQL and PostgreSQL Serverless instances. After you enable this feature, the instance may be unavailable for 30 to 120 seconds during forced scaling. Use this feature with caution based on your business requirements.</li>
+         * <li>Elastic scaling of RCUs usually takes effect immediately. However, in some special cases (such as during the execution of large transactions), scaling cannot be completed immediately. In this case, you can enable this parameter to force scaling.</li>
          * </ul>
          * </blockquote>
          * 
@@ -1503,10 +1524,10 @@ public class CreateDBInstanceRequest extends TeaModel {
 
     public static class CreateDBInstanceRequestTag extends TeaModel {
         /**
-         * <p>The tag key. Specify this parameter to add a tag to the instance.</p>
+         * <p>The tag key. You can specify this parameter to add a tag to the instance.</p>
          * <ul>
          * <li>If the specified tag key already exists, the tag key is directly added to the instance. You can call the ListTagResources operation to query existing tags.</li>
-         * <li>If the specified tag key does not exist, the system creates the tag key and adds it to the instance.</li>
+         * <li>If the specified tag key does not exist, the tag key is created and then added to the instance.</li>
          * <li>Empty strings are not allowed.</li>
          * <li>This parameter must be used together with <strong>Tag.Value</strong>.</li>
          * </ul>
@@ -1518,10 +1539,10 @@ public class CreateDBInstanceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value that corresponds to the tag key. Specify this parameter to add a tag to the instance.</p>
+         * <p>The tag value that corresponds to the tag key. You can specify this parameter to add a tag to the instance.</p>
          * <ul>
          * <li>If the specified tag value exists for the corresponding tag key, the tag value is directly added to the instance. You can call the ListTagResources operation to query existing tags.</li>
-         * <li>If the specified tag value does not exist for the corresponding tag key, the system creates the tag value and adds it to the instance.</li>
+         * <li>If the specified tag value does not exist for the corresponding tag key, the tag value is created and then added to the instance.</li>
          * <li>This parameter must be used together with <strong>Tag.Key</strong>.</li>
          * </ul>
          * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MigrateDBInstanceResponseBody extends TeaModel {
     /**
-     * <p>The migration queue number. When the number is 0, the migration switchover is performed.</p>
+     * <p>The migration queue number. When the value is 0, the migration and switchover are performed.</p>
      * 
      * <strong>example:</strong>
      * <p>2245016</p>

@@ -9,8 +9,8 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
      * <ul>
      * <li><strong>200</strong>: Normal.</li>
      * <li><strong>400</strong>: Client fault.</li>
-     * <li><strong>401</strong>: Authentication failed.</li>
-     * <li><strong>404</strong>: Request page not found.</li>
+     * <li><strong>401</strong>: Failed to authenticate during identity verification.</li>
+     * <li><strong>404</strong>: The requested page is not found.</li>
      * <li><strong>500</strong>: Server fault.</li>
      * </ul>
      * 
@@ -21,7 +21,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The list of returned data.</p>
      */
     @NameInMap("Data")
     public DescribeWhitelistTemplateResponseBodyData data;
@@ -29,7 +29,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><strong>200</strong>: Success.</li>
+     * <li><strong>200</strong>: Normal.</li>
      * <li><strong>400</strong>: Client error.</li>
      * <li><strong>500</strong>: Server error.</li>
      * </ul>
@@ -135,7 +135,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>The IP address list.</p>
+         * <p>The list of IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>10.1.X.X,2.3.X.X</p>
@@ -144,7 +144,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         public String ips;
 
         /**
-         * <p>The whitelist template ID.</p>
+         * <p>The ID of the whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>424</p>
@@ -153,7 +153,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         public Integer templateId;
 
         /**
-         * <p>The whitelist template name.</p>
+         * <p>The name of the whitelist template.</p>
          * 
          * <strong>example:</strong>
          * <p>template_123</p>
@@ -162,7 +162,7 @@ public class DescribeWhitelistTemplateResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>16****</p>

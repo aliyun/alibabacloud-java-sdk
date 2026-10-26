@@ -16,7 +16,7 @@ public class DescribeMarketingActivityRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>Chinese site: 26842</li>
+     * <li>China site: 26842</li>
      * <li>International site: 26888</li>
      * </ul>
      * 
@@ -27,7 +27,7 @@ public class DescribeMarketingActivityRequest extends TeaModel {
     public String bid;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -39,7 +39,7 @@ public class DescribeMarketingActivityRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query the available regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

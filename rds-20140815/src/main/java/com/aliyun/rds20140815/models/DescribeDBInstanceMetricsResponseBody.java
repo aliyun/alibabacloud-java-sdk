@@ -14,13 +14,13 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The list of enhanced monitoring metrics that are enabled for the instance.</p>
+     * <p>The list of enhanced metrics that are enabled for the instance.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeDBInstanceMetricsResponseBodyItems> items;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>318C3754-F6D0-54BB-A55C-23EAA04708B7</p>
@@ -29,7 +29,7 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of enhanced monitoring metrics that are enabled for the instance.</p>
+     * <p>The total number of enhanced metrics that are enabled for the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -76,19 +76,19 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceMetricsResponseBodyItems extends TeaModel {
         /**
-         * <p>The description of the enhanced monitoring metric.</p>
+         * <p>The description of the enhanced metric.</p>
          * 
          * <strong>example:</strong>
-         * <p>sys cpu使用率，sys cpu使用量 / cpu总量</p>
+         * <p>sys CPU usage, sys CPU usage / total CPU capacity</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The category of the enhanced monitoring metric. Valid values:</p>
+         * <p>The category of the enhanced metric. Valid values:</p>
          * <ul>
-         * <li><strong>os</strong>: operating system metric.</li>
-         * <li><strong>db</strong>: database metric.</li>
+         * <li><strong>os</strong>: operating system metrics.</li>
+         * <li><strong>db</strong>: database metrics.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
         public String dimension;
 
         /**
-         * <p>The key of the group to which the enhanced monitoring metric belongs.</p>
+         * <p>The key of the group to which the enhanced metric belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>os.cpu_usage</p>
@@ -107,16 +107,16 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
         public String groupKey;
 
         /**
-         * <p>The name of the group to which the enhanced monitoring metric belongs.</p>
+         * <p>The name of the group to which the enhanced metric belongs.</p>
          * 
          * <strong>example:</strong>
-         * <p>CPU使用率</p>
+         * <p>CPU usage</p>
          */
         @NameInMap("GroupKeyType")
         public String groupKeyType;
 
         /**
-         * <p>The statistical method of the enhanced monitoring metric. Valid values:</p>
+         * <p>The statistical method for the enhanced metric. Valid values:</p>
          * <ul>
          * <li><strong>avg</strong>: average value.</li>
          * <li><strong>min</strong>: minimum value.</li>
@@ -130,7 +130,7 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>The key of the enhanced monitoring metric.</p>
+         * <p>The key of the enhanced metric.</p>
          * 
          * <strong>example:</strong>
          * <p>os.cpu_usage.sys.avg</p>
@@ -139,7 +139,7 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
         public String metricsKey;
 
         /**
-         * <p>The alias of the enhanced monitoring metric.</p>
+         * <p>The alias of the enhanced metric.</p>
          * 
          * <strong>example:</strong>
          * <p>os.cpu_usage.sys</p>
@@ -148,7 +148,7 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
         public String metricsKeyAlias;
 
         /**
-         * <p>The sequence number of the enhanced monitoring metric.</p>
+         * <p>The sequence number of the enhanced metric.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -157,7 +157,7 @@ public class DescribeDBInstanceMetricsResponseBody extends TeaModel {
         public Integer sortRule;
 
         /**
-         * <p>The unit of the enhanced monitoring metric.</p>
+         * <p>The unit of the enhanced metric.</p>
          * 
          * <strong>example:</strong>
          * <p>%</p>

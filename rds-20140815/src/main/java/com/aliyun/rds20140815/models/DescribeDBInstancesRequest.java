@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
     /**
-     * <p>The instance edition. Valid values:</p>
+     * <p>The instance series. Valid values:</p>
      * <ul>
      * <li><strong>Basic</strong>: Basic Edition</li>
-     * <li><strong>HighAvailability</strong>: High-availability Edition</li>
+     * <li><strong>HighAvailability</strong>: high availability series</li>
      * <li><strong>cluster</strong>: Cluster Edition</li>
      * <li><strong>serverless_basic</strong>: Serverless</li>
      * </ul>
@@ -20,7 +20,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value of this parameter on the client side. The value must be unique across different requests and can be up to 64 ASCII characters in length. The value cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -34,7 +34,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
      * <li><strong>Standard</strong>: standard access mode</li>
      * <li><strong>Safe</strong>: database proxy mode</li>
      * </ul>
-     * <p>By default, instances in all access modes are returned.</p>
+     * <p>By default, instances of all access modes are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>
@@ -43,7 +43,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String connectionMode;
 
     /**
-     * <p>The endpoint of the instance. Use this endpoint to query the corresponding instance.</p>
+     * <p>The endpoint of the instance. You can use the endpoint to query the corresponding instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-uf6wjk5****.mysql.rds.aliyuncs.com</p>
@@ -70,7 +70,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance states</a>.</p>
+     * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/26315.html">Instance statuses</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -151,7 +151,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String expired;
 
     /**
-     * <p>The JSON string that contains the instance filter conditions and their values.</p>
+     * <p>The JSON string of instance filter parameters and their values.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;babelfishEnabled&quot;:&quot;true&quot;}</p>
@@ -160,10 +160,10 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>Specifies whether to return the instance edition (Category) information. Valid values:</p>
+     * <p>Specifies whether to return the instance edition information. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: does not return the information</li>
-     * <li><strong>1</strong>: returns the information</li>
+     * <li><strong>0</strong>: no</li>
+     * <li><strong>1</strong>: yes</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,8 +175,8 @@ public class DescribeDBInstancesRequest extends TeaModel {
     /**
      * <p>The network type of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: an instance in a virtual private cloud (VPC)</li>
-     * <li><strong>Classic</strong>: an instance in the classic network</li>
+     * <li><strong>VPC</strong>: VPC</li>
+     * <li><strong>Classic</strong>: classic network</li>
      * </ul>
      * <p>By default, instances of all network types are returned.</p>
      * 
@@ -187,10 +187,10 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String instanceNetworkType;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
+     * <p>The maximum number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
      * <p>Default value: <strong>30</strong>.</p>
      * <blockquote>
-     * <p>If you specify this parameter, the <strong>PageSize</strong> and <strong>PageNumber</strong> parameters are unavailable.</p>
+     * <p>If you specify this parameter, the <strong>PageSize</strong> and <strong>PageNumber</strong> parameters become invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -200,7 +200,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of <strong>NextToken</strong> that is returned from the last call to the <strong>DescribeDBInstances</strong> operation. If the results span multiple pages, pass in this value to retrieve the next page.</p>
+     * <p>The pagination token. The value is the <strong>NextToken</strong> parameter value returned from the previous call to the <strong>DescribeDBInstances</strong> operation. If the results are displayed across multiple pages, you can pass this value in the next call to display the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>o7PORW5o2TJg****</p>
@@ -215,7 +215,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: any value greater than 0 that does not exceed the maximum value of Integer.</p>
+     * <p>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum value of the Integer type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>A reserved parameter. You do not need to configure this parameter.</p>
+     * <p>Reserved parameter. You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -257,7 +257,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Boolean queryAutoRenewal;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -282,7 +282,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The keyword for fuzzy search based on the instance ID or instance description.</p>
+     * <p>The search key. You can perform a fuzzy search based on the instance ID or instance description.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-uf6w</p>
@@ -291,7 +291,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>The tags that are bound to the instance, including TagKey and TagValue. You can specify up to five pairs of tags at a time. Format: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}. If the instance matches any of the specified tags, the instance information is returned.</p>
+     * <p>The tags that are added to the instances to be queried, including TagKey and TagValue. You can specify up to 5 tags in a single request. Format: {&quot;key1&quot;:&quot;value1&quot;,&quot;key2&quot;:&quot;value2&quot;...}. If an instance matches any of the specified tags, the instance information is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;key1&quot;:&quot;value1&quot;}</p>
@@ -309,7 +309,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>VPC ID。</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-uf6f7l4fg90****</p>
@@ -327,7 +327,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String zoneId;
 
     /**
-     * <p>A deprecated parameter. You do not need to configure this parameter.</p>
+     * <p><strong>[Deprecated]</strong> You do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>

@@ -14,7 +14,7 @@ public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
     public String connectionString;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -23,7 +23,7 @@ public class ModifyDBInstanceNetworkTypeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>1025486523574</p>

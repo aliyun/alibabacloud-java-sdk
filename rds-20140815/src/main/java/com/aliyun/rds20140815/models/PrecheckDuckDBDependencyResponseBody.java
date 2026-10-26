@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class PrecheckDuckDBDependencyResponseBody extends TeaModel {
     /**
-     * <p>The items that do not meet the prerequisites for creating a DuckDB-based analytical instance.</p>
+     * <p>The check items that do not meet the prerequisites for creating a DuckDB-based analytical instance.</p>
      */
     @NameInMap("FailedCheckItems")
     public java.util.List<PrecheckDuckDBDependencyResponseBodyFailedCheckItems> failedCheckItems;
 
     /**
-     * <p>Indicates whether the prerequisite check for creating a DuckDB-based analytical instance is passed. Valid values:</p>
+     * <p>Indicates whether the precheck for creating a DuckDB-based analytical instance is passed. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The check is passed.</li>
-     * <li><strong>false</strong>: The check is not passed.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,13 +46,13 @@ public class PrecheckDuckDBDependencyResponseBody extends TeaModel {
 
     public static class PrecheckDuckDBDependencyResponseBodyFailedCheckItems extends TeaModel {
         /**
-         * <p>Indicates whether the item can be fixed with one click.</p>
+         * <p>Indicates whether the issue can be fixed with one click.</p>
          * <ul>
-         * <li><strong>true</strong>: The item can be fixed with one click by calling the <a href="https://help.aliyun.com/document_detail/2623684.html">ModifyDBInstanceConfig</a> operation.</li>
-         * <li><strong>false</strong>: The item cannot be fixed with one click.</li>
+         * <li><strong>true</strong>: Yes. You can call the <a href="https://help.aliyun.com/document_detail/2623684.html">ModifyDBInstanceConfig</a> operation to fix the issue with one click.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
-         * <p>Notice: If the major engine version of the database instance does not meet the requirements, you must perform a <a href="https://help.aliyun.com/document_detail/2623684.html">manual upgrade</a>.</p>
+         * <p>Notice: If the major version of the database instance does not meet the requirements, you must <a href="https://help.aliyun.com/document_detail/2623684.html">manually upgrade</a> the major version.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -89,11 +89,11 @@ public class PrecheckDuckDBDependencyResponseBody extends TeaModel {
         public String requiredValue;
 
         /**
-         * <p>The check item type. Valid values:</p>
+         * <p>The check item. Valid values:</p>
          * <ul>
          * <li><strong>Parameter</strong>: parameter.</li>
          * <li><strong>MinorVersion</strong>: minor engine version.</li>
-         * <li><strong>MajorVersion</strong>: major engine version.</li>
+         * <li><strong>MajorVersion</strong>: major database version.</li>
          * </ul>
          * 
          * <strong>example:</strong>

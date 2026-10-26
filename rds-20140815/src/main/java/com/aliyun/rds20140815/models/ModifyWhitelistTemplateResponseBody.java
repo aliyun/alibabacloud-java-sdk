@@ -10,7 +10,7 @@ public class ModifyWhitelistTemplateResponseBody extends TeaModel {
      * <li><strong>200</strong>: Normal.</li>
      * <li><strong>400</strong>: Client error.</li>
      * <li><strong>401</strong>: Authentication failed.</li>
-     * <li><strong>404</strong>: Request page not found.</li>
+     * <li><strong>404</strong>: The requested page is not found.</li>
      * <li><strong>500</strong>: Server error.</li>
      * </ul>
      * 
@@ -21,7 +21,7 @@ public class ModifyWhitelistTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data list.</p>
+     * <p>The list of returned data.</p>
      */
     @NameInMap("Data")
     public ModifyWhitelistTemplateResponseBodyData data;
@@ -50,7 +50,7 @@ public class ModifyWhitelistTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID. Each request has a unique ID, which facilitates troubleshooting.</p>
+     * <p>The request ID. The ID is unique for each request and can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>08A3B71B-FE08-4B03-974F-CC7EA6DB1828</p>
@@ -59,10 +59,10 @@ public class ModifyWhitelistTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Successful.</li>
-     * <li><strong>false</strong>: Failed.</li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,10 +126,10 @@ public class ModifyWhitelistTemplateResponseBody extends TeaModel {
 
     public static class ModifyWhitelistTemplateResponseBodyData extends TeaModel {
         /**
-         * <p>The return status. Valid values:</p>
+         * <p>The returned status. Valid values:</p>
          * <ul>
-         * <li><strong>ok</strong>: Normal return.</li>
-         * <li><strong>error</strong>: Error return.</li>
+         * <li><strong>ok</strong>: Normal response.</li>
+         * <li><strong>error</strong>: Error response.</li>
          * </ul>
          * 
          * <strong>example:</strong>

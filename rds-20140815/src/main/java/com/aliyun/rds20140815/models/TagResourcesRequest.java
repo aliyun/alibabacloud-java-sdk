@@ -8,7 +8,7 @@ public class TagResourcesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,11 +36,11 @@ public class TagResourcesRequest extends TeaModel {
     /**
      * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><strong>INSTANCE</strong>: regular ApsaraDB RDS instance.</li>
-     * <li><strong>CUSTOM</strong>: RDS Custom instance.</li>
-     * <li><strong>CUSTOMDEPLOYMENTSET</strong>: RDS Custom deployment set.</li>
-     * <li><strong>CUSTOMDISK</strong>: RDS Custom cloud disk.</li>
-     * <li><strong>CUSTOMSNAPSHOT</strong>: RDS Custom snapshot.</li>
+     * <li><strong>INSTANCE</strong>: regular ApsaraDB RDS instances.</li>
+     * <li><strong>CUSTOM</strong>: ApsaraDB RDS Custom instances.</li>
+     * <li><strong>CUSTOMDEPLOYMENTSET</strong>: ApsaraDB RDS Custom deployment sets.</li>
+     * <li><strong>CUSTOMDISK</strong>: ApsaraDB RDS Custom cloud disks.</li>
+     * <li><strong>CUSTOMSNAPSHOT</strong>: ApsaraDB RDS Custom snapshots.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -119,9 +119,9 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. Empty values and duplicate values are <strong>not allowed</strong>.</p>
+         * <p>The tag key. The tag key <strong>cannot</strong> be empty or duplicate.</p>
          * <blockquote>
-         * <p>An existing tag key is overwritten by a new tag key with the same name.</p>
+         * <p>Duplicate tag keys are overwritten.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -132,7 +132,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. Empty values are <strong>allowed</strong>.</p>
+         * <p>The tag value. The tag value <strong>can</strong> be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>testvalue1</p>

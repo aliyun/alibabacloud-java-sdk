@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportUserBackupFileResponseBody extends TeaModel {
     /**
-     * <p>The user backup ID.</p>
+     * <p>The ID of the user backup.</p>
      * 
      * <strong>example:</strong>
      * <p>b-n8tpg24c6i0v****</p>
@@ -26,7 +26,7 @@ public class ImportUserBackupFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the user backup is imported. The value <strong>true</strong> is returned if the import is successful. Otherwise, an error message is returned.</p>
+     * <p>Indicates whether the user backup is imported. If the import is successful, <strong>true</strong> is returned. Otherwise, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

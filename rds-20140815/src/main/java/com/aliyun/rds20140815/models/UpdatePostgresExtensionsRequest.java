@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePostgresExtensionsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate requests. You can generate the value of this parameter on the client side. The value must be unique across different requests and can contain a maximum of 64 ASCII characters. The value cannot contain non-ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -14,7 +14,7 @@ public class UpdatePostgresExtensionsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdatePostgresExtensionsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database name of the instance. You can call DescribeDatabases to query the database name.</p>
+     * <p>The name of the database in the instance. You can call the DescribeDatabases operation to query the name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpdatePostgresExtensionsRequest extends TeaModel {
     public String DBNames;
 
     /**
-     * <p>The extension name. Separate multiple extensions with commas (,).</p>
+     * <p>The names of the plug-ins. Separate multiple plug-in names with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,7 @@ public class UpdatePostgresExtensionsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableClassesResponseBody extends TeaModel {
     /**
-     * <p>The available instance types for the instance.</p>
+     * <p>The list of available instance specifications.</p>
      */
     @NameInMap("DBInstanceClasses")
     public java.util.List<DescribeAvailableClassesResponseBodyDBInstanceClasses> DBInstanceClasses;
@@ -42,7 +42,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
 
     public static class DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange extends TeaModel {
         /**
-         * <p>The maximum storage capacity. Unit: GB.</p>
+         * <p>The maximum storage space. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -51,7 +51,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         public Integer maxValue;
 
         /**
-         * <p>The minimum storage capacity. Unit: GB.</p>
+         * <p>The minimum storage space. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -60,7 +60,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         public Integer minValue;
 
         /**
-         * <p>The minimum granularity for storage capacity adjustment. The value is fixed at 5 GB increments.</p>
+         * <p>The minimum step size for adjusting the storage space. The storage space increases in fixed increments of 5 GB.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -101,7 +101,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
 
     public static class DescribeAvailableClassesResponseBodyDBInstanceClasses extends TeaModel {
         /**
-         * <p>The instance type.</p>
+         * <p>The instance specification.</p>
          * 
          * <strong>example:</strong>
          * <p>rds.mysql.c1.large</p>
@@ -110,7 +110,7 @@ public class DescribeAvailableClassesResponseBody extends TeaModel {
         public String DBInstanceClass;
 
         /**
-         * <p>The instance storage capacity range.</p>
+         * <p>The instance storage range.</p>
          */
         @NameInMap("DBInstanceStorageRange")
         public DescribeAvailableClassesResponseBodyDBInstanceClassesDBInstanceStorageRange DBInstanceStorageRange;

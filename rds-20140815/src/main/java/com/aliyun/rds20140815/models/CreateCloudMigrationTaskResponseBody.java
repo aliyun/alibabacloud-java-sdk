@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudMigrationTaskResponseBody extends TeaModel {
     /**
-     * <p>The name of the target instance.</p>
+     * <p>The name of the destination instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-bp102g323jd4****</p>

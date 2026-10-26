@@ -18,7 +18,7 @@ public class AuthorizeBackupEncryptionResponseBody extends TeaModel {
     public Integer authorizationState;
 
     /**
-     * <p>The error message returned by the operation.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>create backup encrypt service linked role error.</p>
@@ -36,7 +36,7 @@ public class AuthorizeBackupEncryptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The Alibaba Resource Name (ARN) of the service-linked role associated with backup encryption.</p>
+     * <p>The ARN of the service-linked role for backup encryption.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::113991************:role/AliyunServiceRoleForRdsBackupEncryption</p>

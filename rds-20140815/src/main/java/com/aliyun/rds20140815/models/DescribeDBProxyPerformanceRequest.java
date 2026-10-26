@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBProxyPerformanceRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>A reserved parameter. You do not need to configure this parameter.</p>
+     * <p>A reserved parameter. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>normal</p>
@@ -37,7 +37,7 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public String DBProxyInstanceType;
 
     /**
-     * <p>The aggregation dimension. Valid values. The service and server values cannot be specified at the same time.</p>
+     * <p>The aggregation dimension. You cannot specify both service and server at the same time. Valid values:</p>
      * <ul>
      * <li><p>service: aggregates monitoring metrics by proxy endpoint.</p>
      * </li>
@@ -56,7 +56,7 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public String dimension;
 
     /**
-     * <p>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,19 +66,19 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The performance metrics.</p>
-     * <p>RDS MySQL supports only <strong>Maxscale_CpuUsage</strong>: CPU utilization.</p>
-     * <p>RDS PostgreSQL supports the following performance metrics:</p>
+     * <p>The performance metric.</p>
+     * <p>ApsaraDB RDS for MySQL supports only <strong>Maxscale_CpuUsage</strong>: CPU utilization.</p>
+     * <p>ApsaraDB RDS for PostgreSQL supports the following performance metrics:</p>
      * <ul>
      * <li><strong>Maxscale_TotalConns</strong>: connection rate</li>
-     * <li><strong>Maxscale_CurrentConns</strong>: current connections</li>
+     * <li><strong>Maxscale_CurrentConns</strong>: current number of connections</li>
      * <li><strong>Maxscale_DownFlows</strong>: outbound traffic</li>
      * <li><strong>Maxscale_UpFlows</strong>: inbound traffic</li>
      * <li><strong>Maxscale_QPS</strong>: request rate (QPS)</li>
      * <li><strong>Maxscale_MemUsage</strong>: memory utilization</li>
      * <li><strong>Maxscale_CpuUsage</strong>: CPU utilization</li>
      * </ul>
-     * <p>To query multiple performance metrics, separate them with commas (,). You can query up to six performance metrics at a time.</p>
+     * <p>To query multiple performance metrics, separate the metrics with commas (,). You can query up to six performance metrics at a time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -91,7 +91,7 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to obtain the region ID.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class DescribeDBProxyPerformanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time of the query. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * <p>The start time of the query. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

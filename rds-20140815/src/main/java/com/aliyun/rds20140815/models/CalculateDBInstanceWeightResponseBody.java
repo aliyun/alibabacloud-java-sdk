@@ -8,7 +8,7 @@ public class CalculateDBInstanceWeightResponseBody extends TeaModel {
     public CalculateDBInstanceWeightResponseBodyItems items;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C816A4BF-A6EC-4722-95F9-2055859CCFD2</p>

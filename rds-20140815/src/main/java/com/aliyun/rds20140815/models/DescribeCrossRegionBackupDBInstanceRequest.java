@@ -17,7 +17,7 @@ public class DescribeCrossRegionBackupDBInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: any integer greater than 0 that does not exceed the maximum value of the Integer data type.</p>
+     * <p>The page number. Valid values: any integer greater than 0 and less than or equal to the maximum value of the Integer type.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>

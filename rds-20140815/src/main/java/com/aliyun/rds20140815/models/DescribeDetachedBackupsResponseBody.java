@@ -26,7 +26,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
     public String pageRecordCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
@@ -35,7 +35,7 @@ public class DescribeDetachedBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

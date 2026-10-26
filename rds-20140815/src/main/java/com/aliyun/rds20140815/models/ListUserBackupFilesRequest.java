@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserBackupFilesRequest extends TeaModel {
     /**
-     * <p>The user backup ID.</p>
+     * <p>Queries target user backups by user backup ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b-kwwvr7v8t7of****</p>
@@ -14,9 +14,9 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The comment of the user backup to query.</p>
+     * <p>Queries target user backups by comment.</p>
      * <blockquote>
-     * <p>You can enter part of the comment for fuzzy matching.</p>
+     * <p>You can enter a partial comment of the target user backup for fuzzy match.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The OSS download URL of the user backup file. For information about how to obtain the OSS download URL of a user backup file, see <a href="https://help.aliyun.com/document_detail/39607.html">How do I obtain the URL of an uploaded object?</a>.</p>
+     * <p>Queries target user backups by the OSS download URL of the user backup file. For more information about how to obtain the OSS download URL of a user backup file, see <a href="https://help.aliyun.com/document_detail/39607.html">Obtain the URL of an uploaded object</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>https://<strong><strong>.oss-ap-</strong></strong>.aliyuncs.com/backup_qp.xb</p>
@@ -38,7 +38,7 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query the available regions.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. You can call DescribeDBInstanceAttribute to query the resource group ID.</p>
+     * <p>The resource group ID. You can call the DescribeDBInstanceAttribute operation to query the resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>
@@ -63,7 +63,7 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The status of the user backup file. Valid values:</p>
+     * <p>Queries target user backups by the status of the user backup file. Valid values:</p>
      * <ul>
      * <li><strong>Importing</strong>: The backup is being imported.</li>
      * <li><strong>Failed</strong>: The import failed.</li>
@@ -79,7 +79,7 @@ public class ListUserBackupFilesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The tag information used to query the user backup.</p>
+     * <p>Queries target user backups by tag.</p>
      * 
      * <strong>example:</strong>
      * <p>key1:value1</p>

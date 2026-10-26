@@ -20,7 +20,7 @@ public class DeleteMaskingRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5EEE1ED1-A459-38D2-840C-0C49********</p>

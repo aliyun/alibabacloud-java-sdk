@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAccountCheckPolicyRequest extends TeaModel {
     /**
-     * <p>The account name.</p>
+     * <p>The name of the account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,8 +17,8 @@ public class ModifyAccountCheckPolicyRequest extends TeaModel {
     /**
      * <p>Specifies whether to apply the password policy. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Applies the password policy to the account.</li>
-     * <li><strong>false</strong>: Removes the password policy from the account.</li>
+     * <li><strong>true</strong>: applies the password policy to the account.</li>
+     * <li><strong>false</strong>: cancels the password policy applied to the account.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,9 +29,9 @@ public class ModifyAccountCheckPolicyRequest extends TeaModel {
     public Boolean checkPolicy;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can only contain ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the value of RequestId as the value of ClientToken. The value of RequestId for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ModifyAccountCheckPolicyRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2628785.html">DescribeDBInstances</a> operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class ModifyAccountCheckPolicyRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>

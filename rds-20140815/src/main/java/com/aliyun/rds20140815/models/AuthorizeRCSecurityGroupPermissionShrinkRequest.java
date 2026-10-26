@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AuthorizeRCSecurityGroupPermissionShrinkRequest extends TeaModel {
     /**
-     * <p>The direction of the rule. Valid values:</p>
+     * <p>The rule direction. Valid values:</p>
      * <ul>
-     * <li><strong>ingress</strong>: inbound.</li>
-     * <li><strong>egress</strong>: outbound.</li>
+     * <li><strong>ingress</strong>: inbound traffic to the security group.</li>
+     * <li><strong>egress</strong>: outbound traffic from the security group.</li>
      * </ul>
      * 
      * <strong>example:</strong>

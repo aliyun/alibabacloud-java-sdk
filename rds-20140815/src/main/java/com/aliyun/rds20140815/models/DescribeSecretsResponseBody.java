@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecretsResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the query result.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -85,7 +85,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         public String accountId;
 
         /**
-         * <p>The description of the credential.</p>
+         * <p>The description of the credential provided by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -103,7 +103,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The user credential of the Data API account.</p>
+         * <p>The user credential of the created Data API account.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:rds:cn-hangzhou:1335786****:dbInstance/rm-bp1m7l3j63****</p>
@@ -112,7 +112,7 @@ public class DescribeSecretsResponseBody extends TeaModel {
         public String secretArn;
 
         /**
-         * <p>The credential name.</p>
+         * <p>The name of the user credential.</p>
          * 
          * <strong>example:</strong>
          * <p>Foo</p>

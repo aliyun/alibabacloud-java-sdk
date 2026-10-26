@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddRCInstancesToDeploymentSetRequest extends TeaModel {
     /**
-     * <p>The group number of the ECS instance in the deployment set when the deployment set policy is high availability group (AvailabilityGroup). You can use this parameter to specify the group number. Valid values: 1 to 7. If no value is specified, the system automatically assigns an active group.</p>
+     * <p>The group number of the instance in the deployment set. This parameter is valid only when the deployment set strategy of the ECS instance to be added or adjusted is AvailabilityGroup. Valid values: 1 to 7.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class AddRCInstancesToDeploymentSetRequest extends TeaModel {
     public String deploymentSetGroupNo;
 
     /**
-     * <p>The deployment set ID.</p>
+     * <p>The ID of the deployment set.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,10 @@ public class AddRCInstancesToDeploymentSetRequest extends TeaModel {
     public String deploymentSetId;
 
     /**
-     * <p>Specifies whether to forcibly release running instances. Valid values:</p>
+     * <p>Specifies whether to forcibly release the running instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Forcibly release.</li>
-     * <li><strong>false</strong> (default): Do not forcibly release.</li>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong> (default): no.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class AddRCInstancesToDeploymentSetRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class AddRCInstancesToDeploymentSetRequest extends TeaModel {
     public String RCInstanceIds;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query available regions.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

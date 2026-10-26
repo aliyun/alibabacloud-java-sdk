@@ -8,8 +8,8 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
      * <p>The event status. Valid values:</p>
      * <ul>
      * <li><strong>Archived</strong>: archived.</li>
-     * <li><strong>UnArchived</strong>: not archived.</li>
-     * <li><strong>All</strong>: all events.</li>
+     * <li><strong>UnArchived</strong>: unarchived.</li>
+     * <li><strong>All</strong>: all.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public String archiveStatus;
 
     /**
-     * <p>The beginning of the time range for the task start time. Only tasks whose start time is later than this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days before the current time. If the specified time is more than 30 days before the current time, it is automatically converted to 30 days before the current time.</p>
+     * <p>The start time of the time range for querying task start times. Tasks that start after this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. The earliest supported time is 30 days before the current time. If you specify a time more than 30 days before the current time, the system automatically changes it to 30 days before the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-01-02T11:31:03Z</p>
@@ -28,7 +28,7 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public String fromStartTime;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query the most recent region list.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeHistoryEventsStatRequest extends TeaModel {
     public String securityToken;
 
     /**
-     * <p>The end of the time range for the task start time. Only tasks whose start time is earlier than this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time of the time range for querying task start times. Tasks that start before this time are queried. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-03-02T11:31:03Z</p>

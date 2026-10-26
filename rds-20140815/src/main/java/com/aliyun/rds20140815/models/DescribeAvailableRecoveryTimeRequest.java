@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableRecoveryTimeRequest extends TeaModel {
     /**
-     * <p>The ID of the cross-region backup file. You can call the DescribeCrossRegionBackups operation to query the backup set ID.</p>
+     * <p>The ID of the cross-region backup file. You can call the DescribeCrossRegionBackups operation to query the ID of the backup set.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

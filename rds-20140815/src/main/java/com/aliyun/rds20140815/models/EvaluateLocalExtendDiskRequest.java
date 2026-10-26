@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EvaluateLocalExtendDiskRequest extends TeaModel {
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class EvaluateLocalExtendDiskRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> to query available regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/26243.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class EvaluateLocalExtendDiskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ac****</p>
@@ -43,7 +43,7 @@ public class EvaluateLocalExtendDiskRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The storage capacity after the expansion. Unit: GB.</p>
+     * <p>The storage capacity after scaling. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

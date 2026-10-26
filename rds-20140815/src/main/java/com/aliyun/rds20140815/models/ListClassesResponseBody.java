@@ -86,7 +86,7 @@ public class ListClassesResponseBody extends TeaModel {
         public String cpu;
 
         /**
-         * <p>The encrypted memory size for the security-enhanced instance family. Unit: GB.</p>
+         * <p>The encrypted memory size of the security-enhanced instance family. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -97,7 +97,7 @@ public class ListClassesResponseBody extends TeaModel {
         /**
          * <p>The architecture type of the instance type. Valid values:</p>
          * <ul>
-         * <li>If the instance uses the <strong>x86</strong> architecture, this parameter is empty by default.</li>
+         * <li>If the instance uses the <strong>x86</strong> architecture, this parameter is left empty by default.</li>
          * <li>If the instance uses the <strong>arm</strong> architecture, <strong>arm</strong> is returned.</li>
          * </ul>
          * 
@@ -117,7 +117,7 @@ public class ListClassesResponseBody extends TeaModel {
         public String maxConnections;
 
         /**
-         * <p>The maximum I/O bandwidth for the instance type. Unit: Mbit/s.</p>
+         * <p>The maximum I/O bandwidth for the instance type. Unit: Mbps.</p>
          * 
          * <strong>example:</strong>
          * <p>1024Mbps</p>
@@ -126,7 +126,7 @@ public class ListClassesResponseBody extends TeaModel {
         public String maxIOMBPS;
 
         /**
-         * <p>The maximum IOPS for the instance type.</p>
+         * <p>The maximum IOPS for the instance type. Unit: operations per second.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -135,7 +135,7 @@ public class ListClassesResponseBody extends TeaModel {
         public String maxIOPS;
 
         /**
-         * <p>The memory size for the instance type. Unit: GB.</p>
+         * <p>The memory capacity for the instance type. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1GB</p>
@@ -144,7 +144,7 @@ public class ListClassesResponseBody extends TeaModel {
         public String memoryClass;
 
         /**
-         * <p>The price for the instance type.</p>
+         * <p>The price of the instance type.</p>
          * <p>&lt;props=&quot;china&quot;&gt;</p>
          * <ul>
          * <li>Unit: cents (CNY).</li>
@@ -155,8 +155,8 @@ public class ListClassesResponseBody extends TeaModel {
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>If you set the <strong>CommodityCode</strong> parameter to a pay-as-you-go commodity code, this parameter indicates the hourly price.</li>
-         * <li>If you set the <strong>CommodityCode</strong> parameter to a subscription commodity code, this parameter indicates the monthly price.</li>
+         * <li>If you specify a pay-as-you-go commodity code for the <strong>CommodityCode</strong> parameter, this parameter displays the hourly price.</li>
+         * <li>If you specify a subscription commodity code for the <strong>CommodityCode</strong> parameter, this parameter displays the monthly price.</li>
          * </ul>
          * </blockquote>
          * 
@@ -171,16 +171,16 @@ public class ListClassesResponseBody extends TeaModel {
          * <ul>
          * <li>Regular instances<ul>
          * <li><strong>Basic</strong>: Basic Edition.</li>
-         * <li><strong>HighAvailability</strong>: High availability series.</li>
-         * <li><strong>cluster</strong>: MySQL or PostgreSQL Cluster Edition.</li>
-         * <li><strong>AlwaysOn</strong>: SQL Server Cluster Edition.</li>
+         * <li><strong>HighAvailability</strong>: High-availability Edition.</li>
+         * <li><strong>cluster</strong>: Cluster Edition for MySQL or PostgreSQL.</li>
+         * <li><strong>AlwaysOn</strong>: Cluster Edition for SQL Server.</li>
          * <li><strong>Finance</strong>: RDS Enterprise Edition.</li>
          * </ul>
          * </li>
          * <li>Serverless instances<ul>
          * <li><strong>serverless_basic</strong>: Serverless Basic Edition. (Applicable only to MySQL and PostgreSQL)</li>
-         * <li><strong>serverless_standard</strong>: Serverless high availability series. (Applicable only to MySQL and PostgreSQL)</li>
-         * <li><strong>serverless_ha</strong>: SQL Server Serverless high availability series.</li>
+         * <li><strong>serverless_standard</strong>: Serverless High-availability Edition. (Applicable only to MySQL and PostgreSQL)</li>
+         * <li><strong>serverless_ha</strong>: Serverless High-availability Edition for SQL Server.</li>
          * </ul>
          * </li>
          * </ul>

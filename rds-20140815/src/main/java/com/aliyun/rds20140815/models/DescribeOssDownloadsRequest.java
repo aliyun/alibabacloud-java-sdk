@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOssDownloadsRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeOssDownloadsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The ID of the migration task. You can call the DescribeMigrateTasks operation to query the migration task ID.</p>
+     * <p>The ID of the migration task. You can call the DescribeMigrateTasks operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeOssDownloadsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>

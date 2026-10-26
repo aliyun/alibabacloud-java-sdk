@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can invoke DescribeDBInstances to query the instance ID.</p>
+     * <p>The ID of the instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <blockquote>
      * <ul>
-     * <li>The storage type of the ApsaraDB RDS for PostgreSQL instance must be <strong>cloud disks</strong>. For an instance with Premium Local SSDs, you can invoke the <a href="https://help.aliyun.com/document_detail/26230.html">RestartDBInstance</a> operation to restart the instance, which automatically upgrades the instance to the latest minor engine version.</li>
-     * <li>Only the 2019 version of ApsaraDB RDS for SQL Server supports minor engine version upgrades.</li>
+     * <li>The storage type of the ApsaraDB RDS for PostgreSQL instance must be <strong>cloud disk</strong>. You can call the <a href="https://help.aliyun.com/document_detail/26230.html">restart the instance</a> operation to restart an instance with Premium Local SSDs to automatically upgrade the instance to the latest minor engine version.</li>
+     * <li>Only ApsaraDB RDS for SQL Server 2019 instances support minor engine version upgrades.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -30,7 +30,7 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The specified time. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * <p>The specified time when the upgrade is performed. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <blockquote>
      * <p>This parameter takes effect only when <strong>UpgradeTime</strong> is set to <strong>SpecifyTime</strong>.</p>
      * </blockquote>
@@ -42,20 +42,20 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The minor database engine version to which you want to upgrade. Format:</p>
+     * <p>The target minor database version. Format:</p>
      * <ul>
-     * <li><strong>PostgreSQL</strong>: <code>rds_postgres_&lt;Major version number&gt;00_&lt;Minor version number&gt;</code>. Example for version 12 with minor version 20200830: <code>rds_postgres_1200_20200830</code>.</li>
-     * <li><strong>MySQL</strong>: <code>&lt;Instance version&gt;_&lt;Minor version number&gt;</code>. Examples: <code>rds_20200229</code>, <code>xcluster_20200229</code>, or <code>xcluster80_20200229</code>. The instance version can be one of the following:<ul>
-     * <li><strong>rds</strong>: high-availability series or Basic Edition.</li>
+     * <li><strong>PostgreSQL</strong>: <code>rds_postgres_&lt;Major version number&gt;00_&lt;Minor version number&gt;</code>. Example: <code>rds_postgres_1200_20200830</code> for PostgreSQL 12 version 20200830.</li>
+     * <li><strong>MySQL</strong>: <code>&lt;Instance edition&gt;_&lt;Minor version number&gt;</code>. Examples: <code>rds_20200229</code>, <code>xcluster_20200229</code>, and <code>xcluster80_20200229</code>. The instance editions are as follows:<ul>
+     * <li><strong>rds</strong>: high availability series or Basic Edition.</li>
      * <li><strong>xcluster</strong>: MySQL 5.7 RDS Enterprise Edition.</li>
      * <li><strong>xcluster80</strong>: MySQL 8.0 RDS Enterprise Edition.</li>
      * </ul>
      * </li>
-     * <li><strong>SQLServer</strong>: <code>&lt;Minor version number&gt;</code>. Example: <code>15.0.4073.23</code>.</li>
+     * <li><strong>SQL Server</strong>: <code>&lt;Minor version number&gt;</code>. Example: <code>15.0.4073.23</code>.</li>
      * </ul>
-     * <p>If you do not specify this parameter, the instance is upgraded to the latest minor engine version by default.</p>
+     * <p>If you do not specify this parameter, the instance is upgraded to the latest minor database version by default.</p>
      * <blockquote>
-     * <p>For minor engine version numbers, see <a href="https://help.aliyun.com/document_detail/126002.html">Release notes of ApsaraDB RDS for PostgreSQL minor engine versions</a>, <a href="https://help.aliyun.com/document_detail/96060.html">Release notes of ApsaraDB RDS for MySQL minor engine versions</a>, and <a href="https://help.aliyun.com/document_detail/213577.html">Release notes of ApsaraDB RDS for SQL Server minor engine versions</a>.</p>
+     * <p>For more information about minor database versions, see <a href="https://help.aliyun.com/document_detail/126002.html">Release notes for minor engine versions of ApsaraDB RDS for PostgreSQL</a>, <a href="https://help.aliyun.com/document_detail/96060.html">Release notes for minor engine versions of ApsaraDB RDS for MySQL</a>, and <a href="https://help.aliyun.com/document_detail/213577.html">Release notes for minor engine versions of ApsaraDB RDS for SQL Server</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,11 +65,11 @@ public class UpgradeDBInstanceKernelVersionRequest extends TeaModel {
     public String targetMinorVersion;
 
     /**
-     * <p>The upgrade time. Valid values:</p>
+     * <p>The time when the upgrade is performed. Valid values:</p>
      * <ul>
-     * <li><strong>Immediate</strong> (default): The upgrade takes effect immediately.</li>
-     * <li><strong>MaintainTime</strong>: The upgrade takes effect during the maintenance window. To modify the maintenance window, call ModifyDBInstanceMaintainTime.</li>
-     * <li><strong>SpecifyTime</strong>: The upgrade takes effect at a specified time.</li>
+     * <li><strong>Immediate</strong>: The upgrade is immediately performed. This is the default value.</li>
+     * <li><strong>MaintainTime</strong>: The upgrade is performed within the specified maintenance window. For more information about how to modify the maintenance window, see ModifyDBInstanceMaintainTime.</li>
+     * <li><strong>SpecifyTime</strong>: The upgrade is performed at the specified time.</li>
      * </ul>
      * 
      * <strong>example:</strong>

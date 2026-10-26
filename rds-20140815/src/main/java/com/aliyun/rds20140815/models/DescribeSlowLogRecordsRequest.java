@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogRecordsRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String DBName;
 
     /**
-     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
+     * <p>The end time of the query. The end time must be later than the start time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Valid values: any integer greater than 0 that does not exceed the maximum value of Integer.</p>
+     * <p>The page number. Valid values: any positive integer up to the maximum value of the Integer data type.</p>
      * <blockquote>
      * <p>Default value: <strong>1</strong>.</p>
      * </blockquote>
@@ -82,7 +82,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The unique identifier of the SQL statement in the slow query log statistics. You can use this parameter to obtain the slow query log details of the SQL statement.</p>
+     * <p>The unique identifier of the SQL statement in the slow query log statistics. You can use this identifier to query the slow query log details of the SQL statement.</p>
      * 
      * <strong>example:</strong>
      * <p>U2FsdGVk****</p>
@@ -91,7 +91,7 @@ public class DescribeSlowLogRecordsRequest extends TeaModel {
     public String SQLHASH;
 
     /**
-     * <p>The start time of the query. The start time must be within the last 30 days. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format (UTC).</p>
+     * <p>The start time of the query. The start time cannot be more than 30 days earlier than the current time. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm</i>Z format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

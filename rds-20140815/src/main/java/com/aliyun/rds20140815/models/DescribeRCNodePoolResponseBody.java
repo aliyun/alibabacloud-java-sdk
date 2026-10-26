@@ -42,7 +42,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
 
     public static class DescribeRCNodePoolResponseBodyNodePoolListDataDisk extends TeaModel {
         /**
-         * <p>The type of the data cloud disk. Only <strong>cloud_essd</strong> (ESSD cloud disk) is supported.</p>
+         * <p>The category of the data cloud disk. Only <strong>cloud_essd</strong> (ESSD cloud disk) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -62,8 +62,8 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the cloud disk is encrypted. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Encrypted.</li>
-         * <li><strong>false</strong> (default): Not encrypted.</li>
+         * <li><strong>true</strong>: The cloud disk is encrypted.</li>
+         * <li><strong>false</strong> (default): The cloud disk is not encrypted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,12 +73,12 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public String encrypted;
 
         /**
-         * <p>The performance level (PL) of the standard SSD. Valid values:</p>
+         * <p>The performance level of the ESSD cloud disk. Valid values:</p>
          * <ul>
-         * <li><strong>PL0</strong>: A maximum of 10,000 random read/write IOPS per cloud disk.</li>
-         * <li><strong>PL1</strong>: A maximum of 50,000 random read/write IOPS per cloud disk.</li>
-         * <li><strong>PL2</strong>: A maximum of 100,000 random read/write IOPS per cloud disk.</li>
-         * <li><strong>PL3</strong>: A maximum of 1,000,000 random read/write IOPS per cloud disk.</li>
+         * <li><strong>PL0</strong>: A single cloud disk delivers up to 10,000 random read/write IOPS.</li>
+         * <li><strong>PL1</strong>: A single cloud disk delivers up to 50,000 random read/write IOPS.</li>
+         * <li><strong>PL2</strong>: A single cloud disk delivers up to 100,000 random read/write IOPS.</li>
+         * <li><strong>PL3</strong>: A single cloud disk delivers up to 1,000,000 random read/write IOPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
 
     public static class DescribeRCNodePoolResponseBodyNodePoolListSystemDisk extends TeaModel {
         /**
-         * <p>The type of the system cloud disk. Only <strong>cloud_essd</strong> (Enterprise SSD (ESSD)) is supported.</p>
+         * <p>The category of the system cloud disk. Only <strong>cloud_essd</strong> (ESSD) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud_essd</p>
@@ -154,12 +154,12 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The performance level (PL) of the standard SSD. Valid values:</p>
+         * <p>The performance level of the ESSD cloud disk. Valid values:</p>
          * <ul>
-         * <li><strong>PL0</strong>: A maximum of 10,000 random read/write IOPS per cloud disk.</li>
-         * <li><strong>PL1</strong>: A maximum of 50,000 random read/write IOPS per cloud disk.</li>
-         * <li><strong>PL2</strong>: A maximum of 100,000 random read/write IOPS per cloud disk.</li>
-         * <li><strong>PL3</strong>: A maximum of 1,000,000 random read/write IOPS per cloud disk.</li>
+         * <li><strong>PL0</strong>: A single cloud disk delivers up to 10,000 random read/write IOPS.</li>
+         * <li><strong>PL1</strong>: A single cloud disk delivers up to 50,000 random read/write IOPS.</li>
+         * <li><strong>PL2</strong>: A single cloud disk delivers up to 100,000 random read/write IOPS.</li>
+         * <li><strong>PL3</strong>: A single cloud disk delivers up to 1,000,000 random read/write IOPS.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -255,7 +255,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
          * <p>Indicates whether automatic payment is enabled. Valid values:</p>
          * <ul>
          * <li><strong>true</strong> (default): Automatic payment is enabled. Make sure that your account balance is sufficient.</li>
-         * <li><strong>false</strong>: Only an order is generated. No payment is made.</li>
+         * <li><strong>false</strong>: Only an order is generated and no payment is made.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -267,8 +267,8 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         /**
          * <p>Indicates whether auto-renewal is enabled for the instance. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong> (default): Enabled.</li>
-         * <li><strong>false</strong>: Disabled.</li>
+         * <li><strong>true</strong> (default): Auto-renewal is enabled.</li>
+         * <li><strong>false</strong>: Auto-renewal is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +287,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>Indicates whether the node is allowed to join an ACK cluster.</p>
+         * <p>Indicates whether joining an ACK cluster is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -302,7 +302,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public java.util.List<DescribeRCNodePoolResponseBodyNodePoolListDataDisk> dataDisk;
 
         /**
-         * <p>The deployment set ID.</p>
+         * <p>The ID of the deployment set.</p>
          * 
          * <strong>example:</strong>
          * <p>ds-bp18ukv66rlyuffv****</p>
@@ -311,7 +311,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public String deploymentSetId;
 
         /**
-         * <p>The instance description.</p>
+         * <p>The description of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -340,8 +340,8 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>Prepaid</strong>: subscription.</li>
-         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
+         * <li><strong>Prepaid</strong>: Subscription.</li>
+         * <li><strong>Postpaid</strong>: Pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -351,7 +351,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public String instanceChargeType;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -405,7 +405,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public String keyPairName;
 
         /**
-         * <p>The node pool ID.</p>
+         * <p>The ID of the node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>np31da1b38983f4511b490fc62108a****</p>
@@ -423,7 +423,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public String nodePoolName;
 
         /**
-         * <p>The password of the root account of the instance.</p>
+         * <p>The password of the root account for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>testPassword</p>
@@ -432,7 +432,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>The subscription duration of the resource.</p>
+         * <p>The subscription duration.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -441,10 +441,10 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public Integer period;
 
         /**
-         * <p>The unit of the subscription billable methods duration. Valid values:</p>
+         * <p>The unit of the subscription duration for the subscription Billable methods. Valid values:</p>
          * <ul>
-         * <li><strong>Year</strong>: year.</li>
-         * <li><strong>Month</strong> (default): month.</li>
+         * <li><strong>Year</strong>: Year.</li>
+         * <li><strong>Month</strong> (default): Month.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -463,7 +463,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmy****</p>
@@ -481,7 +481,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public String securityEnhancementStrategy;
 
         /**
-         * <p>The security group ID.</p>
+         * <p>The ID of the security group.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-uf6av412xaxixuez****</p>
@@ -499,7 +499,7 @@ public class DescribeRCNodePoolResponseBody extends TeaModel {
         public String spotStrategy;
 
         /**
-         * <p>The system cloud disk specifications.</p>
+         * <p>The specifications of the system cloud disk.</p>
          */
         @NameInMap("SystemDisk")
         public DescribeRCNodePoolResponseBodyNodePoolListSystemDisk systemDisk;

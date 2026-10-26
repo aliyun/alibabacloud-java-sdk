@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
     public String insName;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to obtain the region ID.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -24,7 +24,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. For more information about resource groups, see What is a resource group.</p>
+     * <p>The ID of the resource group. For more information about resource groups, see What is a resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmz3kjr******</p>
@@ -39,7 +39,7 @@ public class DetachWhitelistTemplateToInstanceRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The whitelist template ID. You can call DescribeAllWhitelistTemplate to obtain the ID.</p>
+     * <p>The ID of the whitelist template. You can call the DescribeAllWhitelistTemplate operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

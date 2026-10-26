@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CalculateDBInstanceWeightRequest extends TeaModel {
     /**
-     * <p>The ID of the primary instance. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>Instance ID of the primary instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     /**
-     * <p>The backup set ID of the source instance. To copy a database from a backup set, call DescribeBackups to query the backup set ID.</p>
+     * <p>The ID of the backup set of the source instance. When you copy a database based on a backup set, you can call the DescribeBackups operation to query the backup set ID.</p>
      * <blockquote>
-     * <p>You must specify either <strong>BackupId</strong> or <strong>RestoreTime</strong>.</p>
+     * <p>When you call this operation, you must specify either <strong>BackupId</strong> or <strong>RestoreTime</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     public String backupId;
 
     /**
-     * <p>The source instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>The ID of the source instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,13 +27,13 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The list of database names to be copied. Format: <code>{&quot;Source database name&quot;:&quot;Destination database name&quot;}</code>. Separate multiple databases with commas (,). Examples:</p>
+     * <p>The names of the databases to be copied. Specify the names in the following format: <code>{&quot;Source database name&quot;:&quot;Target database name&quot;}</code>. Separate multiple databases with commas (,). Examples:</p>
      * <ul>
      * <li>Copy a single database: <code>{&quot;zhttest&quot;:&quot;zhttest&quot;}</code></li>
      * <li>Copy multiple databases: <code>{&quot;zhttest01&quot;:&quot;zhttest01&quot;,&quot;zhttest02&quot;:&quot;zhttest02&quot;}</code></li>
      * </ul>
      * <blockquote>
-     * <p>The database name on the target instance can be different from that on the source instance. However, make sure that the target instance does not contain a database with the same name before copying.</p>
+     * <p>The name of the database in the target instance can be different from that in the source instance. However, before copying, make sure that the target instance does not contain a database with the same name.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -47,9 +47,9 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The point in time to which you want to copy the database. You can specify any point in time within the backup retention period. Format: <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * <p>The point in time to which you want to restore the database. You can select any point in time within the backup retention period. Specify the time in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time must be in UTC.</p>
      * <blockquote>
-     * <p>You must specify either <strong>BackupId</strong> or <strong>RestoreTime</strong>.</p>
+     * <p>When you call this operation, you must specify either <strong>BackupId</strong> or <strong>RestoreTime</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,10 +59,10 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     public String restoreTime;
 
     /**
-     * <p>Specifies whether to copy users and permissions. Valid values:</p>
+     * <p>Specifies whether to enable the replication of users and permissions. Valid values:</p>
      * <ul>
-     * <li><strong>YES</strong>: Users and permissions are copied. If the target instance contains a user with the same name, the permissions of the user on the source instance are merged with those of the user on the target instance.</li>
-     * <li><strong>NO</strong> (default): Users and permissions are not copied.</li>
+     * <li><strong>YES</strong>: Enables the replication of users and permissions. If the target instance contains a user with the same name as a user in the source instance, the permissions of the source user are added to the target user.</li>
+     * <li><strong>NO</strong>: Disables the replication of users and permissions. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class CopyDatabaseBetweenInstancesRequest extends TeaModel {
     public String syncUserPrivilege;
 
     /**
-     * <p>The target instance ID. You can invoke DescribeDBInstances to query the instance ID.</p>
+     * <p>The ID of the target instance. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

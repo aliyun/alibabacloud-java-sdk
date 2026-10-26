@@ -14,7 +14,7 @@ public class MigrateToOtherZoneResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The order ID. This parameter is applicable only to ApsaraDB RDS for MySQL instances.</p>
+     * <p>The order ID. This parameter is only applicable to ApsaraDB RDS for MySQL instances.</p>
      * 
      * <strong>example:</strong>
      * <p>21334157599****</p>

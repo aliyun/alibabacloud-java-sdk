@@ -123,18 +123,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the documentation to fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to ensure that you fully understand the prerequisites and the impacts of the operation.</notice>
      * <a href="https://help.aliyun.com/document_detail/365562.html">One-click cloud migration</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Performs a cloud migration switchover for an ApsaraDB RDS for PostgreSQL instance to promote it to the primary instance and start providing services.</p>
+     * <p>Performs a cloud migration switchover for an ApsaraDB RDS for PostgreSQL instance and promotes it to the primary database to provide services.</p>
      * 
      * @param request ActivateMigrationTargetInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -182,18 +182,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the documentation to fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to ensure that you fully understand the prerequisites and the impacts of the operation.</notice>
      * <a href="https://help.aliyun.com/document_detail/365562.html">One-click cloud migration</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Performs a cloud migration switchover for an ApsaraDB RDS for PostgreSQL instance to promote it to the primary instance and start providing services.</p>
+     * <p>Performs a cloud migration switchover for an ApsaraDB RDS for PostgreSQL instance and promotes it to the primary database to provide services.</p>
      * 
      * @param request ActivateMigrationTargetInstanceRequest
      * @return ActivateMigrationTargetInstanceResponse
@@ -205,8 +205,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Instances with local disks are not allowed to join a deployment set by default, and the error UNSUPPORTED_DBINSTANCE_OPERATEION is returned. To add such instances, contact technical support. Ask the administrator to add the UID to the whitelist. Cloud disk instances do not have this restriction.
-     * Forcibly adding instances to a deployment set may cause instance restarts. Use this feature with caution.</p>
+     * <p>By default, instances with local disks are not allowed to be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the administrator to add your UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds instances to a deployment set.</p>
@@ -257,8 +256,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Instances with local disks are not allowed to join a deployment set by default, and the error UNSUPPORTED_DBINSTANCE_OPERATEION is returned. To add such instances, contact technical support. Ask the administrator to add the UID to the whitelist. Cloud disk instances do not have this restriction.
-     * Forcibly adding instances to a deployment set may cause instance restarts. Use this feature with caution.</p>
+     * <p>By default, instances with local disks are not allowed to be added to a deployment set, and the UNSUPPORTED_DBINSTANCE_OPERATEION error is returned. To add such an instance, contact the administrator to add your UID to the whitelist. This restriction does not apply to cloud disk instances. Forcibly adding an instance to a deployment set may cause the instance to restart. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds instances to a deployment set.</p>
@@ -273,24 +271,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Precautions</h3>
+     * <h3>Usage notes</h3>
      * <ul>
      * <li>Each tag consists of a tag key (TagKey) and a tag value (TagValue). TagKey cannot be empty, but TagValue can be empty.</li>
      * <li>The values of TagKey and TagValue cannot start with aliyun.</li>
      * <li>TagKey and TagValue are case-insensitive.</li>
-     * <li>TagKey can be up to 64 characters in length. TagValue can be up to 128 characters in length.</li>
-     * <li>Each instance can have up to 10 tags. The TagKey of each tag bound to an instance must be unique. If you bind a tag that has the same TagKey as an existing tag, the new tag overwrites the existing tag.</li>
+     * <li>TagKey can be up to 64 characters in length, and TagValue can be up to 128 characters in length.</li>
+     * <li>You can bind up to 10 tags to each instance, and the TagKeys bound to an instance must be unique. If you bind a tag with a duplicate TagKey, the newly bound tag overwrites the previously bound tag.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Binds tags to an instance.</p>
+     * <p>Binds tags to one or more instances.</p>
      * 
      * @param request AddTagsToResourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -362,24 +360,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Precautions</h3>
+     * <h3>Usage notes</h3>
      * <ul>
      * <li>Each tag consists of a tag key (TagKey) and a tag value (TagValue). TagKey cannot be empty, but TagValue can be empty.</li>
      * <li>The values of TagKey and TagValue cannot start with aliyun.</li>
      * <li>TagKey and TagValue are case-insensitive.</li>
-     * <li>TagKey can be up to 64 characters in length. TagValue can be up to 128 characters in length.</li>
-     * <li>Each instance can have up to 10 tags. The TagKey of each tag bound to an instance must be unique. If you bind a tag that has the same TagKey as an existing tag, the new tag overwrites the existing tag.</li>
+     * <li>TagKey can be up to 64 characters in length, and TagValue can be up to 128 characters in length.</li>
+     * <li>You can bind up to 10 tags to each instance, and the TagKeys bound to an instance must be unique. If you bind a tag with a duplicate TagKey, the newly bound tag overwrites the previously bound tag.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Binds tags to an instance.</p>
+     * <p>Binds tags to one or more instances.</p>
      * 
      * @param request AddTagsToResourceRequest
      * @return AddTagsToResourceResponse
@@ -645,7 +643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
@@ -656,10 +654,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></li>
      * </ul>
      * <h3>Precautions</h3>
-     * <p>If the RDS Custom instance has a public IP address enabled, the existing public IP address undergoes automatic release after you associate an EIP with the instance.</p>
+     * <p>If an RDS Custom instance has a public IP address enabled, the public IP address is automatically released after you attach an EIP.</p>
      * 
      * <b>summary</b> : 
-     * <p>Associates an elastic IP address (EIP) with an RDS Custom instance.</p>
+     * <p>Attaches an EIP to an RDS Custom instance.</p>
      * 
      * @param request AssociateEipAddressWithRCInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -699,7 +697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
@@ -710,10 +708,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></li>
      * </ul>
      * <h3>Precautions</h3>
-     * <p>If the RDS Custom instance has a public IP address enabled, the existing public IP address undergoes automatic release after you associate an EIP with the instance.</p>
+     * <p>If an RDS Custom instance has a public IP address enabled, the public IP address is automatically released after you attach an EIP.</p>
      * 
      * <b>summary</b> : 
-     * <p>Associates an elastic IP address (EIP) with an RDS Custom instance.</p>
+     * <p>Attaches an EIP to an RDS Custom instance.</p>
      * 
      * @param request AssociateEipAddressWithRCInstanceRequest
      * @return AssociateEipAddressWithRCInstanceResponse
@@ -725,21 +723,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke this operation, take note of the following items:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <ul>
      * <li>The cloud disk must be in the Available state.</li>
-     * <li>When you mount a data cloud disk:<ul>
+     * <li>When you attach a data cloud disk:<ul>
      * <li>The destination RDS Custom instance must be in the Running or Stopped state.</li>
-     * <li>If the cloud disk is purchased separately, the billable methods must be pay-as-you-go.</li>
-     * <li>If a system cloud disk detached from an RDS Custom instance is mounted as a data cloud disk, no billing method restriction applies.</li>
-     * <li>An elastic ephemeral disk can be remounted only to its original instance after it is uninstalled.</li>
+     * <li>If the cloud disk was purchased separately, its billing method must be pay-as-you-go.</li>
+     * <li>If a system cloud disk detached from an RDS Custom instance is attached as a data cloud disk, its billing method is not limited.</li>
+     * <li>Once an elastic ephemeral disk is detached, it can only be reattached to its original instance.</li>
      * </ul>
      * </li>
-     * <li>When you mount a system cloud disk:<ul>
+     * <li>When you attach a system cloud disk:<ul>
      * <li>The destination RDS Custom instance must be the source instance from which the system cloud disk was detached.</li>
      * <li>The destination RDS Custom instance must be in the Stopped state.</li>
-     * <li>You must configure the logon credentials for the instance under Settings.</li>
-     * <li>Elastic ephemeral disks cannot be mounted as system cloud disks.</li>
+     * <li>You must configure the instance logon credentials.</li>
+     * <li>Elastic ephemeral disks cannot be attached as system cloud disks.</li>
      * </ul>
      * </li>
      * </ul>
@@ -789,21 +787,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you invoke this operation, take note of the following items:</p>
+     * <p>When you call this operation, take note of the following items:</p>
      * <ul>
      * <li>The cloud disk must be in the Available state.</li>
-     * <li>When you mount a data cloud disk:<ul>
+     * <li>When you attach a data cloud disk:<ul>
      * <li>The destination RDS Custom instance must be in the Running or Stopped state.</li>
-     * <li>If the cloud disk is purchased separately, the billable methods must be pay-as-you-go.</li>
-     * <li>If a system cloud disk detached from an RDS Custom instance is mounted as a data cloud disk, no billing method restriction applies.</li>
-     * <li>An elastic ephemeral disk can be remounted only to its original instance after it is uninstalled.</li>
+     * <li>If the cloud disk was purchased separately, its billing method must be pay-as-you-go.</li>
+     * <li>If a system cloud disk detached from an RDS Custom instance is attached as a data cloud disk, its billing method is not limited.</li>
+     * <li>Once an elastic ephemeral disk is detached, it can only be reattached to its original instance.</li>
      * </ul>
      * </li>
-     * <li>When you mount a system cloud disk:<ul>
+     * <li>When you attach a system cloud disk:<ul>
      * <li>The destination RDS Custom instance must be the source instance from which the system cloud disk was detached.</li>
      * <li>The destination RDS Custom instance must be in the Stopped state.</li>
-     * <li>You must configure the logon credentials for the instance under Settings.</li>
-     * <li>Elastic ephemeral disks cannot be mounted as system cloud disks.</li>
+     * <li>You must configure the instance logon credentials.</li>
+     * <li>Elastic ephemeral disks cannot be attached as system cloud disks.</li>
      * </ul>
      * </li>
      * </ul>
@@ -821,7 +819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds RDS Custom instances to an ACK cluster.</p>
+     * <p>Adds an RDS Custom instance to an ACK cluster.</p>
      * 
      * @param tmpReq AttachRCInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -875,7 +873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds RDS Custom instances to an ACK cluster.</p>
+     * <p>Adds an RDS Custom instance to an ACK cluster.</p>
      * 
      * @param request AttachRCInstancesRequest
      * @return AttachRCInstancesResponse
@@ -887,11 +885,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -947,11 +945,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -967,7 +965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates the service-linked role AliyunServiceRoleForRdsBackupEncryption for backup encryption.</p>
+     * <p>Creates the AliyunServiceRoleForRdsBackupEncryption service-linked role for backup encryption.</p>
      * 
      * @param request AuthorizeBackupEncryptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1003,7 +1001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates the service-linked role AliyunServiceRoleForRdsBackupEncryption for backup encryption.</p>
+     * <p>Creates the AliyunServiceRoleForRdsBackupEncryption service-linked role for backup encryption.</p>
      * 
      * @param request AuthorizeBackupEncryptionRequest
      * @return AuthorizeBackupEncryptionResponse
@@ -1077,18 +1075,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Feature description</h3>
-     * <p>When <a href="https://help.aliyun.com/document_detail/51073.html">read/write splitting</a> is enabled, this operation calculates the system-assigned weights. To query custom read weights, see <a href="https://help.aliyun.com/document_detail/610423.html">DescribeDBInstanceNetInfo</a>.</p>
-     * <h3>Before you begin</h3>
-     * <p>When you invoke this operation, the instance must meet the following conditions. Otherwise, the operation fails:</p>
+     * <h3>Description</h3>
+     * <p>When <a href="https://help.aliyun.com/document_detail/51073.html">read/write splitting</a> is enabled, this operation calculates the system-assigned weights. For custom read weights, refer to <a href="https://help.aliyun.com/document_detail/610423.html">DescribeDBInstanceNetInfo</a>.</p>
+     * <h3>Prerequisites</h3>
+     * <p>When you call this operation, the instance must meet the following requirements. Otherwise, the operation fails:</p>
      * <ul>
-     * <li>The MySQL instance uses a shared database proxy.</li>
-     * <li>The instance runs one of the following editions:<ul>
+     * <li>The MySQL instance uses the shared database proxy.</li>
+     * <li>The instance runs one of the following engine versions:<ul>
      * <li>MySQL 5.7 High-availability Edition (local SSDs)</li>
      * <li>MySQL 5.6</li>
      * <li>SQL Server Cluster Edition</li>
@@ -1097,7 +1095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the system-assigned weight values.</p>
+     * <p>Queries the system weight allocation values.</p>
      * 
      * @param request CalculateDBInstanceWeightRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1133,18 +1131,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Feature description</h3>
-     * <p>When <a href="https://help.aliyun.com/document_detail/51073.html">read/write splitting</a> is enabled, this operation calculates the system-assigned weights. To query custom read weights, see <a href="https://help.aliyun.com/document_detail/610423.html">DescribeDBInstanceNetInfo</a>.</p>
-     * <h3>Before you begin</h3>
-     * <p>When you invoke this operation, the instance must meet the following conditions. Otherwise, the operation fails:</p>
+     * <h3>Description</h3>
+     * <p>When <a href="https://help.aliyun.com/document_detail/51073.html">read/write splitting</a> is enabled, this operation calculates the system-assigned weights. For custom read weights, refer to <a href="https://help.aliyun.com/document_detail/610423.html">DescribeDBInstanceNetInfo</a>.</p>
+     * <h3>Prerequisites</h3>
+     * <p>When you call this operation, the instance must meet the following requirements. Otherwise, the operation fails:</p>
      * <ul>
-     * <li>The MySQL instance uses a shared database proxy.</li>
-     * <li>The instance runs one of the following editions:<ul>
+     * <li>The MySQL instance uses the shared database proxy.</li>
+     * <li>The instance runs one of the following engine versions:<ul>
      * <li>MySQL 5.7 High-availability Edition (local SSDs)</li>
      * <li>MySQL 5.6</li>
      * <li>SQL Server Cluster Edition</li>
@@ -1153,7 +1151,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the system-assigned weight values.</p>
+     * <p>Queries the system weight allocation values.</p>
      * 
      * @param request CalculateDBInstanceWeightRequest
      * @return CalculateDBInstanceWeightResponse
@@ -1165,7 +1163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -1174,24 +1172,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to ensure that you fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events of ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104452.html">Scheduled events of ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104451.html">Scheduled events of ApsaraDB RDS for SQL Server</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104454.html">Scheduled events of ApsaraDB RDS for MariaDB</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104452.html">Scheduled events for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104451.html">Scheduled events for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104454.html">Scheduled events for ApsaraDB RDS for MariaDB</a></li>
      * </ul>
      * <h3>Limits</h3>
-     * <p>A task cannot be canceled in the following cases:</p>
+     * <p>You cannot cancel a task in the following scenarios:</p>
      * <ul>
-     * <li>The value of allowCancel is 0.</li>
+     * <li>The allowCancel parameter is set to 0.</li>
      * <li>The current time is later than the task start time.</li>
-     * <li>The task status is not 3 (waiting for execution).</li>
+     * <li>The task status is not 3 (Pending Execution).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels O&amp;M tasks that have not yet started.</p>
+     * <p>Cancels proactive O&amp;M tasks that have not yet started.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1243,7 +1241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -1252,24 +1250,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to ensure that you fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events of ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104452.html">Scheduled events of ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104451.html">Scheduled events of ApsaraDB RDS for SQL Server</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/104454.html">Scheduled events of ApsaraDB RDS for MariaDB</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104452.html">Scheduled events for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104451.html">Scheduled events for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/104454.html">Scheduled events for ApsaraDB RDS for MariaDB</a></li>
      * </ul>
      * <h3>Limits</h3>
-     * <p>A task cannot be canceled in the following cases:</p>
+     * <p>You cannot cancel a task in the following scenarios:</p>
      * <ul>
-     * <li>The value of allowCancel is 0.</li>
+     * <li>The allowCancel parameter is set to 0.</li>
      * <li>The current time is later than the task start time.</li>
-     * <li>The task status is not 3 (waiting for execution).</li>
+     * <li>The task status is not 3 (Pending Execution).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Cancels O&amp;M tasks that have not yet started.</p>
+     * <p>Cancels proactive O&amp;M tasks that have not yet started.</p>
      * 
      * @param request CancelActiveOperationTasksRequest
      * @return CancelActiveOperationTasksResponse
@@ -1363,7 +1361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the service-linked role AliyunServiceRoleForRdsBackupEncryption is associated with Cloud Hardware Security Module (CloudHSM) for backup encryption under the current account.</p>
+     * <p>Checks whether the backup encryption service-linked role AliyunServiceRoleForRdsBackupEncryption is created for the user account.</p>
      * 
      * @param request CheckBackupEncryptionAuthorizedRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1399,7 +1397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the service-linked role AliyunServiceRoleForRdsBackupEncryption is associated with Cloud Hardware Security Module (CloudHSM) for backup encryption under the current account.</p>
+     * <p>Checks whether the backup encryption service-linked role AliyunServiceRoleForRdsBackupEncryption is created for the user account.</p>
      * 
      * @param request CheckBackupEncryptionAuthorizedRequest
      * @return CheckBackupEncryptionAuthorizedResponse
@@ -1511,18 +1509,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to ensure that you fully understand the prerequisites and the impacts of this operation.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/120824.html">MySQL cross-region backup</a> and <a href="https://help.aliyun.com/document_detail/120875.html">MySQL cross-region restoration</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/206671.html">PostgreSQL cross-region backup</a> and <a href="https://help.aliyun.com/document_detail/206662.html">PostgreSQL cross-region restoration</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/187923.html">SQL Server cross-region backup</a> and <a href="https://help.aliyun.com/document_detail/187924.html">SQL Server cross-region restoration</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a>, <a href="https://help.aliyun.com/document_detail/120875.html">Cross-region restoration for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Cross-region backup for ApsaraDB RDS for PostgreSQL</a>, <a href="https://help.aliyun.com/document_detail/206662.html">Cross-region restoration for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Cross-region backup for ApsaraDB RDS for SQL Server</a>, <a href="https://help.aliyun.com/document_detail/187924.html">Cross-region restoration for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Prechecks whether an ApsaraDB RDS instance can be restored across regions by using a cross-region backup set.</p>
+     * <p>Checks whether an ApsaraDB RDS instance can be restored across regions by using a cross-region backup set.</p>
      * 
      * @param request CheckCreateDdrDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1612,18 +1610,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to ensure that you fully understand the prerequisites and the impacts of this operation.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/120824.html">MySQL cross-region backup</a> and <a href="https://help.aliyun.com/document_detail/120875.html">MySQL cross-region restoration</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/206671.html">PostgreSQL cross-region backup</a> and <a href="https://help.aliyun.com/document_detail/206662.html">PostgreSQL cross-region restoration</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/187923.html">SQL Server cross-region backup</a> and <a href="https://help.aliyun.com/document_detail/187924.html">SQL Server cross-region restoration</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a>, <a href="https://help.aliyun.com/document_detail/120875.html">Cross-region restoration for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Cross-region backup for ApsaraDB RDS for PostgreSQL</a>, <a href="https://help.aliyun.com/document_detail/206662.html">Cross-region restoration for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Cross-region backup for ApsaraDB RDS for SQL Server</a>, <a href="https://help.aliyun.com/document_detail/187924.html">Cross-region restoration for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Prechecks whether an ApsaraDB RDS instance can be restored across regions by using a cross-region backup set.</p>
+     * <p>Checks whether an ApsaraDB RDS instance can be restored across regions by using a cross-region backup set.</p>
      * 
      * @param request CheckCreateDdrDBInstanceRequest
      * @return CheckCreateDdrDBInstanceResponse
@@ -1847,7 +1845,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether backup encryption is supported in the current region.</p>
+     * <p>Checks whether the current region supports backup encryption.</p>
      * 
      * @param request CheckRegionSupportBackupEncryptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1887,7 +1885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether backup encryption is supported in the current region.</p>
+     * <p>Checks whether the current region supports backup encryption.</p>
      * 
      * @param request CheckRegionSupportBackupEncryptionRequest
      * @return CheckRegionSupportBackupEncryptionResponse
@@ -1975,22 +1973,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96147.html">Restore data for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96776.html">Restore data for ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95722.html">Restore data for ApsaraDB RDS for SQL Server</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97151.html">Restore data for ApsaraDB RDS for MariaDB</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96147.html">Restore data for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96776.html">Restore data for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95722.html">Restore data for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97151.html">Restore data for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2164,22 +2162,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96147.html">Restore data for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96776.html">Restore data for ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95722.html">Restore data for ApsaraDB RDS for SQL Server</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97151.html">Restore data for ApsaraDB RDS for MariaDB</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96147.html">Restore data for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96776.html">Restore data for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95722.html">Restore data for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97151.html">Restore data for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2309,10 +2307,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Description</h3>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/610443.html">QueryNotify</a> to query notifications, and then call this operation to mark a notification as confirmed, which indicates that you have acknowledged the notification content.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/610443.html">QueryNotify</a> to query notifications, and then call this operation to mark a notification as confirmed, which indicates that you have acknowledged the content of the notification.</p>
      * 
      * <b>summary</b> : 
-     * <p>Confirms a carousel notification in the ApsaraDB RDS console for the China site (aliyun.com) under the China site account.</p>
+     * <p>Confirms the carousel messages in the ApsaraDB RDS console for the Alibaba Cloud account.</p>
      * 
      * @param tmpReq ConfirmNotifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2362,10 +2360,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Description</h3>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/610443.html">QueryNotify</a> to query notifications, and then call this operation to mark a notification as confirmed, which indicates that you have acknowledged the notification content.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/610443.html">QueryNotify</a> to query notifications, and then call this operation to mark a notification as confirmed, which indicates that you have acknowledged the content of the notification.</p>
      * 
      * <b>summary</b> : 
-     * <p>Confirms a carousel notification in the ApsaraDB RDS console for the China site (aliyun.com) under the China site account.</p>
+     * <p>Confirms the carousel messages in the ApsaraDB RDS console for the Alibaba Cloud account.</p>
      * 
      * @param request ConfirmNotifyRequest
      * @return ConfirmNotifyResponse
@@ -2449,21 +2447,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server.</p>
+     * <h3>Supported engine</h3>
+     * <p>ApsaraDB RDS for SQL Server.</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/95702.html">Copy a database between ApsaraDB RDS for SQL Server instances</a></p>
+     * <p>Notice: Before you call this operation, read the related documentation to understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/95702.html">Copy databases between ApsaraDB RDS for SQL Server instances</a></p>
      * </blockquote>
      * <h3>Limits</h3>
      * <ul>
      * <li>The source and target instances must belong to the same Alibaba Cloud account.</li>
-     * <li>The target instance <strong>must not contain</strong> a database that has the same name as the database to be copied from the source instance.</li>
-     * <li>The available storage of the target instance <strong>must be greater than</strong> the storage used by the database to be copied from the source instance. If the storage is insufficient, <a href="https://help.aliyun.com/document_detail/95665.html">expand the storage</a> in a timely manner.</li>
-     * <li>The source and target instances must be in the same region (zones can be different) and must use the same network type.</li>
-     * <li>The source and target instances do not support <a href="https://help.aliyun.com/document_detail/603466.html">serverless instances</a>. To migrate a serverless instance, <a href="https://help.aliyun.com/document_detail/210947.html">use DTS</a>.</li>
-     * <li>You <strong>must specify</strong> either BackupId or RestoreTime. An error is returned if neither parameter is specified.</li>
+     * <li>The target instance <strong>must not contain</strong> a database that has the same name as the source database to be copied.</li>
+     * <li>The available storage space of the target instance <strong>must be greater than</strong> the space occupied by the source database to be copied. If the storage space is insufficient, <a href="https://help.aliyun.com/document_detail/95665.html">scale up the storage capacity</a>.</li>
+     * <li>The source and target instances must be deployed in the same region. They can be deployed in different zones but must have the same network type.</li>
+     * <li>The source and target instances do not support the <a href="https://help.aliyun.com/document_detail/603466.html">serverless instance</a> type. To migrate a serverless instance, <a href="https://help.aliyun.com/document_detail/210947.html">use DTS</a>.</li>
+     * <li>When you call this operation, you <strong>must specify</strong> either the BackupId or RestoreTime parameter. If neither is specified, an error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2523,21 +2521,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server.</p>
+     * <h3>Supported engine</h3>
+     * <p>ApsaraDB RDS for SQL Server.</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/95702.html">Copy a database between ApsaraDB RDS for SQL Server instances</a></p>
+     * <p>Notice: Before you call this operation, read the related documentation to understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/95702.html">Copy databases between ApsaraDB RDS for SQL Server instances</a></p>
      * </blockquote>
      * <h3>Limits</h3>
      * <ul>
      * <li>The source and target instances must belong to the same Alibaba Cloud account.</li>
-     * <li>The target instance <strong>must not contain</strong> a database that has the same name as the database to be copied from the source instance.</li>
-     * <li>The available storage of the target instance <strong>must be greater than</strong> the storage used by the database to be copied from the source instance. If the storage is insufficient, <a href="https://help.aliyun.com/document_detail/95665.html">expand the storage</a> in a timely manner.</li>
-     * <li>The source and target instances must be in the same region (zones can be different) and must use the same network type.</li>
-     * <li>The source and target instances do not support <a href="https://help.aliyun.com/document_detail/603466.html">serverless instances</a>. To migrate a serverless instance, <a href="https://help.aliyun.com/document_detail/210947.html">use DTS</a>.</li>
-     * <li>You <strong>must specify</strong> either BackupId or RestoreTime. An error is returned if neither parameter is specified.</li>
+     * <li>The target instance <strong>must not contain</strong> a database that has the same name as the source database to be copied.</li>
+     * <li>The available storage space of the target instance <strong>must be greater than</strong> the space occupied by the source database to be copied. If the storage space is insufficient, <a href="https://help.aliyun.com/document_detail/95665.html">scale up the storage capacity</a>.</li>
+     * <li>The source and target instances must be deployed in the same region. They can be deployed in different zones but must have the same network type.</li>
+     * <li>The source and target instances do not support the <a href="https://help.aliyun.com/document_detail/603466.html">serverless instance</a> type. To migrate a serverless instance, <a href="https://help.aliyun.com/document_detail/210947.html">use DTS</a>.</li>
+     * <li>When you call this operation, you <strong>must specify</strong> either the BackupId or RestoreTime parameter. If neither is specified, an error is returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2673,26 +2671,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Description</h3>
-     * <p>This operation calls the built-in backup feature of ApsaraDB RDS. You can also use Database Backup Service (DBS). For more information, &lt;props=&quot;china&quot;&gt;refer to <a href="https://help.aliyun.com/document_detail/2841997.html">DBS API overview</a>&lt;props=&quot;intl&quot;&gt;refer to <a href="https://help.aliyun.com/document_detail/2402073.html">DBS API overview</a>.</p>
+     * <h3>Feature description</h3>
+     * <p>This operation calls the built-in backup feature of ApsaraDB RDS. You can also use Database Backup (DBS). For more information, &lt;props=&quot;china&quot;&gt;see <a href="https://help.aliyun.com/document_detail/2841997.html">DBS API overview</a>&lt;props=&quot;intl&quot;&gt;see <a href="https://help.aliyun.com/document_detail/2402073.html">DBS API overview</a>.</p>
      * <h3>Precautions</h3>
-     * <p>When you invoke this operation, the instance must meet the following conditions. Otherwise, the operation is failed:</p>
+     * <p>When you invoke this operation, the instance must meet the following conditions. Otherwise, the operation will be failed:</p>
      * <ul>
      * <li>The instance status is Running.</li>
-     * <li>No backup node is being executed.</li>
-     * <li>A maximum of 20 backup sets can be created for a single instance per day.</li>
+     * <li>No backup nodes are being executed.</li>
+     * <li>The number of backup sets that can be created for a single instance within a day does not exceed 20. For MySQL DPI engine instances, there is no limit on the number of backup sets that can be created within a day.</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/378074.html">Back up an RDS MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Back up an RDS PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Back up an RDS SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Back up an RDS MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/378074.html">Back up data for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Back up data for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Back up data for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Back up data for ApsaraDB RDS for MariaDB</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2754,26 +2752,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Description</h3>
-     * <p>This operation calls the built-in backup feature of ApsaraDB RDS. You can also use Database Backup Service (DBS). For more information, &lt;props=&quot;china&quot;&gt;refer to <a href="https://help.aliyun.com/document_detail/2841997.html">DBS API overview</a>&lt;props=&quot;intl&quot;&gt;refer to <a href="https://help.aliyun.com/document_detail/2402073.html">DBS API overview</a>.</p>
+     * <h3>Feature description</h3>
+     * <p>This operation calls the built-in backup feature of ApsaraDB RDS. You can also use Database Backup (DBS). For more information, &lt;props=&quot;china&quot;&gt;see <a href="https://help.aliyun.com/document_detail/2841997.html">DBS API overview</a>&lt;props=&quot;intl&quot;&gt;see <a href="https://help.aliyun.com/document_detail/2402073.html">DBS API overview</a>.</p>
      * <h3>Precautions</h3>
-     * <p>When you invoke this operation, the instance must meet the following conditions. Otherwise, the operation is failed:</p>
+     * <p>When you invoke this operation, the instance must meet the following conditions. Otherwise, the operation will be failed:</p>
      * <ul>
      * <li>The instance status is Running.</li>
-     * <li>No backup node is being executed.</li>
-     * <li>A maximum of 20 backup sets can be created for a single instance per day.</li>
+     * <li>No backup nodes are being executed.</li>
+     * <li>The number of backup sets that can be created for a single instance within a day does not exceed 20. For MySQL DPI engine instances, there is no limit on the number of backup sets that can be created within a day.</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/378074.html">Back up an RDS MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Back up an RDS PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Back up an RDS SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Back up an RDS MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/378074.html">Back up data for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96772.html">Back up data for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95717.html">Back up data for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97147.html">Back up data for ApsaraDB RDS for MariaDB</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2789,18 +2787,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/365562.html">One-click migration to RDS</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/365562.html">One-click cloud migration</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a pre-check task for one-click migration to ApsaraDB RDS for PostgreSQL.</p>
+     * <p>Creates a pre-check task for one-click cloud migration of an ApsaraDB RDS for PostgreSQL instance.</p>
      * 
      * @param request CreateCloudMigrationPrecheckTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2860,18 +2858,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/365562.html">One-click migration to RDS</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/365562.html">One-click cloud migration</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a pre-check task for one-click migration to ApsaraDB RDS for PostgreSQL.</p>
+     * <p>Creates a pre-check task for one-click cloud migration of an ApsaraDB RDS for PostgreSQL instance.</p>
      * 
      * @param request CreateCloudMigrationPrecheckTaskRequest
      * @return CreateCloudMigrationPrecheckTaskResponse
@@ -2883,18 +2881,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/365562.html">Migrate to the cloud</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/365562.html">One-click cloud migration</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a migration-to-cloud task for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Creates a cloud migration task for ApsaraDB RDS for PostgreSQL.</p>
      * 
      * @param request CreateCloudMigrationTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2954,18 +2952,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/365562.html">Migrate to the cloud</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/365562.html">One-click cloud migration</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a migration-to-cloud task for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Creates a cloud migration task for ApsaraDB RDS for PostgreSQL.</p>
      * 
      * @param request CreateCloudMigrationTaskRequest
      * @return CreateCloudMigrationTaskResponse
@@ -2987,7 +2985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Related documentation</h3>
      * <blockquote>
      * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you proceed.
-     * If an error occurs when you call the API operation, you can search for the error message to identify the cause.</p>
+     * If an error occurs when you call the API operation, you can search for the error message to view the cause.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/148036.html">Create an ApsaraDB RDS for MySQL instance</a></li>
@@ -3030,6 +3028,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoRenew)) {
             query.put("AutoRenew", request.autoRenew);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoUpgradeMinorVersion)) {
+            query.put("AutoUpgradeMinorVersion", request.autoUpgradeMinorVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoUseCoupon)) {
@@ -3293,7 +3295,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Related documentation</h3>
      * <blockquote>
      * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you proceed.
-     * If an error occurs when you call the API operation, you can search for the error message to identify the cause.</p>
+     * If an error occurs when you call the API operation, you can search for the error message to view the cause.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/148036.html">Create an ApsaraDB RDS for MySQL instance</a></li>
@@ -3322,24 +3324,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Supported engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the documentation to fully understand the prerequisites and the impacts of the operation.</notice>
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>RDS MySQL: <a href="https://help.aliyun.com/document_detail/464132.html">Add a cluster read-only endpoint</a></li>
-     * <li>RDS PostgreSQL: <a href="https://help.aliyun.com/document_detail/96788.html">Add a cluster read-only endpoint</a>
+     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464132.html">Add a cluster read-only endpoint</a></li>
+     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/96788.html">Add a cluster read-only endpoint</a>
      * &lt;props=&quot;intl&quot;&gt;
      * <a href="https://help.aliyun.com/document_detail/464132.html">Add a cluster read-only endpoint</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an endpoint for an ApsaraDB RDS instance that runs the Cluster Edition.</p>
+     * <p>Creates an endpoint for an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param tmpReq CreateDBInstanceEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3424,24 +3426,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Supported engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the documentation to fully understand the prerequisites and the impacts of the operation.</notice>
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>RDS MySQL: <a href="https://help.aliyun.com/document_detail/464132.html">Add a cluster read-only endpoint</a></li>
-     * <li>RDS PostgreSQL: <a href="https://help.aliyun.com/document_detail/96788.html">Add a cluster read-only endpoint</a>
+     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464132.html">Add a cluster read-only endpoint</a></li>
+     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/96788.html">Add a cluster read-only endpoint</a>
      * &lt;props=&quot;intl&quot;&gt;
      * <a href="https://help.aliyun.com/document_detail/464132.html">Add a cluster read-only endpoint</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an endpoint for an ApsaraDB RDS instance that runs the Cluster Edition.</p>
+     * <p>Creates an endpoint for an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param request CreateDBInstanceEndpointRequest
      * @return CreateDBInstanceEndpointResponse
@@ -3460,14 +3462,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>RDS PostgreSQL
      * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
      * </ul>
-     * <h3>Before you begin</h3>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>You can create a public endpoint for an endpoint only when the endpoint does not have a public endpoint.</li>
-     * <li>The configurations such as traffic distribution weights are the same as those of the internal endpoint of the endpoint. Each endpoint can have only one public endpoint and one internal endpoint.</li>
+     * <li>You can create a public endpoint for an endpoint only if the endpoint does not already have a public endpoint.</li>
+     * <li>Configurations such as the traffic distribution weight are the same as those of the internal endpoint. Each endpoint can have only one public endpoint and one internal endpoint.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a public endpoint for an endpoint of an ApsaraDB RDS instance that uses the Cluster Edition.</p>
+     * <p>Creates a public endpoint for an endpoint of an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param request CreateDBInstanceEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3534,14 +3536,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>RDS PostgreSQL
      * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
      * </ul>
-     * <h3>Before you begin</h3>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>You can create a public endpoint for an endpoint only when the endpoint does not have a public endpoint.</li>
-     * <li>The configurations such as traffic distribution weights are the same as those of the internal endpoint of the endpoint. Each endpoint can have only one public endpoint and one internal endpoint.</li>
+     * <li>You can create a public endpoint for an endpoint only if the endpoint does not already have a public endpoint.</li>
+     * <li>Configurations such as the traffic distribution weight are the same as those of the internal endpoint. Each endpoint can have only one public endpoint and one internal endpoint.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a public endpoint for an endpoint of an ApsaraDB RDS instance that uses the Cluster Edition.</p>
+     * <p>Creates a public endpoint for an endpoint of an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param request CreateDBInstanceEndpointAddressRequest
      * @return CreateDBInstanceEndpointAddressResponse
@@ -3553,22 +3555,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation involves fees. Read the related feature documentation carefully before you perform this operation.</p>
+     * <p>Warning: This API operation incurs fees. Read the related feature documentation carefully before you call this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96065.html">Rebuild an RDS MySQL instance from the recycle bin</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96752.html">Rebuild an RDS PostgreSQL instance from the recycle bin</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95669.html">Rebuild an RDS SQL Server instance from the recycle bin</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97131.html">Rebuild an RDS MariaDB instance from the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96065.html">Rebuild an ApsaraDB RDS for MySQL instance from the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96752.html">Rebuild an ApsaraDB RDS for PostgreSQL instance from the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95669.html">Rebuild an ApsaraDB RDS for SQL Server instance from the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97131.html">Rebuild an ApsaraDB RDS for MariaDB instance from the recycle bin</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3684,22 +3686,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported database engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation involves fees. Read the related feature documentation carefully before you perform this operation.</p>
+     * <p>Warning: This API operation incurs fees. Read the related feature documentation carefully before you call this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96065.html">Rebuild an RDS MySQL instance from the recycle bin</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96752.html">Rebuild an RDS PostgreSQL instance from the recycle bin</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95669.html">Rebuild an RDS SQL Server instance from the recycle bin</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97131.html">Rebuild an RDS MariaDB instance from the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96065.html">Rebuild an ApsaraDB RDS for MySQL instance from the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96752.html">Rebuild an ApsaraDB RDS for PostgreSQL instance from the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95669.html">Rebuild an ApsaraDB RDS for SQL Server instance from the recycle bin</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97131.html">Rebuild an ApsaraDB RDS for MariaDB instance from the recycle bin</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3787,13 +3789,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for an ApsaraDB RDS for SQL Server instance</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for ApsaraDB RDS for SQL Server</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Adds security group rules to an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Adds a security group rule to an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request CreateDBInstanceSecurityGroupRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3857,13 +3859,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for an ApsaraDB RDS for SQL Server instance</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for ApsaraDB RDS for SQL Server</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Adds security group rules to an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Adds a security group rule to an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request CreateDBInstanceSecurityGroupRuleRequest
      * @return CreateDBInstanceSecurityGroupRuleResponse
@@ -3878,24 +3880,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Supported engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following feature documentation carefully to fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts.
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>RDS MySQL: <a href="https://help.aliyun.com/document_detail/464129.html">Add nodes to an ApsaraDB RDS for MySQL instance that runs the Cluster Edition</a></li>
-     * <li>RDS PostgreSQL: <a href="https://help.aliyun.com/document_detail/2778876.html">Add nodes to an ApsaraDB RDS for PostgreSQL instance that runs the Cluster Edition</a>
+     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464129.html">Add nodes to an ApsaraDB RDS for MySQL Cluster Edition instance</a></li>
+     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/2778876.html">Add nodes to an ApsaraDB RDS for PostgreSQL Cluster Edition instance</a>
      * &lt;props=&quot;intl&quot;&gt;
-     * <a href="https://help.aliyun.com/document_detail/464129.html">Add nodes to an ApsaraDB RDS for MySQL instance that runs the Cluster Edition</a></li>
+     * <a href="https://help.aliyun.com/document_detail/464129.html">Add nodes to an ApsaraDB RDS for MySQL Cluster Edition instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds nodes to an ApsaraDB RDS instance that runs the Cluster Edition.</p>
+     * <p>Adds a node to an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param tmpReq CreateDBNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3964,24 +3966,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Supported engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following feature documentation carefully to fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts.
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>RDS MySQL: <a href="https://help.aliyun.com/document_detail/464129.html">Add nodes to an ApsaraDB RDS for MySQL instance that runs the Cluster Edition</a></li>
-     * <li>RDS PostgreSQL: <a href="https://help.aliyun.com/document_detail/2778876.html">Add nodes to an ApsaraDB RDS for PostgreSQL instance that runs the Cluster Edition</a>
+     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464129.html">Add nodes to an ApsaraDB RDS for MySQL Cluster Edition instance</a></li>
+     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/2778876.html">Add nodes to an ApsaraDB RDS for PostgreSQL Cluster Edition instance</a>
      * &lt;props=&quot;intl&quot;&gt;
-     * <a href="https://help.aliyun.com/document_detail/464129.html">Add nodes to an ApsaraDB RDS for MySQL instance that runs the Cluster Edition</a></li>
+     * <a href="https://help.aliyun.com/document_detail/464129.html">Add nodes to an ApsaraDB RDS for MySQL Cluster Edition instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds nodes to an ApsaraDB RDS instance that runs the Cluster Edition.</p>
+     * <p>Adds a node to an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param request CreateDBNodesRequest
      * @return CreateDBNodesResponse
@@ -3995,16 +3997,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you invoke this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Create an internal or public database proxy endpoint for an RDS MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Create an internal or public database proxy endpoint for an RDS PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4082,16 +4084,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you invoke this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Create an internal or public database proxy endpoint for an RDS MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Create an internal or public database proxy endpoint for an RDS PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Create internal and public database proxy endpoints for an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4229,8 +4231,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Suggestions</h3>
-     * <p>Before you perform a restoration, call the CheckCreateDdrDBInstance operation to check whether the cross-region backup set of the destination ApsaraDB RDS instance can be used for cross-region restoration.</p>
+     * <h3>Recommendations</h3>
+     * <p>Before restoration, call the CheckCreateDdrDBInstance operation to check whether the cross-region backup set of the destination ApsaraDB RDS instance can be used for cross-region restoration.</p>
      * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
@@ -4239,7 +4241,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of using this operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
@@ -4248,7 +4250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restores data to a new instance across regions.</p>
+     * <p>Restores data across regions to a new instance.</p>
      * 
      * @param request CreateDdrInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4408,8 +4410,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Suggestions</h3>
-     * <p>Before you perform a restoration, call the CheckCreateDdrDBInstance operation to check whether the cross-region backup set of the destination ApsaraDB RDS instance can be used for cross-region restoration.</p>
+     * <h3>Recommendations</h3>
+     * <p>Before restoration, call the CheckCreateDdrDBInstance operation to check whether the cross-region backup set of the destination ApsaraDB RDS instance can be used for cross-region restoration.</p>
      * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
@@ -4418,7 +4420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of using this operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
@@ -4427,7 +4429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restores data to a new instance across regions.</p>
+     * <p>Restores data across regions to a new instance.</p>
      * 
      * @param request CreateDdrInstanceRequest
      * @return CreateDdrInstanceResponse
@@ -4439,19 +4441,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL
+     * <li>ApsaraDB RDS for MySQL
      * &lt;props=&quot;china&quot;&gt;</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/328592.html">Create and release a GAD cluster</a></p>
+     * <p>Notice: Before you call this operation, read the documentation to fully understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/328592.html">Create and release a global active database cluster</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Global Active Database (GAD) cluster for ApsaraDB RDS.</p>
+     * <p>Creates an ApsaraDB RDS global active database cluster.</p>
      * 
      * @param request CreateGADInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4515,19 +4517,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL
+     * <li>ApsaraDB RDS for MySQL
      * &lt;props=&quot;china&quot;&gt;</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/328592.html">Create and release a GAD cluster</a></p>
+     * <p>Notice: Before you call this operation, read the documentation to fully understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/328592.html">Create and release a global active database cluster</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Global Active Database (GAD) cluster for ApsaraDB RDS.</p>
+     * <p>Creates an ApsaraDB RDS global active database cluster.</p>
      * 
      * @param request CreateGADInstanceRequest
      * @return CreateGADInstanceResponse
@@ -4539,13 +4541,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the documentation to fully understand the prerequisites and potential impacts, and then proceed.
+     * <p>Notice: Before you call this operation, read the documentation to fully understand the prerequisites and impacts.</notice>
      * &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/331851.html">Add or remove unit nodes</a></p>
      * </blockquote>
      * 
@@ -4606,13 +4608,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the documentation to fully understand the prerequisites and potential impacts, and then proceed.
+     * <p>Notice: Before you call this operation, read the documentation to fully understand the prerequisites and impacts.</notice>
      * &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/331851.html">Add or remove unit nodes</a></p>
      * </blockquote>
      * 
@@ -4629,7 +4631,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a data import task for importing data to an ApsaraDB RDS for MySQL instance with native replication.</p>
+     * <p>Creates a data import task to import data into an ApsaraDB RDS for MySQL instance that uses native replication.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data import task.</p>
@@ -4708,7 +4710,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a data import task for importing data to an ApsaraDB RDS for MySQL instance with native replication.</p>
+     * <p>Creates a data import task to import data into an ApsaraDB RDS for MySQL instance that uses native replication.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a data import task.</p>
@@ -4725,12 +4727,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that the column encryption service is activated in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption service through Cloud Hardware Security Module (CloudHSM) before trying again.</li>
+     * <li>Before you invoke this operation, make sure that column encryption is activated in the DAS Security Center.</li>
+     * <li>If you receive the ColumnEncryptionErrorCode.NOT_PURCHASED error message when invoking this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and activate column encryption.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an encryption or masking rule for a specified instance.</p>
+     * <p>Creates a new encryption or masking rule for a specified instance.</p>
      * 
      * @param tmpReq CreateMaskingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4806,12 +4808,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that the column encryption service is activated in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption service through Cloud Hardware Security Module (CloudHSM) before trying again.</li>
+     * <li>Before you invoke this operation, make sure that column encryption is activated in the DAS Security Center.</li>
+     * <li>If you receive the ColumnEncryptionErrorCode.NOT_PURCHASED error message when invoking this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and activate column encryption.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates an encryption or masking rule for a specified instance.</p>
+     * <p>Creates a new encryption or masking rule for a specified instance.</p>
      * 
      * @param request CreateMaskingRulesRequest
      * @return CreateMaskingRulesResponse
@@ -5055,11 +5057,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>ApsaraDB RDS for MySQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL Cluster Edition instance</a></p>
      * </blockquote>
      * 
@@ -5162,11 +5164,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>ApsaraDB RDS for MySQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL Cluster Edition instance</a></p>
      * </blockquote>
      * 
@@ -5293,23 +5295,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension exchange DingTalk group (103525002795) to consult, communicate, provide feedback, and obtain more information about extensions.</p>
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL plug-in communication DingTalk group (103525002795) for consultation, communication, and feedback to obtain more information about plug-ins.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts. Proceed only after you understand the information.
-     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impact of this operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage plug-ins</a></p>
      * </blockquote>
      * <h3>Precautions</h3>
-     * <p>You can install only extensions that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
+     * <p>You can only install plug-ins that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
      * <ul>
-     * <li>For information about supported extensions, see <a href="https://help.aliyun.com/document_detail/142340.html">Supported extensions</a>.</li>
-     * <li>You can call <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> to query the major engine version of the instance.</li>
+     * <li>For information about supported plug-ins, see <a href="https://help.aliyun.com/document_detail/142340.html">Supported plug-ins</a>.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to query the major engine version of the instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Installs a specified extension in a target database.</p>
+     * <p>Installs a specified plug-in in a destination database.</p>
      * 
      * @param request CreatePostgresExtensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5385,23 +5387,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension exchange DingTalk group (103525002795) to consult, communicate, provide feedback, and obtain more information about extensions.</p>
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL plug-in communication DingTalk group (103525002795) for consultation, communication, and feedback to obtain more information about plug-ins.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts. Proceed only after you understand the information.
-     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impact of this operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage plug-ins</a></p>
      * </blockquote>
      * <h3>Precautions</h3>
-     * <p>You can install only extensions that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
+     * <p>You can only install plug-ins that are supported by the major engine version of the instance. Otherwise, the installation fails.</p>
      * <ul>
-     * <li>For information about supported extensions, see <a href="https://help.aliyun.com/document_detail/142340.html">Supported extensions</a>.</li>
-     * <li>You can call <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> to query the major engine version of the instance.</li>
+     * <li>For information about supported plug-ins, see <a href="https://help.aliyun.com/document_detail/142340.html">Supported plug-ins</a>.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/610394.html">DescribeDBInstanceAttribute</a> operation to query the major engine version of the instance.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Installs a specified extension in a target database.</p>
+     * <p>Installs a specified plug-in in a destination database.</p>
      * 
      * @param request CreatePostgresExtensionsRequest
      * @return CreatePostgresExtensionsResponse
@@ -5486,14 +5488,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Supported cloud disk types: ultra cloud disk, standard SSD, ESSD, and premium performance disk (default).</li>
-     * <li>If the billing method of the cloud disk is subscription (<strong>Prepaid</strong>), you must specify the instance ID of a subscription instance (<strong>InstanceId</strong>) to which the cloud disk is mounted. The expiration time of the cloud disk is the same as that of the instance.</li>
-     * <li>You can create a pay-as-you-go (<strong>Postpaid</strong>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method during creation as needed.</li>
-     * <li>The cloud disk types and the number of cloud disks that can be mounted vary based on instance specifications.</li>
+     * <li>Supported cloud disk types: ultra disk, standard SSD, ESSD, and premium performance disk (default).</li>
+     * <li>When the billing method of the cloud disk is subscription (<strong>Prepaid</strong>), you must specify the instance ID of a subscription instance (<strong>InstanceId</strong>) to which the cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</li>
+     * <li>You can create a pay-as-you-go (<strong>Postpaid</strong>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method when you create it as needed.</li>
+     * <li>The types and number of cloud disks that can be mounted vary based on the instance type.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls the CreateDisk operation to create an RDS Custom data cloud disk.</p>
+     * <p>Creates an RDS Custom data cloud disk.</p>
      * 
      * @param request CreateRCDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5586,14 +5588,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Supported cloud disk types: ultra cloud disk, standard SSD, ESSD, and premium performance disk (default).</li>
-     * <li>If the billing method of the cloud disk is subscription (<strong>Prepaid</strong>), you must specify the instance ID of a subscription instance (<strong>InstanceId</strong>) to which the cloud disk is mounted. The expiration time of the cloud disk is the same as that of the instance.</li>
-     * <li>You can create a pay-as-you-go (<strong>Postpaid</strong>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method during creation as needed.</li>
-     * <li>The cloud disk types and the number of cloud disks that can be mounted vary based on instance specifications.</li>
+     * <li>Supported cloud disk types: ultra disk, standard SSD, ESSD, and premium performance disk (default).</li>
+     * <li>When the billing method of the cloud disk is subscription (<strong>Prepaid</strong>), you must specify the instance ID of a subscription instance (<strong>InstanceId</strong>) to which the cloud disk is mounted. The expiration time of the cloud disk is the same as that of the mounted instance.</li>
+     * <li>You can create a pay-as-you-go (<strong>Postpaid</strong>) cloud disk separately without mounting it to an instance. You can also mount it to an instance of any billing method when you create it as needed.</li>
+     * <li>The types and number of cloud disks that can be mounted vary based on the instance type.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls the CreateDisk operation to create an RDS Custom data cloud disk.</p>
+     * <p>Creates an RDS Custom data cloud disk.</p>
      * 
      * @param request CreateRCDiskRequest
      * @return CreateRCDiskResponse
@@ -5607,18 +5609,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/2844223.html">Introduction to RDS Custom for MySQL</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></li>
      * </ul>
-     * <h3>Usage notes</h3>
+     * <h3>Usage</h3>
      * <ul>
-     * <li>Method 1: Create a custom image from a snapshot of the <strong>system cloud disk</strong>. Specify SnapshotId and ImageName together.</li>
-     * <li>Method 2: Create a custom image from an RDS Custom instance. Specify InstanceId and ImageName together.</li>
+     * <li>Method 1: Create a custom image from a snapshot generated from a <strong>system cloud disk</strong>. When passing values, use SnapshotId and ImageName together.</li>
+     * <li>Method 2: Create a custom image from an RDS Custom instance. When passing values, use InstanceId and ImageName together.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5668,18 +5670,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/2844223.html">Introduction to RDS Custom for MySQL</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom for SQL Server</a></li>
      * </ul>
-     * <h3>Usage notes</h3>
+     * <h3>Usage</h3>
      * <ul>
-     * <li>Method 1: Create a custom image from a snapshot of the <strong>system cloud disk</strong>. Specify SnapshotId and ImageName together.</li>
-     * <li>Method 2: Create a custom image from an RDS Custom instance. Specify InstanceId and ImageName together.</li>
+     * <li>Method 1: Create a custom image from a snapshot generated from a <strong>system cloud disk</strong>. When passing values, use SnapshotId and ImageName together.</li>
+     * <li>Method 2: Create a custom image from an RDS Custom instance. When passing values, use InstanceId and ImageName together.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5881,16 +5883,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot create a snapshot for a cloud disk in the following scenarios:</p>
+     * <p>You cannot create a snapshot for a specified cloud disk in the following scenarios:</p>
      * <ul>
-     * <li>The number of manual snapshots retained for the cloud disk has reached 256.</li>
-     * <li>The previous snapshot has not been created yet.</li>
-     * <li>The instance to which the cloud disk is mounted has never been started.</li>
-     * <li>The instance to which the cloud disk is mounted is not in the <strong>Stopped</strong> or <strong>Running</strong> instance status.
-     * When you create a snapshot, take note of the following items:</li>
-     * <li>If the snapshot has not been created, the snapshot cannot be used to create a custom image (CreateImage).</li>
-     * <li>If the cloud disk is mounted to an RDS Custom instance, do not change the instance status while the snapshot is being created.</li>
-     * <li>You can create snapshots for cloud disks in the <strong>Expired</strong> state. If the cloud disk reaches its expiration release time while the snapshot is being created, the cloud disk is released and the snapshot in the Creating state is also deleted.</li>
+     * <li>The cloud disk has reached the limit of 256 manual snapshots.</li>
+     * <li>The previous snapshot is still being created.</li>
+     * <li>The instance on which the cloud disk is mounted has never been started.</li>
+     * <li>The instance on which the cloud disk is mounted is not in the <strong>Stopped</strong> or <strong>Running</strong> state.
+     * Note the following when you create a snapshot:</li>
+     * <li>If the snapshot is still being created, you cannot use it to create a custom image by calling the CreateImage operation.</li>
+     * <li>If the cloud disk is mounted on an RDS Custom instance, do not change the instance status during snapshot creation.</li>
+     * <li>You can create snapshots for cloud disks in the <strong>Expired</strong> state. If a cloud disk reaches its expiration and release time exactly when a snapshot is being created, the snapshot in the <strong>Creating</strong> state is deleted along with the cloud disk.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -5958,16 +5960,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot create a snapshot for a cloud disk in the following scenarios:</p>
+     * <p>You cannot create a snapshot for a specified cloud disk in the following scenarios:</p>
      * <ul>
-     * <li>The number of manual snapshots retained for the cloud disk has reached 256.</li>
-     * <li>The previous snapshot has not been created yet.</li>
-     * <li>The instance to which the cloud disk is mounted has never been started.</li>
-     * <li>The instance to which the cloud disk is mounted is not in the <strong>Stopped</strong> or <strong>Running</strong> instance status.
-     * When you create a snapshot, take note of the following items:</li>
-     * <li>If the snapshot has not been created, the snapshot cannot be used to create a custom image (CreateImage).</li>
-     * <li>If the cloud disk is mounted to an RDS Custom instance, do not change the instance status while the snapshot is being created.</li>
-     * <li>You can create snapshots for cloud disks in the <strong>Expired</strong> state. If the cloud disk reaches its expiration release time while the snapshot is being created, the cloud disk is released and the snapshot in the Creating state is also deleted.</li>
+     * <li>The cloud disk has reached the limit of 256 manual snapshots.</li>
+     * <li>The previous snapshot is still being created.</li>
+     * <li>The instance on which the cloud disk is mounted has never been started.</li>
+     * <li>The instance on which the cloud disk is mounted is not in the <strong>Stopped</strong> or <strong>Running</strong> state.
+     * Note the following when you create a snapshot:</li>
+     * <li>If the snapshot is still being created, you cannot use it to create a custom image by calling the CreateImage operation.</li>
+     * <li>If the cloud disk is mounted on an RDS Custom instance, do not change the instance status during snapshot creation.</li>
+     * <li>You can create snapshots for cloud disks in the <strong>Expired</strong> state. If a cloud disk reaches its expiration and release time exactly when a snapshot is being created, the snapshot in the <strong>Creating</strong> state is deleted along with the cloud disk.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6329,9 +6331,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6415,9 +6417,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -6607,7 +6609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Claims a coupon.</p>
+     * <p>Redeems a coupon.</p>
      * 
      * @param request CreateYouhuiForOrderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6659,7 +6661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Claims a coupon.</p>
+     * <p>Redeems a coupon.</p>
      * 
      * @param request CreateYouhuiForOrderRequest
      * @return CreateYouhuiForOrderResponse
@@ -6671,13 +6673,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes the current ApsaraDB RDS for SQL Server instance from its Active Directory (AD) domain.</p>
+     * <p>Removes the current ApsaraDB RDS for SQL Server instance from its domain.</p>
      * 
      * @param request DeleteADSettingRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6729,13 +6731,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Removes the current ApsaraDB RDS for SQL Server instance from its Active Directory (AD) domain.</p>
+     * <p>Removes the current ApsaraDB RDS for SQL Server instance from its domain.</p>
      * 
      * @param request DeleteADSettingRequest
      * @return DeleteADSettingResponse
@@ -7148,18 +7150,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</notice>
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464133.html">Delete a cluster read-only endpoint</a></li>
-     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/96788.html">Delete a cluster read-only endpoint</a>
+     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464133.html">Delete the read-only routing endpoint of a cluster</a></li>
+     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/96788.html">Delete the read-only routing endpoint of a cluster</a>
      * &lt;props=&quot;intl&quot;&gt;
-     * ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464133.html">Delete a cluster read-only endpoint</a></li>
+     * ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464133.html">Delete the read-only routing endpoint of a cluster</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an endpoint of an ApsaraDB RDS instance that runs the Cluster Edition.</p>
+     * <p>Deletes the endpoint of an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param request DeleteDBInstanceEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7212,18 +7214,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</notice>
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464133.html">Delete a cluster read-only endpoint</a></li>
-     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/96788.html">Delete a cluster read-only endpoint</a>
+     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464133.html">Delete the read-only routing endpoint of a cluster</a></li>
+     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/96788.html">Delete the read-only routing endpoint of a cluster</a>
      * &lt;props=&quot;intl&quot;&gt;
-     * ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464133.html">Delete a cluster read-only endpoint</a></li>
+     * ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464133.html">Delete the read-only routing endpoint of a cluster</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an endpoint of an ApsaraDB RDS instance that runs the Cluster Edition.</p>
+     * <p>Deletes the endpoint of an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param request DeleteDBInstanceEndpointRequest
      * @return DeleteDBInstanceEndpointResponse
@@ -7235,18 +7237,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Precautions</h3>
-     * <p>You can delete only the public endpoint from an endpoint. To delete the internal endpoint, delete the endpoint directly.</p>
+     * <p>Currently, you can only release the public address of an endpoint. To release the internal address, delete the endpoint directly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Releases the public endpoint of an endpoint for an ApsaraDB RDS instance in the Cluster Edition.</p>
+     * <p>Releases the public endpoint of an endpoint for an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param request DeleteDBInstanceEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7296,18 +7298,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Precautions</h3>
-     * <p>You can delete only the public endpoint from an endpoint. To delete the internal endpoint, delete the endpoint directly.</p>
+     * <p>Currently, you can only release the public address of an endpoint. To release the internal address, delete the endpoint directly.</p>
      * 
      * <b>summary</b> : 
-     * <p>Releases the public endpoint of an endpoint for an ApsaraDB RDS instance in the Cluster Edition.</p>
+     * <p>Releases the public endpoint of an endpoint for an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param request DeleteDBInstanceEndpointAddressRequest
      * @return DeleteDBInstanceEndpointAddressResponse
@@ -7319,7 +7321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a replication task from a native replication instance.</p>
+     * <p>Deletes the native replication task of an instance.</p>
      * 
      * @param request DeleteDBInstanceReplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7363,7 +7365,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a replication task from a native replication instance.</p>
+     * <p>Deletes the native replication task of an instance.</p>
      * 
      * @param request DeleteDBInstanceReplicationRequest
      * @return DeleteDBInstanceReplicationResponse
@@ -7462,24 +7464,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Supported engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>RDS MySQL: <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL instance that runs Cluster Edition</a></li>
-     * <li>RDS PostgreSQL: <a href="https://help.aliyun.com/document_detail/2778876.html">Delete nodes from an ApsaraDB RDS for PostgreSQL instance that runs Cluster Edition</a>
+     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL Cluster Edition instance</a></li>
+     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/2778876.html">Delete nodes from an ApsaraDB RDS for PostgreSQL Cluster Edition instance</a>
      * &lt;props=&quot;intl&quot;&gt;
-     * <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL instance that runs Cluster Edition</a></li>
+     * <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL Cluster Edition instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes nodes from an ApsaraDB RDS instance that runs Cluster Edition.</p>
+     * <p>Deletes nodes from an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param tmpReq DeleteDBNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7548,24 +7550,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Supported engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
-     * <li>RDS MySQL: <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL instance that runs Cluster Edition</a></li>
-     * <li>RDS PostgreSQL: <a href="https://help.aliyun.com/document_detail/2778876.html">Delete nodes from an ApsaraDB RDS for PostgreSQL instance that runs Cluster Edition</a>
+     * <li>ApsaraDB RDS for MySQL: <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL Cluster Edition instance</a></li>
+     * <li>ApsaraDB RDS for PostgreSQL: <a href="https://help.aliyun.com/document_detail/2778876.html">Delete nodes from an ApsaraDB RDS for PostgreSQL Cluster Edition instance</a>
      * &lt;props=&quot;intl&quot;&gt;
-     * <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL instance that runs Cluster Edition</a></li>
+     * <a href="https://help.aliyun.com/document_detail/464130.html">Delete nodes from an ApsaraDB RDS for MySQL Cluster Edition instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes nodes from an ApsaraDB RDS instance that runs Cluster Edition.</p>
+     * <p>Deletes nodes from an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param request DeleteDBNodesRequest
      * @return DeleteDBNodesResponse
@@ -7584,15 +7586,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Settings for database proxy endpoints for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Settings for database proxy endpoints for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the database proxy endpoint for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a database proxy endpoint of an ApsaraDB RDS instance.</p>
+     * <p>Deletes the database proxy endpoint of an ApsaraDB RDS instance.</p>
      * 
      * @param request DeleteDBProxyEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7651,15 +7653,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Settings for database proxy endpoints for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Settings for database proxy endpoints for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the database proxy endpoint for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418274.html">Configure the database proxy endpoint for an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a database proxy endpoint of an ApsaraDB RDS instance.</p>
+     * <p>Deletes the database proxy endpoint of an ApsaraDB RDS instance.</p>
      * 
      * @param request DeleteDBProxyEndpointAddressRequest
      * @return DeleteDBProxyEndpointAddressResponse
@@ -7835,14 +7837,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when invoking this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature in Cloud Hardware Security Module (CloudHSM).</li>
+     * <li>Before you invoke this operation, make sure that the column encryption service is enabled in the DAS Security Center.</li>
+     * <li>If you receive the ColumnEncryptionErrorCode.NOT_PURCHASED error message when you invoke this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable the column encryption service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an encryption or masking rule for a specified instance.</p>
+     * <p>Deletes the encryption or data masking rule for a specified instance.</p>
      * 
      * @param request DeleteMaskingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7898,14 +7900,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when invoking this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature in Cloud Hardware Security Module (CloudHSM).</li>
+     * <li>Before you invoke this operation, make sure that the column encryption service is enabled in the DAS Security Center.</li>
+     * <li>If you receive the ColumnEncryptionErrorCode.NOT_PURCHASED error message when you invoke this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable the column encryption service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an encryption or masking rule for a specified instance.</p>
+     * <p>Deletes the encryption or data masking rule for a specified instance.</p>
      * 
      * @param request DeleteMaskingRulesRequest
      * @return DeleteMaskingRulesResponse
@@ -8016,17 +8018,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
-     * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
-     * </blockquote>
+     * <h3>Related feature documentation</h3>
+     * <p><notice>Before you use this operation, read the feature documentation to fully understand the prerequisites and the impacts of using this operation.</notice></p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set instance parameters for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set instance parameters for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set the parameters of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set the parameters of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a scheduled task for modifying instance parameters.</p>
+     * <p>Deletes the scheduled task for modifying instance parameters.</p>
      * 
      * @param request DeleteParameterTimedScheduleTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8067,17 +8067,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
-     * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
-     * </blockquote>
+     * <h3>Related feature documentation</h3>
+     * <p><notice>Before you use this operation, read the feature documentation to fully understand the prerequisites and the impacts of using this operation.</notice></p>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set instance parameters for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set instance parameters for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set the parameters of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set the parameters of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a scheduled task for modifying instance parameters.</p>
+     * <p>Deletes the scheduled task for modifying instance parameters.</p>
      * 
      * @param request DeleteParameterTimedScheduleTaskRequest
      * @return DeleteParameterTimedScheduleTaskResponse
@@ -8089,17 +8087,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension exchange DingTalk group (103525002795) to consult, communicate, provide feedback, and obtain more information about extensions.</p>
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension communication DingTalk group (103525002795) for consultation, communication, and feedback to obtain more information about extensions.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.
      * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified extension from a target database of an instance.</p>
+     * <p>Deletes a specified extension from the target database of an instance.</p>
      * 
      * @param request DeletePostgresExtensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8163,17 +8161,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension exchange DingTalk group (103525002795) to consult, communicate, provide feedback, and obtain more information about extensions.</p>
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension communication DingTalk group (103525002795) for consultation, communication, and feedback to obtain more information about extensions.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.
      * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified extension from a target database of an instance.</p>
+     * <p>Deletes a specified extension from the target database of an instance.</p>
      * 
      * @param request DeletePostgresExtensionsRequest
      * @return DeletePostgresExtensionsResponse
@@ -8251,7 +8249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an RDS Custom deployment set by specifying parameters such as RegionId and DeploymentSetId.</p>
+     * <p>Deletes an RDS Custom deployment set.</p>
      * 
      * @param request DeleteRCDeploymentSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8287,7 +8285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an RDS Custom deployment set by specifying parameters such as RegionId and DeploymentSetId.</p>
+     * <p>Deletes an RDS Custom deployment set.</p>
      * 
      * @param request DeleteRCDeploymentSetRequest
      * @return DeleteRCDeploymentSetResponse
@@ -8299,15 +8297,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>Manual snapshots of the cloud disk are retained.</li>
-     * <li>When you release a cloud disk, the cloud disk must be in the <strong>Unattached</strong> (Available) state.</li>
-     * <li>If the cloud disk with the specified ID does not exist, the request is ignored.</li>
+     * <li>Manual snapshots of the disk are retained.</li>
+     * <li>The disk must be in the Available state when it is released.</li>
+     * <li>If the disk with the specified ID does not exist, the request is ignored.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a pay-as-you-go data cloud disk. Cloud disk types include basic cloud disks, ultra cloud disks, standard SSDs, and ESSDs.</p>
+     * <p>Releases a pay-as-you-go data cloud disk. Supported disk types include basic cloud disks, ultra cloud disks, standard SSDs, and ESSDs.</p>
      * 
      * @param request DeleteRCDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8343,15 +8341,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following items:</p>
+     * <p>When you call this operation, note the following items:</p>
      * <ul>
-     * <li>Manual snapshots of the cloud disk are retained.</li>
-     * <li>When you release a cloud disk, the cloud disk must be in the <strong>Unattached</strong> (Available) state.</li>
-     * <li>If the cloud disk with the specified ID does not exist, the request is ignored.</li>
+     * <li>Manual snapshots of the disk are retained.</li>
+     * <li>The disk must be in the Available state when it is released.</li>
+     * <li>If the disk with the specified ID does not exist, the request is ignored.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a pay-as-you-go data cloud disk. Cloud disk types include basic cloud disks, ultra cloud disks, standard SSDs, and ESSDs.</p>
+     * <p>Releases a pay-as-you-go data cloud disk. Supported disk types include basic cloud disks, ultra cloud disks, standard SSDs, and ESSDs.</p>
      * 
      * @param request DeleteRCDiskRequest
      * @return DeleteRCDiskResponse
@@ -8415,10 +8413,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After an instance is released, all physical resources used by the instance are reclaimed, and all related data is permanently lost and cannot be recovered.</p>
+     * <p>After the instances are released, the physical resources used by the instances are reclaimed, and all related data is lost and cannot be recovered.</p>
      * 
      * <b>summary</b> : 
-     * <p>Releases one or more subscription RDS Custom instances by calling the DeleteRCInstance operation.</p>
+     * <p>Releases one or more subscription RDS Custom instances.</p>
      * 
      * @param tmpReq DeleteRCInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8472,10 +8470,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After an instance is released, all physical resources used by the instance are reclaimed, and all related data is permanently lost and cannot be recovered.</p>
+     * <p>After the instances are released, the physical resources used by the instances are reclaimed, and all related data is lost and cannot be recovered.</p>
      * 
      * <b>summary</b> : 
-     * <p>Releases one or more subscription RDS Custom instances by calling the DeleteRCInstance operation.</p>
+     * <p>Releases one or more subscription RDS Custom instances.</p>
      * 
      * @param request DeleteRCInstancesRequest
      * @return DeleteRCInstancesResponse
@@ -8655,14 +8653,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the data synchronization link of a disaster recovery RDS instance and promotes the disaster recovery instance to a primary instance.</p>
+     * <p>Deletes the data synchronization link of a disaster recovery instance and promotes the disaster recovery instance to a primary instance.</p>
      * 
      * @param request DeleteReplicationLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8702,14 +8700,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the data synchronization link of a disaster recovery RDS instance and promotes the disaster recovery instance to a primary instance.</p>
+     * <p>Deletes the data synchronization link of a disaster recovery instance and promotes the disaster recovery instance to a primary instance.</p>
      * 
      * @param request DeleteReplicationLinkRequest
      * @return DeleteReplicationLinkResponse
@@ -8801,15 +8799,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Precautions</h3>
-     * <p>A replication slot can be deleted only when its status (SlotStatus) is <strong>INACTIVE</strong>. You can call the DescribeSlots operation to query the replication slot status.</p>
+     * <p>A replication slot can be deleted only when its status (SlotStatus) is <strong>INACTIVE</strong>. You can call the DescribeSlots operation to query the status of the replication slot.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified replication slot from an instance.</p>
+     * <p>Deletes a specified replication slot of an instance.</p>
      * 
      * @param request DeleteSlotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8873,15 +8871,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Precautions</h3>
-     * <p>A replication slot can be deleted only when its status (SlotStatus) is <strong>INACTIVE</strong>. You can call the DescribeSlots operation to query the replication slot status.</p>
+     * <p>A replication slot can be deleted only when its status (SlotStatus) is <strong>INACTIVE</strong>. You can call the DescribeSlots operation to query the status of the replication slot.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified replication slot from an instance.</p>
+     * <p>Deletes a specified replication slot of an instance.</p>
      * 
      * @param request DeleteSlotRequest
      * @return DeleteSlotResponse
@@ -8893,18 +8891,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
-     * <h3>Description</h3>
+     * <h3>Features</h3>
      * <ul>
-     * <li>A user backup is a full backup of a self-managed MySQL database. You can restore a user backup to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the full data of a self-managed MySQL 5.7 database to the cloud</a>.</li>
-     * <li>This operation only deletes the specified user backup from the ApsaraDB RDS console and does not affect the original backup file in Object Storage Service (OSS). After the deletion, you can call the ImportUserBackupFile operation to re-import the user backup.</li>
+     * <li>A user backup is a full backup of a self-managed MySQL database. You can restore the user backup to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from a self-managed MySQL 5.7 database to the cloud</a>.</li>
+     * <li>This operation only deletes the specified user backup from the ApsaraDB RDS console and does not affect the original backup file in OSS. After the deletion, you can call the ImportUserBackupFile operation to re-import the user backup.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a user backup of an ApsaraDB RDS for MySQL instance.</p>
+     * <p>Deletes a specified user backup of an ApsaraDB RDS for MySQL instance.</p>
      * 
      * @param request DeleteUserBackupFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8956,18 +8954,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
-     * <h3>Description</h3>
+     * <h3>Features</h3>
      * <ul>
-     * <li>A user backup is a full backup of a self-managed MySQL database. You can restore a user backup to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the full data of a self-managed MySQL 5.7 database to the cloud</a>.</li>
-     * <li>This operation only deletes the specified user backup from the ApsaraDB RDS console and does not affect the original backup file in Object Storage Service (OSS). After the deletion, you can call the ImportUserBackupFile operation to re-import the user backup.</li>
+     * <li>A user backup is a full backup of a self-managed MySQL database. You can restore the user backup to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from a self-managed MySQL 5.7 database to the cloud</a>.</li>
+     * <li>This operation only deletes the specified user backup from the ApsaraDB RDS console and does not affect the original backup file in OSS. After the deletion, you can call the ImportUserBackupFile operation to re-import the user backup.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a user backup of an ApsaraDB RDS for MySQL instance.</p>
+     * <p>Deletes a specified user backup of an ApsaraDB RDS for MySQL instance.</p>
      * 
      * @param request DeleteUserBackupFileRequest
      * @return DeleteUserBackupFileResponse
@@ -9083,13 +9081,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the Active Directory (AD) domain information of the current instance, including whether the instance has joined a domain, the domain name, and the account used.</p>
+     * <p>Queries the Active Directory (AD) domain information of the current instance, including the domain join status, domain name, and associated account.</p>
      * 
      * @param request DescribeADInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9141,13 +9139,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the Active Directory (AD) domain information of the current instance, including whether the instance has joined a domain, the domain name, and the account used.</p>
+     * <p>Queries the Active Directory (AD) domain information of the current instance, including the domain join status, domain name, and associated account.</p>
      * 
      * @param request DescribeADInfoRequest
      * @return DescribeADInfoResponse
@@ -9161,12 +9159,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before you invoke this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the error message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature before using it.</li>
+     * <li>Before you call this operation, make sure that you have activated the column encryption service in the DAS Security Center.</li>
+     * <li>If you receive the error message ColumnEncryptionErrorCode.NOT_PURCHASED when calling this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption service before you proceed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the encryption or data masking permission configurations of accounts in a specified instance.</p>
+     * <p>Queries the encryption or masking permission configurations for accounts in a specified instance.</p>
      * 
      * @param request DescribeAccountMaskingPrivilegeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9224,12 +9222,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before you invoke this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the error message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature before using it.</li>
+     * <li>Before you call this operation, make sure that you have activated the column encryption service in the DAS Security Center.</li>
+     * <li>If you receive the error message ColumnEncryptionErrorCode.NOT_PURCHASED when calling this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption service before you proceed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the encryption or data masking permission configurations of accounts in a specified instance.</p>
+     * <p>Queries the encryption or masking permission configurations for accounts in a specified instance.</p>
      * 
      * @param request DescribeAccountMaskingPrivilegeRequest
      * @return DescribeAccountMaskingPrivilegeResponse
@@ -9401,7 +9399,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the proactive O&amp;M configuration of a user, which currently includes the scheduled event cycle window information.</p>
+     * <p>Retrieves the O&amp;M configuration information of a user, which currently includes the cycle window information for scheduled events.</p>
      * 
      * @param request DescribeActiveOperationMaintainConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9449,7 +9447,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the proactive O&amp;M configuration of a user, which currently includes the scheduled event cycle window information.</p>
+     * <p>Retrieves the O&amp;M configuration information of a user, which currently includes the cycle window information for scheduled events.</p>
      * 
      * @param request DescribeActiveOperationMaintainConfRequest
      * @return DescribeActiveOperationMaintainConfResponse
@@ -9468,9 +9466,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events for ApsaraDB RDS for MySQL</a></li>
@@ -9579,9 +9577,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/104183.html">Scheduled events for ApsaraDB RDS for MySQL</a></li>
@@ -9603,15 +9601,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves whitelist templates in batches with support for fuzzy search.</p>
+     * <p>Queries whitelist templates in batches and supports fuzzy match.</p>
      * 
      * @param request DescribeAllWhitelistTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9671,15 +9669,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves whitelist templates in batches with support for fuzzy search.</p>
+     * <p>Queries whitelist templates in batches and supports fuzzy match.</p>
      * 
      * @param request DescribeAllWhitelistTemplateRequest
      * @return DescribeAllWhitelistTemplateResponse
@@ -9763,7 +9761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -9772,7 +9770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the instance types and storage capacity to which an ApsaraDB RDS instance can be changed.</p>
+     * <p>Queries the available specifications and storage space of an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeAvailableClassesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9844,7 +9842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -9853,7 +9851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the instance types and storage capacity to which an ApsaraDB RDS instance can be changed.</p>
+     * <p>Queries the available specifications and storage space of an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeAvailableClassesRequest
      * @return DescribeAvailableClassesResponse
@@ -9955,13 +9953,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts.
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts of this operation.</notice>
      * <a href="https://help.aliyun.com/document_detail/299200.html">View enhanced monitoring</a>.</p>
      * </blockquote>
      * 
@@ -10006,13 +10004,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts.
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts of this operation.</notice>
      * <a href="https://help.aliyun.com/document_detail/299200.html">View enhanced monitoring</a>.</p>
      * </blockquote>
      * 
@@ -10030,18 +10028,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>To query the restorable time range of a regular backup file, see DescribeBackups.</p>
+     * <p>To view the time range to which data can be restored from a regular backup file, see DescribeBackups.</p>
      * </blockquote>
-     * <h3>Applicable engine</h3>
-     * <p>ApsaraDB RDS for MySQL (with Premium Local SSDs)</p>
-     * <h3>Related documentation</h3>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for MySQL (instances with Premium Local SSDs)</p>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the restorable time range of a cross-region backup file.</p>
+     * <p>Queries the time range to which data can be restored from a specified cross-region backup file.</p>
      * 
      * @param request DescribeAvailableRecoveryTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10098,18 +10096,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>To query the restorable time range of a regular backup file, see DescribeBackups.</p>
+     * <p>To view the time range to which data can be restored from a regular backup file, see DescribeBackups.</p>
      * </blockquote>
-     * <h3>Applicable engine</h3>
-     * <p>ApsaraDB RDS for MySQL (with Premium Local SSDs)</p>
-     * <h3>Related documentation</h3>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for MySQL (instances with Premium Local SSDs)</p>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the restorable time range of a cross-region backup file.</p>
+     * <p>Queries the time range to which data can be restored from a specified cross-region backup file.</p>
      * 
      * @param request DescribeAvailableRecoveryTimeRequest
      * @return DescribeAvailableRecoveryTimeResponse
@@ -10123,13 +10121,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL<blockquote>
-     * <p>This operation is used only to query available zone resources and is not used for the sales of ApsaraDB RDS for PostgreSQL on the console. Due to differences in actual sales policies, some parameter values on the buy page may slightly differ. When making a purchase, refer to the <a href="https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL">buy page</a>.</p>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL<blockquote>
+     * <p>This operation is only used to query available zone resources and is not used for the sales of ApsaraDB RDS for PostgreSQL in the console. The purchase page may have slightly different parameter values based on actual sales strategies. When you make a purchase, refer to the <a href="https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL">purchase page</a>.</p>
      * </blockquote>
      * </li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10199,13 +10197,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL<blockquote>
-     * <p>This operation is used only to query available zone resources and is not used for the sales of ApsaraDB RDS for PostgreSQL on the console. Due to differences in actual sales policies, some parameter values on the buy page may slightly differ. When making a purchase, refer to the <a href="https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL">buy page</a>.</p>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL<blockquote>
+     * <p>This operation is only used to query available zone resources and is not used for the sales of ApsaraDB RDS for PostgreSQL in the console. The purchase page may have slightly different parameter values based on actual sales strategies. When you make a purchase, refer to the <a href="https://rdsbuy.console.aliyun.com/create/rds/PostgreSQL">purchase page</a>.</p>
      * </blockquote>
      * </li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10469,12 +10467,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10546,12 +10544,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10759,7 +10757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>RDS MySQL</li>
      * <li>RDS PostgreSQL</li>
@@ -10768,7 +10766,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an instance type by instance type code.</p>
+     * <p>Queries the details of an instance type by using the instance type code.</p>
      * 
      * @param request DescribeClassDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10836,7 +10834,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>RDS MySQL</li>
      * <li>RDS PostgreSQL</li>
@@ -10845,7 +10843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an instance type by instance type code.</p>
+     * <p>Queries the details of an instance type by using the instance type code.</p>
      * 
      * @param request DescribeClassDetailsRequest
      * @return DescribeClassDetailsResponse
@@ -10857,7 +10855,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
@@ -10923,7 +10921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
@@ -10941,13 +10939,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a cloud migration task for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Queries the details of an ApsaraDB RDS for PostgreSQL cloud migration task.</p>
      * 
      * @param request DescribeCloudMigrationResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11007,13 +11005,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a cloud migration task for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Queries the details of an ApsaraDB RDS for PostgreSQL cloud migration task.</p>
      * 
      * @param request DescribeCloudMigrationResultRequest
      * @return DescribeCloudMigrationResultResponse
@@ -11085,13 +11083,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Committed serverless</a></p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related feature documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Committed Serverless</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration of the committed serverless feature.</p>
+     * <p>Queries the configuration of the committed Serverless feature.</p>
      * 
      * @param request DescribeComputeBurstConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11147,13 +11145,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Committed serverless</a></p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related feature documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Committed Serverless</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration of the committed serverless feature.</p>
+     * <p>Queries the configuration of the committed Serverless feature.</p>
      * 
      * @param request DescribeComputeBurstConfigRequest
      * @return DescribeComputeBurstConfigResponse
@@ -11165,7 +11163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -11173,16 +11171,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation to fully understand the prerequisites and impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Cross-region backup for ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Cross-region backup for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backups for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Cross-region backups for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Cross-region backups for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the database and table information of a cross-region backup for an ApsaraDB RDS instance.</p>
+     * <p>Queries the database and table information of cross-region backups for an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeCrossBackupMetaListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11250,7 +11248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -11258,16 +11256,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation to fully understand the prerequisites and impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Cross-region backup for ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Cross-region backup for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backups for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/206671.html">Cross-region backups for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/187923.html">Cross-region backups for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the database and table information of a cross-region backup for an ApsaraDB RDS instance.</p>
+     * <p>Queries the database and table information of cross-region backups for an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeCrossBackupMetaListRequest
      * @return DescribeCrossBackupMetaListResponse
@@ -11287,7 +11285,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
@@ -11360,7 +11358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
@@ -11383,19 +11381,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL (<a href="https://help.aliyun.com/document_detail/69795.html">storage type</a> must be <strong>Premium Local SSDs</strong>. Cloud disks are not supported.)</li>
+     * <li>ApsaraDB RDS for MySQL (The <a href="https://help.aliyun.com/document_detail/69795.html">storage type</a> must be <strong>Premium Local SSDs</strong>. Cloud disks are not supported.)</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/187923.html">Cross-region backup for ApsaraDB RDS for SQL Server</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/206671.html">Cross-region backup for ApsaraDB RDS for PostgreSQL</a><blockquote>
-     * <p>To query cross-region log backup files, refer to DescribeCrossRegionLogBackupFiles.</p>
+     * <p>To query cross-region log backup files, see DescribeCrossRegionLogBackupFiles.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -11483,19 +11481,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL (<a href="https://help.aliyun.com/document_detail/69795.html">storage type</a> must be <strong>Premium Local SSDs</strong>. Cloud disks are not supported.)</li>
+     * <li>ApsaraDB RDS for MySQL (The <a href="https://help.aliyun.com/document_detail/69795.html">storage type</a> must be <strong>Premium Local SSDs</strong>. Cloud disks are not supported.)</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/187923.html">Cross-region backup for ApsaraDB RDS for SQL Server</a></li>
      * <li><a href="https://help.aliyun.com/document_detail/206671.html">Cross-region backup for ApsaraDB RDS for PostgreSQL</a><blockquote>
-     * <p>To query cross-region log backup files, refer to DescribeCrossRegionLogBackupFiles.</p>
+     * <p>To query cross-region log backup files, see DescribeCrossRegionLogBackupFiles.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -11701,7 +11699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource usage of an instance.</p>
+     * <p>Queries the resource usage of instances.</p>
      * 
      * @param request DescribeCustinsResourceInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11749,7 +11747,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the resource usage of an instance.</p>
+     * <p>Queries the resource usage of instances.</p>
      * 
      * @param request DescribeCustinsResourceInfoRequest
      * @return DescribeCustinsResourceInfoResponse
@@ -11831,16 +11829,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
-     * <li>ApsaraDB RDS for MariaDB</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags that are bound to an instance.</p>
+     * <p>Retrieves the tags bound to an instance.</p>
      * 
      * @param request DescribeDBInstanceByTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11908,16 +11906,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
-     * <li>ApsaraDB RDS for MariaDB</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tags that are bound to an instance.</p>
+     * <p>Retrieves the tags bound to an instance.</p>
      * 
      * @param request DescribeDBInstanceByTagsRequest
      * @return DescribeDBInstanceByTagsResponse
@@ -11931,8 +11929,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before you invoke this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when invoking this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature.</li>
+     * <li>Before you use this operation, make sure that the column encryption service is enabled in the DAS Security Center.</li>
+     * <li>If you receive the error message ColumnEncryptionErrorCode.NOT_PURCHASED when you call this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable the column encryption service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -11986,8 +11984,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before you invoke this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when invoking this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature.</li>
+     * <li>Before you use this operation, make sure that the column encryption service is enabled in the DAS Security Center.</li>
+     * <li>If you receive the error message ColumnEncryptionErrorCode.NOT_PURCHASED when you call this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable the column encryption service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12003,7 +12001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves link diagnostics information for an instance.</p>
+     * <p>Retrieves the connectivity diagnostics information for an instance.</p>
      * 
      * @param request DescribeDBInstanceConnectivityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12031,7 +12029,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves link diagnostics information for an instance.</p>
+     * <p>Retrieves the connectivity diagnostics information for an instance.</p>
      * 
      * @param request DescribeDBInstanceConnectivityRequest
      * @return DescribeDBInstanceConnectivityResponse
@@ -12043,8 +12041,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p>RDS SQL Server.</p>
+     * <h3>Applicable engine</h3>
+     * <p>ApsaraDB RDS for SQL Server.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an ApsaraDB RDS for SQL Server instance.</p>
@@ -12103,8 +12101,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p>RDS SQL Server.</p>
+     * <h3>Applicable engine</h3>
+     * <p>ApsaraDB RDS for SQL Server.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the details of an ApsaraDB RDS for SQL Server instance.</p>
@@ -12119,7 +12117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -12127,7 +12125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether cloud disk encryption is enabled for an ApsaraDB RDS instance and the encryption key details.</p>
+     * <p>Queries whether cloud disk encryption is enabled for an ApsaraDB RDS instance and retrieves the key details.</p>
      * 
      * @param request DescribeDBInstanceEncryptionKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12191,7 +12189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -12199,7 +12197,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether cloud disk encryption is enabled for an ApsaraDB RDS instance and the encryption key details.</p>
+     * <p>Queries whether cloud disk encryption is enabled for an ApsaraDB RDS instance and retrieves the key details.</p>
      * 
      * @param request DescribeDBInstanceEncryptionKeyRequest
      * @return DescribeDBInstanceEncryptionKeyResponse
@@ -12287,13 +12285,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before you proceed.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96055.html">Query the data replication mode of an ApsaraDB RDS for MySQL instance</a></li>
@@ -12352,13 +12350,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before you proceed.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96055.html">Query the data replication mode of an ApsaraDB RDS for MySQL instance</a></li>
@@ -12388,7 +12386,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IP whitelist of an ApsaraDB RDS instance.</p>
+     * <p>Queries the IP address whitelists of an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeDBInstanceIPArrayListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12441,7 +12439,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IP whitelist of an ApsaraDB RDS instance.</p>
+     * <p>Queries the IP address whitelists of an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeDBInstanceIPArrayListRequest
      * @return DescribeDBInstanceIPArrayListResponse
@@ -12557,18 +12555,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts.
+     * <p>Notice: Before you use this operation, read the feature documentation carefully to ensure that you fully understand the prerequisites and the impacts of using this operation.</notice>
      * <a href="https://help.aliyun.com/document_detail/299200.html">View enhanced monitoring</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the enhanced monitoring metrics that are enabled for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Queries the enhanced metrics that are enabled and displayed for an ApsaraDB RDS for PostgreSQL instance.</p>
      * 
      * @param request DescribeDBInstanceMetricsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12608,18 +12606,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts.
+     * <p>Notice: Before you use this operation, read the feature documentation carefully to ensure that you fully understand the prerequisites and the impacts of using this operation.</notice>
      * <a href="https://help.aliyun.com/document_detail/299200.html">View enhanced monitoring</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the enhanced monitoring metrics that are enabled for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Queries the enhanced metrics that are enabled and displayed for an ApsaraDB RDS for PostgreSQL instance.</p>
      * 
      * @param request DescribeDBInstanceMetricsRequest
      * @return DescribeDBInstanceMetricsResponse
@@ -12895,12 +12893,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
-     * <li>ApsaraDB RDS for MariaDB</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12956,12 +12954,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
-     * <li>ApsaraDB RDS for MariaDB</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -12977,10 +12975,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. <strong>You can still call this operation, but Alibaba Cloud no longer maintains it</strong>.</p>
+     * <p>This operation is deprecated: <strong>you can still call this operation, but Alibaba Cloud no longer maintains it</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation is no longer maintained. You can still call this operation, but it is no longer maintained.</p>
+     * <p>Queries the promotional activities applied to an instance. This operation is deprecated and no longer maintained, but remains callable.</p>
      * 
      * @deprecated OpenAPI DescribeDBInstancePromoteActivity is deprecated
      * 
@@ -13036,10 +13034,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. <strong>You can still call this operation, but Alibaba Cloud no longer maintains it</strong>.</p>
+     * <p>This operation is deprecated: <strong>you can still call this operation, but Alibaba Cloud no longer maintains it</strong>.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation is no longer maintained. You can still call this operation, but it is no longer maintained.</p>
+     * <p>Queries the promotional activities applied to an instance. This operation is deprecated and no longer maintained, but remains callable.</p>
      * 
      * @deprecated OpenAPI DescribeDBInstancePromoteActivity is deprecated
      * 
@@ -13127,16 +13125,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before you proceed.
-     * <a href="https://help.aliyun.com/document_detail/2856487.html">RDS MySQL native replication instance</a></p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.
+     * <a href="https://help.aliyun.com/document_detail/2856487.html">Native replication instances of ApsaraDB RDS for MySQL</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the instance status and configuration of a native replication instance.</p>
+     * <p>Queries the status and configuration of a native replication instance.</p>
      * 
      * @param request DescribeDBInstanceReplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13176,16 +13174,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before you proceed.
-     * <a href="https://help.aliyun.com/document_detail/2856487.html">RDS MySQL native replication instance</a></p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.
+     * <a href="https://help.aliyun.com/document_detail/2856487.html">Native replication instances of ApsaraDB RDS for MySQL</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the instance status and configuration of a native replication instance.</p>
+     * <p>Queries the status and configuration of a native replication instance.</p>
      * 
      * @param request DescribeDBInstanceReplicationRequest
      * @return DescribeDBInstanceReplicationResponse
@@ -13286,9 +13284,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server</p>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for ApsaraDB RDS for SQL Server</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for an ApsaraDB RDS for SQL Server instance</a></p>
      * 
      * <b>summary</b> : 
      * <p>Queries the security group rules of an ApsaraDB RDS for SQL Server instance.</p>
@@ -13340,9 +13338,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server</p>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for ApsaraDB RDS for SQL Server</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for an ApsaraDB RDS for SQL Server instance</a></p>
      * 
      * <b>summary</b> : 
      * <p>Queries the security group rules of an ApsaraDB RDS for SQL Server instance.</p>
@@ -13443,7 +13441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -13499,7 +13497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -13528,7 +13526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of ApsaraDB RDS instances.</p>
+     * <p>Queries ApsaraDB RDS instances.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13701,7 +13699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of ApsaraDB RDS instances.</p>
+     * <p>Queries ApsaraDB RDS instances.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -13713,10 +13711,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained: <strong>the operation can still be called, but Alibaba Cloud no longer maintains it</strong>. Use the <strong>DescribeDBInstances</strong> operation instead.</p>
+     * <p>This operation is deprecated: <strong>You can still call this operation, but Alibaba Cloud no longer maintains it</strong>. Use the <strong>DescribeDBInstances</strong> operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of instances. This operation is no longer maintained but can still be called.</p>
+     * <p>Queries a list of instances. This operation is deprecated and no longer maintained, but can still be called.</p>
      * 
      * @deprecated OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
      * 
@@ -13780,10 +13778,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained: <strong>the operation can still be called, but Alibaba Cloud no longer maintains it</strong>. Use the <strong>DescribeDBInstances</strong> operation instead.</p>
+     * <p>This operation is deprecated: <strong>You can still call this operation, but Alibaba Cloud no longer maintains it</strong>. Use the <strong>DescribeDBInstances</strong> operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of instances. This operation is no longer maintained but can still be called.</p>
+     * <p>Queries a list of instances. This operation is deprecated and no longer maintained, but can still be called.</p>
      * 
      * @deprecated OpenAPI DescribeDBInstancesAsCsv is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
      * 
@@ -13799,7 +13797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -13808,7 +13806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about ApsaraDB RDS instances based on the remaining available time of subscription instances.</p>
+     * <p>Queries the details of ApsaraDB RDS instances based on the remaining available time of subscription instances.</p>
      * 
      * @param request DescribeDBInstancesByExpireTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13884,7 +13882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -13893,7 +13891,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about ApsaraDB RDS instances based on the remaining available time of subscription instances.</p>
+     * <p>Queries the details of ApsaraDB RDS instances based on the remaining available time of subscription instances.</p>
      * 
      * @param request DescribeDBInstancesByExpireTimeRequest
      * @return DescribeDBInstancesByExpireTimeResponse
@@ -14008,7 +14006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is no longer maintained: <strong>the operation can still be called, but Alibaba Cloud no longer maintains it</strong>. Use the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the details of new instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries clone database instances. This operation is no longer maintained but can still be called.</p>
+     * <p>Queries cloned database instances. <strong>[Deprecated]</strong> This operation can still be called, but it is no longer maintained.</p>
      * 
      * @deprecated OpenAPI DescribeDBInstancesForClone is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
      * 
@@ -14147,7 +14145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation is no longer maintained: <strong>the operation can still be called, but Alibaba Cloud no longer maintains it</strong>. Use the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the details of new instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries clone database instances. This operation is no longer maintained but can still be called.</p>
+     * <p>Queries cloned database instances. <strong>[Deprecated]</strong> This operation can still be called, but it is no longer maintained.</p>
      * 
      * @deprecated OpenAPI DescribeDBInstancesForClone is deprecated, please use Rds::2014-08-15::DescribeDBInstances instead.
      * 
@@ -14259,12 +14257,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the database proxy settings of an ApsaraDB RDS instance.</p>
+     * <p>Queries the details of the database proxy settings for an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeDBProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14326,12 +14324,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of the database proxy settings of an ApsaraDB RDS instance.</p>
+     * <p>Queries the details of the database proxy settings for an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeDBProxyRequest
      * @return DescribeDBProxyResponse
@@ -14435,19 +14433,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL<blockquote>
-     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition instances are progressively provided with a complimentary dedicated proxy service with one proxy node across regions. For more information, see <a href="https://help.aliyun.com/document_detail/2555466.html">ApsaraDB RDS for MySQL Cluster Edition complimentary dedicated proxy service with one proxy node</a>.</p>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL<blockquote>
+     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated dedicated proxy with one proxy node in each unit. For more information, see <a href="https://help.aliyun.com/document_detail/2555466.html">Free dedicated dedicated proxy with one proxy node for ApsaraDB RDS for MySQL Cluster Edition</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following feature documentation to fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/194241.html">View monitoring data for RDS MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418275.html">View monitoring data for RDS PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/194241.html">View monitoring data for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418275.html">View monitoring data for ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -14529,19 +14527,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL<blockquote>
-     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition instances are progressively provided with a complimentary dedicated proxy service with one proxy node across regions. For more information, see <a href="https://help.aliyun.com/document_detail/2555466.html">ApsaraDB RDS for MySQL Cluster Edition complimentary dedicated proxy service with one proxy node</a>.</p>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL<blockquote>
+     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated dedicated proxy with one proxy node in each unit. For more information, see <a href="https://help.aliyun.com/document_detail/2555466.html">Free dedicated dedicated proxy with one proxy node for ApsaraDB RDS for MySQL Cluster Edition</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following feature documentation to fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/194241.html">View monitoring data for RDS MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418275.html">View monitoring data for RDS PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/194241.html">View monitoring data for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418275.html">View monitoring data for ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -14557,16 +14555,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server</p>
+     * <h3>Supported engine</h3>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist for SQL Server</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the distributed transaction whitelist of an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Queries the distributed transaction whitelist information of an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeDTCSecurityIpHostsForSQLServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14626,16 +14624,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server</p>
+     * <h3>Supported engine</h3>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.
      * <a href="https://help.aliyun.com/document_detail/124321.html">Configure a distributed transaction whitelist for SQL Server</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the distributed transaction whitelist of an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Queries the distributed transaction whitelist information of an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeDTCSecurityIpHostsForSQLServerRequest
      * @return DescribeDTCSecurityIpHostsForSQLServerResponse
@@ -14741,10 +14739,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The dedicated cluster feature allows you to manage instances in batches by cluster. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
+     * <p>The dedicated cluster feature allows you to manage instances in batches as clusters. You can create multiple dedicated clusters in a region. Each dedicated cluster contains multiple hosts, and each host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about an ApsaraDB RDS dedicated cluster.</p>
+     * <p>Queries the details of ApsaraDB RDS dedicated clusters.</p>
      * 
      * @param request DescribeDedicatedHostGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14796,10 +14794,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The dedicated cluster feature allows you to manage instances in batches by cluster. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
+     * <p>The dedicated cluster feature allows you to manage instances in batches as clusters. You can create multiple dedicated clusters in a region. Each dedicated cluster contains multiple hosts, and each host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about an ApsaraDB RDS dedicated cluster.</p>
+     * <p>Queries the details of ApsaraDB RDS dedicated clusters.</p>
      * 
      * @param request DescribeDedicatedHostGroupsRequest
      * @return DescribeDedicatedHostGroupsResponse
@@ -14811,7 +14809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The dedicated cluster feature allows you to manage instances in batches by cluster. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
+     * <p>The dedicated cluster feature manages instances in batches in the form of clusters. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the host information in a dedicated cluster.</p>
@@ -14886,7 +14884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The dedicated cluster feature allows you to manage instances in batches by cluster. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
+     * <p>The dedicated cluster feature manages instances in batches in the form of clusters. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the host information in a dedicated cluster.</p>
@@ -14901,16 +14899,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS MySQL</p>
+     * <h3>Supported database engine</h3>
+     * <p>ApsaraDB RDS for MySQL</p>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/2836955.html">Set the backup retention policy after an instance is released</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/2836955.html">Configure the backup retention policy for a released instance</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the backup sets of released ApsaraDB RDS for MySQL instances.</p>
+     * <p>Queries the backup sets of a released ApsaraDB RDS for MySQL instance.</p>
      * 
      * @param request DescribeDetachedBackupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14982,16 +14980,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS MySQL</p>
+     * <h3>Supported database engine</h3>
+     * <p>ApsaraDB RDS for MySQL</p>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/2836955.html">Set the backup retention policy after an instance is released</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts of this operation.
+     * <a href="https://help.aliyun.com/document_detail/2836955.html">Configure the backup retention policy for a released instance</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the backup sets of released ApsaraDB RDS for MySQL instances.</p>
+     * <p>Queries the backup sets of a released ApsaraDB RDS for MySQL instance.</p>
      * 
      * @param request DescribeDetachedBackupsRequest
      * @return DescribeDetachedBackupsResponse
@@ -15003,16 +15001,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
-     * <li>ApsaraDB RDS for MariaDB</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the error logs of an instance within a specified time range.</p>
+     * <p>Queries the error logs of an instance within a specified time period.</p>
      * 
      * @param request DescribeErrorLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15076,16 +15074,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
-     * <li>ApsaraDB RDS for MariaDB</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the error logs of an instance within a specified time range.</p>
+     * <p>Queries the error logs of an instance within a specified time period.</p>
      * 
      * @param request DescribeErrorLogsRequest
      * @return DescribeErrorLogsResponse
@@ -15099,24 +15097,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before proceeding.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and the impact of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/468953.html">RDS MySQL historical events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/2569306.html">RDS PostgreSQL historical events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/2571444.html">RDS SQL Server historical events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/2571339.html">RDS MariaDB historical events</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/468953.html">Historical events for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2569306.html">Historical events for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2571444.html">Historical events for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2571339.html">Historical events for ApsaraDB RDS for MariaDB</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of historical event records for an ApsaraDB RDS instance.</p>
+     * <p>Queries a list of historical event records for ApsaraDB RDS.</p>
      * 
      * @param request DescribeEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15178,24 +15176,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before proceeding.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and the impact of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/468953.html">RDS MySQL historical events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/2569306.html">RDS PostgreSQL historical events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/2571444.html">RDS SQL Server historical events</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/2571339.html">RDS MariaDB historical events</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/468953.html">Historical events for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2569306.html">Historical events for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2571444.html">Historical events for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2571339.html">Historical events for ApsaraDB RDS for MariaDB</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of historical event records for an ApsaraDB RDS instance.</p>
+     * <p>Queries a list of historical event records for ApsaraDB RDS.</p>
      * 
      * @param request DescribeEventsRequest
      * @return DescribeEventsResponse
@@ -15207,13 +15205,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of active geo-redundancy database clusters for ApsaraDB RDS for MySQL or the details of a specified cluster.</p>
+     * <p>Queries a list of ApsaraDB RDS for MySQL global active database (GAD) clusters or the details of a specified cluster.</p>
      * 
      * @param request DescribeGadInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15253,13 +15251,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of active geo-redundancy database clusters for ApsaraDB RDS for MySQL or the details of a specified cluster.</p>
+     * <p>Queries a list of ApsaraDB RDS for MySQL global active database (GAD) clusters or the details of a specified cluster.</p>
      * 
      * @param request DescribeGadInstancesRequest
      * @return DescribeGadInstancesResponse
@@ -15271,7 +15269,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -15279,10 +15277,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/207467.html">What is an availability check method</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/207467.html">What is the availability detection method?</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the availability check method of an ApsaraDB RDS instance.</p>
+     * <p>Queries the availability detection method of an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeHADiagnoseConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15330,7 +15328,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -15338,10 +15336,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/207467.html">What is an availability check method</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/207467.html">What is the availability detection method?</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the availability check method of an ApsaraDB RDS instance.</p>
+     * <p>Queries the availability detection method of an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeHADiagnoseConfigRequest
      * @return DescribeHADiagnoseConfigResponse
@@ -15431,7 +15429,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the event list in Event Center.</p>
+     * <p>Queries the events in the Event Center.</p>
      * 
      * @param request DescribeHistoryEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15523,7 +15521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the event list in Event Center.</p>
+     * <p>Queries the events in the Event Center.</p>
      * 
      * @param request DescribeHistoryEventsRequest
      * @return DescribeHistoryEventsResponse
@@ -15535,7 +15533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries historical event statistics from the Event Center.</p>
+     * <p>Counts historical events in the event center.</p>
      * 
      * @param request DescribeHistoryEventsStatRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15583,7 +15581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries historical event statistics from the Event Center.</p>
+     * <p>Counts historical events in the event center.</p>
      * 
      * @param request DescribeHistoryEventsStatRequest
      * @return DescribeHistoryEventsStatResponse
@@ -15601,18 +15599,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/474275.html">Task list of ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/474537.html">Task list of ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/614826.html">Task list of ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/474275.html">ApsaraDB RDS for MySQL task list</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/474537.html">ApsaraDB RDS for PostgreSQL task list</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/614826.html">ApsaraDB RDS for SQL Server task list</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves historical task records, supporting tasks created within the last 30 days.</p>
+     * <p>Queries historical task records created within the last 30 days.</p>
      * 
      * @param request DescribeHistoryTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15714,18 +15712,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/474275.html">Task list of ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/474537.html">Task list of ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/614826.html">Task list of ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/474275.html">ApsaraDB RDS for MySQL task list</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/474537.html">ApsaraDB RDS for PostgreSQL task list</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/614826.html">ApsaraDB RDS for SQL Server task list</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves historical task records, supporting tasks created within the last 30 days.</p>
+     * <p>Queries historical task records created within the last 30 days.</p>
      * 
      * @param request DescribeHistoryTasksRequest
      * @return DescribeHistoryTasksResponse
@@ -15889,30 +15887,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Before you begin</h3>
      * <ul>
-     * <li>The RDS instance must meet the following conditions:<ul>
-     * <li>Region: All regions except China (Zhangjiakou) support this feature.</li>
-     * <li>Instance edition: Basic Edition, high-availability series (SQL Server 2012 or later), or Cluster Edition.</li>
-     * <li>Instance type: general-purpose or dedicated. Shared instance types are not supported.</li>
+     * <li>The ApsaraDB RDS instance must meet the following requirements:<ul>
+     * <li>Region: This feature is supported in all regions except China (Zhangjiakou).</li>
+     * <li>Instance edition: Basic Edition, High Availability Edition (SQL Server 2012 or later), and Cluster Edition.</li>
+     * <li>Instance type: General-purpose and dedicated instance types. Shared instance types are not supported.</li>
      * <li>Network type: VPC. To change the network type, see <a href="https://help.aliyun.com/document_detail/95707.html">Change the network type</a>.</li>
-     * <li>Instance creation time: High-availability series and Cluster Edition instances must be created on or after January 1, 2021. Basic Edition instances must be created on or after September 2, 2022. You can view the <strong>creation time</strong> in the <strong>Running Status</strong> section on the <strong>Basic Information</strong> page.</li>
+     * <li>Creation time: High Availability Edition and Cluster Edition instances must be created on or after January 1, 2021. Basic Edition instances must be created on or after September 2, 2022. You can view the <strong>creation time</strong> of an instance in the <strong>Running Status</strong> section of the <strong>Basic Information</strong> page.</li>
      * </ul>
      * </li>
-     * <li>You must log on with an <strong>Alibaba Cloud account</strong>.</li>
+     * <li>The logon account must be an <strong>Alibaba Cloud account</strong>.</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, read the documentation to fully understand the prerequisites and impacts.
      * <a href="https://help.aliyun.com/document_detail/354862.html">Create a host account and log on</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the WebShell logon information for the host of an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Queries the host WebShell logon information of an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeHostWebShellRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15972,30 +15970,30 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Before you begin</h3>
      * <ul>
-     * <li>The RDS instance must meet the following conditions:<ul>
-     * <li>Region: All regions except China (Zhangjiakou) support this feature.</li>
-     * <li>Instance edition: Basic Edition, high-availability series (SQL Server 2012 or later), or Cluster Edition.</li>
-     * <li>Instance type: general-purpose or dedicated. Shared instance types are not supported.</li>
+     * <li>The ApsaraDB RDS instance must meet the following requirements:<ul>
+     * <li>Region: This feature is supported in all regions except China (Zhangjiakou).</li>
+     * <li>Instance edition: Basic Edition, High Availability Edition (SQL Server 2012 or later), and Cluster Edition.</li>
+     * <li>Instance type: General-purpose and dedicated instance types. Shared instance types are not supported.</li>
      * <li>Network type: VPC. To change the network type, see <a href="https://help.aliyun.com/document_detail/95707.html">Change the network type</a>.</li>
-     * <li>Instance creation time: High-availability series and Cluster Edition instances must be created on or after January 1, 2021. Basic Edition instances must be created on or after September 2, 2022. You can view the <strong>creation time</strong> in the <strong>Running Status</strong> section on the <strong>Basic Information</strong> page.</li>
+     * <li>Creation time: High Availability Edition and Cluster Edition instances must be created on or after January 1, 2021. Basic Edition instances must be created on or after September 2, 2022. You can view the <strong>creation time</strong> of an instance in the <strong>Running Status</strong> section of the <strong>Basic Information</strong> page.</li>
      * </ul>
      * </li>
-     * <li>You must log on with an <strong>Alibaba Cloud account</strong>.</li>
+     * <li>The logon account must be an <strong>Alibaba Cloud account</strong>.</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, read the documentation to fully understand the prerequisites and impacts.
      * <a href="https://help.aliyun.com/document_detail/354862.html">Create a host account and log on</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the WebShell logon information for the host of an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Queries the host WebShell logon information of an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeHostWebShellRequest
      * @return DescribeHostWebShellResponse
@@ -16007,10 +16005,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a data import task.</p>
+     * <p>Queries the details of an import task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a data import task for a native replication ApsaraDB RDS instance.</p>
+     * <p>Queries the details of a data import task for an ApsaraDB RDS instance that uses native replication.</p>
      * 
      * @param request DescribeImportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16054,10 +16052,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a data import task.</p>
+     * <p>Queries the details of an import task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a data import task for a native replication ApsaraDB RDS instance.</p>
+     * <p>Queries the details of a data import task for an ApsaraDB RDS instance that uses native replication.</p>
      * 
      * @param request DescribeImportTaskRequest
      * @return DescribeImportTaskResponse
@@ -16069,10 +16067,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of an import task dry run.</p>
+     * <p>Queries the precheck details of an import task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an import task dry run, including the specific check items and check results.</p>
+     * <p>Queries the precheck details of an import task, including specific precheck items and check results.</p>
      * 
      * @param request DescribeImportTaskValidationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16112,10 +16110,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of an import task dry run.</p>
+     * <p>Queries the precheck details of an import task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of an import task dry run, including the specific check items and check results.</p>
+     * <p>Queries the precheck details of an import task, including specific precheck items and check results.</p>
      * 
      * @param request DescribeImportTaskValidationRequest
      * @return DescribeImportTaskValidationResponse
@@ -16328,7 +16326,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the reserved keywords of an ApsaraDB RDS instance, which are keywords that cannot be used when you create databases or accounts.</p>
+     * <p>Queries the reserved keywords of an ApsaraDB RDS instance, which are prohibited from being used as database or account names.</p>
      * 
      * @param request DescribeInstanceKeywordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16385,7 +16383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the reserved keywords of an ApsaraDB RDS instance, which are keywords that cannot be used when you create databases or accounts.</p>
+     * <p>Queries the reserved keywords of an ApsaraDB RDS instance, which are prohibited from being used as database or account names.</p>
      * 
      * @param request DescribeInstanceKeywordsRequest
      * @return DescribeInstanceKeywordsResponse
@@ -16397,15 +16395,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist templates associated with an instance by instance name.</p>
+     * <p>Queries the whitelist templates associated with an instance based on the instance name.</p>
      * 
      * @param request DescribeInstanceLinkedWhitelistTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16453,15 +16451,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist templates associated with an instance by instance name.</p>
+     * <p>Queries the whitelist templates associated with an instance based on the instance name.</p>
      * 
      * @param request DescribeInstanceLinkedWhitelistTemplateRequest
      * @return DescribeInstanceLinkedWhitelistTemplateResponse
@@ -16473,7 +16471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -16481,7 +16479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether a specified Key Management Service (KMS) resource is associated with ApsaraDB RDS instances.</p>
+     * <p>Queries whether a specified Key Management Service (KMS) resource is associated with an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeKmsAssociateResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16553,7 +16551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -16561,7 +16559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries whether a specified Key Management Service (KMS) resource is associated with ApsaraDB RDS instances.</p>
+     * <p>Queries whether a specified Key Management Service (KMS) resource is associated with an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeKmsAssociateResourcesRequest
      * @return DescribeKmsAssociateResourcesResponse
@@ -16581,7 +16579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the restorable time range of backups for an ApsaraDB RDS instance.</p>
+     * <p>Queries the restorable time range for backups of an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeLocalAvailableRecoveryTimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16641,7 +16639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the restorable time range of backups for an ApsaraDB RDS instance.</p>
+     * <p>Queries the restorable time range for backups of an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeLocalAvailableRecoveryTimeRequest
      * @return DescribeLocalAvailableRecoveryTimeResponse
@@ -16743,7 +16741,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about instances that are pending upgrade in an RDS marketing campaign.</p>
+     * <p>Retrieves information about instances pending upgrade in RDS marketing campaigns.</p>
      * 
      * @param request DescribeMarketingActivityRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16807,7 +16805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves information about instances that are pending upgrade in an RDS marketing campaign.</p>
+     * <p>Retrieves information about instances pending upgrade in RDS marketing campaigns.</p>
      * 
      * @param request DescribeMarketingActivityRequest
      * @return DescribeMarketingActivityResponse
@@ -16819,14 +16817,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Request notes</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column Cloud Hardware Security Module (CloudHSM) feature.</li>
+     * <li>Before you invoke this operation, make sure that column encryption is enabled in the DAS Security Center.</li>
+     * <li>If you receive the ColumnEncryptionErrorCode.NOT_PURCHASED error message when invoking this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable column encryption.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the encryption or masking rules of a specified instance.</p>
+     * <p>Queries a list of encryption or masking rules for a specified instance.</p>
      * 
      * @param request DescribeMaskingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16882,14 +16880,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request description</h2>
+     * <h2>Request notes</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column Cloud Hardware Security Module (CloudHSM) feature.</li>
+     * <li>Before you invoke this operation, make sure that column encryption is enabled in the DAS Security Center.</li>
+     * <li>If you receive the ColumnEncryptionErrorCode.NOT_PURCHASED error message when invoking this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable column encryption.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the encryption or masking rules of a specified instance.</p>
+     * <p>Queries a list of encryption or masking rules for a specified instance.</p>
      * 
      * @param request DescribeMaskingRulesRequest
      * @return DescribeMaskingRulesResponse
@@ -16901,16 +16899,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
      * <blockquote>
      * <p>Only MySQL 8.0, 5.7, and 5.6 High-availability Edition instances with local SSDs are supported.</p>
      * </blockquote>
      * <h3>Feature description</h3>
-     * <p>Before you call the <a href="https://help.aliyun.com/document_detail/131510.html">RestoreTable</a> operation to <a href="https://help.aliyun.com/document_detail/103175.html">restore individual databases and tables in ApsaraDB RDS for MySQL</a>, you can call this operation to query the information about the databases and tables that can be restored.</p>
+     * <p>Before you call the <a href="https://help.aliyun.com/document_detail/131510.html">RestoreTable</a> operation to <a href="https://help.aliyun.com/document_detail/103175.html">restore an individual database and table of an ApsaraDB RDS for MySQL instance</a>, you can call this operation to query the information about databases and tables that can be restored.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the databases and tables that can be restored from a specified backup set.</p>
+     * <p>Queries the information about databases and tables that can be restored from a specified backup set.</p>
      * 
      * @param request DescribeMetaListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16990,16 +16988,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
      * <blockquote>
      * <p>Only MySQL 8.0, 5.7, and 5.6 High-availability Edition instances with local SSDs are supported.</p>
      * </blockquote>
      * <h3>Feature description</h3>
-     * <p>Before you call the <a href="https://help.aliyun.com/document_detail/131510.html">RestoreTable</a> operation to <a href="https://help.aliyun.com/document_detail/103175.html">restore individual databases and tables in ApsaraDB RDS for MySQL</a>, you can call this operation to query the information about the databases and tables that can be restored.</p>
+     * <p>Before you call the <a href="https://help.aliyun.com/document_detail/131510.html">RestoreTable</a> operation to <a href="https://help.aliyun.com/document_detail/103175.html">restore an individual database and table of an ApsaraDB RDS for MySQL instance</a>, you can call this operation to query the information about databases and tables that can be restored.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about the databases and tables that can be restored from a specified backup set.</p>
+     * <p>Queries the information about databases and tables that can be restored from a specified backup set.</p>
      * 
      * @param request DescribeMetaListRequest
      * @return DescribeMetaListResponse
@@ -17011,13 +17009,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about an Object Storage Service (OSS) backup migration task for an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Queries the details of an OSS backup migration task for an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeMigrateTaskByIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17069,13 +17067,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about an Object Storage Service (OSS) backup migration task for an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Queries the details of an OSS backup migration task for an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeMigrateTaskByIdRequest
      * @return DescribeMigrateTaskByIdResponse
@@ -17087,20 +17085,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Description</h3>
-     * <p>This operation queries backup data migration task records for an instance within the last week.</p>
+     * <p>This operation queries the backup data migration tasks of an instance within the last week.</p>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>The source backup file for backup data migration must be a full backup (FULL) file.</li>
+     * <li>The source backup file for a backup data migration task must be a full backup file.</li>
      * <li>ApsaraDB RDS for SQL Server 2017 Cluster Edition instances are not supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of backup data migration tasks for an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Queries the backup data migration tasks of an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeMigrateTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17164,20 +17162,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Description</h3>
-     * <p>This operation queries backup data migration task records for an instance within the last week.</p>
+     * <p>This operation queries the backup data migration tasks of an instance within the last week.</p>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>The source backup file for backup data migration must be a full backup (FULL) file.</li>
+     * <li>The source backup file for a backup data migration task must be a full backup file.</li>
      * <li>ApsaraDB RDS for SQL Server 2017 Cluster Edition instances are not supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of backup data migration tasks for an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Queries the backup data migration tasks of an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeMigrateTasksRequest
      * @return DescribeMigrateTasksResponse
@@ -17359,15 +17357,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Before you begin</h3>
-     * <p>This operation does not support SQL Server 2017 Enterprise Edition or SQL Server 2019 Enterprise Edition Enterprise instances.</p>
+     * <h3>Precautions</h3>
+     * <p>This operation does not support ApsaraDB RDS for SQL Server 2017 Enterprise Edition and 2019 Enterprise Edition instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the file details of a backup data upload task for an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Queries the file details of a backup data migration task for an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeOssDownloadsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17419,15 +17417,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Before you begin</h3>
-     * <p>This operation does not support SQL Server 2017 Enterprise Edition or SQL Server 2019 Enterprise Edition Enterprise instances.</p>
+     * <h3>Precautions</h3>
+     * <p>This operation does not support ApsaraDB RDS for SQL Server 2017 Enterprise Edition and 2019 Enterprise Edition instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the file details of a backup data upload task for an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Queries the file details of a backup data migration task for an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeOssDownloadsRequest
      * @return DescribeOssDownloadsResponse
@@ -17693,10 +17691,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -17770,10 +17768,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -17791,16 +17789,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to ensure that you fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set instance parameters for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set instance parameters for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set the parameters of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set the parameters of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -17834,16 +17832,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to ensure that you fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set instance parameters for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set instance parameters for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set the parameters of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set the parameters of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -17859,7 +17857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>RDS MySQL</li>
      * <li>RDS PostgreSQL</li>
@@ -17920,7 +17918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>RDS MySQL</li>
      * <li>RDS PostgreSQL</li>
@@ -17941,17 +17939,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension exchange DingTalk group (103525002795) to consult, communicate, provide feedback, and obtain more information about extensions.</p>
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension communication DingTalk group (103525002795) for consultation, communication, and feedback to obtain more information about extensions.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.
      * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about all extensions in a specified database of an instance.</p>
+     * <p>Retrieves information about all extensions in the specified database of an instance.</p>
      * 
      * @param request DescribePostgresExtensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18011,17 +18009,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension exchange DingTalk group (103525002795) to consult, communicate, provide feedback, and obtain more information about extensions.</p>
-     * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
+     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension communication DingTalk group (103525002795) for consultation, communication, and feedback to obtain more information about extensions.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.
      * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about all extensions in a specified database of an instance.</p>
+     * <p>Retrieves information about all extensions in the specified database of an instance.</p>
      * 
      * @param request DescribePostgresExtensionsRequest
      * @return DescribePostgresExtensionsResponse
@@ -18035,14 +18033,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the price information of an ApsaraDB RDS instance.</p>
+     * <p>Queries the pricing information of an ApsaraDB RDS instance.</p>
      * 
      * @param tmpReq DescribePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18170,14 +18168,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the price information of an ApsaraDB RDS instance.</p>
+     * <p>Queries the pricing information of an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribePriceRequest
      * @return DescribePriceResponse
@@ -18423,7 +18421,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>KubeConfig is used to configure access credentials for an ACK cluster on the client. It contains identity and authentication data for accessing the target cluster. When you use kubectl for cluster management, you need to connect through KubeConfig. Properly manage the KubeConfig credentials of the cluster and revoke them promptly when they are no longer needed to avoid security risks such as data leaks caused by KubeConfig exposure.</p>
+     * <p>KubeConfig is used to configure access credentials for an ACK cluster on the client side. It contains information such as the identity and authentication data for accessing the target cluster. When you use kubectl for cluster management, you must connect to the cluster by using KubeConfig. Properly manage the KubeConfig credentials of the cluster and revoke them promptly when they are no longer needed to prevent security risks such as data leaks caused by KubeConfig leaks.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the KubeConfig of an RDS Custom ACK cluster.</p>
@@ -18466,7 +18464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>KubeConfig is used to configure access credentials for an ACK cluster on the client. It contains identity and authentication data for accessing the target cluster. When you use kubectl for cluster management, you need to connect through KubeConfig. Properly manage the KubeConfig credentials of the cluster and revoke them promptly when they are no longer needed to avoid security risks such as data leaks caused by KubeConfig exposure.</p>
+     * <p>KubeConfig is used to configure access credentials for an ACK cluster on the client side. It contains information such as the identity and authentication data for accessing the target cluster. When you use kubectl for cluster management, you must connect to the cluster by using KubeConfig. Properly manage the KubeConfig credentials of the cluster and revoke them promptly when they are no longer needed to prevent security risks such as data leaks caused by KubeConfig leaks.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the KubeConfig of an RDS Custom ACK cluster.</p>
@@ -18637,7 +18635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the disk information of an RDS Custom instance by calling the DescribeRCDisks operation.</p>
+     * <p>Queries the disk information of an RDS Custom instance.</p>
      * 
      * @param request DescribeRCDisksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18665,7 +18663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the disk information of an RDS Custom instance by calling the DescribeRCDisks operation.</p>
+     * <p>Queries the disk information of an RDS Custom instance.</p>
      * 
      * @param request DescribeRCDisksRequest
      * @return DescribeRCDisksResponse
@@ -18737,7 +18735,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of custom images available for creating RDS Custom instances by calling the DescribeRCImageList operation. You can specify parameters such as RegionId.</p>
+     * <p>Queries the custom images available for creating RDS Custom instances.</p>
      * 
      * @param request DescribeRCImageListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18765,7 +18763,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of custom images available for creating RDS Custom instances by calling the DescribeRCImageList operation. You can specify parameters such as RegionId.</p>
+     * <p>Queries the custom images available for creating RDS Custom instances.</p>
      * 
      * @param request DescribeRCImageListRequest
      * @return DescribeRCImageListResponse
@@ -18837,17 +18835,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server</p>
+     * <h3>Supported engine</h3>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related feature documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom</a>
+     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">RDS Custom overview</a>
      * &lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p>A DDoS attack, short for Distributed Denial of Service attack, is a common Network Security attack method. This type of attack primarily consumes the resources of networks or network devices through malicious traffic, causing websites to malfunction or online services to become unavailable. For information about the causes of DDoS attacks, common Attack Type, and methods to identify and mitigate DDoS attacks, see <a href="https://www.aliyun.com/getting-started/what-is/what-is-ddos">DDoS attacks</a>.</p>
+     * <p>A distributed denial-of-service (DDoS) attack is a common network security attack method. This type of attack primarily consumes network or network device resources with malicious traffic, causing websites or online services to become unavailable. For more information about the causes, common DDoS attack types, and methods to identify and mitigate DDoS attacks, see <a href="https://www.aliyun.com/getting-started/what-is/what-is-ddos">DDoS attacks</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the number of DDoS attacks on an RDS Custom for SQL Server instance to monitor the security status of database instances in real time and assess potential security risks.</p>
+     * <p>Queries the number of DDoS attacks on RDS Custom for SQL Server instances and monitors the security status of database instances in real time to evaluate potential security risks.</p>
      * 
      * @param request DescribeRCInstanceDdosCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18887,17 +18885,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server</p>
+     * <h3>Supported engine</h3>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related feature documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom</a>
+     * <p><a href="https://help.aliyun.com/document_detail/2864363.html">RDS Custom overview</a>
      * &lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p>A DDoS attack, short for Distributed Denial of Service attack, is a common Network Security attack method. This type of attack primarily consumes the resources of networks or network devices through malicious traffic, causing websites to malfunction or online services to become unavailable. For information about the causes of DDoS attacks, common Attack Type, and methods to identify and mitigate DDoS attacks, see <a href="https://www.aliyun.com/getting-started/what-is/what-is-ddos">DDoS attacks</a>.</p>
+     * <p>A distributed denial-of-service (DDoS) attack is a common network security attack method. This type of attack primarily consumes network or network device resources with malicious traffic, causing websites or online services to become unavailable. For more information about the causes, common DDoS attack types, and methods to identify and mitigate DDoS attacks, see <a href="https://www.aliyun.com/getting-started/what-is/what-is-ddos">DDoS attacks</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the number of DDoS attacks on an RDS Custom for SQL Server instance to monitor the security status of database instances in real time and assess potential security risks.</p>
+     * <p>Queries the number of DDoS attacks on RDS Custom for SQL Server instances and monitors the security status of database instances in real time to evaluate potential security risks.</p>
      * 
      * @param request DescribeRCInstanceDdosCountRequest
      * @return DescribeRCInstanceDdosCountResponse
@@ -19013,16 +19011,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable DPI engine</h3>
-     * <p>RDS SQL Server</p>
+     * <h3>Supported engine</h3>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom</a></p>
      * <blockquote>
-     * <p>When an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin</a> instance contains one or more assets that are assigned public IP addresses, you can invoke this operation to query the DDoS mitigation information of RDS Custom for SQL Server instances under the current Alibaba Cloud account and the details of the associated Anti-DDoS Origin instance, such as the basic DDoS Mitigation Threshold, traffic scrubbing threshold, DDoS mitigation status of assets that are assigned public IP addresses, instance ID, and instance mitigation status.</p>
+     * <p>If an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin</a> instance protects one or more assets that are assigned public IP addresses, you can call this operation to query the DDoS mitigation information of ApsaraDB RDS Custom for SQL Server instances and the details of the associated Anti-DDoS Origin instances within the current Alibaba Cloud account. The information includes the basic Mitigation Threshold, traffic scrubbing threshold, DDoS mitigation status of the assets that are assigned public IP addresses, instance IDs, and instance mitigation status.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the DDoS mitigation information of an RDS Custom for SQL Server instance and the details of the associated Anti-DDoS Origin instance.</p>
+     * <p>Queries the DDoS mitigation information of an ApsaraDB RDS Custom for SQL Server instance and the details of the associated Anti-DDoS Origin instance.</p>
      * 
      * @param request DescribeRCInstanceIpAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19090,16 +19088,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable DPI engine</h3>
-     * <p>RDS SQL Server</p>
+     * <h3>Supported engine</h3>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2864363.html">Introduction to RDS Custom</a></p>
      * <blockquote>
-     * <p>When an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin</a> instance contains one or more assets that are assigned public IP addresses, you can invoke this operation to query the DDoS mitigation information of RDS Custom for SQL Server instances under the current Alibaba Cloud account and the details of the associated Anti-DDoS Origin instance, such as the basic DDoS Mitigation Threshold, traffic scrubbing threshold, DDoS mitigation status of assets that are assigned public IP addresses, instance ID, and instance mitigation status.</p>
+     * <p>If an <a href="https://help.aliyun.com/document_detail/63643.html">Anti-DDoS Origin</a> instance protects one or more assets that are assigned public IP addresses, you can call this operation to query the DDoS mitigation information of ApsaraDB RDS Custom for SQL Server instances and the details of the associated Anti-DDoS Origin instances within the current Alibaba Cloud account. The information includes the basic Mitigation Threshold, traffic scrubbing threshold, DDoS mitigation status of the assets that are assigned public IP addresses, instance IDs, and instance mitigation status.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the DDoS mitigation information of an RDS Custom for SQL Server instance and the details of the associated Anti-DDoS Origin instance.</p>
+     * <p>Queries the DDoS mitigation information of an ApsaraDB RDS Custom for SQL Server instance and the details of the associated Anti-DDoS Origin instance.</p>
      * 
      * @param request DescribeRCInstanceIpAddressRequest
      * @return DescribeRCInstanceIpAddressResponse
@@ -19217,7 +19215,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The VNC logon URL is time-sensitive and valid for 15 seconds. If you do not use the URL within 15 seconds after the call succeeds, the URL automatically expires. In this case, call the operation again to obtain a new URL.</p>
+     * <p>The VNC logon URL is time-sensitive and valid for 15 seconds. If the URL is not used within 15 seconds after a successful API call, it automatically expires. You must call the API operation again to obtain a new URL.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the VNC logon URL of an RDS Custom instance.</p>
@@ -19260,7 +19258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The VNC logon URL is time-sensitive and valid for 15 seconds. If you do not use the URL within 15 seconds after the call succeeds, the URL automatically expires. In this case, call the operation again to obtain a new URL.</p>
+     * <p>The VNC logon URL is time-sensitive and valid for 15 seconds. If the URL is not used within 15 seconds after a successful API call, it automatically expires. You must call the API operation again to obtain a new URL.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the VNC logon URL of an RDS Custom instance.</p>
@@ -19275,7 +19273,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeRCInstances operation to query the list of specified RDS Custom instances. If no instance ID (InstanceId) is specified, the operation returns information about all RDS Custom instances in the specified region.</p>
+     * <p>Queries a list of RDS Custom instances. If no instance ID is specified, this operation returns a list of all RDS Custom instances in the specified region.</p>
      * 
      * @param request DescribeRCInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19363,7 +19361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeRCInstances operation to query the list of specified RDS Custom instances. If no instance ID (InstanceId) is specified, the operation returns information about all RDS Custom instances in the specified region.</p>
+     * <p>Queries a list of RDS Custom instances. If no instance ID is specified, this operation returns a list of all RDS Custom instances in the specified region.</p>
      * 
      * @param request DescribeRCInstancesRequest
      * @return DescribeRCInstancesResponse
@@ -19473,7 +19471,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of a specified monitoring metrics for a target RDS Custom instance.</p>
+     * <p>Queries the monitoring data of specified monitoring metrics for an RDS Custom instance.</p>
      * 
      * @param request DescribeRCMetricListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19501,7 +19499,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the monitoring data of a specified monitoring metrics for a target RDS Custom instance.</p>
+     * <p>Queries the monitoring data of specified monitoring metrics for an RDS Custom instance.</p>
      * 
      * @param request DescribeRCMetricListRequest
      * @return DescribeRCMetricListResponse
@@ -19557,7 +19555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of an RDS Custom edge node pool.</p>
+     * <p>Queries the configuration information of an RDS Custom edge node pool.</p>
      * 
      * @param request DescribeRCNodePoolRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19585,7 +19583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration of an RDS Custom edge node pool.</p>
+     * <p>Queries the configuration information of an RDS Custom edge node pool.</p>
      * 
      * @param request DescribeRCNodePoolRequest
      * @return DescribeRCNodePoolResponse
@@ -19779,7 +19777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about snapshots, such as snapshot status, remaining time for a snapshot that is being created, and the retention period of automatic snapshots.</p>
+     * <p>Queries the details of a list of snapshots, such as the snapshot status, the remaining time for snapshot creation, and the retention period of automatic snapshots.</p>
      * 
      * @param request DescribeRCSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19835,7 +19833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about snapshots, such as snapshot status, remaining time for a snapshot that is being created, and the retention period of automatic snapshots.</p>
+     * <p>Queries the details of a list of snapshots, such as the snapshot status, the remaining time for snapshot creation, and the retention period of automatic snapshots.</p>
      * 
      * @param request DescribeRCSnapshotsRequest
      * @return DescribeRCSnapshotsResponse
@@ -19895,10 +19893,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. You can still call this operation, but Alibaba Cloud no longer maintains it.</p>
+     * <p>This API operation is deprecated: it can still be called normally, but Alibaba Cloud no longer maintains it.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the notification settings of instance resources. This operation is no longer maintained but can still be called.</p>
+     * <p>Retrieves the notification settings for instance resources. This API operation is deprecated: it can still be called, but is no longer maintained.</p>
      * 
      * @deprecated OpenAPI DescribeRdsResourceSettings is deprecated
      * 
@@ -19946,10 +19944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. You can still call this operation, but Alibaba Cloud no longer maintains it.</p>
+     * <p>This API operation is deprecated: it can still be called normally, but Alibaba Cloud no longer maintains it.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the notification settings of instance resources. This operation is no longer maintained but can still be called.</p>
+     * <p>Retrieves the notification settings for instance resources. This API operation is deprecated: it can still be called, but is no longer maintained.</p>
      * 
      * @deprecated OpenAPI DescribeRdsResourceSettings is deprecated
      * 
@@ -20195,7 +20193,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -20204,7 +20202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the renewal fees for a subscription ApsaraDB RDS instance.</p>
+     * <p>Queries the renewal fee for a subscription ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeRenewalPriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20292,7 +20290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -20301,7 +20299,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the renewal fees for a subscription ApsaraDB RDS instance.</p>
+     * <p>Queries the renewal fee for a subscription ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeRenewalPriceRequest
      * @return DescribeRenewalPriceResponse
@@ -20313,13 +20311,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>RDS PostgreSQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the operation logs of a data synchronization link for a specified ApsaraDB RDS instance.</p>
+     * <p>Queries the operation logs of the data synchronization link for a specified ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeReplicationLinkLogsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20371,13 +20369,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>RDS PostgreSQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the operation logs of a data synchronization link for a specified ApsaraDB RDS instance.</p>
+     * <p>Queries the operation logs of the data synchronization link for a specified ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeReplicationLinkLogsRequest
      * @return DescribeReplicationLinkLogsResponse
@@ -20389,7 +20387,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resource details on the overview page.</p>
+     * <p>Retrieves the resource details on the overview page.</p>
      * 
      * @param request DescribeResourceDetailsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20445,7 +20443,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resource details on the overview page.</p>
+     * <p>Retrieves the resource details on the overview page.</p>
      * 
      * @param request DescribeResourceDetailsRequest
      * @return DescribeResourceDetailsResponse
@@ -20457,7 +20455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -20466,7 +20464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the storage usage of an ApsaraDB RDS instance.</p>
+     * <p>Queries the storage usage information of an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeResourceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20518,7 +20516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -20527,7 +20525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the storage usage of an ApsaraDB RDS instance.</p>
+     * <p>Queries the storage usage information of an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeResourceUsageRequest
      * @return DescribeResourceUsageResponse
@@ -20539,10 +20537,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation instead.</p>
+     * <p>This operation is deprecated. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>End of maintenance: This operation can be called as expected but is no longer maintained. Queries whether the SQL Explorer (SQL Audit) feature is enabled for an ApsaraDB RDS instance.</p>
+     * <p><em>[Deprecated]</em>* This operation can still be called but is no longer maintained. Queries whether the SQL Explorer (SQL Audit) feature is enabled for an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeSQLCollectorPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20598,10 +20596,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation instead.</p>
+     * <p>This operation is deprecated. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>End of maintenance: This operation can be called as expected but is no longer maintained. Queries whether the SQL Explorer (SQL Audit) feature is enabled for an ApsaraDB RDS instance.</p>
+     * <p><em>[Deprecated]</em>* This operation can still be called but is no longer maintained. Queries whether the SQL Explorer (SQL Audit) feature is enabled for an ApsaraDB RDS instance.</p>
      * 
      * @param request DescribeSQLCollectorPolicyRequest
      * @return DescribeSQLCollectorPolicyResponse
@@ -20613,10 +20611,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation instead.</p>
+     * <p>This operation is deprecated. It can still be called normally, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>End of maintenance: This operation can be invoked as Normal but is no longer maintained. Queries the log retention period of SQL Explorer logs for an ApsaraDB RDS instance.</p>
+     * <p>Queries the SQL Explorer log retention period for an ApsaraDB RDS instance. This operation is deprecated and no longer maintained, but can still be called.</p>
      * 
      * @param request DescribeSQLCollectorRetentionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20672,10 +20670,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation instead.</p>
+     * <p>This operation is deprecated. It can still be called normally, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>End of maintenance: This operation can be invoked as Normal but is no longer maintained. Queries the log retention period of SQL Explorer logs for an ApsaraDB RDS instance.</p>
+     * <p>Queries the SQL Explorer log retention period for an ApsaraDB RDS instance. This operation is deprecated and no longer maintained, but can still be called.</p>
      * 
      * @param request DescribeSQLCollectorRetentionRequest
      * @return DescribeSQLCollectorRetentionResponse
@@ -20687,7 +20685,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -20698,16 +20696,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>This operation does not support querying the SQL Explorer list for the trial edition of SQL Explorer on ApsaraDB RDS for MySQL instances.</li>
-     * <li>This operation does not support querying SQL Explorer log files that are manually exported from the console. This operation supports querying only the list of SQL Explorer files that are generated by calling the <a href="https://help.aliyun.com/document_detail/610533.html">DescribeSQLLogRecords</a> operation with the <strong>Form</strong> request parameter set to <strong>File</strong>.</li>
-     * <li>The exported files are retained for only 2 days.<blockquote>
-     * <p>If DAS Enterprise Edition V2 or Enterprise Edition V3 is enabled and you use the SQL Explorer and Audit feature provided by DAS Enterprise Edition, the exported files are retained for 7 days. You can call <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> to query the enabled DAS Enterprise Edition information.</p>
+     * <li>This operation does not support querying the SQL Explorer list for the SQL Explorer Trial Edition of MySQL instances.</li>
+     * <li>This operation does not support querying SQL Explorer log files that are manually exported from the console. It only supports querying SQL Explorer files generated by calling the <a href="https://help.aliyun.com/document_detail/610533.html">DescribeSQLLogRecords</a> operation with the <strong>Form</strong> request parameter set to <strong>File</strong>.</li>
+     * <li>Files exported by using this operation are retained for only 2 days.<blockquote>
+     * <p>If DAS Enterprise Edition V2 or V3 is activated and its SQL Explorer and Audit feature is used, the exported files are retained for 7 days. You can call the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation to query the activated Enterprise Edition information.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of exported SQL Explorer (SQL Audit) files. This operation does not support querying SQL Explorer log files that are manually exported from the console. This operation supports querying only the list of SQL Explorer files that are generated by calling the DescribeSQLLogRecords operation with the Form request parameter set to File.</p>
+     * <p>Queries the list of exported files for SQL Explorer (SQL Audit). This operation does not support querying SQL Explorer log files that are manually exported from the console. It only supports querying SQL Explorer files generated by calling the DescribeSQLLogRecords operation with the Form request parameter set to File.</p>
      * 
      * @param request DescribeSQLLogFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20767,7 +20765,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -20778,16 +20776,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>This operation does not support querying the SQL Explorer list for the trial edition of SQL Explorer on ApsaraDB RDS for MySQL instances.</li>
-     * <li>This operation does not support querying SQL Explorer log files that are manually exported from the console. This operation supports querying only the list of SQL Explorer files that are generated by calling the <a href="https://help.aliyun.com/document_detail/610533.html">DescribeSQLLogRecords</a> operation with the <strong>Form</strong> request parameter set to <strong>File</strong>.</li>
-     * <li>The exported files are retained for only 2 days.<blockquote>
-     * <p>If DAS Enterprise Edition V2 or Enterprise Edition V3 is enabled and you use the SQL Explorer and Audit feature provided by DAS Enterprise Edition, the exported files are retained for 7 days. You can call <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> to query the enabled DAS Enterprise Edition information.</p>
+     * <li>This operation does not support querying the SQL Explorer list for the SQL Explorer Trial Edition of MySQL instances.</li>
+     * <li>This operation does not support querying SQL Explorer log files that are manually exported from the console. It only supports querying SQL Explorer files generated by calling the <a href="https://help.aliyun.com/document_detail/610533.html">DescribeSQLLogRecords</a> operation with the <strong>Form</strong> request parameter set to <strong>File</strong>.</li>
+     * <li>Files exported by using this operation are retained for only 2 days.<blockquote>
+     * <p>If DAS Enterprise Edition V2 or V3 is activated and its SQL Explorer and Audit feature is used, the exported files are retained for 7 days. You can call the <a href="https://help.aliyun.com/document_detail/2778837.html">DescribeSqlLogConfig</a> operation to query the activated Enterprise Edition information.</p>
      * </blockquote>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of exported SQL Explorer (SQL Audit) files. This operation does not support querying SQL Explorer log files that are manually exported from the console. This operation supports querying only the list of SQL Explorer files that are generated by calling the DescribeSQLLogRecords operation with the Form request parameter set to File.</p>
+     * <p>Queries the list of exported files for SQL Explorer (SQL Audit). This operation does not support querying SQL Explorer log files that are manually exported from the console. It only supports querying SQL Explorer files generated by calling the DescribeSQLLogRecords operation with the Form request parameter set to File.</p>
      * 
      * @param request DescribeSQLLogFilesRequest
      * @return DescribeSQLLogFilesResponse
@@ -20799,16 +20797,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation has been discontinued: The operation can still be invoked normally, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2360999.html">GetDasSQLLogHotData</a> operation instead.</p>
+     * <p>This API operation is deprecated. It can still be invoked normally, but Alibaba Cloud no longer provides maintenance for it. Use the <a href="https://help.aliyun.com/document_detail/2360999.html">GetDasSQLLogHotData</a> operation instead.</p>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>Regardless of whether this operation is invoked successfully or failed, a single user (including the Alibaba Cloud account and Resource Access Management (RAM) users) can invoke this operation up to 1,000 times per minute.</li>
-     * <li>This operation does not support querying SQL Explorer logs for the trial edition of SQL Explorer for MySQL instances.</li>
-     * <li>When this operation generates an audit file (the <strong>Form</strong> request parameter is set to <strong>File</strong>), a maximum of 1,000,000 log entries are recorded, and keyword-based log filtering is not supported.</li>
+     * <li>Each user (including the Alibaba Cloud account and Resource Access Management (RAM) users) can invoke this API operation up to 1,000 times per minute, regardless of whether the invocation succeeded or failed.</li>
+     * <li>This API operation does not support querying SQL Explorer logs for the SQL Explorer trial edition of ApsaraDB RDS for MySQL instances.</li>
+     * <li>When this API operation generates an audit file (the <strong>Form</strong> request parameter is set to <strong>File</strong>), it records up to 1 million log entries and does not support filtering logs by keyword.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Discontinued: This operation can still be called but is no longer maintained. Queries the SQL Explorer (SQL Audit) logs of an ApsaraDB RDS instance.</p>
+     * <p><em>[Deprecated]</em>* Queries the SQL Explorer (SQL Audit) logs of an ApsaraDB RDS instance. This API operation is no longer maintained but remains callable.</p>
      * 
      * @param request DescribeSQLLogRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20896,16 +20894,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation has been discontinued: The operation can still be invoked normally, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2360999.html">GetDasSQLLogHotData</a> operation instead.</p>
+     * <p>This API operation is deprecated. It can still be invoked normally, but Alibaba Cloud no longer provides maintenance for it. Use the <a href="https://help.aliyun.com/document_detail/2360999.html">GetDasSQLLogHotData</a> operation instead.</p>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>Regardless of whether this operation is invoked successfully or failed, a single user (including the Alibaba Cloud account and Resource Access Management (RAM) users) can invoke this operation up to 1,000 times per minute.</li>
-     * <li>This operation does not support querying SQL Explorer logs for the trial edition of SQL Explorer for MySQL instances.</li>
-     * <li>When this operation generates an audit file (the <strong>Form</strong> request parameter is set to <strong>File</strong>), a maximum of 1,000,000 log entries are recorded, and keyword-based log filtering is not supported.</li>
+     * <li>Each user (including the Alibaba Cloud account and Resource Access Management (RAM) users) can invoke this API operation up to 1,000 times per minute, regardless of whether the invocation succeeded or failed.</li>
+     * <li>This API operation does not support querying SQL Explorer logs for the SQL Explorer trial edition of ApsaraDB RDS for MySQL instances.</li>
+     * <li>When this API operation generates an audit file (the <strong>Form</strong> request parameter is set to <strong>File</strong>), it records up to 1 million log entries and does not support filtering logs by keyword.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Discontinued: This operation can still be called but is no longer maintained. Queries the SQL Explorer (SQL Audit) logs of an ApsaraDB RDS instance.</p>
+     * <p><em>[Deprecated]</em>* Queries the SQL Explorer (SQL Audit) logs of an ApsaraDB RDS instance. This API operation is no longer maintained but remains callable.</p>
      * 
      * @param request DescribeSQLLogRecordsRequest
      * @return DescribeSQLLogRecordsResponse
@@ -21011,13 +21009,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable engine:</p>
+     * <p>Supported engine:</p>
      * <ul>
-     * <li>SQL Server (only versions 2016 and earlier are supported)</li>
+     * <li>SQL Server (only SQL Server 2016 and earlier versions are supported)</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Describes the versions to which a SQL Server instance or a specified SQL Server version can be upgraded.</p>
+     * <p>Queries the target versions to which an ApsaraDB RDS for SQL Server instance or a specified SQL Server version can be upgraded.</p>
      * 
      * @param request DescribeSQLServerUpgradeVersionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21069,13 +21067,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable engine:</p>
+     * <p>Supported engine:</p>
      * <ul>
-     * <li>SQL Server (only versions 2016 and earlier are supported)</li>
+     * <li>SQL Server (only SQL Server 2016 and earlier versions are supported)</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Describes the versions to which a SQL Server instance or a specified SQL Server version can be upgraded.</p>
+     * <p>Queries the target versions to which an ApsaraDB RDS for SQL Server instance or a specified SQL Server version can be upgraded.</p>
      * 
      * @param request DescribeSQLServerUpgradeVersionsRequest
      * @return DescribeSQLServerUpgradeVersionsResponse
@@ -21087,7 +21085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>RDS MySQL</li>
      * </ul>
@@ -21169,7 +21167,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>RDS MySQL</li>
      * </ul>
@@ -21277,9 +21275,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -21339,9 +21337,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -21359,16 +21357,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>The response parameters of this operation are updated every minute.</li>
-     * <li>A certain delay may occur when you call this operation to retrieve data. Wait for the response to be returned.</li>
-     * <li>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the SQL template algorithm for slow SQL statements</a>.</li>
+     * <li>The response parameters of this API operation are updated every minute.</li>
+     * <li>There may be a delay when you call this API operation to retrieve data. Wait for the response.</li>
+     * <li>Starting September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the SQL template algorithm for slow SQL queries</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -21450,16 +21448,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>The response parameters of this operation are updated every minute.</li>
-     * <li>A certain delay may occur when you call this operation to retrieve data. Wait for the response to be returned.</li>
-     * <li>Starting from September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the SQL template algorithm for slow SQL statements</a>.</li>
+     * <li>The response parameters of this API operation are updated every minute.</li>
+     * <li>There may be a delay when you call this API operation to retrieve data. Wait for the response.</li>
+     * <li>Starting September 1, 2024, due to the optimization of the SQL template algorithm, the value of the SQLHash field will change when you call this operation. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the SQL template algorithm for slow SQL queries</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -21475,7 +21473,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL<blockquote>
      * <p>MySQL 5.7 Basic Edition is not supported.</p>
@@ -21487,11 +21485,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Before you begin</h3>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>Slow query log statistics are not collected in real time. A latency of 6 to 8 hours may occur.</li>
-     * <li>If the response is empty, check whether the values of StartTime and EndTime are in the required UTC format. If the values are valid, no slow query logs exist within the specified time range.</li>
-     * <li>Starting from September 1, 2024, the value of the <strong>SQLHash</strong> field will change when you call this operation due to the optimization of the SQL template algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: SQL template algorithm optimization</a>.</li>
+     * <li>Slow query log statistics are not collected in real time. A delay of 6 to 8 hours may occur.</li>
+     * <li>If the response is empty, check whether the StartTime and EndTime parameters meet the UTC format requirements. If they do, no slow query logs exist within the specified time range.</li>
+     * <li>Starting September 1, 2024, the value of the <strong>SQLHash</strong> field will change when you call this operation due to the optimization of the SQL template algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the SQL template algorithm</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -21567,7 +21565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL<blockquote>
      * <p>MySQL 5.7 Basic Edition is not supported.</p>
@@ -21579,11 +21577,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Before you begin</h3>
+     * <h3>Precautions</h3>
      * <ul>
-     * <li>Slow query log statistics are not collected in real time. A latency of 6 to 8 hours may occur.</li>
-     * <li>If the response is empty, check whether the values of StartTime and EndTime are in the required UTC format. If the values are valid, no slow query logs exist within the specified time range.</li>
-     * <li>Starting from September 1, 2024, the value of the <strong>SQLHash</strong> field will change when you call this operation due to the optimization of the SQL template algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: SQL template algorithm optimization</a>.</li>
+     * <li>Slow query log statistics are not collected in real time. A delay of 6 to 8 hours may occur.</li>
+     * <li>If the response is empty, check whether the StartTime and EndTime parameters meet the UTC format requirements. If they do, no slow query logs exist within the specified time range.</li>
+     * <li>Starting September 1, 2024, the value of the <strong>SQLHash</strong> field will change when you call this operation due to the optimization of the SQL template algorithm. For more information, see <a href="https://help.aliyun.com/document_detail/2845725.html">Notice: Optimization of the SQL template algorithm</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -21599,8 +21597,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries whether an ApsaraDB RDS for SQL Server instance supports online storage expansion.</p>
@@ -21639,8 +21637,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries whether an ApsaraDB RDS for SQL Server instance supports online storage expansion.</p>
@@ -21664,12 +21662,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>If you specify an instance ID, all tags of the instance are returned and other filter conditions are ignored.</li>
-     * <li>If you specify only a tag key (TagKey) without a tag value (TagValue), all results that match the tag key are returned. If you specify both a tag key and a tag value, only results that match both conditions are returned.</li>
+     * <li>If a specific instance ID is specified, all tags of the instance are queried, and other filter conditions become invalid.</li>
+     * <li>If only a tag key (TagKey) is specified without a tag value (TagValue) when querying tags, all results that match the tag key are returned. If both a tag key and a tag value are specified, only results that match both conditions are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tag information of an ApsaraDB RDS instance.</p>
+     * <p>Queries the tag information of ApsaraDB RDS instances.</p>
      * 
      * @param request DescribeTagsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21746,12 +21744,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>If you specify an instance ID, all tags of the instance are returned and other filter conditions are ignored.</li>
-     * <li>If you specify only a tag key (TagKey) without a tag value (TagValue), all results that match the tag key are returned. If you specify both a tag key and a tag value, only results that match both conditions are returned.</li>
+     * <li>If a specific instance ID is specified, all tags of the instance are queried, and other filter conditions become invalid.</li>
+     * <li>If only a tag key (TagKey) is specified without a tag value (TagValue) when querying tags, all results that match the tag key are returned. If both a tag key and a tag value are specified, only results that match both conditions are returned.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tag information of an ApsaraDB RDS instance.</p>
+     * <p>Queries the tag information of ApsaraDB RDS instances.</p>
      * 
      * @param request DescribeTagsRequest
      * @return DescribeTagsResponse
@@ -21763,14 +21761,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported database engines</h3>
      * <p>ApsaraDB RDS for SQL Server</p>
      * <blockquote>
-     * <p>For ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances, use <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a> to query tasks.</p>
+     * <p>For ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances, use <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tasks that are in the pending or running state for an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Queries the pending and running tasks of an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21842,14 +21840,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported database engines</h3>
      * <p>ApsaraDB RDS for SQL Server</p>
      * <blockquote>
-     * <p>For ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances, use <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a> to query tasks.</p>
+     * <p>For ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL instances, use <a href="https://help.aliyun.com/document_detail/2627863.html">DescribeHistoryTasks</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the tasks that are in the pending or running state for an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Queries the pending and running tasks of an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request DescribeTasksRequest
      * @return DescribeTasksResponse
@@ -21861,21 +21859,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable DPI engines</h3>
+     * <h3>Applicable engines</h3>
      * <p>ApsaraDB RDS for MySQL
      * ApsaraDB RDS for PostgreSQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before you proceed.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/2794383.html">Major engine version upgrade check report for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL database</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/218391.html">Understand the major engine version upgrade check report for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2794383.html">Check reports major engine version upgrades of ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/218391.html">Interpret check reports major engine version upgrades of ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the pre-upgrade check report for a major engine version upgrade of an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Queries the check reports for major engine version upgrades of ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL.</p>
      * 
      * @param request DescribeUpgradeMajorVersionPrecheckTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21939,21 +21937,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable DPI engines</h3>
+     * <h3>Applicable engines</h3>
      * <p>ApsaraDB RDS for MySQL
      * ApsaraDB RDS for PostgreSQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before you proceed.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/2794383.html">Major engine version upgrade check report for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL database</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/218391.html">Understand the major engine version upgrade check report for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/2794383.html">Check reports major engine version upgrades of ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/218391.html">Interpret check reports major engine version upgrades of ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the pre-upgrade check report for a major engine version upgrade of an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Queries the check reports for major engine version upgrades of ApsaraDB RDS for MySQL and ApsaraDB RDS for PostgreSQL.</p>
      * 
      * @param request DescribeUpgradeMajorVersionPrecheckTaskRequest
      * @return DescribeUpgradeMajorVersionPrecheckTaskResponse
@@ -21965,11 +21963,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>ApsaraDB RDS for PostgreSQL.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the historical tasks of major engine version upgrades for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Queries the historical major engine version upgrade tasks for an ApsaraDB RDS for PostgreSQL instance.</p>
      * 
      * @param request DescribeUpgradeMajorVersionTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22033,11 +22031,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Applicable engine</h3>
      * <p>ApsaraDB RDS for PostgreSQL.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the historical tasks of major engine version upgrades for an ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Queries the historical major engine version upgrade tasks for an ApsaraDB RDS for PostgreSQL instance.</p>
      * 
      * @param request DescribeUpgradeMajorVersionTasksRequest
      * @return DescribeUpgradeMajorVersionTasksResponse
@@ -22215,7 +22213,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of virtual private clouds (VPCs) under your Alibaba Cloud account.</p>
+     * <p>Queries a list of virtual private clouds (VPCs) in an Alibaba Cloud account.</p>
      * 
      * @param request DescribeVpcsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22291,7 +22289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of virtual private clouds (VPCs) under your Alibaba Cloud account.</p>
+     * <p>Queries a list of virtual private clouds (VPCs) in an Alibaba Cloud account.</p>
      * 
      * @param request DescribeVpcsRequest
      * @return DescribeVpcsResponse
@@ -22303,15 +22301,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about a specified whitelist template.</p>
+     * <p>Retrieves the information about a specified whitelist template.</p>
      * 
      * @param request DescribeWhitelistTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22359,15 +22357,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about a specified whitelist template.</p>
+     * <p>Retrieves the information about a specified whitelist template.</p>
      * 
      * @param request DescribeWhitelistTemplateRequest
      * @return DescribeWhitelistTemplateResponse
@@ -22381,13 +22379,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries instances associated with a whitelist template.</p>
+     * <p>Queries the instances associated with a whitelist template.</p>
      * 
      * @param request DescribeWhitelistTemplateLinkedInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22439,13 +22437,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries instances associated with a whitelist template.</p>
+     * <p>Queries the instances associated with a whitelist template.</p>
      * 
      * @param request DescribeWhitelistTemplateLinkedInstanceRequest
      * @return DescribeWhitelistTemplateLinkedInstanceResponse
@@ -22651,9 +22649,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -22711,9 +22709,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -22729,7 +22727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables backup encryption for an instance.</p>
+     * <p>Enables backup encryption.</p>
      * 
      * @param request EnableBackupEncryptionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22769,7 +22767,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables backup encryption for an instance.</p>
+     * <p>Enables backup encryption.</p>
      * 
      * @param request EnableBackupEncryptionRequest
      * @return EnableBackupEncryptionResponse
@@ -22781,7 +22779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Evaluates the available disk space that can be unlocked by performing an emergency local disk expansion.</p>
+     * <p>Evaluates the available disk space that can be unlocked by emergency local disk scaling.</p>
      * 
      * @param request EvaluateLocalExtendDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22837,7 +22835,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Evaluates the available disk space that can be unlocked by performing an emergency local disk expansion.</p>
+     * <p>Evaluates the available disk space that can be unlocked by emergency local disk scaling.</p>
      * 
      * @param request EvaluateLocalExtendDiskRequest
      * @return EvaluateLocalExtendDiskResponse
@@ -22849,8 +22847,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS MySQL.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for MySQL.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the topology of an ApsaraDB RDS instance.</p>
@@ -22893,8 +22891,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS MySQL.</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for MySQL.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the topology of an ApsaraDB RDS instance.</p>
@@ -22913,7 +22911,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>ApsaraDB RDS for MySQL.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the Secure Sockets Layer (SSL) encryption information of database proxy endpoints for an ApsaraDB RDS for MySQL database instance.</p>
+     * <p>Queries the Secure Sockets Layer (SSL) encryption information of the database proxy endpoint for an ApsaraDB RDS for MySQL instance.</p>
      * 
      * @param request GetDbProxyInstanceSslRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22961,7 +22959,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>ApsaraDB RDS for MySQL.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the Secure Sockets Layer (SSL) encryption information of database proxy endpoints for an ApsaraDB RDS for MySQL database instance.</p>
+     * <p>Queries the Secure Sockets Layer (SSL) encryption information of the database proxy endpoint for an ApsaraDB RDS for MySQL instance.</p>
      * 
      * @param request GetDbProxyInstanceSslRequest
      * @return GetDbProxyInstanceSslResponse
@@ -23073,16 +23071,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to a service account for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to a service account for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to a service account for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to a service account for an ApsaraDB RDS for SQL Server instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -23144,16 +23142,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to a service account for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to a service account for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96102.html">Grant permissions to a service account for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95693.html">Grant permissions to a service account for an ApsaraDB RDS for SQL Server instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -23169,21 +23167,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
-     * <h3>Description</h3>
-     * <p>A user backup is a full backup of a self-managed MySQL database. You can restore a user backup to the cloud.</p>
-     * <h3>Before you begin</h3>
-     * <p><strong>To call this operation, the following conditions must be met:</strong></p>
+     * <h3>Feature description</h3>
+     * <p>A user backup is a full backup of a self-managed MySQL database. You can restore user backups to the cloud.</p>
+     * <h3>Precautions</h3>
+     * <p><strong>Before you call this operation, make sure that the following conditions are met:</strong></p>
      * <ul>
-     * <li>You have backed up a self-managed MySQL 5.7 or 8.0 database by using XtraBackup, and the backup file name ends with <code>_qp.xb</code>. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Full migration of self-managed MySQL 5.7 or 8.0 databases to the cloud</a>.</li>
-     * <li>You have uploaded the backup file of the self-managed MySQL 5.7 or 8.0 database to an OSS bucket in the corresponding region. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Full migration of self-managed MySQL 5.7 or 8.0 databases to the cloud</a>.</li>
+     * <li>You have used XtraBackup to back up the self-managed MySQL 5.7 or 8.0 database, and the backup file name ends with <code>_qp.xb</code>. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from a self-managed MySQL 5.7 or 8.0 database to the cloud</a>.</li>
+     * <li>You have uploaded the backup file of the self-managed MySQL 5.7 or 8.0 database to an OSS bucket in the corresponding region. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from a self-managed MySQL 5.7 or 8.0 database to the cloud</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports backup data from a self-managed MySQL 5.7 database into ApsaraDB RDS by using the data import feature.</p>
+     * <p>Performs a data import of backup data from a self-managed MySQL 5.7 database to ApsaraDB RDS.</p>
      * 
      * @param request ImportUserBackupFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23279,21 +23277,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
-     * <h3>Description</h3>
-     * <p>A user backup is a full backup of a self-managed MySQL database. You can restore a user backup to the cloud.</p>
-     * <h3>Before you begin</h3>
-     * <p><strong>To call this operation, the following conditions must be met:</strong></p>
+     * <h3>Feature description</h3>
+     * <p>A user backup is a full backup of a self-managed MySQL database. You can restore user backups to the cloud.</p>
+     * <h3>Precautions</h3>
+     * <p><strong>Before you call this operation, make sure that the following conditions are met:</strong></p>
      * <ul>
-     * <li>You have backed up a self-managed MySQL 5.7 or 8.0 database by using XtraBackup, and the backup file name ends with <code>_qp.xb</code>. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Full migration of self-managed MySQL 5.7 or 8.0 databases to the cloud</a>.</li>
-     * <li>You have uploaded the backup file of the self-managed MySQL 5.7 or 8.0 database to an OSS bucket in the corresponding region. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Full migration of self-managed MySQL 5.7 or 8.0 databases to the cloud</a>.</li>
+     * <li>You have used XtraBackup to back up the self-managed MySQL 5.7 or 8.0 database, and the backup file name ends with <code>_qp.xb</code>. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from a self-managed MySQL 5.7 or 8.0 database to the cloud</a>.</li>
+     * <li>You have uploaded the backup file of the self-managed MySQL 5.7 or 8.0 database to an OSS bucket in the corresponding region. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from a self-managed MySQL 5.7 or 8.0 database to the cloud</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports backup data from a self-managed MySQL 5.7 database into ApsaraDB RDS by using the data import feature.</p>
+     * <p>Performs a data import of backup data from a self-managed MySQL 5.7 database to ApsaraDB RDS.</p>
      * 
      * @param request ImportUserBackupFileRequest
      * @return ImportUserBackupFileResponse
@@ -23361,14 +23359,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of all instance types for an ApsaraDB RDS instance.</p>
+     * <p>Queries the details of all instance types for ApsaraDB RDS instances.</p>
      * 
      * @param request ListClassesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23434,14 +23432,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of all instance types for an ApsaraDB RDS instance.</p>
+     * <p>Queries the details of all instance types for ApsaraDB RDS instances.</p>
      * 
      * @param request ListClassesRequest
      * @return ListClassesResponse
@@ -23453,10 +23451,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a list of data import tasks for native replication instances.</p>
+     * <p>Lists data import tasks for native replication instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of native replication data import tasks.</p>
+     * <p>Lists native replication data import tasks.</p>
      * 
      * @param request ListImportTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23504,10 +23502,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a list of data import tasks for native replication instances.</p>
+     * <p>Lists data import tasks for native replication instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of native replication data import tasks.</p>
+     * <p>Lists native replication data import tasks.</p>
      * 
      * @param request ListImportTasksRequest
      * @return ListImportTasksResponse
@@ -23653,19 +23651,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
-     * <h3>Description</h3>
+     * <h3>Features</h3>
      * <ul>
-     * <li>A user backup is a full backup of a self-managed MySQL database. You can restore a user backup to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the full data of a self-managed MySQL 5.7 database to the cloud</a>.</li>
-     * <li>When you call the <a href="https://help.aliyun.com/document_detail/26228.html">CreateDBInstance</a> operation to create an ApsaraDB RDS for MySQL instance from a backup, you can call this operation to query the user backup ID.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/260266.html">ImportUserBackupFile</a> operation to import a user backup to ApsaraDB RDS.</li>
+     * <li>A user backup is a full backup of a self-managed MySQL database. You can restore user backups to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from a self-managed MySQL 5.7 database to the cloud</a>.</li>
+     * <li>When you call the <a href="https://help.aliyun.com/document_detail/26228.html">CreateDBInstance</a> operation to create an ApsaraDB RDS for MySQL instance for backup migration to the cloud, you can call this operation to query the user backup ID.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/260266.html">ImportUserBackupFile</a> operation to import user backups to ApsaraDB RDS.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of all user backups that have been imported to ApsaraDB RDS.</p>
+     * <p>Queries the details of all user backups imported to ApsaraDB RDS.</p>
      * 
      * @param request ListUserBackupFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23733,19 +23731,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
-     * <h3>Description</h3>
+     * <h3>Features</h3>
      * <ul>
-     * <li>A user backup is a full backup of a self-managed MySQL database. You can restore a user backup to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the full data of a self-managed MySQL 5.7 database to the cloud</a>.</li>
-     * <li>When you call the <a href="https://help.aliyun.com/document_detail/26228.html">CreateDBInstance</a> operation to create an ApsaraDB RDS for MySQL instance from a backup, you can call this operation to query the user backup ID.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/260266.html">ImportUserBackupFile</a> operation to import a user backup to ApsaraDB RDS.</li>
+     * <li>A user backup is a full backup of a self-managed MySQL database. You can restore user backups to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from a self-managed MySQL 5.7 database to the cloud</a>.</li>
+     * <li>When you call the <a href="https://help.aliyun.com/document_detail/26228.html">CreateDBInstance</a> operation to create an ApsaraDB RDS for MySQL instance for backup migration to the cloud, you can call this operation to query the user backup ID.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/260266.html">ImportUserBackupFile</a> operation to import user backups to ApsaraDB RDS.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of all user backups that have been imported to ApsaraDB RDS.</p>
+     * <p>Queries the details of all user backups imported to ApsaraDB RDS.</p>
      * 
      * @param request ListUserBackupFilesRequest
      * @return ListUserBackupFilesResponse
@@ -23835,15 +23833,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96746.html">Migrate an ApsaraDB RDS for MySQL instance across zones</a></li>
@@ -23900,15 +23898,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96746.html">Migrate an ApsaraDB RDS for MySQL instance across zones</a></li>
@@ -23929,10 +23927,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The dedicated cluster feature allows you to manage instances in batches in the form of clusters. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
+     * <p>The dedicated cluster feature allows you to manage instances in batches as clusters. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Migrates an ApsaraDB RDS instance within a dedicated cluster by calling the MigrateDBInstance operation.</p>
+     * <p>Migrates an ApsaraDB RDS instance within a dedicated cluster.</p>
      * 
      * @param request MigrateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24008,10 +24006,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The dedicated cluster feature allows you to manage instances in batches in the form of clusters. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
+     * <p>The dedicated cluster feature allows you to manage instances in batches as clusters. You can create multiple dedicated clusters in a region. A dedicated cluster contains multiple hosts, and a host contains multiple instances. For more information, see <a href="https://help.aliyun.com/document_detail/141455.html">Overview of dedicated clusters</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Migrates an ApsaraDB RDS instance within a dedicated cluster by calling the MigrateDBInstance operation.</p>
+     * <p>Migrates an ApsaraDB RDS instance within a dedicated cluster.</p>
      * 
      * @param request MigrateDBInstanceRequest
      * @return MigrateDBInstanceResponse
@@ -24023,7 +24021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the zones of nodes in an ApsaraDB RDS for MySQL Cluster Edition instance.</p>
+     * <p>Changes the zone of a node in an ApsaraDB RDS for MySQL Cluster Edition instance.</p>
      * 
      * @param tmpReq MigrateDBNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24097,7 +24095,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Changes the zones of nodes in an ApsaraDB RDS for MySQL Cluster Edition instance.</p>
+     * <p>Changes the zone of a node in an ApsaraDB RDS for MySQL Cluster Edition instance.</p>
      * 
      * @param request MigrateDBNodesRequest
      * @return MigrateDBNodesResponse
@@ -24203,7 +24201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96053.html">Migrate an ApsaraDB RDS for MySQL instance across zones</a></li>
@@ -24324,7 +24322,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96053.html">Migrate an ApsaraDB RDS for MySQL instance across zones</a></li>
@@ -24345,13 +24343,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before calling this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/170734.html">Connect an ApsaraDB RDS for SQL Server instance to a self-managed domain</a></li>
@@ -24426,13 +24424,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before calling this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/170734.html">Connect an ApsaraDB RDS for SQL Server instance to a self-managed domain</a></li>
@@ -24451,16 +24449,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p>ApsaraDB RDS for SQL Server (shared instance types and 2008 R2 instances are not supported)</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server (Shared instances and instances running SQL Server 2008 R2 are not supported)</p>
      * <blockquote>
-     * <p>Before calling this operation, set the SQL Server account password policy. For more information, see <a href="https://help.aliyun.com/document_detail/2848321.html">ModifyAccountSecurityPolicy</a>.</p>
+     * <p>Before calling this operation, you must configure the account password policy for SQL Server. For more information, see <a href="https://help.aliyun.com/document_detail/2848321.html">ModifyAccountSecurityPolicy</a>.</p>
      * </blockquote>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2845728.html">Custom account password policies for ApsaraDB RDS for SQL Server</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the password policy of an account for an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Modifies the account password policy of an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request ModifyAccountCheckPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24524,16 +24522,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p>ApsaraDB RDS for SQL Server (shared instance types and 2008 R2 instances are not supported)</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server (Shared instances and instances running SQL Server 2008 R2 are not supported)</p>
      * <blockquote>
-     * <p>Before calling this operation, set the SQL Server account password policy. For more information, see <a href="https://help.aliyun.com/document_detail/2848321.html">ModifyAccountSecurityPolicy</a>.</p>
+     * <p>Before calling this operation, you must configure the account password policy for SQL Server. For more information, see <a href="https://help.aliyun.com/document_detail/2848321.html">ModifyAccountSecurityPolicy</a>.</p>
      * </blockquote>
      * <h3>Related documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2845728.html">Custom account password policies for ApsaraDB RDS for SQL Server</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the password policy of an account for an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Modifies the account password policy of an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request ModifyAccountCheckPolicyRequest
      * @return ModifyAccountCheckPolicyResponse
@@ -24633,8 +24631,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before you invoke this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature before trying again.</li>
+     * <li>Before you invoke this API operation, make sure that the column encryption service is enabled in the DAS Security Center.</li>
+     * <li>If you receive the ColumnEncryptionErrorCode.NOT_PURCHASED error message when you invoke this API operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable the column encryption service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -24704,8 +24702,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before you invoke this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature before trying again.</li>
+     * <li>Before you invoke this API operation, make sure that the column encryption service is enabled in the DAS Security Center.</li>
+     * <li>If you receive the ColumnEncryptionErrorCode.NOT_PURCHASED error message when you invoke this API operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable the column encryption service.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -24721,16 +24719,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>ApsaraDB RDS for SQL Server (shared instance types and the 2008 R2 edition are not supported)</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server (Shared instances and SQL Server 2008 R2 are not supported)</p>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following feature documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/95640.html">Custom password policies for ApsaraDB RDS for SQL Server accounts</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/95640.html">Custom password policy for ApsaraDB RDS for SQL Server</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the password policy for an account of an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Modifies the account password policy of an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request ModifyAccountSecurityPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24790,16 +24788,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>ApsaraDB RDS for SQL Server (shared instance types and the 2008 R2 edition are not supported)</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server (Shared instances and SQL Server 2008 R2 are not supported)</p>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following feature documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/95640.html">Custom password policies for ApsaraDB RDS for SQL Server accounts</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/95640.html">Custom password policy for ApsaraDB RDS for SQL Server</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the password policy for an account of an ApsaraDB RDS for SQL Server instance.</p>
+     * <p>Modifies the account password policy of an ApsaraDB RDS for SQL Server instance.</p>
      * 
      * @param request ModifyAccountSecurityPolicyRequest
      * @return ModifyAccountSecurityPolicyResponse
@@ -25021,14 +25019,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
@@ -25196,14 +25194,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/98818.html">Configure an automatic backup policy for an ApsaraDB RDS for MySQL instance</a></li>
@@ -25225,12 +25223,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you invoke this operation, carefully read the feature documentation to fully understand the prerequisites and impacts. Then proceed with the operation.
-     * <a href="https://help.aliyun.com/document_detail/95717.html">Manual backup of SQL Server data</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/95717.html">Manually back up ApsaraDB RDS for SQL Server data</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -25278,12 +25276,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server</p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you invoke this operation, carefully read the feature documentation to fully understand the prerequisites and impacts. Then proceed with the operation.
-     * <a href="https://help.aliyun.com/document_detail/95717.html">Manual backup of SQL Server data</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/95717.html">Manually back up ApsaraDB RDS for SQL Server data</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -25382,12 +25380,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Committed Serverless</a></p>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related feature documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Provisioned Serverless</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies or disables the committed serverless feature.</p>
+     * <p>Modifies or disables the provisioned Serverless feature.</p>
      * 
      * @param request ModifyComputeBurstConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25492,12 +25490,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h3>Applicable engine</h3>
-     * <p>RDS PostgreSQL</p>
-     * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Committed Serverless</a></p>
+     * <p>ApsaraDB RDS for PostgreSQL</p>
+     * <h3>Related feature documentation</h3>
+     * <p><a href="https://help.aliyun.com/document_detail/2928780.html">Provisioned Serverless</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies or disables the committed serverless feature.</p>
+     * <p>Modifies or disables the provisioned Serverless feature.</p>
      * 
      * @param request ModifyComputeBurstConfigRequest
      * @return ModifyComputeBurstConfigResponse
@@ -25577,12 +25575,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
-     * <li>ApsaraDB RDS for MariaDB</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -25642,12 +25640,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
-     * <li>ApsaraDB RDS for MariaDB</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
+     * <li>RDS MariaDB</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -25897,12 +25895,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive a fault message when invoking this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature before trying again.</li>
+     * <li>Before you use this operation, make sure that you have activated the Cloud Hardware Security Module (CloudHSM) for column encryption in the DAS Security Center.</li>
+     * <li>If you receive an error message when you invoke this operation, go to the DAS (Database Autonomy Service) Security Center to purchase and activate the Cloud Hardware Security Module (CloudHSM) for column encryption before use.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the column encryption algorithm configuration of a specified instance.</p>
+     * <p>Modifies the column encryption algorithm configuration for a specified instance.</p>
      * 
      * @param request ModifyDBInstanceCLSRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25980,12 +25978,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that you have activated the column encryption feature in DAS Security Center.</li>
-     * <li>If you receive a fault message when invoking this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption feature before trying again.</li>
+     * <li>Before you use this operation, make sure that you have activated the Cloud Hardware Security Module (CloudHSM) for column encryption in the DAS Security Center.</li>
+     * <li>If you receive an error message when you invoke this operation, go to the DAS (Database Autonomy Service) Security Center to purchase and activate the Cloud Hardware Security Module (CloudHSM) for column encryption before use.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the column encryption algorithm configuration of a specified instance.</p>
+     * <p>Modifies the column encryption algorithm configuration for a specified instance.</p>
      * 
      * @param request ModifyDBInstanceCLSRequest
      * @return ModifyDBInstanceCLSResponse
@@ -26326,13 +26324,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable instance release protection for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/471512.html">Enable and disable instance release protection for ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/416209.html">Enable and disable instance release protection for ApsaraDB RDS for SQL Server</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable instance release protection for ApsaraDB RDS for MariaDB</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable release protection for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/471512.html">Enable and disable release protection for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/416209.html">Enable and disable release protection for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable release protection for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -26401,13 +26399,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable instance release protection for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/471512.html">Enable and disable instance release protection for ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/416209.html">Enable and disable instance release protection for ApsaraDB RDS for SQL Server</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable instance release protection for ApsaraDB RDS for MariaDB</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable release protection for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/471512.html">Enable and disable release protection for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/416209.html">Enable and disable release protection for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/414512.html">Enable and disable release protection for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -26505,16 +26503,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the endpoint weight information of an ApsaraDB RDS instance in the Cluster Edition.</p>
+     * <p>Modifies the endpoint weight information of an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param tmpReq ModifyDBInstanceEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26572,16 +26570,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the endpoint weight information of an ApsaraDB RDS instance in the Cluster Edition.</p>
+     * <p>Modifies the endpoint weight information of an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param request ModifyDBInstanceEndpointRequest
      * @return ModifyDBInstanceEndpointResponse
@@ -26596,18 +26594,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Supported DPI engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>You can modify endpoint connection information, including the connection string and port for public and internal network endpoints, and the VPC, vSwitch, and IP address for internal network connections.</li>
-     * <li>When modifying, VpcId and VSwitchId are treated as a group. The internal network connection parameters (VpcId, VSwitchId, and PrivateIpAddress) and the connection parameters (ConnectionStringPrefix and Port) cannot be specified at the same time. However, you must specify at least one of them.</li>
+     * <li>You can modify the endpoint connection address, including the connection strings and ports for both public and internal networks, as well as the VPC, vSwitch, and IP address for the internal network connection.</li>
+     * <li>When you modify the endpoint, VpcId and VSwitchId are treated as a group. For an internal endpoint, you cannot specify VpcId, VSwitchId, or PrivateIpAddress together with ConnectionStringPrefix or Port. However, you must specify at least one of these parameters.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the endpoint connection information of an ApsaraDB RDS instance in Cluster Edition.</p>
+     * <p>Modifies the endpoint connection address of an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param request ModifyDBInstanceEndpointAddressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26678,18 +26676,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <h3>Supported DPI engines</h3>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL
-     * &lt;props=&quot;intl&quot;&gt;RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL
+     * &lt;props=&quot;intl&quot;&gt;ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>You can modify endpoint connection information, including the connection string and port for public and internal network endpoints, and the VPC, vSwitch, and IP address for internal network connections.</li>
-     * <li>When modifying, VpcId and VSwitchId are treated as a group. The internal network connection parameters (VpcId, VSwitchId, and PrivateIpAddress) and the connection parameters (ConnectionStringPrefix and Port) cannot be specified at the same time. However, you must specify at least one of them.</li>
+     * <li>You can modify the endpoint connection address, including the connection strings and ports for both public and internal networks, as well as the VPC, vSwitch, and IP address for the internal network connection.</li>
+     * <li>When you modify the endpoint, VpcId and VSwitchId are treated as a group. For an internal endpoint, you cannot specify VpcId, VSwitchId, or PrivateIpAddress together with ConnectionStringPrefix or Port. However, you must specify at least one of these parameters.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the endpoint connection information of an ApsaraDB RDS instance in Cluster Edition.</p>
+     * <p>Modifies the endpoint connection address of an ApsaraDB RDS Cluster Edition instance.</p>
      * 
      * @param request ModifyDBInstanceEndpointAddressRequest
      * @return ModifyDBInstanceEndpointAddressResponse
@@ -26905,14 +26903,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/299200.html">View enhanced monitoring</a>.</p>
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/299200.html">Enhanced monitoring</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -26960,14 +26958,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/299200.html">View enhanced monitoring</a>.</p>
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/299200.html">Enhanced monitoring</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -26983,24 +26981,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Precautions</h3>
-     * <p>Second-level monitoring for ApsaraDB RDS for MySQL incurs additional fees. Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/45020.html">billing methods and pricing</a> of ApsaraDB RDS.</p>
+     * <p>Second-level monitoring for ApsaraDB RDS for MySQL incurs additional fees. Make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/45020.html">billing methods and pricing</a> of ApsaraDB RDS before you call this operation.</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before using this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts, and then proceed.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96112.html">Set the monitoring frequency for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95710.html">Set the monitoring frequency for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96112.html">Set the monitoring frequency for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95710.html">Set the monitoring frequency for an ApsaraDB RDS for SQL Server instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the monitoring frequency of an instance.</p>
+     * <p>Modifies the monitoring frequency.</p>
      * 
      * @param request ModifyDBInstanceMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27056,24 +27054,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Precautions</h3>
-     * <p>Second-level monitoring for ApsaraDB RDS for MySQL incurs additional fees. Before using this operation, make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/45020.html">billing methods and pricing</a> of ApsaraDB RDS.</p>
+     * <p>Second-level monitoring for ApsaraDB RDS for MySQL incurs additional fees. Make sure that you fully understand the <a href="https://help.aliyun.com/document_detail/45020.html">billing methods and pricing</a> of ApsaraDB RDS before you call this operation.</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before using this operation, carefully read the following documentation to fully understand the prerequisites and potential impacts, and then proceed.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96112.html">Set the monitoring frequency for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95710.html">Set the monitoring frequency for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96112.html">Set the monitoring frequency for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95710.html">Set the monitoring frequency for an ApsaraDB RDS for SQL Server instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the monitoring frequency of an instance.</p>
+     * <p>Modifies the monitoring frequency.</p>
      * 
      * @param request ModifyDBInstanceMonitorRequest
      * @return ModifyDBInstanceMonitorResponse
@@ -27177,7 +27175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -27185,7 +27183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96109.html">Change the network type of an ApsaraDB RDS for MySQL instance</a></li>
@@ -27194,7 +27192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Switches an ApsaraDB RDS instance from the classic network to a VPC. This operation is used for instance switchover from the classic network to a VPC.</p>
+     * <p>Switches the network type of an ApsaraDB RDS instance from the classic network to a VPC through an instance switchover.</p>
      * 
      * @param request ModifyDBInstanceNetworkTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27274,7 +27272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -27282,7 +27280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96109.html">Change the network type of an ApsaraDB RDS for MySQL instance</a></li>
@@ -27291,7 +27289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Switches an ApsaraDB RDS instance from the classic network to a VPC. This operation is used for instance switchover from the classic network to a VPC.</p>
+     * <p>Switches the network type of an ApsaraDB RDS instance from the classic network to a VPC through an instance switchover.</p>
      * 
      * @param request ModifyDBInstanceNetworkTypeRequest
      * @return ModifyDBInstanceNetworkTypeResponse
@@ -27489,16 +27487,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Settings for Secure Sockets Layer (SSL) encryption for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Settings for Secure Sockets Layer (SSL) encryption for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Settings for Secure Sockets Layer (SSL) encryption for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the SSL link configuration of an ApsaraDB RDS instance.</p>
+     * <p>Modifies the SSL configuration of an ApsaraDB RDS instance.</p>
      * 
      * @param request ModifyDBInstanceSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27614,16 +27612,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Settings for Secure Sockets Layer (SSL) encryption for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Settings for Secure Sockets Layer (SSL) encryption for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Settings for Secure Sockets Layer (SSL) encryption for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96120.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/229517.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95715.html">Secure Sockets Layer (SSL) encryption settings for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the SSL link configuration of an ApsaraDB RDS instance.</p>
+     * <p>Modifies the SSL configuration of an ApsaraDB RDS instance.</p>
      * 
      * @param request ModifyDBInstanceSSLRequest
      * @return ModifyDBInstanceSSLResponse
@@ -27635,10 +27633,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for ApsaraDB RDS for SQL Server</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for an ApsaraDB RDS for SQL Server instance</a></p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the security group rules of an ApsaraDB RDS for SQL Server instance.</p>
@@ -27709,10 +27707,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for SQL Server</p>
      * <h3>Related documentation</h3>
-     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for ApsaraDB RDS for SQL Server</a></p>
+     * <p><a href="https://help.aliyun.com/document_detail/2392322.html">Configure security group rules for an ApsaraDB RDS for SQL Server instance</a></p>
      * 
      * <b>summary</b> : 
      * <p>Modifies the security group rules of an ApsaraDB RDS for SQL Server instance.</p>
@@ -27735,7 +27733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Billing</h3>
-     * <p>This API operation incurs <a href="https://help.aliyun.com/document_detail/57178.html">specification change fees</a>. Read the relevant feature documentation before you proceed.</p>
+     * <p>This API operation involves <a href="https://help.aliyun.com/document_detail/57178.html">specification change fees</a>. Read the relevant feature documentation before you proceed.</p>
      * <h3>Relevant feature documentation</h3>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96061.html">Change the specifications of an ApsaraDB RDS for MySQL instance</a></li>
@@ -27919,7 +27917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
      * <h3>Billing</h3>
-     * <p>This API operation incurs <a href="https://help.aliyun.com/document_detail/57178.html">specification change fees</a>. Read the relevant feature documentation before you proceed.</p>
+     * <p>This API operation involves <a href="https://help.aliyun.com/document_detail/57178.html">specification change fees</a>. Read the relevant feature documentation before you proceed.</p>
      * <h3>Relevant feature documentation</h3>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96061.html">Change the specifications of an ApsaraDB RDS for MySQL instance</a></li>
@@ -27941,24 +27939,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable DPI engine</h3>
+     * <h3>Applicable DPI engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts of the encrypt operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96121.html">Settings for transparent data encryption TDE on ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/465652.html">Settings for transparent data encryption TDE on ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95716.html">Settings for transparent data encryption TDE on ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96121.html">Settings for transparent data encryption (TDE) for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/465652.html">Settings for transparent data encryption (TDE) for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95716.html">Settings for transparent data encryption (TDE) for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or modifies the Transparent Data Encryption (TDE) feature for an ApsaraDB RDS instance.</p>
+     * <p>Enables the transparent data encryption (TDE) feature for an ApsaraDB RDS instance and allows you to modify the encrypt status.</p>
      * 
      * @param request ModifyDBInstanceTDERequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28038,24 +28036,24 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable DPI engine</h3>
+     * <h3>Applicable DPI engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the feature documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts of the encrypt operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96121.html">Settings for transparent data encryption TDE on ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/465652.html">Settings for transparent data encryption TDE on ApsaraDB RDS for PostgreSQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95716.html">Settings for transparent data encryption TDE on ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96121.html">Settings for transparent data encryption (TDE) for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/465652.html">Settings for transparent data encryption (TDE) for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95716.html">Settings for transparent data encryption (TDE) for ApsaraDB RDS for SQL Server</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or modifies the Transparent Data Encryption (TDE) feature for an ApsaraDB RDS instance.</p>
+     * <p>Enables the transparent data encryption (TDE) feature for an ApsaraDB RDS instance and allows you to modify the encrypt status.</p>
      * 
      * @param request ModifyDBInstanceTDERequest
      * @return ModifyDBInstanceTDEResponse
@@ -28141,14 +28139,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <p> <a href="https://help.aliyun.com/document_detail/2627998.html">Modify node configurations</a></p>
      * <blockquote>
-     * <p>Warning: This API operation involves fees. Read the related documentation carefully before you perform this operation.</p>
+     * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you call this operation.</warning></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -28238,14 +28236,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <p> <a href="https://help.aliyun.com/document_detail/2627998.html">Modify node configurations</a></p>
      * <blockquote>
-     * <p>Warning: This API operation involves fees. Read the related documentation carefully before you perform this operation.</p>
+     * <p>Warning: This API operation incurs fees. Read the related documentation carefully before you call this operation.</warning></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -28261,21 +28259,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL<blockquote>
-     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition instances are progressively granted a complimentary dedicated proxy service with one proxy node across regions. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">ApsaraDB RDS for MySQL Cluster Edition complimentary dedicated proxy service with one proxy node</a>.</p>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL<blockquote>
+     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy instance across all units. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: ApsaraDB RDS for MySQL Cluster Edition provides a free dedicated proxy service with one proxy instance</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you invoke this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable database proxy for RDS MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable database proxy for RDS PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable the database proxy for ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -28377,21 +28375,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL<blockquote>
-     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition instances are progressively granted a complimentary dedicated proxy service with one proxy node across regions. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">ApsaraDB RDS for MySQL Cluster Edition complimentary dedicated proxy service with one proxy node</a>.</p>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL<blockquote>
+     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated proxy service with one proxy instance across all units. For details, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: ApsaraDB RDS for MySQL Cluster Edition provides a free dedicated proxy service with one proxy instance</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you invoke this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you use this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable database proxy for RDS MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable database proxy for RDS PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/197456.html">Enable the database proxy for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/418272.html">Enable the database proxy for ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -28414,7 +28412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/2621331.html">Configure the access policy for a database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
@@ -28422,7 +28420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Configures the access policy for a database proxy endpoint of an ApsaraDB RDS instance.</p>
+     * <p>Configures the access policy for the database proxy endpoint of an ApsaraDB RDS instance.</p>
      * 
      * @param request ModifyDBProxyEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28549,7 +28547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation carefully to fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/2621331.html">Configure the access policy for a database proxy endpoint of an ApsaraDB RDS for MySQL instance</a></li>
@@ -28557,7 +28555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Configures the access policy for a database proxy endpoint of an ApsaraDB RDS instance.</p>
+     * <p>Configures the access policy for the database proxy endpoint of an ApsaraDB RDS instance.</p>
      * 
      * @param request ModifyDBProxyEndpointRequest
      * @return ModifyDBProxyEndpointResponse
@@ -28574,9 +28572,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>RDS MySQL</li>
      * <li>RDS PostgreSQL</li>
      * </ul>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation, make sure that you fully understand the prerequisites and impacts of this operation, and then proceed.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the database proxy endpoint for RDS MySQL</a></li>
@@ -28657,9 +28655,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>RDS MySQL</li>
      * <li>RDS PostgreSQL</li>
      * </ul>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the following documentation, make sure that you fully understand the prerequisites and impacts of this operation, and then proceed.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/184921.html">Configure the database proxy endpoint for RDS MySQL</a></li>
@@ -28681,9 +28679,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL<blockquote>
-     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition progressively provides a complimentary dedicated proxy service with one proxy node across regions. For more information, see <a href="https://help.aliyun.com/document_detail/2555466.html">ApsaraDB RDS for MySQL Cluster Edition complimentary dedicated proxy service with one proxy node</a>.</p>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL<blockquote>
+     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated dedicated proxy with one proxy instance across units. For more information, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: Free dedicated dedicated proxy with one proxy instance for ApsaraDB RDS for MySQL Cluster Edition</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -28785,9 +28783,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL<blockquote>
-     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition progressively provides a complimentary dedicated proxy service with one proxy node across regions. For more information, see <a href="https://help.aliyun.com/document_detail/2555466.html">ApsaraDB RDS for MySQL Cluster Edition complimentary dedicated proxy service with one proxy node</a>.</p>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL<blockquote>
+     * <p>Starting from October 17, 2023, ApsaraDB RDS for MySQL Cluster Edition gradually provides a free dedicated dedicated proxy with one proxy instance across units. For more information, see <a href="https://help.aliyun.com/document_detail/2555466.html">Promotion: Free dedicated dedicated proxy with one proxy instance for ApsaraDB RDS for MySQL Cluster Edition</a>.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -29021,14 +29019,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Related feature documentation</h3>
-     * <p>This operation supports the following features: <a href="https://help.aliyun.com/document_detail/2401398.html">Modify SQL Server database attributes</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to OSS</a>. Before using the data archiving to OSS feature through the API, enable the data archiving feature in the console first.</p>
+     * <p>The features supported by this operation include <a href="https://help.aliyun.com/document_detail/2401398.html">Modifying the attributes of an SQL Server database</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archiving cloud disk data to OSS</a>. Before you use the data archiving to OSS feature by calling this API operation, you must enable the data archiving feature in the console.</p>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the feature documentation to fully understand the prerequisites and potential impacts, and then proceed.</p>
+     * <p>Notice: Before you call this API operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -29092,14 +29090,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Related feature documentation</h3>
-     * <p>This operation supports the following features: <a href="https://help.aliyun.com/document_detail/2401398.html">Modify SQL Server database attributes</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archive cloud disk data to OSS</a>. Before using the data archiving to OSS feature through the API, enable the data archiving feature in the console first.</p>
+     * <p>The features supported by this operation include <a href="https://help.aliyun.com/document_detail/2401398.html">Modifying the attributes of an SQL Server database</a> and <a href="https://help.aliyun.com/document_detail/2767189.html">Archiving cloud disk data to OSS</a>. Before you use the data archiving to OSS feature by calling this API operation, you must enable the data archiving feature in the console.</p>
      * <blockquote>
-     * <p>Notice: Before calling this operation, carefully read the feature documentation to fully understand the prerequisites and potential impacts, and then proceed.</p>
+     * <p>Notice: Before you call this API operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -29115,16 +29113,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/188164.html">Settings for database proxy SSL encryption of an ApsaraDB RDS for MySQL database</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to ensure that you fully understand the prerequisites and impacts.</notice>
+     * <a href="https://help.aliyun.com/document_detail/188164.html">Configure Secure Sockets Layer (SSL) encryption for the database proxy of ApsaraDB RDS for MySQL</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Sets SSL encryption for a database proxy endpoint of an ApsaraDB RDS for MySQL database.</p>
+     * <p>Configures Secure Sockets Layer (SSL) encryption for the database proxy endpoint of an ApsaraDB RDS for MySQL instance.</p>
      * 
      * @param request ModifyDbProxyInstanceSslRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29180,16 +29178,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/188164.html">Settings for database proxy SSL encryption of an ApsaraDB RDS for MySQL database</a></p>
+     * <p>Notice: Before you call this operation, read the feature documentation to ensure that you fully understand the prerequisites and impacts.</notice>
+     * <a href="https://help.aliyun.com/document_detail/188164.html">Configure Secure Sockets Layer (SSL) encryption for the database proxy of ApsaraDB RDS for MySQL</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Sets SSL encryption for a database proxy endpoint of an ApsaraDB RDS for MySQL database.</p>
+     * <p>Configures Secure Sockets Layer (SSL) encryption for the database proxy endpoint of an ApsaraDB RDS for MySQL instance.</p>
      * 
      * @param request ModifyDbProxyInstanceSslRequest
      * @return ModifyDbProxyInstanceSslResponse
@@ -29201,7 +29199,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies event information in Event Center.</p>
+     * <p>Modifies the event information in the event center.</p>
      * 
      * @param request ModifyEventInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29249,7 +29247,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies event information in Event Center.</p>
+     * <p>Modifies the event information in the event center.</p>
      * 
      * @param request ModifyEventInfoRequest
      * @return ModifyEventInfoResponse
@@ -29261,7 +29259,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -29270,12 +29268,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/207467.html">What is the availability detection method</a>.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/207467.html">What is the availability check method?</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the availability detection method of an ApsaraDB RDS instance.</p>
+     * <p>Modifies the availability check method of an ApsaraDB RDS instance.</p>
      * 
      * @param request ModifyHADiagnoseConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29327,7 +29325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -29336,12 +29334,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/207467.html">What is the availability detection method</a>.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts.
+     * <a href="https://help.aliyun.com/document_detail/207467.html">What is the availability check method?</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the availability detection method of an ApsaraDB RDS instance.</p>
+     * <p>Modifies the availability check method of an ApsaraDB RDS instance.</p>
      * 
      * @param request ModifyHADiagnoseConfigRequest
      * @return ModifyHADiagnoseConfigResponse
@@ -29525,22 +29523,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation involves fees. Read the related documentation carefully before you perform this operation.</p>
+     * <p>Warning: This API operation involves fees. Read the related feature documentation carefully before you perform this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96049.html">Auto-renewal of an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96740.html">Auto-renewal of an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95635.html">Auto-renewal of an ApsaraDB RDS for SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97121.html">Auto-renewal of an ApsaraDB RDS for MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96049.html">Auto-renewal for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96740.html">Auto-renewal for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95635.html">Auto-renewal for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97121.html">Auto-renewal for ApsaraDB RDS for MariaDB</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -29608,22 +29606,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation involves fees. Read the related documentation carefully before you perform this operation.</p>
+     * <p>Warning: This API operation involves fees. Read the related feature documentation carefully before you perform this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96049.html">Auto-renewal of an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96740.html">Auto-renewal of an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/95635.html">Auto-renewal of an ApsaraDB RDS for SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/97121.html">Auto-renewal of an ApsaraDB RDS for MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96049.html">Auto-renewal for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96740.html">Auto-renewal for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/95635.html">Auto-renewal for ApsaraDB RDS for SQL Server</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/97121.html">Auto-renewal for ApsaraDB RDS for MariaDB</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -29639,7 +29637,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -29647,7 +29645,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts of this operation.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
@@ -29728,7 +29726,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -29736,7 +29734,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and impacts of this operation.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
@@ -29759,12 +29757,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that the column encryption service is activated in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption service before trying again.</li>
+     * <li>Before you invoke this operation, make sure that the Cloud Hardware Security Module (CloudHSM) column encryption feature is enabled in the DAS Security Center.</li>
+     * <li>If you receive the error message ColumnEncryptionErrorCode.NOT_PURCHASED when invoking this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable the Cloud Hardware Security Module (CloudHSM) column encryption feature.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the encryption or masking rule of a specified instance.</p>
+     * <p>Modifies the encryption or masking rules for a specified instance.</p>
      * 
      * @param tmpReq ModifyMaskingRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -29844,12 +29842,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li>Before invoking this operation, make sure that the column encryption service is activated in DAS Security Center.</li>
-     * <li>If you receive the fault message ColumnEncryptionErrorCode.NOT_PURCHASED when you invoke this operation, go to Database Autonomy Service (DAS) Security Center to purchase and activate the column encryption service before trying again.</li>
+     * <li>Before you invoke this operation, make sure that the Cloud Hardware Security Module (CloudHSM) column encryption feature is enabled in the DAS Security Center.</li>
+     * <li>If you receive the error message ColumnEncryptionErrorCode.NOT_PURCHASED when invoking this operation, go to the Database Autonomy Service (DAS) Security Center to purchase and enable the Cloud Hardware Security Module (CloudHSM) column encryption feature.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the encryption or masking rule of a specified instance.</p>
+     * <p>Modifies the encryption or masking rules for a specified instance.</p>
      * 
      * @param request ModifyMaskingRulesRequest
      * @return ModifyMaskingRulesResponse
@@ -30165,22 +30163,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the feature documentation to fully understand the prerequisites and impacts of calling this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set instance parameters for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set instance parameters for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set the parameters of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set the parameters of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the effective period in a scheduled node for parameter modification.</p>
+     * <p>Modifies the effective time of a scheduled parameter modification task.</p>
      * 
      * @param request ModifyParameterTimedScheduleTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30220,22 +30218,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related feature documentation</h3>
+     * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the feature documentation to fully understand the prerequisites and impacts of calling this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set instance parameters for ApsaraDB RDS for MySQL</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set instance parameters for ApsaraDB RDS for PostgreSQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96063.html">Set the parameters of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96751.html">Set the parameters of an ApsaraDB RDS for PostgreSQL instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the effective period in a scheduled node for parameter modification.</p>
+     * <p>Modifies the effective time of a scheduled parameter modification task.</p>
      * 
      * @param request ModifyParameterTimedScheduleTaskRequest
      * @return ModifyParameterTimedScheduleTaskResponse
@@ -30303,10 +30301,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation with the DiskId parameter to modify the name, description, release behavior, and other attributes of a block storage device.</p>
+     * <p>You can specify the DiskId parameter to modify the attributes of a block storage device, such as the name, description, and release behavior with the instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name, description, release behavior, automatic snapshot deletion behavior, automatic snapshot policy, performance burst settings, and other attributes of a block storage device.</p>
+     * <p>Modifies the attributes of a block storage device, such as the name, description, release behavior with the instance, automatic snapshot deletion behavior with the disk, automatic snapshot policy, and performance burst feature.</p>
      * 
      * @param request ModifyRCDiskAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30358,10 +30356,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation with the DiskId parameter to modify the name, description, release behavior, and other attributes of a block storage device.</p>
+     * <p>You can specify the DiskId parameter to modify the attributes of a block storage device, such as the name, description, and release behavior with the instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the name, description, release behavior, automatic snapshot deletion behavior, automatic snapshot policy, performance burst settings, and other attributes of a block storage device.</p>
+     * <p>Modifies the attributes of a block storage device, such as the name, description, release behavior with the instance, automatic snapshot deletion behavior with the disk, automatic snapshot policy, and performance burst feature.</p>
      * 
      * @param request ModifyRCDiskAttributeRequest
      * @return ModifyRCDiskAttributeResponse
@@ -30458,18 +30456,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: To minimize the impact of Upgrade/Downgrade operations on your business, perform this operation during off-peak hours.
+     * <p>Notice: To minimize the impact on your business, perform Upgrade/Downgrade operations during off-peak hours.
      * When you invoke this operation, take note of the following items:</p>
      * </blockquote>
      * <ul>
-     * <li>ESSD cloud disks support upgrading and lowering performance levels (PLs), but you cannot decrease the quota to PL0.</li>
+     * <li>ESSD cloud disks support upgrading and downgrading performance levels, but do not support downgrading to PL0.</li>
      * <li>The ESSD cloud disk must be in the In_Use or Available state.</li>
-     * <li>If the ESSD cloud disk is mounted to an instance, the instance must be in the Running or Stopped state and cannot have an overdue payment or be expired.</li>
-     * <li>Because the performance level (PL) of an ESSD cloud disk is limited by its capacity, if you cannot upgrade the performance level (PL), expand the disk capacity and try again.</li>
+     * <li>If the ESSD cloud disk is mounted to an instance, the instance must be in the Running or Stopped state. The instance cannot be expired or have an overdue payment.</li>
+     * <li>The performance level of an ESSD cloud disk is limited by its capacity. If you cannot upgrade the performance level, expand the capacity and try again.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the cloud disk type or performance level (PL) of an RDS Custom instance.</p>
+     * <p>Modifies the cloud disk category or performance level (PL) of an ApsaraDB RDS Custom instance.</p>
      * 
      * @param request ModifyRCDiskSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30522,18 +30520,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: To minimize the impact of Upgrade/Downgrade operations on your business, perform this operation during off-peak hours.
+     * <p>Notice: To minimize the impact on your business, perform Upgrade/Downgrade operations during off-peak hours.
      * When you invoke this operation, take note of the following items:</p>
      * </blockquote>
      * <ul>
-     * <li>ESSD cloud disks support upgrading and lowering performance levels (PLs), but you cannot decrease the quota to PL0.</li>
+     * <li>ESSD cloud disks support upgrading and downgrading performance levels, but do not support downgrading to PL0.</li>
      * <li>The ESSD cloud disk must be in the In_Use or Available state.</li>
-     * <li>If the ESSD cloud disk is mounted to an instance, the instance must be in the Running or Stopped state and cannot have an overdue payment or be expired.</li>
-     * <li>Because the performance level (PL) of an ESSD cloud disk is limited by its capacity, if you cannot upgrade the performance level (PL), expand the disk capacity and try again.</li>
+     * <li>If the ESSD cloud disk is mounted to an instance, the instance must be in the Running or Stopped state. The instance cannot be expired or have an overdue payment.</li>
+     * <li>The performance level of an ESSD cloud disk is limited by its capacity. If you cannot upgrade the performance level, expand the capacity and try again.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the cloud disk type or performance level (PL) of an RDS Custom instance.</p>
+     * <p>Modifies the cloud disk category or performance level (PL) of an ApsaraDB RDS Custom instance.</p>
      * 
      * @param request ModifyRCDiskSpecRequest
      * @return ModifyRCDiskSpecResponse
@@ -30817,10 +30815,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Precautions</h3>
      * <ul>
-     * <li>Before you call this operation, make sure that you fully understand the subscription and pay-as-you-go billing methods and pricing of RDS Custom.</li>
-     * <li>Make sure that the target instance is in the <strong>Running</strong> or <strong>Stopped</strong> state and that your account does not have an overdue payment.</li>
-     * <li>Make sure that the cloud disk is in the <strong>In_use</strong> state and that the billing method of the cloud disk has not been successfully changed within the last 15 minutes.</li>
-     * <li>After the billing method is changed, fees are automatically deducted by default. Make sure that your account balance is sufficient. Otherwise, an abnormal order is generated, and you can only void the order.</li>
+     * <li>Before you call this operation, make sure that you fully understand the billing methods and pricing of RDS Custom, including subscription and pay-as-you-go.</li>
+     * <li>Make sure that the target instance is in the <strong>Running</strong> or <strong>Stopped</strong> state and your account has no overdue payments.</li>
+     * <li>Make sure that the cloud disk is in the <strong>In_use</strong> state and its billing method has not been modified in the last 15 minutes.</li>
+     * <li>After you change the billing method, fees are automatically deducted by default. Make sure that your account balance is sufficient. Otherwise, an abnormal order is generated and can only be canceled.</li>
      * </ul>
      * <h3>Before you begin</h3>
      * <p>Refer to the corresponding feature documentation:</p>
@@ -30830,7 +30828,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the billing method of an RDS Custom instance or a cloud disk. You can use this operation to switch between pay-as-you-go instances and subscription instances.</p>
+     * <p>Modifies the billing method of an RDS Custom instance or a cloud disk. You can use this operation to convert a pay-as-you-go instance to a subscription instance and vice versa.</p>
      * 
      * @param request ModifyRCInstanceChargeTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30920,10 +30918,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Precautions</h3>
      * <ul>
-     * <li>Before you call this operation, make sure that you fully understand the subscription and pay-as-you-go billing methods and pricing of RDS Custom.</li>
-     * <li>Make sure that the target instance is in the <strong>Running</strong> or <strong>Stopped</strong> state and that your account does not have an overdue payment.</li>
-     * <li>Make sure that the cloud disk is in the <strong>In_use</strong> state and that the billing method of the cloud disk has not been successfully changed within the last 15 minutes.</li>
-     * <li>After the billing method is changed, fees are automatically deducted by default. Make sure that your account balance is sufficient. Otherwise, an abnormal order is generated, and you can only void the order.</li>
+     * <li>Before you call this operation, make sure that you fully understand the billing methods and pricing of RDS Custom, including subscription and pay-as-you-go.</li>
+     * <li>Make sure that the target instance is in the <strong>Running</strong> or <strong>Stopped</strong> state and your account has no overdue payments.</li>
+     * <li>Make sure that the cloud disk is in the <strong>In_use</strong> state and its billing method has not been modified in the last 15 minutes.</li>
+     * <li>After you change the billing method, fees are automatically deducted by default. Make sure that your account balance is sufficient. Otherwise, an abnormal order is generated and can only be canceled.</li>
      * </ul>
      * <h3>Before you begin</h3>
      * <p>Refer to the corresponding feature documentation:</p>
@@ -30933,7 +30931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the billing method of an RDS Custom instance or a cloud disk. You can use this operation to switch between pay-as-you-go instances and subscription instances.</p>
+     * <p>Modifies the billing method of an RDS Custom instance or a cloud disk. You can use this operation to convert a pay-as-you-go instance to a subscription instance and vice versa.</p>
      * 
      * @param request ModifyRCInstanceChargeTypeRequest
      * @return ModifyRCInstanceChargeTypeResponse
@@ -31303,26 +31301,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Before you begin</h3>
-     * <p>The instance must meet the following conditions when you invoke this operation. Otherwise, the operation fails:</p>
+     * <p>When you call this operation, the instance must meet the following conditions. Otherwise, the operation fails:</p>
      * <ul>
      * <li>The MySQL instance uses a shared database proxy.</li>
      * <li>Read/write splitting is enabled for the MySQL instance.</li>
-     * <li>The instance runs one of the following versions:<ul>
-     * <li>MySQL 5.7 high-availability series (local SSDs)</li>
+     * <li>The instance runs one of the following editions:<ul>
+     * <li>MySQL 5.7 high availability series (with local SSDs)</li>
      * <li>MySQL 5.6</li>
-     * <li>SQL Server on RDS Cluster Edition</li>
+     * <li>SQL Server Cluster Edition</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the latency threshold and read weights of instances on a read/write splitting link.</p>
+     * <p>Modifies the latency threshold of a read/write splitting link and the read weights of instances.</p>
      * 
      * @param request ModifyReadWriteSplittingConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31390,26 +31388,26 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Before you begin</h3>
-     * <p>The instance must meet the following conditions when you invoke this operation. Otherwise, the operation fails:</p>
+     * <p>When you call this operation, the instance must meet the following conditions. Otherwise, the operation fails:</p>
      * <ul>
      * <li>The MySQL instance uses a shared database proxy.</li>
      * <li>Read/write splitting is enabled for the MySQL instance.</li>
-     * <li>The instance runs one of the following versions:<ul>
-     * <li>MySQL 5.7 high-availability series (local SSDs)</li>
+     * <li>The instance runs one of the following editions:<ul>
+     * <li>MySQL 5.7 high availability series (with local SSDs)</li>
      * <li>MySQL 5.6</li>
-     * <li>SQL Server on RDS Cluster Edition</li>
+     * <li>SQL Server Cluster Edition</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the latency threshold and read weights of instances on a read/write splitting link.</p>
+     * <p>Modifies the latency threshold of a read/write splitting link and the read weights of instances.</p>
      * 
      * @param request ModifyReadWriteSplittingConnectionRequest
      * @return ModifyReadWriteSplittingConnectionResponse
@@ -31603,10 +31601,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead.</p>
+     * <p>This operation is deprecated. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the SQL Explorer (SQL Audit) feature for an instance. This operation is no longer maintained but can still be called.</p>
+     * <p>Enables or disables the SQL Explorer (SQL Audit) feature for an instance. This operation is deprecated. You can still call this operation, but it is no longer maintained.</p>
      * 
      * @param request ModifySQLCollectorPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31662,10 +31660,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead.</p>
+     * <p>This operation is deprecated. You can still call this operation, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables the SQL Explorer (SQL Audit) feature for an instance. This operation is no longer maintained but can still be called.</p>
+     * <p>Enables or disables the SQL Explorer (SQL Audit) feature for an instance. This operation is deprecated. You can still call this operation, but it is no longer maintained.</p>
      * 
      * @param request ModifySQLCollectorPolicyRequest
      * @return ModifySQLCollectorPolicyResponse
@@ -31677,10 +31675,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained: the operation can still be called normally, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead.</p>
+     * <p>This operation is deprecated and no longer maintained by Alibaba Cloud, but remains available for use. Use the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>No longer maintained: can be invoked normally but is no longer maintained. Modifies the log retention period of SQL Explorer for an ApsaraDB RDS instance.</p>
+     * <p>Modifies the log retention period of SQL Explorer for an ApsaraDB RDS instance. This operation is deprecated and no longer maintained, but can still be invoked normally.</p>
      * 
      * @param request ModifySQLCollectorRetentionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31740,10 +31738,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is no longer maintained: the operation can still be called normally, but Alibaba Cloud no longer maintains it. Use the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead.</p>
+     * <p>This operation is deprecated and no longer maintained by Alibaba Cloud, but remains available for use. Use the <a href="https://help.aliyun.com/document_detail/2778835.html">ModifySqlLogConfig</a> operation instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>No longer maintained: can be invoked normally but is no longer maintained. Modifies the log retention period of SQL Explorer for an ApsaraDB RDS instance.</p>
+     * <p>Modifies the log retention period of SQL Explorer for an ApsaraDB RDS instance. This operation is deprecated and no longer maintained, but can still be invoked normally.</p>
      * 
      * @param request ModifySQLCollectorRetentionRequest
      * @return ModifySQLCollectorRetentionResponse
@@ -31856,19 +31854,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP whitelist for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP whitelist configuration of a specified ApsaraDB RDS instance. Three modification modes are supported: overwrite, append, and delete.</p>
+     * <p>Modifies the IP address whitelist configuration of a specified ApsaraDB RDS instance. This operation supports three modification modes: overwrite, append, and delete.</p>
      * 
      * @param request ModifySecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31939,19 +31937,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>ApsaraDB RDS for SQL Server</li>
      * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of this operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP whitelist for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96118.html">Configure an IP address whitelist for an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43187.html">Configure an IP address whitelist for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/43186.html">Configure an IP address whitelist for an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/90336.html">Configure an IP address whitelist for an ApsaraDB RDS for MariaDB instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP whitelist configuration of a specified ApsaraDB RDS instance. Three modification modes are supported: overwrite, append, and delete.</p>
+     * <p>Modifies the IP address whitelist configuration of a specified ApsaraDB RDS instance. This operation supports three modification modes: overwrite, append, and delete.</p>
      * 
      * @param request ModifySecurityIpsRequest
      * @return ModifySecurityIpsResponse
@@ -31963,7 +31961,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information of a historical task in the task center.</p>
+     * <p>Modifies the historical task information in the task center.</p>
      * 
      * @param request ModifyTaskInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32023,7 +32021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information of a historical task in the task center.</p>
+     * <p>Modifies the historical task information in the task center.</p>
      * 
      * @param request ModifyTaskInfoRequest
      * @return ModifyTaskInfoResponse
@@ -32035,15 +32033,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Edits a whitelist template, including creating, modifying, or deleting a whitelist template.</p>
+     * <p>Edits a whitelist template, including creating, modifying, and deleting whitelist templates.</p>
      * 
      * @param request ModifyWhitelistTemplateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32099,15 +32097,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>ApsaraDB RDS for MySQL</li>
-     * <li>ApsaraDB RDS for PostgreSQL</li>
-     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>RDS MySQL</li>
+     * <li>RDS PostgreSQL</li>
+     * <li>RDS SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Edits a whitelist template, including creating, modifying, or deleting a whitelist template.</p>
+     * <p>Edits a whitelist template, including creating, modifying, and deleting whitelist templates.</p>
      * 
      * @param request ModifyWhitelistTemplateRequest
      * @return ModifyWhitelistTemplateResponse
@@ -32119,7 +32117,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a precheck for a delete node order.</p>
+     * <p>Performs a pre-check for creating an order to delete a node.</p>
      * 
      * @param tmpReq PreCheckCreateOrderForDeleteDBNodesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32213,7 +32211,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a precheck for a delete node order.</p>
+     * <p>Performs a pre-check for creating an order to delete a node.</p>
      * 
      * @param request PreCheckCreateOrderForDeleteDBNodesRequest
      * @return PreCheckCreateOrderForDeleteDBNodesResponse
@@ -32227,11 +32225,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engine</h3>
      * <p>ApsaraDB RDS for PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2977241.html">DuckDB-based analytical instance</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether an ApsaraDB RDS for PostgreSQL primary instance meets the prerequisites for creating a DuckDB-based analytical instance. For conditions that are not met, the operation returns the failure reasons and provides solutions or recommended target values.</p>
+     * <p>Checks whether an ApsaraDB RDS for PostgreSQL primary instance meets the prerequisites for creating a DuckDB-based analytical instance. For conditions that are not met, it returns the failure reasons and provides solutions or recommended target values.</p>
      * 
      * @param request PrecheckDuckDBDependencyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32281,11 +32279,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engine</h3>
      * <p>ApsaraDB RDS for PostgreSQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <p><a href="https://help.aliyun.com/document_detail/2977241.html">DuckDB-based analytical instance</a></p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether an ApsaraDB RDS for PostgreSQL primary instance meets the prerequisites for creating a DuckDB-based analytical instance. For conditions that are not met, the operation returns the failure reasons and provides solutions or recommended target values.</p>
+     * <p>Checks whether an ApsaraDB RDS for PostgreSQL primary instance meets the prerequisites for creating a DuckDB-based analytical instance. For conditions that are not met, it returns the failure reasons and provides solutions or recommended target values.</p>
      * 
      * @param request PrecheckDuckDBDependencyRequest
      * @return PrecheckDuckDBDependencyResponse
@@ -32395,17 +32393,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Description</h3>
-     * <p>ApsaraDB RDS notifications are displayed in a highlighted banner at the top of the ApsaraDB RDS console. Notifications include renewal reminders and instance creation failure alerts.
-     * After you query notifications by calling this operation, you can call <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> to mark a notification as confirmed, which indicates that you have acknowledged the notification.</p>
+     * <h3>Feature description</h3>
+     * <p>ApsaraDB RDS notifications are highlighted at the top of the ApsaraDB RDS console. These notifications include renewal reminders and instance creation failure reminders.
+     * After you query notifications by calling this operation, you can call the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation to mark a notification as confirmed. This indicates that you have acknowledged the content of the notification.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries notifications for ApsaraDB RDS.</p>
+     * <p>Queries ApsaraDB RDS notifications.</p>
      * 
      * @param request QueryNotifyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32455,17 +32453,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
-     * <li>RDS MariaDB</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
+     * <li>ApsaraDB RDS for MariaDB</li>
      * </ul>
-     * <h3>Description</h3>
-     * <p>ApsaraDB RDS notifications are displayed in a highlighted banner at the top of the ApsaraDB RDS console. Notifications include renewal reminders and instance creation failure alerts.
-     * After you query notifications by calling this operation, you can call <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> to mark a notification as confirmed, which indicates that you have acknowledged the notification.</p>
+     * <h3>Feature description</h3>
+     * <p>ApsaraDB RDS notifications are highlighted at the top of the ApsaraDB RDS console. These notifications include renewal reminders and instance creation failure reminders.
+     * After you query notifications by calling this operation, you can call the <a href="https://help.aliyun.com/document_detail/610444.html">ConfirmNotify</a> operation to mark a notification as confirmed. This indicates that you have acknowledged the content of the notification.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries notifications for ApsaraDB RDS.</p>
+     * <p>Queries ApsaraDB RDS notifications.</p>
      * 
      * @param request QueryNotifyRequest
      * @return QueryNotifyResponse
@@ -32477,7 +32475,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the hot topics of the ApsaraDB RDS chatbot.</p>
+     * <p>Queries the hot issues of the RDS bot.</p>
      * 
      * @param request QueryRecommendByCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32525,7 +32523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the hot topics of the ApsaraDB RDS chatbot.</p>
+     * <p>Queries the hot issues of the RDS bot.</p>
      * 
      * @param request QueryRecommendByCodeRequest
      * @return QueryRecommendByCodeResponse
@@ -32789,13 +32787,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Rebuilds the data synchronization link for a disaster recovery instance.</p>
+     * <p>Rebuilds the data synchronization link for an RDS disaster recovery instance.</p>
      * 
      * @param request RebuildReplicationLinkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32827,13 +32825,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Rebuilds the data synchronization link for a disaster recovery instance.</p>
+     * <p>Rebuilds the data synchronization link for an RDS disaster recovery instance.</p>
      * 
      * @param request RebuildReplicationLinkRequest
      * @return RebuildReplicationLinkResponse
@@ -32917,16 +32915,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server (instances running SQL Server 2012 or later) </p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server (instances of SQL Server 2012 and later) </p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the documentation to ensure that you fully understand the prerequisites and impacts.
      * <a href="https://help.aliyun.com/document_detail/95722.html">Restore SQL Server data</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Restores RDS SQL Server backup data to an existing instance or a new instance.</p>
+     * <p>Restores the backup data of an ApsaraDB RDS for SQL Server instance to an existing instance or a new instance.</p>
      * 
      * @param request RecoveryDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33018,16 +33016,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>RDS SQL Server (instances running SQL Server 2012 or later) </p>
+     * <h3>Supported engines</h3>
+     * <p>ApsaraDB RDS for SQL Server (instances of SQL Server 2012 and later) </p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, carefully read the documentation to ensure that you fully understand the prerequisites and impacts.
      * <a href="https://help.aliyun.com/document_detail/95722.html">Restore SQL Server data</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Restores RDS SQL Server backup data to an existing instance or a new instance.</p>
+     * <p>Restores the backup data of an ApsaraDB RDS for SQL Server instance to an existing instance or a new instance.</p>
      * 
      * @param request RecoveryDBInstanceRequest
      * @return RecoveryDBInstanceResponse
@@ -33289,18 +33287,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Before you begin</h3>
-     * <p>Before you call this operation, make sure that the instance meets the following requirements. Otherwise, the operation fails:</p>
+     * <h3>Prerequisites</h3>
+     * <p>When you call this operation, the instance must meet the following requirements. Otherwise, the operation fails:</p>
      * <ul>
-     * <li>The MySQL instance uses a shared database proxy.</li>
+     * <li>The MySQL instance uses the shared database proxy.</li>
      * <li>Read/write splitting is enabled for the instance.</li>
-     * <li>The instance runs one of the following versions:<ul>
-     * <li>MySQL 5.7 on RDS High-availability Edition with local SSDs</li>
+     * <li>The instance runs one of the following editions:<ul>
+     * <li>MySQL 5.7 High-availability Edition (with local SSDs)</li>
      * <li>MySQL 5.6</li>
      * <li>SQL Server Cluster Edition</li>
      * </ul>
@@ -33308,7 +33306,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a read/write splitting endpoint.</p>
+     * <p>Releases the read/write splitting endpoint.</p>
      * 
      * @param request ReleaseReadWriteSplittingConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33360,18 +33358,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engines</h3>
+     * <h3>Supported engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
-     * <h3>Before you begin</h3>
-     * <p>Before you call this operation, make sure that the instance meets the following requirements. Otherwise, the operation fails:</p>
+     * <h3>Prerequisites</h3>
+     * <p>When you call this operation, the instance must meet the following requirements. Otherwise, the operation fails:</p>
      * <ul>
-     * <li>The MySQL instance uses a shared database proxy.</li>
+     * <li>The MySQL instance uses the shared database proxy.</li>
      * <li>Read/write splitting is enabled for the instance.</li>
-     * <li>The instance runs one of the following versions:<ul>
-     * <li>MySQL 5.7 on RDS High-availability Edition with local SSDs</li>
+     * <li>The instance runs one of the following editions:<ul>
+     * <li>MySQL 5.7 High-availability Edition (with local SSDs)</li>
      * <li>MySQL 5.6</li>
      * <li>SQL Server Cluster Edition</li>
      * </ul>
@@ -33379,7 +33377,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a read/write splitting endpoint.</p>
+     * <p>Releases the read/write splitting endpoint.</p>
      * 
      * @param request ReleaseReadWriteSplittingConnectionRequest
      * @return ReleaseReadWriteSplittingConnectionResponse
@@ -33391,10 +33389,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Removing instances from a deployment set is a non-disruptive operation and does not cause instance restarts.</p>
+     * <p>Removing an RDS custom instance from a deployment set is a non-disruptive operation and does not cause the instance to restart.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes instances from a deployment set.</p>
+     * <p>Removes an RDS custom instance from a deployment set.</p>
      * 
      * @param request RemoveRCInstancesFromDeploymentSetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33434,10 +33432,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Removing instances from a deployment set is a non-disruptive operation and does not cause instance restarts.</p>
+     * <p>Removing an RDS custom instance from a deployment set is a non-disruptive operation and does not cause the instance to restart.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes instances from a deployment set.</p>
+     * <p>Removes an RDS custom instance from a deployment set.</p>
      * 
      * @param request RemoveRCInstancesFromDeploymentSetRequest
      * @return RemoveRCInstancesFromDeploymentSetResponse
@@ -33793,7 +33791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>The instance must be in the Stopped state.</li>
-     * <li>Reinstalling the operating system deletes all data on the original system cloud disk. Proceed with caution.</li>
+     * <li>Reinstalling the operating system causes data loss on the original system cloud disk. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -33851,7 +33849,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>The instance must be in the Stopped state.</li>
-     * <li>Reinstalling the operating system deletes all data on the original system cloud disk. Proceed with caution.</li>
+     * <li>Reinstalling the operating system causes data loss on the original system cloud disk. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -34067,10 +34065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Instances with local disks do not support storage space changes.</p>
+     * <p>Storage space changes are not supported for instances with local disks.</p>
      * 
      * <b>summary</b> : 
-     * <p>Expands the instance storage of an RDS Custom instance.</p>
+     * <p>Expands the instance storage of an ApsaraDB RDS Custom instance.</p>
      * 
      * @param request ResizeRCInstanceDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34126,10 +34124,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Instances with local disks do not support storage space changes.</p>
+     * <p>Storage space changes are not supported for instances with local disks.</p>
      * 
      * <b>summary</b> : 
-     * <p>Expands the instance storage of an RDS Custom instance.</p>
+     * <p>Expands the instance storage of an ApsaraDB RDS Custom instance.</p>
      * 
      * @param request ResizeRCInstanceDiskRequest
      * @return ResizeRCInstanceDiskResponse
@@ -34250,11 +34248,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <blockquote>
      * <p>Before the restoration, you can call the CheckCreateDdrDBInstance operation to check whether an ApsaraDB RDS instance can be restored across regions by using a cross-region backup set.</p>
      * </blockquote>
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
@@ -34262,7 +34260,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restores data to an existing instance across regions.</p>
+     * <p>Restores data across regions to an existing instance.</p>
      * 
      * @param request RestoreDdrTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -34345,11 +34343,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <blockquote>
      * <p>Before the restoration, you can call the CheckCreateDdrDBInstance operation to check whether an ApsaraDB RDS instance can be restored across regions by using a cross-region backup set.</p>
      * </blockquote>
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.</notice></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/120824.html">Cross-region backup for ApsaraDB RDS for MySQL</a></li>
@@ -34357,7 +34355,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Restores data to an existing instance across regions.</p>
+     * <p>Restores data across regions to an existing instance.</p>
      * 
      * @param request RestoreDdrTableRequest
      * @return RestoreDdrTableResponse
@@ -35205,7 +35203,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
@@ -35321,7 +35319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
+     * <p>Notice: Before you call this operation, read the documentation to understand the prerequisites and impacts.
      * &lt;props=&quot;china&quot;&gt;</p>
      * </blockquote>
      * <ul>
@@ -35345,7 +35343,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts an RDS Custom instance that is in the Stopped state. After the operation is called, the instance enters the Starting state and then transitions to the Running state.</p>
+     * <p>Starts an RDS Custom instance that is in the Stopped state. After the API call succeeds, the instance transitions from the Starting state to the Running state.</p>
      * 
      * @param request StartRCInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35381,7 +35379,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts an RDS Custom instance that is in the Stopped state. After the operation is called, the instance enters the Starting state and then transitions to the Running state.</p>
+     * <p>Starts an RDS Custom instance that is in the Stopped state. After the API call succeeds, the instance transitions from the Starting state to the Running state.</p>
      * 
      * @param request StartRCInstanceRequest
      * @return StartRCInstanceResponse
@@ -35551,7 +35549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a running RDS Custom instance. After the API is called, the instance transitions from the Stopping state to the Stopped state.</p>
+     * <p>Stops a running RDS Custom instance. After a successful call, the instance transitions from the Stopping state to the Stopped state.</p>
      * 
      * @param request StopRCInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35595,7 +35593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops a running RDS Custom instance. After the API is called, the instance transitions from the Stopping state to the Stopped state.</p>
+     * <p>Stops a running RDS Custom instance. After a successful call, the instance transitions from the Stopping state to the Stopped state.</p>
      * 
      * @param request StopRCInstanceRequest
      * @return StopRCInstanceResponse
@@ -35891,7 +35889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -35899,16 +35897,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to ensure that you fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/137567.html">Switch the VPC and vSwitch of an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/146885.html">Switch the vSwitch of an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/347675.html">Switch the VPC and vSwitch of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/137567.html">Change the VPC and vSwitch of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146885.html">Change the vSwitch of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/347675.html">Change the VPC and vSwitch of an ApsaraDB RDS for SQL Server instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Switches the virtual private cloud (VPC) and vSwitch of an ApsaraDB RDS instance.</p>
+     * <p>Switches the VPC and vSwitch of an ApsaraDB RDS instance.</p>
      * 
      * @param request SwitchDBInstanceVpcRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35956,7 +35954,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Applicable engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -35964,16 +35962,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to ensure that you fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/137567.html">Switch the VPC and vSwitch of an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/146885.html">Switch the vSwitch of an ApsaraDB RDS for PostgreSQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/347675.html">Switch the VPC and vSwitch of an ApsaraDB RDS for SQL Server instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/137567.html">Change the VPC and vSwitch of an ApsaraDB RDS for MySQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146885.html">Change the vSwitch of an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/347675.html">Change the VPC and vSwitch of an ApsaraDB RDS for SQL Server instance</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Switches the virtual private cloud (VPC) and vSwitch of an ApsaraDB RDS instance.</p>
+     * <p>Switches the VPC and vSwitch of an ApsaraDB RDS instance.</p>
      * 
      * @param request SwitchDBInstanceVpcRequest
      * @return SwitchDBInstanceVpcResponse
@@ -35985,13 +35983,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable engine:</p>
+     * <p>Applicable engines:</p>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Switches traffic for zero-downtime major engine version upgrades of ApsaraDB RDS for PostgreSQL instances.</p>
+     * <p>Switches traffic for zero-downtime major engine version upgrades of ApsaraDB RDS for PostgreSQL.</p>
      * 
      * @param request SwitchOverMajorVersionUpgradeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36059,13 +36057,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Applicable engine:</p>
+     * <p>Applicable engines:</p>
      * <ul>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Switches traffic for zero-downtime major engine version upgrades of ApsaraDB RDS for PostgreSQL instances.</p>
+     * <p>Switches traffic for zero-downtime major engine version upgrades of ApsaraDB RDS for PostgreSQL.</p>
      * 
      * @param request SwitchOverMajorVersionUpgradeRequest
      * @return SwitchOverMajorVersionUpgradeResponse
@@ -36077,8 +36075,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p>RDS SQL Server.</p>
+     * <h3>Applicable engine</h3>
+     * <p>ApsaraDB RDS for SQL Server.</p>
      * 
      * <b>summary</b> : 
      * <p>Switches the replication task of an ApsaraDB RDS for SQL Server primary instance to a disaster recovery instance.</p>
@@ -36125,8 +36123,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
-     * <p>RDS SQL Server.</p>
+     * <h3>Applicable engine</h3>
+     * <p>ApsaraDB RDS for SQL Server.</p>
      * 
      * <b>summary</b> : 
      * <p>Switches the replication task of an ApsaraDB RDS for SQL Server primary instance to a disaster recovery instance.</p>
@@ -36245,7 +36243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -36254,7 +36252,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before you proceed.</p>
+     * <p>Notice: Before you call this operation, read the related documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96149.html">Create tags for an ApsaraDB RDS for MySQL instance</a></li>
@@ -36264,7 +36262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates and binds tags to a specified ApsaraDB RDS instance.</p>
+     * <p>Creates and binds tags to specified ApsaraDB RDS instances.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36320,7 +36318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -36329,7 +36327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation before you proceed.</p>
+     * <p>Notice: Before you call this operation, read the related documentation to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96149.html">Create tags for an ApsaraDB RDS for MySQL instance</a></li>
@@ -36339,7 +36337,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates and binds tags to a specified ApsaraDB RDS instance.</p>
+     * <p>Creates and binds tags to specified ApsaraDB RDS instances.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -36351,9 +36349,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -36405,9 +36403,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engine</h3>
+     * <h3>Supported engines</h3>
      * <ul>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -36432,7 +36430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation involves fees. Read the related documentation carefully before you perform this operation.</p>
+     * <p>Warning: This API operation involves fees. Read the related documentation carefully before you call this operation.</warning></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96048.html">Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription</a> and <a href="https://help.aliyun.com/document_detail/161875.html">Change the billing method of an ApsaraDB RDS for MySQL instance from subscription to pay-as-you-go</a></li>
@@ -36442,7 +36440,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the billing method of an ApsaraDB RDS instance.</p>
+     * <p>Modifies the billing method of an ApsaraDB RDS instance.</p>
      * 
      * @param request TransformDBInstancePayTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36531,7 +36529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Warning: This API operation involves fees. Read the related documentation carefully before you perform this operation.</p>
+     * <p>Warning: This API operation involves fees. Read the related documentation carefully before you call this operation.</warning></p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96048.html">Change the billing method of an ApsaraDB RDS for MySQL instance from pay-as-you-go to subscription</a> and <a href="https://help.aliyun.com/document_detail/161875.html">Change the billing method of an ApsaraDB RDS for MySQL instance from subscription to pay-as-you-go</a></li>
@@ -36541,7 +36539,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Changes the billing method of an ApsaraDB RDS instance.</p>
+     * <p>Modifies the billing method of an ApsaraDB RDS instance.</p>
      * 
      * @param request TransformDBInstancePayTypeRequest
      * @return TransformDBInstancePayTypeResponse
@@ -36683,7 +36681,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -36692,12 +36690,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>You can unbind up to 20 tags at a time.</li>
-     * <li>If a tag is unbound from an instance and is not bound to any other instances, the tag is automatically deleted.</li>
+     * <li>You can remove up to 20 tags at a time.</li>
+     * <li>If a tag is removed from an instance and is not attached to any other instances, the tag is automatically deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds tags from a specified ApsaraDB RDS instance.</p>
+     * <p>Removes tags from a specified ApsaraDB RDS instance.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36757,7 +36755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -36766,12 +36764,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Precautions</h3>
      * <ul>
-     * <li>You can unbind up to 20 tags at a time.</li>
-     * <li>If a tag is unbound from an instance and is not bound to any other instances, the tag is automatically deleted.</li>
+     * <li>You can remove up to 20 tags at a time.</li>
+     * <li>If a tag is removed from an instance and is not attached to any other instances, the tag is automatically deleted.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds tags from a specified ApsaraDB RDS instance.</p>
+     * <p>Removes tags from a specified ApsaraDB RDS instance.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse
@@ -36783,16 +36781,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>ApsaraDB RDS for MySQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Applicable engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/2856487.html">RDS MySQL native replication instance</a></p>
+     * <p>Notice: Before you use this API operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</notice>
+     * <a href="https://help.aliyun.com/document_detail/2856487.html">Native replication instances of ApsaraDB RDS for MySQL</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Updates a replication channel for a native replication instance.</p>
+     * <p>Updates the replication channel of a native replication instance.</p>
      * 
      * @param request UpdateDBInstanceReplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36856,16 +36854,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
-     * <p>ApsaraDB RDS for MySQL</p>
-     * <h3>Related documentation</h3>
+     * <h3>Applicable engines</h3>
+     * <p>RDS MySQL</p>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/2856487.html">RDS MySQL native replication instance</a></p>
+     * <p>Notice: Before you use this API operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</notice>
+     * <a href="https://help.aliyun.com/document_detail/2856487.html">Native replication instances of ApsaraDB RDS for MySQL</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Updates a replication channel for a native replication instance.</p>
+     * <p>Updates the replication channel of a native replication instance.</p>
      * 
      * @param request UpdateDBInstanceReplicationRequest
      * @return UpdateDBInstanceReplicationResponse
@@ -36877,17 +36875,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension exchange DingTalk group (103525002795) to consult, communicate, provide feedback, and obtain more information about extensions.</p>
-     * <h3>Applicable engine</h3>
+     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL plug-in DingTalk group (103525002795) for consultation, discussion, and feedback to get more information about plug-ins.</p>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage plug-ins</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades a specified extension in a destination database.</p>
+     * <p>Upgrades specified plug-ins in a specified database.</p>
      * 
      * @param request UpdatePostgresExtensionsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36951,17 +36949,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL extension exchange DingTalk group (103525002795) to consult, communicate, provide feedback, and obtain more information about extensions.</p>
-     * <h3>Applicable engine</h3>
+     * <p>&lt;props=&quot;china&quot;&gt;You can join the RDS PostgreSQL plug-in DingTalk group (103525002795) for consultation, discussion, and feedback to get more information about plug-ins.</p>
+     * <h3>Supported engine</h3>
      * <p>RDS PostgreSQL</p>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation to fully understand the prerequisites and impacts of this operation.
-     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage extensions</a></p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.
+     * <a href="https://help.aliyun.com/document_detail/2402409.html">Manage plug-ins</a></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Upgrades a specified extension in a destination database.</p>
+     * <p>Upgrades specified plug-ins in a specified database.</p>
      * 
      * @param request UpdatePostgresExtensionsRequest
      * @return UpdatePostgresExtensionsResponse
@@ -36973,12 +36971,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
-     * <h3>Related feature documentation</h3>
-     * <p>A user backup is a full backup of a self-managed MySQL database. You can restore a user backup to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the full data of a self-managed MySQL 5.7 or 8.0 database to the cloud</a>.</p>
+     * <h3>Related documentation</h3>
+     * <p>A user backup is a full backup of a self-managed MySQL database. You can restore the user backup to Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from self-managed MySQL 5.7 and 8.0 databases to the cloud</a>.</p>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the feature documentation to fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the related documentation to ensure that you fully understand the prerequisites and impacts of this operation.</notice></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -37042,12 +37040,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engines</h3>
      * <p>ApsaraDB RDS for MySQL</p>
-     * <h3>Related feature documentation</h3>
-     * <p>A user backup is a full backup of a self-managed MySQL database. You can restore a user backup to the cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate the full data of a self-managed MySQL 5.7 or 8.0 database to the cloud</a>.</p>
+     * <h3>Related documentation</h3>
+     * <p>A user backup is a full backup of a self-managed MySQL database. You can restore the user backup to Alibaba Cloud. For more information, see <a href="https://help.aliyun.com/document_detail/251779.html">Migrate full data from self-managed MySQL 5.7 and 8.0 databases to the cloud</a>.</p>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the feature documentation to fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the related documentation to ensure that you fully understand the prerequisites and impacts of this operation.</notice></p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -37153,15 +37151,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the documentation to ensure that you fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96059.html">Upgrade the minor engine version of an ApsaraDB RDS for MySQL instance</a></li>
@@ -37226,15 +37224,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
-     * <li>RDS SQL Server</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
+     * <li>ApsaraDB RDS for SQL Server</li>
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, carefully read the following documentation. Make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the documentation to ensure that you fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96059.html">Upgrade the minor engine version of an ApsaraDB RDS for MySQL instance</a></li>
@@ -37255,10 +37253,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
-     * <p>This API operation involves fees. Carefully read the related documentation to fully understand the fees, prerequisites, and impacts before you proceed.
+     * <p>This API operation incurs fees. Carefully read the related documentation to fully understand the fees, prerequisites, and impacts before you proceed.
      * <a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></p>
      * 
      * <b>summary</b> : 
@@ -37382,10 +37380,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Applicable engine</h3>
+     * <h3>Supported engine</h3>
      * <p>ApsaraDB RDS for PostgreSQL</p>
      * <h3>Related documentation</h3>
-     * <p>This API operation involves fees. Carefully read the related documentation to fully understand the fees, prerequisites, and impacts before you proceed.
+     * <p>This API operation incurs fees. Carefully read the related documentation to fully understand the fees, prerequisites, and impacts before you proceed.
      * <a href="https://help.aliyun.com/document_detail/203309.html">Upgrade the major engine version of an ApsaraDB RDS for PostgreSQL instance</a></p>
      * 
      * <b>summary</b> : 
@@ -37490,7 +37488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/197465.html">Upgrade the minor engine version of the database proxy for an ApsaraDB RDS for MySQL instance</a></li>
@@ -37565,7 +37563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the feature documentation to understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/197465.html">Upgrade the minor engine version of the database proxy for an ApsaraDB RDS for MySQL instance</a></li>
@@ -37585,10 +37583,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a precheck for a data import task of an ApsaraDB RDS for MySQL native replication instance.</p>
+     * <p>Pre-checks the data import task for an ApsaraDB RDS for MySQL native replication instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a precheck for a data import task of an ApsaraDB RDS for MySQL native replication instance.</p>
+     * <p>Pre-checks the data import task for an ApsaraDB RDS for MySQL native replication instance.</p>
      * 
      * @param request ValidateImportTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37664,10 +37662,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Performs a precheck for a data import task of an ApsaraDB RDS for MySQL native replication instance.</p>
+     * <p>Pre-checks the data import task for an ApsaraDB RDS for MySQL native replication instance.</p>
      * 
      * <b>summary</b> : 
-     * <p>Performs a precheck for a data import task of an ApsaraDB RDS for MySQL native replication instance.</p>
+     * <p>Pre-checks the data import task for an ApsaraDB RDS for MySQL native replication instance.</p>
      * 
      * @param request ValidateImportTaskRequest
      * @return ValidateImportTaskResponse

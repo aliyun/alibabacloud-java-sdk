@@ -8,7 +8,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     public DescribeDBInstanceTDEResponseBodyDatabases databases;
 
     /**
-     * <p>The ID of the key used for TDE encryption.</p>
+     * <p>The ID of the key used for TDE.</p>
      * 
      * <strong>example:</strong>
      * <p>key-szz644a355asjcuilll4u</p>
@@ -17,7 +17,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     public String encryptionKey;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C816A4BF-A6EC-4722-95F9-2055859CCFD2</p>
@@ -26,7 +26,7 @@ public class DescribeDBInstanceTDEResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The key mode of instance-level TDE encryption. Valid values:</p>
+     * <p>The key management method for instance-level TDE. Valid values:</p>
      * <ul>
      * <li><strong>Aliyun_Generate_Key</strong></li>
      * <li><strong>Customer_Provided_Key</strong></li>

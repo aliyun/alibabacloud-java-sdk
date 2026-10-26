@@ -32,7 +32,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     public Long backupSize;
 
     /**
-     * <p>The disk capacity.</p>
+     * <p>The storage capacity.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     public Long dbInstanceStorage;
 
     /**
-     * <p>The name of the database proxy instance.</p>
+     * <p>The name of the proxy instance.</p>
      * 
      * <strong>example:</strong>
      * <p>mr-n1m1wjrylfolvrt67s</p>
@@ -50,7 +50,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     public String dbProxyInstanceName;
 
     /**
-     * <p>The used storage space, which consists of the space occupied by data files and log files. Unit: bytes. A value of -1 indicates that no data is available.</p>
+     * <p>The used storage space, which consists of the space occupied by data files and logs. Unit: bytes. A value of -1 indicates that no data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>4871684096</p>
@@ -68,7 +68,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     public String instanceStorageType;
 
     /**
-     * <p>The RDS whitelist group specifications.</p>
+     * <p>The whitelist group specifications.</p>
      */
     @NameInMap("RdsEcsSecurityGroupRel")
     public java.util.List<DescribeResourceDetailsResponseBodyRdsEcsSecurityGroupRel> rdsEcsSecurityGroupRel;
@@ -101,12 +101,12 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The <a href="https://help.aliyun.com/document_detail/43185.html">IP whitelist</a> of the instance. Separate multiple entries with commas (,). Each entry must be unique. A maximum of 1,000 entries are supported. The following two formats are supported:</p>
+     * <p>The <a href="https://help.aliyun.com/document_detail/43185.html">IP address whitelist</a> of the instance. Separate multiple entries with commas (,). Duplicate entries are not allowed. You can add up to 1,000 entries. The following two formats are supported:</p>
      * <ul>
      * <li>IP address format, such as 10.10.XX.XX.</li>
-     * <li>CIDR format, such as 10.10.XX.XX/24, where 24 indicates the length of the prefix in the IP address. The prefix length ranges from 1 to 32.</li>
+     * <li>CIDR format, such as 10.10.XX.XX/24. In this format, 24 indicates the length of the prefix in the IP address, and the value ranges from 1 to 32.</li>
      * </ul>
-     * <p>If this parameter is not specified, the whitelist information of the default group of the original instance is used.</p>
+     * <p>If this parameter is not specified, the default whitelist of the original instance is used.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.1.14,172.16.1.13,172.16.1.44,172.16.1.43,172.16.1.74,172.16.1.73</p>
@@ -117,7 +117,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     /**
      * <p>The vSwitch ID.</p>
      * <blockquote>
-     * <p>The vSwitch must belong to the same zone as the ApsaraDB RDS instance.</p>
+     * <p>The vSwitch must reside in the same zone as the ApsaraDB RDS instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class DescribeResourceDetailsResponseBody extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>VPC ID。</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-wz9rbibex7v0lxbeyo6at</p>

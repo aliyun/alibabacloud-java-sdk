@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePostgresExtensionsRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -14,7 +14,7 @@ public class DescribePostgresExtensionsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to query the instance ID.</p>
+     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DescribePostgresExtensionsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database name. You can call DescribeDatabases to query the database name.</p>
+     * <p>The name of the database. You can call the DescribeDatabases operation to query the database name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

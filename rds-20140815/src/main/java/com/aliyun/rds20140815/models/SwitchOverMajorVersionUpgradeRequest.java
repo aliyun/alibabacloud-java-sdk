@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SwitchOverMajorVersionUpgradeRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the token, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxxxxx</p>
@@ -14,7 +14,7 @@ public class SwitchOverMajorVersionUpgradeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-m5e4gegx63fh92bn</p>
@@ -29,7 +29,7 @@ public class SwitchOverMajorVersionUpgradeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query available regions.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -38,7 +38,7 @@ public class SwitchOverMajorVersionUpgradeRequest extends TeaModel {
     public byte[] regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>
@@ -53,7 +53,7 @@ public class SwitchOverMajorVersionUpgradeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The maximum tolerable time for the switchover, in seconds. If the switchover exceeds this time, it is canceled. Valid values: 10 to 3600.</p>
+     * <p>Specifies the maximum tolerance time for the switchover. If the switchover exceeds this time, it is canceled. Unit: seconds. Valid values: 10 to 3600.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -62,11 +62,11 @@ public class SwitchOverMajorVersionUpgradeRequest extends TeaModel {
     public Integer switchoverTimeout;
 
     /**
-     * <p>The type of switchover operation. Valid values:</p>
+     * <p>Specifies the operation type for the switchover. Valid values:</p>
      * <ul>
-     * <li>switch: performs the switchover.</li>
-     * <li>cancel: cancels the switchover.</li>
-     * <li>interrupt: interrupts the switchover.</li>
+     * <li>switch: Switchover.</li>
+     * <li>cancel: Cancel.</li>
+     * <li>interrupt: Interrupt.</li>
      * </ul>
      * 
      * <strong>example:</strong>

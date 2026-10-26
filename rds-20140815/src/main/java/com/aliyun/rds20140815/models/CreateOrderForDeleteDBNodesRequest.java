@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateOrderForDeleteDBNodesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to automatically complete automatic payment. Valid values:</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * <ol>
-     * <li><p><strong>true</strong>: automatically completes automatic payment. Make sure that your account balance is sufficient.</p>
+     * <li><p><strong>true</strong>: enables automatic payment. You must ensure that your account balance is sufficient.</p>
      * </li>
-     * <li><p><strong>false</strong>: generates the order without completing automatic payment.</p>
+     * <li><p><strong>false</strong>: generates an unpaid order without deducting fees.</p>
      * </li>
      * </ol>
      * <blockquote>
-     * <p>Default value: true. If your payment method has insufficient balance, set AutoPay to false. In this case, an unpaid order is generated. You can log on to the ApsaraDB RDS console to complete automatic payment.</p>
+     * <p>Default value: true. If your payment method has an insufficient balance, you can change the Settings of the AutoPay parameter to false. In this case, an unpaid order is generated, and you can logon to the ApsaraDB RDS console to pay for the order.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class CreateOrderForDeleteDBNodesRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The additional business information about the instance.</p>
+     * <p>The business extension parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -32,7 +32,7 @@ public class CreateOrderForDeleteDBNodesRequest extends TeaModel {
     public String businessInfo;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCzxxxxxxx</p>
@@ -61,7 +61,7 @@ public class CreateOrderForDeleteDBNodesRequest extends TeaModel {
     public String commodityCode;
 
     /**
-     * <p>The instance ID. You can call <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> to query the instance ID.</p>
+     * <p>The instance ID. You can call the <a href="https://help.aliyun.com/document_detail/610396.html">DescribeDBInstances</a> operation to query the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-8vb9******</p>
@@ -77,7 +77,7 @@ public class CreateOrderForDeleteDBNodesRequest extends TeaModel {
 
     /**
      * <p>The current database engine version. Valid values:</p>
-     * <p>MySQL: <strong>5.5, 5.6, 5.7, 8.0</strong></p>
+     * <p>MySQL: <strong>5.5, 5.6, 5.7, and 8.0</strong></p>
      * 
      * <strong>example:</strong>
      * <p>5.7</p>
@@ -111,7 +111,7 @@ public class CreateOrderForDeleteDBNodesRequest extends TeaModel {
     public String promotionCode;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/610399.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBDescriptionRequest extends TeaModel {
     /**
-     * <p>The database description.</p>
+     * <p>The description of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyDBDescriptionRequest extends TeaModel {
     public String DBDescription;
 
     /**
-     * <p>The instance ID. You can call DescribeDBInstances to obtain the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyDBDescriptionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database name.</p>
+     * <p>The name of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

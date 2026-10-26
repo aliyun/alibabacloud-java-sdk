@@ -26,7 +26,7 @@ public class DescribeErrorLogsResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>98504E07-BB0E-40FC-B152-E4882615812C</p>

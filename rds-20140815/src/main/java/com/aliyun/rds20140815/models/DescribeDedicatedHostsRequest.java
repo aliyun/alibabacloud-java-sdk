@@ -7,8 +7,8 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     /**
      * <p>Specifies whether the host allows instance allocation. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Instance allocation is not allowed.</li>
-     * <li><strong>1</strong>: Instance allocation is allowed.</li>
+     * <li><strong>0</strong>: Not allowed.</li>
+     * <li><strong>1</strong>: Allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String allocationStatus;
 
     /**
-     * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to query the dedicated cluster ID.</p>
+     * <p>The dedicated cluster ID. You can call the DescribeDedicatedHostGroups operation to obtain the dedicated cluster ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dhg-7a9xxxxxxxx</p>
@@ -27,7 +27,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     public String dedicatedHostGroupId;
 
     /**
-     * <p>The host ID in the dedicated cluster.</p>
+     * <p>The host ID of the dedicated cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>ch-t4nn100ddxxxxxxxx</p>
@@ -38,13 +38,13 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
     /**
      * <p>The host status. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: being created</li>
-     * <li><strong>1</strong>: running</li>
-     * <li><strong>2</strong>: down</li>
-     * <li><strong>3</strong>: offline (host being replaced)</li>
-     * <li><strong>4</strong>: offline</li>
-     * <li><strong>5</strong>: deleted</li>
-     * <li><strong>6</strong>: restarting</li>
+     * <li><strong>0</strong>: Creating.</li>
+     * <li><strong>1</strong>: Running.</li>
+     * <li><strong>2</strong>: Down.</li>
+     * <li><strong>3</strong>: Down and offline (host replacement in progress).</li>
+     * <li><strong>4</strong>: Offline.</li>
+     * <li><strong>5</strong>: Deleted.</li>
+     * <li><strong>6</strong>: Restarting.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class DescribeDedicatedHostsRequest extends TeaModel {
      * <p>The storage type of the host. Valid values:</p>
      * <ul>
      * <li><strong>dhg_cloud_ssd</strong>: ESSD cloud disk.</li>
-     * <li><strong>dhg_local_ssd</strong>: local standard SSD.</li>
+     * <li><strong>dhg_local_ssd</strong>: local SSD.</li>
      * </ul>
      * 
      * <strong>example:</strong>

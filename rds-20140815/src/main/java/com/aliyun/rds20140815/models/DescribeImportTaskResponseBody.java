@@ -14,7 +14,7 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String account;
 
     /**
-     * <p>The Milvus version number.</p>
+     * <p>The kernel version number.</p>
      * 
      * <strong>example:</strong>
      * <p>5.7</p>
@@ -23,7 +23,7 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String dbVersion;
 
     /**
-     * <p>The detailed information about the task.</p>
+     * <p>The task details.</p>
      * 
      * <strong>example:</strong>
      * <p>Error Message</p>
@@ -41,7 +41,7 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The category of the source instance.</p>
+     * <p>The category of the source instance. Valid values:</p>
      * <ul>
      * <li><strong>ECS</strong>: Alibaba Cloud ECS.</li>
      * <li><strong>other</strong>: Other.</li>
@@ -108,7 +108,7 @@ public class DescribeImportTaskResponseBody extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The task type. This parameter is used to query tasks of specific types. Separate multiple task types with commas (,). A maximum of 30 task types are supported. If this parameter is left empty, tasks of all types are queried.</p>
+     * <p>The task type, which is used to query tasks of specific types. Separate multiple values with commas (,). A maximum of 30 values are supported. By default, this parameter is left empty, which indicates that no limit is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>import</p>

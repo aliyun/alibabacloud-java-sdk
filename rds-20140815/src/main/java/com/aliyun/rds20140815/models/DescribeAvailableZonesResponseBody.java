@@ -76,7 +76,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The list of supported storage types available for sale.</p>
+         * <p>The list of available storage types.</p>
          */
         @NameInMap("SupportedStorageTypes")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorysSupportedStorageTypes> supportedStorageTypes;
@@ -106,7 +106,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
 
     public static class DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions extends TeaModel {
         /**
-         * <p>The list of supported instance editions available for sale.</p>
+         * <p>The list of available instance editions.</p>
          */
         @NameInMap("SupportedCategorys")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersionsSupportedCategorys> supportedCategorys;
@@ -154,7 +154,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The list of supported database engine versions available for sale.</p>
+         * <p>The list of available database engine versions.</p>
          */
         @NameInMap("SupportedEngineVersions")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEnginesSupportedEngineVersions> supportedEngineVersions;
@@ -193,7 +193,7 @@ public class DescribeAvailableZonesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The list of supported database engines available for sale.</p>
+         * <p>The list of available database engines.</p>
          */
         @NameInMap("SupportedEngines")
         public java.util.List<DescribeAvailableZonesResponseBodyAvailableZonesSupportedEngines> supportedEngines;

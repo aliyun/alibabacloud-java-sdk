@@ -14,7 +14,7 @@ public class ModifyDBInstanceMetricsResponseBody extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B55934BB-FFAA-5276-80A8-E0FDB12810B3</p>

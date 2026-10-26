@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class StopRCInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to forcefully stop the instance. Valid values:</p>
+     * <p>Specifies whether to force a shutdown. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Forcefully stops the instance.</p>
+     * <li><p><strong>true</strong>: Forces a shutdown.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): Gracefully stops the instance.</p>
+     * <li><p><strong>false</strong> (default): Performs a normal shutdown.</p>
      * </li>
      * </ul>
      * 
@@ -39,16 +39,16 @@ public class StopRCInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The stop mode of the instance. Valid values:</p>
+     * <p>The stop mode configured when the instance is stopped. Valid values:</p>
      * <ul>
-     * <li><p>StopCharging: economical mode. After economical mode is enabled:</p>
+     * <li><p>StopCharging: Economical mode. After economical mode is enabled:</p>
      * <ul>
      * <li>Billing for compute resources is suspended.</li>
-     * <li>Billing for system cloud disks and data cloud disks continues.</li>
-     * <li>Because compute resources are released, the instance may fail to start due to insufficient resources. Try again later or change the instance type.</li>
+     * <li>Billing for the system cloud disk and data cloud disks continues.</li>
+     * <li>Because compute resources are reclaimed, the instance may fail to start due to insufficient inventory. Try again later or change the instance type.</li>
      * </ul>
      * </li>
-     * <li><p>KeepCharging: standard mode. Billing continues after the instance is stopped.</p>
+     * <li><p>KeepCharging: Standard mode. The instance continues to be billed after it is stopped.</p>
      * </li>
      * </ul>
      * 
