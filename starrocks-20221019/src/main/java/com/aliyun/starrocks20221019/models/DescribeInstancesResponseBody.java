@@ -335,6 +335,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean encrypted;
 
         /**
+         * <strong>example:</strong>
+         * <p>2026-07</p>
+         */
+        @NameInMap("EosDate")
+        public String eosDate;
+
+        /**
          * <p>The expiration time of the cluster.</p>
          * 
          * <strong>example:</strong>
@@ -584,6 +591,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String version;
 
         /**
+         * <strong>example:</strong>
+         * <p>长期支持</p>
+         */
+        @NameInMap("VersionLifecycleStatus")
+        public String versionLifecycleStatus;
+
+        /**
          * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
@@ -691,6 +705,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Boolean getEncrypted() {
             return this.encrypted;
+        }
+
+        public DescribeInstancesResponseBodyData setEosDate(String eosDate) {
+            this.eosDate = eosDate;
+            return this;
+        }
+        public String getEosDate() {
+            return this.eosDate;
         }
 
         public DescribeInstancesResponseBodyData setExpireTime(Long expireTime) {
@@ -859,6 +881,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public String getVersion() {
             return this.version;
+        }
+
+        public DescribeInstancesResponseBodyData setVersionLifecycleStatus(String versionLifecycleStatus) {
+            this.versionLifecycleStatus = versionLifecycleStatus;
+            return this;
+        }
+        public String getVersionLifecycleStatus() {
+            return this.versionLifecycleStatus;
         }
 
         public DescribeInstancesResponseBodyData setVpcId(String vpcId) {
