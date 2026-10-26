@@ -20,7 +20,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
     public java.util.List<ListDataMaskingInstancesResponseBodyItems> items;
 
     /**
-     * <p>The number of records per page for the current query.</p>
+     * <p>The number of entries returned per page in the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID. You can use this ID to locate the API call.</p>
+     * <p>The request ID, which can be used to locate the current API call.</p>
      * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -38,7 +38,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that match the current statistics or query scope.</p>
+     * <p>The total number of entries that meet the current statistics or query scope.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,7 +93,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
 
     public static class ListDataMaskingInstancesResponseBodyItems extends TeaModel {
         /**
-         * <p>The column encryption algorithm used by the instance.</p>
+         * <p>The current column encryption algorithm of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>AES_256_GCM</p>
@@ -102,7 +102,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String encryptionAlgorithm;
 
         /**
-         * <p>The ID of the KMS key used by the instance. This field may not be returned for local key scenarios.</p>
+         * <p>The ID of the KMS key used by the instance. This parameter may not be returned in local key scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>12345678-1234-1234-1234-12345678****</p>
@@ -111,7 +111,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String encryptionKeyId;
 
         /**
-         * <p>The database engine type.</p>
+         * <p>The type of the database engine.</p>
          * 
          * <strong>example:</strong>
          * <p>MySQL</p>
@@ -120,7 +120,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String engineType;
 
         /**
-         * <p>The number of database accounts that have fullAccess plaintext access permissions.</p>
+         * <p>The number of database accounts that have the fullAccess plaintext access permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -129,7 +129,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public Integer fullAccessAccountCount;
 
         /**
-         * <p>The instance identity of the database instance.</p>
+         * <p>The database instance identity.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-2ze1abcdefgh****</p>
@@ -138,7 +138,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The code of the cloud product.</p>
+         * <p>The code of the cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>RDS</p>
@@ -147,7 +147,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the cloud product type. Valid values: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
+         * <p>The ID of the cloud service type. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -156,7 +156,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public Long productId;
 
         /**
-         * <p>The region ID of the asset.</p>
+         * <p>The ID of the region where the asset is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
@@ -165,7 +165,7 @@ public class ListDataMaskingInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The region name of the asset.</p>
+         * <p>The name of the region where the asset is located.</p>
          * 
          * <strong>example:</strong>
          * <p>China (Zhangjiakou)</p>

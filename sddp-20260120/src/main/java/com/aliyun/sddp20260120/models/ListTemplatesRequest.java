@@ -14,7 +14,7 @@ public class ListTemplatesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>A reserved feature type parameter. This parameter is not used to filter results in the current query and is not required for column encryption calls.</p>
+     * <p>The reserved feature type parameter. This parameter is not used to filter results in the current query and is not required for column encryption calls.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,11 +23,7 @@ public class ListTemplatesRequest extends TeaModel {
     public Integer featureType;
 
     /**
-     * <p>The language of the response description. Valid values:</p>
-     * <ul>
-     * <li>zh: Chinese.</li>
-     * <li>en: English.</li>
-     * </ul>
+     * <p>The language of the response description. Valid values: zh: Chinese. en: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -36,7 +32,7 @@ public class ListTemplatesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of records per page. Keep other filter conditions consistent when querying the next page.</p>
+     * <p>The number of records returned per page. Keep other filter conditions consistent when querying the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,7 +41,7 @@ public class ListTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The scenario identifier for compatible template queries. This parameter is not required for column encryption queries. The available templates are determined by the returned list. Do not rely on this parameter to determine whether general-purpose templates are included.</p>
+     * <p>The identifier of the compatible template query scenario. This parameter is not required for column encryption queries. The available templates are subject to the returned list. Do not rely on this parameter to determine whether general templates are included.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

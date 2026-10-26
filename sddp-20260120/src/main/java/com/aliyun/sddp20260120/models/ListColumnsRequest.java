@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListColumnsRequest extends TeaModel {
     /**
-     * <p>The current page number, starting from 1.</p>
+     * <p>The page number of the current query. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListColumnsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The cloud database instance identity. Set this parameter to the InstanceId from the instance list.</p>
+     * <p>The cloud database instance identity. Set this parameter to the InstanceId in the instance list.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -23,7 +23,7 @@ public class ListColumnsRequest extends TeaModel {
     public String dataAssetSourceId;
 
     /**
-     * <p>The database name. Set this parameter to the DbName returned by ListDataSources.</p>
+     * <p>The name of the database. Set this parameter to the DbName returned by ListDataSources.</p>
      * 
      * <strong>example:</strong>
      * <p>business_db</p>
@@ -32,7 +32,7 @@ public class ListColumnsRequest extends TeaModel {
     public String dataSourceName;
 
     /**
-     * <p>The database engine type. This value must match the EngineType of the target instance, such as MySQL or PostgreSQL.</p>
+     * <p>The type of the database engine. This parameter must be consistent with the EngineType of the target instance, such as MySQL or PostgreSQL.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -50,11 +50,7 @@ public class ListColumnsRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The language of the response description. Valid values:</p>
-     * <ul>
-     * <li>zh: Chinese.</li>
-     * <li>en: English.</li>
-     * </ul>
+     * <p>The language of the response description. Valid values: zh: Chinese; en: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -63,7 +59,7 @@ public class ListColumnsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The column name filter condition.</p>
+     * <p>The filter condition for the column name.</p>
      * 
      * <strong>example:</strong>
      * <p>phone</p>
@@ -72,7 +68,7 @@ public class ListColumnsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of records per page. Keep other filter conditions consistent when querying the next page.</p>
+     * <p>The number of entries to return on each page. Keep other filter conditions consistent when querying the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -81,7 +77,7 @@ public class ListColumnsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two values must correspond to each other.</p>
+     * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -90,7 +86,7 @@ public class ListColumnsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The sensitivity level ID. You can obtain this value from the list returned by ListRiskLevels.</p>
+     * <p>The identifier of the sensitivity level. You can obtain this value from the return list of ListRiskLevels.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -99,7 +95,7 @@ public class ListColumnsRequest extends TeaModel {
     public Long riskLevelId;
 
     /**
-     * <p>The ID of the detection rule or model. Set this parameter to the ID of the corresponding detection rule in the target template.</p>
+     * <p>The identifier of the detection rule or model. Set this parameter to the ID of the corresponding detection rule in the target template.</p>
      * 
      * <strong>example:</strong>
      * <p>1001</p>
@@ -108,7 +104,7 @@ public class ListColumnsRequest extends TeaModel {
     public Long ruleId;
 
     /**
-     * <p>The name of the data table. For PostgreSQL or Oracle scenarios, retain the schema.table format obtained from the table list.</p>
+     * <p>The name of the data table. In PostgreSQL or Oracle scenarios, retain the schema.table format obtained from the table list.</p>
      * 
      * <strong>example:</strong>
      * <p>customer</p>
@@ -117,7 +113,7 @@ public class ListColumnsRequest extends TeaModel {
     public String tableName;
 
     /**
-     * <p>The ID of the classification and grading template. You can obtain this value from Items[].Id returned by ListTemplates. Ensure consistency with the selected sensitivity level and detection model.</p>
+     * <p>The identifier of the data classification and grading template. You can obtain this value from Items[].Id returned by ListTemplates. Keep this parameter consistent with the selected sensitivity level and detection model.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

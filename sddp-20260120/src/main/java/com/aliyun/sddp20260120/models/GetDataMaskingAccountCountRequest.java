@@ -5,11 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataMaskingAccountCountRequest extends TeaModel {
     /**
-     * <p>The language of the response description. Valid values:</p>
-     * <ul>
-     * <li>zh: Chinese.</li>
-     * <li>en: English.</li>
-     * </ul>
+     * <p>The language of the response description. Valid values: zh: Chinese. en: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -18,7 +14,7 @@ public class GetDataMaskingAccountCountRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The list of cloud product type identifiers. Separate multiple values with commas (,). For column encryption scenarios, valid values: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
+     * <p>The list of cloud product type identifiers. Separate multiple values with commas (,). For column encryption scenarios, the values are 5 (RDS), 8 (PolarDB), and 27 (PolarDB-X 2.0).</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

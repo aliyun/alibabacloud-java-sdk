@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeKernelVersionRequest extends TeaModel {
     /**
-     * <p>The database instance identity. You can obtain this value from Items[].InstanceId returned by ListDataMaskingInstances.</p>
+     * <p>The database instance identity. You can obtain the value from Items[].InstanceId in the response of the ListDataMaskingInstances operation.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -14,7 +14,7 @@ public class UpgradeKernelVersionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The target kernel version. You can obtain this value from KernelVersions[].KernelVersion returned by ListMiniEngineVersions.</p>
+     * <p>The target Milvus version. You can obtain the value from KernelVersions[].KernelVersion in the response of the ListMiniEngineVersions operation.</p>
      * 
      * <strong>example:</strong>
      * <p>rds_20220731</p>
@@ -36,7 +36,7 @@ public class UpgradeKernelVersionRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If you also specify ProductId, the two values must correspond to each other.</p>
+     * <p>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two values must match.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -45,13 +45,13 @@ public class UpgradeKernelVersionRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The cloud product type identifier. Valid values:</p>
+     * <p>The identifier of the cloud service type. Valid values:</p>
      * <ul>
      * <li>5: RDS.</li>
      * <li>8: POLARDB.</li>
-     * <li>27: PolarDBX2.</li>
+     * <li>27: PolarDBX2.
+     * If this parameter is specified together with ProductCode, the values must match.</li>
      * </ul>
-     * <p>If you specify both ProductId and ProductCode, the values must correspond to each other.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -60,7 +60,7 @@ public class UpgradeKernelVersionRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>The specified upgrade time. This value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC. Specify this parameter only when UpgradeTime is set to SpecifyTime. The value must be later than the current time.</p>
+     * <p>The specified upgrade time. The value is a UNIX timestamp in milliseconds that have elapsed since 1970-01-01 00:00:00 UTC. Specify this parameter only when UpgradeTime is set to SpecifyTime, and the time must be later than the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>1893456000000</p>
@@ -69,13 +69,13 @@ public class UpgradeKernelVersionRequest extends TeaModel {
     public Long switchTime;
 
     /**
-     * <p>The time at which the kernel upgrade is performed. Valid values:</p>
+     * <p>The execution time of the kernel upgrade. Valid values:</p>
      * <ul>
-     * <li>Immediate: The upgrade is performed immediately.</li>
-     * <li>MaintainTime: The upgrade is performed during the maintenance window.</li>
-     * <li>SpecifyTime: The upgrade is performed at a specified time.</li>
+     * <li>Immediate: Executes the upgrade immediately.</li>
+     * <li>MaintainTime: Executes the upgrade during the maintenance window.</li>
+     * <li>SpecifyTime: Executes the upgrade at a specified time.
+     * PolarDB-X 2.0 does not support SpecifyTime.</li>
      * </ul>
-     * <p>PolarDB-X 2.0 does not support SpecifyTime.</p>
      * 
      * <strong>example:</strong>
      * <p>MaintainTime</p>

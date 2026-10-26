@@ -14,7 +14,7 @@ public class ListTemplatesResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The list of records returned by the current query.</p>
+     * <p>The list of records returned for the current query.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListTemplatesResponseBodyItems> items;
@@ -29,7 +29,7 @@ public class ListTemplatesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID, which can be used to locate this API call.</p>
+     * <p>The request ID, which can be used to trace the current API call.</p>
      * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -38,7 +38,7 @@ public class ListTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that match the current query scope.</p>
+     * <p>The total number of records that match the current query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -111,7 +111,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The time when the template was created. This value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
+         * <p>The creation time of the template. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1788566400000</p>
@@ -120,7 +120,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The time when the template was last modified. This value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
+         * <p>The last modification time of the template. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>1788566400000</p>
@@ -129,7 +129,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The ID of the classification and grading template.</p>
+         * <p>The identifier of the classification and grading template.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -138,7 +138,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The maximum category level supported by the template.</p>
+         * <p>The maximum classification level supported by the template.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -147,7 +147,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public Integer maxCategoryLevel;
 
         /**
-         * <p>The maximum sensitivity level supported by the template.</p>
+         * <p>The highest sensitivity level supported by the template.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -165,13 +165,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The status of the template. Valid values:</p>
-         * <ul>
-         * <li>0: disabled.</li>
-         * <li>1: enabled as the primary template.</li>
-         * <li>2: active template.</li>
-         * <li>3: general-purpose detection model.</li>
-         * </ul>
+         * <p>The status of the template. Valid values: 0: Disabled. 1: Enabled primary template. 2: Active template. 3: General detection model.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -180,11 +174,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Indicates whether the template can be edited. Valid values:</p>
-         * <ul>
-         * <li>0: not supported.</li>
-         * <li>1: supported.</li>
-         * </ul>
+         * <p>Specifies whether the template can be edited. Valid values: 0: Not supported. 1: Supported.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -193,17 +183,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public Integer supportEdit;
 
         /**
-         * <p>The category of the template. Valid values:</p>
-         * <ul>
-         * <li>1: Alibaba template.</li>
-         * <li>2: finance template.</li>
-         * <li>3: energy template.</li>
-         * <li>4: personal information security template.</li>
-         * <li>5: travel template.</li>
-         * <li>65: general-purpose template.</li>
-         * <li>66: custom template.</li>
-         * <li>67: template from another cloud service.</li>
-         * </ul>
+         * <p>The category of the template. Valid values: 1: Alibaba Cloud template. 2: Finance template. 3: Energy template. 4: Personal information security template. 5: Travel template. 65: General template. 66: Custom template. 67: Template from other cloud services.</p>
          * 
          * <strong>example:</strong>
          * <p>65</p>

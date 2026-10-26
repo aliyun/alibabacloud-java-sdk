@@ -11,7 +11,7 @@ public class ListMiniEngineVersionsResponseBody extends TeaModel {
     public java.util.List<ListMiniEngineVersionsResponseBodyKernelVersions> kernelVersions;
 
     /**
-     * <p>The request ID. You can use this ID to locate the API call.</p>
+     * <p>The request ID, which can be used to locate this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -42,7 +42,7 @@ public class ListMiniEngineVersionsResponseBody extends TeaModel {
 
     public static class ListMiniEngineVersionsResponseBodyKernelVersions extends TeaModel {
         /**
-         * <p>The release type of the kernel version. This value is the same as the value returned by the corresponding database product. For example, for ApsaraDB RDS, LTS indicates a long-term support version and BETA indicates a preview version. For PolarDB, the value can be Stable, Old, HighRisk, or Beta.</p>
+         * <p>The release type of the kernel version, which follows the return values of the corresponding database service. For example, for RDS, LTS indicates the long-term support version and BETA indicates the preview version. For PolarDB, the value may be Stable, Old, HighRisk, or Beta.</p>
          * 
          * <strong>example:</strong>
          * <p>LTS</p>

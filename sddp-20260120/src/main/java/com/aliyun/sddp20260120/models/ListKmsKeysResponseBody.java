@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListKmsKeysResponseBody extends TeaModel {
     /**
-     * <p>The list of records returned by this query.</p>
+     * <p>The list of records returned by the query.</p>
      */
     @NameInMap("Items")
     public java.util.List<ListKmsKeysResponseBodyItems> items;
 
     /**
-     * <p>The request ID, which can be used to locate this API call.</p>
+     * <p>The request identity, which is active when you invoke the operation to locate this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>

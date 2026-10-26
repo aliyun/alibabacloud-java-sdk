@@ -42,7 +42,7 @@ public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
 
     public static class ListDataMaskingEncryptionAlgorithmsResponseBodyAlgorithms extends TeaModel {
         /**
-         * <p>The business error code for the record or operation. This value can be empty if no error occurs. Evaluate this value together with ErrorMessage.</p>
+         * <p>The business error code for the record or operation. This parameter can be empty when no error occurs. Evaluate this parameter together with ErrorMessage.</p>
          * 
          * <strong>example:</strong>
          * <p>data_masking_not_running</p>
@@ -51,7 +51,7 @@ public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The business error description for the record or operation.</p>
+         * <p>The business error message for the record or operation.</p>
          * 
          * <strong>example:</strong>
          * <p>The instance is not in the running state</p>
@@ -60,7 +60,7 @@ public class ListDataMaskingEncryptionAlgorithmsResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The algorithm name.</p>
+         * <p>The name of the algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>AES_256_GCM</p>

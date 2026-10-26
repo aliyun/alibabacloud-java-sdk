@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataAssetAccountsRequest extends TeaModel {
     /**
-     * <p>The database account name. Filters by exact account name.</p>
+     * <p>The database account name. The system filters accounts by the exact account name.</p>
      * 
      * <strong>example:</strong>
      * <p>app_reader</p>
@@ -14,11 +14,20 @@ public class ListDataAssetAccountsRequest extends TeaModel {
     public String accountName;
 
     /**
+     * <p>The authentication database of the MongoDB account. This parameter is used to distinguish accounts with the same name in different authentication databases.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
+    @NameInMap("AuthDb")
+    public String authDb;
+
+    /**
      * <p>The column encryption access permissions. Valid values:</p>
      * <ul>
-     * <li>fullAccess: plaintext access.</li>
-     * <li>restrictedAccess: restricted access.</li>
-     * <li>noneAccess: decryption prohibited. noneAccess applies only to ApsaraDB RDS for MySQL instances whose current effective key pattern is client_key.</li>
+     * <li>fullAccess: plaintext access</li>
+     * <li>restrictedAccess: restricted access</li>
+     * <li>noneAccess: decryption prohibited. This value applies only to ApsaraDB RDS for MySQL instances whose current effective key mode is client_key.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +37,7 @@ public class ListDataAssetAccountsRequest extends TeaModel {
     public String authRole;
 
     /**
-     * <p>The query business scenario. Use DataMasking for the column encryption scenario. This value is case-sensitive.</p>
+     * <p>The business scenario for the query. Set this parameter to DataMasking for the column encryption scenario. Note that the value is case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>DataMasking</p>
@@ -37,7 +46,7 @@ public class ListDataAssetAccountsRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>The page number of the current query. Pages start from 1.</p>
+     * <p>The page number of the current page. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -46,7 +55,7 @@ public class ListDataAssetAccountsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The database instance identity. You can obtain this value from Items[].InstanceId returned by ListDataMaskingInstances.</p>
+     * <p>The database instance ID. You can obtain this value from the Items[].InstanceId parameter in the response of the ListDataMaskingInstances operation.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -55,10 +64,10 @@ public class ListDataAssetAccountsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the response description. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li>zh: Chinese.</li>
-     * <li>en: English.</li>
+     * <li>zh: Chinese</li>
+     * <li>en: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +77,7 @@ public class ListDataAssetAccountsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of records per page. Keep other filter conditions consistent when querying the next page.</p>
+     * <p>The number of entries to return on each page. Keep other filter conditions consistent when querying the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -77,7 +86,7 @@ public class ListDataAssetAccountsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The cloud product code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two values must correspond to each other.</p>
+     * <p>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also specified, the two parameters must match.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -86,7 +95,7 @@ public class ListDataAssetAccountsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The list of cloud product type identifiers. Separate multiple values with commas (,). Valid values for the column encryption scenario: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
+     * <p>The list of cloud service type IDs. Separate multiple values with commas (,). For the column encryption scenario, the valid values are 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -105,6 +114,14 @@ public class ListDataAssetAccountsRequest extends TeaModel {
     }
     public String getAccountName() {
         return this.accountName;
+    }
+
+    public ListDataAssetAccountsRequest setAuthDb(String authDb) {
+        this.authDb = authDb;
+        return this;
+    }
+    public String getAuthDb() {
+        return this.authDb;
     }
 
     public ListDataAssetAccountsRequest setAuthRole(String authRole) {

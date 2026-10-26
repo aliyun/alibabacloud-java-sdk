@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataMaskingInstancesRequest extends TeaModel {
     /**
-     * <p>The column name filter condition.</p>
+     * <p>The filter condition for the column name.</p>
      * 
      * <strong>example:</strong>
      * <p>phone</p>
@@ -32,7 +32,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public String dbName;
 
     /**
-     * <p>The database engine type. The value must match the EngineType of the target instance, such as MySQL or PostgreSQL.</p>
+     * <p>The type of the database engine. The value must be consistent with the EngineType of the target instance, such as MySQL or PostgreSQL.</p>
      * 
      * <strong>example:</strong>
      * <p>MySQL</p>
@@ -41,7 +41,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public String engineType;
 
     /**
-     * <p>The instance identity of the database instance. You can obtain the value from Items[].InstanceId in the response of ListDataMaskingInstances.</p>
+     * <p>The database instance identity. You can obtain the identity from the Items[].InstanceId parameter in the response of the ListDataMaskingInstances operation.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -50,11 +50,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the response description. Valid values:</p>
-     * <ul>
-     * <li>zh: Chinese.</li>
-     * <li>en: English.</li>
-     * </ul>
+     * <p>The language of the response description. Valid values: zh: Chinese. en: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -63,12 +59,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The column encryption status used for filtering. Valid values:</p>
-     * <ul>
-     * <li>NotEncrypted: Not encrypted.</li>
-     * <li>Success: Encryption succeeded.</li>
-     * <li>Failed: Encryption failed.</li>
-     * </ul>
+     * <p>The column encryption status filter. Valid values: NotEncrypted: not encrypted. Success: encrypted. Failed: encryption failed.</p>
      * 
      * <strong>example:</strong>
      * <p>NotEncrypted</p>
@@ -77,7 +68,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public String maskingStatus;
 
     /**
-     * <p>The ID of the model tag. This parameter is used to limit the data to those that match the specified model tag.</p>
+     * <p>The ID of the model tag. This parameter is used to filter data that matches the specified model tag.</p>
      * 
      * <strong>example:</strong>
      * <p>101</p>
@@ -86,7 +77,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public String modelTagId;
 
     /**
-     * <p>The number of records per page. Keep other filter conditions consistent when querying the next page.</p>
+     * <p>The number of entries to return on each page. Keep other filter conditions consistent when querying the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -95,7 +86,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The code of the cloud product. Column encryption supports RDS, POLARDB, and PolarDBX2. If you also specify ProductId, the two values must correspond to each other.</p>
+     * <p>The code of the cloud service. Column encryption supports RDS, POLARDB, and PolarDBX2. If you specify this parameter and ProductId at the same time, the values must match.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -104,7 +95,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the cloud product type. Valid values: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2). If you specify both ProductId and ProductCode, the values must correspond to each other.</p>
+     * <p>The ID of the cloud service type. Valid values: 5: RDS. 8: POLARDB. 27: PolarDBX2. If you specify this parameter and ProductCode at the same time, the values must match.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -113,7 +104,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public Long productId;
 
     /**
-     * <p>The list of cloud product type IDs. Separate multiple values with commas (,). Valid values for column encryption: 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
+     * <p>The list of cloud service type IDs. Separate multiple values with commas (,). In column encryption scenarios, the valid values are 5 (RDS), 8 (POLARDB), and 27 (PolarDBX2).</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -122,7 +113,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public String productIds;
 
     /**
-     * <p>The ID of the sensitivity level. You can obtain the value from the response of ListRiskLevels.</p>
+     * <p>The ID of the sensitivity level. You can obtain the ID from the response of the ListRiskLevels operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -131,7 +122,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public Long riskLevelId;
 
     /**
-     * <p>The list of sensitivity level IDs. Separate multiple values with commas (,). Select values from the response of ListRiskLevels that corresponds to the same TemplateId.</p>
+     * <p>The list of sensitivity level IDs. Separate multiple values with commas (,). Select the values from the response of the ListRiskLevels operation that corresponds to the same TemplateId.</p>
      * 
      * <strong>example:</strong>
      * <p>1,2</p>
@@ -140,7 +131,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public String riskLevelIds;
 
     /**
-     * <p>The name of the table. For PostgreSQL or Oracle scenarios, retain the schema.table format obtained from the table list.</p>
+     * <p>The name of the table. In PostgreSQL or Oracle scenarios, retain the schema.table format obtained from the table list.</p>
      * 
      * <strong>example:</strong>
      * <p>customer</p>
@@ -149,7 +140,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public String tableName;
 
     /**
-     * <p>The ID of the classification and grading template. You can obtain the value from Items[].Id in the response of ListTemplates. The value must be consistent with the selected sensitivity level and detection model.</p>
+     * <p>The ID of the data classification template. You can obtain the ID from the Items[].Id parameter in the response of the ListTemplates operation. The ID must be consistent with the selected sensitivity level and identification model.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -158,7 +149,7 @@ public class ListDataMaskingInstancesRequest extends TeaModel {
     public Long templateId;
 
     /**
-     * <p>The list of detection model IDs. Separate multiple values with commas (,). Select values from the response of ListIdentifyModels that corresponds to the same TemplateId.</p>
+     * <p>The list of identification model IDs. Separate multiple values with commas (,). Select the values from the response of the ListIdentifyModels operation that corresponds to the same TemplateId.</p>
      * 
      * <strong>example:</strong>
      * <p>1001,1002</p>

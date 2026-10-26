@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListIdentifyModelsResponseBody extends TeaModel {
     /**
-     * <p>The request ID, which can be used to locate this API call.</p>
+     * <p>The request ID, which is active for locating this API invoke.</p>
      * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>
@@ -14,7 +14,7 @@ public class ListIdentifyModelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of detection models or rules.</p>
+     * <p>The list of recognition models or rules.</p>
      */
     @NameInMap("RuleList")
     public java.util.List<ListIdentifyModelsResponseBodyRuleList> ruleList;
@@ -42,7 +42,7 @@ public class ListIdentifyModelsResponseBody extends TeaModel {
 
     public static class ListIdentifyModelsResponseBodyRuleList extends TeaModel {
         /**
-         * <p>The ID of the detection model.</p>
+         * <p>The ID of the recognition model.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -51,10 +51,10 @@ public class ListIdentifyModelsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The name of the detection model or rule.</p>
+         * <p>The name of the recognition model or rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>Phone Number</p>
+         * <p>Mobile phone number</p>
          */
         @NameInMap("Name")
         public String name;

@@ -32,7 +32,7 @@ public class GetInstanceAttributeResponseBody extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>The business error code for the record or operation. This value can be empty if no error occurs. Evaluate this value together with ErrorMessage.</p>
+     * <p>The business error code for the record or operation. This parameter can be empty when no error occurs. You should evaluate this parameter together with ErrorMessage.</p>
      * 
      * <strong>example:</strong>
      * <p>data_masking_not_running</p>
@@ -50,13 +50,13 @@ public class GetInstanceAttributeResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
-     * <p>Indicates whether the instance supports column encryption by using KMS keys.</p>
+     * <p>Indicates whether the instance supports using KMS keys for column encryption.</p>
      */
     @NameInMap("KmsEncryptionSupported")
     public Boolean kmsEncryptionSupported;
 
     /**
-     * <p>The end time of the O&amp;M window. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC. The UTC time of the O&amp;M window is combined with the date of the query day and returned.</p>
+     * <p>The end time of the maintenance window. The value is a UNIX timestamp in milliseconds that have elapsed since 1970-01-01 00:00:00 UTC. The returned value combines the UTC time of the maintenance window with the date of the query day.</p>
      * 
      * <strong>example:</strong>
      * <p>1788570000000</p>
@@ -65,7 +65,7 @@ public class GetInstanceAttributeResponseBody extends TeaModel {
     public Long maintainEndTime;
 
     /**
-     * <p>The start time of the O&amp;M window. The value is a UNIX timestamp in milliseconds since 1970-01-01 00:00:00 UTC. The UTC time of the O&amp;M window is combined with the date of the query day and returned.</p>
+     * <p>The start time of the maintenance window. The value is a UNIX timestamp in milliseconds that have elapsed since 1970-01-01 00:00:00 UTC. The returned value combines the UTC time of the maintenance window with the date of the query day.</p>
      * 
      * <strong>example:</strong>
      * <p>1788566400000</p>
@@ -74,7 +74,7 @@ public class GetInstanceAttributeResponseBody extends TeaModel {
     public Long maintainStartTime;
 
     /**
-     * <p>The request ID. You can use this ID to locate the API call.</p>
+     * <p>The request ID, which can be used to locate this API call.</p>
      * 
      * <strong>example:</strong>
      * <p>7C6D8E9F-1234-5678-ABCD-0123456789AB</p>

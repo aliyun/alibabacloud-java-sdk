@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMiniEngineVersionsRequest extends TeaModel {
     /**
-     * <p>The instance identity of the database. You can obtain this value from Items[].InstanceId returned by the ListDataMaskingInstances operation.</p>
+     * <p>The database instance ID. You can obtain this value from Items[].InstanceId returned by ListDataMaskingInstances.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1abcdefgh****</p>
@@ -14,11 +14,7 @@ public class ListMiniEngineVersionsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the response description. Valid values:</p>
-     * <ul>
-     * <li>zh: Chinese.</li>
-     * <li>en: English.</li>
-     * </ul>
+     * <p>The language of the response message. Valid values: zh: Chinese; en: English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -27,7 +23,7 @@ public class ListMiniEngineVersionsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The code of the cloud product. Column encryption supports RDS, POLARDB, and PolarDBX2. If you also specify ProductId, the two values must correspond to each other.</p>
+     * <p>The cloud service code. Column encryption supports RDS, POLARDB, and PolarDBX2. If ProductId is also provided, the two parameters must correspond to each other.</p>
      * 
      * <strong>example:</strong>
      * <p>RDS</p>
@@ -36,13 +32,7 @@ public class ListMiniEngineVersionsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The identifier of the cloud product type. Valid values:</p>
-     * <ul>
-     * <li>5: ApsaraDB RDS.</li>
-     * <li>8: PolarDB.</li>
-     * <li>27: PolarDBX2.</li>
-     * </ul>
-     * <p>If you specify both ProductId and ProductCode, the values must correspond to each other.</p>
+     * <p>The cloud service type identifier. Valid values: 5: RDS; 8: POLARDB; 27: PolarDBX2. If specified together with ProductCode, the values must match.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

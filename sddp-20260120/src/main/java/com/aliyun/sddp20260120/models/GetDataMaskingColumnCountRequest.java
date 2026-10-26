@@ -18,7 +18,7 @@ public class GetDataMaskingColumnCountRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The list of cloud product type identifiers. Separate multiple values with commas (,). Valid values for column encryption scenarios: 5 (ApsaraDB RDS), 8 (PolarDB), and 27 (PolarDB-X 2.0).</p>
+     * <p>The list of cloud product type identifiers. Separate multiple values with commas (,). For column encryption scenarios, the values correspond to 5 (ApsaraDB RDS), 8 (PolarDB), and 27 (PolarDB-X).</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -27,7 +27,7 @@ public class GetDataMaskingColumnCountRequest extends TeaModel {
     public String productIds;
 
     /**
-     * <p>The ID of the data classification template. You can obtain this value from Items[].Id returned by the ListTemplates operation. This value must be consistent with the selected sensitivity level and detection model.</p>
+     * <p>The data classification template ID. You can obtain the ID from the Items[].Id parameter in the ListTemplates response. The ID must be consistent with the selected sensitivity level and detection model.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
