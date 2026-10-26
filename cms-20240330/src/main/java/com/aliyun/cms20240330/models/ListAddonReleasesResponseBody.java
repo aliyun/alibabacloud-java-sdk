@@ -73,7 +73,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
     public static class ListAddonReleasesResponseBodyReleasesConditions extends TeaModel {
         /**
-         * <p>The time of the first transition.</p>
+         * <p>The first transition time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-04T16:10:22+08:00</p>
@@ -82,7 +82,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String firstTransitionTime;
 
         /**
-         * <p>The time of the last transition.</p>
+         * <p>The last transition time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-04T16:10:22+08:00</p>
@@ -91,7 +91,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String lastTransitionTime;
 
         /**
-         * <p>The detailed information.</p>
+         * <p>The details.</p>
          * 
          * <strong>example:</strong>
          * <p>The addon loaded successfully</p>
@@ -100,7 +100,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The status of the phase.</p>
+         * <p>The phase status.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -109,7 +109,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the phase.</p>
+         * <p>The phase type.</p>
          * 
          * <strong>example:</strong>
          * <p>Loaded</p>
@@ -208,7 +208,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
     public static class ListAddonReleasesResponseBodyReleases extends TeaModel {
         /**
-         * <p>The name of the add-on.</p>
+         * <p>The addon name.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-gpu</p>
@@ -236,12 +236,22 @@ public class ListAddonReleasesResponseBody extends TeaModel {
 
         /**
          * <p>The summary of installation phase conditions.</p>
+         * <p>Type includes four values: Loaded (loads configurations), Installed (executes installation), Ready (performs a readiness check after installation), and UnInstalled (executes uninstallation). These four conditions theoretically occur in sequence.</p>
+         * <p>Status. Valid values:</p>
+         * <ul>
+         * <li>Unknown: The current phase is being executed.</li>
+         * <li>True: The execution is ready.</li>
+         * <li>False: The execution failed.</li>
+         * </ul>
+         * <p>Complete status determination rules:
+         * If the Status of Loaded, Installed, or Ready is False, the installation fails. If the Status of Ready is True, the installation succeeds. In other cases, the installation is in progress.</p>
+         * <p>If UnInstalled exists, an uninstallation is in progress. If Status is True, the uninstallation succeeds. If Status is Unknown, the uninstallation is in progress. If Status is False, the uninstallation fails.</p>
          */
         @NameInMap("conditions")
         public java.util.List<ListAddonReleasesResponseBodyReleasesConditions> conditions;
 
         /**
-         * <p>The configuration information of the component.</p>
+         * <p>The component configuration information.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;install&quot;:{&quot;mode&quot;:&quot;auto-install&quot;,&quot;listenPort&quot;:&quot;9400&quot;},&quot;discoverMode&quot;:&quot;instances&quot;,&quot;discover&quot;:{&quot;instances&quot;:&quot;worker-k8s-for-cs-c126d87c76218487e83ab322017f11b44&quot;},&quot;scrapeInterval&quot;:&quot;15&quot;,&quot;enableSecuritecs-nodeyGroupInjection&quot;:&quot;true&quot;,&quot;metricTags&quot;:&quot;&quot;}</p>
@@ -274,7 +284,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public EntityGroupBase entityRules;
 
         /**
-         * <p>The type of the environment.</p>
+         * <p>The environment type.</p>
          * 
          * <strong>example:</strong>
          * <p>CS</p>
@@ -382,7 +392,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String releaseId;
 
         /**
-         * <p>The name of the release.</p>
+         * <p>The release name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-gpu-integration-name</p>
@@ -391,7 +401,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String releaseName;
 
         /**
-         * <p>The scenario of the component.</p>
+         * <p>The component scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>container</p>
@@ -409,7 +419,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The statistics information of sub-add-on releases.</p>
+         * <p>The statistics information of sub-addon releases.</p>
          */
         @NameInMap("subAddonRelease")
         public ListAddonReleasesResponseBodyReleasesSubAddonRelease subAddonRelease;
@@ -424,7 +434,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The ID of the owning user.</p>
+         * <p>The ID of the owner user.</p>
          * 
          * <strong>example:</strong>
          * <p>175xxxxxxxxxxxxx</p>
@@ -433,7 +443,7 @@ public class ListAddonReleasesResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The version of the component.</p>
+         * <p>The component version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.2</p>

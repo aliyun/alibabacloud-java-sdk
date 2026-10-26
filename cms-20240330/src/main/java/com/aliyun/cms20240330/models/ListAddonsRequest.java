@@ -13,6 +13,10 @@ public class ListAddonsRequest extends TeaModel {
     @NameInMap("aliyunLang")
     public String aliyunLang;
 
+    /**
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
     @NameInMap("apiVersion")
     public String apiVersion;
 

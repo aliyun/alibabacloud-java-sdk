@@ -20,7 +20,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
     public String maxResults;
 
     /**
-     * <p>The next token for the next page. It is empty when all results are returned.</p>
+     * <p>The next token for the next page. This parameter is empty when all results are returned.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
@@ -35,7 +35,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of instances returned.</p>
+     * <p>The total number of returned instances.</p>
      */
     @NameInMap("totalCount")
     public String totalCount;
@@ -96,7 +96,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The HTTP API URL.</p>
+         * <p>The HTTP API endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxxxxxxx">http://xxxxxxxx</a></p>

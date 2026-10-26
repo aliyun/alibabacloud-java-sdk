@@ -1901,6 +1901,54 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建订阅</p>
+     * 
+     * @param request CreateSubscriptionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateSubscriptionResponse
+     */
+    public CreateSubscriptionResponse createSubscriptionWithOptions(CreateSubscriptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(request.body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateSubscription"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/subscriptions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateSubscriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建订阅</p>
+     * 
+     * @param request CreateSubscriptionRequest
+     * @return CreateSubscriptionResponse
+     */
+    public CreateSubscriptionResponse createSubscription(CreateSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createSubscriptionWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</p>
      * 
      * @param request CreateTicketRequest
@@ -3257,6 +3305,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除订阅</p>
+     * 
+     * @param request DeleteSubscriptionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteSubscriptionResponse
+     */
+    public DeleteSubscriptionResponse deleteSubscriptionWithOptions(String subscriptionId, DeleteSubscriptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteSubscription"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/subscriptions/" + com.aliyun.openapiutil.Client.getEncodeParam(subscriptionId) + ""),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteSubscriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除订阅</p>
+     * 
+     * @param request DeleteSubscriptionRequest
+     * @return DeleteSubscriptionResponse
+     */
+    public DeleteSubscriptionResponse deleteSubscription(String subscriptionId, DeleteSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteSubscriptionWithOptions(subscriptionId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Deletes a Umodel from a specified workspace.</p>
      * 
@@ -3697,6 +3792,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>暂停订阅</p>
+     * 
+     * @param request DisableSubscriptionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DisableSubscriptionResponse
+     */
+    public DisableSubscriptionResponse disableSubscriptionWithOptions(String subscriptionId, DisableSubscriptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DisableSubscription"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/subscriptions/" + com.aliyun.openapiutil.Client.getEncodeParam(subscriptionId) + "/disable"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DisableSubscriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>暂停订阅</p>
+     * 
+     * @param request DisableSubscriptionRequest
+     * @return DisableSubscriptionResponse
+     */
+    public DisableSubscriptionResponse disableSubscription(String subscriptionId, DisableSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.disableSubscriptionWithOptions(subscriptionId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Enables a specified silence policy. After the policy is enabled, the service refreshes the runtime cache through asynchronous messages. After the refresh is complete, events that match the filter conditions of the policy and fall within the effective period do not trigger notifications. Events may still be processed based on the pre-enablement state for a short period. If the specified silence policy does not exist, a ResourceNotFound error is returned.</p>
      * 
@@ -3800,6 +3942,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.enableNotifyPolicyWithOptions(uuid, request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动订阅</p>
+     * 
+     * @param request EnableSubscriptionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return EnableSubscriptionResponse
+     */
+    public EnableSubscriptionResponse enableSubscriptionWithOptions(String subscriptionId, EnableSubscriptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "EnableSubscription"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/subscriptions/" + com.aliyun.openapiutil.Client.getEncodeParam(subscriptionId) + "/enable"),
+            new TeaPair("method", "PUT"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new EnableSubscriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>启动订阅</p>
+     * 
+     * @param request EnableSubscriptionRequest
+     * @return EnableSubscriptionResponse
+     */
+    public EnableSubscriptionResponse enableSubscription(String subscriptionId, EnableSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.enableSubscriptionWithOptions(subscriptionId, request, headers, runtime);
     }
 
     /**
@@ -5461,6 +5650,53 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>获取订阅</p>
+     * 
+     * @param request GetSubscriptionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetSubscriptionResponse
+     */
+    public GetSubscriptionResponse getSubscriptionWithOptions(String subscriptionId, GetSubscriptionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetSubscription"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/subscriptions/" + com.aliyun.openapiutil.Client.getEncodeParam(subscriptionId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetSubscriptionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>获取订阅</p>
+     * 
+     * @param request GetSubscriptionRequest
+     * @return GetSubscriptionResponse
+     */
+    public GetSubscriptionResponse getSubscription(String subscriptionId, GetSubscriptionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getSubscriptionWithOptions(subscriptionId, request, headers, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>Retrieves Umodel configuration information.</p>
      * 
@@ -5650,10 +5886,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of integration configurations.</p>
+     * <p>Queries the list of add-on configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the releases of an add-on.</p>
+     * <p>Lists add-on releases.</p>
      * 
      * @param request ListAddonReleasesRequest
      * @param headers map
@@ -5699,10 +5935,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of integration configurations.</p>
+     * <p>Queries the list of add-on configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the releases of an add-on.</p>
+     * <p>Lists add-on releases.</p>
      * 
      * @param request ListAddonReleasesRequest
      * @return ListAddonReleasesResponse
@@ -7905,6 +8141,97 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>查询订阅规则列表</p>
+     * 
+     * @param request ListSubscriptionsRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListSubscriptionsResponse
+     */
+    public ListSubscriptionsResponse listSubscriptionsWithOptions(ListSubscriptionsRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentUuid)) {
+            query.put("agentUuid", request.agentUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.direction)) {
+            query.put("direction", request.direction);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enable)) {
+            query.put("enable", request.enable);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyStrategyUuid)) {
+            query.put("notifyStrategyUuid", request.notifyStrategyUuid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
+            query.put("orderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionId)) {
+            query.put("subscriptionId", request.subscriptionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionName)) {
+            query.put("subscriptionName", request.subscriptionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionType)) {
+            query.put("subscriptionType", request.subscriptionType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.unbound)) {
+            query.put("unbound", request.unbound);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListSubscriptions"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/subscriptions"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListSubscriptionsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询订阅规则列表</p>
+     * 
+     * @param request ListSubscriptionsRequest
+     * @return ListSubscriptionsResponse
+     */
+    public ListSubscriptionsResponse listSubscriptions(ListSubscriptionsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listSubscriptionsWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Queries labels associated with resources.</p>
      * 
      * @param tmpReq ListTagResourcesRequest
@@ -7974,6 +8301,145 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.listTagResourcesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>List History name</p>
+     * 
+     * @param request ListUserNotifyHistoriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListUserNotifyHistoriesResponse
+     */
+    public ListUserNotifyHistoriesResponse listUserNotifyHistoriesWithOptions(ListUserNotifyHistoriesRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.batchId)) {
+            query.put("batchId", request.batchId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizSource)) {
+            query.put("bizSource", request.bizSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channel)) {
+            query.put("channel", request.channel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.channelCategory)) {
+            query.put("channelCategory", request.channelCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.from)) {
+            query.put("from", request.from);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.group)) {
+            query.put("group", request.group);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.incidentId)) {
+            query.put("incidentId", request.incidentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeNoChannel)) {
+            query.put("includeNoChannel", request.includeNoChannel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.isDesc)) {
+            query.put("isDesc", request.isDesc);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyStrategyId)) {
+            query.put("notifyStrategyId", request.notifyStrategyId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notifyStrategyName)) {
+            query.put("notifyStrategyName", request.notifyStrategyName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partitionKey)) {
+            query.put("partitionKey", request.partitionKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.receiver)) {
+            query.put("receiver", request.receiver);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleId)) {
+            query.put("ruleId", request.ruleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ruleName)) {
+            query.put("ruleName", request.ruleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sendType)) {
+            query.put("sendType", request.sendType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.severity)) {
+            query.put("severity", request.severity);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionId)) {
+            query.put("subscriptionId", request.subscriptionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.subscriptionName)) {
+            query.put("subscriptionName", request.subscriptionName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.success)) {
+            query.put("success", request.success);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.to)) {
+            query.put("to", request.to);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListUserNotifyHistories"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/userHistories"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListUserNotifyHistoriesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>List History name</p>
+     * 
+     * @param request ListUserNotifyHistoriesRequest
+     * @return ListUserNotifyHistoriesResponse
+     */
+    public ListUserNotifyHistoriesResponse listUserNotifyHistories(ListUserNotifyHistoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listUserNotifyHistoriesWithOptions(request, headers, runtime);
     }
 
     /**

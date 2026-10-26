@@ -1,0 +1,45 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.cms20240330.models;
+
+import com.aliyun.tea.*;
+
+public class EnableSubscriptionResponse extends TeaModel {
+    @NameInMap("headers")
+    public java.util.Map<String, String> headers;
+
+    @NameInMap("statusCode")
+    public Integer statusCode;
+
+    @NameInMap("body")
+    public EnableSubscriptionResponseBody body;
+
+    public static EnableSubscriptionResponse build(java.util.Map<String, ?> map) throws Exception {
+        EnableSubscriptionResponse self = new EnableSubscriptionResponse();
+        return TeaModel.build(map, self);
+    }
+
+    public EnableSubscriptionResponse setHeaders(java.util.Map<String, String> headers) {
+        this.headers = headers;
+        return this;
+    }
+    public java.util.Map<String, String> getHeaders() {
+        return this.headers;
+    }
+
+    public EnableSubscriptionResponse setStatusCode(Integer statusCode) {
+        this.statusCode = statusCode;
+        return this;
+    }
+    public Integer getStatusCode() {
+        return this.statusCode;
+    }
+
+    public EnableSubscriptionResponse setBody(EnableSubscriptionResponseBody body) {
+        this.body = body;
+        return this;
+    }
+    public EnableSubscriptionResponseBody getBody() {
+        return this.body;
+    }
+
+}

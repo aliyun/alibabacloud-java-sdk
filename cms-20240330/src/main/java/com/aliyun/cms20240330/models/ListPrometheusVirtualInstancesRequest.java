@@ -20,7 +20,7 @@ public class ListPrometheusVirtualInstancesRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The next paging token for the paged query.</p>
+     * <p>The next token for the paging query.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
