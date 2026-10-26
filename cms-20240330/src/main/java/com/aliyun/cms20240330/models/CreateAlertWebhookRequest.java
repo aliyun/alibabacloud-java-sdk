@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAlertWebhookRequest extends TeaModel {
     /**
-     * <p>The content type of the data. Valid values:</p>
+     * <p>The data content type. Valid values:</p>
      * <ul>
      * <li>JSON (default)</li>
      * <li>FORM</li>

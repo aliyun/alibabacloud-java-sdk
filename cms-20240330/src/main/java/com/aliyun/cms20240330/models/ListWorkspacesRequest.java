@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page.
+     * <p>The maximum number of entries per page.
      * Default value:
      *     50
      * Maximum value:
@@ -39,7 +39,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ae******ey</p>
@@ -54,7 +54,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public java.util.List<ListWorkspacesRequestTags> tags;
 
     /**
-     * <p>The workspace name. Fuzzy match is used.</p>
+     * <p>The workspace name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>
@@ -63,7 +63,7 @@ public class ListWorkspacesRequest extends TeaModel {
     public String workspaceName;
 
     /**
-     * <p>The workspace name. Exact match is used.</p>
+     * <p>The names of the workspaces. Exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>
@@ -138,12 +138,18 @@ public class ListWorkspacesRequest extends TeaModel {
     public static class ListWorkspacesRequestTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>value</p>
          */
         @NameInMap("value")
         public String value;

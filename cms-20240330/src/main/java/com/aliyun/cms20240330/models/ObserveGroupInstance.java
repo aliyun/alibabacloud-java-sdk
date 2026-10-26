@@ -5,67 +5,67 @@ import com.aliyun.tea.*;
 
 public class ObserveGroupInstance extends TeaModel {
     /**
-     * <p>The entity category (adapted by entityType).</p>
+     * <p>实体分类（由 entityType 适配）。</p>
      */
     @NameInMap("category")
     public String category;
 
     /**
-     * <p>The key-value pairs of monitoring dimensions.</p>
+     * <p>监控维度键值对。</p>
      */
     @NameInMap("dimension")
     public java.util.Map<String, String> dimension;
 
     /**
-     * <p>The entity domain (such as acs).</p>
+     * <p>实体域（如 acs）。</p>
      */
     @NameInMap("entityDomain")
     public String entityDomain;
 
     /**
-     * <p>The entity type (such as acs.ecs.instance).</p>
+     * <p>实体类型（如 acs.ecs.instance）。</p>
      */
     @NameInMap("entityType")
     public String entityType;
 
     /**
-     * <p>The ID of the observation group to which the entity belongs.</p>
+     * <p>所属观测分组 ID。</p>
      */
     @NameInMap("groupId")
     public String groupId;
 
     /**
-     * <p>The instance ID.</p>
+     * <p>实例 ID。</p>
      */
     @NameInMap("instanceId")
     public String instanceId;
 
     /**
-     * <p>The instance name.</p>
+     * <p>实例名称。</p>
      */
     @NameInMap("instanceName")
     public String instanceName;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>实例所属地域 ID。</p>
      */
     @NameInMap("regionId")
     public String regionId;
 
     /**
-     * <p>The resource group ID of the instance.</p>
+     * <p>实例所属资源组 ID。</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The key-value pairs of instance tags.</p>
+     * <p>实例标签键值对。</p>
      */
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 
     /**
-     * <p>The UID of the user to which the instance belongs.</p>
+     * <p>实例归属的用户 UID。</p>
      */
     @NameInMap("userId")
     public String userId;

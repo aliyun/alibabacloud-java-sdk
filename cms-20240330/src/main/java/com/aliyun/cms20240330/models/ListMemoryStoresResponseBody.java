@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMemoryStoresResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of returned entries.</p>
+     * <p>The maximum number of returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
     public java.util.List<ListMemoryStoresResponseBodyMemoryStores> memoryStores;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxxxxxx</p>
@@ -29,7 +29,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>16C0A6D6-C3E7-511D-A60B-A87FD85F5BA7</p>
@@ -37,6 +37,12 @@ public class ListMemoryStoresResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The total number of memory stores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("total")
     public Integer total;
 
@@ -87,7 +93,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
 
     public static class ListMemoryStoresResponseBodyMemoryStores extends TeaModel {
         /**
-         * <p>The time when the memory store was created.</p>
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -97,7 +103,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the memory store.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>Created by taishan-module-recovery</p>
@@ -115,7 +121,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         public String memoryStoreName;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -124,7 +130,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The time when the memory store was last updated.</p>
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -134,7 +140,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>Workspace</p>
+         * <p>The workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-1646467597142798-cn-shenzhen</p>

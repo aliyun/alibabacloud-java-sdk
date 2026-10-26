@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAlertRobotResponseBody extends TeaModel {
     /**
-     * <p>The robot ID.</p>
+     * <p>The ID of the robot.</p>
      * 
      * <strong>example:</strong>
      * <p>testId</p>

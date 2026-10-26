@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PreviewDataPipelineRequest extends TeaModel {
     /**
-     * <p>The pipeline description.</p>
+     * <p>The description of the pipeline.</p>
      * 
      * <strong>example:</strong>
      * <p>Preview error span routing.</p>
@@ -14,7 +14,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The start time of the preview.</p>
+     * <p>The start time of the preview. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1784563200</p>
@@ -23,7 +23,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
     public Long fromTime;
 
     /**
-     * <p>The pipeline type.</p>
+     * <p>The type of the pipeline.</p>
      * 
      * <strong>example:</strong>
      * <p>custom</p>
@@ -65,7 +65,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
     public PreviewDataPipelineRequestSource source;
 
     /**
-     * <p>The end time for the preview.</p>
+     * <p>The end time for the preview. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1784566800</p>
@@ -236,7 +236,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
 
     public static class PreviewDataPipelineRequestOutputsProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The length of the prefix to retain.</p>
+         * <p>The length of the retained prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -245,7 +245,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The length of the suffix to retain.</p>
+         * <p>The length of the retained suffix.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -271,7 +271,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public String maskChar;
 
         /**
-         * <p>The masking mode.</p>
+         * <p>The data masking mode.</p>
          * 
          * <strong>example:</strong>
          * <p>keyword</p>
@@ -280,7 +280,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The built-in sensitive types.</p>
+         * <p>The built-in sensitive data types.</p>
          */
         @NameInMap("types")
         public java.util.List<String> types;
@@ -360,7 +360,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public String kind;
 
         /**
-         * <p>The field or dimension name.</p>
+         * <p>The name of the field or dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>service.name</p>
@@ -421,7 +421,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public PreviewDataPipelineRequestOutputsProcessorsConfigScopeConditionsField field;
 
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXACT</p>
@@ -468,7 +468,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
 
     public static class PreviewDataPipelineRequestOutputsProcessorsConfigScopeMetricName extends TeaModel {
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXACT</p>
@@ -510,7 +510,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
 
     public static class PreviewDataPipelineRequestOutputsProcessorsConfigScopeServiceName extends TeaModel {
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXACT</p>
@@ -599,7 +599,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
 
     public static class PreviewDataPipelineRequestOutputsProcessorsConfigSelector extends TeaModel {
         /**
-         * <p>The list of service names.</p>
+         * <p>The service name list.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -688,13 +688,13 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public java.util.List<PreviewDataPipelineRequestOutputsProcessorsConfigProjections> projections;
 
         /**
-         * <p>The list of masking rules.</p>
+         * <p>The list of data masking rules.</p>
          */
         @NameInMap("rules")
         public java.util.List<PreviewDataPipelineRequestOutputsProcessorsConfigRules> rules;
 
         /**
-         * <p>The pipeline processing scope.</p>
+         * <p>The effective scope of pipeline processing.</p>
          */
         @NameInMap("scope")
         public PreviewDataPipelineRequestOutputsProcessorsConfigScope scope;
@@ -875,7 +875,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
 
     public static class PreviewDataPipelineRequestOutputs extends TeaModel {
         /**
-         * <p>The output name.</p>
+         * <p>The name of the output.</p>
          * 
          * <strong>example:</strong>
          * <p>checkout_route</p>
@@ -998,7 +998,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
 
     public static class PreviewDataPipelineRequestProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The length of the prefix to retain.</p>
+         * <p>The length of the retained prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1007,7 +1007,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The length of the suffix to retain.</p>
+         * <p>The length of the retained suffix.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1033,7 +1033,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public String maskChar;
 
         /**
-         * <p>The masking mode.</p>
+         * <p>The data masking mode.</p>
          * 
          * <strong>example:</strong>
          * <p>keyword</p>
@@ -1042,7 +1042,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The built-in sensitive types.</p>
+         * <p>The built-in sensitive data types.</p>
          */
         @NameInMap("types")
         public java.util.List<String> types;
@@ -1122,7 +1122,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public String kind;
 
         /**
-         * <p>The field or dimension name.</p>
+         * <p>The name of the field or dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>service.name</p>
@@ -1183,7 +1183,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public PreviewDataPipelineRequestProcessorsConfigScopeConditionsField field;
 
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXACT</p>
@@ -1230,7 +1230,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
 
     public static class PreviewDataPipelineRequestProcessorsConfigScopeMetricName extends TeaModel {
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXACT</p>
@@ -1272,7 +1272,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
 
     public static class PreviewDataPipelineRequestProcessorsConfigScopeServiceName extends TeaModel {
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXACT</p>
@@ -1361,7 +1361,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
 
     public static class PreviewDataPipelineRequestProcessorsConfigSelector extends TeaModel {
         /**
-         * <p>The list of service names.</p>
+         * <p>The service name list.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1450,13 +1450,13 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public java.util.List<PreviewDataPipelineRequestProcessorsConfigProjections> projections;
 
         /**
-         * <p>The list of masking rules.</p>
+         * <p>The list of data masking rules.</p>
          */
         @NameInMap("rules")
         public java.util.List<PreviewDataPipelineRequestProcessorsConfigRules> rules;
 
         /**
-         * <p>The scope in which pipeline processing takes effect.</p>
+         * <p>The effective scope of pipeline processing.</p>
          */
         @NameInMap("scope")
         public PreviewDataPipelineRequestProcessorsConfigScope scope;
@@ -1778,7 +1778,7 @@ public class PreviewDataPipelineRequest extends TeaModel {
         public String runMode;
 
         /**
-         * <p>The read start point.</p>
+         * <p>The read start position.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>

@@ -15,7 +15,7 @@ public class GetPipelineResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The description of the pipeline.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -30,7 +30,7 @@ public class GetPipelineResponseBody extends TeaModel {
     public GetPipelineResponseBodyExecutePolicy executePolicy;
 
     /**
-     * <p>The pipeline configuration.</p>
+     * <p>The pipeline information.</p>
      */
     @NameInMap("pipeline")
     public GetPipelineResponseBodyPipeline pipeline;
@@ -63,13 +63,13 @@ public class GetPipelineResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The pipeline\&quot;s data sink.</p>
+     * <p>The output destination.</p>
      */
     @NameInMap("sink")
     public GetPipelineResponseBodySink sink;
 
     /**
-     * <p>The pipeline\&quot;s data source.</p>
+     * <p>The data source.</p>
      */
     @NameInMap("source")
     public GetPipelineResponseBodySource source;
@@ -188,7 +188,7 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodyExecutePolicyRunOnce extends TeaModel {
         /**
-         * <p>The start time of the execution, as a Unix timestamp.</p>
+         * <p>The start timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1772519013</p>
@@ -197,7 +197,7 @@ public class GetPipelineResponseBody extends TeaModel {
         public Long fromTime;
 
         /**
-         * <p>The end time of the execution, as a Unix timestamp.</p>
+         * <p>The end timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1772519013</p>
@@ -230,7 +230,7 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodyExecutePolicyScheduled extends TeaModel {
         /**
-         * <p>The start time of the execution, as a Unix timestamp.</p>
+         * <p>The start timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1772519013</p>
@@ -239,7 +239,7 @@ public class GetPipelineResponseBody extends TeaModel {
         public Long fromTime;
 
         /**
-         * <p>The execution interval in seconds.</p>
+         * <p>The time interval.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -281,13 +281,13 @@ public class GetPipelineResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>The configuration for a one-time execution.</p>
+         * <p>The configuration for one-time execution.</p>
          */
         @NameInMap("runOnce")
         public GetPipelineResponseBodyExecutePolicyRunOnce runOnce;
 
         /**
-         * <p>The configuration for a scheduled execution.</p>
+         * <p>The configuration for scheduled execution.</p>
          */
         @NameInMap("scheduled")
         public GetPipelineResponseBodyExecutePolicyScheduled scheduled;
@@ -334,7 +334,7 @@ public class GetPipelineResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The parameters for the node.</p>
+         * <p>The parameters.</p>
          */
         @NameInMap("parameters")
         public java.util.Map<String, ?> parameters;
@@ -381,7 +381,7 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodyPipeline extends TeaModel {
         /**
-         * <p>The nodes in the pipeline.</p>
+         * <p>The nodes.</p>
          */
         @NameInMap("nodes")
         public java.util.List<GetPipelineResponseBodyPipelineNodes> nodes;
@@ -403,7 +403,7 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySinkDataset extends TeaModel {
         /**
-         * <p>The dataset name.</p>
+         * <p>The dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>dataset_1</p>
@@ -445,13 +445,13 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySink extends TeaModel {
         /**
-         * <p>The dataset configuration.</p>
+         * <p>The dataset information.</p>
          */
         @NameInMap("dataset")
         public GetPipelineResponseBodySinkDataset dataset;
 
         /**
-         * <p>The sink type.</p>
+         * <p>The output destination type.</p>
          * 
          * <strong>example:</strong>
          * <p>dataset</p>
@@ -484,7 +484,7 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySourceLogstore extends TeaModel {
         /**
-         * <p>The name of the Log Service Logstore.</p>
+         * <p>The Simple Log Service Logstore name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-logstore</p>
@@ -493,7 +493,7 @@ public class GetPipelineResponseBody extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the Log Service project.</p>
+         * <p>The Simple Log Service project name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-project</p>
@@ -501,6 +501,12 @@ public class GetPipelineResponseBody extends TeaModel {
         @NameInMap("project")
         public String project;
 
+        /**
+         * <p>The filter statement for the Simple Log Service Logstore.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>status:500 and method:GET</p>
+         */
         @NameInMap("query")
         public String query;
 
@@ -537,13 +543,13 @@ public class GetPipelineResponseBody extends TeaModel {
 
     public static class GetPipelineResponseBodySource extends TeaModel {
         /**
-         * <p>The configuration of the Log Service Logstore.</p>
+         * <p>The Simple Log Service Logstore information.</p>
          */
         @NameInMap("logstore")
         public GetPipelineResponseBodySourceLogstore logstore;
 
         /**
-         * <p>The type of the data source.</p>
+         * <p>The data source type.</p>
          * 
          * <strong>example:</strong>
          * <p>logstore</p>

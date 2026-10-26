@@ -14,7 +14,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The list of PodMonitors.</p>
+     * <p>The PodMonitor list.</p>
      */
     @NameInMap("podMonitors")
     public java.util.List<ListIntegrationPolicyPodMonitorsResponseBodyPodMonitors> podMonitors;
@@ -196,7 +196,7 @@ public class ListIntegrationPolicyPodMonitorsResponseBody extends TeaModel {
         public String addonVersion;
 
         /**
-         * <p>The configuration YAML.</p>
+         * <p>The YAML configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>apiVersion: xxxxx</p>

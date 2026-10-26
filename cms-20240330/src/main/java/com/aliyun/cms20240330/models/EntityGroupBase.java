@@ -8,7 +8,7 @@ public class EntityGroupBase extends TeaModel {
      * <p>The entity description.</p>
      * 
      * <strong>example:</strong>
-     * <p>ECS 实例</p>
+     * <p>ECS instance</p>
      */
     @NameInMap("description")
     public String description;
@@ -26,19 +26,19 @@ public class EntityGroupBase extends TeaModel {
      * <p>The entity name.</p>
      * 
      * <strong>example:</strong>
-     * <p>ECS 全部实体</p>
+     * <p>All ECS entities</p>
      */
     @NameInMap("entityGroupName")
     public String entityGroupName;
 
     /**
-     * <p>A collection of entity query rules.</p>
+     * <p>The entity query rule set.</p>
      */
     @NameInMap("entityQueries")
     public java.util.List<EntityGroupBaseEntityQueries> entityQueries;
 
     /**
-     * <p>The rule for entity discovery.</p>
+     * <p>The rules used for entity discovery.</p>
      */
     @NameInMap("entityRules")
     public EntityDiscoverRule entityRules;
@@ -150,7 +150,7 @@ public class EntityGroupBase extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The Structured Process Language (SPL) search statement.</p>
+         * <p>The SPL query statement.</p>
          * 
          * <strong>example:</strong>
          * <p>.entity with(type=\&quot;acs.ecs.instance\&quot;) | where region_id in (\&quot;cn-beijing\&quot;)</p>

@@ -11,7 +11,7 @@ public class QueryAlertRulesRequest extends TeaModel {
     public QueryAlertRulesInput body;
 
     /**
-     * <p>The idempotency token.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxx-xxxx-xxxx</p>
@@ -20,7 +20,7 @@ public class QueryAlertRulesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The maximum number of data records to read in this request.</p>
+     * <p>The maximum number of data records to return in the current read operation.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class QueryAlertRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that marks the position from which to start reading. Leave this parameter empty to read from the beginning.</p>
+     * <p>The token that specifies the starting position for the current read operation. If this parameter is left empty, the read operation starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -38,7 +38,7 @@ public class QueryAlertRulesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The query filter condition. The value is a JSON string whose fields have the same semantics as the request body. Supported fields include filter (uuid, displayName, labels, status, enabled, and more. Fields at the same level have an AND relationship), pagination (pageNumber and pageSize), and workspace. Specify either this parameter or the request body. If both are specified, the request body takes precedence.</p>
+     * <p>The query filter conditions in JSON string format. The field semantics are the same as those in the request body. Supported fields include filter (such as uuid, displayName, labels, status, and enabled, where sibling fields use the AND logical operator), pagination (pageNumber and pageSize), and workspace. You must specify either this parameter or the body parameter. If both are specified, the body parameter takes precedence.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;filter&quot;:{&quot;displayName&quot;:{&quot;contains&quot;:&quot;my-rule&quot;}},&quot;pagination&quot;:{&quot;pageNumber&quot;:1,&quot;pageSize&quot;:20}}</p>

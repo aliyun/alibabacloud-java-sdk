@@ -59,9 +59,11 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
 
     public static class ListIntegrationPolicyDashboardsResponseBodyDashboards extends TeaModel {
         /**
-         * <p>The dashboard engine. Valid values:
-         * grafana: shared Grafana.
-         * cms: the self-developed dashboard engine of CloudMonitor.</p>
+         * <p>The dashboard engine. Valid values:</p>
+         * <ul>
+         * <li>grafana: shared Grafana.</li>
+         * <li>cms: the proprietary dashboard engine of CloudMonitor.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>grafana</p>
@@ -103,7 +105,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         public java.util.List<String> tags;
 
         /**
-         * <p>The title of the UI module. This is different from the name parameter.</p>
+         * <p>The title of the UI module, not the name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -112,7 +114,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The ID of the current Alibaba Cloud account. This parameter is read-only.</p>
+         * <p>The ID of the current Alibaba Cloud account. This field is read-only.</p>
          * 
          * <strong>example:</strong>
          * <p>1258199346721590</p>
@@ -121,7 +123,7 @@ public class ListIntegrationPolicyDashboardsResponseBody extends TeaModel {
         public String uid;
 
         /**
-         * <p>The webhook URL for PagerDuty integration. V1 and V2 are supported.</p>
+         * <p>The integration webhook for PagerDuty. Both V1 and V2 are supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://agi.alicdn.com/user/0/0_0_5255362686.png?x-oss-process=image/quality,q_75/format,jpg&file=1734574878007.jpg">https://agi.alicdn.com/user/0/0_0_5255362686.png?x-oss-process=image/quality,q_75/format,jpg&amp;file=1734574878007.jpg</a></p>

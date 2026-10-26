@@ -14,7 +14,7 @@ public class MergeWebhook extends TeaModel {
     public String contentType;
 
     /**
-     * <p>An extension field used to store additional configurations.</p>
+     * <p>The extension field used to store additional configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;timeout&quot;: 3000}</p>
@@ -41,7 +41,7 @@ public class MergeWebhook extends TeaModel {
     public java.util.Map<String, ?> gmtModified;
 
     /**
-     * <p>The request header.</p>
+     * <p>The request header information.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Authorization&quot;: &quot;Bearer abc123&quot;}</p>
@@ -80,7 +80,7 @@ public class MergeWebhook extends TeaModel {
      * <p>The name of the webhook.</p>
      * 
      * <strong>example:</strong>
-     * <p>运维告警通知</p>
+     * <p>O&amp;M alert notification</p>
      */
     @NameInMap("name")
     public String name;
@@ -95,7 +95,7 @@ public class MergeWebhook extends TeaModel {
     public String source;
 
     /**
-     * <p>The type of the webhook. It indicates the destination platform.</p>
+     * <p>The webhook type, which indicates its target platform.</p>
      * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
@@ -104,7 +104,7 @@ public class MergeWebhook extends TeaModel {
     public String type;
 
     /**
-     * <p>The webhook URL used to send requests.</p>
+     * <p>The webhook address used to send requests.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=abc123">https://oapi.dingtalk.com/robot/send?access_token=abc123</a></p>

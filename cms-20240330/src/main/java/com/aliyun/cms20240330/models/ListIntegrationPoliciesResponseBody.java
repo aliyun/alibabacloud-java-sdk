@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class ListIntegrationPoliciesResponseBody extends TeaModel {
     /**
-     * <p>The page size.</p>
+     * <p>The maximum number of entries per page.
+     * Default value:
+     *     50
+     * Maximum value:
+     *     50</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -111,6 +115,15 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String clusterType;
 
         /**
+         * <p>The UID of the actual owner of the bound resource in cross-account scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12xxxx</p>
+         */
+        @NameInMap("entityUserId")
+        public String entityUserId;
+
+        /**
          * <p>The VPC CIDR block.</p>
          * 
          * <strong>example:</strong>
@@ -120,7 +133,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String vpcCidr;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-uf664nyle5khp5d4d7hdo</p>
@@ -147,6 +160,14 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         }
         public String getClusterType() {
             return this.clusterType;
+        }
+
+        public ListIntegrationPoliciesResponseBodyPoliciesBindResource setEntityUserId(String entityUserId) {
+            this.entityUserId = entityUserId;
+            return this;
+        }
+        public String getEntityUserId() {
+            return this.entityUserId;
         }
 
         public ListIntegrationPoliciesResponseBodyPoliciesBindResource setVpcCidr(String vpcCidr) {
@@ -234,7 +255,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String fieldKey;
 
         /**
-         * <p>The field values. Multiple values are separated by commas (,).</p>
+         * <p>The field values. Separate multiple values with commas (,).</p>
          */
         @NameInMap("fieldValues")
         public java.util.List<String> fieldValues;
@@ -281,7 +302,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
 
     public static class ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesIpMatchRule extends TeaModel {
         /**
-         * <p>The IP CIDR block.</p>
+         * <p>The IP address CIDR block.</p>
          * 
          * <strong>example:</strong>
          * <p>100.100.1.0/16</p>
@@ -290,7 +311,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String ipCidr;
 
         /**
-         * <p>The key of the IP field.</p>
+         * <p>The key of the IP address field.</p>
          * 
          * <strong>example:</strong>
          * <p>xxxx</p>
@@ -459,7 +480,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The IP match rule.</p>
+         * <p>The IP address matching rule.</p>
          */
         @NameInMap("ipMatchRule")
         public ListIntegrationPoliciesResponseBodyPoliciesEntityGroupEntityRulesIpMatchRule ipMatchRule;
@@ -713,7 +734,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
 
     public static class ListIntegrationPoliciesResponseBodyPoliciesManagedInfo extends TeaModel {
         /**
-         * <p>The ENI ID of the managed probe. Example: eni-xxxx.</p>
+         * <p>The ID of the elastic network interface (ENI) for the managed probe. Example: eni-xxxx.</p>
          * 
          * <strong>example:</strong>
          * <p>eni-12345678</p>
@@ -814,19 +835,26 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
 
     public static class ListIntegrationPoliciesResponseBodyPolicies extends TeaModel {
         /**
-         * <p>The names of all components installed in this policy.</p>
+         * <p>The names of all add-ons installed in this policy.</p>
          */
         @NameInMap("addonNames")
         public java.util.List<String> addonNames;
 
         /**
-         * <p>The bound resource information.</p>
+         * <strong>example:</strong>
+         * <p>v2</p>
+         */
+        @NameInMap("apiVersion")
+        public String apiVersion;
+
+        /**
+         * <p>The information about the bound resources.</p>
          */
         @NameInMap("bindResource")
         public ListIntegrationPoliciesResponseBodyPoliciesBindResource bindResource;
 
         /**
-         * <p>The umodel installation status in the container environment.</p>
+         * <p>The installation status of umodel in the container environment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -850,7 +878,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String feePackage;
 
         /**
-         * <p>The policy network management information.</p>
+         * <p>The network management information of the policy.</p>
          */
         @NameInMap("managedInfo")
         public ListIntegrationPoliciesResponseBodyPoliciesManagedInfo managedInfo;
@@ -874,7 +902,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String policyName;
 
         /**
-         * <p>The access center policy type.</p>
+         * <p>The Access Center policy type.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>
@@ -901,7 +929,7 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The sub-release count.</p>
+         * <p>The number of sub-releases.</p>
          */
         @NameInMap("subAddonRelease")
         public ListIntegrationPoliciesResponseBodyPoliciesSubAddonRelease subAddonRelease;
@@ -935,6 +963,14 @@ public class ListIntegrationPoliciesResponseBody extends TeaModel {
         }
         public java.util.List<String> getAddonNames() {
             return this.addonNames;
+        }
+
+        public ListIntegrationPoliciesResponseBodyPolicies setApiVersion(String apiVersion) {
+            this.apiVersion = apiVersion;
+            return this;
+        }
+        public String getApiVersion() {
+            return this.apiVersion;
         }
 
         public ListIntegrationPoliciesResponseBodyPolicies setBindResource(ListIntegrationPoliciesResponseBodyPoliciesBindResource bindResource) {

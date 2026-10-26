@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AlertEventIntegrationPolicyForView extends TeaModel {
     /**
-     * <p>The universally unique identifier (UUID).</p>
+     * <p>UUID</p>
      * 
      * <strong>example:</strong>
      * <p>123123123</p>
@@ -24,7 +24,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String alertEventIntegrationPolicyName;
 
     /**
-     * <p>The time when the policy was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58Z</p>
@@ -42,7 +42,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether the policy is enabled.</p>
+     * <p>Specifies whether it is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -66,7 +66,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String integrationSetting;
 
     /**
-     * <p>The key for the integration\&quot;s reporting endpoint.</p>
+     * <p>The reporting entry key for the integration.</p>
      * 
      * <strong>example:</strong>
      * <p>10-16818f1445e10a1d012922b285bfb334</p>
@@ -75,7 +75,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String token;
 
     /**
-     * <p>The transformation settings.</p>
+     * <p>The transform settings.</p>
      */
     @NameInMap("transformerSetting")
     public java.util.List<TransformAction> transformerSetting;
@@ -90,7 +90,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String type;
 
     /**
-     * <p>The time when the policy was last updated.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-16T02:00:23Z</p>
@@ -108,7 +108,7 @@ public class AlertEventIntegrationPolicyForView extends TeaModel {
     public String userId;
 
     /**
-     * <p>The workspace.</p>
+     * <p>workspace</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

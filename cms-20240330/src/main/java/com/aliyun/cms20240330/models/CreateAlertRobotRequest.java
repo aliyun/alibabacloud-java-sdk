@@ -69,7 +69,7 @@ public class CreateAlertRobotRequest extends TeaModel {
     public String url;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>The name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>default-cms-1423134313712421-cn-shanghai</p>

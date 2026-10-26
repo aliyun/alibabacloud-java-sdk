@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAddonsRequest extends TeaModel {
     /**
-     * <p>The language. Valid values: zh and en. The default value is zh.</p>
+     * <p>The locale. Valid values: zh and en. Default value: zh.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -13,8 +13,11 @@ public class ListAddonsRequest extends TeaModel {
     @NameInMap("aliyunLang")
     public String aliyunLang;
 
+    @NameInMap("apiVersion")
+    public String apiVersion;
+
     /**
-     * <p>Tag filtering.</p>
+     * <p>The tag filter.</p>
      * 
      * <strong>example:</strong>
      * <p>database</p>
@@ -23,13 +26,16 @@ public class ListAddonsRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>Specifies whether to use regular expressions for the search. The default value is false.</p>
+     * <p>Specifies whether to use regular expression matching for the query field. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("regexp")
     public Boolean regexp;
 
     /**
-     * <p>The search keyword. You can search for add-ons by name, description, or keyword.</p>
+     * <p>The search query. Supports searching by add-on name, description, or keyword.</p>
      * 
      * <strong>example:</strong>
      * <p>105095</p>
@@ -48,6 +54,14 @@ public class ListAddonsRequest extends TeaModel {
     }
     public String getAliyunLang() {
         return this.aliyunLang;
+    }
+
+    public ListAddonsRequest setApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    public String getApiVersion() {
+        return this.apiVersion;
     }
 
     public ListAddonsRequest setCategory(String category) {

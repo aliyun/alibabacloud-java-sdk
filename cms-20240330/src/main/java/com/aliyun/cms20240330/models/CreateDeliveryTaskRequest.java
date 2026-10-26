@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDeliveryTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the Prometheus instance that serves as the data source.</p>
+     * <p>The ID of the data source, which is the ID of the Prometheus instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,19 +15,19 @@ public class CreateDeliveryTaskRequest extends TeaModel {
     public String dataSourceId;
 
     /**
-     * <p>A map of key-value pairs to attach as additional labels to all delivered metrics.</p>
+     * <p>The additional labels attached to all delivered metrics. The key is the label name, and the value is the label value.</p>
      */
     @NameInMap("externalLabels")
     public java.util.Map<String, String> externalLabels;
 
     /**
-     * <p>The label conditions for filtering metrics. The key is the label name and the value is the value to match. The filtering behavior is controlled by <code>labelFiltersType</code>.</p>
+     * <p>The metric filtering conditions. This parameter is used together with labelFiltersType. The key is the metric label name, and the value is the match value.</p>
      */
     @NameInMap("labelFilters")
     public java.util.Map<String, String> labelFilters;
 
     /**
-     * <p>The mode for applying the label filters.</p>
+     * <p>The metric filtering mode.</p>
      * 
      * <strong>example:</strong>
      * <p>Allow</p>
@@ -45,20 +45,20 @@ public class CreateDeliveryTaskRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>An array of delivery destination objects.</p>
+     * <p>The list of delivery destinations.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("sinkList")
     public java.util.List<CreateDeliveryTaskRequestSinkList> sinkList;
 
     /**
-     * <p>An array of resource tags.</p>
+     * <p>The tags of the resource.</p>
      */
     @NameInMap("tags")
     public java.util.List<CreateDeliveryTaskRequestTags> tags;
 
     /**
-     * <p>The task description.</p>
+     * <p>The description of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>my delivery task</p>
@@ -155,13 +155,13 @@ public class CreateDeliveryTaskRequest extends TeaModel {
 
     public static class CreateDeliveryTaskRequestSinkList extends TeaModel {
         /**
-         * <p>The configuration for the sink, specified as key-value pairs. The valid keys and values depend on the value of <code>sinkType</code>.</p>
+         * <p>The detailed configuration of the delivery destination. The meanings of the key and value vary based on the sinkType. For more information, see the following descriptions.</p>
          */
         @NameInMap("sinkConfigs")
         public java.util.Map<String, String> sinkConfigs;
 
         /**
-         * <p>The type of the delivery destination (sink).</p>
+         * <p>The type of the delivery destination.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

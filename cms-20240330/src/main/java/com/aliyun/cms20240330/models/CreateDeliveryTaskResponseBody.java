@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDeliveryTaskResponseBody extends TeaModel {
     /**
-     * <p>The unique ID for the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>4CB23A2E-B426-5D4B-9AA2-6C7A508D954B</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CloudMonitoringCompositeEscalation extends TeaModel {
     /**
-     * <p>The multi-condition configuration list for the cloud service monitoring composite trigger. The list contains multiple sub-causes that are combined by using logical operators (AND/OR) to determine whether to trigger an alert.</p>
+     * <p>The multi-condition configuration list for cloud service monitoring composite triggers, which includes multiple sub-trigger conditions combined by logical operators (AND/OR) to determine whether to trigger an alert.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;metricName&quot;:&quot;cpu_total&quot;,&quot;comparisonOperator&quot;:&quot;GreaterThanThreshold&quot;,&quot;threshold&quot;:&quot;90&quot;,&quot;times&quot;:3}]</p>
+     * <p>[{&quot;metricName&quot;:&quot;cpuUsage&quot;,&quot;comparisonOperator&quot;:&quot;GT&quot;,&quot;threshold&quot;:&quot;80&quot;,&quot;period&quot;:60}]</p>
      */
     @NameInMap("escalations")
     public java.util.List<CloudMonitoringCompositeEscalationEntry> escalations;
@@ -32,7 +32,7 @@ public class CloudMonitoringCompositeEscalation extends TeaModel {
     public String severity;
 
     /**
-     * <p>The number of consecutive times the condition is met before the alert is triggered.</p>
+     * <p>The consecutive trigger count.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

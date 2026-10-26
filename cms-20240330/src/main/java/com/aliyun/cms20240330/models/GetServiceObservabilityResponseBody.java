@@ -20,7 +20,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
     public String feeType;
 
     /**
-     * <p>The quota configuration.</p>
+     * <p>The quota configurations.</p>
      */
     @NameInMap("quotas")
     public java.util.Map<String, String> quotas;
@@ -44,7 +44,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The system configuration.</p>
+     * <p>The system configurations.</p>
      */
     @NameInMap("settings")
     public java.util.Map<String, String> settings;
@@ -59,7 +59,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of application observability.</p>
+     * <p>The application observability type.</p>
      * 
      * <strong>example:</strong>
      * <p>apm</p>
@@ -155,7 +155,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
 
     public static class GetServiceObservabilityResponseBodyEntryPointInfo extends TeaModel {
         /**
-         * <p>The authentication token for reporting data.</p>
+         * <p>The authentication token for data reporting.</p>
          * 
          * <strong>example:</strong>
          * <p>gaddp****@de20f2<em><strong>1ce</strong></em></p>
@@ -164,7 +164,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         public String authToken;
 
         /**
-         * <p>The internal endpoint.</p>
+         * <p>The internal-facing access address.</p>
          * 
          * <strong>example:</strong>
          * <p>project-xtrace-xxxx-cn-hangzhou.cn-hangzhou-intranet.log.aliyuncs.com</p>
@@ -173,7 +173,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         public String privateDomain;
 
         /**
-         * <p>The Simple Log Service project.</p>
+         * <p>SLS Project</p>
          * 
          * <strong>example:</strong>
          * <p>proj-xtrace-xxxxx</p>
@@ -182,7 +182,7 @@ public class GetServiceObservabilityResponseBody extends TeaModel {
         public String project;
 
         /**
-         * <p>The public endpoint.</p>
+         * <p>The public network access address.</p>
          * 
          * <strong>example:</strong>
          * <p>project-xtrace-xxxx-cn-hangzhou.cn-hangzhou.log.aliyuncs.com</p>

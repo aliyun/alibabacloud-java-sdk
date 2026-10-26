@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAddonReleaseRequest extends TeaModel {
     /**
-     * <p>The name of the addon component to be connected to monitoring.</p>
+     * <p>The name of the add-on component to be integrated for monitoring.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,6 +24,13 @@ public class CreateAddonReleaseRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <strong>example:</strong>
+     * <p>v2</p>
+     */
+    @NameInMap("apiVersion")
+    public String apiVersion;
+
+    /**
      * <p>Specifies whether to perform a dry run. Default value: false.</p>
      * 
      * <strong>example:</strong>
@@ -40,7 +47,7 @@ public class CreateAddonReleaseRequest extends TeaModel {
     public EntityDiscoverRule entityRules;
 
     /**
-     * <p>The environment type. If the policy type is CS or ECS, the corresponding value is used. For other types, the value is Cloud.</p>
+     * <p>The environment type. If the policy type is CS or ECS, the corresponding environment type is used. For other policy types, the value is uniformly set to Cloud.</p>
      * 
      * <strong>example:</strong>
      * <p>CS</p>
@@ -49,7 +56,7 @@ public class CreateAddonReleaseRequest extends TeaModel {
     public String envType;
 
     /**
-     * <p>The parent AddonReleaseId.</p>
+     * <p>The parent add-on release ID.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-xxxxxxxxxxx</p>
@@ -58,7 +65,7 @@ public class CreateAddonReleaseRequest extends TeaModel {
     public String parentAddonReleaseId;
 
     /**
-     * <p>The name of the plugin after access. If this parameter is not specified, a default rule name is generated.</p>
+     * <p>The name of the plug-in after integration. If you do not specify this parameter, a default rule name is generated.</p>
      * 
      * <strong>example:</strong>
      * <p>test-gpu-integration-name</p>
@@ -76,7 +83,7 @@ public class CreateAddonReleaseRequest extends TeaModel {
     public String values;
 
     /**
-     * <p>The version of the addon component to be connected to monitoring.</p>
+     * <p>The version of the add-on component to be integrated for monitoring.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,6 +120,14 @@ public class CreateAddonReleaseRequest extends TeaModel {
     }
     public String getAliyunLang() {
         return this.aliyunLang;
+    }
+
+    public CreateAddonReleaseRequest setApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    public String getApiVersion() {
+        return this.apiVersion;
     }
 
     @Deprecated

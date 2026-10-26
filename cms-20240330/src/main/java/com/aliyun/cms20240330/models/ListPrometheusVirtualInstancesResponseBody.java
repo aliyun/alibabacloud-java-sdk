@@ -5,25 +5,28 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
     /**
-     * <p>A list of instances.</p>
+     * <p>The instance information.</p>
      */
     @NameInMap("instances")
     public java.util.List<ListPrometheusVirtualInstancesResponseBodyInstances> instances;
 
     /**
-     * <p>The maximum number of entries returned on each page.</p>
+     * <p>The maximum number of instances to return per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("maxResults")
     public String maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If all results are returned, this parameter is left empty.</p>
+     * <p>The next token for the next page. It is empty when all results are returned.</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -32,7 +35,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of instances returned.</p>
      */
     @NameInMap("totalCount")
     public String totalCount;
@@ -102,7 +105,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         public String httpApiUrl;
 
         /**
-         * <p>Returned for the <code>PROMETHEUS_DS</code> data source type.</p>
+         * <p>The applicable data source type: PROMETHEUS_DS.</p>
          * <p>The Prometheus instance ID.</p>
          * 
          * <strong>example:</strong>
@@ -112,7 +115,7 @@ public class ListPrometheusVirtualInstancesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Returned for the <code>CMS_BASIC_QUERY</code> query type.</p>
+         * <p>The applicable query type: CMS_BASIC_QUERY.</p>
          * <p>The namespace of the metric.</p>
          * 
          * <strong>example:</strong>

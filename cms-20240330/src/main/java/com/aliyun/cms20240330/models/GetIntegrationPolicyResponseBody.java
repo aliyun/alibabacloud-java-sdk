@@ -60,6 +60,15 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public String clusterType;
 
         /**
+         * <p>The UID of the actual owner of the bound resource in cross-account scenarios.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>12xxxx</p>
+         */
+        @NameInMap("entityUserId")
+        public String entityUserId;
+
+        /**
          * <p>The VPC CIDR block.</p>
          * 
          * <strong>example:</strong>
@@ -96,6 +105,14 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         }
         public String getClusterType() {
             return this.clusterType;
+        }
+
+        public GetIntegrationPolicyResponseBodyPolicyBindResource setEntityUserId(String entityUserId) {
+            this.entityUserId = entityUserId;
+            return this;
+        }
+        public String getEntityUserId() {
+            return this.entityUserId;
         }
 
         public GetIntegrationPolicyResponseBodyPolicyBindResource setVpcCidr(String vpcCidr) {
@@ -136,7 +153,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag values.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;
@@ -402,7 +419,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public java.util.List<GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesFieldRules> fieldRules;
 
         /**
-         * <p>The instance IDs.</p>
+         * <p>The instance ID.</p>
          */
         @NameInMap("instanceIds")
         public java.util.List<String> instanceIds;
@@ -414,7 +431,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesIpMatchRule ipMatchRule;
 
         /**
-         * <p>The labels.</p>
+         * <p>The tags.</p>
          */
         @NameInMap("labels")
         public java.util.List<GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesLabels> labels;
@@ -435,7 +452,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The tag values.</p>
+         * <p>The tag value.</p>
          */
         @NameInMap("tags")
         public java.util.List<GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesTags> tags;
@@ -554,7 +571,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRules entityRules;
 
         /**
-         * <p>Used for querying.</p>
+         * <p>The query.</p>
          * 
          * <strong>example:</strong>
          * <p>status: 200 AND totalTime &gt; 0.5</p>
@@ -746,19 +763,26 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
     public static class GetIntegrationPolicyResponseBodyPolicy extends TeaModel {
         /**
-         * <p>The names of all components installed in this policy.</p>
+         * <p>The names of all components installed in the policy.</p>
          */
         @NameInMap("addonNames")
         public java.util.List<String> addonNames;
 
         /**
-         * <p>The bound resource information.</p>
+         * <strong>example:</strong>
+         * <p>v2</p>
+         */
+        @NameInMap("apiVersion")
+        public String apiVersion;
+
+        /**
+         * <p>The information about the bound resource.</p>
          */
         @NameInMap("bindResource")
         public GetIntegrationPolicyResponseBodyPolicyBindResource bindResource;
 
         /**
-         * <p>The umodel installation status in the container environment.</p>
+         * <p>The installation status of umodel in the container environment.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -858,6 +882,14 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         }
         public java.util.List<String> getAddonNames() {
             return this.addonNames;
+        }
+
+        public GetIntegrationPolicyResponseBodyPolicy setApiVersion(String apiVersion) {
+            this.apiVersion = apiVersion;
+            return this;
+        }
+        public String getApiVersion() {
+            return this.apiVersion;
         }
 
         public GetIntegrationPolicyResponseBodyPolicy setBindResource(GetIntegrationPolicyResponseBodyPolicyBindResource bindResource) {

@@ -41,7 +41,7 @@ public class ObserveResourceConfig extends TeaModel {
     public String productCategory;
 
     /**
-     * <p>The relation type. TAG is supported only for alert rules where datasourceConfig.type is set to APM and queryConfig.type is set to APM_MULTI_QUERY. UMODEL_ENTITY does not support writes and is used only for reading existing data.</p>
+     * <p>The relation type. TAG is supported only for alert rules where datasourceConfig.type is APM and queryConfig.type is APM_MULTI_QUERY. UMODEL_ENTITY does not support write operations and is used only to read existing data.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL</p>
@@ -50,7 +50,7 @@ public class ObserveResourceConfig extends TeaModel {
     public String relationType;
 
     /**
-     * <p>The list of resources. If relationType is set to ALL, this parameter can be left empty, which indicates all resources. If relationType is set to TAG, this parameter is a list of labels in key=value format (such as [&quot;env=prod&quot;, &quot;app=foo&quot;]). This is supported only for APM data sources with APM_MULTI_QUERY.</p>
+     * <p>The resource list. This field can be left empty when relationType is set to ALL, which indicates all resources. When relationType is set to TAG, this field is a list of tags in the key=value format, such as [&quot;env=prod&quot;, &quot;app=foo&quot;]. Only the APM data source and APM_MULTI_QUERY are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;i-bp1a2b3c4d5e6f7g8h9i&quot;,&quot;i-bp9h8g7f6e5d4c3b2a1&quot;]</p>

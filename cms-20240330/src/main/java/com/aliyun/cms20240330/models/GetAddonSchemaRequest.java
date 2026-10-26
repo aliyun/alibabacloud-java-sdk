@@ -13,6 +13,9 @@ public class GetAddonSchemaRequest extends TeaModel {
     @NameInMap("aliyunLang")
     public String aliyunLang;
 
+    @NameInMap("apiVersion")
+    public String apiVersion;
+
     /**
      * <p>The environment type. Valid values: \<code>CS\\</code> (container) and \<code>ECS\\</code>.</p>
      * 
@@ -42,6 +45,14 @@ public class GetAddonSchemaRequest extends TeaModel {
     }
     public String getAliyunLang() {
         return this.aliyunLang;
+    }
+
+    public GetAddonSchemaRequest setApiVersion(String apiVersion) {
+        this.apiVersion = apiVersion;
+        return this;
+    }
+    public String getApiVersion() {
+        return this.apiVersion;
     }
 
     public GetAddonSchemaRequest setEnvironmentType(String environmentType) {

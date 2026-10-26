@@ -4,11 +4,14 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListPrometheusVirtualInstancesRequest extends TeaModel {
+    /**
+     * <p>The maximum number of instances to return per page.</p>
+     */
     @NameInMap("maxResults")
     public Integer maxResults;
 
     /**
-     * <p>The namespace of the cloud product. This parameter is optional.</p>
+     * <p>The optional cloud services.</p>
      * 
      * <strong>example:</strong>
      * <p>ack-csi-fuse</p>
@@ -16,6 +19,9 @@ public class ListPrometheusVirtualInstancesRequest extends TeaModel {
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The next paging token for the paged query.</p>
+     */
     @NameInMap("nextToken")
     public String nextToken;
 

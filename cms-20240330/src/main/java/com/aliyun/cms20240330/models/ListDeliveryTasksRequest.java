@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeliveryTasksRequest extends TeaModel {
     /**
-     * <p>Fuzzy search by task name or task ID (like semantics).</p>
+     * <p>Specifies the keywords used to perform a fuzzy search by task name or task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>test-task</p>
@@ -14,7 +14,7 @@ public class ListDeliveryTasksRequest extends TeaModel {
     public String keyWords;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+     * <p>The maximum number of entries to return per page. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -23,7 +23,7 @@ public class ListDeliveryTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, pass in the nextToken value returned in the previous response.</p>
+     * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, pass the nextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</p>
@@ -32,7 +32,7 @@ public class ListDeliveryTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2bhocin5e2na</p>

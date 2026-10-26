@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertRobotsShrinkRequest extends TeaModel {
     /**
-     * <p>The chatbot ID.</p>
+     * <p>The chatbot IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("robotIds")

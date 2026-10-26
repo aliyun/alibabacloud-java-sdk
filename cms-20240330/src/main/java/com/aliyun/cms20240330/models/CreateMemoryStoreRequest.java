@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateMemoryStoreRequest extends TeaModel {
     /**
-     * <p>A list of custom extraction strategies.</p>
+     * <p>The custom extraction strategies.</p>
      */
     @NameInMap("customExtractionStrategies")
     public java.util.List<CustomExtractionStrategy> customExtractionStrategies;
 
     /**
-     * <p>The description of the MemoryStore.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>Test memory store for demonstration.</p>
@@ -20,13 +20,13 @@ public class CreateMemoryStoreRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The extraction strategies to use. Valid values include <code>Episodic</code>, <code>Summary</code>, and <code>Fact</code>.</p>
+     * <p>The extraction strategies. Valid values: Episodic, Summary, and Fact.</p>
      */
     @NameInMap("extractionStrategies")
     public java.util.List<String> extractionStrategies;
 
     /**
-     * <p>The name of the MemoryStore. The name must be unique within the workspace.</p>
+     * <p>The name of the memory store.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class CreateMemoryStoreRequest extends TeaModel {
     public String memoryStoreName;
 
     /**
-     * <p>The short-term TTL, which is the number of conversation rounds to retain.</p>
+     * <p>The retention period for short-term memory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateMemoryStoreRequest extends TeaModel {
     public Integer shortTermTtl;
 
     /**
-     * <p>The source type of the memory. Valid values are <code>None</code> and <code>Trace</code>.</p>
+     * <p>The source of the memory.</p>
      * 
      * <strong>example:</strong>
      * <p>None/Trace</p>
@@ -55,7 +55,7 @@ public class CreateMemoryStoreRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>Configuration for the trace source. Required if <code>sourceType</code> is <code>Trace</code>.</p>
+     * <p>The configuration when the sourceType is Trace.</p>
      */
     @NameInMap("traceSourceConfig")
     public CreateMemoryStoreRequestTraceSourceConfig traceSourceConfig;
@@ -123,13 +123,13 @@ public class CreateMemoryStoreRequest extends TeaModel {
 
     public static class CreateMemoryStoreRequestTraceSourceConfig extends TeaModel {
         /**
-         * <p>Specifies whether to include the output in the trace.</p>
+         * <p>Specifies whether to include the large language model (LLM) output in memory extraction.</p>
          */
         @NameInMap("includeOutput")
         public Boolean includeOutput;
 
         /**
-         * <p>The query to filter traces.</p>
+         * <p>The Simple Log Service (SLS) query statement used to filter traces.</p>
          * 
          * <strong>example:</strong>
          * <p>(serviceName : &quot;langchain-rag&quot; or serviceName : &quot;agentscope-code-correction&quot;) and hostname = frontend-proxy-999c48c8d-hvk6c</p>
@@ -138,7 +138,7 @@ public class CreateMemoryStoreRequest extends TeaModel {
         public String query;
 
         /**
-         * <p>The name of the workspace that contains the trace source.</p>
+         * <p>The workspace where the trace is located.</p>
          * 
          * <strong>example:</strong>
          * <p>test-workspace</p>

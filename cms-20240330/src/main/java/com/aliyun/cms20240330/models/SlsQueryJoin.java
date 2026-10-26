@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class SlsQueryJoin extends TeaModel {
     /**
-     * <p>The list of join conditions for SLS query result sets. The conditions define the matching rules between multiple SLS query results for cross-Logstore data correlation analysis.</p>
+     * <p>The list of join conditions for SLS query result sets, which defines the matching rules between multiple SLS query results for cross-logstore data association analysis.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;leftField&quot;:&quot;traceId&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;rightField&quot;:&quot;trace_id&quot;}]</p>
+     * <p>[{&quot;lhsField&quot;:&quot;$0.hostIp&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;rhsField&quot;:&quot;$1.hostIp&quot;}]</p>
      */
     @NameInMap("conditions")
     public java.util.List<SlsJoinCondition> conditions;
 
     /**
-     * <p>The set operation type. Valid values: InnerJoin, LeftJoin, RightJoin, FullJoin, LeftExclude, RightExclude, CrossJoin, NoJoin, and Concat.</p>
+     * <p>The set operation type: InnerJoin / LeftJoin / RightJoin / FullJoin / LeftExclude / RightExclude / CrossJoin / NoJoin / Concat.</p>
      * 
      * <strong>example:</strong>
      * <p>LEFT</p>

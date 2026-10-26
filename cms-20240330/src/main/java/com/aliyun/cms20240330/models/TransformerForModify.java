@@ -20,13 +20,13 @@ public class TransformerForModify extends TeaModel {
     public String description;
 
     /**
-     * <p>The filter criteria.</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("filterSetting")
     public FilterSetting filterSetting;
 
     /**
-     * <p>Specifies whether to exit after a match is processed.</p>
+     * <p>Specifies whether to exit after match processing.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -35,7 +35,7 @@ public class TransformerForModify extends TeaModel {
     public Boolean quitAfterMatch;
 
     /**
-     * <p>The sort number.</p>
+     * <p>The sort order.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class Joinings extends TeaModel {
     /**
-     * <p>The list of join conditions for result sets. The conditions define the matching rules between multiple result sets and are used to merge query results from different data sources based on specified conditions.</p>
+     * <p>The list of join conditions for query result sets, which defines the matching rules between multiple query result sets to merge query results from different data sources based on specified conditions.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;leftField&quot;:&quot;host&quot;,&quot;operator&quot;:&quot;eq&quot;,&quot;rightField&quot;:&quot;instance_id&quot;}]</p>
+     * <p>[{&quot;lhsField&quot;:&quot;$0.hostIp&quot;,&quot;operator&quot;:&quot;==&quot;,&quot;rhsField&quot;:&quot;$1.hostIp&quot;}]</p>
      */
     @NameInMap("conditions")
     public java.util.List<JoinConditions> conditions;

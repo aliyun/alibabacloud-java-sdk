@@ -14,7 +14,7 @@ public class MaintainWindowForModify extends TeaModel {
     public String description;
 
     /**
-     * <p>The effective time range.</p>
+     * <p>The effective period range.</p>
      */
     @NameInMap("effectTimeRange")
     public MaintainWindowForModifyEffectTimeRange effectTimeRange;
@@ -34,7 +34,7 @@ public class MaintainWindowForModify extends TeaModel {
     public String effective;
 
     /**
-     * <p>The time when the policy stops taking effect.</p>
+     * <p>The effective end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-09-05 09:30:40</p>
@@ -59,7 +59,7 @@ public class MaintainWindowForModify extends TeaModel {
     public String maintainWindowName;
 
     /**
-     * <p>The time when the policy starts to take effect.</p>
+     * <p>The effective start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-04-11 07:55:00</p>
@@ -130,7 +130,7 @@ public class MaintainWindowForModify extends TeaModel {
 
     public static class MaintainWindowForModifyEffectTimeRange extends TeaModel {
         /**
-         * <p>The days of the week when the policy is effective (Monday to Sunday).</p>
+         * <p>The effective days (Monday to Sunday).</p>
          */
         @NameInMap("dayInWeek")
         public java.util.List<Integer> dayInWeek;

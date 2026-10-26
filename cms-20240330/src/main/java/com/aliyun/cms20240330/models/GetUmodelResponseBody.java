@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUmodelResponseBody extends TeaModel {
     /**
-     * <p>This parameter is reserved.</p>
+     * <p>This field does not need to be populated.</p>
      */
     @NameInMap("commonSchemaRef")
     public java.util.List<GetUmodelResponseBodyCommonSchemaRef> commonSchemaRef;
@@ -20,7 +20,7 @@ public class GetUmodelResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The region of the resource.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-heyuan</p>
@@ -93,7 +93,7 @@ public class GetUmodelResponseBody extends TeaModel {
 
     public static class GetUmodelResponseBodyCommonSchemaRef extends TeaModel {
         /**
-         * <p>The public Umodel schema group.</p>
+         * <p>The common Umodel schema group.</p>
          * 
          * <strong>example:</strong>
          * <p>test-job-123123</p>

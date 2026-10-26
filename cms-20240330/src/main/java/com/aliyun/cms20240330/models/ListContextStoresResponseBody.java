@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListContextStoresResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of results returned per page.</p>
+     * <p>The maximum number of returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class ListContextStoresResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results. If this field is empty, all results have been returned.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
@@ -23,7 +23,7 @@ public class ListContextStoresResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -32,13 +32,13 @@ public class ListContextStoresResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of context stores.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("results")
     public java.util.List<ListContextStoresResponseBodyResults> results;
 
     /**
-     * <p>The total number of context stores.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>56</p>
@@ -111,7 +111,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String contextType;
 
         /**
-         * <p>The creation time of the context store. The value is a Unix timestamp in milliseconds.</p>
+         * <p>The creation time in UTC format based on the ISO 8601 standard. Example: 2026-08-10T05:00:00Z.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the context store.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -139,7 +139,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The status of the context store.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>
@@ -148,7 +148,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last update time of the context store. The value is a Unix timestamp in milliseconds.</p>
+         * <p>The update time in UTC format based on the ISO 8601 standard. Example: 2026-08-10T05:10:00Z.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -158,7 +158,7 @@ public class ListContextStoresResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>

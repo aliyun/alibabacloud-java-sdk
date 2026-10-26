@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ObserveGroupPromInstance extends TeaModel {
     /**
-     * <p>The ID of the Managed Service for Prometheus instance, such as rw-xxxxxxxxxx.</p>
+     * <p>The ID of the Prometheus instance, such as rw-xxxxxxxxxx.</p>
      * 
      * <strong>example:</strong>
      * <p>prom-12345</p>
@@ -27,7 +27,7 @@ public class ObserveGroupPromInstance extends TeaModel {
     public String kind;
 
     /**
-     * <p>The region where the Managed Service for Prometheus instance resides. If this parameter is left empty, the backend automatically populates the region based on the workspace to which the observation group belongs.</p>
+     * <p>The region where the Prometheus instance resides. If left empty, the backend automatically populates it with the region of the workspace to which the observation group belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,7 +36,7 @@ public class ObserveGroupPromInstance extends TeaModel {
     public String region;
 
     /**
-     * <p>The time when the record was written or selected. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The time when the record is written or selected, in the yyyy-MM-dd HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-01-15 10:30:00</p>

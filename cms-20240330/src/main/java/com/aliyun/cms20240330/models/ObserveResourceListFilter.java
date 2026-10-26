@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ObserveResourceListFilter extends TeaModel {
     /**
-     * <p>The match condition that requires the observeResourceList of a rule to contain at least one instance ID from the array (OR semantics).</p>
+     * <p>The match condition: the observeResourceList of a rule contains at least one instance ID in the array (OR semantics).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;i-bp1a2b3c4d5e6f7g8h9i&quot;]</p>

@@ -32,7 +32,7 @@ public class UpdateAggTaskGroupStatusResponseBody extends TeaModel {
     public String aggTaskGroupName;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0CEC5375-C554-562B-A65F-***</p>
@@ -41,7 +41,7 @@ public class UpdateAggTaskGroupStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the source Prometheus instance for the aggregation task group.</p>
+     * <p>The source Prometheus instance ID of the aggregation node group.</p>
      * 
      * <strong>example:</strong>
      * <p>rw-xxx</p>

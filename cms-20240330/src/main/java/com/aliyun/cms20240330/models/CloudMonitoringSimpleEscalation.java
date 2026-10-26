@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CloudMonitoringSimpleEscalation extends TeaModel {
     /**
-     * <p>The list of multi-level trigger configurations for cloud service monitoring. Each item defines a trigger level, such as Warning or Critical, and includes parameters such as the threshold, duration, and notification method.</p>
+     * <p>The configuration list for multi-level triggers in cloud service monitoring. Each item defines a trigger level (such as Warning or Critical) and includes parameters such as the threshold, duration period, and notification method.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;level&quot;:&quot;WARN&quot;,&quot;comparisonOperator&quot;:&quot;GreaterThanThreshold&quot;,&quot;threshold&quot;:&quot;80&quot;,&quot;times&quot;:3}]</p>
+     * <p>[{&quot;severity&quot;:&quot;CRITICAL&quot;,&quot;comparisonOperator&quot;:&quot;GT&quot;,&quot;threshold&quot;:&quot;80&quot;,&quot;times&quot;:3}]</p>
      */
     @NameInMap("escalations")
     public java.util.List<CloudMonitoringSimpleEscalationEntry> escalations;
@@ -23,7 +23,7 @@ public class CloudMonitoringSimpleEscalation extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The aggregation period, in seconds.</p>
+     * <p>The collection period in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>

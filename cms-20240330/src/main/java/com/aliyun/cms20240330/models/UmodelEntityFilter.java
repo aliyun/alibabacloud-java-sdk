@@ -4,21 +4,12 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class UmodelEntityFilter extends TeaModel {
-    /**
-     * <p>The field name to filter on.</p>
-     */
     @NameInMap("field")
     public String field;
 
-    /**
-     * <p>The comparison operator to use. Supported operators include <code>=</code>, <code>&gt;</code>, <code>&lt;</code>, <code>!=</code>, <code>IN</code>, and <code>NOT IN</code>.</p>
-     */
     @NameInMap("operator")
     public String operator;
 
-    /**
-     * <p>The value to compare the field against.</p>
-     */
     @NameInMap("value")
     public String value;
 

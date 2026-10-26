@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAlertRulesRelationTypeFilter extends TeaModel {
     /**
-     * <p>Matches any value in the set with OR semantics. Valid values: ALL, UMODEL_ENTITY, CLOUD_INSTANCE, GROUP_V1, GROUP_V2, and TAG.</p>
+     * <p>Matches any value in the set (OR semantics): ALL/UMODEL_ENTITY/CLOUD_INSTANCE/GROUP_V1/GROUP_V2/TAG.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;ALL&quot;,&quot;CLOUD_INSTANCE&quot;]</p>
@@ -14,7 +14,7 @@ public class QueryAlertRulesRelationTypeFilter extends TeaModel {
     public java.util.List<String> in;
 
     /**
-     * <p>Excludes any value in the set with NOT IN semantics.</p>
+     * <p>Excludes any value in the set (NOT IN semantics).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;TAG&quot;,&quot;GROUP_V1&quot;]</p>

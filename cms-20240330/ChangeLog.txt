@@ -1,3 +1,12 @@
+2026-10-26 Version: 10.6.3
+- Update API CreateAddonRelease: add request parameters body.apiVersion.
+- Update API CreateIntegrationPolicy: add request parameters body.apiVersion.
+- Update API GetAddonSchema: add request parameters apiVersion.
+- Update API GetIntegrationPolicy: add response parameters Body.policy.apiVersion.
+- Update API ListAddons: add request parameters apiVersion.
+- Update API ListIntegrationPolicies: add response parameters Body.policies.$.apiVersion.
+
+
 2026-09-21 Version: 10.6.1
 - Update API CreateDataPipeline: add request parameters body.outputs.$.processors.$.config.assignments.
 - Update API CreateDataPipeline: add request parameters body.outputs.$.processors.$.config.parameters.

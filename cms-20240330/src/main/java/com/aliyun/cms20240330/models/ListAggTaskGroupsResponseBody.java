@@ -129,7 +129,7 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String cronExpr;
 
         /**
-         * <p>The fixed scheduling delay, in seconds.</p>
+         * <p>The fixed delay time for scheduling, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -147,7 +147,7 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The UNIX timestamp that indicates the scheduling start time, in seconds.</p>
+         * <p>The UNIX timestamp of the start time for scheduling, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1757409499000</p>
@@ -174,7 +174,7 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public Integer maxRetries;
 
         /**
-         * <p>The maximum retry time for executing the aggregation task, in seconds.</p>
+         * <p>The maximum retry time to execute the aggregation node, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -201,7 +201,7 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String scheduleMode;
 
         /**
-         * <p>The schedule time expression.</p>
+         * <p>The scheduling time expression.</p>
          * 
          * <strong>example:</strong>
          * <p>@m</p>
@@ -210,7 +210,7 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String scheduleTimeExpr;
 
         /**
-         * <p>The instance ID of the source Managed Service for Prometheus instance for the aggregation node group.</p>
+         * <p>The instance ID of the source Prometheus instance for the aggregation node group.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-xxx</p>
@@ -228,7 +228,7 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The instance ID of the target Managed Service for Prometheus instance for the aggregation node group.</p>
+         * <p>The instance ID of the target Prometheus instance for the aggregation node group.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-xxx</p>
@@ -237,7 +237,7 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public String targetPrometheusId;
 
         /**
-         * <p>The UNIX timestamp that indicates the scheduling end time, in seconds.</p>
+         * <p>The UNIX timestamp of the end time for scheduling, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -246,7 +246,7 @@ public class ListAggTaskGroupsResponseBody extends TeaModel {
         public Long toTime;
 
         /**
-         * <p>The time when the aggregation task group was last updated, in UNIX timestamp format.</p>
+         * <p>The update time of the aggregation task group. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1757409499000</p>

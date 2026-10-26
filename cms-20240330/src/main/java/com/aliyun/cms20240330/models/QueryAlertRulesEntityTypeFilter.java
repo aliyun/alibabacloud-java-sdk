@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAlertRulesEntityTypeFilter extends TeaModel {
     /**
-     * <p>Matches any value in the set (OR semantics).</p>
+     * <p>The match for any item in the set (OR semantics).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;UMODEL_ENTITY&quot;,&quot;CLOUD_INSTANCE&quot;]</p>
@@ -14,7 +14,7 @@ public class QueryAlertRulesEntityTypeFilter extends TeaModel {
     public java.util.List<String> in;
 
     /**
-     * <p>Excludes any value in the set (NOT IN semantics).</p>
+     * <p>The exclusion of any item in the set (NOT IN semantics).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;TAG&quot;]</p>

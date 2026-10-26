@@ -5,12 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusViewsRequest extends TeaModel {
     /**
-     * <p>Filters by region ID.</p>
+     * <p>Filters the results by region ID. Currently, only a single region ID is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou,cn-beijing</p>
      */
     @NameInMap("filterRegionIds")
+    @Deprecated
     public String filterRegionIds;
 
     /**
@@ -47,7 +48,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public String prometheusViewIds;
 
     /**
-     * <p>The Prometheus view name.</p>
+     * <p>The name of the Prometheus view.</p>
      * 
      * <strong>example:</strong>
      * <p>view1</p>
@@ -56,7 +57,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public String prometheusViewName;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm3gn5i6bigbi</p>
@@ -80,7 +81,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public java.util.List<ListPrometheusViewsRequestTag> tag;
 
     /**
-     * <p>The instance version: V1 or V2.</p>
+     * <p>The instance version.</p>
      * 
      * <strong>example:</strong>
      * <p>V2</p>
@@ -89,7 +90,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public String version;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>The name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
@@ -102,6 +103,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
         return TeaModel.build(map, self);
     }
 
+    @Deprecated
     public ListPrometheusViewsRequest setFilterRegionIds(String filterRegionIds) {
         this.filterRegionIds = filterRegionIds;
         return this;

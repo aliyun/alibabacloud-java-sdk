@@ -4,21 +4,48 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class Evaluator extends TeaModel {
+    /**
+     * <p>The evaluator configuration parameters.</p>
+     */
     @NameInMap("config")
     public java.util.Map<String, ?> config;
 
+    /**
+     * <p>The evaluation filter conditions.</p>
+     */
     @NameInMap("filters")
     public java.util.Map<String, String> filters;
 
+    /**
+     * <p>The evaluator name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent_task_completion</p>
+     */
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The evaluation result name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>agent_task_completion</p>
+     */
     @NameInMap("resultName")
     public String resultName;
 
+    /**
+     * <p>The evaluation result type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>score</p>
+     */
     @NameInMap("resultType")
     public String resultType;
 
+    /**
+     * <p>The evaluation variable mapping.</p>
+     */
     @NameInMap("variableMapping")
     public java.util.Map<String, String> variableMapping;
 

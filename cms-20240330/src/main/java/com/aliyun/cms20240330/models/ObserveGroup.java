@@ -5,130 +5,121 @@ import com.aliyun.tea.*;
 
 public class ObserveGroup extends TeaModel {
     /**
-     * <p>The UID of the Alibaba Cloud account to which the group belongs.</p>
+     * <p>分组归属的阿里云主账号 UID。</p>
      */
     @NameInMap("aliUid")
     public String aliUid;
 
     /**
-     * <p>The creation time in UTC format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>创建时间，UTC 格式 yyyy-MM-ddTHH:mm:ssZ。</p>
      */
     @NameInMap("createTime")
     public String createTime;
 
     /**
-     * <p>The description of the observability group, which explains its business purpose.</p>
+     * <p>观测分组描述（业务用途说明）。</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The list of entity discovery rules that define which entities the group automatically matches.</p>
+     * <p>实体发现规则列表，定义分组自动匹配哪些实体。</p>
      */
     @NameInMap("discoverRules")
     public java.util.List<ObserveGroupDiscoverRule> discoverRules;
 
     /**
-     * <p>The number of entities in each category. The key is the category domain (acs for cloud services, apm, or rum, which is extensible). The value is the number of entities in that category that belong to this group. Returned only when withEntityCount is set to true.</p>
+     * <p>各分类实体数量。key=分类 domain（acs=云产品 / apm / rum，可扩展），value=该分类下属于本分组的实体数。仅 withEntityCount=true 时返回。</p>
      */
     @NameInMap("entityCounts")
     public java.util.Map<String, Integer> entityCounts;
 
     /**
-     * <p>The extended information as a JSON string, which carries alert templates, alert contact groups, and suspension policies.</p>
+     * <p>扩展信息（JSON 字符串，承载告警模板/联系人组/暂停策略等）。</p>
      */
     @NameInMap("extraInfo")
     public String extraInfo;
 
     /**
-     * <p>Indicates whether the current user has followed this group. This value is used as the filter criterion for the My Favorites feature.</p>
+     * <p>当前用户是否已关注该分组（「我的关注」筛选依据）。</p>
      */
     @NameInMap("favorited")
     public Boolean favorited;
 
     /**
-     * <p>The globally unique ID of the observability group. Format: og-&lt;16-character hash&gt;. Used uniformly across metrics, alerts, and consoles.</p>
+     * <p>观测分组全局唯一 ID，格式 og-&lt;16位hash&gt;，指标/告警/控制台统一使用。</p>
      */
     @NameInMap("groupId")
     public String groupId;
 
     /**
-     * <p>The name of the observability group. Must be unique within the same workspace.</p>
+     * <p>观测分组名称（同 workspace 下唯一）。</p>
      */
     @NameInMap("groupName")
     public String groupName;
 
     /**
-     * <p>The type of the observability group.</p>
+     * <p>观测分组类型。</p>
      */
     @NameInMap("groupType")
     public String groupType;
 
     /**
-     * <p>The health status of the group. Valid values:</p>
-     * <ul>
-     * <li>-1: unknown (placeholder).</li>
-     * <li>1: healthy.</li>
-     * <li>0: unhealthy.</li>
-     * </ul>
+     * <p>分组健康状态：-1 未知（占位）/ 1 健康 / 0 不健康。</p>
      */
     @NameInMap("health")
     public Integer health;
 
     /**
-     * <p>The last modification time in UTC format: yyyy-MM-ddTHH:mm:ssZ. Automatically updated when any resource attribute changes.</p>
+     * <p>最后修改时间，UTC 格式 yyyy-MM-ddTHH:mm:ssZ。资源任意属性变更时自动更新。</p>
      */
     @NameInMap("modifyTime")
     public String modifyTime;
 
     /**
-     * <p>Specifies whether og_entity_info metric output is enabled. When enabled, the data plane writes the group membership information to the target Prometheus instance.</p>
+     * <p>是否开启 og_entity_info 指标输出。开启后数据面会把本分组归属写入目标 Prometheus 实例。</p>
      */
     @NameInMap("ogEntityInfoEnabled")
     public Boolean ogEntityInfoEnabled;
 
     /**
-     * <p>The set of Prometheus instances to which og_entity_info is written. Includes two source types: system (automatically identified by the system) and custom (user-defined).</p>
+     * <p>写入 og_entity_info 的 Prometheus 实例集合，包含系统自动识别(system)和用户自定义(custom)两类来源。</p>
      */
     @NameInMap("ogEntityInfoPromInstances")
     public java.util.List<ObserveGroupPromInstance> ogEntityInfoPromInstances;
 
     /**
-     * <p>The product_group.id of the version 1.0 application group. This parameter is valid only when sourceOrigin is set to synced_from_1_0.</p>
+     * <p>仅 synced_from_1_0 时填值，存 1.0 应用分组的 product_group.id。</p>
      */
     @NameInMap("originGroupId")
     public String originGroupId;
 
     /**
-     * <p>The region ID to which the group belongs.</p>
+     * <p>分组所属地域 ID。</p>
      */
     @NameInMap("regionId")
     public String regionId;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>阿里云资源组 ID。</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The data source. Valid values:</p>
-     * <ul>
-     * <li>native_2_0: created natively in version 2.0.</li>
-     * <li>synced_from_1_0: synchronized from a version 1.0 application group.</li>
-     * </ul>
+     * <p>数据来源：native_2_0（2.0 原生）/ synced_from_1_0（从 1.0 应用分组同步）。</p>
      */
     @NameInMap("sourceOrigin")
     public String sourceOrigin;
 
     /**
-     * <p>The resource tags (Alibaba Cloud standard tags) as an array of key-value pairs.</p>
+     * <p>资源标签（阿里云标准标签），键值对数组。</p>
      */
     @NameInMap("tags")
     public java.util.List<ObserveGroupTags> tags;
 
     /**
-     * <p>The workspace ID to which the group belongs. This value is set at the workspace level and cannot be changed after creation.</p>
+     * <p>分组归属的 workspace ID（workspace 级归属，创建后不可变）。</p>
      */
     @NameInMap("workspaceId")
     public String workspaceId;
@@ -300,13 +291,13 @@ public class ObserveGroup extends TeaModel {
 
     public static class ObserveGroupTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>标签键。</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>标签值。</p>
          */
         @NameInMap("tagValue")
         public String tagValue;

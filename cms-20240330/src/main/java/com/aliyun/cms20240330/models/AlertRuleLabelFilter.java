@@ -11,7 +11,7 @@ public class AlertRuleLabelFilter extends TeaModel {
     public java.util.Map<String, String> labels;
 
     /**
-     * <p>The relationship operator between multiple labels.</p>
+     * <p>The relational operator between multiple labels.</p>
      * 
      * <strong>example:</strong>
      * <p>AND</p>

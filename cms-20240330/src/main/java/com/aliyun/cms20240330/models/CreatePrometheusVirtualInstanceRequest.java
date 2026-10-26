@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusVirtualInstanceRequest extends TeaModel {
     /**
-     * <p>Each cloud product supports only one virtual instance per region.</p>
+     * <p>Each cloud service can create only one virtual instance in each region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +14,12 @@ public class CreatePrometheusVirtualInstanceRequest extends TeaModel {
     @NameInMap("namespace")
     public String namespace;
 
+    /**
+     * <p>The tenant ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1111111111111111</p>
+     */
     @NameInMap("tenantId")
     public String tenantId;
 

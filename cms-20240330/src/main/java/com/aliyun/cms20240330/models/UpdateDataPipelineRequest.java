@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateDataPipelineRequest extends TeaModel {
     /**
-     * <p>The pipeline description.</p>
+     * <p>The description of the pipeline.</p>
      * 
      * <strong>example:</strong>
      * <p>Export selected trace services to the target workspace.</p>
@@ -23,7 +23,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
     public Long expectedVersion;
 
     /**
-     * <p>The pipeline type.</p>
+     * <p>The type of the pipeline.</p>
      * 
      * <strong>example:</strong>
      * <p>export</p>
@@ -202,7 +202,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestOutputsProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The length of the prefix to retain.</p>
+         * <p>The length of the retained prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -211,7 +211,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The length of the suffix to retain.</p>
+         * <p>The length of the retained suffix.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -237,7 +237,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String maskChar;
 
         /**
-         * <p>The masking mode.</p>
+         * <p>The data masking mode.</p>
          * 
          * <strong>example:</strong>
          * <p>keyword</p>
@@ -246,7 +246,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The built-in sensitive types.</p>
+         * <p>The built-in sensitive data types.</p>
          */
         @NameInMap("types")
         public java.util.List<String> types;
@@ -326,7 +326,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String kind;
 
         /**
-         * <p>The field or dimension name.</p>
+         * <p>The name of the field or dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -387,7 +387,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public UpdateDataPipelineRequestOutputsProcessorsConfigScopeConditionsField field;
 
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXACT</p>
@@ -434,7 +434,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestOutputsProcessorsConfigScopeMetricName extends TeaModel {
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXACT</p>
@@ -476,7 +476,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestOutputsProcessorsConfigScopeServiceName extends TeaModel {
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>GLOB</p>
@@ -565,7 +565,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestOutputsProcessorsConfigSelector extends TeaModel {
         /**
-         * <p>The list of service names.</p>
+         * <p>The service name list.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -654,13 +654,13 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public java.util.List<UpdateDataPipelineRequestOutputsProcessorsConfigProjections> projections;
 
         /**
-         * <p>The list of masking rules.</p>
+         * <p>The list of data masking rules.</p>
          */
         @NameInMap("rules")
         public java.util.List<UpdateDataPipelineRequestOutputsProcessorsConfigRules> rules;
 
         /**
-         * <p>The scope in which the pipeline processing processor takes effect.</p>
+         * <p>The effective scope of pipeline processing.</p>
          */
         @NameInMap("scope")
         public UpdateDataPipelineRequestOutputsProcessorsConfigScope scope;
@@ -841,7 +841,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestOutputs extends TeaModel {
         /**
-         * <p>The output name.</p>
+         * <p>The name of the output.</p>
          * 
          * <strong>example:</strong>
          * <p>checkout_route</p>
@@ -964,7 +964,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The length of the prefix to retain.</p>
+         * <p>The length of the retained prefix.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -973,7 +973,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The length of the suffix to retain.</p>
+         * <p>The length of the retained suffix.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -999,7 +999,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String maskChar;
 
         /**
-         * <p>The masking mode.</p>
+         * <p>The data masking mode.</p>
          * 
          * <strong>example:</strong>
          * <p>keyword</p>
@@ -1008,7 +1008,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The built-in sensitive types.</p>
+         * <p>The built-in sensitive data types.</p>
          */
         @NameInMap("types")
         public java.util.List<String> types;
@@ -1088,7 +1088,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String kind;
 
         /**
-         * <p>The field or dimension name.</p>
+         * <p>The name of the field or dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>serviceName</p>
@@ -1149,7 +1149,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public UpdateDataPipelineRequestProcessorsConfigScopeConditionsField field;
 
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>GLOB</p>
@@ -1196,7 +1196,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestProcessorsConfigScopeMetricName extends TeaModel {
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXACT</p>
@@ -1238,7 +1238,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestProcessorsConfigScopeServiceName extends TeaModel {
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>EXACT</p>
@@ -1327,7 +1327,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestProcessorsConfigSelector extends TeaModel {
         /**
-         * <p>The list of service names.</p>
+         * <p>The service name list.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1416,13 +1416,13 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public java.util.List<UpdateDataPipelineRequestProcessorsConfigProjections> projections;
 
         /**
-         * <p>The list of masking rules.</p>
+         * <p>The list of data masking rules.</p>
          */
         @NameInMap("rules")
         public java.util.List<UpdateDataPipelineRequestProcessorsConfigRules> rules;
 
         /**
-         * <p>The scope in which the pipeline processing processor takes effect.</p>
+         * <p>The effective scope of pipeline processing.</p>
          */
         @NameInMap("scope")
         public UpdateDataPipelineRequestProcessorsConfigScope scope;
@@ -1603,7 +1603,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
 
     public static class UpdateDataPipelineRequestSinks extends TeaModel {
         /**
-         * <p>The list of datasets.</p>
+         * <p>The dataset list.</p>
          */
         @NameInMap("datasets")
         public java.util.List<String> datasets;
@@ -1618,7 +1618,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the output destination.</p>
+         * <p>The output destination name.</p>
          * 
          * <strong>example:</strong>
          * <p>error-archive</p>
@@ -1636,7 +1636,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String project;
 
         /**
-         * <p>The type of the output destination.</p>
+         * <p>The output destination type.</p>
          * 
          * <strong>example:</strong>
          * <p>logstore</p>
@@ -1744,7 +1744,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public String runMode;
 
         /**
-         * <p>The read start point.</p>
+         * <p>The start position.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -1797,7 +1797,7 @@ public class UpdateDataPipelineRequest extends TeaModel {
         public UpdateDataPipelineRequestSourceConfig config;
 
         /**
-         * <p>The type of the data source.</p>
+         * <p>The data source type.</p>
          * 
          * <strong>example:</strong>
          * <p>traces-default</p>

@@ -32,7 +32,7 @@ public class ListContextStoresRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>OCAQV0pBqldexv7EidbIZw==</p>

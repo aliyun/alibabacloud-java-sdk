@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAggTaskGroupRequest extends TeaModel {
     /**
-     * <p>The configuration of the aggregation task group. Currently, only the RecordingRuleYaml format is supported. The configuration must comply with the RecordingRule format of open source Prometheus.</p>
+     * <p>The configuration of the aggregation task group. Only the RecordingRuleYaml format is supported. The configuration must meet the format requirements of RecordingRule in open-source Prometheus.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
     public String aggTaskGroupConfig;
 
     /**
-     * <p>The type of the aggregation task group configuration. The default value is RecordingRuleYaml, which is the RecordingRule format of open source Prometheus.</p>
+     * <p>The configuration type of the aggregation task group. Default value: RecordingRuleYaml, which is the RecordingRule format of open-source Prometheus.</p>
      * 
      * <strong>example:</strong>
      * <p>RecordingRuleYaml</p>
@@ -43,7 +43,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
     public String aggTaskGroupName;
 
     /**
-     * <p>The cron expression for scheduling when the scheduling mode is set to Cron. For example, \<code>0/1 \\* \\* \\* \\*\\</code> indicates that the task is scheduled every 1 minute, starting from the 0th minute.</p>
+     * <p>The cron expression used when the scheduling mode is set to Cron. For example, 0/1 * * * * indicates that the task is scheduled every 1 minute starting from minute 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0/1 * * * *</p>
@@ -52,7 +52,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
     public String cronExpr;
 
     /**
-     * <p>The fixed delay for scheduling. Unit: seconds. The default value is 30.</p>
+     * <p>The fixed delay time for scheduling, in seconds. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -70,7 +70,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The UNIX timestamp in seconds that indicates the start time of the scheduling.</p>
+     * <p>The timestamp of the scheduling start time, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1724996015</p>
@@ -79,7 +79,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
     public Long fromTime;
 
     /**
-     * <p>The maximum number of retries to execute the aggregation task. The default value is 20.</p>
+     * <p>The maximum number of retries for executing the aggregation task. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -88,7 +88,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
     public Integer maxRetries;
 
     /**
-     * <p>The maximum retry time to execute the aggregation task. Unit: seconds. The default value is 600.</p>
+     * <p>The maximum retry time to execute the aggregation node, in seconds. Default value: 600.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>
@@ -97,7 +97,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
     public Integer maxRunTimeInSeconds;
 
     /**
-     * <p>The dry run configuration. This parameter is not configured by default. The input string must be a valid JSON string.</p>
+     * <p>The precheck configuration. By default, this parameter is not configured. The input string must be a valid JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;xxx&quot;,&quot;query&quot;:&quot;scalar(sum(count_over_time(up{job=\&quot;_arms/kubelet/cadvisor\&quot;}[15s])) / 21)&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;promql&quot;}</p>
@@ -106,7 +106,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
     public String precheckString;
 
     /**
-     * <p>The scheduling mode. Valid values: Cron and FixedRate. The default value is FixedRate.</p>
+     * <p>The scheduling mode. Valid values: Cron and FixedRate. Default value: FixedRate.</p>
      * 
      * <strong>example:</strong>
      * <p>FixedRate</p>
@@ -115,7 +115,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
     public String scheduleMode;
 
     /**
-     * <p>The scheduling time expression. Recommended values are \<code>@s\\</code> and \<code>@m\\</code>. This expression indicates the granularity at which the scheduling time window is snapped. The default value is \<code>@m\\</code>.</p>
+     * <p>The scheduling time expression. Use @s or @m to specify the alignment granularity of the scheduling time window. Default value: @m.</p>
      * 
      * <strong>example:</strong>
      * <p>@m</p>
@@ -124,7 +124,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
     public String scheduleTimeExpr;
 
     /**
-     * <p>The status of the aggregation task group. Valid values: Running and Stopped. The default value is Running.</p>
+     * <p>The status of the aggregation task group. Valid values: Running and Stopped. Default value: Running.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -139,7 +139,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
     public java.util.List<UpdateAggTaskGroupRequestTags> tags;
 
     /**
-     * <p>The ID of the target Prometheus instance for the aggregation task group.</p>
+     * <p>The target Prometheus instance ID of the aggregation node group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -149,7 +149,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
     public String targetPrometheusId;
 
     /**
-     * <p>The UNIX timestamp in seconds that indicates the end time of the scheduling. A value of 0 indicates that the scheduling does not stop.</p>
+     * <p>The timestamp of the scheduling end time, in seconds. A value of 0 indicates that the scheduling does not stop.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -292,7 +292,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
 
     public static class UpdateAggTaskGroupRequestTags extends TeaModel {
         /**
-         * <p>The key of the resource group tag.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -301,7 +301,7 @@ public class UpdateAggTaskGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the resource group tag.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

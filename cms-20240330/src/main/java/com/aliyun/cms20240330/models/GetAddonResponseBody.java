@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetAddonResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The list of data corresponding to the request header.</p>
      */
     @NameInMap("data")
     public GetAddonResponseBodyData data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>0B9377D9-C56B-5C2E-A8A4-A01D6CC3F4B8</p>
@@ -193,7 +193,7 @@ public class GetAddonResponseBody extends TeaModel {
 
     public static class GetAddonResponseBodyDataEnvironmentsPoliciesMetricCheckRule extends TeaModel {
         /**
-         * <p>The data check rule that is used after installation.</p>
+         * <p>The data check rule after installation.</p>
          */
         @NameInMap("promQL")
         public java.util.List<String> promQL;
@@ -291,7 +291,7 @@ public class GetAddonResponseBody extends TeaModel {
 
     public static class GetAddonResponseBodyDataEnvironmentsPolicies extends TeaModel {
         /**
-         * <p>The status of the default policy for alert rules.</p>
+         * <p>The enabled status of the default alert rule policy.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -309,7 +309,7 @@ public class GetAddonResponseBody extends TeaModel {
         public Boolean defaultInstall;
 
         /**
-         * <p>Indicates whether a service account is assigned for communication with the console API.</p>
+         * <p>Indicates whether a service account is assigned to communicate with the Console API.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -324,7 +324,7 @@ public class GetAddonResponseBody extends TeaModel {
         public GetAddonResponseBodyDataEnvironmentsPoliciesMetricCheckRule metricCheckRule;
 
         /**
-         * <p>Indicates whether to guide the user to restart pods after the add-on is installed.</p>
+         * <p>Indicates whether a pod restart is triggered immediately after the add-on is installed during integration.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -333,13 +333,13 @@ public class GetAddonResponseBody extends TeaModel {
         public Boolean needRestartAfterIntegration;
 
         /**
-         * <p>The protocol.</p>
+         * <p>The protocols.</p>
          */
         @NameInMap("protocols")
         public java.util.List<GetAddonResponseBodyDataEnvironmentsPoliciesProtocols> protocols;
 
         /**
-         * <p>The name of the target add-on to which the system redirects.</p>
+         * <p>The name of the target add-on for redirection.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-default</p>
@@ -418,7 +418,7 @@ public class GetAddonResponseBody extends TeaModel {
         public java.util.List<GetAddonResponseBodyDataEnvironmentsCommonSchemaRefs> commonSchemaRefs;
 
         /**
-         * <p>The dependencies.</p>
+         * <p>The additional dependencies.</p>
          */
         @NameInMap("dependencies")
         public GetAddonResponseBodyDataEnvironmentsDependencies dependencies;
@@ -433,7 +433,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the feature is enabled.</p>
+         * <p>Indicates whether the environment is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -445,7 +445,7 @@ public class GetAddonResponseBody extends TeaModel {
          * <p>The display name of the environment.</p>
          * 
          * <strong>example:</strong>
-         * <p>容器环境</p>
+         * <p>Container environment</p>
          */
         @NameInMap("label")
         public String label;
@@ -460,7 +460,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the resource group.</p>
+         * <p>The resource group ID.</p>
          */
         @NameInMap("policies")
         public GetAddonResponseBodyDataEnvironmentsPolicies policies;
@@ -547,7 +547,7 @@ public class GetAddonResponseBody extends TeaModel {
 
     public static class GetAddonResponseBodyData extends TeaModel {
         /**
-         * <p>The alias of the component.</p>
+         * <p>The alias of the integrated component.</p>
          * 
          * <strong>example:</strong>
          * <p>resume_vector_alias</p>
@@ -556,7 +556,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The list of component categories.</p>
+         * <p>The list of categories for the integrated component.</p>
          */
         @NameInMap("categories")
         public java.util.List<String> categories;
@@ -577,7 +577,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The environment information.</p>
+         * <p>The environment context.</p>
          */
         @NameInMap("environments")
         public java.util.List<GetAddonResponseBodyDataEnvironments> environments;
@@ -607,7 +607,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The time when the latest version was created.</p>
+         * <p>The latest creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-12 12:30:30</p>
@@ -654,7 +654,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String version;
 
         /**
-         * <p>The weight.</p>
+         * <p>The weight value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

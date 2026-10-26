@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateMemoryStoreRequest extends TeaModel {
     /**
-     * <p>Custom extraction strategies.</p>
+     * <p>The custom extraction strategies.</p>
      */
     @NameInMap("customExtractionStrategies")
     public java.util.List<CustomExtractionStrategy> customExtractionStrategies;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>memoryStore test</p>
@@ -20,13 +20,13 @@ public class UpdateMemoryStoreRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Extraction strategies. Supports &quot;Episodic&quot;, &quot;Summary&quot;, and &quot;Fact&quot;.</p>
+     * <p>The extraction strategies. Valid values: Episodic, Summary, and Fact.</p>
      */
     @NameInMap("extractionStrategies")
     public java.util.List<String> extractionStrategies;
 
     /**
-     * <p>Short-term memory retention time.</p>
+     * <p>The retention period for short-term memory.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>

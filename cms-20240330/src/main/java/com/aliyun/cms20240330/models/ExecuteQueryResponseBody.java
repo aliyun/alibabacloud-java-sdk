@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ExecuteQueryResponseBody extends TeaModel {
     /**
-     * <p>An array of log entries. Each object in the array represents a log entry.</p>
+     * <p>The log data array. Each element corresponds to a log entry.</p>
      */
     @NameInMap("data")
     public java.util.List<java.util.Map<String, String>> data;
 
     /**
-     * <p>Metadata about the query execution.</p>
+     * <p>The metadata.</p>
      */
     @NameInMap("meta")
     public ExecuteQueryResponseBodyMeta meta;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3B311FD9-A60B-55E0-A896-A0C73*********</p>
@@ -56,7 +56,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
 
     public static class ExecuteQueryResponseBodyMeta extends TeaModel {
         /**
-         * <p>The number of scanned or processed log entries.</p>
+         * <p>The number of log entries scanned or processed.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -65,7 +65,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
         public Integer affectedRows;
 
         /**
-         * <p>The number of log entries returned.</p>
+         * <p>The number of log entries returned by the query request.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -74,7 +74,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The query execution time in milliseconds.</p>
+         * <p>The execution duration in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1231243</p>
@@ -83,7 +83,7 @@ public class ExecuteQueryResponseBody extends TeaModel {
         public Long elapsedMillisecond;
 
         /**
-         * <p>The query completion status. A value of <code>Complete</code> indicates that the query has finished.</p>
+         * <p>Indicates whether the query results are complete.</p>
          * 
          * <strong>example:</strong>
          * <p>Complete</p>

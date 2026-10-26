@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutWorkspaceRequest extends TeaModel {
     /**
-     * <p>The description of the workspace.</p>
+     * <p>The workspace description.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace test</p>
@@ -23,7 +23,7 @@ public class PutWorkspaceRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The ID of the resource group specified when the workspace is created.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ae******ey</p>
@@ -32,7 +32,7 @@ public class PutWorkspaceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The name of the Simple Log Service project.</p>
+     * <p>The Simple Log Service project name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class PutWorkspaceRequest extends TeaModel {
     public String slsProject;
 
     /**
-     * <p>The tags attached to the workspace when it is created.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("tags")
     public java.util.List<PutWorkspaceRequestTags> tags;
@@ -94,13 +94,19 @@ public class PutWorkspaceRequest extends TeaModel {
 
     public static class PutWorkspaceRequestTags extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("key")
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         @NameInMap("value")
         public String value;

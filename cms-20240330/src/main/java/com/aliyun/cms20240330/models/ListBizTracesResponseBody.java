@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListBizTracesResponseBody extends TeaModel {
     /**
-     * <p>The list of business traces.</p>
+     * <p>The list of business links.</p>
      */
     @NameInMap("items")
     public java.util.List<BizTraceConfig> items;
 
     /**
-     * <p>The maximum number of results returned. The maximum value is 100.</p>
+     * <p>The maximum number of results to return. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class ListBizTracesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to use to retrieve the next page of results.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>aa9d0e569b88098a0e3155c29b473201a</p>

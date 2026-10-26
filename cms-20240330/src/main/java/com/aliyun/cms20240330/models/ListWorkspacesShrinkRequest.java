@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkspacesShrinkRequest extends TeaModel {
     /**
-     * <p>The number of entries per page.
+     * <p>The maximum number of entries per page.
      * Default value:
      *     50
      * Maximum value:
@@ -39,7 +39,7 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ae******ey</p>
@@ -54,7 +54,7 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     public String tagsShrink;
 
     /**
-     * <p>The workspace name. Fuzzy match is used.</p>
+     * <p>The workspace name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>
@@ -63,7 +63,7 @@ public class ListWorkspacesShrinkRequest extends TeaModel {
     public String workspaceName;
 
     /**
-     * <p>The workspace name. Exact match is used.</p>
+     * <p>The names of the workspaces. Exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test-001</p>

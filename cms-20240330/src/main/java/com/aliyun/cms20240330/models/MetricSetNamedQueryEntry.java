@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class MetricSetNamedQueryEntry extends TeaModel {
     /**
-     * <p>The label filter conditions. This parameter is optional and independent for each query.</p>
+     * <p>The optional label filter conditions, which are independent for each query.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;key&quot;:&quot;host.name&quot;,&quot;value&quot;:&quot;web-server-01&quot;,&quot;type&quot;:&quot;eq&quot;}]</p>
+     * <p>[{&quot;name&quot;:&quot;env&quot;,&quot;operator&quot;:&quot;=&quot;,&quot;value&quot;:&quot;prod&quot;}]</p>
      */
     @NameInMap("labelFilters")
     public java.util.List<LabelFilters> labelFilters;
@@ -32,7 +32,7 @@ public class MetricSetNamedQueryEntry extends TeaModel {
     public String metricSet;
 
     /**
-     * <p>The query name, such as $A or $B, referenced by condition triggers.</p>
+     * <p>The query name, such as $A or $B, referenced by the condition trigger.</p>
      * 
      * <strong>example:</strong>
      * <p>cpuQuery</p>

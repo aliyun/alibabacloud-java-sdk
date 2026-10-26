@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDatasetsResponseBody extends TeaModel {
     /**
-     * <p>A list of dataset objects.</p>
+     * <p>The result set.</p>
      */
     @NameInMap("datasets")
     public java.util.List<ListDatasetsResponseBodyDatasets> datasets;
 
     /**
-     * <p>The maximum number of results returned per page.</p>
+     * <p>The maximum number of results to return.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -20,7 +20,7 @@ public class ListDatasetsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A token to retrieve the next page of results. This element is returned only when the result set is truncated.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>d9a48d977f45aa6fcf6981ed13b885b3fab0b124c12dcbbe70edce5d81ba****************</p>
@@ -29,7 +29,7 @@ public class ListDatasetsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -38,7 +38,7 @@ public class ListDatasetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of datasets that match the query.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>96</p>
@@ -93,7 +93,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyDatasets extends TeaModel {
         /**
-         * <p>The time the dataset was created, as a UNIX timestamp.</p>
+         * <p>The creation time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The name of the dataset.</p>
+         * <p>The dataset name.</p>
          * 
          * <strong>example:</strong>
          * <p>test_dataset</p>
@@ -112,7 +112,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String datasetName;
 
         /**
-         * <p>The description of the dataset.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test dataset</p>
@@ -121,7 +121,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the region where the dataset resides.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -130,7 +130,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The time the dataset was last updated, as a UNIX timestamp.</p>
+         * <p>The update time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -140,7 +140,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The ID of the workspace that contains the dataset.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace-test</p>

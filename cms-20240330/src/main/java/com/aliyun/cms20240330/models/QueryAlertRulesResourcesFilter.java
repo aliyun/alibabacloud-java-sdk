@@ -14,7 +14,7 @@ public class QueryAlertRulesResourcesFilter extends TeaModel {
     public java.util.List<String> contains;
 
     /**
-     * <p>Filters out alert rules by resource instance ID blacklist. Alert rules whose associated resources contains any instance ID in the array are excluded.</p>
+     * <p>The resource instance ID blacklist filter that excludes alert rules whose associated resources contain any instance ID in the array.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;i-bp0z9y8x7w6v5u4t3s2&quot;]</p>

@@ -5,85 +5,85 @@ import com.aliyun.tea.*;
 
 public class ObserveGroupDiscoverRule extends TeaModel {
     /**
-     * <p>Indicates whether the rule is enabled. If set to false, the data plane skips this rule and does not perform matching, tagging, or delivery.</p>
+     * <p>规则是否启用；false 时数据面跳过该规则（不匹配 / 不打标 / 不下发）。</p>
      */
     @NameInMap("enabled")
     public Boolean enabled;
 
     /**
-     * <p>The entity type (legacy). Retained for backward compatibility. Use entityTypes instead.</p>
+     * <p>（旧）单实体类型，向后兼容，优先用 entityTypes。</p>
      */
     @NameInMap("entityType")
     public String entityType;
 
     /**
-     * <p>The list of entity types. A single rule can match multiple types, such as acs.ecs.instance, acs.rds.instance, and acs.arms.service.</p>
+     * <p>实体类型列表，支持一条规则跨多类型匹配（如 acs.ecs.instance/acs.rds.instance/acs.arms.service）。</p>
      */
     @NameInMap("entityTypes")
     public java.util.List<String> entityTypes;
 
     /**
-     * <p>The time when the rule was created, in UNIX millisecond timestamp format. This value is used for display in the console.</p>
+     * <p>规则创建时间（Unix 毫秒时间戳），控制台展示用。</p>
      */
     @NameInMap("gmtCreate")
     public Long gmtCreate;
 
     /**
-     * <p>The list of manually specified instance IDs in enumeration mode, including instances synchronized manually in version 1.0.</p>
+     * <p>手动指定的实例 ID 列表（枚举型，含 1.0 手动实例同步）。</p>
      */
     @NameInMap("instanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The name matching rules.</p>
+     * <p>名称匹配规则。</p>
      */
     @NameInMap("nameRules")
     public ObserveGroupDiscoverRuleNameRules nameRules;
 
     /**
-     * <p>The list of region IDs used for filtering by region.</p>
+     * <p>按地域过滤的 region ID 列表。</p>
      */
     @NameInMap("regionIds")
     public java.util.List<String> regionIds;
 
     /**
-     * <p>The resource group ID used for filtering.</p>
+     * <p>按资源组过滤。</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The stable rule ID used as an anchor for editing, deleting, and enabling or disabling operations. Format: dr-&lt;16-character hash&gt;.</p>
+     * <p>规则稳定 ID（编辑/删除/启停锚点），格式 dr-&lt;16位hash&gt;。</p>
      */
     @NameInMap("ruleId")
     public String ruleId;
 
     /**
-     * <p>The matching method. Valid values: byTag, byResourceGroup, byInstanceName, byManual, and bySpl.</p>
+     * <p>匹配方式：byTag / byResourceGroup / byInstanceName / byManual / bySpl。</p>
      */
     @NameInMap("ruleType")
     public String ruleType;
 
     /**
-     * <p>The applicable scope. Valid values: all (all entity types, exclusive) and entity (specified entity types).</p>
+     * <p>适用范围：all（全部实体类型，独占）/ entity（指定实体类型）。</p>
      */
     @NameInMap("scope")
     public String scope;
 
     /**
-     * <p>The full SPL expression for advanced configuration. If this parameter is not empty, it takes precedence over other filter fields.</p>
+     * <p>完整 SPL 表达式（高级配置）；非空时优先生效，覆盖其它过滤字段。</p>
      */
     @NameInMap("spl")
     public String spl;
 
     /**
-     * <p>The tag matching rules.</p>
+     * <p>标签匹配规则。</p>
      */
     @NameInMap("tagRules")
     public ObserveGroupDiscoverRuleTagRules tagRules;
 
     /**
-     * <p>The UID of the user to whom the rule belongs.</p>
+     * <p>规则所属用户 UID。</p>
      */
     @NameInMap("userId")
     public String userId;
@@ -207,13 +207,13 @@ public class ObserveGroupDiscoverRule extends TeaModel {
 
     public static class ObserveGroupDiscoverRuleNameRulesTags extends TeaModel {
         /**
-         * <p>The matching operation.</p>
+         * <p>匹配操作。</p>
          */
         @NameInMap("op")
         public String op;
 
         /**
-         * <p>The matching value list.</p>
+         * <p>匹配值列表。</p>
          */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;
@@ -243,13 +243,13 @@ public class ObserveGroupDiscoverRule extends TeaModel {
 
     public static class ObserveGroupDiscoverRuleNameRules extends TeaModel {
         /**
-         * <p>The name matching logic.</p>
+         * <p>名称匹配逻辑。</p>
          */
         @NameInMap("op")
         public String op;
 
         /**
-         * <p>The name condition list.</p>
+         * <p>名称条件列表。</p>
          */
         @NameInMap("tags")
         public java.util.List<ObserveGroupDiscoverRuleNameRulesTags> tags;
@@ -279,19 +279,19 @@ public class ObserveGroupDiscoverRule extends TeaModel {
 
     public static class ObserveGroupDiscoverRuleTagRulesTags extends TeaModel {
         /**
-         * <p>The matching operation.</p>
+         * <p>匹配操作。</p>
          */
         @NameInMap("op")
         public String op;
 
         /**
-         * <p>The tag key.</p>
+         * <p>标签键。</p>
          */
         @NameInMap("tagKey")
         public String tagKey;
 
         /**
-         * <p>The tag value list.</p>
+         * <p>标签值列表。</p>
          */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;
@@ -329,13 +329,13 @@ public class ObserveGroupDiscoverRule extends TeaModel {
 
     public static class ObserveGroupDiscoverRuleTagRules extends TeaModel {
         /**
-         * <p>The tag matching logic.</p>
+         * <p>标签匹配逻辑。</p>
          */
         @NameInMap("op")
         public String op;
 
         /**
-         * <p>The tag condition list.</p>
+         * <p>标签条件列表。</p>
          */
         @NameInMap("tags")
         public java.util.List<ObserveGroupDiscoverRuleTagRulesTags> tags;

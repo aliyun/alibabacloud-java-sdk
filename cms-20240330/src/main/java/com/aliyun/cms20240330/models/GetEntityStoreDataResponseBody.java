@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEntityStoreDataResponseBody extends TeaModel {
     /**
-     * <p>The list of returned data.</p>
+     * <p>The total count of the returned data list.</p>
      */
     @NameInMap("data")
     public java.util.List<java.util.List<String>> data;
@@ -88,7 +88,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         public String level;
 
         /**
-         * <p>The execution information.</p>
+         * <p>The computation execution information.</p>
          * 
          * <strong>example:</strong>
          * <p>Query execution timeout after 30 seconds</p>
@@ -97,7 +97,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The suggestion provided when an execution fault occurs.</p>
+         * <p>The suggestions provided when an execution error occurs.</p>
          * 
          * <strong>example:</strong>
          * <p>Try to reduce the query scope or increase timeout limit, then retry</p>
@@ -146,7 +146,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
 
     public static class GetEntityStoreDataResponseBodyResponseStatus extends TeaModel {
         /**
-         * <p>Information about the execution procedure.</p>
+         * <p>The information during the execution process.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -182,7 +182,7 @@ public class GetEntityStoreDataResponseBody extends TeaModel {
         public String retryPolicy;
 
         /**
-         * <p>A list of detailed status information.</p>
+         * <p>The list of detailed status information.</p>
          */
         @NameInMap("statusItem")
         public java.util.List<GetEntityStoreDataResponseBodyResponseStatusStatusItem> statusItem;

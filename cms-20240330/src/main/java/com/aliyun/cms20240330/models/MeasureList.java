@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MeasureList extends TeaModel {
     /**
-     * <p>The list of grouping dimensions for metric data. Specifies the dimension keys by which metric results are computed through grouping and aggregation.</p>
+     * <p>The list of grouping dimensions for measure data, specifying the dimension keys used for grouping and aggregation of measure results.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;host.name&quot;, &quot;region&quot;]</p>
@@ -24,7 +24,7 @@ public class MeasureList extends TeaModel {
     public String measureCode;
 
     /**
-     * <p>The query time window, in seconds.</p>
+     * <p>The query time window in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

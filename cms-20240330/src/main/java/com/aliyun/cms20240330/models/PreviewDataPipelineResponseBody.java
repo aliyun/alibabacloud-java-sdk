@@ -11,13 +11,13 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
     public java.util.List<PreviewDataPipelineResponseBodyDatasets> datasets;
 
     /**
-     * <p>The aggregated diagnostics.</p>
+     * <p>The aggregation diagnostics.</p>
      */
     @NameInMap("diagnostics")
     public java.util.Map<String, ?> diagnostics;
 
     /**
-     * <p>The effective SPL script.</p>
+     * <p>The effective SPL.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -75,7 +75,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
 
     public static class PreviewDataPipelineResponseBodyDatasetsMeta extends TeaModel {
         /**
-         * <p>The field name.</p>
+         * <p>The name of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>trace_id</p>
@@ -84,7 +84,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The field type.</p>
+         * <p>The type of the field.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -129,7 +129,7 @@ public class PreviewDataPipelineResponseBody extends TeaModel {
         public java.util.List<PreviewDataPipelineResponseBodyDatasetsMeta> meta;
 
         /**
-         * <p>The dataset name.</p>
+         * <p>The name of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>error_spans</p>

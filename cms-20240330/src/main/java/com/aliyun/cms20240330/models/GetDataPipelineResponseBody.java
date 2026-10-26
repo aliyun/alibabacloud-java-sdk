@@ -126,7 +126,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
 
     public static class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The retained prefix length.</p>
+         * <p>The prefix retention length.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -135,7 +135,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The retained suffix length.</p>
+         * <p>The suffix retention length.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -161,7 +161,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public String maskChar;
 
         /**
-         * <p>The masking mode.</p>
+         * <p>The data masking mode.</p>
          * 
          * <strong>example:</strong>
          * <p>keyword</p>
@@ -367,7 +367,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public String matchType;
 
         /**
-         * <p>The metric name.</p>
+         * <p>The metric names.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;http_requests_total&quot;]</p>
@@ -489,7 +489,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
 
     public static class GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigSelector extends TeaModel {
         /**
-         * <p>The list of service names.</p>
+         * <p>The service name list.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -578,13 +578,13 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigProjections> projections;
 
         /**
-         * <p>The masking rule list.</p>
+         * <p>The data masking rule list.</p>
          */
         @NameInMap("rules")
         public java.util.List<GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigRules> rules;
 
         /**
-         * <p>The scope in which the pipeline processing processor takes effect.</p>
+         * <p>The pipeline processing scope.</p>
          */
         @NameInMap("scope")
         public GetDataPipelineResponseBodyPipelineOutputsProcessorsConfigScope scope;
@@ -888,7 +888,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
 
     public static class GetDataPipelineResponseBodyPipelineProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The retained prefix length.</p>
+         * <p>The prefix retention length.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -897,7 +897,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The retained suffix length.</p>
+         * <p>The suffix retention length.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -923,7 +923,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public String maskChar;
 
         /**
-         * <p>The masking mode.</p>
+         * <p>The data masking mode.</p>
          * 
          * <strong>example:</strong>
          * <p>keyword</p>
@@ -1129,7 +1129,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public String matchType;
 
         /**
-         * <p>The metric name.</p>
+         * <p>The metric names.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;http_requests_total&quot;]</p>
@@ -1251,7 +1251,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
 
     public static class GetDataPipelineResponseBodyPipelineProcessorsConfigSelector extends TeaModel {
         /**
-         * <p>The list of service names.</p>
+         * <p>The service name list.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1340,13 +1340,13 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigProjections> projections;
 
         /**
-         * <p>The masking rule list.</p>
+         * <p>The data masking rule list.</p>
          */
         @NameInMap("rules")
         public java.util.List<GetDataPipelineResponseBodyPipelineProcessorsConfigRules> rules;
 
         /**
-         * <p>The scope in which the pipeline processing processor takes effect.</p>
+         * <p>The effective scope of pipeline processing.</p>
          */
         @NameInMap("scope")
         public GetDataPipelineResponseBodyPipelineProcessorsConfigScope scope;
@@ -1542,7 +1542,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the output destination.</p>
+         * <p>The name of the data sink.</p>
          * 
          * <strong>example:</strong>
          * <p>error-archive</p>
@@ -1560,7 +1560,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public String project;
 
         /**
-         * <p>The type of the output destination.</p>
+         * <p>The type of the data sink.</p>
          * 
          * <strong>example:</strong>
          * <p>logstore</p>
@@ -1668,7 +1668,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public String runMode;
 
         /**
-         * <p>The read start point.</p>
+         * <p>The starting point for reading.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -1754,7 +1754,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
 
     public static class GetDataPipelineResponseBodyPipeline extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in ISO 8601 format in UTC, such as 2026-08-10T05:00:00Z.</p>
          * <p>This parameter is required.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
@@ -1791,7 +1791,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public java.util.List<GetDataPipelineResponseBodyPipelineOutputs> outputs;
 
         /**
-         * <p>The pipeline name.</p>
+         * <p>The name of the pipeline.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1818,7 +1818,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public String signalType;
 
         /**
-         * <p>The output destinations.</p>
+         * <p>The data sinks.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("sinks")
@@ -1851,7 +1851,7 @@ public class GetDataPipelineResponseBody extends TeaModel {
         public String statusMessage;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time in ISO 8601 format in UTC, such as 2026-08-10T05:10:00Z.</p>
          * <p>This parameter is required.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 

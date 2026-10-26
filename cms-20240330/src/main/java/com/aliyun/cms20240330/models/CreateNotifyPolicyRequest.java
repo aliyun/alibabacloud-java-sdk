@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateNotifyPolicyRequest extends TeaModel {
     /**
-     * <p>The request body, which is the complete notification policy configuration object NotifyPolicyConfig.</p>
+     * <p>The request body, which contains the complete NotifyPolicyConfig configuration object for the notification policy.</p>
      */
     @NameInMap("body")
     public NotifyPolicyConfig body;
 
     /**
-     * <p>The workspace ID. This parameter is used to isolate notification policy resources across different business spaces.</p>
+     * <p>The workspace ID, which isolates notification policy resources across different business workspaces.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

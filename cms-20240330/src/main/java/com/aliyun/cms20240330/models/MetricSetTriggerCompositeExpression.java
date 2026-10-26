@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class MetricSetTriggerCompositeExpression extends TeaModel {
     /**
-     * <p>The list of sub-conditions. Each item is a simple comparison expression.</p>
+     * <p>The list of sub-conditions, where each item is a simple comparison expression.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;metric&quot;:&quot;cpu_usage&quot;,&quot;operator&quot;:&quot;GreaterThanThreshold&quot;,&quot;threshold&quot;:&quot;90&quot;},{&quot;metric&quot;:&quot;mem_usage&quot;,&quot;operator&quot;:&quot;GreaterThanThreshold&quot;,&quot;threshold&quot;:&quot;85&quot;}]</p>
+     * <p>[{&quot;expressionType&quot;:&quot;SIMPLE&quot;,&quot;queryName&quot;:&quot;cpuQuery&quot;,&quot;operator&quot;:&quot;GT&quot;,&quot;threshold&quot;:80}]</p>
      */
     @NameInMap("conditions")
     public java.util.List<MetricSetTriggerSimpleExpression> conditions;
 
     /**
-     * <p>The expression type, fixed as COMPOSITE.</p>
+     * <p>The expression type, which is fixed to COMPOSITE.</p>
      * 
      * <strong>example:</strong>
      * <p>COMPOSITE</p>
@@ -23,12 +23,7 @@ public class MetricSetTriggerCompositeExpression extends TeaModel {
     public String expressionType;
 
     /**
-     * <p>The logical operator. Valid values:</p>
-     * <ul>
-     * <li>AND: All conditions are met.</li>
-     * <li>OR: Any condition is met.</li>
-     * <li>UNLESS: The first condition is met and none of the remaining conditions are met.</li>
-     * </ul>
+     * <p>The logical operator. Valid values: AND (all conditions are met), OR (any condition is met), and UNLESS (the first condition is met and none of the others are met).</p>
      * 
      * <strong>example:</strong>
      * <p>AND</p>

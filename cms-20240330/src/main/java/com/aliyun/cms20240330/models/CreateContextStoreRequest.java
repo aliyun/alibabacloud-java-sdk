@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateContextStoreRequest extends TeaModel {
     /**
-     * <p>The configuration.</p>
+     * <p>The configuration information.</p>
      */
     @NameInMap("config")
     public CreateContextStoreRequestConfig config;
@@ -21,7 +21,7 @@ public class CreateContextStoreRequest extends TeaModel {
     public String contextStoreName;
 
     /**
-     * <p>The type of the context store.</p>
+     * <p>The context type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,13 +31,13 @@ public class CreateContextStoreRequest extends TeaModel {
     public String contextType;
 
     /**
-     * <p>The properties of the dataset.</p>
+     * <p>The dataset.</p>
      */
     @NameInMap("dataset")
     public CreateContextStoreRequestDataset dataset;
 
     /**
-     * <p>The description of the context store.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -92,7 +92,7 @@ public class CreateContextStoreRequest extends TeaModel {
 
     public static class CreateContextStoreRequestConfigSource extends TeaModel {
         /**
-         * <p>The name of the Log Service Logstore.</p>
+         * <p>The name of the Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>sls-test-logstore</p>
@@ -101,7 +101,7 @@ public class CreateContextStoreRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the Log Service project.</p>
+         * <p>The name of the Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>sls-test-project</p>
@@ -152,7 +152,7 @@ public class CreateContextStoreRequest extends TeaModel {
 
     public static class CreateContextStoreRequestConfig extends TeaModel {
         /**
-         * <p>The metadata fields.</p>
+         * <p>The metadata field.</p>
          */
         @NameInMap("metadataField")
         public java.util.Map<String, String> metadataField;

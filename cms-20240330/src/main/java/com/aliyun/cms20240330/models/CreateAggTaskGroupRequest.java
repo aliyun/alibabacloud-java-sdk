@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAggTaskGroupRequest extends TeaModel {
     /**
-     * <p>Aggregation task group configuration.
-     * Currently only the &quot;RecordingRuleYaml&quot; format is supported, which must conform to the RecordingRule format requirements of open-source Prometheus.</p>
+     * <p>The configuration of the aggregation task group. Only the RecordingRuleYaml format is supported. The configuration must meet the format requirements of RecordingRule in open source Prometheus.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +25,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public String aggTaskGroupConfig;
 
     /**
-     * <p>Aggregation task group configuration type. Default: &quot;RecordingRuleYaml&quot; (open-source Prometheus RecordingRule format).</p>
+     * <p>The configuration type of the aggregation task group. Default value: RecordingRuleYaml, which is the RecordingRule format of open source Prometheus.</p>
      * 
      * <strong>example:</strong>
      * <p>RecordingRuleYaml</p>
@@ -35,7 +34,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public String aggTaskGroupConfigType;
 
     /**
-     * <p>Aggregation task group name.</p>
+     * <p>The name of the aggregation task group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +44,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public String aggTaskGroupName;
 
     /**
-     * <p>The specific scheduling expression when the scheduling mode is set to &quot;Cron&quot;. For example, &quot;0/1 * * * *&quot; means scheduling every 1 minute starting from minute 0.</p>
+     * <p>The cron expression used when the scheduling mode is set to Cron. For example, 0/1 * * * * indicates that the task is scheduled every 1 minute starting from minute 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0/1 * * * *</p>
@@ -54,7 +53,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public String cronExpr;
 
     /**
-     * <p>Fixed delay time for scheduling. Unit: seconds. Default: 30.</p>
+     * <p>The fixed delay time for scheduling. Unit: seconds. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -63,7 +62,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public Integer delay;
 
     /**
-     * <p>Aggregation task group description.</p>
+     * <p>The description of the aggregation task group.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -72,7 +71,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Second-level timestamp corresponding to the scheduling start time.</p>
+     * <p>The UNIX timestamp in seconds for the scheduling start time.</p>
      * 
      * <strong>example:</strong>
      * <p>1724996015</p>
@@ -81,7 +80,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public Long fromTime;
 
     /**
-     * <p>Maximum number of retries for executing aggregation tasks. Default: 20.</p>
+     * <p>The maximum number of retries for executing the aggregation task. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -90,7 +89,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public Integer maxRetries;
 
     /**
-     * <p>Maximum retry duration for executing aggregation tasks. Unit: seconds. Default: 600.</p>
+     * <p>The maximum retry time to execute the aggregation node. Unit: seconds. Default value: 600.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>
@@ -99,7 +98,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public Integer maxRunTimeInSeconds;
 
     /**
-     * <p>Pre-check configuration. Not configured by default. The input string must be valid JSON.</p>
+     * <p>The precheck configuration. By default, this parameter is not configured. The input string must be valid JSON.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;xxx&quot;,&quot;query&quot;:&quot;scalar(sum(count_over_time(up{job=\&quot;_arms/kubelet/cadvisor\&quot;}[15s])) / 21)&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;promql&quot;}</p>
@@ -108,7 +107,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public String precheckString;
 
     /**
-     * <p>Scheduling mode. &quot;Cron&quot; or &quot;FixedRate&quot;. Default: &quot;FixedRate&quot;.</p>
+     * <p>The scheduling mode. Valid values: Cron and FixedRate. Default value: FixedRate.</p>
      * 
      * <strong>example:</strong>
      * <p>FixedRate</p>
@@ -117,7 +116,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public String scheduleMode;
 
     /**
-     * <p>Scheduling time expression. &quot;@s&quot; or &quot;@m&quot; is recommended, indicating the granularity of scheduling time window alignment. Default: &quot;@m&quot;.</p>
+     * <p>The scheduling time expression. Use @s or @m to specify the alignment granularity of the scheduling time window. Default value: @m.</p>
      * 
      * <strong>example:</strong>
      * <p>@m</p>
@@ -126,7 +125,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public String scheduleTimeExpr;
 
     /**
-     * <p>Aggregation task group status. &quot;Running&quot; or &quot;Stopped&quot;. Default: Running.</p>
+     * <p>The status of the aggregation task group. Valid values: Running and Stopped. Default value: Running.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -135,13 +134,13 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Resource group tags.</p>
+     * <p>The tags of the resource group.</p>
      */
     @NameInMap("tags")
     public java.util.List<CreateAggTaskGroupRequestTags> tags;
 
     /**
-     * <p>Target Prometheus instance ID of the aggregation task group.</p>
+     * <p>The target Prometheus instance ID of the aggregation node group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -151,7 +150,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public String targetPrometheusId;
 
     /**
-     * <p>Second-level timestamp corresponding to the scheduling end time. 0 means scheduling will not stop.</p>
+     * <p>The UNIX timestamp in seconds for the scheduling end time. A value of 0 indicates that the scheduling does not stop.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -160,7 +159,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
     public Long toTime;
 
     /**
-     * <p>Whether to override and update when a resource with the same name exists during aggregation task group creation.</p>
+     * <p>Specifies whether to overwrite the existing resource with the same name when creating the aggregation task group.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -311,7 +310,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
 
     public static class CreateAggTaskGroupRequestTags extends TeaModel {
         /**
-         * <p>Key of the resource group tag.</p>
+         * <p>The key of the resource group tag.</p>
          * 
          * <strong>example:</strong>
          * <p>key1</p>
@@ -320,7 +319,7 @@ public class CreateAggTaskGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Value of the resource group tag.</p>
+         * <p>The value of the resource group tag.</p>
          * 
          * <strong>example:</strong>
          * <p>value1</p>

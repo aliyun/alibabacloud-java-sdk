@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateContextStoreAPIKeyResponseBody extends TeaModel {
     /**
-     * <p>The value of the API key. This value is returned only upon creation. Store it in a secure location.</p>
+     * <p>The full API key value.</p>
      * 
      * <strong>example:</strong>
      * <p>sk-xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</p>
@@ -14,7 +14,7 @@ public class CreateContextStoreAPIKeyResponseBody extends TeaModel {
     public String apiKey;
 
     /**
-     * <p>The display name of the API key.</p>
+     * <p>The name of the API key.</p>
      * 
      * <strong>example:</strong>
      * <p>Production Service Key</p>

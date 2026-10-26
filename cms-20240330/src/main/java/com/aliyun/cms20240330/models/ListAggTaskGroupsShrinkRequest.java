@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAggTaskGroupsShrinkRequest extends TeaModel {
     /**
-     * <p>The list of aggregation task group IDs. The value must be a JSON-parsable string.</p>
+     * <p>The list of IDs of the aggregation task groups. The value must be in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;aggTaskGroup-xxx&quot;]</p>
@@ -14,7 +14,7 @@ public class ListAggTaskGroupsShrinkRequest extends TeaModel {
     public String filterAggTaskGroupIds;
 
     /**
-     * <p>The list of aggregation task group names. The value must be a JSON-parsable string.</p>
+     * <p>The list of names of the aggregation task groups. The value must be in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;apiserver_request_total&quot;]</p>
@@ -41,7 +41,7 @@ public class ListAggTaskGroupsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The name to search for. Fuzzy match is supported.</p>
+     * <p>The search keyword for names. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -50,12 +50,7 @@ public class ListAggTaskGroupsShrinkRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The status of the aggregation task group. Valid values:</p>
-     * <ul>
-     * <li>Running</li>
-     * <li>Stopped</li>
-     * </ul>
-     * <p>Default value: Running.</p>
+     * <p>The status of the aggregation task group. Valid values: Running and Stopped. Default value: Running.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -64,13 +59,13 @@ public class ListAggTaskGroupsShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The resource group tags.</p>
+     * <p>The tags of the resource group.</p>
      */
     @NameInMap("tags")
     public String tagsShrink;
 
     /**
-     * <p>The instance ID of the target Managed Service for Prometheus instance for the aggregation node group.</p>
+     * <p>The instance ID of the target Prometheus instance for the aggregation node group.</p>
      * 
      * <strong>example:</strong>
      * <p>rw-pq4apob9jm</p>

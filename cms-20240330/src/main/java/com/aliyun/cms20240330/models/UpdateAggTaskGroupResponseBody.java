@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAggTaskGroupResponseBody extends TeaModel {
     /**
-     * <p>The summary of the aggregation task group configuration.</p>
+     * <p>The hash of the aggregation task group configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>a54136014dc386a92c83a6ef1e97ff22</p>

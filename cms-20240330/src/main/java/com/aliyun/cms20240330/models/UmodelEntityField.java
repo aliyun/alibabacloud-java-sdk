@@ -4,15 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class UmodelEntityField extends TeaModel {
-    /**
-     * <p>The name of the entity field.</p>
-     */
     @NameInMap("field")
     public String field;
 
-    /**
-     * <p>The field alias or display value.</p>
-     */
     @NameInMap("value")
     public String value;
 

@@ -25,7 +25,7 @@ public class FilterList extends TeaModel {
     public String type;
 
     /**
-     * <p>The filter value. This parameter can be left empty when type is set to ALL or DISABLED.</p>
+     * <p>The filter value, which can be empty when the type is ALL or DISABLED.</p>
      * 
      * <strong>example:</strong>
      * <p>prod</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetContextRequest extends TeaModel {
     /**
-     * <p>Whether to return the context in a formatted structure. Valid values: <code>true</code> and <code>false</code>. Default value: <code>false</code>.</p>
+     * <p>Specifies whether to format the context.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
