@@ -5,17 +5,14 @@ import com.aliyun.tea.*;
 
 public class AddDatabasesToGroupRequest extends TeaModel {
     /**
-     * <p>An array that consists of the database IDs.</p>
+     * <p>The array of database IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DatabaseIds")
     public java.util.List<String> databaseIds;
 
     /**
-     * <p>The ID of the asset group to which you want to add the databases.</p>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the asset group.</p>
-     * </blockquote>
+     * <p>The ID of the asset group to which you want to add the databases. You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the asset group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +22,7 @@ public class AddDatabasesToGroupRequest extends TeaModel {
     public String hostGroupId;
 
     /**
-     * <p>The bastion host ID.</p>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
-     * </blockquote>
+     * <p>The ID of the Bastionhost instance. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,10 +32,7 @@ public class AddDatabasesToGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
-     * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
-     * </blockquote>
+     * <p>The region ID of the Bastionhost instance. For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

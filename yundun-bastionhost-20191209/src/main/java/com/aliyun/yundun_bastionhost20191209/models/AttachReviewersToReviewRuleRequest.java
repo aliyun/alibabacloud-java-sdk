@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AttachReviewersToReviewRuleRequest extends TeaModel {
     /**
-     * <p>The ID of the bastion host instance.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the DescribeInstances operation to obtain the bastion host instance ID.</p>
+     * <p>You can call the DescribeInstances operation to obtain the Bastionhost instance ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,15 +18,15 @@ public class AttachReviewersToReviewRuleRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The information about the auditors associated with the audit policy.</p>
+     * <p>The information about the auditors to be associated with the audit policy.</p>
      */
     @NameInMap("Principals")
     public java.util.List<AttachReviewersToReviewRuleRequestPrincipals> principals;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class AttachReviewersToReviewRuleRequest extends TeaModel {
     /**
      * <p>The ID of the audit policy.</p>
      * <blockquote>
-     * <p>You can call the ListReviewRules operation to obtain this parameter.</p>
+     * <p>You can invoke the ListReviewRules operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -87,7 +87,7 @@ public class AttachReviewersToReviewRuleRequest extends TeaModel {
 
     public static class AttachReviewersToReviewRuleRequestPrincipals extends TeaModel {
         /**
-         * <p>When PrincipalType is set to RamUser, specify the RAM user ID of the auditor to associate. When PrincipalType is set to RamRole, specify the RAM role ARN of the auditor to associate.</p>
+         * <p>The ID of the RAM user or the ARN of the RAM role of the auditor to be associated. If PrincipalType is set to RamUser, specify the RAM user ID. If PrincipalType is set to RamRole, specify the ARN of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>160****9214</p>
@@ -96,7 +96,7 @@ public class AttachReviewersToReviewRuleRequest extends TeaModel {
         public String principalId;
 
         /**
-         * <p>The display name of the associated auditor\&quot;s RAM user or RAM role.</p>
+         * <p>The display name of the RAM user or RAM role of the associated auditor.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -105,7 +105,7 @@ public class AttachReviewersToReviewRuleRequest extends TeaModel {
         public String principalName;
 
         /**
-         * <p>The type of the auditor to associate. Valid values:</p>
+         * <p>The type of the auditor to be associated. Valid values:</p>
          * <ul>
          * <li><p><strong>RamUser</strong>: Resource Access Management (RAM) user.</p>
          * </li>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListOperationHostAccountsResponseBody extends TeaModel {
     /**
-     * <p>The host accounts returned.</p>
+     * <p>The host accounts.</p>
      */
     @NameInMap("HostAccounts")
     public java.util.List<ListOperationHostAccountsResponseBodyHostAccounts> hostAccounts;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -20,7 +20,7 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of host accounts returned.</p>
+     * <p>The total number of host accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -59,13 +59,13 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
 
     public static class ListOperationHostAccountsResponseBodyHostAccountsSSHConfig extends TeaModel {
         /**
-         * <p>Indicates whether SFTP channels are enabled for the account.</p>
+         * <p>Indicates whether the SFTP channel is enabled for the account.</p>
          */
         @NameInMap("EnableSFTPChannel")
         public Boolean enableSFTPChannel;
 
         /**
-         * <p>Indicates whether SSH channels are enabled for the account.</p>
+         * <p>Indicates whether the SSH channel is enabled for the account.</p>
          */
         @NameInMap("EnableSSHChannel")
         public Boolean enableSSHChannel;
@@ -95,12 +95,10 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
 
     public static class ListOperationHostAccountsResponseBodyHostAccounts extends TeaModel {
         /**
-         * <p>Indicates whether a password is configured for the host account.</p>
+         * <p>Indicates whether a password is set for the host account.</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: A password is set.</li>
+         * <li><strong>false</strong>: No password is set.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +108,7 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         public Boolean hasPassword;
 
         /**
-         * <p>The host account ID.</p>
+         * <p>The ID of the host account.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -119,7 +117,7 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         public String hostAccountId;
 
         /**
-         * <p>The host account name.</p>
+         * <p>The name of the host account.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -128,7 +126,7 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         public String hostAccountName;
 
         /**
-         * <p>The host ID.</p>
+         * <p>The ID of the host.</p>
          * 
          * <strong>example:</strong>
          * <p>１</p>
@@ -137,7 +135,7 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         public String hostId;
 
         /**
-         * <p>The ID of the shared key that is associated with the host.</p>
+         * <p>The ID of the host shared key.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -155,12 +153,10 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         public String privateKeyFingerprint;
 
         /**
-         * <p>The protocol that is used by the host account.</p>
+         * <p>The protocol name of the host account.</p>
          * <ul>
-         * <li><p><strong>SSH</strong></p>
-         * </li>
-         * <li><p><strong>RDP</strong></p>
-         * </li>
+         * <li><strong>SSH</strong></li>
+         * <li><strong>RDP</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +166,7 @@ public class ListOperationHostAccountsResponseBody extends TeaModel {
         public String protocolName;
 
         /**
-         * <p>Indicates whether the Secure File Transfer Protocol (SFTP) channels or the SSH channels are enabled for the host account that uses the SSH protocol.</p>
+         * <p>The O&amp;M permissions of the SSH account.</p>
          */
         @NameInMap("SSHConfig")
         public ListOperationHostAccountsResponseBodyHostAccountsSSHConfig SSHConfig;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -14,7 +14,7 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the call.</p>
+     * <p>The results of the API call.</p>
      */
     @NameInMap("Results")
     public java.util.List<AttachHostGroupAccountsToUserResponseBodyResults> results;
@@ -42,18 +42,13 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
 
     public static class AttachHostGroupAccountsToUserResponseBodyResultsHostAccountNames extends TeaModel {
         /**
-         * <p>The return code that indicates whether the user was authorized to manage the host account. Valid values:</p>
+         * <p>The result code of the operation to grant the user access to the host account. Valid values:</p>
          * <ul>
-         * <li><p><strong>OK</strong>: The call was successful.</p>
-         * </li>
-         * <li><p><strong>UNEXPECTED</strong>: An unknown error occurred.</p>
-         * </li>
-         * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
-         * </li>
-         * <li><p><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</p>
-         * </li>
-         * <li><p><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</p>
-         * </li>
+         * <li><strong>OK</strong>: The operation succeeded.</li>
+         * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
+         * <li><strong>INVALID_ARGUMENT</strong>: The specified request parameter is invalid.</li>
+         * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object does not exist.</li>
+         * <li><strong>OBJECT_AlREADY_EXISTS</strong> : The specified object already exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +67,7 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
         public String hostAccountName;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -113,18 +108,13 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
 
     public static class AttachHostGroupAccountsToUserResponseBodyResults extends TeaModel {
         /**
-         * <p>The return code that indicates whether the call was successful. Valid values:</p>
+         * <p>The result code of the API call. Valid values:</p>
          * <ul>
-         * <li><p><strong>OK</strong>: The call was successful.</p>
-         * </li>
-         * <li><p><strong>UNEXPECTED</strong>: An unknown error occurred.</p>
-         * </li>
-         * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
-         * </li>
-         * <li><p><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</p>
-         * </li>
-         * <li><p><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</p>
-         * </li>
+         * <li><strong>OK</strong>: The operation succeeded.</li>
+         * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
+         * <li><strong>INVALID_ARGUMENT</strong>: The specified request parameter is invalid.</li>
+         * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object does not exist.</li>
+         * <li><strong>OBJECT_AlREADY_EXISTS</strong> : The specified object already exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +124,7 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The result of authorizing the user to manage the host accounts.</p>
+         * <p>The results of the operation to grant the user access to the host accounts.</p>
          */
         @NameInMap("HostAccountNames")
         public java.util.List<AttachHostGroupAccountsToUserResponseBodyResultsHostAccountNames> hostAccountNames;
@@ -149,7 +139,7 @@ public class AttachHostGroupAccountsToUserResponseBody extends TeaModel {
         public String hostGroupId;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You can ignore this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateProjectRequest extends TeaModel {
     /**
-     * <p>The project description.</p>
+     * <p>The description of the project.</p>
      * 
      * <strong>example:</strong>
      * <p>comment</p>
@@ -14,9 +14,9 @@ public class CreateProjectRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the bastion host instance.</p>
+     * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,9 +27,9 @@ public class CreateProjectRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The list of member account UIDs to associate with the project.</p>
+     * <p>The UIDs of the member accounts to associate with the project.</p>
      * <blockquote>
-     * <p>You can call the ListMembersNotForProject operation to query this parameter.</p>
+     * <p>You can call the ListMembersNotForProject operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class CreateProjectRequest extends TeaModel {
     public String memberIds;
 
     /**
-     * <p>The project name.</p>
+     * <p>The name of the project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,9 +49,9 @@ public class CreateProjectRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

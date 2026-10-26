@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHostAccountsForUserResponseBody extends TeaModel {
     /**
-     * <p>The list of host accounts returned.</p>
+     * <p>The host accounts returned.</p>
      */
     @NameInMap("HostAccounts")
     public java.util.List<ListHostAccountsForUserResponseBodyHostAccounts> hostAccounts;
@@ -77,6 +77,15 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         public String hostAccountName;
 
         /**
+         * <p>The type of the host account.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;Normal&quot;</p>
+         */
+        @NameInMap("HostAccountType")
+        public String hostAccountType;
+
+        /**
          * <p>The ID of the host to which the host account belongs.</p>
          * 
          * <strong>example:</strong>
@@ -86,10 +95,10 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         public String hostId;
 
         /**
-         * <p>Indicates whether the host account is authorized to the current user. Valid values:</p>
+         * <p>Indicates whether the host account is authorized for the current user. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Authorized.</li>
-         * <li><strong>false</strong>: Unauthorized.</li>
+         * <li><strong>true</strong>: authorized</li>
+         * <li><strong>false</strong>: unauthorized</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -99,7 +108,7 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         public Boolean isAuthorized;
 
         /**
-         * <p>The protocol name of the host account. Valid values:</p>
+         * <p>The protocol of the host account. Valid values:</p>
          * <ul>
          * <li><strong>SSH</strong></li>
          * <li><strong>RDP</strong></li>
@@ -130,6 +139,14 @@ public class ListHostAccountsForUserResponseBody extends TeaModel {
         }
         public String getHostAccountName() {
             return this.hostAccountName;
+        }
+
+        public ListHostAccountsForUserResponseBodyHostAccounts setHostAccountType(String hostAccountType) {
+            this.hostAccountType = hostAccountType;
+            return this;
+        }
+        public String getHostAccountType() {
+            return this.hostAccountType;
         }
 
         public ListHostAccountsForUserResponseBodyHostAccounts setHostId(String hostId) {

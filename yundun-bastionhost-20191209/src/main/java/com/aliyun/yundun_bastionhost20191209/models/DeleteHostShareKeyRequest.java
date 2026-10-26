@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteHostShareKeyRequest extends TeaModel {
     /**
-     * <p>The shared key ID.</p>
+     * <p>The ID of the host shared key.</p>
      * <blockquote>
-     * <p>You must specify this parameter. You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to query the shared key ID.</p>
+     * <p>This parameter is required. You can call the <a href="https://help.aliyun.com/document_detail/462973.html">ListHostShareKeys</a> operation to retrieve this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DeleteHostShareKeyRequest extends TeaModel {
     public String hostShareKeyId;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to retrieve this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -30,9 +30,9 @@ public class DeleteHostShareKeyRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

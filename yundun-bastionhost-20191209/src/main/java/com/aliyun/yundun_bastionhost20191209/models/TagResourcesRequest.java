@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the Bastionhost instance resides.</p>
+     * <p>The region ID of the Bastionhost instance for which you want to create and bind tags.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -18,10 +18,10 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the Bastionhost instances. You can specify up to 20 instance IDs.</p>
-     * <p>N can be from 1 to 20.</p>
+     * <p>The list of Bastionhost instance IDs.</p>
+     * <p>Valid values of N: 1 to 20.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the IDs of Bastionhost instances.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the Bastionhost instance IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -32,8 +32,8 @@ public class TagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource.</p>
-     * <p>Set the value to <code>INSTANCE</code>. This value indicates a Bastionhost instance.</p>
+     * <p>The resource type.</p>
+     * <p>The only valid value is <strong>INSTANCE</strong>, which indicates a Bastionhost instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags to add to the instances. You can add up to 20 tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<TagResourcesRequestTag> tag;
@@ -87,13 +87,12 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key of the instance.
+         * Valid values of N: 1 to 20. </p>
          * <blockquote>
          * <ul>
-         * <li><p>The tag key cannot be an empty string. It can be up to 128 characters in length.</p>
-         * </li>
-         * <li><p>The tag key cannot start with <strong>aliyun</strong> or <strong>acs:</strong>. It cannot contain <strong>http\://</strong> or <strong>https\://</strong>.</p>
-         * </li>
+         * <li>This parameter cannot be an empty string and can be up to 128 characters in length.</li>
+         * <li>This parameter cannot start with <strong>aliyun</strong> or <strong>acs:</strong> and cannot contain <strong>http://</strong> or <strong>https://</strong>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -104,13 +103,11 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value of the instance.<br>Valid values of N: 1 to 20.</p>
          * <blockquote>
          * <ul>
-         * <li><p>The tag value can be an empty string. It can be up to 128 characters in length.</p>
-         * </li>
-         * <li><p>The tag value cannot start with <strong>aliyun</strong> or <strong>acs:</strong>. It cannot contain <strong>http\://</strong> or <strong>https\://</strong>.</p>
-         * </li>
+         * <li>This parameter can be an empty string and can be up to 128 characters in length.</li>
+         * <li>This parameter cannot start with <strong>aliyun</strong> or <strong>acs:</strong> and cannot contain <strong>http://</strong> or <strong>https://</strong>.</li>
          * </ul>
          * </blockquote>
          * 

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteReviewRulesRequest extends TeaModel {
     /**
-     * <p>The instance ID of the bastion host.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DeleteReviewRulesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host. </p>
+     * <p>The region ID of the Bastionhost instance. </p>
      * <blockquote>
-     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DeleteReviewRulesRequest extends TeaModel {
     /**
      * <p>The array of audit policy IDs to delete.</p>
      * <blockquote>
-     * <p>You can invoke the ListReviewRules operation to query this parameter.</p>
+     * <p>You can call the ListReviewRules operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

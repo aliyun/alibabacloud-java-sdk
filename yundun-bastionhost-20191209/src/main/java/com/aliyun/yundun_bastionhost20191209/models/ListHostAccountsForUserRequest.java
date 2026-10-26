@@ -14,9 +14,9 @@ public class ListHostAccountsForUserRequest extends TeaModel {
     public String hostAccountName;
 
     /**
-     * <p>The ID of the host to which the host accounts belong.</p>
+     * <p>The ID of the host for which you want to query the host accounts.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/200665.html">ListHosts</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,9 +27,9 @@ public class ListHostAccountsForUserRequest extends TeaModel {
     public String hostId;
 
     /**
-     * <p>The instance ID of the Bastionhost instance to which the user belongs. This parameter is used to query the host account authorization list for the user.</p>
+     * <p>The instance ID of the Bastionhost instance to which the user whose host accounts with authorization you want to query belongs.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,7 @@ public class ListHostAccountsForUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number for the paged query. This parameter is used for paging. Default value: <strong>1</strong>.</p>
+     * <p>The page number for paging in a paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,9 +49,9 @@ public class ListHostAccountsForUserRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The maximum number of entries to return on each page in a paged query. This parameter is used for paging. Maximum value: 100. Default value: 20. If this parameter is left empty, 20 entries are returned by default.</p>
+     * <p>The maximum number of entries to return on each page for paging in a paged query.<br>The maximum value of the PageSize parameter is 100. Default value: 20. If you leave this parameter empty, 20 entries are returned.</p>
      * <blockquote>
-     * <p>Specify a value for this parameter.</p>
+     * <p>Specify a value for the PageSize parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class ListHostAccountsForUserRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The region ID of the Bastionhost instance to which the user belongs.</p>
+     * <p>The region ID of the Bastionhost instance where the user whose authorized host accounts you want to query is located.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
@@ -82,9 +82,9 @@ public class ListHostAccountsForUserRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the user whose host accounts you want to query.</p>
+     * <p>The ID of the user whose authorized and unauthorized host accounts you want to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204522.html">ListUsers</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -1,3 +1,10 @@
+2026-10-26 Version: 1.7.2
+- Update API ListHostAccountsForUser: add response parameters Body.HostAccounts.$.HostAccountType.
+- Update API ListHostAccountsForUserGroup: add response parameters Body.HostAccounts.$.HostAccountType.
+- Update API ListHosts: add response parameters Body.Hosts.$.DomainAccountCount.
+- Update API ListProjects: add response parameters Body.Projects.$.DomainServerCount.
+
+
 2026-10-22 Version: 1.7.1
 - Update API DescribeInstanceAttribute: add response parameters Body.InstanceAttribute.AiCreditsTotal.
 - Update API DescribeInstanceAttribute: add response parameters Body.InstanceAttribute.AiCreditsUs.

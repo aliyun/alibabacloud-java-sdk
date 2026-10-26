@@ -7,7 +7,7 @@ public class CreateProjectNotifyReceiverRequest extends TeaModel {
     /**
      * <p>The email address of the recipient.</p>
      * <blockquote>
-     * <p>You must specify at least one of Phone or Email.</p>
+     * <p>You must specify at least one of the mobile phone number and the email address.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class CreateProjectNotifyReceiverRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The instance ID of the bastion host.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/462953.html">DescribeInstances</a> operation to query this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/462953.html">DescribeInstances</a> operation to retrieve this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class CreateProjectNotifyReceiverRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the recipient. The name must be 1 to 128 characters in length, cannot start with a special character, and can contain only the following special characters: periods (.), underscores (_), hyphens (-), backslashes (\), and spaces.</p>
+     * <p>The name of the recipient. The name must be 1 to 128 characters in length. It cannot start with a special character and can contain only the following special characters: periods (.), underscores (_), hyphens (-), backslashes (\), and spaces.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,9 +39,9 @@ public class CreateProjectNotifyReceiverRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The phone number of the recipient.</p>
+     * <p>The mobile phone number of the recipient.</p>
      * <blockquote>
-     * <p>You must specify at least one of Phone or Email.</p>
+     * <p>You must specify at least one of the mobile phone number and the email address.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CreateProjectNotifyReceiverRequest extends TeaModel {
     /**
      * <p>The project ID.</p>
      * <blockquote>
-     * <p>You can call the ListProjects operation to query this parameter.</p>
+     * <p>You can call the ListProjects operation to retrieve this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -64,9 +64,9 @@ public class CreateProjectNotifyReceiverRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

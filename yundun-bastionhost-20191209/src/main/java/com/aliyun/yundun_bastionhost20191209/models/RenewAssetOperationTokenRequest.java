@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class RenewAssetOperationTokenRequest extends TeaModel {
     /**
-     * <p>The ID of the Bastionhost instance. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the instance ID.</p>
+     * <p>The ID of the Bastionhost instance.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the Bastionhost instance ID.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +18,10 @@ public class RenewAssetOperationTokenRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the Bastionhost instance. For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
+     * <blockquote>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -25,12 +31,18 @@ public class RenewAssetOperationTokenRequest extends TeaModel {
 
     /**
      * <p>The O&amp;M token to be renewed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NmYyMmEzNmMwYzljNGY******</p>
      */
     @NameInMap("Token")
     public String token;
 
     /**
-     * <p>The ID of the O&amp;M token to be renewed. You can call the <a href="https://help.aliyun.com/document_detail/2758861.html">GenerateAssetOperationToken</a> operation to obtain the token ID.</p>
+     * <p>The ID of the O&amp;M token to be renewed.</p>
+     * <blockquote>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758861.html">GenerateAssetOperationToken</a> operation to obtain this parameter.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>NmYyMmEzNmMwYzljNGYxMjh******</p>

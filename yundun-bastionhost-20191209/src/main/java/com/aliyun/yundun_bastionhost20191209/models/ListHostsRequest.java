@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHostsRequest extends TeaModel {
     /**
-     * <p>The address of the host. A domain name or an IP address is supported. Only exact match is supported.</p>
+     * <p>The address of the host. You can use a domain name or an IP address. Fuzzy match is not supported. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>1.1.XX.XX</p>
@@ -16,7 +16,7 @@ public class ListHostsRequest extends TeaModel {
     /**
      * <p>The ID of the host group to which the host belongs.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the host group ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to obtain the host group ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ListHostsRequest extends TeaModel {
     public String hostGroupId;
 
     /**
-     * <p>The name of the host. Only exact match is supported.</p>
+     * <p>The name of the host. Fuzzy match is not supported. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>host</p>
@@ -35,7 +35,7 @@ public class ListHostsRequest extends TeaModel {
     public String hostName;
 
     /**
-     * <p>The instance ID of the Bastionhost instance.</p>
+     * <p>The instance ID of the Bastionhost instance whose hosts you want to query.</p>
      * <blockquote>
      * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
@@ -70,7 +70,7 @@ public class ListHostsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>Settings for paging. Specifies the number of host information entries to return per page in a paged query. Default value: <strong>10</strong>, which indicates that 10 host information entries are displayed per page.</p>
+     * <p>Specifies the number of hosts to return per page in a paged query. Default value: <strong>10</strong>, which indicates that 10 hosts are returned per page.</p>
      * <blockquote>
      * <p>Do not leave PageSize empty.</p>
      * </blockquote>
@@ -107,7 +107,7 @@ public class ListHostsRequest extends TeaModel {
      * <ul>
      * <li><strong>Local</strong>: local host</li>
      * <li><strong>Ecs</strong>: ECS instance</li>
-     * <li><strong>Rds</strong>: ApsaraDB RDS dedicated cluster host</li>
+     * <li><strong>Rds</strong>: RDS dedicated cluster host</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class ListHostsRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The ECS instance ID or the dedicated cluster host ID that corresponds to the host. Only exact match is supported.</p>
+     * <p>The ECS instance ID or the dedicated cluster host ID to which the host corresponds. Fuzzy match is not supported. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>i-bp19ienyt0yax748****</p>

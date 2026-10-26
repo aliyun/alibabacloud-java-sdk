@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AttachHostGroupAccountsToUserGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the host group and the name of the host account that you want to authorize the user group to manage. You can specify up to 10 host group IDs and up to 10 host account names for each host group. You can specify only host group IDs. In this case, the user group is authorized to manage only the specified host groups. For more information about this parameter, see the &quot;Description of the HostGroups parameter&quot; section of this topic.</p>
+     * <p>The IDs of the host groups and the names of the host accounts to which you want to grant the user group access. You can specify up to 10 host group IDs and up to 10 host account names for each host group. If you do not specify host account names, the user group is granted access only to the host groups. For more information about the structure of this parameter, see the HostGroups parameter structure description in the Request parameters section.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query the ID of the host group and the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query the name of the host account.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/201307.html">ListHostGroups</a> operation to query host group IDs and call the <a href="https://help.aliyun.com/document_detail/204372.html">ListHostAccounts</a> operation to query host account names.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class AttachHostGroupAccountsToUserGroupRequest extends TeaModel {
     public String hostGroups;
 
     /**
-     * <p>The ID of the bastion host for which you want to authorize the user group to manage the specified host groups and host accounts.</p>
+     * <p>The ID of the Bastionhost instance where the user group resides. The user group is to be authorized to access host groups and host accounts.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the ID of the bastion host.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -31,9 +31,9 @@ public class AttachHostGroupAccountsToUserGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the bastion host for which you want to authorize the user group to manage the specified host groups and host accounts.</p>
+     * <p>Specifies the region ID of the Bastionhost instance that manages the user group to which you want to grant permissions on host groups and host accounts.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,9 +43,9 @@ public class AttachHostGroupAccountsToUserGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the user group that you want to authorize to manage the specified host groups and host accounts.</p>
+     * <p>The ID of the user group to which you want to grant permissions on host groups and host accounts.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the ID of the user group.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/204509.html">ListUserGroups</a> operation to query the user group ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

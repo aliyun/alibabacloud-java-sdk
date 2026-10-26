@@ -7,7 +7,7 @@ public class ListInstanceRdMembersRequest extends TeaModel {
     /**
      * <p>The ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class ListInstanceRdMembersRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The maximum number of RD member accounts to return. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The maximum number of member accounts in a resource directory to return per request. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -27,7 +27,7 @@ public class ListInstanceRdMembersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for a paged query. If this is your first query, leave this parameter empty.</p>
+     * <p>The request token. Leave this parameter empty or do not specify it for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</p>
@@ -38,7 +38,7 @@ public class ListInstanceRdMembersRequest extends TeaModel {
     /**
      * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
+     * <p>For the mappings between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

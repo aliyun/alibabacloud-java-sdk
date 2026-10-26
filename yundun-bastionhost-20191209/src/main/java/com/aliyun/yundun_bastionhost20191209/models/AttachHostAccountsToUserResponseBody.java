@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachHostAccountsToUserResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EC9BF0F4-8983-491A-BC8C-1B4DD94976DE</p>
@@ -14,7 +14,7 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the call.</p>
+     * <p>The results of the API call.</p>
      */
     @NameInMap("Results")
     public java.util.List<AttachHostAccountsToUserResponseBodyResults> results;
@@ -42,18 +42,13 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
 
     public static class AttachHostAccountsToUserResponseBodyResultsHostAccounts extends TeaModel {
         /**
-         * <p>The return code that indicates whether the user was authorized to manage the host accounts. Valid values:</p>
+         * <p>The result returned for the operation of authorizing host accounts for the user. Valid values:</p>
          * <ul>
-         * <li><p><strong>OK</strong>: The call was successful.</p>
-         * </li>
-         * <li><p><strong>UNEXPECTED</strong>: An unknown error occurred.</p>
-         * </li>
-         * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
-         * </li>
-         * <li><p><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</p>
-         * </li>
-         * <li><p><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</p>
-         * </li>
+         * <li><strong>OK</strong>: The operation is successful.</li>
+         * <li><strong>UNEXPECTED</strong>: An unknown error occurred.</li>
+         * <li><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</li>
+         * <li><strong>OBJECT_NOT_FOUND</strong>: The object on which the operation is performed does not exist.</li>
+         * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The object on which the operation is performed already exists.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +67,7 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
         public String hostAccountId;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You can ignore it.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -113,26 +108,24 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
 
     public static class AttachHostAccountsToUserResponseBodyResults extends TeaModel {
         /**
-         * <p>The return code that indicates whether the call was successful. Valid values:</p>
+         * <p>The result of the API call. Valid values:</p>
          * <ul>
-         * <li><p><strong>OK</strong>: The call was successful.</p>
+         * <li><p><strong>OK</strong>: The operation is successful.</p>
          * </li>
          * <li><p><strong>UNEXPECTED</strong>: An unknown error occurred.</p>
          * </li>
          * <li><p><strong>INVALID_ARGUMENT</strong>: A request parameter is invalid.</p>
+         * <blockquote>
+         * <p>Check the request parameters, ensure that they are correct, and then call the operation again.</p>
+         * </blockquote>
          * </li>
-         * </ul>
+         * <li><p><strong>OBJECT_NOT_FOUND</strong>: The object on which the operation is performed does not exist.</p>
          * <blockquote>
-         * <p>Make sure that the request parameters are valid and call the operation again.</p>
+         * <p>Check whether the ID of the Bastionhost instance exists, whether the host exists, and whether the host ID is correct, and then call the operation again.</p>
          * </blockquote>
-         * <ul>
-         * <li><strong>OBJECT_NOT_FOUND</strong>: The specified object on which you want to perform the operation does not exist.</li>
-         * </ul>
-         * <blockquote>
-         * <p>Check whether the specified ID of the bastion host exists, whether the specified hosts exist, and whether the specified host IDs are valid. Then, call the operation again.</p>
-         * </blockquote>
-         * <ul>
-         * <li><strong>OBJECT_AlREADY_EXISTS</strong>: The specified object on which you want to perform the operation already exists.</li>
+         * </li>
+         * <li><p><strong>OBJECT_AlREADY_EXISTS</strong>: The object on which the operation is performed already exists.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -142,7 +135,7 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The result of authorizing the user to manage the host accounts.</p>
+         * <p>The results returned for the operation of authorizing host accounts for the user.</p>
          */
         @NameInMap("HostAccounts")
         public java.util.List<AttachHostAccountsToUserResponseBodyResultsHostAccounts> hostAccounts;
@@ -157,7 +150,7 @@ public class AttachHostAccountsToUserResponseBody extends TeaModel {
         public String hostId;
 
         /**
-         * <p>This parameter is deprecated.</p>
+         * <p><strong>[Deprecated]</strong> This parameter is deprecated. You can ignore it.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>

@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListReviewRulesRequest extends TeaModel {
     /**
-     * <p>The ID of the bastion host instance.</p>
-     * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the bastion host instance ID.</p>
-     * </blockquote>
+     * <p>The ID of the Bastionhost instance. You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +24,7 @@ public class ListReviewRulesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The maximum number of audit policies to return per request. Valid values: 1 to 100. Default value: 20.</p>
+     * <p>The maximum number of audit policy entries to return in a single request. Valid values: 1 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -36,7 +33,7 @@ public class ListReviewRulesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the paging query. Leave this parameter empty or do not specify it for the first request.</p>
+     * <p>The token that is used to start a paged query. Do not specify this parameter or specify an empty character string for the first request.</p>
      * 
      * <strong>example:</strong>
      * <p>4ieSWJCwxvW3dk3wF.BqkrZmP72nWu5zJ5NWydMqyEs****</p>
@@ -45,10 +42,7 @@ public class ListReviewRulesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID of the bastion host. </p>
-     * <blockquote>
-     * <p>For the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
-     * </blockquote>
+     * <p>The region ID of the Bastionhost instance. For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -57,10 +51,7 @@ public class ListReviewRulesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The number of entries to skip.</p>
-     * <blockquote>
-     * <p>This parameter takes effect only when NextToken is empty.</p>
-     * </blockquote>
+     * <p>The number of entries to skip. This parameter takes effect only when NextToken is left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

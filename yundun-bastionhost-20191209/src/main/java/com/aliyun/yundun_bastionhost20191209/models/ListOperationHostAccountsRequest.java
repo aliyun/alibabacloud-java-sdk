@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOperationHostAccountsRequest extends TeaModel {
     /**
-     * <p>The name of the host account to query. Only exact match is supported.</p>
+     * <p>The name of the host account that you want to query. Only exact match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>root</p>
@@ -14,9 +14,9 @@ public class ListOperationHostAccountsRequest extends TeaModel {
     public String hostAccountName;
 
     /**
-     * <p>The ID of the host whose accounts you want to query.</p>
+     * <p>The ID of the host for which you want to query host accounts.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758857.html">ListOperationHosts</a> operation to query the host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2758857.html">ListOperationHosts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,9 +27,9 @@ public class ListOperationHostAccountsRequest extends TeaModel {
     public String hostId;
 
     /**
-     * <p>The bastion host ID.</p>
+     * <p>The instance ID of the Bastionhost instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to query the bastion host ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/153281.html">DescribeInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,7 @@ public class ListOperationHostAccountsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the current page when paging in a paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,9 +49,9 @@ public class ListOperationHostAccountsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.<br> Valid values: 1 to 100. Default value: 20. If you leave this parameter empty, 20 entries are returned on each page.</p>
+     * <p>The maximum number of entries to return on each page when paging in a paged query.<br>The maximum value of the PageSize parameter is 100. Default value: 20. If you leave this parameter empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>We recommend that you do not leave this parameter empty.</p>
+     * <p>Specify a value for the PageSize parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class ListOperationHostAccountsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The region ID of the bastion host.</p>
+     * <p>The region ID of the Bastionhost instance.</p>
      * <blockquote>
      * <p>For more information about the mapping between region IDs and region names, see <a href="https://help.aliyun.com/document_detail/40654.html">Regions and zones</a>.</p>
      * </blockquote>

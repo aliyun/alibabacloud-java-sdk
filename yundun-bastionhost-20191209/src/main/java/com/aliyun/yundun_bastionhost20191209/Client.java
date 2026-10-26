@@ -238,7 +238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds multiple databases to a specified asset group.</p>
+     * <p>Adds multiple database instances to a specified asset group.</p>
      * 
      * @param request AddDatabasesToGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -282,7 +282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds multiple databases to a specified asset group.</p>
+     * <p>Adds multiple database instances to a specified asset group.</p>
      * 
      * @param request AddDatabasesToGroupRequest
      * @return AddDatabasesToGroupResponse
@@ -364,7 +364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a Resource Directory (RD) member account to a Bastionhost instance so that you can import and manage the cloud assets of the member account through Bastionhost.</p>
+     * <p>Adds member accounts in a resource directory.</p>
      * 
      * @param request AddInstanceRdMemberRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -404,7 +404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds a Resource Directory (RD) member account to a Bastionhost instance so that you can import and manage the cloud assets of the member account through Bastionhost.</p>
+     * <p>Adds member accounts in a resource directory.</p>
      * 
      * @param request AddInstanceRdMemberRequest
      * @return AddInstanceRdMemberResponse
@@ -720,7 +720,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\\\\\\\\\\&amp;M operations on the assets.</p>
+     * <p>Authorizes assets for a user. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</p>
      * 
      * @param request AttachHostAccountsToUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -764,7 +764,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>After you add a user to your bastion host, you must authorize the user to manage assets. Only authorized users can log on to the bastion host to perform O\\\\\\\\\\\\&amp;M operations on the assets.</p>
+     * <p>Authorizes assets for a user. After the authorization, the user can use Bastionhost to perform O&amp;M operations on the authorized assets.</p>
      * 
      * @param request AttachHostAccountsToUserRequest
      * @return AttachHostAccountsToUserResponse
@@ -842,7 +842,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes a user to manage one or more host groups and host accounts.</p>
+     * <p>Grants permissions on host groups and host accounts to a user.</p>
      * 
      * @param request AttachHostGroupAccountsToUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -886,7 +886,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes a user to manage one or more host groups and host accounts.</p>
+     * <p>Grants permissions on host groups and host accounts to a user.</p>
      * 
      * @param request AttachHostGroupAccountsToUserRequest
      * @return AttachHostGroupAccountsToUserResponse
@@ -898,7 +898,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes a user to manage one or more host groups and host accounts.</p>
+     * <p>Grants permissions on host groups and host accounts to a user group.</p>
      * 
      * @param request AttachHostGroupAccountsToUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -942,7 +942,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Authorizes a user to manage one or more host groups and host accounts.</p>
+     * <p>Grants permissions on host groups and host accounts to a user group.</p>
      * 
      * @param request AttachHostGroupAccountsToUserGroupRequest
      * @return AttachHostGroupAccountsToUserGroupResponse
@@ -1066,7 +1066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies manageable projects in a project authorization. This operation can be called only when the ScopeType parameter returned by the GetProjectAuthorization operation is 2 for the corresponding project authorization.</p>
+     * <p>Specifies the projects that can be managed in a project authorization. You can call this operation only when the ScopeType parameter returned by the GetProjectAuthorization operation for the corresponding project authorization is 2.</p>
      * 
      * @param request AttachProjectsToProjectAuthorizationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1110,7 +1110,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Specifies manageable projects in a project authorization. This operation can be called only when the ScopeType parameter returned by the GetProjectAuthorization operation is 2 for the corresponding project authorization.</p>
+     * <p>Specifies the projects that can be managed in a project authorization. You can call this operation only when the ScopeType parameter returned by the GetProjectAuthorization operation for the corresponding project authorization is 2.</p>
      * 
      * @param request AttachProjectsToProjectAuthorizationRequest
      * @return AttachProjectsToProjectAuthorizationResponse
@@ -1122,7 +1122,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates projects with the scope of an audit policy. This operation can be invoked only when the ScopeType parameter returned by the GetReviewRule operation is 2.</p>
+     * <p>Associates projects with the scope of an audit policy. You can invoke this operation only when the ScopeType parameter returned by the GetReviewRule operation for the corresponding audit policy is 2.</p>
      * 
      * @param request AttachProjectsToReviewRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1166,7 +1166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates projects with the scope of an audit policy. This operation can be invoked only when the ScopeType parameter returned by the GetReviewRule operation is 2.</p>
+     * <p>Associates projects with the scope of an audit policy. You can invoke this operation only when the ScopeType parameter returned by the GetReviewRule operation for the corresponding audit policy is 2.</p>
      * 
      * @param request AttachProjectsToReviewRuleRequest
      * @return AttachProjectsToReviewRuleResponse
@@ -1178,7 +1178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates auditors with an audit policy.</p>
+     * <p>Attaches auditors to an audit policy.</p>
      * 
      * @param request AttachReviewersToReviewRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1222,7 +1222,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associates auditors with an audit policy.</p>
+     * <p>Attaches auditors to an audit policy.</p>
      * 
      * @param request AttachReviewersToReviewRuleRequest
      * @return AttachReviewersToReviewRuleResponse
@@ -2218,7 +2218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a notification recipient for a project.</p>
+     * <p>Creates a project notification recipient.</p>
      * 
      * @param request CreateProjectNotifyReceiverRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2270,7 +2270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a notification recipient for a project.</p>
+     * <p>Creates a project notification recipient.</p>
      * 
      * @param request CreateProjectNotifyReceiverRequest
      * @return CreateProjectNotifyReceiverResponse
@@ -2996,7 +2996,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a shared key.</p>
+     * <p>Deletes a host shared key.</p>
      * 
      * @param request DeleteHostShareKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3036,7 +3036,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a shared key.</p>
+     * <p>Deletes a host shared key.</p>
      * 
      * @param request DeleteHostShareKeyRequest
      * @return DeleteHostShareKeyResponse
@@ -6746,7 +6746,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the authorized and unauthorized host accounts for a specified user group on a specified host.</p>
+     * <p>Queries the authorized and unauthorized host accounts of a specified user group on a specified host.</p>
      * 
      * @param request ListHostAccountsForUserGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6806,7 +6806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the authorized and unauthorized host accounts for a specified user group on a specified host.</p>
+     * <p>Queries the authorized and unauthorized host accounts of a specified user group on a specified host.</p>
      * 
      * @param request ListHostAccountsForUserGroupRequest
      * @return ListHostAccountsForUserGroupResponse
@@ -7206,7 +7206,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the hosts of a specified Bastionhost instance.</p>
+     * <p>Queries the hosts in a specified Bastionhost instance.</p>
      * 
      * @param request ListHostsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7282,7 +7282,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the hosts of a specified Bastionhost instance.</p>
+     * <p>Queries the hosts in a specified Bastionhost instance.</p>
      * 
      * @param request ListHostsRequest
      * @return ListHostsResponse
@@ -7454,7 +7454,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all importable KMS secrets for a specified host.</p>
+     * <p>Lists all importable KMS credentials for a specified host.</p>
      * 
      * @param request ListImportableKMSSecretsForHostRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7506,7 +7506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists all importable KMS secrets for a specified host.</p>
+     * <p>Lists all importable KMS credentials for a specified host.</p>
      * 
      * @param request ListImportableKMSSecretsForHostRequest
      * @return ListImportableKMSSecretsForHostResponse
@@ -7518,7 +7518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the member accounts in a Resource Directory (RD).</p>
+     * <p>Retrieves a list of member accounts in a resource directory.</p>
      * 
      * @param request ListInstanceRdMembersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7562,7 +7562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the member accounts in a Resource Directory (RD).</p>
+     * <p>Retrieves a list of member accounts in a resource directory.</p>
      * 
      * @param request ListInstanceRdMembersRequest
      * @return ListInstanceRdMembersResponse
@@ -7574,7 +7574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of members that are not occupied by other projects.</p>
+     * <p>Queries the list of member accounts that are not assigned to other projects.</p>
      * 
      * @param request ListMembersNotForProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7630,7 +7630,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of members that are not occupied by other projects.</p>
+     * <p>Queries the list of member accounts that are not assigned to other projects.</p>
      * 
      * @param request ListMembersNotForProjectRequest
      * @return ListMembersNotForProjectResponse
@@ -7862,7 +7862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of host accounts that the current Resource Access Management (RAM) user is authorized to manage.</p>
+     * <p>Lists the host accounts for which the current Resource Access Management (RAM) user has authorization.</p>
      * 
      * @param request ListOperationHostAccountsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7914,7 +7914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of host accounts that the current Resource Access Management (RAM) user is authorized to manage.</p>
+     * <p>Lists the host accounts for which the current Resource Access Management (RAM) user has authorization.</p>
      * 
      * @param request ListOperationHostAccountsRequest
      * @return ListOperationHostAccountsResponse
@@ -8342,7 +8342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of projects that the current user can manage.</p>
+     * <p>Queries the projects that the current user can manage.</p>
      * 
      * @param request ListProjectsForProjectAuthorizationPrincipalRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8394,7 +8394,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of projects that the current user can manage.</p>
+     * <p>Queries the projects that the current user can manage.</p>
      * 
      * @param request ListProjectsForProjectAuthorizationPrincipalRequest
      * @return ListProjectsForProjectAuthorizationPrincipalResponse
@@ -8542,7 +8542,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of audit policies.</p>
+     * <p>Queries the audit policy list.</p>
      * 
      * @param request ListReviewRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8594,7 +8594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of audit policies.</p>
+     * <p>Queries the audit policy list.</p>
      * 
      * @param request ListReviewRulesRequest
      * @return ListReviewRulesResponse
@@ -9366,7 +9366,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves database instances to a different project in batches.</p>
+     * <p>Moves multiple database instances to a specified project.</p>
      * 
      * @param request ModifyDatabasesProjectRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9414,7 +9414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Moves database instances to a different project in batches.</p>
+     * <p>Moves multiple database instances to a specified project.</p>
      * 
      * @param request ModifyDatabasesProjectRequest
      * @return ModifyDatabasesProjectResponse
@@ -10126,7 +10126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</p>
+     * <p>Modifies the configuration of the LDAP authentication server for a Bastionhost instance.</p>
      * 
      * @param request ModifyInstanceLDAPAuthServerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10210,7 +10210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the settings of the Lightweight Directory Access Protocol (LDAP) authentication server of a bastion host.</p>
+     * <p>Modifies the configuration of the LDAP authentication server for a Bastionhost instance.</p>
      * 
      * @param request ModifyInstanceLDAPAuthServerRequest
      * @return ModifyInstanceLDAPAuthServerResponse
@@ -11622,7 +11622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews an O&amp;M token. Each call extends the validity of the token by one hour.</p>
+     * <p>Renews an O&amp;M token. Each call extends the validity of the O&amp;M token by 1 hour.</p>
      * 
      * @param request RenewAssetOperationTokenRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11666,7 +11666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Renews an O&amp;M token. Each call extends the validity of the token by one hour.</p>
+     * <p>Renews an O&amp;M token. Each call extends the validity of the O&amp;M token by 1 hour.</p>
      * 
      * @param request RenewAssetOperationTokenRequest
      * @return RenewAssetOperationTokenResponse
@@ -12276,7 +12276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates and attaches tags to one or more Bastionhost instances.</p>
+     * <p>Creates and binds tags for specified Bastionhost instances.</p>
      * 
      * @param request TagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12320,7 +12320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates and attaches tags to one or more Bastionhost instances.</p>
+     * <p>Creates and binds tags for specified Bastionhost instances.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
