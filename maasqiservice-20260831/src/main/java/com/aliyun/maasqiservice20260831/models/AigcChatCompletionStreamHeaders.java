@@ -8,6 +8,7 @@ public class AigcChatCompletionStreamHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>The instance access key. The key must belong to the Creative Agent instance being called. This key is different from the AccessKey Secret used for OpenAPI signing. Do not expose it publicly.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class AigcChatCompletionStreamHeaders extends TeaModel {
     public String xQIAgentApiKey;
 
     /**
+     * <p>The published Creative Agent instance ID. Must correspond to the X-QI-Agent-Api-Key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,8 @@ public class AigcChatCompletionStreamHeaders extends TeaModel {
     public String xQIInstanceId;
 
     /**
+     * <p>The session identifier. Can be omitted for the first turn. Obtain it from the qi_session_id field in the SSE response and pass it back in subsequent turns. Use no more than 128 characters consisting of letters, digits, periods, underscores, colons, or hyphens.</p>
+     * 
      * <strong>example:</strong>
      * <p>session-xxx</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PaChatCompletionStreamRequest extends TeaModel {
     /**
+     * <p>The whitelist of token IDs allowed for generation.</p>
+     * 
      * <strong>example:</strong>
      * <p>[10,11]</p>
      */
@@ -12,16 +14,23 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public java.util.List<Long> allowedTokenIds;
 
     /**
+     * <p>The list of words or strings prohibited from generation.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;blocked&quot;]</p>
      */
     @NameInMap("badWords")
     public java.util.List<String> badWords;
 
+    /**
+     * <p>The vLLM/OpenAI-Compatible template parameter object. Request values are merged with model defaults, with request keys taking precedence, and passed to the model as-is.</p>
+     */
     @NameInMap("chatTemplateKwargs")
     public PaChatCompletionStreamRequestChatTemplateKwargs chatTemplateKwargs;
 
     /**
+     * <p>The frequency penalty parameter passed through to the Mobile Planner Agent model.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0</p>
      */
@@ -29,6 +38,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Double frequencyPenalty;
 
     /**
+     * <p>Specifies whether to ignore EOS and continue generation.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -36,6 +47,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Boolean ignoreEos;
 
     /**
+     * <p>Specifies whether to request reasoning content from the upstream. The actual capability depends on the model.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +56,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Boolean includeReasoning;
 
     /**
+     * <p>A model-compatible parameter with the JSON field name logprobs. Whether it is accepted and takes effect depends on the model used by the instance. The current Agent response does not provide token log probability details.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -50,6 +65,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Boolean logprobs;
 
     /**
+     * <p>The maximum number of completion tokens. Must be greater than 0 if provided, and is passed as an OpenAI-compatible model parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>2048</p>
      */
@@ -57,6 +74,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Long maxCompletionTokens;
 
     /**
+     * <p>The OpenAI-compatible maximum number of generated tokens. Must be greater than 0 if provided.</p>
+     * 
      * <strong>example:</strong>
      * <p>2048</p>
      */
@@ -64,12 +83,15 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Long maxTokens;
 
     /**
+     * <p>The list of conversation messages. The first call can submit one turn or an existing multi-turn conversation. When continuing with an existing session ID, retain the complete and unmodified historical message prefix and append the current turn messages. Tool results are associated through role=tool and the corresponding tool_call_id.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("messages")
     public java.util.List<PaChatCompletionStreamRequestMessages> messages;
 
     /**
+     * <p>The vLLM Min-P sampling parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.05</p>
      */
@@ -77,19 +99,32 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Double minP;
 
     /**
+     * <p>The minimum number of tokens to generate.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("minTokens")
     public Long minTokens;
 
+    /**
+     * <p>The multimodal preprocessor parameters passed through to vLLM as-is by key.</p>
+     */
     @NameInMap("mmProcessorKwargs")
     public PaChatCompletionStreamRequestMmProcessorKwargs mmProcessorKwargs;
 
+    /**
+     * <p>Reserved for OpenAI client compatibility. Ignored during routing. The actual model is determined by the published instance configuration. The model field in the response is always an empty string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot; &quot;</p>
+     */
     @NameInMap("model")
     public String model;
 
     /**
+     * <p>Set this parameter to 1. Whether the model accepts this parameter depends on the model. The current Mobile Planner Agent response does not return multiple candidate results. Do not use this parameter for multiple-candidate responses.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -97,6 +132,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Long n;
 
     /**
+     * <p>Specifies whether the model is allowed to generate multiple tool calling requests in parallel. The model invokes tools concurrently when this parameter is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -104,6 +141,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Boolean parallelToolCalls;
 
     /**
+     * <p>The presence penalty parameter, passed through to the Mobile Planner Agent model.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0</p>
      */
@@ -111,6 +150,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Double presencePenalty;
 
     /**
+     * <p>A model compatibility parameter. The JSON field is prompt_logprobs. Whether the model accepts this parameter depends on the model. The current Agent response does not return probability details for input tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -118,6 +159,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Long promptLogprobs;
 
     /**
+     * <p>The OpenAI-compatible reasoning effort level, such as low, medium, or high.</p>
+     * 
      * <strong>example:</strong>
      * <p>high</p>
      */
@@ -125,16 +168,23 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public String reasoningEffort;
 
     /**
+     * <p>The vLLM repetition penalty parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1</p>
      */
     @NameInMap("repetitionPenalty")
     public Double repetitionPenalty;
 
+    /**
+     * <p>The structured response format, such as json_object or json_schema.</p>
+     */
     @NameInMap("responseFormat")
     public PaChatCompletionStreamRequestResponseFormat responseFormat;
 
     /**
+     * <p>The random seed.</p>
+     * 
      * <strong>example:</strong>
      * <p>42</p>
      */
@@ -142,6 +192,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Long seed;
 
     /**
+     * <p>Specifies whether to skip special tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -149,6 +201,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Boolean skipSpecialTokens;
 
     /**
+     * <p>The stop sequences. Compatible with a single string or an array of strings. This field is displayed in array format.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;END&quot;]</p>
      */
@@ -156,6 +210,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public java.util.List<String> stop;
 
     /**
+     * <p>The vLLM stop token ID list.</p>
+     * 
      * <strong>example:</strong>
      * <p>[1,2]</p>
      */
@@ -163,6 +219,7 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public java.util.List<Long> stopTokenIds;
 
     /**
+     * <p>Specifies whether to use SSE streaming responses. This parameter must be set to true for this operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -171,13 +228,21 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     @NameInMap("stream")
     public Boolean stream;
 
+    /**
+     * <p>The OpenAI-compatible streaming options.</p>
+     */
     @NameInMap("streamOptions")
     public PaChatCompletionStreamRequestStreamOptions streamOptions;
 
+    /**
+     * <p>The vLLM structured output constraints.</p>
+     */
     @NameInMap("structuredOutputs")
     public PaChatCompletionStreamRequestStructuredOutputs structuredOutputs;
 
     /**
+     * <p>The sampling temperature. Passed as an OpenAI-compatible model parameter to override the model default value.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.2</p>
      */
@@ -185,16 +250,23 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Double temperature;
 
     /**
+     * <p>The tool choice strategy. Valid values: auto, none, required, or a named selection supported by the model.</p>
+     * 
      * <strong>example:</strong>
      * <p>auto</p>
      */
     @NameInMap("toolChoice")
     public String toolChoice;
 
+    /**
+     * <p>The array of function tool definitions available for this request. Mobile Planner Agent registers each named function in the runtime Toolkit and returns tool_calls in the streaming response.</p>
+     */
     @NameInMap("tools")
     public java.util.List<PaChatCompletionStreamRequestTools> tools;
 
     /**
+     * <p>The vLLM Top-K sampling parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -202,6 +274,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Long topK;
 
     /**
+     * <p>A model compatibility parameter. The JSON field is top_logprobs. Used for models that support this feature. The current Agent response does not provide candidate token probability details.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -209,6 +283,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     public Long topLogprobs;
 
     /**
+     * <p>Top-P sampling parameter. Passed as an OpenAI-compatible model parameter to override the model default value.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.9</p>
      */
@@ -494,6 +570,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
 
     public static class PaChatCompletionStreamRequestChatTemplateKwargs extends TeaModel {
         /**
+         * <p>Controls whether the model generates reasoning_content through chat_template_kwargs. This value is passed to the model used by the Mobile Planner Agent.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -501,6 +579,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
         public Boolean enableThinking;
 
         /**
+         * <p>Specifies whether the model preserves and reuses existing reasoning content in subsequent turns. Passed through as-is per vLLM/Qwen chat_template_kwargs.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -532,6 +612,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
 
     public static class PaChatCompletionStreamRequestMessagesContentImageUrl extends TeaModel {
         /**
+         * <p>The image URL. Remote images must use HTTPS. Base64 Data URLs are also accepted.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/image.png">https://example.com/image.png</a></p>
          */
@@ -554,17 +636,24 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     }
 
     public static class PaChatCompletionStreamRequestMessagesContent extends TeaModel {
+        /**
+         * <p>The image reference when type=image_url. Supports HTTPS URLs or data:image/...;base64,... format.</p>
+         */
         @NameInMap("imageUrl")
         public PaChatCompletionStreamRequestMessagesContentImageUrl imageUrl;
 
         /**
+         * <p>The non-empty text when type=text.</p>
+         * 
          * <strong>example:</strong>
-         * <p>请分析这张图片</p>
+         * <p>Analyze this image</p>
          */
         @NameInMap("text")
         public String text;
 
         /**
+         * <p>The content part type. Mobile Planner Agent user messages support text or image_url.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -604,13 +693,17 @@ public class PaChatCompletionStreamRequest extends TeaModel {
 
     public static class PaChatCompletionStreamRequestMessagesToolCallsFunction extends TeaModel {
         /**
+         * <p>The JSON object string of function arguments.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{&quot;city&quot;:&quot;杭州&quot;}</p>
+         * <p>{&quot;city&quot;:&quot;Hangzhou&quot;}</p>
          */
         @NameInMap("arguments")
         public String arguments;
 
         /**
+         * <p>The name of the function to call.</p>
+         * 
          * <strong>example:</strong>
          * <p>get_weather</p>
          */
@@ -641,10 +734,15 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     }
 
     public static class PaChatCompletionStreamRequestMessagesToolCalls extends TeaModel {
+        /**
+         * <p>The function information of a historical tool invocation entry, including name and arguments as a JSON character string. Retain the actual returned values in subsequent turns.</p>
+         */
         @NameInMap("function")
         public PaChatCompletionStreamRequestMessagesToolCallsFunction function;
 
         /**
+         * <p>The tool invocation ID. Subsequent tool messages reference this through tool_call_id.</p>
+         * 
          * <strong>example:</strong>
          * <p>call_weather_1</p>
          */
@@ -652,6 +750,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
         public String id;
 
         /**
+         * <p>The tool invocation type. Currently fixed as function.</p>
+         * 
          * <strong>example:</strong>
          * <p>function</p>
          */
@@ -691,13 +791,17 @@ public class PaChatCompletionStreamRequest extends TeaModel {
 
     public static class PaChatCompletionStreamRequestMessages extends TeaModel {
         /**
+         * <p>The message content. Mobile Planner Agent supports text and multimodal content. Image URLs or base64 Data URLs are passed through to the Mobile Planner Agent model if it supports multimodal input.</p>
+         * 
          * <strong>example:</strong>
-         * <p>请分析图片内容</p>
+         * <p>Analyze the image content</p>
          */
         @NameInMap("content")
         public java.util.List<PaChatCompletionStreamRequestMessagesContent> content;
 
         /**
+         * <p>The message role: user, assistant, tool, system, or developer. system/developer is used for optional per-turn text instruction overrides. If omitted, the instructions from the instance configuration are used. Tool results use tool and are associated with tool_call_id.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
@@ -705,12 +809,17 @@ public class PaChatCompletionStreamRequest extends TeaModel {
         public String role;
 
         /**
+         * <p>Required when role=tool. Must match an id from the preceding assistant.tool_calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>call_weather_1</p>
          */
         @NameInMap("toolCallId")
         public String toolCallId;
 
+        /**
+         * <p>The list of function invocation entries that can be carried when role=assistant. Used for multi-turn tool invocation continuation.</p>
+         */
         @NameInMap("toolCalls")
         public java.util.List<PaChatCompletionStreamRequestMessagesToolCalls> toolCalls;
 
@@ -755,6 +864,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
 
     public static class PaChatCompletionStreamRequestMmProcessorKwargs extends TeaModel {
         /**
+         * <p>Example: the maximum number of dynamic image patches allowed by the vision model.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -778,6 +889,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
 
     public static class PaChatCompletionStreamRequestResponseFormat extends TeaModel {
         /**
+         * <p>The response format type, such as text, json_object, or json_schema.</p>
+         * 
          * <strong>example:</strong>
          * <p>json_object</p>
          */
@@ -801,6 +914,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
 
     public static class PaChatCompletionStreamRequestStreamOptions extends TeaModel {
         /**
+         * <p>Specifies whether to output a usage statistics chunk before data:[DONE].</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -824,6 +939,8 @@ public class PaChatCompletionStreamRequest extends TeaModel {
 
     public static class PaChatCompletionStreamRequestStructuredOutputs extends TeaModel {
         /**
+         * <p>The set of allowed enumeration text values.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;yes&quot;,&quot;no&quot;]</p>
          */
@@ -847,13 +964,17 @@ public class PaChatCompletionStreamRequest extends TeaModel {
 
     public static class PaChatCompletionStreamRequestToolsFunctionParametersPropertiesCity extends TeaModel {
         /**
+         * <p>The sample parameter description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>要查询天气的城市名称</p>
+         * <p>The name of the city for which to query the weather</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The JSON Schema type of the sample city field.</p>
+         * 
          * <strong>example:</strong>
          * <p>string</p>
          */
@@ -884,6 +1005,9 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     }
 
     public static class PaChatCompletionStreamRequestToolsFunctionParametersProperties extends TeaModel {
+        /**
+         * <p>The Schema for the sample business parameter city. The actual fields are determined by the caller\&quot;s tool definition.</p>
+         */
         @NameInMap("city")
         public PaChatCompletionStreamRequestToolsFunctionParametersPropertiesCity city;
 
@@ -903,13 +1027,21 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     }
 
     public static class PaChatCompletionStreamRequestToolsFunctionParameters extends TeaModel {
+        /**
+         * <p>The property definitions of the JSON Schema.</p>
+         */
         @NameInMap("properties")
         public PaChatCompletionStreamRequestToolsFunctionParametersProperties properties;
 
+        /**
+         * <p>The array of required field names in the JSON Schema.</p>
+         */
         @NameInMap("required")
         public java.util.List<String> required;
 
         /**
+         * <p>The root Schema type of the function parameters. Typically set to object.</p>
+         * 
          * <strong>example:</strong>
          * <p>object</p>
          */
@@ -949,23 +1081,32 @@ public class PaChatCompletionStreamRequest extends TeaModel {
 
     public static class PaChatCompletionStreamRequestToolsFunction extends TeaModel {
         /**
+         * <p>The description of the function purpose. The model uses this to determine when to call the tool.</p>
+         * 
          * <strong>example:</strong>
-         * <p>查询指定城市天气</p>
+         * <p>Query the weather for a specified city</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
+         * <p>The function name. This parameter is required. Used to match assistant.tool_calls with subsequent tool results.</p>
+         * 
          * <strong>example:</strong>
          * <p>get_weather</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The JSON Schema for function parameters, passed to the model as raw JSON. If not provided, an empty object Schema is used.</p>
+         */
         @NameInMap("parameters")
         public PaChatCompletionStreamRequestToolsFunctionParameters parameters;
 
         /**
+         * <p>Specifies whether the model must strictly follow the function parameter JSON Schema.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1012,10 +1153,15 @@ public class PaChatCompletionStreamRequest extends TeaModel {
     }
 
     public static class PaChatCompletionStreamRequestTools extends TeaModel {
+        /**
+         * <p>The function tool definition, including the name, description, and JSON Schema parameters.</p>
+         */
         @NameInMap("function")
         public PaChatCompletionStreamRequestToolsFunction function;
 
         /**
+         * <p>The tool type. This parameter must be set to function.</p>
+         * 
          * <strong>example:</strong>
          * <p>function</p>
          */

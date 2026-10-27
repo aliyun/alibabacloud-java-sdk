@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GuiChatCompletionStreamRequest extends TeaModel {
     /**
+     * <p>The whitelist of token IDs that are allowed to be generated.</p>
+     * 
      * <strong>example:</strong>
      * <p>[10,11]</p>
      */
@@ -12,16 +14,23 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public java.util.List<Long> allowedTokenIds;
 
     /**
+     * <p>The list of words or strings that are banned from being generated.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;blocked&quot;]</p>
      */
     @NameInMap("badWords")
     public java.util.List<String> badWords;
 
+    /**
+     * <p>The vLLM or OpenAI-compatible template parameter object. The request values override the default values with the same names in the model and are passed as-is to the primary model of the Mobile-Use Agent.</p>
+     */
     @NameInMap("chatTemplateKwargs")
     public GuiChatCompletionStreamRequestChatTemplateKwargs chatTemplateKwargs;
 
     /**
+     * <p>The frequency penalty parameter, which is passed through to the primary model of the Mobile-Use Agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0</p>
      */
@@ -29,6 +38,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Double frequencyPenalty;
 
     /**
+     * <p>Specifies whether to ignore the end-of-sequence (EOS) token and continue generation.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -36,6 +47,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Boolean ignoreEos;
 
     /**
+     * <p>Specifies whether to request the upstream to generate the reasoning field. The client-facing results of the Mobile-Use Agent do not directly expose internal thinking.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +56,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Boolean includeReasoning;
 
     /**
+     * <p>The model compatibility parameter. The JSON field is logprobs. Whether this parameter is accepted and takes effect depends on the model used by the instance. The current Mobile-Use Agent response does not provide token log probability details.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -50,6 +65,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Boolean logprobs;
 
     /**
+     * <p>The OpenAI-compatible maximum number of completion tokens. If provided, the value must be greater than 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>2048</p>
      */
@@ -57,6 +74,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Long maxCompletionTokens;
 
     /**
+     * <p>The OpenAI-compatible maximum number of generated tokens. If provided, the value must be greater than 0.</p>
+     * 
      * <strong>example:</strong>
      * <p>2048</p>
      */
@@ -64,15 +83,21 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Long maxTokens;
 
     /**
+     * <p>The messages for the current Mobile-Use Agent step. The first step can only contain one user message. Subsequent steps can only contain one tool message followed by one user message. Complete multi-round history is not allowed.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("messages")
     public java.util.List<GuiChatCompletionStreamRequestMessages> messages;
 
+    /**
+     * <p>The metadata for the Mobile-Use Agent step. Supports screen_width, screen_height, available_apps, and the compatibility field harness_message. The tool receipt and harness_message cannot be passed at the same time.</p>
+     */
     @NameInMap("metadata")
     public GuiChatCompletionStreamRequestMetadata metadata;
 
     /**
+     * <p>The vLLM Min-P sampling parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.05</p>
      */
@@ -80,19 +105,32 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Double minP;
 
     /**
+     * <p>The minimum number of tokens to generate.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
     @NameInMap("minTokens")
     public Long minTokens;
 
+    /**
+     * <p>The multimodal preprocessor parameters, passed through to the Mobile-Use Agent primary model as-is by key.</p>
+     */
     @NameInMap("mmProcessorKwargs")
     public GuiChatCompletionStreamRequestMmProcessorKwargs mmProcessorKwargs;
 
+    /**
+     * <p>Reserved for OpenAI client compatibility. This parameter is ignored during routing. The model is determined by the published configuration of the instance, and the model field in the response is always an empty string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>&quot; &quot;</p>
+     */
     @NameInMap("model")
     public String model;
 
     /**
+     * <p>Set this parameter to 1. Whether this parameter is accepted depends on the model. The current Mobile-Use Agent response does not return multiple candidate actions.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -100,6 +138,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Long n;
 
     /**
+     * <p>The model-compatible switch to invoke parallel tool calling. This parameter does not expand the set of Mobile-Use Agent actions active for this operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -107,6 +147,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Boolean parallelToolCalls;
 
     /**
+     * <p>The presence penalty parameter, passed through to the Mobile-Use Agent primary model.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.0</p>
      */
@@ -114,6 +156,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Double presencePenalty;
 
     /**
+     * <p>A model-compatible parameter. The JSON field is prompt_logprobs. Whether this parameter is accepted depends on the model. The current Mobile-Use Agent response does not return input token probability details.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -121,6 +165,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Long promptLogprobs;
 
     /**
+     * <p>The OpenAI-compatible reasoning effort, such as low, medium, or high.</p>
+     * 
      * <strong>example:</strong>
      * <p>medium</p>
      */
@@ -128,16 +174,23 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public String reasoningEffort;
 
     /**
+     * <p>The vLLM repetition penalty parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>1.1</p>
      */
     @NameInMap("repetitionPenalty")
     public Double repetitionPenalty;
 
+    /**
+     * <p>The model-compatible structured output options. This parameter does not change the final Mobile-Use Agent tool calling structure when you invoke this operation. Avoid output constraint Settings that conflict with the action protocol.</p>
+     */
     @NameInMap("responseFormat")
     public GuiChatCompletionStreamRequestResponseFormat responseFormat;
 
     /**
+     * <p>The random seed.</p>
+     * 
      * <strong>example:</strong>
      * <p>42</p>
      */
@@ -145,6 +198,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Long seed;
 
     /**
+     * <p>Specifies whether to skip special tokens.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -152,6 +207,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Boolean skipSpecialTokens;
 
     /**
+     * <p>The stop sequences. This parameter is compatible with a single string or an array of strings. The array format is shown here.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;DONE&quot;]</p>
      */
@@ -159,6 +216,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public java.util.List<String> stop;
 
     /**
+     * <p>The list of vLLM stop token IDs.</p>
+     * 
      * <strong>example:</strong>
      * <p>[1,2]</p>
      */
@@ -166,6 +225,7 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public java.util.List<Long> stopTokenIds;
 
     /**
+     * <p>Specifies whether to use Server-Sent Events (SSE) for streaming responses. You must set this parameter to true for this operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -174,13 +234,21 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     @NameInMap("stream")
     public Boolean stream;
 
+    /**
+     * <p>The OpenAI-compatible streaming options.</p>
+     */
     @NameInMap("streamOptions")
     public GuiChatCompletionStreamRequestStreamOptions streamOptions;
 
+    /**
+     * <p>The vLLM structured output constraints.</p>
+     */
     @NameInMap("structuredOutputs")
     public GuiChatCompletionStreamRequestStructuredOutputs structuredOutputs;
 
     /**
+     * <p>The sampling temperature, which overrides the default value of the Mobile-Use Agent primary model.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.2</p>
      */
@@ -188,6 +256,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Double temperature;
 
     /**
+     * <p>The vLLM Top-K sampling parameter.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -195,6 +265,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Long topK;
 
     /**
+     * <p>A model-compatible parameter. The JSON field is top_logprobs. Whether this parameter is accepted depends on the model. The current Mobile-Use Agent response does not return candidate token probability details.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -202,6 +274,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     public Long topLogprobs;
 
     /**
+     * <p>The Top-P nucleus sampling parameter, which overrides the default value of the Mobile-Use Agent primary model.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.9</p>
      */
@@ -479,6 +553,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
 
     public static class GuiChatCompletionStreamRequestChatTemplateKwargs extends TeaModel {
         /**
+         * <p>chat_template_kwargs.enable_thinking: the request-level switch for model thinking, which overrides the default value with the same name. Enabling this switch does not cause the Mobile-Use Agent response to return reasoning_content.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -486,6 +562,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
         public Boolean enableThinking;
 
         /**
+         * <p>Specifies whether to preserve the existing thinking context in subsequent rounds. This parameter is passed as-is according to the vLLM or Qwen chat_template_kwargs.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -517,6 +595,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
 
     public static class GuiChatCompletionStreamRequestMessagesContentImageUrl extends TeaModel {
         /**
+         * <p>A publicly accessible HTTPS image URL or a Base64 image data URL. Each round of user messages must and can only contain one current screenshot. Expired or inaccessible image addresses are rejected.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/screenshot.png">https://example.com/screenshot.png</a></p>
          */
@@ -540,23 +620,32 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
 
     public static class GuiChatCompletionStreamRequestMessagesContent extends TeaModel {
         /**
+         * <p>The compatible inline image field for input_image. You can pass a Base64 data URL.</p>
+         * 
          * <strong>example:</strong>
          * <p>data:image/png;base64,...</p>
          */
         @NameInMap("imageData")
         public String imageData;
 
+        /**
+         * <p>The screenshot reference. Supports an image_url string or an object containing a url field. The object format is shown here.</p>
+         */
         @NameInMap("imageUrl")
         public GuiChatCompletionStreamRequestMessagesContentImageUrl imageUrl;
 
         /**
+         * <p>The text content, which can describe the current operation objective or supplement the current page state.</p>
+         * 
          * <strong>example:</strong>
-         * <p>点击搜索按钮</p>
+         * <p>Click the search button</p>
          */
         @NameInMap("text")
         public String text;
 
         /**
+         * <p>The type of the content item. Use text or input_text for text. Use image_url or input_image for screenshots.</p>
+         * 
          * <strong>example:</strong>
          * <p>text</p>
          */
@@ -603,10 +692,15 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
     }
 
     public static class GuiChatCompletionStreamRequestMessages extends TeaModel {
+        /**
+         * <p>The message content. For a user message, use a content array that contains exactly one current screenshot and optionally attached task text. Screenshots support public HTTPS URLs or Base64 image data URLs. When role is set to tool, fill in the actual execution result of the previous action, which can be a non-empty string, object, or array.</p>
+         */
         @NameInMap("content")
         public java.util.List<GuiChatCompletionStreamRequestMessagesContent> content;
 
         /**
+         * <p>The message role. The current input must end with a user message. If an execution receipt from the previous round exists, the preceding message must be a tool message.</p>
+         * 
          * <strong>example:</strong>
          * <p>user</p>
          */
@@ -614,6 +708,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
         public String role;
 
         /**
+         * <p>Required when role is set to tool. References the tool_call ID from the previous Mobile-Use Agent response.</p>
+         * 
          * <strong>example:</strong>
          * <p>call_gui_1</p>
          */
@@ -653,6 +749,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
 
     public static class GuiChatCompletionStreamRequestMetadata extends TeaModel {
         /**
+         * <p>The compatible alias for available_apps, which is also an array of app name strings.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;Chrome&quot;,&quot;Settings&quot;]</p>
          */
@@ -660,6 +758,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
         public java.util.List<String> appList;
 
         /**
+         * <p>The supplementary list of application names for the Standard Edition of Mobile-Use Agent. The JSON field is available_apps. The newly passed list replaces the previous supplementary items, but the default applications are retained. An empty array does not clear the default applications. The Dedicated Edition of Mobile-Use Agent does not use this list.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;Chrome&quot;,&quot;Settings&quot;]</p>
          */
@@ -667,6 +767,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
         public java.util.List<String> availableApps;
 
         /**
+         * <p>The Mobile-Use Agent Harness receipt text for legacy clients. This cannot be passed at the same time as the preceding tool message. New clients should prioritize using [tool,user] messages.</p>
+         * 
          * <strong>example:</strong>
          * <p>previous action completed</p>
          */
@@ -674,6 +776,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
         public String harnessMessage;
 
         /**
+         * <p>The screen height as a positive integer. For Base64 images, the width and height are parsed from the image itself. For URL images, this value is used for the runtime screen size.</p>
+         * 
          * <strong>example:</strong>
          * <p>1080</p>
          */
@@ -681,6 +785,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
         public Long screenHeight;
 
         /**
+         * <p>The screen width as a positive integer. For Base64 images, the width and height are parsed from the image itself. For URL images, this value is used for the runtime screen size.</p>
+         * 
          * <strong>example:</strong>
          * <p>1920</p>
          */
@@ -736,6 +842,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
 
     public static class GuiChatCompletionStreamRequestMmProcessorKwargs extends TeaModel {
         /**
+         * <p>The maximum number of dynamic image patches allowed by the vision model.</p>
+         * 
          * <strong>example:</strong>
          * <p>8</p>
          */
@@ -759,6 +867,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
 
     public static class GuiChatCompletionStreamRequestResponseFormat extends TeaModel {
         /**
+         * <p>The response format type, such as text, json_object, or json_schema.</p>
+         * 
          * <strong>example:</strong>
          * <p>json_object</p>
          */
@@ -782,6 +892,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
 
     public static class GuiChatCompletionStreamRequestStreamOptions extends TeaModel {
         /**
+         * <p>Specifies whether to output the usage statistics block before data:[DONE].</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -805,6 +917,8 @@ public class GuiChatCompletionStreamRequest extends TeaModel {
 
     public static class GuiChatCompletionStreamRequestStructuredOutputs extends TeaModel {
         /**
+         * <p>The set of allowed enum text values.</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;tap&quot;,&quot;type&quot;]</p>
          */

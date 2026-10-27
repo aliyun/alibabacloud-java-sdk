@@ -8,6 +8,7 @@ public class PaChatCompletionStreamHeaders extends TeaModel {
     public java.util.Map<String, String> commonHeaders;
 
     /**
+     * <p>The Agent instance access key used for QICloud Customer API authentication.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,6 +18,7 @@ public class PaChatCompletionStreamHeaders extends TeaModel {
     public String xQIAgentApiKey;
 
     /**
+     * <p>The published Mobile Planner Agent instance ID. Must correspond to the X-QI-Agent-Api-Key.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,6 +28,8 @@ public class PaChatCompletionStreamHeaders extends TeaModel {
     public String xQIInstanceId;
 
     /**
+     * <p>The optional session identifier. Can be omitted for the first turn, in which case the server generates one. Pass it back in subsequent turns to continue the Mobile Planner Agent session.</p>
+     * 
      * <strong>example:</strong>
      * <p>session-xxx</p>
      */
