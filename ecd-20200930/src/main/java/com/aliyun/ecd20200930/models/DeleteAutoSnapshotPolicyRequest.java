@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteAutoSnapshotPolicyRequest extends TeaModel {
     /**
-     * <p>The IDs of the automatic snapshot policies that you want to delete.</p>
+     * <p>The IDs of the automatic snapshot policies to be deleted.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyId")
     public java.util.List<String> policyId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

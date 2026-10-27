@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeConsoleMessagesRequest extends TeaModel {
     /**
-     * <p>The business channel, which is used to limit the business to which the messages to query belong. Valid values: enterprise, standard, office, business, lincore_team, and AGENTIC_CLOUD_COMPUTER. The values are not case-sensitive. Default value: enterprise. Unrecognized channel values are also processed as enterprise.</p>
+     * <p>The business channel, which is used to restrict the business to which the messages to query belong. Valid values: enterprise, standard, office, business, lincore_team, and AGENTIC_CLOUD_COMPUTER. The values are not case-sensitive. Default value: enterprise. Unrecognized channel values are also processed as enterprise.</p>
      * 
      * <strong>example:</strong>
      * <p>Enterprise</p>
@@ -14,13 +14,13 @@ public class DescribeConsoleMessagesRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The list of client types to which operational messages apply. A maximum of 100 items can be specified. Valid values: Windows (Windows client), Mac (macOS client), Web (web client), and Hardware (hardware terminal). For Mac, macOS is also supported. The matching is not case-sensitive. If multiple types are specified, a message is matched if it applies to any of the specified types. Do not pass duplicate types. To filter by client type, provide a non-empty list. If this parameter is not specified, messages are not filtered by client type. Do not specify this parameter when querying NOTIFICATION messages.</p>
+     * <p>The filter list of client types to which operational messages apply. A maximum of 100 items can be included. Valid values: Windows (Windows client), Mac (macOS client), Web (web client), and Hardware (hardware terminal). For Mac, macOS is also supported. The matching is not case-sensitive. If multiple types are specified, a match occurs if any type matches. Do not pass the same type repeatedly. To filter by client type, provide a non-empty list. If this parameter is not specified, messages are not filtered by client type. Do not specify this parameter when querying NOTIFICATION messages.</p>
      */
     @NameInMap("ClientTypes")
     public java.util.List<String> clientTypes;
 
     /**
-     * <p>The search keyword, which is used to perform a fuzzy match on the message title or body. A message is returned if either the title or the body matches the keyword. If this parameter is not specified or an empty string is passed, messages are not filtered by keyword.</p>
+     * <p>The search keyword, which is used to perform a fuzzy match on the message title or body. A match occurs if either the title or the body matches the keyword. If this parameter is not specified or an empty string is provided, messages are not filtered by keyword.</p>
      * 
      * <strong>example:</strong>
      * <p>System maintenance</p>
@@ -29,13 +29,13 @@ public class DescribeConsoleMessagesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The list of message IDs to query. A maximum of 100 message IDs can be specified. If multiple IDs are specified, a message is matched if its ID matches any of the specified IDs. If this parameter is not specified or an empty list is passed, messages are not filtered by message ID. If no message ID matches, an empty list is returned.</p>
+     * <p>The list of message IDs to query. A maximum of 100 message IDs can be included. If multiple IDs are provided, a match occurs if any ID matches. If this parameter is not specified or an empty list is provided, messages are not filtered by message ID. If no message ID matches, an empty list is returned.</p>
      */
     @NameInMap("MessageIds")
     public java.util.List<String> messageIds;
 
     /**
-     * <p>The message level filter condition for notification messages. Valid values: STRONG (strong message) and WEAK (weak message). The values are not case-sensitive. If this parameter is not specified or an unrecognized value is passed, messages are not filtered by message level. Do not specify this parameter when querying OPERATIONAL messages.</p>
+     * <p>The message level filter condition for notification messages. Valid values: STRONG (strong message) and WEAK (weak message). The values are not case-sensitive. If this parameter is not specified or the value is unrecognized, messages are not filtered by message level. Do not specify this parameter when querying OPERATIONAL messages.</p>
      * 
      * <strong>example:</strong>
      * <p>STRONG</p>
@@ -44,7 +44,7 @@ public class DescribeConsoleMessagesRequest extends TeaModel {
     public String messageLevel;
 
     /**
-     * <p>The message type. Valid values: OPERATIONAL (client operational message), WALLPAPER (desktop wallpaper text message), NOTIFICATION (message center notification), and CUSTOM_WALLPAPER (custom desktop wallpaper). The values are not case-sensitive. If this parameter is not specified or an unrecognized value is passed, messages are not filtered by message type.</p>
+     * <p>The message type. Valid values: OPERATIONAL (client operational message), WALLPAPER (desktop wallpaper text message), NOTIFICATION (message center notification), and CUSTOM_WALLPAPER (custom desktop wallpaper). The values are not case-sensitive. If this parameter is not specified or the value is unrecognized, messages are not filtered by message type.</p>
      * 
      * <strong>example:</strong>
      * <p>NOTIFICATION</p>
@@ -71,7 +71,7 @@ public class DescribeConsoleMessagesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The list of target IDs to match. A maximum of 100 items can be specified. To filter by target, provide a non-empty list and specify TargetType at the same time. Currently, only the first ID is used for Organization, EndUser, and AdUser. Queries for EndUser and AdUser also match messages targeted at the organization to which the user belongs and all users. Queries for Organization include messages for all convenience users and are compatible with fuzzy matching of organization IDs. Other target matching methods match based on the target ID, and the target type of the returned records is not guaranteed to be consistent with TargetType. Currently, Tag does not perform target ID filtering.</p>
+     * <p>The list of target IDs to match. A maximum of 100 items can be included. To filter by target, provide a non-empty list and specify TargetType at the same time. Currently, only the first ID is used for Organization, EndUser, and AdUser. Queries for EndUser and AdUser also match messages targeted at the organization to which the user belongs and all users. Queries for Organization include messages for all convenience users and are compatible with fuzzy matching of organization IDs. Other target matching methods match based on target IDs, and the target type of the returned records is not guaranteed to be consistent with TargetType. Currently, Tag does not perform target ID filtering.</p>
      */
     @NameInMap("TargetIds")
     public java.util.List<String> targetIds;

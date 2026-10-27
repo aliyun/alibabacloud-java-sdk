@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserConnectionRecordsRequest extends TeaModel {
     /**
-     * <p>The minimum value of the connection duration used as a filter condition.</p>
+     * <p>The minimum connection duration used as a filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public Long connectDurationFrom;
 
     /**
-     * <p>The maximum value of the connection duration used as a filter condition.</p>
+     * <p>The maximum connection duration used as a filter condition.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -23,7 +23,7 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public Long connectDurationTo;
 
     /**
-     * <p>The minimum value of the connection end time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The minimum end time of the connection used as a filter condition. The time is formatted as a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1631266200000</p>
@@ -32,7 +32,7 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public Long connectEndTimeFrom;
 
     /**
-     * <p>The maximum value of the connection end time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The maximum end time of the connection used as a filter condition. The time is formatted as a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1631268000000</p>
@@ -41,7 +41,7 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public Long connectEndTimeTo;
 
     /**
-     * <p>The minimum value of the connection start time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The minimum start time of the connection used as a filter condition. The time is formatted as a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1631239200000</p>
@@ -50,7 +50,7 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public Long connectStartTimeFrom;
 
     /**
-     * <p>The maximum value of the connection start time used as a filter condition. The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The maximum start time of the connection used as a filter condition. The time is formatted as a UNIX timestamp. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1631241000000</p>
@@ -59,7 +59,7 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public Long connectStartTimeTo;
 
     /**
-     * <p>The cloud computer pool ID.</p>
+     * <p>The ID of the cloud computer pool.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public String desktopGroupId;
 
     /**
-     * <p>The cloud computer ID.</p>
+     * <p>The ID of the cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>ecd-138dsptkrt00u****</p>
@@ -78,7 +78,7 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public String desktopId;
 
     /**
-     * <p>The authorized user ID.</p>
+     * <p>The ID of the authorized user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,11 +88,7 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The type of user account system. Valid values:</p>
-     * <ul>
-     * <li>SIMPLE: convenience account</li>
-     * <li>AD_CONNECTOR: enterprise AD account</li>
-     * </ul>
+     * <p>The type of the user account system.</p>
      * 
      * <strong>example:</strong>
      * <p>SIMPLE</p>
@@ -101,9 +97,9 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public String endUserType;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
-     * <p>Maximum value: 100.</p>
-     * <p>Default value: 10.</p>
+     * <p>The number of entries to return per page in a paging query.
+     * Maximum value: 100.
+     * Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -112,7 +108,7 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next query. An empty value indicates that there is no next page.</p>
+     * <p>The token used to start the next query. An empty NextToken indicates that no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -121,7 +117,7 @@ public class DescribeUserConnectionRecordsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the list of regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

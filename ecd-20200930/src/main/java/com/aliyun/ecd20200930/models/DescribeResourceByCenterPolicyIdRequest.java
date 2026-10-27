@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceByCenterPolicyIdRequest extends TeaModel {
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for a paged query.    </p>
      * <ul>
-     * <li>Maximum value: 100.</li>
+     * <li>Maximum value: 100.    </li>
      * <li>Default value: 10.</li>
      * </ul>
      * 
@@ -18,7 +18,7 @@ public class DescribeResourceByCenterPolicyIdRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token.</p>
+     * <p>The token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l69tQX7yFxx6/4dbooBAOc</p>
@@ -37,14 +37,7 @@ public class DescribeResourceByCenterPolicyIdRequest extends TeaModel {
     public String policyGroupId;
 
     /**
-     * <p>The service type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>app: cloud applications.</li>
-     * <li>resourceGroup: resource groups.</li>
-     * <li>desktop: cloud computers.</li>
-     * <li>desktopGroup: cloud computer shares.</li>
-     * </ul>
+     * <p>The product type.</p>
      * 
      * <strong>example:</strong>
      * <p>desktop</p>

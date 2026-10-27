@@ -1019,13 +1019,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The cloud computers must be in the Running state.</li>
-     * <li>This operation immediately returns a result. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <code>ManagementFlags</code> response parameter: <code>ASSIGNING</code> indicates that the assignment is in progress, and other values indicate that the assignment is complete.</li>
-     * <li>Check whether the assignment is complete every 2 to 5 seconds, for a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</li>
+     * <li>The cloud desktop must be in the Running state.</li>
+     * <li>This operation returns a result immediately. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <code>ManagementFlags</code> response parameter to determine whether the assignment is complete. A value of <code>ASSIGNING</code> indicates that the assignment is in progress. Any other value indicates that the assignment is complete.</li>
+     * <li>Check the assignment status every 2 to 5 seconds, up to a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Assigns users to multiple cloud computers in a batch.</p>
+     * <p>Assigns users to multiple cloud desktops in batches.</p>
      * 
      * @param request BatchModifyEntitlementRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1082,13 +1082,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The cloud computers must be in the Running state.</li>
-     * <li>This operation immediately returns a result. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <code>ManagementFlags</code> response parameter: <code>ASSIGNING</code> indicates that the assignment is in progress, and other values indicate that the assignment is complete.</li>
-     * <li>Check whether the assignment is complete every 2 to 5 seconds, for a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</li>
+     * <li>The cloud desktop must be in the Running state.</li>
+     * <li>This operation returns a result immediately. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <code>ManagementFlags</code> response parameter to determine whether the assignment is complete. A value of <code>ASSIGNING</code> indicates that the assignment is in progress. Any other value indicates that the assignment is complete.</li>
+     * <li>Check the assignment status every 2 to 5 seconds, up to a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Assigns users to multiple cloud computers in a batch.</p>
+     * <p>Assigns users to multiple cloud desktops in batches.</p>
      * 
      * @param request BatchModifyEntitlementRequest
      * @return BatchModifyEntitlementResponse
@@ -1152,7 +1152,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels an automatic snapshot policy for cloud computers.</p>
+     * <p>Cancels the automatic snapshot policy for a cloud desktop.</p>
      * 
      * @param request CancelAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1192,7 +1192,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Cancels an automatic snapshot policy for cloud computers.</p>
+     * <p>Cancels the automatic snapshot policy for a cloud desktop.</p>
      * 
      * @param request CancelAutoSnapshotPolicyRequest
      * @return CancelAutoSnapshotPolicyResponse
@@ -1724,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies an image to another region. To share an image across regions, call this operation to copy the image to the destination region first, and then share it.</p>
+     * <p>Copies an image to another region. To share an image across regions, call this operation to copy the image to the destination region before sharing it.</p>
      * 
      * @param request CopyImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1772,7 +1772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies an image to another region. To share an image across regions, call this operation to copy the image to the destination region first, and then share it.</p>
+     * <p>Copies an image to another region. To share an image across regions, call this operation to copy the image to the destination region before sharing it.</p>
      * 
      * @param request CopyImageRequest
      * @return CopyImageResponse
@@ -2723,6 +2723,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FileTransferSpeedLocation", request.fileTransferSpeedLocation);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.folderSync)) {
+            query.put("FolderSync", request.folderSync);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gpuAcceleration)) {
             query.put("GpuAcceleration", request.gpuAcceleration);
         }
@@ -3126,10 +3130,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The disk team list is synchronized from the EDS client -&gt; User Management -&gt; organization chart. If a user wants to use a team space, you can move the user to the specified organization in the User Management interface. The user can then see the team space menu bar in the disk client.</p>
+     * <p>The cloud disk team list is synchronized from the Wuying client by navigating to User Management &gt; Organizational structure. To use a team space, you must move users to a specified organization in the user management interface. Then, the users can view the team space menu bar in the cloud disk client.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disk organization authorization.</p>
+     * <p>Grants organization authorization for a cloud disk.</p>
      * 
      * @param request CreateCloudDriveGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3177,10 +3181,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The disk team list is synchronized from the EDS client -&gt; User Management -&gt; organization chart. If a user wants to use a team space, you can move the user to the specified organization in the User Management interface. The user can then see the team space menu bar in the disk client.</p>
+     * <p>The cloud disk team list is synchronized from the Wuying client by navigating to User Management &gt; Organizational structure. To use a team space, you must move users to a specified organization in the user management interface. Then, the users can view the team space menu bar in the cloud disk client.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disk organization authorization.</p>
+     * <p>Grants organization authorization for a cloud disk.</p>
      * 
      * @param request CreateCloudDriveGroupRequest
      * @return CreateCloudDriveGroupResponse
@@ -3828,22 +3832,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before creating cloud desktops, complete the following preparations:</p>
+     * <p>Before you create a cloud desktop, complete the following preparations:</p>
      * <ul>
-     * <li>Create an office network (formerly workspace) and users. For more information about the related API operations or documentation, see:<ul>
+     * <li>An office network (formerly workspace) and users are created. For related API operations or documentation, see:<ul>
      * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
-     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
+     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create an AD user</a>.</li>
      * </ul>
      * </li>
-     * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
+     * <li>A policy is created by calling <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a>, or an existing policy is used.
      * <strong>Call examples:</strong><details>
-     * <summary>Example of creating a cloud desktop by using a template</summary></li>
+     * <summary>Example of request parameters for creating a cloud desktop by using a template</summary></li>
      * </ul>
      * <pre><code>{
      *   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
      *   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
      *   &quot;Amount&quot;: &quot;1&quot;,
-     *   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// Create an office network in advance
+     *   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// An office network must be created in advance.
      *   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
      *   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
      *   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
@@ -3857,7 +3861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *   "RegionId": "cn-hangzhou",
      *   "DesktopName": "test-desktop-name",
      *   "Amount": "1",
-     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// An office network must be created in advance.
      *   "PolicyGroupId": "system-all-enabled-policy",
      *   "ChargeType": "PostPaid",
      *   "DesktopAttachment": {
@@ -3871,13 +3875,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * ```
      * </details>
      * <details>
-     * <summary>Example of creating a cloud desktop with a monthly hourly package</summary>
+     * <summary>Example of request parameters for creating a monthly hourly package</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
      *   "DesktopName": "test-desktop-name",
      *   "Amount": "1",
-     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// An office network must be created in advance.
      *   "PolicyGroupId": "system-all-enabled-policy",
      *   "ChargeType": "PostPaid",
      *   "DesktopAttachment": {
@@ -3896,14 +3900,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * ```
      * </details>
      * <details>
-     * <summary>Example of creating an agent resource</summary>
+     * <summary>Example of request parameters for creating an agent resource</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
      *   "BundleId": "b-openclaw-linux",
      *   "DesktopName": "test-desktop-name",
      *   "Amount": "1",
-     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// An office network must be created in advance.
      *   "ChargeType": "PostPaid",
      *   "DesktopAttachment": {
      *     "DesktopType": "cloud.space.4c.8g"
@@ -3916,10 +3920,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * ```
      * </details>
-     * To have the cloud desktop automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+     * To allow the cloud desktop to automatically execute custom command scripts, you can use the UserCommands field to configure custom commands.
      * 
      * <b>summary</b> : 
-     * <p>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</p>
+     * <p>Creates one or more cloud desktops. If user information is provided during creation, the cloud desktops are directly assigned.</p>
      * 
      * @param tmpReq CreateDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4012,6 +4016,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
             query.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.hostGpuDriverVersion)) {
+            query.put("HostGpuDriverVersion", request.hostGpuDriverVersion);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.hostname)) {
@@ -4137,22 +4145,22 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before creating cloud desktops, complete the following preparations:</p>
+     * <p>Before you create a cloud desktop, complete the following preparations:</p>
      * <ul>
-     * <li>Create an office network (formerly workspace) and users. For more information about the related API operations or documentation, see:<ul>
+     * <li>An office network (formerly workspace) and users are created. For related API operations or documentation, see:<ul>
      * <li>Convenience office network: <a href="https://help.aliyun.com/document_detail/215416.html">CreateSimpleOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/437832.html">CreateUsers</a>.</li>
-     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create AD users</a>.</li>
+     * <li>AD office network: <a href="https://help.aliyun.com/document_detail/215417.html">CreateADConnectorOfficeSite</a> and <a href="https://help.aliyun.com/document_detail/188619.html">Create an AD user</a>.</li>
      * </ul>
      * </li>
-     * <li>Call <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a> to create a policy, or confirm that an existing policy is available.
+     * <li>A policy is created by calling <a href="https://help.aliyun.com/document_detail/188889.html">CreatePolicyGroup</a>, or an existing policy is used.
      * <strong>Call examples:</strong><details>
-     * <summary>Example of creating a cloud desktop by using a template</summary></li>
+     * <summary>Example of request parameters for creating a cloud desktop by using a template</summary></li>
      * </ul>
      * <pre><code>{
      *   &quot;RegionId&quot;: &quot;cn-hangzhou&quot;,
      *   &quot;DesktopName&quot;: &quot;test-desktop-name&quot;,
      *   &quot;Amount&quot;: &quot;1&quot;,
-     *   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// Create an office network in advance
+     *   &quot;OfficeSiteId&quot;: &quot;cn-hangzhou+dir-xxx&quot;,// An office network must be created in advance.
      *   &quot;PolicyGroupId&quot;: &quot;system-all-enabled-policy&quot;,
      *   &quot;ChargeType&quot;: &quot;PostPaid&quot;,
      *   &quot;BundleId&quot;: &quot;b-enterprise_office_8c16g_windows2022&quot;
@@ -4166,7 +4174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *   "RegionId": "cn-hangzhou",
      *   "DesktopName": "test-desktop-name",
      *   "Amount": "1",
-     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// An office network must be created in advance.
      *   "PolicyGroupId": "system-all-enabled-policy",
      *   "ChargeType": "PostPaid",
      *   "DesktopAttachment": {
@@ -4180,13 +4188,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * ```
      * </details>
      * <details>
-     * <summary>Example of creating a cloud desktop with a monthly hourly package</summary>
+     * <summary>Example of request parameters for creating a monthly hourly package</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
      *   "DesktopName": "test-desktop-name",
      *   "Amount": "1",
-     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// An office network must be created in advance.
      *   "PolicyGroupId": "system-all-enabled-policy",
      *   "ChargeType": "PostPaid",
      *   "DesktopAttachment": {
@@ -4205,14 +4213,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * ```
      * </details>
      * <details>
-     * <summary>Example of creating an agent resource</summary>
+     * <summary>Example of request parameters for creating an agent resource</summary>
      * ```
      * {
      *   "RegionId": "cn-hangzhou",
      *   "BundleId": "b-openclaw-linux",
      *   "DesktopName": "test-desktop-name",
      *   "Amount": "1",
-     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// Create an office network in advance
+     *   "OfficeSiteId": "cn-hangzhou+dir-xxx",// An office network must be created in advance.
      *   "ChargeType": "PostPaid",
      *   "DesktopAttachment": {
      *     "DesktopType": "cloud.space.4c.8g"
@@ -4225,10 +4233,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * }
      * ```
      * </details>
-     * To have the cloud desktop automatically run custom command scripts, use the `UserCommands` field to configure custom commands.
+     * To allow the cloud desktop to automatically execute custom command scripts, you can use the UserCommands field to configure custom commands.
      * 
      * <b>summary</b> : 
-     * <p>Creates one or more cloud desktops. If user information is specified during creation, the cloud desktops are directly assigned to the users.</p>
+     * <p>Creates one or more cloud desktops. If user information is provided during creation, the cloud desktops are directly assigned.</p>
      * 
      * @param request CreateDesktopsRequest
      * @return CreateDesktopsResponse
@@ -5987,7 +5995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an automatic snapshot policy.</p>
+     * <p>Deletes automatic snapshot policies.</p>
      * 
      * @param request DeleteAutoSnapshotPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6023,7 +6031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an automatic snapshot policy.</p>
+     * <p>Deletes automatic snapshot policies.</p>
      * 
      * @param request DeleteAutoSnapshotPolicyRequest
      * @return DeleteAutoSnapshotPolicyResponse
@@ -7129,7 +7137,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a rate-limiting rule.</p>
+     * <p>Deletes QoS rules.</p>
      * 
      * @param request DeleteQosRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7161,7 +7169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a rate-limiting rule.</p>
+     * <p>Deletes QoS rules.</p>
      * 
      * @param request DeleteQosRulesRequest
      * @return DeleteQosRulesResponse
@@ -8553,11 +8561,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries console messages and their configurations under the current Alibaba Cloud account. You can filter messages by message ID, business channel, message type, client type, message level, title or body keyword, and target audience. Returns the list of messages on the current page and the total number of messages that match the query conditions.</p>
+     * <p>Queries console messages and their configurations under the current Alibaba Cloud account. Supports filtering by message ID, business channel, message type, client type, message level, title or body keywords, and message target. Returns the message list for the current page and the total number of messages that match the query conditions.</p>
      * <ul>
-     * <li>When multiple filter conditions are provided, all conditions are applied together to limit the query results.</li>
-     * <li>Uses PageNum and PageSize for pagination. The default value of PageNum is 1, and the default and maximum values of PageSize are both 200.</li>
-     * <li>When querying by a specified convenience user, the results include messages targeted at all convenience users, the user themselves, and the organization to which the user belongs. When querying by a specified AD user, the results also include messages targeted at all AD users, the user themselves, and the AD organization to which the user belongs.</li>
+     * <li>When multiple filter conditions are provided, all conditions jointly restrict the query results.</li>
+     * <li>Uses PageNum and PageSize for pagination. The default value of PageNum is 1. The default and maximum values of PageSize are both 200.</li>
+     * <li>When querying by a specified convenience user, the query matches messages targeted at all convenience users, the user themselves, and the organization to which the user belongs. When querying by a specified AD user, the query also matches messages targeted at all AD users, the user themselves, and the AD organization to which the user belongs.</li>
      * <li>Query results may include messages in the initializing, pushing, published, expired, deleting, and failed states. The Published state does not indicate that all target terminals have successfully received the message.</li>
      * <li>Image download URLs are temporary links. If a link expires, you can query again to obtain a new one.</li>
      * </ul>
@@ -8631,11 +8639,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries console messages and their configurations under the current Alibaba Cloud account. You can filter messages by message ID, business channel, message type, client type, message level, title or body keyword, and target audience. Returns the list of messages on the current page and the total number of messages that match the query conditions.</p>
+     * <p>Queries console messages and their configurations under the current Alibaba Cloud account. Supports filtering by message ID, business channel, message type, client type, message level, title or body keywords, and message target. Returns the message list for the current page and the total number of messages that match the query conditions.</p>
      * <ul>
-     * <li>When multiple filter conditions are provided, all conditions are applied together to limit the query results.</li>
-     * <li>Uses PageNum and PageSize for pagination. The default value of PageNum is 1, and the default and maximum values of PageSize are both 200.</li>
-     * <li>When querying by a specified convenience user, the results include messages targeted at all convenience users, the user themselves, and the organization to which the user belongs. When querying by a specified AD user, the results also include messages targeted at all AD users, the user themselves, and the AD organization to which the user belongs.</li>
+     * <li>When multiple filter conditions are provided, all conditions jointly restrict the query results.</li>
+     * <li>Uses PageNum and PageSize for pagination. The default value of PageNum is 1. The default and maximum values of PageSize are both 200.</li>
+     * <li>When querying by a specified convenience user, the query matches messages targeted at all convenience users, the user themselves, and the organization to which the user belongs. When querying by a specified AD user, the query also matches messages targeted at all AD users, the user themselves, and the AD organization to which the user belongs.</li>
      * <li>Query results may include messages in the initializing, pushing, published, expired, deleting, and failed states. The Published state does not indicate that all target terminals have successfully received the message.</li>
      * <li>Image download URLs are temporary links. If a link expires, you can query again to obtain a new one.</li>
      * </ul>
@@ -9255,7 +9263,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only data within the last 30 days can be queried.</p>
+     * <p>Currently, only data within the last 30 days is supported.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the detailed session information of cloud computers.</p>
@@ -9354,7 +9362,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only data within the last 30 days can be queried.</p>
+     * <p>Currently, only data within the last 30 days is supported.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the detailed session information of cloud computers.</p>
@@ -10181,7 +10189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about the cloud computers whose images can be and are pending to be updated to the specified version.</p>
+     * <p>Retrieves the information about cloud computers that can be upgraded to a specified image version but have not been upgraded.</p>
      * 
      * @param request DescribeFotaPendingDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10237,7 +10245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about the cloud computers whose images can be and are pending to be updated to the specified version.</p>
+     * <p>Retrieves the information about cloud computers that can be upgraded to a specified image version but have not been upgraded.</p>
      * 
      * @param request DescribeFotaPendingDesktopsRequest
      * @return DescribeFotaPendingDesktopsResponse
@@ -11579,11 +11587,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When multiple filter conditions are specified, only drivers that meet all conditions are returned. If no filter conditions are specified, both Wuying official drivers and drivers of the current account are returned. Use PageSize and PageNumber for pagination. Keep the filter conditions and PageSize unchanged, increment PageNumber page by page, and stop when an empty list is returned. The example values are provided to illustrate the format. Replace them with actual values.</p>
+     * <p>When multiple filter conditions are specified, the drivers that meet all the conditions are returned. If no filter condition is specified, both Wuying official drivers and custom drivers of the current account are queried. Use PageSize and PageNumber for pagination. Keep the filter conditions and PageSize unchanged, and increment PageNumber page by page. Stop when an empty list is returned. The sample values are used to illustrate the format. Replace them with actual values.</p>
      * <h2>Request examples</h2>
-     * <p>The following JSON examples show the logical request parameters. Common signature parameters are generated by the SDK or signing component.</p>
+     * <p>The following JSON shows the logical request parameters. Common signature parameters are generated by the SDK or signature component.</p>
      * <h3>Query official printer drivers</h3>
-     * <p>Query official printer drivers of a specified brand that contain a keyword. The first page is returned with a maximum of 20 entries per page.</p>
+     * <p>Queries the official printer drivers of a specified brand that contain a specific keyword. Returns the first page with a maximum of 20 entries per page.</p>
      * <pre><code class="language-json">{
      *   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
      *   &quot;Version&quot;: &quot;2020-09-30&quot;,
@@ -11595,7 +11603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *   &quot;PageNumber&quot;: 1
      * }
      * </code></pre>
-     * <h3>Query drivers by driver ID in batches</h3>
+     * <h3>Batch query by driver ID</h3>
      * <pre><code class="language-json">{
      *   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
      *   &quot;Version&quot;: &quot;2020-09-30&quot;,
@@ -11607,14 +11615,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *   &quot;PageNumber&quot;: 1
      * }
      * </code></pre>
-     * <p>When you construct request parameters directly, expand DriverIds by sequence number:</p>
+     * <p>When constructing request parameters directly, DriverIds are expanded by serial number:</p>
      * <pre><code class="language-text">DriverIds.1=11111111-2222-4333-8444-555555555555
      * DriverIds.2=66666666-7777-4888-8999-000000000000
      * </code></pre>
-     * <p>When you use an SDK, pass in a string array and the SDK handles the encoding.</p>
+     * <p>When using an SDK, pass a string array and the SDK completes the encoding.</p>
      * <h2>Response examples</h2>
-     * <p>The following responses are format examples. The icon URLs are for illustration purposes only. The reserved fields MaxResults and NextToken do not provide valid values and are omitted from the examples.</p>
-     * <h3>Successful query</h3>
+     * <p>The following responses are format examples. The icon URLs are placeholder addresses. The reserved fields MaxResults and NextToken do not provide valid values and are omitted in the examples.</p>
+     * <h3>Query succeeded</h3>
      * <pre><code class="language-json">{
      *   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
      *   &quot;Count&quot;: 1,
@@ -11642,7 +11650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries peripheral drivers visible to the current account, with support for filtering by ownership, brand, device type, driver ID, and keyword, and returns paginated results.</p>
+     * <p>Queries the peripheral drivers visible to the current account. Supports filtering by ownership, brand, device type, driver ID, and keyword, and returns paginated results.</p>
      * 
      * @param request DescribePeripheralDriversRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11706,11 +11714,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When multiple filter conditions are specified, only drivers that meet all conditions are returned. If no filter conditions are specified, both Wuying official drivers and drivers of the current account are returned. Use PageSize and PageNumber for pagination. Keep the filter conditions and PageSize unchanged, increment PageNumber page by page, and stop when an empty list is returned. The example values are provided to illustrate the format. Replace them with actual values.</p>
+     * <p>When multiple filter conditions are specified, the drivers that meet all the conditions are returned. If no filter condition is specified, both Wuying official drivers and custom drivers of the current account are queried. Use PageSize and PageNumber for pagination. Keep the filter conditions and PageSize unchanged, and increment PageNumber page by page. Stop when an empty list is returned. The sample values are used to illustrate the format. Replace them with actual values.</p>
      * <h2>Request examples</h2>
-     * <p>The following JSON examples show the logical request parameters. Common signature parameters are generated by the SDK or signing component.</p>
+     * <p>The following JSON shows the logical request parameters. Common signature parameters are generated by the SDK or signature component.</p>
      * <h3>Query official printer drivers</h3>
-     * <p>Query official printer drivers of a specified brand that contain a keyword. The first page is returned with a maximum of 20 entries per page.</p>
+     * <p>Queries the official printer drivers of a specified brand that contain a specific keyword. Returns the first page with a maximum of 20 entries per page.</p>
      * <pre><code class="language-json">{
      *   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
      *   &quot;Version&quot;: &quot;2020-09-30&quot;,
@@ -11722,7 +11730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *   &quot;PageNumber&quot;: 1
      * }
      * </code></pre>
-     * <h3>Query drivers by driver ID in batches</h3>
+     * <h3>Batch query by driver ID</h3>
      * <pre><code class="language-json">{
      *   &quot;Action&quot;: &quot;DescribePeripheralDrivers&quot;,
      *   &quot;Version&quot;: &quot;2020-09-30&quot;,
@@ -11734,14 +11742,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
      *   &quot;PageNumber&quot;: 1
      * }
      * </code></pre>
-     * <p>When you construct request parameters directly, expand DriverIds by sequence number:</p>
+     * <p>When constructing request parameters directly, DriverIds are expanded by serial number:</p>
      * <pre><code class="language-text">DriverIds.1=11111111-2222-4333-8444-555555555555
      * DriverIds.2=66666666-7777-4888-8999-000000000000
      * </code></pre>
-     * <p>When you use an SDK, pass in a string array and the SDK handles the encoding.</p>
+     * <p>When using an SDK, pass a string array and the SDK completes the encoding.</p>
      * <h2>Response examples</h2>
-     * <p>The following responses are format examples. The icon URLs are for illustration purposes only. The reserved fields MaxResults and NextToken do not provide valid values and are omitted from the examples.</p>
-     * <h3>Successful query</h3>
+     * <p>The following responses are format examples. The icon URLs are placeholder addresses. The reserved fields MaxResults and NextToken do not provide valid values and are omitted in the examples.</p>
+     * <h3>Query succeeded</h3>
      * <pre><code class="language-json">{
      *   &quot;RequestId&quot;: &quot;00000000-1111-4222-8333-444444444444&quot;,
      *   &quot;Count&quot;: 1,
@@ -11769,7 +11777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </code></pre>
      * 
      * <b>summary</b> : 
-     * <p>Queries peripheral drivers visible to the current account, with support for filtering by ownership, brand, device type, driver ID, and keyword, and returns paginated results.</p>
+     * <p>Queries the peripheral drivers visible to the current account. Supports filtering by ownership, brand, device type, driver ID, and keyword, and returns paginated results.</p>
      * 
      * @param request DescribePeripheralDriversRequest
      * @return DescribePeripheralDriversResponse
@@ -12643,7 +12651,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cloud resources that are associated with a global policy.</p>
+     * <p>Queries cloud resources that are not associated with a region policy.</p>
      * 
      * @param request DescribeResourceByCenterPolicyIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12691,7 +12699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries cloud resources that are associated with a global policy.</p>
+     * <p>Queries cloud resources that are not associated with a region policy.</p>
      * 
      * @param request DescribeResourceByCenterPolicyIdRequest
      * @return DescribeResourceByCenterPolicyIdResponse
@@ -12947,7 +12955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the snapshot list and detailed snapshot information of a cloud computer.</p>
+     * <p>Queries the list and details of snapshots for a cloud desktop.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13031,7 +13039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the snapshot list and detailed snapshot information of a cloud computer.</p>
+     * <p>Queries the list and details of snapshots for a cloud desktop.</p>
      * 
      * @param request DescribeSnapshotsRequest
      * @return DescribeSnapshotsResponse
@@ -13375,7 +13383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the connection records of authorized users connecting to pooled cloud computers in a cloud computer pool.</p>
+     * <p>Queries the connection records of authorized users to pooled cloud computers in a cloud computer pool.</p>
      * 
      * @param request DescribeUserConnectionRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13455,7 +13463,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the connection records of authorized users connecting to pooled cloud computers in a cloud computer pool.</p>
+     * <p>Queries the connection records of authorized users to pooled cloud computers in a cloud computer pool.</p>
      * 
      * @param request DescribeUserConnectionRecordsRequest
      * @return DescribeUserConnectionRecordsResponse
@@ -14893,7 +14901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a shared cloud computer.</p>
+     * <p>Retrieves the details of a shared cloud desktop.</p>
      * 
      * @param request GetDesktopGroupDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14929,7 +14937,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a shared cloud computer.</p>
+     * <p>Retrieves the details of a shared cloud desktop.</p>
      * 
      * @param request GetDesktopGroupDetailRequest
      * @return GetDesktopGroupDetailResponse
@@ -16736,6 +16744,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("FileTransferSpeedLocation", request.fileTransferSpeedLocation);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.folderSync)) {
+            query.put("FolderSync", request.folderSync);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.gpuAcceleration)) {
             query.put("GpuAcceleration", request.gpuAcceleration);
         }
@@ -18243,13 +18255,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office specifications use ESSDs by default and support settings for disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</p>
+     * <p>When you create a cloud desktop, you can select specifications by creating a custom template. Enterprise Graphics or High-frequency Office cloud desktops use ESSDs by default and support disk capacity and performance level settings. You can change the performance level of the system cloud disk or data cloud disk as needed.</p>
      * <blockquote>
-     * <p>Only Enterprise Graphics and High Frequency Office cloud computers support changing the disk performance level (PL).</p>
+     * <p>Only Enterprise Graphics and High-frequency Office cloud desktops support changing the disk performance level.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the performance level (PL) of the system cloud disk or data cloud disk of a cloud computer.</p>
+     * <p>Modifies the performance level of the system cloud disk or data cloud disk of a cloud desktop.</p>
      * 
      * @param request ModifyDiskSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18305,13 +18317,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you create a cloud computer, you can select specifications by creating a custom template. Enterprise Graphics or High Frequency Office specifications use ESSDs by default and support settings for disk capacity and performance level (PL). You can change the performance level (PL) of the system cloud disk or data cloud disk as needed.</p>
+     * <p>When you create a cloud desktop, you can select specifications by creating a custom template. Enterprise Graphics or High-frequency Office cloud desktops use ESSDs by default and support disk capacity and performance level settings. You can change the performance level of the system cloud disk or data cloud disk as needed.</p>
      * <blockquote>
-     * <p>Only Enterprise Graphics and High Frequency Office cloud computers support changing the disk performance level (PL).</p>
+     * <p>Only Enterprise Graphics and High-frequency Office cloud desktops support changing the disk performance level.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the performance level (PL) of the system cloud disk or data cloud disk of a cloud computer.</p>
+     * <p>Modifies the performance level of the system cloud disk or data cloud disk of a cloud desktop.</p>
      * 
      * @param request ModifyDiskSpecRequest
      * @return ModifyDiskSpecResponse
@@ -18873,10 +18885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only AD office networks in the <code>ERROR</code> or <code>REGISTERING</code> state support modifications to domain name and DNS-related parameters, including <code>DomainName</code>, <code>SubDomainName</code>, <code>DnsAddress.N</code>, and <code>SubDomainDnsAddress.N</code>.</p>
+     * <p>Only AD office networks in the <code>ERROR</code> or <code>REGISTERING</code> state support the modification of domain name and DNS-related parameters, including <code>DomainName</code>, <code>SubDomainName</code>, <code>DnsAddress.N</code>, and <code>SubDomainDnsAddress.N</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the bridge information for behavior management.</p>
+     * <p>Updates the behavior management bridge information.</p>
      * 
      * @param request ModifyOfficeSiteBridgeInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18932,10 +18944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only AD office networks in the <code>ERROR</code> or <code>REGISTERING</code> state support modifications to domain name and DNS-related parameters, including <code>DomainName</code>, <code>SubDomainName</code>, <code>DnsAddress.N</code>, and <code>SubDomainDnsAddress.N</code>.</p>
+     * <p>Only AD office networks in the <code>ERROR</code> or <code>REGISTERING</code> state support the modification of domain name and DNS-related parameters, including <code>DomainName</code>, <code>SubDomainName</code>, <code>DnsAddress.N</code>, and <code>SubDomainDnsAddress.N</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the bridge information for behavior management.</p>
+     * <p>Updates the behavior management bridge information.</p>
      * 
      * @param request ModifyOfficeSiteBridgeInfoRequest
      * @return ModifyOfficeSiteBridgeInfoResponse
@@ -20226,7 +20238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the trend of active user count statistics within a specified time range. Returns the deduplicated active user count at each time slice based on the specified aggregation interval (Period), which can be used to plot online user trend charts.</p>
+     * <p>Queries the trend of active user statistics within a specified time range. Returns the number of deduplicated active users at each time slice based on the specified time aggregation granularity (Period) for plotting online user trend charts.</p>
      * 
      * @param request QueryActiveUserStatisticRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20274,7 +20286,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the trend of active user count statistics within a specified time range. Returns the deduplicated active user count at each time slice based on the specified aggregation interval (Period), which can be used to plot online user trend charts.</p>
+     * <p>Queries the trend of active user statistics within a specified time range. Returns the number of deduplicated active users at each time slice based on the specified time aggregation granularity (Period) for plotting online user trend charts.</p>
      * 
      * @param request QueryActiveUserStatisticRequest
      * @return QueryActiveUserStatisticResponse
@@ -20366,7 +20378,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the usage duration ranking and details of each end user under a tenant within a specified date range. Aggregates offline statistical data, summarizes connection duration by user dimension, and populates basic information and per-desktop usage duration details for users on the current page.</p>
+     * <p>Queries the usage duration rankings and details of end users within a specified date range for a tenant. It aggregates offline statistical data, summarizes the connection duration by user, and populates basic information and usage duration details for each cloud desktop for the users on the current page.</p>
      * 
      * @param request QueryEndUserHistoryUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -20414,7 +20426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the usage duration ranking and details of each end user under a tenant within a specified date range. Aggregates offline statistical data, summarizes connection duration by user dimension, and populates basic information and per-desktop usage duration details for users on the current page.</p>
+     * <p>Queries the usage duration rankings and details of end users within a specified date range for a tenant. It aggregates offline statistical data, summarizes the connection duration by user, and populates basic information and usage duration details for each cloud desktop for the users on the current page.</p>
      * 
      * @param request QueryEndUserHistoryUsageRequest
      * @return QueryEndUserHistoryUsageResponse

@@ -13,7 +13,7 @@ public class CreateDesktopsResponseBody extends TeaModel {
     /**
      * <p>The order ID.</p>
      * <blockquote>
-     * <p>This parameter is returned only when the ChargeType request parameter is set to PrePaid.</p>
+     * <p>This parameter is returned when the ChargeType request parameter is set to PrePaid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

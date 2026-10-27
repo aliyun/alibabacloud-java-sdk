@@ -1153,6 +1153,13 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         public String fileTransferSpeedLocation;
 
         /**
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        @NameInMap("FolderSync")
+        public String folderSync;
+
+        /**
          * <p>Indicates whether the image quality policy is enabled for GPU-accelerated cloud desktops. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</p>
          * 
          * <strong>example:</strong>
@@ -2535,6 +2542,14 @@ public class DescribeCenterPolicyListResponseBody extends TeaModel {
         }
         public String getFileTransferSpeedLocation() {
             return this.fileTransferSpeedLocation;
+        }
+
+        public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setFolderSync(String folderSync) {
+            this.folderSync = folderSync;
+            return this;
+        }
+        public String getFolderSync() {
+            return this.folderSync;
         }
 
         public DescribeCenterPolicyListResponseBodyDescribePolicyGroups setGpuAcceleration(String gpuAcceleration) {

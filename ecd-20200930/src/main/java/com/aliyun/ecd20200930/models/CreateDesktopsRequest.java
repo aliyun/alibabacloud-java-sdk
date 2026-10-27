@@ -23,7 +23,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String appRuleId;
 
     /**
-     * <p>Specifies whether to enable automatic payment.</p>
+     * <p>Specifies whether to enable automatic payment. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
+     * <p>Specifies whether to enable auto-renewal. This parameter takes effect only when ChargeType is set to PrePaid. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,7 +41,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The cloud desktop template ID. If no template ID is specified, you can create a cloud desktop by specifying the required fields.</p>
+     * <p>The ID of the cloud desktop template. If you do not specify a template ID, you can complete the creation by specifying the required fields.</p>
      * 
      * <strong>example:</strong>
      * <p>b-je9hani001wfn****</p>
@@ -60,7 +60,7 @@ public class CreateDesktopsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This field is not publicly available.</p>
+     * <p>This field is currently not available for public use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String channelCookie;
 
     /**
-     * <p>The billing method of the cloud desktop.</p>
+     * <p>The billing method of the cloud desktop. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
@@ -79,7 +79,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The parameters for creating a cloud desktop without a template. This parameter is invalid when the BundleID parameter is specified.</p>
+     * <p>The parameters for creating a cloud desktop without a template. This parameter is invalid if the BundleId parameter is specified.</p>
      */
     @NameInMap("DesktopAttachment")
     public CreateDesktopsRequestDesktopAttachment desktopAttachment;
@@ -94,10 +94,10 @@ public class CreateDesktopsRequest extends TeaModel {
     public String desktopMemberIp;
 
     /**
-     * <p>The cloud desktop name. The naming rules are as follows:</p>
+     * <p>The name of the cloud desktop. The name must meet the following rules:</p>
      * <ul>
      * <li>The name can be up to 64 characters in length.</li>
-     * <li>The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The name must start with a letter or a Chinese character, and cannot start with http:// or https://.</li>
      * <li>The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
      * </ul>
      * 
@@ -108,13 +108,13 @@ public class CreateDesktopsRequest extends TeaModel {
     public String desktopName;
 
     /**
-     * <p>Controls the format of the desktop name.</p>
+     * <p>The format of the cloud desktop name.</p>
      */
     @NameInMap("DesktopNameModel")
     public CreateDesktopsRequestDesktopNameModel desktopNameModel;
 
     /**
-     * <p>Specifies whether to automatically append a suffix to the cloud desktop name when you create multiple cloud desktops in a batch.</p>
+     * <p>Specifies whether to automatically add a suffix to the cloud desktop name when you create multiple cloud desktops in a batch. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -123,7 +123,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public Boolean desktopNameSuffix;
 
     /**
-     * <p>The details of the scheduled task for the cloud desktop. This parameter is being deprecated. Use the TimerGroupId parameter instead.</p>
+     * <p>The details of the scheduled tasks for the cloud desktop. This parameter is being deprecated. Use the TImerGroupId parameter instead.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -143,7 +143,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The list of authorized user IDs to add to the cloud desktops. You can specify 1 to 100 user IDs.</p>
+     * <p>The list of IDs of authorized users to be added to the cloud desktop. You can specify 1 to 100 user IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -161,7 +161,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String extendInfo;
 
     /**
-     * <p>The cloud desktop pool ID.</p>
+     * <p>The ID of the cloud desktop pool.</p>
      * 
      * <strong>example:</strong>
      * <p>dg-boyczi8enfyc5****</p>
@@ -170,17 +170,26 @@ public class CreateDesktopsRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The custom hostname of the cloud desktop. Settings are supported only for Windows cloud desktops with the Windows operating system type in AD office networks.</p>
-     * <p>The naming rules for the hostname are as follows:</p>
+     * <p>The GPU driver version of the host.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Grid19</p>
+     */
+    @NameInMap("HostGpuDriverVersion")
+    public String hostGpuDriverVersion;
+
+    /**
+     * <p>The custom settings for the hostname of the cloud desktop. This parameter is supported only for cloud desktops whose operating system is Windows in an AD office network.</p>
+     * <p>The hostname must meet the following rules:</p>
      * <ul>
      * <li>The hostname must be 2 to 15 characters in length.</li>
-     * <li>The hostname can contain uppercase letters, lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen, cannot contain consecutive hyphens, and cannot consist of only digits.</li>
+     * <li>The hostname can contain letters, digits, and hyphens (-). It cannot start or end with a hyphen, contain consecutive hyphens, or contain only digits.</li>
      * </ul>
-     * <p>When you create multiple cloud desktops, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> format to name the cloud desktops in a unified manner. For example, if you set Hostname to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</p>
+     * <p>When you create multiple cloud desktops, you can use the name_prefix[begin_number,bits]name_suffix format to name them in a unified manner. For example, if you set Hostname to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</p>
      * <ul>
-     * <li><code>name_prefix</code>: the prefix of the hostname.</li>
-     * <li><code>[begin_number,bits]</code>: the sequential number in the hostname. <code>begin_number</code> specifies the start number. Valid values: 0 to 999999. Default value: 0. <code>bits</code> specifies the number of digits. Valid values: 1 to 6. Default value: 6.</li>
-     * <li><code>name_suffix</code>: the suffix of the hostname.</li>
+     * <li>name_prefix: the prefix of the hostname.</li>
+     * <li>[begin_number,bits]: the sequential number in the hostname. begin_number is the starting number. Valid values: 0 to 999999. Default value: 0. bits is the number of digits. Valid values: 1 to 6. Default value: 6.</li>
+     * <li>name_suffix: the suffix of the hostname.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -190,13 +199,13 @@ public class CreateDesktopsRequest extends TeaModel {
     public String hostname;
 
     /**
-     * <p>The parameters for purchasing a monthly hours package.</p>
+     * <p>The purchase parameters for the monthly hourly package.</p>
      */
     @NameInMap("MonthDesktopSetting")
     public CreateDesktopsRequestMonthDesktopSetting monthDesktopSetting;
 
     /**
-     * <p>The office network ID.</p>
+     * <p>The ID of the office network.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-387822****</p>
@@ -205,7 +214,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The organizational unit (OU) path. If specified, the cloud desktop is added to the corresponding OU in Active Directory (AD).</p>
+     * <p>The OU path. After this parameter is specified, the cloud desktop joins the corresponding organizational unit (OU) in Active Directory (AD).</p>
      * 
      * <strong>example:</strong>
      * <p>test.com/wuyingtest/computers</p>
@@ -214,9 +223,9 @@ public class CreateDesktopsRequest extends TeaModel {
     public String ouPath;
 
     /**
-     * <p>The subscription duration of the resource. The unit is specified by <code>PeriodUnit</code>. This parameter takes effect and is required only when <code>ChargeType</code> is set to <code>PrePaid</code>.</p>
+     * <p>The subscription period of the resource. The unit is specified by PeriodUnit. This parameter takes effect and is required only when ChargeType is set to PrePaid.</p>
      * <ul>
-     * <li><p>If <code>PeriodUnit</code> is set to <code>Month</code>, valid values of this parameter:</p>
+     * <li><p>If PeriodUnit is set to Month, valid values of this parameter are:</p>
      * <ul>
      * <li>1</li>
      * <li>2</li>
@@ -224,7 +233,7 @@ public class CreateDesktopsRequest extends TeaModel {
      * <li>6</li>
      * </ul>
      * </li>
-     * <li><p>If <code>PeriodUnit</code> is set to <code>Year</code>, valid values of this parameter:</p>
+     * <li><p>If PeriodUnit is set to Year, valid values of this parameter are:</p>
      * <ul>
      * <li>1</li>
      * <li>2</li>
@@ -242,7 +251,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription billing method duration.</p>
+     * <p>The time unit for the subscription billing method. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -251,7 +260,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The policy ID.</p>
+     * <p>The ID of the policy.</p>
      * 
      * <strong>example:</strong>
      * <p>system-all-enabled-policy</p>
@@ -260,7 +269,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String policyGroupId;
 
     /**
-     * <p>The promotion ID.</p>
+     * <p>The ID of the promotional event.</p>
      * 
      * <strong>example:</strong>
      * <p>23141</p>
@@ -269,7 +278,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The additional parameters for a specific purchase type.</p>
+     * <p>The additional parameters for specific purchase types.</p>
      */
     @NameInMap("PurchaseOptions")
     public CreateDesktopsRequestPurchaseOptions purchaseOptions;
@@ -284,7 +293,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String qosRuleId;
 
     /**
-     * <p>The region ID. Call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by WUYING Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -294,7 +303,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The user ID for resource ownership in reseller pattern. You do not need to specify this parameter in non-reseller pattern.</p>
+     * <p>The user ID for resource ownership in the reseller pattern. This parameter is not required in the non-reseller pattern.</p>
      * 
      * <strong>example:</strong>
      * <p>1828644634819902</p>
@@ -303,7 +312,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public Long resellerOwnerUid;
 
     /**
-     * <p>The resource reserve pool ID (rp-xxx). This parameter is optional. If specified, the cloud desktop is created from the reserve pool, and compute resources are provided by the reserve pool without generating a compute fee order. If ZoneId is explicitly specified, it must match the zone of the reserve pool.</p>
+     * <p>The ID of compute resource pool (rp-xxx). This parameter is optional. If this parameter is specified, the cloud desktop is created from compute resource pool, computing resources are provided by compute resource pool, and no computing fee order is generated. If the ZoneId parameter is explicitly specified, it must be the same as the zone of compute resource pool.</p>
      * 
      * <strong>example:</strong>
      * <p>rp-xxx</p>
@@ -312,7 +321,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String reservePoolId;
 
     /**
-     * <p>The ID of the WUYING resource group.</p>
+     * <p>The ID of the Wuying resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-3mtuc28rx95lx****</p>
@@ -322,7 +331,7 @@ public class CreateDesktopsRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This field is not publicly available.</p>
+     * <p>This field is currently not available for public use.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -332,7 +341,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String savingPlanId;
 
     /**
-     * <p>The ID of the WUYING automatic snapshot policy.</p>
+     * <p>The ID of the Wuying automatic snapshot policy.</p>
      * 
      * <strong>example:</strong>
      * <p>sp-28mp6my0l6zow****</p>
@@ -341,12 +350,12 @@ public class CreateDesktopsRequest extends TeaModel {
     public String snapshotPolicyId;
 
     /**
-     * <p>The purchase method of the cloud desktop. Valid values:</p>
+     * <p>The billing method of the cloud desktop. Valid values:</p>
      * <ul>
-     * <li>prePaid: Monthly subscription with unlimited duration.</li>
-     * <li>postPaid: Pay-as-you-go.</li>
-     * <li>monthPackage: Monthly hours package.</li>
-     * <li>jvsAgentPackage: JVS Agent hours package.</li>
+     * <li>prePaid: monthly subscription without a duration limit.</li>
+     * <li>postPaid: pay-as-you-go.</li>
+     * <li>monthPackage: monthly duration package.</li>
+     * <li>jvsAgentPackage: JVS agent duration package.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -380,9 +389,9 @@ public class CreateDesktopsRequest extends TeaModel {
     public String timerGroupId;
 
     /**
-     * <p>The cloud desktop assignment mode.</p>
+     * <p>The assignment mode of the cloud desktop. Valid values:</p>
      * <blockquote>
-     * <p>If <code>EndUserId</code> is not specified, the created cloud desktops are not assigned to any user.</p>
+     * <p>If EndUserId is not specified, the created cloud desktop is not assigned to any user.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -409,7 +418,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public String userName;
 
     /**
-     * <p>Specifies whether to enable disk encryption.</p>
+     * <p>Specifies whether to enable cloud disk encryption. Valid values:</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -418,7 +427,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public Boolean volumeEncryptionEnabled;
 
     /**
-     * <p>The ID of the Key Management Service (KMS) key used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
+     * <p>The ID of the Key Management Service (KMS) key used when cloud disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to obtain the key ID.</p>
      * 
      * <strong>example:</strong>
      * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
@@ -584,6 +593,14 @@ public class CreateDesktopsRequest extends TeaModel {
     }
     public String getGroupId() {
         return this.groupId;
+    }
+
+    public CreateDesktopsRequest setHostGpuDriverVersion(String hostGpuDriverVersion) {
+        this.hostGpuDriverVersion = hostGpuDriverVersion;
+        return this;
+    }
+    public String getHostGpuDriverVersion() {
+        return this.hostGpuDriverVersion;
     }
 
     public CreateDesktopsRequest setHostname(String hostname) {
@@ -805,7 +822,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public Integer amount;
 
         /**
-         * <p>The cloud desktop template ID.</p>
+         * <p>The ID of the cloud desktop template.</p>
          * 
          * <strong>example:</strong>
          * <p>b-je9hani001wfn****</p>
@@ -814,10 +831,10 @@ public class CreateDesktopsRequest extends TeaModel {
         public String bundleId;
 
         /**
-         * <p>The cloud desktop name. The naming rules are as follows:</p>
+         * <p>The name of the cloud desktop. The name must meet the following rules:</p>
          * <ul>
          * <li>The name can be up to 64 characters in length.</li>
-         * <li>The name must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</li>
+         * <li>The name must start with a letter or a Chinese character, and cannot start with http:// or https://.</li>
          * <li>The name can contain Chinese characters, letters, digits, colons (:), underscores (_), periods (.), and hyphens (-).</li>
          * </ul>
          * 
@@ -828,23 +845,23 @@ public class CreateDesktopsRequest extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The list of users to whom the cloud desktops are assigned.</p>
+         * <p>The list of users to whom the cloud desktop is assigned.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
         /**
-         * <p>The custom hostname of the cloud desktop. Settings are supported only for cloud desktops with the Windows operating system type in AD office networks.</p>
-         * <p>The naming rules for the hostname are as follows:</p>
+         * <p>The custom settings for the hostname of the cloud desktop. This parameter is supported only for cloud desktops whose operating system is Windows in an AD office network.</p>
+         * <p>The hostname must meet the following rules:</p>
          * <ul>
          * <li>The hostname must be 2 to 15 characters in length.</li>
-         * <li>The hostname can contain uppercase letters, lowercase letters, digits, and hyphens (-). It cannot start or end with a hyphen, cannot contain consecutive hyphens, and cannot consist of only digits.</li>
+         * <li>The hostname can contain letters, digits, and hyphens (-). It cannot start or end with a hyphen, contain consecutive hyphens, or contain only digits.</li>
          * </ul>
-         * <p>When you create multiple cloud desktops, you can use the <code>name_prefix[begin_number,bits]name_suffix</code> format to name the cloud desktops in a unified manner. For example, if you set Hostname to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</p>
+         * <p>When you create multiple cloud desktops, you can use the name_prefix[begin_number,bits]name_suffix format to name them in a unified manner. For example, if you set Hostname to ecd-[1,4]-test, the hostname of the first cloud desktop is ecd-0001-test, the hostname of the second cloud desktop is ecd-0002-test, and so on.</p>
          * <ul>
-         * <li><code>name_prefix</code>: the prefix of the hostname.</li>
-         * <li><code>[begin_number,bits]</code>: the sequential number in the hostname. <code>begin_number</code> specifies the start number. Valid values: 0 to 999999. Default value: 0. <code>bits</code> specifies the number of digits. Valid values: 1 to 6. Default value: 6.</li>
-         * <li><code>name_suffix</code>: the suffix of the hostname.</li>
+         * <li>name_prefix: the prefix of the hostname.</li>
+         * <li>[begin_number,bits]: the sequential number in the hostname. begin_number is the starting number. Valid values: 0 to 999999. Default value: 0. bits is the number of digits. Valid values: 1 to 6. Default value: 6.</li>
+         * <li>name_suffix: the suffix of the hostname.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -854,7 +871,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public String hostname;
 
         /**
-         * <p>Specifies whether to enable disk encryption.</p>
+         * <p>Specifies whether to enable cloud disk encryption. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -863,7 +880,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key used when disk encryption is enabled. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
+         * <p>The ID of the Key Management Service (KMS) key used when cloud disk encryption is enabled. You can call the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation to obtain the key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>
@@ -936,10 +953,10 @@ public class CreateDesktopsRequest extends TeaModel {
 
     public static class CreateDesktopsRequestDesktopAttachment extends TeaModel {
         /**
-         * <p>The type of the data cloud disk. The system cloud disk and data cloud disk must be of the same type. Valid values:</p>
+         * <p>The category of the data cloud disk. The system cloud disk and the data cloud disk must be of the same category. Valid values:</p>
          * <ul>
-         * <li>cloud_auto: standard SSD.</li>
-         * <li>cloud_essd: ESSD cloud disk.</li>
+         * <li>cloud_auto: standard SSD</li>
+         * <li>cloud_essd: ESSD cloud disk</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -949,7 +966,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public String dataDiskCategory;
 
         /**
-         * <p>The performance level of the ESSD cloud disk. This parameter is required if you select an ESSD cloud disk. Valid values:</p>
+         * <p>The performance level of the ESSD. This parameter is required if you select an ESSD. Valid values:</p>
          * <ul>
          * <li>PL0</li>
          * <li>PL1</li>
@@ -962,7 +979,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public String dataDiskPerLevel;
 
         /**
-         * <p>The capacity of the user disk. Valid values: 40 to 2040. The value must be a multiple of 10. Unit: GiB.</p>
+         * <p>The capacity of the user disk. Unit: GiB. Valid values: 40 to 2040, in increments of 10.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -986,7 +1003,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public String defaultLanguage;
 
         /**
-         * <p>The cloud desktop type. You can call <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> to query the supported cloud desktop type IDs.</p>
+         * <p>The specifications of the cloud desktop. You can call the <a href="https://help.aliyun.com/document_detail/188882.html">DescribeDesktopTypes</a> operation to query the IDs of supported cloud desktop specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>eds.enterprise_office.8c16g</p>
@@ -1004,10 +1021,10 @@ public class CreateDesktopsRequest extends TeaModel {
         public String imageId;
 
         /**
-         * <p>The type of the system cloud disk. The system cloud disk and data cloud disk must be of the same type. Valid values:</p>
+         * <p>The category of the system cloud disk. The system cloud disk and the data cloud disk must be of the same category. Valid values:</p>
          * <ul>
-         * <li>cloud_auto: standard SSD.</li>
-         * <li>cloud_essd: ESSD cloud disk.</li>
+         * <li>cloud_auto: standard SSD</li>
+         * <li>cloud_essd: ESSD cloud disk</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1017,7 +1034,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public String systemDiskCategory;
 
         /**
-         * <p>The performance level of the ESSD cloud disk. This parameter is required if you select an ESSD cloud disk. Valid values:</p>
+         * <p>The performance level of the ESSD. This parameter is required if you select an ESSD. Valid values:</p>
          * <ul>
          * <li>PL0</li>
          * <li>PL1</li>
@@ -1030,7 +1047,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public String systemDiskPerLevel;
 
         /**
-         * <p>The capacity of the system cloud disk. Valid values: 40 to 2040. The value must be a multiple of 10. Unit: GiB.</p>
+         * <p>The capacity of the system cloud disk. Unit: GiB. Valid values: 40 to 2040, in increments of 10.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -1119,7 +1136,7 @@ public class CreateDesktopsRequest extends TeaModel {
 
     public static class CreateDesktopsRequestDesktopNameModel extends TeaModel {
         /**
-         * <p>Specifies whether to automatically append a suffix to the cloud desktop name when creating multiple cloud desktops in a batch. Default value: true.</p>
+         * <p>Specifies whether to automatically add a suffix to the cloud desktop name when you create multiple cloud desktops in a batch. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1144,7 +1161,7 @@ public class CreateDesktopsRequest extends TeaModel {
 
     public static class CreateDesktopsRequestDesktopTimers extends TeaModel {
         /**
-         * <p>Specifies whether end users can configure scheduled tasks.</p>
+         * <p>Specifies whether to allow end users to configure scheduled tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1155,7 +1172,7 @@ public class CreateDesktopsRequest extends TeaModel {
         /**
          * <p>The cron expression of the scheduled task.</p>
          * <blockquote>
-         * <p>Notice: The time must be specified in UTC. For example, to specify 00:00 (UTC+8) every day, set this parameter to 0 0 16 ? * 1,2,3,4,5,6,7.</notice></p>
+         * <p>Notice: You must specify the time in UTC. For example, to specify 00:00:00 every day in UTC+8 (Beijing time), pass 0 0 16 ? * 1,2,3,4,5,6,7.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1165,7 +1182,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public String cronExpression;
 
         /**
-         * <p>Specifies whether to forcefully execute the scheduled task.</p>
+         * <p>Specifies whether to forcibly execute the task.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1174,7 +1191,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public Boolean enforce;
 
         /**
-         * <p>The time interval. Unit: minutes.</p>
+         * <p>The time interval, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1183,7 +1200,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>The operation type of the scheduled task. Currently, only the disconnect scheduled task is supported.</p>
+         * <p>The operation type of the scheduled task. Currently, only disconnect scheduled tasks are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>Shutdown</p>
@@ -1275,7 +1292,7 @@ public class CreateDesktopsRequest extends TeaModel {
     public static class CreateDesktopsRequestMonthDesktopSetting extends TeaModel {
         /**
          * <blockquote>
-         * <p>This field is not publicly available.</p>
+         * <p>This field is currently not available for public use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1286,7 +1303,7 @@ public class CreateDesktopsRequest extends TeaModel {
 
         /**
          * <blockquote>
-         * <p>This field is not publicly available.</p>
+         * <p>This field is currently not available for public use.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1296,7 +1313,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The plan option when purchasing a monthly hours package. Valid values: 120, 250, and 360.</p>
+         * <p>The plan selected when purchasing a monthly hourly package. Valid values: 120, 250, and 360.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -1337,7 +1354,7 @@ public class CreateDesktopsRequest extends TeaModel {
 
     public static class CreateDesktopsRequestPurchaseOptions extends TeaModel {
         /**
-         * <p>The quota of the WUYING credit package.</p>
+         * <p>The quota of the Wuying credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -1346,7 +1363,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public Integer creditPackageAmountSpec;
 
         /**
-         * <p>The duration of the WUYING credit package.</p>
+         * <p>The duration of the Wuying credit package.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1364,7 +1381,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public String creditPackagePeriodUnit;
 
         /**
-         * <p>The monthly credit package. This parameter is used to select a credit plan when purchasing Agent resources. Valid values: 200, 1600, and 4000.</p>
+         * <p>The monthly credit package used to select a credit plan when purchasing agent resources. Valid values: 200, 1600, and 4000.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -1455,7 +1472,7 @@ public class CreateDesktopsRequest extends TeaModel {
 
     public static class CreateDesktopsRequestUserCommands extends TeaModel {
         /**
-         * <p>The command content.</p>
+         * <p>The content of the command.</p>
          * 
          * <strong>example:</strong>
          * <p>bmV3LWl0ZW0gZDpcdGVzdF91c2VyX2NvbW1hbmRzLnR4dCAtdHlwZSBm****</p>
@@ -1464,7 +1481,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The encoding method of the command content (CommandContent).</p>
+         * <p>The encoding method of the command content. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>Base64</p>
@@ -1473,7 +1490,7 @@ public class CreateDesktopsRequest extends TeaModel {
         public String contentEncoding;
 
         /**
-         * <p>The language type of the command.</p>
+         * <p>The language type of the command. Valid values:</p>
          * 
          * <strong>example:</strong>
          * <p>RunPowerShellScript</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyOfficeSiteBridgeInfoRequest extends TeaModel {
     /**
-     * <p>The virtual bridge ID.</p>
+     * <p>The ID of the virtual bridge.</p>
      * 
      * <strong>example:</strong>
      * <p>vb-fsifhaiushfishf***</p>
@@ -14,7 +14,7 @@ public class ModifyOfficeSiteBridgeInfoRequest extends TeaModel {
     public String bridgeId;
 
     /**
-     * <p>The virtual bridge specifications.</p>
+     * <p>The specifications of the virtual bridge.</p>
      * 
      * <strong>example:</strong>
      * <p>vb.pro</p>
@@ -50,7 +50,7 @@ public class ModifyOfficeSiteBridgeInfoRequest extends TeaModel {
     public String license;
 
     /**
-     * <p>The office network ID.</p>
+     * <p>The ID of the office network.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-387822****</p>
@@ -59,7 +59,7 @@ public class ModifyOfficeSiteBridgeInfoRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

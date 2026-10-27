@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCloudDriveGroupRequest extends TeaModel {
     /**
-     * <p>List of user IDs to be set as team space administrators.</p>
+     * <p>The list of user IDs to be set as team space administrators.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class CreateCloudDriveGroupRequest extends TeaModel {
     public java.util.List<String> adminUserIds;
 
     /**
-     * <p>The ID of the cloud disk in Cloud Drive Service.</p>
+     * <p>The ID of the Wuying cloud disk.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateCloudDriveGroupRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The ID of the team.</p>
+     * <p>The ID of the organizational team.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateCloudDriveGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class CreateCloudDriveGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The size of the cloud disk in Cloud Drive Service. Unit: bytes. The size is unlimited.</p>
+     * <p>The capacity of the Wuying cloud disk team space. Unit: bytes. Default value: unlimited.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

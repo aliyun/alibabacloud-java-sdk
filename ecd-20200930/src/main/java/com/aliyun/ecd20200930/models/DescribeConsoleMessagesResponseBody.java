@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeConsoleMessagesResponseBody extends TeaModel {
     /**
-     * <p>The list of console messages queried on the current page. If no messages match, an empty list is returned.</p>
+     * <p>The list of console messages queried for the current page. If no messages match, an empty list is returned.</p>
      */
     @NameInMap("MessageList")
     public java.util.List<DescribeConsoleMessagesResponseBodyMessageList> messageList;
 
     /**
-     * <p>The ID of the request, which is used to locate and troubleshoot issues.</p>
+     * <p>The ID of the current request, which is used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>9F1D7E42-06A8-4B50-9A21-6E0C8D3F5B72</p>
@@ -59,7 +59,7 @@ public class DescribeConsoleMessagesResponseBody extends TeaModel {
 
     public static class DescribeConsoleMessagesResponseBodyMessageListContentConfigs extends TeaModel {
         /**
-         * <p>The color of the body text, which retains the color value saved when the message was created or modified.</p>
+         * <p>The color of the body text. The color value saved when the message is created or modified is used.</p>
          * 
          * <strong>example:</strong>
          * <p>#666666</p>
@@ -77,7 +77,7 @@ public class DescribeConsoleMessagesResponseBody extends TeaModel {
         public String contentText;
 
         /**
-         * <p>The body language. Valid values: CN (Chinese), EN (English), and JP (Japanese). The query returns the language value saved when the message was created or modified, retaining the original case.</p>
+         * <p>The body language. Valid values: CN (Chinese), EN (English), and JP (Japanese). The query returns the language value saved when the message is created or modified, retaining the original case.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -127,7 +127,7 @@ public class DescribeConsoleMessagesResponseBody extends TeaModel {
         public String title;
 
         /**
-         * <p>The URL accessed after clicking the hyperlink button.</p>
+         * <p>The URL accessed after the hyperlink button is clicked.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/announcements/maintenance">https://example.com/announcements/maintenance</a></p>
@@ -178,7 +178,7 @@ public class DescribeConsoleMessagesResponseBody extends TeaModel {
         public String imageFilePath;
 
         /**
-         * <p>The image type. Configuration types defined by the backend include Operational (operational message image), WallpaperBasic (basic wallpaper image), and WallpaperAppend (appended wallpaper image). The query returns the image type value saved when the message was created or modified, retaining the original case.</p>
+         * <p>The image type. Configuration types defined by the backend include Operational (operational message image), WallpaperBasic (basic wallpaper image), and WallpaperAppend (appended wallpaper image). The query returns the image type value saved when the message is created or modified, retaining the original case.</p>
          * 
          * <strong>example:</strong>
          * <p>WallpaperBasic</p>
@@ -187,7 +187,7 @@ public class DescribeConsoleMessagesResponseBody extends TeaModel {
         public String imageType;
 
         /**
-         * <p>The temporary download URL of the image file. The link has a limited validity period. If it expires, you can query again to obtain a new one.</p>
+         * <p>The temporary download URL of the image file. The link has a limited validity period. If the link expires, you can query again to obtain a new one.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/images/img0.jpg">https://example.com/images/img0.jpg</a></p>
@@ -309,7 +309,7 @@ public class DescribeConsoleMessagesResponseBody extends TeaModel {
 
     public static class DescribeConsoleMessagesResponseBodyMessageListTitleConfigs extends TeaModel {
         /**
-         * <p>The color of the title text, which retains the color value saved when the message was created or modified.</p>
+         * <p>The color of the title text. The color value saved when the message is created or modified is used.</p>
          * 
          * <strong>example:</strong>
          * <p>#333333</p>
@@ -318,7 +318,7 @@ public class DescribeConsoleMessagesResponseBody extends TeaModel {
         public String color;
 
         /**
-         * <p>The title language. Valid values: CN (Chinese), EN (English), and JP (Japanese). The query returns the language value saved when the message was created or modified, retaining the original case.</p>
+         * <p>The title language. Valid values: CN (Chinese), EN (English), and JP (Japanese). The query returns the language value saved when the message is created or modified, retaining the original case.</p>
          * 
          * <strong>example:</strong>
          * <p>CN</p>
@@ -380,7 +380,7 @@ public class DescribeConsoleMessagesResponseBody extends TeaModel {
         public java.util.List<DescribeConsoleMessagesResponseBodyMessageListContentConfigs> contentConfigs;
 
         /**
-         * <p>The time when the operational message stops taking effect.</p>
+         * <p>The time when the operational message stops taking effect. The time is in ISO 8601 format. A time zone offset of +00:00 indicates UTC time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-11T02:00:00.000+00:00</p>
@@ -428,7 +428,7 @@ public class DescribeConsoleMessagesResponseBody extends TeaModel {
         public java.util.List<DescribeConsoleMessagesResponseBodyMessageListImageInfoList> imageInfoList;
 
         /**
-         * <p>The temporary download URL of the operational message image. The link has a limited validity period. If it expires, you can query again to obtain a new one.</p>
+         * <p>The temporary download URL of the operational message image. The link has a limited validity period. If the link expires, you can query again to obtain a new one.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/images/console-message.png">https://example.com/images/console-message.png</a></p>
@@ -479,7 +479,7 @@ public class DescribeConsoleMessagesResponseBody extends TeaModel {
         public String position;
 
         /**
-         * <p>The time when the operational message starts taking effect.</p>
+         * <p>The time when the operational message starts taking effect. The time is in ISO 8601 format. A time zone offset of +00:00 indicates UTC time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-10T02:00:00.000+00:00</p>
@@ -488,7 +488,7 @@ public class DescribeConsoleMessagesResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The current status of the message. Valid values: Init (initializing), Pushing (pushing), Published (published), Expired (expired), Deleting (deleting), and Failed (failed). Published indicates that the message has been published or the server has finished pushing, but it does not indicate that all target terminals have successfully received the message.</p>
+         * <p>The current status of the message. Valid values: Init (initializing), Pushing (pushing), Published (published), Expired (expired), Deleting (deleting), and Failed (failed). Published indicates that the message has been published or the server-side push processing has finished, but it does not indicate that all target terminals have successfully received the message.</p>
          * 
          * <strong>example:</strong>
          * <p>Published</p>
@@ -497,7 +497,7 @@ public class DescribeConsoleMessagesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The JSON string of the list of targets to which the message applies. For Organization and AdOrg, it is an array of objects containing orgId (organization ID) and orgName (organization name). The organization name may be empty, and records in the old format may not contain orgName. For Tag, it is an array of objects containing tagKey (tag key), tagValue (tag value), and regionId (region ID). For other target types, it is an array of strings. The target for all users is represented by ALL_USERS.</p>
+         * <p>The JSON string of the list of targets to which the message applies. For Organization and AdOrg, it is an array of objects containing orgId (organization ID) and orgName (organization name). The organization name may be empty, and records in the old format may not contain orgName. For Tag, it is an array of objects containing tagKey (tag key), tagValue (tag value), and regionId (region ID). For other target types, it is an array of strings. The all-users target is represented by ALL_USERS.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;user01&quot;]</p>

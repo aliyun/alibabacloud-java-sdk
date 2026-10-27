@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePeripheralDriversResponseBody extends TeaModel {
     /**
-     * <p>The total number of matching drivers, not the length of the current page list. This value may be 0 when the current page contains no data.</p>
+     * <p>The total number of matched drivers, not the length of the list on the current page. If no data exists on the current page, 0 may be returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class DescribePeripheralDriversResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The list of driver information on the current page. An empty list is returned when no data is available.</p>
+     * <p>The list of driver information on the current page. An empty list is returned if no data exists.</p>
      */
     @NameInMap("DriverInfos")
     public java.util.List<DescribePeripheralDriversResponseBodyDriverInfos> driverInfos;
 
     /**
-     * <p>Reserved field. This field does not provide a valid return value and may not be returned. This operation uses PageSize and PageNumber for pagination. Do not rely on this field. The example value 20 is provided only to illustrate the integer type and does not represent the actual return value, default value, or page size of this operation.</p>
+     * <p>The reserved field. This field does not provide a valid return value and may not be returned. This operation uses PageSize and PageNumber for pagination. Do not rely on this field. The sample value 20 is used only to demonstrate the integer type and does not represent the actual return value, default value, or page size of the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,7 +29,7 @@ public class DescribePeripheralDriversResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Reserved field. Token-based pagination is not supported and this field may not be returned. Do not rely on this field for continued queries. The example value token-for-format-only is provided only to illustrate the string type and is not an actual return value or a usable pagination token.</p>
+     * <p>The reserved field. This field does not provide token-based pagination and may not be returned. Do not rely on this field for subsequent queries. The sample value token-for-format-only is used only to demonstrate the string type and is not an actual return value or a usable pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>token-for-format-only</p>
@@ -38,7 +38,7 @@ public class DescribePeripheralDriversResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID. Provide this value when troubleshooting issues.</p>
+     * <p>The request ID. You can provide this value for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>00000000-1111-4222-8333-444444444444</p>
@@ -102,7 +102,7 @@ public class DescribePeripheralDriversResponseBody extends TeaModel {
         public String brand;
 
         /**
-         * <p>The time when the driver record was created, in ISO 8601 (RFC 3339) format with a time zone offset. The time zone offset is based on the returned value. This field may be empty or not returned if the time information does not exist.</p>
+         * <p>The time when the driver record was created. The time is in the ISO 8601 (RFC 3339) format with time zone offset. The time zone offset is subject to the returned value. If the time information does not exist, this field may be empty or not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-01T10:30:00+08:00</p>
@@ -120,7 +120,7 @@ public class DescribePeripheralDriversResponseBody extends TeaModel {
         public String deviceType;
 
         /**
-         * <p>The brand icon URL. This field may be empty or not returned if no icon is configured. The example value is for illustration purposes only.</p>
+         * <p>The URL of the brand icon. If no icon is configured, this field may be empty or not returned. The example is a placeholder address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/icons/printer.png">https://example.com/icons/printer.png</a></p>
@@ -156,11 +156,7 @@ public class DescribePeripheralDriversResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The driver ownership. Valid values:</p>
-         * <ul>
-         * <li>WUYING: Wuying official driver.</li>
-         * <li>CUSTOMER: Custom driver of the current account.</li>
-         * </ul>
+         * <p>The driver ownership. Valid values: WUYING: Wuying official drivers. CUSTOMER: custom drivers of the current account.</p>
          * 
          * <strong>example:</strong>
          * <p>WUYING</p>
@@ -169,13 +165,7 @@ public class DescribePeripheralDriversResponseBody extends TeaModel {
         public String ownerType;
 
         /**
-         * <p>The driver source. Valid values:</p>
-         * <ul>
-         * <li>OpsApp: Uploaded from the management console.</li>
-         * <li>WuyingHelper: Uploaded from Wuying Helper.</li>
-         * <li>Wuying: Wuying source.</li>
-         * </ul>
-         * <p>Unrecognized sources may also be classified as Wuying. To distinguish between official and custom drivers, use OwnerType.</p>
+         * <p>The driver source. Valid values: OpsApp: uploaded from the management console. WuyingHelper: uploaded from Wuying Assistant. Wuying: from Wuying. Unrecognized sources may also be classified as Wuying. To distinguish between official and custom drivers, use OwnerType.</p>
          * 
          * <strong>example:</strong>
          * <p>Wuying</p>

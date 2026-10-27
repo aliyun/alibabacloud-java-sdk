@@ -11,7 +11,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     public java.util.List<DescribeUserConnectionRecordsResponseBodyConnectionRecords> connectionRecords;
 
     /**
-     * <p>The pagination token for the next query.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -20,7 +20,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>2CC66B0A-BA3B-5D87-BFBE-11AAAD7A8E03</p>
@@ -68,7 +68,8 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         public String connectDuration;
 
         /**
-         * <p>The connection end time.</p>
+         * <p>The time when the connection is disconnected.
+         * The time is in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-27T20:03:13Z</p>
@@ -77,7 +78,8 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         public String connectEndTime;
 
         /**
-         * <p>The connection start time.</p>
+         * <p>The start time of the connection.
+         * The time is in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-19T10:12:38Z</p>
@@ -86,7 +88,7 @@ public class DescribeUserConnectionRecordsResponseBody extends TeaModel {
         public String connectStartTime;
 
         /**
-         * <p>The connection record ID.</p>
+         * <p>The ID of the connection record.</p>
          * 
          * <strong>example:</strong>
          * <p>528</p>

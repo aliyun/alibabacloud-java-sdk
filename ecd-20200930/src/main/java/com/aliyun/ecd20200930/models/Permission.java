@@ -4,33 +4,63 @@ package com.aliyun.ecd20200930.models;
 import com.aliyun.tea.*;
 
 public class Permission extends TeaModel {
+    /**
+     * <p>The creation time.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The description.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The destination CIDR block.</p>
+     */
     @NameInMap("DestCidrIp")
     public String destCidrIp;
 
+    /**
+     * <p>The protocol type.</p>
+     */
     @NameInMap("IpProtocol")
     public String ipProtocol;
 
+    /**
+     * <p>The NIC type.</p>
+     */
     @NameInMap("NicType")
     public String nicType;
 
+    /**
+     * <p>The policy.</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
+    /**
+     * <p>The port range.</p>
+     */
     @NameInMap("PortRange")
     public String portRange;
 
+    /**
+     * <p>The priority.</p>
+     */
     @NameInMap("Priority")
     public String priority;
 
+    /**
+     * <p>The source CIDR block.</p>
+     */
     @NameInMap("SourceCidrIp")
     public String sourceCidrIp;
 
+    /**
+     * <p>The source port range.</p>
+     */
     @NameInMap("SourcePortRange")
     public String sourcePortRange;
 

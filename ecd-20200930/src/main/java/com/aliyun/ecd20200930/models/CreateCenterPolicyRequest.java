@@ -473,6 +473,9 @@ public class CreateCenterPolicyRequest extends TeaModel {
     @NameInMap("FileTransferSpeedLocation")
     public String fileTransferSpeedLocation;
 
+    @NameInMap("FolderSync")
+    public String folderSync;
+
     /**
      * <p>Specifies whether to enable the image quality policy for GPU-accelerated Cloud Desktops. Enable this policy when high performance and user experience are required, such as in professional design scenarios.</p>
      * 
@@ -1757,6 +1760,14 @@ public class CreateCenterPolicyRequest extends TeaModel {
     }
     public String getFileTransferSpeedLocation() {
         return this.fileTransferSpeedLocation;
+    }
+
+    public CreateCenterPolicyRequest setFolderSync(String folderSync) {
+        this.folderSync = folderSync;
+        return this;
+    }
+    public String getFolderSync() {
+        return this.folderSync;
     }
 
     public CreateCenterPolicyRequest setGpuAcceleration(String gpuAcceleration) {

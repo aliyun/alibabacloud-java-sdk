@@ -35,7 +35,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String desktopGroupName;
 
     /**
-     * <p>The cloud computer specifications. You can call <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> to query the supported specification IDs.</p>
+     * <p>The cloud computer specification. You can call the <a href="~~DescribeDesktopTypes~~">DescribeDesktopTypes</a> operation to query the supported specification IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>eds.enterprise_office.16c64g</p>
@@ -44,7 +44,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String desktopType;
 
     /**
-     * <p>The list of authorized user IDs for the shared cloud computer.</p>
+     * <p>The list of IDs of authorized users for the shared cloud computer.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
@@ -65,7 +65,9 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public java.util.List<String> imageId;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries per page for paging in a paged query.
+     * Maximum value: 100.
+     * Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -74,12 +76,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Specifies whether the shared cloud computer is a multi-host type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>true: Multi-host shared cloud computer.</li>
-     * <li>false: Single-host shared cloud computer.</li>
-     * </ul>
+     * <p>Specifies whether the shared cloud computer is a multi-resource shared cloud computer.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -88,7 +85,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public Boolean multiResource;
 
     /**
-     * <p>The token for the next query. If NextToken is empty, no more results exist.</p>
+     * <p>The pagination token for the next query. An empty value indicates that no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -97,7 +94,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the office network to which the shared cloud computers belong.</p>
+     * <p>The ID of the office network to which the shared cloud computer belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-467671****</p>
@@ -107,6 +104,9 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
 
     /**
      * <p>The type of the shared cloud computer.</p>
+     * <blockquote>
+     * <p>This parameter is not yet available.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -115,7 +115,24 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public Long ownType;
 
     /**
-     * <p>The subscription duration of the shared cloud computer. The unit is specified by <code>PeriodUnit</code>.</p>
+     * <p>The subscription duration of the shared cloud computer. The unit is specified by PeriodUnit.</p>
+     * <ul>
+     * <li>If PeriodUnit is set to Month, valid values:<ul>
+     * <li>1</li>
+     * <li>2</li>
+     * <li>3</li>
+     * <li>6</li>
+     * </ul>
+     * </li>
+     * <li>If PeriodUnit is set to Year, valid values:<ul>
+     * <li>1</li>
+     * <li>2</li>
+     * <li>3</li>
+     * <li>4</li>
+     * <li>5</li>
+     * </ul>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -124,7 +141,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the duration for the subscription billing method.</p>
+     * <p>The time unit of the subscription billing Billable methods.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -151,7 +168,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String protocolType;
 
     /**
-     * <p>The ID of the QoS rule.</p>
+     * <p>The ID of the bandwidth throttling rule.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-5605u0gelk200****</p>
@@ -160,7 +177,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
     public String qosRuleId;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Wuying Cloud Computer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -359,7 +376,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
 
     public static class DescribeDesktopGroupsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. If you specify this parameter, the value cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. The value cannot be an empty string. It can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -368,7 +385,7 @@ public class DescribeDesktopGroupsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The tag value can be an empty string. The tag value can be up to 128 characters in length and cannot start with <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. The value can be an empty string. It can be up to 128 characters in length, and cannot start with <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

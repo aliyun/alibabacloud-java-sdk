@@ -7,12 +7,12 @@ public class QueryActiveUserStatisticRequest extends TeaModel {
     /**
      * <p>The business channel type code. Valid values:</p>
      * <ul>
-     * <li>1 (default): Enterprise Edition.</li>
+     * <li>1: Enterprise Edition. This is the default value.</li>
      * <li>3: Cloud Office.</li>
      * <li>10: Standard Edition.</li>
      * <li>20: Business Edition.</li>
      * <li>30: Education Business Edition.</li>
-     * <li>40: Cloud Phone isolated resources.</li>
+     * <li>40: Cloud phone isolated resources.</li>
      * <li>50: AgentBay.</li>
      * </ul>
      * 
@@ -23,7 +23,7 @@ public class QueryActiveUserStatisticRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The end time of the query. The format is the same as StartTime. If the value is later than the current time, it is automatically truncated to the current time.</p>
+     * <p>The end time of the query. The format is the same as that of StartTime. If the specified time is later than the current time, it is automatically truncated to the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-12-01T06:32:31Z</p>
@@ -32,7 +32,7 @@ public class QueryActiveUserStatisticRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The workspace ID. If specified, only active users of cloud desktops in this workspace are counted.</p>
+     * <p>The workspace ID. If specified, only active users of desktops in this workspace are counted.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou+dir-885351****</p>
@@ -41,11 +41,11 @@ public class QueryActiveUserStatisticRequest extends TeaModel {
     public String officeSiteId;
 
     /**
-     * <p>The aggregation interval for statistics. Valid values:</p>
+     * <p>The aggregation granularity of the statistics. Valid values:</p>
      * <ul>
      * <li>ONE_MINUTE: 1 minute.</li>
      * <li>TWO_MINUTE: 2 minutes.</li>
-     * <li>FIVE_MINUTE (default): 5 minutes.</li>
+     * <li>FIVE_MINUTE: 5 minutes. This is the default value.</li>
      * <li>ONE_HOUR: 1 hour.</li>
      * <li>ONE_DAY: 1 day.</li>
      * </ul>
@@ -57,12 +57,12 @@ public class QueryActiveUserStatisticRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The start time of the query. The following formats are supported:</p>
+     * <p>The start time of the query. Two formats are supported:</p>
      * <ul>
      * <li>UTC format: yyyy-MM-ddTHH:mm:ssZ.</li>
      * <li>Standard format: yyyy-MM-dd HH:mm:ss.</li>
      * </ul>
-     * <p>The value cannot be earlier than 6 months before the current time or later than EndTime.</p>
+     * <p>The start time cannot be earlier than six months ago or later than the end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-30T06:32:31Z</p>

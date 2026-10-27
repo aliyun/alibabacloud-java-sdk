@@ -17,16 +17,16 @@ public class DescribeFotaPendingDesktopsRequest extends TeaModel {
      * <p>The name of the cloud computer.</p>
      * 
      * <strong>example:</strong>
-     * <p>testName</p>
+     * <p>demo-computer</p>
      */
     @NameInMap("DesktopName")
     public String desktopName;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The maximum number of entries per page for a paged query.</p>
      * <ul>
-     * <li>Valid values: 1 to 100.</li>
-     * <li>Default value: 20.</li>
+     * <li>Maximum value: 100</li>
+     * <li>Default value: 20</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class DescribeFotaPendingDesktopsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of <code>NextToken</code>.</p>
+     * <p>The pagination token. Set the value to the <code>NextToken</code> value returned from the previous call to this operation. You do not need to specify this parameter for the first call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -45,16 +45,16 @@ public class DescribeFotaPendingDesktopsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the office network. You can call the <a href="https://help.aliyun.com/document_detail/216071.html">DescribeOfficeSites</a> operation to obtain the value of this parameter.</p>
+     * <p>The ID of the office network. You can call the <a href="https://help.aliyun.com/document_detail/216071.html">DescribeOfficeSites</a> operation to obtain this parameter.</p>
      * 
      * <strong>example:</strong>
-     * <p>cn-hangzhou+dir-363353****</p>
+     * <p>cn-shanghai+dir-428216****</p>
      */
     @NameInMap("OfficeSiteId")
     public String officeSiteId;
 
     /**
-     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by cloud computers.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class DescribeFotaPendingDesktopsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the image update task. You can call the <a href="https://help.aliyun.com/document_detail/437001.html">DescribeFotaTasks</a> operation to obtain the value of this parameter.</p>
+     * <p>The information about the image upgrade task. You can call the <a href="https://help.aliyun.com/document_detail/437001.html">DescribeFotaTasks</a> operation to obtain this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>aot-c4khwrp9ocml4****</p>

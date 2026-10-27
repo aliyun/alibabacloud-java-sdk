@@ -68,7 +68,7 @@ public class QueryActiveUserStatisticResponseBody extends TeaModel {
         public Integer activeUserCount;
 
         /**
-         * <p>The formatted date string in UTC+8, in the format of yyyy-MM-dd.</p>
+         * <p>The formatted date string in the UTC+8 time zone. The format is yyyy-MM-dd.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-30</p>

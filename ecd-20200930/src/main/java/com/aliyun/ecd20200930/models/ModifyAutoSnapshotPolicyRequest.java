@@ -14,7 +14,7 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     public String cronExpression;
 
     /**
-     * <p>The type of cloud disk for which the automatic snapshot policy creates snapshots.</p>
+     * <p>The type of the cloud disk for which the automatic snapshot policy creates snapshots.</p>
      * 
      * <strong>example:</strong>
      * <p>ALL</p>
@@ -33,16 +33,16 @@ public class ModifyAutoSnapshotPolicyRequest extends TeaModel {
     public String policyId;
 
     /**
-     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. The name must start with a letter and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, colons (:), underscores (_), or hyphens (-). Default value: empty.</p>
+     * <p>The name of the automatic snapshot policy. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), and hyphens (-). Default value: empty.</p>
      * 
      * <strong>example:</strong>
-     * <p>系统自动快照</p>
+     * <p>System automatic snapshot</p>
      */
     @NameInMap("PolicyName")
     public String policyName;
 
     /**
-     * <p>The region ID. You can call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

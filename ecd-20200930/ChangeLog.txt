@@ -1,3 +1,14 @@
+2026-10-27 Version: 5.5.1
+- Update API CreateCenterPolicy: add request parameters FolderSync.
+- Update API CreateDesktops: add request parameters HostGpuDriverVersion.
+- Update API DescribeCenterPolicyList: add response parameters Body.DescribePolicyGroups.$.FolderSync.
+- Update API DescribeDesktopGroups: add response parameters Body.DesktopGroups.$.SessionType.
+- Update API DescribeDesktopSessions: add response parameters Body.Sessions.$.LastClientIp.
+- Update API DescribePolicyGroups: add response parameters Body.DescribePolicyGroups.$.FolderSync.
+- Update API GetDesktopGroupDetail: add response parameters Body.Desktops.SessionType.
+- Update API ModifyCenterPolicy: add request parameters FolderSync.
+
+
 2026-10-12 Version: 5.5.0
 - Support API DescribeConsoleMessages.
 - Support API SendConsoleMessage.

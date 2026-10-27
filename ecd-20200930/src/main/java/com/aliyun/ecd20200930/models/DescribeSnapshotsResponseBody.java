@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSnapshotsResponseBody extends TeaModel {
     /**
-     * <p>The pagination token. If the NextToken parameter is empty, no next page exists.</p>
+     * <p>The pagination token for the next query. If the value is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -14,7 +14,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>51592A88-0F2C-55E6-AD2C-2AD9C10D****</p>
@@ -23,7 +23,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The snapshot information.</p>
+     * <p>The snapshots.</p>
      */
     @NameInMap("Snapshots")
     public java.util.List<DescribeSnapshotsResponseBodySnapshots> snapshots;
@@ -59,7 +59,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
 
     public static class DescribeSnapshotsResponseBodySnapshots extends TeaModel {
         /**
-         * <p>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+         * <p>The time when the snapshot was created. The time is displayed in UTC and follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-20T14:52:28Z</p>
@@ -77,7 +77,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The time when the snapshot was created. The time follows the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard in the <code>yyyy-mm-ddthh:mm:ssz</code> format. The time is displayed in UTC.</p>
+         * <p>The time when the snapshot was created. The time is displayed in UTC+0 in the <code>yyyy-mm-ddthh:mm:ssz</code> format in accordance with the <a href="https://help.aliyun.com/document_detail/25696.html">ISO 8601</a> standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-20T14:52:28Z</p>
@@ -86,7 +86,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String deletionTime;
 
         /**
-         * <p>The snapshot description.</p>
+         * <p>The description of the snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>testDescription</p>
@@ -95,7 +95,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the cloud computer to which the snapshot belongs.</p>
+         * <p>The ID of the cloud desktop to which the snapshot belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-g03l3tlm8djoj****</p>
@@ -104,7 +104,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The cloud computer name.</p>
+         * <p>The name of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -113,7 +113,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The cloud computer status.</p>
+         * <p>The status of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -122,7 +122,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
-         * <p>The status of the cloud disk to which the snapshot belongs.</p>
+         * <p>The status of the disk to which the snapshot belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -149,7 +149,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The snapshot creation progress, in percentage.</p>
+         * <p>The creation progress of the snapshot. Unit: percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>100%</p>
@@ -169,7 +169,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         /**
          * <p>The remaining time required to create the snapshot. Unit: seconds.</p>
          * <blockquote>
-         * <p>When <code>Status</code> is <code>PROGRESSING</code>, a <code>RemainTime</code> value of <code>-1</code> indicates that the remaining time is being calculated.</p>
+         * <p>If <code>Status</code> is <code>PROGRESSING</code>, the value of <code>RemainTime</code> is <code>-1</code>, which indicates that the remaining time is being calculated.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -179,7 +179,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public Integer remainTime;
 
         /**
-         * <p>The restore point ID.</p>
+         * <p>The ID of the restore point.</p>
          * 
          * <strong>example:</strong>
          * <p>rp-btgmaa20wkcju****</p>
@@ -188,16 +188,16 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String restorePointId;
 
         /**
-         * <p>The restore point name.</p>
+         * <p>The name of the restore point.</p>
          * 
          * <strong>example:</strong>
-         * <p>DataDiskBackup</p>
+         * <p>Data cloud disk backup</p>
          */
         @NameInMap("RestorePointName")
         public String restorePointName;
 
         /**
-         * <p>The snapshot ID.</p>
+         * <p>The ID of the snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>s-2zeipxmnhej803x7****</p>
@@ -206,7 +206,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotId;
 
         /**
-         * <p>The snapshot name.</p>
+         * <p>The name of the snapshot.</p>
          * 
          * <strong>example:</strong>
          * <p>testSnapshotName</p>
@@ -215,7 +215,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotName;
 
         /**
-         * <p>The snapshot creation type.</p>
+         * <p>The snapshot type.</p>
          * 
          * <strong>example:</strong>
          * <p>USER</p>
@@ -224,7 +224,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String snapshotType;
 
         /**
-         * <p>The capacity of the source cloud disk. Unit: GiB.</p>
+         * <p>The capacity of the source disk. Unit: GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>150</p>
@@ -233,7 +233,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String sourceDiskSize;
 
         /**
-         * <p>The type of the source cloud disk.</p>
+         * <p>The type of the source disk.</p>
          * 
          * <strong>example:</strong>
          * <p>SYSTEM</p>
@@ -251,7 +251,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether cloud disk encryption is enabled.</p>
+         * <p>Indicates whether disk encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -260,7 +260,7 @@ public class DescribeSnapshotsResponseBody extends TeaModel {
         public Boolean volumeEncryptionEnabled;
 
         /**
-         * <p>The ID of the Key Management Service (KMS) key used for cloud disk encryption. You can call <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> to obtain the key ID.</p>
+         * <p>The ID of the KMS key used when disk encryption is enabled. You can obtain the key ID by calling the <a href="https://help.aliyun.com/document_detail/28951.html">ListKeys</a> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>08c33a6f-4e0a-4a1b-a3fa-7ddfa1d4****</p>

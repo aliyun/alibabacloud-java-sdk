@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchModifyEntitlementResponseBody extends TeaModel {
     /**
-     * <p>The assignment results.</p>
+     * <p>The entitlements collection.</p>
      */
     @NameInMap("Entitlements")
     public BatchModifyEntitlementResponseBodyEntitlements entitlements;
@@ -42,7 +42,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
 
     public static class BatchModifyEntitlementResponseBodyEntitlementsAssignModels extends TeaModel {
         /**
-         * <p>The cloud computer ID.</p>
+         * <p>The cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-e94kzikmpljjx99pl</p>
@@ -51,13 +51,13 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The user IDs (usernames) authorized to use the cloud computer.</p>
+         * <p>The IDs of the users authorized to use the cloud desktop, which are the usernames.</p>
          */
         @NameInMap("EndUserIds")
         public java.util.List<String> endUserIds;
 
         /**
-         * <p>The assignment result for a single cloud computer.</p>
+         * <p>The assignment result for a single cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>FINISHED</p>
@@ -98,7 +98,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
 
     public static class BatchModifyEntitlementResponseBodyEntitlements extends TeaModel {
         /**
-         * <p>The assignment result details.</p>
+         * <p>The collection of assignment results.</p>
          */
         @NameInMap("AssignModels")
         public java.util.List<BatchModifyEntitlementResponseBodyEntitlementsAssignModels> assignModels;

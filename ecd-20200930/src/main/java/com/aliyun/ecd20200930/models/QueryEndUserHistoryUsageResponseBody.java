@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryEndUserHistoryUsageResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>269BDB16-2CD8-4865-84BD-11C40BC21DB0</p>
@@ -23,7 +23,7 @@ public class QueryEndUserHistoryUsageResponseBody extends TeaModel {
     public Long totalCount;
 
     /**
-     * <p>The list of user usage duration entries on the current page.</p>
+     * <p>The list of user usage durations on the current page.</p>
      */
     @NameInMap("UserUsageInfoList")
     public java.util.List<QueryEndUserHistoryUsageResponseBodyUserUsageInfoList> userUsageInfoList;
@@ -59,7 +59,7 @@ public class QueryEndUserHistoryUsageResponseBody extends TeaModel {
 
     public static class QueryEndUserHistoryUsageResponseBodyUserUsageInfoListDesktopUsageList extends TeaModel {
         /**
-         * <p>The desktop ID.</p>
+         * <p>The ID of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-abc123</p>
@@ -68,7 +68,7 @@ public class QueryEndUserHistoryUsageResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The desktop name.</p>
+         * <p>The name of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoDesktop</p>
@@ -77,7 +77,7 @@ public class QueryEndUserHistoryUsageResponseBody extends TeaModel {
         public String desktopName;
 
         /**
-         * <p>The usage duration of the user on the desktop, in seconds.</p>
+         * <p>The usage duration of the user on the cloud desktop, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -118,7 +118,7 @@ public class QueryEndUserHistoryUsageResponseBody extends TeaModel {
 
     public static class QueryEndUserHistoryUsageResponseBodyUserUsageInfoListUserGroupList extends TeaModel {
         /**
-         * <p>The user group ID.</p>
+         * <p>The ID of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>ug-12345678</p>
@@ -127,7 +127,7 @@ public class QueryEndUserHistoryUsageResponseBody extends TeaModel {
         public String userGroupId;
 
         /**
-         * <p>The user group name.</p>
+         * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>Default user group</p>
@@ -160,7 +160,7 @@ public class QueryEndUserHistoryUsageResponseBody extends TeaModel {
 
     public static class QueryEndUserHistoryUsageResponseBodyUserUsageInfoList extends TeaModel {
         /**
-         * <p>The remarks of the user. This parameter has a value only for convenience account users.</p>
+         * <p>The description of the user. This parameter has a value only for convenience users.</p>
          * 
          * <strong>example:</strong>
          * <p>Test user</p>
@@ -169,16 +169,16 @@ public class QueryEndUserHistoryUsageResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The list of usage duration details for each desktop.</p>
+         * <p>The list of usage duration details for each cloud desktop.</p>
          */
         @NameInMap("DesktopUsageList")
         public java.util.List<QueryEndUserHistoryUsageResponseBodyUserUsageInfoListDesktopUsageList> desktopUsageList;
 
         /**
-         * <p>The display name of the user. For convenience account users, this is the actual nickname. For AD users, this is the display name.</p>
+         * <p>The display name of the user. For convenience users, this is the real nickname. For AD users, this is the display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>John Smith</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -193,7 +193,7 @@ public class QueryEndUserHistoryUsageResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>The end user ID.</p>
+         * <p>The ID of the end user.</p>
          * 
          * <strong>example:</strong>
          * <p>user01</p>
@@ -202,7 +202,7 @@ public class QueryEndUserHistoryUsageResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The username. For convenience account users, this is the nickname. For AD users, this is the UserPrincipalName.</p>
+         * <p>The username. For convenience users, this is the nickname. For AD users, this is the UserPrincipalName.</p>
          * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
@@ -211,13 +211,13 @@ public class QueryEndUserHistoryUsageResponseBody extends TeaModel {
         public String endUserName;
 
         /**
-         * <p>The list of organization paths. For convenience account users, this contains multiple organization paths. For AD users, this is the organizational unit (OU) path.</p>
+         * <p>The list of organization paths. For convenience users, this includes multiple organization paths. For AD users, this is the OU path.</p>
          */
         @NameInMap("OrgPathList")
         public java.util.List<String> orgPathList;
 
         /**
-         * <p>The list of user groups. This parameter has a value only for convenience account users.</p>
+         * <p>The list of user groups. This parameter has a value only for convenience users.</p>
          */
         @NameInMap("UserGroupList")
         public java.util.List<QueryEndUserHistoryUsageResponseBodyUserUsageInfoListUserGroupList> userGroupList;
