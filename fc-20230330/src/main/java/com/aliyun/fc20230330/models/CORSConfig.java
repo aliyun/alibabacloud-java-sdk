@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CORSConfig extends TeaModel {
     /**
+     * <p>Specifies whether to allow sending credentials.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -12,6 +14,8 @@ public class CORSConfig extends TeaModel {
     public Boolean allowCredentials;
 
     /**
+     * <p>The list of allowed request headers.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;Content-Type&quot;, &quot;Authorization&quot;]</p>
      */
@@ -19,6 +23,8 @@ public class CORSConfig extends TeaModel {
     public java.util.List<String> allowHeaders;
 
     /**
+     * <p>The list of allowed HTTP methods.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;GET&quot;, &quot;POST&quot;, &quot;OPTIONS&quot;]</p>
      */
@@ -26,6 +32,8 @@ public class CORSConfig extends TeaModel {
     public java.util.List<String> allowMethods;
 
     /**
+     * <p>The list of allowed origins.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;<a href="https://example.com">https://example.com</a>&quot;, &quot;<a href="https://app.example.com%22%5D">https://app.example.com&quot;]</a></p>
      */
@@ -33,6 +41,8 @@ public class CORSConfig extends TeaModel {
     public java.util.List<String> allowOrigins;
 
     /**
+     * <p>The list of exposed response headers.</p>
+     * 
      * <strong>example:</strong>
      * <p>[&quot;X-Custom-Header&quot;]</p>
      */
@@ -40,6 +50,8 @@ public class CORSConfig extends TeaModel {
     public java.util.List<String> exposeHeaders;
 
     /**
+     * <p>The cache time for preflight requests, in seconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>3600</p>
      */

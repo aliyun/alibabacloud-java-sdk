@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResidentResourcePool extends TeaModel {
     /**
-     * <p>The real-time allocation status of the resource pool, including the specific allocation details for each function.</p>
+     * <p>资源池实时分配情况，包含每个函数的具体分配情况</p>
      */
     @NameInMap("allocationStatus")
     public ResidentResourceAllocationStatus allocationStatus;
@@ -14,20 +14,20 @@ public class ResidentResourcePool extends TeaModel {
     public String associatedPoolId;
 
     /**
-     * <p>The resource property field that represents the creation time.</p>
+     * <p>代表创建时间的资源属性字段</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      */
     @NameInMap("createdTime")
     public String createdTime;
 
     /**
-     * <p>The expiration time of the resource pool.</p>
+     * <p>资源池过期时间</p>
      */
     @NameInMap("expireTime")
     public String expireTime;
 
     /**
-     * <p>The last modification time, including operations such as scaling, renewal, and renaming.</p>
+     * <p>上次修改时间，包含扩容、续费、更名等操作</p>
      */
     @NameInMap("lastModifiedTime")
     public String lastModifiedTime;
@@ -39,13 +39,13 @@ public class ResidentResourcePool extends TeaModel {
     public String residentResourcePoolId;
 
     /**
-     * <p>The resource property field that represents the resource name.</p>
+     * <p>代表资源名称的资源属性字段</p>
      */
     @NameInMap("residentResourcePoolName")
     public String residentResourcePoolName;
 
     /**
-     * <p>The overall specifications of the resource pool.</p>
+     * <p>资源池总体规格</p>
      */
     @NameInMap("resourcePoolCapacity")
     public ResidentResourceCapacity resourcePoolCapacity;

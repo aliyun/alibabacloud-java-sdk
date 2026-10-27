@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class FunctionLockInfo extends TeaModel {
     /**
-     * <p>The timestamp when the lock was applied.</p>
+     * <p>The lock time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-04-05T10:00:00Z</p>
@@ -14,7 +14,7 @@ public class FunctionLockInfo extends TeaModel {
     public String lockedAt;
 
     /**
-     * <p>The name of the entity that applied the lock.</p>
+     * <p>The name of the locking entity.</p>
      * 
      * <strong>example:</strong>
      * <p>AgentRun</p>
@@ -23,7 +23,7 @@ public class FunctionLockInfo extends TeaModel {
     public String lockedBy;
 
     /**
-     * <p>The list of locked resource types. Valid values include <code>function</code>, <code>trigger</code>, <code>version</code>, and <code>alias</code>.</p>
+     * <p>The list of locked resource types.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;function&quot;, &quot;trigger&quot;, &quot;version&quot;, &quot;alias&quot;]</p>

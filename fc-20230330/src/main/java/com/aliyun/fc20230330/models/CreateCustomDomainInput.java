@@ -5,22 +5,25 @@ import com.aliyun.tea.*;
 
 public class CreateCustomDomainInput extends TeaModel {
     /**
-     * <p>Permission authentication configuration.</p>
+     * <p>The authentication configuration.</p>
      */
     @NameInMap("authConfig")
     public AuthConfig authConfig;
 
     /**
-     * <p>HTTPS certificate information.</p>
+     * <p>The HTTPS certificate information.</p>
      */
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
+    /**
+     * <p>The CORS configuration.</p>
+     */
     @NameInMap("corsConfig")
     public CORSConfig corsConfig;
 
     /**
-     * <p>Domain name. Enter a custom domain name that has an ICP filing with Alibaba Cloud or has added Alibaba Cloud to the ICP filing information as a service provider.</p>
+     * <p>The domain name. Specify a custom domain name that has an ICP filing obtained through Alibaba Cloud or has been added to Alibaba Cloud for ICP filing.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +36,12 @@ public class CreateCustomDomainInput extends TeaModel {
     public Boolean isE2B;
 
     /**
-     * <p>Protocol type supported by the domain. HTTP: supports HTTP only. HTTPS: supports HTTPS only. HTTP,HTTPS: supports both HTTP and HTTPS.</p>
+     * <p>The protocol types supported by the domain name. Valid values:</p>
+     * <ul>
+     * <li>HTTP: Only the HTTP protocol is supported.</li>
+     * <li>HTTPS: Only the HTTPS protocol is supported.</li>
+     * <li>HTTP,HTTPS: Both the HTTP and HTTPS protocols are supported.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -42,19 +50,19 @@ public class CreateCustomDomainInput extends TeaModel {
     public String protocol;
 
     /**
-     * <p>Route table: maps PATHs to functions when accessing the custom domain.</p>
+     * <p>The route table that maps paths to functions when the custom domain name is accessed.</p>
      */
     @NameInMap("routeConfig")
     public RouteConfig routeConfig;
 
     /**
-     * <p>TLS configuration information.</p>
+     * <p>The TLS configuration information.</p>
      */
     @NameInMap("tlsConfig")
     public TLSConfig tlsConfig;
 
     /**
-     * <p>Web Application Firewall configuration information.</p>
+     * <p>The WAF configuration information.</p>
      */
     @NameInMap("wafConfig")
     public WAFConfig wafConfig;

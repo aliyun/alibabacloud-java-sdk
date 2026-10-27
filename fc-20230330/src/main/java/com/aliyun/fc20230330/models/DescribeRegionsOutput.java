@@ -28,7 +28,7 @@ public class DescribeRegionsOutput extends TeaModel {
          * <p>The region name.</p>
          * 
          * <strong>example:</strong>
-         * <p>华北1（青岛）</p>
+         * <p>China (Qingdao)</p>
          */
         @NameInMap("LocalName")
         public String localName;
@@ -67,7 +67,7 @@ public class DescribeRegionsOutput extends TeaModel {
 
     public static class DescribeRegionsOutputRegions extends TeaModel {
         /**
-         * <p>The collection of region information.</p>
+         * <p>The region information collection.</p>
          */
         @NameInMap("Region")
         public java.util.List<DescribeRegionsOutputRegionsRegion> region;

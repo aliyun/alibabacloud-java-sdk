@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MicroSandboxConfig extends TeaModel {
     /**
-     * <p>The instance ID of the Container Registry (ACR) Enterprise Edition image repository. This parameter is used together with MicroSandbox images. This parameter is optional. If not provided, the server resolves it as needed.</p>
+     * <p>The ID of the ACR Enterprise Edition image repository instance. It is used in combination with MicroSandbox images. This parameter is optional. If it is not provided, the server resolves it on demand.</p>
      */
     @NameInMap("acrInstanceId")
     public String acrInstanceId;
@@ -35,10 +35,16 @@ public class MicroSandboxConfig extends TeaModel {
     public RegistryConfig registryConfig;
 
     /**
-     * <p>The start command.</p>
+     * <p>The startup command.</p>
      */
     @NameInMap("startCommand")
     public String startCommand;
+
+    /**
+     * <p>The build steps.</p>
+     */
+    @NameInMap("steps")
+    public java.util.List<Step> steps;
 
     public static MicroSandboxConfig build(java.util.Map<String, ?> map) throws Exception {
         MicroSandboxConfig self = new MicroSandboxConfig();
@@ -91,6 +97,14 @@ public class MicroSandboxConfig extends TeaModel {
     }
     public String getStartCommand() {
         return this.startCommand;
+    }
+
+    public MicroSandboxConfig setSteps(java.util.List<Step> steps) {
+        this.steps = steps;
+        return this;
+    }
+    public java.util.List<Step> getSteps() {
+        return this.steps;
     }
 
 }

@@ -14,7 +14,7 @@ public class ListCustomDomainsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The token that is used to start paging.</p>
+     * <p>The pagination start token.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNCNhYmM=</p>
@@ -23,7 +23,7 @@ public class ListCustomDomainsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The prefix of the domain name.</p>
+     * <p>The domain name prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>foo</p>

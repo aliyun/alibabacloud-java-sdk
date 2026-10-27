@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CustomDomain extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account (primary account).</p>
+     * <p>The ID of your Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>186851234023****</p>
@@ -29,19 +29,16 @@ public class CustomDomain extends TeaModel {
     public AuthConfig authConfig;
 
     /**
-     * <p>The HTTPS certificate configuration.</p>
+     * <p>The HTTPS certificate information.</p>
      */
     @NameInMap("certConfig")
     public CertConfig certConfig;
 
-    /**
-     * <p>The cross-origin resource sharing (CORS) configuration.</p>
-     */
     @NameInMap("corsConfig")
     public CORSConfig corsConfig;
 
     /**
-     * <p>The time when the custom domain was created.</p>
+     * <p>The time when the custom domain name was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-03-30T08:02:19Z</p>
@@ -62,7 +59,7 @@ public class CustomDomain extends TeaModel {
     public Boolean isE2B;
 
     /**
-     * <p>The time when the custom domain was last modified.</p>
+     * <p>The time when the custom domain name was last updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-03-30T08:02:19Z</p>
@@ -71,7 +68,7 @@ public class CustomDomain extends TeaModel {
     public String lastModifiedTime;
 
     /**
-     * <p>The protocols that are supported by the domain name. Valid values: HTTP (HTTP only), HTTPS (HTTPS only), and HTTP,HTTPS (both HTTP and HTTPS).</p>
+     * <p>The protocol types supported by the domain name. HTTP: supports only the HTTP protocol. HTTPS: supports only the HTTPS protocol. HTTP,HTTPS: supports both the HTTP and HTTPS protocols.</p>
      * 
      * <strong>example:</strong>
      * <p>HTTP</p>
@@ -80,7 +77,7 @@ public class CustomDomain extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The route table that maps paths to functions.</p>
+     * <p>The route table that maps paths to functions when the custom domain name is accessed.</p>
      */
     @NameInMap("routeConfig")
     public RouteConfig routeConfig;
@@ -101,7 +98,7 @@ public class CustomDomain extends TeaModel {
     public TLSConfig tlsConfig;
 
     /**
-     * <p>The Web Application Firewall (WAF) aconfiguration.</p>
+     * <p>The Web Application Firewall (WAF) configuration.</p>
      */
     @NameInMap("wafConfig")
     public WAFConfig wafConfig;

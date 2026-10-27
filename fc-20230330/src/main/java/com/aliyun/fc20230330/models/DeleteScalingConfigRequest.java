@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteScalingConfigRequest extends TeaModel {
     /**
-     * <p>The function alias.</p>
+     * <p>The alias of the function.</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>

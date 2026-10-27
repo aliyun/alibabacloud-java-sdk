@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class ListInstancesRequest extends TeaModel {
     /**
      * <p>The end time of the query range, specified as a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1790899200000</p>
      */
     @NameInMap("endTimeMs")
     public Long endTimeMs;
@@ -24,6 +27,9 @@ public class ListInstancesRequest extends TeaModel {
 
     /**
      * <p>The maximum number of instances to return.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("limit")
     public String limit;
@@ -39,12 +45,18 @@ public class ListInstancesRequest extends TeaModel {
 
     /**
      * <p>The token that specifies where to start the query. It is returned in a truncated response and can be used to retrieve the next page of results.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c-01234567-89abcdef-0123456789ab～</p>
      */
     @NameInMap("startKey")
     public String startKey;
 
     /**
      * <p>The start time of the query range, specified as a UNIX timestamp in milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1790812800000</p>
      */
     @NameInMap("startTimeMs")
     public Long startTimeMs;

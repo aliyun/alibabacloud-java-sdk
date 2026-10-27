@@ -8,7 +8,7 @@ public class PauseSessionRequest extends TeaModel {
     public String fileSystemOnly;
 
     /**
-     * <p>The function alias or version associated with the session ID to save.</p>
+     * <p>The alias or version of the function associated with the session ID to be saved.</p>
      * 
      * <strong>example:</strong>
      * <p>aliasName1</p>

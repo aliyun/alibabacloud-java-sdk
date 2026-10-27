@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>The language in which the list of regions is returned. For more information, see RFC 7231. Valid values:</p>
+     * <p>Specifies the language of the returned region list, such as Chinese or English. For more information, see RFC 7231. Valid values:</p>
      * <ul>
-     * <li>zh-CN: Simplified Chinese.</li>
-     * <li>en-US: English.</li>
-     * <li>ja: Japanese</li>
+     * <li><p>zh-CN: Simplified Chinese.</p>
+     * </li>
+     * <li><p>en-US: English.</p>
+     * </li>
+     * <li><p>ja: Japanese.</p>
+     * </li>
      * </ul>
-     * <p>Default value: en-US</p>
+     * <p>Default value: zh-CN.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>

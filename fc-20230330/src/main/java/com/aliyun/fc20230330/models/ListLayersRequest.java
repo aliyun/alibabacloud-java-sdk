@@ -14,7 +14,7 @@ public class ListLayersRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The token that marks the start of the next page of results.</p>
+     * <p>The pagination start token.</p>
      * 
      * <strong>example:</strong>
      * <p>MTIzNCNhYmM=</p>
@@ -23,7 +23,7 @@ public class ListLayersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Specifies whether the layer is an official layer. Valid values: true and false.</p>
+     * <p>Specifies whether the layer is an official layer. Valid values: true, false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class ListLayersRequest extends TeaModel {
     public String official;
 
     /**
-     * <p>The prefix of the layer name.</p>
+     * <p>The layer name prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>my-layer</p>
@@ -41,7 +41,7 @@ public class ListLayersRequest extends TeaModel {
     public String prefix;
 
     /**
-     * <p>Specifies whether the layer is public. Valid values: true and false.</p>
+     * <p>Specifies whether the layer is public. Valid values: true, false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

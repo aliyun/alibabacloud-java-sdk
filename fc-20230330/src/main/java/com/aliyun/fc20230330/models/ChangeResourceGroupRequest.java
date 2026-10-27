@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupRequest extends TeaModel {
     /**
-     * <p>The request body to change the resource group.</p>
+     * <p>The request information for updating the resource group.</p>
      */
     @NameInMap("body")
     public ChangeResourceGroupInput body;

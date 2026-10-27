@@ -11,7 +11,7 @@ public class CreateSnapshotRequest extends TeaModel {
     public CreateSnapshotInput body;
 
     /**
-     * <p>The function alias.</p>
+     * <p>The alias of the function.</p>
      * 
      * <strong>example:</strong>
      * <p>alias</p>

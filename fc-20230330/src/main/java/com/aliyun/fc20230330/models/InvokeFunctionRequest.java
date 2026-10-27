@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InvokeFunctionRequest extends TeaModel {
     /**
-     * <p>Function invocation parameter</p>
+     * <p>The parameters for function invoke.</p>
      * 
      * <strong>example:</strong>
      * <p>event</p>
@@ -14,7 +14,7 @@ public class InvokeFunctionRequest extends TeaModel {
     public java.io.InputStream body;
 
     /**
-     * <p>Function version or alias</p>
+     * <p>The version or alias of the function.</p>
      * 
      * <strong>example:</strong>
      * <p>LATEST</p>

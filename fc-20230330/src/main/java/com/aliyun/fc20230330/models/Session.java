@@ -7,6 +7,9 @@ public class Session extends TeaModel {
     @NameInMap("allowInternetAccess")
     public Boolean allowInternetAccess;
 
+    @NameInMap("autoPauseFileSystemOnly")
+    public Boolean autoPauseFileSystemOnly;
+
     /**
      * <p>The instance ID of the function associated with the session.</p>
      * 
@@ -153,6 +156,14 @@ public class Session extends TeaModel {
     }
     public Boolean getAllowInternetAccess() {
         return this.allowInternetAccess;
+    }
+
+    public Session setAutoPauseFileSystemOnly(Boolean autoPauseFileSystemOnly) {
+        this.autoPauseFileSystemOnly = autoPauseFileSystemOnly;
+        return this;
+    }
+    public Boolean getAutoPauseFileSystemOnly() {
+        return this.autoPauseFileSystemOnly;
     }
 
     public Session setContainerId(String containerId) {

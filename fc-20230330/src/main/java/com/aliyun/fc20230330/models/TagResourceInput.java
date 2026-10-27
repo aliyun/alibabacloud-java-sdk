@@ -5,7 +5,6 @@ import com.aliyun.tea.*;
 
 public class TagResourceInput extends TeaModel {
     /**
-     * <p>Resource descriptor.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +14,6 @@ public class TagResourceInput extends TeaModel {
     public String resourceArn;
 
     /**
-     * <p>Tag dictionary.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("tags")

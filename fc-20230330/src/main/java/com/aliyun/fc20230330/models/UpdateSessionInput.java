@@ -7,6 +7,9 @@ public class UpdateSessionInput extends TeaModel {
     @NameInMap("allowInternetAccess")
     public Boolean allowInternetAccess;
 
+    @NameInMap("autoPauseFileSystemOnly")
+    public Boolean autoPauseFileSystemOnly;
+
     /**
      * <p>Specifies whether to disable session ID reuse after the session expires. Default value: False, which indicates that after a session expires, you can use the same session ID to initiate requests. The system treats the request as a new session and binds it to a new instance. If you set this parameter to True, the session ID cannot be reused after the session expires.</p>
      * 
@@ -66,6 +69,14 @@ public class UpdateSessionInput extends TeaModel {
     }
     public Boolean getAllowInternetAccess() {
         return this.allowInternetAccess;
+    }
+
+    public UpdateSessionInput setAutoPauseFileSystemOnly(Boolean autoPauseFileSystemOnly) {
+        this.autoPauseFileSystemOnly = autoPauseFileSystemOnly;
+        return this;
+    }
+    public Boolean getAutoPauseFileSystemOnly() {
+        return this.autoPauseFileSystemOnly;
     }
 
     public UpdateSessionInput setDisableSessionIdReuse(Boolean disableSessionIdReuse) {

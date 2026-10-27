@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFunctionsShrinkRequest extends TeaModel {
     /**
-     * <p>The function description to filter by.</p>
+     * <p>The description used to filter functions.</p>
      * 
      * <strong>example:</strong>
      * <p>test_description</p>
@@ -14,12 +14,12 @@ public class ListFunctionsShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The version to which the function belongs. Valid values:</p>
+     * <p>The version of the function. Valid values:</p>
      * <ul>
-     * <li>v3: lists only FC 3.0 functions.</li>
-     * <li>v2: lists only FC 2.0 functions.</li>
+     * <li>v3: Lists only Function Compute 3.0 functions.</li>
+     * <li>v2: Lists only Function Compute 2.0 functions.</li>
      * </ul>
-     * <p>If not specified, both FC 3.0 and FC 2.0 functions are listed.</p>
+     * <p>Default value: empty. An empty value indicates that both Function Compute 3.0 and Function Compute 2.0 functions are listed.</p>
      * 
      * <strong>example:</strong>
      * <p>v3</p>
@@ -28,13 +28,13 @@ public class ListFunctionsShrinkRequest extends TeaModel {
     public String fcVersion;
 
     /**
-     * <p>The function name.</p>
+     * <p>The name of the function.</p>
      */
     @NameInMap("functionName")
     public String functionName;
 
     /**
-     * <p>The function GPU type to filter by.</p>
+     * <p>The GPU type used to filter functions.</p>
      * 
      * <strong>example:</strong>
      * <p>fc.gpu.tesla.1</p>
@@ -43,7 +43,7 @@ public class ListFunctionsShrinkRequest extends TeaModel {
     public String gpuType;
 
     /**
-     * <p>The number of functions to return. Minimum value: 1. Maximum value: 100.</p>
+     * <p>The number of functions to return. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -61,7 +61,7 @@ public class ListFunctionsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The function name prefix.</p>
+     * <p>The prefix of the function name.</p>
      * 
      * <strong>example:</strong>
      * <p>my-func</p>
@@ -70,13 +70,13 @@ public class ListFunctionsShrinkRequest extends TeaModel {
     public String prefix;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      */
     @NameInMap("resourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The function runtime to filter by.</p>
+     * <p>The runtime used to filter functions.</p>
      * 
      * <strong>example:</strong>
      * <p>python3.10</p>
@@ -85,7 +85,7 @@ public class ListFunctionsShrinkRequest extends TeaModel {
     public String runtime;
 
     /**
-     * <p>The function tags to filter by.</p>
+     * <p>The tags used to filter functions.</p>
      */
     @NameInMap("tags")
     public String tagsShrink;
