@@ -1,3 +1,30 @@
+2026-10-27 Version: 10.8.0
+- Support API ActiveContactChannel.
+- Support API CreateAlertAction.
+- Support API CreateAlertNotifyTemplate.
+- Support API CreateContact.
+- Support API CreateContactGroup.
+- Support API CreateOncallSchedule.
+- Support API DeleteAlertActions.
+- Support API DeleteAlertNotifyTemplates.
+- Support API DeleteContactGroups.
+- Support API DeleteContacts.
+- Support API DeleteOncallSchedules.
+- Support API GetAlertAction.
+- Support API GetOncallSchedule.
+- Support API ListAlertNotifyTemplates.
+- Support API ListOncallContacts.
+- Support API ListOncallSchedules.
+- Support API PreviewNotifyTemplate.
+- Support API ResendVerifyActivate.
+- Support API UpdateAlertAction.
+- Support API UpdateAlertNotifyTemplate.
+- Support API UpdateContact.
+- Support API UpdateContactGroup.
+- Support API UpdateOncallSchedule.
+- Support API ViewOncallSchedule.
+
+
 2026-10-26 Version: 10.7.0
 - Support API CreateSubscription.
 - Support API DeleteSubscription.

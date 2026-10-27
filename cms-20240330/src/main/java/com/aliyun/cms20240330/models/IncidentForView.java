@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class IncidentForView extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>-1 表示未屏蔽</p>
+     */
+    @NameInMap("blockingExpireTimestamp")
+    public Long blockingExpireTimestamp;
+
+    /**
      * <p>The details of the incident.</p>
      * 
      * <strong>example:</strong>
@@ -145,6 +152,9 @@ public class IncidentForView extends TeaModel {
     @NameInMap("subscriptionUuid")
     public String subscriptionUuid;
 
+    @NameInMap("tags")
+    public java.util.Map<String, String> tags;
+
     /**
      * <p>The timestamp when the incident was created.</p>
      * 
@@ -184,6 +194,14 @@ public class IncidentForView extends TeaModel {
     public static IncidentForView build(java.util.Map<String, ?> map) throws Exception {
         IncidentForView self = new IncidentForView();
         return TeaModel.build(map, self);
+    }
+
+    public IncidentForView setBlockingExpireTimestamp(Long blockingExpireTimestamp) {
+        this.blockingExpireTimestamp = blockingExpireTimestamp;
+        return this;
+    }
+    public Long getBlockingExpireTimestamp() {
+        return this.blockingExpireTimestamp;
     }
 
     public IncidentForView setContent(String content) {
@@ -328,6 +346,14 @@ public class IncidentForView extends TeaModel {
     }
     public String getSubscriptionUuid() {
         return this.subscriptionUuid;
+    }
+
+    public IncidentForView setTags(java.util.Map<String, String> tags) {
+        this.tags = tags;
+        return this;
+    }
+    public java.util.Map<String, String> getTags() {
+        return this.tags;
     }
 
     public IncidentForView setTime(Long time) {

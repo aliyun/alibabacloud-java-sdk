@@ -16,6 +16,7 @@ public class ListUserNotifyHistoriesRequest extends TeaModel {
      * <p>arms</p>
      */
     @NameInMap("bizSource")
+    @Deprecated
     public String bizSource;
 
     /**
@@ -92,6 +93,7 @@ public class ListUserNotifyHistoriesRequest extends TeaModel {
      * <p>1234567890123456</p>
      */
     @NameInMap("partitionKey")
+    @Deprecated
     public String partitionKey;
 
     /**
@@ -175,6 +177,7 @@ public class ListUserNotifyHistoriesRequest extends TeaModel {
         return this.batchId;
     }
 
+    @Deprecated
     public ListUserNotifyHistoriesRequest setBizSource(String bizSource) {
         this.bizSource = bizSource;
         return this;
@@ -271,6 +274,7 @@ public class ListUserNotifyHistoriesRequest extends TeaModel {
         return this.notifyStrategyName;
     }
 
+    @Deprecated
     public ListUserNotifyHistoriesRequest setPartitionKey(String partitionKey) {
         this.partitionKey = partitionKey;
         return this;

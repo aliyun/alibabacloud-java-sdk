@@ -42,7 +42,7 @@ public class ListAddonsResponseBody extends TeaModel {
 
     public static class ListAddonsResponseBodyAddonsDashboards extends TeaModel {
         /**
-         * <p>The dashboard description.</p>
+         * <p>The description of the dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -51,7 +51,7 @@ public class ListAddonsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The dashboard name.</p>
+         * <p>The name of the dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>rum_view_link_rum_api</p>
@@ -300,7 +300,7 @@ public class ListAddonsResponseBody extends TeaModel {
         public String alertDefaultStatus;
 
         /**
-         * <p>Specifies whether to install the component by default.</p>
+         * <p>Specifies whether to install by default.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -324,7 +324,7 @@ public class ListAddonsResponseBody extends TeaModel {
         public ListAddonsResponseBodyAddonsEnvironmentsPoliciesMetricCheckRule metricCheckRule;
 
         /**
-         * <p>Specifies whether to trigger a pod restart guide immediately after the plug-in installation is completed during integration.</p>
+         * <p>Specifies whether to initiate a pod restart guide immediately after the plug-in installation is completed during integration.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -333,7 +333,7 @@ public class ListAddonsResponseBody extends TeaModel {
         public Boolean needRestartAfterIntegration;
 
         /**
-         * <p>The supported protocol types in the configuration.</p>
+         * <p>The supported protocol types for configuration.</p>
          */
         @NameInMap("protocols")
         public java.util.List<ListAddonsResponseBodyAddonsEnvironmentsPoliciesProtocols> protocols;
@@ -433,7 +433,7 @@ public class ListAddonsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Specifies whether the integration policy type is enabled.</p>
+         * <p>Specifies whether it is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -607,7 +607,7 @@ public class ListAddonsResponseBody extends TeaModel {
         public String language;
 
         /**
-         * <p>The latest release creation time.</p>
+         * <p>The time of the latest release. The time is in ISO 8601 format and includes the UTC identifier or time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-03T03:15:56Z</p>

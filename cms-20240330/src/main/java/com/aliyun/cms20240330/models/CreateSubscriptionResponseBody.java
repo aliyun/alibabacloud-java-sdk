@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSubscriptionResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>264C3E89-XXXX-XXXX-XXXX-CE9C2196C7DC</p>
@@ -14,6 +14,8 @@ public class CreateSubscriptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The subscription ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123123123</p>
      */

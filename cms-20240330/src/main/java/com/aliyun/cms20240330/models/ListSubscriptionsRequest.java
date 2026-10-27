@@ -79,6 +79,7 @@ public class ListSubscriptionsRequest extends TeaModel {
      * <p>true</p>
      */
     @NameInMap("unbound")
+    @Deprecated
     public Boolean unbound;
 
     /**
@@ -173,6 +174,7 @@ public class ListSubscriptionsRequest extends TeaModel {
         return this.subscriptionType;
     }
 
+    @Deprecated
     public ListSubscriptionsRequest setUnbound(Boolean unbound) {
         this.unbound = unbound;
         return this;

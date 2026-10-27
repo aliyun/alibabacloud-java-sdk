@@ -135,7 +135,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
     public static class GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesAnnotations extends TeaModel {
         /**
-         * <p>The operation to perform.</p>
+         * <p>The operation to be performed.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -153,7 +153,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag values.</p>
          */
         @NameInMap("tagValues")
         public java.util.List<String> tagValues;
@@ -206,7 +206,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public java.util.List<String> fieldValues;
 
         /**
-         * <p>The operation to perform.</p>
+         * <p>The operation to be performed.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -289,7 +289,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
     public static class GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesLabels extends TeaModel {
         /**
-         * <p>The operation to perform.</p>
+         * <p>The operation to be performed.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -345,7 +345,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
     public static class GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesTags extends TeaModel {
         /**
-         * <p>The operation to perform.</p>
+         * <p>The operation to be performed.</p>
          * 
          * <strong>example:</strong>
          * <p>add</p>
@@ -419,7 +419,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public java.util.List<GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesFieldRules> fieldRules;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance IDs.</p>
          */
         @NameInMap("instanceIds")
         public java.util.List<String> instanceIds;
@@ -452,7 +452,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag values.</p>
          */
         @NameInMap("tags")
         public java.util.List<GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRulesTags> tags;
@@ -571,7 +571,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public GetIntegrationPolicyResponseBodyPolicyEntityGroupEntityRules entityRules;
 
         /**
-         * <p>The query.</p>
+         * <p>The query condition.</p>
          * 
          * <strong>example:</strong>
          * <p>status: 200 AND totalTime &gt; 0.5</p>
@@ -763,12 +763,14 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
 
     public static class GetIntegrationPolicyResponseBodyPolicy extends TeaModel {
         /**
-         * <p>The names of all components installed in the policy.</p>
+         * <p>The names of all components installed in this policy.</p>
          */
         @NameInMap("addonNames")
         public java.util.List<String> addonNames;
 
         /**
+         * <p>The policy version.</p>
+         * 
          * <strong>example:</strong>
          * <p>v2</p>
          */
@@ -776,7 +778,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public String apiVersion;
 
         /**
-         * <p>The information about the bound resource.</p>
+         * <p>The information about the bound resources.</p>
          */
         @NameInMap("bindResource")
         public GetIntegrationPolicyResponseBodyPolicyBindResource bindResource;
@@ -812,7 +814,7 @@ public class GetIntegrationPolicyResponseBody extends TeaModel {
         public String policyId;
 
         /**
-         * <p>The policy name.</p>
+         * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
          * <p>ControlPolicy4DetailVportInfo</p>

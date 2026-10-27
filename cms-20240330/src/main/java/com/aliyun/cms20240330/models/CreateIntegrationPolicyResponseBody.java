@@ -14,7 +14,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
     public Boolean created;
 
     /**
-     * <p>The policy.</p>
+     * <p>The uploaded policy.</p>
      */
     @NameInMap("policy")
     public CreateIntegrationPolicyResponseBodyPolicy policy;
@@ -113,7 +113,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The workspace to which the policy belongs.</p>
+         * <p>The workspace where the policy resides.</p>
          * 
          * <strong>example:</strong>
          * <p>prometheus</p>

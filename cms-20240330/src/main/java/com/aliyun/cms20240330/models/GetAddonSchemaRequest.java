@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAddonSchemaRequest extends TeaModel {
     /**
-     * <p>The language of the response. Valid values: \<code>zh\\</code> and \<code>en\\</code>. The default value is \<code>zh\\</code>.</p>
+     * <p>The language environment. Default value: zh. Valid values: zh, en.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,6 +14,8 @@ public class GetAddonSchemaRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>The add-on catalog version. Valid values: v1, v2.</p>
+     * 
      * <strong>example:</strong>
      * <p>v2</p>
      */
@@ -21,7 +23,7 @@ public class GetAddonSchemaRequest extends TeaModel {
     public String apiVersion;
 
     /**
-     * <p>The environment type. Valid values: \<code>CS\\</code> (container) and \<code>ECS\\</code>.</p>
+     * <p>The environment type. Valid values: CS (container), ECS.</p>
      * 
      * <strong>example:</strong>
      * <p>CS</p>
@@ -30,7 +32,7 @@ public class GetAddonSchemaRequest extends TeaModel {
     public String environmentType;
 
     /**
-     * <p>The version of the component.</p>
+     * <p>The component version.</p>
      * 
      * <strong>example:</strong>
      * <p>0.1.1</p>
