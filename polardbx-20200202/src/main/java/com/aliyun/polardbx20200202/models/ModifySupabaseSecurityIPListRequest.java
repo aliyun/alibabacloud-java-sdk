@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySupabaseSecurityIPListRequest extends TeaModel {
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifySupabaseSecurityIPListRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The whitelist group name.</p>
+     * <p>The name of the whitelist group.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
@@ -24,12 +24,7 @@ public class ModifySupabaseSecurityIPListRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The modification mode. Valid values:</p>
-     * <ul>
-     * <li>Cover: overwrites the existing whitelist.</li>
-     * <li>Append: appends entries to the existing whitelist.</li>
-     * <li>Delete: deletes entries from the existing whitelist.</li>
-     * </ul>
+     * <p>The modification mode. Valid values: Cover, Append, and Delete.</p>
      * 
      * <strong>example:</strong>
      * <p>Append</p>
@@ -48,7 +43,7 @@ public class ModifySupabaseSecurityIPListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IP whitelist. Separate multiple IP addresses with commas (,).</p>
+     * <p>The IP whitelist. Separate multiple IP addresses with commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

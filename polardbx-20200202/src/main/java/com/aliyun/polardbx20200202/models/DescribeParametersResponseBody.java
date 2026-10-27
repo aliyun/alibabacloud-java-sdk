@@ -165,6 +165,12 @@ public class DescribeParametersResponseBody extends TeaModel {
         @NameInMap("ConfigParameters")
         public java.util.List<DescribeParametersResponseBodyDataConfigParameters> configParameters;
 
+        /**
+         * <p>The instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxc-********</p>
+         */
         @NameInMap("DBInstanceId")
         public String DBInstanceId;
 

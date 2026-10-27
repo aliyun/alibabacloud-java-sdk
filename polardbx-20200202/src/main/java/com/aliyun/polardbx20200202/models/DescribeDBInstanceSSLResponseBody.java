@@ -64,7 +64,7 @@ public class DescribeDBInstanceSSLResponseBody extends TeaModel {
         public Boolean SSLEnabled;
 
         /**
-         * <p>The certificate expiration time.</p>
+         * <p>The expiration time of the certificate. The time is in the YYYY-MM-DDTHH:mm:ssZ format and is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-04T09:39:07Z</p>

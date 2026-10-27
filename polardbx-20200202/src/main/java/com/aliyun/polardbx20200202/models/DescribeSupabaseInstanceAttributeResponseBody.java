@@ -83,7 +83,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of the authentication principal.</p>
+         * <p>The authentication principal type.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -341,7 +341,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<DescribeSupabaseInstanceAttributeResponseBodyDataConnAddrs> connAddrs;
 
         /**
-         * <p>The time when the instance was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-13 10:01:50 +0800</p>
@@ -389,7 +389,7 @@ public class DescribeSupabaseInstanceAttributeResponseBody extends TeaModel {
          * <p>The minor engine version.</p>
          * 
          * <strong>example:</strong>
-         * <p>polardb-2.4.0_5.4.19-20250116_xcluster5.4.20-20241213</p>
+         * <p>polardb-2.6.0_xcluster8.4.21-20260716_pxbaas-20260915</p>
          */
         @NameInMap("MinorVersion")
         public String minorVersion;

@@ -11,7 +11,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
     public CreatePxfuseResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The policy details.</p>
+     * <p>The details of the returned policy.</p>
      */
     @NameInMap("Data")
     public CreatePxfuseResponseBodyData data;
@@ -101,7 +101,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The type of access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -183,7 +183,7 @@ public class CreatePxfuseResponseBody extends TeaModel {
 
     public static class CreatePxfuseResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the instance already exists.</p>
+         * <p>Indicates whether the resource already exists.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>

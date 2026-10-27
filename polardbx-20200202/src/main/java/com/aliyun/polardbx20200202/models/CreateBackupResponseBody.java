@@ -11,7 +11,7 @@ public class CreateBackupResponseBody extends TeaModel {
     public CreateBackupResponseBodyData data;
 
     /**
-     * <p>Empty if the request is successful. An error message is returned if the request fails.</p>
+     * <p>The message. If the request is successful, this field is empty. If the request fails, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -29,7 +29,7 @@ public class CreateBackupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -75,6 +75,12 @@ public class CreateBackupResponseBody extends TeaModel {
     }
 
     public static class CreateBackupResponseBodyData extends TeaModel {
+        /**
+         * <p>The ID of the backup set.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("BackupSetId")
         public String backupSetId;
 

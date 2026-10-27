@@ -51,10 +51,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         public String checkingCode;
 
         /**
-         * <p>Indicates whether the parameter is dynamic. Valid values:</p>
+         * <p>Specifies whether the parameter is dynamic. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: No.</li>
-         * <li><strong>1</strong>: Yes.</li>
+         * <li><strong>0</strong>: no.</li>
+         * <li><strong>1</strong>: yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,10 +91,10 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         public String parameterValue;
 
         /**
-         * <p>Indicates whether the parameter can be modified. Valid values:</p>
+         * <p>Specifies whether the parameter can be modified. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Cannot be modified.</li>
-         * <li><strong>1</strong>: Can be modified.</li>
+         * <li><strong>0</strong>: The parameter cannot be modified.</li>
+         * <li><strong>1</strong>: The parameter can be modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -104,7 +104,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         public Integer revisable;
 
         /**
-         * <p>Indicates whether the parameter can be modified by the user.</p>
+         * <p>Specifies whether the parameter can be modified by the user.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -204,7 +204,7 @@ public class DescribeParameterTemplatesResponseBody extends TeaModel {
         public Integer parameterCount;
 
         /**
-         * <p>The parameter list.</p>
+         * <p>The list of parameters.</p>
          */
         @NameInMap("Parameters")
         public java.util.List<DescribeParameterTemplatesResponseBodyDataParameters> parameters;

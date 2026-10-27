@@ -17,7 +17,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
     public ModifyContext0SecurityIpsResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9B2F3840-5C98-475C-B269-2D5C3A31797C</p>
@@ -65,7 +65,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -83,7 +83,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The identity type used for authentication in the request. Valid values:</p>
+         * <p>The type of identity used for authentication in the request. Valid values:</p>
          * <ul>
          * <li>SubUser: RAM user.</li>
          * <li>AssumedRoleUser: RAM role.</li>
@@ -206,7 +206,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
         public Integer DBInstanceId;
 
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-hzjasd****</p>
@@ -215,7 +215,7 @@ public class ModifyContext0SecurityIpsResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <hr>

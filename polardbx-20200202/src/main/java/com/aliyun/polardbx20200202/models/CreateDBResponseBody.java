@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBResponseBody extends TeaModel {
     /**
-     * <p>Empty if the request is successful. An error message is returned if the request fails.</p>
+     * <p>The error message. This parameter is empty if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <hr>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSupabaseInstancesRequest extends TeaModel {
     /**
-     * <p>The instance name. This parameter is used for exact match filtering. Separate multiple instance names with commas (,).</p>
+     * <p>The instance name. Exact match is used for filtering. Separate multiple names with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>pxsp-hz********</p>
@@ -14,7 +14,7 @@ public class DescribeSupabaseInstancesRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The instance description. This parameter supports fuzzy match.</p>
+     * <p>The instance description. Fuzzy match is used for filtering.</p>
      * 
      * <strong>example:</strong>
      * <p>project name</p>
@@ -23,7 +23,7 @@ public class DescribeSupabaseInstancesRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The maximum number of entries per page for a paged query. Maximum value: 100. Default value: If you do not specify this parameter or specify a value less than 10, the default value is 10. If you specify a value greater than 100, the default value is 100.</p>
+     * <p>The number of entries to return on each page in a paged query. Maximum value: 100. Default value: 10. If you do not specify the Settings or the Settings value is less than 10, the default value is 10. If the Settings value is greater than 100, the default value is 100. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -32,7 +32,7 @@ public class DescribeSupabaseInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>xxdds</p>
@@ -41,7 +41,7 @@ public class DescribeSupabaseInstancesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number. Minimum value: 1. Default value: 1.</p>
+     * <p>The page number. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

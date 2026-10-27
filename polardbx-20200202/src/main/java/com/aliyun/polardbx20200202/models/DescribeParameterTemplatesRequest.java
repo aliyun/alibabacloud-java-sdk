@@ -13,14 +13,20 @@ public class DescribeParameterTemplatesRequest extends TeaModel {
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 
+    /**
+     * <p>The DPI engine version. Default value: 2.0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2.0</p>
+     */
     @NameInMap("EngineVersion")
     public String engineVersion;
 
     /**
      * <p>The parameter level. Valid values:</p>
      * <ul>
-     * <li><strong>compute</strong>: compute layer.</li>
-     * <li><strong>storage</strong>: storage layer.</li>
+     * <li><strong>compute</strong>: the compute layer.</li>
+     * <li><strong>storage</strong>: the storage layer.</li>
      * </ul>
      * 
      * <strong>example:</strong>

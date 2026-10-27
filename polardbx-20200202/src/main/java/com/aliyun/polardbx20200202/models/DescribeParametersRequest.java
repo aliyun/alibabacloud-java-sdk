@@ -17,8 +17,8 @@ public class DescribeParametersRequest extends TeaModel {
     /**
      * <p>The parameter level. Valid values:</p>
      * <ul>
-     * <li>compute: compute layer.</li>
-     * <li>storage: storage layer.</li>
+     * <li>compute: compute layer</li>
+     * <li>storage: storage layer</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeParametersRequest extends TeaModel {
     public String paramLevel;
 
     /**
-     * <p>The region to which the instance belongs.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

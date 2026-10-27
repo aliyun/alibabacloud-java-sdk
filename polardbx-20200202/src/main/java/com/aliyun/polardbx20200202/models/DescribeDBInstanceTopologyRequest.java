@@ -15,7 +15,7 @@ public class DescribeDBInstanceTopologyRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The end time of the time range for querying historical instances in the topology. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The end time of the historical instance range for the topology query, in the yyyy-MM-dd HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-22T10:30:45Z 04:00:00</p>
@@ -43,7 +43,7 @@ public class DescribeDBInstanceTopologyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time of the time range for querying historical instances in the topology. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * <p>The start time of the historical instance range for the topology query, in the yyyy-MM-dd HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-21T10:30:45Z 04:00:00</p>

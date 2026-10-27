@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateOpenSearchRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal. Default value: true.</p>
+     * <p>Specifies whether to enable auto-renewal. Default value: true. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enabled.</li>
-     * <li><strong>false</strong>: disabled.</li>
+     * <li><strong>true</strong>: enables auto-renewal</li>
+     * <li><strong>false</strong>: disables auto-renewal</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class CreateOpenSearchRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The client token used to ensure the idempotence of the request. Use a different value for each creation request.</p>
+     * <p>The idempotency token. Make sure that the value is unique for each creation request.</p>
      * 
      * <strong>example:</strong>
      * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
@@ -30,13 +30,13 @@ public class CreateOpenSearchRequest extends TeaModel {
      * <p>The description of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>TestInstance</p>
+     * <p>Test instance</p>
      */
     @NameInMap("DBInstanceDescription")
     public String DBInstanceDescription;
 
     /**
-     * <p>The node specifications code of PolarDBX Search data nodes. Available specifications depend on the region and sales configuration. Use a PolarDBX Search specification code that is available for purchase in the current region.</p>
+     * <p>The code for the node specifications of the PolarDBX Search data node. The active node specifications vary by region and sales configuration. Use a PolarDBX Search node specifications code that is available for purchase in the current region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateOpenSearchRequest extends TeaModel {
     public String DBNodeClass;
 
     /**
-     * <p>The PolarDBX Search DPI engine version. The value is fixed to 3.0. If this parameter is not specified, the default value 3.0 is used.</p>
+     * <p>The database engine version of PolarDBX Search. The current fixed DPI engine version is 3.0. If this parameter is not specified, 3.0 is used.</p>
      * 
      * <strong>example:</strong>
      * <p>3.0</p>
@@ -55,7 +55,7 @@ public class CreateOpenSearchRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>A compatible parameter that does not take effect. Use DBNodeClass to specify the PolarDBX Search data node specifications.</p>
+     * <p>A compatible parameter. This parameter does not take effect. Specify the node specifications of the PolarDBX Search data node by using DBNodeClass.</p>
      * 
      * <strong>example:</strong>
      * <p>opensearch.sn2ne.large.1</p>
@@ -64,7 +64,7 @@ public class CreateOpenSearchRequest extends TeaModel {
     public String instanceSpec;
 
     /**
-     * <p>The number of PolarDBX Search data nodes. The value must be a positive integer and a multiple of the number of selected zones.</p>
+     * <p>The number of PolarDBX Search data nodes. The value must be a positive integer and an integer multiple of the number of selected zones.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -74,10 +74,10 @@ public class CreateOpenSearchRequest extends TeaModel {
     public Integer nodeCount;
 
     /**
-     * <p>The billing method of the instance.</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>PREPAY</strong>: subscription.</li>
-     * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
+     * <li><strong>PREPAY</strong>: subscription</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -88,7 +88,7 @@ public class CreateOpenSearchRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The billing cycle. Valid values for subscription: Year and Month. Default value for pay-as-you-go: Hour.</p>
+     * <p>The billing cycle. For subscription instances, only Year and Month are supported. For pay-as-you-go instances, the default value is Hour.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -97,7 +97,7 @@ public class CreateOpenSearchRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class CreateOpenSearchRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. This parameter can be left empty. This parameter is not supported.</p>
+     * <p>The resource group ID. This parameter can be left empty and is not currently supported.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-xxxxx</p>
@@ -134,10 +134,10 @@ public class CreateOpenSearchRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The topology type. Valid values:</p>
+     * <p>The active topology type. Valid values:</p>
      * <ul>
-     * <li><strong>1azone</strong>: single active zone.</li>
-     * <li><strong>3azones</strong>: three active zones.</li>
+     * <li><strong>1azone</strong>: single-zone.</li>
+     * <li><strong>3azones</strong>: Three-zone deployment.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class CreateOpenSearchRequest extends TeaModel {
     public String topologyType;
 
     /**
-     * <p>The subscription duration. Specify the number of months or years for prepaid instances.</p>
+     * <p>The subscription duration. You can specify a duration in months or years for subscription instances.</p>
      * <blockquote>
      * <p>When Period is set to Year, valid values for this parameter are 1, 2, and 3.</p>
      * </blockquote>
@@ -159,7 +159,7 @@ public class CreateOpenSearchRequest extends TeaModel {
     public Integer usedTime;
 
     /**
-     * <p>VPC ID。</p>
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -179,7 +179,7 @@ public class CreateOpenSearchRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The second zone. This parameter is required when TopologyType is set to 3azones. The value cannot be the same as other zones.</p>
+     * <p>The secondary zone. This parameter is required when TopologyType is set to 3azones, and the value must be different from other zones.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-i</p>
@@ -188,7 +188,7 @@ public class CreateOpenSearchRequest extends TeaModel {
     public String zone2;
 
     /**
-     * <p>The third zone. This parameter is required when TopologyType is set to 3azones. The value cannot be the same as other zones.</p>
+     * <p>The third zone for Three-zone deployment. This parameter is required when TopologyType is set to 3azones, and the value must be different from other active zones.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-j</p>

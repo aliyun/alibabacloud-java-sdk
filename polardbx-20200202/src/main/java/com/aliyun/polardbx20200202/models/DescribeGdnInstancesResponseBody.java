@@ -11,9 +11,9 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
     public DescribeGdnInstancesResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned for the request.</p>
      * <blockquote>
-     * <p>This parameter is empty when the request succeeds. If the request fails, an exception message is returned, such as an error code.</p>
+     * <p>This parameter is empty if the request is successful. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -79,7 +79,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
 
     public static class DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList extends TeaModel {
         /**
-         * <p>The instance specifications.</p>
+         * <p>The instance type.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx.x4.medium.2e</p>
@@ -88,7 +88,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String classCode;
 
         /**
-         * <p>The CN node specifications.</p>
+         * <p>The CN node specifications. Valid values:</p>
          * <ul>
          * <li><strong>polarx.x4.medium.2e</strong>: 2 cores, 8 GB</li>
          * <li><strong>polarx.x4.large.2e</strong>: 4 cores, 16 GB</li>
@@ -110,7 +110,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String cnNodeClassCode;
 
         /**
-         * <p>The number of CN nodes.</p>
+         * <p>The number of compute nodes (CNs).</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -127,11 +127,14 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         @NameInMap("CommodityCode")
         public String commodityCode;
 
+        /**
+         * <p>The data synchronization status of the member.</p>
+         */
         @NameInMap("DataSyncStatus")
         public String dataSyncStatus;
 
         /**
-         * <p>The DN node specifications.</p>
+         * <p>The DN node specifications. Valid values:</p>
          * <ul>
          * <li><strong>mysql.n2.medium.25</strong>: 2 cores, 4 GB</li>
          * <li><strong>mysql.n4.medium.25</strong>: 2 cores, 8 GB</li>
@@ -157,7 +160,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String dnNodeClassCode;
 
         /**
-         * <p>The number of DN nodes.</p>
+         * <p>The number of data nodes (DNs).</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -166,7 +169,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String dnNodeCount;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The expiration time. The format is YYYY-MM-DDTHH:mm:ss.SSS±HHmm, which includes the time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-02T13:11:10.000+0000</p>
@@ -184,7 +187,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The member name (PolarDB-X instance name).</p>
+         * <p>The name of the member, which is the name of the PolarDB-X instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-***</p>
@@ -195,8 +198,8 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,6 +217,9 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         @NameInMap("PrimaryZone")
         public String primaryZone;
 
+        /**
+         * <p>The read/write status of the member.</p>
+         */
         @NameInMap("ReadWriteStatus")
         public String readWriteStatus;
 
@@ -227,7 +233,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The member role.</p>
+         * <p>The role of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>primary、
@@ -246,7 +252,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String secondaryZone;
 
         /**
-         * <p>The data replication lag.</p>
+         * <p>The data synchronization latency.</p>
          * 
          * <strong>example:</strong>
          * <p>1s</p>
@@ -255,7 +261,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String secondsBehindMaster;
 
         /**
-         * <p>The member status.</p>
+         * <p>The status of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>Creating</p>
@@ -264,20 +270,20 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The switchover task status.</p>
+         * <p>The status of the switchover task.</p>
          * 
          * <strong>example:</strong>
-         * <p>prepared: Parameter initialization is complete.
-         * set_old_primary_readonly: The original primary instance is set to read-only.
-         * set_new_primary_read_write: The switchover is complete.
-         * timeout: The task has timed out.
-         * rollback: The task has been rolled back</p>
+         * <p>prepared: Parameter initialization completed
+         * set_old_primary_readonly: Write operations disabled on the original primary instance
+         * set_new_primary_read_write: Switchover completed
+         * timeout: Task timed out
+         * rollback: Rolled back</p>
          */
         @NameInMap("TaskStatus")
         public String taskStatus;
 
         /**
-         * <p>The zone for three-zone deployment. This zone is active along with the primary and secondary zones.</p>
+         * <p>The third active zone in a three-zone deployment.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou-a</p>
@@ -480,7 +486,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The GDN instance name.</p>
+         * <p>The name of the GDN instance.</p>
          * 
          * <strong>example:</strong>
          * <p>gdn-***</p>
@@ -488,6 +494,12 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         @NameInMap("GdnInstanceName")
         public String gdnInstanceName;
 
+        /**
+         * <p>The replication mode of the GDN. Valid values: gdn_mode_master_slave and gdn_mode_bidirectional.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>gdn_mode_master_slave</p>
+         */
         @NameInMap("GdnMode")
         public String gdnMode;
 
@@ -501,7 +513,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The member list.</p>
+         * <p>The list of members.</p>
          */
         @NameInMap("MemberList")
         public java.util.List<DescribeGdnInstancesResponseBodyDataGdnInstanceListMemberList> memberList;
@@ -515,12 +527,27 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         @NameInMap("MysqlVersion")
         public String mysqlVersion;
 
+        /**
+         * <p>The replication conflict handling strategy. Valid values: DIRECT_OVERWRITE, OVERWRITE, IGNORE, and INTERRUPT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OVERWRITE</p>
+         */
         @NameInMap("RplConflictStrategy")
         public String rplConflictStrategy;
 
+        /**
+         * <p>The DML replication policy. Valid values: MERGE, SERIAL, TRANSACTION, and SPLIT.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SPLIT</p>
+         */
         @NameInMap("RplDmlStrategy")
         public String rplDmlStrategy;
 
+        /**
+         * <p>Specifies whether to synchronously replicate DDL operations.</p>
+         */
         @NameInMap("RplSyncDdl")
         public Boolean rplSyncDdl;
 
@@ -534,7 +561,7 @@ public class DescribeGdnInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The switchover history.</p>
+         * <p>The switchover logs.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>

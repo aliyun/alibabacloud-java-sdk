@@ -14,6 +14,12 @@ public class ModifyDBInstanceVipRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The name of the CN cluster for the instance, such as default.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>default</p>
+     */
     @NameInMap("InstanceClusterName")
     public String instanceClusterName;
 
@@ -38,7 +44,7 @@ public class ModifyDBInstanceVipRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) where the access endpoint resides.</p>
+     * <p>The ID of the VPC where the endpoint is located.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The details of the access denied error.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ModifySupabaseSecurityIPListResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -92,7 +92,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -101,7 +101,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The type of the no permission error.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -183,7 +183,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
 
     public static class ModifySupabaseSecurityIPListResponseBodyData extends TeaModel {
         /**
-         * <p>The instance name.</p>
+         * <p>The name of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxsp-*********</p>
@@ -192,7 +192,7 @@ public class ModifySupabaseSecurityIPListResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The whitelist group name.</p>
+         * <p>The name of the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>special</p>

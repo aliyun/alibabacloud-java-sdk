@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceClassResponseBody extends TeaModel {
     /**
-     * <p>The order ID. An order is generated when you upgrade, downgrade, or change the instance specifications.</p>
+     * <p>The order ID. An order is generated when you upgrade or downgrade an instance, or change the instance specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>20211103105558</p>
@@ -22,6 +22,12 @@ public class ModifyDBInstanceClassResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The ID of the instance specification change task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("TaskId")
     public Integer taskId;
 

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeSupabaseInstancesResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denied details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeSupabaseInstancesResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The paginated result of the instance list.</p>
+     * <p>The paginated list of instances.</p>
      */
     @NameInMap("Data")
     public DescribeSupabaseInstancesResponseBodyData data;
 
     /**
-     * <p>The maximum number of entries per page for a paged query. Maximum value: 100. Default value: If you do not specify this parameter or specify a value less than 10, the default value is 10. If you specify a value greater than 100, the default value is 100.</p>
+     * <p>The number of entries to return on each page in a paged query. Maximum value: 100. Default value: 10. If you do not specify the Settings or the Settings value is less than 10, the default value is 10. If the Settings value is greater than 100, the default value is 100. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -26,7 +26,7 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>xxdds</p>
@@ -99,7 +99,7 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -126,7 +126,7 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAacnceTlBNjlFODgyLTlBMDUtNUUyRC04MzE5LUQwMzZDRjJFQTM3NA==</p>
@@ -135,7 +135,7 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The access denial type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -217,7 +217,7 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
 
     public static class DescribeSupabaseInstancesResponseBodyDataInstances extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the instance was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-06-08T07:19:05.000+0000</p>
@@ -238,7 +238,7 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
          * <p>The instance description.</p>
          * 
          * <strong>example:</strong>
-         * <p>我的 Supabase 项目</p>
+         * <p>My Supabase project</p>
          */
         @NameInMap("Description")
         public String description;
@@ -262,7 +262,7 @@ public class DescribeSupabaseInstancesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The Supabase specification code.</p>
+         * <p>The Supabase instance type code.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx.supabase.x4.2xlarge</p>

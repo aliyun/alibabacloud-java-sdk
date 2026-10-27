@@ -15,7 +15,7 @@ public class DescribeBinaryLogListRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The end time of the query for the binary log list.</p>
+     * <p>The end time of the query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,11 +24,17 @@ public class DescribeBinaryLogListRequest extends TeaModel {
     @NameInMap("EndTime")
     public String endTime;
 
+    /**
+     * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-hzrh51fze****pon-cdc</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The page number of the current binary log list. Default value: 1.</p>
+     * <p>The page number. Pages start from page 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -37,7 +43,7 @@ public class DescribeBinaryLogListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of binary logs to return on each page. Default value: 30.</p>
+     * <p>The number of entries per page. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -56,7 +62,7 @@ public class DescribeBinaryLogListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time of the query for the binary log list.</p>
+     * <p>The start time of the query. Specify the time in the YYYY-MM-DD HH:mm:ss format.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCdcVersionListRequest extends TeaModel {
     /**
-     * <p>The instance name.</p>
+     * <p>The name of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pxc-bjrl7****k2vp7</p>
@@ -13,11 +13,17 @@ public class DescribeCdcVersionListRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The name of the CDC instance. This parameter specifies the CDC instance for which to query versions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-***</p>
+     */
     @NameInMap("InstanceName")
     public String instanceName;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The ID of the region where the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

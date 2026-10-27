@@ -38,7 +38,7 @@ public class QueryColumnarLogSSEResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned only when Type is EOF. Indicates whether the service or API row limit truncated the SQL submitted by the caller. A value of false when the SQL statement has a smaller LIMIT that was fully executed does not indicate that no more data exists in the underlying table.</p>
+     * <p>Returned only when Type is EOF. Indicates whether the service or API row limit truncated the SQL statement submitted by the caller. A value of false when the SQL statement completes with a smaller LIMIT does not indicate that no more data exists in the underlying table.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>
@@ -56,13 +56,13 @@ public class QueryColumnarLogSSEResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether at least one RECORD event was sent before the ERROR occurred. A value of true indicates that the results already received by the caller are incomplete and must not be treated as complete query results.</p>
+     * <p>Indicates whether at least one RECORD event was sent before the ERROR occurred. A value of true indicates that the results already received by the caller are incomplete and should not be treated as complete query results.</p>
      */
     @NameInMap("Partial")
     public Boolean partial;
 
     /**
-     * <p>Returned only when Type is EOF. The elapsed time from the start of JDBC statement execution to the completion of reading the last result row or probe row. Unit: milliseconds.</p>
+     * <p>Returned only when Type is EOF. The elapsed time in milliseconds from the start of JDBC statement execution to the completion of reading the last result row or probe row.</p>
      * 
      * <strong>example:</strong>
      * <p>125</p>
@@ -80,13 +80,13 @@ public class QueryColumnarLogSSEResponseBody extends TeaModel {
     public String queryId;
 
     /**
-     * <p>Returned only when Type is RECORD. A batch of query results carried by this event. Each row is a JSON key-value object that maps column names to text values. SQL NULL values are encoded as the string null.</p>
+     * <p>Returned only when Type is RECORD. A batch of query results carried by this event. Each row is a JSON key-value object that maps column names to text values. SQL NULL is encoded as the string null.</p>
      */
     @NameInMap("Records")
     public java.util.List<java.util.Map<String, String>> records;
 
     /**
-     * <p>Returned only when Type is EOF. The sum of UTF-8 bytes of the JSON objects for all returned rows. This value does not include arrays, SSE frames, or fixed response fields.</p>
+     * <p>Returned only when Type is EOF. The total UTF-8 byte size of all returned row JSON objects. This value does not include arrays, SSE frames, or fixed response fields.</p>
      * 
      * <strong>example:</strong>
      * <p>8192</p>
@@ -131,7 +131,7 @@ public class QueryColumnarLogSSEResponseBody extends TeaModel {
     public Long sequence;
 
     /**
-     * <p>The SSE event type. RECORD indicates a batch of query results. EOF indicates that the query has completed. ERROR indicates that the query ended abnormally.</p>
+     * <p>The SSE event type. RECORD carries a batch of query results. EOF indicates that the query has completed. ERROR indicates that the query ended with an exception.</p>
      * 
      * <strong>example:</strong>
      * <p>RECORD</p>
@@ -277,7 +277,7 @@ public class QueryColumnarLogSSEResponseBody extends TeaModel {
          * <p>As described above.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:QueryColumnarLogSSE</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -286,7 +286,7 @@ public class QueryColumnarLogSSEResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
@@ -324,7 +324,7 @@ public class QueryColumnarLogSSEResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>NoPermissionType</p>
+         * <p>The type of the permission denial.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>

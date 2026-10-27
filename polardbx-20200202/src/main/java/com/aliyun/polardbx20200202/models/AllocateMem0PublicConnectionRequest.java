@@ -25,7 +25,7 @@ public class AllocateMem0PublicConnectionRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The port number.</p>
+     * <p>The port.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class AllocateMem0PublicConnectionRequest extends TeaModel {
     public String port;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region where the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

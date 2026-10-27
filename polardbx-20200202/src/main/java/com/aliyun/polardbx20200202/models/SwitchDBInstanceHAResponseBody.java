@@ -4,12 +4,27 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class SwitchDBInstanceHAResponseBody extends TeaModel {
+    /**
+     * <p>The error message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>successs</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 

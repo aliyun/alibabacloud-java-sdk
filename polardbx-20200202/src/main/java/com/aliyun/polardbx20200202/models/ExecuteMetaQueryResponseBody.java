@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExecuteMetaQueryResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The detailed information about the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ExecuteMetaQueryResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -17,7 +17,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
     public ExecuteMetaQueryResponseBodyData data;
 
     /**
-     * <p>The additional information returned by the operation. success is returned if the request is successful. Otherwise, an error code is returned.</p>
+     * <p>The additional message returned by the API operation. If the request is successful, success is returned. If an error occurs, the corresponding error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -90,7 +90,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
 
     public static class ExecuteMetaQueryResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>The description is the same as above.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -99,7 +99,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The description is the same as above.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -182,9 +182,21 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
     }
 
     public static class ExecuteMetaQueryResponseBodyData extends TeaModel {
+        /**
+         * <p>The actual top-level LIMIT offset applied to the SQL statement. If no offset is specified, the value is 0.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("AppliedOffset")
         public Long appliedOffset;
 
+        /**
+         * <p>The effective upper limit of returned rows for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("AppliedRowLimit")
         public Long appliedRowLimit;
 
@@ -194,12 +206,27 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
         @NameInMap("Columns")
         public java.util.List<String> columns;
 
+        /**
+         * <p>Indicates whether the query result contains at least one more row beyond the effective row limit for this request.</p>
+         */
         @NameInMap("HasMore")
         public Boolean hasMore;
 
+        /**
+         * <p>The size in bytes of the Rows JSON array in the returned result after UTF-8 encoding, excluding protocol overhead.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2048</p>
+         */
         @NameInMap("RecordsSizeBytes")
         public Long recordsSizeBytes;
 
+        /**
+         * <p>The actual number of result rows returned for this request.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
         @NameInMap("ReturnedRowCount")
         public Long returnedRowCount;
 
@@ -213,7 +240,7 @@ public class ExecuteMetaQueryResponseBody extends TeaModel {
         public Integer rowCount;
 
         /**
-         * <p>The number of affected or returned rows. This field is available only for compute nodes (CNs).</p>
+         * <p>The number of affected or returned rows. This field is available only for CN.</p>
          */
         @NameInMap("Rows")
         public java.util.List<java.util.Map<String, ?>> rows;

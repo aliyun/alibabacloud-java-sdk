@@ -15,8 +15,8 @@ public class DescribeGdnInstancesRequest extends TeaModel {
     public String filterType;
 
     /**
-     * <p>The filter value for querying resources.</p>
-     * <p>Used together with FilterKey.</p>
+     * <p>The filter value used when querying resources.</p>
+     * <p>This parameter is used in conjunction with FilterKey.</p>
      * 
      * <strong>example:</strong>
      * <p>gdn-<em><strong>、
@@ -26,7 +26,7 @@ public class DescribeGdnInstancesRequest extends TeaModel {
     public String filterValue;
 
     /**
-     * <p>GDN ID。</p>
+     * <p>The GDN ID.</p>
      * 
      * <strong>example:</strong>
      * <p>gdn-***</p>
@@ -35,7 +35,7 @@ public class DescribeGdnInstancesRequest extends TeaModel {
     public String GDNId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
+     * <p>The page number. Valid values: an integer greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

@@ -4,11 +4,17 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DescribeDBInstancesRequest extends TeaModel {
+    /**
+     * <p>The database version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5.5</p>
+     */
     @NameInMap("DbVersion")
     public String dbVersion;
 
     /**
-     * <p>The description of the database.</p>
+     * <p>The description or remark of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>app-test</p>
@@ -26,7 +32,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Specifies whether the instance must have a log engine.</p>
+     * <p>Specifies whether a log engine is required.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -44,7 +50,12 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The page size. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
+     * <ul>
+     * <li>30</li>
+     * <li>50</li>
+     * <li>100</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -63,7 +74,7 @@ public class DescribeDBInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmyst47******</p>
@@ -73,6 +84,10 @@ public class DescribeDBInstancesRequest extends TeaModel {
 
     /**
      * <p>The instance edition. Valid values:</p>
+     * <ul>
+     * <li><strong>enterprise</strong>: Enterprise Edition</li>
+     * <li><strong>standard</strong>: Standard Edition</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>enterprise</p>

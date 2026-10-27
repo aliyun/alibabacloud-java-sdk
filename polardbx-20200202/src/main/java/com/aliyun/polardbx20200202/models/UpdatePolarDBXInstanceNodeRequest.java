@@ -4,6 +4,12 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
+    /**
+     * <p>The node specifications of the storage nodes to add.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mysql.n4.medium.25</p>
+     */
     @NameInMap("AddDNSpec")
     public String addDNSpec;
 
@@ -17,7 +23,7 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     public Integer CNNodeCount;
 
     /**
-     * <p>The client token, which is an arbitrary random string.</p>
+     * <p>The client token. It can be any random string.</p>
      * 
      * <strong>example:</strong>
      * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
@@ -26,7 +32,7 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The instance name ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,6 +59,12 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     @NameInMap("DbInstanceNodeCount")
     public Integer dbInstanceNodeCount;
 
+    /**
+     * <p>The IDs of the storage nodes to remove.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-xdb-s-pxcshr****rh7fn2654fc</p>
+     */
     @NameInMap("DeleteDNIds")
     public String deleteDNIds;
 
@@ -66,6 +78,12 @@ public class UpdatePolarDBXInstanceNodeRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the storage pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("StoragePoolName")
     public String storagePoolName;
 

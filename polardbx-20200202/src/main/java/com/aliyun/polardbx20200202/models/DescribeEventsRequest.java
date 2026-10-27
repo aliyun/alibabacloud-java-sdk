@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventsRequest extends TeaModel {
     /**
-     * <p>The end time.</p>
+     * <p>The end time. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-18T03:07:25Z</p>
@@ -42,7 +42,7 @@ public class DescribeEventsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time. Specify the time in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-18T03:07:25Z</p>

@@ -56,7 +56,7 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
 
     public static class ModifyOpenSearchClassResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>The authentication action.</p>
+         * <p>The authorization action.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -65,7 +65,7 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The display name of the authorization principal.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -74,7 +74,7 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the authentication principal.</p>
+         * <p>The owner ID of the authorization principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The identity type used for authentication in the request. Valid values:</p>
+         * <p>The type of identity used for authorization in the request. Valid values:</p>
          * <ul>
          * <li>SubUser: RAM user.</li>
          * <li>AssumedRoleUser: RAM role.</li>
@@ -97,7 +97,7 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encrypted complete diagnostic message.</p>
+         * <p>The encoded full diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -106,7 +106,7 @@ public class ModifyOpenSearchClassResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of permission denial.</p>
+         * <p>The no permission type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>

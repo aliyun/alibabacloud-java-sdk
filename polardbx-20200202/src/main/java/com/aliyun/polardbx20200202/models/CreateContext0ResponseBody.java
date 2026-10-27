@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateContext0ResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denial details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public CreateContext0ResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -65,7 +65,7 @@ public class CreateContext0ResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -83,7 +83,7 @@ public class CreateContext0ResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of the authentication principal.</p>
+         * <p>The authentication principal type.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -210,7 +210,7 @@ public class CreateContext0ResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The name of the context service dashboard instance.</p>
+         * <p>The dashboard instance name of the context service.</p>
          * 
          * <strong>example:</strong>
          * <p>pxt-*********-d</p>
@@ -228,7 +228,7 @@ public class CreateContext0ResponseBody extends TeaModel {
         public String openSearchInstanceName;
 
         /**
-         * <p>The name of the context service instance.</p>
+         * <p>The service instance name of the context service.</p>
          * 
          * <strong>example:</strong>
          * <p>pxt-*********-s</p>

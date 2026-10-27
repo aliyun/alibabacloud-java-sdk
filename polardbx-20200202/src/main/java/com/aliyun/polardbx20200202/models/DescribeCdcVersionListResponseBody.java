@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCdcVersionListResponseBody extends TeaModel {
     /**
-     * <p>The response struct.</p>
+     * <p>The data struct.</p>
      */
     @NameInMap("Data")
     public DescribeCdcVersionListResponseBodyData data;
@@ -42,7 +42,7 @@ public class DescribeCdcVersionListResponseBody extends TeaModel {
 
     public static class DescribeCdcVersionListResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the associated legacy project. You can ignore this parameter.</p>
+         * <p>The ID of the associated legacy project. You can ignore this field.</p>
          */
         @NameInMap("VersionList")
         public java.util.List<String> versionList;

@@ -5,23 +5,54 @@ import com.aliyun.tea.*;
 
 public class AlignStoragePrimaryAzoneRequest extends TeaModel {
     /**
+     * <p>The name of the PolarDB-X instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-htri0ori2r****</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the storage instance whose primary node zone needs to be aligned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-xdb-m-pxcbjrylg49skcxb17394</p>
+     */
     @NameInMap("StorageInstanceName")
     public String storageInstanceName;
 
+    /**
+     * <p>The start time of the switch for the storage primary node, in the UTC time format YYYY-MM-DDThh:mm:ssZ.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-12-11T17:10:00Z</p>
+     */
     @NameInMap("SwitchTime")
     public String switchTime;
 
+    /**
+     * <p>The switchover mode. Valid values:</p>
+     * <ul>
+     * <li>0: immediate switchover</li>
+     * <li>1: switchover during the O&amp;M window</li>
+     * <li>2: switchover at a specified time</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
 

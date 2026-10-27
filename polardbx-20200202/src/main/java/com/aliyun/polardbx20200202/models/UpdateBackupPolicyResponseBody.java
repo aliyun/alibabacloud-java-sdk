@@ -75,42 +75,94 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
     }
 
     public static class UpdateBackupPolicyResponseBodyData extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>1001000</p>
+         */
         @NameInMap("BackupPeriod")
         public String backupPeriod;
 
+        /**
+         * <strong>example:</strong>
+         * <p>03:00Z</p>
+         */
         @NameInMap("BackupPlanBegin")
         public String backupPlanBegin;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("BackupSetRetention")
         public Integer backupSetRetention;
 
+        /**
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("BackupType")
         public String backupType;
 
+        /**
+         * <strong>example:</strong>
+         * <p>P</p>
+         */
         @NameInMap("BackupWay")
         public String backupWay;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("ColdDataBackupInterval")
         public Integer coldDataBackupInterval;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("ColdDataBackupRetention")
         public Integer coldDataBackupRetention;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("CrossRegionDataBackupRetention")
         public Integer crossRegionDataBackupRetention;
 
+        /**
+         * <strong>example:</strong>
+         * <p>3,7,1,5,6,2,4</p>
+         */
         @NameInMap("CrossRegionFilterValue")
         public String crossRegionFilterValue;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("CrossRegionLogBackupRetention")
         public Integer crossRegionLogBackupRetention;
 
+        /**
+         * <strong>example:</strong>
+         * <p>pxc-hzjasdyuoo</p>
+         */
         @NameInMap("DBInstanceName")
         public String DBInstanceName;
 
+        /**
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
         @NameInMap("DestCrossRegion")
         public String destCrossRegion;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("ForceCleanOnHighSpaceUsage")
         public Integer forceCleanOnHighSpaceUsage;
 
@@ -120,18 +172,38 @@ public class UpdateBackupPolicyResponseBody extends TeaModel {
         @NameInMap("IsCrossRegionLogBackupEnabled")
         public Boolean isCrossRegionLogBackupEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("IsEnabled")
         public Integer isEnabled;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("LocalLogRetention")
         public Integer localLogRetention;
 
+        /**
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
         @NameInMap("LocalLogRetentionNumber")
         public Integer localLogRetentionNumber;
 
+        /**
+         * <strong>example:</strong>
+         * <p>30</p>
+         */
         @NameInMap("LogLocalRetentionSpace")
         public Integer logLocalRetentionSpace;
 
+        /**
+         * <strong>example:</strong>
+         * <p>7</p>
+         */
         @NameInMap("RemoveLogRetention")
         public Integer removeLogRetention;
 

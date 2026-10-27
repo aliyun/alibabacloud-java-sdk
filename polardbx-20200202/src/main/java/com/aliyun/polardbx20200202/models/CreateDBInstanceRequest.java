@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateDBInstanceRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable auto-renewal. Default value: true.</p>
+     * <p>Specifies whether to enable auto-renewal. Default value: true. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enable</li>
-     * <li><strong>false</strong>: Disable</li>
+     * <li><strong>true</strong>: Enables auto-renewal.</li>
+     * <li><strong>false</strong>: Disables auto-renewal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Integer CNNodeCount;
 
     /**
-     * <p>The idempotency token. Ensure that a unique value is used for each creation request.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You must specify a unique token for each request.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxx-xxx</p>
@@ -36,38 +36,38 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The compute node specification. Required for creating Enterprise Edition instances. Not required for Standard Edition.</p>
-     * <p>Enterprise Edition local disk:</p>
+     * <p>The specifications of compute nodes. Required when you create an Enterprise Edition instance. Not required for a Standard Edition instance.</p>
+     * <p>Local node specifications for Enterprise Edition:</p>
      * <ul>
-     * <li><strong>polarx.x4.medium.2e</strong>:	2 Cores 8 GB (General Purpose)</li>
-     * <li><strong>polarx.x4.large.2e</strong>:	4 Cores 16 GB (General Purpose)</li>
-     * <li><strong>polarx.x4.xlarge.2e</strong>:	8 Cores 32 GB (General Purpose)</li>
-     * <li><strong>polarx.x4.2xlarge.2e</strong>:	16 Cores 64 GB (General Purpose)</li>
-     * <li><strong>polarx.x8.large.2e</strong>:	4 Cores 32 GB (Dedicated)</li>
-     * <li><strong>polarx.x2.large.2x</strong>:	8 Cores 16 GB (Dedicated)</li>
-     * <li><strong>polarx.x4.xlarge.2x</strong>:	8 Cores 32 GB (Dedicated)</li>
-     * <li><strong>polarx.x8.xlarge.2e</strong>:	8 Cores 64 GB (Dedicated)</li>
-     * <li><strong>polarx.x8.2xlarge.2e</strong>:	16 Cores 128 GB (Dedicated)</li>
-     * <li><strong>polarx.x4.4xlarge.2e</strong>:	32 Cores 128 GB (Dedicated)</li>
-     * <li><strong>polarx.x8.4xlarge.2e</strong>:	32 Cores 256 GB (Dedicated)</li>
-     * <li><strong>polarx.st.8xlarge.2e</strong>:	60 Cores 470 GB (Dedicated)</li>
-     * <li><strong>polarx.st.12xlarge.2e</strong>:	90 Cores 720 GB (Dedicated)</li>
+     * <li><strong>polarx.x4.medium.2e</strong>: 2 vCPUs, 8 GB (general-purpose)</li>
+     * <li><strong>polarx.x4.large.2e</strong>: 4 vCPUs, 16 GB (general-purpose)</li>
+     * <li><strong>polarx.x4.xlarge.2e</strong>: 8 vCPUs, 32 GB (general-purpose)</li>
+     * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 vCPUs, 64 GB (general-purpose)</li>
+     * <li><strong>polarx.x8.large.2e</strong>: 4 vCPUs, 32 GB (dedicated)</li>
+     * <li><strong>polarx.x2.large.2x</strong>: 8 vCPUs, 16 GB (dedicated)</li>
+     * <li><strong>polarx.x4.xlarge.2x</strong>: 8 vCPUs, 32 GB (dedicated)</li>
+     * <li><strong>polarx.x8.xlarge.2e</strong>: 8 vCPUs, 64 GB (dedicated)</li>
+     * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 vCPUs, 256 GB (dedicated)</li>
+     * <li><strong>polarx.st.8xlarge.2e</strong>: 60 vCPUs, 470 GB (dedicated)</li>
+     * <li><strong>polarx.st.12xlarge.2e</strong>: 90 vCPUs, 720 GB (dedicated)</li>
      * </ul>
-     * <p>Enterprise Edition cloud disk:</p>
+     * <p>Cloud node specifications for Enterprise Edition:</p>
      * <ul>
-     * <li><strong>polarx.x4.medium.c2e</strong>:	2 Cores 8 GB (General Purpose)</li>
-     * <li><strong>polarx.x4.large.c2e</strong>:	4 Cores 16 GB (General Purpose)</li>
-     * <li><strong>polarx.x4.xlarge.c2e</strong>:	8 Cores 32 GB (General Purpose)</li>
-     * <li><strong>polarx.x4.2xlarge.c2e</strong>:	16 Cores 64 GB (General Purpose)</li>
-     * <li><strong>polarx.x8.large.c2e</strong>:	4 Cores 32 GB (Dedicated)</li>
-     * <li><strong>polarx.x2.large.c2x</strong>:	8 Cores 16 GB (Dedicated)</li>
-     * <li><strong>polarx.x4.xlarge.c2x</strong>:	8 Cores 32 GB (Dedicated)</li>
-     * <li><strong>polarx.x8.xlarge.c2e</strong>:	8 Cores 64 GB (Dedicated)</li>
-     * <li><strong>polarx.x8.2xlarge.c2e</strong>:	16 Cores 128 GB (Dedicated)</li>
-     * <li><strong>polarx.x4.4xlarge.c2e</strong>:	32 Cores 128 GB (Dedicated)</li>
-     * <li><strong>polarx.x8.4xlarge.c2e</strong>:	32 Cores 256 GB (Dedicated)</li>
-     * <li><strong>polarx.st.8xlarge.c2e</strong>:	60 Cores 470 GB (Dedicated)</li>
-     * <li><strong>polarx.st.12xlarge.c2e</strong>:	90 Cores 720 GB (Dedicated)</li>
+     * <li><strong>polarx.x4.medium.c2e</strong>: 2 vCPUs, 8 GB (general-purpose)</li>
+     * <li><strong>polarx.x4.large.c2e</strong>: 4 vCPUs, 16 GB (general-purpose)</li>
+     * <li><strong>polarx.x4.xlarge.c2e</strong>: 8 vCPUs, 32 GB (general-purpose)</li>
+     * <li><strong>polarx.x4.2xlarge.c2e</strong>: 16 vCPUs, 64 GB (general-purpose)</li>
+     * <li><strong>polarx.x8.large.c2e</strong>: 4 vCPUs, 32 GB (dedicated)</li>
+     * <li><strong>polarx.x2.large.c2x</strong>: 8 vCPUs, 16 GB (dedicated)</li>
+     * <li><strong>polarx.x4.xlarge.c2x</strong>: 8 vCPUs, 32 GB (dedicated)</li>
+     * <li><strong>polarx.x8.xlarge.c2e</strong>: 8 vCPUs, 64 GB (dedicated)</li>
+     * <li><strong>polarx.x8.2xlarge.c2e</strong>: 16 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>polarx.x4.4xlarge.c2e</strong>: 32 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>polarx.x8.4xlarge.c2e</strong>: 32 vCPUs, 256 GB (dedicated)</li>
+     * <li><strong>polarx.st.8xlarge.c2e</strong>: 60 vCPUs, 470 GB (dedicated)</li>
+     * <li><strong>polarx.st.12xlarge.c2e</strong>: 90 vCPUs, 720 GB (dedicated)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,69 +77,69 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String cnClass;
 
     /**
-     * <p>Required for creating Standard Edition instances. Not required for Enterprise Edition.</p>
-     * <p>Standard Edition local disk specifications:</p>
+     * <p>Required when you create a Standard Edition instance. Not required for an Enterprise Edition instance.</p>
+     * <p>Local disk specifications for Standard Edition:</p>
      * <ul>
-     * <li><strong>mysql.n8.small.25</strong>:	1 Core 8 GB (General Purpose)</li>
-     * <li><strong>mysql.n2.medium.25</strong>:	2 Cores 4 GB (General Purpose)</li>
-     * <li><strong>mysql.n4.medium.25</strong>:	2 Cores 8 GB (General Purpose)</li>
-     * <li><strong>mysql.n8.medium.25</strong>:	2 Cores 16 GB (General Purpose)</li>
-     * <li><strong>mysql.n2.large.25</strong>:	4 Cores 8 GB (General Purpose)</li>
-     * <li><strong>mysql.n4.large.25</strong>:	4 Cores 16 GB (General Purpose)</li>
-     * <li><strong>mysql.n8.large.25</strong>:	4 Cores 32 GB (General Purpose)</li>
-     * <li><strong>mysql.n2.xlarge.25</strong>:	8 Cores 16 GB (General Purpose)</li>
-     * <li><strong>mysql.n4.xlarge.25</strong>:	8 Cores 32 GB (General Purpose)</li>
-     * <li><strong>mysql.n8.xlarge.25</strong>:	8 Cores 64 GB (General Purpose)</li>
-     * <li><strong>mysql.n2.2xlarge.25</strong>:	16 Cores 32 GB (General Purpose)</li>
-     * <li><strong>mysql.n4.2xlarge.25</strong>:	16 Cores 64 GB (General Purpose)</li>
-     * <li><strong>mysql.n8.2xlarge.25</strong>:	16 Cores 128 GB (General Purpose)</li>
-     * <li><strong>mysql.x2.medium.25</strong>:	2 Cores 4 GB (Dedicated)</li>
-     * <li><strong>mysql.x4.medium.25</strong>:	2 Cores 8 GB (Dedicated)</li>
-     * <li><strong>mysql.x8.medium.25</strong>:	2 Cores 16 GB (Dedicated)</li>
-     * <li><strong>mysql.x2.large.25</strong>:	4 Cores 8 GB (Dedicated)</li>
-     * <li><strong>mysql.x4.large.25</strong>:	4 Cores 16 GB (Dedicated)</li>
-     * <li><strong>mysql.x8.large.25</strong>:	4 Cores 32 GB (Dedicated)</li>
-     * <li><strong>mysql.x2.xlarge.25</strong>:	8 Cores 16 GB (Dedicated)</li>
-     * <li><strong>mysql.x4.xlarge.25</strong>:	8 Cores 32 GB (Dedicated)</li>
-     * <li><strong>mysql.x8.xlarge.25</strong>:	8 Cores 64 GB (Dedicated)</li>
-     * <li><strong>mysql.x2.2xlarge.25</strong>:	16 Cores 32 GB (Dedicated)</li>
-     * <li><strong>mysql.x4.2xlarge.25</strong>:	16 Cores 64 GB (Dedicated)</li>
-     * <li><strong>mysql.x8.2xlarge.25</strong>:	16 Cores 128 GB (Dedicated)</li>
-     * <li><strong>mysql.x4.4xlarge.25</strong>:	32 Cores 128 GB (Dedicated)</li>
-     * <li><strong>mysql.x8.4xlarge.25</strong>:	32 Cores 256 GB (Dedicated)</li>
-     * <li><strong>mysql.x4.8xlarge.25</strong>:	64 Cores 256 GB (Dedicated)</li>
-     * <li><strong>mysql.x8.8xlarge.25</strong>:	64 Cores 512 GB (Dedicated)</li>
-     * <li><strong>mysql.st.12xlarge.25</strong>:	90 Cores 720 GB (Dedicated)</li>
+     * <li><strong>mysql.n8.small.25</strong>: 1 vCPU, 8 GB (general-purpose)</li>
+     * <li><strong>mysql.n2.medium.25</strong>: 2 vCPUs, 4 GB (general-purpose)</li>
+     * <li><strong>mysql.n4.medium.25</strong>: 2 vCPUs, 8 GB (general-purpose)</li>
+     * <li><strong>mysql.n8.medium.25</strong>: 2 vCPUs, 16 GB (general-purpose)</li>
+     * <li><strong>mysql.n2.large.25</strong>: 4 vCPUs, 8 GB (general-purpose)</li>
+     * <li><strong>mysql.n4.large.25</strong>: 4 vCPUs, 16 GB (general-purpose)</li>
+     * <li><strong>mysql.n8.large.25</strong>: 4 vCPUs, 32 GB (general-purpose)</li>
+     * <li><strong>mysql.n2.xlarge.25</strong>: 8 vCPUs, 16 GB (general-purpose)</li>
+     * <li><strong>mysql.n4.xlarge.25</strong>: 8 vCPUs, 32 GB (general-purpose)</li>
+     * <li><strong>mysql.n8.xlarge.25</strong>: 8 vCPUs, 64 GB (general-purpose)</li>
+     * <li><strong>mysql.n2.2xlarge.25</strong>: 16 vCPUs, 32 GB (general-purpose)</li>
+     * <li><strong>mysql.n4.2xlarge.25</strong>: 16 vCPUs, 64 GB (general-purpose)</li>
+     * <li><strong>mysql.n8.2xlarge.25</strong>: 16 vCPUs, 128 GB (general-purpose)</li>
+     * <li><strong>mysql.x2.medium.25</strong>: 2 vCPUs, 4 GB (dedicated)</li>
+     * <li><strong>mysql.x4.medium.25</strong>: 2 vCPUs, 8 GB (dedicated)</li>
+     * <li><strong>mysql.x8.medium.25</strong>: 2 vCPUs, 16 GB (dedicated)</li>
+     * <li><strong>mysql.x2.large.25</strong>: 4 vCPUs, 8 GB (dedicated)</li>
+     * <li><strong>mysql.x4.large.25</strong>: 4 vCPUs, 16 GB (dedicated)</li>
+     * <li><strong>mysql.x8.large.25</strong>: 4 vCPUs, 32 GB (dedicated)</li>
+     * <li><strong>mysql.x2.xlarge.25</strong>: 8 vCPUs, 16 GB (dedicated)</li>
+     * <li><strong>mysql.x4.xlarge.25</strong>: 8 vCPUs, 32 GB (dedicated)</li>
+     * <li><strong>mysql.x8.xlarge.25</strong>: 8 vCPUs, 64 GB (dedicated)</li>
+     * <li><strong>mysql.x2.2xlarge.25</strong>: 16 vCPUs, 32 GB (dedicated)</li>
+     * <li><strong>mysql.x4.2xlarge.25</strong>: 16 vCPUs, 64 GB (dedicated)</li>
+     * <li><strong>mysql.x8.2xlarge.25</strong>: 16 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>mysql.x4.4xlarge.25</strong>: 32 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>mysql.x8.4xlarge.25</strong>: 32 vCPUs, 256 GB (dedicated)</li>
+     * <li><strong>mysql.x4.8xlarge.25</strong>: 64 vCPUs, 256 GB (dedicated)</li>
+     * <li><strong>mysql.x8.8xlarge.25</strong>: 64 vCPUs, 512 GB (dedicated)</li>
+     * <li><strong>mysql.st.12xlarge.25</strong>: 90 vCPUs, 720 GB (dedicated)</li>
      * </ul>
-     * <p>Standard Edition cloud disk specifications:</p>
+     * <p>Cloud disk specifications for Standard Edition:</p>
      * <ul>
-     * <li><strong>polarx.mysql.n2.medium.c25</strong>:	2 Cores 4 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n4.medium.c25</strong>:	2 Cores 8 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n8.medium.c25</strong>:	2 Cores 16 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n2.large.c25</strong>:	4 Cores 8 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n4.large.c25</strong>:	4 Cores 16 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n8.large.c25</strong>:	4 Cores 32 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n2.xlarge.c25</strong>:	8 Cores 16 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n4.xlarge.c25</strong>:	8 Cores 32 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n8.xlarge.c25</strong>:	8 Cores 64 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.x2.medium.c25</strong>:	2 Cores 4 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x4.medium.c25</strong>:	2 Cores 8 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x8.medium.c25</strong>:	2 Cores 16 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x2.large.c25</strong>:	4 Cores 8 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x4.large.c25</strong>:	4 Cores 16 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x8.large.c25</strong>:	4 Cores 32 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x2.xlarge.c25</strong>:	8 Cores 16 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x4.xlarge.c25</strong>:	8 Cores 32 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x8.xlarge.c25</strong>:	8 Cores 64 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x2.2xlarge.c25</strong>:	16 Cores 32 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x4.2xlarge.c25</strong>:	16 Cores 64 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x8.2xlarge.c25</strong>:	16 Cores 128 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x2.4xlarge.c25</strong>:	32 Cores 64 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x4.4xlarge.c25</strong>:	32 Cores 128 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x8.4xlarge.c25</strong>:	32 Cores 256 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x2.8xlarge.c25</strong>:	64 Cores 128 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x4.8xlarge.c25</strong>:	64 Cores 256 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x8.8xlarge.c25</strong>:	64 Cores 512 GB (Dedicated)</li>
+     * <li><strong>polarx.mysql.n2.medium.c25</strong>: 2 vCPUs, 4 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n4.medium.c25</strong>: 2 vCPUs, 8 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n8.medium.c25</strong>: 2 vCPUs, 16 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n2.large.c25</strong>: 4 vCPUs, 8 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n4.large.c25</strong>: 4 vCPUs, 16 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n8.large.c25</strong>: 4 vCPUs, 32 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n2.xlarge.c25</strong>: 8 vCPUs, 16 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n4.xlarge.c25</strong>: 8 vCPUs, 32 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n8.xlarge.c25</strong>: 8 vCPUs, 64 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.x2.medium.c25</strong>: 2 vCPUs, 4 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x4.medium.c25</strong>: 2 vCPUs, 8 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x8.medium.c25</strong>: 2 vCPUs, 16 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x2.large.c25</strong>: 4 vCPUs, 8 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x4.large.c25</strong>: 4 vCPUs, 16 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x8.large.c25</strong>: 4 vCPUs, 32 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x2.xlarge.c25</strong>: 8 vCPUs, 16 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x4.xlarge.c25</strong>: 8 vCPUs, 32 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x8.xlarge.c25</strong>: 8 vCPUs, 64 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x2.2xlarge.c25</strong>: 16 vCPUs, 32 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x4.2xlarge.c25</strong>: 16 vCPUs, 64 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x8.2xlarge.c25</strong>: 16 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x2.4xlarge.c25</strong>: 32 vCPUs, 64 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x4.4xlarge.c25</strong>: 32 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x8.4xlarge.c25</strong>: 32 vCPUs, 256 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x2.8xlarge.c25</strong>: 64 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x4.8xlarge.c25</strong>: 64 vCPUs, 256 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x8.8xlarge.c25</strong>: 64 vCPUs, 512 GB (dedicated)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -149,10 +149,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String DBNodeClass;
 
     /**
-     * <p>The number of instance nodes:</p>
+     * <p>The number of nodes in the instance. Valid values:</p>
      * <ul>
      * <li>Standard Edition: 1</li>
-     * <li>Enterprise Edition: &gt;=2</li>
+     * <li>Enterprise Edition: 2 or greater</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -180,46 +180,46 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The storage node specification. Required for creating Enterprise Edition instances. Not required for Standard Edition.</p>
-     * <p>Enterprise Edition local disk:</p>
+     * <p>The specifications of storage nodes. Required when you create an Enterprise Edition instance. Not required for a Standard Edition instance.</p>
+     * <p>Local node specifications for Enterprise Edition:</p>
      * <ul>
-     * <li><strong>mysql.n2.medium.25</strong>:	2 Cores 4 GB (General Purpose)</li>
-     * <li><strong>mysql.n4.medium.25</strong>:	2 Cores 8 GB (General Purpose)</li>
-     * <li><strong>mysql.n2.large.25</strong>:	4 Cores 8 GB (General Purpose)</li>
-     * <li><strong>mysql.n4.large.25</strong>:	4 Cores 16 GB (General Purpose)</li>
-     * <li><strong>mysql.n4.xlarge.25</strong>:	8 Cores 32 GB (General Purpose)</li>
-     * <li><strong>mysql.n4.2xlarge.25</strong>:	16 Cores 64 GB (General Purpose)</li>
-     * <li><strong>mysql.x4.large.25</strong>:	4 Cores 16 GB (Dedicated)</li>
-     * <li><strong>mysql.x8.large.25</strong>:	4 Cores 32 GB (Dedicated)</li>
-     * <li><strong>mysql.x2.xlarge.25</strong>:	8 Cores 16 GB (Dedicated)</li>
-     * <li><strong>mysql.x8.xlarge.25</strong>:	8 Cores 64 GB (Dedicated)</li>
-     * <li><strong>mysql.x8.2xlarge.25</strong>:	16 Cores 128 GB (Dedicated)</li>
-     * <li><strong>mysql.x4.4xlarge.25</strong>:	32 Cores 128 GB (Dedicated)</li>
-     * <li><strong>mysql.x8.4xlarge.25</strong>:	32 Cores 256 GB (Dedicated)</li>
-     * <li><strong>mysql.st.8xlarge.25</strong>:	60 Cores 470 GB (Dedicated)</li>
-     * <li><strong>mysql.st.12xlarge.25</strong>:	90 Cores 720 GB (Dedicated)</li>
-     * <li><strong>mysql.x8.45xlarge.25</strong>:	180 Cores 1440 GB (Dedicated)</li>
-     * <li><strong>mysql.x8.60xlarge.25</strong>:	240 Cores 1920 GB (Dedicated)</li>
+     * <li><strong>mysql.n2.medium.25</strong>: 2 vCPUs, 4 GB (general-purpose)</li>
+     * <li><strong>mysql.n4.medium.25</strong>: 2 vCPUs, 8 GB (general-purpose)</li>
+     * <li><strong>mysql.n2.large.25</strong>: 4 vCPUs, 8 GB (general-purpose)</li>
+     * <li><strong>mysql.n4.large.25</strong>: 4 vCPUs, 16 GB (general-purpose)</li>
+     * <li><strong>mysql.n4.xlarge.25</strong>: 8 vCPUs, 32 GB (general-purpose)</li>
+     * <li><strong>mysql.n4.2xlarge.25</strong>: 16 vCPUs, 64 GB (general-purpose)</li>
+     * <li><strong>mysql.x4.large.25</strong>: 4 vCPUs, 16 GB (dedicated)</li>
+     * <li><strong>mysql.x8.large.25</strong>: 4 vCPUs, 32 GB (dedicated)</li>
+     * <li><strong>mysql.x2.xlarge.25</strong>: 8 vCPUs, 16 GB (dedicated)</li>
+     * <li><strong>mysql.x8.xlarge.25</strong>: 8 vCPUs, 64 GB (dedicated)</li>
+     * <li><strong>mysql.x8.2xlarge.25</strong>: 16 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>mysql.x4.4xlarge.25</strong>: 32 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>mysql.x8.4xlarge.25</strong>: 32 vCPUs, 256 GB (dedicated)</li>
+     * <li><strong>mysql.st.8xlarge.25</strong>: 60 vCPUs, 470 GB (dedicated)</li>
+     * <li><strong>mysql.st.12xlarge.25</strong>: 90 vCPUs, 720 GB (dedicated)</li>
+     * <li><strong>mysql.x8.45xlarge.25</strong>: 180 vCPUs, 1440 GB (dedicated)</li>
+     * <li><strong>mysql.x8.60xlarge.25</strong>: 240 vCPUs, 1920 GB (dedicated)</li>
      * </ul>
-     * <p>Enterprise Edition cloud disk:</p>
+     * <p>Cloud node specifications for Enterprise Edition:</p>
      * <ul>
-     * <li><strong>polarx.mysql.n2.medium.c25</strong>:	2 Cores 4 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n4.medium.c25</strong>:	2 Cores 8 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n2.large.c25</strong>:	4 Cores 8 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n4.large.c25</strong>:	4 Cores 16 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n4.xlarge.c25</strong>:	8 Cores 32 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.n4.2xlarge.c25</strong>:	16 Cores 64 GB (General Purpose)</li>
-     * <li><strong>polarx.mysql.x4.large.c25</strong>:	4 Cores 16 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x8.large.c25</strong>:	4 Cores 32 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x2.xlarge.c25</strong>:	8 Cores 16 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x8.xlarge.c25</strong>:	8 Cores 64 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x8.2xlarge.c25</strong>:	16 Cores 128 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x4.4xlarge.c25</strong>:	32 Cores 128 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x8.4xlarge.c25</strong>:	32 Cores 256 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.st.8xlarge.c25</strong>:	60 Cores 470 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.st.12xlarge.c25</strong>: 90 Cores 720 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x8.45xlarge.c25</strong>: 180 Cores 1440 GB (Dedicated)</li>
-     * <li><strong>polarx.mysql.x8.60xlarge.c25</strong>: 240 Cores 1920 GB (Dedicated)</li>
+     * <li><strong>polarx.mysql.n2.medium.c25</strong>: 2 vCPUs, 4 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n4.medium.c25</strong>: 2 vCPUs, 8 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n2.large.c25</strong>: 4 vCPUs, 8 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n4.large.c25</strong>: 4 vCPUs, 16 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n4.xlarge.c25</strong>: 8 vCPUs, 32 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.n4.2xlarge.c25</strong>: 16 vCPUs, 64 GB (general-purpose)</li>
+     * <li><strong>polarx.mysql.x4.large.c25</strong>: 4 vCPUs, 16 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x8.large.c25</strong>: 4 vCPUs, 32 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x2.xlarge.c25</strong>: 8 vCPUs, 16 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x8.xlarge.c25</strong>: 8 vCPUs, 64 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x8.2xlarge.c25</strong>: 16 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x4.4xlarge.c25</strong>: 32 vCPUs, 128 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x8.4xlarge.c25</strong>: 32 vCPUs, 256 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.st.8xlarge.c25</strong>: 60 vCPUs, 470 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.st.12xlarge.c25</strong>: 90 vCPUs, 720 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x8.45xlarge.c25</strong>: 180 vCPUs, 1440 GB (dedicated)</li>
+     * <li><strong>polarx.mysql.x8.60xlarge.c25</strong>: 240 vCPUs, 1920 GB (dedicated)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -229,7 +229,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String dnClass;
 
     /**
-     * <p>The disk space size of the storage node.</p>
+     * <p>The disk space of the storage nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>1500</p>
@@ -238,7 +238,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String dnStorageSpace;
 
     /**
-     * <p>The MySQL engine version. Valid values: 5.7 and 8.0.</p>
+     * <p>The MySQL DPI engine version. Valid values: 5.7 and 8.0.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -248,13 +248,13 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String engineVersion;
 
     /**
-     * <p>Additional parameters.</p>
+     * <p>The extra parameters.</p>
      */
     @NameInMap("ExtraParams")
     public java.util.Map<String, String> extraParams;
 
     /**
-     * <p>Specifies whether the instance to be created is a columnar read-only instance.</p>
+     * <p>Specifies whether the instance to be created is a column store read-only instance.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -263,10 +263,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Boolean isColumnarReadDBInstance;
 
     /**
-     * <p>Specifies whether the instance is a read-only instance.</p>
+     * <p>Specifies whether the instance is a read-only instance. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Yes</li>
-     * <li><strong>false</strong>: No</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -276,7 +276,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public Boolean isReadDBInstance;
 
     /**
-     * <p>The network type. Only VPC is supported.</p>
+     * <p>The network type of the instance. Only VPC is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc</p>
@@ -285,7 +285,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String networkType;
 
     /**
-     * <p>The minor version number. This parameter is generally not required.</p>
+     * <p>The minor engine version. This parameter is generally not required.</p>
      * 
      * <strong>example:</strong>
      * <p>polardb-2.4.0_standard_xcluster8.4.20-20260331</p>
@@ -294,10 +294,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String originMinorVersion;
 
     /**
-     * <p>The billing method of the instance.</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>PREPAY</strong>: Subscription</li>
-     * <li><strong>POSTPAY</strong>: Pay-as-you-go</li>
+     * <li><strong>PREPAY</strong>: subscription</li>
+     * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -308,7 +308,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The billing cycle. For subscription instances, valid values are Year and Month. For pay-as-you-go instances, the default value is Hour.</p>
+     * <p>The billing cycle. Valid values for subscription instances: Year and Month. Default value for pay-as-you-go instances: Hour.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -317,7 +317,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The primary instance must be specified if the instance is a read-only instance.</p>
+     * <p>The name of the primary instance. This parameter is required if the instance is a read-only instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pxc-*********</p>
@@ -326,7 +326,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String primaryDBInstanceName;
 
     /**
-     * <p>The primary availability zone.</p>
+     * <p>The primary zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen-e</p>
@@ -335,7 +335,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String primaryZone;
 
     /**
-     * <p>The region where the instance resides.</p>
+     * <p>The region of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -345,7 +345,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. This parameter can be left empty. This feature is currently not supported.</p>
+     * <p>The resource group ID. This parameter is not supported and can be left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -354,7 +354,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The secondary availability zone.</p>
+     * <p>The secondary zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen-a</p>
@@ -363,8 +363,11 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String secondaryZone;
 
     /**
-     * <p>Enterprise Edition: enterprise
-     * Standard Edition: standard</p>
+     * <p>The edition of the instance. Valid values:</p>
+     * <ul>
+     * <li>enterprise: Enterprise Edition</li>
+     * <li>standard: Standard Edition</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>enterprise</p>
@@ -373,10 +376,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String series;
 
     /**
-     * <p>The storage type.</p>
+     * <p>The storage type. Valid values:</p>
      * <ul>
-     * <li>Local disk: custom_local_ssd</li>
-     * <li>Cloud disk: cloud_auto</li>
+     * <li>custom_local_ssd: local disk</li>
+     * <li>cloud_auto: cloud disk</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -386,7 +389,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The tertiary availability zone.</p>
+     * <p>The third active zone in a Three-zone deployment.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shenzhen-e</p>
@@ -395,10 +398,10 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String tertiaryZone;
 
     /**
-     * <p>The topology type:</p>
+     * <p>The topology type. Valid values:</p>
      * <ul>
-     * <li><strong>3azones</strong>: Three availability zones</li>
-     * <li><strong>1azone</strong>: Single availability zone</li>
+     * <li><strong>3azones</strong>: Three-zone deployment (three active zones).</li>
+     * <li><strong>1azone</strong>: Single active zone.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -409,9 +412,9 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String topologyType;
 
     /**
-     * <p>The subscription duration. You can specify the number of months or years for prepaid instances.</p>
+     * <p>The subscription duration. This parameter is required when the billing method is set to subscription.</p>
      * <blockquote>
-     * <p>When Period is set to Year, valid values for this parameter are 1, 2, and 3.</p>
+     * <p>If Period is set to Year, valid values are 1, 2, and 3.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -439,7 +442,7 @@ public class CreateDBInstanceRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The availability zone of the instance.</p>
+     * <p>The zone of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou-a</p>

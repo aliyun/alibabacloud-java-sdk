@@ -5,13 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeArchiveTableListResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The data.</p>
      */
     @NameInMap("Data")
     public DescribeArchiveTableListResponseBodyData data;
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -38,38 +41,59 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
     }
 
     public static class DescribeArchiveTableListResponseBodyDataTables extends TeaModel {
+        /**
+         * <p>The archiving status. Valid values: SUCCESS, PAUSE, and RUNNING.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
+         */
         @NameInMap("ArchiveStatus")
         public String archiveStatus;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the table was created.</p>
          */
         @NameInMap("CreatedDate")
         public Long createdDate;
 
         /**
          * <p>The number of files.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("FileCount")
         public Integer fileCount;
 
+        /**
+         * <p>The time of the last successful archiving.</p>
+         */
         @NameInMap("LastSuccessArchiveTime")
         public Long lastSuccessArchiveTime;
 
         /**
-         * <p>The database name.</p>
+         * <p>The name of the database.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("SchemaName")
         public String schemaName;
 
         /**
-         * <p>The space size occupied by the table.</p>
+         * <p>The amount of storage space used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("SpaceSize")
         public Double spaceSize;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
          */
         @NameInMap("TableName")
         public String tableName;
@@ -139,34 +163,70 @@ public class DescribeArchiveTableListResponseBody extends TeaModel {
 
     public static class DescribeArchiveTableListResponseBodyData extends TeaModel {
         /**
-         * <p>The page index.</p>
+         * <p>The page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("PageIndex")
         public Long pageIndex;
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
          */
         @NameInMap("PageSize")
         public Long pageSize;
 
+        /**
+         * <p>The number of tables in the PAUSE state.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("PausedCount")
         public Integer pausedCount;
 
+        /**
+         * <p>The number of tables being archived.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("RunningCount")
         public Integer runningCount;
 
+        /**
+         * <p>The number of successfully archived tables.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("SuccessCount")
         public Integer successCount;
 
+        /**
+         * <p>The list of archived tables.</p>
+         */
         @NameInMap("Tables")
         public java.util.List<DescribeArchiveTableListResponseBodyDataTables> tables;
 
+        /**
+         * <p>The number of tables to be archived.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("TobeArchivedConut")
         public Integer tobeArchivedConut;
 
         /**
          * <p>The total number of entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("Total")
         public Long total;

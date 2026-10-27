@@ -25,7 +25,7 @@ public class ModifyOpenSearchWhitelistGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The list of source IP address restrictions.</p>
+     * <p>The list of source IP addresses.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ModifyOpenSearchWhitelistGroupRequest extends TeaModel {
     public String IPs;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ModifyOpenSearchWhitelistGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The remarks.</p>
+     * <p>The remark.</p>
      * 
      * <strong>example:</strong>
      * <p>000G2DJ1YGee321432</p>

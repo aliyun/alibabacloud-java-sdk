@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyOpenSearchWhitelistGroupResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The details of the access denied error.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public ModifyOpenSearchWhitelistGroupResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -92,7 +92,7 @@ public class ModifyOpenSearchWhitelistGroupResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -192,7 +192,7 @@ public class ModifyOpenSearchWhitelistGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The time when the task was last updated, in timestamp format.</p>
+         * <p>The time when the task was last updated, in the UNIX timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-17T02:27:11Z</p>

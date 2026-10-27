@@ -65,7 +65,7 @@ public class CreateOpenSearchResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The name of the security principal.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -74,7 +74,7 @@ public class CreateOpenSearchResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The ID of the Alibaba Cloud account to which the authentication principal belongs.</p>
+         * <p>The Alibaba Cloud account ID of the security principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class CreateOpenSearchResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of the authentication principal.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>

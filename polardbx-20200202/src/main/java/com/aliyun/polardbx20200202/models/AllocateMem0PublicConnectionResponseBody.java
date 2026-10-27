@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateMem0PublicConnectionResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The detailed reason for the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public AllocateMem0PublicConnectionResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -42,7 +42,7 @@ public class AllocateMem0PublicConnectionResponseBody extends TeaModel {
 
     public static class AllocateMem0PublicConnectionResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>As described above.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -60,7 +60,7 @@ public class AllocateMem0PublicConnectionResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>As described above.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -69,7 +69,7 @@ public class AllocateMem0PublicConnectionResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>As described above.</p>
+         * <p>Same as above.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>

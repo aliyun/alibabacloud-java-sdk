@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSupabaseNetTypeResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denial details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public CreateSupabaseNetTypeResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -65,7 +65,7 @@ public class CreateSupabaseNetTypeResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The security principal name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -74,7 +74,7 @@ public class CreateSupabaseNetTypeResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the authentication principal.</p>
+         * <p>The owner ID of the security principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class CreateSupabaseNetTypeResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The type of the authentication principal.</p>
+         * <p>The security principal type.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -92,7 +92,7 @@ public class CreateSupabaseNetTypeResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The diagnostic information.</p>
+         * <p>The encoded diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -101,7 +101,7 @@ public class CreateSupabaseNetTypeResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The no permission type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -183,7 +183,7 @@ public class CreateSupabaseNetTypeResponseBody extends TeaModel {
 
     public static class CreateSupabaseNetTypeResponseBodyData extends TeaModel {
         /**
-         * <p>The public endpoint.</p>
+         * <p>The public network connection endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>test2.polarx.huhehaote.rds.aliyuncs.com</p>

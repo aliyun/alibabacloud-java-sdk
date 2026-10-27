@@ -650,6 +650,15 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>Service 当前已确认的小版本完整 tag，未知时为空。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardb-2.6.0_release_contextdb-20261023</p>
+         */
+        @NameInMap("MinorVersion")
+        public String minorVersion;
+
+        /**
          * <p>The number of nodes.</p>
          * 
          * <strong>example:</strong>
@@ -770,6 +779,14 @@ public class DescribeContext0InfoResponseBody extends TeaModel {
         }
         public String getInstanceId() {
             return this.instanceId;
+        }
+
+        public DescribeContext0InfoResponseBodyDataInstance setMinorVersion(String minorVersion) {
+            this.minorVersion = minorVersion;
+            return this;
+        }
+        public String getMinorVersion() {
+            return this.minorVersion;
         }
 
         public DescribeContext0InfoResponseBodyDataInstance setNodeCount(Integer nodeCount) {

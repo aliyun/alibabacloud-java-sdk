@@ -89,6 +89,10 @@ public class UpdateBackupPolicyRequest extends TeaModel {
     @NameInMap("CrossRegionDataBackupRetention")
     public Integer crossRegionDataBackupRetention;
 
+    /**
+     * <strong>example:</strong>
+     * <p>3,7,1,5,6,2,4</p>
+     */
     @NameInMap("CrossRegionFilterValue")
     public String crossRegionFilterValue;
 

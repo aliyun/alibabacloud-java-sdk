@@ -54,19 +54,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("eu-west-1", "polardbx.aliyuncs.com"),
             new TeaPair("eu-west-1-oxs", "polardbx.aliyuncs.com"),
             new TeaPair("me-east-1", "polardbx.aliyuncs.com"),
-            new TeaPair("rus-west-1-pop", "polardbx.aliyuncs.com"),
-            new TeaPair("cn-beijing", "polardbx.cn-beijing.aliyuncs.com"),
-            new TeaPair("cn-qingdao", "polardbx.cn-qingdao.aliyuncs.com"),
-            new TeaPair("cn-shanghai", "polardbx.cn-shanghai.aliyuncs.com"),
-            new TeaPair("cn-hongkong", "polardbx.cn-hongkong.aliyuncs.com"),
-            new TeaPair("cn-zhangjiakou", "polardbx.cn-zhangjiakou.aliyuncs.com"),
-            new TeaPair("cn-shenzhen", "polardbx.cn-shenzhen.aliyuncs.com"),
-            new TeaPair("cn-chengdu", "polardbx.cn-chengdu.aliyuncs.com"),
-            new TeaPair("ap-southeast-1", "polardbx.ap-southeast-1.aliyuncs.com"),
-            new TeaPair("cn-huhehaote", "polardbx.cn-huhehaote.aliyuncs.com"),
-            new TeaPair("cn-hangzhou", "polardbx.cn-hangzhou.aliyuncs.com"),
-            new TeaPair("us-east-1", "polardbx.us-east-1.aliyuncs.com"),
-            new TeaPair("us-west-1", "polardbx.us-west-1.aliyuncs.com")
+            new TeaPair("rus-west-1-pop", "polardbx.aliyuncs.com")
         );
         this.checkConfig(config);
         this._endpoint = this.getEndpoint("polardbx", _regionId, _endpointRule, _network, _suffix, _endpointMap, _endpoint);
@@ -86,6 +74,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Aligns the primary zone of the storage nodes of a PolarDB-X instance.</p>
+     * 
      * @param request AlignStoragePrimaryAzoneRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return AlignStoragePrimaryAzoneResponse
@@ -131,6 +122,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Aligns the primary zone of the storage nodes of a PolarDB-X instance.</p>
+     * 
      * @param request AlignStoragePrimaryAzoneRequest
      * @return AlignStoragePrimaryAzoneResponse
      */
@@ -189,10 +183,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * <p>This operation confirms that no active connections exist before a rollback task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a public network connection for a specified physical ReplicaSet of the context service.</p>
+     * <p>Enables public network connections for a specified physical ReplicaSet of the context service.</p>
      * 
      * @param request AllocateContext0PublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -240,10 +234,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to confirm that no active connections exist before a rollback task, ensuring operation safety.</p>
+     * <p>This operation confirms that no active connections exist before a rollback task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a public network connection for a specified physical ReplicaSet of the context service.</p>
+     * <p>Enables public network connections for a specified physical ReplicaSet of the context service.</p>
      * 
      * @param request AllocateContext0PublicConnectionRequest
      * @return AllocateContext0PublicConnectionResponse
@@ -397,10 +391,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to confirm that no active connections exist before a rollback task, to ensure operation safety.</p>
+     * <p>This operation checks for active connections before a rollback task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a public domain name for a Mem0 instance.</p>
+     * <p>Enables the public domain name for a Mem0 instance.</p>
      * 
      * @param request AllocateMem0PublicConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -444,10 +438,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is used to confirm that no active connections exist before a rollback task, to ensure operation safety.</p>
+     * <p>This operation checks for active connections before a rollback task to ensure operational security.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables a public domain name for a Mem0 instance.</p>
+     * <p>Enables the public domain name for a Mem0 instance.</p>
      * 
      * @param request AllocateMem0PublicConnectionRequest
      * @return AllocateMem0PublicConnectionResponse
@@ -455,6 +449,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public AllocateMem0PublicConnectionResponse allocateMem0PublicConnection(AllocateMem0PublicConnectionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.allocateMem0PublicConnectionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Enables public network connection for the agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables public network connection for PXFS.</p>
+     * 
+     * @param request AllocatePxfsPublicConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return AllocatePxfsPublicConnectionResponse
+     */
+    public AllocatePxfsPublicConnectionResponse allocatePxfsPublicConnectionWithOptions(AllocatePxfsPublicConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "AllocatePxfsPublicConnection"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new AllocatePxfsPublicConnectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Enables public network connection for the agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Enables public network connection for PXFS.</p>
+     * 
+     * @param request AllocatePxfsPublicConnectionRequest
+     * @return AllocatePxfsPublicConnectionResponse
+     */
+    public AllocatePxfsPublicConnectionResponse allocatePxfsPublicConnection(AllocatePxfsPublicConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.allocatePxfsPublicConnectionWithOptions(request, runtime);
     }
 
     /**
@@ -952,7 +1000,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a backup by calling the CreateBackup operation.</p>
+     * <p>Creates a backup.</p>
      * 
      * @param request CreateBackupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -992,7 +1040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a backup by calling the CreateBackup operation.</p>
+     * <p>Creates a backup.</p>
      * 
      * @param request CreateBackupRequest
      * @return CreateBackupResponse
@@ -1198,7 +1246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a database by calling the CreateDB operation.</p>
+     * <p>Creates a database.</p>
      * 
      * @param request CreateDBRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1270,7 +1318,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a database by calling the CreateDB operation.</p>
+     * <p>Creates a database.</p>
      * 
      * @param request CreateDBRequest
      * @return CreateDBResponse
@@ -1285,7 +1333,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Calls the CreateDBInstance operation to create a PolarDB-X instance.</p>
+     * <p>Creates a PolarDB-X instance.</p>
      * 
      * @param tmpReq CreateDBInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1446,7 +1494,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Calls the CreateDBInstance operation to create a PolarDB-X instance.</p>
+     * <p>Creates a PolarDB-X instance.</p>
      * 
      * @param request CreateDBInstanceRequest
      * @return CreateDBInstanceResponse
@@ -1548,7 +1596,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>***.</p>
+     * <hr>
      * 
      * <b>summary</b> : 
      * <p>Creates an AI gateway consumer for a PolarDB-X instance.</p>
@@ -1587,7 +1635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>***.</p>
+     * <hr>
      * 
      * <b>summary</b> : 
      * <p>Creates an AI gateway consumer for a PolarDB-X instance.</p>
@@ -1815,7 +1863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enable Memory Engine</p>
+     * <p>Enables the memory engine.</p>
      * 
      * @param request CreateMem0Request
      * @param runtime runtime options for this request RuntimeOptions
@@ -1854,7 +1902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enable Memory Engine</p>
+     * <p>Enables the memory engine.</p>
      * 
      * @param request CreateMem0Request
      * @return CreateMem0Response
@@ -1995,7 +2043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an account for a PolarDB-X Search instance.</p>
+     * <p>Creates a PolarDB-X Search instance account.</p>
      * 
      * @param request CreateOpenSearchAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2042,7 +2090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an account for a PolarDB-X Search instance.</p>
+     * <p>Creates a PolarDB-X Search instance account.</p>
      * 
      * @param request CreateOpenSearchAccountRequest
      * @return CreateOpenSearchAccountResponse
@@ -2222,6 +2270,298 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public CreatePolardbxSupabaseInstanceResponse createPolardbxSupabaseInstance(CreatePolardbxSupabaseInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.createPolardbxSupabaseInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an Agent file service instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an Agent file service instance.</p>
+     * 
+     * @param request CreatePxfsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePxfsResponse
+     */
+    public CreatePxfsResponse createPxfsWithOptions(CreatePxfsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.classCode)) {
+            query.put("ClassCode", request.classCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nodeCount)) {
+            query.put("NodeCount", request.nodeCount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
+            query.put("SecurityIPList", request.securityIPList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.storageSize)) {
+            query.put("StorageSize", request.storageSize);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePxfs"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePxfsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an Agent file service instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an Agent file service instance.</p>
+     * 
+     * @param request CreatePxfsRequest
+     * @return CreatePxfsResponse
+     */
+    public CreatePxfsResponse createPxfs(CreatePxfsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPxfsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Issues an access token for the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Issues an access token for the Agent file service.</p>
+     * 
+     * @param request CreatePxfsAccessTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePxfsAccessTokenResponse
+     */
+    public CreatePxfsAccessTokenResponse createPxfsAccessTokenWithOptions(CreatePxfsAccessTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identityName)) {
+            query.put("IdentityName", request.identityName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.label)) {
+            query.put("Label", request.label);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ttlSeconds)) {
+            query.put("TtlSeconds", request.ttlSeconds);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePxfsAccessToken"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePxfsAccessTokenResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Issues an access token for the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Issues an access token for the Agent file service.</p>
+     * 
+     * @param request CreatePxfsAccessTokenRequest
+     * @return CreatePxfsAccessTokenResponse
+     */
+    public CreatePxfsAccessTokenResponse createPxfsAccessToken(CreatePxfsAccessTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPxfsAccessTokenWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an Agent file service tenant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an Agent file service tenant.</p>
+     * 
+     * @param request CreatePxfsTenantRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePxfsTenantResponse
+     */
+    public CreatePxfsTenantResponse createPxfsTenantWithOptions(CreatePxfsTenantRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaBytes)) {
+            query.put("QuotaBytes", request.quotaBytes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaFiles)) {
+            query.put("QuotaFiles", request.quotaFiles);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rateLimitRps)) {
+            query.put("RateLimitRps", request.rateLimitRps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rateLimitWbps)) {
+            query.put("RateLimitWbps", request.rateLimitWbps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantName)) {
+            query.put("TenantName", request.tenantName);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePxfsTenant"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePxfsTenantResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates an Agent file service tenant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates an Agent file service tenant.</p>
+     * 
+     * @param request CreatePxfsTenantRequest
+     * @return CreatePxfsTenantResponse
+     */
+    public CreatePxfsTenantResponse createPxfsTenant(CreatePxfsTenantRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPxfsTenantWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a tenant identity for the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a tenant identity for the Agent file service.</p>
+     * 
+     * @param request CreatePxfsUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreatePxfsUserResponse
+     */
+    public CreatePxfsUserResponse createPxfsUserWithOptions(CreatePxfsUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identityName)) {
+            query.put("IdentityName", request.identityName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.posixGid)) {
+            query.put("PosixGid", request.posixGid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.posixUid)) {
+            query.put("PosixUid", request.posixUid);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.role)) {
+            query.put("Role", request.role);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreatePxfsUser"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreatePxfsUserResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Creates a tenant identity for the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Creates a tenant identity for the Agent file service.</p>
+     * 
+     * @param request CreatePxfsUserRequest
+     * @return CreatePxfsUserResponse
+     */
+    public CreatePxfsUserResponse createPxfsUser(CreatePxfsUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createPxfsUserWithOptions(request, runtime);
     }
 
     /**
@@ -2691,7 +3031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Enables the public endpoint for a Supabase instance.</p>
+     * <p>Enables the public endpoint for Supabase.</p>
      * 
      * @param request CreateSupabaseNetTypeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2734,7 +3074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Enables the public endpoint for a Supabase instance.</p>
+     * <p>Enables the public endpoint for Supabase.</p>
      * 
      * @param request CreateSupabaseNetTypeRequest
      * @return CreateSupabaseNetTypeResponse
@@ -3286,7 +3626,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the custom endpoint of a specified database instance and disables the access entry for the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access to the domain name.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables the memory engine.</p>
@@ -3325,7 +3665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes the custom endpoint of a specified database instance and disables the access entry for the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access to the domain name.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables the memory engine.</p>
@@ -3568,6 +3908,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DeletePolardbxSupabaseInstanceResponse deletePolardbxSupabaseInstance(DeletePolardbxSupabaseInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.deletePolardbxSupabaseInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes an Agent file service instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an Agent file service instance.</p>
+     * 
+     * @param request DeletePxfsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePxfsResponse
+     */
+    public DeletePxfsResponse deletePxfsWithOptions(DeletePxfsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePxfs"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePxfsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes an Agent file service instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an Agent file service instance.</p>
+     * 
+     * @param request DeletePxfsRequest
+     * @return DeletePxfsResponse
+     */
+    public DeletePxfsResponse deletePxfs(DeletePxfsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deletePxfsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes an Agent file service tenant identity.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an Agent file service tenant identity.</p>
+     * 
+     * @param request DeletePxfsUserRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeletePxfsUserResponse
+     */
+    public DeletePxfsUserResponse deletePxfsUserWithOptions(DeletePxfsUserRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identityName)) {
+            query.put("IdentityName", request.identityName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeletePxfsUser"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeletePxfsUserResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Deletes an Agent file service tenant identity.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Deletes an Agent file service tenant identity.</p>
+     * 
+     * @param request DeletePxfsUserRequest
+     * @return DeletePxfsUserResponse
+     */
+    public DeletePxfsUserResponse deletePxfsUser(DeletePxfsUserRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deletePxfsUserWithOptions(request, runtime);
     }
 
     /**
@@ -3852,7 +4308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeActiveOperationMaintainConf operation to display the O&amp;M window configuration.</p>
+     * <p>Queries the O&amp;M time configuration.</p>
      * 
      * @param request DescribeActiveOperationMaintainConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3884,7 +4340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeActiveOperationMaintainConf operation to display the O&amp;M window configuration.</p>
+     * <p>Queries the O&amp;M time configuration.</p>
      * 
      * @param request DescribeActiveOperationMaintainConfRequest
      * @return DescribeActiveOperationMaintainConfResponse
@@ -3936,7 +4392,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries O&amp;M events by calling the DescribeActiveOperationTasks operation.</p>
+     * <p>Queries O&amp;M events.</p>
      * 
      * @param request DescribeActiveOperationTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3964,7 +4420,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries O&amp;M events by calling the DescribeActiveOperationTasks operation.</p>
+     * <p>Queries O&amp;M events.</p>
      * 
      * @param request DescribeActiveOperationTasksRequest
      * @return DescribeActiveOperationTasksResponse
@@ -3976,7 +4432,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of cold storage tables.</p>
+     * <p>Lists cold storage tables.</p>
      * 
      * @param request DescribeArchiveTableListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4032,7 +4488,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of cold storage tables.</p>
+     * <p>Lists cold storage tables.</p>
      * 
      * @param request DescribeArchiveTableListRequest
      * @return DescribeArchiveTableListResponse
@@ -4238,12 +4694,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs log record end time is after the query start time and log record start time is before the query end time.</li>
-     * <li>When DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If the value of DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries binary logs by calling the DescribeBinaryLogList operation.</p>
+     * <p>Queries binary logs.</p>
      * 
      * @param request DescribeBinaryLogListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4301,12 +4757,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs log record end time is after the query start time and log record start time is before the query end time.</li>
-     * <li>When DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is later than the query start time and whose start time is earlier than the query end time.</li>
+     * <li>If the value of DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries binary logs by calling the DescribeBinaryLogList operation.</p>
+     * <p>Queries binary logs.</p>
      * 
      * @param request DescribeBinaryLogListRequest
      * @return DescribeBinaryLogListResponse
@@ -4434,12 +4890,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
-     * <li>When DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is after the query start time and whose start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of CDC versions.</p>
+     * <p>Retrieves a list of CDC versions.</p>
      * 
      * @param request DescribeCdcVersionListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4481,12 +4937,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs whose log record end time is after the query start time and whose log record start time is before the query end time.</li>
-     * <li>When DownloadLink is not NULL, you can download the backup file from this URL. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is after the query start time and whose start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can download the backup file by using this URL. The URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of CDC versions.</p>
+     * <p>Retrieves a list of CDC versions.</p>
      * 
      * @param request DescribeCdcVersionListRequest
      * @return DescribeCdcVersionListResponse
@@ -4546,7 +5002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the basic information of cold storage.</p>
+     * <p>Queries the basic information of cold storage.</p>
      * 
      * @param request DescribeColdDataBasicInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4574,7 +5030,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the basic information of cold storage.</p>
+     * <p>Queries the basic information of cold storage.</p>
      * 
      * @param request DescribeColdDataBasicInfoRequest
      * @return DescribeColdDataBasicInfoResponse
@@ -4935,7 +5391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist of the context service.</p>
+     * <p>Queries the whitelist for the context service.</p>
      * 
      * @param request DescribeContext0SecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4978,7 +5434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the whitelist of the context service.</p>
+     * <p>Queries the whitelist for the context service.</p>
      * 
      * @param request DescribeContext0SecurityIpsRequest
      * @return DescribeContext0SecurityIpsResponse
@@ -5237,8 +5693,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves the list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Calls the DescribeDBInstanceAttribute operation to retrieve instance attributes.</p>
+     * <p>Queries the attributes of an instance.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5277,8 +5736,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation retrieves the list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Calls the DescribeDBInstanceAttribute operation to retrieve instance attributes.</p>
+     * <p>Queries the attributes of an instance.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse
@@ -5404,7 +5866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the high availability (HA) information of an instance.</p>
+     * <p>Queries the high availability information of an instance.</p>
      * 
      * @param request DescribeDBInstanceHARequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5440,7 +5902,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the high availability (HA) information of an instance.</p>
+     * <p>Queries the high availability information of an instance.</p>
      * 
      * @param request DescribeDBInstanceHARequest
      * @return DescribeDBInstanceHAResponse
@@ -5452,7 +5914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries SSL information.</p>
+     * <p>Retrieves SSL information.</p>
      * 
      * @param request DescribeDBInstanceSSLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5488,7 +5950,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries SSL information.</p>
+     * <p>Retrieves SSL information.</p>
      * 
      * @param request DescribeDBInstanceSSLRequest
      * @return DescribeDBInstanceSSLResponse
@@ -5548,7 +6010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the topology information of an instance.</p>
+     * <p>Retrieves the topology information of an instance.</p>
      * 
      * @param request DescribeDBInstanceTopologyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5596,7 +6058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the topology information of an instance.</p>
+     * <p>Retrieves the topology information of an instance.</p>
      * 
      * @param request DescribeDBInstanceTopologyRequest
      * @return DescribeDBInstanceTopologyResponse
@@ -5656,7 +6118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances by calling the DescribeDBInstances operation.</p>
+     * <p>Queries a list of database instances.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5724,7 +6186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of instances by calling the DescribeDBInstances operation.</p>
+     * <p>Queries a list of database instances.</p>
      * 
      * @param request DescribeDBInstancesRequest
      * @return DescribeDBInstancesResponse
@@ -6184,7 +6646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of global database network (GDN) instances.</p>
+     * <p>Queries the list of global database network (GDN) instances.</p>
      * 
      * @param request DescribeGdnInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6236,7 +6698,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of global database network (GDN) instances.</p>
+     * <p>Queries the list of global database network (GDN) instances.</p>
      * 
      * @param request DescribeGdnInstancesRequest
      * @return DescribeGdnInstancesResponse
@@ -6539,7 +7001,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a PolarDB-X Search instance.</p>
+     * <p>Queries the details of PolarDB-X Search instances.</p>
      * 
      * @param request DescribeOpenSearchInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6582,7 +7044,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a PolarDB-X Search instance.</p>
+     * <p>Queries the details of PolarDB-X Search instances.</p>
      * 
      * @param request DescribeOpenSearchInfoRequest
      * @return DescribeOpenSearchInfoResponse
@@ -6936,7 +7398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeParameterTemplates operation to retrieve the parameter template list of an instance.</p>
+     * <p>Queries the instance parameter templates.</p>
      * 
      * @param request DescribeParameterTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6980,7 +7442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the DescribeParameterTemplates operation to retrieve the parameter template list of an instance.</p>
+     * <p>Queries the instance parameter templates.</p>
      * 
      * @param request DescribeParameterTemplatesRequest
      * @return DescribeParameterTemplatesResponse
@@ -7100,6 +7562,292 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribePolarxDataNodesResponse describePolarxDataNodes(DescribePolarxDataNodesRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describePolarxDataNodesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the access token for the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the access token for the Agent file service.</p>
+     * 
+     * @param request DescribePxfsAccessTokensRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePxfsAccessTokensResponse
+     */
+    public DescribePxfsAccessTokensResponse describePxfsAccessTokensWithOptions(DescribePxfsAccessTokensRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.identityName)) {
+            query.put("IdentityName", request.identityName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePxfsAccessTokens"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePxfsAccessTokensResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the access token for the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the access token for the Agent file service.</p>
+     * 
+     * @param request DescribePxfsAccessTokensRequest
+     * @return DescribePxfsAccessTokensResponse
+     */
+    public DescribePxfsAccessTokensResponse describePxfsAccessTokens(DescribePxfsAccessTokensRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePxfsAccessTokensWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the information about an Agent file service instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about an Agent file service instance.</p>
+     * 
+     * @param request DescribePxfsInfoRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePxfsInfoResponse
+     */
+    public DescribePxfsInfoResponse describePxfsInfoWithOptions(DescribePxfsInfoRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePxfsInfo"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePxfsInfoResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the information about an Agent file service instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the information about an Agent file service instance.</p>
+     * 
+     * @param request DescribePxfsInfoRequest
+     * @return DescribePxfsInfoResponse
+     */
+    public DescribePxfsInfoResponse describePxfsInfo(DescribePxfsInfoRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePxfsInfoWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the whitelist for the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the whitelist for the Agent file service.</p>
+     * 
+     * @param request DescribePxfsSecurityIpsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePxfsSecurityIpsResponse
+     */
+    public DescribePxfsSecurityIpsResponse describePxfsSecurityIpsWithOptions(DescribePxfsSecurityIpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePxfsSecurityIps"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePxfsSecurityIpsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the whitelist for the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the whitelist for the Agent file service.</p>
+     * 
+     * @param request DescribePxfsSecurityIpsRequest
+     * @return DescribePxfsSecurityIpsResponse
+     */
+    public DescribePxfsSecurityIpsResponse describePxfsSecurityIps(DescribePxfsSecurityIpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePxfsSecurityIpsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the Agent file service tenant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Agent file service tenant.</p>
+     * 
+     * @param request DescribePxfsTenantRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePxfsTenantResponse
+     */
+    public DescribePxfsTenantResponse describePxfsTenantWithOptions(DescribePxfsTenantRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePxfsTenant"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePxfsTenantResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the Agent file service tenant.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the Agent file service tenant.</p>
+     * 
+     * @param request DescribePxfsTenantRequest
+     * @return DescribePxfsTenantResponse
+     */
+    public DescribePxfsTenantResponse describePxfsTenant(DescribePxfsTenantRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePxfsTenantWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the tenant identity of the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tenant identity of the Agent file service.</p>
+     * 
+     * @param request DescribePxfsUsersRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribePxfsUsersResponse
+     */
+    public DescribePxfsUsersResponse describePxfsUsersWithOptions(DescribePxfsUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribePxfsUsers"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribePxfsUsersResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the tenant identity of the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the tenant identity of the Agent file service.</p>
+     * 
+     * @param request DescribePxfsUsersRequest
+     * @return DescribePxfsUsersResponse
+     */
+    public DescribePxfsUsersResponse describePxfsUsers(DescribePxfsUsersRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describePxfsUsersWithOptions(request, runtime);
     }
 
     /**
@@ -7443,7 +8191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Displays the progress of a ScaleOut migration task.</p>
+     * <p>Retrieves the progress of a scale-out migration task.</p>
      * 
      * @param request DescribeScaleOutMigrateTaskListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7495,7 +8243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Displays the progress of a ScaleOut migration task.</p>
+     * <p>Retrieves the progress of a scale-out migration task.</p>
      * 
      * @param request DescribeScaleOutMigrateTaskListRequest
      * @return DescribeScaleOutMigrateTaskListResponse
@@ -7963,8 +8711,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is after the query start time and whose start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8006,8 +8754,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs whose log record end time is later than the query start time and whose log record start time is earlier than the query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose end time is after the query start time and whose start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. This URL is valid for 2 days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -8077,7 +8825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of custom endpoints configured by the user for managing and viewing private connection or VPC endpoint service settings.</p>
+     * <p>Retrieves the list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of Supabase instances.</p>
@@ -8136,7 +8884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of custom endpoints configured by the user for managing and viewing private connection or VPC endpoint service settings.</p>
+     * <p>Retrieves the list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries a list of Supabase instances.</p>
@@ -8153,12 +8901,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs whose log record end time is later than the specified query start time and whose log record start time is earlier than the specified query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose record end time is after the query start time and whose record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IP whitelist of a Supabase instance.</p>
+     * <p>Queries the Supabase IP whitelist.</p>
      * 
      * @param request DescribeSupabaseIpWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8200,12 +8948,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>Binary log files are retained for 15 days by default.</li>
-     * <li>The returned log list includes all logs whose log record end time is later than the specified query start time and whose log record start time is earlier than the specified query end time.</li>
-     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for 2 days after it is generated. Download the file before the URL expires.</li>
+     * <li>The returned log list includes all log records whose record end time is after the query start time and whose record start time is before the query end time.</li>
+     * <li>If DownloadLink is not NULL, you can use this URL to download the backup file. The URL is valid for two days after it is generated. Download the file before it expires.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the IP whitelist of a Supabase instance.</p>
+     * <p>Queries the Supabase IP whitelist.</p>
      * 
      * @param request DescribeSupabaseIpWhitelistRequest
      * @return DescribeSupabaseIpWhitelistResponse
@@ -8269,7 +9017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the task list of an instance.</p>
+     * <p>Retrieves the list of tasks for an instance.</p>
      * 
      * @param request DescribeTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8337,7 +9085,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the task list of an instance.</p>
+     * <p>Retrieves the list of tasks for an instance.</p>
      * 
      * @param request DescribeTasksRequest
      * @return DescribeTasksResponse
@@ -8452,7 +9200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables public network access for PolarDB-X Search.</p>
+     * <p>Disables public network access to PolarDB-X Search.</p>
      * 
      * @param request DisableOpenSearchPublicEndpointRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8495,7 +9243,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Disables public network access for PolarDB-X Search.</p>
+     * <p>Disables public network access to PolarDB-X Search.</p>
      * 
      * @param request DisableOpenSearchPublicEndpointRequest
      * @return DisableOpenSearchPublicEndpointResponse
@@ -8833,7 +9581,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
      * 
      * <b>summary</b> : 
      * <p>Executes a metadata query.</p>
@@ -8884,7 +9632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a custom endpoint of a specified database instance and disables access through the domain name.</p>
+     * <p>Deletes the custom endpoint of a specified database instance and disables access through the domain name.</p>
      * 
      * <b>summary</b> : 
      * <p>Executes a metadata query.</p>
@@ -9159,7 +9907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the time configuration of O&amp;M events by calling the ModifyActiveOperationMaintainConf operation.</p>
+     * <p>Modifies the time configuration for O&amp;M events.</p>
      * 
      * @param request ModifyActiveOperationMaintainConfRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9187,7 +9935,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the time configuration of O&amp;M events by calling the ModifyActiveOperationMaintainConf operation.</p>
+     * <p>Modifies the time configuration for O&amp;M events.</p>
      * 
      * @param request ModifyActiveOperationMaintainConfRequest
      * @return ModifyActiveOperationMaintainConfResponse
@@ -9390,7 +10138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Synchronously modifies the whitelists of the context service (Service) and Dashboard.</p>
+     * <p>Synchronously modifies the whitelists for the context service and dashboard.</p>
      * 
      * @param request ModifyContext0SecurityIpsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9441,7 +10189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Synchronously modifies the whitelists of the context service (Service) and Dashboard.</p>
+     * <p>Synchronously modifies the whitelists for the context service and dashboard.</p>
      * 
      * @param request ModifyContext0SecurityIpsRequest
      * @return ModifyContext0SecurityIpsResponse
@@ -9667,7 +10415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the ModifyDBInstanceClass operation to modify the instance specifications.</p>
+     * <p>Modifies the specifications of an instance.</p>
      * 
      * @param request ModifyDBInstanceClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9747,7 +10495,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the ModifyDBInstanceClass operation to modify the instance specifications.</p>
+     * <p>Modifies the specifications of an instance.</p>
      * 
      * @param request ModifyDBInstanceClassRequest
      * @return ModifyDBInstanceClassResponse
@@ -9989,10 +10737,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>***.</p>
+     * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the virtual IP (VIP) address or network properties bound to a database instance. This operation supports changing the internal IP address, adjusting the vSwitch, migrating across zones, and other operations.</p>
+     * <p>Modifies the virtual IP address or network properties of a database instance. This operation supports changing the internal IP address, adjusting the subnet, and migrating across zones.</p>
      * 
      * @param request ModifyDBInstanceVipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10040,10 +10788,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>***.</p>
+     * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the virtual IP (VIP) address or network properties bound to a database instance. This operation supports changing the internal IP address, adjusting the vSwitch, migrating across zones, and other operations.</p>
+     * <p>Modifies the virtual IP address or network properties of a database instance. This operation supports changing the internal IP address, adjusting the subnet, and migrating across zones.</p>
      * 
      * @param request ModifyDBInstanceVipRequest
      * @return ModifyDBInstanceVipResponse
@@ -10308,7 +11056,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Changes the specifications of a PolarDB-X Search instance.</p>
+     * <p>Modifies the specifications of a PolarDBX Search instance.</p>
      * 
      * @param request ModifyOpenSearchClassRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10355,7 +11103,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Changes the specifications of a PolarDB-X Search instance.</p>
+     * <p>Modifies the specifications of a PolarDBX Search instance.</p>
      * 
      * @param request ModifyOpenSearchClassRequest
      * @return ModifyOpenSearchClassResponse
@@ -10433,7 +11181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies instance parameters, including parameters at the compute layer and storage layer.</p>
+     * <p>Modifies the parameters of an instance, including the compute and storage layer parameters.</p>
      * 
      * @param request ModifyParameterRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10485,7 +11233,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies instance parameters, including parameters at the compute layer and storage layer.</p>
+     * <p>Modifies the parameters of an instance, including the compute and storage layer parameters.</p>
      * 
      * @param request ModifyParameterRequest
      * @return ModifyParameterResponse
@@ -10493,6 +11241,72 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyParameterResponse modifyParameter(ModifyParameterRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyParameterWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Modifies the whitelist of the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the whitelist of the Agent file service.</p>
+     * 
+     * @param request ModifyPxfsSecurityIpsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyPxfsSecurityIpsResponse
+     */
+    public ModifyPxfsSecurityIpsResponse modifyPxfsSecurityIpsWithOptions(ModifyPxfsSecurityIpsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            query.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.modifyMode)) {
+            query.put("ModifyMode", request.modifyMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.securityIPList)) {
+            query.put("SecurityIPList", request.securityIPList);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyPxfsSecurityIps"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPxfsSecurityIpsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Modifies the whitelist of the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Modifies the whitelist of the Agent file service.</p>
+     * 
+     * @param request ModifyPxfsSecurityIpsRequest
+     * @return ModifyPxfsSecurityIpsResponse
+     */
+    public ModifyPxfsSecurityIpsResponse modifyPxfsSecurityIps(ModifyPxfsSecurityIpsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyPxfsSecurityIpsWithOptions(request, runtime);
     }
 
     /**
@@ -10684,7 +11498,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP whitelist of a Supabase instance.</p>
+     * <p>Modifies the IP whitelist for Supabase.</p>
      * 
      * @param request ModifySupabaseSecurityIPListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10735,7 +11549,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the IP whitelist of a Supabase instance.</p>
+     * <p>Modifies the IP whitelist for Supabase.</p>
      * 
      * @param request ModifySupabaseSecurityIPListRequest
      * @return ModifySupabaseSecurityIPListResponse
@@ -10872,7 +11686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Queries complete column store audit logs by using streaming.</p>
+     * <p>Queries full column store audit logs by using streaming.</p>
      * 
      * @param request QueryColumnarLogSSERequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10919,7 +11733,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Queries complete column store audit logs by using streaming.</p>
+     * <p>Queries full column store audit logs by using streaming.</p>
      * 
      * @param request QueryColumnarLogSSERequest
      * @return QueryColumnarLogSSEResponse
@@ -11264,6 +12078,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Disables the public network connection for the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables the public network connection for the Agent file service.</p>
+     * 
+     * @param request ReleasePxfsPublicConnectionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ReleasePxfsPublicConnectionResponse
+     */
+    public ReleasePxfsPublicConnectionResponse releasePxfsPublicConnectionWithOptions(ReleasePxfsPublicConnectionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ReleasePxfsPublicConnection"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ReleasePxfsPublicConnectionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Disables the public network connection for the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Disables the public network connection for the Agent file service.</p>
+     * 
+     * @param request ReleasePxfsPublicConnectionRequest
+     * @return ReleasePxfsPublicConnectionResponse
+     */
+    public ReleasePxfsPublicConnectionResponse releasePxfsPublicConnection(ReleasePxfsPublicConnectionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.releasePxfsPublicConnectionWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Resets the password of an account.</p>
      * 
@@ -11399,7 +12267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>***.</p>
+     * <hr>
      * 
      * <b>summary</b> : 
      * <p>Resets the API key of the memory engine.</p>
@@ -11442,7 +12310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>***.</p>
+     * <hr>
      * 
      * <b>summary</b> : 
      * <p>Resets the API key of the memory engine.</p>
@@ -11677,6 +12545,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <p>Restarts an Agent file service instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Restarts an Agent file service instance.</p>
+     * 
+     * @param request RestartPxfsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RestartPxfsResponse
+     */
+    public RestartPxfsResponse restartPxfsWithOptions(RestartPxfsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RestartPxfs"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RestartPxfsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Restarts an Agent file service instance.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Restarts an Agent file service instance.</p>
+     * 
+     * @param request RestartPxfsRequest
+     * @return RestartPxfsResponse
+     */
+    public RestartPxfsResponse restartPxfs(RestartPxfsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.restartPxfsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <hr>
      * 
      * <b>summary</b> : 
@@ -11897,6 +12819,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public RestoreDBInstanceResponse restoreDBInstance(RestoreDBInstanceRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.restoreDBInstanceWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Revokes an access token for the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes an access token for the Agent file service.</p>
+     * 
+     * @param request RevokePxfsAccessTokenRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RevokePxfsAccessTokenResponse
+     */
+    public RevokePxfsAccessTokenResponse revokePxfsAccessTokenWithOptions(RevokePxfsAccessTokenRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tokenId)) {
+            query.put("TokenId", request.tokenId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "RevokePxfsAccessToken"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new RevokePxfsAccessTokenResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Revokes an access token for the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Revokes an access token for the Agent file service.</p>
+     * 
+     * @param request RevokePxfsAccessTokenRequest
+     * @return RevokePxfsAccessTokenResponse
+     */
+    public RevokePxfsAccessTokenResponse revokePxfsAccessToken(RevokePxfsAccessTokenRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.revokePxfsAccessTokenWithOptions(request, runtime);
     }
 
     /**
@@ -12280,6 +13264,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Switches the zone of the primary node for a PolarDB-X instance.</p>
+     * 
      * @param request SwitchDBInstanceHARequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return SwitchDBInstanceHAResponse
@@ -12329,6 +13316,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Switches the zone of the primary node for a PolarDB-X instance.</p>
+     * 
      * @param request SwitchDBInstanceHARequest
      * @return SwitchDBInstanceHAResponse
      */
@@ -12658,7 +13648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies instance tags.</p>
+     * <p>Updates instance labels.</p>
      * 
      * @param request UpdateCustinsParamRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12705,7 +13695,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>&lt;props=&quot;china&quot;&gt;For more information about instance accounts, see <a href="https://help.aliyun.com/document_detail/172163.html">Account management</a>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Modifies instance tags.</p>
+     * <p>Updates instance labels.</p>
      * 
      * @param request UpdateCustinsParamRequest
      * @return UpdateCustinsParamResponse
@@ -12833,7 +13823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the UpdatePolarDBXInstanceNode operation to change the number of nodes for an instance, including scaling out and scaling in. This request generates a billable order.</p>
+     * <p>Changes the number of nodes for a PolarDB-X instance, including scaling out and scaling in. This request generates an order.</p>
      * 
      * @param request UpdatePolarDBXInstanceNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12897,7 +13887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls the UpdatePolarDBXInstanceNode operation to change the number of nodes for an instance, including scaling out and scaling in. This request generates a billable order.</p>
+     * <p>Changes the number of nodes for a PolarDB-X instance, including scaling out and scaling in. This request generates an order.</p>
      * 
      * @param request UpdatePolarDBXInstanceNodeRequest
      * @return UpdatePolarDBXInstanceNodeResponse
@@ -13085,5 +14075,63 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public UpgradeDBInstanceKernelVersionResponse upgradeDBInstanceKernelVersion(UpgradeDBInstanceKernelVersionRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.upgradeDBInstanceKernelVersionWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Upgrades the minor version of the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the minor version of the Agent file service.</p>
+     * 
+     * @param request UpgradePxfsVersionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpgradePxfsVersionResponse
+     */
+    public UpgradePxfsVersionResponse upgradePxfsVersionWithOptions(UpgradePxfsVersionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.minorVersion)) {
+            query.put("MinorVersion", request.minorVersion);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpgradePxfsVersion"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpgradePxfsVersionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Upgrades the minor version of the Agent file service.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Upgrades the minor version of the Agent file service.</p>
+     * 
+     * @param request UpgradePxfsVersionRequest
+     * @return UpgradePxfsVersionResponse
+     */
+    public UpgradePxfsVersionResponse upgradePxfsVersion(UpgradePxfsVersionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.upgradePxfsVersionWithOptions(request, runtime);
     }
 }

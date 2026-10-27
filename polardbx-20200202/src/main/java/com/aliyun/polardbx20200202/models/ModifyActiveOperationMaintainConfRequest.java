@@ -15,10 +15,7 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String cycleTime;
 
     /**
-     * <p>The cycle mode. Valid values:</p>
-     * <ul>
-     * <li>Week: weekly.</li>
-     * </ul>
+     * <p>The cycle type. Valid value: Week.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +25,7 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String cycleType;
 
     /**
-     * <p>The end time.</p>
+     * <p>The end time. Specify the time in the HH:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +35,7 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String maintainEndTime;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time. Specify the time in the HH:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +55,7 @@ public class ModifyActiveOperationMaintainConfRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to enable the configuration. Valid values:</p>
+     * <p>Specifies whether to enable the feature. Valid values:</p>
      * <ul>
      * <li><strong>1</strong>: Enabled.</li>
      * <li><strong>0</strong>: Disabled.</li>

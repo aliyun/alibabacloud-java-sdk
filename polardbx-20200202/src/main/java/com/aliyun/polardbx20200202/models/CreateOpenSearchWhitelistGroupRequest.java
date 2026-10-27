@@ -25,7 +25,7 @@ public class CreateOpenSearchWhitelistGroupRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The list of allowed source IP addresses.</p>
+     * <p>The list of source IP addresses.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateOpenSearchWhitelistGroupRequest extends TeaModel {
     public String IPs;
 
     /**
-     * <p>The ID of the region in which the instance resides. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
+     * <p>The region ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class CreateOpenSearchWhitelistGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The description of the group ID.</p>
+     * <p>The description of the group.</p>
      * 
      * <strong>example:</strong>
      * <p>MAIN</p>

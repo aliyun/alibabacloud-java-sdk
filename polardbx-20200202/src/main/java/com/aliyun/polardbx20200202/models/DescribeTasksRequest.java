@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTasksRequest extends TeaModel {
     /**
-     * <p>The instance name.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeTasksRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end time of the task.</p>
+     * <p>The end time of the task. The format is YYYY-MM-DD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class DescribeTasksRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time of the task.</p>
+     * <p>The start time of the task. The format is YYYY-MM-DD.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -8,7 +8,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public Boolean alignStoragePrimaryAzone;
 
     /**
-     * <p>The client token. This parameter is used to ensure the idempotence of the request. You can use any unique string.</p>
+     * <p>The client token. It is an arbitrary unique string used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
@@ -17,40 +17,40 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p><strong>Target specifications for Enterprise Edition compute node specification changes</strong></p>
-     * <p><strong>Primary instance compute node specifications (Enterprise Edition CN) General-purpose</strong>	</p>
+     * <p><strong>Target specifications for Enterprise Edition compute nodes</strong></p>
+     * <p><strong>Primary instance compute node specifications (Enterprise Edition CN) (General-purpose)</strong>	</p>
      * <ul>
-     * <li>polarx.x4.medium.2e	2 cores, 8 GB (general-purpose)</li>
-     * <li>polarx.x4.large.2e	4 cores, 16 GB (general-purpose)</li>
-     * <li>polarx.x4.xlarge.2e	8 cores, 32 GB (general-purpose)</li>
-     * <li>polarx.x4.2xlarge.2e 16 cores, 64 GB (general-purpose)</li>
+     * <li>polarx.x4.medium.2e 2 vCPUs, 8 GB (General-purpose)</li>
+     * <li>polarx.x4.large.2e 4 vCPUs, 16 GB (General-purpose)</li>
+     * <li>polarx.x4.xlarge.2e 8 vCPUs, 32 GB (General-purpose)</li>
+     * <li>polarx.x4.2xlarge.2e 16 vCPUs, 64 GB (General-purpose)</li>
      * </ul>
-     * <p><strong>Primary instance compute node specifications (Enterprise Edition CN) Dedicated</strong>	</p>
+     * <p><strong>Primary instance compute node specifications (Enterprise Edition CN) (Dedicated)</strong>	</p>
      * <ul>
-     * <li>polarx.x8.large.2e	4 cores, 32 GB (dedicated)</li>
-     * <li>polarx.x8.xlarge.2e	8 cores, 64 GB (dedicated)</li>
-     * <li>polarx.x8.2xlarge.2e	16 cores, 128 GB (dedicated)</li>
-     * <li>polarx.x4.4xlarge.2e	32 cores, 128 GB (dedicated)</li>
-     * <li>polarx.x8.4xlarge.2e	32 cores, 256 GB (dedicated)</li>
-     * <li>polarx.st.8xlarge.2e	60 cores, 470 GB (dedicated)</li>
-     * <li>polarx.st.12xlarge.2e	90 cores, 720 GB (dedicated)</li>
+     * <li>polarx.x8.large.2e 4 vCPUs, 32 GB (Dedicated)</li>
+     * <li>polarx.x8.xlarge.2e 8 vCPUs, 64 GB (Dedicated)</li>
+     * <li>polarx.x8.2xlarge.2e 16 vCPUs, 128 GB (Dedicated)</li>
+     * <li>polarx.x4.4xlarge.2e 32 vCPUs, 128 GB (Dedicated)</li>
+     * <li>polarx.x8.4xlarge.2e 32 vCPUs, 256 GB (Dedicated)</li>
+     * <li>polarx.st.8xlarge.2e 60 vCPUs, 470 GB (Dedicated)</li>
+     * <li>polarx.st.12xlarge.2e 90 vCPUs, 720 GB (Dedicated)</li>
      * </ul>
-     * <p><strong>Read-only instance compute node specifications (Enterprise Edition CN) General-purpose</strong>	</p>
+     * <p><strong>Read-only instance compute node specifications (Enterprise Edition CN) (General-purpose)</strong>	</p>
      * <ul>
-     * <li>polarxro.x4.medium.2e	2 cores, 8 GB (general-purpose)</li>
-     * <li>polarxro.x4.large.2e	4 cores, 16 GB (general-purpose)</li>
-     * <li>polarxro.x4.xlarge.2e	8 cores, 32 GB (general-purpose)</li>
-     * <li>polarxro.x4.2xlarge.2e	16 cores, 64 GB (general-purpose)</li>
+     * <li>polarxro.x4.medium.2e 2 vCPUs, 8 GB (General-purpose)</li>
+     * <li>polarxro.x4.large.2e 4 vCPUs, 16 GB (General-purpose)</li>
+     * <li>polarxro.x4.xlarge.2e 8 vCPUs, 32 GB (General-purpose)</li>
+     * <li>polarxro.x4.2xlarge.2e 16 vCPUs, 64 GB (General-purpose)</li>
      * </ul>
-     * <p><strong>Read-only instance compute node specifications (Enterprise Edition CN) Dedicated</strong>	</p>
+     * <p><strong>Read-only instance compute node specifications (Enterprise Edition CN) (Dedicated)</strong>	</p>
      * <ul>
-     * <li>polarxro.x8.large.2e	4 cores, 32 GB (dedicated)</li>
-     * <li>polarxro.x8.xlarge.2e	8 cores, 64 GB (dedicated)</li>
-     * <li>polarxro.x8.2xlarge.2e	16 cores, 128 GB (dedicated)</li>
-     * <li>polarxro.x4.4xlarge.2e	32 cores, 128 GB (dedicated)</li>
-     * <li>polarxro.x8.4xlarge.2e	32 cores, 256 GB (dedicated)</li>
-     * <li>polarxro.st.8xlarge.2e	60 cores, 470 GB (dedicated physical machine)</li>
-     * <li>polarxro.st.12xlarge.2e	90 cores, 720 GB (dedicated physical machine)</li>
+     * <li>polarxro.x8.large.2e 4 vCPUs, 32 GB (Dedicated)</li>
+     * <li>polarxro.x8.xlarge.2e 8 vCPUs, 64 GB (Dedicated)</li>
+     * <li>polarxro.x8.2xlarge.2e 16 vCPUs, 128 GB (Dedicated)</li>
+     * <li>polarxro.x4.4xlarge.2e 32 vCPUs, 128 GB (Dedicated)</li>
+     * <li>polarxro.x8.4xlarge.2e 32 vCPUs, 256 GB (Dedicated)</li>
+     * <li>polarxro.st.8xlarge.2e 60 vCPUs, 470 GB (Dedicated physical host)</li>
+     * <li>polarxro.st.12xlarge.2e 90 vCPUs, 720 GB (Dedicated physical host)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,40 +70,40 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p><strong>Target specifications for Enterprise Edition storage node specification changes</strong></p>
-     * <p><strong>Storage node specifications (Enterprise Edition DN) General-purpose</strong>	</p>
+     * <p><strong>Target specifications for Enterprise Edition storage nodes</strong></p>
+     * <p><strong>Storage node specifications (Enterprise Edition DN) (General-purpose)</strong>	</p>
      * <ul>
-     * <li>mysql.n4.medium.25	2 cores, 8 GB (general-purpose)</li>
-     * <li>mysql.n4.large.25	4 cores, 16 GB (general-purpose)</li>
-     * <li>mysql.n4.xlarge.25	8 cores, 32 GB (general-purpose)</li>
-     * <li>mysql.n4.2xlarge.25	16 cores, 64 GB (general-purpose)</li>
+     * <li>mysql.n4.medium.25 2 vCPUs, 8 GB (General-purpose)</li>
+     * <li>mysql.n4.large.25 4 vCPUs, 16 GB (General-purpose)</li>
+     * <li>mysql.n4.xlarge.25 8 vCPUs, 32 GB (General-purpose)</li>
+     * <li>mysql.n4.2xlarge.25 16 vCPUs, 64 GB (General-purpose)</li>
      * </ul>
-     * <p><strong>Storage node specifications (Enterprise Edition DN) Dedicated</strong>	</p>
+     * <p><strong>Storage node specifications (Enterprise Edition DN) (Dedicated)</strong>	</p>
      * <ul>
-     * <li>mysql.x8.large.25	4 cores, 32 GB (dedicated)</li>
-     * <li>mysql.x8.xlarge.25	8 cores, 64 GB (dedicated)</li>
-     * <li>mysql.x8.2xlarge.25	16 cores, 128 GB (dedicated)</li>
-     * <li>mysql.x4.4xlarge.25	32 cores, 128 GB (dedicated)</li>
-     * <li>mysql.x8.4xlarge.25	32 cores, 256 GB (dedicated)</li>
-     * <li>mysql.st.8xlarge.25	60 cores, 470 GB (dedicated)</li>
-     * <li>mysql.st.12xlarge.25	90 cores, 720 GB (dedicated)</li>
+     * <li>mysql.x8.large.25 4 vCPUs, 32 GB (Dedicated)</li>
+     * <li>mysql.x8.xlarge.25 8 vCPUs, 64 GB (Dedicated)</li>
+     * <li>mysql.x8.2xlarge.25 16 vCPUs, 128 GB (Dedicated)</li>
+     * <li>mysql.x4.4xlarge.25 32 vCPUs, 128 GB (Dedicated)</li>
+     * <li>mysql.x8.4xlarge.25 32 vCPUs, 256 GB (Dedicated)</li>
+     * <li>mysql.st.8xlarge.25 60 vCPUs, 470 GB (Dedicated)</li>
+     * <li>mysql.st.12xlarge.25 90 vCPUs, 720 GB (Dedicated)</li>
      * </ul>
-     * <p><strong>Read-only instance storage node specifications (Enterprise Edition DN) General-purpose</strong>	</p>
+     * <p><strong>Read-only instance storage node specifications (Enterprise Edition DN) (General-purpose)</strong>	</p>
      * <ul>
-     * <li>rds.mysql.s2.xlarge	2 cores, 8 GB (general-purpose)</li>
-     * <li>mysqlro.x4.large.1	4 cores, 16 GB (general-purpose)</li>
-     * <li>mysqlro.x4.xlarge.1	8 cores, 32 GB (general-purpose)</li>
-     * <li>mysqlro.x4.2xlarge.1	16 cores, 64 GB (general-purpose)</li>
+     * <li>rds.mysql.s2.xlarge 2 vCPUs, 8 GB (General-purpose)</li>
+     * <li>mysqlro.x4.large.1 4 vCPUs, 16 GB (General-purpose)</li>
+     * <li>mysqlro.x4.xlarge.1 8 vCPUs, 32 GB (General-purpose)</li>
+     * <li>mysqlro.x4.2xlarge.1 16 vCPUs, 64 GB (General-purpose)</li>
      * </ul>
-     * <p><strong>Read-only instance storage node specifications (Enterprise Edition DN) Dedicated</strong>	</p>
+     * <p><strong>Read-only instance storage node specifications (Enterprise Edition DN) (Dedicated)</strong>	</p>
      * <ul>
-     * <li>mysqlro.x8.large.1	4 cores, 32 GB (dedicated)</li>
-     * <li>mysqlro.x8.xlarge.1	8 cores, 64 GB (dedicated)</li>
-     * <li>mysqlro.x8.2xlarge.1	16 cores, 128 GB (dedicated)</li>
-     * <li>mysqlro.x4.4xlarge.1	32 cores, 128 GB (dedicated)</li>
-     * <li>mysqlro.x8.4xlarge.1	32 cores, 256 GB (dedicated)</li>
-     * <li>rds.mysql.st.h43	60 cores, 470 GB (dedicated physical machine)</li>
-     * <li>rds.mysql.st.v52	90 cores, 720 GB (dedicated physical machine)</li>
+     * <li>mysqlro.x8.large.1 4 vCPUs, 32 GB (Dedicated)</li>
+     * <li>mysqlro.x8.xlarge.1 8 vCPUs, 64 GB (Dedicated)</li>
+     * <li>mysqlro.x8.2xlarge.1 16 vCPUs, 128 GB (Dedicated)</li>
+     * <li>mysqlro.x4.4xlarge.1 32 vCPUs, 128 GB (Dedicated)</li>
+     * <li>mysqlro.x8.4xlarge.1 32 vCPUs, 256 GB (Dedicated)</li>
+     * <li>rds.mysql.st.h43 60 vCPUs, 470 GB (Dedicated physical host)</li>
+     * <li>rds.mysql.st.v52 90 vCPUs, 720 GB (Dedicated physical host)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -113,10 +113,10 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String dnClass;
 
     /**
-     * <p>The target disk size for the specification change.</p>
+     * <p>The target cloud disk size after the specification change.</p>
      * <ul>
-     * <li>If the instance uses a fixed-size disk, the disk cannot be changed. In this case, do not specify DnStorageSpace.</li>
-     * <li>Valid values of DnStorageSpace: [20, 3072].</li>
+     * <li>If the instance uses a fixed-size cloud disk, you cannot change the cloud disk size. In this case, do not specify DnStorageSpace.</li>
+     * <li>Valid values of DnStorageSpace: 20 to 3072.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,7 +136,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to perform a multi-specification change for DN nodes.</p>
+     * <p>Specifies whether to change the DN nodes to different specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -145,7 +145,7 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public Boolean specifiedDNScale;
 
     /**
-     * <p>The target specification for each DN node when performing a multi-specification DN change.</p>
+     * <p>The target specification for each DN node when DN nodes are changed to different specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;pxc-xdb-s-htr3rh44ki3s6a4354&quot;:&quot;mysql.n4.medium.25&quot;,&quot;pxc-xdb-s-htr3rh44ki3s6a71c6&quot;:&quot;mysql.n4.medium.25&quot;}</p>
@@ -154,13 +154,16 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String specifiedDNSpecMapJson;
 
     /**
-     * <p>Set this parameter to cloud_auto when migrating from local disks to cloud disks. If this parameter is not specified, the storage type remains unchanged.</p>
+     * <p>The target storage type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cloud_auto</p>
      */
     @NameInMap("StorageType")
     public String storageType;
 
     /**
-     * <p>The switchover start time. The switchover time range is [start time T, T+30m]. This parameter is not yet available.</p>
+     * <p>The start time of the switchover. The switchover is performed within the period from the start time T to T+30 minutes. This parameter is not available.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-11T17:10:00Z</p>
@@ -169,10 +172,10 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String switchTime;
 
     /**
-     * <p>The switchover time. Valid values:</p>
+     * <p>The switching time. Valid values:</p>
      * <ul>
-     * <li>0: immediately.</li>
-     * <li>1: within the O&amp;M window.</li>
+     * <li>0: Immediately.</li>
+     * <li>1: Within the O&amp;M window.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -182,51 +185,51 @@ public class ModifyDBInstanceClassRequest extends TeaModel {
     public String switchTimeMode;
 
     /**
-     * <p><strong>Target specifications for Standard Edition specification changes</strong></p>
+     * <p><strong>Target specifications for Standard Edition</strong></p>
      * <p><strong>Primary instance node specifications (Standard Edition) (General-purpose):</strong></p>
      * <ul>
-     * <li>mysql.n2.medium.25	2 cores, 4 GB (general-purpose)</li>
-     * <li>mysql.n4.medium.25	2 cores, 8 GB (general-purpose)</li>
-     * <li>mysql.n8.medium.25	2 cores, 16 GB (general-purpose)</li>
-     * <li>mysql.n2.large.25	4 cores, 8 GB (general-purpose)</li>
-     * <li>mysql.n4.large.25	4 cores, 16 GB (general-purpose)</li>
-     * <li>mysql.n8.large.25	4 cores, 32 GB (general-purpose)</li>
-     * <li>mysql.n2.xlarge.25	8 cores, 16 GB (general-purpose)</li>
-     * <li>mysql.n4.xlarge.25	8 cores, 32 GB (general-purpose)</li>
-     * <li>mysql.n8.xlarge.25	8 cores, 64 GB (general-purpose)</li>
-     * <li>mysql.n2.2xlarge.25	16 cores, 32 GB (general-purpose)</li>
-     * <li>mysql.n4.2xlarge.25	16 cores, 64 GB (general-purpose)</li>
-     * <li>mysql.n8.2xlarge.25	16 cores, 128 GB (general-purpose)</li>
+     * <li>mysql.n2.medium.25 2 vCPUs, 4 GB (General-purpose)</li>
+     * <li>mysql.n4.medium.25 2 vCPUs, 8 GB (General-purpose)</li>
+     * <li>mysql.n8.medium.25 2 vCPUs, 16 GB (General-purpose)</li>
+     * <li>mysql.n2.large.25 4 vCPUs, 8 GB (General-purpose)</li>
+     * <li>mysql.n4.large.25 4 vCPUs, 16 GB (General-purpose)</li>
+     * <li>mysql.n8.large.25 4 vCPUs, 32 GB (General-purpose)</li>
+     * <li>mysql.n2.xlarge.25 8 vCPUs, 16 GB (General-purpose)</li>
+     * <li>mysql.n4.xlarge.25 8 vCPUs, 32 GB (General-purpose)</li>
+     * <li>mysql.n8.xlarge.25 8 vCPUs, 64 GB (General-purpose)</li>
+     * <li>mysql.n2.2xlarge.25 16 vCPUs, 32 GB (General-purpose)</li>
+     * <li>mysql.n4.2xlarge.25 16 vCPUs, 64 GB (General-purpose)</li>
+     * <li>mysql.n8.2xlarge.25 16 vCPUs, 128 GB (General-purpose)</li>
      * </ul>
      * <p><strong>Primary instance node specifications (Standard Edition) (Dedicated):</strong></p>
      * <ul>
-     * <li>mysql.x2.medium.25	2 cores, 4 GB (dedicated)</li>
-     * <li>mysql.x4.medium.25	2 cores, 8 GB (dedicated)</li>
-     * <li>mysql.x8.medium.25	2 cores, 16 GB (dedicated)</li>
-     * <li>mysql.x2.large.25	4 cores, 8 GB (dedicated)</li>
-     * <li>mysql.x4.large.25	4 cores, 16 GB (dedicated)</li>
-     * <li>mysql.x8.large.25	4 cores, 32 GB (dedicated)</li>
-     * <li>mysql.x2.xlarge.25	8 cores, 16 GB (dedicated)</li>
-     * <li>mysql.x4.xlarge.25	8 cores, 32 GB (dedicated)</li>
-     * <li>mysql.x8.xlarge.25	8 cores, 64 GB (dedicated)</li>
-     * <li>mysql.x2.2xlarge.25	16 cores, 32 GB (dedicated)</li>
-     * <li>mysql.x4.2xlarge.25	16 cores, 64 GB (dedicated)</li>
-     * <li>mysql.x8.2xlarge.25	16 cores, 128 GB (dedicated)</li>
+     * <li>mysql.x2.medium.25 2 vCPUs, 4 GB (Dedicated)</li>
+     * <li>mysql.x4.medium.25 2 vCPUs, 8 GB (Dedicated)</li>
+     * <li>mysql.x8.medium.25 2 vCPUs, 16 GB (Dedicated)</li>
+     * <li>mysql.x2.large.25 4 vCPUs, 8 GB (Dedicated)</li>
+     * <li>mysql.x4.large.25 4 vCPUs, 16 GB (Dedicated)</li>
+     * <li>mysql.x8.large.25 4 vCPUs, 32 GB (Dedicated)</li>
+     * <li>mysql.x2.xlarge.25 8 vCPUs, 16 GB (Dedicated)</li>
+     * <li>mysql.x4.xlarge.25 8 vCPUs, 32 GB (Dedicated)</li>
+     * <li>mysql.x8.xlarge.25 8 vCPUs, 64 GB (Dedicated)</li>
+     * <li>mysql.x2.2xlarge.25 16 vCPUs, 32 GB (Dedicated)</li>
+     * <li>mysql.x4.2xlarge.25 16 vCPUs, 64 GB (Dedicated)</li>
+     * <li>mysql.x8.2xlarge.25 16 vCPUs, 128 GB (Dedicated)</li>
      * </ul>
-     * <p><strong>Read-only instance node specifications (Standard Edition) General-purpose</strong>	</p>
+     * <p><strong>Read-only instance node specifications (Standard Edition) (General-purpose)</strong>	</p>
      * <ul>
-     * <li>rds.mysql.s2.xlarge 	2 cores, 8 GB (general-purpose)</li>
-     * <li>mysqlro.x4.large.1 	4 cores, 16 GB (general-purpose)</li>
-     * <li>mysqlro.x4.xlarge.1 	8 cores, 32 GB (general-purpose)</li>
-     * <li>mysqlro.x4.2xlarge.1 	16 cores, 64 GB (general-purpose)</li>
+     * <li>rds.mysql.s2.xlarge 2 vCPUs, 8 GB (General-purpose)</li>
+     * <li>mysqlro.x4.large.1 4 vCPUs, 16 GB (General-purpose)</li>
+     * <li>mysqlro.x4.xlarge.1 8 vCPUs, 32 GB (General-purpose)</li>
+     * <li>mysqlro.x4.2xlarge.1 16 vCPUs, 64 GB (General-purpose)</li>
      * </ul>
-     * <p><strong>Read-only instance node specifications (Standard Edition) Dedicated</strong>	</p>
+     * <p><strong>Read-only instance node specifications (Standard Edition) (Dedicated)</strong>	</p>
      * <ul>
-     * <li>mysqlro.x8.large.1 	4 cores, 32 GB (dedicated) </li>
-     * <li>mysqlro.x8.xlarge.1 	8 cores, 64 GB (dedicated) </li>
-     * <li>mysqlro.x8.2xlarge.1 	16 cores, 128 GB (dedicated) </li>
-     * <li>mysqlro.x4.4xlarge.1 	32 cores, 128 GB (dedicated) </li>
-     * <li>mysqlro.x8.4xlarge.1	32 cores, 256 GB (dedicated)</li>
+     * <li>mysqlro.x8.large.1 4 vCPUs, 32 GB (Dedicated) </li>
+     * <li>mysqlro.x8.xlarge.1 8 vCPUs, 64 GB (Dedicated) </li>
+     * <li>mysqlro.x8.2xlarge.1 16 vCPUs, 128 GB (Dedicated) </li>
+     * <li>mysqlro.x4.4xlarge.1 32 vCPUs, 128 GB (Dedicated) </li>
+     * <li>mysqlro.x8.4xlarge.1 32 vCPUs, 256 GB (Dedicated)</li>
      * </ul>
      * 
      * <strong>example:</strong>

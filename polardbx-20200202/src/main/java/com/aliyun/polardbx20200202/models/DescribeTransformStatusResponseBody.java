@@ -60,10 +60,10 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
         public Boolean canFinish;
 
         /**
-         * <p>Indicates whether the migration switchover can be performed. Valid values:</p>
+         * <p>Indicates whether a migration switchover can be performed. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The migration switchover can be performed.</li>
-         * <li><strong>false</strong>: The migration switchover cannot be performed.</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
          * <p>This parameter is used by the one-click upgrade feature of PolarDB.</p>
@@ -73,13 +73,13 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
         public Boolean canSwitch;
 
         /**
-         * <p>Indicates whether the switchover operation can be reverted.</p>
+         * <p>Indicates whether the switchover operation can be undone.</p>
          */
         @NameInMap("CanUndoSwitch")
         public Boolean canUndoSwitch;
 
         /**
-         * <p>The Enterprise Edition instance name.</p>
+         * <p>The name of the Enterprise instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-*****</p>
@@ -103,7 +103,7 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
         public java.util.Map<String, ?> reportSummary;
 
         /**
-         * <p>The date when the data report was generated.</p>
+         * <p>The generation date of the data report.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-02 16:52:47.0</p>
@@ -112,7 +112,7 @@ public class DescribeTransformStatusResponseBody extends TeaModel {
         public Long reportTime;
 
         /**
-         * <p>The standard instance name.</p>
+         * <p>The name of the standard instance.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-*****</p>

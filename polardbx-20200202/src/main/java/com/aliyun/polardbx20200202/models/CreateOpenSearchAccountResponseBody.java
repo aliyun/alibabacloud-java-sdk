@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateOpenSearchAccountResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The details of the access denied error.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public CreateOpenSearchAccountResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The details of the returned policy.</p>
+     * <p>The returned policy details.</p>
      */
     @NameInMap("Data")
     public CreateOpenSearchAccountResponseBodyData data;
@@ -101,7 +101,7 @@ public class CreateOpenSearchAccountResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The no-permission type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -183,7 +183,7 @@ public class CreateOpenSearchAccountResponseBody extends TeaModel {
 
     public static class CreateOpenSearchAccountResponseBodyData extends TeaModel {
         /**
-         * <p>The account name.</p>
+         * <p>The name of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>polardbx_meta_ro</p>

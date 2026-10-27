@@ -5,26 +5,58 @@ import com.aliyun.tea.*;
 
 public class SwitchDBInstanceHARequest extends TeaModel {
     /**
+     * <p>The name of the PolarDB-X instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-htri0ori2r****</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The specified switchover time. This parameter is required when SwitchTimeMode is set to 2. The time must be in UTC and in the YYYY-MM-DDThh:mm:ssZ format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2018-02-05T09:12:00Z</p>
+     */
     @NameInMap("SwitchTime")
     public String switchTime;
 
+    /**
+     * <p>The switchover mode. Valid values: 0: Immediate switchover. 1: Switchover during the O&amp;M window. 2: Switchover at a specified time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SwitchTimeMode")
     public String switchTimeMode;
 
+    /**
+     * <p>The zone ID of the primary node after the switchover.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou-d</p>
+     */
     @NameInMap("TargetPrimaryAzoneId")
     public String targetPrimaryAzoneId;
 
+    /**
+     * <p>The region ID of the primary node after the switchover.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("TargetPrimaryRegionId")
     public String targetPrimaryRegionId;
 

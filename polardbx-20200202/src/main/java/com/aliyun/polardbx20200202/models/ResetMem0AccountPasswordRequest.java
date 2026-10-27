@@ -15,7 +15,7 @@ public class ResetMem0AccountPasswordRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The API key.</p>
+     * <p>apikey</p>
      * 
      * <strong>example:</strong>
      * <p>aafdf2e7d0988ef623***</p>

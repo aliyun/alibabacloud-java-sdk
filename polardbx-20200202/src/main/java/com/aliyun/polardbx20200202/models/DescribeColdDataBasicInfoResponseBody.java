@@ -12,6 +12,9 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
 
     /**
      * <p>requestId</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1A6D328C-84B8-40DC-BF49-6C73984D7494</p>
      */
     @NameInMap("RequestId")
     public String requestId;
@@ -40,28 +43,46 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
     public static class DescribeColdDataBasicInfoResponseBodyData extends TeaModel {
         /**
          * <p>The number of backup sets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BackupSetCount")
         public Integer backupSetCount;
 
         /**
          * <p>The data size of valid backup sets.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("BackupSetSpaceSize")
         public Double backupSetSpaceSize;
 
         /**
-         * <p>The underlying storage cloud product.</p>
+         * <p>The underlying cloud storage service.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>aliyunOSS</p>
          */
         @NameInMap("CloudProduct")
         public String cloudProduct;
 
         /**
          * <p>The data size of cold storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CurrentSpaceSize")
         public Double currentSpaceSize;
 
+        /**
+         * <p>The data redundancy type of cold storage. LRS indicates locally redundant storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>LRS</p>
+         */
         @NameInMap("DataRedundancyType")
         public String dataRedundancyType;
 
@@ -71,18 +92,39 @@ public class DescribeColdDataBasicInfoResponseBody extends TeaModel {
         @NameInMap("EnableStatus")
         public Boolean enableStatus;
 
+        /**
+         * <p>The number of read accesses to cold data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("ReadAccessNum")
         public Long readAccessNum;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 
         /**
-         * <p>The storage volume name.</p>
+         * <p>The name of the storage volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardbx-oss-columnar-bucket-cn-hangzhou-1</p>
          */
         @NameInMap("VolumeName")
         public String volumeName;
 
+        /**
+         * <p>The number of write accesses to cold data.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("WriteAccessNum")
         public Double writeAccessNum;
 

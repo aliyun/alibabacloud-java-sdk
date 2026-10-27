@@ -15,7 +15,7 @@ public class CreateOpenSearchAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password of the account. The password must be 6 to 32 characters in length and must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (!@#$&amp;%^*()_+-=).</p>
+     * <p>The password of the account. The password must be 6 to 32 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (!@#$&amp;%^*()_+-=).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class CreateOpenSearchAccountRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

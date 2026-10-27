@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeScaleOutMigrateTaskListResponseBody extends TeaModel {
     /**
-     * <p>The migration task progress.</p>
+     * <p>The progress of the migration task.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>

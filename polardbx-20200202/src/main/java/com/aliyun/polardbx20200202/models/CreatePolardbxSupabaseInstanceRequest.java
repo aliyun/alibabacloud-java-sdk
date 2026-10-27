@@ -23,7 +23,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The dashboard password.</p>
+     * <p>The Dashboard password.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,10 +33,10 @@ public class CreatePolardbxSupabaseInstanceRequest extends TeaModel {
     public String dashboardPassword;
 
     /**
-     * <p>The instance description.</p>
+     * <p>The description of the instance.</p>
      * 
      * <strong>example:</strong>
-     * <p>Supabase实例</p>
+     * <p>Supabase instance</p>
      */
     @NameInMap("DbInstanceDescription")
     public String dbInstanceDescription;
@@ -61,11 +61,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends TeaModel {
     public String nodeSpec;
 
     /**
-     * <p>The billing type. Valid values:</p>
-     * <ul>
-     * <li>PREPAY: subscription.</li>
-     * <li>POSTPAY: pay-as-you-go.</li>
-     * </ul>
+     * <p>The billing method. Valid values: PREPAY and POSTPAY.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -75,12 +71,7 @@ public class CreatePolardbxSupabaseInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The billing cycle. Valid values:</p>
-     * <ul>
-     * <li>Year</li>
-     * <li>Month</li>
-     * <li>Hour</li>
-     * </ul>
+     * <p>The billing cycle. Valid values: Year, Month, and Hour.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>

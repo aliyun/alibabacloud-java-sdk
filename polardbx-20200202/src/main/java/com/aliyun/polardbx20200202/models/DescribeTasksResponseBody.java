@@ -20,7 +20,7 @@ public class DescribeTasksResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -93,7 +93,7 @@ public class DescribeTasksResponseBody extends TeaModel {
 
     public static class DescribeTasksResponseBodyItems extends TeaModel {
         /**
-         * <p>The start time of the task, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</p>
+         * <p>The start time of the task. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-20T19:40:00Z</p>
@@ -102,7 +102,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String beginTime;
 
         /**
-         * <p>The database name associated with the task. This parameter is generally empty.</p>
+         * <p>The name of the database associated with the task. This field is usually empty.</p>
          * 
          * <strong>example:</strong>
          * <p>DBName</p>
@@ -111,7 +111,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String DBName;
 
         /**
-         * <p>The end time of the task, in the yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot; format.</p>
+         * <p>The end time of the task. The format is yyyy-MM-dd\&quot;T\&quot;HH:mm:ss\&quot;Z\&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-20T20:00:00Z</p>
@@ -120,7 +120,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The task progress, in percentage (%).</p>
+         * <p>The task progress, in percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -129,7 +129,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String progress;
 
         /**
-         * <p>The detailed progress information of the task. This parameter is generally empty.</p>
+         * <p>The detailed progress of the task. This field is usually empty.</p>
          * 
          * <strong>example:</strong>
          * <p>ProgressInfo</p>
@@ -138,7 +138,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String progressInfo;
 
         /**
-         * <p>The scale-out ID if the task is a scale-out task. This is a unique key in the backend.</p>
+         * <p>The scale-out token. If the task is a scale-out task, this field returns a scale-out ID, which is a unique backend key.</p>
          * 
          * <strong>example:</strong>
          * <p>FEA5DC20-6D8A-5979-97AA-FC57546ADC20</p>
@@ -160,7 +160,7 @@ public class DescribeTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The task action, which is the unique key for the backend task type.</p>
+         * <p>The task action. This is a unique key for the backend task type.</p>
          * 
          * <strong>example:</strong>
          * <p>multi_scale_out</p>

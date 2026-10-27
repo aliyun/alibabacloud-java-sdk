@@ -24,7 +24,7 @@ public class AllocateContext0PublicConnectionRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The target node type: service or dashboard.</p>
+     * <p>The target node type. Valid values: service and dashboard.</p>
      * 
      * <strong>example:</strong>
      * <p>dn</p>
@@ -33,7 +33,7 @@ public class AllocateContext0PublicConnectionRequest extends TeaModel {
     public String nodeType;
 
     /**
-     * <p>The port.</p>
+     * <p>The port number.</p>
      * 
      * <strong>example:</strong>
      * <p>3306</p>

@@ -15,17 +15,17 @@ public class UpdateCustinsParamRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The tag name.</p>
+     * <p>The name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>DataWarehouseExtractionAddress</p>
+     * <p>Data warehouse data extraction address</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The region ID. &gt; You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196841.html">DescribeRegions</a> operation to query the regions supported by PolarDB-X, including region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

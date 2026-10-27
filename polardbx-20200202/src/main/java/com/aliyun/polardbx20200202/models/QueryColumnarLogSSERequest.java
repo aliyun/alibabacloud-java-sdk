@@ -15,7 +15,7 @@ public class QueryColumnarLogSSERequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The maximum number of result rows to return for this request. Valid values: 1 to 10000. If this parameter is not specified, no additional row limit is imposed on the SQL submitted by the caller. The server-side SSE upper limit of 10000 rows and the top-level LIMIT clause in the SQL statement still apply.</p>
+     * <p>The maximum number of result rows to return for this request. Valid values: 1 to 10000. If this parameter is not specified, no additional row limit is applied to the SQL statement submitted by the caller. The result is still subject to the server-side SSE upper limit of 10000 rows and the top-level LIMIT clause in the SQL statement.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -34,11 +34,11 @@ public class QueryColumnarLogSSERequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The read-only query statement to execute. Only a single MySQL SELECT statement is supported, and it must access the fully qualified polardbx_sls table. Multi-statement queries, write operations, locks, user variables, dynamic placeholders, and reserved hints are not supported.</p>
+     * <p>The read-only query statement to execute. Only a single MySQL SELECT statement is supported. The query table must use the fully qualified form polardbx_sls.<table_name>, and only the following tables are allowed: polardbx_sls.polardbx_log (kernel logs), polardbx_sls.slow_detail_log (slow query logs), polardbx_sls.slow_trans_log (slow transaction logs), and polardbx_sls.sql_audit_log (audit logs). Multi-statement queries, write operations, locks, user variables, dynamic placeholders, and reserved hints are not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>select * from device where name = \&quot;108001022203365239\&quot;</p>
+     * <p>SELECT * FROM polardbx_sls.sql_audit_log LIMIT 100</p>
      */
     @NameInMap("SQL")
     public String SQL;

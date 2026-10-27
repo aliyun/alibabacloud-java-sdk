@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The details of the access denied error.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeContext0SecurityIpsResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -65,7 +65,7 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -92,7 +92,7 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -110,7 +110,7 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>The policy type.</p>
+         * <p>The type of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>
@@ -201,7 +201,7 @@ public class DescribeContext0SecurityIpsResponseBody extends TeaModel {
         public String groupTag;
 
         /**
-         * <p>The details of the whitelist group.</p>
+         * <p>The details of the whitelist in the group.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1,172.168.0.0</p>

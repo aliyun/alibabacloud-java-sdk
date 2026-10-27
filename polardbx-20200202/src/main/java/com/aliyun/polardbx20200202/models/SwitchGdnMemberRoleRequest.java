@@ -14,12 +14,30 @@ public class SwitchGdnMemberRoleRequest extends TeaModel {
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The endpoint of the primary node of the target instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-*********.polarx.rds.aliyuncs.com</p>
+     */
     @NameInMap("DstMainConnectString")
     public String dstMainConnectString;
 
+    /**
+     * <p>The port number of the primary node of the target instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3313</p>
+     */
     @NameInMap("DstMainPort")
     public String dstMainPort;
 
+    /**
+     * <p>Specifies whether the endpoint and port of the source or target instance is simultaneously modified.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("IsModifyEndpoint")
     public String isModifyEndpoint;
 
@@ -33,9 +51,21 @@ public class SwitchGdnMemberRoleRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The endpoint of the primary node of the source instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-*********.mysql.rds.aliyuncs.com</p>
+     */
     @NameInMap("SrcMainConnectString")
     public String srcMainConnectString;
 
+    /**
+     * <p>The port number of the primary node of the source instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3308</p>
+     */
     @NameInMap("SrcMainPort")
     public String srcMainPort;
 
@@ -44,14 +74,14 @@ public class SwitchGdnMemberRoleRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Regular switchover: switch_over
+     * <p>Normal switchover: switch_over
      * Forced switchover: fail_over</p>
      */
     @NameInMap("SwitchMode")
     public String switchMode;
 
     /**
-     * <p>The timeout period of the switchover task. Unit: seconds.</p>
+     * <p>The timeout period for the switchover task, in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

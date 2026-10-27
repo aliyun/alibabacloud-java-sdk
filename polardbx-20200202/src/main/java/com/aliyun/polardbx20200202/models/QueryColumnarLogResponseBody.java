@@ -11,7 +11,7 @@ public class QueryColumnarLogResponseBody extends TeaModel {
     public QueryColumnarLogResponseBodyAccessDeniedDetail accessDeniedDetail;
 
     /**
-     * <p>The top-level SQL LIMIT offset that the service actually applied. The value is 0 if no offset is specified in the SQL statement.</p>
+     * <p>The top-level SQL LIMIT offset that the service actually applied. The value is 0 if the SQL statement does not specify an offset.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -38,7 +38,7 @@ public class QueryColumnarLogResponseBody extends TeaModel {
     public Boolean hasMore;
 
     /**
-     * <p>The elapsed time from the start of the JDBC statement execution to the completion of reading the last returned row or probe row. Unit: milliseconds.</p>
+     * <p>The elapsed time from the start of the JDBC statement execution to the completion of reading the last result row or probe row. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>125</p>
@@ -56,7 +56,7 @@ public class QueryColumnarLogResponseBody extends TeaModel {
     public String queryId;
 
     /**
-     * <p>The list of query results. Each row is a JSON key-value object that maps column names to text values. All scalar values are returned as strings. SQL NULL is encoded as the string null, and empty strings remain as empty strings.</p>
+     * <p>The list of query results. Each row is a JSON key-value object that maps column names to text values. All scalars are returned as strings. SQL NULL is encoded as the string null, and empty strings remain as empty strings.</p>
      */
     @NameInMap("Records")
     public java.util.List<java.util.Map<String, String>> records;
@@ -80,7 +80,7 @@ public class QueryColumnarLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of result rows actually returned in this synchronous response.</p>
+     * <p>The actual number of result rows returned in this synchronous response.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -178,7 +178,7 @@ public class QueryColumnarLogResponseBody extends TeaModel {
          * <p>The authentication action.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>polardbx:QueryColumnarLog</p>
          */
         @NameInMap("AuthAction")
         public String authAction;
@@ -187,7 +187,7 @@ public class QueryColumnarLogResponseBody extends TeaModel {
          * <p>The display name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx</p>
+         * <p>Sample RAM user</p>
          */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;

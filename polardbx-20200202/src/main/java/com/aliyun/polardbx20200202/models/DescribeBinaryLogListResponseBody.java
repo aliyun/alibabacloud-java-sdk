@@ -11,7 +11,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
     public java.util.List<DescribeBinaryLogListResponseBodyLogList> logList;
 
     /**
-     * <p>The page number of the current query.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of binary logs displayed on the current page.</p>
+     * <p>The number of binary logs returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -93,7 +93,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
 
     public static class DescribeBinaryLogListResponseBodyLogList extends TeaModel {
         /**
-         * <p>The start time of the log.</p>
+         * <p>The start time of the log. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-09-09 10:27:46</p>
@@ -102,7 +102,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         public String beginTime;
 
         /**
-         * <p>The creation time of the file.</p>
+         * <p>The creation time of the file. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-09-09 10:27:46</p>
@@ -111,7 +111,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The download link of the file. The link is valid for 2 days.</p>
+         * <p>The download URL of the file. The URL is valid for two days.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://polarx-cdc-binlog-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/polardbx_cdc/pxc-hzfd132143sfds1/binlog.000001?Expires=1636469502&OSSAccessKeyId=LT13fds12dsafddsf&Signature=fdpm%bdsfadsa%2F%bdsafdsaf%3D">http://polarx-cdc-binlog-cn-hangzhou.oss-cn-hangzhou.aliyuncs.com/polardbx_cdc/pxc-hzfd132143sfds1/binlog.000001?Expires=1636469502&amp;OSSAccessKeyId=LT13fds12dsafddsf&amp;Signature=fdpm%bdsfadsa%2F%bdsafdsaf%3D</a></p>
@@ -120,7 +120,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         public String downloadLink;
 
         /**
-         * <p>The end time of the current binary log.</p>
+         * <p>The end time of the binary log. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-09 10:27:46</p>
@@ -138,7 +138,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The unique ID of the current record.</p>
+         * <p>The unique ID of the record.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -147,7 +147,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The size of the current log file.</p>
+         * <p>The size of the log file.</p>
          * 
          * <strong>example:</strong>
          * <p>536870912</p>
@@ -156,7 +156,7 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         public Long logSize;
 
         /**
-         * <p>The last modified time.</p>
+         * <p>The last update time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-09 10:27:46</p>
@@ -165,10 +165,10 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The purge status. Valid values:</p>
+         * <p>The cleanup status. Valid values:</p>
          * <ul>
-         * <li>0: not deleted. </li>
-         * <li>1: deleted.</li>
+         * <li>0: Not deleted. </li>
+         * <li>1: Deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,9 +189,9 @@ public class DescribeBinaryLogListResponseBody extends TeaModel {
         /**
          * <p>The backup status. Valid values:</p>
          * <ul>
-         * <li>0: not backed up. </li>
-         * <li>1: being backed up. </li>
-         * <li>2: backed up.</li>
+         * <li>0: Not backed up. </li>
+         * <li>1: Being backed up. </li>
+         * <li>2: Backed up.</li>
          * </ul>
          * 
          * <strong>example:</strong>

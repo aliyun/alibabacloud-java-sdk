@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeArchiveTableListRequest extends TeaModel {
     /**
+     * <p>The name of the PolarDB-X instance.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pxc-htri0ori2r****</p>
      */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
@@ -13,28 +17,57 @@ public class DescribeArchiveTableListRequest extends TeaModel {
     /**
      * <p>The page number, starting from 1.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("PageIndex")
     public Long pageIndex;
 
     /**
+     * <p>The number of tables to return on each page. Default value: 20.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Long pageSize;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The database name used to filter archived tables.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testdb</p>
+     */
     @NameInMap("SchemaName")
     public String schemaName;
 
+    /**
+     * <p>The archiving status used to filter tables. Valid values: SUCCESS, PAUSE, and RUNNING.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SUCCESS</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The table name used to filter archived tables.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("TableName")
     public String tableName;
 

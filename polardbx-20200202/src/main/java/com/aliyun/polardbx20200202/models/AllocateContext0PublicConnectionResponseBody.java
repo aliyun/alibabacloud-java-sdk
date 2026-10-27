@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The detailed reasons for access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public AllocateContext0PublicConnectionResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -56,7 +56,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
 
     public static class AllocateContext0PublicConnectionResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>The description is the same as above.</p>
+         * <p>The action that is evaluated.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -83,7 +83,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The description is the same as above.</p>
+         * <p>The action that is evaluated.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -183,7 +183,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
 
     public static class AllocateContext0PublicConnectionResponseBodyData extends TeaModel {
         /**
-         * <p>The endpoint.</p>
+         * <p>The connection string.</p>
          * 
          * <strong>example:</strong>
          * <p>test2.polarx.huhehaote.rds.aliyuncs.com</p>
@@ -192,7 +192,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The context service instance name.</p>
+         * <p>The name of the context service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>context0-example</p>
@@ -210,7 +210,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
         public Integer DBInstanceId;
 
         /**
-         * <p>The instance ID.</p>
+         * <p>The instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-hzjasd****</p>
@@ -219,7 +219,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
         public String DBInstanceName;
 
         /**
-         * <p>The network type of the endpoint.</p>
+         * <p>The network type of the connection string.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +228,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
         public Integer DBInstanceNetType;
 
         /**
-         * <p>The target node type: service or dashboard.</p>
+         * <p>The target node type. Valid values: service and dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p>service</p>
@@ -237,7 +237,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
         public String nodeType;
 
         /**
-         * <p>The port of the endpoint.</p>
+         * <p>The port number.</p>
          * 
          * <strong>example:</strong>
          * <p>3300</p>
@@ -255,7 +255,7 @@ public class AllocateContext0PublicConnectionResponseBody extends TeaModel {
         public Integer taskId;
 
         /**
-         * <p>The IP address of the Anti-DDoS Proxy instance protected by the policy.</p>
+         * <p>The IP address of the Anti-DDoS Pro or Anti-DDoS Premium instance protected by the policy.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://anchashi.aliyun-inc.coM">https://anchashi.aliyun-inc.coM</a></p>

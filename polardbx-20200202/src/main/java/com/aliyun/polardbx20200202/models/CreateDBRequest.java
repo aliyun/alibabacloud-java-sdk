@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBRequest extends TeaModel {
     /**
-     * <p>The name of the account that is authorized to access the created database.</p>
+     * <p>The name of the account to be authorized for the new database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateDBRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The permissions granted to the account on the new database. Valid values:</p>
+     * <p>The permissions granted to the new account on the database. Valid values:</p>
      * <ul>
      * <li><strong>ReadWrite</strong></li>
      * <li><strong>ReadOnly</strong></li>
@@ -30,7 +30,7 @@ public class CreateDBRequest extends TeaModel {
     public String accountPrivilege;
 
     /**
-     * <p>The character set. The following character sets are supported:</p>
+     * <p>The character set. Valid values:</p>
      * <ul>
      * <li><strong>utf8</strong></li>
      * <li><strong>gbk</strong></li>
@@ -65,7 +65,7 @@ public class CreateDBRequest extends TeaModel {
     public String dbDescription;
 
     /**
-     * <p>The name of the database to create.</p>
+     * <p>The name of the database to be created.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class CreateDBRequest extends TeaModel {
      * <p>The mode selected when creating the database. Valid values:</p>
      * <ul>
      * <li><strong>auto</strong>: The database supports automatic partitioning. You do not need to specify a partition key when creating a table.</li>
-     * <li><strong>drds</strong>: The database does not support automatic partitioning. You must use dedicated table and database sharding syntax and specify sharding keys when creating a table.</li>
+     * <li><strong>drds</strong>: The database does not support automatic partitioning. You must use the dedicated database and table sharding syntax and specify the shard keys when creating a table.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class CreateDBRequest extends TeaModel {
     /**
      * <p>The name of the security administrator account.</p>
      * <blockquote>
-     * <p>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is optional.</p>
+     * <p>This parameter is required if the three-role mode is enabled. If the three-role mode is not enabled, this parameter is optional.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class CreateDBRequest extends TeaModel {
     /**
      * <p>The password of the security administrator account.</p>
      * <blockquote>
-     * <p>If the three-role mode is enabled, this parameter is required. If the three-role mode is not enabled, this parameter is optional.</p>
+     * <p>This parameter is required if the three-role mode is enabled. If the three-role mode is not enabled, this parameter is optional.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,6 +121,12 @@ public class CreateDBRequest extends TeaModel {
     @NameInMap("SecurityAccountPassword")
     public String securityAccountPassword;
 
+    /**
+     * <p>The name of the storage pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("StoragePoolName")
     public String storagePoolName;
 

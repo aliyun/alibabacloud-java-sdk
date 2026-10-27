@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdatePolarDBXInstanceNodeResponseBody extends TeaModel {
     /**
-     * <p>The order ID generated when the number of instance nodes is changed.</p>
+     * <p>The ID of the order generated when the number of nodes for the instance is changed.</p>
      * 
      * <strong>example:</strong>
      * <p>20211103105558</p>

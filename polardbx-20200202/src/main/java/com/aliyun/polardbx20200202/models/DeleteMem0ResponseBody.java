@@ -4,6 +4,9 @@ package com.aliyun.polardbx20200202.models;
 import com.aliyun.tea.*;
 
 public class DeleteMem0ResponseBody extends TeaModel {
+    /**
+     * <p>The detailed cause of the access denial.</p>
+     */
     @NameInMap("AccessDeniedDetail")
     public DeleteMem0ResponseBodyAccessDeniedDetail accessDeniedDetail;
 
@@ -52,24 +55,66 @@ public class DeleteMem0ResponseBody extends TeaModel {
     }
 
     public static class DeleteMem0ResponseBodyAccessDeniedDetail extends TeaModel {
+        /**
+         * <p>The authentication action.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>polardbx:DeleteMem0</p>
+         */
         @NameInMap("AuthAction")
         public String authAction;
 
+        /**
+         * <p>The display name of the authentication principal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Sample RAM user</p>
+         */
         @NameInMap("AuthPrincipalDisplayName")
         public String authPrincipalDisplayName;
 
+        /**
+         * <p>The owner ID of the authentication principal.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>111</p>
+         */
         @NameInMap("AuthPrincipalOwnerId")
         public String authPrincipalOwnerId;
 
+        /**
+         * <p>The type of the authentication principal, such as RAM user SubUser or RAM role AssumedRoleUser.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SubUser</p>
+         */
         @NameInMap("AuthPrincipalType")
         public String authPrincipalType;
 
+        /**
+         * <p>The diagnostic information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
+         */
         @NameInMap("EncodedDiagnosticMessage")
         public String encodedDiagnosticMessage;
 
+        /**
+         * <p>The no-permission type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ImplicitDeny</p>
+         */
         @NameInMap("NoPermissionType")
         public String noPermissionType;
 
+        /**
+         * <p>The policy type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PRIORITY</p>
+         */
         @NameInMap("PolicyType")
         public String policyType;
 

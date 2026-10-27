@@ -111,7 +111,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>The supplementary information.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Domain\&quot;: \&quot;rds-cn-hangzhou.aliyuncs.com\&quot;}</p>
@@ -129,7 +129,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventReason;
 
         /**
-         * <p>The record time.</p>
+         * <p>The record time. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-15T06:39:49Z</p>
@@ -138,7 +138,7 @@ public class DescribeEventsResponseBody extends TeaModel {
         public String eventRecordTime;
 
         /**
-         * <p>The event time.</p>
+         * <p>The event time. The time is in the YYYY-MM-DDTHH:mm:ssZ format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-10-15T06:35:00Z</p>

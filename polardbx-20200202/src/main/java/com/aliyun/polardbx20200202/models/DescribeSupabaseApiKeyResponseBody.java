@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSupabaseApiKeyResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The access denied details.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeSupabaseApiKeyResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -65,7 +65,7 @@ public class DescribeSupabaseApiKeyResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The authentication principal name.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -92,7 +92,7 @@ public class DescribeSupabaseApiKeyResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic message.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -101,7 +101,7 @@ public class DescribeSupabaseApiKeyResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The no permission type.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>

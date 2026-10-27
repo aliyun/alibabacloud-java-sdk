@@ -11,7 +11,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
     public DescribeActiveOperationMaintainConfResponseBodyConfig config;
 
     /**
-     * <p>Indicates whether the O&amp;M window has been configured. Valid values:</p>
+     * <p>Specifies whether the settings are configured. Valid values:</p>
      * <ul>
      * <li>1: Configured.</li>
      * <li>0: Not configured.</li>
@@ -63,7 +63,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
 
     public static class DescribeActiveOperationMaintainConfResponseBodyConfig extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-11T10:08:27Z</p>
@@ -90,7 +90,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String cycleType;
 
         /**
-         * <p>The O&amp;M end time.</p>
+         * <p>The end time of the O&amp;M window. The time is displayed in UTC in the HH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>04:00:00Z</p>
@@ -99,7 +99,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
-         * <p>The O&amp;M start time.</p>
+         * <p>The start time of the O&amp;M window. The time is displayed in UTC in the HH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>04:00:00Z</p>
@@ -108,7 +108,7 @@ public class DescribeActiveOperationMaintainConfResponseBody extends TeaModel {
         public String maintainStartTime;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time. The time is displayed in UTC in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-08-11T10:08:27Z</p>

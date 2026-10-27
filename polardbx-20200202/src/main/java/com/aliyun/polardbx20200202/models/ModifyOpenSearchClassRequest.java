@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyOpenSearchClassRequest extends TeaModel {
     /**
-     * <p>The target disk size per node, in GB. If not specified, the current disk size is retained.</p>
+     * <p>The target disk size per node, in GB. If this parameter is not specified, the current disk size is retained.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -34,7 +34,7 @@ public class ModifyOpenSearchClassRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The node specifications code of the PolarDB-X Search data node. This parameter is required. Active node specifications depend on the region and sales configuration, and must differ from the current node specifications.</p>
+     * <p>The node specifications code for PolarDBX Search data nodes. This parameter is required. The active node specifications depend on the region and sales configuration, and must differ from the current node specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>opensearch.sn2ne.large.1</p>

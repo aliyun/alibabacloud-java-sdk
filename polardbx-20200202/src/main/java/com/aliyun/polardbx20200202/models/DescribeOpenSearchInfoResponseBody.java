@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOpenSearchInfoResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial.</p>
+     * <p>The details of the access denial.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeOpenSearchInfoResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -56,7 +56,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
 
     public static class DescribeOpenSearchInfoResponseBodyAccessDeniedDetail extends TeaModel {
         /**
-         * <p>The authentication action.</p>
+         * <p>The authorization action.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -65,7 +65,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The identity used for authentication in the request.</p>
+         * <p>The identity used for authorization in the request.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -74,7 +74,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public String authPrincipalDisplayName;
 
         /**
-         * <p>The owner ID of the authentication principal.</p>
+         * <p>The ID of the owner of the authorization principal.</p>
          * 
          * <strong>example:</strong>
          * <p>111</p>
@@ -83,7 +83,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The authentication principal type.</p>
+         * <p>The type of the authorization principal.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -92,7 +92,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -101,7 +101,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The type of access denial.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>
@@ -185,8 +185,8 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         /**
          * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li><strong>POSTPAY</strong>: pay-as-you-go.</li>
-         * <li><strong>PREPAY</strong>: subscription.</li>
+         * <li><strong>POSTPAY</strong>: pay-as-you-go</li>
+         * <li><strong>PREPAY</strong>: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,7 +196,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public String chargeType;
 
         /**
-         * <p>The OpenSearch-compatible version.</p>
+         * <p>The OpenSearch compatible version.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0</p>
@@ -216,8 +216,8 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         /**
          * <p>The deployment mode. Valid values:</p>
          * <ul>
-         * <li>multiple: multi-zone deployment.</li>
-         * <li>single: single-zone deployment.</li>
+         * <li>multiple: multi-zone deployment</li>
+         * <li>single: single-zone deployment</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,9 +265,9 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         /**
          * <p>The network type of the connection string. Valid values:</p>
          * <ul>
-         * <li><strong>Public</strong>: public endpoint.</li>
-         * <li><strong>Private</strong>: private endpoint.</li>
-         * <li><strong>Inner</strong>: private endpoint (classic network).</li>
+         * <li><strong>Public</strong>: public endpoint</li>
+         * <li><strong>Private</strong>: private endpoint</li>
+         * <li><strong>Inner</strong>: private endpoint (classic network)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -295,7 +295,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the last task was updated (in timestamp format).</p>
+         * <p>The last task update time in UNIX timestamp format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-09-02T16:01:51Z</p>
@@ -304,7 +304,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC) in which the access endpoint resides.</p>
+         * <p>The ID of the virtual private cloud (VPC) where the access endpoint resides.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2ze99u5upo8zxyf5dlfl5</p>
@@ -451,7 +451,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public Integer coordinatorNodeCount;
 
         /**
-         * <p>The number of CPU cores of a single coordinator node.</p>
+         * <p>The number of CPU cores per coordinator node.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -460,13 +460,13 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public Integer coordinatorNodeCpu;
 
         /**
-         * <p>Indicates whether coordinator nodes are enabled.</p>
+         * <p>Indicates whether the coordinator node is enabled.</p>
          */
         @NameInMap("CoordinatorNodeEnabled")
         public Boolean coordinatorNodeEnabled;
 
         /**
-         * <p>The memory size of a single coordinator node. Unit: GB.</p>
+         * <p>The memory size per coordinator node, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -484,7 +484,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public Integer dataNodeCount;
 
         /**
-         * <p>The number of CPU cores of a single data node.</p>
+         * <p>The number of CPU cores per data node.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -493,7 +493,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public Integer dataNodeCpu;
 
         /**
-         * <p>The memory size of a single data node. Unit: GB.</p>
+         * <p>The memory size per data node, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -504,8 +504,8 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         /**
          * <p>The master node type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: The master node is a single node.</li>
-         * <li><strong>2</strong>: The master node is in Cluster Edition.</li>
+         * <li><strong>0</strong>: single-node master</li>
+         * <li><strong>2</strong>: cluster-edition master</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -515,7 +515,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public Integer masterNodeCount;
 
         /**
-         * <p>The number of CPU cores of a single dedicated master node.</p>
+         * <p>The number of CPU cores per dedicated master node.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -524,13 +524,13 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public Integer masterNodeCpu;
 
         /**
-         * <p>Indicates whether dedicated master nodes are enabled.</p>
+         * <p>Indicates whether the dedicated master node is enabled.</p>
          */
         @NameInMap("MasterNodeEnabled")
         public Boolean masterNodeEnabled;
 
         /**
-         * <p>The memory size of a single dedicated master node. Unit: GB.</p>
+         * <p>The memory size per dedicated master node, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -539,9 +539,9 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public Integer masterNodeMemoryGB;
 
         /**
-         * <p>The number of replica nodes in the primary zone.</p>
+         * <p>The number of secondary nodes in the primary zone.</p>
          * <blockquote>
-         * <p>The <strong>ReplicaCount</strong> and <strong>SlaveReplicaCount</strong> parameters apply only to cloud-native instances. If the instance uses a cluster architecture, these parameters indicate the number of replica nodes of a <strong>single shard</strong> in the primary and secondary zones.</p>
+         * <p>The <strong>ReplicaCount</strong> and <strong>SlaveReplicaCount</strong> parameters apply only to cloud-native instances. If the instance uses a cluster architecture, these parameters indicate the number of secondary nodes per shard in the primary and secondary zones.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -551,7 +551,7 @@ public class DescribeOpenSearchInfoResponseBody extends TeaModel {
         public Integer replicaCount;
 
         /**
-         * <p>The storage size of a single data node. Unit: GB.</p>
+         * <p>The storage space per data node, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>500</p>

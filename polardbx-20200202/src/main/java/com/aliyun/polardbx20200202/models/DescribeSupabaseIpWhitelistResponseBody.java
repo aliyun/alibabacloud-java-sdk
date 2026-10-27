@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial.</p>
+     * <p>The details of the access denied error.</p>
      */
     @NameInMap("AccessDeniedDetail")
     public DescribeSupabaseIpWhitelistResponseBodyAccessDeniedDetail accessDeniedDetail;
@@ -110,7 +110,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>The policy type.</p>
+         * <p>The type of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIORITY</p>
@@ -183,7 +183,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
 
     public static class DescribeSupabaseIpWhitelistResponseBodyDataGroupItems extends TeaModel {
         /**
-         * <p>The group name.</p>
+         * <p>The name of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>defaultGroup</p>
@@ -192,7 +192,7 @@ public class DescribeSupabaseIpWhitelistResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The group tag.</p>
+         * <p>The tag of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>group1</p>
