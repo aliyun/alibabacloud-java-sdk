@@ -23,7 +23,7 @@ public class ListMemoriesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The memory list.</p>
+     * <p>The list of memory records.</p>
      */
     @NameInMap("items")
     public java.util.List<ListMemoriesResponseBodyItems> items;

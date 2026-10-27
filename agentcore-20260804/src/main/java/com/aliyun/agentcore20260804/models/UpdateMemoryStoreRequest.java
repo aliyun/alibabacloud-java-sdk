@@ -43,7 +43,7 @@ public class UpdateMemoryStoreRequest extends TeaModel {
 
     public static class UpdateMemoryStoreRequestBody extends TeaModel {
         /**
-         * <p>The MemoryStore description. Maximum length: 1,024 characters.</p>
+         * <p>The MemoryStore description, up to 1,024 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Memory store used to save long-term customer preferences</p>
@@ -52,7 +52,7 @@ public class UpdateMemoryStoreRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The custom memory extraction instructions. Maximum length: 4,096 characters.</p>
+         * <p>The custom memory extraction instructions, up to 4,096 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Extract only long-term preferences explicitly expressed by the user</p>

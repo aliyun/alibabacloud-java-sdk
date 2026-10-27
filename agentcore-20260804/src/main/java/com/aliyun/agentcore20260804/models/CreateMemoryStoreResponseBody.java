@@ -14,7 +14,7 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The memory store details.</p>
+     * <p>The MemoryStore details.</p>
      */
     @NameInMap("data")
     public CreateMemoryStoreResponseBodyData data;
@@ -116,7 +116,7 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The memory store description.</p>
+         * <p>The MemoryStore description.</p>
          * 
          * <strong>example:</strong>
          * <p>Used to store long-term user preferences</p>
@@ -128,13 +128,13 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
          * <p>The custom extraction instructions.</p>
          * 
          * <strong>example:</strong>
-         * <p>Extract only long-term preferences explicitly expressed by the user</p>
+         * <p>Extract only explicitly expressed long-term user preferences</p>
          */
         @NameInMap("extractInstructions")
         public String extractInstructions;
 
         /**
-         * <p>The memory store ID.</p>
+         * <p>The MemoryStore ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ms-2f5f9c5a8d0e4c3b</p>
@@ -143,7 +143,7 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
         public String memoryStoreId;
 
         /**
-         * <p>The name of the memory store. The name cannot be modified after creation.</p>
+         * <p>The name of the MemoryStore. The name cannot be modified after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>customer-memory</p>
@@ -152,7 +152,7 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
         public String memoryStoreName;
 
         /**
-         * <p>The lifecycle status of the memory store.</p>
+         * <p>The lifecycle state of the MemoryStore.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -161,7 +161,7 @@ public class CreateMemoryStoreResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last updated time.</p>
+         * <p>The last update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:05:00Z</p>

@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateMemoryStoreShrinkRequest extends TeaModel {
     /**
-     * <p>The request to create a memory store.</p>
+     * <p>The MemoryStore creation request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public String bodyShrink;
 
     /**
-     * <p>The client request token.</p>
+     * <p>The client token.</p>
      * 
      * <strong>example:</strong>
      * <p>memory-store-create-20260909-001</p>

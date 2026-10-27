@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceRequest extends TeaModel {
     /**
-     * <p>The workspace creation request body.</p>
+     * <p>The request body for creating a workspace.</p>
      */
     @NameInMap("body")
     public CreateWorkspaceRequestBody body;
@@ -51,13 +51,13 @@ public class CreateWorkspaceRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The list of vSwitch IDs. When the VPC network is enabled, the list must contain at least one vSwitch, and all vSwitches must belong to the VPC specified by VpcId.</p>
+         * <p>The list of vSwitch IDs. If the VPC network is enabled, at least one vSwitch must be included, and all vSwitches must belong to the VPC specified by VpcId.</p>
          */
         @NameInMap("vSwitchIds")
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The user VPC ID.</p>
+         * <p>The ID of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -98,7 +98,7 @@ public class CreateWorkspaceRequest extends TeaModel {
 
     public static class CreateWorkspaceRequestBodyNetworkConfiguration extends TeaModel {
         /**
-         * <p>Specifies whether to allow public outbound access from the platform. If this parameter is not specified, the default value is true. This setting only controls whether the latest versions of managed and custom agents use the public outbound endpoint of the platform. It does not affect fixed historical versions, model or MCP proxy endpoints, or the public outbound endpoint of the user VPC.</p>
+         * <p>Specifies whether to allow public outbound access from the platform. If not specified, the default value is true. This setting only controls whether the latest versions of managed and custom agents use the public outbound endpoint of the platform. It does not affect fixed historical versions, model or Model Context Protocol (MCP) proxy outbound endpoints, or the public outbound endpoint of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -107,7 +107,7 @@ public class CreateWorkspaceRequest extends TeaModel {
         public Boolean publicEgressEnabled;
 
         /**
-         * <p>Specifies whether to allow public inbound access. If this parameter is not specified, the default value is true. If disabled, the public inbound endpoints of all agent endpoints in the workspace are closed, and the original public inbound endpoints are restored when re-enabled. INNER_DIRECT and user VPC endpoints are not affected. Collaboration and Element Web endpoints are not controlled by this parameter.</p>
+         * <p>Specifies whether to allow public inbound access. If not specified, the default value is true. If disabled, the public inbound endpoints of all agent endpoints in the workspace are closed. If re-enabled, the original public inbound endpoints are restored. INNER_DIRECT and user VPC inbound endpoints are not affected. Collaboration and Element Web inbound endpoints are not controlled by this setting.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -116,7 +116,7 @@ public class CreateWorkspaceRequest extends TeaModel {
         public Boolean publicIngressEnabled;
 
         /**
-         * <p>The user VPC network configuration.</p>
+         * <p>The VPC network configuration of the user.</p>
          */
         @NameInMap("vpc")
         public CreateWorkspaceRequestBodyNetworkConfigurationVpc vpc;
@@ -154,6 +154,24 @@ public class CreateWorkspaceRequest extends TeaModel {
 
     public static class CreateWorkspaceRequestBody extends TeaModel {
         /**
+         * <p>If specified, the workspace is directly bound to this AgentSpace without creating a new one. The associated CloudMonitor (CMS) workspace is determined by the server\&quot;s reverse lookup result, and CmsWorkspace validation is skipped. When the workspace is deleted, only the binding is removed, and the AgentSpace is not deleted. The value must match the current account and region, and the associated CMS workspace must be found through reverse lookup. Otherwise, InvalidParameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-agent-space</p>
+         */
+        @NameInMap("agentSpace")
+        public String agentSpace;
+
+        /**
+         * <p>If specified, the workspace is bound to this CloudMonitor (CMS) workspace without creating a new one. When the workspace is deleted, only the binding is removed, and the CMS workspace is not deleted. The value must match the current account and region. Otherwise, InvalidParameter is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>my-cms-workspace</p>
+         */
+        @NameInMap("cmsWorkspace")
+        public String cmsWorkspace;
+
+        /**
          * <p>The name of the workspace.</p>
          * <p>This parameter is required.</p>
          * 
@@ -170,7 +188,7 @@ public class CreateWorkspaceRequest extends TeaModel {
         public CreateWorkspaceRequestBodyNetworkConfiguration networkConfiguration;
 
         /**
-         * <p>The workspace storage type. PLATFORM indicates platform-managed storage, and PRIVATE indicates user private OSS storage.</p>
+         * <p>The storage type of the workspace. PLATFORM indicates platform-managed storage. PRIVATE indicates user-owned private Object Storage Service (OSS) storage.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIVATE</p>
@@ -181,6 +199,22 @@ public class CreateWorkspaceRequest extends TeaModel {
         public static CreateWorkspaceRequestBody build(java.util.Map<String, ?> map) throws Exception {
             CreateWorkspaceRequestBody self = new CreateWorkspaceRequestBody();
             return TeaModel.build(map, self);
+        }
+
+        public CreateWorkspaceRequestBody setAgentSpace(String agentSpace) {
+            this.agentSpace = agentSpace;
+            return this;
+        }
+        public String getAgentSpace() {
+            return this.agentSpace;
+        }
+
+        public CreateWorkspaceRequestBody setCmsWorkspace(String cmsWorkspace) {
+            this.cmsWorkspace = cmsWorkspace;
+            return this;
+        }
+        public String getCmsWorkspace() {
+            return this.cmsWorkspace;
         }
 
         public CreateWorkspaceRequestBody setName(String name) {

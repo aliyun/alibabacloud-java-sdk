@@ -26,7 +26,7 @@ public class SearchMemoriesRequest extends TeaModel {
 
     public static class SearchMemoriesRequestBodyScope extends TeaModel {
         /**
-         * <p>The agent ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with an agent ID, this field is not returned.</p>
+         * <p>The agent ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain a forward slash (/) or an asterisk (*). If the memory is not associated with an agent ID, this field is not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-001</p>
@@ -35,7 +35,7 @@ public class SearchMemoriesRequest extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The session ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a session ID, this field is not returned.</p>
+         * <p>The session ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain a forward slash (/) or an asterisk (*). If the memory is not associated with a session ID, this field is not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>session-001</p>
@@ -44,7 +44,7 @@ public class SearchMemoriesRequest extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The user ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain forward slashes (/) or asterisks (*). If the memory is not associated with a user ID, this field is not returned.</p>
+         * <p>The user ID. The ID must be 1 to 128 bytes in length and encoded in UTF-8. The ID cannot contain a forward slash (/) or an asterisk (*). If the memory is not associated with a user ID, this field is not returned.</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>

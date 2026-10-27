@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateIdentityProviderShrinkRequest extends TeaModel {
     /**
-     * <p>The request body for updating the external identity provider.</p>
+     * <p>The configuration fields to be modified. For DingTalk and Lark, you must submit at least one of loginEnabled, syncEnabled, metadata, and syncScope. For CustomSSO, use protocol, saml, and loginEnabled. You cannot submit vendor metadata, syncEnabled, or syncScope.</p>
      */
     @NameInMap("body")
     public String bodyShrink;

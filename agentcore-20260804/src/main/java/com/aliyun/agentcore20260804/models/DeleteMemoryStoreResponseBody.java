@@ -116,7 +116,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The MemoryStore description.</p>
+         * <p>The description of the MemoryStore.</p>
          * 
          * <strong>example:</strong>
          * <p>Used to store long-term user preferences</p>
@@ -128,7 +128,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
          * <p>The custom extraction instructions.</p>
          * 
          * <strong>example:</strong>
-         * <p>Extract only long-term preferences explicitly expressed by the user</p>
+         * <p>Extract only the long-term preferences explicitly expressed by the user</p>
          */
         @NameInMap("extractInstructions")
         public String extractInstructions;
@@ -143,7 +143,7 @@ public class DeleteMemoryStoreResponseBody extends TeaModel {
         public String memoryStoreId;
 
         /**
-         * <p>The MemoryStore name. It cannot be modified after creation.</p>
+         * <p>The name of the MemoryStore. It cannot be modified after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>customer-memory</p>

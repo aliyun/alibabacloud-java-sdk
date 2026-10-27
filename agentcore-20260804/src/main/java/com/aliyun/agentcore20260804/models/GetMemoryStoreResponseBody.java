@@ -119,7 +119,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
          * <p>The MemoryStore description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Used to save long-term user preferences</p>
+         * <p>Used to store long-term user preferences</p>
          */
         @NameInMap("description")
         public String description;
@@ -152,7 +152,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         public String memoryStoreName;
 
         /**
-         * <p>The MemoryStore lifecycle state.</p>
+         * <p>The lifecycle state of the MemoryStore.</p>
          * 
          * <strong>example:</strong>
          * <p>Ready</p>
@@ -161,7 +161,7 @@ public class GetMemoryStoreResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The last update time.</p>
+         * <p>The last updated time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:05:00Z</p>

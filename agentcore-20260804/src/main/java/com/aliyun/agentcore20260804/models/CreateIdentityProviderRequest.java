@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIdentityProviderRequest extends TeaModel {
     /**
-     * <p>The request body for binding an external identity provider.</p>
+     * <p>The request content for binding an external identity provider.</p>
      */
     @NameInMap("body")
     public CreateIdentityProviderRequestBody body;
@@ -25,7 +25,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestBodyMetadata extends TeaModel {
         /**
-         * <p>The App ID of the Lark application. This parameter is required when the binding type is Feishu.</p>
+         * <p>The app ID of the Feishu application. This parameter is required when the binding type is Feishu.</p>
          * 
          * <strong>example:</strong>
          * <p>cli_exampleappid01</p>
@@ -34,7 +34,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String appId;
 
         /**
-         * <p>The AppKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</p>
+         * <p>The appKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</p>
          * 
          * <strong>example:</strong>
          * <p>dingexampleappkey01</p>
@@ -43,7 +43,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String appKey;
 
         /**
-         * <p>Required. The application secret of the external identity provider. This parameter is used only for write operations and is not returned by query operations.</p>
+         * <p>Required. The secret of the external identity provider application. This parameter is used only for writing and is not returned by the query API.</p>
          * 
          * <strong>example:</strong>
          * <p>example-app-secret</p>
@@ -52,7 +52,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String appSecret;
 
         /**
-         * <p>The CorpId of the DingTalk organization. This parameter is required when the binding type is DingTalk.</p>
+         * <p>The corpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</p>
          * 
          * <strong>example:</strong>
          * <p>dingexamplecorpid01</p>
@@ -61,7 +61,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String corpId;
 
         /**
-         * <p>The data encryption key for event subscriptions. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</p>
+         * <p>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by the query API.</p>
          * 
          * <strong>example:</strong>
          * <p>example-encrypt-key</p>
@@ -70,7 +70,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String encryptKey;
 
         /**
-         * <p>The verification token for event subscriptions. The value must be the same as the one configured in the external identity provider application. This parameter is used only for write operations and is not returned by query operations.</p>
+         * <p>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by the query API.</p>
          * 
          * <strong>example:</strong>
          * <p>example-verification-token</p>
@@ -133,6 +133,53 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     }
 
+    public static class CreateIdentityProviderRequestBodySyncScope extends TeaModel {
+        /**
+         * <p>When the mode is SelectedDepartments, at least one non-empty department ID must be included, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;10001&quot;]</p>
+         */
+        @NameInMap("departmentIds")
+        public java.util.List<String> departmentIds;
+
+        /**
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AllAuthorized: The full authorization scope, which is limited by the application address book authorization.</li>
+         * <li>SelectedDepartments: The selected departments and all their sub-departments.
+         * When you explicitly submit syncScope, you must provide a valid mode, which is verified by the backend.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>SelectedDepartments</p>
+         */
+        @NameInMap("mode")
+        public String mode;
+
+        public static CreateIdentityProviderRequestBodySyncScope build(java.util.Map<String, ?> map) throws Exception {
+            CreateIdentityProviderRequestBodySyncScope self = new CreateIdentityProviderRequestBodySyncScope();
+            return TeaModel.build(map, self);
+        }
+
+        public CreateIdentityProviderRequestBodySyncScope setDepartmentIds(java.util.List<String> departmentIds) {
+            this.departmentIds = departmentIds;
+            return this;
+        }
+        public java.util.List<String> getDepartmentIds() {
+            return this.departmentIds;
+        }
+
+        public CreateIdentityProviderRequestBodySyncScope setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
+    }
+
     public static class CreateIdentityProviderRequestBody extends TeaModel {
         /**
          * <p>The type of the external identity provider. Valid values: DingTalk and Feishu.</p>
@@ -145,22 +192,34 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String identityProviderType;
 
         /**
-         * <p>Specifies whether workspace users can log on through the external identity provider.</p>
+         * <p>Specifies whether to allow workspace users to log on through the external identity provider.</p>
          */
         @NameInMap("loginEnabled")
         public Boolean loginEnabled;
 
         /**
-         * <p>The application configuration for the external identity provider. When you bind DingTalk, you must provide appKey, appSecret, and corpId. When you bind Feishu, you must provide appId and appSecret.</p>
+         * <p>The application configuration of the external identity provider. When you bind DingTalk, you must provide appKey, appSecret, and corpId. When you bind Feishu, you must provide appId and appSecret.</p>
          */
         @NameInMap("metadata")
         public CreateIdentityProviderRequestBodyMetadata metadata;
 
         /**
-         * <p>Specifies whether to enable organization member synchronization. If enabled, organization members are synchronized to workspace users from the external identity provider.</p>
+         * <p>Specifies whether to enable organization member synchronization. After this feature is enabled, the external identity provider synchronizes organization members as workspace users.</p>
          */
         @NameInMap("syncEnabled")
         public Boolean syncEnabled;
+
+        /**
+         * <p>Controls the first synchronization when DingTalk or Feishu is bound. If this parameter is omitted or set to null, the default value is true. If this parameter is set to false, only the configuration is saved, and synchronization is explicitly triggered later. CustomSSO does not use the vendor pull link.</p>
+         */
+        @NameInMap("syncOnBind")
+        public Boolean syncOnBind;
+
+        /**
+         * <p>Retains the department-based synchronization scope definition. If this parameter is omitted during creation, the default value is AllAuthorized, and the first vendor synchronization is determined by syncOnBind. If this parameter is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</p>
+         */
+        @NameInMap("syncScope")
+        public CreateIdentityProviderRequestBodySyncScope syncScope;
 
         public static CreateIdentityProviderRequestBody build(java.util.Map<String, ?> map) throws Exception {
             CreateIdentityProviderRequestBody self = new CreateIdentityProviderRequestBody();
@@ -197,6 +256,22 @@ public class CreateIdentityProviderRequest extends TeaModel {
         }
         public Boolean getSyncEnabled() {
             return this.syncEnabled;
+        }
+
+        public CreateIdentityProviderRequestBody setSyncOnBind(Boolean syncOnBind) {
+            this.syncOnBind = syncOnBind;
+            return this;
+        }
+        public Boolean getSyncOnBind() {
+            return this.syncOnBind;
+        }
+
+        public CreateIdentityProviderRequestBody setSyncScope(CreateIdentityProviderRequestBodySyncScope syncScope) {
+            this.syncScope = syncScope;
+            return this;
+        }
+        public CreateIdentityProviderRequestBodySyncScope getSyncScope() {
+            return this.syncScope;
         }
 
     }

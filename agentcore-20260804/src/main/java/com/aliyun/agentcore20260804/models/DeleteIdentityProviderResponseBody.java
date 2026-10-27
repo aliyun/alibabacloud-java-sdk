@@ -14,7 +14,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The binding information of the external identity provider after the unbinding request is accepted.</p>
+     * <p>The external identity provider binding information after the disconnection operation is accepted.</p>
      */
     @NameInMap("data")
     public DeleteIdentityProviderResponseBodyData data;
@@ -29,7 +29,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The response message. An error description is returned if the request failed.</p>
+     * <p>The response message. An error description is returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -105,13 +105,167 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class DeleteIdentityProviderResponseBodyDataConfiguration extends TeaModel {
+        /**
+         * <p>HTTP-Redirect or HTTP-POST. This parameter is required when manually filled in. Queries return the short name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP-Redirect</p>
+         */
+        @NameInMap("bindingType")
+        public String bindingType;
+
+        /**
+         * <p>This parameter is required when manually filled in. It must be non-empty and cannot exceed 2,048 characters. Existing configurations do not support replacement. This is different from the Entity ID of the SP queried on our side.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
+         */
+        @NameInMap("entityId")
+        public String entityId;
+
+        /**
+         * <p>This parameter is required when manually filled in. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
+         */
+        @NameInMap("loginUrl")
+        public String loginUrl;
+
+        /**
+         * <p>The actual switch value, which is Enabled or Disabled. This is not equivalent to the expected value of loginEnabled saved in AC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
+        @NameInMap("ssoStatus")
+        public String ssoStatus;
+
+        public static DeleteIdentityProviderResponseBodyDataConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            DeleteIdentityProviderResponseBodyDataConfiguration self = new DeleteIdentityProviderResponseBodyDataConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteIdentityProviderResponseBodyDataConfiguration setBindingType(String bindingType) {
+            this.bindingType = bindingType;
+            return this;
+        }
+        public String getBindingType() {
+            return this.bindingType;
+        }
+
+        public DeleteIdentityProviderResponseBodyDataConfiguration setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        public DeleteIdentityProviderResponseBodyDataConfiguration setLoginUrl(String loginUrl) {
+            this.loginUrl = loginUrl;
+            return this;
+        }
+        public String getLoginUrl() {
+            return this.loginUrl;
+        }
+
+        public DeleteIdentityProviderResponseBodyDataConfiguration setSsoStatus(String ssoStatus) {
+            this.ssoStatus = ssoStatus;
+            return this;
+        }
+        public String getSsoStatus() {
+            return this.ssoStatus;
+        }
+
+    }
+
+    public static class DeleteIdentityProviderResponseBodyDataSaml extends TeaModel {
+        /**
+         * <p>HTTP-Redirect or HTTP-POST. This parameter is required when manually filled in. Queries return the short name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP-Redirect</p>
+         */
+        @NameInMap("bindingType")
+        public String bindingType;
+
+        /**
+         * <p>This parameter is required when manually filled in. It must be non-empty and cannot exceed 2,048 characters. Existing configurations do not support replacement. This is different from the Entity ID of the SP queried on our side.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
+         */
+        @NameInMap("entityId")
+        public String entityId;
+
+        /**
+         * <p>This parameter is required when manually filled in. It must be an absolute HTTPS URL and cannot contain user credentials or fragments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
+         */
+        @NameInMap("loginUrl")
+        public String loginUrl;
+
+        /**
+         * <p>This parameter is required when manually filled in. It must be a non-empty array and use PEM X.509 certificate text. The current validity period is verified. A maximum of two certificates are allowed after deduplication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</p>
+         */
+        @NameInMap("x509Certificates")
+        public java.util.List<String> x509Certificates;
+
+        public static DeleteIdentityProviderResponseBodyDataSaml build(java.util.Map<String, ?> map) throws Exception {
+            DeleteIdentityProviderResponseBodyDataSaml self = new DeleteIdentityProviderResponseBodyDataSaml();
+            return TeaModel.build(map, self);
+        }
+
+        public DeleteIdentityProviderResponseBodyDataSaml setBindingType(String bindingType) {
+            this.bindingType = bindingType;
+            return this;
+        }
+        public String getBindingType() {
+            return this.bindingType;
+        }
+
+        public DeleteIdentityProviderResponseBodyDataSaml setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        public DeleteIdentityProviderResponseBodyDataSaml setLoginUrl(String loginUrl) {
+            this.loginUrl = loginUrl;
+            return this;
+        }
+        public String getLoginUrl() {
+            return this.loginUrl;
+        }
+
+        public DeleteIdentityProviderResponseBodyDataSaml setX509Certificates(java.util.List<String> x509Certificates) {
+            this.x509Certificates = x509Certificates;
+            return this;
+        }
+        public java.util.List<String> getX509Certificates() {
+            return this.x509Certificates;
+        }
+
+    }
+
     public static class DeleteIdentityProviderResponseBodyData extends TeaModel {
         /**
-         * <p>The type of the external identity provider. Valid values:</p>
-         * <ul>
-         * <li>DingTalk</li>
-         * <li>Feishu</li>
-         * </ul>
+         * <p>The actual SAML configuration is read back on demand only in GetIdentityProvider. SCIM queries and preparations return the actual receiving status and URL.</p>
+         */
+        @NameInMap("configuration")
+        public DeleteIdentityProviderResponseBodyDataConfiguration configuration;
+
+        /**
+         * <p>The type of the external identity provider. Valid values: DingTalk and Feishu.</p>
          * 
          * <strong>example:</strong>
          * <p>DingTalk</p>
@@ -120,18 +274,22 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
         public String identityProviderType;
 
         /**
-         * <p>The status. Valid values:</p>
-         * <ul>
-         * <li>CONFIGURED: The configuration has been accepted and is waiting for the user pool to be provisioned.</li>
-         * <li>SYNCING: Organization members are being synchronized.</li>
-         * <li>SYNCED: Organization member synchronization is complete.</li>
-         * <li>READY: The binding is in effect.</li>
-         * <li>SYNC_FAILED: Organization member synchronization failed.</li>
-         * <li>UPDATING: The configuration is being updated.</li>
-         * <li>UPDATE_FAILED: The configuration update failed.</li>
-         * <li>DISCONNECTING: The identity provider is being unbound.</li>
-         * <li>DISCONNECT_FAILED: The unbinding failed.</li>
-         * </ul>
+         * <p>Currently, only SAML is supported. This parameter may not be returned if no valid configuration is saved. OIDC placeholders are not supported for initialization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAML</p>
+         */
+        @NameInMap("protocol")
+        public String protocol;
+
+        /**
+         * <p>The input supports either XML or complete manual configuration. Queries return the standardized configuration and do not echo the original XML. This parameter can be omitted when not configured.</p>
+         */
+        @NameInMap("saml")
+        public DeleteIdentityProviderResponseBodyDataSaml saml;
+
+        /**
+         * <p>The status. Valid values: CONFIGURED (the configuration is accepted and the system is waiting to activate the user pool), SYNCING (synchronizing organization members), SYNCED (organization member synchronization is complete), READY (the binding is effective), SYNC_FAILED (organization member synchronization failed), UPDATING (updating the configuration), UPDATE_FAILED (configuration update failed), DISCONNECTING (disconnecting), and DISCONNECT_FAILED (disconnection failed).</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -153,12 +311,36 @@ public class DeleteIdentityProviderResponseBody extends TeaModel {
             return TeaModel.build(map, self);
         }
 
+        public DeleteIdentityProviderResponseBodyData setConfiguration(DeleteIdentityProviderResponseBodyDataConfiguration configuration) {
+            this.configuration = configuration;
+            return this;
+        }
+        public DeleteIdentityProviderResponseBodyDataConfiguration getConfiguration() {
+            return this.configuration;
+        }
+
         public DeleteIdentityProviderResponseBodyData setIdentityProviderType(String identityProviderType) {
             this.identityProviderType = identityProviderType;
             return this;
         }
         public String getIdentityProviderType() {
             return this.identityProviderType;
+        }
+
+        public DeleteIdentityProviderResponseBodyData setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public DeleteIdentityProviderResponseBodyData setSaml(DeleteIdentityProviderResponseBodyDataSaml saml) {
+            this.saml = saml;
+            return this;
+        }
+        public DeleteIdentityProviderResponseBodyDataSaml getSaml() {
+            return this.saml;
         }
 
         public DeleteIdentityProviderResponseBodyData setStatus(String status) {

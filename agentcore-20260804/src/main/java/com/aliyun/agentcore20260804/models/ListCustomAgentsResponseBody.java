@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomAgentsResponseBody extends TeaModel {
     /**
-     * <p>The result code of the request. The value is SUCCESS if the request is successful.</p>
+     * <p>The request result code. The value is SUCCESS when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code of the request. The value is 200 if the request is successful.</p>
+     * <p>The HTTP status code of the current request. The value is 200 when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,13 +23,13 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The list of custom agent summaries on the current page. To obtain the complete configuration and the execution results of the latest version, call GetCustomAgent.</p>
+     * <p>The list of custom agent summaries on the current page. To query the complete configuration and the execution result of the latest version, call the GetCustomAgent operation.</p>
      */
     @NameInMap("items")
     public java.util.List<ListCustomAgentsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of entries returned per page for this query.</p>
+     * <p>The maximum number of results returned per page for the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The description of the processing result for this request. The value is success if the request is successful.</p>
+     * <p>The message that describes the processing result of the request. The value is success if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The opaque token used to query the next page. If this value is empty, no more pages are available. Pass this value as is in subsequent requests.</p>
+     * <p>The opaque token used to query the next page. An empty value indicates that no more pages exist. Pass this token as is in subsequent requests.</p>
      * 
      * <strong>example:</strong>
      * <p>djE6YWdlbnRjb3JlLmFnZW50Lmxpc3QuY3VzdG9tOjIw</p>
@@ -56,7 +56,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The unique identifier of the request. You can use this ID to locate and troubleshoot issues.</p>
+     * <p>The unique identifier of the request, used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>550E8400-E29B-41D4-A716-446655440000</p>
@@ -65,7 +65,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was processed successfully. A successful creation, update, or deletion does not indicate that the background operation is complete.</p>
+     * <p>Indicates whether the request was processed successfully. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -156,9 +156,333 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListCustomAgentsResponseBodyItemsArtifactCode extends TeaModel {
+        /**
+         * <p>The startup command for the code package. This parameter is required in code package mode. The working directory is the root directory of the extracted code, which is /code. Example: python main.py. Quotes and escape characters are supported. Environment variables, pipes, and logical operations are not automatically expanded. For complex commands, use a script within the package.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python main.py</p>
+         */
+        @NameInMap("entrypoint")
+        public String entrypoint;
+
+        /**
+         * <p>The identifier of the code runtime environment in the currently saved configuration. The runtime image uses a saved snapshot. Adding a new version to the directory does not automatically change the existing configuration.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python3.12</p>
+         */
+        @NameInMap("languageRuntime")
+        public String languageRuntime;
+
+        /**
+         * <p>The fixed oss:// address of the platform code package referenced by the currently saved configuration. This address does not include the signature parameters of the source HTTPS link. You can use this address to reuse an existing code package. To download the content, call the GetAgentCodePackageDownloadUrl operation.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>oss://agentcore-platform-example/code-packages/workspaces/ws-a1b2c3d4e5f6/550e8400-e29b-41d4-a716-446655440000/package.zip</p>
+         */
+        @NameInMap("sourceUri")
+        public String sourceUri;
+
+        public static ListCustomAgentsResponseBodyItemsArtifactCode build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomAgentsResponseBodyItemsArtifactCode self = new ListCustomAgentsResponseBodyItemsArtifactCode();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomAgentsResponseBodyItemsArtifactCode setEntrypoint(String entrypoint) {
+            this.entrypoint = entrypoint;
+            return this;
+        }
+        public String getEntrypoint() {
+            return this.entrypoint;
+        }
+
+        public ListCustomAgentsResponseBodyItemsArtifactCode setLanguageRuntime(String languageRuntime) {
+            this.languageRuntime = languageRuntime;
+            return this;
+        }
+        public String getLanguageRuntime() {
+            return this.languageRuntime;
+        }
+
+        public ListCustomAgentsResponseBodyItemsArtifactCode setSourceUri(String sourceUri) {
+            this.sourceUri = sourceUri;
+            return this;
+        }
+        public String getSourceUri() {
+            return this.sourceUri;
+        }
+
+    }
+
+    public static class ListCustomAgentsResponseBodyItemsArtifactContainer extends TeaModel {
+        /**
+         * <p>The custom container startup command and parameters. If this parameter is not configured, the default startup method of the image is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>python main.py</p>
+         */
+        @NameInMap("entrypoint")
+        public String entrypoint;
+
+        /**
+         * <p>The ID of the Container Registry Enterprise instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cri-example</p>
+         */
+        @NameInMap("instanceId")
+        public String instanceId;
+
+        /**
+         * <p>The namespace of the Container Registry instance.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>team</p>
+         */
+        @NameInMap("namespace")
+        public String namespace;
+
+        /**
+         * <p>The name of the Container Registry image repository.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>app</p>
+         */
+        @NameInMap("repo")
+        public String repo;
+
+        /**
+         * <p>The tag of the image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
+        @NameInMap("tag")
+        public String tag;
+
+        /**
+         * <p>The source type of the container image.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acr</p>
+         */
+        @NameInMap("type")
+        public String type;
+
+        public static ListCustomAgentsResponseBodyItemsArtifactContainer build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomAgentsResponseBodyItemsArtifactContainer self = new ListCustomAgentsResponseBodyItemsArtifactContainer();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomAgentsResponseBodyItemsArtifactContainer setEntrypoint(String entrypoint) {
+            this.entrypoint = entrypoint;
+            return this;
+        }
+        public String getEntrypoint() {
+            return this.entrypoint;
+        }
+
+        public ListCustomAgentsResponseBodyItemsArtifactContainer setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public ListCustomAgentsResponseBodyItemsArtifactContainer setNamespace(String namespace) {
+            this.namespace = namespace;
+            return this;
+        }
+        public String getNamespace() {
+            return this.namespace;
+        }
+
+        public ListCustomAgentsResponseBodyItemsArtifactContainer setRepo(String repo) {
+            this.repo = repo;
+            return this;
+        }
+        public String getRepo() {
+            return this.repo;
+        }
+
+        public ListCustomAgentsResponseBodyItemsArtifactContainer setTag(String tag) {
+            this.tag = tag;
+            return this;
+        }
+        public String getTag() {
+            return this.tag;
+        }
+
+        public ListCustomAgentsResponseBodyItemsArtifactContainer setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class ListCustomAgentsResponseBodyItemsArtifact extends TeaModel {
+        /**
+         * <p>The code package deployment configuration. This parameter is mutually exclusive with container. The code package uses the ZIP or TAR.GZ format. Dependencies are packaged by the user. The platform does not install dependencies or perform online builds.</p>
+         */
+        @NameInMap("code")
+        public ListCustomAgentsResponseBodyItemsArtifactCode code;
+
+        /**
+         * <p>The container image deployment configuration.</p>
+         */
+        @NameInMap("container")
+        public ListCustomAgentsResponseBodyItemsArtifactContainer container;
+
+        /**
+         * <p>The listening port of the agent service.</p>
+         * <p>This parameter is required.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
+         */
+        @NameInMap("port")
+        public Integer port;
+
+        public static ListCustomAgentsResponseBodyItemsArtifact build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomAgentsResponseBodyItemsArtifact self = new ListCustomAgentsResponseBodyItemsArtifact();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomAgentsResponseBodyItemsArtifact setCode(ListCustomAgentsResponseBodyItemsArtifactCode code) {
+            this.code = code;
+            return this;
+        }
+        public ListCustomAgentsResponseBodyItemsArtifactCode getCode() {
+            return this.code;
+        }
+
+        public ListCustomAgentsResponseBodyItemsArtifact setContainer(ListCustomAgentsResponseBodyItemsArtifactContainer container) {
+            this.container = container;
+            return this;
+        }
+        public ListCustomAgentsResponseBodyItemsArtifactContainer getContainer() {
+            return this.container;
+        }
+
+        public ListCustomAgentsResponseBodyItemsArtifact setPort(Integer port) {
+            this.port = port;
+            return this;
+        }
+        public Integer getPort() {
+            return this.port;
+        }
+
+    }
+
+    public static class ListCustomAgentsResponseBodyItemsCodePackageInfo extends TeaModel {
+        /**
+         * <p>The CRC64 value of the code package object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>456</p>
+         */
+        @NameInMap("crc64")
+        public String crc64;
+
+        /**
+         * <p>The ETag of the code package object.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fixed-etag</p>
+         */
+        @NameInMap("etag")
+        public String etag;
+
+        /**
+         * <p>The original file name of the code package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>main.zip</p>
+         */
+        @NameInMap("fileName")
+        public String fileName;
+
+        /**
+         * <p>The compressed size of the code package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123</p>
+         */
+        @NameInMap("fileSize")
+        public Long fileSize;
+
+        /**
+         * <p>The format of the code package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>zip</p>
+         */
+        @NameInMap("format")
+        public String format;
+
+        public static ListCustomAgentsResponseBodyItemsCodePackageInfo build(java.util.Map<String, ?> map) throws Exception {
+            ListCustomAgentsResponseBodyItemsCodePackageInfo self = new ListCustomAgentsResponseBodyItemsCodePackageInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public ListCustomAgentsResponseBodyItemsCodePackageInfo setCrc64(String crc64) {
+            this.crc64 = crc64;
+            return this;
+        }
+        public String getCrc64() {
+            return this.crc64;
+        }
+
+        public ListCustomAgentsResponseBodyItemsCodePackageInfo setEtag(String etag) {
+            this.etag = etag;
+            return this;
+        }
+        public String getEtag() {
+            return this.etag;
+        }
+
+        public ListCustomAgentsResponseBodyItemsCodePackageInfo setFileName(String fileName) {
+            this.fileName = fileName;
+            return this;
+        }
+        public String getFileName() {
+            return this.fileName;
+        }
+
+        public ListCustomAgentsResponseBodyItemsCodePackageInfo setFileSize(Long fileSize) {
+            this.fileSize = fileSize;
+            return this;
+        }
+        public Long getFileSize() {
+            return this.fileSize;
+        }
+
+        public ListCustomAgentsResponseBodyItemsCodePackageInfo setFormat(String format) {
+            this.format = format;
+            return this;
+        }
+        public String getFormat() {
+            return this.format;
+        }
+
+    }
+
     public static class ListCustomAgentsResponseBodyItemsProtocolPaths extends TeaModel {
         /**
-         * <p>The description of the current API path.</p>
+         * <p>The purpose description of the current API path.</p>
          * 
          * <strong>example:</strong>
          * <p>AG-UI conversation API</p>
@@ -201,7 +525,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
     public static class ListCustomAgentsResponseBodyItemsProtocol extends TeaModel {
         /**
-         * <p>The request header configuration of the current protocol. The key is the header name and the value is a string.</p>
+         * <p>The request header configuration for the current protocol. The key is the header name and the value is a string.</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
@@ -213,12 +537,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public java.util.List<ListCustomAgentsResponseBodyItemsProtocolPaths> paths;
 
         /**
-         * <p>The invocation protocol type. Valid values:</p>
-         * <ul>
-         * <li>agui: AG-UI protocol.</li>
-         * <li>openai-chat-completion: OpenAI Chat Completions compatible protocol.</li>
-         * <li>custom: Custom protocol.</li>
-         * </ul>
+         * <p>The invoke Protocol Type. Valid values: agui (AG-UI protocol), openai-chat-completion (OpenAI Chat Completions compatible protocol), and custom (custom protocol).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -260,13 +579,25 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
     public static class ListCustomAgentsResponseBodyItems extends TeaModel {
         /**
-         * <p>The unique identifier of the custom agent. You can obtain this value from the response of CreateCustomAgent or ListCustomAgents.</p>
+         * <p>The unique identifier of the custom agent. You can obtain this ID from the response of the CreateCustomAgent or ListCustomAgents operation.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-550e8400e29b41d4a716446655440000</p>
          */
         @NameInMap("agentId")
         public String agentId;
+
+        /**
+         * <p>The agent artifact.</p>
+         */
+        @NameInMap("artifact")
+        public ListCustomAgentsResponseBodyItemsArtifact artifact;
+
+        /**
+         * <p>The currently saved code package information.</p>
+         */
+        @NameInMap("codePackageInfo")
+        public ListCustomAgentsResponseBodyItemsCodePackageInfo codePackageInfo;
 
         /**
          * <p>The creation method of the agent. The value is CUSTOM for custom agents.</p>
@@ -296,10 +627,10 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String deployType;
 
         /**
-         * <p>The description of the agent.</p>
+         * <p>The description of the agent\&quot;s purpose.</p>
          * 
          * <strong>example:</strong>
-         * <p>Custom agent that provides conversational services</p>
+         * <p>Custom agent that provides conversation services</p>
          */
         @NameInMap("description")
         public String description;
@@ -338,16 +669,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String runtime;
 
         /**
-         * <p>The overall status of the agent. Valid values:</p>
-         * <ul>
-         * <li>Creating: The agent is being created.</li>
-         * <li>Running: The agent is running.</li>
-         * <li>Failed: The agent failed.</li>
-         * <li>Updating: The agent is being updated.</li>
-         * <li>Deleting: The agent is being deleted.</li>
-         * <li>Deleted: The agent is deleted.
-         * To check the execution progress of the latest configuration, call GetCustomAgent.</li>
-         * </ul>
+         * <p>The overall status of the agent. Valid values: Creating, Running, Failed, Updating, Deleting, and Deleted. To query the execution progress of the latest configuration, call the GetCustomAgent operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -384,6 +706,22 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         }
         public String getAgentId() {
             return this.agentId;
+        }
+
+        public ListCustomAgentsResponseBodyItems setArtifact(ListCustomAgentsResponseBodyItemsArtifact artifact) {
+            this.artifact = artifact;
+            return this;
+        }
+        public ListCustomAgentsResponseBodyItemsArtifact getArtifact() {
+            return this.artifact;
+        }
+
+        public ListCustomAgentsResponseBodyItems setCodePackageInfo(ListCustomAgentsResponseBodyItemsCodePackageInfo codePackageInfo) {
+            this.codePackageInfo = codePackageInfo;
+            return this;
+        }
+        public ListCustomAgentsResponseBodyItemsCodePackageInfo getCodePackageInfo() {
+            return this.codePackageInfo;
         }
 
         public ListCustomAgentsResponseBodyItems setCreateMode(String createMode) {

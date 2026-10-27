@@ -125,7 +125,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The user VPC ID.</p>
+         * <p>The ID of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1234567890</p>
@@ -166,7 +166,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
 
     public static class CreateWorkspaceResponseBodyDataNetworkConfiguration extends TeaModel {
         /**
-         * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public network egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public network egress of the user VPC.</p>
+         * <p>Returns the target configuration value. Updating indicates that the change is still in progress, and UpdateFailed indicates that the current change failed. This parameter only controls whether the latest versions of managed and custom agents use the public egress of the platform. It does not control fixed historical versions, model or MCP proxy egress, or the public egress of the user VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -175,7 +175,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public Boolean publicEgressEnabled;
 
         /**
-         * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. When disabled, the public network ingress for all agent endpoints in the workspace is closed. The original public network ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</p>
+         * <p>Returns the target configuration value. Updating indicates that the change is in progress, and UpdateFailed indicates that the change failed. If disabled, the public ingress for all agent endpoints in the workspace is closed, and the original public ingress is restored when re-enabled. INNER_DIRECT and user VPC ingress are not affected. Collaboration and Element Web ingress are not controlled by this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -184,7 +184,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public Boolean publicIngressEnabled;
 
         /**
-         * <p>The user VPC network configuration.</p>
+         * <p>The VPC network configuration of the user.</p>
          */
         @NameInMap("vpc")
         public CreateWorkspaceResponseBodyDataNetworkConfigurationVpc vpc;
@@ -266,7 +266,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
 
     public static class CreateWorkspaceResponseBodyData extends TeaModel {
         /**
-         * <p>The AI Registry namespace ID. It is returned after related resources are bound and may be empty during initialization.</p>
+         * <p>The AI Registry namespace ID. This value is returned after related resources are bound and may be empty during initialization.</p>
          * 
          * <strong>example:</strong>
          * <p>namespace-0123456789abcdef</p>
@@ -296,7 +296,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The CloudMonitor workspace ID. It is returned after related resources are bound and may be empty during initialization.</p>
+         * <p>The CloudMonitor workspace ID. This value is returned after related resources are bound and may be empty during initialization.</p>
          * 
          * <strong>example:</strong>
          * <p>cms-ws-0123456789abcdef</p>
@@ -308,7 +308,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String cmsWorkspaceId;
 
         /**
-         * <p>The time when the workspace was created, in ISO 8601 format.</p>
+         * <p>The time when the workspace was created. The time follows the ISO 8601 standard.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -342,7 +342,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the resource group to which the workspace belongs. It may be empty if no resource group is specified.</p>
+         * <p>The ID of the resource group to which the workspace belongs. This value may be empty if no resource group is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfm1234567890</p>
@@ -363,7 +363,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The supplementary reason for the current status of the workspace. It is used to display the specific reason when initialization fails or when waiting for authorization. It may be empty under normal circumstances.</p>
+         * <p>The supplementary reason for the current status of the workspace. This value is used to display the specific reason when initialization fails or authorization is pending, and may be empty under normal circumstances.</p>
          * 
          * <strong>example:</strong>
          * <p>Waiting for OSS RAM authorization</p>
@@ -391,7 +391,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public java.util.List<CreateWorkspaceResponseBodyDataTags> tags;
 
         /**
-         * <p>The ID of the tenant.</p>
+         * <p>The ID of the tenant to which the workspace belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>tenant-123456</p>
@@ -400,7 +400,7 @@ public class CreateWorkspaceResponseBody extends TeaModel {
         public String tenantId;
 
         /**
-         * <p>The workspace ID.</p>
+         * <p>The ID of the workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>ws-123456</p>

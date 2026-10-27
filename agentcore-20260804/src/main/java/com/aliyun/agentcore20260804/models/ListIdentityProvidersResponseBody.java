@@ -29,7 +29,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     public java.util.List<ListIdentityProvidersResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of records per page that takes effect for the current query.</p>
+     * <p>The maximum number of records per page that takes effect in this query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. An error description is returned if the request fails.</p>
+     * <p>The response message. Returns an error description if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The cursor for the next page. This parameter is empty if no next page exists.</p>
+     * <p>The cursor for the next page. Empty if there is no next page.</p>
      * 
      * <strong>example:</strong>
      * <p>aWRlbnRpdHktcHJvdmlkZXItb2Zmc2V0OjEw</p>
@@ -71,7 +71,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of external identity providers that meet the query conditions.</p>
+     * <p>The total number of external identity providers that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>42</p>
@@ -156,9 +156,85 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         return this.totalCount;
     }
 
+    public static class ListIdentityProvidersResponseBodyItemsConfiguration extends TeaModel {
+        /**
+         * <p>HTTP-Redirect or HTTP-POST. Required for manual entry. Queries return the short name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP-Redirect</p>
+         */
+        @NameInMap("bindingType")
+        public String bindingType;
+
+        /**
+         * <p>Required for manual entry. Must be non-empty and up to 2048 characters. Existing configurations cannot be changed. This is different from the local entity ID returned by SP queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
+         */
+        @NameInMap("entityId")
+        public String entityId;
+
+        /**
+         * <p>Required for manual entry. Must be an absolute HTTPS URL without user credentials or fragments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
+         */
+        @NameInMap("loginUrl")
+        public String loginUrl;
+
+        /**
+         * <p>The actual switch value is Enabled or Disabled. This is not equivalent to the expected loginEnabled value saved in AC.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enabled</p>
+         */
+        @NameInMap("ssoStatus")
+        public String ssoStatus;
+
+        public static ListIdentityProvidersResponseBodyItemsConfiguration build(java.util.Map<String, ?> map) throws Exception {
+            ListIdentityProvidersResponseBodyItemsConfiguration self = new ListIdentityProvidersResponseBodyItemsConfiguration();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIdentityProvidersResponseBodyItemsConfiguration setBindingType(String bindingType) {
+            this.bindingType = bindingType;
+            return this;
+        }
+        public String getBindingType() {
+            return this.bindingType;
+        }
+
+        public ListIdentityProvidersResponseBodyItemsConfiguration setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        public ListIdentityProvidersResponseBodyItemsConfiguration setLoginUrl(String loginUrl) {
+            this.loginUrl = loginUrl;
+            return this;
+        }
+        public String getLoginUrl() {
+            return this.loginUrl;
+        }
+
+        public ListIdentityProvidersResponseBodyItemsConfiguration setSsoStatus(String ssoStatus) {
+            this.ssoStatus = ssoStatus;
+            return this;
+        }
+        public String getSsoStatus() {
+            return this.ssoStatus;
+        }
+
+    }
+
     public static class ListIdentityProvidersResponseBodyItemsMetadata extends TeaModel {
         /**
-         * <p>The App ID of the Lark application. This parameter is required when the binding type is Feishu.</p>
+         * <p>The App ID of the Lark application. Required when the binding type is Feishu.</p>
          * 
          * <strong>example:</strong>
          * <p>cli_exampleappid01</p>
@@ -167,7 +243,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The AppKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</p>
+         * <p>The AppKey of the DingTalk application. Required when the binding type is DingTalk.</p>
          * 
          * <strong>example:</strong>
          * <p>dingexampleappkey01</p>
@@ -176,13 +252,49 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String appKey;
 
         /**
-         * <p>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</p>
+         * <p>The SAML binding URI in the historical metadata snapshot. Use saml.bindingType for CustomSSO updates.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>urn:oasis:names:tc:SAML:2.0:bindings:HTTP-Redirect</p>
+         */
+        @NameInMap("binding")
+        public String binding;
+
+        /**
+         * <p>The certificate string in the historical metadata snapshot. Use saml.x509Certificates to edit the configuration. Do not submit the old metadata.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQELBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoXDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8oGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYNW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbYEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Okkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0EBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQABMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUWld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImcaWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTqP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjocJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdVjfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5</p>
+         */
+        @NameInMap("certificates")
+        public String certificates;
+
+        /**
+         * <p>The CorpId of the DingTalk enterprise. Required when the binding type is DingTalk.</p>
          * 
          * <strong>example:</strong>
          * <p>dingexamplecorpid01</p>
          */
         @NameInMap("corpId")
         public String corpId;
+
+        /**
+         * <p>Required for manual entry. Must be non-empty and up to 2048 characters. Existing configurations cannot be changed. This is different from the local entity ID returned by SP queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
+         */
+        @NameInMap("entityId")
+        public String entityId;
+
+        /**
+         * <p>Required for manual entry. Must be an absolute HTTPS URL without user credentials or fragments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
+         */
+        @NameInMap("loginUrl")
+        public String loginUrl;
 
         public static ListIdentityProvidersResponseBodyItemsMetadata build(java.util.Map<String, ?> map) throws Exception {
             ListIdentityProvidersResponseBodyItemsMetadata self = new ListIdentityProvidersResponseBodyItemsMetadata();
@@ -205,6 +317,22 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             return this.appKey;
         }
 
+        public ListIdentityProvidersResponseBodyItemsMetadata setBinding(String binding) {
+            this.binding = binding;
+            return this;
+        }
+        public String getBinding() {
+            return this.binding;
+        }
+
+        public ListIdentityProvidersResponseBodyItemsMetadata setCertificates(String certificates) {
+            this.certificates = certificates;
+            return this;
+        }
+        public String getCertificates() {
+            return this.certificates;
+        }
+
         public ListIdentityProvidersResponseBodyItemsMetadata setCorpId(String corpId) {
             this.corpId = corpId;
             return this;
@@ -213,11 +341,151 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             return this.corpId;
         }
 
+        public ListIdentityProvidersResponseBodyItemsMetadata setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        public ListIdentityProvidersResponseBodyItemsMetadata setLoginUrl(String loginUrl) {
+            this.loginUrl = loginUrl;
+            return this;
+        }
+        public String getLoginUrl() {
+            return this.loginUrl;
+        }
+
+    }
+
+    public static class ListIdentityProvidersResponseBodyItemsSaml extends TeaModel {
+        /**
+         * <p>HTTP-Redirect or HTTP-POST. Required for manual entry. Queries return the short name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>HTTP-Redirect</p>
+         */
+        @NameInMap("bindingType")
+        public String bindingType;
+
+        /**
+         * <p>Required for manual entry. Must be non-empty and up to 2048 characters. Existing configurations cannot be changed. This is different from the local entity ID returned by SP queries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
+         */
+        @NameInMap("entityId")
+        public String entityId;
+
+        /**
+         * <p>Required for manual entry. Must be an absolute HTTPS URL without user credentials or fragments.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
+         */
+        @NameInMap("loginUrl")
+        public String loginUrl;
+
+        /**
+         * <p>Required as a non-empty array for manual entry. Uses PEM X.509 certificate text. Validates the current validity period. A maximum of two certificates are allowed after deduplication.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</p>
+         */
+        @NameInMap("x509Certificates")
+        public java.util.List<String> x509Certificates;
+
+        public static ListIdentityProvidersResponseBodyItemsSaml build(java.util.Map<String, ?> map) throws Exception {
+            ListIdentityProvidersResponseBodyItemsSaml self = new ListIdentityProvidersResponseBodyItemsSaml();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIdentityProvidersResponseBodyItemsSaml setBindingType(String bindingType) {
+            this.bindingType = bindingType;
+            return this;
+        }
+        public String getBindingType() {
+            return this.bindingType;
+        }
+
+        public ListIdentityProvidersResponseBodyItemsSaml setEntityId(String entityId) {
+            this.entityId = entityId;
+            return this;
+        }
+        public String getEntityId() {
+            return this.entityId;
+        }
+
+        public ListIdentityProvidersResponseBodyItemsSaml setLoginUrl(String loginUrl) {
+            this.loginUrl = loginUrl;
+            return this;
+        }
+        public String getLoginUrl() {
+            return this.loginUrl;
+        }
+
+        public ListIdentityProvidersResponseBodyItemsSaml setX509Certificates(java.util.List<String> x509Certificates) {
+            this.x509Certificates = x509Certificates;
+            return this;
+        }
+        public java.util.List<String> getX509Certificates() {
+            return this.x509Certificates;
+        }
+
+    }
+
+    public static class ListIdentityProvidersResponseBodyItemsSyncScope extends TeaModel {
+        /**
+         * <p>Must contain at least one non-empty department ID when set to SelectedDepartments. The IDs should be obtained from ListIdentityProviderDepartments. Pass an empty array or omit this parameter when set to AllAuthorized.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[&quot;10001&quot;]</p>
+         */
+        @NameInMap("departmentIds")
+        public java.util.List<String> departmentIds;
+
+        /**
+         * <p>AllAuthorized: the full authorization scope, limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. A valid mode must be provided and verified by the backend when syncScope is explicitly submitted.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SelectedDepartments</p>
+         */
+        @NameInMap("mode")
+        public String mode;
+
+        public static ListIdentityProvidersResponseBodyItemsSyncScope build(java.util.Map<String, ?> map) throws Exception {
+            ListIdentityProvidersResponseBodyItemsSyncScope self = new ListIdentityProvidersResponseBodyItemsSyncScope();
+            return TeaModel.build(map, self);
+        }
+
+        public ListIdentityProvidersResponseBodyItemsSyncScope setDepartmentIds(java.util.List<String> departmentIds) {
+            this.departmentIds = departmentIds;
+            return this;
+        }
+        public java.util.List<String> getDepartmentIds() {
+            return this.departmentIds;
+        }
+
+        public ListIdentityProvidersResponseBodyItemsSyncScope setMode(String mode) {
+            this.mode = mode;
+            return this;
+        }
+        public String getMode() {
+            return this.mode;
+        }
+
     }
 
     public static class ListIdentityProvidersResponseBodyItems extends TeaModel {
         /**
-         * <p>The creation time in UTC format that complies with RFC 3339.</p>
+         * <p>The actual SAML configuration is retrieved on demand only through GetIdentityProvider. SCIM queries and provisioning return the actual receiving status and URL.</p>
+         */
+        @NameInMap("configuration")
+        public ListIdentityProvidersResponseBodyItemsConfiguration configuration;
+
+        /**
+         * <p>The creation time in UTC format based on RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -226,7 +494,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The callback URL for event subscription. You must configure this URL in the application of the external identity provider to receive organization change events. An empty string is returned if the user pool is not activated.</p>
+         * <p>The event subscription callback URL. Configure this URL in the external identity provider application to receive organization change events. Returns an empty string if the user pool is not activated.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456">http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456</a></p>
@@ -235,7 +503,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String eventSubscriptionCallbackUrl;
 
         /**
-         * <p>The type of the external identity provider. Valid values: DingTalk and Feishu.</p>
+         * <p>The type of the external identity provider. Valid values: DingTalk, Feishu.</p>
          * 
          * <strong>example:</strong>
          * <p>DingTalk</p>
@@ -244,7 +512,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String identityProviderType;
 
         /**
-         * <p>The login callback URL. You must configure this URL in the application of the external identity provider. An empty string is returned if the user pool is not activated.</p>
+         * <p>The logon callback URL. Configure this URL in the external identity provider application. Returns an empty string if the user pool is not activated.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback">https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback</a></p>
@@ -253,30 +521,34 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String loginCallbackUrl;
 
         /**
-         * <p>Indicates whether workspace users are allowed to log on through the external identity provider.</p>
+         * <p>Specifies whether workspace users are allowed to log on through this external identity provider.</p>
          */
         @NameInMap("loginEnabled")
         public Boolean loginEnabled;
 
         /**
-         * <p>The application configurations of the external identity provider. Application secret configurations are not returned.</p>
+         * <p>The application configuration of the external identity provider. Application secret configurations are not returned.</p>
          */
         @NameInMap("metadata")
         public ListIdentityProvidersResponseBodyItemsMetadata metadata;
 
         /**
-         * <p>The binding status. Valid values:</p>
-         * <ul>
-         * <li>CONFIGURED: The configuration is accepted and the system is waiting for the user pool to be activated.</li>
-         * <li>SYNCING: Organization members are being synchronized.</li>
-         * <li>SYNCED: Organization members are synchronized.</li>
-         * <li>READY: The binding is effective.</li>
-         * <li>SYNC_FAILED: The synchronization of organization members failed.</li>
-         * <li>UPDATING: The configuration is being updated.</li>
-         * <li>UPDATE_FAILED: The configuration update failed.</li>
-         * <li>DISCONNECTING: The binding is being removed.</li>
-         * <li>DISCONNECT_FAILED: The unbinding failed.</li>
-         * </ul>
+         * <p>Only SAML is currently supported. May not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SAML</p>
+         */
+        @NameInMap("protocol")
+        public String protocol;
+
+        /**
+         * <p>Input supports either XML or full manual entry. Queries return the standardized configuration and do not echo the original XML. Can be omitted if not configured.</p>
+         */
+        @NameInMap("saml")
+        public ListIdentityProvidersResponseBodyItemsSaml saml;
+
+        /**
+         * <p>The binding status. Valid values: CONFIGURED (the configuration is accepted and waiting for user pool activation), SYNCING (synchronizing organization members), SYNCED (organization member synchronization is completed), READY (the binding is effective), SYNC_FAILED (organization member synchronization failed), UPDATING (updating the configuration), UPDATE_FAILED (configuration update failed), DISCONNECTING (disconnecting), DISCONNECT_FAILED (disconnection failed).</p>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -285,13 +557,19 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Indicates whether organization member synchronization is enabled. After this feature is enabled, organization members are synchronized as workspace users by the external identity provider.</p>
+         * <p>Specifies whether to enable organization member synchronization. If enabled, the external identity provider synchronizes organization members as workspace users.</p>
          */
         @NameInMap("syncEnabled")
         public Boolean syncEnabled;
 
         /**
-         * <p>The time of the last update in UTC format that complies with RFC 3339.</p>
+         * <p>Follows the department-based synchronization scope definition. If omitted during creation, the default is AllAuthorized. The first vendor synchronization is determined by syncOnBind. If omitted or null during an update, the original value is retained. Updating the saved scope does not automatically trigger full synchronization.</p>
+         */
+        @NameInMap("syncScope")
+        public ListIdentityProvidersResponseBodyItemsSyncScope syncScope;
+
+        /**
+         * <p>The time of the last modification in UTC format based on RFC 3339.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-12T03:04:05Z</p>
@@ -311,6 +589,14 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public static ListIdentityProvidersResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             ListIdentityProvidersResponseBodyItems self = new ListIdentityProvidersResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public ListIdentityProvidersResponseBodyItems setConfiguration(ListIdentityProvidersResponseBodyItemsConfiguration configuration) {
+            this.configuration = configuration;
+            return this;
+        }
+        public ListIdentityProvidersResponseBodyItemsConfiguration getConfiguration() {
+            return this.configuration;
         }
 
         public ListIdentityProvidersResponseBodyItems setCreatedAt(String createdAt) {
@@ -361,6 +647,22 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
             return this.metadata;
         }
 
+        public ListIdentityProvidersResponseBodyItems setProtocol(String protocol) {
+            this.protocol = protocol;
+            return this;
+        }
+        public String getProtocol() {
+            return this.protocol;
+        }
+
+        public ListIdentityProvidersResponseBodyItems setSaml(ListIdentityProvidersResponseBodyItemsSaml saml) {
+            this.saml = saml;
+            return this;
+        }
+        public ListIdentityProvidersResponseBodyItemsSaml getSaml() {
+            return this.saml;
+        }
+
         public ListIdentityProvidersResponseBodyItems setStatus(String status) {
             this.status = status;
             return this;
@@ -375,6 +677,14 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         }
         public Boolean getSyncEnabled() {
             return this.syncEnabled;
+        }
+
+        public ListIdentityProvidersResponseBodyItems setSyncScope(ListIdentityProvidersResponseBodyItemsSyncScope syncScope) {
+            this.syncScope = syncScope;
+            return this;
+        }
+        public ListIdentityProvidersResponseBodyItemsSyncScope getSyncScope() {
+            return this.syncScope;
         }
 
         public ListIdentityProvidersResponseBodyItems setUpdatedAt(String updatedAt) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMemorySessionMessagesRequest extends TeaModel {
     /**
-     * <p>The agent ID. At least one of UserId and AgentId must be provided. The length must be 1 to 128 UTF-8 bytes. The value cannot contain forward slashes (/) or asterisks (*).</p>
+     * <p>The agent ID. You must specify at least one of AgentId and UserId. The length is limited to 1 to 128 UTF-8 bytes. The forward slash (/) and asterisk (*) are not allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>agent-001</p>
@@ -32,7 +32,7 @@ public class ListMemorySessionMessagesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The session ID. The length must be 1 to 128 UTF-8 bytes. The value cannot contain forward slashes (/) or asterisks (*).</p>
+     * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The forward slash (/) and asterisk (*) are not allowed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListMemorySessionMessagesRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The user ID. At least one of UserId and AgentId must be provided. The length must be 1 to 128 UTF-8 bytes. The value cannot contain forward slashes (/) or asterisks (*).</p>
+     * <p>The user ID. You must specify at least one of UserId and AgentId. The length is limited to 1 to 128 UTF-8 bytes. The forward slash (/) and asterisk (*) are not allowed.</p>
      * 
      * <strong>example:</strong>
      * <p>user-001</p>

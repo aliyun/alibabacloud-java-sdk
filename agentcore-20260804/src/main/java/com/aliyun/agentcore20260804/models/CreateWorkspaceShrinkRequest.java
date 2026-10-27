@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateWorkspaceShrinkRequest extends TeaModel {
     /**
-     * <p>The workspace creation request body.</p>
+     * <p>The request body for creating a workspace.</p>
      */
     @NameInMap("body")
     public String bodyShrink;

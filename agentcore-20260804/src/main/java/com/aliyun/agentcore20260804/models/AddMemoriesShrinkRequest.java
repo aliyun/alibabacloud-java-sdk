@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddMemoriesShrinkRequest extends TeaModel {
     /**
-     * <p>The memory write request.</p>
+     * <p>The request body for writing to memory.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")

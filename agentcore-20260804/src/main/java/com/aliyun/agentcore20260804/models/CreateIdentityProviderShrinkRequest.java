@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIdentityProviderShrinkRequest extends TeaModel {
     /**
-     * <p>The request body for binding an external identity provider.</p>
+     * <p>The request content for binding an external identity provider.</p>
      */
     @NameInMap("body")
     public String bodyShrink;

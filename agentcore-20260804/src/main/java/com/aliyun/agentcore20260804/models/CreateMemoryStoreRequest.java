@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CreateMemoryStoreRequest extends TeaModel {
     /**
-     * <p>The request to create a memory store.</p>
+     * <p>The MemoryStore creation request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
     public CreateMemoryStoreRequestBody body;
 
     /**
-     * <p>The client request token.</p>
+     * <p>The client token.</p>
      * 
      * <strong>example:</strong>
      * <p>memory-store-create-20260909-001</p>
@@ -43,7 +43,7 @@ public class CreateMemoryStoreRequest extends TeaModel {
 
     public static class CreateMemoryStoreRequestBody extends TeaModel {
         /**
-         * <p>The description of the memory store. Maximum of 1,024 characters.</p>
+         * <p>The description of the MemoryStore. Maximum length: 1,024 characters.</p>
          * 
          * <strong>example:</strong>
          * <p>Used to store long-term user preferences</p>
@@ -52,16 +52,16 @@ public class CreateMemoryStoreRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The custom extraction instructions. Maximum of 4,096 characters.</p>
+         * <p>The custom extraction instructions. Maximum length: 4,096 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>Extract only long-term preferences explicitly expressed by the user</p>
+         * <p>Extract only explicitly expressed long-term user preferences</p>
          */
         @NameInMap("extractInstructions")
         public String extractInstructions;
 
         /**
-         * <p>The name of the memory store. The name must be 1 to 64 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot be modified after creation.</p>
+         * <p>The name of the MemoryStore. The name must be 1 to 64 characters in length and can contain only lowercase letters, digits, and hyphens (-). The name cannot be modified after creation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

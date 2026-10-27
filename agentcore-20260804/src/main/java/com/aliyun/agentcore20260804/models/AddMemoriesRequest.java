@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddMemoriesRequest extends TeaModel {
     /**
-     * <p>The memory write request.</p>
+     * <p>The request body for writing to memory.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
@@ -26,7 +26,7 @@ public class AddMemoriesRequest extends TeaModel {
 
     public static class AddMemoriesRequestBodyMessages extends TeaModel {
         /**
-         * <p>The message content.</p>
+         * <p>The content of the message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class AddMemoriesRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The message role.</p>
+         * <p>The role of the message.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class AddMemoriesRequest extends TeaModel {
 
     public static class AddMemoriesRequestBodyScope extends TeaModel {
         /**
-         * <p>The agent ID. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</p>
+         * <p>The ID of the agent. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>agent-001</p>
@@ -79,7 +79,7 @@ public class AddMemoriesRequest extends TeaModel {
         public String agentId;
 
         /**
-         * <p>The session ID. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</p>
+         * <p>The ID of the session. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>session-001</p>
@@ -88,7 +88,7 @@ public class AddMemoriesRequest extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The user ID. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</p>
+         * <p>The ID of the user. The length is limited to 1 to 128 UTF-8 bytes. The ID cannot contain a forward slash (/) or an asterisk (*).</p>
          * 
          * <strong>example:</strong>
          * <p>user-001</p>
@@ -129,7 +129,7 @@ public class AddMemoriesRequest extends TeaModel {
 
     public static class AddMemoriesRequestBody extends TeaModel {
         /**
-         * <p>The list of messages. You must provide either this parameter or Text, but not both. You can specify 1 to 20 messages, and the total size of Content must not exceed 32,000 UTF-8 bytes.</p>
+         * <p>The list of messages. You must provide either this parameter or Text, but not both. The list must contain 1 to 20 messages, and the total size of the content must not exceed 32,000 UTF-8 bytes.</p>
          */
         @NameInMap("messages")
         public java.util.List<AddMemoriesRequestBodyMessages> messages;
@@ -141,7 +141,7 @@ public class AddMemoriesRequest extends TeaModel {
         public java.util.Map<String, String> metadata;
 
         /**
-         * <p>The time reference point for this batch of messages or text. The time must be in RFC 3339 format with a time zone and support fractional seconds.</p>
+         * <p>The time reference point for the batch of messages or text. The value must be in RFC 3339 format with a time zone and support fractional seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-08T13:56:00+08:00</p>
@@ -150,7 +150,7 @@ public class AddMemoriesRequest extends TeaModel {
         public String referenceTime;
 
         /**
-         * <p>The write scope. UserId, AgentId, and SessionId are all optional.</p>
+         * <p>The scope of the write operation. UserId, AgentId, and SessionId are all optional.</p>
          */
         @NameInMap("scope")
         public AddMemoriesRequestBodyScope scope;
@@ -162,7 +162,7 @@ public class AddMemoriesRequest extends TeaModel {
         public Boolean sync;
 
         /**
-         * <p>The text to be written directly. You must provide either this parameter or Messages, but not both. The text size must not exceed 32,000 UTF-8 bytes.</p>
+         * <p>The text to be written directly. You must provide either this parameter or Messages, but not both. The size of the text must not exceed 32,000 UTF-8 bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>The user likes hiking</p>

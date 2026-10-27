@@ -170,7 +170,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The description of the MemoryStore.</p>
+         * <p>The MemoryStore description.</p>
          * 
          * <strong>example:</strong>
          * <p>Used to store long-term user preferences</p>
@@ -197,7 +197,7 @@ public class ListMemoryStoresResponseBody extends TeaModel {
         public String memoryStoreId;
 
         /**
-         * <p>The name of the MemoryStore. It cannot be modified after creation.</p>
+         * <p>The MemoryStore name. It cannot be modified after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>customer-memory</p>

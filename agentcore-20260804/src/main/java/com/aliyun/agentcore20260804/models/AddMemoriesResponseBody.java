@@ -14,7 +14,7 @@ public class AddMemoriesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The write result.</p>
+     * <p>The result of the write operation.</p>
      */
     @NameInMap("data")
     public AddMemoriesResponseBodyData data;
@@ -38,7 +38,7 @@ public class AddMemoriesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>01A00000-0000-0000-0000-000000000001</p>
@@ -107,7 +107,7 @@ public class AddMemoriesResponseBody extends TeaModel {
 
     public static class AddMemoriesResponseBodyDataMemories extends TeaModel {
         /**
-         * <p>The long-term memory ID.</p>
+         * <p>The ID of the long-term memory.</p>
          * 
          * <strong>example:</strong>
          * <p>mem-2f5f9c5a8d0e4c3b</p>
@@ -138,7 +138,7 @@ public class AddMemoriesResponseBody extends TeaModel {
         public java.util.List<AddMemoriesResponseBodyDataMemories> memories;
 
         /**
-         * <p>The task ID returned only when sync is set to false. This parameter is not returned together with memories.</p>
+         * <p>The ID of the task returned only when sync is set to false. This parameter is not returned together with memories.</p>
          * 
          * <strong>example:</strong>
          * <p>task-2f5f9c5a8d0e4c3b</p>

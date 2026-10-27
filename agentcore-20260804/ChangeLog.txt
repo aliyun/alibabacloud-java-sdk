@@ -1,3 +1,62 @@
+2026-10-27 Version: 3.0.0
+- Support API CreateIdentityProviderSCIMCredential.
+- Support API CreateIdentityProviderSyncJob.
+- Support API DeleteIdentityProviderSCIMCredential.
+- Support API GetAgentCodePackageDownloadUrl.
+- Support API GetAgentCodePackageOssRamAuthorizeUrl.
+- Support API GetAgentCodePackageUploadUrl.
+- Support API GetIdentityProviderSCIM.
+- Support API GetIdentityProviderServiceProvider.
+- Support API GetIdentityProviderSyncJob.
+- Support API GetIdentityProviderSyncScope.
+- Support API ListAgentCodeRuntimes.
+- Support API ListIdentityProviderDepartments.
+- Support API ListIdentityProviderSCIMCredentials.
+- Support API PrepareIdentityProviderSCIM.
+- Support API UpdateIdentityProviderSCIM.
+- Support API ValidateAgentCodePackageFromOss.
+- Support API VerifyAgentCodePackageOssRamAuthorization.
+- Update API CreateCustomAgent: add response parameters Body.data.codePackageInfo.
+- Update API CreateIdentityProvider: add request parameters body.syncOnBind.
+- Update API CreateIdentityProvider: add request parameters body.syncScope.
+- Update API CreateIdentityProvider: add response parameters Body.data.configuration.
+- Update API CreateIdentityProvider: add response parameters Body.data.protocol.
+- Update API CreateIdentityProvider: add response parameters Body.data.saml.
+- Update API CreateIdentityProvider: add response parameters Body.data.syncScope.
+- Update API CreateWorkspace: add request parameters body.agentSpace.
+- Update API CreateWorkspace: add request parameters body.cmsWorkspace.
+- Update API DeleteIdentityProvider: add response parameters Body.data.configuration.
+- Update API DeleteIdentityProvider: add response parameters Body.data.protocol.
+- Update API DeleteIdentityProvider: add response parameters Body.data.saml.
+- Update API GetCustomAgent: add response parameters Body.data.codePackageInfo.
+- Update API GetIdentityProvider: add response parameters Body.data.configuration.
+- Update API GetIdentityProvider: add response parameters Body.data.protocol.
+- Update API GetIdentityProvider: add response parameters Body.data.saml.
+- Update API GetIdentityProvider: add response parameters Body.data.syncScope.
+- Update API GetIdentityProvider: add response parameters Body.data.metadata.binding.
+- Update API GetIdentityProvider: add response parameters Body.data.metadata.certificates.
+- Update API GetIdentityProvider: add response parameters Body.data.metadata.entityId.
+- Update API GetIdentityProvider: add response parameters Body.data.metadata.loginUrl.
+- Update API ListCustomAgents: add response parameters Body.items.$.artifact.
+- Update API ListCustomAgents: add response parameters Body.items.$.codePackageInfo.
+- Update API ListIdentityProviders: add response parameters Body.items.$.configuration.
+- Update API ListIdentityProviders: add response parameters Body.items.$.protocol.
+- Update API ListIdentityProviders: add response parameters Body.items.$.saml.
+- Update API ListIdentityProviders: add response parameters Body.items.$.syncScope.
+- Update API ListIdentityProviders: add response parameters Body.items.$.metadata.binding.
+- Update API ListIdentityProviders: add response parameters Body.items.$.metadata.certificates.
+- Update API ListIdentityProviders: add response parameters Body.items.$.metadata.entityId.
+- Update API ListIdentityProviders: add response parameters Body.items.$.metadata.loginUrl.
+- Update API UpdateCustomAgent: add response parameters Body.data.codePackageInfo.
+- Update API UpdateIdentityProvider: add request parameters body.protocol.
+- Update API UpdateIdentityProvider: add request parameters body.saml.
+- Update API UpdateIdentityProvider: add request parameters body.syncScope.
+- Update API UpdateIdentityProvider: add response parameters Body.data.configuration.
+- Update API UpdateIdentityProvider: add response parameters Body.data.protocol.
+- Update API UpdateIdentityProvider: add response parameters Body.data.saml.
+- Update API UpdateIdentityProvider: add response parameters Body.data.syncScope.
+
+
 2026-10-21 Version: 2.5.0
 - Support API CreateImageCache.
 - Support API DeleteImageCache.

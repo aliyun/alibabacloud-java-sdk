@@ -23,7 +23,7 @@ public class ListMemorySessionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The session list.</p>
+     * <p>The list of sessions.</p>
      */
     @NameInMap("items")
     public java.util.List<ListMemorySessionsResponseBodyItems> items;
