@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class AttachInstancesRequest extends TeaModel {
     /**
-     * <p>The CPU management policy of the node. The following policies are supported for clusters running version 1.12.6 or later:</p>
+     * <p>The CPU management policy for the node. The following two policies are supported when the cluster version is 1.12.6 or later:</p>
      * <ul>
-     * <li><code>static</code>: Allows pods with certain resource characteristics on the node to be granted enhanced CPU affinity and exclusivity.</li>
-     * <li><code>none</code>: Uses the existing default CPU affinity scheme.</li>
+     * <li><code>static</code>: allows you to enhance CPU affinity and exclusivity for pods with specific resource characteristics on the node.</li>
+     * <li><code>none</code>: uses the existing default CPU affinity policy.</li>
      * </ul>
      * <p>Default value: <code>none</code>.</p>
      * <blockquote>
-     * <p>After you specify <code>nodepool_id</code>, this parameter is not supported.</p>
+     * <p>This parameter is not supported if nodepool_id is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,17 +24,15 @@ public class AttachInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to store container data and images on a data cloud disk. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Stores container data and images on a data cloud disk.</p>
-     * </li>
-     * <li><p><code>false</code>: Does not store container data and images on a data cloud disk.</p>
-     * </li>
+     * <li><code>true</code>: stores container data and images on a data cloud disk.</li>
+     * <li><code>false</code>: does not store container data and images on a data cloud disk.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * <p>Data cloud disk mounting rules:</p>
      * <ul>
-     * <li>If the ECS instance has data cloud disks attached and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to EXT4. The data cloud disk is then used to store the content of /var/lib/docker and /var/lib/kubelet, which are the default data directories for the Docker container runtime and the kubelet component, respectively.</li>
-     * <li>If the ECS instance does not have data cloud disks attached, no new data cloud disk is mounted.<blockquote>
-     * <p>If you choose to store data on a data cloud disk and the ECS instance already has data cloud disks attached, the existing data on the data cloud disk will be lost. Back up your data in advance.</p>
+     * <li>If the ECS instance has data cloud disks attached and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to EXT4 to store the /var/lib/docker and /var/lib/kubelet directories, which are the default data directories for the Docker container runtime and kubelet component.</li>
+     * <li>If the ECS instance does not have data cloud disks attached, no new data cloud disk is attached.<blockquote>
+     * <p>If you choose to store data on a data cloud disk and the ECS instance already has data cloud disks attached, the existing data on the data cloud disks will be lost. Back up your data first.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -48,13 +46,11 @@ public class AttachInstancesRequest extends TeaModel {
     /**
      * <p>The custom image ID.</p>
      * <ul>
-     * <li><p>If you specify a custom image ID, the system cloud disk image of the instance is replaced with the custom image.</p>
-     * </li>
-     * <li><p>If you do not specify this parameter, the default system image is used.</p>
-     * </li>
+     * <li>If you specify a custom image ID, the system cloud disk image of the instance is replaced with the custom image.</li>
+     * <li>If you do not specify this parameter, the default system image is used.</li>
      * </ul>
      * <blockquote>
-     * <p>After you specify <code>nodepool_id</code>, this parameter is not supported.</p>
+     * <p>This parameter is not supported if nodepool_id is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -71,16 +67,14 @@ public class AttachInstancesRequest extends TeaModel {
     public java.util.List<String> instances;
 
     /**
-     * <p>Specifies whether the node to be added is an edge node, which is an Edge Node Service (ENS) node. Valid values:</p>
+     * <p>Specifies whether the node to be added is an edge node, namely an ENS node. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The node to be added is an edge node.</p>
-     * </li>
-     * <li><p><code>false</code>: The node to be added is not an edge node.</p>
-     * </li>
+     * <li><code>true</code>: The node to be added is an edge node.</li>
+     * <li><code>false</code>: The node to be added is not an edge node.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * <blockquote>
-     * <p>If the node is an edge node, set this parameter to <code>true</code> to identify the node type as an ENS node.</p>
+     * <p>If the node is an edge node, you must set this parameter to <code>true</code> to identify the node type as an ENS node.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -92,10 +86,8 @@ public class AttachInstancesRequest extends TeaModel {
     /**
      * <p>Specifies whether to retain the original instance name. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Retains the instance name.</p>
-     * </li>
-     * <li><p><code>false</code>: Does not retain the instance name.</p>
-     * </li>
+     * <li><code>true</code>: retains the instance name.</li>
+     * <li><code>false</code>: does not retain the instance name.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -106,10 +98,9 @@ public class AttachInstancesRequest extends TeaModel {
     public Boolean keepInstanceName;
 
     /**
-     * <p>The name of the key pair for the instances to be added.
-     * You need to specify only one of key_pair and password, or you can leave both parameters empty.</p>
+     * <p>The name of the key pair for the instances to be added. You can specify either the key_pair or password parameter, or leave both empty.</p>
      * <blockquote>
-     * <p>After you specify <code>nodepool_id</code>, this parameter is not supported.</p>
+     * <p>This parameter is not supported if nodepool_id is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -128,11 +119,11 @@ public class AttachInstancesRequest extends TeaModel {
     public String nodepoolId;
 
     /**
-     * <p>The SSH logon password for the instances to be added. You need to specify only one of key_pair and password, or you can leave both parameters empty.</p>
+     * <p>The SSH logon password for the instances to be added. You can specify either the key_pair or password parameter, or leave both empty.</p>
      * <p>The password must meet the following requirements:</p>
      * <ul>
      * <li>The password must be 8 to 30 characters in length.</li>
-     * <li>The password must contain at least uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>The password must contain uppercase letters, lowercase letters, digits, and special characters.</li>
      * <li>The password cannot contain backslashes (\) or double quotation marks (&quot;).</li>
      * </ul>
      * <p>For security purposes, the password is encrypted during transmission.</p>
@@ -152,17 +143,17 @@ public class AttachInstancesRequest extends TeaModel {
     /**
      * <p>The container runtime.</p>
      * <blockquote>
-     * <p>After you specify <code>nodepool_id</code>, this parameter is not supported.</p>
+     * <p>This parameter is not supported if nodepool_id is specified.</p>
      * </blockquote>
      * <p>name: the name of the container runtime. ACK supports the following three container runtimes:</p>
      * <ul>
-     * <li>containerd: Recommended. Supported by all cluster versions.</li>
-     * <li>Sandboxed-Container.runv: Sandboxed container that provides higher isolation. Supported by clusters running version 1.24 or earlier.</li>
-     * <li>docker: Supported by clusters running version 1.22 or earlier.</li>
+     * <li>containerd: recommended. Supported by all cluster versions.</li>
+     * <li>Sandboxed-Container.runv: sandboxed container. Provides higher isolation. Supported by clusters runtime version 1.24 and earlier.</li>
+     * <li>docker: supported by clusters runtime version 1.22 and earlier.</li>
      * </ul>
      * <p>Default value: containerd.</p>
-     * <p>containerd: the container runtime version. Default value: the latest version.</p>
-     * <p>For more information about changes to the sandboxed container runtime, see <a href="https://help.aliyun.com/document_detail/160312.html">Sandboxed container runtime release notes</a>.</p>
+     * <p>containerd: the version of the container runtime. The default value is the latest version.</p>
+     * <p>For more information about the changes to the sandboxed container runtime, see <a href="https://help.aliyun.com/document_detail/160312.html">Sandboxed container runtime release notes</a>.</p>
      */
     @NameInMap("runtime")
     public Runtime runtime;
@@ -170,23 +161,23 @@ public class AttachInstancesRequest extends TeaModel {
     /**
      * <p>The node labels. Label definition rules:</p>
      * <ul>
-     * <li>Labels are case-sensitive key-value pairs. You can configure up to 20 labels.</li>
-     * <li>Label keys cannot be duplicate and can be up to 64 characters in length.</li>
+     * <li>A label is a case-sensitive key-value pair. You can configure up to 20 labels.</li>
+     * <li>Label keys must be unique and can be up to 64 characters in length.</li>
      * <li>Label values can be empty and can be up to 128 characters in length.</li>
-     * <li>Label keys and label values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>.</li>
+     * <li>Label keys and values cannot start with <code>aliyun</code>, <code>acs:</code>, <code>https://</code>, or <code>http://</code>.</li>
      * </ul>
      * <p>For more information, see <a href="https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/#syntax-and-character-set">Labels and Selectors</a>.</p>
      * <blockquote>
-     * <p>After you specify <code>nodepool_id</code>, this parameter is not supported.</p>
+     * <p>This parameter is not supported if nodepool_id is specified.</p>
      * </blockquote>
      */
     @NameInMap("tags")
     public java.util.List<Tag> tags;
 
     /**
-     * <p>The node user data. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate instance user data</a>.</p>
+     * <p>The custom data for the node. For more information, see <a href="https://help.aliyun.com/document_detail/49121.html">Generate instance user data</a>.</p>
      * <blockquote>
-     * <p>After you specify <code>nodepool_id</code>, this parameter is not supported.</p>
+     * <p>This parameter is not supported if nodepool_id is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

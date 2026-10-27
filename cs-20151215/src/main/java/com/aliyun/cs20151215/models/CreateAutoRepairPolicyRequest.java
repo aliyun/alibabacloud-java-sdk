@@ -14,7 +14,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The resource subtype to which the self-healing rule can be bound.</p>
+     * <p>The resource subtype that can be associated with the self-healing rule.</p>
      * 
      * <strong>example:</strong>
      * <p>ess</p>
@@ -23,7 +23,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
     public String resourceSubType;
 
     /**
-     * <p>The resource type to which the self-healing rule can be bound.</p>
+     * <p>The resource type that can be associated with the self-healing rule.</p>
      * 
      * <strong>example:</strong>
      * <p>nodepool</p>
@@ -32,7 +32,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of self-healing sub-rules.</p>
+     * <p>The list of self-healing subrules.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;np-xxx&quot;]</p>
@@ -205,7 +205,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
 
     public static class CreateAutoRepairPolicyRequestRulesRepairProcedureIntervention extends TeaModel {
         /**
-         * <p>The label configuration for authorization confirmation. Adding the following labels to the node indicates that you authorize ACK to execute the action for this stage. After completing the action for this stage, ACK automatically removes the authorization inquiry and authorization confirmation labels corresponding to this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in an impaired state.</p>
+         * <p>The label configuration for authorization confirmation. Adding the following labels to the node indicates that you authorize ACK to execute the operations in this stage. After completing the operations in this stage, ACK automatically removes the authorization inquiry and confirmation labels corresponding to this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the actions in this stage and subsequent stages, and the node may remain in a damaged state.</p>
          */
         @NameInMap("approved_label")
         public CreateAutoRepairPolicyRequestRulesRepairProcedureInterventionApprovedLabel approvedLabel;
@@ -220,7 +220,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The label configuration for authorization inquiry. When this stage is reached, ACK adds the following labels to your node and waits for your authorization to execute the action for this stage.</p>
+         * <p>The label configuration for authorization inquiry. When this stage is reached, ACK adds the following labels to your node and waits for your authorization to execute the actions in this stage.</p>
          */
         @NameInMap("inquiring_label")
         public CreateAutoRepairPolicyRequestRulesRepairProcedureInterventionInquiringLabel inquiringLabel;
@@ -281,7 +281,7 @@ public class CreateAutoRepairPolicyRequest extends TeaModel {
         public java.util.Map<String, ?> config;
 
         /**
-         * <p>The manual intervention process.</p>
+         * <p>The configuration for the manual intervention procedure.</p>
          */
         @NameInMap("intervention")
         public CreateAutoRepairPolicyRequestRulesRepairProcedureIntervention intervention;

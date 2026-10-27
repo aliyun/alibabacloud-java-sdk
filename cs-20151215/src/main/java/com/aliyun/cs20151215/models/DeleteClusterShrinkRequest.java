@@ -5,19 +5,20 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterShrinkRequest extends TeaModel {
     /**
-     * <p>The deletion options for cluster-associated resources.</p>
+     * <p>The deletion options for the resources associated with the cluster.</p>
      */
     @NameInMap("delete_options")
     public String deleteOptionsShrink;
 
     /**
-     * <p>Specifies whether to retain SLB instances. Valid values:</p>
+     * <p>Specifies whether to retain the Server Load Balancer (SLB) instances created by using Services.
+     * Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Retains the created SLB resources.</li>
-     * <li><code>false</code>: Does not retain the created SLB resources.</li>
+     * <li><code>true</code>: retains the created SLB resources.</li>
+     * <li><code>false</code>: does not retain the created SLB resources.</li>
      * </ul>
      * <p>Default value: <code>false</code>.
-     * Use <code>SLB</code> in <code>delete_options</code> to manage this setting.</p>
+     * <strong>[Deprecated]</strong> Use <code>SLB</code> in <code>delete_options</code> instead.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -27,10 +28,11 @@ public class DeleteClusterShrinkRequest extends TeaModel {
     public Boolean keepSlb;
 
     /**
-     * <p>Specifies whether to retain all resources. If this parameter is set to <code>true</code>, <code>retain_resources</code> is ignored, and cloud resources created through the cluster that are queried by the <code>DescribeClusterResources</code> operation are retained. If this parameter is set to <code>false</code>, note that resources that are retained by default in <code>delete_options</code> are still retained. To delete these resources, set <code>delete_mode</code> to <code>delete</code> separately in <code>delete_options</code>.</p>
+     * <p>Specifies whether to retain all resources. If you set this parameter to <code>true</code>, the <code>retain_resources</code> parameter is ignored, and all cloud resources created by the cluster that are queried by calling the <code>DescribeClusterResources</code> operation are retained. If you set this parameter to <code>false</code>, note that the resources that are retained by default in <code>delete_options</code> are still retained. To delete these resources, set <code>delete_mode</code> to <code>delete</code> in <code>delete_options</code>.</p>
+     * <p>Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Retains all resources, including all cloud resources created through the cluster.</li>
-     * <li><code>false</code>: Does not retain all resources (except resources defined as retained by default in <code>delete_options</code>. For example, <code>ALB</code> is still retained when this parameter is set to <code>false</code>).</li>
+     * <li><code>true</code>: retains all resources, including all cloud resources created by the cluster.</li>
+     * <li><code>false</code>: does not retain all resources, except for the resources that are retained by default in <code>delete_options</code>. For example, ALB resources are still retained even if this parameter is set to <code>false</code>.</li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * 
@@ -41,7 +43,7 @@ public class DeleteClusterShrinkRequest extends TeaModel {
     public Boolean retainAllResources;
 
     /**
-     * <p>The list of resources. To retain resources when deleting a cluster, specify the IDs of the corresponding resources.</p>
+     * <p>The list of resources. To retain resources when you delete the cluster, specify the IDs of the corresponding resources.</p>
      */
     @NameInMap("retain_resources")
     public String retainResourcesShrink;

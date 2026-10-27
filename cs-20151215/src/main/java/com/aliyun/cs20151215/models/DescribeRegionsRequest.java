@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsRequest extends TeaModel {
     /**
-     * <p>Filters the returned results by language (Chinese or English).</p>
+     * <p>Filters the returned results by language, such as Chinese or English.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -23,7 +23,7 @@ public class DescribeRegionsRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>The subtype of managed clusters.</p>
+     * <p>The subtype of the managed cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>Default</p>

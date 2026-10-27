@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeClusterRequest extends TeaModel {
     /**
-     * <p><strong>[Deprecated]</strong> You do not need to specify this parameter.</p>
+     * <p><strong>[Deprecated]</strong> Do not specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -15,10 +15,10 @@ public class UpgradeClusterRequest extends TeaModel {
     public String componentName;
 
     /**
-     * <p>Specifies whether to upgrade only the control plane.</p>
+     * <p>Specifies whether to upgrade only the control plane. Valid values:</p>
      * <ul>
      * <li>true: Upgrades only the control plane.</li>
-     * <li>false: Upgrades both the control plane and worker nodes.</li>
+     * <li>false: Upgrades the control plane and worker nodes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,14 +37,14 @@ public class UpgradeClusterRequest extends TeaModel {
     public String nextVersion;
 
     /**
-     * <p>The rolling upgrade configuration.</p>
+     * <p>The rolling update configuration.</p>
      */
     @NameInMap("rolling_policy")
     @Deprecated
     public UpgradeClusterRequestRollingPolicy rollingPolicy;
 
     /**
-     * <p><strong>[Deprecated]</strong> Use the <code>next_version</code> parameter instead.</p>
+     * <p><strong>[Deprecated]</strong> Use the next_version parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -104,7 +104,7 @@ public class UpgradeClusterRequest extends TeaModel {
     public static class UpgradeClusterRequestRollingPolicy extends TeaModel {
         /**
          * <p>The maximum number of worker nodes that can be upgraded in parallel per batch.</p>
-         * <p>During the worker node upgrade, nodes are upgraded in batches based on the specified maximum parallelism. The number of nodes upgraded in each batch increases as follows: 1, 2, 4, 8, and so on until the maximum parallelism is reached. After the maximum parallelism is reached, each subsequent batch upgrades the maximum number of nodes.</p>
+         * <p>During the worker node upgrade process, nodes are upgraded in sequence based on the specified maximum parallelism. The number of nodes upgraded in each batch increases in the sequence of 1, 2, 4, 8, and so on, until the maximum parallelism is reached. After the maximum parallelism is reached, each subsequent batch upgrades the maximum number of nodes in parallel.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

@@ -7,8 +7,8 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
     /**
      * <p>The diagnosis result code. Valid values:</p>
      * <ul>
-     * <li>0: Diagnosis completed.</li>
-     * <li>1: Diagnosis failed.</li>
+     * <li>0: The diagnosis is completed.</li>
+     * <li>1: The diagnosis failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
     public String finished;
 
     /**
-     * <p>The diagnosis status information.</p>
+     * <p>The diagnosis status message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -65,9 +65,9 @@ public class GetClusterDiagnosisResultResponseBody extends TeaModel {
     /**
      * <p>The diagnosis status. Valid values:</p>
      * <ul>
-     * <li>0: Diagnosis created.</li>
-     * <li>1: Diagnosis running.</li>
-     * <li>2: Diagnosis completed.</li>
+     * <li>0: The diagnosis is created.</li>
+     * <li>1: The diagnosis is running.</li>
+     * <li>2: The diagnosis is completed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

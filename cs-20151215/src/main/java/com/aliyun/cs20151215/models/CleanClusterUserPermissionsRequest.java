@@ -7,7 +7,7 @@ public class CleanClusterUserPermissionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to force delete the specified KubeConfig. Valid values:</p>
      * <ul>
-     * <li>false (default): Before deleting the KubeConfig, the system checks whether cluster access records exist within the last seven days. If access records exist or cannot be retrieved, the deletion is not allowed.</li>
+     * <li>false (default): Before deleting the KubeConfig, the system checks whether there are cluster access records within the last seven days. If such records exist or cannot be found, the deletion is not allowed.</li>
      * <li>true: Force deletes the KubeConfig without checking cluster access records.</li>
      * </ul>
      * 

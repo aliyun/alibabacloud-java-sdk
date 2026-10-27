@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetClusterAuditProjectResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the API server audit feature is enabled for the cluster.</p>
+     * <p>Indicates whether the API server audit feature is enabled for the cluster. Valid values:</p>
      * <ul>
      * <li><p><code>true</code>: Enabled.</p>
      * </li>
-     * <li><p><code>false</code>: Not enabled.</p>
+     * <li><p><code>false</code>: Disabled.</p>
      * </li>
      * </ul>
      * 

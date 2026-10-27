@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveNodePoolNodesResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A9891419-D125-4D89-AFCA-68846675****</p>
@@ -14,7 +14,7 @@ public class RemoveNodePoolNodesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>T-62a944794ee141074400****</p>

@@ -71,7 +71,7 @@ public class DescribeClusterLogsResponse extends TeaModel {
         public String clusterLog;
 
         /**
-         * <p>The time when the log was created.</p>
+         * <p>The time when the log was generated.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-10T17:54:26+08:00</p>

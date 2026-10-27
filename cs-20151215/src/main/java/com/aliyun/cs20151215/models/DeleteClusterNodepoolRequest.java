@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DeleteClusterNodepoolRequest extends TeaModel {
     /**
-     * <p>Specifies whether to force delete the node pool.</p>
+     * <p>Specifies whether to force delete the node pool. Valid values:</p>
      * <ul>
-     * <li><p>true: Force deletes the node pool. If the node pool contains existing instances, the existing nodes are forcefully deleted.</p>
-     * </li>
-     * <li><p>false: Does not force delete the node pool. If the node pool contains existing instances, the node pool cannot be deleted, and the API call returns an error.</p>
-     * </li>
+     * <li>true: Force deletes the node pool. If the node pool contains existing nodes, the nodes are forcibly deleted.</li>
+     * <li>false: Does not force delete the node pool. If the node pool contains existing nodes, the deletion is blocked and an error is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>

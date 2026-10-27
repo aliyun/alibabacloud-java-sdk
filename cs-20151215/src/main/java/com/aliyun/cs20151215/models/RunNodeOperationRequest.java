@@ -15,7 +15,7 @@ public class RunNodeOperationRequest extends TeaModel {
     public String operationAction;
 
     /**
-     * <p>The list of parameters accepted by the O&amp;M action.</p>
+     * <p>The list of parameters for the O&amp;M action.</p>
      */
     @NameInMap("operationArgs")
     public java.util.List<String> operationArgs;

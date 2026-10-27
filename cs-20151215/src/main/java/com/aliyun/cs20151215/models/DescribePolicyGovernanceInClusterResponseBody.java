@@ -250,18 +250,27 @@ public class DescribePolicyGovernanceInClusterResponseBody extends TeaModel {
     public static class DescribePolicyGovernanceInClusterResponseBodyViolationViolationsWarn extends TeaModel {
         /**
          * <p>The description of the policy.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Restricts the creation of Application Load Balancer (ALB) instances.</p>
          */
         @NameInMap("policyDescription")
         public String policyDescription;
 
         /**
          * <p>The policy name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ACKRestrictALBCreation</p>
          */
         @NameInMap("policyName")
         public String policyName;
 
         /**
          * <p>The severity level.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>low</p>
          */
         @NameInMap("severity")
         public String severity;

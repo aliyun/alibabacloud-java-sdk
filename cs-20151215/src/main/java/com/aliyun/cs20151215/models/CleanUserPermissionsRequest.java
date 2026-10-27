@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CleanUserPermissionsRequest extends TeaModel {
     /**
-     * <p>The list of cluster IDs. If this list is specified, only the KubeConfig credentials and RBAC permissions of the current user in the specified clusters are cleaned up.</p>
+     * <p>The list of cluster IDs. If you specify this list, only the KubeConfig credentials and RBAC permissions of the specified user in the listed clusters are cleared.</p>
      */
     @NameInMap("ClusterIds")
     public java.util.List<String> clusterIds;
@@ -13,7 +13,7 @@ public class CleanUserPermissionsRequest extends TeaModel {
     /**
      * <p>Specifies whether to force delete the specified KubeConfig. Valid values:</p>
      * <ul>
-     * <li>false (default): Before deleting the KubeConfig, the system checks whether cluster access records exist within the last seven days. If access records exist or cannot be retrieved, the deletion is not allowed.</li>
+     * <li>false (default): Checks whether there are cluster access records within the last seven days before deleting the KubeConfig. If such records exist or cannot be found, the deletion is not allowed.</li>
      * <li>true: Force deletes the KubeConfig without checking cluster access records.</li>
      * </ul>
      * 

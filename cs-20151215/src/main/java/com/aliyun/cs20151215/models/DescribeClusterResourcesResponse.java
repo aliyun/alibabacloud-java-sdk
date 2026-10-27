@@ -103,7 +103,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
 
     public static class DescribeClusterResourcesResponseBodyAssociatedObject extends TeaModel {
         /**
-         * <p>The object type of the Kubernetes object.</p>
+         * <p>The Kubernetes object type.</p>
          * 
          * <strong>example:</strong>
          * <p>Service</p>
@@ -162,12 +162,10 @@ public class DescribeClusterResourcesResponse extends TeaModel {
 
     public static class DescribeClusterResourcesResponseBodyDeleteBehavior extends TeaModel {
         /**
-         * <p>Indicates whether the resource is deleted by default when the cluster is deleted.</p>
+         * <p>Specifies whether the resource is deleted by default when the cluster is deleted. Valid values:</p>
          * <ul>
-         * <li><p>true: The resource is deleted by default.</p>
-         * </li>
-         * <li><p>false: The resource is not deleted.</p>
-         * </li>
+         * <li>true: The resource is deleted by default.</li>
+         * <li>false: The resource is not deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,12 +175,10 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public Boolean deleteByDefault;
 
         /**
-         * <p>Indicates whether the default behavior of <code>delete_by_default</code> can be changed.</p>
+         * <p>Specifies whether the default behavior returned in <code>delete_by_default</code> can be changed. Valid values:</p>
          * <ul>
-         * <li><p>true: The behavior can be changed.</p>
-         * </li>
-         * <li><p>false: The behavior cannot be changed.</p>
-         * </li>
+         * <li>true: The default behavior can be changed.</li>
+         * <li>false: The default behavior cannot be changed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,7 +239,7 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The resource information. For source information about the resource, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</p>
+         * <p>The resource information. For more information about the source information of resources, see <a href="https://help.aliyun.com/document_detail/133836.html">ListStackResources</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;Id\&quot;:\&quot;KubernetesWorkerRole\&quot;,\&quot;Name\&quot;:\&quot;KubernetesWorkerRole\&quot;,\&quot;Type\&quot;:\&quot;ALIYUN::RAM::Role\&quot;,\&quot;Status\&quot;:\&quot;CREATE_COMPLETE\&quot;,\&quot;StatusReason\&quot;:\&quot;state changed\&quot;,\&quot;Updated\&quot;:\&quot;2025-04-10T06:21:17\&quot;,\&quot;PhysicalId\&quot;:\&quot;KubernetesWorkerRole-7e611193-225f-40f6-bc3c-ea8633******\&quot;}</p>
@@ -261,15 +257,15 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The resource status. Valid values:</p>
+         * <p>The resource state. Valid values:</p>
          * <ul>
-         * <li><code>CREATE_COMPLETE</code>: The resource was created.</li>
-         * <li><code>CREATE_FAILED</code>: The resource failed to be created.</li>
+         * <li><code>CREATE_COMPLETE</code>: The resource is created.</li>
+         * <li><code>CREATE_FAILED</code>: The resource fails to be created.</li>
          * <li><code>CREATE_IN_PROGRESS</code>: The resource is being created.</li>
-         * <li><code>DELETE_FAILED</code>: The resource failed to be deleted.</li>
+         * <li><code>DELETE_FAILED</code>: The resource fails to be deleted.</li>
          * <li><code>DELETE_IN_PROGRESS</code>: The resource is being deleted.</li>
-         * <li><code>ROLLBACK_COMPLETE</code>: The rollback was successful.</li>
-         * <li><code>ROLLBACK_FAILED</code>: The rollback failed.</li>
+         * <li><code>ROLLBACK_COMPLETE</code>: The rollback is successful.</li>
+         * <li><code>ROLLBACK_FAILED</code>: The rollback fails.</li>
          * <li><code>ROLLBACK_IN_PROGRESS</code>: The rollback is in progress.</li>
          * </ul>
          * 
@@ -280,10 +276,10 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public String state;
 
         /**
-         * <p>Indicates whether the resource was created by ACK.</p>
+         * <p>Specifies whether the resource is created by ACK. Valid values:</p>
          * <ul>
-         * <li>1: The resource was created by ACK.</li>
-         * <li>0: The resource is a pre-existing resource.</li>
+         * <li>1: The resource is created by ACK.</li>
+         * <li>0: The resource is an existing resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -311,11 +307,11 @@ public class DescribeClusterResourcesResponse extends TeaModel {
         public DescribeClusterResourcesResponseBodyDeleteBehavior deleteBehavior;
 
         /**
-         * <p>The type of the resource creator. Valid values:</p>
+         * <p>The type of the creator of the resource. Valid values:</p>
          * <ul>
-         * <li>user: Created by the user.</li>
-         * <li>system: Created by the ACK control system.</li>
-         * <li>addon: Created by a cluster component.</li>
+         * <li>user: The resource is created by the user.</li>
+         * <li>system: The resource is created by the ACK control system.</li>
+         * <li>addon: The resource is created by a cluster component.</li>
          * </ul>
          * 
          * <strong>example:</strong>

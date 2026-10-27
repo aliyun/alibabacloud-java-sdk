@@ -12,7 +12,7 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
     public java.util.List<CreateNodePoolComponentInstancesRequestComponents> components;
 
     /**
-     * <p>The list of nodes for the rolling update. Default value: all nodes.</p>
+     * <p>The list of nodes specified for the rolling update. Default value: all nodes.</p>
      */
     @NameInMap("node_names")
     public java.util.List<String> nodeNames;
@@ -193,7 +193,7 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
 
     public static class CreateNodePoolComponentInstancesRequestRollingPolicy extends TeaModel {
         /**
-         * <p>The interval between batches in seconds. Default value: 0.</p>
+         * <p>The upgrade interval between batches, in seconds. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -202,7 +202,7 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
         public Long batchInterval;
 
         /**
-         * <p>The maximum number of nodes that can fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
+         * <p>The maximum number of nodes allowed to fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -220,7 +220,7 @@ public class CreateNodePoolComponentInstancesRequest extends TeaModel {
         public Long maxParallelism;
 
         /**
-         * <p>The auto-pause policy during the node upgrade. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</p>
+         * <p>The auto-pause policy during the node upgrade process. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</p>
          * 
          * <strong>example:</strong>
          * <p>NotPause</p>

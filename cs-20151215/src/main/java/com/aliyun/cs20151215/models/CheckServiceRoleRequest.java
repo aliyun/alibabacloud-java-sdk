@@ -26,7 +26,7 @@ public class CheckServiceRoleRequest extends TeaModel {
 
     public static class CheckServiceRoleRequestRoles extends TeaModel {
         /**
-         * <p>Container service role name. For information about container service roles and permission scopes included in ACK, see <a href="https://help.aliyun.com/document_detail/86483.html">ACK service roles</a>.</p>
+         * <p>The name of the service role. For more information about the service roles and permission scopes in Container Service for Kubernetes (ACK), see <a href="https://help.aliyun.com/document_detail/86483.html">Service roles for ACK</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

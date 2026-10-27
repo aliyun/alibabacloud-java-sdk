@@ -20,7 +20,7 @@ public class GetClusterInspectConfigResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The inspection cycle defined by using the RFC 5545 Recurrence Rule syntax. You must specify BYHOUR and BYMINUTE. Only FREQ=DAILY is supported. COUNT and UNTIL are not supported.</p>
+     * <p>The inspection recurrence defined by using the RFC5545 recurrence rule syntax. You must specify BYHOUR and BYMINUTE. Only FREQ=DAILY is supported. COUNT and UNTIL are not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>FREQ=DAILY;BYHOUR=10;BYMINUTE=15</p>

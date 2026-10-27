@@ -23,7 +23,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The collection of tag resources.</p>
+     * <p>The collection of tagged resources.</p>
      */
     @NameInMap("tag_resources")
     public ListTagResourcesResponseBodyTagResources tagResources;
@@ -135,7 +135,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class ListTagResourcesResponseBodyTagResources extends TeaModel {
         /**
-         * <p>The tag resource.</p>
+         * <p>The tagged resource.</p>
          */
         @NameInMap("tag_resource")
         public java.util.List<ListTagResourcesResponseBodyTagResourcesTagResource> tagResource;

@@ -23,8 +23,8 @@ public class UpdateControlPlaneLogRequest extends TeaModel {
     public java.util.List<String> components;
 
     /**
-     * <p>The name of the SLS project used to store control plane component logs.</p>
-     * <p>Default value: k8s-log-$Cluster ID.</p>
+     * <p>The name of the SLS project where control plane component logs are stored.</p>
+     * <p>Default value: k8s-log-$ClusterId.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s-log-c5b5e80b0b64a4bf6939d2d8fbbc5****</p>
@@ -36,8 +36,8 @@ public class UpdateControlPlaneLogRequest extends TeaModel {
     public String logProject;
 
     /**
-     * <p>The log retention period in the SLS Logstore. Valid values: 1 to 3000. Unit: days.</p>
-     * <p>Default value: 30 days.</p>
+     * <p>The retention period of logs in the SLS Logstore. Valid values: 1 to 3000. Unit: days.</p>
+     * <p>Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

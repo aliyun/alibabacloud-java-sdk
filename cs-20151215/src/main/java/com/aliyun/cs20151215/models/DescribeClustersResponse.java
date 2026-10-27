@@ -43,9 +43,21 @@ public class DescribeClustersResponse extends TeaModel {
     }
 
     public static class DescribeClustersResponseBodyTags extends TeaModel {
+        /**
+         * <p>The key of the cluster tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example.tag.key</p>
+         */
         @NameInMap("key")
         public String key;
 
+        /**
+         * <p>The value of the cluster tag.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-tag-value</p>
+         */
         @NameInMap("value")
         public String value;
 
@@ -73,90 +85,246 @@ public class DescribeClustersResponse extends TeaModel {
     }
 
     public static class DescribeClustersResponseBody extends TeaModel {
+        /**
+         * <p>The cluster ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>c0123456789abcdef0123456789abcdef0</p>
+         */
         @NameInMap("cluster_id")
         public String clusterId;
 
+        /**
+         * <p>The cluster type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ManagedKubernetes</p>
+         */
         @NameInMap("cluster_type")
         public String clusterType;
 
+        /**
+         * <p>The time when the cluster was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-01T08:00:00+08:00</p>
+         */
         @NameInMap("created")
         public String created;
 
+        /**
+         * <p>The current version of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.32.1-aliyun.1</p>
+         */
         @NameInMap("current_version")
         public String currentVersion;
 
+        /**
+         * <p>The data disk category of the node.</p>
+         */
         @NameInMap("data_disk_category")
         public String dataDiskCategory;
 
+        /**
+         * <p>The data disk size of the node.</p>
+         */
         @NameInMap("data_disk_size")
         public Long dataDiskSize;
 
+        /**
+         * <p>Indicates whether deletion protection is enabled for the cluster.</p>
+         */
         @NameInMap("deletion_protection")
         public Boolean deletionProtection;
 
+        /**
+         * <p>The Docker version of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20.10.17</p>
+         */
         @NameInMap("docker_version")
         public String dockerVersion;
 
+        /**
+         * <p>The ID of the external load balancing instance used by the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>lb-a1b2c3d4e5f6g7h8i9j0k</p>
+         */
         @NameInMap("external_loadbalancer_id")
         public String externalLoadbalancerId;
 
+        /**
+         * <p>The initial version of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.32.1-aliyun.1</p>
+         */
         @NameInMap("init_version")
         public String initVersion;
 
+        /**
+         * <p>The access address of the cluster API server, including the internal network access address and the public network access address.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;api_server_endpoint&quot;:&quot;&quot;,&quot;intranet_api_server_endpoint&quot;:&quot;<a href="https://192.0.2.10:6443%22%7D">https://192.0.2.10:6443&quot;}</a></p>
+         */
         @NameInMap("master_url")
         public String masterUrl;
 
+        /**
+         * <p>The metadata of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;addons&quot;:[{&quot;name&quot;:&quot;kube-proxy&quot;,&quot;version&quot;:&quot;v1.32.1&quot;}]}</p>
+         */
         @NameInMap("meta_data")
         public String metaData;
 
+        /**
+         * <p>The name of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-cluster</p>
+         */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The network mode of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc</p>
+         */
         @NameInMap("network_mode")
         public String networkMode;
 
+        /**
+         * <p>Indicates whether Private Zone is enabled for the cluster. Default value: false.</p>
+         */
         @NameInMap("private_zone")
         public Boolean privateZone;
 
+        /**
+         * <p>The subtype of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default</p>
+         */
         @NameInMap("profile")
         public String profile;
 
+        /**
+         * <p>The region ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou</p>
+         */
         @NameInMap("region_id")
         public String regionId;
 
+        /**
+         * <p>The resource group ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rg-a1b2c3d4e5f6g7h</p>
+         */
         @NameInMap("resource_group_id")
         public String resourceGroupId;
 
+        /**
+         * <p>The security group ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
+         */
         @NameInMap("security_group_id")
         public String securityGroupId;
 
+        /**
+         * <p>The current number of nodes in the cluster, including master and worker nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
         @NameInMap("size")
         public Long size;
 
+        /**
+         * <p>The state of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>running</p>
+         */
         @NameInMap("state")
         public String state;
 
+        /**
+         * <p>The subnet CIDR of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>172.16.0.0/16</p>
+         */
         @NameInMap("subnet_cidr")
         public String subnetCidr;
 
+        /**
+         * <p>The tags of the cluster.</p>
+         */
         @NameInMap("tags")
         public java.util.List<DescribeClustersResponseBodyTags> tags;
 
+        /**
+         * <p>The time when the cluster was updated.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-02T08:00:00+08:00</p>
+         */
         @NameInMap("updated")
         public String updated;
 
+        /**
+         * <p>The VPC ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
+         */
         @NameInMap("vpc_id")
         public String vpcId;
 
+        /**
+         * <p>The vSwitch CIDR.</p>
+         */
         @NameInMap("vswitch_cidr")
         public String vswitchCidr;
 
+        /**
+         * <p>The ID of the vSwitch where the cluster is deployed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vsw-a1b2c3d4e5f6g7h8i9j0k</p>
+         */
         @NameInMap("vswitch_id")
         public String vswitchId;
 
+        /**
+         * <p>The name of the RAM role used by the worker nodes.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-worker-ram-role</p>
+         */
         @NameInMap("worker_ram_role_name")
         public String workerRamRoleName;
 
+        /**
+         * <p>The zone ID of the cluster.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-hangzhou-h</p>
+         */
         @NameInMap("zone_id")
         public String zoneId;
 

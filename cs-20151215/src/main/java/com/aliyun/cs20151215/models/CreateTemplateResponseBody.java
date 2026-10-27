@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateResponseBody extends TeaModel {
     /**
-     * <p>The orchestration template ID.</p>
+     * <p>The ID of the orchestration template.</p>
      * 
      * <strong>example:</strong>
      * <p>ba1fe77b-b01e-4640-b77e-8f1b80******</p>

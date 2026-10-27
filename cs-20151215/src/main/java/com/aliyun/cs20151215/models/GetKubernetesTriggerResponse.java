@@ -71,7 +71,7 @@ public class GetKubernetesTriggerResponse extends TeaModel {
         public String clusterId;
 
         /**
-         * <p>The trigger project name. It consists of the namespace and the name of the application, in the format of <code>${namespace}/${name}</code>. Example: default/test-app.</p>
+         * <p>The trigger project name. It consists of the namespace and name of the application, in the <code>${namespace}/${name}</code> format. Example: default/test-app.</p>
          * 
          * <strong>example:</strong>
          * <p>default/test-app</p>

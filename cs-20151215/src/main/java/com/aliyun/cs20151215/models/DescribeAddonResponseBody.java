@@ -11,7 +11,7 @@ public class DescribeAddonResponseBody extends TeaModel {
     public java.util.List<String> architecture;
 
     /**
-     * <p>The component category.</p>
+     * <p>The category of the component.</p>
      * 
      * <strong>example:</strong>
      * <p>network</p>
@@ -20,7 +20,7 @@ public class DescribeAddonResponseBody extends TeaModel {
     public String category;
 
     /**
-     * <p>The schema of custom parameters for the component.</p>
+     * <p>The custom parameter schema of the component.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -38,7 +38,7 @@ public class DescribeAddonResponseBody extends TeaModel {
     public Boolean installByDefault;
 
     /**
-     * <p>Indicates whether the component is managed.</p>
+     * <p>Indicates whether the component is a managed component.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -56,7 +56,7 @@ public class DescribeAddonResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The information about newer versions of the component.</p>
+     * <p>The information about the latest versions of the component.</p>
      */
     @NameInMap("newer_versions")
     public java.util.List<DescribeAddonResponseBodyNewerVersions> newerVersions;
@@ -164,12 +164,10 @@ public class DescribeAddonResponseBody extends TeaModel {
         public String minimumClusterVersion;
 
         /**
-         * <p>Indicates whether the component can be upgraded to this version.</p>
+         * <p>Indicates whether the component can be upgraded to this version. Valid values:</p>
          * <ul>
-         * <li><p>true: The upgrade is supported.</p>
-         * </li>
-         * <li><p>false: The upgrade is not supported.</p>
-         * </li>
+         * <li>true: Supported.</li>
+         * <li>false: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>

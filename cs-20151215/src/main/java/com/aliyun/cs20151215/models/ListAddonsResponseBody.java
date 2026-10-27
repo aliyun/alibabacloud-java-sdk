@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAddonsResponseBody extends TeaModel {
     /**
-     * <p>The list of available add-on components.</p>
+     * <p>The list of available components.</p>
      */
     @NameInMap("addons")
     public java.util.List<ListAddonsResponseBodyAddons> addons;
@@ -31,16 +31,16 @@ public class ListAddonsResponseBody extends TeaModel {
         public java.util.List<String> architecture;
 
         /**
-         * <p>The component categorization. Valid values:</p>
+         * <p>The category of the component. Valid values:</p>
          * <ul>
-         * <li>core: core component.</li>
-         * <li>network: network type component.</li>
-         * <li>security: security component.</li>
-         * <li>storage: storage component.</li>
-         * <li>monitor: logging and monitoring component.</li>
-         * <li>application: application component.</li>
+         * <li>core: core component</li>
+         * <li>network: network component</li>
+         * <li>security: security component</li>
+         * <li>storage: storage component</li>
+         * <li>monitor: logging and monitoring component</li>
+         * <li>application: application component</li>
          * </ul>
-         * <p>An empty value indicates that the component belongs to another categorization.</p>
+         * <p>An empty value indicates that the component belongs to another category.</p>
          * 
          * <strong>example:</strong>
          * <p>monitor</p>
@@ -60,10 +60,8 @@ public class ListAddonsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the component is installed by default. Valid values:</p>
          * <ul>
-         * <li><p>true: The component is installed by default when a cluster is created.</p>
-         * </li>
-         * <li><p>false: The component is not installed by default.</p>
-         * </li>
+         * <li>true: The component is installed by default when the cluster is created.</li>
+         * <li>false: The component is not installed by default.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -75,10 +73,8 @@ public class ListAddonsResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the component is managed. Valid values:</p>
          * <ul>
-         * <li><p>true: The component is managed.</p>
-         * </li>
-         * <li><p>false: The component is not managed.</p>
-         * </li>
+         * <li>true: The component is managed.</li>
+         * <li>false: The component is not managed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -88,7 +84,7 @@ public class ListAddonsResponseBody extends TeaModel {
         public Boolean managed;
 
         /**
-         * <p>The component name.</p>
+         * <p>The name of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>arms-prometheus</p>
@@ -103,7 +99,7 @@ public class ListAddonsResponseBody extends TeaModel {
         public java.util.List<String> supportedActions;
 
         /**
-         * <p>The component version.</p>
+         * <p>The version of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>1.1.9</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartAlertResponseBody extends TeaModel {
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

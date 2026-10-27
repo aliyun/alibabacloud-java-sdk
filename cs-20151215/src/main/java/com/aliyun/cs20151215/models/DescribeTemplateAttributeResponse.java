@@ -44,7 +44,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
 
     public static class DescribeTemplateAttributeResponseBody extends TeaModel {
         /**
-         * <p>The orchestration template ID. A new ID is generated each time the template is modified.</p>
+         * <p>The ID of the orchestration template. A new template ID is generated each time the template is modified.</p>
          * 
          * <strong>example:</strong>
          * <p>72d20cf8-a533-4ea9-a10d-e7630d3d****</p>
@@ -55,9 +55,9 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         /**
          * <p>The access permissions of the orchestration template. Valid values:</p>
          * <ul>
-         * <li><code>private</code>: private.</li>
-         * <li><code>public</code>: public.</li>
-         * <li><code>shared</code>: shared.</li>
+         * <li><code>private</code>: Private.</li>
+         * <li><code>public</code>: Public.</li>
+         * <li><code>shared</code>: Shared.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
          * <ul>
          * <li><p>If the value is kubernetes, the template is displayed on the Orchestration Templates page in the console.</p>
          * </li>
-         * <li><p>If this parameter is not set or is set to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
+         * <li><p>If this parameter is not specified or is set to another value, the template is not displayed on the Orchestration Templates page in the console.</p>
          * </li>
          * </ul>
          * 
@@ -136,7 +136,7 @@ public class DescribeTemplateAttributeResponse extends TeaModel {
         public String created;
 
         /**
-         * <p>The time when the orchestration template was last updated.</p>
+         * <p>The time when the orchestration template was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-25T16:56:33+08:00</p>

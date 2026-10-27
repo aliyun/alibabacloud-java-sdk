@@ -7,8 +7,8 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to delete all custom tags. This parameter takes effect only when <code>tag_keys</code> is empty. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Deletes all tags.</li>
-     * <li><code>false</code>: Does not delete all tags.</li>
+     * <li><code>true</code>: deletes all tags.</li>
+     * <li><code>false</code>: does not delete all tags.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,15 +28,17 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of resource IDs. You can specify up to 50 resource IDs.</p>
+     * <p>The list of resource IDs. Up to 50 resource IDs can be specified.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("resource_ids")
     public String resourceIdsShrink;
 
     /**
-     * <p>The resource type.</p>
-     * <p>CLUSTER: cluster.</p>
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li>CLUSTER: cluster.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +48,7 @@ public class UntagResourcesShrinkRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tag keys for the resource. You can specify up to 20 tag keys.</p>
+     * <p>The list of tag keys for the resources. Up to 20 tag keys can be specified.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("tag_keys")

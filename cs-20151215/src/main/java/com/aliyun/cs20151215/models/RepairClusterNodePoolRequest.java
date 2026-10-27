@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RepairClusterNodePoolRequest extends TeaModel {
     /**
-     * <p><strong>[Deprecated]</strong> Specifies whether to allow instance restart.</p>
+     * <p><strong>[Deprecated]</strong> Specifies whether to restart the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -21,7 +21,7 @@ public class RepairClusterNodePoolRequest extends TeaModel {
     public java.util.List<String> nodes;
 
     /**
-     * <p>The repair operations to perform. If not specified, all repair operations are performed by default. In most scenarios, you do not need to specify this parameter.</p>
+     * <p>The repair operations to be performed. If you do not specify this parameter, all repair operations are performed by default. You do not need to specify this parameter in common scenarios.</p>
      */
     @NameInMap("operations")
     public java.util.List<RepairClusterNodePoolRequestOperations> operations;
@@ -70,10 +70,10 @@ public class RepairClusterNodePoolRequest extends TeaModel {
          * <li>restart.docker: Restarts Docker.</li>
          * <li>restart.containerd: Restarts Containerd.</li>
          * <li>restart.ntp: Restarts ntpd or chronyd.</li>
-         * <li>remove.containerdContainerInSandbox: Removes a specified sandbox container under Containerd.</li>
-         * <li>remove.dockerContainerInSandbox: Removes a specified sandbox container under Docker.</li>
-         * <li>remove.containerdContainer: Removes a specified container under Containerd.</li>
-         * <li>remove.dockerContainer: Removes a specified container under Docker.</li>
+         * <li>remove.containerdContainerInSandbox: Deletes the specified sandbox container in Containerd.</li>
+         * <li>remove.dockerContainerInSandbox: Deletes the specified sandbox container in Docker.</li>
+         * <li>remove.containerdContainer: Deletes the specified container in Containerd.</li>
+         * <li>remove.dockerContainer: Deletes the specified container in Docker.</li>
          * </ul>
          * 
          * <strong>example:</strong>

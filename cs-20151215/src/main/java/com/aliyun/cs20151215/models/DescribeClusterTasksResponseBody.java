@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterTasksResponseBody extends TeaModel {
+    /**
+     * <p>The pagination token.</p>
+     */
     @NameInMap("next_token")
     public String nextToken;
 
@@ -23,7 +26,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task array.</p>
+     * <p>The array of tasks.</p>
      */
     @NameInMap("tasks")
     public java.util.List<DescribeClusterTasksResponseBodyTasks> tasks;
@@ -76,7 +79,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of items per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -177,7 +180,7 @@ public class DescribeClusterTasksResponseBody extends TeaModel {
         public String created;
 
         /**
-         * <p>The node fault error message.</p>
+         * <p>The node fault message.</p>
          */
         @NameInMap("error")
         public DescribeClusterTasksResponseBodyTasksError error;

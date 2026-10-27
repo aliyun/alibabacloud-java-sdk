@@ -7,8 +7,8 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     /**
      * <p>The governance action of the rule. Valid values:</p>
      * <ul>
-     * <li><code>enforce</code>: blocks non-compliant deployments.</li>
-     * <li><code>inform</code>: generates alerts.</li>
+     * <li><code>enforce</code>: Blocks non-compliant deployments.</li>
+     * <li><code>inform</code>: Triggers alerts.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public String action;
 
     /**
-     * <p>The templatetype of the rule.</p>
+     * <p>The rule templatetype.</p>
      * 
      * <strong>example:</strong>
      * <p>k8s-general</p>
@@ -38,8 +38,8 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the rule is deleted. Valid values:</p>
      * <ul>
-     * <li>0: not deleted.</li>
-     * <li>1: deleted.</li>
+     * <li>0: Not deleted.</li>
+     * <li>1: Deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,10 +58,10 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Indicates whether the policy requires configuration. Valid values: </p>
+     * <p>Specifies whether policy configuration is required. Valid values: </p>
      * <ul>
-     * <li>0: parameter settings required.</li>
-     * <li>1: no parameter settings required.</li>
+     * <li>0: Parameter settings are required.</li>
+     * <li>1: No parameter settings are required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -73,9 +73,9 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
     /**
      * <p>The governance severity of the rule. Valid values:</p>
      * <ul>
-     * <li><code>high</code>: high risk.</li>
-     * <li><code>medium</code>: medium risk.</li>
-     * <li><code>low</code>: low risk.</li>
+     * <li><code>high</code>: High-risk.</li>
+     * <li><code>medium</code>: Medium-risk.</li>
+     * <li><code>low</code>: Low-risk.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribePolicyDetailsResponseBody extends TeaModel {
      * <p>The details of the rule template.</p>
      * 
      * <strong>example:</strong>
-     * <p>For more information, see the request example</p>
+     * <p>For more information, see the request examples</p>
      */
     @NameInMap("template")
     public String template;

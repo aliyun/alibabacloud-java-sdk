@@ -20,7 +20,7 @@ public class FixNodePoolVulsRequest extends TeaModel {
     public Boolean autoRestart;
 
     /**
-     * <p>The list of node names to fix. If this parameter is not specified, all nodes in the node pool are fixed by default.</p>
+     * <p>The list of node names to fix. If not specified, all nodes in the node pool are fixed by default.</p>
      */
     @NameInMap("nodes")
     public java.util.List<String> nodes;
@@ -77,7 +77,7 @@ public class FixNodePoolVulsRequest extends TeaModel {
     public static class FixNodePoolVulsRequestRolloutPolicy extends TeaModel {
         /**
          * <p>CVE fixes for nodes in the node pool are performed in batches. This parameter specifies the maximum number of nodes that can be fixed in parallel per batch.</p>
-         * <p>Valid values: The minimum value is 1 and the maximum value is the number of nodes in the node pool.</p>
+         * <p>Valid values: 1 to the total number of nodes in the node pool.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

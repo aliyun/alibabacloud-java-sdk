@@ -73,7 +73,7 @@ public class DescribeAddonsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The names of the components in the group.</p>
+         * <p>The names of the components included in the group.</p>
          */
         @NameInMap("items")
         public java.util.List<DescribeAddonsResponseBodyComponentGroupsItems> items;

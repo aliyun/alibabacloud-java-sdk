@@ -14,7 +14,7 @@ public class StopAlertResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>The execution result status. Valid values:</p>
+     * <p>The execution status.</p>
      * <ul>
      * <li>True: The execution succeeded.</li>
      * <li>False: The execution failed.</li>

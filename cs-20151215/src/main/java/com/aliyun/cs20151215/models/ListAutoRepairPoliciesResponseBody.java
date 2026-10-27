@@ -34,7 +34,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The diagnosis type.</p>
+         * <p>The diagnostic type.</p>
          * 
          * <strong>example:</strong>
          * <p>system</p>
@@ -118,7 +118,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the taint.</p>
+         * <p>The value of the label.</p>
          * 
          * <strong>example:</strong>
          * <p>inquiring</p>
@@ -151,7 +151,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
 
     public static class ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureIntervention extends TeaModel {
         /**
-         * <p>The label configuration for authorization confirmation. When you add the following labels to the node, you authorize ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the authorization inquiry and authorization confirmation labels corresponding to this stage. If you do not add the following labels in time to grant authorization, ACK will not execute the action for this stage and subsequent actions, and the node may remain in a damaged state.</p>
+         * <p>The label configuration for authorization confirmation. Adding the following labels to the node authorizes ACK to execute the operation for this stage. After completing the operation for this stage, ACK automatically removes the inquiry and confirmation labels associated with this stage. If you do not add the following labels promptly, ACK does not execute the action for this stage or any subsequent actions, and the node may remain in a damaged state.</p>
          */
         @NameInMap("approved_label")
         public ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureInterventionApprovedLabel approvedLabel;
@@ -227,7 +227,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
         public java.util.Map<String, ?> config;
 
         /**
-         * <p>The manual intervention configuration for the procedure.</p>
+         * <p>The configuration for the manual intervention procedure.</p>
          */
         @NameInMap("intervention")
         public ListAutoRepairPoliciesResponseBodyItemsRulesRepairProcedureIntervention intervention;
@@ -334,7 +334,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
         public java.util.List<String> resourceIds;
 
         /**
-         * <p>The subtype of resource bound to the self-healing rule.</p>
+         * <p>The subtype of the resource bound to the self-healing rule.</p>
          * 
          * <strong>example:</strong>
          * <p>ess</p>
@@ -352,7 +352,7 @@ public class ListAutoRepairPoliciesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The list of self-healing sub-rules.</p>
+         * <p>The list of self-healing subrules.</p>
          */
         @NameInMap("rules")
         public java.util.List<ListAutoRepairPoliciesResponseBodyItemsRules> rules;

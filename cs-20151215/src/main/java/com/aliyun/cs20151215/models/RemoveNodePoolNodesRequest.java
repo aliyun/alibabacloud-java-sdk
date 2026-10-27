@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class RemoveNodePoolNodesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove nodes concurrently.</p>
+     * <p>Specifies whether to remove the nodes concurrently. Valid values:</p>
      * <ul>
-     * <li><p>true: Nodes are concurrently removed from the scaling group.</p>
+     * <li><p>true: removes the nodes from the scaling group concurrently.</p>
      * </li>
-     * <li><p>false: Nodes are sequentially removed from the scaling group.</p>
+     * <li><p>false: removes the nodes from the scaling group sequentially.</p>
      * </li>
      * </ul>
      * <p>Default value: false.</p>
@@ -23,8 +23,8 @@ public class RemoveNodePoolNodesRequest extends TeaModel {
     /**
      * <p>Specifies whether to drain the nodes. Valid values:</p>
      * <ul>
-     * <li>true: Drain the nodes.</li>
-     * <li>false: Do not drain the nodes.</li>
+     * <li>true: drains the nodes.</li>
+     * <li>false: does not drain the nodes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,16 +34,16 @@ public class RemoveNodePoolNodesRequest extends TeaModel {
     public Boolean drainNode;
 
     /**
-     * <p>The list of instances to remove.</p>
+     * <p>The list of instances to be removed.</p>
      */
     @NameInMap("instance_ids")
     public java.util.List<String> instanceIds;
 
     /**
      * <p><strong>[Deprecated]</strong></p>
-     * <p>The list of nodes to remove.</p>
+     * <p>The list of nodes to be removed.</p>
      * <blockquote>
-     * <p>Danger: This parameter is deprecated. Use <code>instance_ids</code> instead.</danger></p>
+     * <p>Danger: This parameter is deprecated. Use instance_ids instead.</danger></p>
      * </blockquote>
      */
     @NameInMap("nodes")
@@ -53,8 +53,8 @@ public class RemoveNodePoolNodesRequest extends TeaModel {
     /**
      * <p>Specifies whether to release the nodes. Valid values:</p>
      * <ul>
-     * <li>true: Release the nodes.</li>
-     * <li>false: Do not release the nodes.</li>
+     * <li>true: releases the nodes.</li>
+     * <li>false: does not release the nodes.</li>
      * </ul>
      * 
      * <strong>example:</strong>

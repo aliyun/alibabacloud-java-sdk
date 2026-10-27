@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopAlertRequest extends TeaModel {
     /**
-     * <p>The alert rule group name.</p>
+     * <p>The name of the alert rule group.</p>
      * 
      * <strong>example:</strong>
      * <p>sample</p>
@@ -14,7 +14,7 @@ public class StopAlertRequest extends TeaModel {
     public String alertRuleGroupName;
 
     /**
-     * <p>The alert rule name.</p>
+     * <p>The name of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>sample</p>

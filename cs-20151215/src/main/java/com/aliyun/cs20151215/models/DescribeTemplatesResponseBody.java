@@ -57,7 +57,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of results.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -130,7 +130,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The orchestration template ID.</p>
+         * <p>The ID of the orchestration template.</p>
          * 
          * <strong>example:</strong>
          * <p>874ec485-e7e6-4373-8a3b-47bde8******</p>
@@ -139,7 +139,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The orchestration template name.</p>
+         * <p>The name of the orchestration template.</p>
          * 
          * <strong>example:</strong>
          * <p>webserver</p>
@@ -148,7 +148,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The tag of the orchestration template. If not explicitly specified, the tag defaults to the template name.</p>
+         * <p>The tags of the orchestration template. If no tag is explicitly specified, the template name is used as the default tag.</p>
          * 
          * <strong>example:</strong>
          * <p>kubernetes</p>
@@ -157,7 +157,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String tags;
 
         /**
-         * <p>The template content in YAML format.</p>
+         * <p>The content of the orchestration template in YAML format.</p>
          * 
          * <strong>example:</strong>
          * <p>apiVersion: apps/v1\nkind: Deployment\nmetadata:\n  name: nginx-deployment-basic\n  labels:\n    app: nginx\nspec:\n  replicas: 2\n  selector:\n    matchLabels:\n      app: nginx\n  template:\n    metadata:\n      labels:\n        app: nginx\n    spec:\n      containers:\n      - name: nginx\n        image: busybox:latest\n        ports:\n        - containerPort: 80</p>
@@ -166,11 +166,11 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String template;
 
         /**
-         * <p>The templatetype.</p>
+         * <p>The templatetype. Valid values:</p>
          * <ul>
-         * <li><p>If the value is kubernetes, the template is displayed on the Orchestration Templates page in the console.</p>
+         * <li><p><code>kubernetes</code>: The template is displayed on the Orchestration Templates page in the console.</p>
          * </li>
-         * <li><p>If this parameter is left empty or set to other values, the template is not displayed on the Orchestration Templates page in the console.</p>
+         * <li><p>If this parameter is left empty or set to other values: The template is not displayed on the Orchestration Templates page in the console.</p>
          * </li>
          * </ul>
          * 
@@ -181,7 +181,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String templateType;
 
         /**
-         * <p>The ID of the parent template associated with the template. This parameter is used to implement the multi-version feature for templates. Different versions of the same template share the same <code>template_with_hist_id</code> value.</p>
+         * <p>The ID of the parent template associated with the orchestration template. This ID is used to implement the multi-version feature for templates. Different versions of the same template share the same <code>template_with_hist_id</code> value.</p>
          * 
          * <strong>example:</strong>
          * <p>ad81d115-7c8b-47e7-a222-9c28d7******</p>
@@ -190,7 +190,7 @@ public class DescribeTemplatesResponseBody extends TeaModel {
         public String templateWithHistId;
 
         /**
-         * <p>The time when the orchestration template was last updated.</p>
+         * <p>The time when the orchestration template was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-25T16:56:33+08:00</p>

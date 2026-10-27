@@ -164,7 +164,7 @@ public class ListNodePoolComponentInstancesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The state of the component.</p>
+         * <p>The state of the component. Valid values: installing, failed, active, upgrading, updating, and uninstalling.</p>
          * 
          * <strong>example:</strong>
          * <p>active</p>

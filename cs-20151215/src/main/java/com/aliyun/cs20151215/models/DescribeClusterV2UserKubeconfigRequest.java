@@ -4,6 +4,9 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterV2UserKubeconfigRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to access the cluster over the internal network.</p>
+     */
     @NameInMap("PrivateIpAddress")
     public Boolean privateIpAddress;
 

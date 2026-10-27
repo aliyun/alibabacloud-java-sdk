@@ -7,8 +7,8 @@ public class DeployPolicyInstanceRequest extends TeaModel {
     /**
      * <p>The governance action of the rule. Valid values:</p>
      * <ul>
-     * <li><code>deny</code>: blocks deployments that violate the policy.</li>
-     * <li><code>warn</code>: generates alerts.</li>
+     * <li><code>deny</code>: Blocks non-compliant deployments.</li>
+     * <li><code>warn</code>: Generates an alert.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,13 +18,13 @@ public class DeployPolicyInstanceRequest extends TeaModel {
     public String action;
 
     /**
-     * <p>The namespaces to which the policy applies. An empty value indicates all namespaces.</p>
+     * <p>The namespaces where the policy is enforced. If this parameter is left empty, the policy is enforced in all namespaces.</p>
      */
     @NameInMap("namespaces")
     public java.util.List<String> namespaces;
 
     /**
-     * <p>The parameter settings of the current rule instance. For the parameters supported by each policy governance rule and the corresponding metric description, see <a href="https://www.alibabacloud.com/help/doc-detail/359819.html">Container security policy rules</a>.</p>
+     * <p>The parameter settings of the current rule instance. For more information about the parameters supported by each policy governance rule and the corresponding metric description, see <a href="https://www.alibabacloud.com/help/doc-detail/359819.html">Container security policy rule library</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{   &quot;repos&quot;: [     &quot;registry-vpc.cn-hangzhou.aliyuncs.com/acs/&quot;,     &quot;registry.cn-hangzhou.aliyuncs.com/acs/&quot;   ] }</p>

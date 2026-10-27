@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class AttachInstancesToNodePoolRequest extends TeaModel {
     /**
-     * <p>Specifies whether to store container data and images on a data cloud disk. Valid values:</p>
+     * <p>Specifies whether to store container data and images on data cloud disks. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: Stores container data and images on a data cloud disk.</p>
+     * <li><p><code>true</code>: Stores container data and images on data cloud disks.</p>
      * </li>
-     * <li><p><code>false</code>: Does not store container data and images on a data cloud disk.</p>
+     * <li><p><code>false</code>: Does not store container data and images on data cloud disks.</p>
      * </li>
      * </ul>
      * <p>Default value: <code>false</code>.</p>
      * <p>Data cloud disk mounting rules:</p>
      * <ul>
-     * <li>If the ECS instance has data cloud disks mounted and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to EXT4 to store the content of /var/lib/docker and /var/lib/kubelet.</li>
-     * <li>If the ECS instance has no data cloud disks mounted, no new data cloud disk is mounted.<blockquote>
-     * <p>If you choose to store data on a data cloud disk and the ECS instance already has data cloud disks mounted, the existing data on the data cloud disk is lost. Back up your data in advance.</p>
+     * <li>If the ECS instance has data cloud disks mounted and the file system of the last data cloud disk is not initialized, the system automatically formats the data cloud disk to EXT4 to store the /var/lib/docker and /var/lib/kubelet directories.</li>
+     * <li>If the ECS instance does not have data cloud disks mounted, no new data cloud disks are mounted.<blockquote>
+     * <p>If you choose to store data on data cloud disks and the ECS instance already has data cloud disks mounted, the existing data on the data cloud disks will be lost. Back up your data in advance.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -51,7 +51,7 @@ public class AttachInstancesToNodePoolRequest extends TeaModel {
     public Boolean keepInstanceName;
 
     /**
-     * <p>The SSH logon password of the instances to be added.</p>
+     * <p>The SSH logon password for the instances to be added.</p>
      * 
      * <strong>example:</strong>
      * <hr>

@@ -72,7 +72,7 @@ public class DescribeTriggerResponse extends TeaModel {
 
         /**
          * <p>The trigger project name.</p>
-         * <p>The value consists of the namespace and application name in the format <code>${namespace}/${name}</code>. Example: default/test-app.</p>
+         * <p>It consists of the namespace and application name in the <code>${namespace}/${name}</code> format. Example: default/test-app.</p>
          * 
          * <strong>example:</strong>
          * <p>default/test-app</p>
@@ -84,9 +84,9 @@ public class DescribeTriggerResponse extends TeaModel {
          * <p>The trigger type.</p>
          * <p>Valid values:</p>
          * <ul>
-         * <li><p><code>deployment</code>: a trigger for stateless applications. </p>
+         * <li><p><code>deployment</code>: the trigger for stateless applications. </p>
          * </li>
-         * <li><p><code>application</code>: a trigger for App Hub applications.</p>
+         * <li><p><code>application</code>: the trigger for Hybrid Cloud Application Center applications.</p>
          * </li>
          * </ul>
          * 

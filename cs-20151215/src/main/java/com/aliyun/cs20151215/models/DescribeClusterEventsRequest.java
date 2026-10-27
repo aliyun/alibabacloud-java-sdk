@@ -6,12 +6,18 @@ import com.aliyun.tea.*;
 public class DescribeClusterEventsRequest extends TeaModel {
     /**
      * <p>The maximum number of results to return for a single request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>50</p>
      */
     @NameInMap("max_results")
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. The value is the next_token parameter returned by the previous API call.</p>
+     * <p>The pagination token. Set the value to the next_token value returned from the previous API call.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0123456789abcdef0123456789abcdef</p>
      */
     @NameInMap("next_token")
     public String nextToken;
@@ -26,9 +32,7 @@ public class DescribeClusterEventsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The maximum number of results to return per page.</p>
-     * <p>Valid values: 1 to 100.</p>
-     * <p>Default value: 50.</p>
+     * <p>The maximum number of entries to return on each page. Valid values: 1 to 100. Default value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

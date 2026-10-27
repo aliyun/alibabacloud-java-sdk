@@ -14,7 +14,7 @@ public class DescribeClustersRequest extends TeaModel {
     public String clusterType;
 
     /**
-     * <p>Specifies the cluster name for fuzzy matching.</p>
+     * <p>The cluster name used for fuzzy matching.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -22,6 +22,12 @@ public class DescribeClustersRequest extends TeaModel {
     @NameInMap("name")
     public String name;
 
+    /**
+     * <p>The ID of the resource group used to filter clusters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-a1b2c3d4e5f6g7h</p>
+     */
     @NameInMap("resource_group_id")
     public String resourceGroupId;
 

@@ -7,7 +7,7 @@ public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable deletion protection for the resource. Valid values:</p>
      * <ul>
-     * <li><p>true: Enables deletion protection. After deletion protection is enabled, you must manually disable deletion protection before you can delete the specified resource.</p>
+     * <li><p>true: Enables deletion protection. After deletion protection is enabled, you must manually disable it before you can delete the specified resource.</p>
      * </li>
      * <li><p>false: Disables deletion protection.</p>
      * </li>
@@ -21,7 +21,7 @@ public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The namespace of the resource.</p>
+     * <p>The namespace where the resource resides.</p>
      * <p>Default value: default.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class UpdateResourcesDeleteProtectionRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The type of resource to update. Valid values:</p>
+     * <p>The type of the resource to update. Valid values:</p>
      * <ul>
      * <li><p>namespaces: namespace.</p>
      * </li>

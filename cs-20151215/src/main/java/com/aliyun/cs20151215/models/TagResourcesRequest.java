@@ -15,15 +15,17 @@ public class TagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of resource IDs. You can specify up to 50 resource IDs.</p>
+     * <p>The list of resource IDs. You can add up to 50 resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("resource_ids")
     public java.util.List<String> resourceIds;
 
     /**
-     * <p>The resource type.</p>
-     * <p>CLUSTER: cluster.</p>
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li>CLUSTER: cluster.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,9 +35,9 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag key-value pairs of the resource. You can specify up to 20 tag key-value pairs. Note:</p>
+     * <p>The tag key-value pairs of the resource. You can add up to 20 tag key-value pairs. Take note of the following items:</p>
      * <ul>
-     * <li>Once a value is specified, it cannot be an empty string. The value can be up to 128 characters in length.</li>
+     * <li>If a value is specified, it cannot be an empty string and can be up to 128 characters in length.</li>
      * <li>The value cannot start with <code>aliyun</code> or <code>acs:</code>.</li>
      * <li>The value cannot contain <code>http://</code> or <code>https://</code>.</li>
      * </ul>

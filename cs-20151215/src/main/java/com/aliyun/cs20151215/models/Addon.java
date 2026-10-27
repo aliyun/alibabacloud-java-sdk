@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Addon extends TeaModel {
     /**
-     * <p>The configuration of the component.</p>
+     * <p>The component configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;IngressSlbNetworkType\&quot;:\&quot;internet\&quot;}</p>
@@ -14,7 +14,7 @@ public class Addon extends TeaModel {
     public String config;
 
     /**
-     * <p>Specifies whether to disable default installation. When a cluster is created, required components and additional components such as log components are installed by default. You can disable this default behavior and install these components later by calling the component installation API or by using the console. Valid values:</p>
+     * <p>Specifies whether to disable default installation. When a cluster is created, in addition to required components, additional components such as log components are installed by default. You can disable this default behavior and install these components later by calling the component installation API or through the console. Valid values:</p>
      * <ul>
      * <li><code>true</code>: Disables default installation.</li>
      * <li><code>false</code>: Allows default installation.</li>
@@ -27,7 +27,7 @@ public class Addon extends TeaModel {
     public Boolean disabled;
 
     /**
-     * <p>The name of the component.</p>
+     * <p>The component name.</p>
      * 
      * <strong>example:</strong>
      * <p>nginx-ingress-controller</p>
@@ -36,7 +36,7 @@ public class Addon extends TeaModel {
     public String name;
 
     /**
-     * <p>The version of the component.</p>
+     * <p>The component version.</p>
      * 
      * <strong>example:</strong>
      * <p>v1.9.3-aliyun.1</p>

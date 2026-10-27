@@ -37,7 +37,7 @@ public class InstallClusterAddonsRequest extends TeaModel {
         public String config;
 
         /**
-         * <p>The component name. You can call the <a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a> operation to query information about available components, including component names and versions.</p>
+         * <p>The name of the component. You can call the <a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a> operation to query the information about available components, including component names and versions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class InstallClusterAddonsRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The component version. You can call the <a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a> operation to query information about available components, including component names and versions.</p>
+         * <p>The version of the component. You can call the <a href="https://help.aliyun.com/document_detail/2667939.html">ListAddons</a> operation to query the information about available components, including component names and versions.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeAddonsRequest extends TeaModel {
     /**
-     * <p>The cluster type. Valid values:</p>
+     * <p>The cluster profile. Valid values:</p>
      * <ul>
-     * <li><code>Default</code>: managed cluster.</li>
-     * <li><code>Serverless</code>: serverless cluster.</li>
-     * <li><code>Edge</code>: edge cluster.</li>
+     * <li>Default: managed cluster.</li>
+     * <li>Serverless: Serverless cluster.</li>
+     * <li>Edge: edge cluster.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,11 +19,11 @@ public class DescribeAddonsRequest extends TeaModel {
     public String clusterProfile;
 
     /**
-     * <p>After you set <code>cluster_type</code> to <code>ManagedKubernetes</code> and configure <code>profile</code>, you can further specify the cluster specification.</p>
+     * <p>The cluster specifications. You can specify this parameter when you set cluster_type to ManagedKubernetes and configure profile. Valid values:</p>
      * <ul>
-     * <li><p><code>ack.pro.small</code>: Pro cluster.</p>
+     * <li><p>ack.pro.small: ACK Pro.</p>
      * </li>
-     * <li><p><code>ack.standard</code>: Basic cluster (selected by default if this parameter is left empty).</p>
+     * <li><p>ack.standard: ACK Basic. This is the default value if this parameter is left empty.</p>
      * </li>
      * </ul>
      * 
@@ -34,13 +34,12 @@ public class DescribeAddonsRequest extends TeaModel {
     public String clusterSpec;
 
     /**
-     * <p>Valid values:</p>
      * <ul>
-     * <li><p><code>Kubernetes</code>: ACK dedicated cluster.</p>
+     * <li><p>Kubernetes: ACK dedicated cluster.</p>
      * </li>
-     * <li><p><code>ManagedKubernetes</code>: ACK ACK cluster types, including ACK ACK clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</p>
+     * <li><p>ManagedKubernetes: ACK ACK clusters, including ACK ACK clusters (ACK Pro and ACK Basic), ACK Serverless clusters (Pro and Basic), ACK Edge clusters (Pro and Basic), and ACK Lingjun clusters (Pro).</p>
      * </li>
-     * <li><p><code>ExternalKubernetes</code>: registered cluster.</p>
+     * <li><p>ExternalKubernetes: registered cluster.</p>
      * </li>
      * </ul>
      * 
@@ -60,7 +59,7 @@ public class DescribeAddonsRequest extends TeaModel {
     public String clusterVersion;
 
     /**
-     * <p>The ID of the region where the cluster resides.</p>
+     * <p>The ID of the region where the cluster is deployed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

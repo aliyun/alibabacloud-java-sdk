@@ -11,7 +11,7 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
     public UpdateNodePoolComponentInstanceRequestConfig config;
 
     /**
-     * <p>Specifies whether to disable the rolling update. Default value: false. Updating the baseline configuration triggers a rolling update of the nodes.</p>
+     * <p>Specifies whether to disable rolling updates. Default value: false. Updating the baseline configuration triggers a rolling update of the nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -20,7 +20,7 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
     public Boolean disableRolling;
 
     /**
-     * <p>The list of nodes to be updated in a rolling manner. By default, all nodes are updated.</p>
+     * <p>The list of nodes to be updated in a rolling manner. Default value: all nodes.</p>
      */
     @NameInMap("node_names")
     public java.util.List<String> nodeNames;
@@ -177,7 +177,7 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
         public Long batchInterval;
 
         /**
-         * <p>The maximum number of nodes that are allowed to fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
+         * <p>The maximum number of nodes allowed to fail during the rolling update. Default value: 0. A value of 0 indicates that the task fails if any node fails. A value greater than 0 indicates that the task fails and stops if the cumulative number of failed nodes exceeds this value.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -186,7 +186,7 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
         public Long maxFailedNodes;
 
         /**
-         * <p>The maximum number of parallel updates per batch. Default value: 1.</p>
+         * <p>The maximum number of parallel nodes per batch. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -195,7 +195,7 @@ public class UpdateNodePoolComponentInstanceRequest extends TeaModel {
         public Long maxParallelism;
 
         /**
-         * <p>The auto-pause policy during the node upgrade process. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</p>
+         * <p>The automatic pause policy during node upgrades. Valid values: NotPause, FirstBatch, and EveryBatch. Default value: NotPause.</p>
          * 
          * <strong>example:</strong>
          * <p>NotPause</p>

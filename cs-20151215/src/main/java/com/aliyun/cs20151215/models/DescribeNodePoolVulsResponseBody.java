@@ -5,18 +5,16 @@ import com.aliyun.tea.*;
 
 public class DescribeNodePoolVulsResponseBody extends TeaModel {
     /**
-     * <p>The list of node pool vulnerabilities.</p>
+     * <p>The list of vulnerabilities in the node pool.</p>
      */
     @NameInMap("vul_records")
     public java.util.List<DescribeNodePoolVulsResponseBodyVulRecords> vulRecords;
 
     /**
-     * <p>Indicates whether the China Cloud Security CVE fix service has been purchased.</p>
+     * <p>Indicates whether the Security Center CVE fix service is purchased. Valid values:</p>
      * <ul>
-     * <li><p>true: Purchased.</p>
-     * </li>
-     * <li><p>false: Not purchased.</p>
-     * </li>
+     * <li>true: Purchased.</li>
+     * <li>false: Not purchased.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +46,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
 
     public static class DescribeNodePoolVulsResponseBodyVulRecordsVulListPackageList extends TeaModel {
         /**
-         * <p>The package name.</p>
+         * <p>The name of the package.</p>
          * 
          * <strong>example:</strong>
          * <p>WebLogic</p>
@@ -73,7 +71,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
 
     public static class DescribeNodePoolVulsResponseBodyVulRecordsVulList extends TeaModel {
         /**
-         * <p>The vulnerability alias.</p>
+         * <p>The alias of the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>RHSA-2019:3197-Important: sudo security update</p>
@@ -82,13 +80,13 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         public String aliasName;
 
         /**
-         * <p>The list of CVEs associated with the vulnerability.</p>
+         * <p>The list of CVEs corresponding to the vulnerability.</p>
          */
         @NameInMap("cve_list")
         public java.util.List<String> cveList;
 
         /**
-         * <p>The vulnerability name.</p>
+         * <p>The name of the vulnerability.</p>
          * 
          * <strong>example:</strong>
          * <p>oval:com.redhat.rhsa:def:20193197</p>
@@ -97,7 +95,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The vulnerability severity level.</p>
+         * <p>The vulnerability level.</p>
          * 
          * <strong>example:</strong>
          * <p>asap</p>
@@ -186,7 +184,7 @@ public class DescribeNodePoolVulsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The node name, which is the identifier of the node within the cluster.</p>
+         * <p>The name of the node, which identifies the node in the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou.192.168.x.x</p>

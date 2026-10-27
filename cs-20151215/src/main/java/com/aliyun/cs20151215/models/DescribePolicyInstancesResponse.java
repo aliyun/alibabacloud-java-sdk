@@ -44,7 +44,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
 
     public static class DescribePolicyInstancesResponseBody extends TeaModel {
         /**
-         * <p>The UID of the policy instance implementer.</p>
+         * <p>The UID of the policy instance enforcer.</p>
          * 
          * <strong>example:</strong>
          * <p>16298168****</p>
@@ -116,9 +116,9 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String policySeverity;
 
         /**
-         * <p>The scope of the policy instance.</p>
-         * <p>By default, an asterisk (*) indicates all namespaces in the cluster.</p>
-         * <p>Otherwise, the names of the namespaces to which the policy applies are returned. Multiple namespaces are separated by commas (,).</p>
+         * <p>The enforcement scope of the policy instance.</p>
+         * <p>A value of &quot;*&quot; indicates all namespaces in the cluster.</p>
+         * <p>Otherwise, the names of the target namespaces are returned, separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -133,7 +133,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
          * <ul>
          * <li><p><code>deny</code>: Blocks non-compliant deployments.</p>
          * </li>
-         * <li><p><code>warn</code>: Generates an alert.</p>
+         * <li><p><code>warn</code>: Triggers an alert.</p>
          * </li>
          * </ul>
          * 
@@ -144,7 +144,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String policyAction;
 
         /**
-         * <p>The creation time. This parameter is deprecated. Do not use it.</p>
+         * <p><strong>[Deprecated]</strong> The creation time. Do not use this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-29T18:09:12+08:00</p>
@@ -154,7 +154,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String created;
 
         /**
-         * <p>The update time. This parameter is deprecated. Do not use it.</p>
+         * <p><strong>[Deprecated]</strong> The update time. Do not use this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-29T18:09:12+08:00</p>
@@ -164,7 +164,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String updated;
 
         /**
-         * <p>The resource ID. This parameter is deprecated. Do not use it.</p>
+         * <p><strong>[Deprecated]</strong> The resource ID. Do not use this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>123456***</p>
@@ -174,7 +174,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The number of violations processed in the cluster. This parameter is deprecated. Do not use it.</p>
+         * <p><strong>[Deprecated]</strong> The number of processed violations in the cluster. Do not use this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -184,7 +184,7 @@ public class DescribePolicyInstancesResponse extends TeaModel {
         public Long totalViolations;
 
         /**
-         * <p>The deletion status. This parameter is deprecated. Do not use it.</p>
+         * <p><strong>[Deprecated]</strong> The deletion status. Do not use this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

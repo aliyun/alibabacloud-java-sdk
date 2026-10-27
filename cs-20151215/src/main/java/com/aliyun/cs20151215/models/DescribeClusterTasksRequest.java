@@ -4,14 +4,23 @@ package com.aliyun.cs20151215.models;
 import com.aliyun.tea.*;
 
 public class DescribeClusterTasksRequest extends TeaModel {
+    /**
+     * <p>The maximum number of results to return per request.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("max_results")
     public Integer maxResults;
 
+    /**
+     * <p>The pagination token. Set the value to the next_token parameter value returned from the previous API call.</p>
+     */
     @NameInMap("next_token")
     public String nextToken;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +29,7 @@ public class DescribeClusterTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

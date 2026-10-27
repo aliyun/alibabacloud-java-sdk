@@ -23,7 +23,7 @@ public class StandardComponentsValue extends TeaModel {
     public String version;
 
     /**
-     * <p>The description of the component.</p>
+     * <p>The description of the component features.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -32,11 +32,11 @@ public class StandardComponentsValue extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether the component is required for the cluster. Valid values:</p>
+     * <p>Specifies whether the component is required for the cluster. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The component is required and must be installed when the cluster is created.</p>
+     * <li><p>true: The component is required and must be installed when the cluster is created.</p>
      * </li>
-     * <li><p><code>false</code>: The component is not required. You can install it through component management after the cluster is created.</p>
+     * <li><p>false: The component is not required. You can install it in the Components module after the cluster is created.</p>
      * </li>
      * </ul>
      * 
@@ -47,10 +47,10 @@ public class StandardComponentsValue extends TeaModel {
     public String required;
 
     /**
-     * <p>Specifies whether to disable default installation. When a cluster is created, in addition to the required components, some log-related or routing-related components (such as Ingress) are installed by default. If you do not want these components to be installed by default, set this parameter to disable default installation. Valid values:</p>
+     * <p>Specifies whether to disable the default installation of the component. When a cluster is created, components required for the cluster are installed. In addition, some components related to logs or routing, such as Ingress, are installed by default. If you do not want to install these components by default, you can set this parameter to disable the default installation. Valid values:</p>
      * <ul>
-     * <li><code>true</code>: Default installation is disabled.</li>
-     * <li><code>false</code>: Default installation is enabled.</li>
+     * <li>true: disables the default installation.</li>
+     * <li>false: enables the default installation.</li>
      * </ul>
      * 
      * <strong>example:</strong>

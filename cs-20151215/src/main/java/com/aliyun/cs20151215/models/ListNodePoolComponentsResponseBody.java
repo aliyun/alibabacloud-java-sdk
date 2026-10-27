@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListNodePoolComponentsResponseBody extends TeaModel {
     /**
-     * <p>The list of node components.</p>
+     * <p>The node components.</p>
      */
     @NameInMap("components")
     public java.util.List<ListNodePoolComponentsResponseBodyComponents> components;
 
     /**
-     * <p>The maximum number of results to return. Default value: 200.</p>
+     * <p>The maximum number of results per page. Default value: 200.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

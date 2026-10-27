@@ -7,8 +7,8 @@ public class DescribeExternalAgentRequest extends TeaModel {
     /**
      * <p>The agent permission mode. Valid values:</p>
      * <ul>
-     * <li>admin: Administrator mode. Grants all permissions.</li>
-     * <li>restricted: Restricted mode. Grants only partial permissions.</li>
+     * <li>admin: Administrator mode. The agent has all permissions.</li>
+     * <li>restricted: Restricted mode. The agent has only partial permissions.</li>
      * </ul>
      * <p>Default value: admin.</p>
      * 

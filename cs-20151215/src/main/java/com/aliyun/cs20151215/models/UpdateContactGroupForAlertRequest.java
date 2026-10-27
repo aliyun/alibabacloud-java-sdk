@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContactGroupForAlertRequest extends TeaModel {
     /**
-     * <p>The name of the alert metric contact group.</p>
+     * <p>The name of the contact group for the alert metric.</p>
      * 
      * <strong>example:</strong>
      * <p>sample</p>
@@ -29,7 +29,7 @@ public class UpdateContactGroupForAlertRequest extends TeaModel {
     public String crName;
 
     /**
-     * <p>The namespace in which the resource resides.</p>
+     * <p>The namespace where the resource resides.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>
