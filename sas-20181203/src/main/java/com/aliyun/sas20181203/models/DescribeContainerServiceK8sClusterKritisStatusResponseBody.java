@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeContainerServiceK8sClusterKritisStatusResponseBody extends TeaModel {
     /**
-     * <p>The Kritis status information of the ACK cluster.</p>
+     * <p>The Kritis status information of the Container Service for Kubernetes cluster.</p>
      */
     @NameInMap("KritisStatus")
     public DescribeContainerServiceK8sClusterKritisStatusResponseBodyKritisStatus kritisStatus;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BE120DAB-F4E7-4C53-ADC3-A97578AB****</p>

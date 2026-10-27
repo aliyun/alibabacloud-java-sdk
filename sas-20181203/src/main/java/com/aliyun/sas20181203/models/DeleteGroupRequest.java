@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the server group that you want to delete.</p>
+     * <p>Specifies the ID of the server group to delete.</p>
      * <blockquote>
-     * <p>To delete a server group, you must specify the server group ID. You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the server group ID.</p>
+     * <p>To delete a server group, you must provide the server group ID. You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DeleteGroupRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.172.XX.XX</p>

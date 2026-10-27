@@ -56,7 +56,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectProcessResponseBodyDataTags extends TeaModel {
         /**
-         * <p>The English label of the process.</p>
+         * <p>The English tag of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>System Process</p>
@@ -65,7 +65,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String tagEn;
 
         /**
-         * <p>The Chinese label of the process.</p>
+         * <p>The Chinese tag of the process.</p>
          * 
          * <strong>example:</strong>
          * <p>System Process</p>
@@ -100,9 +100,9 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         /**
          * <p>The analysis result. Valid values:</p>
          * <ul>
-         * <li><strong>black</strong>: Malicious process.</li>
-         * <li><strong>white</strong>: Normal process.</li>
-         * <li><strong>abnormal</strong>: Abnormal process.</li>
+         * <li><strong>black</strong>: malicious process</li>
+         * <li><strong>white</strong>: normal process</li>
+         * <li><strong>abnormal</strong>: abnormal process</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -112,6 +112,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String analyzeResult;
 
         /**
+         * <p>The English description of the process behavior.</p>
+         * 
          * <strong>example:</strong>
          * <p>Normal system process</p>
          */
@@ -119,6 +121,8 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String explanationEn;
 
         /**
+         * <p>The Chinese description of the process behavior.</p>
+         * 
          * <strong>example:</strong>
          * <p>正常系统进程</p>
          */
@@ -126,7 +130,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String explanationZh;
 
         /**
-         * <p>The timestamp when the process was first detected.</p>
+         * <p>The timestamp of the first occurrence.</p>
          * 
          * <strong>example:</strong>
          * <p>1694576692000</p>
@@ -162,7 +166,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String processPath;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The remark.</p>
          * 
          * <strong>example:</strong>
          * <p>safe process</p>
@@ -180,7 +184,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String sha256;
 
         /**
-         * <p>The process labels.</p>
+         * <p>The process tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListUnknownThreatDetectProcessResponseBodyDataTags> tags;
@@ -274,7 +278,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
 
     public static class ListUnknownThreatDetectProcessResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries on the current page.</p>
+         * <p>The number of entries returned on the current page.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -283,7 +287,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public String count;
 
         /**
-         * <p>The page number of the current page in a paged query. This is used for paging.</p>
+         * <p>The page number of the current page returned during paging for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -292,7 +296,7 @@ public class ListUnknownThreatDetectProcessResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries per page in a paged query. This is used for paging.</p>
+         * <p>The maximum number of entries returned on each page during paging for a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchUpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
     /**
-     * <p>The whitelist rules.</p>
+     * <p>The list of whitelist rules for sensitive file alerts in agentless detection.</p>
      */
     @NameInMap("ConfigList")
     public java.util.List<BatchUpdateMaliciousFileWhitelistConfigRequestConfigList> configList;
@@ -25,7 +25,7 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
 
     public static class BatchUpdateMaliciousFileWhitelistConfigRequestConfigList extends TeaModel {
         /**
-         * <p>The ID of the whitelist rule. If you do not specify this parameter, a whitelist rule is created.</p>
+         * <p>The ID of the whitelist rule for sensitive file alerts in agentless detection. This parameter is optional. If you do not specify this parameter, a new rule is created. You can call the <a href="~~ListMaliciousFileWhitelistConfigs~~">ListMaliciousFileWhitelistConfigs</a> operation to obtain the ID of the whitelist rule for sensitive files.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -34,9 +34,9 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
         public Long configId;
 
         /**
-         * <p>The name of the alert.</p>
+         * <p>The alerting name. Valid values:</p>
          * <ul>
-         * <li>Set the value to <strong>ALL</strong>, which indicates all alert types.</li>
+         * <li><strong>ALL</strong>: all Alarm Metrics.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
         public String eventName;
 
         /**
-         * <p>The field that you want to use in the whitelist rule.</p>
+         * <p>The field used to determine the whitelist for sensitive file alerts.</p>
          * 
          * <strong>example:</strong>
          * <p>fileMd5</p>
@@ -55,7 +55,7 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
         public String field;
 
         /**
-         * <p>The value of the field that you want to use in the whitelist rule.</p>
+         * <p>The expected field value to be whitelisted.</p>
          * 
          * <strong>example:</strong>
          * <p>b2cf9747ee49d8d9b105cf16e078cc16</p>
@@ -64,9 +64,9 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
         public String fieldValue;
 
         /**
-         * <p>The logical operator that you want to use in the whitelist rule.</p>
+         * <p>The operator used to evaluate the rule. Valid values:</p>
          * <ul>
-         * <li>Set the value to strEqual, which indicates the equality operator (=).</li>
+         * <li>strEqual: equal to.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -76,9 +76,9 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
         public String operator;
 
         /**
-         * <p>The feature to which this operation belongs.</p>
+         * <p>The business source. Valid values:</p>
          * <ul>
-         * <li>Set the value to agentless, which indicates the agentless detection feature.</li>
+         * <li>agentless: agentless detection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -88,10 +88,10 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
         public String source;
 
         /**
-         * <p>The type of the assets on which you want the whitelist rule to take effect. Valid values:</p>
+         * <p>The type of the target to which the rule applies. Valid values:</p>
          * <ul>
-         * <li>ALL: all assets</li>
-         * <li>SELECTION_KEY: selected assets</li>
+         * <li>ALL: all assets.</li>
+         * <li>SELECTION_KEY: assets selected by using the asset selection component.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,10 +101,10 @@ public class BatchUpdateMaliciousFileWhitelistConfigRequest extends TeaModel {
         public String targetType;
 
         /**
-         * <p>The assets on which you want the whitelist rule to take effect. Valid values:</p>
+         * <p>The scope of the target to which the rule applies. Valid values:</p>
          * <ul>
-         * <li>ALL: all assets</li>
-         * <li>Others: selected assets</li>
+         * <li>ALL: all assets.</li>
+         * <li>Other values: the key of the asset scope selected by using the asset selection component.</li>
          * </ul>
          * 
          * <strong>example:</strong>

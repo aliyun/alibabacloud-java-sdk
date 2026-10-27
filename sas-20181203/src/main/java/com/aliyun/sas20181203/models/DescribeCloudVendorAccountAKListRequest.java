@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     /**
-     * <p>The unique ID of the AccessKey pair.</p>
+     * <p>The unique ID of the AK.</p>
      * 
      * <strong>example:</strong>
      * <p>2624</p>
@@ -14,7 +14,7 @@ public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     public String authIds;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number of the current page during paging. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,10 +23,10 @@ public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: 20.</p>
+     * <p>The maximum number of entries to return on each page during paging. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -45,10 +45,10 @@ public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The status of the AccessKey pair. Valid values:</p>
+     * <p>The status of the AK. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: enabled</li>
-     * <li><strong>1</strong>: disabled</li>
+     * <li><strong>0</strong>: Enabled.</li>
+     * <li><strong>1</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The username of the sub-account of the cloud service provider to which the AccessKey pair belongs.</p>
+     * <p>The username of the sub-account of the cloud service provider to which the AK belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>AlibabaCloud_***</p>
@@ -67,10 +67,23 @@ public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     public String subAccountName;
 
     /**
-     * <p>Cloud asset vendor. Values:</p>
+     * <p>The cloud service provider. Valid values:</p>
      * <ul>
-     * <li><strong>Tencent</strong>: Tencent Cloud </li>
-     * <li><strong>AWS</strong>: Amazon Web Services</li>
+     * <li><strong>Tencent</strong>: Tencent Cloud.</li>
+     * <li><strong>HUAWEICLOUD</strong>: Huawei Cloud.</li>
+     * <li><strong>Azure</strong>: Azure.</li>
+     * <li><strong>AWS</strong>: AWS.</li>
+     * <li><strong>VOLCENGINE</strong>: Volcengine.</li>
+     * <li><strong>google</strong>: Google Cloud.</li>
+     * <li><strong>CHAITIN</strong>: Chaitin Tech.</li>
+     * <li><strong>FORTINET</strong>: Fortinet.</li>
+     * <li><strong>THREATBOOK</strong>: ThreatBook.</li>
+     * <li><strong>KingsoftCloud</strong>: Kingsoft Cloud.</li>
+     * <li><strong>UCloud</strong>: UCloud.</li>
+     * <li><strong>BaiduCloud</strong>: Baidu AI Cloud.</li>
+     * <li><strong>WIZ</strong>: Wiz.</li>
+     * <li><strong>OracleCloud</strong>: Oracle Cloud.</li>
+     * <li><strong>StateCloud</strong>: CTYun.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +93,7 @@ public class DescribeCloudVendorAccountAKListRequest extends TeaModel {
     public String vendor;
 
     /**
-     * <p>The name of the AccessKey pair.</p>
+     * <p>The name of the AK account.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

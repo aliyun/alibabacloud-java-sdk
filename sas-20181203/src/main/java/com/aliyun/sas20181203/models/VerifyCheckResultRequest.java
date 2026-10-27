@@ -11,23 +11,23 @@ public class VerifyCheckResultRequest extends TeaModel {
     public java.util.List<Long> checkIds;
 
     /**
-     * <p>Specifies whether to forcibly run the specified check items. Default value: false.</p>
+     * <p>Specifies whether to forcibly execute the specified check item. Default value: false.</p>
      * <ul>
-     * <li>true: Forcibly runs the specified check items. Forced execution bypasses frequency and quantity limits and initiates the check directly, which may cause duplicate checks to run multiple times within a short period.</li>
-     * <li>false (default): Does not forcibly run the specified check items. This ensures that the same check item is executed only once within a short period.</li>
+     * <li>true: Forcibly executes the specified check item. Forcible execution bypasses frequency and quantity limits and directly initiates the check, which may result in repeated executions within a short period.</li>
+     * <li>false (default): Does not forcibly execute the specified check item. This ensures that the same check item is executed only once within a short period.</li>
      * </ul>
      */
     @NameInMap("Force")
     public Boolean force;
 
     /**
-     * <p>The list of instance IDs of the assets associated with the check items.</p>
+     * <p>The list of instance IDs for the check item assets.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The task source. Valid values:</p>
+     * <p>The source of the task. Valid values:</p>
      * <ul>
      * <li><strong>YAO_CHI</strong>: ApsaraDB console.</li>
      * </ul>

@@ -38,7 +38,7 @@ public class UpdateHoneypotNodeRequest extends TeaModel {
     public String nodeName;
 
     /**
-     * <p>The collection of allowed CIDR blocks.</p>
+     * <p>The list of allowed CIDR blocks.</p>
      */
     @NameInMap("SecurityGroupProbeIpList")
     public java.util.List<String> securityGroupProbeIpList;

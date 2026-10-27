@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConsoleFuncGrayStatusRequest extends TeaModel {
     /**
-     * <p>Name of the function module.</p>
+     * <p>The name of the feature module.</p>
      * 
      * <strong>example:</strong>
      * <p>vpcConsoleSwitch</p>
@@ -14,7 +14,7 @@ public class GetConsoleFuncGrayStatusRequest extends TeaModel {
     public String condition;
 
     /**
-     * <p>Set the language type for request and response messages. Default value: <strong>zh</strong>. Values:</p>
+     * <p>Sets the language for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>

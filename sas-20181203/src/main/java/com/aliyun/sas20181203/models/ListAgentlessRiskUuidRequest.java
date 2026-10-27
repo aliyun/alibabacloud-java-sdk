@@ -50,6 +50,15 @@ public class ListAgentlessRiskUuidRequest extends TeaModel {
     public String intranetIp;
 
     /**
+     * <p>报告语言。取值：zh（中文）、en（英文）。不传或为空时使用 zh。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
+    @NameInMap("Lang")
+    public String lang;
+
+    /**
      * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
@@ -147,6 +156,14 @@ public class ListAgentlessRiskUuidRequest extends TeaModel {
     }
     public String getIntranetIp() {
         return this.intranetIp;
+    }
+
+    public ListAgentlessRiskUuidRequest setLang(String lang) {
+        this.lang = lang;
+        return this;
+    }
+    public String getLang() {
+        return this.lang;
     }
 
     public ListAgentlessRiskUuidRequest setMachineName(String machineName) {

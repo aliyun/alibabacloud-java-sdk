@@ -12,10 +12,10 @@ public class GetAccountLabelRequest extends TeaModel {
     public java.util.List<String> labelList;
 
     /**
-     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language type for requests and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>

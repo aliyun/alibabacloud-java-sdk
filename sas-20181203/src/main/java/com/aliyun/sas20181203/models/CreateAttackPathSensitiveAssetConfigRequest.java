@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateAttackPathSensitiveAssetConfigRequest extends TeaModel {
     /**
-     * <p>List of cloud product assets.</p>
+     * <p>The list of cloud service assets.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AttackPathAssetList")
     public java.util.List<CreateAttackPathSensitiveAssetConfigRequestAttackPathAssetList> attackPathAssetList;
 
     /**
-     * <p>Configuration type. Possible values:</p>
+     * <p>The configuration type. Valid values:</p>
      * <ul>
-     * <li>asset_instance: Asset.</li>
+     * <li>asset_instance: asset.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -47,9 +47,9 @@ public class CreateAttackPathSensitiveAssetConfigRequest extends TeaModel {
 
     public static class CreateAttackPathSensitiveAssetConfigRequestAttackPathAssetList extends TeaModel {
         /**
-         * <p>Subtype of the cloud product asset.</p>
+         * <p>The subtype of the cloud service asset.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the subtype of the cloud product asset.</p>
+         * <p>You can call the <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> operation to query the subtype of the cloud service asset.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -60,9 +60,9 @@ public class CreateAttackPathSensitiveAssetConfigRequest extends TeaModel {
         public Integer assetSubType;
 
         /**
-         * <p>Type of the cloud product asset.</p>
+         * <p>The type of the cloud service asset.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the type of the cloud product asset.</p>
+         * <p>You can call the <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> operation to query the type of the cloud service asset.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -73,9 +73,9 @@ public class CreateAttackPathSensitiveAssetConfigRequest extends TeaModel {
         public Integer assetType;
 
         /**
-         * <p>Cloud product asset instance ID.</p>
+         * <p>The instance ID of the cloud service asset.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the cloud product asset instance ID.</p>
+         * <p>You can call the <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> operation to query the instance ID of the cloud service asset.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -86,9 +86,9 @@ public class CreateAttackPathSensitiveAssetConfigRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>Region ID of the cloud product asset instance.</p>
+         * <p>The region ID of the cloud service asset instance.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the region ID of the cloud product asset instance.</p>
+         * <p>You can call the <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> operation to query the region ID of the cloud service asset instance.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -99,9 +99,9 @@ public class CreateAttackPathSensitiveAssetConfigRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>Cloud product asset vendor.</p>
+         * <p>The vendor of the cloud service asset.</p>
          * <blockquote>
-         * <p>You can call <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> to query the cloud product asset vendor.</p>
+         * <p>You can call the <a href="~~ListCloudAssetInstances~~">ListCloudAssetInstances</a> operation to query the vendor of the cloud service asset.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 

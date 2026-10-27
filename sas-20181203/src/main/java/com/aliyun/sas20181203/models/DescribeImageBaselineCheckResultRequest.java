@@ -14,11 +14,11 @@ public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     public String criteria;
 
     /**
-     * <p>The query type of the baseline to query. Valid values:</p>
+     * <p>The query type for the baseline to query. Valid values:</p>
      * <ul>
      * <li><p><strong>BaselineNameAlias</strong>: baseline name</p>
      * </li>
-     * <li><p><strong>BaselineClassAlias</strong>: baseline category.</p>
+     * <li><p><strong>BaselineClassAlias</strong>: baseline category</p>
      * </li>
      * </ul>
      * 
@@ -29,7 +29,7 @@ public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     public String criteriaType;
 
     /**
-     * <p>The page number of the current page when using paging. Default value: 20, which indicates the first page.</p>
+     * <p>The page number of the current page when paging in a paged query. Default value: 20, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,10 +48,10 @@ public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     public String imageUuid;
 
     /**
-     * <p>The language type for the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page when using paging. Default value: <strong>20</strong>, which indicates that 20 logon configuration entries are displayed per page.</p>
+     * <p>The number of logon configuration entries to return on each page when paging in a paged query. Default value: <strong>20</strong>, which indicates that 20 logon configuration entries are displayed on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -70,13 +70,13 @@ public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The risk level of the baseline to query. Separate multiple levels with commas (,). By default, all levels are included. Valid values:</p>
+     * <p>The risk level of the baselines to query. Separate multiple risk levels with commas (,). By default, all risk levels are queried. Valid values:</p>
      * <ul>
      * <li><p><strong>high</strong>: high risk</p>
      * </li>
      * <li><p><strong>medium</strong>: medium risk</p>
      * </li>
-     * <li><p><strong>low</strong>: low risk.</p>
+     * <li><p><strong>low</strong>: low risk</p>
      * </li>
      * </ul>
      * 
@@ -87,7 +87,7 @@ public class DescribeImageBaselineCheckResultRequest extends TeaModel {
     public String riskLevel;
 
     /**
-     * <p>The scan scope.</p>
+     * <p>The scan ranges.</p>
      */
     @NameInMap("ScanRange")
     public java.util.List<String> scanRange;

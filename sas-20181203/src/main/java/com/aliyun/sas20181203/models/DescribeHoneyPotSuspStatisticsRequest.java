@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHoneyPotSuspStatisticsRequest extends TeaModel {
     /**
-     * <p>The source of the request. Set the value to <strong>honeypot</strong>.</p>
+     * <p>Specifies the source of the request. Set the value to <strong>honeypot</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class DescribeHoneyPotSuspStatisticsRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribeHoneyPotSuspStatisticsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The time range of the data to query. Unit: days.</p>
+     * <p>Specifies the time range of the data to query. Unit: days.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class DescribeHoneyPotSuspStatisticsRequest extends TeaModel {
     public Integer statisticsDays;
 
     /**
-     * <p>The Asset Type to query. Valid values:</p>
+     * <p>Specifies the asset type to query. Valid values:</p>
      * <ul>
      * <li><strong>vpcInstanceId</strong>: VPC-connected instance</li>
      * <li><strong>uuid</strong>: server</li>

@@ -53,9 +53,9 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong>: High.</li>
-         * <li><strong>medium</strong>: Medium.</li>
-         * <li><strong>low</strong>: Low.</li>
+         * <li><strong>high</strong>: High risk.</li>
+         * <li><strong>medium</strong>: Medium risk.</li>
+         * <li><strong>low</strong>: Low risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -98,11 +98,11 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The warning level. Valid values:</p>
+         * <p>The alert level. Valid values:</p>
          * <ul>
-         * <li><strong>asap</strong>: High. Fix the vulnerability at the earliest opportunity.</li>
-         * <li><strong>nntf</strong>: Medium. The vulnerability can be temporarily left unfixed.</li>
-         * <li><strong>later</strong>: Low. The vulnerability can be left unfixed.</li>
+         * <li><strong>asap</strong>: High. Fix as soon as possible.</li>
+         * <li><strong>nntf</strong>: Medium. Can be fixed later.</li>
+         * <li><strong>later</strong>: Low. Can be left unfixed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,9 +147,9 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         /**
          * <p>The risk level. Valid values:</p>
          * <ul>
-         * <li><strong>high</strong>: High.</li>
-         * <li><strong>medium</strong>: Medium.</li>
-         * <li><strong>low</strong>: Low.</li>
+         * <li><strong>high</strong>: High risk.</li>
+         * <li><strong>medium</strong>: Medium risk.</li>
+         * <li><strong>low</strong>: Low risk.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,11 +192,11 @@ public class DescribeClusterImageSecuritySummaryResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The warning level. Valid values:</p>
+         * <p>The alert level. Valid values:</p>
          * <ul>
-         * <li><strong>asap</strong>: High. Fix the vulnerability at the earliest opportunity.</li>
-         * <li><strong>nntf</strong>: Medium. The vulnerability can be temporarily left unfixed.</li>
-         * <li><strong>later</strong>: Low. The vulnerability can be left unfixed.</li>
+         * <li><strong>asap</strong>: High. Fix as soon as possible.</li>
+         * <li><strong>nntf</strong>: Medium. Can be fixed later.</li>
+         * <li><strong>later</strong>: Low. Can be left unfixed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

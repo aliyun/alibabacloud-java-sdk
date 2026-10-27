@@ -41,7 +41,7 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
     public String image;
 
     /**
-     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>24A20733-10A0-4AF6-BE6B-E3322413BB68</p>
@@ -70,8 +70,8 @@ public class GetClusterScannerYamlResponseBody extends TeaModel {
     /**
      * <p>Indicates whether incremental scanning is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Disabled.</li>
-     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: disabled.</li>
+     * <li><strong>1</strong>: enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

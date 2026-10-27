@@ -12,7 +12,7 @@ public class DescribeAlarmEventStackInfoRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Variable Trojan</p>
+     * <p>Mining program</p>
      */
     @NameInMap("EventName")
     public String eventName;

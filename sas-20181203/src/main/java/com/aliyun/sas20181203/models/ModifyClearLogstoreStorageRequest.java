@@ -14,10 +14,10 @@ public class ModifyClearLogstoreStorageRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ModifyClearLogstoreStorageRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the user LogStore.</p>
+     * <p>The name of the Logstore for user log storage.</p>
      * 
      * <strong>example:</strong>
      * <p>sas_sls_storage</p>

@@ -6,6 +6,10 @@ import com.aliyun.tea.*;
 public class ListUuidsByAppIdRequest extends TeaModel {
     /**
      * <p>The SAE application ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListMachineApps~~">ListMachineApps</a> operation to obtain the value of this parameter.
+     * This parameter is required. If it is not provided, the API returns HTTP 400 with the error code -101.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>5b41f4bf-349f-4263-89b1-9234c034****</p>
@@ -15,6 +19,10 @@ public class ListUuidsByAppIdRequest extends TeaModel {
 
     /**
      * <p>The region ID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListMachineApps~~">ListMachineApps</a> operation to obtain the value of this parameter.
+     * This parameter is required. If it is not provided, the API returns HTTP 400 with the error code -101.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -23,7 +31,7 @@ public class ListUuidsByAppIdRequest extends TeaModel {
     public String appRegionId;
 
     /**
-     * <p>The page number of the current page in a paged query. Paging starts from page 1.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +43,7 @@ public class ListUuidsByAppIdRequest extends TeaModel {
      * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +53,7 @@ public class ListUuidsByAppIdRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page in a paged query. Paging is performed based on this value.</p>
+     * <p>The number of entries to return on each page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -54,7 +62,7 @@ public class ListUuidsByAppIdRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The UID of the resource directory.</p>
+     * <p>The UID of the associated resource directory.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>

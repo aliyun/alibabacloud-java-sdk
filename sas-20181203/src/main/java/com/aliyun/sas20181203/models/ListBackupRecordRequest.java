@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBackupRecordRequest extends TeaModel {
     /**
-     * <p>The backup end time. The value is a timestamp in milliseconds.</p>
+     * <p>The end time of the backup. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1699600611000</p>
@@ -14,7 +14,7 @@ public class ListBackupRecordRequest extends TeaModel {
     public Long backupEndTime;
 
     /**
-     * <p>The backup start time. The value is a timestamp in milliseconds.</p>
+     * <p>The start time of the backup. The value is a UNIX timestamp in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1699514211000</p>
@@ -23,7 +23,7 @@ public class ListBackupRecordRequest extends TeaModel {
     public Long backupStartTime;
 
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates the first page.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,9 +41,9 @@ public class ListBackupRecordRequest extends TeaModel {
     public String machineRemark;
 
     /**
-     * <p>The maximum number of entries per page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned.</p>
+     * <p>The maximum number of entries to return on each page in a paged query. The default number of entries per page for paging is 20. If the PageSize parameter is empty, 20 entries are returned by default.</p>
      * <blockquote>
-     * <p>Do not leave PageSize empty.</p>
+     * <p>Do not leave the PageSize parameter empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,9 +55,9 @@ public class ListBackupRecordRequest extends TeaModel {
     /**
      * <p>The list of backup task statuses. Valid values:</p>
      * <ul>
-     * <li><strong>BACKUP_COMPLETE</strong>: backup succeeded</li>
-     * <li><strong>BACKUP_FAILED</strong>: backup failed</li>
-     * <li><strong>PARTIAL_COMPLETE</strong>: partial backup succeeded.</li>
+     * <li><strong>BACKUP_COMPLETE</strong>: The backup is successful.</li>
+     * <li><strong>BACKUP_FAILED</strong>: The backup fails.</li>
+     * <li><strong>PARTIAL_COMPLETE</strong>: The backup is partially successful.</li>
      * </ul>
      */
     @NameInMap("StatusList")

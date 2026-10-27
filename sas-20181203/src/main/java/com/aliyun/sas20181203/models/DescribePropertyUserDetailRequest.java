@@ -83,6 +83,10 @@ public class DescribePropertyUserDetailRequest extends TeaModel {
     @NameInMap("Remark")
     public String remark;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

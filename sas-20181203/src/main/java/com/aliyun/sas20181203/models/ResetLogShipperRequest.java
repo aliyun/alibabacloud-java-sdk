@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ResetLogShipperRequest extends TeaModel {
     /**
-     * <p>The global retention period of hot data.</p>
+     * <p>The global data retention period in the hot storage tier.</p>
      * <blockquote>
-     * <p> The value of this parameter must be at least 7 and smaller than the log retention period. Unit: days.</p>
+     * <p>Valid values: greater than or equal to 7 days and less than the log retention period.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,15 +17,15 @@ public class ResetLogShipperRequest extends TeaModel {
     public Integer hotTtl;
 
     /**
-     * <p>The settings of the log analysis feature.</p>
+     * <p>The configuration information for log analysis in Security Center.</p>
      */
     @NameInMap("LogMetaList")
     public java.util.List<ResetLogShipperRequestLogMetaList> logMetaList;
 
     /**
-     * <p>The global log retention period.</p>
+     * <p>The global log retention period in days.</p>
      * <blockquote>
-     * <p> This parameter is supported only when the log analysis feature uses the pay-as-you-go billing method.</p>
+     * <p>This parameter is supported only in the pay-as-you-go billing mode for logs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,9 +65,9 @@ public class ResetLogShipperRequest extends TeaModel {
 
     public static class ResetLogShipperRequestLogMetaList extends TeaModel {
         /**
-         * <p>The Logstore that you want to configure.</p>
+         * <p>The Logstore to be configured.</p>
          * <blockquote>
-         * <p> You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to query the Logstore.</p>
+         * <p>You can call the <a href="~~DescribeLogMeta~~">DescribeLogMeta</a> operation to obtain the value of this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -77,9 +77,9 @@ public class ResetLogShipperRequest extends TeaModel {
         public String configLogStore;
 
         /**
-         * <p>The retention period of hot data in the Logstore.</p>
+         * <p>The data retention period in the hot storage tier of the Logstore.</p>
          * <blockquote>
-         * <p> The value of this parameter must be at least 7 and smaller than the log retention period. Unit: days. If you specify this parameter for the Logstore, the global retention period of hot data specified by the HotTtl parameter is overwritten.</p>
+         * <p>Valid values: greater than or equal to 7 days and less than the log retention period. Specifying the data retention period in the hot storage tier for a single Logstore overrides the global settings.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -89,10 +89,10 @@ public class ResetLogShipperRequest extends TeaModel {
         public Integer hotTtl;
 
         /**
-         * <p>The status of the log analysis feature. Valid values:</p>
+         * <p>The current enabling status. Valid values:</p>
          * <ul>
-         * <li><strong>disabled</strong></li>
-         * <li><strong>enabled</strong></li>
+         * <li><strong>disabled</strong>: The feature is disabled.</li>
+         * <li><strong>enabled</strong>: The feature is enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,9 +102,9 @@ public class ResetLogShipperRequest extends TeaModel {
         public String status;
 
         /**
-         * <p>The log retention period of the Logstore.</p>
+         * <p>The log retention period of the Logstore in days.</p>
          * <blockquote>
-         * <p> If you specify this parameter for the Logstore, the global log retention period specified by the Ttl parameter is overwritten.</p>
+         * <p>Specifying the log retention period for a single Logstore overrides the global settings.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

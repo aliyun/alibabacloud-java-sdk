@@ -152,6 +152,9 @@ public class UpdatePostPaidBindRelRequest extends TeaModel {
 
         /**
          * <p>The type of free quota used for the binding operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>freeEnterprise</p>
          */
         @NameInMap("FreeType")
         public String freeType;

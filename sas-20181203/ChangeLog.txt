@@ -1,3 +1,12 @@
+2026-10-27 Version: 10.3.1
+- Update API DescribeFieldStatistics: add response parameters Body.GroupedFields.OracleInstanceCount.
+- Update API DescribeVersionConfig: add response parameters Body.PostPaidFirstTrialTime.
+- Update API DescribeVersionConfig: add response parameters Body.PostPaidLastTrialTime.
+- Update API DescribeVersionConfig: add response parameters Body.PostPaidTrialExpiredTime.
+- Update API GetCanTrySas: add response parameters Body.Data.PostPaidCanTry.
+- Update API ListAgentlessRiskUuid: add request parameters Lang.
+
+
 2026-10-13 Version: 10.3.0
 - Support API CreateFileDeepAnalyze.
 

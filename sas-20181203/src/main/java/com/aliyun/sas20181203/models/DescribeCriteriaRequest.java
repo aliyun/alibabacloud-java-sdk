@@ -7,7 +7,7 @@ public class DescribeCriteriaRequest extends TeaModel {
     /**
      * <p>The Asset Type to query. Valid values:</p>
      * <ul>
-     * <li><strong>ecs</strong>: queries all ECS servers.</li>
+     * <li><strong>ecs</strong>: Queries all ECS servers.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DescribeCriteriaRequest extends TeaModel {
     public String machineTypes;
 
     /**
-     * <p>The ID of the Alibaba Cloud account of the member accounts in the resource folder.</p>
+     * <p>The ID of the Alibaba Cloud account for the member accounts in the resource folder.</p>
      * <blockquote>
-     * <p>Invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,10 +29,10 @@ public class DescribeCriteriaRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>Specifies whether the fuzzy query field supports automatic matching. Default value: <strong>false</strong>. Valid values:</p>
+     * <p>Specifies whether the entered fuzzy query field supports automatic matching. Default value: <strong>false</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Supported.</li>
-     * <li><strong>false</strong>: Not supported.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>

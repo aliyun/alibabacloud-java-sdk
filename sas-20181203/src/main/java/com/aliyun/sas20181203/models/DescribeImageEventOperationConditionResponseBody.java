@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
     /**
-     * <p>The return code of the call.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,10 +38,10 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.</li>
-     * <li><strong>false</strong>: The call failed.</li>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
          * <p>The condition key. Valid values:</p>
          * <ul>
          * <li><strong>MD5</strong>: MD5.</li>
-         * <li><strong>PATH</strong>: path.</li>
+         * <li><strong>PATH</strong>: Path.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -165,7 +165,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         /**
          * <p>The operation code. Valid values:</p>
          * <ul>
-         * <li><strong>whitelist</strong>: whitelist.</li>
+         * <li><strong>whitelist</strong>: Whitelist.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class DescribeImageEventOperationConditionResponseBody extends TeaModel {
         /**
          * <p>The alerting type. Valid values:</p>
          * <ul>
-         * <li><strong>sensitiveFile</strong>: sensitive file.</li>
+         * <li><strong>sensitiveFile</strong>: Sensitive file.</li>
          * </ul>
          * 
          * <strong>example:</strong>

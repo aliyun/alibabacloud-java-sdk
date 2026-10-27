@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCustomizedDictRequest extends TeaModel {
     /**
-     * <p>The IP address of the access source.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>58.240.XX.XX</p>

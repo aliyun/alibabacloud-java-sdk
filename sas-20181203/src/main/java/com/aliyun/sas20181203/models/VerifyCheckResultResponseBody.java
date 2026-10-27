@@ -11,7 +11,7 @@ public class VerifyCheckResultResponseBody extends TeaModel {
     public VerifyCheckResultResponseBodyData data;
 
     /**
-     * <p>The request ID. Alibaba Cloud generates a unique ID for each request. You can use the ID to troubleshoot issues.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>7C0A3FA0-AA32-5660-8989-85A5582F****</p>
@@ -44,8 +44,8 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         /**
          * <p>The operation code of the cloud service configuration check task. Valid values:</p>
          * <ul>
-         * <li><strong>Throttling</strong>: Rate limited.</li>
-         * <li><strong>ActionTrialUnauthorized</strong>: Unauthorized error.</li>
+         * <li><strong>Throttling</strong>: Throttling.</li>
+         * <li><strong>ActionTrailUnauthorized</strong>: Unauthorized error.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         public String operateCode;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>8eded533-5348-468c-aa1d-0aa2934a7***</p>
@@ -64,7 +64,7 @@ public class VerifyCheckResultResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The throttling duration. Unit: seconds.</p>
+         * <p>The duration of the throttling. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>

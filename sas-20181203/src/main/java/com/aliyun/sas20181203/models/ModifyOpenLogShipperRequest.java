@@ -11,7 +11,7 @@ public class ModifyOpenLogShipperRequest extends TeaModel {
      * <li><strong>sas</strong>: Security Center edition.</li>
      * </ul>
      * <blockquote>
-     * <p>Server Guard users must use <strong>aegis</strong>, and Security Center users must use <strong>sas</strong>.</p>
+     * <p>If you use Server Guard, set this parameter to <strong>aegis</strong>. If you use Security Center, set this parameter to <strong>sas</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,9 +21,9 @@ public class ModifyOpenLogShipperRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The ID of the member accounts in the resource directory (Alibaba Cloud account).</p>
+     * <p>The ID of the member accounts (Alibaba Cloud account) in the resource folder.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

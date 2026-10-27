@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetCanTrySasRequest extends TeaModel {
     /**
-     * <p>Specifies whether the request is redirected from the Elastic Compute Service (ECS) console. Valid values:</p>
+     * <p>Specifies whether the request is from the ECS console. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class GetCanTrySasRequest extends TeaModel {
     public Boolean fromEcs;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>

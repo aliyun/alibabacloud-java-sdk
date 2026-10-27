@@ -150,6 +150,9 @@ public class DescribePropertyScaDetailRequest extends TeaModel {
      * <blockquote>
      * <p>You can call the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

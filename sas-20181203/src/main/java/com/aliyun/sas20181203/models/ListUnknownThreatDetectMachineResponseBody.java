@@ -112,6 +112,9 @@ public class ListUnknownThreatDetectMachineResponseBody extends TeaModel {
 
         /**
          * <p>The plug-in status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("PluginStatus")
         public String pluginStatus;

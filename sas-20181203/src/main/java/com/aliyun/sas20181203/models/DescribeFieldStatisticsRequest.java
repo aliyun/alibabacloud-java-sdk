@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeFieldStatisticsRequest extends TeaModel {
     /**
-     * <p>The type of asset to query. If you do not specify an asset type, the statistics information of all asset types is queried. Valid values:</p>
+     * <p>The type of asset to query. If you do not specify an asset type, the statistics information of all types of assets is queried. Valid values:</p>
      * <ul>
      * <li><strong>ecs</strong>: server</li>
-     * <li><strong>cloud_product</strong>: cloud product.</li>
+     * <li><strong>cloud_product</strong>: cloud service</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,9 +27,9 @@ public class DescribeFieldStatisticsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the Alibaba Cloud account of the member accounts in the resource directory.</p>
+     * <p>The ID of the main account of the member accounts in the resource folder.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
+     * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

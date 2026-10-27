@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListClusterCheckResultRequest extends TeaModel {
     /**
-     * <p>Fuzzy search key for check items.</p>
+     * <p>The keyword for fuzzy search of check items.</p>
      * 
      * <strong>example:</strong>
      * <p>container</p>
@@ -14,7 +14,7 @@ public class ListClusterCheckResultRequest extends TeaModel {
     public String checkKey;
 
     /**
-     * <p>Cluster ID.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListClusterCheckResultRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Page number for the current page in a paginated query. The default value is <strong>1</strong>.</p>
+     * <p>Specifies the page number of the current page during paging in a paged query. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,12 +33,10 @@ public class ListClusterCheckResultRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Language type for requests and responses. The default value is <strong>zh</strong>. Values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong>: Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -49,7 +47,7 @@ public class ListClusterCheckResultRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Number of records to display per page when performing a paginated query. The default value is <strong>20</strong>, indicating 20 records per page.</p>
+     * <p>The Settings for paging in a paged query. Specifies the number of records to display on each page. Default value: <strong>20</strong>, which indicates that 20 records are displayed on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -58,18 +56,16 @@ public class ListClusterCheckResultRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>List of risk levels.</p>
+     * <p>The list of risk levels.</p>
      */
     @NameInMap("RiskLevels")
     public java.util.List<String> riskLevels;
 
     /**
-     * <p>Custom sorting type. Values:</p>
+     * <p>The custom sort type. Valid values:</p>
      * <ul>
-     * <li><p><strong>RISK_LEVEL</strong>: Risk level.</p>
-     * </li>
-     * <li><p><strong>STATUS</strong>: Check item status.</p>
-     * </li>
+     * <li><strong>RISK_LEVEL</strong>: Risk level.</li>
+     * <li><strong>STATUS</strong>: Check item status.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +75,7 @@ public class ListClusterCheckResultRequest extends TeaModel {
     public String sortType;
 
     /**
-     * <p>List of check item statuses.</p>
+     * <p>The list of check item statuses.</p>
      */
     @NameInMap("Statuses")
     public java.util.List<String> statuses;

@@ -7,8 +7,8 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     /**
      * <p>The defense mode. Valid values:</p>
      * <ul>
-     * <li><strong>block</strong>: Block mode.</li>
-     * <li><strong>audit</strong>: Alert mode.</li>
+     * <li><strong>block</strong>: Blocks requests.</li>
+     * <li><strong>audit</strong>: Generates alerts.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,9 +29,9 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String dir;
 
     /**
-     * <p>The folder to exclude from web tamper proofing protection.</p>
+     * <p>The directory that does not require web tamper-proofing (excluded directory).</p>
      * <blockquote>
-     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to <strong>blacklist</strong> pattern.</p>
+     * <p>If the defense pattern <strong>Mode</strong> is set to <strong>blacklist</strong>, you must configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,9 +41,9 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String exclusiveDir;
 
     /**
-     * <p>The file to exclude from web tamper proofing protection.</p>
+     * <p>The files that do not require web tamper-proofing (excluded files).</p>
      * <blockquote>
-     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to <strong>blacklist</strong> pattern.</p>
+     * <p>If the defense pattern <strong>Mode</strong> is set to <strong>blacklist</strong>, you must configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String exclusiveFile;
 
     /**
-     * <p>The file types to exclude from web tamper proofing protection. Separate multiple file types with semicolons (;). Valid values:</p>
+     * <p>The file types that do not require web tamper-proofing (excluded file types). Separate multiple file types with a semicolon. Valid values:</p>
      * <ul>
      * <li>php</li>
      * <li>jsp</li>
@@ -71,7 +71,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
      * <li>png</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to <strong>blacklist</strong> pattern.</p>
+     * <p>If the defense pattern <strong>Mode</strong> is set to <strong>blacklist</strong>, you must configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,9 +81,9 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String exclusiveFileType;
 
     /**
-     * <p>The file to protect.</p>
+     * <p>The files that require protection.</p>
      * <blockquote>
-     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to <strong>whitelist</strong> pattern.</p>
+     * <p>If the defense pattern <strong>Mode</strong> is set to <strong>whitelist</strong>, you must configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String inclusiveFile;
 
     /**
-     * <p>The file types to protect with web tamper proofing. Separate multiple file types with semicolons (;). Valid values:</p>
+     * <p>The file types that require web tamper-proofing. Separate multiple file types with a semicolon. Valid values:</p>
      * <ul>
      * <li>php</li>
      * <li>jsp</li>
@@ -111,7 +111,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
      * <li>png</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when the Defense mode <strong>Mode</strong> is set to <strong>whitelist</strong> pattern.</p>
+     * <p>If the defense pattern <strong>Mode</strong> is set to <strong>whitelist</strong>, you must configure this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -121,10 +121,10 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String inclusiveFileType;
 
     /**
-     * <p>The language type of the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The local backup path used for secure backup of the protected directory.</p>
+     * <p>The local backup path used for the secure backup of the protected directory.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -144,10 +144,10 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String localBackupDir;
 
     /**
-     * <p>The protection directory mode. Valid values:</p>
+     * <p>The protection mode of the directory. Valid values:</p>
      * <ul>
-     * <li><strong>whitelist</strong>: whitelist mode. Protects only the specified directories and file types.</li>
-     * <li><strong>blacklist</strong>: blacklist mode. Protects all subdirectories, file types, and specified files under the protected directory that are not excluded.</li>
+     * <li><strong>whitelist</strong>: Whitelist mode. Protects the added protected directories and file types.</li>
+     * <li><strong>blacklist</strong>: Blacklist mode. Protects all subdirectories, file types, and specified files under the added protected directory that are not excluded.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class ModifyWebLockCreateConfigRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The IP address of the access source.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>39.170.XX.XX</p>

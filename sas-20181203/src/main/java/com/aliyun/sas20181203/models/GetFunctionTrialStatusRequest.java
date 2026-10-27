@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetFunctionTrialStatusRequest extends TeaModel {
     /**
-     * <p>The name of the function module.</p>
+     * <p>The name of the feature module.</p>
      * 
      * <strong>example:</strong>
      * <p>trail_file_detect_api_reward</p>

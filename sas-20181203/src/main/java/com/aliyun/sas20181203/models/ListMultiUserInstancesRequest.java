@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMultiUserInstancesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page for a paged query. Maximum value: 100. Valid values: 10 to 100. Default value: 10.</p>
+     * <p>The number of rows per page for paging. The maximum value is 100. Valid values: 10 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListMultiUserInstancesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token used for paging. Leave this parameter empty for the first request. For subsequent requests, set this parameter to the NextToken value returned in the previous response.</p>
+     * <p>Used for paging. Leave this parameter empty for the first request. For subsequent requests, specify the NextToken value returned in the previous response.</p>
      * 
      * <strong>example:</strong>
      * <p>CAESGgoSChAKDGNvbXBsZXRlVGltZRABCgQiAggAGAAiQAoJAB4SwmEAAAAACjMDLgAAADFTNzMyZDMwMzAzMDM0NzY3YTZjNjI3NjZmNmU3MjcxNjk3NDY5MzY3MjY4****</p>

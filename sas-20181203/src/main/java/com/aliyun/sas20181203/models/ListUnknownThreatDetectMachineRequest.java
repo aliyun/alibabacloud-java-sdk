@@ -13,6 +13,10 @@ public class ListUnknownThreatDetectMachineRequest extends TeaModel {
     @NameInMap("CurrentPage")
     public Integer currentPage;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("EventStatus")
     public Integer eventStatus;
 

@@ -163,7 +163,7 @@ public class QueryGroupedSecurityEventMarkMissListResponseBody extends TeaModel 
          * <p>The type of the alert event.</p>
          * 
          * <strong>example:</strong>
-         * <p>异常登录</p>
+         * <p>Unusual logon</p>
          */
         @NameInMap("EventTypeOriginal")
         public String eventTypeOriginal;

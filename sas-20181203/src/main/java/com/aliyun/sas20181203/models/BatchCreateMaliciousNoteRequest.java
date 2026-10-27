@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCreateMaliciousNoteRequest extends TeaModel {
     /**
-     * <p>The batches.</p>
+     * <p>The batch list.</p>
      */
     @NameInMap("ImageMaliciousFileList")
     public java.util.List<BatchCreateMaliciousNoteRequestImageMaliciousFileList> imageMaliciousFileList;
@@ -25,10 +25,7 @@ public class BatchCreateMaliciousNoteRequest extends TeaModel {
 
     public static class BatchCreateMaliciousNoteRequestImageMaliciousFileList extends TeaModel {
         /**
-         * <p>The ID of the alert.</p>
-         * <blockquote>
-         * <p> You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query the alert IDs.</p>
-         * </blockquote>
+         * <p>The alert ID. You can call the <a href="~~DescribeSuspEvents~~">DescribeSuspEvents</a> operation to query this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -37,7 +34,7 @@ public class BatchCreateMaliciousNoteRequest extends TeaModel {
         public Long eventId;
 
         /**
-         * <p>The description.</p>
+         * <p>The note.</p>
          * 
          * <strong>example:</strong>
          * <p>Malware sample</p>

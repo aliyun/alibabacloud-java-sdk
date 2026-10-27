@@ -16,25 +16,25 @@ public class DescribeClusterImageSecuritySummaryRequest extends TeaModel {
     /**
      * <p>The container search field. Valid values:</p>
      * <ul>
-     * <li><strong>instanceId</strong>: container instance ID</li>
-     * <li><strong>clusterId</strong>: cluster ID</li>
-     * <li><strong>regionId</strong>: container region</li>
-     * <li><strong>clusterName</strong>: cluster name</li>
-     * <li><strong>image</strong>: image name</li>
-     * <li><strong>imageRepoName</strong>: image repository name</li>
-     * <li><strong>imageRepoNamespace</strong>: image repository namespace</li>
-     * <li><strong>imageRepoTag</strong>: image repository tag</li>
-     * <li><strong>imageDigest</strong>: image digest</li>
-     * <li><strong>clusterType</strong>: cluster type</li>
-     * <li><strong>hostIp</strong>: public IP address</li>
-     * <li><strong>pod</strong>: pod</li>
-     * <li><strong>podIp</strong>: pod IP address</li>
-     * <li><strong>containerId</strong>: container ID</li>
+     * <li><strong>instanceId</strong>: the container instance ID</li>
+     * <li><strong>clusterId</strong>: the cluster ID</li>
+     * <li><strong>regionId</strong>: the container region</li>
+     * <li><strong>clusterName</strong>: the cluster name</li>
+     * <li><strong>image</strong>: the image name</li>
+     * <li><strong>imageRepoName</strong>: the image repository name</li>
+     * <li><strong>imageRepoNamespace</strong>: the image repository namespace</li>
+     * <li><strong>imageRepoTag</strong>: the image repository tag</li>
+     * <li><strong>imageDigest</strong>: the image digest</li>
+     * <li><strong>clusterType</strong>: the cluster type</li>
+     * <li><strong>hostIp</strong>: the public IP address</li>
+     * <li><strong>pod</strong>: the pod</li>
+     * <li><strong>podIp</strong>: the pod IP address</li>
+     * <li><strong>containerId</strong>: the container ID</li>
      * <li><strong>vulStatus</strong>: whether the container has vulnerabilities</li>
      * <li><strong>alarmStatus</strong>: whether the container has security alerts</li>
      * <li><strong>riskStatus</strong>: whether the container has risks</li>
-     * <li><strong>riskLevel</strong>: container risk level</li>
-     * <li><strong>containerScope</strong>: container type.</li>
+     * <li><strong>riskLevel</strong>: the container risk level</li>
+     * <li><strong>containerScope</strong>: the container type</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class DescribeClusterImageSecuritySummaryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IP address of the access source.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>60.190.XXX.XXX</p>

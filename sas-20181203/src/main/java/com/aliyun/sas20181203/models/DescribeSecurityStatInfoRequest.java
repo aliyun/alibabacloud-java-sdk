@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityStatInfoRequest extends TeaModel {
     /**
-     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeSecurityStatInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the member account in the resource folder. This parameter is used by the multi-account security management feature of Security Center to query the security information of specified member accounts.</p>
+     * <p>The ID of the member account. This parameter is used for the multi-account security control feature of Security Center to query the security information of other member accounts in the resource directory.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -27,7 +27,7 @@ public class DescribeSecurityStatInfoRequest extends TeaModel {
     public String resourceDirectoryAccountId;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>1.2.XX.XX</p>

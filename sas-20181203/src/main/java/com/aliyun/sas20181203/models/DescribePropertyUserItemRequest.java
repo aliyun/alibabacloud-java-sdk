@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePropertyUserItemRequest extends TeaModel {
     /**
-     * <p>The page number of the current page to display in a paged query.</p>
+     * <p>The page number of the current page returned for a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,10 +14,10 @@ public class DescribePropertyUserItemRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Specifies whether to forcefully refresh the data to be queried. Valid values:</p>
+     * <p>Specifies whether to forcibly refresh the data to be queried. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Forcefully refresh.</li>
-     * <li><strong>false</strong>: Do not forcefully refresh.</li>
+     * <li><strong>true</strong>: Forces a refresh.</li>
+     * <li><strong>false</strong>: Does not force a refresh.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribePropertyUserItemRequest extends TeaModel {
     public Boolean forceFlush;
 
     /**
-     * <p>The maximum number of entries to display on each page in a paged query.</p>
+     * <p>The maximum number of entries returned per page for a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

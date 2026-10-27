@@ -133,7 +133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a whitelist rule for a baseline check item.</p>
+     * <p>Creates a baseline whitelist record.</p>
      * 
      * @param request AddBaselineCheckWhiteRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -181,7 +181,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a whitelist rule for a baseline check item.</p>
+     * <p>Creates a baseline whitelist record.</p>
      * 
      * @param request AddBaselineCheckWhiteRecordRequest
      * @return AddBaselineCheckWhiteRecordResponse
@@ -441,7 +441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds multi-cloud asset configuration information.</p>
+     * <p>Creates multi-cloud asset configuration information.</p>
      * 
      * @param request AddCloudVendorAccountAKRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -521,7 +521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds multi-cloud asset configuration information.</p>
+     * <p>Creates multi-cloud asset configuration information.</p>
      * 
      * @param request AddCloudVendorAccountAKRequest
      * @return AddCloudVendorAccountAKResponse
@@ -861,7 +861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an alert handling rule.</p>
+     * <p>Adds an image alert handling rule.</p>
      * 
      * @param request AddImageEventOperationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -921,7 +921,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an alert handling rule.</p>
+     * <p>Adds an image alert handling rule.</p>
      * 
      * @param request AddImageEventOperationRequest
      * @return AddImageEventOperationResponse
@@ -1321,7 +1321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the trial use of Security Center value-added features, including vulnerability fixing and threat analysis and response.</p>
+     * <p>Adds a trial for the value-added modules of Security Center, including vulnerability remediation and threat analysis and response.</p>
      * 
      * @param request AddSasModuleTrialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1357,7 +1357,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the trial use of Security Center value-added features, including vulnerability fixing and threat analysis and response.</p>
+     * <p>Adds a trial for the value-added modules of Security Center, including vulnerability remediation and threat analysis and response.</p>
      * 
      * @param request AddSasModuleTrialRequest
      * @return AddSasModuleTrialResponse
@@ -1643,7 +1643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds alert description in batches.</p>
+     * <p>Adds notes to multiple security alerts.</p>
      * 
      * @param request BatchCreateMaliciousNoteRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1675,7 +1675,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds alert description in batches.</p>
+     * <p>Adds notes to multiple security alerts.</p>
      * 
      * @param request BatchCreateMaliciousNoteRequest
      * @return BatchCreateMaliciousNoteResponse
@@ -1687,7 +1687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes whitelist rules for alerts generated for sensitive files that are detected by using the agentless detection feature in batches.</p>
+     * <p>Deletes multiple whitelist rules for sensitive file alerts in agentless detection.</p>
      * 
      * @param request BatchDeleteMaliciousFileWhitelistConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1719,7 +1719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes whitelist rules for alerts generated for sensitive files that are detected by using the agentless detection feature in batches.</p>
+     * <p>Deletes multiple whitelist rules for sensitive file alerts in agentless detection.</p>
      * 
      * @param request BatchDeleteMaliciousFileWhitelistConfigRequest
      * @return BatchDeleteMaliciousFileWhitelistConfigResponse
@@ -1779,7 +1779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies multiple alert whitelist rules of sensitive files that are detected by using the agentless detection feature at a time.</p>
+     * <p>Modifies multiple whitelist rules for sensitive file alerts in agentless detection.</p>
      * 
      * @param request BatchUpdateMaliciousFileWhitelistConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1811,7 +1811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies multiple alert whitelist rules of sensitive files that are detected by using the agentless detection feature at a time.</p>
+     * <p>Modifies multiple whitelist rules for sensitive file alerts in agentless detection.</p>
      * 
      * @param request BatchUpdateMaliciousFileWhitelistConfigRequest
      * @return BatchUpdateMaliciousFileWhitelistConfigResponse
@@ -1919,7 +1919,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds servers to Security Center over a proxy server. After you create a proxy cluster and deploy a proxy server, you can connect a server to the proxy cluster as a client. This way, the server is added to Security Center over the proxy server and is protected.</p>
+     * <p>Connects servers to a proxy server. After you create a cluster and deploy the proxy server, you can add servers as clients to the proxy cluster. This enables the servers to connect to Security Center through the proxy for protection.</p>
      * 
      * @param request BindHybridProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1955,7 +1955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds servers to Security Center over a proxy server. After you create a proxy cluster and deploy a proxy server, you can connect a server to the proxy cluster as a client. This way, the server is added to Security Center over the proxy server and is protected.</p>
+     * <p>Connects servers to a proxy server. After you create a cluster and deploy the proxy server, you can add servers as clients to the proxy cluster. This enables the servers to connect to Security Center through the proxy for protection.</p>
      * 
      * @param request BindHybridProxyRequest
      * @return BindHybridProxyResponse
@@ -2011,7 +2011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the interval of asset synchronization configurations.</p>
+     * <p>Modifies the custom refresh cycle configuration for assets.</p>
      * 
      * @param request ChangeAssetRefreshTaskConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2047,7 +2047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the interval of asset synchronization configurations.</p>
+     * <p>Modifies the custom refresh cycle configuration for assets.</p>
      * 
      * @param request ChangeAssetRefreshTaskConfigRequest
      * @return ChangeAssetRefreshTaskConfigResponse
@@ -2441,7 +2441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks a Security Token Service (STS) token and returns the ID of the Alibaba Cloud account.</p>
+     * <p>Authenticates an STS token and returns the Alibaba Cloud account ID.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return CheckStsTokenAuthResponse
@@ -2464,7 +2464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks a Security Token Service (STS) token and returns the ID of the Alibaba Cloud account.</p>
+     * <p>Authenticates an STS token and returns the Alibaba Cloud account ID.</p>
      * @return CheckStsTokenAuthResponse
      */
     public CheckStsTokenAuthResponse checkStsTokenAuth() throws Exception {
@@ -2910,7 +2910,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create attack path sensitive asset configuration.</p>
+     * <p>Creates the sensitive asset configuration for attack paths.</p>
      * 
      * @param request CreateAttackPathSensitiveAssetConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2946,7 +2946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create attack path sensitive asset configuration.</p>
+     * <p>Creates the sensitive asset configuration for attack paths.</p>
      * 
      * @param request CreateAttackPathSensitiveAssetConfigRequest
      * @return CreateAttackPathSensitiveAssetConfigResponse
@@ -3804,9 +3804,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Initiates deep analysis for a specified file and streams the progress of each analysis stage in real time by using Server-Sent Events (SSE).
-     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
-     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing stages. Valid values for the event name (event):</p>
+     * <p>Initiates deep analysis for a specified file and streams the progress of each analysis phase in real time by using Server-Sent Events (SSE).
+     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial edition verification based on the source.
+     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing phases. Valid values for the event name (event):</p>
      * <ul>
      * <li>accepted: The request is accepted.</li>
      * <li>authorized: The purchase verification for the source is passed.</li>
@@ -3816,7 +3816,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>result: The analysis result is matched. This parameter is optional and pushed after the asynchronous result is ready.</li>
      * <li>done: The current analysis process is completed.</li>
      * <li>error: A processing exception occurs, including the error code and message.
-     * The data body of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
+     * The data payload of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -3868,9 +3868,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Initiates deep analysis for a specified file and streams the progress of each analysis stage in real time by using Server-Sent Events (SSE).
-     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial verification based on the source.
-     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing stages. Valid values for the event name (event):</p>
+     * <p>Initiates deep analysis for a specified file and streams the progress of each analysis phase in real time by using Server-Sent Events (SSE).
+     * [Input parameters] You must provide at least one of the Hash and EventId parameters. If EventId is provided, the file hash is preferentially parsed from the details of the corresponding alert. Otherwise, the provided Hash (MD5 or SHA-256) is used. The Source parameter identifies the call source and is used for commercial edition verification based on the source.
+     * [Response] The response is of the text/event-stream type. The server pushes events sequentially based on the processing phases. Valid values for the event name (event):</p>
      * <ul>
      * <li>accepted: The request is accepted.</li>
      * <li>authorized: The purchase verification for the source is passed.</li>
@@ -3880,7 +3880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <li>result: The analysis result is matched. This parameter is optional and pushed after the asynchronous result is ready.</li>
      * <li>done: The current analysis process is completed.</li>
      * <li>error: A processing exception occurs, including the error code and message.
-     * The data body of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
+     * The data payload of each event is a JSON object in the data field. The fields vary depending on the event type. For more information, see the response structure description.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7002,7 +7002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes snapshots of anti-ransomware backups in Security Center.</p>
+     * <p>Deletes the snapshots of anti-ransomware backups for servers in Security Center.</p>
      * 
      * @param request DeleteBackupSnapshotRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7042,7 +7042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes snapshots of anti-ransomware backups in Security Center.</p>
+     * <p>Deletes the snapshots of anti-ransomware backups for servers in Security Center.</p>
      * 
      * @param request DeleteBackupSnapshotRequest
      * @return DeleteBackupSnapshotResponse
@@ -7054,7 +7054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the whitelist record for a baseline check item.</p>
+     * <p>Deletes baseline whitelist records.</p>
      * 
      * @param request DeleteBaselineCheckWhiteRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7098,7 +7098,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the whitelist record for a baseline check item.</p>
+     * <p>Deletes baseline whitelist records.</p>
      * 
      * @param request DeleteBaselineCheckWhiteRecordRequest
      * @return DeleteBaselineCheckWhiteRecordResponse
@@ -7438,7 +7438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the blocking records of specific IP addresses that are custom-defined on one or more servers.</p>
+     * <p>Deletes the blocking records for specific IP addresses on one or more user-defined servers.</p>
      * 
      * @param request DeleteCustomBlockRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7474,7 +7474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the blocking records of specific IP addresses that are custom-defined on one or more servers.</p>
+     * <p>Deletes the blocking records for specific IP addresses on one or more user-defined servers.</p>
      * 
      * @param request DeleteCustomBlockRecordRequest
      * @return DeleteCustomBlockRecordResponse
@@ -7730,7 +7730,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes core file monitoring rules.</p>
+     * <p>Deletes core file protection rules.</p>
      * 
      * @param request DeleteFileProtectRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7762,7 +7762,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes core file monitoring rules.</p>
+     * <p>Deletes core file protection rules.</p>
      * 
      * @param request DeleteFileProtectRuleRequest
      * @return DeleteFileProtectRuleResponse
@@ -7774,7 +7774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot delete the default server group provided by Security Center, which is <strong>Ungrouped</strong>. After you delete a group, the assets in the group are moved to <strong>Ungrouped</strong> by default.</p>
+     * <p>You cannot delete the default server group provided by Security Center, which is <strong>Ungrouped</strong>. After you delete a group, the assets in the group are moved to the <strong>Ungrouped</strong> group by default.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a server group.</p>
@@ -7813,7 +7813,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You cannot delete the default server group provided by Security Center, which is <strong>Ungrouped</strong>. After you delete a group, the assets in the group are moved to <strong>Ungrouped</strong> by default.</p>
+     * <p>You cannot delete the default server group provided by Security Center, which is <strong>Ungrouped</strong>. After you delete a group, the assets in the group are moved to the <strong>Ungrouped</strong> group by default.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a server group.</p>
@@ -7876,7 +7876,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified management node.</p>
+     * <p>Deletes a specified honeypot node.</p>
      * 
      * @param request DeleteHoneypotNodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7912,7 +7912,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified management node.</p>
+     * <p>Deletes a specified honeypot node.</p>
      * 
      * @param request DeleteHoneypotNodeRequest
      * @return DeleteHoneypotNodeResponse
@@ -8208,7 +8208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an alert disposal rule.</p>
+     * <p>Deletes an alert handling rule.</p>
      * 
      * @param request DeleteImageEventOperationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8240,7 +8240,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an alert disposal rule.</p>
+     * <p>Deletes an alert handling rule.</p>
      * 
      * @param request DeleteImageEventOperationRequest
      * @return DeleteImageEventOperationResponse
@@ -8544,7 +8544,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a whitelist rule for agentless detection of sensitive file alerts.</p>
+     * <p>Deletes a whitelist rule for sensitive file alerts in agentless detection.</p>
      * 
      * @param request DeleteMaliciousFileWhitelistConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8576,7 +8576,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a whitelist rule for agentless detection of sensitive file alerts.</p>
+     * <p>Deletes a whitelist rule for sensitive file alerts in agentless detection.</p>
      * 
      * @param request DeleteMaliciousFileWhitelistConfigRequest
      * @return DeleteMaliciousFileWhitelistConfigResponse
@@ -8682,7 +8682,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a risky image blocking policy.</p>
+     * <p>Deletes risky image blocking policies.</p>
      * 
      * @param request DeleteOpaStrategyNewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8714,7 +8714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a risky image blocking policy.</p>
+     * <p>Deletes risky image blocking policies.</p>
      * 
      * @param request DeleteOpaStrategyNewRequest
      * @return DeleteOpaStrategyNewResponse
@@ -9398,7 +9398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the configurations of vulnerabilities that can be automatically fixed in the vulnerability task center in batches.</p>
+     * <p>Deletes the auto-repair configurations for vulnerabilities in the task center in batches.</p>
      * 
      * @param request DeleteVulAutoRepairConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9438,7 +9438,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the configurations of vulnerabilities that can be automatically fixed in the vulnerability task center in batches.</p>
+     * <p>Deletes the auto-repair configurations for vulnerabilities in the task center in batches.</p>
      * 
      * @param request DeleteVulAutoRepairConfigRequest
      * @return DeleteVulAutoRepairConfigResponse
@@ -9878,7 +9878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for the agentless detection feature of Security Center can call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of assets that contain a specific type of sensitive file detected by the agentless detection feature.</p>
+     * <p>Queries the list of assets that contain a specific type of sensitive file detected by the agentless detection feature.</p>
      * 
      * @param tmpReq DescribeAgentlessSensitiveFileByKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9915,7 +9915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Only Alibaba Cloud accounts that have activated the pay-as-you-go billing method for the agentless detection feature of Security Center can call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of assets that contain a specific type of sensitive file detected by the agentless detection feature.</p>
+     * <p>Queries the list of assets that contain a specific type of sensitive file detected by the agentless detection feature.</p>
      * 
      * @param request DescribeAgentlessSensitiveFileByKeyRequest
      * @return DescribeAgentlessSensitiveFileByKeyResponse
@@ -11094,7 +11094,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If you have created anti-ransomware restoration tasks, you can call this operation to query the number of anti-ransomware restoration tasks in the <strong>Restored</strong> and <strong>Restoring</strong> states.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries data of anti-ransomware restoration tasks.</p>
+     * <p>Queries the data of anti-ransomware restoration tasks.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeBackupRestoreCountResponse
@@ -11120,7 +11120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If you have created anti-ransomware restoration tasks, you can call this operation to query the number of anti-ransomware restoration tasks in the <strong>Restored</strong> and <strong>Restoring</strong> states.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries data of anti-ransomware restoration tasks.</p>
+     * <p>Queries the data of anti-ransomware restoration tasks.</p>
      * @return DescribeBackupRestoreCountResponse
      */
     public DescribeBackupRestoreCountResponse describeBackupRestoreCount() throws Exception {
@@ -11612,7 +11612,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the charts supported for statistics in Security Center security reports.</p>
+     * <p>Queries the statistical charts supported by Security Center security reports.</p>
      * 
      * @param request DescribeChartListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11652,7 +11652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the charts supported for statistics in Security Center security reports.</p>
+     * <p>Queries the statistical charts supported by Security Center security reports.</p>
      * 
      * @param request DescribeChartListRequest
      * @return DescribeChartListResponse
@@ -12229,7 +12229,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the machine configuration information for different client tags.</p>
+     * <p>Queries the server configuration information for clients with different tags.</p>
      * 
      * @param request DescribeClientConfStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12265,7 +12265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the machine configuration information for different client tags.</p>
+     * <p>Queries the server configuration information for clients with different tags.</p>
      * 
      * @param request DescribeClientConfStrategyRequest
      * @return DescribeClientConfStrategyResponse
@@ -12460,7 +12460,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the multi-cloud assets added to Security Center.</p>
+     * <p>Queries the list of multi-cloud asset configurations.</p>
      * 
      * @param request DescribeCloudVendorAccountAKListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12520,7 +12520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the multi-cloud assets added to Security Center.</p>
+     * <p>Queries the list of multi-cloud asset configurations.</p>
      * 
      * @param request DescribeCloudVendorAccountAKListRequest
      * @return DescribeCloudVendorAccountAKListResponse
@@ -12580,7 +12580,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the trail configuration attributes of the corresponding AK configuration</p>
+     * <p>Queries the integration configurations for audit logs of third-party cloud assets.</p>
      * 
      * @param request DescribeCloudVendorTrialConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12608,7 +12608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the trail configuration attributes of the corresponding AK configuration</p>
+     * <p>Queries the integration configurations for audit logs of third-party cloud assets.</p>
      * 
      * @param request DescribeCloudVendorTrialConfigRequest
      * @return DescribeCloudVendorTrialConfigResponse
@@ -12672,7 +12672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the security statistics of a host.</p>
+     * <p>Queries the statistics on host security information.</p>
      * 
      * @param request DescribeClusterHostSecuritySummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12724,7 +12724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the security statistics of a host.</p>
+     * <p>Queries the statistics on host security information.</p>
      * 
      * @param request DescribeClusterHostSecuritySummaryRequest
      * @return DescribeClusterHostSecuritySummaryResponse
@@ -12736,7 +12736,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the security statistics of container images.</p>
+     * <p>Retrieves image security statistics.</p>
      * 
      * @param request DescribeClusterImageSecuritySummaryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12800,7 +12800,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the security statistics of container images.</p>
+     * <p>Retrieves image security statistics.</p>
      * 
      * @param request DescribeClusterImageSecuritySummaryRequest
      * @return DescribeClusterImageSecuritySummaryResponse
@@ -13012,7 +13012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global configuration of the master switch.</p>
+     * <p>Queries the global configuration of the main switch.</p>
      * 
      * @param request DescribeCommonOverallConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13048,7 +13048,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the global configuration of the master switch.</p>
+     * <p>Queries the global configuration of the main switch.</p>
      * 
      * @param request DescribeCommonOverallConfigRequest
      * @return DescribeCommonOverallConfigResponse
@@ -13529,7 +13529,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Kritis status of a Container Service for Kubernetes (ACK) cluster.</p>
+     * <p>Queries the Kritis status of a Container Service for Kubernetes cluster.</p>
      * 
      * @param request DescribeContainerServiceK8sClusterKritisStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13569,7 +13569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Kritis status of a Container Service for Kubernetes (ACK) cluster.</p>
+     * <p>Queries the Kritis status of a Container Service for Kubernetes cluster.</p>
      * 
      * @param request DescribeContainerServiceK8sClusterKritisStatusRequest
      * @return DescribeContainerServiceK8sClusterKritisStatusResponse
@@ -13687,7 +13687,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only users who have purchased Container Registry Enterprise instances can invoke this operation.</p>
+     * <p>Only users who have purchased Container Registry Enterprise instances can invoke this API operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the alert statistics of container assets.</p>
@@ -13722,7 +13722,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only users who have purchased Container Registry Enterprise instances can invoke this operation.</p>
+     * <p>Only users who have purchased Container Registry Enterprise instances can invoke this API operation.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the alert statistics of container assets.</p>
@@ -13838,7 +13838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries statistics on scanned image data.</p>
+     * <p>Retrieves statistics on scanned images.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCountScannedImageResponse
@@ -13861,7 +13861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries statistics on scanned image data.</p>
+     * <p>Retrieves statistics on scanned images.</p>
      * @return DescribeCountScannedImageResponse
      */
     public DescribeCountScannedImageResponse describeCountScannedImage() throws Exception {
@@ -13871,7 +13871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fuzzy match conditions for asset properties that can be displayed when you query assets.</p>
+     * <p>Queries the fuzzy match criteria for asset properties displayed during asset queries.</p>
      * 
      * @param request DescribeCriteriaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13915,7 +13915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the fuzzy match conditions for asset properties that can be displayed when you query assets.</p>
+     * <p>Queries the fuzzy match criteria for asset properties displayed during asset queries.</p>
      * 
      * @param request DescribeCriteriaRequest
      * @return DescribeCriteriaResponse
@@ -13991,7 +13991,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries brute-force attacks interception records for custom blocked IP addresses defined on one or more servers.</p>
+     * <p>Queries interception records for IP addresses blocked due to brute-force attacks on one or more servers.</p>
      * 
      * @param request DescribeCustomBlockRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14039,7 +14039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries brute-force attacks interception records for custom blocked IP addresses defined on one or more servers.</p>
+     * <p>Queries interception records for IP addresses blocked due to brute-force attacks on one or more servers.</p>
      * 
      * @param request DescribeCustomBlockRecordsRequest
      * @return DescribeCustomBlockRecordsResponse
@@ -14175,7 +14175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the upload result of a custom weak password file.</p>
+     * <p>Retrieves the upload results of custom weak passwords.</p>
      * 
      * @param request DescribeCustomizedDictRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -14207,7 +14207,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the upload result of a custom weak password file.</p>
+     * <p>Retrieves the upload results of custom weak passwords.</p>
      * 
      * @param request DescribeCustomizedDictRequest
      * @return DescribeCustomizedDictResponse
@@ -15798,7 +15798,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics information of servers in your assets.</p>
+     * <p>Queries the statistics information of servers in assets.</p>
      * 
      * @param request DescribeFieldStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15838,7 +15838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics information of servers in your assets.</p>
+     * <p>Queries the statistics information of servers in assets.</p>
      * 
      * @param request DescribeFieldStatisticsRequest
      * @return DescribeFieldStatisticsResponse
@@ -16191,7 +16191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of malicious sample files in container images.</p>
+     * <p>Queries the list of malicious sample files in images.</p>
      * 
      * @param request DescribeGroupedMaliciousFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16283,7 +16283,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of malicious sample files in container images.</p>
+     * <p>Queries the list of malicious sample files in images.</p>
      * 
      * @param request DescribeGroupedMaliciousFilesRequest
      * @return DescribeGroupedMaliciousFilesResponse
@@ -16455,7 +16455,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a baseline risk export, such as the file name and download link.</p>
+     * <p>Queries the file name, download URL, and other information about a baseline export.</p>
      * 
      * @param request DescribeHcExportInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16487,7 +16487,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about a baseline risk export, such as the file name and download link.</p>
+     * <p>Queries the file name, download URL, and other information about a baseline export.</p>
      * 
      * @param request DescribeHcExportInfoRequest
      * @return DescribeHcExportInfoResponse
@@ -16543,7 +16543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about the top 5 VPCs or assets ranked by the number of security alerts.</p>
+     * <p>Queries the top 5 VPCs or assets by number of security alerts.</p>
      * 
      * @param request DescribeHoneyPotSuspStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16587,7 +16587,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about the top 5 VPCs or assets ranked by the number of security alerts.</p>
+     * <p>Queries the top 5 VPCs or assets by number of security alerts.</p>
      * 
      * @param request DescribeHoneyPotSuspStatisticsRequest
      * @return DescribeHoneyPotSuspStatisticsResponse
@@ -16599,7 +16599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries proxy clusters by using paging.</p>
+     * <p>Queries the list of proxy clusters by using paging.</p>
      * 
      * @param request DescribeHybridProxyClusterListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16639,7 +16639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries proxy clusters by using paging.</p>
+     * <p>Queries the list of proxy clusters by using paging.</p>
      * 
      * @param request DescribeHybridProxyClusterListRequest
      * @return DescribeHybridProxyClusterListResponse
@@ -16859,7 +16859,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of IDC probe instances used for asset discovery in the multi-cloud configuration management feature.</p>
+     * <p>Queries the list of IDC probes for asset discovery in the multi-cloud configuration management feature.</p>
      * 
      * @param request DescribeIdcProbeListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16903,7 +16903,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of IDC probe instances used for asset discovery in the multi-cloud configuration management feature.</p>
+     * <p>Queries the list of IDC probes for asset discovery in the multi-cloud configuration management feature.</p>
      * 
      * @param request DescribeIdcProbeListRequest
      * @return DescribeIdcProbeListResponse
@@ -17039,7 +17039,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detection results of image security scans.</p>
+     * <p>Queries the results of image security scans.</p>
      * 
      * @param request DescribeImageBaselineCheckResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17099,7 +17099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the detection results of image security scans.</p>
+     * <p>Queries the results of image security scans.</p>
      * 
      * @param request DescribeImageBaselineCheckResultRequest
      * @return DescribeImageBaselineCheckResultResponse
@@ -17491,7 +17491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves image search criteria.</p>
+     * <p>Retrieves the image search criteria.</p>
      * 
      * @param request DescribeImageCriteriaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17523,7 +17523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves image search criteria.</p>
+     * <p>Retrieves the image search criteria.</p>
      * 
      * @param request DescribeImageCriteriaRequest
      * @return DescribeImageCriteriaResponse
@@ -18108,7 +18108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about images affected by sensitive files.</p>
+     * <p>Queries the details of images affected by sensitive files.</p>
      * 
      * @param tmpReq DescribeImageListBySensitiveFileRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18186,7 +18186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries information about images affected by sensitive files.</p>
+     * <p>Queries the details of images affected by sensitive files.</p>
      * 
      * @param request DescribeImageListBySensitiveFileRequest
      * @return DescribeImageListBySensitiveFileResponse
@@ -18406,7 +18406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves statistics information on image defense switch configurations.</p>
+     * <p>Retrieves the statistics of image defense switch configurations.</p>
      * 
      * @param request DescribeImageRepoListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18474,7 +18474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves statistics information on image defense switch configurations.</p>
+     * <p>Retrieves the statistics of image defense switch configurations.</p>
      * 
      * @param request DescribeImageRepoListRequest
      * @return DescribeImageRepoListResponse
@@ -18632,7 +18632,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the sensitive files of an image.</p>
+     * <p>Queries the sensitive files in an image.</p>
      * 
      * @param tmpReq DescribeImageSensitiveFileByKeyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18690,7 +18690,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the sensitive files of an image.</p>
+     * <p>Queries the sensitive files in an image.</p>
      * 
      * @param request DescribeImageSensitiveFileByKeyRequest
      * @return DescribeImageSensitiveFileByKeyResponse
@@ -19144,12 +19144,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the commands for manually installing the Security Center agent on servers. The query results include installation verification codes and server-related information. If you need to manually install the Security Center agent on a server, call this operation to obtain the manual installation commands.</p>
-     * <h3>Rate limit</h3>
-     * <p>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as needed.</p>
+     * <p>This operation queries the installation commands used to manually install the Security Center agent on a server. The query result includes the installation verification code and server-related information. When you need to manually install the Security Center agent on a server, you can call this operation to obtain the manual installation commands.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of commands for manually installing the Security Center agent.</p>
+     * <p>Queries the list of installation commands for manually installing the Security Center agent.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeInstallCodesResponse
@@ -19172,12 +19172,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the commands for manually installing the Security Center agent on servers. The query results include installation verification codes and server-related information. If you need to manually install the Security Center agent on a server, call this operation to obtain the manual installation commands.</p>
-     * <h3>Rate limit</h3>
-     * <p>The single-user queries per second (QPS) limit for this operation is 10. If the number of calls exceeds the limit, throttling is triggered, which may affect your business. Call this operation as needed.</p>
+     * <p>This operation queries the installation commands used to manually install the Security Center agent on a server. The query result includes the installation verification code and server-related information. When you need to manually install the Security Center agent on a server, you can call this operation to obtain the manual installation commands.</p>
+     * <h3>QPS limits</h3>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the list of commands for manually installing the Security Center agent.</p>
+     * <p>Queries the list of installation commands for manually installing the Security Center agent.</p>
      * @return DescribeInstallCodesResponse
      */
     public DescribeInstallCodesResponse describeInstallCodes() throws Exception {
@@ -19347,7 +19347,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries vulnerability statistics for a cluster.</p>
+     * <p>Queries the vulnerability statistics of a cluster.</p>
      * 
      * @param request DescribeInstanceVulStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19383,7 +19383,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries vulnerability statistics for a cluster.</p>
+     * <p>Queries the vulnerability statistics of a cluster.</p>
      * 
      * @param request DescribeInstanceVulStatisticsRequest
      * @return DescribeInstanceVulStatisticsResponse
@@ -19428,7 +19428,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration information of log analysis in Security Center.</p>
+     * <p>Queries the log analysis configurations of Security Center.</p>
      * 
      * @param request DescribeLogMetaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19472,7 +19472,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the configuration information of log analysis in Security Center.</p>
+     * <p>Queries the log analysis configurations of Security Center.</p>
      * 
      * @param request DescribeLogMetaRequest
      * @return DescribeLogMetaResponse
@@ -20949,7 +20949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Java processes that are collected by the asset fingerprints feature of Security Center in your assets.</p>
+     * <p>Queries the list of Java processes collected by the Asset Fingerprints feature of Security Center for your assets.</p>
      * 
      * @param request DescribePropertyScaProcessDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21005,7 +21005,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Java processes that are collected by the asset fingerprints feature of Security Center in your assets.</p>
+     * <p>Queries the list of Java processes collected by the Asset Fingerprints feature of Security Center for your assets.</p>
      * 
      * @param request DescribePropertyScaProcessDetailRequest
      * @return DescribePropertyScaProcessDetailResponse
@@ -21977,10 +21977,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is offline. Use the upgraded operation ListCheckStandard instead.</p>
+     * <p>This operation is deprecated. Use the upgraded operation ListCheckStandard instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the types of all cloud service configuration check items.</p>
+     * <p>Queries the types of configuration check items for all cloud services.</p>
      * 
      * @deprecated OpenAPI DescribeRiskItemType is deprecated
      * 
@@ -22024,10 +22024,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is offline. Use the upgraded operation ListCheckStandard instead.</p>
+     * <p>This operation is deprecated. Use the upgraded operation ListCheckStandard instead.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the types of all cloud service configuration check items.</p>
+     * <p>Queries the types of configuration check items for all cloud services.</p>
      * 
      * @deprecated OpenAPI DescribeRiskItemType is deprecated
      * 
@@ -22425,7 +22425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the filter conditions that are used to search for assets.</p>
+     * <p>Queries the filter conditions for the Security Center asset list.</p>
      * 
      * @param request DescribeSearchConditionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22465,7 +22465,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the filter conditions that are used to search for assets.</p>
+     * <p>Queries the filter conditions for the Security Center asset list.</p>
      * 
      * @param request DescribeSearchConditionRequest
      * @return DescribeSearchConditionResponse
@@ -22603,7 +22603,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the auto-whitelist rules for security alerts.</p>
+     * <p>Queries the automatic whitelist rules for alerts.</p>
      * 
      * @param request DescribeSecurityEventMarkMissListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22655,7 +22655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the auto-whitelist rules for security alerts.</p>
+     * <p>Queries the automatic whitelist rules for alerts.</p>
      * 
      * @param request DescribeSecurityEventMarkMissListRequest
      * @return DescribeSecurityEventMarkMissListResponse
@@ -22779,7 +22779,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics of each security check item and the daily statistics in the security check item trend chart.</p>
+     * <p>Queries the statistical values of each security check item and the daily statistical values in the trend chart of security check items.</p>
      * 
      * @param request DescribeSecurityStatInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -22819,7 +22819,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics of each security check item and the daily statistics in the security check item trend chart.</p>
+     * <p>Queries the statistical values of each security check item and the daily statistical values in the trend chart of security check items.</p>
      * 
      * @param request DescribeSecurityStatInfoRequest
      * @return DescribeSecurityStatInfoResponse
@@ -23067,10 +23067,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is only supported by the Enterprise and Flagship editions of Cloud Security Center, other versions do not support it.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the execution details of a remediation task playbook</p>
+     * <p>Retrieves the execution results of the playbook corresponding to a policy in Task Center.</p>
      * 
      * @param request DescribeSoarPlaybookTaskDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23110,10 +23110,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is only supported by the Enterprise and Flagship editions of Cloud Security Center, other versions do not support it.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Query the execution details of a remediation task playbook</p>
+     * <p>Retrieves the execution results of the playbook corresponding to a policy in Task Center.</p>
      * 
      * @param request DescribeSoarPlaybookTaskDetailRequest
      * @return DescribeSoarPlaybookTaskDetailResponse
@@ -23283,10 +23283,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</p>
+     * <p>This API operation is supported only by the Enterprise and Ultimate editions of Security Center.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the parameters of a policy task in the task center.</p>
+     * <p>Queries the parameters of a policy task in the Task Center.</p>
      * 
      * @param request DescribeSoarStrategyTaskParamsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23314,10 +23314,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation. Other editions do not support this operation.</p>
+     * <p>This API operation is supported only by the Enterprise and Ultimate editions of Security Center.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the parameters of a policy task in the task center.</p>
+     * <p>Queries the parameters of a policy task in the Task Center.</p>
      * 
      * @param request DescribeSoarStrategyTaskParamsRequest
      * @return DescribeSoarStrategyTaskParamsResponse
@@ -23699,7 +23699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Strict mode supports alarm queries</p>
+     * <p>Queries the names of all alerts that support strict mode.</p>
      * 
      * @param request DescribeStrictEventNameRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -23727,7 +23727,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Strict mode supports alarm queries</p>
+     * <p>Queries the names of all alerts that support strict mode.</p>
      * 
      * @param request DescribeStrictEventNameRequest
      * @return DescribeStrictEventNameResponse
@@ -23787,7 +23787,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the latest system vulnerability discovery time.</p>
+     * <p>Queries the discovery time of the latest system vulnerability.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSupervisonInfoResponse
@@ -23810,7 +23810,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the latest system vulnerability discovery time.</p>
+     * <p>Queries the discovery time of the latest system vulnerability.</p>
      * @return DescribeSupervisonInfoResponse
      */
     public DescribeSupervisonInfoResponse describeSupervisonInfo() throws Exception {
@@ -24325,7 +24325,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Alarm Security Event Statistics</p>
+     * <p>Queries the statistics on security alert events.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeSuspiciousSecurityEventyStatisticsResponse
@@ -24348,7 +24348,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Alarm Security Event Statistics</p>
+     * <p>Queries the statistics on security alert events.</p>
      * @return DescribeSuspiciousSecurityEventyStatisticsResponse
      */
     public DescribeSuspiciousSecurityEventyStatisticsResponse describeSuspiciousSecurityEventyStatistics() throws Exception {
@@ -24462,7 +24462,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of IDC scan tasks for asset synchronization.</p>
+     * <p>Queries the details of an IDC scan task for an asset synchronization task.</p>
      * 
      * @param request DescribeSyncAssetTaskLogDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24514,7 +24514,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of IDC scan tasks for asset synchronization.</p>
+     * <p>Queries the details of an IDC scan task for an asset synchronization task.</p>
      * 
      * @param request DescribeSyncAssetTaskLogDetailRequest
      * @return DescribeSyncAssetTaskLogDetailResponse
@@ -24526,7 +24526,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the machine list settings for vulnerability scanning.</p>
+     * <p>Queries the machine list settings for enabled vulnerability scanning.</p>
      * 
      * @param request DescribeTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -24562,7 +24562,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the machine list settings for vulnerability scanning.</p>
+     * <p>Queries the machine list settings for enabled vulnerability scanning.</p>
      * 
      * @param request DescribeTargetRequest
      * @return DescribeTargetResponse
@@ -25092,7 +25092,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries servers that have anti-ransomware backup policies enabled.</p>
+     * <p>Queries the servers that have the anti-ransomware backup policy enabled.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeUserBackupMachinesResponse
@@ -25115,7 +25115,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries servers that have anti-ransomware backup policies enabled.</p>
+     * <p>Queries the servers that have the anti-ransomware backup policy enabled.</p>
      * @return DescribeUserBackupMachinesResponse
      */
     public DescribeUserBackupMachinesResponse describeUserBackupMachines() throws Exception {
@@ -25406,7 +25406,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the version details of a purchased Security Center instance.</p>
+     * <p>Queries the edition details of a purchased Security Center instance.</p>
      * 
      * @param request DescribeVersionConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25442,7 +25442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the version details of a purchased Security Center instance.</p>
+     * <p>Queries the edition details of a purchased Security Center instance.</p>
      * 
      * @param request DescribeVersionConfigRequest
      * @return DescribeVersionConfigResponse
@@ -26165,7 +26165,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get vulnerability statistics.</p>
+     * <p>Retrieves vulnerability statistics information.</p>
      * 
      * @param request DescribeVulNumStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26201,7 +26201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get vulnerability statistics.</p>
+     * <p>Retrieves vulnerability statistics information.</p>
      * 
      * @param request DescribeVulNumStatisticsRequest
      * @return DescribeVulNumStatisticsResponse
@@ -26501,7 +26501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of servers that have web tamper-proofing protection enabled.</p>
+     * <p>Queries the list of servers protected by web tamper-proofing.</p>
      * 
      * @param request DescribeWebLockBindListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -26557,7 +26557,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of servers that have web tamper-proofing protection enabled.</p>
+     * <p>Queries the list of servers protected by web tamper-proofing.</p>
      * 
      * @param request DescribeWebLockBindListRequest
      * @return DescribeWebLockBindListResponse
@@ -26774,7 +26774,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the WebLock file type summary.</p>
+     * <p>Queries the summary of WebLock file types.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeWebLockFileTypeSummaryResponse
@@ -26797,7 +26797,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the WebLock file type summary.</p>
+     * <p>Queries the summary of WebLock file types.</p>
      * @return DescribeWebLockFileTypeSummaryResponse
      */
     public DescribeWebLockFileTypeSummaryResponse describeWebLockFileTypeSummary() throws Exception {
@@ -27885,10 +27885,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation by using the management account of the resource directory or a delegated administrator account of Security Center.</p>
+     * <p>You must use the management account of a resource directory or the delegated administrator account of Security Center to call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables the multi-account management feature of Security Center.</p>
+     * <p>Enables the multi-account security management feature of Security Center.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return EnableServiceAccessResourceDirectoryResponse
@@ -27911,10 +27911,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Call this operation by using the management account of the resource directory or a delegated administrator account of Security Center.</p>
+     * <p>You must use the management account of a resource directory or the delegated administrator account of Security Center to call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables the multi-account management feature of Security Center.</p>
+     * <p>Enables the multi-account security management feature of Security Center.</p>
      * @return EnableServiceAccessResourceDirectoryResponse
      */
     public EnableServiceAccessResourceDirectoryResponse enableServiceAccessResourceDirectory() throws Exception {
@@ -27924,7 +27924,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a baseline check on machines within a specified policy.</p>
+     * <p>Executes a specified policy to scan the servers within the policy for check items.</p>
      * 
      * @param request ExecStrategyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27964,7 +27964,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Performs a baseline check on machines within a specified policy.</p>
+     * <p>Executes a specified policy to scan the servers within the policy for check items.</p>
      * 
      * @param request ExecStrategyRequest
      * @return ExecStrategyResponse
@@ -28028,10 +28028,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the export progress and retrieve the download URL for the exported Excel file.</p>
+     * <p>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the file export progress and obtain the download link for the exported Excel file.</p>
      * 
      * <b>summary</b> : 
-     * <p>Exports detection results from various Cloud Security Center features, such as Asset Center, cloud platform configuration check, image security scan, attack analysis, and AK leakage detection, to an Excel file.</p>
+     * <p>Exports the detection results of the Asset Center, cloud platform configuration assessment, image security scanning, attack analysis, AccessKey leak detection, and baseline checks to an Excel file.</p>
      * 
      * @param request ExportRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28079,10 +28079,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the export progress and retrieve the download URL for the exported Excel file.</p>
+     * <p>After you call this operation, you can call the <a href="~~DescribeExportInfo~~">DescribeExportInfo</a> operation to query the file export progress and obtain the download link for the exported Excel file.</p>
      * 
      * <b>summary</b> : 
-     * <p>Exports detection results from various Cloud Security Center features, such as Asset Center, cloud platform configuration check, image security scan, attack analysis, and AK leakage detection, to an Excel file.</p>
+     * <p>Exports the detection results of the Asset Center, cloud platform configuration assessment, image security scanning, attack analysis, AccessKey leak detection, and baseline checks to an Excel file.</p>
      * 
      * @param request ExportRecordRequest
      * @return ExportRecordResponse
@@ -28230,13 +28230,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Exports a vulnerability list. You can export vulnerability lists for Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
-     * This operation is used together with the DescribeVulExportInfo operation. After you call this operation to create a vulnerability export task, call the <a href="~~DescribeVulExportInfo~~">DescribeVulExportInfo</a> operation with the export task ID to check the progress of the export task.</p>
+     * <p>This operation exports vulnerability lists. You can use it to export lists of Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
+     * This operation is used together with the DescribeVulExportInfo operation. After you use this operation to create a vulnerability export task, you can call the DescribeVulExportInfo operation and specify the ID of the vulnerability export task to view the progress of the export task.</p>
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</p>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Exports a vulnerability list.</p>
+     * <p>Exports the vulnerability list.</p>
      * 
      * @param request ExportVulRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -28344,13 +28344,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Exports a vulnerability list. You can export vulnerability lists for Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
-     * This operation is used together with the DescribeVulExportInfo operation. After you call this operation to create a vulnerability export task, call the <a href="~~DescribeVulExportInfo~~">DescribeVulExportInfo</a> operation with the export task ID to check the progress of the export task.</p>
+     * <p>This operation exports vulnerability lists. You can use it to export lists of Linux software vulnerabilities, Windows system vulnerabilities, Web-CMS vulnerabilities, application vulnerabilities, and emergency vulnerabilities.
+     * This operation is used together with the DescribeVulExportInfo operation. After you use this operation to create a vulnerability export task, you can call the DescribeVulExportInfo operation and specify the ID of the vulnerability export task to view the progress of the export task.</p>
      * <h3>QPS limit</h3>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the number of calls per second exceeds the limit, throttling is triggered. This may affect your business. Manage your calls appropriately.</p>
+     * <p>You can call this operation up to 10 times per second per account. If the number of calls per second exceeds the limit, throttling is triggered, which may affect your business. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Exports a vulnerability list.</p>
+     * <p>Exports the vulnerability list.</p>
      * 
      * @param request ExportVulRequest
      * @return ExportVulResponse
@@ -28361,8 +28361,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>[Deprecated]</em>* Exports the list of baseline check results. This operation is deprecated. Use <a href="~~ExportRecord~~">ExportRecord</a> instead.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Exports baseline check results.</p>
+     * <p><em>[Deprecated]</em>* This operation is deprecated. Use ExportRecord instead.</p>
      * 
      * @deprecated OpenAPI ExportWarning is deprecated, please use Sas::2018-12-03::ExportRecord instead.
      * 
@@ -28457,8 +28460,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p><em>[Deprecated]</em>* Exports the list of baseline check results. This operation is deprecated. Use <a href="~~ExportRecord~~">ExportRecord</a> instead.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Exports baseline check results.</p>
+     * <p><em>[Deprecated]</em>* This operation is deprecated. Use ExportRecord instead.</p>
      * 
      * @deprecated OpenAPI ExportWarning is deprecated, please use Sas::2018-12-03::ExportRecord instead.
      * 
@@ -29700,7 +29706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries attack path event statistics.</p>
+     * <p>Queries the statistics of attack path events.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetAttackPathEventStatisticsResponse
@@ -29723,7 +29729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries attack path event statistics.</p>
+     * <p>Queries the statistics of attack path events.</p>
      * @return GetAttackPathEventStatisticsResponse
      */
     public GetAttackPathEventStatisticsResponse getAttackPathEventStatistics() throws Exception {
@@ -30034,7 +30040,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the current user is qualified for the trial use of Security Center.</p>
+     * <p>Queries whether you have trial permissions for Security Center.</p>
      * 
      * @param request GetCanTrySasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -30070,7 +30076,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the current user is qualified for the trial use of Security Center.</p>
+     * <p>Queries whether you have trial permissions for Security Center.</p>
      * 
      * @param request GetCanTrySasRequest
      * @return GetCanTrySasResponse
@@ -31008,7 +31014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scan access configuration of a Kubernetes cluster.</p>
+     * <p>Queries the scan integration configuration for a Kubernetes cluster.</p>
      * 
      * @param request GetClusterScannerYamlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31040,7 +31046,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the scan access configuration of a Kubernetes cluster.</p>
+     * <p>Queries the scan integration configuration for a Kubernetes cluster.</p>
      * 
      * @param request GetClusterScannerYamlRequest
      * @return GetClusterScannerYamlResponse
@@ -31177,7 +31183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query whether the core function\&quot;s gray switch is hit</p>
+     * <p>Retrieves the grayscale status of console feature modules.</p>
      * 
      * @param request GetConsoleFuncGrayStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31213,7 +31219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query whether the core function\&quot;s gray switch is hit</p>
+     * <p>Retrieves the grayscale status of console feature modules.</p>
      * 
      * @param request GetConsoleFuncGrayStatusRequest
      * @return GetConsoleFuncGrayStatusResponse
@@ -31225,7 +31231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a non-image process defense rule.</p>
+     * <p>Retrieves the details of a defense rule for non-image programs.</p>
      * 
      * @param request GetContainerDefenseRuleDetailRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31261,7 +31267,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a non-image process defense rule.</p>
+     * <p>Retrieves the details of a defense rule for non-image programs.</p>
      * 
      * @param request GetContainerDefenseRuleDetailRequest
      * @return GetContainerDefenseRuleDetailResponse
@@ -31399,7 +31405,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the rankings of images by various dimensions.</p>
+     * <p>Queries the rankings of images across different dimensions.</p>
      * 
      * @param request GetDockerhubImageRiskRankInfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -31431,7 +31437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the rankings of images by various dimensions.</p>
+     * <p>Queries the rankings of images across different dimensions.</p>
      * 
      * @param request GetDockerhubImageRiskRankInfoRequest
      * @return GetDockerhubImageRiskRankInfoResponse
@@ -31487,7 +31493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the usage information of the malicious file detection SDK.</p>
+     * <p>Retrieves the usage information of the malicious file detection SDK.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return GetFileDetectApiInvokeInfoResponse
@@ -31510,7 +31516,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the usage information of the malicious file detection SDK.</p>
+     * <p>Retrieves the usage information of the malicious file detection SDK.</p>
      * @return GetFileDetectApiInvokeInfoResponse
      */
     public GetFileDetectApiInvokeInfoResponse getFileDetectApiInvokeInfo() throws Exception {
@@ -32035,7 +32041,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Trial Status</p>
+     * <p>Retrieves the trial eligibility status of a feature.</p>
      * 
      * @param request GetFunctionTrialStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32067,7 +32073,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get Trial Status</p>
+     * <p>Retrieves the trial eligibility status of a feature.</p>
      * 
      * @param request GetFunctionTrialStatusRequest
      * @return GetFunctionTrialStatusResponse
@@ -32123,7 +32129,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attack event statistics information of a honeypot attack source.</p>
+     * <p>Retrieves the statistics on attack events from honeypot attack sources.</p>
      * 
      * @param request GetHoneypotAttackStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32183,7 +32189,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attack event statistics information of a honeypot attack source.</p>
+     * <p>Retrieves the statistics on attack events from honeypot attack sources.</p>
      * 
      * @param request GetHoneypotAttackStatisticsRequest
      * @return GetHoneypotAttackStatisticsResponse
@@ -32477,7 +32483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get statistics on honey pot usage.</p>
+     * <p>Retrieves the statistics on honeypot usage.</p>
      * 
      * @param request GetHoneypotStatisticsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -32509,7 +32515,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Get statistics on honey pot usage.</p>
+     * <p>Retrieves the statistics on honeypot usage.</p>
      * 
      * @param request GetHoneypotStatisticsRequest
      * @return GetHoneypotStatisticsResponse
@@ -33118,7 +33124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the purchased Security Center features are enabled and whether related configurations take effect.</p>
+     * <p>Queries whether the features of the purchased Security Center modules are enabled or configured.</p>
      * 
      * @param tmpReq GetModuleConfigStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33156,7 +33162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Checks whether the purchased Security Center features are enabled and whether related configurations take effect.</p>
+     * <p>Queries whether the features of the purchased Security Center modules are enabled or configured.</p>
      * 
      * @param request GetModuleConfigStatusRequest
      * @return GetModuleConfigStatusResponse
@@ -33517,7 +33523,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the installation status of the components that are required for clusters protected by proactive defense for containers.</p>
+     * <p>Queries the installation status of the container proactive defense component.</p>
      * 
      * @param request GetOpaPluginStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33549,7 +33555,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the installation status of the components that are required for clusters protected by proactive defense for containers.</p>
+     * <p>Queries the installation status of the container proactive defense component.</p>
      * 
      * @param request GetOpaPluginStatusRequest
      * @return GetOpaPluginStatusResponse
@@ -33561,7 +33567,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of the rule that is used to block at-risk images.</p>
+     * <p>Retrieves the details of a risky image blocking policy.</p>
      * 
      * @param request GetOpaStrategyDetailNewRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33593,7 +33599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of the rule that is used to block at-risk images.</p>
+     * <p>Retrieves the details of a risky image blocking policy.</p>
      * 
      * @param request GetOpaStrategyDetailNewRequest
      * @return GetOpaStrategyDetailNewResponse
@@ -33964,7 +33970,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the application list for container file defense configurations.</p>
+     * <p>Retrieves the list of applications for container file defense configurations.</p>
      * 
      * @param request GetSasContainerWebDefenseRuleApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -33996,7 +34002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the application list for container file defense configurations.</p>
+     * <p>Retrieves the list of applications for container file defense configurations.</p>
      * 
      * @param request GetSasContainerWebDefenseRuleApplicationRequest
      * @return GetSasContainerWebDefenseRuleApplicationResponse
@@ -35072,10 +35078,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>***.</p>
+     * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Batch processes malicious sample alerts.</p>
+     * <p>Processes malicious sample alerts in batches.</p>
      * 
      * @param request HandleSimilarMaliciousFilesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35123,10 +35129,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>***.</p>
+     * <hr>
      * 
      * <b>summary</b> : 
-     * <p>Batch processes malicious sample alerts.</p>
+     * <p>Processes malicious sample alerts in batches.</p>
      * 
      * @param request HandleSimilarMaliciousFilesRequest
      * @return HandleSimilarMaliciousFilesResponse
@@ -35567,11 +35573,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before installation, make sure that the Security Center client on your server is online and that your server can access Alibaba Cloud services over the network.</p>
+     * <p>Before installation, ensure that the Security Center agent on your server is online and that your server has Normal access to Alibaba Cloud services.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Installs the CloudMonitor agent on a specified server.</p>
+     * <p>Installs the CloudMonitor agent on specified servers.</p>
      * 
      * @param request InstallCloudMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -35620,11 +35626,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Before installation, make sure that the Security Center client on your server is online and that your server can access Alibaba Cloud services over the network.</p>
+     * <p>Before installation, ensure that the Security Center agent on your server is online and that your server has Normal access to Alibaba Cloud services.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Installs the CloudMonitor agent on a specified server.</p>
+     * <p>Installs the CloudMonitor agent on specified servers.</p>
      * 
      * @param request InstallCloudMonitorRequest
      * @return InstallCloudMonitorResponse
@@ -36277,6 +36283,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("IntranetIp", request.intranetIp);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.machineName)) {
             query.put("MachineName", request.machineName);
         }
@@ -36747,7 +36757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of attack path events.</p>
+     * <p>Queries the attack path events.</p>
      * 
      * @param request ListAttackPathEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36811,7 +36821,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of attack path events.</p>
+     * <p>Queries the attack path events.</p>
      * 
      * @param request ListAttackPathEventRequest
      * @return ListAttackPathEventResponse
@@ -36823,7 +36833,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attack path whitelist.</p>
+     * <p>Queries the attack path whitelists.</p>
      * 
      * @param request ListAttackPathWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -36875,7 +36885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attack path whitelist.</p>
+     * <p>Queries the attack path whitelists.</p>
      * 
      * @param request ListAttackPathWhitelistRequest
      * @return ListAttackPathWhitelistResponse
@@ -37027,7 +37037,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of backup records.</p>
+     * <p>Queries the backup records.</p>
      * 
      * @param request ListBackupRecordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37079,7 +37089,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of backup records.</p>
+     * <p>Queries the backup records.</p>
      * 
      * @param request ListBackupRecordRequest
      * @return ListBackupRecordResponse
@@ -37305,7 +37315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of warning machines for a specific baseline check item.</p>
+     * <p>Queries the list of servers affected by baseline check item risks.</p>
      * 
      * @param request ListCheckItemWarningMachineRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37385,7 +37395,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of warning machines for a specific baseline check item.</p>
+     * <p>Queries the list of servers affected by baseline check item risks.</p>
      * 
      * @param request ListCheckItemWarningMachineRequest
      * @return ListCheckItemWarningMachineResponse
@@ -37781,7 +37791,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the standards of configuration checks.</p>
+     * <p>Retrieves the list of standards for cloud platform configuration checks.</p>
      * 
      * @param request ListCheckStandardRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -37833,7 +37843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the standards of configuration checks.</p>
+     * <p>Retrieves the list of standards for cloud platform configuration checks.</p>
      * 
      * @param request ListCheckStandardRequest
      * @return ListCheckStandardResponse
@@ -38280,7 +38290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Cluster Check Item Scan Results</p>
+     * <p>Queries the details of risk items in cluster configuration check results.</p>
      * 
      * @param request ListClusterCheckResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -38340,7 +38350,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query Cluster Check Item Scan Results</p>
+     * <p>Queries the details of risk items in cluster configuration check results.</p>
      * 
      * @param request ListClusterCheckResultRequest
      * @return ListClusterCheckResultResponse
@@ -38598,7 +38608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of defense rules for non-image programs.</p>
+     * <p>Queries a list of non-image program defense rules.</p>
      * 
      * @param request ListContainerDefenseRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -38650,7 +38660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of defense rules for non-image programs.</p>
+     * <p>Queries a list of non-image program defense rules.</p>
      * 
      * @param request ListContainerDefenseRuleRequest
      * @return ListContainerDefenseRuleResponse
@@ -39188,7 +39198,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of server groups for the current user.</p>
+     * <p>Retrieves the list of server groups.</p>
      * 
      * @param request ListGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -39236,7 +39246,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the list of server groups for the current user.</p>
+     * <p>Retrieves the list of server groups.</p>
      * 
      * @param request ListGroupsRequest
      * @return ListGroupsResponse
@@ -39416,7 +39426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attack source IP addresses that are used to attack a honeypot.</p>
+     * <p>Retrieves a list of attack sources that launched attacks on honeypots.</p>
      * 
      * @param request ListHoneypotAttackerSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -39472,7 +39482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the attack source IP addresses that are used to attack a honeypot.</p>
+     * <p>Retrieves a list of attack sources that launched attacks on honeypots.</p>
      * 
      * @param request ListHoneypotAttackerSourceRequest
      * @return ListHoneypotAttackerSourceResponse
@@ -39872,7 +39882,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the extra configuration information of an image repository.</p>
+     * <p>Queries the additional configuration information of an image registry.</p>
      * 
      * @param request ListImageRegistryExtraRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -39904,7 +39914,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the extra configuration information of an image repository.</p>
+     * <p>Queries the additional configuration information of an image registry.</p>
      * 
      * @param request ListImageRegistryExtraRequest
      * @return ListImageRegistryExtraResponse
@@ -40024,7 +40034,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the asset types and asset subtypes for configuration assessment.</p>
+     * <p>Queries the assets and sub-assets for cloud platform configuration checks.</p>
      * 
      * @param request ListInstanceCatalogRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -40080,7 +40090,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the asset types and asset subtypes for configuration assessment.</p>
+     * <p>Queries the assets and sub-assets for cloud platform configuration checks.</p>
      * 
      * @param request ListInstanceCatalogRequest
      * @return ListInstanceCatalogResponse
@@ -40136,7 +40146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics about risks in instances.</p>
+     * <p>Retrieves the number of security issues for instances.</p>
      * 
      * @param request ListInstanceRiskNumRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -40168,7 +40178,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the statistics about risks in instances.</p>
+     * <p>Retrieves the number of security issues for instances.</p>
      * 
      * @param request ListInstanceRiskNumRequest
      * @return ListInstanceRiskNumResponse
@@ -40543,7 +40553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Serverless Application Engine (SAE) applications of a serverless instance.</p>
+     * <p>Queries the SAE applications of a serverless instance.</p>
      * 
      * @param request ListMachineAppsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -40603,7 +40613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the Serverless Application Engine (SAE) applications of a serverless instance.</p>
+     * <p>Queries the SAE applications of a serverless instance.</p>
      * 
      * @param request ListMachineAppsRequest
      * @return ListMachineAppsResponse
@@ -40679,10 +40689,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</p>
+     * <p>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address. You can also configure logical relationships between different search conditions to find assets that meet multiple conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the multi-account authorization assignment list under multi-account authorization management.</p>
+     * <p>Queries the list of multi-account authorization assignments under multi-account authorization management.</p>
      * 
      * @param request ListMultiUserInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -40718,10 +40728,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can search for assets by instance ID, instance name, VPC ID, region, public IP address, and other conditions. You can also set logical relationships between different search conditions to search for assets that meet multiple search conditions.</p>
+     * <p>You can search for assets by conditions such as the instance ID, instance name, VPC ID, region, and public IP address. You can also configure logical relationships between different search conditions to find assets that meet multiple conditions.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the multi-account authorization assignment list under multi-account authorization management.</p>
+     * <p>Queries the list of multi-account authorization assignments under multi-account authorization management.</p>
      * 
      * @param request ListMultiUserInstancesRequest
      * @return ListMultiUserInstancesResponse
@@ -41828,7 +41838,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of system rule clusters.</p>
+     * <p>Queries the details of system rule aggregations.</p>
      * 
      * @param request ListSystemAggregationRulesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -41856,7 +41866,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of system rule clusters.</p>
+     * <p>Queries the details of system rule aggregations.</p>
      * 
      * @param request ListSystemAggregationRulesRequest
      * @return ListSystemAggregationRulesResponse
@@ -41973,7 +41983,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the aggregation types of system defense rules.</p>
+     * <p>Queries the clustering types of system defense rules.</p>
      * 
      * @param request ListSystemRuleAggregationTypesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -42001,7 +42011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the aggregation types of system defense rules.</p>
+     * <p>Queries the clustering types of system defense rules.</p>
      * 
      * @param request ListSystemRuleAggregationTypesRequest
      * @return ListSystemRuleAggregationTypesResponse
@@ -42405,7 +42415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the process list of intelligent behavior analytics.</p>
+     * <p>Queries the process list for intelligent behavior analytics.</p>
      * 
      * @param request ListUnknownThreatDetectProcessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -42481,7 +42491,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the process list of intelligent behavior analytics.</p>
+     * <p>Queries the process list for intelligent behavior analytics.</p>
      * 
      * @param request ListUnknownThreatDetectProcessRequest
      * @return ListUnknownThreatDetectProcessResponse
@@ -42553,7 +42563,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves VPC data for the user in a specified region by using the third-party image repository integration feature of Container Asset in Security Center.</p>
+     * <p>Retrieves the VPC data of users in a specified region by using the container assets and third-party image repository access features of Security Center.</p>
      * 
      * @param request ListUserVpcRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -42585,7 +42595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves VPC data for the user in a specified region by using the third-party image repository integration feature of Container Asset in Security Center.</p>
+     * <p>Retrieves the VPC data of users in a specified region by using the container assets and third-party image repository access features of Security Center.</p>
      * 
      * @param request ListUserVpcRequest
      * @return ListUserVpcResponse
@@ -42597,7 +42607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of Serverless instance UUIDs by application ID.</p>
+     * <p>Queries the UUIDs of Serverless instances based on the application ID.</p>
      * 
      * @param request ListUuidsByAppIdRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -42649,7 +42659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of Serverless instance UUIDs by application ID.</p>
+     * <p>Queries the UUIDs of Serverless instances based on the application ID.</p>
      * 
      * @param request ListUuidsByAppIdRequest
      * @return ListUuidsByAppIdResponse
@@ -42833,7 +42843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries virus scan tasks that match specified conditions such as scan type, scan status, and scanned machine information.</p>
+     * <p>Queries virus scan tasks that meet the specified conditions based on the scan type, scan status, and machine information.</p>
      * 
      * @param request ListVirusScanTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -42917,7 +42927,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries virus scan tasks that match specified conditions such as scan type, scan status, and scanned machine information.</p>
+     * <p>Queries virus scan tasks that meet the specified conditions based on the scan type, scan status, and machine information.</p>
      * 
      * @param request ListVirusScanTaskRequest
      * @return ListVirusScanTaskResponse
@@ -43797,10 +43807,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cleared logs cannot be recovered. Before calling this operation, perform a log export and save the logs to a local device, and then call this operation to clear the logs and free up storage capacity space.</p>
+     * <p>Logs cannot be recovered after they are cleared. Perform log export and store the logs locally before you call this operation to clear the logs and release storage capacity.</p>
      * 
      * <b>summary</b> : 
-     * <p>Clears the storage capacity space for log analysis.</p>
+     * <p>Clears the storage capacity for log analysis.</p>
      * 
      * @param request ModifyClearLogstoreStorageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -43844,10 +43854,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Cleared logs cannot be recovered. Before calling this operation, perform a log export and save the logs to a local device, and then call this operation to clear the logs and free up storage capacity space.</p>
+     * <p>Logs cannot be recovered after they are cleared. Perform log export and store the logs locally before you call this operation to clear the logs and release storage capacity.</p>
      * 
      * <b>summary</b> : 
-     * <p>Clears the storage capacity space for log analysis.</p>
+     * <p>Clears the storage capacity for log analysis.</p>
      * 
      * @param request ModifyClearLogstoreStorageRequest
      * @return ModifyClearLogstoreStorageResponse
@@ -44083,7 +44093,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the authorization and authentication configuration of multi-cloud assets.</p>
+     * <p>Modifies the authorization and authentication configuration information of multi-cloud assets.</p>
      * 
      * @param request ModifyCloudVendorAccountAKRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -44163,7 +44173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the authorization and authentication configuration of multi-cloud assets.</p>
+     * <p>Modifies the authorization and authentication configuration information of multi-cloud assets.</p>
      * 
      * @param request ModifyCloudVendorAccountAKRequest
      * @return ModifyCloudVendorAccountAKResponse
@@ -45651,7 +45661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies notification configuration information.</p>
+     * <p>Modifies the notification configuration.</p>
      * 
      * @param request ModifyNoticeConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -45711,7 +45721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies notification configuration information.</p>
+     * <p>Modifies the notification configuration.</p>
      * 
      * @param request ModifyNoticeConfigRequest
      * @return ModifyNoticeConfigResponse
@@ -45725,13 +45735,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>Before you begin</em>*
      * Activate &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/48863.html">Simple Log Service</a>
-     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/log-service/latest/billable-items">Log Service</a>.
-     * Create a service-linked role and authorize Security Center to access cloud resources. You can call the <a href="~~CreateServiceLinkedRole~~">CreateServiceLinkedRole</a> operation to create a service-linked role and authorize Security Center to access cloud resources.
-     * <strong>Common scenarios</strong>
-     * Before you use the log analysis feature of Security Center, call the <a href="~~ModifyOpenLogShipper~~">ModifyOpenLogShipper</a> operation to activate Simple Log Service.</p>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/log-service/latest/billable-items">Simple Log Service</a> first, and create a service-linked role to authorize Security Center to access cloud resources. You can call the <a href="~~CreateServiceLinkedRole~~">CreateServiceLinkedRole</a> operation to create a service-linked role and authorize Security Center to access cloud resources.
+     * <strong>Scenarios</strong>
+     * Before you use the log analysis feature of Security Center, you must call the <a href="~~ModifyOpenLogShipper~~">ModifyOpenLogShipper</a> operation to enable Simple Log Service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Activates Simple Log Service.</p>
+     * <p>Enables Simple Log Service.</p>
      * 
      * @param request ModifyOpenLogShipperRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -45769,13 +45778,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <p><em>Before you begin</em>*
      * Activate &lt;props=&quot;china&quot;&gt;<a href="https://help.aliyun.com/document_detail/48863.html">Simple Log Service</a>
-     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/log-service/latest/billable-items">Log Service</a>.
-     * Create a service-linked role and authorize Security Center to access cloud resources. You can call the <a href="~~CreateServiceLinkedRole~~">CreateServiceLinkedRole</a> operation to create a service-linked role and authorize Security Center to access cloud resources.
-     * <strong>Common scenarios</strong>
-     * Before you use the log analysis feature of Security Center, call the <a href="~~ModifyOpenLogShipper~~">ModifyOpenLogShipper</a> operation to activate Simple Log Service.</p>
+     * &lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/en/log-service/latest/billable-items">Simple Log Service</a> first, and create a service-linked role to authorize Security Center to access cloud resources. You can call the <a href="~~CreateServiceLinkedRole~~">CreateServiceLinkedRole</a> operation to create a service-linked role and authorize Security Center to access cloud resources.
+     * <strong>Scenarios</strong>
+     * Before you use the log analysis feature of Security Center, you must call the <a href="~~ModifyOpenLogShipper~~">ModifyOpenLogShipper</a> operation to enable Simple Log Service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Activates Simple Log Service.</p>
+     * <p>Enables Simple Log Service.</p>
      * 
      * @param request ModifyOpenLogShipperRequest
      * @return ModifyOpenLogShipperResponse
@@ -45941,10 +45949,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The application whitelist is a China-site public preview feature that is no longer open for new applications. Users who have already applied for or are using this feature can call this operation as expected.</p>
+     * <p>The application whitelist feature is in public preview and is no longer available for new applications. Users who have already applied for or are currently using this feature can call this operation as usual.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds processes to or removes processes from the whitelist in the application whitelist feature.</p>
+     * <p>Adds a process to or removes a process from the application whitelist.</p>
      * 
      * @param request ModifyProcessWhiteListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -45992,10 +46000,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The application whitelist is a China-site public preview feature that is no longer open for new applications. Users who have already applied for or are using this feature can call this operation as expected.</p>
+     * <p>The application whitelist feature is in public preview and is no longer available for new applications. Users who have already applied for or are currently using this feature can call this operation as usual.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds processes to or removes processes from the whitelist in the application whitelist feature.</p>
+     * <p>Adds a process to or removes a process from the application whitelist.</p>
      * 
      * @param request ModifyProcessWhiteListRequest
      * @return ModifyProcessWhiteListResponse
@@ -46511,10 +46519,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API call. Other editions do not support this call.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds or removes a policy template to or from My Policies in the task center.</p>
+     * <p>Adds or removes a strategy template to or from My Strategies in Task Center.</p>
      * 
      * @param request ModifySoarStrategySubscribeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -46550,10 +46558,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the Enterprise and Ultimate editions of Security Center support this API call. Other editions do not support this call.</p>
+     * <p>Only the Enterprise and Ultimate editions of Security Center support this API operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds or removes a policy template to or from My Policies in the task center.</p>
+     * <p>Adds or removes a strategy template to or from My Strategies in Task Center.</p>
      * 
      * @param request ModifySoarStrategySubscribeRequest
      * @return ModifySoarStrategySubscribeResponse
@@ -46565,7 +46573,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the one-click scan feature on the vulnerability management page of the console.</p>
+     * <p>Enables the quick scan feature on the Vulnerability Management page in the console.</p>
      * 
      * @param request ModifyStartVulScanRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -46613,7 +46621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the one-click scan feature on the vulnerability management page of the console.</p>
+     * <p>Enables the quick scan feature on the Vulnerability Management page in the console.</p>
      * 
      * @param request ModifyStartVulScanRequest
      * @return ModifyStartVulScanResponse
@@ -47023,7 +47031,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the machine-level toggle settings for vulnerability scanning.</p>
+     * <p>Modifies the machine switch settings for vulnerability scanning.</p>
      * 
      * @param request ModifyVulTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -47059,7 +47067,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the machine-level toggle settings for vulnerability scanning.</p>
+     * <p>Modifies the machine switch settings for vulnerability scanning.</p>
      * 
      * @param request ModifyVulTargetRequest
      * @return ModifyVulTargetResponse
@@ -47525,7 +47533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or shuts down web tamper-proofing for a server.</p>
+     * <p>Enables or initiates a shutdown of the web tamper-proofing protection status of a server.</p>
      * 
      * @param request ModifyWebLockStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -47569,7 +47577,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables or shuts down web tamper-proofing for a server.</p>
+     * <p>Enables or initiates a shutdown of the web tamper-proofing protection status of a server.</p>
      * 
      * @param request ModifyWebLockStatusRequest
      * @return ModifyWebLockStatusResponse
@@ -47581,7 +47589,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes the web tamper proofing protection folder from a specified server.</p>
+     * <p>Dissociates the web tamper-proofing protected directory from a specified server.</p>
      * 
      * @param request ModifyWebLockUnbindRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -47613,7 +47621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes the web tamper proofing protection folder from a specified server.</p>
+     * <p>Dissociates the web tamper-proofing protected directory from a specified server.</p>
      * 
      * @param request ModifyWebLockUnbindRequest
      * @return ModifyWebLockUnbindResponse
@@ -47769,7 +47777,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the anti-ransomware managed service to configure server backup policies with one click. This operation can be called only after you purchase the anti-ransomware managed service.</p>
+     * <p>Enables the one-click configuration of anti-ransomware backup policies for servers in the managed anti-ransomware service. You can call this operation only after you purchase the managed anti-ransomware service.</p>
      * 
      * @param request OpenBackupAutoConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -47801,7 +47809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Enables the anti-ransomware managed service to configure server backup policies with one click. This operation can be called only after you purchase the anti-ransomware managed service.</p>
+     * <p>Enables the one-click configuration of anti-ransomware backup policies for servers in the managed anti-ransomware service. You can call this operation only after you purchase the managed anti-ransomware service.</p>
      * 
      * @param request OpenBackupAutoConfigRequest
      * @return OpenBackupAutoConfigResponse
@@ -49489,7 +49497,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Security Center provides rewards such as value-added service authorization quotas and log analysis storage capacity to users who complete tasks. Queries the completion status and reward information of configuration tasks.</p>
+     * <p>Queries the completion status and reward information of onboarding tasks. Security Center provides rewards such as value-added service authorizations and log analysis storage capacity for users who complete tasks. You can call this API operation to query the completion status and reward information of configured tasks.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryGuidTaskListResponse
@@ -49512,7 +49520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Security Center provides rewards such as value-added service authorization quotas and log analysis storage capacity to users who complete tasks. Queries the completion status and reward information of configuration tasks.</p>
+     * <p>Queries the completion status and reward information of onboarding tasks. Security Center provides rewards such as value-added service authorizations and log analysis storage capacity for users who complete tasks. You can call this API operation to query the completion status and reward information of configured tasks.</p>
      * @return QueryGuidTaskListResponse
      */
     public QueryGuidTaskListResponse queryGuidTaskList() throws Exception {
@@ -49662,7 +49670,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Claims a trial reward for the cloud honeypot or malicious file detection SDK feature after completing a task.</p>
+     * <p>Grants the trial reward for enabling the cloud honeypot or malicious file detection SDK feature upon task completion.</p>
      * 
      * @param request ReceiveFunctionTrialRewardByAliUidRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -49698,7 +49706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Claims a trial reward for the cloud honeypot or malicious file detection SDK feature after completing a task.</p>
+     * <p>Grants the trial reward for enabling the cloud honeypot or malicious file detection SDK feature upon task completion.</p>
      * 
      * @param request ReceiveFunctionTrialRewardByAliUidRequest
      * @return ReceiveFunctionTrialRewardByAliUidResponse
@@ -50106,7 +50114,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets and upgrades the log analysis feature. You can call this operation only when the log analysis feature uses the pay-as-you-go billing method.</p>
+     * <p>Resets and upgrades the log analysis feature. You can invoke this operation only in the pay-as-you-go pattern for logs.</p>
      * 
      * @param request ResetLogShipperRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -50146,7 +50154,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resets and upgrades the log analysis feature. You can call this operation only when the log analysis feature uses the pay-as-you-go billing method.</p>
+     * <p>Resets and upgrades the log analysis feature. You can invoke this operation only in the pay-as-you-go pattern for logs.</p>
      * 
      * @param request ResetLogShipperRequest
      * @return ResetLogShipperResponse
@@ -51609,7 +51617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers ISO 27001 compliance checks of Security Center.</p>
+     * <p>Triggers an ISO 27001 compliance check task in Security Center.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return TriggerCheckResponse
@@ -51632,7 +51640,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Triggers ISO 27001 compliance checks of Security Center.</p>
+     * <p>Triggers an ISO 27001 compliance check task in Security Center.</p>
      * @return TriggerCheckResponse
      */
     public TriggerCheckResponse triggerCheck() throws Exception {
@@ -51642,7 +51650,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes servers from a proxy cluster.</p>
+     * <p>Dissociates the client from the current proxy cluster.</p>
      * 
      * @param request UnBindHybridProxyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -51678,7 +51686,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes servers from a proxy cluster.</p>
+     * <p>Dissociates the client from the current proxy cluster.</p>
      * 
      * @param request UnBindHybridProxyRequest
      * @return UnBindHybridProxyResponse
@@ -51734,17 +51742,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you no longer need Security Center to protect your non-Alibaba Cloud servers, you can call the UnbindAegis operation to unbind the servers. After a non-Alibaba Cloud server is unbound, the server no longer consumes your Security Center quota (the number of servers or compute cores). The released quota can then be used to protect other servers.</p>
+     * <p>If you no longer need Security Center to protect your non-Alibaba Cloud servers, you can call the UnbindAegis operation to unbind the servers. After a non-Alibaba Cloud server is unbound, it no longer consumes the quota of Security Center (the number of protected servers or CPU cores). The released quota can be used to protect other servers.</p>
      * <blockquote>
-     * <p>Only non-Alibaba Cloud servers require the unbinding operation. Alibaba Cloud ECS instances do not require unbinding. For ECS instances, even if you uninstall the agent, the server still appears in the asset management list in an offline state and is not removed from the list.<br><strong>Before you begin</strong></p>
+     * <p>Only non-Alibaba Cloud servers need to be unbound. You do not need to unbind Alibaba Cloud ECS instances. Even if you uninstall the agent from an ECS instance, the instance remains in the asset management list in the offline state and is not removed from the list.<br><strong>Before you begin</strong></p>
      * </blockquote>
      * <ul>
-     * <li>The agent on the non-Alibaba Cloud server that you want to unbind has been paused (the client status is disabled). You can call the <a href="~~PauseClient~~">PauseClient</a> operation to pause the agent.</li>
-     * <li>Client self-protection has been disabled on the non-Alibaba Cloud server that you want to unbind. For more information, see <a href="https://help.aliyun.com/document_detail/460802.html">Client self-protection</a>.</li>
+     * <li>The agent on the non-Alibaba Cloud server that you want to unbind is paused (the client status is Disabled). You can call the <a href="~~PauseClient~~">PauseClient</a> operation to pause the agent.</li>
+     * <li>Client self-protection is disabled for the non-Alibaba Cloud server that you want to unbind. For more information about how to disable client self-protection, see <a href="https://help.aliyun.com/document_detail/460802.html">Client self-protection</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds non-Alibaba Cloud servers from Security Center.</p>
+     * <p>Unbinds a non-Alibaba Cloud server from Security Center.</p>
      * 
      * @param request UnbindAegisRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -51776,17 +51784,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If you no longer need Security Center to protect your non-Alibaba Cloud servers, you can call the UnbindAegis operation to unbind the servers. After a non-Alibaba Cloud server is unbound, the server no longer consumes your Security Center quota (the number of servers or compute cores). The released quota can then be used to protect other servers.</p>
+     * <p>If you no longer need Security Center to protect your non-Alibaba Cloud servers, you can call the UnbindAegis operation to unbind the servers. After a non-Alibaba Cloud server is unbound, it no longer consumes the quota of Security Center (the number of protected servers or CPU cores). The released quota can be used to protect other servers.</p>
      * <blockquote>
-     * <p>Only non-Alibaba Cloud servers require the unbinding operation. Alibaba Cloud ECS instances do not require unbinding. For ECS instances, even if you uninstall the agent, the server still appears in the asset management list in an offline state and is not removed from the list.<br><strong>Before you begin</strong></p>
+     * <p>Only non-Alibaba Cloud servers need to be unbound. You do not need to unbind Alibaba Cloud ECS instances. Even if you uninstall the agent from an ECS instance, the instance remains in the asset management list in the offline state and is not removed from the list.<br><strong>Before you begin</strong></p>
      * </blockquote>
      * <ul>
-     * <li>The agent on the non-Alibaba Cloud server that you want to unbind has been paused (the client status is disabled). You can call the <a href="~~PauseClient~~">PauseClient</a> operation to pause the agent.</li>
-     * <li>Client self-protection has been disabled on the non-Alibaba Cloud server that you want to unbind. For more information, see <a href="https://help.aliyun.com/document_detail/460802.html">Client self-protection</a>.</li>
+     * <li>The agent on the non-Alibaba Cloud server that you want to unbind is paused (the client status is Disabled). You can call the <a href="~~PauseClient~~">PauseClient</a> operation to pause the agent.</li>
+     * <li>Client self-protection is disabled for the non-Alibaba Cloud server that you want to unbind. For more information about how to disable client self-protection, see <a href="https://help.aliyun.com/document_detail/460802.html">Client self-protection</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Unbinds non-Alibaba Cloud servers from Security Center.</p>
+     * <p>Unbinds a non-Alibaba Cloud server from Security Center.</p>
      * 
      * @param request UnbindAegisRequest
      * @return UnbindAegisResponse
@@ -52000,7 +52008,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Attack Path Whitelist.</p>
+     * <p>Updates the attack path whitelist.</p>
      * 
      * @param request UpdateAttackPathWhitelistRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -52056,7 +52064,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Update Attack Path Whitelist.</p>
+     * <p>Updates the attack path whitelist.</p>
      * 
      * @param request UpdateAttackPathWhitelistRequest
      * @return UpdateAttackPathWhitelistResponse
@@ -53034,7 +53042,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the QPS for client file uploads.</p>
+     * <p>Modifies the QPS limit for client file uploads.</p>
      * 
      * @param request UpdateFileUploadLimitRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -53066,7 +53074,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the QPS for client file uploads.</p>
+     * <p>Modifies the QPS limit for client file uploads.</p>
      * 
      * @param request UpdateFileUploadLimitRequest
      * @return UpdateFileUploadLimitResponse
@@ -54172,8 +54180,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of the client upgrade time.
-     * To use this feature, contact technical support.</p>
+     * <p>Modifies the client upgrade time configuration. To use this feature, contact technical support.</p>
      * 
      * @param request UpdatePublishCronRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -54221,8 +54228,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of the client upgrade time.
-     * To use this feature, contact technical support.</p>
+     * <p>Modifies the client upgrade time configuration. To use this feature, contact technical support.</p>
      * 
      * @param request UpdatePublishCronRequest
      * @return UpdatePublishCronResponse
@@ -55140,7 +55146,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validates check items.</p>
+     * <p>Validates check item dimensions.</p>
      * 
      * @param request VerifyCheckResultRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -55184,7 +55190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Validates check items.</p>
+     * <p>Validates check item dimensions.</p>
      * 
      * @param request VerifyCheckResultRequest
      * @return VerifyCheckResultResponse

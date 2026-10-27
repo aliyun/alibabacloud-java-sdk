@@ -9,13 +9,13 @@ public class DeleteHybridProxyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>IDC-代理</p>
+     * <p>IDC-Proxy</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
-     * <p>The UUID of the proxy server to delete. The value starts with inet-proxy-.</p>
+     * <p>The UUID of the proxy server to delete. The UUID starts with inet-proxy-.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -6,7 +6,10 @@ import com.aliyun.tea.*;
 public class GetFileProtectEventRequest extends TeaModel {
     /**
      * <p>The event ID.</p>
-     * <p>This parameter is required. If this parameter is not specified, the API returns HTTP 400 with error code -101. You can call ListFileProtectEvent to obtain valid event IDs.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~ListFileProtectEvent~~">ListFileProtectEvent</a> operation to retrieve this parameter.
+     * This parameter is required. If it is not provided, the API returns HTTP 400 with error code -101.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>12</p>

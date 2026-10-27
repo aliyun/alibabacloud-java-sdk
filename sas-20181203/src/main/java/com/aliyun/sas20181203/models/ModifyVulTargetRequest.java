@@ -8,7 +8,7 @@ public class ModifyVulTargetRequest extends TeaModel {
      * <p>The configuration target. This parameter is in JSON format and contains the following fields:</p>
      * <ul>
      * <li><strong>vulType</strong>: The vulnerability type. Valid values:<ul>
-     * <li><strong>cve</strong>: Linux software vulnerability.</li>
+     * <li><strong>cve</strong>: Linux system vulnerability.</li>
      * <li><strong>sys</strong>: Windows system vulnerability.</li>
      * <li><strong>cms</strong>: Web-CMS vulnerability.</li>
      * <li><strong>emg</strong>: Emergency vulnerability.</li>

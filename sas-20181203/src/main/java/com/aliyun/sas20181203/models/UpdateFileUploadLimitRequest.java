@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateFileUploadLimitRequest extends TeaModel {
     /**
-     * <p>The QPS throttling threshold for file uploads from the client. Valid values: 100 to 10000.</p>
+     * <p>Sets the QPS limit for client file uploads. Valid values: 100 to 10000.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

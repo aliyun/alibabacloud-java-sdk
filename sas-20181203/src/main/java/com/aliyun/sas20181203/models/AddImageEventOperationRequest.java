@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class AddImageEventOperationRequest extends TeaModel {
     /**
-     * <p>The rule conditions. The value is in the JSON format. Valid values of keys:</p>
+     * <p>The rule conditions. The value is in JSON format. Valid keys:</p>
      * <ul>
-     * <li><strong>condition</strong>: the matching condition.</li>
-     * <li><strong>type</strong>: the matching type.</li>
-     * <li><strong>value</strong>: the matching value.</li>
+     * <li><strong>condition</strong>: The matching condition.</li>
+     * <li><strong>type</strong>: The matching type.</li>
+     * <li><strong>value</strong>: The matching value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class AddImageEventOperationRequest extends TeaModel {
     public String conditions;
 
     /**
-     * <p>The keyword of the alert item.</p>
+     * <p>The alert metric keyword.</p>
      * 
      * <strong>example:</strong>
      * <p>PEM</p>
@@ -28,7 +28,7 @@ public class AddImageEventOperationRequest extends TeaModel {
     public String eventKey;
 
     /**
-     * <p>The name of the alert item.</p>
+     * <p>The alert metric name.</p>
      * 
      * <strong>example:</strong>
      * <p>PEM</p>
@@ -37,9 +37,9 @@ public class AddImageEventOperationRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The alert type.</p>
+     * <p>The Alarm Metric for alerting. Valid values:</p>
      * <ul>
-     * <li>Set the value to <strong>sensitiveFile</strong>.</li>
+     * <li><strong>sensitiveFile</strong>: Sensitive file.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class AddImageEventOperationRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The remarks that you want to add.</p>
+     * <p>The note to add.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -58,9 +58,9 @@ public class AddImageEventOperationRequest extends TeaModel {
     public String note;
 
     /**
-     * <p>The operation code.</p>
+     * <p>The operation code. Valid values:</p>
      * <ul>
-     * <li>Set the value to <strong>whitelist</strong> to add the alert item to the whitelist.</li>
+     * <li><strong>whitelist</strong>: Whitelist.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,10 +70,13 @@ public class AddImageEventOperationRequest extends TeaModel {
     public String operationCode;
 
     /**
-     * <p>The application scope of the rule. The value is in the JSON format. Valid values of keys:</p>
+     * <p>The rule scope. The value is in JSON format. Valid keys:</p>
      * <ul>
-     * <li><strong>type</strong></li>
-     * <li><strong>value</strong></li>
+     * <li><strong>type</strong>: The scope type.</li>
+     * <li><strong>value</strong>: The scope value.<blockquote>
+     * <p>This parameter and <strong>Source</strong> cannot be empty at the same time. If <strong>Source</strong> is set to <strong>agentless</strong>, this parameter does not take effect.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,8 +88,11 @@ public class AddImageEventOperationRequest extends TeaModel {
     /**
      * <p>The source of the whitelist. Valid values:</p>
      * <ul>
-     * <li><strong>image</strong>: image.</li>
-     * <li><strong>agentless</strong>: agentless detection.</li>
+     * <li><strong>image</strong>: Image.</li>
+     * <li><strong>agentless</strong>: Agentless detection.<blockquote>
+     * <p>This parameter and <strong>Scenarios</strong> cannot be empty at the same time. If this parameter is set to <strong>agentless</strong>, the <strong>Scenarios</strong> parameter does not take effect.</p>
+     * </blockquote>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

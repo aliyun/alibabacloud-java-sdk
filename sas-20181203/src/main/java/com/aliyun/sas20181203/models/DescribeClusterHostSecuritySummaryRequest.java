@@ -16,18 +16,18 @@ public class DescribeClusterHostSecuritySummaryRequest extends TeaModel {
     /**
      * <p>The container search field. Valid values:</p>
      * <ul>
-     * <li><strong>instanceId</strong>: instance ID.</li>
-     * <li><strong>appName</strong>: application name.</li>
-     * <li><strong>clusterId</strong>: cluster ID.</li>
-     * <li><strong>regionId</strong>: region.</li>
-     * <li><strong>nodeName</strong>: node name.</li>
-     * <li><strong>namespace</strong>: namespace.</li>
-     * <li><strong>clusterName</strong>: cluster name.</li>
-     * <li><strong>image</strong>: image name.</li>
-     * <li><strong>imageRepoName</strong>: image repository name.</li>
-     * <li><strong>imageRepoNamespace</strong>: image repository namespace.</li>
-     * <li><strong>imageRepoTag</strong>: image tag.</li>
-     * <li><strong>imageDigest</strong>: image digest.</li>
+     * <li><strong>instanceId</strong>: The instance ID.</li>
+     * <li><strong>appName</strong>: The application name.</li>
+     * <li><strong>clusterId</strong>: The cluster ID.</li>
+     * <li><strong>regionId</strong>: The region ID.</li>
+     * <li><strong>nodeName</strong>: The node name.</li>
+     * <li><strong>namespace</strong>: The namespace.</li>
+     * <li><strong>clusterName</strong>: The cluster name.</li>
+     * <li><strong>image</strong>: The image name.</li>
+     * <li><strong>imageRepoName</strong>: The image repository name.</li>
+     * <li><strong>imageRepoNamespace</strong>: The image repository namespace.</li>
+     * <li><strong>imageRepoTag</strong>: The image tag.</li>
+     * <li><strong>imageDigest</strong>: The image digest.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +49,7 @@ public class DescribeClusterHostSecuritySummaryRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The IP address of the access source.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>222.71.XXX.XXX</p>
@@ -60,8 +60,8 @@ public class DescribeClusterHostSecuritySummaryRequest extends TeaModel {
     /**
      * <p>The query type. Valid values:</p>
      * <ul>
-     * <li><strong>containerId</strong>: container ID.</li>
-     * <li><strong>uuid</strong>: asset ID.</li>
+     * <li><strong>containerId</strong>: The container ID.</li>
+     * <li><strong>uuid</strong>: The asset ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>

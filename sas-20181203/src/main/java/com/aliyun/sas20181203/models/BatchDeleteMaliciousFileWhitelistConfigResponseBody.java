@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchDeleteMaliciousFileWhitelistConfigResponseBody extends TeaModel {
     /**
-     * <p>The response code. The status code <strong>200</strong> indicates that the request was successful. Other status codes indicate that the request failed. You can identify the cause of the failure based on the status code.</p>
+     * <p>The result code. A value of <strong>200</strong> indicates success, whereas any other value indicates failure. You can use this field to determine the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class BatchDeleteMaliciousFileWhitelistConfigResponseBody extends TeaMode
     public String code;
 
     /**
-     * <p>The HTTP status code. The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code. A value of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class BatchDeleteMaliciousFileWhitelistConfigResponseBody extends TeaMode
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The additional message returned for the request result.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class BatchDeleteMaliciousFileWhitelistConfigResponseBody extends TeaMode
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A3D7C47D-3F11-57BB-90E8-E5C20C61****</p>
@@ -41,10 +41,10 @@ public class BatchDeleteMaliciousFileWhitelistConfigResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The API call is successful.</li>
+     * <li><strong>false</strong>: The API call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteBaselineCheckWhiteRecordRequest extends TeaModel {
     /**
-     * <p>The IDs of check items.</p>
+     * <p>The list of check item IDs.</p>
      */
     @NameInMap("CheckIds")
     public java.util.List<Long> checkIds;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -24,7 +24,7 @@ public class DeleteBaselineCheckWhiteRecordRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The IDs of the whitelist records.</p>
+     * <p>The list of whitelist record IDs.</p>
      */
     @NameInMap("RecordIds")
     public java.util.List<Long> recordIds;
@@ -32,8 +32,8 @@ public class DeleteBaselineCheckWhiteRecordRequest extends TeaModel {
     /**
      * <p>The data source. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong>: host baseline</li>
-     * <li><strong>agentless</strong>: agentless detection</li>
+     * <li><strong>default</strong>: server baseline</li>
+     * <li><strong>agentless</strong>: agentless baseline</li>
      * </ul>
      * 
      * <strong>example:</strong>

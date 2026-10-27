@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeHcExportInfoRequest extends TeaModel {
     /**
-     * <p>The ID of the export task. Call the <a href="https://help.aliyun.com/document_detail/425092.html">ExportWarning</a> operation to obtain the task ID (<strong>Id</strong>).</p>
+     * <p>The ID of the export task.</p>
+     * <blockquote>
+     * <p>To obtain the task ID (<strong>Id</strong>), call the <a href="https://help.aliyun.com/document_detail/425092.html">ExportWarning</a> operation.
+     * This parameter is required. If you do not specify this parameter, the API returns HTTP 400 and the error code -101.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>443285</p>

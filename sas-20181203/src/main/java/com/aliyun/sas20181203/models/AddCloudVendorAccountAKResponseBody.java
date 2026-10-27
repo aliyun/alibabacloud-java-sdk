@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddCloudVendorAccountAKResponseBody extends TeaModel {
     /**
-     * <p>The AK information that is added.</p>
+     * <p>The added AccessKey information.</p>
      */
     @NameInMap("Data")
     public AddCloudVendorAccountAKResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A60DA4EC-7CD8-577D-AD73-***</p>
@@ -42,7 +42,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
 
     public static class AddCloudVendorAccountAKResponseBodyDataAuthModules extends TeaModel {
         /**
-         * <p>The module exception information.</p>
+         * <p>The exception information of the module.</p>
          * 
          * <strong>example:</strong>
          * <p>ak_domain_error</p>
@@ -51,7 +51,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The module code. Valid values:</p>
+         * <p>The code of the module. Valid values:</p>
          * <ul>
          * <li><strong>HOST</strong>: Host</li>
          * <li><strong>CSPM</strong>: Cloud product configuration check</li>
@@ -66,7 +66,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String module;
 
         /**
-         * <p>The cloud asset description associated with the module.</p>
+         * <p>The description of the cloud assets associated with the module.</p>
          * 
          * <strong>example:</strong>
          * <p>Cloud server or virtual machine</p>
@@ -84,12 +84,12 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String moduleDisp;
 
         /**
-         * <p>The module status. Valid values:</p>
+         * <p>The status of the module. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: In use.</li>
-         * <li><strong>1</strong>: Abnormal.</li>
-         * <li><strong>2</strong>: Validity verification in progress.</li>
-         * <li><strong>3</strong>: Validity verification timed out.</li>
+         * <li><strong>0</strong>: In use</li>
+         * <li><strong>1</strong>: Exception</li>
+         * <li><strong>2</strong>: Verifying</li>
+         * <li><strong>3</strong>: Verification timed out</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -99,7 +99,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public Integer moduleServiceStatus;
 
         /**
-         * <p>The associate permission description for the module.</p>
+         * <p>The description of the permissions associated with the module.</p>
          * 
          * <strong>example:</strong>
          * <p>Read permission of the cloud server or virtual machine</p>
@@ -164,10 +164,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
 
     public static class AddCloudVendorAccountAKResponseBodyData extends TeaModel {
         /**
-         * <p>The AK type. Valid values:</p>
+         * <p>The AccessKey type. Valid values:</p>
          * <ul>
-         * <li><strong>primary</strong>: Primary account.</li>
-         * <li><strong>sub</strong>: Sub-account.</li>
+         * <li><strong>primary</strong>: Primary account</li>
+         * <li><strong>sub</strong>: Sub-account</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String akType;
 
         /**
-         * <p>The unique ID of the AK.</p>
+         * <p>The unique ID of the AccessKey.</p>
          * 
          * <strong>example:</strong>
          * <p>2158</p>
@@ -186,7 +186,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public Long authId;
 
         /**
-         * <p>The list of AK-associated modules.</p>
+         * <p>The list of modules associated with the AccessKey.</p>
          */
         @NameInMap("AuthModules")
         public java.util.List<AddCloudVendorAccountAKResponseBodyDataAuthModules> authModules;
@@ -204,7 +204,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String ctdrCloudUserId;
 
         /**
-         * <p>The AK exception information.</p>
+         * <p>The exception information of the AccessKey.</p>
          * 
          * <strong>example:</strong>
          * <p>The IAM user is forbidden in the currently selected region</p>
@@ -213,7 +213,7 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The AK parameter ID.</p>
+         * <p>The AccessKey ID.</p>
          * 
          * <strong>example:</strong>
          * <p>AE6SLd****</p>
@@ -222,12 +222,12 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String secretId;
 
         /**
-         * <p>The AK usage status. Valid values:</p>
+         * <p>The usage status of the AccessKey. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: In use.</li>
-         * <li><strong>1</strong>: Abnormal.</li>
-         * <li><strong>2</strong>: Validity verification in progress.</li>
-         * <li><strong>3</strong>: Validity verification timed out.</li>
+         * <li><strong>0</strong>: In use</li>
+         * <li><strong>1</strong>: Exception</li>
+         * <li><strong>2</strong>: Verifying</li>
+         * <li><strong>3</strong>: Verification timed out</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -237,10 +237,10 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public Integer serviceStatus;
 
         /**
-         * <p>The AK status. Valid values:</p>
+         * <p>The AccessKey status. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Enabled.</li>
-         * <li><strong>1</strong>: Not enabled.</li>
+         * <li><strong>0</strong>: Enabled</li>
+         * <li><strong>1</strong>: Disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,9 +258,15 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
          * <li><strong>AWS</strong>: AWS</li>
          * <li><strong>VOLCENGINE</strong>: Volcengine</li>
          * <li><strong>google</strong>: Google Cloud</li>
-         * <li><strong>CHAITIN</strong>: Chaitin Technology</li>
+         * <li><strong>CHAITIN</strong>: Chaitin Tech</li>
          * <li><strong>FORTINET</strong>: Fortinet</li>
          * <li><strong>THREATBOOK</strong>: ThreatBook</li>
+         * <li><strong>KingsoftCloud</strong>: Kingsoft Cloud</li>
+         * <li><strong>UCloud</strong>: UCloud</li>
+         * <li><strong>BaiduCloud</strong>: Baidu AI Cloud</li>
+         * <li><strong>WIZ</strong>: Wiz</li>
+         * <li><strong>OracleCloud</strong>: Oracle Cloud</li>
+         * <li><strong>StateCloud</strong>: China Telecom Cloud</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,9 +276,9 @@ public class AddCloudVendorAccountAKResponseBody extends TeaModel {
         public String vendor;
 
         /**
-         * <p>The AK account name.</p>
+         * <p>The name of the AccessKey account.</p>
          * <blockquote>
-         * <p>Used to identify the account to which third-party host assets belong.</p>
+         * <p>This parameter is used to identify the account to which the third-party host assets belong.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

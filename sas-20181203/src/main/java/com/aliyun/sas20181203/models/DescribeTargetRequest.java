@@ -10,7 +10,7 @@ public class DescribeTargetRequest extends TeaModel {
      * <li><strong>cms</strong>: Web-CMS vulnerability</li>
      * <li><strong>sys</strong>: Windows system vulnerability</li>
      * <li><strong>cve</strong>: Linux software vulnerability</li>
-     * <li><strong>emg</strong>: emergency vulnerability.</li>
+     * <li><strong>emg</strong>: emergency vulnerability</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DescribeTargetRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The query type. Set this parameter to vul.</p>
+     * <p>The query type. Set the value to vul.</p>
      * 
      * <strong>example:</strong>
      * <p>vul</p>

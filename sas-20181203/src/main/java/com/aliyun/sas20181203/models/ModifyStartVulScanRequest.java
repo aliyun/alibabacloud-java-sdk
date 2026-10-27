@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyStartVulScanRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests should use different tokens. The token supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You must use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
@@ -14,35 +14,38 @@ public class ModifyStartVulScanRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
      * <ul>
-     * <li>true: performs only a dry run without performing the actual operation.</li>
-     * <li>false: performs the actual request.</li>
+     * <li>true: performs a dry run only. The system checks the request but does not perform the actual operation.</li>
+     * <li>false: performs the request.
+     * Default value: false.</li>
      * </ul>
-     * <p>Default value: false.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The Alibaba Cloud account ID of the member accounts in the resource folder.</p>
+     * <p>The ID of the main account of the member accounts in the resource folder.</p>
      * <blockquote>
      * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>Settings for the vulnerability types to be detected by the one-click scan feature. Valid values:</p>
+     * <p>Settings for the vulnerability types to be detected by the quick scan feature. Valid values:</p>
      * <ul>
      * <li><strong>cve</strong>: Linux software vulnerability.</li>
      * <li><strong>sys</strong>: Windows system vulnerability.</li>
      * <li><strong>cms</strong>: Web-CMS vulnerability.</li>
-     * <li><strong>app</strong>: Application vulnerability detected by the web scanner.</li>
-     * <li><strong>emg</strong>: Emergency vulnerability.</li>
-     * <li><strong>image</strong>: Container image vulnerability.</li>
-     * <li><strong>sca</strong>: Application vulnerability detected by software constituency parsing.<blockquote>
+     * <li><strong>app</strong>: Application vulnerabilities detected by web scanners.</li>
+     * <li><strong>emg</strong>: Emergency vulnerabilities.</li>
+     * <li><strong>image</strong>: Container image vulnerabilities.</li>
+     * <li><strong>sca</strong>: Application vulnerabilities detected by software constituency parsing.<blockquote>
      * <p>If this parameter is left empty, all vulnerability types are detected.</p>
      * </blockquote>
      * </li>
@@ -57,7 +60,7 @@ public class ModifyStartVulScanRequest extends TeaModel {
     /**
      * <p>The list of server UUIDs. Separate multiple UUIDs with commas (,).</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/421726.html">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/421726.html">DescribeCloudCenterInstances</a> operation to obtain the UUIDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

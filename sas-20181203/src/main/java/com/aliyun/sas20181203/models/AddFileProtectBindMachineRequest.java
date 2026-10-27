@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class AddFileProtectBindMachineRequest extends TeaModel {
     /**
-     * <p>The list of servers for which the alert protection level is enabled.</p>
+     * <p>The list of servers with the alert protection level enabled.</p>
      */
     @NameInMap("AlertUuids")
     public java.util.List<String> alertUuids;
 
     /**
-     * <p>The list of servers for which tamper-proofing is enabled.</p>
+     * <p>The list of servers with tamper-proofing enabled.</p>
      */
     @NameInMap("BlockUuids")
     public java.util.List<String> blockUuids;
 
     /**
-     * <p>The list of servers for which file protection is disabled.</p>
+     * <p>The list of servers with the file protection feature disabled.</p>
      */
     @NameInMap("NoneUuids")
     public java.util.List<String> noneUuids;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomizeReportStatusRequest extends TeaModel {
     /**
-     * <p>The pinning time. Unit: milliseconds.</p>
+     * <p>The time when the report is pinned. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1717430400000</p>
@@ -16,7 +16,7 @@ public class UpdateCustomizeReportStatusRequest extends TeaModel {
     /**
      * <p>The report ID.</p>
      * <blockquote>
-     * <p>Call <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> to obtain this parameter.</p>
+     * <p>You can call the <a href="~~DescribeCustomizeReportList~~">DescribeCustomizeReportList</a> operation to obtain this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,10 +27,10 @@ public class UpdateCustomizeReportStatusRequest extends TeaModel {
     public Long reportId;
 
     /**
-     * <p>The report status. Valid values:</p>
+     * <p>The status of the report. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: Disabled.</li>
-     * <li><strong>1</strong>: Enabled.</li>
+     * <li><strong>0</strong>: disabled</li>
+     * <li><strong>1</strong>: enabled</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

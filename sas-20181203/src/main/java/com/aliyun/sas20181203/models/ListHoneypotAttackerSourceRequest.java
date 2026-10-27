@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHoneypotAttackerSourceRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The page number of the current page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListHoneypotAttackerSourceRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end of the time range to query. This value is a timestamp.</p>
+     * <p>The end time in UNIX timestamp format.</p>
      * 
      * <strong>example:</strong>
      * <p>1676945366221</p>
@@ -23,12 +23,10 @@ public class ListHoneypotAttackerSourceRequest extends TeaModel {
     public Long endTimeStamp;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong>: Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +36,7 @@ public class ListHoneypotAttackerSourceRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The maximum number of entries to return on each page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +45,7 @@ public class ListHoneypotAttackerSourceRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>An array that consists of risk levels.</p>
+     * <p>The list of risk levels.</p>
      */
     @NameInMap("RiskLevelList")
     public java.util.List<String> riskLevelList;
@@ -62,7 +60,7 @@ public class ListHoneypotAttackerSourceRequest extends TeaModel {
     public String srcIp;
 
     /**
-     * <p>The beginning of the time range to query. This value is a timestamp.</p>
+     * <p>The start time in UNIX timestamp format.</p>
      * 
      * <strong>example:</strong>
      * <p>1674007632124</p>

@@ -7,8 +7,8 @@ public class DescribePropertyScaProcessDetailRequest extends TeaModel {
     /**
      * <p>The type of the application process. Default value: <strong>java</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>java</strong>: Java process.</li>
-     * <li><strong>php</strong>: PHP process.</li>
+     * <li><strong>java</strong>: Java process</li>
+     * <li><strong>php</strong>: PHP process</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DescribePropertyScaProcessDetailRequest extends TeaModel {
     /**
      * <p>The startup parameter.</p>
      * <blockquote>
-     * <p> This parameter supports only prefix queries. Fuzzy match is not supported.</p>
+     * <p>Only prefix match is supported. Fuzzy match is not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class DescribePropertyScaProcessDetailRequest extends TeaModel {
     public String cmdline;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,9 +39,9 @@ public class DescribePropertyScaProcessDetailRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries per page. Default value: 10. If you leave this parameter empty, 10 entries are returned on each page.</p>
+     * <p>The maximum number of entries to return on each page in a paged query. The default number of entries per page for paging is 10. If this parameter is left empty, 10 entries are returned by default.</p>
      * <blockquote>
-     * <p> We recommend that you do not leave this parameter empty.</p>
+     * <p>Specify a value for this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class DescribePropertyScaProcessDetailRequest extends TeaModel {
     /**
      * <p>The process ID.</p>
      * <blockquote>
-     * <p> Only exact match is supported.</p>
+     * <p>Only exact match is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribePropertyScaProcessDetailRequest extends TeaModel {
     public String pid;
 
     /**
-     * <p>The information about the server that you want to query. The value can be the public IP address, private IP address, or name of the server. Fuzzy match is supported.</p>
+     * <p>The asset information to query. You can set this parameter to the asset name, public IP address, or private IP address. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>10.167.XX.XX</p>
@@ -74,13 +74,11 @@ public class DescribePropertyScaProcessDetailRequest extends TeaModel {
     /**
      * <p>The UUID of the server.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs of servers.</p>
-     * </li>
-     * <li><p>Only exact match is supported.</p>
-     * </li>
+     * <li>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</li>
+     * <li>Only exact match is supported.</li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>D0D6E6E4-CB8C-4897-B852-46AEFDA0****</p>

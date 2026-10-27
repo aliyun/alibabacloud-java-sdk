@@ -7,7 +7,7 @@ public class DescribeContainerStatisticsRequest extends TeaModel {
     /**
      * <p>The ID of the container cluster to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain the value of this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

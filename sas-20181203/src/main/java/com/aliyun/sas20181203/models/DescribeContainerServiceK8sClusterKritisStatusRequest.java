@@ -17,7 +17,7 @@ public class DescribeContainerServiceK8sClusterKritisStatusRequest extends TeaMo
     public Long resourceOwnerId;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>119.145.XXX.XXX</p>

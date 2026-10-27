@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHoneypotStatisticsRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese.</li>
      * <li><strong>en</strong>: English.</li>

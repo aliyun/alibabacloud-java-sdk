@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ExportWarningRequest extends TeaModel {
     /**
-     * <p>Specifies whether the baseline risks are handled. Valid values:</p>
+     * <p>Specifies whether the baseline issue is handled. Valid values:</p>
      * <ul>
-     * <li><strong>Y</strong>: yes</li>
-     * <li><strong>N</strong>: no</li>
+     * <li><strong>Y</strong>: The issue is handled.</li>
+     * <li><strong>N</strong>: The issue is not handled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ExportWarningRequest extends TeaModel {
     public String dealed;
 
     /**
-     * <p>The type of the export task. Set the value to <strong>hc_check_warning</strong>, which indicates tasks to export baseline check results.</p>
+     * <p>The type of the export task. Set the value to <strong>hc_check_warning</strong>, which indicates exporting baseline check results.</p>
      * 
      * <strong>example:</strong>
      * <p>hc_check_warning</p>
@@ -29,7 +29,7 @@ public class ExportWarningRequest extends TeaModel {
     /**
      * <p>The ID of the server group.</p>
      * <blockquote>
-     * <p> You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to query the IDs of server groups.</p>
+     * <p>You can call the <a href="~~DescribeAllGroups~~">DescribeAllGroups</a> operation to obtain the ID of the server group.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,10 +39,10 @@ public class ExportWarningRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The export method of the results for the weak password baseline check. Valid values:</p>
+     * <p>Specifies the export method for weak password baseline check results. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: exports the check results after it is masked.</li>
-     * <li><strong>1</strong>: exports the check results in plaintext.</li>
+     * <li><strong>0</strong>: Weak passwords are masked before export.</li>
+     * <li><strong>1</strong>: Weak passwords are exported in plaintext.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,10 +52,10 @@ public class ExportWarningRequest extends TeaModel {
     public Integer isCleartextPwd;
 
     /**
-     * <p>Specifies whether the baseline check results are aggregated and exported. Valid values:</p>
+     * <p>Specifies whether to export the baseline check results in summary mode. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: no</li>
-     * <li><strong>1</strong>: yes</li>
+     * <li><strong>0</strong>: The results are not exported in summary mode.</li>
+     * <li><strong>1</strong>: The results are exported in summary mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class ExportWarningRequest extends TeaModel {
     public Integer isSummaryExport;
 
     /**
-     * <p>The language of the content within the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
      * <li><strong>en</strong>: English</li>
@@ -78,7 +78,7 @@ public class ExportWarningRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the risk item in the baseline check results. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the risk items in the baseline check results. Separate multiple risk item IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>123,124</p>
@@ -87,11 +87,11 @@ public class ExportWarningRequest extends TeaModel {
     public String riskIds;
 
     /**
-     * <p>The severity of the baseline check item. Separate multiple severities with commas (,). Valid values:</p>
+     * <p>The risk levels of the baselines. Separate multiple risk levels with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>high</strong></li>
-     * <li><strong>medium</strong></li>
-     * <li><strong>low</strong></li>
+     * <li><strong>high</strong>: High</li>
+     * <li><strong>medium</strong>: Medium</li>
+     * <li><strong>low</strong>: Low</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class ExportWarningRequest extends TeaModel {
     public String riskName;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -119,10 +119,10 @@ public class ExportWarningRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The status of the check item in the baseline check results. Separate multiple statuses with commas (,). Valid values:</p>
+     * <p>The statuses of the risk items in the baseline check results. Separate multiple status values with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>3</strong>: passed</li>
-     * <li><strong>1</strong>: failed</li>
+     * <li><strong>3</strong>: Passed</li>
+     * <li><strong>1</strong>: Failed</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -141,9 +141,9 @@ public class ExportWarningRequest extends TeaModel {
     public Long strategyId;
 
     /**
-     * <p>The subtypes of the baselines based on which baseline checks are performed. Separate multiple subtypes with commas (,).</p>
+     * <p>Specifies the baseline subtypes to which the baseline check results to be exported belong. Separate multiple subtypes with commas (,).</p>
      * <blockquote>
-     * <p>You must set the value of this parameter to the value of the <strong>TypeName</strong> parameter that is contained in the <strong>SubTypes</strong> parameter. You can call the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation to obtain the value of the TypeName parameter.</p>
+     * <p>The value is the <strong>TypeName</strong> field under the <strong>SubTypes</strong> field returned by the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -153,9 +153,9 @@ public class ExportWarningRequest extends TeaModel {
     public String subTypeNames;
 
     /**
-     * <p>The type of the baseline based on which baseline checks are performed.</p>
+     * <p>Specifies the baseline type to which the baseline check results to be exported belong.</p>
      * <blockquote>
-     * <p>You must set the value of this parameter to the value of the <strong>TypeName</strong> parameter that is returned by calling the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation. If both the <strong>TypeName</strong> and <strong>TypeNames</strong> parameters are specified, only the <strong>TypeName</strong> parameter takes effect.</p>
+     * <p>The value is the <strong>TypeName</strong> field returned by the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation. If both <strong>TypeName</strong> and <strong>TypeNames</strong> are specified, only <strong>TypeName</strong> takes effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -165,9 +165,9 @@ public class ExportWarningRequest extends TeaModel {
     public String typeName;
 
     /**
-     * <p>The types of the baselines based on which baseline checks are performed. Separate multiple types with commas (,).</p>
+     * <p>Specifies the baseline types to which the baseline check results to be exported belong. Separate multiple types with commas (,).</p>
      * <blockquote>
-     * <p>You must set the value of this parameter to the value of the <strong>TypeName</strong> parameter that is returned by calling the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation. If both the <strong>TypeName</strong> and <strong>TypeNames</strong> parameters are specified, only the <strong>TypeName</strong> parameter takes effect.</p>
+     * <p>The value is the <strong>TypeName</strong> field returned by the <a href="~~DescribeRiskType~~">DescribeRiskType</a> operation. If both <strong>TypeName</strong> and <strong>TypeNames</strong> are specified, only <strong>TypeName</strong> takes effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class ExportWarningRequest extends TeaModel {
     public String typeNames;
 
     /**
-     * <p>The UUID of the server whose baseline check results you want to export. Separate multiple UUIDs with commas (,).</p>
+     * <p>The UUIDs of the server assets for which you want to export the baseline check results. Separate multiple UUIDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>inet-7c676676-06fa-442e-90fb-b802e****,inet-7c676676-06fa-442e-90fb-b****</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyWebLockStatusRequest extends TeaModel {
     /**
-     * <p>The language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language of the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>zh</strong>: Chinese.</li>
      * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
@@ -18,7 +18,7 @@ public class ModifyWebLockStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The IP address of the access source.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>125.71.XX.XX</p>
@@ -27,13 +27,13 @@ public class ModifyWebLockStatusRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The protection status of the server. Valid values:</p>
+     * <p>Specifies the protection status of the server. Valid values:</p>
      * <ul>
      * <li><strong>on</strong>: Enables protection.</li>
-     * <li><strong>off</strong>: Shuts down protection.</li>
+     * <li><strong>off</strong>: Initiates a shutdown of protection.</li>
      * </ul>
      * <blockquote>
-     * <p>After you shut down web tamper-proofing for the server, a tamper-proofing authorization quota is released.</p>
+     * <p>After you initiate a shutdown of web tamper-proofing for the current server, a tamper-proofing authorization quota is released.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,8 +44,8 @@ public class ModifyWebLockStatusRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The UUID of the server for which you want to modify the brute-force attacks prevention status.
-     * You can invoke the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUID of the server.</p>
+     * <p>The UUID of the server for which you want to modify the protection status against brute-force attacks.
+     * You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain the UUID of the server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

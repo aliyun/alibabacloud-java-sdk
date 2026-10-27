@@ -17,7 +17,7 @@ public class DescribeVersionConfigRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The IP address of the access source.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>

@@ -17,7 +17,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
     public java.util.List<DescribePropertyUserItemResponseBodyPropertyItems> propertyItems;
 
     /**
-     * <p>The unique identifier that Alibaba Cloud generated for the request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>76068BE2-F9C4-4EDD-967B-F503B8CCDD3D</p>
@@ -56,7 +56,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
 
     public static class DescribePropertyUserItemResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries on the current page in a paged query.</p>
+         * <p>The number of entries returned on the current page for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -65,7 +65,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the current page to display in a paged query.</p>
+         * <p>The page number of the current page returned for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -74,7 +74,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries displayed on each page in a paged query.</p>
+         * <p>The maximum number of entries returned per page for a paging query.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -141,7 +141,7 @@ public class DescribePropertyUserItemResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The account name.</p>
+         * <p>The name of the account.</p>
          * 
          * <strong>example:</strong>
          * <p>adm</p>

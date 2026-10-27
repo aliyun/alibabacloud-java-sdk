@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return. Minimum value: <strong>1</strong>. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
+     * <p>The page number of the returned page. Pages start from page <strong>1</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end time in timestamp format.</p>
+     * <p>The end time in the timestamp format.</p>
      * 
      * <strong>example:</strong>
      * <p>1675058931215</p>
@@ -26,7 +26,7 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
      * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries to return on each page in a paged query. Default value: 20. If you leave this parameter empty, 20 entries are returned by default. &gt; Specify a value for the paging parameter.</p>
+     * <p>The maximum number of entries to return on each page in a paging query. Default value: 20. If this parameter is left empty, 20 entries are returned by default. Do not leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -61,7 +61,7 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     public String srcIp;
 
     /**
-     * <p>The start time in timestamp format.</p>
+     * <p>The start time in the timestamp format.</p>
      * 
      * <strong>example:</strong>
      * <p>1681624877761</p>
@@ -70,12 +70,12 @@ public class GetHoneypotAttackStatisticsRequest extends TeaModel {
     public Long startTimeStamp;
 
     /**
-     * <p>The type of attack source statistics information. Valid values:</p>
+     * <p>The type of statistics for the attack source. Valid values:</p>
      * <ul>
-     * <li><strong>TOP_ATTACKED_AGENT</strong>: the top 5 probes by number of attacks.</li>
-     * <li><strong>TOP_ATTACKED_IP</strong>: the top 5 IP addresses by number of attacks.</li>
-     * <li><strong>ATTACK_EVENT_TYPE</strong>: the intrusion event type.</li>
-     * <li><strong>ATTACK_HONEYPOT_TYPE</strong>: the type of the compromised honeypot.</li>
+     * <li><strong>TOP_ATTACKED_AGENT</strong>: The top 5 probes that are attacked most frequently.</li>
+     * <li><strong>TOP_ATTACKED_IP</strong>: The top 5 IP addresses that are attacked most frequently.</li>
+     * <li><strong>ATTACK_EVENT_TYPE</strong>: The intrusion event type.</li>
+     * <li><strong>ATTACK_HONEYPOT_TYPE</strong>: The type of the attacked honeypot.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

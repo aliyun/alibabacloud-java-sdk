@@ -79,7 +79,7 @@ public class HandleSecurityEventsRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>{\&quot;expireTime\&quot;:1719588943551,\&quot;subOperation\&quot;:\&quot;killAndQuaraFileByMd5andPath\&quot;}</p>
+     * <p>{}</p>
      */
     @NameInMap("OperationParams")
     public String operationParams;
@@ -100,7 +100,7 @@ public class HandleSecurityEventsRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>127608589417****</p>
+     * <p>16670360956*****</p>
      */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;

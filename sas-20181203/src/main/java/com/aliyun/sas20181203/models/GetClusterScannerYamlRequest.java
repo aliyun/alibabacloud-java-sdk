@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetClusterScannerYamlRequest extends TeaModel {
     /**
-     * <p>The ID of the container cluster to query.</p>
+     * <p>The ID of the container cluster.</p>
      * <blockquote>
      * <p>You can call the <a href="~~DescribeGroupedContainerInstances~~">DescribeGroupedContainerInstances</a> operation to obtain this parameter.</p>
      * </blockquote>

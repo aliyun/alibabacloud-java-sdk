@@ -134,6 +134,9 @@ public class UpdateMultiUserInstancesRequest extends TeaModel {
 
         /**
          * <p>The number of platform configuration check instance authorizations allocated to the member accounts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("CspmInstanceCapacity")
         public Long cspmInstanceCapacity;

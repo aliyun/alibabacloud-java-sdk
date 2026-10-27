@@ -19,7 +19,7 @@ public class GetAppNetworkRequest extends TeaModel {
     /**
      * <p>The timestamp of the end time. Unit: milliseconds.</p>
      * <blockquote>
-     * <p>The difference between the start timestamp and the end timestamp cannot exceed <strong>7</strong> days.</p>
+     * <p>The interval between the start timestamp and the end timestamp cannot exceed <strong>7</strong> days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class GetAppNetworkRequest extends TeaModel {
     /**
      * <p>The timestamp of the start time. Unit: milliseconds.</p>
      * <blockquote>
-     * <p>The difference between the start timestamp and the end timestamp cannot exceed <strong>7</strong> days.</p>
+     * <p>The interval between the start timestamp and the end timestamp cannot exceed <strong>7</strong> days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

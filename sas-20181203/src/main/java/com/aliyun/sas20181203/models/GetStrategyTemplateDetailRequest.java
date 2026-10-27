@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetStrategyTemplateDetailRequest extends TeaModel {
     /**
-     * <p>The ID of the rule template.</p>
+     * <p>The rule template ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="~~GetOpaStrategyTemplateSummary~~">GetOpaStrategyTemplateSummary</a> operation to obtain this parameter.</p>
+     * <p>Call the <a href="~~GetOpaStrategyTemplateSummary~~">GetOpaStrategyTemplateSummary</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

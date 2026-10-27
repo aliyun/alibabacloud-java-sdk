@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyWebLockUnbindRequest extends TeaModel {
     /**
-     * <p>The UUID of the server from which you want to remove the protection directories.</p>
+     * <p>The UUID of the server from which you want to dissociate the protected directory.</p>
      * <blockquote>
-     * <p>Call <a href="~~DescribeWebLockBindList~~">DescribeWebLockBindList</a> to obtain the UUID of the server.</p>
+     * <p>You can call the <a href="~~DescribeWebLockBindList~~">DescribeWebLockBindList</a> operation to retrieve the UUID of the server.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

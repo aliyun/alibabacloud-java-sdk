@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListInstanceCatalogRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language type of the request and response messages. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class ListInstanceCatalogRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether to filter the assets that support custom checks. Valid values:</p>
+     * <p>Specifies whether to filter assets that support custom checks. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Filter assets that support custom checks.</li>
-     * <li><strong>false</strong>: All assets are selected. This is the default value.</li>
+     * <li><strong>true</strong>: Filters assets that support custom checks.</li>
+     * <li><strong>false</strong>: All check assets. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,10 @@ public class ListInstanceCatalogRequest extends TeaModel {
     public Boolean onlyCustom;
 
     /**
-     * <p>The ID of the region in which the asset resides. Valid values:</p>
+     * <p>The ID of the region where the instance to be queried is located. Valid values:</p>
      * <ul>
-     * <li><strong>cn-hangzhou</strong>: International</li>
-     * <li><strong>ap-southeast-1</strong>: Singapore</li>
+     * <li><strong>cn-hangzhou</strong>: Center.</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,25 +44,25 @@ public class ListInstanceCatalogRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of requirement items.</p>
+     * <p>The list of requirement IDs.</p>
      */
     @NameInMap("RequirementIds")
     public java.util.List<Long> requirementIds;
 
     /**
-     * <p>The IDs of standards.</p>
+     * <p>The list of standard IDs.</p>
      */
     @NameInMap("StandardIds")
     public java.util.List<Long> standardIds;
 
     /**
-     * <p>List of task sources.</p>
+     * <p>The list of task sources.</p>
      */
     @NameInMap("TaskSources")
     public java.util.List<String> taskSources;
 
     /**
-     * <p>The types of check standards.</p>
+     * <p>The list of types to which the check standards belong.</p>
      */
     @NameInMap("Types")
     public java.util.List<String> types;

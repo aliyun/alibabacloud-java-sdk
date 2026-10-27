@@ -7,7 +7,7 @@ public class UnbindAegisRequest extends TeaModel {
     /**
      * <p>The UUIDs of the non-Alibaba Cloud servers that you want to unbind. Separate multiple UUIDs with commas (,).</p>
      * <blockquote>
-     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to query the UUIDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

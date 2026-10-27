@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSasContainerWebDefenseRuleApplicationRequest extends TeaModel {
     /**
-     * <p>The rule ID. This parameter is required. If this parameter is not specified, the API returns HTTP 400 with error code -101. You can call ListSasContainerWebDefenseRule to obtain valid RuleId values.</p>
+     * <p>The rule ID. You can call the <a href="~~ListSasContainerWebDefenseRule~~">ListSasContainerWebDefenseRule</a> operation to obtain this parameter. This parameter is required. If it is not provided, the API returns HTTP 400 with error code -101.</p>
      * 
      * <strong>example:</strong>
      * <p>400599</p>

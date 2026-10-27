@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSystemAggregationRulesRequest extends TeaModel {
     /**
-     * <p>The rule cluster ID.</p>
+     * <p>The ID of the rule aggregation.</p>
      */
     @NameInMap("AggregationIds")
     public java.util.List<Integer> aggregationIds;
 
     /**
-     * <p>The page number of the current page in a paging query.</p>
+     * <p>The page number of the current page for a paged query. This parameter is used for paging.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,10 +21,10 @@ public class ListSystemAggregationRulesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The language type of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language type for requests and responses. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ListSystemAggregationRulesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries per page in a paging query.</p>
+     * <p>The maximum number of entries to return on each page for a paged query. This parameter is used for paging.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,10 +44,10 @@ public class ListSystemAggregationRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The rule name.</p>
+     * <p>The name of the rule.</p>
      * 
      * <strong>example:</strong>
-     * <p>规则****</p>
+     * <p>Rule****</p>
      */
     @NameInMap("RuleName")
     public String ruleName;
@@ -63,7 +63,7 @@ public class ListSystemAggregationRulesRequest extends TeaModel {
      * <ul>
      * <li><strong>2</strong>: Windows</li>
      * <li><strong>1</strong>: Linux</li>
-     * <li><strong>0</strong>: all.</li>
+     * <li><strong>0</strong>: All</li>
      * </ul>
      * 
      * <strong>example:</strong>

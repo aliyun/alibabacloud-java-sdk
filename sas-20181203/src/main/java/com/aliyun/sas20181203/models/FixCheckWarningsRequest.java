@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class FixCheckWarningsRequest extends TeaModel {
     /**
-     * <p>The parameters of the baseline check items to fix. The following parameters are included:</p>
+     * <p>The parameters of the baseline check items to be fixed. Parameter description:</p>
      * <ul>
      * <li><strong>checkId</strong>: The ID of the check item.</li>
-     * <li><strong>rules</strong>: The fix rules (in array format).<ul>
-     * <li><strong>value</strong>: Specifies whether the fix method is selected. Valid values: <strong>0</strong> (not selected), <strong>1</strong> (selected).</li>
+     * <li><strong>rules</strong>: The fix rules. This parameter is an array.<ul>
+     * <li><strong>value</strong>: Specifies whether the fix method is selected. Valid values: <strong>0</strong> (not selected) and <strong>1</strong> (selected).</li>
      * <li><strong>ruleId</strong>: The ID of the fix method.</li>
-     * <li><strong>paramList</strong>: The list of fix methods (in array format).<br>      • <strong>paramName</strong>: The name of the fix method.<br>      • <strong>value</strong>: The value of the fix method.</li>
+     * <li><strong>paramList</strong>: The list of fix methods. This parameter is an array.<br>      • <strong>paramName</strong>: The name of the fix method.<br>      • <strong>value</strong>: The specific value of the fix method.</li>
      * </ul>
      * </li>
      * </ul>
@@ -37,7 +37,7 @@ public class FixCheckWarningsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The retention period of the snapshot to create when performing the baseline fix operation. Valid values: 1 to 365. Unit: days.</p>
+     * <p>The retention period of the snapshot created when the baseline fix operation is performed. Valid values: 1 to 365. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +48,7 @@ public class FixCheckWarningsRequest extends TeaModel {
     /**
      * <p>The ID of the risk item.</p>
      * <blockquote>
-     * <p>To query the check item information for a specified risk item and a specified server, you must provide the risk item ID. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to obtain the ID.</p>
+     * <p>To query the check item information for a specified risk item and server, you must provide the risk item ID. You can call the <a href="~~DescribeCheckWarningSummary~~">DescribeCheckWarningSummary</a> operation to obtain the ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class FixCheckWarningsRequest extends TeaModel {
     public Long riskId;
 
     /**
-     * <p>The name of the snapshot to create when performing the baseline fix operation.</p>
+     * <p>The name of the snapshot created when the baseline fix operation is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>sas_fix_2024-12-04</p>
@@ -67,7 +67,7 @@ public class FixCheckWarningsRequest extends TeaModel {
     public String snapshotName;
 
     /**
-     * <p>The IP address of the access source.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>165.225.XX.XX</p>
@@ -76,7 +76,7 @@ public class FixCheckWarningsRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The unique ID of the asset instance to fix. You can call the <a href="~~DescribeWarningMachines~~">DescribeWarningMachines</a> operation to obtain the ID.</p>
+     * <p>The UUIDs of the asset instances to be fixed. You can call the <a href="~~DescribeWarningMachines~~">DescribeWarningMachines</a> operation to obtain the UUIDs.</p>
      * 
      * <strong>example:</strong>
      * <p>75a417dda5f25edb5bed8f208a9a****,c7e10fd794262a1510d5648f9e5d****</p>

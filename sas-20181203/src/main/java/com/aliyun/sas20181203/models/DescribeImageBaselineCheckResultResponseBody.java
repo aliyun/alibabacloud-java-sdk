@@ -11,7 +11,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
     public java.util.List<DescribeImageBaselineCheckResultResponseBodyBaselineResult> baselineResult;
 
     /**
-     * <p>The paging information.</p>
+     * <p>The paging information for a paged query.</p>
      */
     @NameInMap("PageInfo")
     public DescribeImageBaselineCheckResultResponseBodyPageInfo pageInfo;
@@ -56,7 +56,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
 
     public static class DescribeImageBaselineCheckResultResponseBodyBaselineResult extends TeaModel {
         /**
-         * <p>The type key of the baseline item.</p>
+         * <p>The key of the baseline item type.</p>
          * 
          * <strong>example:</strong>
          * <p>identification</p>
@@ -77,13 +77,13 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
          * <p>The alias of the baseline item.</p>
          * 
          * <strong>example:</strong>
-         * <p>身份鉴别</p>
+         * <p>Identity authentication</p>
          */
         @NameInMap("BaselineNameAlias")
         public String baselineNameAlias;
 
         /**
-         * <p>The name key of the baseline item.</p>
+         * <p>The key of the baseline item name.</p>
          * 
          * <strong>example:</strong>
          * <p>identification</p>
@@ -96,7 +96,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
          * <ul>
          * <li><strong>high</strong>: high risk</li>
          * <li><strong>medium</strong>: medium risk</li>
-         * <li><strong>low</strong>: low risk.</li>
+         * <li><strong>low</strong>: low risk</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,7 +106,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         public String baselineNameLevel;
 
         /**
-         * <p>The timestamp of the first scan, in milliseconds.</p>
+         * <p>The timestamp of the first scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1610304058366</p>
@@ -124,7 +124,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         public Integer highRiskItemCount;
 
         /**
-         * <p>The timestamp of the most recent scan, in milliseconds.</p>
+         * <p>The timestamp of the latest scan. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1610304058301</p>
@@ -153,8 +153,8 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         /**
          * <p>The fix status of the baseline risk. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: Unfixed.</li>
-         * <li><strong>1</strong>: Fixed.</li>
+         * <li><strong>0</strong>: unfixed</li>
+         * <li><strong>1</strong>: fixed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -260,7 +260,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
 
     public static class DescribeImageBaselineCheckResultResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>The number of entries on the current page when using paging.</p>
+         * <p>The number of entries returned on the current page when paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -269,7 +269,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The page number of the current page when using paging.</p>
+         * <p>The page number of the current page when paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -278,7 +278,7 @@ public class DescribeImageBaselineCheckResultResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The maximum number of entries per page when using paging.</p>
+         * <p>The maximum number of entries returned per page when paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

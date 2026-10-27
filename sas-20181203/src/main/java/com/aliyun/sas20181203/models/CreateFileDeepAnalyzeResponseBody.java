@@ -21,7 +21,7 @@ public class CreateFileDeepAnalyzeResponseBody extends TeaModel {
      *   &quot;result&quot;: 0,
      *   &quot;file_analysis&quot;: {
      *     &quot;summary&quot;: {
-     *       &quot;ai_interpretation&quot;: &quot;The file is a script for the JetBrains PhpStorm stub generation tool, which is a legitimate developer tool. The code uses the PhpParser library to parse PHP source code and generate the PhpStormStubsMap.php mapping file. The engine analysis did not detect any attempts to invoke dangerous functions, external input processing, code obfuscation, or malicious behavior characteristics, and the file is determined to be normal.&quot;
+     *       &quot;ai_interpretation&quot;: &quot;The file is a JetBrains PhpStorm stub generation tool script and is a legitimate developer tool. The code uses the PhpParser library to parse PHP source code and generate the PhpStormStubsMap.php mapping file. The DPI engine analysis did not detect any dangerous function invoke, external input processing, code obfuscation, or malicious behavior characteristics. The file is determined to be normal.&quot;
      *     }
      *   }
      * }</p>
@@ -30,7 +30,7 @@ public class CreateFileDeepAnalyzeResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The stage description.</p>
+     * <p>The phase description.</p>
      * 
      * <strong>example:</strong>
      * <p>File hash parsed</p>
@@ -48,7 +48,7 @@ public class CreateFileDeepAnalyzeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The stage status.</p>
+     * <p>The phase status.</p>
      * 
      * <strong>example:</strong>
      * <p>RUNNING</p>

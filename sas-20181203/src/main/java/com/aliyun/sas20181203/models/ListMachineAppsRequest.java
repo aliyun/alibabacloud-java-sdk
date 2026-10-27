@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMachineAppsRequest extends TeaModel {
     /**
-     * <p>The SAE application ID.</p>
+     * <p>The ID of the SAE application.</p>
      * 
      * <strong>example:</strong>
      * <p>5b41f4bf-349f-4263-89b1-9234c034****</p>
@@ -14,7 +14,7 @@ public class ListMachineAppsRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The SAE application name.</p>
+     * <p>The name of the SAE application.</p>
      * 
      * <strong>example:</strong>
      * <p>agent-commprice-shop</p>
@@ -38,7 +38,7 @@ public class ListMachineAppsRequest extends TeaModel {
      * <li><strong>5</strong>: Premium Edition</li>
      * <li><strong>3</strong>: Enterprise Edition</li>
      * <li><strong>7</strong>: Ultimate Edition</li>
-     * <li><strong>10</strong>: value-added service Edition.</li>
+     * <li><strong>10</strong>: Value-added Service Edition</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class ListMachineAppsRequest extends TeaModel {
     public String authVersion;
 
     /**
-     * <p>The page number of the current page in a paging query.</p>
+     * <p>The page number of the current page returned during paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,7 +60,7 @@ public class ListMachineAppsRequest extends TeaModel {
      * <p>The language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class ListMachineAppsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries per page in a paging query.</p>
+     * <p>The maximum number of entries to return per page during paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

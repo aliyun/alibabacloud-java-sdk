@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetOpaStrategyDetailNewRequest extends TeaModel {
     /**
-     * <p>The rule ID.</p>
+     * <p>The policy ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to query the rule ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2623574.html">ListOpaClusterStrategyNew</a> operation to obtain this parameter.
+     * This parameter is required. If it is not provided, the API returns HTTP 400 with the error code -101.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

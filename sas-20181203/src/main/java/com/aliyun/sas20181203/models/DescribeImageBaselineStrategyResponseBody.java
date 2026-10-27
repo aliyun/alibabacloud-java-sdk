@@ -42,7 +42,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
 
     public static class DescribeImageBaselineStrategyResponseBodyStrategyBaselineItemList extends TeaModel {
         /**
-         * <p>The classification key of the baseline main item.</p>
+         * <p>The classification key of the primary baseline item.</p>
          * 
          * <strong>example:</strong>
          * <p>identification</p>
@@ -51,7 +51,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         public String classKey;
 
         /**
-         * <p>The key of the baseline subitem.</p>
+         * <p>The key of the sub-baseline item.</p>
          * 
          * <strong>example:</strong>
          * <p>duplicate_pwd_hash</p>
@@ -60,7 +60,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         public String itemKey;
 
         /**
-         * <p>The name key of the baseline main item.</p>
+         * <p>The name key of the primary baseline item.</p>
          * 
          * <strong>example:</strong>
          * <p>identification</p>
@@ -116,7 +116,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         public java.util.List<DescribeImageBaselineStrategyResponseBodyStrategyBaselineItemList> baselineItemList;
 
         /**
-         * <p>The retention period of baseline risks. Unit: days.</p>
+         * <p>The retention period of baseline risks, in days.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -143,7 +143,7 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         public Long strategyId;
 
         /**
-         * <p>The Policy Name.</p>
+         * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -163,9 +163,9 @@ public class DescribeImageBaselineStrategyResponseBody extends TeaModel {
         /**
          * <p>The type of the baseline check policy. Valid values:</p>
          * <ul>
-         * <li><strong>default</strong>: default policy</li>
-         * <li><strong>full</strong>: full baseline item policy</li>
-         * <li><strong>normal</strong>: common baseline item policy.</li>
+         * <li><strong>default</strong>: Default policy</li>
+         * <li><strong>full</strong>: Full baseline item policy</li>
+         * <li><strong>normal</strong>: Standard baseline item policy</li>
          * </ul>
          * 
          * <strong>example:</strong>

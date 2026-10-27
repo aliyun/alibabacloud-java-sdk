@@ -13,6 +13,10 @@ public class GetCheckTimeDimensionStatisticRequest extends TeaModel {
     @NameInMap("EndTimeStamp")
     public Long endTimeStamp;
 
+    /**
+     * <strong>example:</strong>
+     * <p>1234567890123456</p>
+     */
     @NameInMap("ResourceDirectoryAccountId")
     public Long resourceDirectoryAccountId;
 

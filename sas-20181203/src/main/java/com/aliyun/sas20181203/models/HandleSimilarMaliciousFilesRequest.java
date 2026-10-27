@@ -30,11 +30,11 @@ public class HandleSimilarMaliciousFilesRequest extends TeaModel {
     /**
      * <p>The handling action. Valid values:</p>
      * <ul>
-     * <li>addWhitelist: adds to the whitelist.</li>
-     * <li>offWhitelist: removes from the whitelist.</li>
-     * <li>offline_handled: handled offline.</li>
-     * <li>mark_mis_info: submits as a false positive.</li>
-     * <li>ignore: ignores the alert.</li>
+     * <li>addWhitelist: Adds the alert to the whitelist.</li>
+     * <li>offWhitelist: Removes the alert from the whitelist.</li>
+     * <li>offline_handled: Marks the alert as handled offline.</li>
+     * <li>mark_mis_info: Submits the alert as a false positive.</li>
+     * <li>ignore: Ignores the alert.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -47,9 +47,9 @@ public class HandleSimilarMaliciousFilesRequest extends TeaModel {
     /**
      * <p>The file source. Valid values:</p>
      * <ul>
-     * <li>agentless: host detection.</li>
-     * <li>ecs_snapshot: user snapshot detection.</li>
-     * <li>ecs_image: user custom image detection.</li>
+     * <li>agentless: Host detection.</li>
+     * <li>ecs_snapshot: User snapshot detection.</li>
+     * <li>ecs_image: Custom image detection.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,10 +59,10 @@ public class HandleSimilarMaliciousFilesRequest extends TeaModel {
     public String scanRange;
 
     /**
-     * <p>The batch processing scenario. Valid values:</p>
+     * <p>The scenario for batch processing. Valid values:</p>
      * <ul>
-     * <li>same_file_md5: same file MD5.</li>
-     * <li>default (default value): same alerting type.</li>
+     * <li>same_file_md5: The same file MD5.</li>
+     * <li>default: The same alerting type. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>

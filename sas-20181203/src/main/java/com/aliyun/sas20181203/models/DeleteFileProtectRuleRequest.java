@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFileProtectRuleRequest extends TeaModel {
     /**
-     * <p>The IDs of the core file monitoring rules that you want to delete.</p>
+     * <p>The IDs of the rules to delete.</p>
      */
     @NameInMap("Id")
     public java.util.List<Long> id;

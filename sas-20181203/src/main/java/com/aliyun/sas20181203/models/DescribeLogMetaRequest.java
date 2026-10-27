@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeLogMetaRequest extends TeaModel {
     /**
-     * <p>The source identifier of the request. Default value: <strong>aegis</strong>. Valid values:</p>
+     * <p>Specifies the identifier of the request source. Default value: <strong>aegis</strong>. Valid values:</p>
      * <ul>
      * <li><strong>aegis</strong>: Server Guard edition.</li>
      * <li><strong>sas</strong>: Security Center edition.</li>
      * </ul>
      * <blockquote>
-     * <p>Server Guard users should use <strong>aegis</strong>, and Security Center users should use <strong>sas</strong>.</p>
+     * <p>If you use Server Guard, set this parameter to <strong>aegis</strong>. If you use Security Center, set this parameter to <strong>sas</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -21,10 +21,10 @@ public class DescribeLogMetaRequest extends TeaModel {
     public String from;
 
     /**
-     * <p>The language type for the request and response messages. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DescribeLogMetaRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the member accounts in the resource directory (Alibaba Cloud account).</p>
+     * <p>The ID of the member accounts in the resource folder (Alibaba Cloud account).</p>
      * <blockquote>
      * <p>You can invoke the <a href="~~DescribeMonitorAccounts~~">DescribeMonitorAccounts</a> operation to obtain this parameter.</p>
      * </blockquote>
@@ -46,7 +46,7 @@ public class DescribeLogMetaRequest extends TeaModel {
     public Long resourceDirectoryAccountId;
 
     /**
-     * <p>The IP address of the access source.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>123.168.XX.XX</p>

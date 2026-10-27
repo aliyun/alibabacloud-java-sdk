@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCustomBlockRecordRequest extends TeaModel {
     /**
-     * <p>The ID of the record to delete.</p>
+     * <p>The ID of the data to delete.</p>
      * <blockquote>
      * <p>Call the <a href="~~DescribeCustomBlockRecords~~">DescribeCustomBlockRecords</a> operation to obtain this parameter.</p>
      * </blockquote>

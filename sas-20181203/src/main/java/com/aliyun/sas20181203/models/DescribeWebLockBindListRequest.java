@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeWebLockBindListRequest extends TeaModel {
     /**
-     * <p>The page number of the current page in a paging query. Minimum value: 1. Default value: 1.</p>
+     * <p>The page number of the current page returned for a paging query. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeWebLockBindListRequest extends TeaModel {
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeWebLockBindListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries per page in a paging query. Default value: 20.</p>
+     * <p>The maximum number of entries to return on each page for a paging query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -36,7 +36,7 @@ public class DescribeWebLockBindListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The fuzzy match field for the server. The value can be a server name or IP address.</p>
+     * <p>The fuzzy match keyword for the server, which can be the server name or IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -45,7 +45,7 @@ public class DescribeWebLockBindListRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The IP address of the access source.</p>
+     * <p>The source IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>116.30.XX.XX</p>
@@ -54,7 +54,7 @@ public class DescribeWebLockBindListRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The protection status of the servers that you want to query. Valid values:</p>
+     * <p>The protection status of the servers to query. Valid values:</p>
      * <ul>
      * <li><strong>on</strong>: Protection is enabled.</li>
      * <li><strong>off</strong>: Protection is disabled.</li>
@@ -67,9 +67,9 @@ public class DescribeWebLockBindListRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The UUID of the asset that you want to query.</p>
+     * <p>The UUID of the asset to query.</p>
      * <blockquote>
-     * <p>Call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
+     * <p>You can call the <a href="~~DescribeCloudCenterInstances~~">DescribeCloudCenterInstances</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class DescribeSecurityStatInfoResponseBody extends TeaModel {
     /**
-     * <p>The statistics of attack events.</p>
+     * <p>The statistical details of attacks.</p>
      */
     @NameInMap("AttackEvent")
     public DescribeSecurityStatInfoResponseBodyAttackEvent attackEvent;
 
     /**
-     * <p>The statistics of baseline issues.</p>
+     * <p>The statistical details of baseline check issues.</p>
      */
     @NameInMap("HealthCheck")
     public DescribeSecurityStatInfoResponseBodyHealthCheck healthCheck;
 
     /**
-     * <p>The ID of the request. Alibaba Cloud generates a unique identifier for each request. You can use the ID to troubleshoot issues.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A3E61730-85E2-4789-8017-B9B1B70F0568</p>
@@ -26,13 +26,13 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The statistics of pending security alerts.</p>
+     * <p>The statistical details of pending alerts.</p>
      */
     @NameInMap("SecurityEvent")
     public DescribeSecurityStatInfoResponseBodySecurityEvent securityEvent;
 
     /**
-     * <p>Indicates whether the query is successful. Valid values:</p>
+     * <p>Indicates whether the query was successful. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Successful.</li>
      * <li><strong>false</strong>: Failed.</li>
@@ -45,7 +45,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The statistics information of unfixed vulnerabilities.</p>
+     * <p>The statistics information of vulnerabilities to be fixed.</p>
      */
     @NameInMap("Vulnerability")
     public DescribeSecurityStatInfoResponseBodyVulnerability vulnerability;
@@ -105,7 +105,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
     public static class DescribeSecurityStatInfoResponseBodyAttackEvent extends TeaModel {
         /**
-         * <p>The collection of statistical time points in the attack count trend chart.</p>
+         * <p>The statistical time points in the trend chart of attacks.</p>
          */
         @NameInMap("DateArray")
         public java.util.List<String> dateArray;
@@ -120,7 +120,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>The collection of attack counts at each statistical time point.</p>
+         * <p>The numbers of attacks at each statistical time point.</p>
          */
         @NameInMap("ValueArray")
         public java.util.List<String> valueArray;
@@ -158,13 +158,13 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
     public static class DescribeSecurityStatInfoResponseBodyHealthCheck extends TeaModel {
         /**
-         * <p>The collection of statistical time points in the baseline issue trend chart.</p>
+         * <p>The statistical time points in the trend chart of baseline check issues.</p>
          */
         @NameInMap("DateArray")
         public java.util.List<String> dateArray;
 
         /**
-         * <p>The number of high-risk baseline issues on the current day.</p>
+         * <p>The number of high-risk baseline check issues on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -173,19 +173,19 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer highCount;
 
         /**
-         * <p>The collection of high-risk baseline counts at each statistical time point.</p>
+         * <p>The numbers of high-risk baseline check issues at each statistical time point.</p>
          */
         @NameInMap("HighList")
         public java.util.List<String> highList;
 
         /**
-         * <p>The collection of baseline risk levels included in the statistics.</p>
+         * <p>The risk levels of baseline check issues included in the statistics.</p>
          */
         @NameInMap("LevelsOn")
         public java.util.List<String> levelsOn;
 
         /**
-         * <p>The number of low-risk baseline issues on the current day.</p>
+         * <p>The number of low-risk baseline check issues on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -194,13 +194,13 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer lowCount;
 
         /**
-         * <p>The collection of low-risk baseline issue counts at each statistical time point.</p>
+         * <p>The numbers of low-risk baseline check issues that occurred at each statistical time point.</p>
          */
         @NameInMap("LowList")
         public java.util.List<String> lowList;
 
         /**
-         * <p>The number of medium-risk baseline issues on the current day.</p>
+         * <p>The number of medium-risk baseline check issues on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
@@ -209,19 +209,19 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer mediumCount;
 
         /**
-         * <p>The collection of medium-risk baseline issue counts at each statistical time point.</p>
+         * <p>The numbers of medium-risk baseline check issues that occurred at each statistical time point.</p>
          */
         @NameInMap("MediumList")
         public java.util.List<String> mediumList;
 
         /**
-         * <p>The collection of statistical time periods for baselines.</p>
+         * <p>The statistical time periods for baseline check issues.</p>
          */
         @NameInMap("TimeArray")
         public java.util.List<String> timeArray;
 
         /**
-         * <p>The total number of baseline issues on the current day.</p>
+         * <p>The total number of baseline check issues on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -230,7 +230,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>The collection of total baseline counts at each statistical time point.</p>
+         * <p>The total numbers of baseline check issues at each statistical time point.</p>
          */
         @NameInMap("ValueArray")
         public java.util.List<String> valueArray;
@@ -332,13 +332,13 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
     public static class DescribeSecurityStatInfoResponseBodySecurityEvent extends TeaModel {
         /**
-         * <p>The collection of statistical time points in the pending alert trend chart.</p>
+         * <p>The statistical time points in the trend chart of pending alerts.</p>
          */
         @NameInMap("DateArray")
         public java.util.List<String> dateArray;
 
         /**
-         * <p>The collection of alert severity levels included in the statistics for pending alerts.</p>
+         * <p>The severity levels of pending alerts included in the statistics.</p>
          */
         @NameInMap("LevelsOn")
         public java.util.List<String> levelsOn;
@@ -353,13 +353,13 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer remindCount;
 
         /**
-         * <p>The collection of Reminder-level alert counts at each statistical time point.</p>
+         * <p>The numbers of alerts with the Reminder severity level that occurred at each statistical time point.</p>
          */
         @NameInMap("RemindList")
         public java.util.List<String> remindList;
 
         /**
-         * <p>The number of alerts with the <strong>Urgent</strong> severity level on the current day.</p>
+         * <p>The number of alerts with the <strong>Urgent</strong> severity level that occurred on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>404</p>
@@ -368,13 +368,13 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer seriousCount;
 
         /**
-         * <p>The collection of Urgent-level alert counts at each statistical time point.</p>
+         * <p>The numbers of alert events with the Urgent severity level that occurred at each statistical time point.</p>
          */
         @NameInMap("SeriousList")
         public java.util.List<String> seriousList;
 
         /**
-         * <p>The number of alerts with the <strong>Suspicious</strong> severity level on the current day.</p>
+         * <p>The number of alerts with the <strong>Suspicious</strong> severity level that occurred on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>148</p>
@@ -383,13 +383,13 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer suspiciousCount;
 
         /**
-         * <p>The collection of Suspicious-level alert counts at each statistical time point.</p>
+         * <p>The numbers of alert events with the Suspicious severity level that occurred at each statistical time point.</p>
          */
         @NameInMap("SuspiciousList")
         public java.util.List<String> suspiciousList;
 
         /**
-         * <p>The collection of statistical time periods for alerts.</p>
+         * <p>The statistical time periods for the same alerts.</p>
          */
         @NameInMap("TimeArray")
         public java.util.List<String> timeArray;
@@ -404,7 +404,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>The collection of pending alert counts at each statistical time point.</p>
+         * <p>The numbers of pending alerts at each statistical time point.</p>
          */
         @NameInMap("ValueArray")
         public java.util.List<String> valueArray;
@@ -506,7 +506,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
 
     public static class DescribeSecurityStatInfoResponseBodyVulnerability extends TeaModel {
         /**
-         * <p>The number of unfixed vulnerabilities with <strong>high</strong> priority on the current day.</p>
+         * <p>The number of vulnerabilities to be fixed with the <strong>High</strong> priority on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>109</p>
@@ -515,19 +515,19 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer asapCount;
 
         /**
-         * <p>The collection of high-priority unfixed vulnerability counts at each statistical time point.</p>
+         * <p>The numbers of vulnerabilities to be fixed with the High priority at each statistical time point.</p>
          */
         @NameInMap("AsapList")
         public java.util.List<String> asapList;
 
         /**
-         * <p>The collection of statistical time points in the unfixed vulnerability trend chart.</p>
+         * <p>The statistical time points in the trend chart of vulnerabilities to be fixed.</p>
          */
         @NameInMap("DateArray")
         public java.util.List<String> dateArray;
 
         /**
-         * <p>The number of unfixed vulnerabilities with <strong>medium</strong> priority on the current day.</p>
+         * <p>The number of vulnerabilities to be fixed with the <strong>Medium</strong> priority on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>275</p>
@@ -536,19 +536,19 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer laterCount;
 
         /**
-         * <p>The collection of medium-priority unfixed vulnerability counts at each statistical time point.</p>
+         * <p>The numbers of vulnerabilities to be fixed with the Medium priority at each statistical time point.</p>
          */
         @NameInMap("LaterList")
         public java.util.List<String> laterList;
 
         /**
-         * <p>The collection of vulnerability priority levels included in the statistics for unfixed vulnerabilities.</p>
+         * <p>The priorities of vulnerabilities to be fixed included in the statistics.</p>
          */
         @NameInMap("LevelsOn")
         public java.util.List<String> levelsOn;
 
         /**
-         * <p>The number of unfixed vulnerabilities with <strong>low</strong> priority on the current day.</p>
+         * <p>The number of vulnerabilities to be fixed with the <strong>Low</strong> priority on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -557,19 +557,19 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer nntfCount;
 
         /**
-         * <p>The collection of low-priority unfixed vulnerability counts at each statistical time point.</p>
+         * <p>The numbers of vulnerabilities to be fixed with the Low priority at each statistical time point.</p>
          */
         @NameInMap("NntfList")
         public java.util.List<String> nntfList;
 
         /**
-         * <p>The collection of statistical time periods for unfixed vulnerabilities.</p>
+         * <p>The statistical time periods for vulnerabilities to be fixed.</p>
          */
         @NameInMap("TimeArray")
         public java.util.List<String> timeArray;
 
         /**
-         * <p>The number of unfixed vulnerabilities on the current day.</p>
+         * <p>The total number of vulnerabilities to be fixed on the current day.</p>
          * 
          * <strong>example:</strong>
          * <p>384</p>
@@ -578,7 +578,7 @@ public class DescribeSecurityStatInfoResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>The collection of unfixed vulnerability counts at each statistical time point.</p>
+         * <p>The numbers of vulnerabilities to be fixed at each statistical time point.</p>
          */
         @NameInMap("ValueArray")
         public java.util.List<String> valueArray;

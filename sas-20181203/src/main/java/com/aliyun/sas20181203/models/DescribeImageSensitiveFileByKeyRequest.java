@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeImageSensitiveFileByKeyRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>.</p>
+     * <p>Specifies the page number of the returned results. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,12 @@ public class DescribeImageSensitiveFileByKeyRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The UUID of the image.</p>
+     * <p>The image UUID.</p>
+     * <blockquote>
+     * <p>You can call the <a href="~~DescribeImageListBySensitiveFile~~">DescribeImageListBySensitiveFile</a> operation to obtain this parameter from the ImageInfos[].Uuid field in the response.
+     * This parameter is required. If you do not specify this parameter, the API returns an HTTP 400 error with the error code -101.
+     * The ByKey suffix in the operation name indicates filtering by sensitive file type. To locate an image, you must specify this parameter (imageUuid). SensitiveFileKey is an optional filter condition for the sensitive file type.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>0083a31ccf7c10367a6e783e8601****</p>
@@ -23,10 +28,10 @@ public class DescribeImageSensitiveFileByKeyRequest extends TeaModel {
     public String imageUuid;
 
     /**
-     * <p>The language of the content in the request and response. Default value: <strong>zh</strong>. Valid values:</p>
+     * <p>Specifies the language of the request and response. Default value: <strong>zh</strong>. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong>: Chinese.</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>zh</strong>: Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +41,7 @@ public class DescribeImageSensitiveFileByKeyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries per page in paging query. Default value: <strong>20</strong>.</p>
+     * <p>Specifies the maximum number of entries to return on each page in a paging query. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,8 +52,8 @@ public class DescribeImageSensitiveFileByKeyRequest extends TeaModel {
     /**
      * <p>The scan scope. Valid values:</p>
      * <ul>
-     * <li><strong>image</strong>: Image.</li>
-     * <li><strong>container</strong>: Container.</li>
+     * <li><strong>image</strong>: image</li>
+     * <li><strong>container</strong>: container</li>
      * </ul>
      */
     @NameInMap("ScanRange")
@@ -59,25 +64,25 @@ public class DescribeImageSensitiveFileByKeyRequest extends TeaModel {
      * <ul>
      * <li><strong>npm_token</strong>: NPM access token</li>
      * <li><strong>ftp_cfg</strong>: FTP configuration</li>
-     * <li><strong>google_oauth_key</strong>: Google OAuth Key</li>
-     * <li><strong>planetscale_passwd</strong>: Planetscale password</li>
-     * <li><strong>github_ssh_key</strong>: Github SSH key</li>
+     * <li><strong>google_oauth_key</strong>: Google OAuth key</li>
+     * <li><strong>planetscale_passwd</strong>: PlanetScale password</li>
+     * <li><strong>github_ssh_key</strong>: GitHub SSH key</li>
      * <li><strong>msbuild_publish_profile</strong>: MSBuild publish profile</li>
      * <li><strong>fastly_cdn_token</strong>: Fastly CDN token</li>
      * <li><strong>ssh_private_key</strong>: SSH private key</li>
-     * <li><strong>aws_cli</strong>: AWS CLI credentials</li>
-     * <li><strong>cpanel_proftpd</strong>: cPanel ProFTPd credentials</li>
+     * <li><strong>aws_cli</strong>: AWS CLI credential</li>
+     * <li><strong>cpanel_proftpd</strong>: cPanel ProFTPd credential</li>
      * <li><strong>postgresql_passwd</strong>: PostgreSQL password file</li>
-     * <li><strong>discord_client_cred</strong>: Discord client credentials</li>
+     * <li><strong>discord_client_cred</strong>: Discord client credential</li>
      * <li><strong>rails_database</strong>: Rails database configuration</li>
-     * <li><strong>aws_access_key</strong>: AWS Access Key</li>
+     * <li><strong>aws_access_key</strong>: AWS access key</li>
      * <li><strong>esmtp_cfg</strong>: ESMTP mail server configuration</li>
      * <li><strong>docker_registry_cfg</strong>: Docker image repository configuration</li>
-     * <li><strong>pem</strong>: PEM</li>
-     * <li><strong>common_cred</strong>: common credentials</li>
+     * <li><strong>pem</strong>: PEM file</li>
+     * <li><strong>common_cred</strong>: common credential</li>
      * <li><strong>sftp_cfg</strong>: SFTP connection configuration</li>
      * <li><strong>grafana_token</strong>: Grafana token</li>
-     * <li><strong>slack_token</strong>: Slack Token</li>
+     * <li><strong>slack_token</strong>: Slack token</li>
      * <li><strong>ec_private_key</strong>: EC private key</li>
      * <li><strong>pypi_token</strong>: PyPI upload token</li>
      * <li><strong>finicity_token</strong>: Finicity platform token</li>
@@ -85,90 +90,90 @@ public class DescribeImageSensitiveFileByKeyRequest extends TeaModel {
      * <li><strong>git_cfg</strong>: Git configuration</li>
      * <li><strong>django_key</strong>: Django key</li>
      * <li><strong>jenkins_ssh</strong>: Jenkins SSH configuration file</li>
-     * <li><strong>openssh_private_key</strong>: OPENSSH private key</li>
-     * <li><strong>square_oauth</strong>: Square OAuth credentials</li>
+     * <li><strong>openssh_private_key</strong>: OpenSSH private key</li>
+     * <li><strong>square_oauth</strong>: Square OAuth credential</li>
      * <li><strong>typeform_token</strong>: Typeform token</li>
      * <li><strong>common_database_cfg</strong>: common database connection configuration</li>
      * <li><strong>wordpress_database_cfg</strong>: WordPress database configuration</li>
-     * <li><strong>googlecloud_api_key</strong>: Google Cloud API Key</li>
+     * <li><strong>googlecloud_api_key</strong>: Google Cloud API key</li>
      * <li><strong>vscode_sftp</strong>: VSCode SFTP configuration</li>
-     * <li><strong>apache_htpasswd</strong>: Apache htpasswd</li>
-     * <li><strong>planetscale_token</strong>: Planetscale token</li>
-     * <li><strong>contentful_preview_token</strong>: Contentful Preview token</li>
+     * <li><strong>apache_htpasswd</strong>: Apache htpasswd file</li>
+     * <li><strong>planetscale_token</strong>: PlanetScale token</li>
+     * <li><strong>contentful_preview_token</strong>: Contentful preview token</li>
      * <li><strong>php_database_cfg</strong>: PHP application database password</li>
      * <li><strong>atom_remote_sync</strong>: Atom remote synchronization configuration</li>
      * <li><strong>aws_session_token</strong>: AWS session token</li>
      * <li><strong>atom_sftp_cfg</strong>: Atom SFTP configuration</li>
-     * <li><strong>asana_client_private_key</strong>: Asana client private key</li>
-     * <li><strong>tencentcloud_ak</strong>: third-party cloud SecretId</li>
+     * <li><strong>asana_client_private_key</strong>: Asana project management platform client key</li>
+     * <li><strong>tencentcloud_ak</strong>: Tencent Cloud SecretId</li>
      * <li><strong>rsa_private_key</strong>: RSA private key</li>
-     * <li><strong>github_personal_token</strong>: Github Personal access token</li>
-     * <li><strong>pgp</strong>: PGP encrypt file</li>
-     * <li><strong>stripe_skpk</strong>: Stripe Secret Key</li>
+     * <li><strong>github_personal_token</strong>: GitHub personal access token</li>
+     * <li><strong>pgp</strong>: PGP encrypted file</li>
+     * <li><strong>stripe_skpk</strong>: Stripe secret key</li>
      * <li><strong>square_token</strong>: Square access token</li>
-     * <li><strong>rails_carrierwave</strong>: Rails Carrierwave file upload credentials</li>
+     * <li><strong>rails_carrierwave</strong>: Rails Carrierwave file upload credential</li>
      * <li><strong>dbeaver_database_cfg</strong>: DBeaver database configuration</li>
-     * <li><strong>robomongo_cred</strong>: Robomongo credentials</li>
-     * <li><strong>github_oauth_token</strong>: Github OAuth access token</li>
+     * <li><strong>robomongo_cred</strong>: Robomongo credential</li>
+     * <li><strong>github_oauth_token</strong>: GitHub OAuth access token</li>
      * <li><strong>pulumi_token</strong>: Pulumi token</li>
-     * <li><strong>ventrilo_voip</strong>: Ventrilo VoIP Server configuration</li>
-     * <li><strong>macos_keychain</strong>: macOS Keychain</li>
-     * <li><strong>amazon_mws_token</strong>: Amazon MWS Token</li>
+     * <li><strong>ventrilo_voip</strong>: Ventrilo VoIP server configuration</li>
+     * <li><strong>macos_keychain</strong>: macOS keychain</li>
+     * <li><strong>amazon_mws_token</strong>: Amazon MWS token</li>
      * <li><strong>dynatrace_token</strong>: Dynatrace token</li>
-     * <li><strong>java_keystore</strong>: Java KeyStore</li>
+     * <li><strong>java_keystore</strong>: Java keystore</li>
      * <li><strong>microsoft_sdf</strong>: Microsoft SQL CE database</li>
-     * <li><strong>kubernetes_dashboard_cred</strong>: Kubernetes Dashboard user credentials</li>
+     * <li><strong>kubernetes_dashboard_cred</strong>: Kubernetes Dashboard user credential</li>
      * <li><strong>atlassian_token</strong>: Atlassian token</li>
      * <li><strong>rdp</strong>: Remote Desktop Protocol (RDP) connection</li>
-     * <li><strong>mailgun_key</strong>: Mailgun Webhook Signing Key</li>
-     * <li><strong>mailchimp_api_key</strong>: Mailchimp API Key</li>
+     * <li><strong>mailgun_key</strong>: Mailgun webhook signing key</li>
+     * <li><strong>mailchimp_api_key</strong>: Mailchimp API key</li>
      * <li><strong>netrc_cfg</strong>: .netrc configuration file</li>
      * <li><strong>openvpn_cfg</strong>: OpenVPN client configuration</li>
-     * <li><strong>github_refresh_token</strong>: Github Refresh Token</li>
-     * <li><strong>salesforce</strong>: Salesforce credentials</li>
+     * <li><strong>github_refresh_token</strong>: GitHub refresh token</li>
+     * <li><strong>salesforce</strong>: Salesforce credential</li>
      * <li><strong>sendinblue</strong>: Sendinblue token</li>
      * <li><strong>pkcs_private_key</strong>: PKCS#12 key</li>
      * <li><strong>rubyonrails_passwd</strong>: Ruby on Rails password file</li>
      * <li><strong>filezilla_ftp</strong>: FileZilla FTP configuration</li>
      * <li><strong>databricks_token</strong>: Databricks token</li>
-     * <li><strong>gitLab_personal_token</strong>: GitLab Personal access token</li>
-     * <li><strong>rails_master_key</strong>: Rails Master Key</li>
+     * <li><strong>gitLab_personal_token</strong>: GitLab personal access token</li>
+     * <li><strong>rails_master_key</strong>: Rails master key</li>
      * <li><strong>sqlite</strong>: SQLite3/SQLite database</li>
      * <li><strong>firefox_logins</strong>: Firefox logon configuration</li>
-     * <li><strong>mailgun_private_token</strong>: Mailgun Private token</li>
+     * <li><strong>mailgun_private_token</strong>: Mailgun private token</li>
      * <li><strong>joomla_cfg</strong>: Joomla configuration</li>
-     * <li><strong>hashicorp_terraform_token</strong>: Hashicorp Terraform Token</li>
-     * <li><strong>jetbrains_ides</strong>: Jetbrains IDEs configuration</li>
+     * <li><strong>hashicorp_terraform_token</strong>: HashiCorp Terraform token</li>
+     * <li><strong>jetbrains_ides</strong>: JetBrains IDEs configuration</li>
      * <li><strong>heroku_api_key</strong>: Heroku API key</li>
      * <li><strong>messagebird_token</strong>: MessageBird token</li>
-     * <li><strong>github_app_token</strong>: Github App Token</li>
-     * <li><strong>hashicorp_vault_token</strong>: Hashicorp Vault Token</li>
+     * <li><strong>github_app_token</strong>: GitHub App token</li>
+     * <li><strong>hashicorp_vault_token</strong>: HashiCorp Vault token</li>
      * <li><strong>pgp_private_key</strong>: PGP private key</li>
      * <li><strong>sshpasswd</strong>: SSH password</li>
-     * <li><strong>huaweicloud_ak</strong>: third-party cloud Secret Access Key</li>
+     * <li><strong>huaweicloud_ak</strong>: Huawei Cloud Secret Access Key</li>
      * <li><strong>aws_s3cmd</strong>: AWS S3cmd configuration</li>
      * <li><strong>php_config</strong>: PHP configuration</li>
-     * <li><strong>common_private_key</strong>: common private key types</li>
+     * <li><strong>common_private_key</strong>: common private key type</li>
      * <li><strong>microsoft_mdf</strong>: Microsoft SQL database</li>
      * <li><strong>mediawiki_cfg</strong>: MediaWiki configuration</li>
-     * <li><strong>jenkins_cred</strong>: Jenkins credentials</li>
-     * <li><strong>rubygems_cred</strong>: Rubygems credentials</li>
+     * <li><strong>jenkins_cred</strong>: Jenkins credential</li>
+     * <li><strong>rubygems_cred</strong>: RubyGems credential</li>
      * <li><strong>clojars_token</strong>: Clojars token</li>
-     * <li><strong>phoenix_web_passwd</strong>: Phoenix Web credentials</li>
+     * <li><strong>phoenix_web_passwd</strong>: Phoenix web credential</li>
      * <li><strong>puttygen_private_key</strong>: PuTTYgen private key</li>
      * <li><strong>google_oauth_token</strong>: Google OAuth access token</li>
-     * <li><strong>rubyonrails_cfg</strong>: Ruby On Rails database configuration</li>
-     * <li><strong>lob_api_key</strong>: Lob API Key</li>
+     * <li><strong>rubyonrails_cfg</strong>: Ruby on Rails database configuration</li>
+     * <li><strong>lob_api_key</strong>: Lob API key</li>
      * <li><strong>pkcs_cred</strong>: PKCS#12 certificate</li>
      * <li><strong>otr_private_key</strong>: OTR private key</li>
-     * <li><strong>contentful_delivery_token</strong>: Contentful Delivery token</li>
-     * <li><strong>digital_ocean_tugboat</strong>: Digital Ocean Tugboat configuration</li>
+     * <li><strong>contentful_delivery_token</strong>: Contentful delivery token</li>
+     * <li><strong>digital_ocean_tugboat</strong>: DigitalOcean Tugboat configuration</li>
      * <li><strong>dsa_private_key</strong>: DSA private key</li>
-     * <li><strong>rails_app_token</strong>: Rails App token</li>
-     * <li><strong>git_cred</strong>: Git user credentials</li>
-     * <li><strong>newrelic_api_key</strong>: New Relic User API Key</li>
-     * <li><strong>github_hub</strong>: hub configuration that stores Github tokens</li>
-     * <li><strong>rubygem</strong>: Rubygem token</li>
+     * <li><strong>rails_app_token</strong>: Rails app token</li>
+     * <li><strong>git_cred</strong>: Git user credential</li>
+     * <li><strong>newrelic_api_key</strong>: New Relic user API key</li>
+     * <li><strong>github_hub</strong>: hub configuration that stores GitHub tokens</li>
+     * <li><strong>rubygem</strong>: RubyGems token</li>
      * </ul>
      * 
      * <strong>example:</strong>

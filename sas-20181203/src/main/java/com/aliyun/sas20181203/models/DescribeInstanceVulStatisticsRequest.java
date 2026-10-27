@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceVulStatisticsRequest extends TeaModel {
     /**
-     * <p>The vulnerability type of the Serverless asset. Valid values:</p>
+     * <p>The vulnerability types for serverless assets. Valid values:</p>
      * <ul>
-     * <li><p><strong>sca</strong>: middleware vulnerability</p>
+     * <li><p><strong>sca</strong>: middleware vulnerabilities</p>
      * </li>
-     * <li><p><strong>app</strong>: scanner vulnerability</p>
+     * <li><p><strong>app</strong>: scanner vulnerabilities</p>
      * </li>
      * </ul>
      * <blockquote>

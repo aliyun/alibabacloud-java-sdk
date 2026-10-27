@@ -8,7 +8,7 @@ public class DescribeImageBaselineStrategyRequest extends TeaModel {
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class DescribeImageBaselineStrategyRequest extends TeaModel {
     /**
      * <p>The data source. If this parameter is left empty, the image baseline policy is queried by default. Valid values:</p>
      * <ul>
-     * <li><strong>default</strong>: image</li>
-     * <li><strong>agentless</strong>: agentless.</li>
+     * <li><strong>default</strong>: Image</li>
+     * <li><strong>agentless</strong>: Agentless</li>
      * </ul>
      * 
      * <strong>example:</strong>

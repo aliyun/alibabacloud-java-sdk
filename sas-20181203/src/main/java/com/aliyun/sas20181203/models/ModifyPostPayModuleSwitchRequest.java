@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPostPayModuleSwitchRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Different requests must use different tokens. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use different tokens for different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
@@ -14,18 +14,17 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li>true: Performs a dry run. The system checks the request but does not perform the actual operation.</li>
-     * <li>false: Performs the request normally.
-     * Default value: false.</li>
+     * <li>true: Only prechecks the request and does not perform the actual operation.</li>
+     * <li>false: Performs the actual operation.</li>
      * </ul>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The switch configuration of the EDR module.</p>
+     * <p>The switch configuration for the EDR module.</p>
      */
     @NameInMap("EdrModuleSwitch")
     public ModifyPostPayModuleSwitchRequestEdrModuleSwitch edrModuleSwitch;
@@ -48,7 +47,7 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
      * <ul>
      * <li><strong>1</strong>: Free Edition </li>
      * <li><strong>3</strong>: Enterprise Edition</li>
-     * <li><strong>5</strong>: Advanced Edition</li>
+     * <li><strong>5</strong>: Premium Edition</li>
      * <li><strong>6</strong>: Anti-virus Edition    </li>
      * <li><strong>7</strong>: Ultimate Edition</li>
      * </ul>
@@ -62,7 +61,7 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
     /**
      * <p>The pay-as-you-go instance ID. This parameter is required.</p>
      * <blockquote>
-     * <p>Invoke the <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> operation to obtain the value of this parameter.</p>
+     * <p>Invoke the <a href="~~DescribeVersionConfig~~">DescribeVersionConfig</a> operation to obtain this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -72,7 +71,7 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
     public String postPayInstanceId;
 
     /**
-     * <p>The switch status of pay-as-you-go modules. The value is a JSON string. Valid values:</p>
+     * <p>The switch status of the pay-as-you-go modules. The value is a JSON string. Valid values:</p>
      * <ul>
      * <li>Key:<ul>
      * <li><strong>VUL</strong>: Vulnerability fixing module</li>
@@ -87,7 +86,7 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
      * <li><strong>ANTI_RANSOMWARE</strong>: Anti-ransomware management</li>
      * </ul>
      * </li>
-     * <li>Value: 0 indicates disabled. 1 indicates enabled.</li>
+     * <li>Value: 0 indicates disabled, and 1 indicates enabled.</li>
      * </ul>
      * <blockquote>
      * <p>The values of modules that are not specified remain unchanged.</p>
@@ -101,9 +100,9 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
     public String postPayModuleSwitch;
 
     /**
-     * <p>The switches of pay-as-you-go modules.</p>
+     * <p>The switch status of the pay-as-you-go modules.</p>
      * <blockquote>
-     * <p>Notice:  This parameter has the same meaning as the PostPayModuleSwitch parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></p>
+     * <p>Notice: This parameter has the same meaning as the PostPayModuleSwitch parameter. If both parameters are specified, the value of PostPayModuleSwitch takes precedence.</notice></p>
      * </blockquote>
      */
     @NameInMap("PostPayModuleSwitchObj")
@@ -180,13 +179,19 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
 
     public static class ModifyPostPayModuleSwitchRequestEdrModuleSwitch extends TeaModel {
         /**
-         * <p>Specifies whether to enable automatic binding of new assets to the EDR module. A value of 0 indicates that the feature is disabled. A value of 1 indicates that the feature is enabled.</p>
+         * <p>Specifies whether to enable automatic binding of new assets to the EDR module. Valid values: 0: disabled. 1: enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("AutoBind")
         public Integer autoBind;
 
         /**
          * <p>The authorized quota for EDR hosts.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2</p>
          */
         @NameInMap("EDR_HOST_USAGE")
         public Long EDR_HOST_USAGE;
@@ -216,7 +221,7 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
 
     public static class ModifyPostPayModuleSwitchRequestPostPayModuleSwitchObj extends TeaModel {
         /**
-         * <p>The agentless detection module. Valid values:</p>
+         * <p>The Agentless detection module. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: disabled</li>
          * <li><strong>1</strong>: enabled</li>
@@ -257,7 +262,7 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
          * <li><strong>1</strong>: enabled</li>
          * </ul>
          * <blockquote>
-         * <p>Notice: You cannot manually change the switch of the basic service module. If any other module is enabled, the enabling status of this module is enabled. If all other modules are shutdown, this module is not in the shutdown state.</notice></p>
+         * <p>Notice: The switch for the basic service module cannot be manually modified. This module is enabled when any other module is enabled, and disabled when all other modules are disabled.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -267,7 +272,7 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
         public Integer basicService;
 
         /**
-         * <p>The Cloud Security Posture Management (CSPM) module. Valid values:</p>
+         * <p>The Cloud Security Posture Management module. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: disabled</li>
          * <li><strong>1</strong>: enabled</li>
@@ -280,7 +285,7 @@ public class ModifyPostPayModuleSwitchRequest extends TeaModel {
         public Integer cspm;
 
         /**
-         * <p>The Cloud Threat Detection and Response (CTDR) module. Valid values:</p>
+         * <p>The Cloud Threat Detection and Response module. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: disabled</li>
          * <li><strong>1</strong>: enabled</li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSyncAssetTaskLogDetailRequest extends TeaModel {
     /**
-     * <p>The page number from which to start displaying query results. Default value: 1, which indicates that query results are displayed starting from page 1.</p>
+     * <p>Specifies the page number of the page to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,10 +23,7 @@ public class DescribeSyncAssetTaskLogDetailRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The maximum number of entries to display on each page when you perform a paginated query. Default value: 20. If the PageSize parameter is left empty, 20 entries are returned by default.</p>
-     * <blockquote>
-     * <p>We recommend that you do not leave PageSize empty.</p>
-     * </blockquote>
+     * <p>Specifies the maximum number of entries to return on each page in a paged query. The default number of entries per page for paging is 20. If this parameter is left empty, 20 entries are returned by default. Do not leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,7 +32,7 @@ public class DescribeSyncAssetTaskLogDetailRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the IDC scan task that you want to query. You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeSyncAssetTaskList</a> operation to obtain the ID of an abnormal task.</p>
+     * <p>The ID of the IDC scan task to query. You can call the <a href="https://help.aliyun.com/document_detail/141932.html">DescribeSyncAssetTaskList</a> operation to obtain the ID of the abnormal task. This parameter is required. If this parameter is not specified, the API returns HTTP 400 and the error code -101.</p>
      * 
      * <strong>example:</strong>
      * <p>7e9565f537146fdf6bfb4e01f6f08818</p>
@@ -53,7 +50,7 @@ public class DescribeSyncAssetTaskLogDetailRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The task name.</p>
+     * <p>The name of the task.</p>
      * 
      * <strong>example:</strong>
      * <p>IDC_PROBE_SCAN-TEST_001</p>

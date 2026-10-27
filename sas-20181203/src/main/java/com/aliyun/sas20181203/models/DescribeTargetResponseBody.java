@@ -14,13 +14,13 @@ public class DescribeTargetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The machine settings for the vulnerability type.</p>
+     * <p>The machine settings corresponding to the vulnerability type.</p>
      */
     @NameInMap("Targets")
     public java.util.List<DescribeTargetResponseBodyTargets> targets;
 
     /**
-     * <p>The total number of machine configuration entries returned.</p>
+     * <p>The total number of queried machine configurations.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -59,7 +59,7 @@ public class DescribeTargetResponseBody extends TeaModel {
 
     public static class DescribeTargetResponseBodyTargets extends TeaModel {
         /**
-         * <p>The flag. This parameter can be empty.</p>
+         * <p>The flag. This field can be empty.</p>
          * 
          * <strong>example:</strong>
          * <p>del</p>
@@ -68,7 +68,7 @@ public class DescribeTargetResponseBody extends TeaModel {
         public String flag;
 
         /**
-         * <p>The target. The value is a machine UUID or a machine group ID.</p>
+         * <p>The target, which is the UUID of the server or the ID of the server group.</p>
          * 
          * <strong>example:</strong>
          * <p>5c5f0169-3527-40a2-b5ff-0bc1db8f****</p>
@@ -79,8 +79,8 @@ public class DescribeTargetResponseBody extends TeaModel {
         /**
          * <p>The target type. Valid values:</p>
          * <ul>
-         * <li><strong>uuid</strong>: added by individual asset</li>
-         * <li><strong>groupId</strong>: added by server group.</li>
+         * <li><strong>uuid</strong>: add a single asset</li>
+         * <li><strong>groupId</strong>: add a server group</li>
          * </ul>
          * 
          * <strong>example:</strong>

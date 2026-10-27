@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAutoTagRulesRequest extends TeaModel {
     /**
-     * <p>The page number of the page to return. Default value: <strong>1</strong>, which indicates that the first page is returned.</p>
+     * <p>The number of the page to return. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,10 +14,7 @@ public class ListAutoTagRulesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The maximum number of entries per page in a paging query. Default value: 20. If you leave this parameter empty, 20 entries are returned per page.</p>
-     * <blockquote>
-     * <p>Do not leave PageSize empty.</p>
-     * </blockquote>
+     * <p>The maximum number of entries to return per page during paging. Default value: 20. If this parameter is left empty, 20 entries are returned. Specify a value for this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -26,7 +23,7 @@ public class ListAutoTagRulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The rule name.</p>
+     * <p>The name of the rule.</p>
      * 
      * <strong>example:</strong>
      * <p>text-001</p>

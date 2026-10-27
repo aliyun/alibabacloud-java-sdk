@@ -15,7 +15,7 @@ public class UnBindHybridProxyRequest extends TeaModel {
     public String clusterName;
 
     /**
-     * <p>The UUIDs of the servers that you want to remove from the proxy cluster.</p>
+     * <p>The list of Security Center client UUIDs for the machines connected to the proxy.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("YundunUuids")

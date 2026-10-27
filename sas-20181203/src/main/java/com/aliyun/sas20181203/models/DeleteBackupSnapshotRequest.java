@@ -19,8 +19,8 @@ public class DeleteBackupSnapshotRequest extends TeaModel {
     /**
      * <p>Specifies whether to retain the latest snapshot. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: retains the latest snapshot.</li>
-     * <li><strong>false</strong>: does not retain the latest snapshot.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -85,9 +85,9 @@ public class DeleteBackupSnapshotRequest extends TeaModel {
         /**
          * <p>The region of the Security Center instance. Valid values:</p>
          * <ul>
-         * <li><strong>cn-hangzhou</strong>: China (Hangzhou).</li>
-         * <li><strong>ap-southeast-1</strong>: Singapore.</li>
-         * <li><strong>cn-beijing</strong>: China (Beijing).</li>
+         * <li><strong>cn-hangzhou</strong>: China (Hangzhou)</li>
+         * <li><strong>ap-southeast-1</strong>: Singapore</li>
+         * <li><strong>cn-beijing</strong>: China (Beijing)</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -98,7 +98,7 @@ public class DeleteBackupSnapshotRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The ID of the snapshot to delete.</p>
+         * <p>The ID of the snapshot to be deleted.</p>
          * <blockquote>
          * <p>You can call the <a href="~~DescribeSnapshots~~">DescribeSnapshots</a> operation to obtain this parameter.</p>
          * </blockquote>
@@ -113,10 +113,10 @@ public class DeleteBackupSnapshotRequest extends TeaModel {
         /**
          * <p>The type of the data source. Valid values:</p>
          * <ul>
-         * <li><strong>ECS_FILE</strong>: backup snapshot of ECS files.</li>
-         * <li><strong>OSS</strong>: backup snapshot of Alibaba Cloud OSS.</li>
-         * <li><strong>NAS</strong>: backup snapshot of Alibaba Cloud NAS.</li>
-         * <li><strong>OTS_TABLE</strong>: backup snapshot of Alibaba Cloud Tablestore.</li>
+         * <li><strong>ECS_FILE</strong>: backup snapshots of ECS files</li>
+         * <li><strong>OSS</strong>: backup snapshots of Alibaba Cloud OSS</li>
+         * <li><strong>NAS</strong>: backup snapshots of Alibaba Cloud NAS</li>
+         * <li><strong>OTS_TABLE</strong>: backup snapshots of Alibaba Cloud Tablestore</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

@@ -9,7 +9,7 @@ public class CreateHybridProxyClusterRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>test</p>
+     * <p>Chester-Test</p>
      */
     @NameInMap("ClusterName")
     public String clusterName;
@@ -21,7 +21,7 @@ public class CreateHybridProxyClusterRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>117.71.xx.xx</p>
+     * <p>192.168.xx.xx</p>
      */
     @NameInMap("Ip")
     public String ip;
@@ -30,7 +30,7 @@ public class CreateHybridProxyClusterRequest extends TeaModel {
      * <p>The description of the cluster.</p>
      * 
      * <strong>example:</strong>
-     * <p>testRemark</p>
+     * <p>remark test</p>
      */
     @NameInMap("Remark")
     public String remark;

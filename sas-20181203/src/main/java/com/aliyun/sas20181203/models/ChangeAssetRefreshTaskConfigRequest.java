@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
     /**
-     * <p>The asset synchronization configuration.</p>
+     * <p>The list of asset refresh configurations.</p>
      */
     @NameInMap("AssetRefreshConfigs")
     public java.util.List<ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs> assetRefreshConfigs;
 
     /**
-     * <p>The region in which your Security Center service resides.</p>
+     * <p>The region of the Security Center instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -42,11 +42,11 @@ public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
 
     public static class ChangeAssetRefreshTaskConfigRequestAssetRefreshConfigs extends TeaModel {
         /**
-         * <p>The type of the configuration. Valid values:</p>
+         * <p>The configuration type. Valid values:</p>
          * <ul>
-         * <li><strong>0</strong>: server synchronization task</li>
-         * <li><strong>1</strong>: cloud service synchronization task</li>
-         * <li><strong>2</strong>: scheduled AccessKey pair verification task</li>
+         * <li><strong>0</strong>: Host refresh task</li>
+         * <li><strong>1</strong>: Cloud service refresh task</li>
+         * <li><strong>2</strong>: AccessKey scheduled check task</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,10 +73,10 @@ public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
         public Integer schedulePeriod;
 
         /**
-         * <p>The status of the configuration. Valid values:</p>
+         * <p>The enabling status of the configuration. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: enabled</li>
-         * <li><strong>0</strong>: disabled</li>
+         * <li><strong>1</strong>: Enabled</li>
+         * <li><strong>0</strong>: Disabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The ID of the data entry containing the AccessKey pair that you specify when you configure the scheduled AccessKey pair verification task.</p>
+         * <p>The ID of the specified AccessKey record when you configure an AccessKey scheduled check task.</p>
          * 
          * <strong>example:</strong>
          * <p>2308</p>
@@ -95,11 +95,11 @@ public class ChangeAssetRefreshTaskConfigRequest extends TeaModel {
         public Long targetId;
 
         /**
-         * <p>The service provider of the cloud asset. Valid values:</p>
+         * <p>The cloud asset vendor. Valid values:</p>
          * <ul>
          * <li><strong>3</strong>: Tencent Cloud</li>
          * <li><strong>4</strong>: Huawei Cloud</li>
-         * <li><strong>7</strong>: Amazon Web Services (AWS) Cloud</li>
+         * <li><strong>7</strong>: Amazon Web Services</li>
          * </ul>
          * 
          * <strong>example:</strong>
