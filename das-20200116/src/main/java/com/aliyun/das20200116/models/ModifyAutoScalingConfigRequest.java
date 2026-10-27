@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoScalingConfigRequest extends TeaModel {
     /**
-     * <p>The configuration item of the bandwidth auto scaling feature.</p>
+     * <p>The configuration items for the bandwidth elastic scaling feature.</p>
      */
     @NameInMap("Bandwidth")
     public ModifyAutoScalingConfigRequestBandwidth bandwidth;
@@ -21,25 +21,25 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The configuration item of the resource auto scaling feature.</p>
+     * <p>The configuration items for the resource elastic scaling feature.</p>
      */
     @NameInMap("Resource")
     public ModifyAutoScalingConfigRequestResource resource;
 
     /**
-     * <p>The configuration item of the shard auto scaling feature.</p>
+     * <p>The configuration items for the shard elastic scaling feature.</p>
      */
     @NameInMap("Shard")
     public ModifyAutoScalingConfigRequestShard shard;
 
     /**
-     * <p>The configuration item of the specification auto scaling feature.</p>
+     * <p>The configuration items for the specification elastic scaling feature.</p>
      */
     @NameInMap("Spec")
     public ModifyAutoScalingConfigRequestSpec spec;
 
     /**
-     * <p>The configuration item of the automatic storage expansion feature.</p>
+     * <p>The configuration items for the automatic storage expansion feature.</p>
      */
     @NameInMap("Storage")
     public ModifyAutoScalingConfigRequestStorage storage;
@@ -99,12 +99,10 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
 
     public static class ModifyAutoScalingConfigRequestBandwidth extends TeaModel {
         /**
-         * <p>Specifies whether to apply the <strong>Bandwidth</strong> configuration of the bandwidth auto scaling feature. Valid values:</p>
+         * <p>Specifies whether to apply the configurations under the <strong>Bandwidth</strong> configuration item for the bandwidth elastic scaling feature:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -114,14 +112,11 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Boolean apply;
 
         /**
-         * <p>The average bandwidth usage threshold that triggers automatic bandwidth downgrade. Unit: %. Valid values:</p>
+         * <p>The threshold of average bandwidth usage that triggers automatic bandwidth downgrade. Unit: %. Valid values:</p>
          * <ul>
-         * <li><p><strong>10</strong></p>
-         * </li>
-         * <li><p><strong>20</strong></p>
-         * </li>
-         * <li><p><strong>30</strong></p>
-         * </li>
+         * <li><strong>10</strong></li>
+         * <li><strong>20</strong></li>
+         * <li><strong>30</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,20 +129,14 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Integer bandwidthUsageLowerThreshold;
 
         /**
-         * <p>The average bandwidth usage threshold that triggers automatic bandwidth upgrade. Unit: %. Valid values:</p>
+         * <p>The threshold of average bandwidth usage that triggers automatic bandwidth upgrade. Unit: %. Valid values:</p>
          * <ul>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>60</strong></p>
-         * </li>
-         * <li><p><strong>70</strong></p>
-         * </li>
-         * <li><p><strong>80</strong></p>
-         * </li>
-         * <li><p><strong>90</strong></p>
-         * </li>
-         * <li><p><strong>95</strong></p>
-         * </li>
+         * <li><strong>50</strong></li>
+         * <li><strong>60</strong></li>
+         * <li><strong>70</strong></li>
+         * <li><strong>80</strong></li>
+         * <li><strong>90</strong></li>
+         * <li><strong>95</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,12 +149,10 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Integer bandwidthUsageUpperThreshold;
 
         /**
-         * <p>Specifies whether to enable automatic bandwidth downgrade. Valid values:</p>
+         * <p>Specifies whether to enable automatic bandwidth downgrade:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,18 +162,13 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Boolean downgrade;
 
         /**
-         * <p>The observation window of the bandwidth auto scaling feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute. Valid values:</p>
+         * <p>The observation window for automatic bandwidth upgrade. The parameter value consists of a number and a time unit suffix. The time suffix <strong>m</strong> indicates minutes. Valid values:</p>
          * <ul>
-         * <li><p><strong>1m</strong></p>
-         * </li>
-         * <li><p><strong>5m</strong></p>
-         * </li>
-         * <li><p><strong>10m</strong></p>
-         * </li>
-         * <li><p><strong>15m</strong></p>
-         * </li>
-         * <li><p><strong>30m</strong></p>
-         * </li>
+         * <li><strong>1m</strong></li>
+         * <li><strong>5m</strong></li>
+         * <li><strong>10m</strong></li>
+         * <li><strong>15m</strong></li>
+         * <li><strong>30m</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,12 +181,10 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public String observationWindowSize;
 
         /**
-         * <p>Specifies whether to enable automatic bandwidth upgrade. Valid values:</p>
+         * <p>Specifies whether to enable automatic bandwidth upgrade:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -270,12 +250,10 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
 
     public static class ModifyAutoScalingConfigRequestResource extends TeaModel {
         /**
-         * <p>Specifies whether to apply the <strong>Resource</strong> configuration of the resource auto scaling feature. Valid values:</p>
+         * <p>Specifies whether to apply the configurations under the <strong>Resource</strong> configuration item for the resource elastic scaling feature:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,14 +266,11 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Boolean apply;
 
         /**
-         * <p>The average CPU utilization threshold that triggers automatic resource scale-out. Unit: %. Valid values:</p>
+         * <p>The threshold of average CPU utilization that triggers automatic resource scale-up. Unit: %. Valid values:</p>
          * <ul>
-         * <li><p><strong>70</strong></p>
-         * </li>
-         * <li><p><strong>80</strong></p>
-         * </li>
-         * <li><p><strong>90</strong></p>
-         * </li>
+         * <li><strong>70</strong></li>
+         * <li><strong>80</strong></li>
+         * <li><strong>90</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -308,20 +283,14 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Integer cpuUsageUpperThreshold;
 
         /**
-         * <p>The observation window of the automatic resource scale-in feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute. Valid values:</p>
+         * <p>The observation window for scale-down. The parameter value consists of a number and a time unit suffix. The time suffix <strong>m</strong> indicates minutes. Valid values:</p>
          * <ul>
-         * <li><p><strong>1m</strong></p>
-         * </li>
-         * <li><p><strong>3m</strong></p>
-         * </li>
-         * <li><p><strong>5m</strong></p>
-         * </li>
-         * <li><p><strong>10m</strong></p>
-         * </li>
-         * <li><p><strong>20m</strong></p>
-         * </li>
-         * <li><p><strong>30m</strong></p>
-         * </li>
+         * <li><strong>1m</strong></li>
+         * <li><strong>3m</strong></li>
+         * <li><strong>5m</strong></li>
+         * <li><strong>10m</strong></li>
+         * <li><strong>20m</strong></li>
+         * <li><strong>30m</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -334,12 +303,10 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public String downgradeObservationWindowSize;
 
         /**
-         * <p>Specifies whether to enable resource auto scaling. Valid values:</p>
+         * <p>Specifies whether to enable resource elastic scaling:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -352,20 +319,14 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Boolean enable;
 
         /**
-         * <p>The observation window of the automatic resource scale-out feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute. Valid values:</p>
+         * <p>The observation window for scale-up. The parameter value consists of a number and a time unit suffix. The time suffix <strong>m</strong> indicates minutes. Valid values:</p>
          * <ul>
-         * <li><p><strong>1m</strong></p>
-         * </li>
-         * <li><p><strong>3m</strong></p>
-         * </li>
-         * <li><p><strong>5m</strong></p>
-         * </li>
-         * <li><p><strong>10m</strong></p>
-         * </li>
-         * <li><p><strong>20m</strong></p>
-         * </li>
-         * <li><p><strong>30m</strong></p>
-         * </li>
+         * <li><strong>1m</strong></li>
+         * <li><strong>3m</strong></li>
+         * <li><strong>5m</strong></li>
+         * <li><strong>10m</strong></li>
+         * <li><strong>20m</strong></li>
+         * <li><strong>30m</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -426,15 +387,13 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
 
     public static class ModifyAutoScalingConfigRequestShard extends TeaModel {
         /**
-         * <p>Specifies whether to apply the <strong>Shard</strong> configuration of the shard auto scaling feature. Valid values:</p>
+         * <p>Specifies whether to apply the configurations under the <strong>Shard</strong> configuration item for the shard elastic scaling feature:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
-         * <p>The shard auto scaling feature is available only for Tair (Redis OSS-compatible) cloud-native cluster instances on the China site (aliyun.com).</p>
+         * <p>Notice: The shard elastic scaling feature is supported only when the target database instance is Tair (Redis® OSS-Compatible) cloud-native (formerly cloud disk) edition in cluster architecture on the China site.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -444,15 +403,13 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Boolean apply;
 
         /**
-         * <p>Specifies whether to enable automatic shard removal. Valid values:</p>
+         * <p>Specifies whether to enable automatic shard reduction:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
-         * <p>The automatic shard removal feature is in a canary release.</p>
+         * <p>The automatic shard reduction feature is currently in canary release.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -462,18 +419,13 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Boolean downgrade;
 
         /**
-         * <p>The observation window of the automatic shard removal feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>h</strong> time unit suffix specifies the hour. The <strong>d</strong> time unit suffix specifies the day. Valid values:</p>
+         * <p>The observation window for automatic shard reduction. The parameter value consists of a number and a time unit suffix. The time suffix <strong>h</strong> indicates hours, and <strong>d</strong> indicates days. Valid values:</p>
          * <ul>
-         * <li><p><strong>1h</strong></p>
-         * </li>
-         * <li><p><strong>2h</strong></p>
-         * </li>
-         * <li><p><strong>3h</strong></p>
-         * </li>
-         * <li><p><strong>1d</strong></p>
-         * </li>
-         * <li><p><strong>7d</strong></p>
-         * </li>
+         * <li><strong>1h</strong></li>
+         * <li><strong>2h</strong></li>
+         * <li><strong>3h</strong></li>
+         * <li><strong>1d</strong></li>
+         * <li><strong>7d</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -486,7 +438,7 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public String downgradeObservationWindowSize;
 
         /**
-         * <p>The maximum number of shards in the instance. The value must be a positive integer. Valid values: 4 to 32.</p>
+         * <p>The maximum total number of shards for the instance. The value must be a positive integer. Valid values: 4 to 32.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -498,14 +450,11 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Integer maxShards;
 
         /**
-         * <p>The average memory usage threshold that triggers automatic shard removal. Unit: %. Valid values:</p>
+         * <p>The threshold of average memory utilization that triggers automatic shard reduction. Unit: %. Valid values:</p>
          * <ul>
-         * <li><p><strong>10</strong></p>
-         * </li>
-         * <li><p><strong>20</strong></p>
-         * </li>
-         * <li><p><strong>30</strong></p>
-         * </li>
+         * <li><strong>10</strong></li>
+         * <li><strong>20</strong></li>
+         * <li><strong>30</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -518,18 +467,13 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Integer memUsageLowerThreshold;
 
         /**
-         * <p>The average memory usage threshold that triggers automatic shard addition. Unit: %. Valid values:</p>
+         * <p>The threshold of average memory utilization that triggers automatic shard addition. Unit: %. Valid values:</p>
          * <ul>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>60</strong></p>
-         * </li>
-         * <li><p><strong>70</strong></p>
-         * </li>
-         * <li><p><strong>80</strong></p>
-         * </li>
-         * <li><p><strong>90</strong></p>
-         * </li>
+         * <li><strong>50</strong></li>
+         * <li><strong>60</strong></li>
+         * <li><strong>70</strong></li>
+         * <li><strong>80</strong></li>
+         * <li><strong>90</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -542,7 +486,7 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Integer memUsageUpperThreshold;
 
         /**
-         * <p>The minimum number of shards in the instance. The value must be a positive integer. Valid values: 4 to 32.</p>
+         * <p>The minimum total number of shards for the instance. The value must be a positive integer. Valid values: 4 to 32.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -554,12 +498,10 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Integer minShards;
 
         /**
-         * <p>Specifies whether to enable automatic shard addition. Valid values:</p>
+         * <p>Specifies whether to enable automatic shard addition:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -569,16 +511,12 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Boolean upgrade;
 
         /**
-         * <p>The observation window of the automatic shard addition feature. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute. Valid values:</p>
+         * <p>The observation window for automatic shard addition. The parameter value consists of a number and a time unit suffix. The time suffix <strong>m</strong> indicates minutes. Valid values:</p>
          * <ul>
-         * <li><p><strong>5m</strong></p>
-         * </li>
-         * <li><p><strong>10m</strong></p>
-         * </li>
-         * <li><p><strong>15m</strong></p>
-         * </li>
-         * <li><p><strong>30m</strong></p>
-         * </li>
+         * <li><strong>5m</strong></li>
+         * <li><strong>10m</strong></li>
+         * <li><strong>15m</strong></li>
+         * <li><strong>30m</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -671,12 +609,10 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
 
     public static class ModifyAutoScalingConfigRequestSpec extends TeaModel {
         /**
-         * <p>Specifies whether to apply the <strong>Spec</strong> configuration of the specification auto scaling feature. Valid values:</p>
+         * <p>Specifies whether to apply the configurations under the <strong>Spec</strong> configuration item for the specification elastic scaling feature:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -686,12 +622,10 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Boolean apply;
 
         /**
-         * <p>The quiescent period. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute, the <strong>h</strong> time unit suffix specifies the hour, and the <strong>d</strong> time unit suffix specifies the day.</p>
+         * <p>The cool-down period. The parameter value consists of a number and a time unit suffix. The supported database instances and valid values are as follows. The time suffix <strong>m</strong> indicates minutes, <strong>h</strong> indicates hours, and <strong>d</strong> indicates days:</p>
          * <ul>
-         * <li><p>Valid values for PolarDB for MySQL Cluster Edition instances: <strong>5m</strong>, <strong>10m</strong>, <strong>30m</strong>, <strong>1h</strong>, <strong>2h</strong>, <strong>3h</strong>, <strong>1d</strong>, and <strong>7d</strong>.</p>
-         * </li>
-         * <li><p>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or Enterprise SSDs (ESSDs): <strong>5m</strong>, <strong>10m</strong>, <strong>30m</strong>, <strong>1h</strong>, <strong>2h</strong>, <strong>3h</strong>, <strong>1d</strong>, and <strong>7d</strong>.</p>
-         * </li>
+         * <li>PolarDB for MySQL Cluster Edition: <strong>5m</strong>, <strong>10m</strong>, <strong>30m</strong>, <strong>1h</strong>, <strong>2h</strong>, <strong>3h</strong>, <strong>1d</strong>, and <strong>7d</strong>.</li>
+         * <li>ApsaraDB RDS for MySQL high availability series cloud disk edition: <strong>5m</strong>, <strong>10m</strong>, <strong>30m</strong>, <strong>1h</strong>, <strong>2h</strong>, <strong>3h</strong>, <strong>1d</strong>, and <strong>7d</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -704,21 +638,16 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public String coolDownTime;
 
         /**
-         * <p>The average CPU utilization threshold that triggers automatic specification scale-up. Unit: %. Valid values:</p>
+         * <p>The threshold of average CPU utilization that triggers automatic specification scale-up. Unit: %. Valid values:</p>
          * <ul>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>60</strong></p>
-         * </li>
-         * <li><p><strong>70</strong></p>
-         * </li>
-         * <li><p><strong>80</strong></p>
-         * </li>
-         * <li><p><strong>90</strong></p>
-         * </li>
+         * <li><strong>50</strong></li>
+         * <li><strong>60</strong></li>
+         * <li><strong>70</strong></li>
+         * <li><strong>80</strong></li>
+         * <li><strong>90</strong></li>
          * </ul>
          * <blockquote>
-         * <p>This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</p>
+         * <p>Notice: You must set this parameter when the target database instance is PolarDB for MySQL Cluster Edition or ApsaraDB RDS for MySQL high availability series cloud disk edition.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -731,15 +660,13 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Integer cpuUsageUpperThreshold;
 
         /**
-         * <p>Specifies whether to enable automatic specification scale-down. Valid values:</p>
+         * <p>Specifies whether automatic specification scale-down is enabled:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance or an ApsaraDB RDS for MySQL High-availability Edition instance that uses standard SSDs or ESSDs.</p>
+         * <p>Notice: You must set this parameter when the target database instance is PolarDB for MySQL Cluster Edition or ApsaraDB RDS for MySQL high availability series cloud disk edition.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -752,9 +679,9 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Boolean downgrade;
 
         /**
-         * <p>The maximum number of read-only nodes of the instance.</p>
+         * <p>The maximum number of read-only nodes for the instance.</p>
          * <blockquote>
-         * <p>This parameter must be specified if the database instance is a PolarDB for MySQL Cluster Edition instance.</p>
+         * <p>Notice: You must set this parameter when the target database instance is PolarDB for MySQL Cluster Edition.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -767,12 +694,17 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Integer maxReadOnlyNodes;
 
         /**
-         * <p>The maximum specifications to which the database instance can be scaled up. The database instance can be upgraded only to a database instance of the same edition with higher specifications. For information about the specifications of different database instances, see the following topics:</p>
+         * <p>The upper limit of the specification for automatic scale-up. You can only scale up to a higher specification within the same series of the database instance. For more details, see the specification documentation for each database instance:
+         * &lt;props=&quot;china&quot;&gt;</p>
          * <ul>
-         * <li><p>PolarDB for MySQL Cluster Edition instances: <a href="https://help.aliyun.com/document_detail/102542.html">Specifications of compute nodes</a></p>
-         * </li>
-         * <li><p>ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <a href="https://help.aliyun.com/document_detail/276974.html">Specifications</a></p>
-         * </li>
+         * <li>For PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</li>
+         * <li>For ApsaraDB RDS for MySQL high availability series cloud disk edition, see <a href="https://help.aliyun.com/document_detail/276974.html">Product specifications</a>.</li>
+         * <li>For Tair (Redis® OSS-Compatible) cloud-native (formerly cloud disk) open-source edition, see <a href="https://help.aliyun.com/document_detail/144986.html">Instance specifications</a>.</li>
+         * </ul>
+         * <p>&lt;props=&quot;intl&quot;&gt;</p>
+         * <ul>
+         * <li>For PolarDB for MySQL Cluster Edition, see <a href="https://help.aliyun.com/document_detail/102542.html">Compute node specifications</a>.</li>
+         * <li>For ApsaraDB RDS for MySQL high availability series cloud disk edition, see <a href="https://help.aliyun.com/document_detail/276974.html">Product specifications</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -785,21 +717,16 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public String maxSpec;
 
         /**
-         * <p>The average memory usage threshold that triggers automatic specification scale-up. Unit: %. Valid values:</p>
+         * <p>The threshold of average memory utilization that triggers automatic specification scale-up. Unit: %. Valid values:</p>
          * <ul>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>60</strong></p>
-         * </li>
-         * <li><p><strong>70</strong></p>
-         * </li>
-         * <li><p><strong>80</strong></p>
-         * </li>
-         * <li><p><strong>90</strong></p>
-         * </li>
+         * <li><strong>50</strong></li>
+         * <li><strong>60</strong></li>
+         * <li><strong>70</strong></li>
+         * <li><strong>80</strong></li>
+         * <li><strong>90</strong></li>
          * </ul>
          * <blockquote>
-         * <p>This parameter must be specified if the database instance is a Tair (Redis OSS-compatible) Community Edition cloud-native instance on the China site (aliyun.com).</p>
+         * <p>Notice: You must set this parameter when the target database instance is Tair (Redis® OSS-Compatible) cloud-native (formerly cloud disk) open-source edition on the China site.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -812,14 +739,11 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Integer memUsageUpperThreshold;
 
         /**
-         * <p>The observation window. The value of this parameter consists of a numeric value and a time unit suffix. The <strong>m</strong> time unit suffix specifies the minute and the <strong>h</strong> time unit suffix specifies the hour.</p>
+         * <p>The observation window. The parameter value consists of a number and a time unit suffix. The supported database instances and valid values are as follows. The time suffix <strong>m</strong> indicates minutes, and <strong>h</strong> indicates hours:</p>
          * <ul>
-         * <li><p>Valid values for PolarDB for MySQL Cluster Edition instances: <strong>5m</strong>, <strong>10m</strong>, <strong>15m</strong>, and <strong>30m</strong>.</p>
-         * </li>
-         * <li><p>Valid values for ApsaraDB RDS for MySQL High-availability Edition instances that use standard SSDs or ESSDs: <strong>5m</strong>, <strong>20m</strong>, <strong>30m</strong>, <strong>40m</strong>, and <strong>1h</strong>.</p>
-         * </li>
-         * <li><p>Valid values for Tair (Redis OSS-compatible) Community Edition cloud-native instances: <strong>5m</strong>, <strong>10m</strong>, <strong>15m</strong>, and <strong>30m</strong>.</p>
-         * </li>
+         * <li>PolarDB for MySQL Cluster Edition: <strong>5m</strong>, <strong>10m</strong>, <strong>15m</strong>, and <strong>30m</strong>.</li>
+         * <li>ApsaraDB RDS for MySQL high availability series cloud disk edition: <strong>5m</strong>, <strong>20m</strong>, <strong>30m</strong>, <strong>40m</strong>, and <strong>1h</strong>.</li>
+         * <li>Tair (Redis® OSS-Compatible) cloud-native (formerly cloud disk) open-source edition: <strong>5m</strong>, <strong>10m</strong>, <strong>15m</strong>, and <strong>30m</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -832,12 +756,10 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public String observationWindowSize;
 
         /**
-         * <p>Specifies whether to enable automatic specification scale-up. Valid values:</p>
+         * <p>Specifies whether to enable automatic specification scale-up:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -930,12 +852,10 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
 
     public static class ModifyAutoScalingConfigRequestStorage extends TeaModel {
         /**
-         * <p>Specifies whether to apply the <strong>Storage</strong> configuration of the automatic storage expansion feature. Valid values:</p>
+         * <p>Specifies whether to apply the configurations under the <strong>Storage</strong> configuration item for the automatic storage expansion feature:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -945,18 +865,13 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Boolean apply;
 
         /**
-         * <p>The average storage usage threshold that triggers automatic storage expansion. Unit: %. Valid values:</p>
+         * <p>The threshold of average storage space utilization that triggers automatic storage expansion. Unit: %. Valid values:</p>
          * <ul>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>60</strong></p>
-         * </li>
-         * <li><p><strong>70</strong></p>
-         * </li>
-         * <li><p><strong>80</strong></p>
-         * </li>
-         * <li><p><strong>90</strong></p>
-         * </li>
+         * <li><strong>50</strong></li>
+         * <li><strong>60</strong></li>
+         * <li><strong>70</strong></li>
+         * <li><strong>80</strong></li>
+         * <li><strong>90</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -969,15 +884,13 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Integer diskUsageUpperThreshold;
 
         /**
-         * <p>The maximum storage size of the database instance. Unit: GB. The value must be greater than or equal to the total storage size of the instance.</p>
+         * <p>The upper limit of the storage space. The value must be greater than or equal to the current total storage space of the instance. Valid values:</p>
          * <ul>
-         * <li><p>If the instance uses ESSDs, the maximum value of this parameter can be 32000.</p>
-         * </li>
-         * <li><p>If the instance uses standard SSDs, the maximum value of this parameter can be 6000.</p>
-         * </li>
+         * <li>ESSD cloud disk upper limit: 32,000 GB.</li>
+         * <li>Standard SSD upper limit: 6,000 GB.</li>
          * </ul>
          * <blockquote>
-         * <p>The standard SSD storage type is phased out. We recommend that you <a href="https://help.aliyun.com/document_detail/314678.html">upgrade the storage type of your instance from standard SSDs to ESSDs</a>.</p>
+         * <p>Standard SSDs are retired. <a href="https://help.aliyun.com/document_detail/314678.html">Upgrade to ESSD cloud disks</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -990,12 +903,10 @@ public class ModifyAutoScalingConfigRequest extends TeaModel {
         public Integer maxStorage;
 
         /**
-         * <p>Specifies whether to enable automatic storage expansion. Valid values:</p>
+         * <p>Specifies whether to enable automatic storage expansion:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * 
          * <strong>example:</strong>

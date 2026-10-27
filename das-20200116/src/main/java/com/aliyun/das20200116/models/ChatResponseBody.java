@@ -23,6 +23,13 @@ public class ChatResponseBody extends TeaModel {
     public String agentId;
 
     /**
+     * <strong>example:</strong>
+     * <p>direct_skill_rejected</p>
+     */
+    @NameInMap("Code")
+    public String code;
+
+    /**
      * <p>The response content.</p>
      * 
      * <strong>example:</strong>
@@ -57,6 +64,13 @@ public class ChatResponseBody extends TeaModel {
      */
     @NameInMap("Label")
     public String label;
+
+    /**
+     * <strong>example:</strong>
+     * <p>[HdmApiClient] instance is not managed by the agent</p>
+     */
+    @NameInMap("Message")
+    public String message;
 
     /**
      * <p>The message ID.</p>
@@ -232,6 +246,14 @@ public class ChatResponseBody extends TeaModel {
         return this.agentId;
     }
 
+    public ChatResponseBody setCode(String code) {
+        this.code = code;
+        return this;
+    }
+    public String getCode() {
+        return this.code;
+    }
+
     public ChatResponseBody setContent(String content) {
         this.content = content;
         return this;
@@ -262,6 +284,14 @@ public class ChatResponseBody extends TeaModel {
     }
     public String getLabel() {
         return this.label;
+    }
+
+    public ChatResponseBody setMessage(String message) {
+        this.message = message;
+        return this;
+    }
+    public String getMessage() {
+        return this.message;
     }
 
     public ChatResponseBody setMessageId(String messageId) {

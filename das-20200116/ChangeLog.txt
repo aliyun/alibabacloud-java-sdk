@@ -1,3 +1,8 @@
+2026-10-27 Version: 4.0.2
+- Update API Chat: add response parameters Body.Code.
+- Update API Chat: add response parameters Body.Message.
+
+
 2026-10-12 Version: 4.0.1
 - Update API Chat: add request parameters ForwardedProps.
 

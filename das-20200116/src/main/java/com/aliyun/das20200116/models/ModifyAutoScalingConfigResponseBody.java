@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyAutoScalingConfigResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -16,7 +16,7 @@ public class ModifyAutoScalingConfigResponseBody extends TeaModel {
     /**
      * <p>The returned message.</p>
      * <blockquote>
-     * <p>If the request was successful, <strong>Successful</strong> is returned. If the request failed, an error message such as an error code is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,11 +35,11 @@ public class ModifyAutoScalingConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request was successful:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
+     * <li><p><strong>true</strong>: The request was successful.</p>
      * </li>
-     * <li><p><strong>false</strong></p>
+     * <li><p><strong>false</strong>: The request failed.</p>
      * </li>
      * </ul>
      * 

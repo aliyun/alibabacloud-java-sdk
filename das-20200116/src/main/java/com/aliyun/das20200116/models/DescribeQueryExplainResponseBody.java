@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeQueryExplainResponseBody extends TeaModel {
     /**
-     * <p>The status code returned. A value of 200 indicates success.</p>
+     * <p>The returned status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,15 +14,15 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>List of execution plans.</p>
+     * <p>List<ExplainedSqlDO></p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeQueryExplainResponseBodyData> data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned for the request.</p>
      * <blockquote>
-     * <p>If the request succeeds, this parameter returns Successful. If the request fails, this parameter returns error details such as an error code.</p>
+     * <p>If the request is successful, Successful is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
@@ -41,12 +41,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request succeeded.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The request was successful.</li>
+     * <li><strong>false</strong>: The request failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,79 +100,79 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
 
     public static class DescribeQueryExplainResponseBodyData extends TeaModel {
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("Argument")
         public String argument;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("AvgRowSize")
         public String avgRowSize;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("DefinedValues")
         public String definedValues;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("EstimateCPU")
         public String estimateCPU;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("EstimateExecutions")
         public String estimateExecutions;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("EstimateIO")
         public String estimateIO;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("EstimateRows")
         public String estimateRows;
 
         /**
-         * <p>Additional information.</p>
+         * <p>The additional information.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("Extra")
         public String extra;
 
         /**
-         * <p>The ID of the query.</p>
+         * <p>The query ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -183,13 +181,13 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>A reserved field for the PostgreSQL engine.</p>
+         * <p>The reserved field for the PostgreSQL engine.</p>
          */
         @NameInMap("IndexList")
         public java.util.List<String> indexList;
 
         /**
-         * <p>The index actually used in the execution plan.</p>
+         * <p>The index that is actually used in the execution plan.</p>
          * 
          * <strong>example:</strong>
          * <p>PRIMARY</p>
@@ -198,7 +196,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The length of the index actually used.</p>
+         * <p>The length of the used index.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -207,67 +205,67 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         public String keyLen;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("LogicalOp")
         public String logicalOp;
 
         /**
-         * <p>A reserved field for the PolarDB X engine.</p>
+         * <p>The reserved field for the PolarDB-X engine.</p>
          */
         @NameInMap("LogicalPlanList")
         public java.util.List<String> logicalPlanList;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("NodeId")
         public String nodeId;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("OutputList")
         public String outputList;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("Parallel")
         public String parallel;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("Parent")
         public String parent;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("PhysicalOp")
         public String physicalOp;
 
         /**
-         * <p>The indexes that might be used.</p>
+         * <p>The possible indexes.</p>
          * 
          * <strong>example:</strong>
          * <p>test_idx</p>
@@ -276,16 +274,16 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         public String possibleKeys;
 
         /**
-         * <p>A reserved field for the PostgreSQL engine.</p>
+         * <p>The reserved field for the PostgreSQL engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("QueryPlan")
         public String queryPlan;
 
         /**
-         * <p>The column used by the index.</p>
+         * <p>The columns used with the index.</p>
          * 
          * <strong>example:</strong>
          * <p>test_column</p>
@@ -303,7 +301,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         public String rows;
 
         /**
-         * <p>The type of the query.</p>
+         * <p>The select type.</p>
          * 
          * <strong>example:</strong>
          * <p>SIMPLE</p>
@@ -312,25 +310,25 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         public String selectType;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("StmtId")
         public String stmtId;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("StmtText")
         public String stmtText;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -339,16 +337,16 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         public String table;
 
         /**
-         * <p>A reserved field for the PostgreSQL engine.</p>
+         * <p>The reserved field for the PostgreSQL engine.</p>
          */
         @NameInMap("TableList")
         public java.util.List<String> tableList;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("TotalSubtreeCost")
         public String totalSubtreeCost;
@@ -363,10 +361,10 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>A reserved field for the SQL Server engine.</p>
+         * <p>The reserved field for the SQL Server engine.</p>
          * 
          * <strong>example:</strong>
-         * <p>无</p>
+         * <p>None</p>
          */
         @NameInMap("Warnings")
         public String warnings;

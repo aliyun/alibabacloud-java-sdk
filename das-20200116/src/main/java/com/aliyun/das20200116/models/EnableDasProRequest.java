@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableDasProRequest extends TeaModel {
     /**
-     * <p>The database instance ID.</p>
+     * <p>The instance ID of the database.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,18 +15,13 @@ public class EnableDasProRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The storage duration of SQL Explorer data. Unit: day. Default value: <strong>30</strong>. Valid values:</p>
+     * <p>The storage duration of SQL Explorer data. Unit: days. Default value: <strong>30</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>180</strong></p>
-     * </li>
-     * <li><p><strong>365</strong></p>
-     * </li>
-     * <li><p><strong>1095</strong></p>
-     * </li>
-     * <li><p><strong>1825</strong></p>
-     * </li>
+     * <li><strong>30</strong></li>
+     * <li><strong>180</strong></li>
+     * <li><strong>365</strong></li>
+     * <li><strong>1095</strong></li>
+     * <li><strong>1825</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,9 +31,9 @@ public class EnableDasProRequest extends TeaModel {
     public Integer sqlRetention;
 
     /**
-     * <p>The ID of the Alibaba Cloud account that is used to create the database instance.</p>
+     * <p>The instance ID, which is the ID of the Alibaba Cloud account that created the database instance.</p>
      * <blockquote>
-     * <p>This parameter is optional. The system can automatically obtain the account ID based on the value of InstanceId when you call this operation.</p>
+     * <p>This parameter is optional. After you specify the ID of the target database instance, the system automatically obtains the instance ID when you call the API operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

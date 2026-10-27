@@ -14,13 +14,13 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The envelope for asynchronous query results. The first call returns <strong>ResultId</strong> and <strong>State</strong>. Poll with the exact same request parameters until <strong>State</strong> is <strong>SUCCESS</strong>, then retrieve the statistical details from <strong>List</strong>.</p>
+     * <p>The envelope for the asynchronous query result. The first call returns <strong>ResultId</strong> and <strong>State</strong>. You must poll the API with the exact same request parameters until <strong>State</strong> is <strong>SUCCESS</strong>, and then retrieve the statistical details from <strong>List</strong>.</p>
      */
     @NameInMap("Data")
     public DescribeSqlInsightStatisticResponseBodyData data;
 
     /**
-     * <p>The response message. An error description is returned if the request fails.</p>
+     * <p>The response message. An error description is returned when the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Successful</p>
@@ -29,7 +29,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique ID of the request, which can be used for troubleshooting.</p>
+     * <p>The unique identifier of the request, which can be used for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>B6D17591-B48B-4D31-9CD6-9B9796B2****</p>
@@ -41,7 +41,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed. Check the <strong>Code</strong> and <strong>Message</strong> fields to determine the cause.</li>
+     * <li><strong>false</strong>: The request failed. Check the cause based on <strong>Code</strong> and <strong>Message</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,7 +97,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
 
     public static class DescribeSqlInsightStatisticResponseBodyDataDataListTrend extends TeaModel {
         /**
-         * <p>The timestamp of the trend data point. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The timestamp of the trend point, which is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1718000000000</p>
@@ -151,11 +151,11 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long affectRows;
 
         /**
-         * <p>The value of the aggregation dimension for this statistical entry, which varies based on the <strong>Type</strong> request parameter. Valid values:</p>
+         * <p>The value of the aggregation dimension for the current statistics. This value varies based on the <strong>Type</strong> request parameter. Valid values:</p>
          * <ul>
          * <li>When aggregated by SQL template: the SQL template ID, which is the same as <strong>SqlId</strong>.</li>
-         * <li>When <strong>Type</strong> is set to <strong>FullRequestOrigin</strong>: the access source address.</li>
-         * <li>When <strong>Type</strong> is set to <strong>FullRequestUser</strong>: the database username.</li>
+         * <li>When <strong>Type</strong> is <strong>FullRequestOrigin</strong>: the source access address.</li>
+         * <li>When <strong>Type</strong> is <strong>FullRequestUser</strong>: the database username.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -167,7 +167,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The average number of affected rows.</p>
          * <blockquote>
-         * <p>Returned only for Lindorm instances. The value is null for other database engines.</p>
+         * <p>Returned only for Lindorm instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -179,7 +179,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The average CPU time consumed by SQL execution, in microseconds.</p>
          * <blockquote>
-         * <p>This metric is exclusive to SQL Server instances. The value is null for other database engines.</p>
+         * <p>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -189,9 +189,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Double avgCpuTime;
 
         /**
-         * <p>The average number of rows fetched by the PolarDB-X compute node from data nodes.</p>
+         * <p>The average number of rows fetched by PolarDB-X compute nodes from data nodes.</p>
          * <blockquote>
-         * <p>This metric is exclusive to PolarDB-X compute nodes. The value is null or 0 for other database engines.</p>
+         * <p>This is an exclusive metric for PolarDB-X compute nodes. For other engines, the value is null or 0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -203,7 +203,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The average lock wait time per execution, in milliseconds.</p>
          * <blockquote>
-         * <p>Data is available only when <strong>Version</strong> is set to <strong>1</strong>.</p>
+         * <p>Data is available only when <strong>Version</strong> is <strong>1</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The average number of logical reads per execution.</p>
          * <blockquote>
-         * <p>Data is available only when <strong>Version</strong> is set to <strong>1</strong>.</p>
+         * <p>Data is available only when <strong>Version</strong> is <strong>1</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The average number of physical asynchronous reads per execution.</p>
          * <blockquote>
-         * <p>Data is available only when <strong>Version</strong> is set to <strong>1</strong>.</p>
+         * <p>Data is available only when <strong>Version</strong> is <strong>1</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -239,7 +239,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The average number of physical reads.</p>
          * <blockquote>
-         * <p>This metric is exclusive to SQL Server instances. The value is null for other database engines.</p>
+         * <p>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -251,7 +251,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The average number of physical synchronous reads per execution.</p>
          * <blockquote>
-         * <p>Data is available only when <strong>Version</strong> is set to <strong>1</strong>.</p>
+         * <p>Data is available only when <strong>Version</strong> is <strong>1</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -261,9 +261,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Double avgPhysicalSyncRead;
 
         /**
-         * <p>The average number of updated rows and returned rows for the PolarDB-X compute node.</p>
+         * <p>The average number of updated and returned rows for PolarDB-X compute nodes.</p>
          * <blockquote>
-         * <p>This metric is exclusive to PolarDB-X compute nodes. The value is null or 0 for other database engines.</p>
+         * <p>This is an exclusive metric for PolarDB-X compute nodes. For other engines, the value is null or 0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -273,7 +273,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Double avgRows;
 
         /**
-         * <p>The average number of rows scanned per execution.</p>
+         * <p>The average number of scanned rows per execution.</p>
          * 
          * <strong>example:</strong>
          * <p>53421.0</p>
@@ -282,7 +282,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Double avgRowsExamined;
 
         /**
-         * <p>The average number of rows returned per execution.</p>
+         * <p>The average number of returned rows per execution.</p>
          * 
          * <strong>example:</strong>
          * <p>14</p>
@@ -291,7 +291,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Double avgRowsReturned;
 
         /**
-         * <p>The average number of rows updated per execution.</p>
+         * <p>The average number of updated rows per execution.</p>
          * 
          * <strong>example:</strong>
          * <p>30.2</p>
@@ -311,7 +311,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The average number of scanned rows.</p>
          * <blockquote>
-         * <p>This field is not returned by this operation. Use <strong>AvgRowsExamined</strong> for the average number of scanned rows.</p>
+         * <p>This operation does not return this field. To obtain the average number of scanned rows, use <strong>AvgRowsExamined</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -321,9 +321,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Double avgScanRows;
 
         /**
-         * <p>The average number of requests sent by the PolarDB-X compute node to data nodes.</p>
+         * <p>The average number of requests sent from PolarDB-X compute nodes to data nodes.</p>
          * <blockquote>
-         * <p>This metric is exclusive to PolarDB-X compute nodes. The value is null or 0 for other database engines.</p>
+         * <p>This is an exclusive metric for PolarDB-X compute nodes. For other engines, the value is null or 0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -335,7 +335,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The average number of logical writes.</p>
          * <blockquote>
-         * <p>This metric is exclusive to SQL Server instances. The value is null for other database engines.</p>
+         * <p>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -345,7 +345,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Double avgWrites;
 
         /**
-         * <p>The total number of executions of the SQL template within the statistical interval.</p>
+         * <p>The total number of executions for the SQL template within the statistical period.</p>
          * 
          * <strong>example:</strong>
          * <p>127</p>
@@ -354,7 +354,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The ratio of the number of executions of this statistical entry to the total number of executions of all SQL statements on the instance. The value ranges from 0 to 1.</p>
+         * <p>The ratio of the number of times the SQL template in this entry is executed to the total number of times SQL statements execute on the instance. Valid values: 0 to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0586</p>
@@ -365,7 +365,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The total CPU time consumed by SQL execution, in microseconds.</p>
          * <blockquote>
-         * <p>This metric is exclusive to SQL Server instances. The value is null for other database engines.</p>
+         * <p>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -384,9 +384,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public String database;
 
         /**
-         * <p>The error code returned by SQL execution.</p>
+         * <p>The error code returned by the SQL execution.</p>
          * <blockquote>
-         * <p>The error code is a detail of a single SQL statement. This operation returns template-level aggregated statistics and does not return this field. Use <strong>ErrorCount</strong> for error information.</p>
+         * <p>Error codes belong to the details of a single SQL statement. This operation returns aggregated statistics at the template level and does not return this field. To check error occurrences, use <strong>ErrorCount</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -396,7 +396,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The number of execution errors for the SQL template within the statistical interval.</p>
+         * <p>The number of execution errors for the SQL template within the statistical period.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -405,9 +405,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long errorCount;
 
         /**
-         * <p>The time when the SQL template first appeared.</p>
+         * <p>The time when the SQL template first appeared. The time is a UNIX timestamp in milliseconds.</p>
          * <blockquote>
-         * <p>This field is not returned by this operation.</p>
+         * <p>This operation does not return this field.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -417,9 +417,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long firstTime;
 
         /**
-         * <p>The total number of rows fetched by the PolarDB-X compute node from data nodes.</p>
+         * <p>The total number of rows fetched by PolarDB-X compute nodes from data nodes.</p>
          * <blockquote>
-         * <p>This metric is exclusive to PolarDB-X compute nodes. The value is null or 0 for other database engines.</p>
+         * <p>This is an exclusive metric for PolarDB-X compute nodes. For other engines, the value is null or 0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -431,7 +431,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The hash value of the SQL template, returned together with the SQL template.</p>
          * <blockquote>
-         * <p>This value is generated by the PolarDB-X compute node kernel. The value is empty for non-PolarDB-X compute node instances.</p>
+         * <p>This value is generated by the kernel of PolarDB-X compute nodes. For instances that are not PolarDB-X compute nodes, the value is empty.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -443,7 +443,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The endpoint of the instance to which the statistical data belongs.</p>
          * <blockquote>
-         * <p>Whether this field is returned depends on the aggregated storage link of the instance. The value is null for some links.</p>
+         * <p>Whether this field is returned depends on the converged storage link of the instance. For some links, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -455,7 +455,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The total lock wait time, in milliseconds.</p>
          * <blockquote>
-         * <p>Data is available only when <strong>Version</strong> is set to <strong>1</strong>.</p>
+         * <p>Data is available only when <strong>Version</strong> is <strong>1</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -467,7 +467,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The total number of logical reads.</p>
          * <blockquote>
-         * <p>Data is available only when <strong>Version</strong> is set to <strong>1</strong>.</p>
+         * <p>Data is available only when <strong>Version</strong> is <strong>1</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -477,9 +477,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Double logicalRead;
 
         /**
-         * <p>The maximum CPU time in a single execution, in microseconds.</p>
+         * <p>The maximum CPU time consumed in a single execution, in microseconds.</p>
          * <blockquote>
-         * <p>This metric is exclusive to SQL Server instances. The value is null for other database engines.</p>
+         * <p>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -491,7 +491,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The maximum number of logical reads in a single execution.</p>
          * <blockquote>
-         * <p>Data is available only when <strong>Version</strong> is set to <strong>1</strong>.</p>
+         * <p>Data is available only when <strong>Version</strong> is <strong>1</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -503,7 +503,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The maximum number of physical reads in a single execution.</p>
          * <blockquote>
-         * <p>This metric is exclusive to SQL Server instances. The value is null for other database engines.</p>
+         * <p>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -513,9 +513,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long maxPhysicalRead;
 
         /**
-         * <p>The maximum number of rows scanned in a single execution.</p>
+         * <p>The maximum number of scanned rows in a single execution.</p>
          * <blockquote>
-         * <p>This field is not returned by this operation. Use <strong>RowsExamined</strong> and <strong>AvgRowsExamined</strong> for scanned row counts.</p>
+         * <p>This operation does not return this field. To obtain the number of scanned rows, use <strong>RowsExamined</strong> and <strong>AvgRowsExamined</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -525,7 +525,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long maxRowsExamined;
 
         /**
-         * <p>The maximum number of rows returned in a single execution.</p>
+         * <p>The maximum number of returned rows in a single execution.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -545,7 +545,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The maximum number of logical writes in a single execution.</p>
          * <blockquote>
-         * <p>This metric is exclusive to SQL Server instances. The value is null for other database engines.</p>
+         * <p>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -555,9 +555,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long maxWrites;
 
         /**
-         * <p>The minimum CPU time in a single execution, in microseconds.</p>
+         * <p>The minimum CPU time consumed in a single execution, in microseconds.</p>
          * <blockquote>
-         * <p>This metric is exclusive to SQL Server instances. The value is null for other database engines.</p>
+         * <p>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -569,7 +569,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The minimum number of logical reads in a single execution.</p>
          * <blockquote>
-         * <p>Data is available only when <strong>Version</strong> is set to <strong>1</strong>.</p>
+         * <p>Data is available only when <strong>Version</strong> is <strong>1</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -581,7 +581,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The minimum number of physical reads in a single execution.</p>
          * <blockquote>
-         * <p>This metric is exclusive to SQL Server instances. The value is null for other database engines.</p>
+         * <p>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -591,7 +591,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long minPhysicalRead;
 
         /**
-         * <p>The minimum number of rows returned in a single execution.</p>
+         * <p>The minimum number of returned rows in a single execution.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -611,7 +611,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The minimum number of logical writes in a single execution.</p>
          * <blockquote>
-         * <p>This metric is exclusive to SQL Server instances. The value is null for other database engines.</p>
+         * <p>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -621,9 +621,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long minWrites;
 
         /**
-         * <p>The display alias configured for the access source address.</p>
+         * <p>The display alias configured for the source access address.</p>
          * <blockquote>
-         * <p>Returned only when aggregated by access source (when <strong>Type</strong> is set to <strong>FullRequestOrigin</strong>). The value is null in other scenarios.</p>
+         * <p>Returned only when aggregated by access source (when <strong>Type</strong> is <strong>FullRequestOrigin</strong>). In other scenarios, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -635,7 +635,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The source address of the client that initiated the SQL statement.</p>
          * <blockquote>
-         * <p>When <strong>Type</strong> is set to <strong>FullRequestOrigin</strong>, this field serves as the aggregation dimension for the statistical entry.</p>
+         * <p>When <strong>Type</strong> is <strong>FullRequestOrigin</strong>, this field is the aggregation dimension for the statistics.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -647,7 +647,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The parameter content of the SQL sample.</p>
          * <blockquote>
-         * <p>This operation returns template-level aggregated statistics and does not return this field.</p>
+         * <p>This operation returns aggregated statistics at the template level and does not return this field.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -659,7 +659,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The total number of physical asynchronous reads.</p>
          * <blockquote>
-         * <p>Data is available only when <strong>Version</strong> is set to <strong>1</strong>.</p>
+         * <p>Data is available only when <strong>Version</strong> is <strong>1</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -671,7 +671,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The total number of physical reads.</p>
          * <blockquote>
-         * <p>This metric is exclusive to SQL Server instances. The value is null for other database engines.</p>
+         * <p>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -683,7 +683,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The total number of physical synchronous reads.</p>
          * <blockquote>
-         * <p>Data is available only when <strong>Version</strong> is set to <strong>1</strong>.</p>
+         * <p>Data is available only when <strong>Version</strong> is <strong>1</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -693,9 +693,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Double physicalSyncRead;
 
         /**
-         * <p>The port of the instance to which the statistical data belongs.</p>
+         * <p>The connection port of the instance to which the statistical data belongs.</p>
          * <blockquote>
-         * <p>Whether this field is returned depends on the aggregated storage link of the instance. The value is null for some links.</p>
+         * <p>Whether this field is returned depends on the converged storage link of the instance. For some links, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -714,9 +714,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public String psql;
 
         /**
-         * <p>The total number of updated rows and returned rows for the PolarDB-X compute node.</p>
+         * <p>The total number of updated and returned rows for PolarDB-X compute nodes.</p>
          * <blockquote>
-         * <p>This metric is exclusive to PolarDB-X compute nodes. The value is null or 0 for other engines.</p>
+         * <p>This is an exclusive metric for PolarDB-X compute nodes. For other engines, the value is null or 0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -726,7 +726,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long rows;
 
         /**
-         * <p>The total number of rows examined by the SQL template within the statistical interval.</p>
+         * <p>The total number of scanned rows for the SQL template within the statistical period.</p>
          * 
          * <strong>example:</strong>
          * <p>2048576</p>
@@ -735,7 +735,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long rowsExamined;
 
         /**
-         * <p>The total number of rows returned by the SQL template within the statistical interval.</p>
+         * <p>The total number of returned rows for the SQL template within the statistical period.</p>
          * 
          * <strong>example:</strong>
          * <p>14</p>
@@ -744,9 +744,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long rowsReturned;
 
         /**
-         * <p>The total execution duration of the SQL template within the statistical interval. Unit: milliseconds.</p>
+         * <p>The total execution time of the SQL template within the statistical period, in milliseconds.</p>
          * <blockquote>
-         * <p>For PolarDB-X compute nodes (where <strong>Role</strong> is <strong>polarx_cn</strong>) with kernel versions earlier than 5.4.13, this value is converted from microseconds to milliseconds.</p>
+         * <p>For PolarDB-X compute nodes (where <strong>Role</strong> is <strong>polarx_cn</strong>) with a kernel version earlier than 5.4.13, this value is converted from microseconds to milliseconds.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -756,9 +756,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Double rt;
 
         /**
-         * <p>The number of times the execution duration exceeds 1 second.</p>
+         * <p>The number of times the execution duration exceeded 1 second.</p>
          * <blockquote>
-         * <p>Whether this field is returned depends on the aggregation storage link of the instance. The value is null for certain links.</p>
+         * <p>Whether this field is returned depends on the aggregated storage link of the instance. For some links, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -768,7 +768,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long rtGreaterThanOneSecondCount;
 
         /**
-         * <p>The ratio of the total execution duration of this entry to the total execution duration of all SQL statements on the instance. Valid values: 0 to 1.</p>
+         * <p>The ratio of the total execution time of this statistic to the total execution time of all SQL statements for the instance. Valid values: 0 to 1.</p>
          * 
          * <strong>example:</strong>
          * <p>0.1384</p>
@@ -789,9 +789,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public String sampleType;
 
         /**
-         * <p>The number of rows scanned by a single SQL statement.</p>
+         * <p>The number of scanned rows for a single SQL statement.</p>
          * <blockquote>
-         * <p>This operation returns template-level aggregated statistics and does not return this field. Use the aggregated metrics <strong>RowsExamined</strong> and <strong>AvgRowsExamined</strong> instead.</p>
+         * <p>This operation returns aggregated statistics at the template dimension and does not return this field. Use the aggregated metrics <strong>RowsExamined</strong> and <strong>AvgRowsExamined</strong> instead.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -801,9 +801,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long scanRows;
 
         /**
-         * <p>The total number of requests sent from the PolarDB-X compute node to data nodes.</p>
+         * <p>The total number of requests sent from PolarDB-X compute nodes to data nodes.</p>
          * <blockquote>
-         * <p>This metric is exclusive to PolarDB-X compute nodes. The value is null or 0 for other engines.</p>
+         * <p>This is an exclusive metric for PolarDB-X compute nodes. For other engines, the value is null or 0.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -825,7 +825,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public String sql;
 
         /**
-         * <p>The SQL template ID that uniquely identifies a type of parameterized SQL statement. Multiple executions under the same template are aggregated into a single statistical entry. You can use this ID to correlate the same type of SQL across multi-dimensional queries.</p>
+         * <p>The SQL template ID, which uniquely identifies a category of parameterized SQL statements. Multiple executions under the same template are aggregated into a single statistic. You can use this ID to associate the same category of SQL statements across multi-dimensional queries.</p>
          * 
          * <strong>example:</strong>
          * <p>651b56fe9418d48edb8fdf0980ec****</p>
@@ -834,7 +834,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public String sqlId;
 
         /**
-         * <p>The SQL text with parameter values uniformly processed, used in sample data scenarios.</p>
+         * <p>The SQL text after unified processing of parameter values, used in sample data scenarios.</p>
          * <blockquote>
          * <p>This operation does not return this field.</p>
          * </blockquote>
@@ -874,7 +874,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public String sqlType;
 
         /**
-         * <p>The total number of rows updated by the SQL template within the statistical interval.</p>
+         * <p>The total number of updated rows for the SQL template within the statistical period.</p>
          * 
          * <strong>example:</strong>
          * <p>3810</p>
@@ -891,7 +891,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The database thread ID that executed the SQL statement.</p>
          * <blockquote>
-         * <p>The thread ID is a detail of a single SQL statement. This operation returns template-level aggregated statistics and does not return this field.</p>
+         * <p>The thread ID belongs to the details of a single SQL statement. This operation returns aggregated statistics at the template dimension and does not return this field.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -901,9 +901,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public String threadId;
 
         /**
-         * <p>The execution duration ratio.</p>
+         * <p>The execution time proportion.</p>
          * <blockquote>
-         * <p>This operation returns the execution duration ratio through <strong>RtRate</strong> and does not return this field.</p>
+         * <p>This operation returns the execution time proportion through <strong>RtRate</strong> and does not return this field.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -913,9 +913,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Double timeRate;
 
         /**
-         * <p>The data timestamp. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The data timestamp, which is a UNIX timestamp in milliseconds.</p>
          * <blockquote>
-         * <p>The statistical results are aggregated at the SQL template level and do not return this field.</p>
+         * <p>The statistical results are aggregated at the SQL template dimension and do not return this field.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -927,7 +927,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The total number of affected rows.</p>
          * <blockquote>
-         * <p>This field is returned only for Lindorm instances. The value is null for other engines.</p>
+         * <p>This field is returned only for Lindorm instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -937,9 +937,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long totalAffectRows;
 
         /**
-         * <p>The total SQL execution duration.</p>
+         * <p>The total execution time of the SQL statement.</p>
          * <blockquote>
-         * <p>This operation does not return this field. Use <strong>Rt</strong> for the total execution duration.</p>
+         * <p>This operation does not return this field. Use <strong>Rt</strong> for the total execution time.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -949,9 +949,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long totalRt;
 
         /**
-         * <p>The total number of rows scanned.</p>
+         * <p>The total number of scanned rows.</p>
          * <blockquote>
-         * <p>This operation does not return this field. Use <strong>RowsExamined</strong> for the total number of rows scanned.</p>
+         * <p>This operation does not return this field. Use <strong>RowsExamined</strong> for the total number of scanned rows.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -961,18 +961,18 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long totalScanRows;
 
         /**
-         * <p>The execution count trend sequence of the SQL template, divided into time slices within the query time window.</p>
+         * <p>The trend sequence of execution counts for the SQL template, divided by time slices within the query time window.</p>
          * <blockquote>
-         * <p>This field is returned only when the request parameter <strong>DoFillTrend</strong> is set to <strong>true</strong> and the trend padding capability is enabled for the instance. The time slice interval is automatically determined by the query span. Time slices with no data may be padded with zeros.</p>
+         * <p>This field is returned only when the request parameter <strong>DoFillTrend</strong> is set to <strong>true</strong> and the trend padding feature is enabled for the instance. The time slice interval is automatically determined by the query span. Time slices with no data may be padded with zeros.</p>
          * </blockquote>
          */
         @NameInMap("Trend")
         public java.util.List<DescribeSqlInsightStatisticResponseBodyDataDataListTrend> trend;
 
         /**
-         * <p>The number of rows updated by a single SQL statement.</p>
+         * <p>The number of updated rows for a single SQL statement.</p>
          * <blockquote>
-         * <p>This operation returns template-level aggregated statistics and does not return this field. Use the aggregated metrics <strong>SumRowsUpdated</strong> and <strong>AvgRowsUpdated</strong> instead.</p>
+         * <p>This operation returns aggregated statistics at the template dimension and does not return this field. Use the aggregated metrics <strong>SumRowsUpdated</strong> and <strong>AvgRowsUpdated</strong> instead.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -984,7 +984,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The database username that executed the SQL statement.</p>
          * <blockquote>
-         * <p>When <strong>Type</strong> is set to <strong>FullRequestUser</strong>, this field serves as the aggregation dimension for the statistical entry.</p>
+         * <p>When <strong>Type</strong> is <strong>FullRequestUser</strong>, this field is the aggregation dimension for this statistic.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -994,13 +994,13 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public String user;
 
         /**
-         * <p>The SQL Explorer data collection link version. The value <strong>1</strong> is returned when the instance collects logical read or lock wait data. Otherwise, the value <strong>0</strong> is returned. Valid values:</p>
+         * <p>The version of the SQL Explorer data collection link. If the instance collects logical read or lock wait data, the value is <strong>1</strong>. Otherwise, the value is <strong>0</strong>. Valid values:</p>
          * <ul>
          * <li><strong>0</strong>: V0 basic collection link.</li>
-         * <li><strong>1</strong>: V1 collection link, which additionally collects four metrics (<strong>LockWaitTime</strong>, <strong>LogicalRead</strong>, <strong>PhysicalSyncRead</strong>, and <strong>PhysicalAsyncRead</strong>) on top of V0.</li>
+         * <li><strong>1</strong>: V1 collection link, which collects four additional metrics based on V0: <strong>LockWaitTime</strong>, <strong>LogicalRead</strong>, <strong>PhysicalSyncRead</strong>, and <strong>PhysicalAsyncRead</strong>.</li>
          * </ul>
          * <blockquote>
-         * <p>When the value is <strong>0</strong>, the extended metrics contain no data.</p>
+         * <p>When <strong>0</strong> is returned, the preceding extended metrics have no data.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1012,7 +1012,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The VPC ID of the instance to which the statistical data belongs.</p>
          * <blockquote>
-         * <p>Whether this field is returned depends on the aggregation storage link of the instance. The value is null for certain links.</p>
+         * <p>Whether this field is returned depends on the aggregated storage link of the instance. For some links, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1024,7 +1024,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The total number of logical writes.</p>
          * <blockquote>
-         * <p>This metric is exclusive to SQL Server instances. The value is null for other engines.</p>
+         * <p>This is an exclusive metric for SQL Server instances. For other engines, the value is null.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1676,7 +1676,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         /**
          * <p>The extended information.</p>
          * <blockquote>
-         * <p>This field is not returned by this operation.</p>
+         * <p>This operation does not return this field.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1692,7 +1692,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public java.util.List<DescribeSqlInsightStatisticResponseBodyDataDataList> list;
 
         /**
-         * <p>The current page number, corresponding to the request parameter <strong>PageNo</strong>.</p>
+         * <p>The current page number, which corresponds to the request parameter <strong>PageNo</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1701,7 +1701,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long pageNo;
 
         /**
-         * <p>The number of entries per page, corresponding to the request parameter <strong>PageSize</strong>.</p>
+         * <p>The number of entries returned per page, which corresponds to the request parameter <strong>PageSize</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1710,7 +1710,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The total number of statistical entries that match the query conditions. You can use this value for pagination calculation.</p>
+         * <p>The total number of statistical entries that meet the query conditions, which can be used for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1767,7 +1767,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
 
     public static class DescribeSqlInsightStatisticResponseBodyData extends TeaModel {
         /**
-         * <p>The SQL Explorer statistical query results.</p>
+         * <p>The SQL Explorer statistical query result.</p>
          * <blockquote>
          * <p>Returned only when <strong>State</strong> is <strong>SUCCESS</strong>.</p>
          * </blockquote>
@@ -1776,7 +1776,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public DescribeSqlInsightStatisticResponseBodyDataData data;
 
         /**
-         * <p>The error code of the asynchronous query failure.</p>
+         * <p>The error code for the failed asynchronous query.</p>
          * <blockquote>
          * <p>This field is returned only when the query fails.</p>
          * </blockquote>
@@ -1788,7 +1788,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Integer errorCode;
 
         /**
-         * <p>Indicates whether the asynchronous query has completed. Valid values:</p>
+         * <p>Indicates whether the asynchronous query has finished. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: <strong>State</strong> is <strong>SUCCESS</strong> or <strong>FAIL</strong>.</li>
          * <li><strong>false</strong>: <strong>State</strong> is <strong>RUNNING</strong>.</li>
@@ -1798,7 +1798,7 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public Boolean isFinish;
 
         /**
-         * <p>The error description of the asynchronous query failure.</p>
+         * <p>The error description for the failed asynchronous query.</p>
          * <blockquote>
          * <p>This field is returned only when the query fails.</p>
          * </blockquote>
@@ -1822,9 +1822,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public String requestKey;
 
         /**
-         * <p>The asynchronous query result ID, in the format of an async_ prefix followed by a hash value computed from all business parameters of the request.</p>
+         * <p>The asynchronous query result ID, which is in the format of an async_ prefix followed by a hash value. It is calculated based on all business parameters of the current request.</p>
          * <blockquote>
-         * <p>Repeated calls with the same parameters return the same query result. Therefore, when polling, you must use exactly the same request parameters as the initial call. Any change in parameters generates a different <strong>ResultId</strong> and triggers a new query.</p>
+         * <p>Repeated calls with the same parameters hit the same query result. Therefore, you must carry the exact same request parameters as the first call when polling. Any parameter change generates a different <strong>ResultId</strong> and triggers a new query.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1834,14 +1834,14 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public String resultId;
 
         /**
-         * <p>The current status of the asynchronous query. Valid values:</p>
+         * <p>The current state of the asynchronous query. Valid values:</p>
          * <ul>
-         * <li><strong>RUNNING</strong>: The query is in progress. Continue polling.</li>
-         * <li><strong>SUCCESS</strong>: The query succeeded. The <strong>Data</strong> field contains data only in this state.</li>
+         * <li><strong>RUNNING</strong>: The query is running. Continue polling.</li>
+         * <li><strong>SUCCESS</strong>: The query is successful. The <strong>Data</strong> field has a value.</li>
          * <li><strong>FAIL</strong>: The query failed.</li>
          * </ul>
          * <blockquote>
-         * <p>When the query fails, the operation directly returns an error code and error message instead of a normal response body with <strong>State</strong> set to <strong>FAIL</strong>.</p>
+         * <p>When the query fails, the operation directly returns an error code and an error message, instead of a normal response body with <strong>State</strong> set to <strong>FAIL</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1851,9 +1851,9 @@ public class DescribeSqlInsightStatisticResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The time when the asynchronous query was submitted. This value is a UNIX timestamp. Unit: milliseconds.</p>
+         * <p>The time when the asynchronous query was submitted, which is a UNIX timestamp in milliseconds.</p>
          * <blockquote>
-         * <p>When the query fails, this value indicates the time when the failure occurred.</p>
+         * <p>When the query fails, this value is the time when the failure occurred.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

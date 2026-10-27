@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The returned status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>AsyncResult<Histogram>。</p>
+     * <p>The AsyncResult<Histogram>.</p>
      */
     @NameInMap("Data")
     public DescribeSlowLogHistogramAsyncResponseBodyData data;
@@ -22,7 +22,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
     /**
      * <p>The message returned for the request.</p>
      * <blockquote>
-     * <p> This parameter returns <strong>Successful</strong> when the request succeeds. If the request fails, an exception message (such as an error code) is returned.</p>
+     * <p>If the request is successful, <strong>Successful</strong> is returned. If the request fails, an error message such as an error code is returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful:</p>
+     * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: The request was successful.</li>
      * <li><strong>false</strong>: The request failed.</li>
@@ -108,7 +108,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         /**
          * <p>The instance role ID.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -120,7 +120,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         /**
          * <p>The instance role.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -130,7 +130,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public String insRole;
 
         /**
-         * <p>The number of slow logs on the physical node.</p>
+         * <p>The number of slow query logs on the physical node.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -179,7 +179,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
 
     public static class DescribeSlowLogHistogramAsyncResponseBodyDataDataItem extends TeaModel {
         /**
-         * <p>The number of slow logs.</p>
+         * <p>The number of slow query logs.</p>
          */
         @NameInMap("Count")
         public java.util.List<Long> count;
@@ -187,7 +187,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         /**
          * <p>The trend metrics.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          */
         @NameInMap("InsItems")
@@ -196,8 +196,11 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         /**
          * <p>The instance role.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
+         * 
+         * <strong>example:</strong>
+         * <p>userAdmin</p>
          */
         @NameInMap("InsRole")
         public String insRole;
@@ -212,7 +215,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The total number of slow logs.</p>
+         * <p>The total number of slow query logs.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -269,7 +272,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
 
     public static class DescribeSlowLogHistogramAsyncResponseBodyDataData extends TeaModel {
         /**
-         * <p>The average CPU processing duration. Unit: seconds (s).</p>
+         * <p>The average CPU processing time. Unit: seconds.</p>
          * <blockquote>
          * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
          * </blockquote>
@@ -278,16 +281,16 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Double> avgCPUTime;
 
         /**
-         * <p>The average number of document rows scanned.</p>
+         * <p>The average number of scanned documents.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          */
         @NameInMap("AvgDocExamined")
         public java.util.List<Double> avgDocExamined;
 
         /**
-         * <p>The average number of rows fetched.</p>
+         * <p>The average number of fetched rows.</p>
          */
         @NameInMap("AvgFrows")
         public java.util.List<Double> avgFrows;
@@ -302,9 +305,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Double> avgIOWrites;
 
         /**
-         * <p>The average number of index rows scanned.</p>
+         * <p>The average number of scanned index rows.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          */
         @NameInMap("AvgKeysExamined")
@@ -320,7 +323,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Double> avgLastRowsCountAffected;
 
         /**
-         * <p>The average lock wait time. Unit: seconds.</p>
+         * <p>The average lock wait time, in seconds.</p>
          */
         @NameInMap("AvgLockTime")
         public java.util.List<Double> avgLockTime;
@@ -344,9 +347,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Double> avgPhysicalIOReads;
 
         /**
-         * <p>The average number of rows returned.</p>
+         * <p>The average number of returned rows.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          */
         @NameInMap("AvgReturnNum")
@@ -359,7 +362,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Double> avgRows;
 
         /**
-         * <p>The average number of rows affected.</p>
+         * <p>The average number of affected rows.</p>
          * <blockquote>
          * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
          * </blockquote>
@@ -368,13 +371,13 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Double> avgRowsCountAffected;
 
         /**
-         * <p>The average number of rows scanned.</p>
+         * <p>The average number of scanned rows.</p>
          */
         @NameInMap("AvgRowsExamined")
         public java.util.List<Double> avgRowsExamined;
 
         /**
-         * <p>The average number of rows returned.</p>
+         * <p>The average number of returned rows.</p>
          */
         @NameInMap("AvgRowsSent")
         public java.util.List<Double> avgRowsSent;
@@ -392,7 +395,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Double> avgScnt;
 
         /**
-         * <p>The CPU processing duration. Unit: seconds (s).</p>
+         * <p>The CPU processing time. Unit: seconds.</p>
          * <blockquote>
          * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
          * </blockquote>
@@ -401,24 +404,24 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Double> CPUTime;
 
         /**
-         * <p>The slow log count trend.</p>
+         * <p>The trend of the number of slow query logs.</p>
          */
         @NameInMap("Count")
         public java.util.List<Long> count;
 
         /**
-         * <p>The number of document rows scanned.</p>
+         * <p>The number of scanned documents.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          */
         @NameInMap("DocExamined")
         public java.util.List<Long> docExamined;
 
         /**
-         * <p>The number of rows fetched by the compute node (CN) of the PolarDB-X 2.0 database instance.</p>
+         * <p>The number of rows fetched by the compute nodes (CN) of a PolarDB-X 2.0 database instance.</p>
          * <blockquote>
-         * <p>Only ApsaraDB PolarDB-X 2.0 instances are supported.</p>
+         * <p>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</p>
          * </blockquote>
          */
         @NameInMap("Frows")
@@ -440,9 +443,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<DescribeSlowLogHistogramAsyncResponseBodyDataDataItem> item;
 
         /**
-         * <p>The number of index rows scanned.</p>
+         * <p>The number of scanned index rows.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          */
         @NameInMap("KeysExamined")
@@ -458,7 +461,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Long> lastRowsCountAffected;
 
         /**
-         * <p>The total lock wait time. Unit: seconds.</p>
+         * <p>The total lock wait time, in seconds.</p>
          */
         @NameInMap("LockTime")
         public java.util.List<Double> lockTime;
@@ -473,7 +476,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Long> logicalIOReads;
 
         /**
-         * <p>The maximum CPU processing duration. Unit: seconds (s).</p>
+         * <p>The maximum CPU processing time. Unit: seconds.</p>
          * <blockquote>
          * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
          * </blockquote>
@@ -482,16 +485,16 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Double> maxCPUTime;
 
         /**
-         * <p>The maximum number of document rows scanned.</p>
+         * <p>The maximum number of scanned documents.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          */
         @NameInMap("MaxDocExamined")
         public java.util.List<Long> maxDocExamined;
 
         /**
-         * <p>The maximum number of rows fetched.</p>
+         * <p>The maximum number of fetched rows.</p>
          */
         @NameInMap("MaxFrows")
         public java.util.List<Long> maxFrows;
@@ -506,9 +509,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Long> maxIOWrites;
 
         /**
-         * <p>The maximum number of index rows scanned.</p>
+         * <p>The maximum number of scanned index rows.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          */
         @NameInMap("MaxKeysExamined")
@@ -524,7 +527,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Long> maxLastRowsCountAffected;
 
         /**
-         * <p>The maximum lock wait time. Unit: seconds.</p>
+         * <p>The maximum lock wait time, in seconds.</p>
          */
         @NameInMap("MaxLockTime")
         public java.util.List<Double> maxLockTime;
@@ -548,9 +551,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Long> maxPhysicalIOReads;
 
         /**
-         * <p>The maximum number of rows returned.</p>
+         * <p>The maximum number of returned rows.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          */
         @NameInMap("MaxReturnNum")
@@ -563,7 +566,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Long> maxRows;
 
         /**
-         * <p>The maximum number of rows affected.</p>
+         * <p>The maximum number of affected rows.</p>
          * <blockquote>
          * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
          * </blockquote>
@@ -572,19 +575,19 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Long> maxRowsCountAffected;
 
         /**
-         * <p>The maximum number of rows scanned.</p>
+         * <p>The maximum number of scanned rows.</p>
          */
         @NameInMap("MaxRowsExamined")
         public java.util.List<Long> maxRowsExamined;
 
         /**
-         * <p>The maximum number of rows returned.</p>
+         * <p>The maximum number of returned rows.</p>
          */
         @NameInMap("MaxRowsSent")
         public java.util.List<Long> maxRowsSent;
 
         /**
-         * <p>The maximum execution duration. Unit: seconds.</p>
+         * <p>The maximum execution duration, in seconds.</p>
          */
         @NameInMap("MaxRt")
         public java.util.List<Double> maxRt;
@@ -605,25 +608,25 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Long> physicalIOReads;
 
         /**
-         * <p>The number of rows returned.</p>
+         * <p>The number of returned rows.</p>
          * <blockquote>
-         * <p>Supported only for ApsaraDB for MongoDB instances.</p>
+         * <p>This field is supported only by ApsaraDB for MongoDB instances.</p>
          * </blockquote>
          */
         @NameInMap("ReturnNum")
         public java.util.List<Long> returnNum;
 
         /**
-         * <p>The total number of rows updated or returned by compute nodes of the PolarDB-X 2.0 database instance.</p>
+         * <p>The total number of rows updated or returned by the compute nodes of a PolarDB-X 2.0 database instance.</p>
          * <blockquote>
-         * <p>Only ApsaraDB PolarDB-X 2.0 instances are supported.</p>
+         * <p>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</p>
          * </blockquote>
          */
         @NameInMap("Rows")
         public java.util.List<Long> rows;
 
         /**
-         * <p>The number of rows affected.</p>
+         * <p>The number of affected rows.</p>
          * <blockquote>
          * <p>Only ApsaraDB RDS for SQL Server instances are supported.</p>
          * </blockquote>
@@ -632,30 +635,30 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public java.util.List<Long> rowsCountAffected;
 
         /**
-         * <p>The total number of rows scanned.</p>
+         * <p>The total number of scanned rows.</p>
          * <blockquote>
-         * <p>Databases that currently support this field: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
+         * <p>This field is supported by the following databases: ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and PolarDB for MySQL.</p>
          * </blockquote>
          */
         @NameInMap("RowsExamined")
         public java.util.List<Long> rowsExamined;
 
         /**
-         * <p>The number of rows returned.</p>
+         * <p>The number of returned rows.</p>
          */
         @NameInMap("RowsSent")
         public java.util.List<Long> rowsSent;
 
         /**
-         * <p>The total execution duration. Unit: seconds.</p>
+         * <p>The total execution duration, in seconds.</p>
          */
         @NameInMap("Rt")
         public java.util.List<Double> rt;
 
         /**
-         * <p>The number of DN requests from the compute node (CN) of the PolarDB-X 2.0 database instance.</p>
+         * <p>The number of requests sent to data nodes (DN) by the compute nodes (CN) of a PolarDB-X 2.0 database instance.</p>
          * <blockquote>
-         * <p>Only ApsaraDB PolarDB-X 2.0 instances are supported.</p>
+         * <p>Only ApsaraDB PolarDB-X 2.0 database instances are supported.</p>
          * </blockquote>
          */
         @NameInMap("Scnt")
@@ -680,13 +683,13 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public Long totalCount;
 
         /**
-         * <p>Used only for relational databases.</p>
+         * <p>The timestamp. This field is used only for relational databases.</p>
          */
         @NameInMap("Ts")
         public java.util.List<Long> ts;
 
         /**
-         * <p>Not used. Reserved field.</p>
+         * <p>Unused. Reserved field.</p>
          */
         @NameInMap("TsEnd")
         public java.util.List<Long> tsEnd;
@@ -1147,7 +1150,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public Integer errorCode;
 
         /**
-         * <p>Indicates whether the task is finished.</p>
+         * <p>Indicates whether the task is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1185,9 +1188,9 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         /**
          * <p>The current state. Valid values:</p>
          * <ul>
-         * <li><strong>RUNNING</strong>: Running.</li>
-         * <li><strong>SUCCESS</strong>: Succeeded.</li>
-         * <li><strong>FAIL</strong>: Failed.</li>
+         * <li><strong>RUNNING</strong>: The task is running.</li>
+         * <li><strong>SUCCESS</strong>: The task was successful.</li>
+         * <li><strong>FAIL</strong>: The task failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1197,7 +1200,7 @@ public class DescribeSlowLogHistogramAsyncResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The request time.</p>
+         * <p>The request time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1645668213000</p>

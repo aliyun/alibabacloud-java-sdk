@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlLogRecordsRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. This is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end time. The value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>A list of filter conditions.</p>
+     * <p>The list of filter conditions.</p>
      */
     @NameInMap("Filters")
     public java.util.List<DescribeSqlLogRecordsRequestFilters> filters;
@@ -33,10 +33,8 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
     /**
      * <p>The node ID.</p>
      * <ul>
-     * <li><p>This parameter is applicable only to ApsaraDB RDS for MySQL and PolarDB for MySQL cluster instances. If this parameter is omitted, the log details of the primary node are returned by default.</p>
-     * </li>
-     * <li><p>For PolarDB-X 2.0, set this parameter to <strong>polarx_cn</strong> (compute node) or <strong>polarx_dn</strong> (data node).</p>
-     * </li>
+     * <li>For ApsaraDB RDS for MySQL and PolarDB for MySQL, this parameter applies only to Cluster Edition instances. If you do not specify this parameter, the log details of the primary node are queried by default.</li>
+     * <li>For PolarDB-X 2.0, set this parameter to <strong>polarx_cn</strong> (compute node) or <strong>polarx_dn</strong> (data node).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +44,7 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
     public String nodeId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number for paging. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +53,7 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Maximum value: 100. Default value: 10.</p>
+     * <p>The maximum number of entries per page. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -64,12 +62,10 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The role of the node in the PolarDB-X 2.0 database instance.</p>
+     * <p>The role of the node in the PolarDB-X 2.0 instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>polarx_cn</strong>: compute node.</p>
-     * </li>
-     * <li><p><strong>polarx_dn</strong>: data node.</p>
-     * </li>
+     * <li><strong>polarx_cn</strong>: compute node.</li>
+     * <li><strong>polarx_dn</strong>: data node.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +75,7 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
     public String role;
 
     /**
-     * <p>The beginning of the time range to query. This is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start time. The value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -159,9 +155,9 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
 
     public static class DescribeSqlLogRecordsRequestFilters extends TeaModel {
         /**
-         * <p>The filter key.</p>
+         * <p>The filter parameter.</p>
          * <blockquote>
-         * <p>For details on supported filter keys and their values, see <strong>Additional information about request parameters</strong>.</p>
+         * <p>For supported filter parameters and their valid values, refer to <strong>Supplementary request parameter descriptions</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -171,7 +167,7 @@ public class DescribeSqlLogRecordsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The filter value.</p>
+         * <p>The value of the filter parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>select</p>

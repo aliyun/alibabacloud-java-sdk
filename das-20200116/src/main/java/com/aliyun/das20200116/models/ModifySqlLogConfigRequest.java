@@ -5,16 +5,14 @@ import com.aliyun.tea.*;
 
 public class ModifySqlLogConfigRequest extends TeaModel {
     /**
-     * <p>Indicates whether to enable DAS Enterprise Edition. Valid values:</p>
+     * <p>Specifies whether to enable DAS Enterprise Edition. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enables DAS Enterprise Edition.</p>
-     * </li>
-     * <li><p><strong>false</strong>: disables DAS Enterprise Edition.</p>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.<blockquote>
+     * <p>This parameter is required when you enable DAS Enterprise Edition. By default, the latest supported version is enabled.</p>
+     * </blockquote>
      * </li>
      * </ul>
-     * <blockquote>
-     * <p>This parameter is required when you enable DAS Enterprise Edition. By default, this operation enables the latest supported version.</p>
-     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +21,7 @@ public class ModifySqlLogConfigRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>Indicates whether to enable security audit.</p>
+     * <p>Specifies whether to enable security auditing.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -38,9 +36,9 @@ public class ModifySqlLogConfigRequest extends TeaModel {
     public java.util.List<ModifySqlLogConfigRequestFilters> filters;
 
     /**
-     * <p>The hot storage retention period, in days. The value must be an integer from 1 to 7.</p>
+     * <p>The hot data storage duration. Unit: days. The value is an integer in the range of [1, 7].</p>
      * <blockquote>
-     * <p>This parameter is required only if you enable DAS Enterprise Edition V3.</p>
+     * <p>This parameter is required only when you enable DAS Enterprise Edition V3.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,15 +58,13 @@ public class ModifySqlLogConfigRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Indicates whether to enable SQL Explorer. Valid values:</p>
+     * <p>Specifies whether to enable SQL Explorer. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enables SQL Explorer.</p>
-     * </li>
-     * <li><p><strong>false</strong>: disables SQL Explorer.</p>
-     * </li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required only if you enable DAS Enterprise Edition V3.</p>
+     * <p>This parameter is required only when you enable DAS Enterprise Edition V3.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -78,19 +74,15 @@ public class ModifySqlLogConfigRequest extends TeaModel {
     public Boolean requestEnable;
 
     /**
-     * <p>The data retention period, in days. Valid values:</p>
+     * <p>The total data storage duration. Unit: days. Valid values:</p>
      * <ul>
-     * <li><p>7</p>
-     * </li>
-     * <li><p>30</p>
-     * </li>
-     * <li><p>180</p>
-     * </li>
-     * <li><p>365</p>
-     * </li>
+     * <li>7</li>
+     * <li>30</li>
+     * <li>180</li>
+     * <li>365</li>
      * </ul>
      * <blockquote>
-     * <p>If you enable DAS Enterprise Edition V3, the value of this parameter must be 30 or greater.</p>
+     * <p>When you enable DAS Enterprise Edition V3, the value of this parameter must be greater than or equal to 30.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

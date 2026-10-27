@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     /**
-     * <p>Specifies whether to sort the returned entries in ascending order. Default value: <strong>true</strong>. Valid values:</p>
+     * <p>Specifies whether to sort the results in ascending order. Default value: <strong>true</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public Boolean asc;
 
     /**
-     * <p>The name of the database to be queried.</p>
+     * <p>The names of the databases to be queried.</p>
      * 
      * <strong>example:</strong>
      * <p>testdb01</p>
@@ -31,12 +29,9 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><p><strong>MySQL</strong>: ApsaraDB RDS for MySQL</p>
-     * </li>
-     * <li><p><strong>PolarDBMySQL</strong>: PolarDB for MySQL</p>
-     * </li>
-     * <li><p><strong>PostgreSQL</strong>: ApsaraDB RDS for PostgreSQL</p>
-     * </li>
+     * <li><strong>MySQL</strong>: RDS MySQL</li>
+     * <li><strong>PolarDBMySQL</strong>: PolarDB for MySQL</li>
+     * <li><strong>PostgreSQL</strong>: RDS PostgreSQL</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -47,7 +42,7 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public String engine;
 
     /**
-     * <p>The instance IDs. Separate multiple IDs with commas (,).</p>
+     * <p>The instance IDs. Separate multiple instance IDs with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-2ze1jdv45i7l6****</p>
@@ -56,7 +51,7 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public String instanceIds;
 
     /**
-     * <p>The keywords of the SQL template. Separate multiple keywords with spaces.</p>
+     * <p>The keywords in the SQL text. Separate multiple keywords with spaces.</p>
      * 
      * <strong>example:</strong>
      * <p>select update</p>
@@ -65,12 +60,10 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public String keywords;
 
     /**
-     * <p>The logical relationship between multiple keywords. Valid values:</p>
+     * <p>The logical relationship between multiple keywords in the SQL text. Valid values:</p>
      * <ul>
-     * <li><p><strong>or</strong></p>
-     * </li>
-     * <li><p><strong>and</strong></p>
-     * </li>
+     * <li><strong>or</strong>: The OR logical relationship.</li>
+     * <li><strong>and</strong>: The AND logical relationship.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,12 +73,10 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public String logicalOperator;
 
     /**
-     * <p>Specifies whether to query only SQL templates that need to be optimized. Default value: <strong>false</strong>. Valid values:</p>
+     * <p>Specifies whether to query only the SQL statements that need to be optimized. Default value: <strong>false</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,26 +86,17 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public Boolean onlyOptimizedSql;
 
     /**
-     * <p>The field by which to sort the returned entries. Default value: <strong>count</strong>. Valid values:</p>
+     * <p>The field by which to sort the results. Default value: <strong>count</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>count</strong>: the number of executions.</p>
-     * </li>
-     * <li><p><strong>maxQueryTime</strong>: the longest execution duration.</p>
-     * </li>
-     * <li><p><strong>avgQueryTime</strong>: the average execution duration.</p>
-     * </li>
-     * <li><p><strong>maxLockTime</strong>: the longest lock wait duration.</p>
-     * </li>
-     * <li><p><strong>avgLockTime</strong>: the average lock wait duration.</p>
-     * </li>
-     * <li><p><strong>maxRowsExamined</strong>: the largest number of scanned rows.</p>
-     * </li>
-     * <li><p><strong>avgRowsExamined</strong>: the average number of scanned rows.</p>
-     * </li>
-     * <li><p><strong>maxRowsSent</strong>: the largest number of returned rows.</p>
-     * </li>
-     * <li><p><strong>avgRowsSent</strong>: the average number of returned rows.</p>
-     * </li>
+     * <li><strong>count</strong>: The number of executions.</li>
+     * <li><strong>maxQueryTime</strong>: The maximum execution time.</li>
+     * <li><strong>avgQueryTime</strong>: The average execution time.</li>
+     * <li><strong>maxLockTime</strong>: The maximum lock wait time.</li>
+     * <li><strong>avgLockTime</strong>: The average lock wait time.</li>
+     * <li><strong>maxRowsExamined</strong>: The maximum number of scanned rows.</li>
+     * <li><strong>avgRowsExamined</strong>: The average number of scanned rows.</li>
+     * <li><strong>maxRowsSent</strong>: The maximum number of returned rows.</li>
+     * <li><strong>avgRowsSent</strong>: The average number of returned rows.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,7 +106,7 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number of the paging query. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -133,7 +115,7 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The maximum number of records per page in a paging query. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -142,18 +124,15 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region in which the instance resides. Valid values:</p>
+     * <p>The region where the instance resides. Valid values:</p>
      * <ul>
-     * <li><p><strong>cn-china</strong>: Chinese mainland</p>
-     * </li>
-     * <li><p><strong>cn-hongkong</strong>: China (Hong Kong)</p>
-     * </li>
-     * <li><p><strong>ap-southeast-1</strong>: Singapore</p>
-     * </li>
+     * <li><strong>cn-china</strong>: The Chinese mainland.</li>
+     * <li><strong>cn-hongkong</strong>: Hong Kong (China).</li>
+     * <li><strong>ap-southeast-1</strong>: Singapore.</li>
      * </ul>
-     * <p>This parameter takes effect only if <strong>InstanceIds</strong> is left empty. If you leave <strong>InstanceIds</strong> empty, the system obtains data from the region set by <strong>Region</strong>. By default, Region is set to <strong>cn-china</strong>. If you specify <strong>InstanceIds</strong>, <strong>Region</strong> does not take effect and the system obtains data from the region in which the first specified instance resides.\<em>\</em>\<em>\</em></p>
+     * <p>This parameter is valid only when the <strong>InstanceIds</strong> request parameter is empty. If the <strong>InstanceIds</strong> request parameter is empty, data is retrieved based on the region specified by the <strong>Region</strong> parameter, and the default region is <strong>cn-china</strong>. If the <strong>InstanceIds</strong> request parameter is not empty, data is retrieved based on the region of the first instance specified in <strong>InstanceIds</strong>, regardless of the value of the <strong>Region</strong> parameter.</p>
      * <blockquote>
-     * <p>If your instances reside in the regions in the Chinese mainland, set this parameter to <strong>cn-china</strong>.</p>
+     * <p>For instances created in regions in the Chinese mainland, set this parameter to <strong>cn-china</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -163,7 +142,7 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The tags that are used to filter SQL templates. Separate multiple tags with commas (,). For more information, see <a href="https://help.aliyun.com/document_detail/290038.html">Query governance</a>.</p>
+     * <p>The rules to be filtered. Separate multiple rules with commas. For more information, see <a href="https://help.aliyun.com/document_detail/290038.html">Query Governance</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>DAS_NOT_IMPORTANT</p>
@@ -172,7 +151,7 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public String rules;
 
     /**
-     * <p>The SQL template IDs. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeExecErrorStats</a> operation to obtain the SQL template IDs.</p>
+     * <p>The SQL template IDs. You can call the <a href="https://help.aliyun.com/document_detail/405261.html">GetQueryOptimizeDataStats</a> operation to query the SQL template IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>6068ce044e3dc9b903979672fb0b69df,d12515c015fc9f41a0778a9e1de0****</p>
@@ -181,7 +160,7 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public String sqlIds;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -190,7 +169,7 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public String tagNames;
 
     /**
-     * <p>The date to query. Set this parameter to a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The date when the data is queried. The value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -200,7 +179,7 @@ public class GetQueryOptimizeShareUrlRequest extends TeaModel {
     public Long time;
 
     /**
-     * <p>The account of the database to be queried.</p>
+     * <p>The database account to be queried.</p>
      * 
      * <strong>example:</strong>
      * <p>testUser</p>
