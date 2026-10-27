@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetAdUsersCountResponseBody extends TeaModel {
     /**
+     * <p>The number of Active Directory (AD) users.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -12,6 +14,8 @@ public class GetAdUsersCountResponseBody extends TeaModel {
     public Integer adUserCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UserBatchJoinGroupRequest extends TeaModel {
     /**
-     * <p>Channel</p>
+     * <p>The business channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>

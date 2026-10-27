@@ -4,11 +4,17 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class DescribeResourceGroupsRequest extends TeaModel {
+    /**
+     * <p>The agent subtype of the DesktopAgent resource group. Valid values: JVSClaw and HermesAgent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>JVSClaw</p>
+     */
     @NameInMap("AgentType")
     public String agentType;
 
     /**
-     * <p>The Alibaba Cloud resource group ID.</p>
+     * <p>The IDs of the cloud platform resource groups.</p>
      */
     @NameInMap("AliyunResourceGroupIds")
     public java.util.List<String> aliyunResourceGroupIds;
@@ -55,7 +61,7 @@ public class DescribeResourceGroupsRequest extends TeaModel {
      * <blockquote>
      * <p>Fixed value: AliyunConsole.</p>
      * <ul>
-     * <li>For Elastic Desktop Service Enterprise Edition, set this parameter to AliyunConsole. Other platforms are not publicly available.</li>
+     * <li>For Wuying Enterprise Edition, set this parameter to AliyunConsole. Other platforms are not publicly available.</li>
      * </ul>
      * </blockquote>
      * 
@@ -66,22 +72,25 @@ public class DescribeResourceGroupsRequest extends TeaModel {
     public String platform;
 
     /**
-     * <p>The resource classification within the resource group.</p>
+     * <p>The resource classification in the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
      */
     @NameInMap("ResourceClassification")
     public String resourceClassification;
 
     /**
-     * <p>The list of resource group IDs.</p>
+     * <p>The IDs of the resource groups.</p>
      */
     @NameInMap("ResourceGroupIds")
     public java.util.List<String> resourceGroupIds;
 
     /**
-     * <p>The resource group name.</p>
+     * <p>The name of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>DepartmentAResourceGroup</p>
+     * <p>Department A resource group</p>
      */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;

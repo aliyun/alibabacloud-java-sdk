@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyGroupRequest extends TeaModel {
     /**
-     * <p>Channel</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -33,11 +33,11 @@ public class ModifyGroupRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the new user group.</p>
+     * <p>The new name of the user group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>开发组</p>
+     * <p>Development group</p>
      */
     @NameInMap("NewGroupName")
     public String newGroupName;

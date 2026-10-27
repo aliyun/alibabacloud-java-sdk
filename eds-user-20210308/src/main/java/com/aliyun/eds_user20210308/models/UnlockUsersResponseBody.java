@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnlockUsersResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>023F4EC4-3602-4A3E-A514-4970847D59DB</p>
@@ -14,7 +14,7 @@ public class UnlockUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of unlocking the convenience user.</p>
+     * <p>The result of the unlock operation for the convenience users.</p>
      */
     @NameInMap("UnlockUsersResult")
     public UnlockUsersResponseBodyUnlockUsersResult unlockUsersResult;
@@ -42,7 +42,7 @@ public class UnlockUsersResponseBody extends TeaModel {
 
     public static class UnlockUsersResponseBodyUnlockUsersResultFailedUsers extends TeaModel {
         /**
-         * <p>The ID of the convenience user that failed to be unlocked.</p>
+         * <p>The convenience user that fails to be unlocked.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -101,13 +101,13 @@ public class UnlockUsersResponseBody extends TeaModel {
 
     public static class UnlockUsersResponseBodyUnlockUsersResult extends TeaModel {
         /**
-         * <p>The convenience users that failed to be unlocked.</p>
+         * <p>The list of convenience users that fail to be unlocked.</p>
          */
         @NameInMap("FailedUsers")
         public java.util.List<UnlockUsersResponseBodyUnlockUsersResultFailedUsers> failedUsers;
 
         /**
-         * <p>The convenience users that were unlocked.</p>
+         * <p>The list of convenience users that are successfully unlocked.</p>
          */
         @NameInMap("UnlockedUsers")
         public java.util.List<String> unlockedUsers;

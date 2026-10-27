@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnlockUsersRequest extends TeaModel {
     /**
-     * <p>The date on which the convenience users are automatically locked.</p>
+     * <p>The date when the convenience user is automatically locked. The format is YYYY-MM-DD.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-03-03</p>
@@ -14,7 +14,7 @@ public class UnlockUsersRequest extends TeaModel {
     public String autoLockTime;
 
     /**
-     * <p>Channel</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -23,7 +23,7 @@ public class UnlockUsersRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The usernames of the convenience users that you want to unlock.</p>
+     * <p>The list of usernames of the convenience users to unlock.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

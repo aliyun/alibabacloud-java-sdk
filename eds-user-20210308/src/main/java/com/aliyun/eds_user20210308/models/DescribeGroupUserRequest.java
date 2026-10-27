@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeGroupUserRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p> This parameter is not available for public use.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class DescribeGroupUserRequest extends TeaModel {
     public String bizType;
 
     /**
-     * <p>Channel</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -25,7 +25,7 @@ public class DescribeGroupUserRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The fuzzy search string that matches the username (EndUserId) and email address (Email) of the regular user.</p>
+     * <p>The fuzzy search string. This parameter supports matching the username (EndUserId) and email address (Email).</p>
      * 
      * <strong>example:</strong>
      * <p>user</p>
@@ -43,7 +43,7 @@ public class DescribeGroupUserRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries to return per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -52,7 +52,7 @@ public class DescribeGroupUserRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. You can obtain this parameter from the response parameters of the last call to this operation.</p>
+     * <p>The token for the next query. You can obtain the token from the response parameters of the previous call to this operation.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK****</p>
@@ -62,7 +62,7 @@ public class DescribeGroupUserRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p> This parameter is not available for public use.</p>
+     * <p>This parameter is not publicly available.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

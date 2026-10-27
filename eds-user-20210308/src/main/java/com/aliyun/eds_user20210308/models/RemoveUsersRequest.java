@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemoveUsersRequest extends TeaModel {
     /**
-     * <p>Channel</p>
+     * <p>The business channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -13,8 +13,11 @@ public class RemoveUsersRequest extends TeaModel {
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
+    @NameInMap("UnbindDesktops")
+    public Boolean unbindDesktops;
+
     /**
-     * <p>The usernames of the convenience users that you want to remove.</p>
+     * <p>The usernames of the convenience users to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,6 +37,14 @@ public class RemoveUsersRequest extends TeaModel {
     }
     public String getBusinessChannel() {
         return this.businessChannel;
+    }
+
+    public RemoveUsersRequest setUnbindDesktops(Boolean unbindDesktops) {
+        this.unbindDesktops = unbindDesktops;
+        return this;
+    }
+    public Boolean getUnbindDesktops() {
+        return this.unbindDesktops;
     }
 
     public RemoveUsersRequest setUsers(java.util.List<String> users) {

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TransferResourcesIntoGroupRequest extends TeaModel {
     /**
+     * <p>The channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -12,6 +14,8 @@ public class TransferResourcesIntoGroupRequest extends TeaModel {
     public String businessChannel;
 
     /**
+     * <p>The WUYING product type.</p>
+     * 
      * <strong>example:</strong>
      * <p>AliyunConsole</p>
      */
@@ -19,12 +23,17 @@ public class TransferResourcesIntoGroupRequest extends TeaModel {
     public String platform;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg-ckf3cx7isinhk***</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The list of resource objects.</p>
+     */
     @NameInMap("Resources")
     public java.util.List<TransferResourcesIntoGroupRequestResources> resources;
 
@@ -67,6 +76,8 @@ public class TransferResourcesIntoGroupRequest extends TeaModel {
 
     public static class TransferResourcesIntoGroupRequestResources extends TeaModel {
         /**
+         * <p>The region ID of the resource.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
          */
@@ -74,6 +85,8 @@ public class TransferResourcesIntoGroupRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The resource ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>ecd-0jl0dwz61hn59tto****</p>
          */
@@ -81,6 +94,8 @@ public class TransferResourcesIntoGroupRequest extends TeaModel {
         public String resourceId;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>DESKTOP</p>
          */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuerySyncStatusByAliUidRequest extends TeaModel {
     /**
-     * <p>Channel</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>

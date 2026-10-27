@@ -15,17 +15,23 @@ public class DescribeGroupsRequest extends TeaModel {
     @NameInMap("BizType")
     public String bizType;
 
+    /**
+     * <p>The business channel.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ENTERPRISE</p>
+     */
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
     /**
-     * <p>Specifies whether to exclude user groups that have associated logon policies.</p>
+     * <p>Specifies whether to exclude user groups that are associated with logon policies.</p>
      */
     @NameInMap("ExcludeAttachedLoginPolicyGroups")
     public Boolean excludeAttachedLoginPolicyGroups;
 
     /**
-     * <p>The user group ID.</p>
+     * <p>The ID of the user group.</p>
      * 
      * <strong>example:</strong>
      * <p>ug-16nf7xxh4o9gc****</p>
@@ -34,7 +40,7 @@ public class DescribeGroupsRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The user group name.</p>
+     * <p>The name of the user group.</p>
      * 
      * <strong>example:</strong>
      * <p>TestGroup</p>
@@ -42,17 +48,23 @@ public class DescribeGroupsRequest extends TeaModel {
     @NameInMap("GroupName")
     public String groupName;
 
+    /**
+     * <p>Filters user groups by the identity provider ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>idp-hlyexfvwert9m8****</p>
+     */
     @NameInMap("IdpId")
     public String idpId;
 
     /**
-     * <p>Filters user groups by the specified associated logon policy.</p>
+     * <p>Specifies the ID of the associated logon policy for filtering.</p>
      */
     @NameInMap("LoginPolicyId")
     public String loginPolicyId;
 
     /**
-     * <p>The page number for a paged query.</p>
+     * <p>The page number for paging in the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,7 +73,7 @@ public class DescribeGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 10.</p>
+     * <p>The number of entries per page for paging in the paged query Settings. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -81,7 +93,7 @@ public class DescribeGroupsRequest extends TeaModel {
     public String solutionId;
 
     /**
-     * <p>Indicates whether file approval is enabled.</p>
+     * <p>Specifies whether file approval is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

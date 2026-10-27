@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetUsersCountResponseBody extends TeaModel {
     /**
+     * <p>The number of user groups.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -12,6 +14,8 @@ public class GetUsersCountResponseBody extends TeaModel {
     public Integer groupCount;
 
     /**
+     * <p>The user quota.</p>
+     * 
      * <strong>example:</strong>
      * <p>10000</p>
      */
@@ -19,6 +23,8 @@ public class GetUsersCountResponseBody extends TeaModel {
     public Integer maxUserNumber;
 
     /**
+     * <p>The number of organizations.</p>
+     * 
      * <strong>example:</strong>
      * <p>278</p>
      */
@@ -26,6 +32,8 @@ public class GetUsersCountResponseBody extends TeaModel {
     public Integer orgCount;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9677D40F-0040-5956-A0EB-11B8B88****</p>
      */
@@ -33,6 +41,8 @@ public class GetUsersCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The number of users.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */

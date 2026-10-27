@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOrgsResponseBody extends TeaModel {
     /**
-     * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
+     * <p>The pagination token. Set the value to the NextToken parameter returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK****</p>
@@ -58,9 +58,15 @@ public class DescribeOrgsResponseBody extends TeaModel {
     }
 
     public static class DescribeOrgsResponseBodyOrgsResourcePolicyList extends TeaModel {
+        /**
+         * <p>The resource policy ID.</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
+        /**
+         * <p>The Policy Name.</p>
+         */
         @NameInMap("PolicyName")
         public String policyName;
 
@@ -89,11 +95,10 @@ public class DescribeOrgsResponseBody extends TeaModel {
 
     public static class DescribeOrgsResponseBodyOrgs extends TeaModel {
         /**
-         * <p>The access type of the organization node. Valid values:</p>
-         * <ul>
-         * <li>MANAGEABLE: indicates a manageable node.</li>
-         * <li>PATH_ONLY: indicates a node used only to display the full path to the root organization.</li>
-         * </ul>
+         * <p>The access type of the organization node. A value of MANAGEABLE indicates a manageable node. A value of PATH_ONLY indicates that the node is used only to display the full path to the root organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MANAGEABLE</p>
          */
         @NameInMap("AccessType")
         public String accessType;
@@ -108,19 +113,25 @@ public class DescribeOrgsResponseBody extends TeaModel {
         public String orgId;
 
         /**
-         * <p>The organization name.</p>
+         * <p>The name of the organization.</p>
          * 
          * <strong>example:</strong>
-         * <p>DesignDepartment****</p>
+         * <p>Design Department****</p>
          */
         @NameInMap("OrgName")
         public String orgName;
 
+        /**
+         * <p>The name path from the root organization to the current organization.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Product Department/Design Department</p>
+         */
         @NameInMap("OrgNamePath")
         public String orgNamePath;
 
         /**
-         * <p>The parent organization ID.</p>
+         * <p>The ID of the parent organization.</p>
          * 
          * <strong>example:</strong>
          * <p>org-ezqr****</p>
@@ -128,6 +139,9 @@ public class DescribeOrgsResponseBody extends TeaModel {
         @NameInMap("ParentOrgId")
         public String parentOrgId;
 
+        /**
+         * <p>The list of resource policies associated with the organization.</p>
+         */
         @NameInMap("ResourcePolicyList")
         public java.util.List<DescribeOrgsResponseBodyOrgsResourcePolicyList> resourcePolicyList;
 

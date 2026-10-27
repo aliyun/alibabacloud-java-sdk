@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LockUsersResponseBody extends TeaModel {
     /**
-     * <p>The result of the LockUsers operation.</p>
+     * <p>The result of the lock operation for the convenience accounts.</p>
      */
     @NameInMap("LockUsersResult")
     public LockUsersResponseBodyLockUsersResult lockUsersResult;
@@ -42,7 +42,7 @@ public class LockUsersResponseBody extends TeaModel {
 
     public static class LockUsersResponseBodyLockUsersResultFailedUsers extends TeaModel {
         /**
-         * <p>The username of the convenience account that failed to lock.</p>
+         * <p>The convenience account that failed to be locked.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
@@ -101,13 +101,13 @@ public class LockUsersResponseBody extends TeaModel {
 
     public static class LockUsersResponseBodyLockUsersResult extends TeaModel {
         /**
-         * <p>A list of convenience accounts that failed to lock.</p>
+         * <p>The list of convenience accounts that failed to be locked.</p>
          */
         @NameInMap("FailedUsers")
         public java.util.List<LockUsersResponseBodyLockUsersResultFailedUsers> failedUsers;
 
         /**
-         * <p>A list of successfully locked convenience accounts.</p>
+         * <p>The list of convenience accounts that are successfully locked.</p>
          */
         @NameInMap("LockedUsers")
         public java.util.List<String> lockedUsers;

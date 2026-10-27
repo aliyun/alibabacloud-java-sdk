@@ -1,3 +1,14 @@
+2026-10-27 Version: 2.3.1
+- Update API CreateResourceGroup: add request parameters ResourceGroupDescription.
+- Update API DescribeResourceGroups: add response parameters Body.ResourceGroup.$.ResourceGroupDescription.
+- Update API RemoveUsers: add request parameters UnbindDesktops.
+- Update API RemoveUsers: add response parameters Body.RemoveUsersResult.ProcessingUsers.
+- Update API RemoveUsers: add response parameters Body.RemoveUsersResult.SubmittedUsers.
+- Update API TransferResourcesOutofGroup: add request parameters AppRuleId.
+- Update API TransferResourcesOutofGroup: add request parameters PolicyId.
+- Update API TransferResourcesOutofGroup: add request parameters TimerId.
+
+
 2026-09-07 Version: 2.3.0
 - Support API GetAdUsersCount.
 - Support API GetUsersCount.

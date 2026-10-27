@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserPropertyValueRequest extends TeaModel {
     /**
-     * <p>Channel</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -14,7 +14,7 @@ public class DeleteUserPropertyValueRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The property ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the property ID.</p>
+     * <p>The property ID. You can call <a href="~~ListProperty~~">ListProperty</a> to obtain this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class DeleteUserPropertyValueRequest extends TeaModel {
     public Long propertyId;
 
     /**
-     * <p>The property value ID. You can call the <a href="~~ListProperty~~">ListProperty</a> operation to query the property value ID.</p>
+     * <p>The property value ID. You can call <a href="~~ListProperty~~">ListProperty</a> to obtain this parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class DeleteUserPropertyValueRequest extends TeaModel {
     public Long propertyValueId;
 
     /**
-     * <p>The user ID. You can call the <a href="~~DescribeUsers~~">DescribeUsers</a> operation to query the user ID, which is the return value of the <code>Id</code> parameter.</p>
+     * <p>The user ID. You can call <a href="~~DescribeUsers~~">DescribeUsers</a> to obtain this parameter, which corresponds to the value of the <code>Id</code> response parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetAdUsersCountRequest extends TeaModel {
     /**
+     * <blockquote>
+     * <p>This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -12,6 +16,8 @@ public class GetAdUsersCountRequest extends TeaModel {
     public String bizType;
 
     /**
+     * <p>The business channel type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
      */
@@ -19,6 +25,10 @@ public class GetAdUsersCountRequest extends TeaModel {
     public String businessChannel;
 
     /**
+     * <blockquote>
+     * <p>This parameter is not publicly available.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>co-0esnf80jab***</p>
      */

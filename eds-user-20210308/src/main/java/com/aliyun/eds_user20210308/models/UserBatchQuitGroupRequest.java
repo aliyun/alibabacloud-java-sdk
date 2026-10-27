@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UserBatchQuitGroupRequest extends TeaModel {
     /**
-     * <p>Channel</p>
+     * <p>The business channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -14,7 +14,7 @@ public class UserBatchQuitGroupRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The user IDs.</p>
+     * <p>The list of user IDs.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;

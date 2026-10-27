@@ -31,7 +31,7 @@ public class CreateResourceGroupRequest extends TeaModel {
     public Long isResourceGroupWithOfficeSite;
 
     /**
-     * <p>For WUYING Workspace Enterprise Edition, set this parameter to <code>AliyunConsole</code>. Other platforms are not supported.</p>
+     * <p>For Elastic Desktop Service (EDS) Enterprise Edition, set the value to <code>AliyunConsole</code>. Other platforms are not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunConsole</p>
@@ -39,14 +39,29 @@ public class CreateResourceGroupRequest extends TeaModel {
     @NameInMap("Platform")
     public String platform;
 
+    /**
+     * <p>The resource category.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
+     */
     @NameInMap("ResourceClassification")
     public String resourceClassification;
+
+    /**
+     * <p>The description of the resource group. This parameter is optional. The description can be up to 500 characters in length and is saved as-is.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Department A resource group</p>
+     */
+    @NameInMap("ResourceGroupDescription")
+    public String resourceGroupDescription;
 
     /**
      * <p>The name of the resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>部门A资源组</p>
+     * <p>Department A resource group</p>
      */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
@@ -102,6 +117,14 @@ public class CreateResourceGroupRequest extends TeaModel {
     }
     public String getResourceClassification() {
         return this.resourceClassification;
+    }
+
+    public CreateResourceGroupRequest setResourceGroupDescription(String resourceGroupDescription) {
+        this.resourceGroupDescription = resourceGroupDescription;
+        return this;
+    }
+    public String getResourceGroupDescription() {
+        return this.resourceGroupDescription;
     }
 
     public CreateResourceGroupRequest setResourceGroupName(String resourceGroupName) {

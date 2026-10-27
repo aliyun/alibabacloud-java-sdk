@@ -4,15 +4,27 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class ThirdApp extends TeaModel {
+    /**
+     * <p>The application ID.</p>
+     */
     @NameInMap("AppKey")
     public String appKey;
 
+    /**
+     * <p>The application name.</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The OIDC configuration.</p>
+     */
     @NameInMap("OidcSsoConfig")
     public ThirdAppOidcSsoConfig oidcSsoConfig;
 
+    /**
+     * <p>The secrets.</p>
+     */
     @NameInMap("Secrets")
     public java.util.List<ThirdAppSecrets> secrets;
 
@@ -54,30 +66,57 @@ public class ThirdApp extends TeaModel {
     }
 
     public static class ThirdAppOidcSsoConfigEndpoints extends TeaModel {
+        /**
+         * <p>The authorization endpoint.</p>
+         */
         @NameInMap("AuthorizationEndpoint")
         public String authorizationEndpoint;
 
+        /**
+         * <p>The discovery endpoint.</p>
+         */
         @NameInMap("DiscoveryEndpoint")
         public String discoveryEndpoint;
 
+        /**
+         * <p>The guest authorization endpoint.</p>
+         */
         @NameInMap("GuestAuthorizationEndpoint")
         public String guestAuthorizationEndpoint;
 
+        /**
+         * <p>Issuer</p>
+         */
         @NameInMap("Issuer")
         public String issuer;
 
+        /**
+         * <p>The signature public key endpoint.</p>
+         */
         @NameInMap("JwksEndpoint")
         public String jwksEndpoint;
 
+        /**
+         * <p>The logout endpoint.</p>
+         */
         @NameInMap("LogoutEndpoint")
         public String logoutEndpoint;
 
+        /**
+         * <p>The revocation endpoint.</p>
+         */
         @NameInMap("RevokeEndpoint")
         public String revokeEndpoint;
 
+        /**
+         * <p>The token endpoint.</p>
+         */
         @NameInMap("TokenEndpoint")
         public String tokenEndpoint;
 
+        /**
+         * <p>The user information endpoint.</p>
+         */
         @NameInMap("UserinfoEndpoint")
         public String userinfoEndpoint;
 
@@ -161,33 +200,63 @@ public class ThirdApp extends TeaModel {
     }
 
     public static class ThirdAppOidcSsoConfig extends TeaModel {
+        /**
+         * <p>1</p>
+         */
         @NameInMap("AccessTokenEffectiveTime")
         public Integer accessTokenEffectiveTime;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("CodeEffectiveTime")
         public Integer codeEffectiveTime;
 
+        /**
+         * <p>Specifies whether to enable authorized logon.</p>
+         */
         @NameInMap("EnableAuthLogin")
         public Boolean enableAuthLogin;
 
+        /**
+         * <p>The endpoints.</p>
+         */
         @NameInMap("Endpoints")
         public ThirdAppOidcSsoConfigEndpoints endpoints;
 
+        /**
+         * <p>The grant scopes.</p>
+         */
         @NameInMap("GrantScopes")
         public java.util.List<String> grantScopes;
 
+        /**
+         * <p>The grant types.</p>
+         */
         @NameInMap("GrantTypes")
         public java.util.List<String> grantTypes;
 
+        /**
+         * <p>The signature type.</p>
+         */
         @NameInMap("IdTokenAlgorithmType")
         public String idTokenAlgorithmType;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("IdTokenEffectiveTime")
         public Integer idTokenEffectiveTime;
 
+        /**
+         * <p>The URI whitelist.</p>
+         */
         @NameInMap("RedirectUris")
         public java.util.List<String> redirectUris;
 
+        /**
+         * <p>1</p>
+         */
         @NameInMap("RefreshTokenEffective")
         public Integer refreshTokenEffective;
 
@@ -279,9 +348,15 @@ public class ThirdApp extends TeaModel {
     }
 
     public static class ThirdAppSecrets extends TeaModel {
+        /**
+         * <p>Specifies whether it is enabled.</p>
+         */
         @NameInMap("Enable")
         public Boolean enable;
 
+        /**
+         * <p>The ciphertext.</p>
+         */
         @NameInMap("Secret")
         public String secret;
 

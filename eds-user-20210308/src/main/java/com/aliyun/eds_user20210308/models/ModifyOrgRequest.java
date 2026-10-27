@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyOrgRequest extends TeaModel {
     /**
-     * <p>Channel</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -28,7 +28,7 @@ public class ModifyOrgRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>开发部。</p>
+     * <p>Development Department</p>
      */
     @NameInMap("OrgName")
     public String orgName;

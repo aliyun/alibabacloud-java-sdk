@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LockMfaDeviceRequest extends TeaModel {
     /**
-     * <p>The domain of the Active Directory (AD) workspace.</p>
+     * <p>The address of the AD office network.</p>
      * 
      * <strong>example:</strong>
      * <p>upower.vip</p>
@@ -14,7 +14,7 @@ public class LockMfaDeviceRequest extends TeaModel {
     public String adDomain;
 
     /**
-     * <p>Channel</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -23,7 +23,7 @@ public class LockMfaDeviceRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The serial number of the virtual MFA device. The serial number is unique for each device.</p>
+     * <p>The serial number of the bound virtual MFA device. The user must first complete the MFA binding in the client authentication flow. You can call <a href="~~DescribeMfaDevices~~">DescribeMfaDevices</a> to query the serial number of the bound device.</p>
      * 
      * <strong>example:</strong>
      * <p>dc856334-446b-4035-bfbc-18af261e****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchSetDesktopManagerRequest extends TeaModel {
     /**
-     * <p>Channel</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -14,12 +14,7 @@ public class BatchSetDesktopManagerRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>Whether the convenience account has the local administrator permissions on cloud computers.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>0: no</li>
-     * <li>1 (default): yes</li>
-     * </ul>
+     * <p>Specifies whether the convenience account has local administrator permissions on the cloud desktop.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -28,7 +23,7 @@ public class BatchSetDesktopManagerRequest extends TeaModel {
     public String isDesktopManager;
 
     /**
-     * <p>The convenience accounts.</p>
+     * <p>The list of convenience accounts.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Users")

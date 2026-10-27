@@ -4,11 +4,14 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class CreateUsersResponseBody extends TeaModel {
+    /**
+     * <p>Indicates whether all convenience accounts are created.</p>
+     */
     @NameInMap("AllSucceed")
     public Boolean allSucceed;
 
     /**
-     * <p>The result of creating convenience accounts.</p>
+     * <p>The result of the convenience account creation operation.</p>
      */
     @NameInMap("CreateResult")
     public CreateUsersResponseBodyCreateResult createResult;
@@ -62,7 +65,7 @@ public class CreateUsersResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The user name.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -80,7 +83,7 @@ public class CreateUsersResponseBody extends TeaModel {
         public String phone;
 
         /**
-         * <p>The display name.</p>
+         * <p>The display name of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>Bean</p>
@@ -89,7 +92,7 @@ public class CreateUsersResponseBody extends TeaModel {
         public String realNickName;
 
         /**
-         * <p>The user\&quot;s remark.</p>
+         * <p>The user remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>remark1</p>
@@ -155,7 +158,7 @@ public class CreateUsersResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The user name.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>test2</p>
@@ -239,13 +242,13 @@ public class CreateUsersResponseBody extends TeaModel {
 
     public static class CreateUsersResponseBodyCreateResult extends TeaModel {
         /**
-         * <p>The convenience accounts that were successfully created.</p>
+         * <p>The information about the convenience accounts that are created.</p>
          */
         @NameInMap("CreatedUsers")
         public java.util.List<CreateUsersResponseBodyCreateResultCreatedUsers> createdUsers;
 
         /**
-         * <p>The convenience accounts that failed to be created.</p>
+         * <p>The information about the convenience accounts that failed to be created.</p>
          */
         @NameInMap("FailedUsers")
         public java.util.List<CreateUsersResponseBodyCreateResultFailedUsers> failedUsers;

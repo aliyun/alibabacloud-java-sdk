@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPropertyResponseBody extends TeaModel {
     /**
-     * <p>The token that is used for the next query. If this parameter is empty, all results have been returned.</p>
+     * <p>The token used to start the next query. An empty NextToken indicates that no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -14,13 +14,13 @@ public class ListPropertyResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The information about the properties.</p>
+     * <p>The property information.</p>
      */
     @NameInMap("Properties")
     public java.util.List<ListPropertyResponseBodyProperties> properties;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -59,7 +59,7 @@ public class ListPropertyResponseBody extends TeaModel {
 
     public static class ListPropertyResponseBodyPropertiesPropertyValues extends TeaModel {
         /**
-         * <p>The value of the property.</p>
+         * <p>The property value.</p>
          * 
          * <strong>example:</strong>
          * <p>A</p>
@@ -68,7 +68,7 @@ public class ListPropertyResponseBody extends TeaModel {
         public String propertyValue;
 
         /**
-         * <p>The ID of the property value.</p>
+         * <p>The property value ID.</p>
          * 
          * <strong>example:</strong>
          * <p>42</p>
@@ -101,7 +101,7 @@ public class ListPropertyResponseBody extends TeaModel {
 
     public static class ListPropertyResponseBodyProperties extends TeaModel {
         /**
-         * <p>The ID of the property.</p>
+         * <p>The property ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -110,7 +110,7 @@ public class ListPropertyResponseBody extends TeaModel {
         public Long propertyId;
 
         /**
-         * <p>The name of the property.</p>
+         * <p>The property name.</p>
          * 
          * <strong>example:</strong>
          * <p>department</p>
@@ -119,7 +119,7 @@ public class ListPropertyResponseBody extends TeaModel {
         public String propertyKey;
 
         /**
-         * <p>Details about the property values.</p>
+         * <p>The property value information.</p>
          */
         @NameInMap("PropertyValues")
         public java.util.List<ListPropertyResponseBodyPropertiesPropertyValues> propertyValues;

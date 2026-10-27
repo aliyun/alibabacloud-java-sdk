@@ -4,18 +4,33 @@ package com.aliyun.eds_user20210308.models;
 import com.aliyun.tea.*;
 
 public class WaIdPermissions extends TeaModel {
+    /**
+     * <p>code</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>basic</p>
+     */
     @NameInMap("IsBasicChild")
     public Boolean isBasicChild;
 
+    /**
+     * <p>name</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>subPermissions</p>
+     */
     @NameInMap("SubPermissions")
     public java.util.List<WaIdPermissions> subPermissions;
 
+    /**
+     * <p>type</p>
+     */
     @NameInMap("Type")
     public String type;
 

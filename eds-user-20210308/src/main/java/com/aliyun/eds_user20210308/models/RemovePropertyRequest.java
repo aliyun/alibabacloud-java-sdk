@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemovePropertyRequest extends TeaModel {
     /**
-     * <p>Channel</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -14,7 +14,7 @@ public class RemovePropertyRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The ID of the property. You can call the <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> operation to query the property ID.</p>
+     * <p>The property ID. You can call <a href="https://help.aliyun.com/document_detail/410890.html">ListProperty</a> to query the property ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

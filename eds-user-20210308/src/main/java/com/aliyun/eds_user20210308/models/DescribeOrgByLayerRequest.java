@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOrgByLayerRequest extends TeaModel {
     /**
-     * <p>Channel</p>
+     * <p>The business channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -17,7 +17,7 @@ public class DescribeOrgByLayerRequest extends TeaModel {
      * <p>The name of the organization.</p>
      * 
      * <strong>example:</strong>
-     * <p>产品部</p>
+     * <p>Product Department</p>
      */
     @NameInMap("OrgName")
     public String orgName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserRequest extends TeaModel {
     /**
-     * <p>Business type.</p>
+     * <p>The business type.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -14,7 +14,7 @@ public class DescribeUserRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>Username.</p>
+     * <p>The username.</p>
      * 
      * <strong>example:</strong>
      * <p>alex</p>
@@ -23,7 +23,7 @@ public class DescribeUserRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>List of attributes to query.</p>
+     * <p>The list of attributes to query.</p>
      */
     @NameInMap("RequireExtraAttributes")
     public java.util.List<String> requireExtraAttributes;

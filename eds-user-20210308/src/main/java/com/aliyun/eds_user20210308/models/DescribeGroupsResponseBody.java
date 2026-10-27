@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned in the query result.</p>
+     * <p>The number of query results.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
     public java.util.List<DescribeGroupsResponseBodyGroups> groups;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -58,9 +58,15 @@ public class DescribeGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupsResponseBodyGroupsAttachedLoginPolicy extends TeaModel {
+        /**
+         * <p>The Policy Name of the logon policy.</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ID of the logon policy.</p>
+         */
         @NameInMap("PolicyId")
         public String policyId;
 
@@ -88,17 +94,20 @@ public class DescribeGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeGroupsResponseBodyGroups extends TeaModel {
+        /**
+         * <p>The logon policy associated with the user group.</p>
+         */
         @NameInMap("AttachedLoginPolicy")
         public DescribeGroupsResponseBodyGroupsAttachedLoginPolicy attachedLoginPolicy;
 
         /**
-         * <p>The list of assigned resources.</p>
+         * <p>The list of allocated resources.</p>
          */
         @NameInMap("AuthedResources")
         public java.util.Map<String, String> authedResources;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in the ISO 8601 standard in the UTC+08:00 time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-07T13:40:40+08:00</p>
@@ -116,13 +125,13 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether download requires approval.</p>
+         * <p>Indicates whether approval is required for downloads.</p>
          */
         @NameInMap("DownloadNeedApproval")
         public Boolean downloadNeedApproval;
 
         /**
-         * <p>The user group ID.</p>
+         * <p>The ID of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>ug-2412ojkwtybd****</p>
@@ -131,7 +140,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The user group name.</p>
+         * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>TestGroup</p>
@@ -140,7 +149,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>Indicates whether file approval is enabled.</p>
+         * <p>Specifies whether file approval is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -149,7 +158,7 @@ public class DescribeGroupsResponseBody extends TeaModel {
         public Boolean transferFileNeedApproval;
 
         /**
-         * <p>Indicates whether upload requires approval.</p>
+         * <p>Indicates whether approval is required for uploads.</p>
          */
         @NameInMap("UploadNeedApproval")
         public Boolean uploadNeedApproval;

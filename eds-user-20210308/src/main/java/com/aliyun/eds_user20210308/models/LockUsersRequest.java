@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class LockUsersRequest extends TeaModel {
     /**
-     * <p>The channel.</p>
+     * <p>The business channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -13,6 +13,9 @@ public class LockUsersRequest extends TeaModel {
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
+    /**
+     * <p>Specifies whether to log off the current session of the convenience account when the account is locked.</p>
+     */
     @NameInMap("LogoutSession")
     public Boolean logoutSession;
 

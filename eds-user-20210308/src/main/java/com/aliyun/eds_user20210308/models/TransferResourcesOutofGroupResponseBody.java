@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class TransferResourcesOutofGroupResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>D2B1DF9E-576B-5B91-BAF6-2C3DD1****</p>
      */

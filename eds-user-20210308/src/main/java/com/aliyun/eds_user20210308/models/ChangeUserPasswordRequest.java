@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeUserPasswordRequest extends TeaModel {
     /**
-     * <p>Channel</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -23,7 +23,7 @@ public class ChangeUserPasswordRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The new password for the user.</p>
+     * <p>The new password for the user. The password must meet the password length and character type policies of the current enterprise. If no policy is configured, the password must be at least 10 characters in length and contain uppercase letters, lowercase letters, and digits.</p>
      * 
      * <strong>example:</strong>
      * <p>Admin@12***</p>

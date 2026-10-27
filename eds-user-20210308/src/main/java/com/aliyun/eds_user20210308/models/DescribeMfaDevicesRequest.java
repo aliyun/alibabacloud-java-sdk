@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMfaDevicesRequest extends TeaModel {
     /**
-     * <p>The AD domain name.</p>
+     * <p>The address of the AD office network.</p>
      * 
      * <strong>example:</strong>
      * <p>cn.misumi.pri</p>
@@ -14,7 +14,7 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     public String adDomain;
 
     /**
-     * <p>The business channel.</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -23,7 +23,7 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>An array of end user usernames.</p>
+     * <p>The list of usernames of the convenience accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -31,11 +31,17 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
+    /**
+     * <p>Filters the virtual MFA devices by convenience account username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>alice</p>
+     */
     @NameInMap("Filter")
     public String filter;
 
     /**
-     * <p>The maximum number of results to return per page. Valid range: 1–500.<br>Default value: 100.<br></p>
+     * <p>The maximum number of results to return. Valid values: 1 to 500. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -44,7 +50,7 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token for the next page of results. This value is the <code>NextToken</code> returned from a previous call.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -53,7 +59,7 @@ public class DescribeMfaDevicesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>An array of serial numbers for virtual MFA devices.</p>
+     * <p>The list of serial numbers of the virtual MFA devices.</p>
      * 
      * <strong>example:</strong>
      * <p>c2d9ae94-a64b-4a0d-8024-9519ca50****</p>

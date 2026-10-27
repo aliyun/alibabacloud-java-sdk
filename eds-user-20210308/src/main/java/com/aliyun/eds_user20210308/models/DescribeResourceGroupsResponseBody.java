@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeResourceGroupsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>68BA1DF7-8814-5AED-B844-F8F7F7****</p>
@@ -58,12 +58,30 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceGroupsResponseBodyResourceGroupAppRules extends TeaModel {
+        /**
+         * <p>The ID of the application rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ruleId1</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the application rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ruleName1</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the application rule.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("Type")
         public Integer type;
 
@@ -100,7 +118,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
 
     public static class DescribeResourceGroupsResponseBodyResourceGroupPolicies extends TeaModel {
         /**
-         * <p>The policy ID.</p>
+         * <p>The ID of the policy.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-a8jnatl8kjasb***</p>
@@ -109,7 +127,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the policy is the default policy.</p>
+         * <p>Specifies whether the policy is the default policy.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -121,7 +139,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
          * <p>The policy name.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestPolicy123</p>
+         * <p>Test policy 123</p>
          */
         @NameInMap("Name")
         public String name;
@@ -158,11 +176,17 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceGroupsResponseBodyResourceGroupTimers extends TeaModel {
+        /**
+         * <p>The association status between the scheduled task and the resource group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>BIND</p>
+         */
         @NameInMap("BindStatus")
         public String bindStatus;
 
         /**
-         * <p>The scheduled task ID.</p>
+         * <p>The ID of the scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>t-asdzx0mbjhg***</p>
@@ -171,17 +195,29 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The scheduled task name.</p>
+         * <p>The name of the scheduled task.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestTask123</p>
+         * <p>Test task 123</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The running status of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AVAILABLE</p>
+         */
         @NameInMap("TimerStatus")
         public String timerStatus;
 
+        /**
+         * <p>The type of the scheduled task.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TIMER</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -233,11 +269,17 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
     }
 
     public static class DescribeResourceGroupsResponseBodyResourceGroup extends TeaModel {
+        /**
+         * <p>The agent subtype of the DesktopAgent resource group. Valid values: JVSClaw and HermesAgent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JVSClaw</p>
+         */
         @NameInMap("AgentType")
         public String agentType;
 
         /**
-         * <p>The Alibaba Cloud resource group ID.</p>
+         * <p>The ID of the Alibaba Cloud resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-123456</p>
@@ -245,6 +287,9 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         @NameInMap("AliyunResourceGroupId")
         public String aliyunResourceGroupId;
 
+        /**
+         * <p>The list of application rules associated with the resource group.</p>
+         */
         @NameInMap("AppRules")
         public java.util.List<DescribeResourceGroupsResponseBodyResourceGroupAppRules> appRules;
 
@@ -258,7 +303,7 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String authCount;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time in ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-11-29T17:25:40.000000000Z</p>
@@ -270,8 +315,8 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
          * <blockquote>
          * <p>The policies associated with the resource group.</p>
          * <ul>
-         * <li>Associated policies take effect on cloud computers in the resource group. If multiple policies are associated, they take effect based on policy priority.</li>
-         * <li>If a cloud computer in the resource group already has other policies specified, the policies associated with the resource group take effect first.</li>
+         * <li>The associated policies take effect on the cloud computers in the resource group. If multiple policies exist, they take effect based on their priorities.</li>
+         * <li>If a cloud computer in the resource group is already assigned another policy, the policy associated with the resource group takes precedence.</li>
          * </ul>
          * </blockquote>
          */
@@ -288,7 +333,16 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String resourceCount;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The description of the resource group. If not set, an empty string is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Department A resource group</p>
+         */
+        @NameInMap("ResourceGroupDescription")
+        public String resourceGroupDescription;
+
+        /**
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-cyo0il2pzge1***</p>
@@ -297,19 +351,19 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The resource group name.</p>
+         * <p>The name of the resource group.</p>
          * 
          * <strong>example:</strong>
-         * <p>TestResourceGroup</p>
+         * <p>Test resource group</p>
          */
         @NameInMap("ResourceGroupName")
         public String resourceGroupName;
 
         /**
          * <blockquote>
-         * <p>The associated scheduled tasks.</p>
+         * <p>The scheduled tasks associated with the resource group.</p>
          * <ul>
-         * <li>Associated scheduled tasks take effect on cloud computers in the resource group. If a cloud computer in the resource group already has other scheduled tasks associated, the tasks associated with the resource group take effect first.</li>
+         * <li>The associated scheduled tasks take effect on the cloud computers in the resource group. If a cloud computer in the resource group is already associated with another scheduled task, the task associated with the resource group takes precedence.</li>
          * </ul>
          * </blockquote>
          */
@@ -375,6 +429,14 @@ public class DescribeResourceGroupsResponseBody extends TeaModel {
         }
         public String getResourceCount() {
             return this.resourceCount;
+        }
+
+        public DescribeResourceGroupsResponseBodyResourceGroup setResourceGroupDescription(String resourceGroupDescription) {
+            this.resourceGroupDescription = resourceGroupDescription;
+            return this;
+        }
+        public String getResourceGroupDescription() {
+            return this.resourceGroupDescription;
         }
 
         public DescribeResourceGroupsResponseBodyResourceGroup setResourceGroupId(String resourceGroupId) {

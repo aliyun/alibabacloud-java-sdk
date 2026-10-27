@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeOrgByLayerResponseBody extends TeaModel {
     /**
-     * <p>The organizations.</p>
+     * <p>The list of organization information.</p>
      */
     @NameInMap("Orgs")
     public java.util.List<DescribeOrgByLayerResponseBodyOrgs> orgs;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -54,7 +54,7 @@ public class DescribeOrgByLayerResponseBody extends TeaModel {
          * <p>The name of the organization.</p>
          * 
          * <strong>example:</strong>
-         * <p>开发部</p>
+         * <p>Development Department</p>
          */
         @NameInMap("OrgName")
         public String orgName;

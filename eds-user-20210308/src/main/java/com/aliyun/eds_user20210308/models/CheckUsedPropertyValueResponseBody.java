@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckUsedPropertyValueResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -14,7 +14,7 @@ public class CheckUsedPropertyValueResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of convenience accounts that are associated with the specified custom property value.</p>
+     * <p>The number of convenience accounts associated with the specified custom property value.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

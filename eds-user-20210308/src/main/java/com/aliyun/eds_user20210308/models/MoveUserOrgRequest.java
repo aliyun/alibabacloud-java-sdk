@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveUserOrgRequest extends TeaModel {
     /**
-     * <p>Channel</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -14,14 +14,14 @@ public class MoveUserOrgRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The user IDs.</p>
+     * <p>The list of user IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EndUserIds")
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>The organization ID.</p>
+     * <p>The ID of the organizational structure.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

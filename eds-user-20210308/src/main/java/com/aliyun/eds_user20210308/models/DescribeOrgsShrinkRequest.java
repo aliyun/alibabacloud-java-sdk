@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOrgsShrinkRequest extends TeaModel {
     /**
-     * <p>The channel.</p>
+     * <p>The business channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -13,6 +13,9 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
     @NameInMap("BusinessChannel")
     public String businessChannel;
 
+    /**
+     * <p>The list of organization IDs to query.</p>
+     */
     @NameInMap("IncludeOrgIds")
     public java.util.List<String> includeOrgIds;
 
@@ -23,7 +26,7 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
     public Boolean isQueryAllSubOrgs;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 1 to 100.<br>Default value: 100.</p>
+     * <p>The maximum number of results to return. Valid values: 1 to 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,7 +35,7 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of NextToken that was returned in the previous API call.</p>
+     * <p>The pagination token. Set the value to the NextToken parameter returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK****</p>
@@ -41,16 +44,16 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The organization name.</p>
+     * <p>The name of the organization.</p>
      * 
      * <strong>example:</strong>
-     * <p>ProductDepartment</p>
+     * <p>Product Department</p>
      */
     @NameInMap("OrgName")
     public String orgName;
 
     /**
-     * <p>The parent organization ID.</p>
+     * <p>The ID of the parent organization.</p>
      * 
      * <strong>example:</strong>
      * <p>org-11fs****</p>
@@ -58,6 +61,9 @@ public class DescribeOrgsShrinkRequest extends TeaModel {
     @NameInMap("ParentOrgId")
     public String parentOrgId;
 
+    /**
+     * <p>The switch mapping for additional response information. This parameter controls whether to return organization paths and resource policy information.</p>
+     */
     @NameInMap("ShowExtras")
     public String showExtrasShrink;
 

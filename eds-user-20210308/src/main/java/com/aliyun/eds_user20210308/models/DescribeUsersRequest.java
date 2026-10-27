@@ -23,16 +23,22 @@ public class DescribeUsersRequest extends TeaModel {
     public java.util.List<String> endUserIds;
 
     /**
-     * <p>The list of usernames (EndUserId) to exclude exactly.</p>
+     * <p>The list of usernames (EndUserId) to be exactly excluded.</p>
      */
     @NameInMap("ExcludeEndUserIds")
     public java.util.List<String> excludeEndUserIds;
 
+    /**
+     * <p>Excludes convenience users that belong to the specified user group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ug-12341234****</p>
+     */
     @NameInMap("ExcludeGroupId")
     public String excludeGroupId;
 
     /**
-     * <p>The fuzzy search string that supports matching by username (EndUserId) and email (Email). This field supports wildcards (*). For example, if you set this field to <code>a*m</code>, all results whose username or email starts with <code>a</code> and ends with <code>m</code> are returned.</p>
+     * <p>The fuzzy search string. This parameter supports matching usernames (EndUserId) and email addresses (Email). This field supports wildcards (*). For example, if you set this field to <code>a*m</code>, all results where the username or email address starts with <code>a</code> and ends with <code>m</code> are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>a*m</p>
@@ -40,20 +46,26 @@ public class DescribeUsersRequest extends TeaModel {
     @NameInMap("Filter")
     public String filter;
 
+    /**
+     * <p>The mapping of fuzzy match conditions for user information. This parameter supports usernames, nicknames, mobile phone numbers, email addresses, remarks, and employee IDs.</p>
+     */
     @NameInMap("FilterMap")
     public java.util.Map<String, String> filterMap;
 
+    /**
+     * <p>Filters users based on the allocation relationship of specified resources. The mapping key is the resource type.</p>
+     */
     @NameInMap("FilterWithAssignedResource")
     public java.util.Map<String, String> filterWithAssignedResource;
 
     /**
-     * <p>Filters users based on whether cloud resources are assigned.</p>
+     * <p>Filters users based on whether cloud resources are allocated.</p>
      */
     @NameInMap("FilterWithAssignedResources")
     public java.util.Map<String, Boolean> filterWithAssignedResources;
 
     /**
-     * <p>Performs an exact match by user group ID and queries the list of accounts that belong to the specified user group.</p>
+     * <p>The user group ID for exact match. Queries the list of accounts that belong to the specified user group.</p>
      * 
      * <strong>example:</strong>
      * <p>ug-12341234****</p>
@@ -71,9 +83,9 @@ public class DescribeUsersRequest extends TeaModel {
     public Boolean isQueryAllSubOrgs;
 
     /**
-     * <p>The number of entries per page for a paged query.  </p>
+     * <p>The number of entries to return on each page in a paging query.</p>
      * <ul>
-     * <li>Valid values: 1 to 500.  </li>
+     * <li>Valid values: 1 to 500.</li>
      * <li>Default value: 200.</li>
      * </ul>
      * 
@@ -84,7 +96,7 @@ public class DescribeUsersRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token for the next query. You do not need to set this parameter for the first request. If not all results are returned in a single query, a non-empty NextToken is returned. You can pass the returned NextToken in subsequent requests to continue the query.</p>
+     * <p>The token for the next query. You do not need to specify this parameter for the first call.<br>If the results returned in a single call do not include all entries, a non-empty NextToken is returned. You can use the returned NextToken in subsequent calls to continue the query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a****</p>
@@ -93,7 +105,7 @@ public class DescribeUsersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Performs an exact match by organization ID and queries the list of accounts that belong to the specified organization.</p>
+     * <p>The organization ID for exact match. Queries the list of accounts that belong to the specified organization.</p>
      * 
      * <strong>example:</strong>
      * <p>org-4mdgc1cocc59z****</p>
@@ -102,7 +114,7 @@ public class DescribeUsersRequest extends TeaModel {
     public String orgId;
 
     /**
-     * <p>Queries extended user information.</p>
+     * <p>The extended information of users to query.</p>
      */
     @NameInMap("ShowExtras")
     public java.util.Map<String, ?> showExtras;
@@ -112,6 +124,9 @@ public class DescribeUsersRequest extends TeaModel {
 
     /**
      * <p>The status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Status")
     public Integer status;

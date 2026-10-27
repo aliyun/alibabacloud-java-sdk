@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class InitTenantAliasResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("AliasInfo")
     public InitTenantAliasResponseBodyAliasInfo aliasInfo;
 
     /**
-     * <p>The generated ID of the organization.</p>
+     * <p>The generated organization ID.</p>
      * 
      * <strong>example:</strong>
      * <p>WY23***</p>
@@ -59,7 +59,7 @@ public class InitTenantAliasResponseBody extends TeaModel {
 
     public static class InitTenantAliasResponseBodyAliasInfo extends TeaModel {
         /**
-         * <p>The reason why modification is not allowed.</p>
+         * <p>The reason why editing is not allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>FrequencyExceedsLimit</p>
@@ -68,7 +68,7 @@ public class InitTenantAliasResponseBody extends TeaModel {
         public String aliasEditDisabledReason;
 
         /**
-         * <p>Indicates whether modification is allowed.</p>
+         * <p>Indicates whether editing is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>False</p>
@@ -78,11 +78,6 @@ public class InitTenantAliasResponseBody extends TeaModel {
 
         /**
          * <p>The source of the organization ID.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>Generated: auto-generated.</li>
-         * <li>Customized: user-defined.</li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Customized</p>
@@ -91,7 +86,7 @@ public class InitTenantAliasResponseBody extends TeaModel {
         public String aliasSourceType;
 
         /**
-         * <p>The time window during which modification is allowed.</p>
+         * <p>The time when editing is allowed, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-04-17 20:31:48</p>

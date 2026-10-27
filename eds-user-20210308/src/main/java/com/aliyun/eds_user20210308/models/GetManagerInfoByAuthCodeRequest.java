@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetManagerInfoByAuthCodeRequest extends TeaModel {
     /**
-     * <p>The authorization code.</p>
+     * <p>The authorization code. The code is obtained by the authorized enterprise account by calling CreateAuthCode and then used by the corresponding service provider account within the validity period. If the calling account does not match the service provider specified by the authorization code, the request is rejected.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

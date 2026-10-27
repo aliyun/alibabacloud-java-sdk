@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RemoveUsersResponseBody extends TeaModel {
     /**
-     * <p>The result of removing the convenience user.</p>
+     * <p>The result of deleting the convenience users.</p>
      */
     @NameInMap("RemoveUsersResult")
     public RemoveUsersResponseBodyRemoveUsersResult removeUsersResult;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>
@@ -42,7 +42,7 @@ public class RemoveUsersResponseBody extends TeaModel {
 
     public static class RemoveUsersResponseBodyRemoveUsersResultFailedUsers extends TeaModel {
         /**
-         * <p>The ID of the convenience user that failed to be removed.</p>
+         * <p>The convenience user that failed to be deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>test2</p>
@@ -101,16 +101,22 @@ public class RemoveUsersResponseBody extends TeaModel {
 
     public static class RemoveUsersResponseBodyRemoveUsersResult extends TeaModel {
         /**
-         * <p>The convenience users that failed to be removed.</p>
+         * <p>The information about the users that failed to be deleted.</p>
          */
         @NameInMap("FailedUsers")
         public java.util.List<RemoveUsersResponseBodyRemoveUsersResultFailedUsers> failedUsers;
 
+        @NameInMap("ProcessingUsers")
+        public java.util.List<String> processingUsers;
+
         /**
-         * <p>The convenience users that were removed.</p>
+         * <p>The convenience users that are successfully deleted.</p>
          */
         @NameInMap("RemovedUsers")
         public java.util.List<String> removedUsers;
+
+        @NameInMap("SubmittedUsers")
+        public java.util.List<String> submittedUsers;
 
         public static RemoveUsersResponseBodyRemoveUsersResult build(java.util.Map<String, ?> map) throws Exception {
             RemoveUsersResponseBodyRemoveUsersResult self = new RemoveUsersResponseBodyRemoveUsersResult();
@@ -125,12 +131,28 @@ public class RemoveUsersResponseBody extends TeaModel {
             return this.failedUsers;
         }
 
+        public RemoveUsersResponseBodyRemoveUsersResult setProcessingUsers(java.util.List<String> processingUsers) {
+            this.processingUsers = processingUsers;
+            return this;
+        }
+        public java.util.List<String> getProcessingUsers() {
+            return this.processingUsers;
+        }
+
         public RemoveUsersResponseBodyRemoveUsersResult setRemovedUsers(java.util.List<String> removedUsers) {
             this.removedUsers = removedUsers;
             return this;
         }
         public java.util.List<String> getRemovedUsers() {
             return this.removedUsers;
+        }
+
+        public RemoveUsersResponseBodyRemoveUsersResult setSubmittedUsers(java.util.List<String> submittedUsers) {
+            this.submittedUsers = submittedUsers;
+            return this;
+        }
+        public java.util.List<String> getSubmittedUsers() {
+            return this.submittedUsers;
         }
 
     }

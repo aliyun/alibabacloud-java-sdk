@@ -28,10 +28,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A convenience account with local administrator permissions can install software or modify certain system settings on the cloud computer.</p>
+     * <p>A convenience account with local administrator permissions can install software or modify specific system settings on the cloud desktop.</p>
      * 
      * <b>summary</b> : 
-     * <p>Add or remove local administrator permissions on a cloud computer for a convenience account.</p>
+     * <p>Grants or revokes local administrator permissions on a cloud desktop for a convenience account.</p>
      * 
      * @param request BatchSetDesktopManagerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -71,10 +71,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A convenience account with local administrator permissions can install software or modify certain system settings on the cloud computer.</p>
+     * <p>A convenience account with local administrator permissions can install software or modify specific system settings on the cloud desktop.</p>
      * 
      * <b>summary</b> : 
-     * <p>Add or remove local administrator permissions on a cloud computer for a convenience account.</p>
+     * <p>Grants or revokes local administrator permissions on a cloud desktop for a convenience account.</p>
      * 
      * @param request BatchSetDesktopManagerRequest
      * @return BatchSetDesktopManagerResponse
@@ -86,7 +86,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>When the administrator activates the mode, you can use this API to modify the user logon password.</p>
+     * <p>Modifies the logon password of a user in administrator activation mode.</p>
      * 
      * @param request ChangeUserPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -126,7 +126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>When the administrator activates the mode, you can use this API to modify the user logon password.</p>
+     * <p>Modifies the logon password of a user in administrator activation mode.</p>
      * 
      * @param request ChangeUserPasswordRequest
      * @return ChangeUserPasswordResponse
@@ -138,7 +138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the number of convenience accounts associated with a specified custom property.</p>
+     * <p>Queries the number of convenience accounts associated with a specified custom property.</p>
      * 
      * @param request CheckUsedPropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -174,7 +174,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the number of convenience accounts associated with a specified custom property.</p>
+     * <p>Queries the number of convenience accounts associated with a specified custom property.</p>
      * 
      * @param request CheckUsedPropertyRequest
      * @return CheckUsedPropertyResponse
@@ -186,7 +186,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the number of convenience accounts associated with a specified custom attribute value.</p>
+     * <p>Queries the number of convenience accounts associated with a specified custom property value.</p>
      * 
      * @param request CheckUsedPropertyValueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -226,7 +226,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the number of convenience accounts associated with a specified custom attribute value.</p>
+     * <p>Queries the number of convenience accounts associated with a specified custom property value.</p>
      * 
      * @param request CheckUsedPropertyValueRequest
      * @return CheckUsedPropertyValueResponse
@@ -238,7 +238,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a group.</p>
+     * <p>Creates a user group.</p>
      * 
      * @param request CreateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -290,7 +290,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a group.</p>
+     * <p>Creates a user group.</p>
      * 
      * @param request CreateGroupRequest
      * @return CreateGroupResponse
@@ -302,7 +302,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an organization.</p>
+     * <p>Creates an organization.</p>
      * 
      * @param request CreateOrgRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -342,7 +342,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create an organization.</p>
+     * <p>Creates an organization.</p>
      * 
      * @param request CreateOrgRequest
      * @return CreateOrgResponse
@@ -355,12 +355,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can create up to 10 different properties under one Alibaba Cloud account. Each property includes a property name (PropertyKey) and multiple attribute values (PropertyValue).  </li>
-     * <li>You can add up to 50 different attribute values to a single property.</li>
+     * <li>You can create up to 10 different properties under an Alibaba Cloud account. Each property includes a property key (PropertyKey) and multiple property values (PropertyValue).</li>
+     * <li>You can add up to 50 different property values to a single property.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create a user attribute.</p>
+     * <p>Creates a user property.</p>
      * 
      * @param request CreatePropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -401,12 +401,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can create up to 10 different properties under one Alibaba Cloud account. Each property includes a property name (PropertyKey) and multiple attribute values (PropertyValue).  </li>
-     * <li>You can add up to 50 different attribute values to a single property.</li>
+     * <li>You can create up to 10 different properties under an Alibaba Cloud account. Each property includes a property key (PropertyKey) and multiple property values (PropertyValue).</li>
+     * <li>You can add up to 50 different property values to a single property.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Create a user attribute.</p>
+     * <p>Creates a user property.</p>
      * 
      * @param request CreatePropertyRequest
      * @return CreatePropertyResponse
@@ -451,6 +451,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("ResourceClassification", request.resourceClassification);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupDescription)) {
+            query.put("ResourceGroupDescription", request.resourceGroupDescription);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupName)) {
             query.put("ResourceGroupName", request.resourceGroupName);
         }
@@ -486,13 +490,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;
-     * A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require a username, and either an email or a phone number.
-     * &lt;props=&quot;intl&quot;&gt;
-     * A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require both a username and an email.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username, email address, and phone number. The username is required, and you must specify at least one of the email address and phone number.
+     * &lt;props=&quot;intl&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username and email address, both of which are required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Easily create accounts for your end users.</p>
+     * <p>Creates a convenience account for an end user.</p>
      * 
      * @param request CreateUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -546,13 +548,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>&lt;props=&quot;china&quot;&gt;
-     * A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require a username, and either an email or a phone number.
-     * &lt;props=&quot;intl&quot;&gt;
-     * A convenience account is a dedicated account system in Wuying Workspace for simple use cases that do not require enterprise AD integration. Accounts require both a username and an email.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username, email address, and phone number. The username is required, and you must specify at least one of the email address and phone number.
+     * &lt;props=&quot;intl&quot;&gt;A convenience account is an account system dedicated to Wuying Workspace, which is suitable for simple scenarios where you do not want to connect to an enterprise Active Directory (AD). The information of a convenience account includes the username and email address, both of which are required.</p>
      * 
      * <b>summary</b> : 
-     * <p>Easily create accounts for your end users.</p>
+     * <p>Creates a convenience account for an end user.</p>
      * 
      * @param request CreateUsersRequest
      * @return CreateUsersResponse
@@ -564,7 +564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a resource group.</p>
+     * <p>Deletes a resource group.</p>
      * 
      * @param request DeleteResourceGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -604,7 +604,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a resource group.</p>
+     * <p>Deletes a resource group.</p>
      * 
      * @param request DeleteResourceGroupRequest
      * @return DeleteResourceGroupResponse
@@ -616,7 +616,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detach a user from a user attribute.</p>
+     * <p>Dissociates a user from a user property.</p>
      * 
      * @param request DeleteUserPropertyValueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -660,7 +660,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detach a user from a user attribute.</p>
+     * <p>Dissociates a user from a user property.</p>
      * 
      * @param request DeleteUserPropertyValueRequest
      * @return DeleteUserPropertyValueResponse
@@ -672,7 +672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query group members.</p>
+     * <p>Queries the members of a user group.</p>
      * 
      * @param request DescribeGroupUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -728,7 +728,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query group members.</p>
+     * <p>Queries the members of a user group.</p>
      * 
      * @param request DescribeGroupUserRequest
      * @return DescribeGroupUserResponse
@@ -824,7 +824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists virtual MFA devices bound to directory accounts.</p>
+     * <p>Queries the virtual MFA devices bound to convenience accounts.</p>
      * 
      * @param request DescribeMfaDevicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -880,7 +880,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists virtual MFA devices bound to directory accounts.</p>
+     * <p>Queries the virtual MFA devices bound to convenience accounts.</p>
      * 
      * @param request DescribeMfaDevicesRequest
      * @return DescribeMfaDevicesResponse
@@ -892,7 +892,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Find subordinate organizations.</p>
+     * <p>Queries subordinate organizations.</p>
      * 
      * @param request DescribeOrgByLayerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -932,7 +932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Find subordinate organizations.</p>
+     * <p>Queries subordinate organizations.</p>
      * 
      * @param request DescribeOrgByLayerRequest
      * @return DescribeOrgByLayerResponse
@@ -944,7 +944,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</p>
+     * <p>Organizations use a tree structure. The root organization ID is org-aliyun-wy-org-id.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of organizations.</p>
@@ -1013,7 +1013,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Organizations have a tree structure. The root organization ID is org-aliyun-wy-org-id.</p>
+     * <p>Organizations use a tree structure. The root organization ID is org-aliyun-wy-org-id.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries the list of organizations.</p>
@@ -1108,7 +1108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query user basic information</p>
+     * <p>Queries the basic information of a user.</p>
      * 
      * @param request DescribeUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1148,7 +1148,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query user basic information</p>
+     * <p>Queries the basic information of a user.</p>
      * 
      * @param request DescribeUserRequest
      * @return DescribeUserResponse
@@ -1160,7 +1160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries convenience account information, such as usernames, email addresses, and remarks.</p>
+     * <p>Queries the information of convenience users, such as usernames, email addresses, and remarks.</p>
      * 
      * @param tmpReq DescribeUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1276,7 +1276,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries convenience account information, such as usernames, email addresses, and remarks.</p>
+     * <p>Queries the information of convenience users, such as usernames, email addresses, and remarks.</p>
      * 
      * @param request DescribeUsersRequest
      * @return DescribeUsersResponse
@@ -1288,7 +1288,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Filter account information by user attribute.</p>
+     * <p>Queries convenience account information by filtering based on user property.</p>
      * 
      * @param tmpReq FilterUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1402,7 +1402,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Filter account information by user attribute.</p>
+     * <p>Queries convenience account information by filtering based on user property.</p>
      * 
      * @param request FilterUsersRequest
      * @return FilterUsersResponse
@@ -1414,13 +1414,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</p>
+     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</p>
      * <blockquote>
-     * <p>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<code>Status</code>取值为0，表示该便捷账号未被锁定；若<code>Status</code>取值为9，表示该便捷账号已被锁定。</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <code>Status</code> value in the returned data is 0, the convenience account is not locked. If the <code>Status</code> value is 9, the convenience account is locked.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>获取用户数量</p>
+     * <p>Retrieves the number of Active Directory (AD) users.</p>
      * 
      * @param request GetAdUsersCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1462,13 +1462,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</p>
+     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</p>
      * <blockquote>
-     * <p>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<code>Status</code>取值为0，表示该便捷账号未被锁定；若<code>Status</code>取值为9，表示该便捷账号已被锁定。</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <code>Status</code> value in the returned data is 0, the convenience account is not locked. If the <code>Status</code> value is 9, the convenience account is locked.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>获取用户数量</p>
+     * <p>Retrieves the number of Active Directory (AD) users.</p>
      * 
      * @param request GetAdUsersCountRequest
      * @return GetAdUsersCountResponse
@@ -1480,7 +1480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information about the current logon administrator based on the authorization code.</p>
+     * <p>Retrieves the information about the currently logged-on administrator based on the authorization code.</p>
      * 
      * @param request GetManagerInfoByAuthCodeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1512,7 +1512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Obtains the information about the current logon administrator based on the authorization code.</p>
+     * <p>Retrieves the information about the currently logged-on administrator based on the authorization code.</p>
      * 
      * @param request GetManagerInfoByAuthCodeRequest
      * @return GetManagerInfoByAuthCodeResponse
@@ -1524,13 +1524,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</p>
+     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</p>
      * <blockquote>
-     * <p>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<code>Status</code>取值为0，表示该便捷账号未被锁定；若<code>Status</code>取值为9，表示该便捷账号已被锁定。</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <code>Status</code> value in the returned data is 0, the convenience account is not locked. If the <code>Status</code> value is 9, the convenience account is locked.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>获取用户数量</p>
+     * <p>Retrieves the total number of Wuying convenience users.</p>
      * 
      * @param request GetUsersCountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1572,13 +1572,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>出于安全考虑，您可以锁定便捷账号。被锁定的便捷用户无法登录无影终端，因此也无法访问任何无影云资源。</p>
+     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources.</p>
      * <blockquote>
-     * <p>您可以调用<a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a>查询便捷账号信息。若返回数据中<code>Status</code>取值为0，表示该便捷账号未被锁定；若<code>Status</code>取值为9，表示该便捷账号已被锁定。</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <code>Status</code> value in the returned data is 0, the convenience account is not locked. If the <code>Status</code> value is 9, the convenience account is locked.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>获取用户数量</p>
+     * <p>Retrieves the total number of Wuying convenience users.</p>
      * 
      * @param request GetUsersCountRequest
      * @return GetUsersCountResponse
@@ -1590,7 +1590,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initialize the organization ID.</p>
+     * <p>Initializes the organization ID.</p>
      * 
      * @param request InitTenantAliasRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1622,7 +1622,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Initialize the organization ID.</p>
+     * <p>Initializes the organization ID.</p>
      * 
      * @param request InitTenantAliasRequest
      * @return InitTenantAliasResponse
@@ -1634,7 +1634,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of existing user attributes under the current account.</p>
+     * <p>Queries the list of user properties under the current account.</p>
      * 
      * @param request ListPropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1666,7 +1666,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of existing user attributes under the current account.</p>
+     * <p>Queries the list of user properties under the current account.</p>
      * 
      * @param request ListPropertyRequest
      * @return ListPropertyResponse
@@ -1678,7 +1678,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of attribute values for a specific user attribute.</p>
+     * <p>Queries the list of property values for a specific user property.</p>
      * 
      * @param request ListPropertyValueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1714,7 +1714,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the list of attribute values for a specific user attribute.</p>
+     * <p>Queries the list of property values for a specific user property.</p>
      * 
      * @param request ListPropertyValueRequest
      * @return ListPropertyValueResponse
@@ -1726,10 +1726,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After locking, the status of the virtual MFA device changes to LOCKED. When the associated convenience account attempts to log on to a WUYING Terminal through an office network with MFA enabled, authentication will fail due to the locked MFA device, preventing successful logon. You can invoke <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock it.</p>
+     * <p>After the device is locked, the status of the virtual MFA device changes to LOCKED. When the corresponding convenience account logs on to a Wuying terminal through an office network with MFA enabled, the logon fails because the MFA device cannot be authenticated. You can call <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock the device.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lock the virtual MFA device attached to a convenience account.</p>
+     * <p>Locks the virtual MFA device bound to a convenience account.</p>
      * 
      * @param request LockMfaDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1769,10 +1769,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After locking, the status of the virtual MFA device changes to LOCKED. When the associated convenience account attempts to log on to a WUYING Terminal through an office network with MFA enabled, authentication will fail due to the locked MFA device, preventing successful logon. You can invoke <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock it.</p>
+     * <p>After the device is locked, the status of the virtual MFA device changes to LOCKED. When the corresponding convenience account logs on to a Wuying terminal through an office network with MFA enabled, the logon fails because the MFA device cannot be authenticated. You can call <a href="~~UnlockMfaDevice~~">UnlockMfaDevice</a> to unlock the device.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lock the virtual MFA device attached to a convenience account.</p>
+     * <p>Locks the virtual MFA device bound to a convenience account.</p>
      * 
      * @param request LockMfaDeviceRequest
      * @return LockMfaDeviceResponse
@@ -1784,13 +1784,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot sign in to Wuying clients, and therefore cannot access any Wuying cloud resources.</p>
+     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to cloud desktop terminals and therefore cannot access any cloud desktop resources.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> operation to check the lock status of convenience accounts. The <code>Status</code> value in the response is 0 for unlocked accounts and 9 for locked accounts.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <code>Status</code> value in the response is 0, the convenience account is not locked. If the <code>Status</code> value is 9, the convenience account is locked.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Locks one or more convenience accounts. Locked convenience accounts cannot be used to sign in to Wuying clients.</p>
+     * <p>Locks one or more convenience accounts. Locked convenience accounts cannot log on to cloud desktop terminals.</p>
      * 
      * @param request LockUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1832,13 +1832,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot sign in to Wuying clients, and therefore cannot access any Wuying cloud resources.</p>
+     * <p>For security purposes, you can lock convenience accounts. Locked convenience users cannot log on to cloud desktop terminals and therefore cannot access any cloud desktop resources.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> operation to check the lock status of convenience accounts. The <code>Status</code> value in the response is 0 for unlocked accounts and 9 for locked accounts.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the <code>Status</code> value in the response is 0, the convenience account is not locked. If the <code>Status</code> value is 9, the convenience account is locked.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Locks one or more convenience accounts. Locked convenience accounts cannot be used to sign in to Wuying clients.</p>
+     * <p>Locks one or more convenience accounts. Locked convenience accounts cannot log on to cloud desktop terminals.</p>
      * 
      * @param request LockUsersRequest
      * @return LockUsersResponse
@@ -1850,7 +1850,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the name and description of a group.</p>
+     * <p>Modifies the name and description of a user group.</p>
      * 
      * @param request ModifyGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1894,7 +1894,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the name and description of a group.</p>
+     * <p>Modifies the name and description of a user group.</p>
      * 
      * @param request ModifyGroupRequest
      * @return ModifyGroupResponse
@@ -1906,7 +1906,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify an organization.</p>
+     * <p>Updates an organization.</p>
      * 
      * @param request ModifyOrgRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1946,7 +1946,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify an organization.</p>
+     * <p>Updates an organization.</p>
      * 
      * @param request ModifyOrgRequest
      * @return ModifyOrgResponse
@@ -1958,7 +1958,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the contact information of a convenience account.</p>
+     * <p>Updates the contact information of a convenience account.</p>
      * 
      * @param request ModifyUserRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2002,7 +2002,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify the contact information of a convenience account.</p>
+     * <p>Updates the contact information of a convenience account.</p>
      * 
      * @param request ModifyUserRequest
      * @return ModifyUserResponse
@@ -2014,7 +2014,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Shift organization.</p>
+     * <p>Moves an organization.</p>
      * 
      * @param request MoveOrgRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2054,7 +2054,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Shift organization.</p>
+     * <p>Moves an organization.</p>
      * 
      * @param request MoveOrgRequest
      * @return MoveOrgResponse
@@ -2066,7 +2066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Shift users to the target organization architecture.</p>
+     * <p>Moves users to the target organizational structure.</p>
      * 
      * @param request MoveUserOrgRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2106,7 +2106,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Shift users to the target organization architecture.</p>
+     * <p>Moves users to the target organizational structure.</p>
      * 
      * @param request MoveUserOrgRequest
      * @return MoveUserOrgResponse
@@ -2118,7 +2118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the user synchronization status.</p>
+     * <p>Queries the user synchronization status.</p>
      * 
      * @param request QuerySyncStatusByAliUidRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2150,7 +2150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the user synchronization status.</p>
+     * <p>Queries the user synchronization status.</p>
      * 
      * @param request QuerySyncStatusByAliUidRequest
      * @return QuerySyncStatusByAliUidResponse
@@ -2162,7 +2162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a group. Supports batch operations.</p>
+     * <p>Deletes one or more user groups. Batch operations are supported.</p>
      * 
      * @param request RemoveGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2202,7 +2202,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a group. Supports batch operations.</p>
+     * <p>Deletes one or more user groups. Batch operations are supported.</p>
      * 
      * @param request RemoveGroupRequest
      * @return RemoveGroupResponse
@@ -2214,10 +2214,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deleting the virtual MFA device attached to a convenience account unbinds the MFA device, which is equivalent to resetting or disabling it. The corresponding convenience account must reattach a new virtual MFA device when logging on to a WUYING Terminal.</p>
+     * <p>Deleting the virtual MFA device bound to a convenience user unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The convenience user must bind a new virtual MFA device when logging on to the Wuying terminal.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete the virtual MFA device attached to a convenience account.</p>
+     * <p>Deletes the virtual MFA device bound to a convenience user.</p>
      * 
      * @param request RemoveMfaDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2257,10 +2257,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deleting the virtual MFA device attached to a convenience account unbinds the MFA device, which is equivalent to resetting or disabling it. The corresponding convenience account must reattach a new virtual MFA device when logging on to a WUYING Terminal.</p>
+     * <p>Deleting the virtual MFA device bound to a convenience user unbinds the MFA device, which is equivalent to resetting or disabling the MFA device. The convenience user must bind a new virtual MFA device when logging on to the Wuying terminal.</p>
      * 
      * <b>summary</b> : 
-     * <p>Delete the virtual MFA device attached to a convenience account.</p>
+     * <p>Deletes the virtual MFA device bound to a convenience user.</p>
      * 
      * @param request RemoveMfaDeviceRequest
      * @return RemoveMfaDeviceResponse
@@ -2272,7 +2272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Remove an organization.</p>
+     * <p>Removes an organization.</p>
      * 
      * @param request RemoveOrgRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2308,7 +2308,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Remove an organization.</p>
+     * <p>Removes an organization.</p>
      * 
      * @param request RemoveOrgRequest
      * @return RemoveOrgResponse
@@ -2320,7 +2320,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a set of user attributes.</p>
+     * <p>Deletes a set of user properties.</p>
      * 
      * @param request RemovePropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2358,7 +2358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete a set of user attributes.</p>
+     * <p>Deletes a set of user properties.</p>
      * 
      * @param request RemovePropertyRequest
      * @return RemovePropertyResponse
@@ -2370,7 +2370,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete one or more convenience accounts.</p>
+     * <p>Deletes one or more convenience users.</p>
      * 
      * @param request RemoveUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2378,6 +2378,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      */
     public RemoveUsersResponse removeUsersWithOptions(RemoveUsersRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.unbindDesktops)) {
+            query.put("UnbindDesktops", request.unbindDesktops);
+        }
+
         java.util.Map<String, Object> body = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
             body.put("BusinessChannel", request.businessChannel);
@@ -2388,6 +2393,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
         ));
         com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
@@ -2406,7 +2412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete one or more convenience accounts.</p>
+     * <p>Deletes one or more convenience users.</p>
      * 
      * @param request RemoveUsersRequest
      * @return RemoveUsersResponse
@@ -2418,7 +2424,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reset the password of a convenience account, including generating a password reset token and sending a password reset email to the mailbox of the convenience account.</p>
+     * <p>Resets the password of a convenience user, including generating a password reset token and sending a password reset email to the email address of the convenience user.</p>
      * 
      * @param request ResetUserPasswordRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2458,7 +2464,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Reset the password of a convenience account, including generating a password reset token and sending a password reset email to the mailbox of the convenience account.</p>
+     * <p>Resets the password of a convenience user, including generating a password reset token and sending a password reset email to the email address of the convenience user.</p>
      * 
      * @param request ResetUserPasswordRequest
      * @return ResetUserPasswordResponse
@@ -2470,7 +2476,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associate a user attribute with a specific user.</p>
+     * <p>Associates a user property with a specified user.</p>
      * 
      * @param request SetUserPropertyValueRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2518,7 +2524,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Associate a user attribute with a specific user.</p>
+     * <p>Associates a user property with a specified user.</p>
      * 
      * @param request SetUserPropertyValueRequest
      * @return SetUserPropertyValueResponse
@@ -2530,7 +2536,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Synchronize all education information.</p>
+     * <p>Synchronizes all education information.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return SyncAllEduInfoResponse
@@ -2553,7 +2559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Synchronize all education information.</p>
+     * <p>Synchronizes all education information.</p>
      * @return SyncAllEduInfoResponse
      */
     public SyncAllEduInfoResponse syncAllEduInfo() throws Exception {
@@ -2563,7 +2569,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将资源转移到资源组中</p>
+     * <p>Transfers resources to a resource group.</p>
      * 
      * @param request TransferResourcesIntoGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2607,7 +2613,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将资源转移到资源组中</p>
+     * <p>Transfers resources to a resource group.</p>
      * 
      * @param request TransferResourcesIntoGroupRequest
      * @return TransferResourcesIntoGroupResponse
@@ -2619,7 +2625,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将资源从资源组中转出</p>
+     * <p>Moves resources out of a resource group.</p>
      * 
      * @param request TransferResourcesOutofGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2628,12 +2634,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public TransferResourcesOutofGroupResponse transferResourcesOutofGroupWithOptions(TransferResourcesOutofGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appRuleId)) {
+            query.put("AppRuleId", request.appRuleId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
             query.put("BusinessChannel", request.businessChannel);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.platform)) {
             query.put("Platform", request.platform);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyId)) {
+            query.put("PolicyId", request.policyId);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
@@ -2646,6 +2660,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.targetResourceGroupId)) {
             query.put("TargetResourceGroupId", request.targetResourceGroupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timerId)) {
+            query.put("TimerId", request.timerId);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -2667,7 +2685,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>将资源从资源组中转出</p>
+     * <p>Moves resources out of a resource group.</p>
      * 
      * @param request TransferResourcesOutofGroupRequest
      * @return TransferResourcesOutofGroupResponse
@@ -2679,7 +2697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unlock the virtual MFA device attached to a convenience account.</p>
+     * <p>Unlocks the virtual MFA device bound to a convenience account.</p>
      * 
      * @param request UnlockMfaDeviceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2719,7 +2737,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unlock the virtual MFA device attached to a convenience account.</p>
+     * <p>Unlocks the virtual MFA device bound to a convenience account.</p>
      * 
      * @param request UnlockMfaDeviceRequest
      * @return UnlockMfaDeviceResponse
@@ -2731,13 +2749,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Locked convenience accounts cannot log on to WUYING Terminal and therefore cannot access any WUYING cloud resources. To allow a convenience account to log on to WUYING Terminal, you must first unlock it.  </p>
+     * <p>Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources. To allow a convenience user to log on to a Wuying terminal, you must unlock the user first.</p>
      * <blockquote>
-     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the value of <code>Status</code> in the returned data is 0, the convenience account is not locked. If the value of <code>Status</code> is 9, the convenience account is locked.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query the information of convenience users. If the <code>Status</code> parameter in the response is 0, the convenience user is not locked. If the <code>Status</code> parameter is 9, the convenience user is locked.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Unlock one or more convenience accounts. After being unlocked, the convenience accounts can log on to WUYING Terminal.</p>
+     * <p>Unlocks one or more convenience users. Unlocked convenience users can log on to Wuying terminals.</p>
      * 
      * @param request UnlockUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2779,13 +2797,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Locked convenience accounts cannot log on to WUYING Terminal and therefore cannot access any WUYING cloud resources. To allow a convenience account to log on to WUYING Terminal, you must first unlock it.  </p>
+     * <p>Locked convenience users cannot log on to Wuying terminals and therefore cannot access any Wuying cloud resources. To allow a convenience user to log on to a Wuying terminal, you must unlock the user first.</p>
      * <blockquote>
-     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query convenience account information. If the value of <code>Status</code> in the returned data is 0, the convenience account is not locked. If the value of <code>Status</code> is 9, the convenience account is locked.</p>
+     * <p>You can call <a href="https://help.aliyun.com/document_detail/283609.html">DescribeUsers</a> to query the information of convenience users. If the <code>Status</code> parameter in the response is 0, the convenience user is not locked. If the <code>Status</code> parameter is 9, the convenience user is locked.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Unlock one or more convenience accounts. After being unlocked, the convenience accounts can log on to WUYING Terminal.</p>
+     * <p>Unlocks one or more convenience users. Unlocked convenience users can log on to Wuying terminals.</p>
      * 
      * @param request UnlockUsersRequest
      * @return UnlockUsersResponse
@@ -2797,7 +2815,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify User Attributes.</p>
+     * <p>Updates user properties.</p>
      * 
      * @param request UpdatePropertyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2843,7 +2861,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify User Attributes.</p>
+     * <p>Updates user properties.</p>
      * 
      * @param request UpdatePropertyRequest
      * @return UpdatePropertyResponse
@@ -2855,7 +2873,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add users to a group in batch.</p>
+     * <p>Adds users to a user group in batches.</p>
      * 
      * @param request UserBatchJoinGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2895,7 +2913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Add users to a group in batch.</p>
+     * <p>Adds users to a user group in batches.</p>
      * 
      * @param request UserBatchJoinGroupRequest
      * @return UserBatchJoinGroupResponse
@@ -2907,7 +2925,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Remove users from a group in batch.</p>
+     * <p>Removes multiple users from a user group.</p>
      * 
      * @param request UserBatchQuitGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2947,7 +2965,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Remove users from a group in batch.</p>
+     * <p>Removes multiple users from a user group.</p>
      * 
      * @param request UserBatchQuitGroupRequest
      * @return UserBatchQuitGroupResponse

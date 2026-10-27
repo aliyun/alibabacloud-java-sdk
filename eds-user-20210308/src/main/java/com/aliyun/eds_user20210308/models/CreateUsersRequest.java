@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateUsersRequest extends TeaModel {
     /**
-     * <p>The date and time when the system automatically locks the convenience user\&quot;s account. The value must be in the <code>yyyy-MM-dd HH:mm:ss</code> format.</p>
+     * <p>The date when the account is automatically locked. Specify the date in the yyyy-MM-dd HH:mm:ss format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-11-28 00:00:00</p>
@@ -14,7 +14,7 @@ public class CreateUsersRequest extends TeaModel {
     public String autoLockTime;
 
     /**
-     * <p>The business channel.</p>
+     * <p>The channel.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -23,7 +23,7 @@ public class CreateUsersRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>Specifies whether to set the convenience user as a local administrator.</p>
+     * <p>Specifies whether to set the convenience account as a local administrator.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -32,7 +32,7 @@ public class CreateUsersRequest extends TeaModel {
     public Boolean isLocalAdmin;
 
     /**
-     * <p>The initial password. If you do not specify this parameter, the system sends a password reset email to the convenience user\&quot;s email address.</p>
+     * <p>The initial password. If you do not specify this parameter, a password reset email is sent to the user\&quot;s email address.</p>
      * 
      * <strong>example:</strong>
      * <p>Test123****</p>
@@ -41,9 +41,9 @@ public class CreateUsersRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>By default, a convenience user\&quot;s password does not expire. You can use this parameter to specify a password validity period of 30 to 365 days. After the password expires, the user must reset it to log in again.</p>
+     * <p>The validity period of the password for the user account. By default, the password never expires. You can set this parameter to a value from 30 to 365 to specify the validity period in days. After the password expires, the end user must change the password before logging on again.</p>
      * <blockquote>
-     * <p>This feature is in invited preview. To use this feature, submit a ticket.</p>
+     * <p>This feature is in invitational preview. To use this feature, submit a ticket.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class CreateUsersRequest extends TeaModel {
     public String passwordExpireDays;
 
     /**
-     * <p>Details about the convenience users.</p>
+     * <p>The convenience account information.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class CreateUsersRequest extends TeaModel {
 
     public static class CreateUsersRequestUsers extends TeaModel {
         /**
-         * <p>The email address of the convenience user. This email address is used for notifications, such as an alert when a cloud computer is assigned. You must specify either this parameter or the <code>Phone</code> parameter.</p>
+         * <p>The email address. The email address is used to receive relevant emails, such as notification emails for cloud computer allocation. You must specify either the email address or the phone number.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:username@example.com">username@example.com</a></p>
@@ -126,7 +126,7 @@ public class CreateUsersRequest extends TeaModel {
         public String email;
 
         /**
-         * <p>The user name. The user name must be 3 to 24 characters long and can contain lowercase letters, digits, and underscores (_).</p>
+         * <p>The username. The username is custom and must be 3 to 24 characters in length. It can contain only lowercase letters, digits, and underscores.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -135,11 +135,14 @@ public class CreateUsersRequest extends TeaModel {
         @NameInMap("EndUserId")
         public String endUserId;
 
+        /**
+         * <p>The IDs of the user groups to join.</p>
+         */
         @NameInMap("GroupIdList")
         public java.util.List<String> groupIdList;
 
         /**
-         * <p>The ID of the organization to which the convenience user belongs.</p>
+         * <p>The organization to which the user belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>design</p>
@@ -157,9 +160,9 @@ public class CreateUsersRequest extends TeaModel {
         public String ownerType;
 
         /**
-         * <p>The password for the convenience user.</p>
+         * <p>The user password.</p>
          * <blockquote>
-         * <p>The password must be at least 10 characters long and contain characters from at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (excluding spaces).</p>
+         * <p>The password must be at least 10 characters in length and contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters (excluding spaces).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -169,10 +172,8 @@ public class CreateUsersRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>&lt;props=&quot;china&quot;&gt;</p>
-         * <p>The phone number of the convenience user. This phone number is used for notifications, such as a text message when a cloud computer is assigned. You must specify either this parameter or the <code>Email</code> parameter.</p>
-         * <p>&lt;props=&quot;intl&quot;&gt;</p>
-         * <p>Phone numbers are not supported on the international site.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;The phone number. The phone number is used to receive relevant text messages, such as notification text messages for cloud computer allocation. You must specify either the email address or the phone number.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;Phone numbers are not supported on the international site.</p>
          * 
          * <strong>example:</strong>
          * <p>1381111****</p>
@@ -181,7 +182,7 @@ public class CreateUsersRequest extends TeaModel {
         public String phone;
 
         /**
-         * <p>The display name of the convenience user.</p>
+         * <p>The display name of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>Bean</p>
@@ -190,7 +191,7 @@ public class CreateUsersRequest extends TeaModel {
         public String realNickName;
 
         /**
-         * <p>A remark for the convenience user.</p>
+         * <p>The user remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>remark1</p>
