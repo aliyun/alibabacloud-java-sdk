@@ -1,3 +1,8 @@
+2026-10-27 Version: 1.6.6
+- Update API DescribeInstances: add response parameters Body.Data.$.ComputeFree.
+- Update API GetInstanceFeatureGate: add response parameters Body.Data.SupportConvertComputeFreeToPostPaid.
+
+
 2026-10-26 Version: 1.6.5
 - Update API DescribeInstances: add response parameters Body.Data.$.EosDate.
 - Update API DescribeInstances: add response parameters Body.Data.$.VersionLifecycleStatus.

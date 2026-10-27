@@ -198,6 +198,9 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         @NameInMap("SupportBackup")
         public Boolean supportBackup;
 
+        @NameInMap("SupportConvertComputeFreeToPostPaid")
+        public Boolean supportConvertComputeFreeToPostPaid;
+
         /**
          * <p>Indicates whether agent creation is supported.</p>
          * 
@@ -387,6 +390,14 @@ public class GetInstanceFeatureGateResponseBody extends TeaModel {
         }
         public Boolean getSupportBackup() {
             return this.supportBackup;
+        }
+
+        public GetInstanceFeatureGateResponseBodyData setSupportConvertComputeFreeToPostPaid(Boolean supportConvertComputeFreeToPostPaid) {
+            this.supportConvertComputeFreeToPostPaid = supportConvertComputeFreeToPostPaid;
+            return this;
+        }
+        public Boolean getSupportConvertComputeFreeToPostPaid() {
+            return this.supportConvertComputeFreeToPostPaid;
         }
 
         public GetInstanceFeatureGateResponseBodyData setSupportCreateAgent(Boolean supportCreateAgent) {

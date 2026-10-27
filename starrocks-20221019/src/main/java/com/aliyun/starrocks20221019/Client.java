@@ -1509,11 +1509,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Danger: After an instance is released, the physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</p>
+     * <p>Danger: After an instance is released, all physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries Serverless StarRocks instances. You can filter the results by instance name or tags.</p>
+     * <p>Queries Serverless StarRocks instances and supports filtering by instance name or tags.</p>
      * 
      * @param tmpReq DescribeInstancesRequest
      * @param headers map
@@ -1582,11 +1582,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Danger: After an instance is released, the physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</p>
+     * <p>Danger: After an instance is released, all physical resources used by the instance are reclaimed. All related data is lost and cannot be recovered.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries Serverless StarRocks instances. You can filter the results by instance name or tags.</p>
+     * <p>Queries Serverless StarRocks instances and supports filtering by instance name or tags.</p>
      * 
      * @param request DescribeInstancesRequest
      * @return DescribeInstancesResponse

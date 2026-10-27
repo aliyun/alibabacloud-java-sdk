@@ -169,7 +169,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
 
     public static class DescribeInstancesResponseBodyDataVSwitches extends TeaModel {
         /**
-         * <p>Specifies whether the vSwitch is the primary vSwitch.</p>
+         * <p>Indicates whether the vSwitch is the primary vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -237,7 +237,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String aclId;
 
         /**
-         * <p>The AI dedicated cluster ID. The ID is prefixed with af-. This parameter is returned if an unreleased dedicated cluster exists, including those being created. If no dedicated cluster is created, this parameter is empty.</p>
+         * <p>The AI dedicated cluster ID. The ID has an af- prefix. This parameter is returned if an unreleased dedicated cluster exists, including those being created. If no dedicated cluster is created, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>af-498ae4af</p>
@@ -246,7 +246,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String aiFunctionClusterId;
 
         /**
-         * <p>The internal network connection endpoint of the AI dedicated cluster. The format is fe-{AiFunctionClusterId}-internal.starrocks.aliyuncs.com. This parameter is returned only after the dedicated cluster is created. If no dedicated cluster is created, this parameter is empty.</p>
+         * <p>The internal network endpoint of the AI dedicated cluster. The format is fe-{AiFunctionClusterId}-internal.starrocks.aliyuncs.com. This parameter is returned only after the dedicated cluster is created. If no dedicated cluster is created, this parameter is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>fe-af-498ae4af-internal.starrocks.aliyuncs.com</p>
@@ -286,14 +286,17 @@ public class DescribeInstancesResponseBody extends TeaModel {
         @NameInMap("BeginTime")
         public Long beginTime;
 
+        @NameInMap("ComputeFree")
+        public Boolean computeFree;
+
         /**
-         * <p>Specifies whether the AI center is enabled. Default value: false.</p>
+         * <p>Indicates whether the AI center is enabled. Default value: false.</p>
          */
         @NameInMap("EnableAiFunction")
         public Boolean enableAiFunction;
 
         /**
-         * <p>Specifies whether automatic minor version upgrades are allowed.</p>
+         * <p>Indicates whether automatic minor version upgrades are allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -302,13 +305,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enableAutoMinorVersionUpgrade;
 
         /**
-         * <p>Specifies whether disaster recovery is enabled.</p>
+         * <p>Indicates whether disaster recovery is enabled.</p>
          */
         @NameInMap("EnableMultiAz")
         public Boolean enableMultiAz;
 
         /**
-         * <p>Specifies whether SSL is enabled.</p>
+         * <p>Indicates whether SSL is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -317,7 +320,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enableSSL;
 
         /**
-         * <p>Specifies whether the audit plug-in is enabled.</p>
+         * <p>Indicates whether the audit plug-in is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -326,7 +329,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean enabledAuditLoader;
 
         /**
-         * <p>Specifies whether encryption is enabled.</p>
+         * <p>Indicates whether encryption is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -335,6 +338,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Boolean encrypted;
 
         /**
+         * <p>The end-of-support date for the cluster version.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-07</p>
          */
@@ -372,13 +377,13 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <p>The instance status. Valid values:</p>
          * <ul>
          * <li>not_init: Not initialized.</li>
-         * <li>unpaid: Pending payment.</li>
+         * <li>unpaid: Unpaid.</li>
          * <li>paid: Paid.</li>
          * <li>creating: Creating.</li>
          * <li>creating_failed: Creation failed.</li>
          * <li>created: Created.</li>
          * <li>running: Running.</li>
-         * <li>updating: Updating.</li>
+         * <li>updating: Upgrading.</li>
          * <li>agent_creating: Creating the agent.</li>
          * <li>agent_scaling_up: Scaling up the agent.</li>
          * <li>modifying_config: Updating configurations.</li>
@@ -387,14 +392,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
          * <li>scaling_in: Scaling in.</li>
          * <li>scaling_up: Scaling up.</li>
          * <li>scaling_down: Scaling down.</li>
-         * <li>upgrading: Upgrading.</li>
-         * <li>enable_public_network: Enabling public network access.</li>
-         * <li>disable_public_network: Disabling public network access.</li>
+         * <li>upgrading: Upgrading the version.</li>
+         * <li>enable_public_network: Enabling the public network.</li>
+         * <li>disable_public_network: Disabling the public network.</li>
          * <li>convert_from_trial_to_official: Converting the edition.</li>
          * <li>migration_cluster_to_serverless: Migrating the cluster.</li>
          * <li>modifying_timezone: Modifying the time zone.</li>
          * <li>switch_az: Switching the primary and secondary zones.</li>
-         * <li>enabling: Resuming.</li>
+         * <li>enabling: Recovering.</li>
          * <li>disable: Unavailable.</li>
          * <li>actively_disabled: Unavailable.</li>
          * <li>deleting: Deleting.</li>
@@ -410,7 +415,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
-         * <p>Specifies whether read/write splitting is enabled. If enabled, the leader FE node processes write requests and other nodes process read requests.</p>
+         * <p>Indicates whether read/write splitting is enabled. If enabled, the leader FE node processes write requests and other nodes process read requests.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -531,8 +536,8 @@ public class DescribeInstancesResponseBody extends TeaModel {
         /**
          * <p>The running mode of the cluster. Valid values:</p>
          * <ul>
-         * <li>shared_nothing: Shared-nothing architecture.</li>
-         * <li>shared_data: Shared-data architecture.</li>
+         * <li>shared_nothing: Shared-nothing.</li>
+         * <li>shared_data: Shared-data.</li>
          * <li>lakehouse: Lakehouse.</li>
          * </ul>
          * 
@@ -552,7 +557,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public Long runningTime;
 
         /**
-         * <p>Specifies whether the security group is a managed security group.</p>
+         * <p>Indicates whether the managed security group is used.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -576,7 +581,7 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public java.util.List<DescribeInstancesResponseBodyDataTags> tags;
 
         /**
-         * <p>The list of vSwitches.</p>
+         * <p>The vSwitches.</p>
          */
         @NameInMap("VSwitches")
         public java.util.List<DescribeInstancesResponseBodyDataVSwitches> vSwitches;
@@ -591,8 +596,10 @@ public class DescribeInstancesResponseBody extends TeaModel {
         public String version;
 
         /**
+         * <p>The version lifecycle status.</p>
+         * 
          * <strong>example:</strong>
-         * <p>长期支持</p>
+         * <p>Long-term support</p>
          */
         @NameInMap("VersionLifecycleStatus")
         public String versionLifecycleStatus;
@@ -657,6 +664,14 @@ public class DescribeInstancesResponseBody extends TeaModel {
         }
         public Long getBeginTime() {
             return this.beginTime;
+        }
+
+        public DescribeInstancesResponseBodyData setComputeFree(Boolean computeFree) {
+            this.computeFree = computeFree;
+            return this;
+        }
+        public Boolean getComputeFree() {
+            return this.computeFree;
         }
 
         public DescribeInstancesResponseBodyData setEnableAiFunction(Boolean enableAiFunction) {
