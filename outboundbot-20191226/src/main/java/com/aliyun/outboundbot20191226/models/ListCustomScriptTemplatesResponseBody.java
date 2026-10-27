@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListCustomScriptTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListCustomScriptTemplatesResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,13 +29,17 @@ public class ListCustomScriptTemplatesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Not used.</p>
+     * 
      * <strong>example:</strong>
-     * <p>暂无使用</p>
+     * <p>Not used</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
+     * <p>The message returned by the API operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -36,13 +47,17 @@ public class ListCustomScriptTemplatesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>Not used.</p>
+     * 
      * <strong>example:</strong>
-     * <p>暂无使用</p>
+     * <p>Not used</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>254EB995-DEDF-48A4-9101-9CA5B72FFBCC</p>
      */
@@ -50,6 +65,8 @@ public class ListCustomScriptTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -127,6 +144,8 @@ public class ListCustomScriptTemplatesResponseBody extends TeaModel {
 
     public static class ListCustomScriptTemplatesResponseBodyDataList extends TeaModel {
         /**
+         * <p>The ID of the custom scenario template.</p>
+         * 
          * <strong>example:</strong>
          * <p>d31794e2a51f47d2901b4094d88311d7</p>
          */
@@ -134,6 +153,8 @@ public class ListCustomScriptTemplatesResponseBody extends TeaModel {
         public String agentProfileId;
 
         /**
+         * <p>The creation time. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1741338619000</p>
          */
@@ -141,13 +162,17 @@ public class ListCustomScriptTemplatesResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The description of the custom scenario template.</p>
+         * 
          * <strong>example:</strong>
-         * <p>这是一个大模型机器人</p>
+         * <p>This is a large language model bot</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The instance ID to which the template belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>e49ad122-15a1-443a-a102-84a78a93be79</p>
          */
@@ -155,13 +180,17 @@ public class ListCustomScriptTemplatesResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The label description. The value is a string in JSON array format.</p>
+         * 
          * <strong>example:</strong>
-         * <p>[{\&quot;name\&quot;:\&quot;是否送达\&quot;,\&quot;description\&quot;:\&quot;购买的家电是否已经送达\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;是\\\&quot;,\\\&quot;否\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;预约上门时间\&quot;,\&quot;description\&quot;:\&quot;收集客户期望的上门安装时间\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</p>
+         * <p>[{\&quot;name\&quot;:\&quot;Delivered\&quot;,\&quot;description\&quot;:\&quot;Whether the purchased home appliance has been delivered\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;Yes\\\&quot;,\\\&quot;No\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;Appointment time for on-site service\&quot;,\&quot;description\&quot;:\&quot;Collect the customer\&quot;s expected on-site installation time\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</p>
          */
         @NameInMap("LabelsJson")
         public String labelsJson;
 
         /**
+         * <p>The ID of the model used.</p>
+         * 
          * <strong>example:</strong>
          * <p>model_002</p>
          */
@@ -169,27 +198,35 @@ public class ListCustomScriptTemplatesResponseBody extends TeaModel {
         public String model;
 
         /**
+         * <p>The name of the custom scenario template.</p>
+         * 
          * <strong>example:</strong>
-         * <p>测试场景</p>
+         * <p>Test scenario</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The prompt in professional mode.</p>
+         * 
          * <strong>example:</strong>
-         * <p>\n名称：安妮 \n身份：游戏推广员\n背景：通过电话向玩家宣传最新福利活动，确保每一位玩家都能及时掌握信息，享受游戏的乐趣。\n技能：作为游戏客服，向用户推荐限时游戏福利活动，强调福利亮点并告知参与流程。\n约束条件：你需要记住你是安妮，</p>
+         * <p>\nName: Annie \nRole: Game Promoter\nBackground: Promote the latest benefit events to players over the phone to ensure that every player stays informed and enjoys the game.\nSkills: As a game customer service representative, recommend time-limited game benefit events to users, highlight the benefits, and explain how to participate.\nConstraints: You must remember that you are Annie,</p>
          */
         @NameInMap("Prompt")
         public String prompt;
 
         /**
+         * <p>The agent configuration. The value is a string in JSON format.</p>
+         * 
          * <strong>example:</strong>
-         * <p>{&quot;name&quot;:&quot;小x&quot;,&quot;gender&quot;:&quot;男&quot;,&quot;age&quot;:18,&quot;role&quot;:&quot;游戏推广员&quot;,&quot;communicationStyle&quot;:[&quot;亲切&quot;],&quot;goals&quot;:&quot;你好&quot;,&quot;background&quot;:&quot;不是很好&quot;,&quot;openingPrompt&quot;:&quot;你好，我是xxx&quot;}</p>
+         * <p>{&quot;name&quot;:&quot;Xiao X&quot;,&quot;gender&quot;:&quot;Male&quot;,&quot;age&quot;:18,&quot;role&quot;:&quot;Game Promoter&quot;,&quot;communicationStyle&quot;:[&quot;Friendly&quot;],&quot;goals&quot;:&quot;Hello&quot;,&quot;background&quot;:&quot;Not very good&quot;,&quot;openingPrompt&quot;:&quot;Hello, I am XXX&quot;}</p>
          */
         @NameInMap("PromptJson")
         public String promptJson;
 
         /**
+         * <p>The ID of the scenario associated with the custom scenario template.</p>
+         * 
          * <strong>example:</strong>
          * <p>43972417-0657-452a-81c2-c59d8245a9b2</p>
          */
@@ -284,10 +321,15 @@ public class ListCustomScriptTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListCustomScriptTemplatesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of custom scenario templates.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListCustomScriptTemplatesResponseBodyDataList> list;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -295,6 +337,8 @@ public class ListCustomScriptTemplatesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -302,6 +346,8 @@ public class ListCustomScriptTemplatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of custom scenario templates.</p>
+         * 
          * <strong>example:</strong>
          * <p>15</p>
          */

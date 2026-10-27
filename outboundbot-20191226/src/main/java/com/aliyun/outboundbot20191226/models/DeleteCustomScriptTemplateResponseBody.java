@@ -14,7 +14,7 @@ public class DeleteCustomScriptTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data. No business data is returned if the deletion succeeds.</p>
+     * <p>The returned data. No business data is returned when the deletion is successful.</p>
      * 
      * <strong>example:</strong>
      * <ul>

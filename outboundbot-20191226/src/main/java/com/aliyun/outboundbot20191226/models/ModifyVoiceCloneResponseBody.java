@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyVoiceCloneResponseBody extends TeaModel {
     /**
+     * <p>The API status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ModifyVoiceCloneResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The ID of the modified voice.</p>
+     * 
      * <strong>example:</strong>
      * <p>cosyvoice-v2-067dc4b2e9d34dbeb5de20b5b093d1e3</p>
      */
@@ -19,6 +23,8 @@ public class ModifyVoiceCloneResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ModifyVoiceCloneResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The message returned by the API operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
@@ -33,6 +41,8 @@ public class ModifyVoiceCloneResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7A573837-3AD3-54CF-930A-07A3287042C2</p>
      */
@@ -40,6 +50,8 @@ public class ModifyVoiceCloneResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

@@ -1153,6 +1153,9 @@ public class DescribeJobGroupResponseBody extends TeaModel {
 
         /**
          * <p>The natural language understanding (NLU) engine used by the script.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Prompts</p>
          */
         @NameInMap("ScriptNluEngine")
         public String scriptNluEngine;

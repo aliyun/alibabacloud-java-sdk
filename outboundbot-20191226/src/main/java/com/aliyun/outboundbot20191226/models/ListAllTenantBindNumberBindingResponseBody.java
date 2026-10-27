@@ -111,6 +111,9 @@ public class ListAllTenantBindNumberBindingResponseBody extends TeaModel {
     public static class ListAllTenantBindNumberBindingResponseBodyDataList extends TeaModel {
         /**
          * <p>The billing method of the number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("BillingType")
         public String billingType;

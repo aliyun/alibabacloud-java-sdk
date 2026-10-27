@@ -3176,7 +3176,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns the conversation data of a job.</p>
+     * <p>Retrieves the conversation data of a job.</p>
      * 
      * @param request DescribeJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3216,7 +3216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Returns the conversation data of a job.</p>
+     * <p>Retrieves the conversation data of a job.</p>
      * 
      * @param request DescribeJobRequest
      * @return DescribeJobResponse
@@ -3563,6 +3563,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.pitchRate)) {
             query.put("PitchRate", request.pitchRate);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sampleRate)) {
+            query.put("SampleRate", request.sampleRate);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.scriptId)) {
@@ -5635,7 +5639,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自定义场景模板列表</p>
+     * <p>Queries the custom script templates of a specified instance.</p>
      * 
      * @param request ListCustomScriptTemplatesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5675,7 +5679,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询自定义场景模板列表</p>
+     * <p>Queries the custom script templates of a specified instance.</p>
      * 
      * @param request ListCustomScriptTemplatesRequest
      * @return ListCustomScriptTemplatesResponse
@@ -7790,7 +7794,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify script information.</p>
+     * <p>Updates script information.</p>
      * 
      * @param request ModifyScriptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7914,7 +7918,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modify script information.</p>
+     * <p>Updates script information.</p>
      * 
      * @param request ModifyScriptRequest
      * @return ModifyScriptResponse
@@ -8120,7 +8124,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改声音克隆</p>
+     * <p>Modifies the name or status of a cloned voice.</p>
      * 
      * @param request ModifyVoiceCloneRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8164,7 +8168,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改声音克隆</p>
+     * <p>Modifies the name or status of a cloned voice.</p>
      * 
      * @param request ModifyVoiceCloneRequest
      * @return ModifyVoiceCloneResponse

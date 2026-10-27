@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTaskExportTaskRequest extends TeaModel {
     /**
-     * <p>The start time (inclusive) for searching by call time.</p>
+     * <p>The start time for the dial time search, inclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>1646496000000</p>
@@ -14,7 +14,7 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Long actualTimeGte;
 
     /**
-     * <p>The end time (inclusive) for searching by call time.</p>
+     * <p>The end time for the dial time search, inclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>1646582400000</p>
@@ -23,19 +23,19 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Long actualTimeLte;
 
     /**
-     * <p>The minimum call duration for the search.</p>
+     * <p>The minimum call duration for the search, in milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>1000</p>
      */
     @NameInMap("CallDurationGte")
     public Long callDurationGte;
 
     /**
-     * <p>The maximum call duration for the search.</p>
+     * <p>The maximum call duration for the search, in milliseconds.</p>
      * 
      * <strong>example:</strong>
-     * <p>20</p>
+     * <p>2000</p>
      */
     @NameInMap("CallDurationLte")
     public Long callDurationLte;
@@ -49,6 +49,12 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     @NameInMap("CalledNumber")
     public String calledNumber;
 
+    /**
+     * <p>The calling number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>187********</p>
+     */
     @NameInMap("CallingNumber")
     public String callingNumber;
 
@@ -71,7 +77,7 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Boolean hasHangUpByRejection;
 
     /**
-     * <p>Specifies whether the conversation was completed.</p>
+     * <p>Specifies whether the conversation reached the end of the flow.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -99,10 +105,10 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String jobGroupId;
 
     /**
-     * <p>The task name.</p>
+     * <p>The job name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试_20220217_160147</p>
+     * <p>Test_20220217_160147</p>
      */
     @NameInMap("JobGroupNameQuery")
     public String jobGroupNameQuery;
@@ -117,7 +123,15 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The job status.</p>
+     * <p>The job statuses. Separate multiple values with commas. Valid values:</p>
+     * <ul>
+     * <li>Scheduling: The job is being scheduled.</li>
+     * <li>Executing: The job is being executed.</li>
+     * <li>Succeeded: The job is completed and the user is reached.</li>
+     * <li>Paused: The job is stopped.</li>
+     * <li>Failed: The job is completed but the user is not reached.</li>
+     * <li>Cancelled: The job is canceled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Succeeded</p>
@@ -174,13 +188,19 @@ public class CreateTaskExportTaskRequest extends TeaModel {
      * <p>The scenario name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试</p>
+     * <p>Test</p>
      */
     @NameInMap("ScriptNameQuery")
     public String scriptNameQuery;
 
     /**
-     * <p>The field by which to sort the results.</p>
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><p>asc: ascending order.</p>
+     * </li>
+     * <li><p>desc: descending order. This is the default value.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>actualTime</p>
@@ -189,11 +209,7 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The sort order. Valid values:</p>
-     * <ul>
-     * <li>asr: ascending order</li>
-     * <li>desc: descending order</li>
-     * </ul>
+     * <p>The sort type. asr indicates ascending order, and desc indicates descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -202,7 +218,7 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String sortOrder;
 
     /**
-     * <p>The start time for searching by task creation time.</p>
+     * <p>The start time for the task creation time search.</p>
      * 
      * <strong>example:</strong>
      * <p>1646496000000</p>
@@ -211,7 +227,7 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public Long taskCreateTimeGte;
 
     /**
-     * <p>The end time for searching by task creation time.</p>
+     * <p>The end time for the task creation time search.</p>
      * 
      * <strong>example:</strong>
      * <p>1646582400000</p>
@@ -229,7 +245,40 @@ public class CreateTaskExportTaskRequest extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The call status.</p>
+     * <p>The call statuses. Separate multiple values with commas. Note: The Succeeded status is subdivided into specific causes. The general Succeeded: 1 (Connected) status is not displayed. All returned values are specific subdivided cause types. Valid values:</p>
+     * <ul>
+     * <li>Executing: 0 (dialing).</li>
+     * <li>Succeeded: 1 (connected).</li>
+     * <li>NoAnswer: 2 (not connected - no answer).</li>
+     * <li>NotExist: 3 (not connected - nonexistent number).</li>
+     * <li>Busy: 4 (not connected - busy).</li>
+     * <li>Cancelled: 5 (not called - task stopped).</li>
+     * <li>Failed: 6 (failed).</li>
+     * <li>NotConnected: 7 (not connected - unreachable).</li>
+     * <li>PoweredOff: 8 (not connected - powered off).</li>
+     * <li>OutOfService: 9 (not connected - out of service).</li>
+     * <li>InArrears: 10 (not connected - overdue payment).</li>
+     * <li>EmptyNumber: 11 (not called - nonexistent number, no call).</li>
+     * <li>PerDayCallCountLimit: 12 (not called - daily call limit exceeded).</li>
+     * <li>ContactBlockList: 13 (not called - on blocklist).</li>
+     * <li>CallerNotRegistered: 14 (not called - calling number not registered).</li>
+     * <li>Terminated: 15 (not called - terminated).</li>
+     * <li>VerificationCancelled: 16 (not called - canceled due to pre-call verification failure).</li>
+     * <li>OutOfServiceNoCall: 17 (not called - out of service, no call).</li>
+     * <li>InArrearsNoCall: 18 (not called - overdue payment, no call).</li>
+     * <li>CallingNumberNotExist: 19 (not called - calling number does not exist).</li>
+     * <li>SucceededFinish: 20 (connected - completed normally).</li>
+     * <li>SucceededChatbotHangUpAfterNoAnswer: 21 (connected - chatbot hung up after unrecognized response).</li>
+     * <li>SucceededChatbotHangUpAfterSilence: 22 (connected - hung up due to silence timeout).</li>
+     * <li>SucceededClientHangUpAfterNoAnswer: 23 (connected - user hung up after unrecognized response).</li>
+     * <li>SucceededClientHangUp: 24 (connected - user hung up without reason).</li>
+     * <li>SucceededTransferByIntent: 25 (connected - transferred to agent due to intent match).</li>
+     * <li>SucceededTransferAfterNoAnswer: 26 (connected - transferred to agent after unrecognized response).</li>
+     * <li>SucceededInoInterAction: 27 (connected - no user interaction).</li>
+     * <li>SucceededError: 28 (connected - interrupted by system error).</li>
+     * <li>SucceededSpecialInterceptVoiceAssistant: 29 (connected - intercepted due to special condition: voice assistant).</li>
+     * <li>SucceededSpecialInterceptExtensionNumberTransfer: 30 (connected - intercepted due to special condition: extension transfer).</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Succeeded,Failed</p>

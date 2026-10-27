@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyVoiceCloneRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ModifyVoiceCloneRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The status of the voice. Note: For a newly created voice, you must call the ModifyVoiceClone operation and set Status to Enabled before it can be used.</p>
+     * 
      * <strong>example:</strong>
      * <p>Enabled</p>
      */
@@ -21,6 +24,7 @@ public class ModifyVoiceCloneRequest extends TeaModel {
     public String status;
 
     /**
+     * <p>The ID of the cloned voice to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,8 +34,10 @@ public class ModifyVoiceCloneRequest extends TeaModel {
     public String voiceId;
 
     /**
+     * <p>The name of the voice.</p>
+     * 
      * <strong>example:</strong>
-     * <p>克隆音色1</p>
+     * <p>Cloned voice 1</p>
      */
     @NameInMap("VoiceName")
     public String voiceName;

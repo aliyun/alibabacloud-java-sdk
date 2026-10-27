@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyScriptResponseBody extends TeaModel {
     /**
-     * <p>The status of the API.</p>
+     * <p>The API status.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class ModifyScriptResponseBody extends TeaModel {
     public ModifyScriptResponseBodyScript script;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class ModifyScriptResponseBody extends TeaModel {
 
     public static class ModifyScriptResponseBodyScript extends TeaModel {
         /**
-         * <p>The debug status of the script.</p>
+         * <p>The script debug status.</p>
          * 
          * <strong>example:</strong>
          * <p>DRAFTED</p>
@@ -122,7 +122,7 @@ public class ModifyScriptResponseBody extends TeaModel {
          * <p>The industry.</p>
          * 
          * <strong>example:</strong>
-         * <p>政务</p>
+         * <p>Government</p>
          */
         @NameInMap("Industry")
         public String industry;
@@ -149,22 +149,22 @@ public class ModifyScriptResponseBody extends TeaModel {
          * <p>The scenario.</p>
          * 
          * <strong>example:</strong>
-         * <p>回访</p>
+         * <p>Follow-up visit</p>
          */
         @NameInMap("Scene")
         public String scene;
 
         /**
-         * <p>The description of the script.</p>
+         * <p>The script description.</p>
          * 
          * <strong>example:</strong>
-         * <p>返工回访话术</p>
+         * <p>Rework callback script</p>
          */
         @NameInMap("ScriptDescription")
         public String scriptDescription;
 
         /**
-         * <p>The ID of the script.</p>
+         * <p>The script ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c153d0d8-ba04-41c0-8632-453944c9dd0b</p>
@@ -173,16 +173,16 @@ public class ModifyScriptResponseBody extends TeaModel {
         public String scriptId;
 
         /**
-         * <p>The name of the script.</p>
+         * <p>The script name.</p>
          * 
          * <strong>example:</strong>
-         * <p>回访话术</p>
+         * <p>Callback script</p>
          */
         @NameInMap("ScriptName")
         public String scriptName;
 
         /**
-         * <p>The status of the script.</p>
+         * <p>The script status.</p>
          * 
          * <strong>example:</strong>
          * <p>PUBLISHED</p>

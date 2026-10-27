@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCustomScriptTemplatesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0ec0c897-b92c-40e4-9ad7-e6e4f5ce13bb</p>
      */
@@ -12,6 +14,8 @@ public class ListCustomScriptTemplatesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number for paging. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListCustomScriptTemplatesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page for paging. Default value: 10.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

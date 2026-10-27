@@ -26,7 +26,7 @@ public class CreateCustomScriptTemplateRequest extends TeaModel {
      * <p>The label descriptions in JSON array format.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{\&quot;name\&quot;:\&quot;Delivered\&quot;,\&quot;description\&quot;:\&quot;Whether the purchased home appliance has been delivered\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;Yes\\\&quot;,\\\&quot;No\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;Appointment Time\&quot;,\&quot;description\&quot;:\&quot;Collect the customer\&quot;s expected on-site installation time\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</p>
+     * <p>[{\&quot;name\&quot;:\&quot;Delivered\&quot;,\&quot;description\&quot;:\&quot;Whether the purchased home appliance has been delivered\&quot;,\&quot;valueList\&quot;:\&quot;[\\\&quot;Yes\\\&quot;,\\\&quot;No\\\&quot;]\&quot;},{\&quot;name\&quot;:\&quot;On-site Appointment Time\&quot;,\&quot;description\&quot;:\&quot;Collect the customer\&quot;s expected on-site installation time\&quot;,\&quot;valueList\&quot;:\&quot;[]\&quot;}]</p>
      */
     @NameInMap("LabelsJson")
     public String labelsJson;
@@ -50,10 +50,10 @@ public class CreateCustomScriptTemplateRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The prompt for professional mode.</p>
+     * <p>The prompt in professional mode.</p>
      * 
      * <strong>example:</strong>
-     * <p>\nName: Annie \nIdentity: Game Promoter\nBackground: Promote the latest welfare activities to players over the phone to ensure that every player can get the information in time and enjoy the game.\nSkills: As a game customer service representative, recommend time-limited game welfare activities to users, highlight the benefits, and inform them of the participation process.\nConstraints: You need to remember that you are Annie,</p>
+     * <p>\nName: Annie \nRole: Game Promoter\nBackground: Promote the latest benefit activities to players over the phone, ensuring that every player stays informed and enjoys the game.\nSkills: As a game customer service representative, recommend time-limited game benefit activities to users, highlight the benefits, and explain the participation process.\nConstraints: You must remember that you are Annie,</p>
      */
     @NameInMap("Prompt")
     public String prompt;

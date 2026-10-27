@@ -188,6 +188,9 @@ public class ListScriptsResponseBody extends TeaModel {
 
         /**
          * <p>The chatbot ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>d31794e2a51f47d2901b4094d88311d7</p>
          */
         @NameInMap("ChatBotId")
         public String chatBotId;
