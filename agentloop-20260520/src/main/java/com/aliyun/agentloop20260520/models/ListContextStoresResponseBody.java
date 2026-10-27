@@ -183,6 +183,9 @@ public class ListContextStoresResponseBody extends TeaModel {
         @NameInMap("storageMode")
         public String storageMode;
 
+        @NameInMap("storageModes")
+        public java.util.List<String> storageModes;
+
         /**
          * <p>The time when the context store was last updated, in ISO 8601 UTC format.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
@@ -276,6 +279,14 @@ public class ListContextStoresResponseBody extends TeaModel {
         }
         public String getStorageMode() {
             return this.storageMode;
+        }
+
+        public ListContextStoresResponseBodyResults setStorageModes(java.util.List<String> storageModes) {
+            this.storageModes = storageModes;
+            return this;
+        }
+        public java.util.List<String> getStorageModes() {
+            return this.storageModes;
         }
 
         public ListContextStoresResponseBodyResults setUpdateTime(String updateTime) {

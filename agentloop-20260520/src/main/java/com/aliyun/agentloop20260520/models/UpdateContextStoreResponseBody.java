@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContextStoreResponseBody extends TeaModel {
     /**
-     * <p>The request ID, which is used to locate the request during troubleshooting.</p>
+     * <p>The request ID, which is used to locate the request when troubleshooting issues.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -14,7 +14,7 @@ public class UpdateContextStoreResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The strategy version number that takes effect after the update for the memory type. If the strategy remains unchanged, the version number is the same as that before the update.</p>
+     * <p>The strategy version that takes effect after the update for the memory type. If the strategy remains unchanged, the version is the same as the one before the update.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

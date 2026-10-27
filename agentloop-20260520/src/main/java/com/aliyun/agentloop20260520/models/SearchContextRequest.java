@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchContextRequest extends TeaModel {
     /**
-     * <p>The structured filter conditions. The key is the field name, and the value is the expected matching value.</p>
+     * <p>The structured filter conditions. The key is the field name, and the value is the expected match value.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;userId&quot;:&quot;alice&quot;}</p>
@@ -14,7 +14,7 @@ public class SearchContextRequest extends TeaModel {
     public java.util.Map<String, ?> filter;
 
     /**
-     * <p>Specifies whether to structurally format the returned results.</p>
+     * <p>Specifies whether to apply structured formatting to the returned results.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class SearchContextRequest extends TeaModel {
     public Boolean formatted;
 
     /**
-     * <p>Specifies whether to include memories with sourceState=inactive. Default value: false.</p>
+     * <p>Specifies whether to include memories whose sourceState is inactive. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class SearchContextRequest extends TeaModel {
     public Boolean includeInactive;
 
     /**
-     * <p>The maximum number of returned results, which corresponds to the Top-N similarity.</p>
+     * <p>The maximum number of returned results, which corresponds to the top N results by similarity.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -66,7 +66,16 @@ public class SearchContextRequest extends TeaModel {
     public SearchContextRequestScope scope;
 
     /**
-     * <p>The similarity threshold. Results with a similarity score lower than this value are filtered out. Valid values: 0 to 1.</p>
+     * <p>Filters results by extraction strategy ID. Multiple IDs in the list are evaluated with an OR condition. If this parameter is not specified, all strategies are recalled. An empty list returns a 400 error. If the format is valid but no matching IDs are found, an empty result is returned. IDs of historically removed strategies are supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[&quot;preferences&quot;,&quot;profile&quot;]</p>
+     */
+    @NameInMap("strategyIds")
+    public java.util.List<String> strategyIds;
+
+    /**
+     * <p>The similarity threshold. Results with a similarity score below this value are filtered out. Valid values: 0 to 1.</p>
      * 
      * <strong>example:</strong>
      * <p>0.5</p>
@@ -133,6 +142,14 @@ public class SearchContextRequest extends TeaModel {
     }
     public SearchContextRequestScope getScope() {
         return this.scope;
+    }
+
+    public SearchContextRequest setStrategyIds(java.util.List<String> strategyIds) {
+        this.strategyIds = strategyIds;
+        return this;
+    }
+    public java.util.List<String> getStrategyIds() {
+        return this.strategyIds;
     }
 
     public SearchContextRequest setThreshold(Double threshold) {

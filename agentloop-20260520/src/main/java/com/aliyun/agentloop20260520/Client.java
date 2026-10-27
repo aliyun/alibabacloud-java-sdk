@@ -1688,7 +1688,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an AgentSpace.</p>
+     * <p>Queries the AgentSpace.</p>
      * 
      * @param request GetAgentSpaceRequest
      * @param headers map
@@ -1716,7 +1716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an AgentSpace.</p>
+     * <p>Queries the AgentSpace.</p>
      * 
      * @param request GetAgentSpaceRequest
      * @return GetAgentSpaceResponse
@@ -1729,7 +1729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the context store.</p>
+     * <p>Queries a context store.</p>
      * 
      * @param request GetContextStoreRequest
      * @param headers map
@@ -1757,7 +1757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the context store.</p>
+     * <p>Queries a context store.</p>
      * 
      * @param request GetContextStoreRequest
      * @return GetContextStoreResponse
@@ -3513,6 +3513,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.scope)) {
             body.put("scope", request.scope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.strategyIds)) {
+            body.put("strategyIds", request.strategyIds);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.threshold)) {

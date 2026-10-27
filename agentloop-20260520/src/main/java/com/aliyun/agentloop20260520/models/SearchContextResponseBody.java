@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchContextResponseBody extends TeaModel {
     /**
-     * <p>The audit write status. Valid values: ok and degraded.</p>
+     * <p>The audit write status. Valid values: ok, degraded.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -14,7 +14,7 @@ public class SearchContextResponseBody extends TeaModel {
     public String auditStatus;
 
     /**
-     * <p>The recall event ID. You can use this ID to call the GetContextStoreRecall operation to view audit details.</p>
+     * <p>The recall event ID. You can use this ID to call GetContextStoreRecall to view audit details.</p>
      * 
      * <strong>example:</strong>
      * <p>0190f1c2-7d3e-7a1b-9c4d-2e5f6a7b8c9d</p>
@@ -23,7 +23,7 @@ public class SearchContextResponseBody extends TeaModel {
     public String recallEventId;
 
     /**
-     * <p>The request ID, which can be used to locate the request during troubleshooting.</p>
+     * <p>The request ID, which is used to locate the request during troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>

@@ -14,7 +14,7 @@ public class GetAgentSpaceResponseBody extends TeaModel {
     public String agentSpace;
 
     /**
-     * <p>The CloudMonitor workspace.</p>
+     * <p>The CMS workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>test-cms-workspace</p>
@@ -179,6 +179,12 @@ public class GetAgentSpaceResponseBody extends TeaModel {
     }
 
     public static class GetAgentSpaceResponseBodyMseNamespace extends TeaModel {
+        /**
+         * <p>The attach type of the MSE namespace. AutoCreated indicates automatic creation by AgentLoop. UserSelected indicates that an existing namespace is selected and attached when the AgentSpace is created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AutoCreated</p>
+         */
         @NameInMap("bindType")
         public String bindType;
 
