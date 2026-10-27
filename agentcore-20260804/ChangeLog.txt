@@ -1,3 +1,9 @@
+2026-10-27 Version: 3.0.1
+- Update API GetIdentityProviderSCIM: add response parameters Body.data.status.
+- Update API UpdateIdentityProviderSCIM: add response parameters Body.data.operationStatus.
+- Update API UpdateIdentityProviderSCIM: add response parameters Body.data.scimStatus.
+
+
 2026-10-27 Version: 3.0.0
 - Support API CreateIdentityProviderSCIMCredential.
 - Support API CreateIdentityProviderSyncJob.

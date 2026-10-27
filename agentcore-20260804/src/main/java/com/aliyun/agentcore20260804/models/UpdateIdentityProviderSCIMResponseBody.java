@@ -389,6 +389,15 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         public UpdateIdentityProviderSCIMResponseBodyDataMetadata metadata;
 
         /**
+         * <p>PENDING/RUNNING 时轮询 GetIdentityProviderSCIM；保留失败、暂停和取消事实，不表示 SAML 状态。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PENDING</p>
+         */
+        @NameInMap("operationStatus")
+        public String operationStatus;
+
+        /**
          * <p>The logon protocol. Currently, only SAML is supported. This field may not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</p>
          * 
          * <strong>example:</strong>
@@ -402,6 +411,15 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
          */
         @NameInMap("saml")
         public UpdateIdentityProviderSCIMResponseBodyDataSaml saml;
+
+        /**
+         * <p>独立 SCIM 状态；不改变原 status 的共享资源及登录配置含义。与查询接口的 data.status 对应。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>UPDATING</p>
+         */
+        @NameInMap("scimStatus")
+        public String scimStatus;
 
         /**
          * <p>The operation status of shared resources and logon configurations. It indicates the user pool lifecycle and logon configuration task status of CustomSSO, and does not represent the SCIM operation result. Query GetIdentityProviderSCIM.operationStatus for the SCIM switch result. You cannot use this field to determine whether all protocols are configured.</p>
@@ -497,6 +515,14 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
             return this.metadata;
         }
 
+        public UpdateIdentityProviderSCIMResponseBodyData setOperationStatus(String operationStatus) {
+            this.operationStatus = operationStatus;
+            return this;
+        }
+        public String getOperationStatus() {
+            return this.operationStatus;
+        }
+
         public UpdateIdentityProviderSCIMResponseBodyData setProtocol(String protocol) {
             this.protocol = protocol;
             return this;
@@ -511,6 +537,14 @@ public class UpdateIdentityProviderSCIMResponseBody extends TeaModel {
         }
         public UpdateIdentityProviderSCIMResponseBodyDataSaml getSaml() {
             return this.saml;
+        }
+
+        public UpdateIdentityProviderSCIMResponseBodyData setScimStatus(String scimStatus) {
+            this.scimStatus = scimStatus;
+            return this;
+        }
+        public String getScimStatus() {
+            return this.scimStatus;
         }
 
         public UpdateIdentityProviderSCIMResponseBodyData setStatus(String status) {

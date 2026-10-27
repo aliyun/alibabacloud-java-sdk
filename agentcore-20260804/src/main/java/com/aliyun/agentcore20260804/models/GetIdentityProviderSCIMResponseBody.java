@@ -178,6 +178,15 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
         public String operationStatus;
 
         /**
+         * <p>UNCONFIGURED：尚未准备完成；WAITING_CONFIGURATION：接收 Enabled、有效 HTTPS URL 和至少一个有效 Token 均已具备，等待外部配置并确认启用；UPDATING：启用或停用任务 PENDING/RUNNING；READY：同步已启用且本次启用任务成功，接收、URL 和 Token 仍可用；DISABLED：停用任务成功，保留配置、凭据和用户；UPDATE_FAILED：操作失败、暂停、取消，或期望启用时配置／凭据不可用。与 SAML/OIDC 状态独立，READY 不证明 Matrix 执行或持续增量链路已验收。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>READY</p>
+         */
+        @NameInMap("status")
+        public String status;
+
+        /**
          * <p>Specifies whether local synchronization is expected. Do not set this parameter to true during CustomSSO initialization. You can only update this parameter by calling UpdateIdentityProviderSCIM. Determine the result based on operationStatus.</p>
          */
         @NameInMap("syncEnabled")
@@ -202,6 +211,14 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
         }
         public String getOperationStatus() {
             return this.operationStatus;
+        }
+
+        public GetIdentityProviderSCIMResponseBodyData setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
         }
 
         public GetIdentityProviderSCIMResponseBodyData setSyncEnabled(Boolean syncEnabled) {
