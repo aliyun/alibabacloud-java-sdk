@@ -1,3 +1,8 @@
+2026-10-27 Version: 1.4.1
+- Update API GetCallDetailRecord: add response parameters Body.Data.Transcripts.$.PlaybackStatus.
+- Update API GetCallDetailRecord: add response parameters Body.Data.Transcripts.$.PlayedAnswer.
+
+
 2026-04-22 Version: 1.4.0
 - Support API GetInstanceTrendingReport.
 - Support API GetRealtimeScriptStats.

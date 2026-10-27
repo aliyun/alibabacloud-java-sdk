@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRealtimeInstanceStatsRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12f407b22cbe4890ac595f09985848d5</p>
      */

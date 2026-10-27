@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCallCenterProviderRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
      */
@@ -12,6 +14,8 @@ public class DeleteCallCenterProviderRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the human service provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxx</p>
      */

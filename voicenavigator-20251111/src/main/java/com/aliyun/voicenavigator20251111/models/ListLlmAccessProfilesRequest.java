@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListLlmAccessProfilesRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>12f407b22cbe4890ac595f09985848d5</p>
      */
@@ -12,6 +14,8 @@ public class ListLlmAccessProfilesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListLlmAccessProfilesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

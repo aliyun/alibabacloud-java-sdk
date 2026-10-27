@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateSubscriptionShrinkRequest extends TeaModel {
     /**
+     * <p>The endpoint. This parameter is required when ROCKET_MQ_4 or ROCKET_MQ_5 is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>rmq-cn-l4p89zajz67.cn-hangzhou.rmq.aliyuncs.com:8080</p>
      */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <p>The list of subscribed events.</p>
+     */
     @NameInMap("EventSubscriptions")
     public String eventSubscriptionsShrink;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
      */
@@ -22,6 +29,8 @@ public class UpdateSubscriptionShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The MQ instance ID. This parameter is required when ROCKET_MQ_5 is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>rmq-cn-l4p89zajz67.cn</p>
      */
@@ -29,6 +38,8 @@ public class UpdateSubscriptionShrinkRequest extends TeaModel {
     public String mqInstanceId;
 
     /**
+     * <p>The message push type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ROCKET_MQ_4</p>
      */
@@ -36,6 +47,8 @@ public class UpdateSubscriptionShrinkRequest extends TeaModel {
     public String mqType;
 
     /**
+     * <p>The password. This parameter is required when ROCKET_MQ_5 is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>pwd</p>
      */
@@ -43,6 +56,8 @@ public class UpdateSubscriptionShrinkRequest extends TeaModel {
     public String password;
 
     /**
+     * <p>The producer ID. This parameter is required when ROCKET_MQ_4 is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>user1</p>
      */
@@ -50,6 +65,8 @@ public class UpdateSubscriptionShrinkRequest extends TeaModel {
     public String producerId;
 
     /**
+     * <p>The queue topic. This parameter is required when ROCKET_MQ_4 or ROCKET_MQ_5 is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -57,6 +74,8 @@ public class UpdateSubscriptionShrinkRequest extends TeaModel {
     public String topic;
 
     /**
+     * <p>The username. This parameter is required when ROCKET_MQ_5 is used.</p>
+     * 
      * <strong>example:</strong>
      * <p>username</p>
      */

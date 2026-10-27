@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateVoiceAccessProfileResponseBody extends TeaModel {
     /**
+     * <p>The status code of the operation. <code>OK</code> indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class UpdateVoiceAccessProfileResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The ID of the updated access profile.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
      */
@@ -19,6 +23,8 @@ public class UpdateVoiceAccessProfileResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class UpdateVoiceAccessProfileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -33,10 +41,15 @@ public class UpdateVoiceAccessProfileResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The dynamic error parameter list.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7401D698-0AAC-5909-B68E-88C68805FFB8</p>
      */

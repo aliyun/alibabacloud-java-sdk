@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListNluModelsResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>A list of the NLU models.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListNluModelsResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListNluModelsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -29,10 +38,15 @@ public class ListNluModelsResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The dynamic parameters for the error.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7401D698-0AAC-5909-B68E-88C68805FFB8</p>
      */
@@ -94,12 +108,20 @@ public class ListNluModelsResponseBody extends TeaModel {
 
     public static class ListNluModelsResponseBodyData extends TeaModel {
         /**
+         * <p>The model ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The model name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>千问-Plus</p>
+         */
         @NameInMap("Name")
         public String name;
 

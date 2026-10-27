@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ExportScriptResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of <code>OK</code> indicates a successful request.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ExportScriptResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The script ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
      */
@@ -19,6 +23,8 @@ public class ExportScriptResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class ExportScriptResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -33,10 +41,15 @@ public class ExportScriptResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The dynamic parameters for the error message.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>83C6DA11-798F-5524-AB1D-555263E7A400</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetRealtimeScriptStatsResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The real-time script statistics.</p>
+     */
     @NameInMap("Data")
     public GetRealtimeScriptStatsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,17 +29,22 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d74d6290-7cbe-4436-b5d7-014ebb0f4060</p>
@@ -95,6 +107,8 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
 
     public static class GetRealtimeScriptStatsResponseBodyData extends TeaModel {
         /**
+         * <p>The configured concurrency.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -102,6 +116,8 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
         public Integer configuredConcurrency;
 
         /**
+         * <p>The time the statistics were collected, expressed as a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774881658931</p>
          */
@@ -109,6 +125,8 @@ public class GetRealtimeScriptStatsResponseBody extends TeaModel {
         public Long statsTime;
 
         /**
+         * <p>The current concurrency.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListVoiceAccessProfileResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The paginated results of third-party voice configurations.</p>
+     */
     @NameInMap("Data")
     public ListVoiceAccessProfileResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -29,10 +38,15 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>C1788610-93C9-574C-AF2D-C053A50C3894</p>
      */
@@ -94,6 +108,8 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
 
     public static class ListVoiceAccessProfileResponseBodyDataVoiceAccessProfilesProfile extends TeaModel {
         /**
+         * <p>The AccessKey for Doubao API calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>HwRnTXgwnQOlsj68URDS5_VMm4Wtapq9</p>
          */
@@ -101,6 +117,8 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         public String accessKey;
 
         /**
+         * <p>The ApiKey for Alibaba Cloud Bailian and iFLYTEK API calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-12341e259b1049e8872b47981e545f78</p>
          */
@@ -108,6 +126,8 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The ApiSecret for iFLYTEK API calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>c0358c6e51c1013b446fdeb21a3a1234</p>
          */
@@ -115,6 +135,8 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         public String apiSecret;
 
         /**
+         * <p>The AppId for iFLYTEK API calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>5b123bfb</p>
          */
@@ -122,15 +144,29 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         public String appId;
 
         /**
+         * <p>The AppKey for Doubao API calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>2541370123</p>
          */
         @NameInMap("AppKey")
         public String appKey;
 
+        /**
+         * <p>This parameter is not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not in use</p>
+         */
         @NameInMap("AsrAppKey")
         public String asrAppKey;
 
+        /**
+         * <p>This parameter is not in use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not in use</p>
+         */
         @NameInMap("TtsApiKey")
         public String ttsApiKey;
 
@@ -199,16 +235,23 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
 
     public static class ListVoiceAccessProfileResponseBodyDataVoiceAccessProfiles extends TeaModel {
         /**
+         * <p>The configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
          */
         @NameInMap("AccessProfileId")
         public String accessProfileId;
 
+        /**
+         * <p>The list of voice engine capabilities.</p>
+         */
         @NameInMap("Capabilities")
         public java.util.List<String> capabilities;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1747620752000</p>
          */
@@ -216,6 +259,8 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
@@ -223,19 +268,32 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The voice engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>VOLC</p>
          */
         @NameInMap("NlsEngine")
         public String nlsEngine;
 
+        /**
+         * <p>The display name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Doubao</p>
+         */
         @NameInMap("NlsEngineName")
         public String nlsEngineName;
 
+        /**
+         * <p>The parameter settings.</p>
+         */
         @NameInMap("Profile")
         public ListVoiceAccessProfileResponseBodyDataVoiceAccessProfilesProfile profile;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1747620752000</p>
          */
@@ -315,6 +373,8 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
 
     public static class ListVoiceAccessProfileResponseBodyData extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -322,6 +382,8 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -329,12 +391,17 @@ public class ListVoiceAccessProfileResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>The list of third-party voice configurations.</p>
+         */
         @NameInMap("VoiceAccessProfiles")
         public java.util.List<ListVoiceAccessProfileResponseBodyDataVoiceAccessProfiles> voiceAccessProfiles;
 

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ImportVocabularyResponseBody extends TeaModel {
     /**
+     * <p>The result code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>A list of vocabulary IDs.</p>
+     */
     @NameInMap("Data")
     public java.util.List<String> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ImportVocabularyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -29,10 +38,15 @@ public class ImportVocabularyResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Parameters used to dynamically generate the error message.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7401D698-0AAC-5909-B68E-88C68805FFB8</p>
      */

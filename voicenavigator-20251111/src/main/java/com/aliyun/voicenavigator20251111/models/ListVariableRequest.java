@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVariableRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c28fc549-d88f-4f6e-85ad-a0806e5e39c0</p>
      */
@@ -12,6 +14,8 @@ public class ListVariableRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListVariableRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListVariableRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>Performs a fuzzy search based on the variable name or display name.</p>
+     * 
      * <strong>example:</strong>
      * <p>age</p>
      */

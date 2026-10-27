@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetInstanceTrendingReportResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The scenario ID.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetInstanceTrendingReportResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -29,6 +38,9 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
@@ -96,6 +108,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
 
     public static class GetInstanceTrendingReportResponseBodyData extends TeaModel {
         /**
+         * <p>The number of answered sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -103,6 +117,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long callsHandled;
 
         /**
+         * <p>The number of incoming sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -110,6 +126,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long callsOffered;
 
         /**
+         * <p>The number of rejected sessions.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -117,6 +135,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long callsRejected;
 
         /**
+         * <p>The number of resolved sessions, based on the model evaluation results.</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -124,6 +144,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long callsResolved;
 
         /**
+         * <p>The latest configured concurrency.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -131,6 +153,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long configuredConcurrency;
 
         /**
+         * <p>The distribution of labels.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;label1&quot;:{ 
@@ -143,6 +167,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public String labelBreakdown;
 
         /**
+         * <p>The maximum talk time, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -150,6 +176,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>The distribution of rejection reasons.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;ConcurrentLimitExceeded&quot;:3
@@ -159,6 +187,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public String rejectionBreakdown;
 
         /**
+         * <p>The distribution of hang-up reasons after a session is connected.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;SilenceTimeout&quot;:1,
@@ -172,6 +202,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public String releaseReasonBreakdown;
 
         /**
+         * <p>The statistical time. The value is a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774881208361</p>
          */
@@ -179,6 +211,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long statsTime;
 
         /**
+         * <p>The distribution of dialog turns.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;1&quot;:2,
@@ -189,6 +223,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public String talkTurnsDistribution;
 
         /**
+         * <p>Reserved for future use.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -196,6 +232,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long totalInputTokens;
 
         /**
+         * <p>Reserved for future use.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -203,6 +241,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long totalOutputTokens;
 
         /**
+         * <p>The total talk time, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -210,6 +250,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Reserved for future use.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -217,6 +259,8 @@ public class GetInstanceTrendingReportResponseBody extends TeaModel {
         public Long totalTokens;
 
         /**
+         * <p>The maximum concurrency used.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

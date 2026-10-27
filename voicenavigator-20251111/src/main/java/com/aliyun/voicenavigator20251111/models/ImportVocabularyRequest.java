@@ -4,10 +4,18 @@ package com.aliyun.voicenavigator20251111.models;
 import com.aliyun.tea.*;
 
 public class ImportVocabularyRequest extends TeaModel {
+    /**
+     * <p>The path to the uploaded file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vocabulary/热词导入单元测试.zip</p>
+     */
     @NameInMap("FileKey")
     public String fileKey;
 
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
      */

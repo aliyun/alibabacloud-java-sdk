@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVoiceAccessProfileResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DeleteVoiceAccessProfileResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The ID of the access profile.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
      */
@@ -19,6 +23,8 @@ public class DeleteVoiceAccessProfileResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeleteVoiceAccessProfileResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -33,10 +41,15 @@ public class DeleteVoiceAccessProfileResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>97E7ED13-6884-52D7-B97E-C780D7870680</p>
      */

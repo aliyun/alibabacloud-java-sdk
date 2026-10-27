@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListScriptProfileTemplatesRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c28fc549-d88f-4f6e-85ad-a0806e5e39c0</p>
      */

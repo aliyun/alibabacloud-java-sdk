@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The real-time stats for the instance.</p>
+     */
     @NameInMap("Data")
     public GetRealtimeInstanceStatsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,17 +29,22 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of parameters that are related to an error, if one occurred.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3a530dc0-7cfa-48f6-9539-bf9001e77b16</p>
@@ -95,6 +107,8 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
 
     public static class GetRealtimeInstanceStatsResponseBodyDataRealtimeScriptStatsList extends TeaModel {
         /**
+         * <p>The maximum number of concurrent tasks configured for this script.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -102,6 +116,8 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
         public Integer configuredConcurrency;
 
         /**
+         * <p>The script ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>92836ced-6f3a-4cec-bc3d-c3893d3c7efa</p>
          */
@@ -109,6 +125,8 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
         public String scriptId;
 
         /**
+         * <p>The script name.</p>
+         * 
          * <strong>example:</strong>
          * <p>TypeCombinationTest</p>
          */
@@ -116,6 +134,8 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
         public String scriptName;
 
         /**
+         * <p>The time when the statistics were collected, expressed as a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774881208361</p>
          */
@@ -123,6 +143,8 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
         public Long statsTime;
 
         /**
+         * <p>The current number of concurrent tasks for this script.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -178,16 +200,23 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
 
     public static class GetRealtimeInstanceStatsResponseBodyData extends TeaModel {
         /**
+         * <p>The maximum number of concurrent tasks configured for the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
         @NameInMap("ConfiguredConcurrency")
         public Integer configuredConcurrency;
 
+        /**
+         * <p>A list of real-time stats for scripts.</p>
+         */
         @NameInMap("RealtimeScriptStatsList")
         public java.util.List<GetRealtimeInstanceStatsResponseBodyDataRealtimeScriptStatsList> realtimeScriptStatsList;
 
         /**
+         * <p>The time when the statistics were collected, expressed as a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774881208361</p>
          */
@@ -195,6 +224,8 @@ public class GetRealtimeInstanceStatsResponseBody extends TeaModel {
         public Long statsTime;
 
         /**
+         * <p>The current number of concurrent tasks for the instance.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

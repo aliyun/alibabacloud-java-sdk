@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetDataChannelCredentialResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data channel credential.</p>
+     */
     @NameInMap("Data")
     public GetDataChannelCredentialResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,23 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A8AED3C8-F57B-5D71-9A34-4A170287533F</p>
      */
@@ -93,6 +107,8 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
 
     public static class GetDataChannelCredentialResponseBodyData extends TeaModel {
         /**
+         * <p>The client ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>GID_rtc-datachannel@@@*******</p>
          */
@@ -100,6 +116,8 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
         public String clientId;
 
         /**
+         * <p>The device ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>d4c38420-<strong><strong>-43bc-b001-56bfc274</strong></strong></p>
          */
@@ -107,6 +125,8 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
         public String deviceId;
 
         /**
+         * <p>The endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>mqtt.***.aliyuncs.com</p>
          */
@@ -114,6 +134,8 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
         public String endpoint;
 
         /**
+         * <p>The expiration time of the credential.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774794266093</p>
          */
@@ -121,6 +143,8 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
         public Long expirationTime;
 
         /**
+         * <p>The password.</p>
+         * 
          * <strong>example:</strong>
          * <hr>
          */
@@ -128,6 +152,8 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
         public String password;
 
         /**
+         * <p>The topic for the data channel.</p>
+         * 
          * <strong>example:</strong>
          * <p>datachannel-hz/****</p>
          */
@@ -135,6 +161,8 @@ public class GetDataChannelCredentialResponseBody extends TeaModel {
         public String topic;
 
         /**
+         * <p>The username.</p>
+         * 
          * <strong>example:</strong>
          * <p>Token|LTAI****|mqtt-***</p>
          */

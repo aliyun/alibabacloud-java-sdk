@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListVoicesRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>e48e45dd-e47a-4744-a063-f08cbebb1c5a</p>
      */
@@ -12,6 +14,8 @@ public class ListVoicesRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The TTS access type.</p>
+     * 
      * <strong>example:</strong>
      * <p>MANAGED</p>
      */
@@ -19,6 +23,8 @@ public class ListVoicesRequest extends TeaModel {
     public String nlsAccessType;
 
     /**
+     * <p>The TTS engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>BAILIAN</p>
      */
@@ -26,6 +32,8 @@ public class ListVoicesRequest extends TeaModel {
     public String nlsEngine;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -33,6 +41,8 @@ public class ListVoicesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

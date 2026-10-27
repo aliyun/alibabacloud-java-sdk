@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PreviewVoiceShrinkRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>da37319b-6c83-4268-9f19-814aed62e401</p>
      */
@@ -12,6 +14,8 @@ public class PreviewVoiceShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The TTS model.</p>
+     * 
      * <strong>example:</strong>
      * <p>Qwen</p>
      */
@@ -19,6 +23,8 @@ public class PreviewVoiceShrinkRequest extends TeaModel {
     public String model;
 
     /**
+     * <p>The TTS invocation method.</p>
+     * 
      * <strong>example:</strong>
      * <p>MANAGED</p>
      */
@@ -26,19 +32,32 @@ public class PreviewVoiceShrinkRequest extends TeaModel {
     public String nlsAccessType;
 
     /**
+     * <p>The TTS engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>BAILIAN</p>
      */
     @NameInMap("NlsEngine")
     public String nlsEngine;
 
+    /**
+     * <p>The synthesis parameters.</p>
+     */
     @NameInMap("Params")
     public String paramsShrink;
 
+    /**
+     * <p>The preview text.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Hello, nice to meet you</p>
+     */
     @NameInMap("Text")
     public String text;
 
     /**
+     * <p>The voice.</p>
+     * 
      * <strong>example:</strong>
      * <p>Cherry</p>
      */

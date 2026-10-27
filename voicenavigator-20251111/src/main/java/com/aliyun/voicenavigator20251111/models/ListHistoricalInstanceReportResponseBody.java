@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListHistoricalInstanceReportResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public ListHistoricalInstanceReportResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,17 +29,22 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</p>
@@ -95,6 +107,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
 
     public static class ListHistoricalInstanceReportResponseBodyDataList extends TeaModel {
         /**
+         * <p>The number of answered calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -102,6 +116,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsHandled;
 
         /**
+         * <p>The number of offered calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -109,6 +125,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsOffered;
 
         /**
+         * <p>The number of rejected calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -116,6 +134,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsRejected;
 
         /**
+         * <p>The number of calls classified as resolved by the large language model (LLM).</p>
+         * 
          * <strong>example:</strong>
          * <p>4</p>
          */
@@ -123,6 +143,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public Long callsResolved;
 
         /**
+         * <p>The most recent concurrency configuration.</p>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -130,6 +152,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public Long configuredConcurrency;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>38d5fb05092b469e86b6061ad7945437</p>
          */
@@ -137,6 +161,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The breakdown of labels.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;label1&quot;:{ 
@@ -149,6 +175,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public String labelBreakdown;
 
         /**
+         * <p>The maximum talk time in milliseconds (ms).</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -156,6 +184,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>The breakdown of rejection reasons.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;ConcurrentLimitExceeded&quot;:3
@@ -165,6 +195,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public String rejectionBreakdown;
 
         /**
+         * <p>A breakdown of release reasons for answered calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;SilenceTimeout&quot;:1,
@@ -178,6 +210,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public String releaseReasonBreakdown;
 
         /**
+         * <p>The distribution of conversation turns.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;1&quot;:2,
@@ -188,6 +222,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public String talkTurnsDistribution;
 
         /**
+         * <p>Reserved for future use.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -195,6 +231,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalInputTokens;
 
         /**
+         * <p>Reserved for future use.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -202,6 +240,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalOutputTokens;
 
         /**
+         * <p>The total talk time in milliseconds (ms).</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -209,6 +249,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>Reserved for future use.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -216,6 +258,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public Long totalTokens;
 
         /**
+         * <p>The peak number of concurrent calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>11</p>
          */
@@ -358,10 +402,15 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
     }
 
     public static class ListHistoricalInstanceReportResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of historical reports for the instances.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListHistoricalInstanceReportResponseBodyDataList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -369,6 +418,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -376,6 +427,8 @@ public class ListHistoricalInstanceReportResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

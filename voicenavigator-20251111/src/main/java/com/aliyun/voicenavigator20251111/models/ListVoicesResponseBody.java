@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListVoicesResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>A paginated list of voices.</p>
+     */
     @NameInMap("Data")
     public ListVoicesResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListVoicesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -29,10 +38,15 @@ public class ListVoicesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of dynamic parameters related to the error.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</p>
      */
@@ -93,36 +107,69 @@ public class ListVoicesResponseBody extends TeaModel {
     }
 
     public static class ListVoicesResponseBodyDataVoices extends TeaModel {
+        /**
+         * <p>The category of the voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>千问音色</p>
+         */
         @NameInMap("Category")
         public String category;
 
+        /**
+         * <p>The language supported by the voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>中文及中英文混合</p>
+         */
         @NameInMap("Language")
         public String language;
 
         /**
+         * <p>The TTS model.</p>
+         * 
          * <strong>example:</strong>
          * <p>Qwen</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>The name of the voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>芊悦</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The TTS engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>BAILIAN</p>
          */
         @NameInMap("NlsEngine")
         public String nlsEngine;
 
+        /**
+         * <p>The style of the voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>女声</p>
+         */
         @NameInMap("Style")
         public String style;
 
+        /**
+         * <p>A list of supported parameters.</p>
+         */
         @NameInMap("SupportedParams")
         public java.util.List<String> supportedParams;
 
         /**
+         * <p>The identifier for the voice.</p>
+         * 
          * <strong>example:</strong>
          * <p>Cherry</p>
          */
@@ -202,6 +249,8 @@ public class ListVoicesResponseBody extends TeaModel {
 
     public static class ListVoicesResponseBodyData extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -209,6 +258,8 @@ public class ListVoicesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -216,12 +267,17 @@ public class ListVoicesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total count of voices.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
         @NameInMap("TotalCount")
         public Integer totalCount;
 
+        /**
+         * <p>A list of voices.</p>
+         */
         @NameInMap("Voices")
         public java.util.List<ListVoicesResponseBodyDataVoices> voices;
 

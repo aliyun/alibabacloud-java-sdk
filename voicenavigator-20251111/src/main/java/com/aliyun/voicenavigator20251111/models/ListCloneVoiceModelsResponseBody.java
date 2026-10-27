@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListCloneVoiceModelsResponseBody extends TeaModel {
     /**
+     * <p>The status code of the request. A value of &quot;OK&quot; indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The paginated data.</p>
+     */
     @NameInMap("Data")
     public ListCloneVoiceModelsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The detailed message returned for the request. It provides more context about the status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -29,10 +38,15 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The unique ID generated for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</p>
      */
@@ -93,10 +107,18 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
     }
 
     public static class ListCloneVoiceModelsResponseBodyDataCloneVoiceModels extends TeaModel {
+        /**
+         * <p>The description of the model.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>口音还原相似度高、韵律流畅</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The display name of the model.</p>
+         * 
          * <strong>example:</strong>
          * <p>CosyVoice</p>
          */
@@ -104,6 +126,8 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
         public String displayName;
 
         /**
+         * <p>The model name.</p>
+         * 
          * <strong>example:</strong>
          * <p>CosyVoice</p>
          */
@@ -142,10 +166,15 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
     }
 
     public static class ListCloneVoiceModelsResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of clone voice models.</p>
+         */
         @NameInMap("CloneVoiceModels")
         public java.util.List<ListCloneVoiceModelsResponseBodyDataCloneVoiceModels> cloneVoiceModels;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -153,6 +182,8 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries on the current page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -160,6 +191,8 @@ public class ListCloneVoiceModelsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>66</p>
          */

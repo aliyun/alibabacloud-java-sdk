@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetVocabularyResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The vocabulary object.</p>
+     */
     @NameInMap("Data")
     public GetVocabularyResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetVocabularyResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -29,10 +38,15 @@ public class GetVocabularyResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>97E7ED13-6884-52D7-B97E-C780D7870680</p>
      */
@@ -94,26 +108,44 @@ public class GetVocabularyResponseBody extends TeaModel {
 
     public static class GetVocabularyResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1773453676000</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The vocabulary description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>包含金融场景专业术语</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The vocabulary name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>金融场景热词</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1308144684576655</p>
          */
@@ -121,6 +153,8 @@ public class GetVocabularyResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1773453676000</p>
          */
@@ -128,6 +162,8 @@ public class GetVocabularyResponseBody extends TeaModel {
         public Long updatedTime;
 
         /**
+         * <p>The vocabulary ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
          */
@@ -135,12 +171,20 @@ public class GetVocabularyResponseBody extends TeaModel {
         public String vocabularyId;
 
         /**
+         * <p>The word count.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
         @NameInMap("WordCount")
         public String wordCount;
 
+        /**
+         * <p>A JSON string that contains the words and their weights.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;苹果\&quot;:\&quot;2\&quot;,\&quot;香蕉\&quot;:\&quot;3\&quot;}</p>
+         */
         @NameInMap("Words")
         public String words;
 

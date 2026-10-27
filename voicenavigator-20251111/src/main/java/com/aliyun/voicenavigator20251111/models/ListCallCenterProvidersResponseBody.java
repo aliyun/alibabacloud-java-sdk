@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListCallCenterProvidersResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The call center provider data.</p>
+     */
     @NameInMap("Data")
     public ListCallCenterProvidersResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,23 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75BAAB9B-40B2-5FF5-A59A-7BCF8154C6EE</p>
      */
@@ -93,16 +107,26 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
 
     public static class ListCallCenterProvidersResponseBodyDataProviders extends TeaModel {
         /**
+         * <p>The destination of the call transfer. Required if the transfer mode is <code>Bridge</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>153*********</p>
          */
         @NameInMap("Destination")
         public String destination;
 
+        /**
+         * <p>The display name of the service provider.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心内部服务提供商</p>
+         */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
+         * <p>The extra data.&gt;Notice:  Format: <code>k1=v1;k2=v2</code></p>
+         * 
          * <strong>example:</strong>
          * <p>key1=value1</p>
          */
@@ -110,16 +134,26 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
         public String extras;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The service provider name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>云联络中心内部服务提供商</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The originator of the call transfer. Required if the transfer mode is <code>Bridge</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>010****</p>
          */
@@ -127,6 +161,8 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
         public String originator;
 
         /**
+         * <p>The call center provider ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>xxxxxxxxx</p>
          */
@@ -134,6 +170,16 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
         public String providerId;
 
         /**
+         * <p>The provider type.</p>
+         * <blockquote>
+         * <ul>
+         * <li><p><code>CCC</code>: Cloud Contact Center</p>
+         * </li>
+         * <li><p><code>CUSTOM</code>: customer-owned contact center</p>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>CCC</p>
          */
@@ -141,6 +187,8 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
         public String providerType;
 
         /**
+         * <p>The Refer address.&gt;Notice:  Required if the transfer mode is <code>Refer</code>.</p>
+         * 
          * <strong>example:</strong>
          * <ul>
          * <li></li>
@@ -150,6 +198,8 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
         public String referTo;
 
         /**
+         * <p>The trunk ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>trunk-xxx</p>
          */
@@ -245,6 +295,8 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
 
     public static class ListCallCenterProvidersResponseBodyData extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -252,16 +304,23 @@ public class ListCallCenterProvidersResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>A list of call center providers.</p>
+         */
         @NameInMap("Providers")
         public java.util.List<ListCallCenterProvidersResponseBodyDataProviders> providers;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

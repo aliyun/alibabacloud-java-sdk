@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateLlmAccessProfileShrinkRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The parameter settings.</p>
+     */
     @NameInMap("Profile")
     public String profileShrink;
 

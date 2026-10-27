@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteScriptRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
      */
@@ -12,6 +14,8 @@ public class DeleteScriptRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The scenario ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
      */

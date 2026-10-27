@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class BridgeWebCallResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The call record.</p>
+     */
     @NameInMap("Data")
     public BridgeWebCallResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,23 @@ public class BridgeWebCallResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
      */
@@ -93,6 +107,8 @@ public class BridgeWebCallResponseBody extends TeaModel {
 
     public static class BridgeWebCallResponseBodyData extends TeaModel {
         /**
+         * <p>The channel ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1515602866088888___5ec8446df1e2495a97969e887ab9e748</p>
          */
@@ -100,6 +116,8 @@ public class BridgeWebCallResponseBody extends TeaModel {
         public String channelId;
 
         /**
+         * <p>The expiration time of the token.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774794266093</p>
          */
@@ -107,16 +125,23 @@ public class BridgeWebCallResponseBody extends TeaModel {
         public String expirationTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The server URL.</p>
+         */
         @NameInMap("ServerUrl")
         public String serverUrl;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f814f3ae-b2a7-44fb-883c-771221274673</p>
          */

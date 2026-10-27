@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetScriptRequest extends TeaModel {
     /**
+     * <p>Instance ID</p>
+     * 
      * <strong>example:</strong>
      * <p>8a503680-815d-473e-a9b0-e010f47a64d2</p>
      */
@@ -12,6 +14,8 @@ public class GetScriptRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>Scenario ID</p>
+     * 
      * <strong>example:</strong>
      * <p>ac6db76a-bbe7-4a2c-b7cc-7f62da7bb4c6</p>
      */

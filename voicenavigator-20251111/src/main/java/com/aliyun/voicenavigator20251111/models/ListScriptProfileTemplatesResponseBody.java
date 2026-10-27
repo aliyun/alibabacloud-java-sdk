@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListScriptProfileTemplatesResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of scenario templates.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListScriptProfileTemplatesResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -29,10 +38,15 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>E6E61E1A-D2DC-5ACF-AED4-A115B6691F98</p>
      */
@@ -94,22 +108,63 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
 
     public static class ListScriptProfileTemplatesResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1752829090000</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Build professional conversational prompt engineering from a blank document</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>General scenario</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The template definition.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{
+         *   &quot;name&quot;: &quot;General&quot;,
+         *   &quot;properties&quot;: {
+         *     &quot;prompts&quot;: {
+         *       &quot;displayName&quot;: &quot;Instruction information&quot;,
+         *       &quot;dataType&quot;: &quot;TEXT&quot;,
+         *       &quot;name&quot;: &quot;prompts&quot;,
+         *       &quot;displayOrder&quot;: 1,
+         *       &quot;defaultValue&quot;: &quot;You are a friendly and approachable chat assistant, focusing on natural Chinese conversations. Stay positive and patient, provide helpful responses, and avoid sensitive content. Honestly admit when you do not know the answer to create a relaxed and pleasant communication experience.&quot;,
+         *       &quot;attributes&quot;: {
+         *         &quot;placeholder&quot;: &quot;You are a friendly and approachable chat assistant, focusing on natural Chinese conversations. Stay positive and patient, provide helpful responses, and avoid sensitive content. Honestly admit when you do not know the answer to create a relaxed and pleasant communication experience.&quot;,
+         *         &quot;rows&quot;: 20
+         *       },
+         *       &quot;editorType&quot;: &quot;MENTIONS_TEXTAREA&quot;,
+         *       &quot;maxLength&quot;: 2000,
+         *       &quot;required&quot;: true,
+         *       &quot;group&quot;: &quot;Business description&quot;
+         *     }
+         *   }
+         * }</p>
+         */
         @NameInMap("Schema")
         public String schema;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>CCC_PROMPTS_DEFAULT</p>
          */
@@ -117,6 +172,8 @@ public class ListScriptProfileTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1752829090000</p>
          */

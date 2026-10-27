@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetDataChannelCredentialRequest extends TeaModel {
     /**
+     * <p>The device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d4c38420-<strong><strong>-43bc-b001-56bfc274</strong></strong></p>
      */
@@ -12,6 +14,8 @@ public class GetDataChannelCredentialRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>c28fc549-d88f-4f6e-85ad-a0806e5e39c0</p>
      */

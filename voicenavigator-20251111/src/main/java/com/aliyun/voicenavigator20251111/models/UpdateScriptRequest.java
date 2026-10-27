@@ -5,26 +5,44 @@ import com.aliyun.tea.*;
 
 public class UpdateScriptRequest extends TeaModel {
     /**
+     * <p>The concurrency.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Concurrency")
     public Integer concurrency;
 
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>For testing</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>19ac2375-53e3-477f-abe9-6cd334227981</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The scenario name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Navigation test scenario</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The scenario ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class BeginSessionResponseBody extends TeaModel {
     /**
+     * <p>The business status code. A value of OK indicates that the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The business data.</p>
+     */
     @NameInMap("Data")
     public BeginSessionResponseBodyData data;
 
     /**
+     * <p>The HTTP status code. A value of 200 indicates that the HTTP request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,23 @@ public class BeginSessionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The HTTP response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The POP request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
      */
@@ -93,6 +107,16 @@ public class BeginSessionResponseBody extends TeaModel {
 
     public static class BeginSessionResponseBodyDataControlParamsList extends TeaModel {
         /**
+         * <p>The control parameter type. Valid values:</p>
+         * <blockquote>
+         * <ul>
+         * <li>HangUp: Hang up.</li>
+         * <li>Transfer: Transfer.</li>
+         * <li>GatherDtmf: Gather DTMF.</li>
+         * <li>Voice: Voice.</li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>Voice</p>
          */
@@ -115,13 +139,24 @@ public class BeginSessionResponseBody extends TeaModel {
     }
 
     public static class BeginSessionResponseBodyData extends TeaModel {
+        /**
+         * <p>The chatbot reply content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Hello, welcome to STO Express. How can I help you?</p>
+         */
         @NameInMap("Answer")
         public String answer;
 
+        /**
+         * <p>The list of control parameters.</p>
+         */
         @NameInMap("ControlParamsList")
         public java.util.List<BeginSessionResponseBodyDataControlParamsList> controlParamsList;
 
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1752283603978</p>
          */
@@ -129,6 +164,8 @@ public class BeginSessionResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>07d72ea0-6e38-48d4-8371-14deaaba996f</p>
          */
@@ -136,6 +173,8 @@ public class BeginSessionResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774858849987</p>
          */
@@ -143,6 +182,8 @@ public class BeginSessionResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>Specifies whether the streaming response has ended.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -150,6 +191,8 @@ public class BeginSessionResponseBody extends TeaModel {
         public Boolean streamEnd;
 
         /**
+         * <p>The turn ID of the conversation.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

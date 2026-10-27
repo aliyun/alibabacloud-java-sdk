@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListHistoricalScriptReportRequest extends TeaModel {
     /**
+     * <p>The end of the query time range, which is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1582103299434</p>
      */
@@ -12,6 +14,8 @@ public class ListHistoricalScriptReportRequest extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The ID of the Voice Bot instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>12f407b22cbe4890ac595f09985848d5</p>
      */
@@ -19,6 +23,8 @@ public class ListHistoricalScriptReportRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number to retrieve.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -26,16 +32,23 @@ public class ListHistoricalScriptReportRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>A list of up to 100 script IDs.</p>
+     */
     @NameInMap("ScriptIds")
     public java.util.List<String> scriptIds;
 
     /**
+     * <p>The start of the query time range, which is a UNIX timestamp in milliseconds.</p>
+     * 
      * <strong>example:</strong>
      * <p>1582267398628</p>
      */

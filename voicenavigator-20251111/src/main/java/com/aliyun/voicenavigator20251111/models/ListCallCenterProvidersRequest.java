@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListCallCenterProvidersRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
      */
@@ -12,6 +14,8 @@ public class ListCallCenterProvidersRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class ListCallCenterProvidersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -26,6 +32,8 @@ public class ListCallCenterProvidersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the call center provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxx</p>
      */

@@ -5,34 +5,57 @@ import com.aliyun.tea.*;
 
 public class CreateScriptVersionShrinkRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>abb4aa26-3a8e-43dd-82f8-0c3898c9c67f</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The interaction configuration.</p>
+     */
     @NameInMap("InteractionConfig")
     public String interactionConfigShrink;
 
+    /**
+     * <p>The custom label configuration.</p>
+     */
     @NameInMap("LabelConfig")
     public String labelConfigShrink;
 
     /**
+     * <p>The scenario ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
      */
     @NameInMap("ScriptId")
     public String scriptId;
 
+    /**
+     * <p>The conversation capability configuration.</p>
+     */
     @NameInMap("ScriptProfile")
     public String scriptProfileShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>d7b8a210-1f2d-4c5b-8a63-01e4f3b7c9d2</p>
+     */
     @NameInMap("SourceVersionId")
     public String sourceVersionId;
 
+    /**
+     * <p>The TTS configuration.</p>
+     */
     @NameInMap("SynthesizerConfig")
     public String synthesizerConfigShrink;
 
+    /**
+     * <p>The ASR configuration.</p>
+     */
     @NameInMap("TranscriberConfig")
     public String transcriberConfigShrink;
 

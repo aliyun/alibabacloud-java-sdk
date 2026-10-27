@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetRecordingResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The recording object.</p>
+     */
     @NameInMap("Data")
     public GetRecordingResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,17 +29,22 @@ public class GetRecordingResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The error parameter list.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>F132DDBA-66C4-5BD3-BF7E-9642FE877158</p>
@@ -95,6 +107,8 @@ public class GetRecordingResponseBody extends TeaModel {
 
     public static class GetRecordingResponseBodyData extends TeaModel {
         /**
+         * <p>The recording file name.</p>
+         * 
          * <strong>example:</strong>
          * <p>61f7f225-3a2e-4b6e-8a1d-888f1862590f.wav</p>
          */
@@ -102,6 +116,8 @@ public class GetRecordingResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The recording file URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://bgc-us-east.oss-accelerate.aliyuncs.com/intellidocs/2025-08-27/bc84ce11-f110-436d-af70-382ce7c5690a.pdf">https://bgc-us-east.oss-accelerate.aliyuncs.com/intellidocs/2025-08-27/bc84ce11-f110-436d-af70-382ce7c5690a.pdf</a></p>
          */
@@ -109,6 +125,8 @@ public class GetRecordingResponseBody extends TeaModel {
         public String fileUrl;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>f814f3ae-b2a7-44fb-883c-771221274673</p>
          */

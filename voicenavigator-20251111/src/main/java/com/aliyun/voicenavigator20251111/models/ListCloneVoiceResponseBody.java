@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListCloneVoiceResponseBody extends TeaModel {
     /**
+     * <p>Internal error code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The paginated list of cloned voices.</p>
+     */
     @NameInMap("Data")
     public ListCloneVoiceResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListCloneVoiceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -30,6 +39,8 @@ public class ListCloneVoiceResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7401D698-0AAC-5909-B68E-88C68805FFB8</p>
      */
@@ -83,6 +94,8 @@ public class ListCloneVoiceResponseBody extends TeaModel {
 
     public static class ListCloneVoiceResponseBodyDataCloneVoices extends TeaModel {
         /**
+         * <p>The ID of the cloned voice.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
          */
@@ -90,6 +103,8 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         public String cloneVoiceId;
 
         /**
+         * <p>The creation timestamp of the cloned voice.</p>
+         * 
          * <strong>example:</strong>
          * <p>1764900994000</p>
          */
@@ -97,6 +112,8 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
          */
@@ -104,16 +121,26 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The cloning model.</p>
+         * 
          * <strong>example:</strong>
          * <p>CosyVoice</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>The name of the cloned voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试克隆音</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The TTS engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>BAILIAN</p>
          */
@@ -121,6 +148,8 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         public String nlsEngine;
 
         /**
+         * <p>The status of the cloned voice.</p>
+         * 
          * <strong>example:</strong>
          * <p>Published</p>
          */
@@ -128,6 +157,8 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1308144684576655</p>
          */
@@ -135,6 +166,8 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         public String tenantId;
 
         /**
+         * <p>The last update timestamp of the cloned voice.</p>
+         * 
          * <strong>example:</strong>
          * <p>1764900994000</p>
          */
@@ -142,6 +175,8 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         public Long updatedTime;
 
         /**
+         * <p>The base voice used for cloning.</p>
+         * 
          * <strong>example:</strong>
          * <p>cosyvoice-v3-plus-voicebot2-3666e4bbb2b94832ac4f4107b5804c34</p>
          */
@@ -236,10 +271,15 @@ public class ListCloneVoiceResponseBody extends TeaModel {
     }
 
     public static class ListCloneVoiceResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of cloned voices for the current page.</p>
+         */
         @NameInMap("CloneVoices")
         public java.util.List<ListCloneVoiceResponseBodyDataCloneVoices> cloneVoices;
 
         /**
+         * <p>The returned page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -247,6 +287,8 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -254,6 +296,8 @@ public class ListCloneVoiceResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of cloned voices that match the query.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

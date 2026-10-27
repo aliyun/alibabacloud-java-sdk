@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class ExportVocabularyRequest extends TeaModel {
     /**
+     * <p>The ID of the Voice Navigator instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The IDs of the vocabularies to export.</p>
+     */
     @NameInMap("VocabularyIds")
     public java.util.List<String> vocabularyIds;
 

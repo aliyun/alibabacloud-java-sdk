@@ -4,13 +4,27 @@ package com.aliyun.voicenavigator20251111.models;
 import com.aliyun.tea.*;
 
 public class CreateVariableRequest extends TeaModel {
+    /**
+     * <p>The description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Indicates the user type, including VIP and regular users</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The display name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>User type</p>
+     */
     @NameInMap("DisplayName")
     public String displayName;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>5daac920-d6c1-429f-a95f-2a798f5255b5</p>
      */
@@ -18,6 +32,8 @@ public class CreateVariableRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The variable name.</p>
+     * 
      * <strong>example:</strong>
      * <p>userType</p>
      */

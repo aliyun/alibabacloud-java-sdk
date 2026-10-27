@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetScriptTrendingReportResponseBody extends TeaModel {
     /**
+     * <p>The service-specific error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>An array of scenario template objects.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetScriptTrendingReportResponseBodyData> data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,17 +29,22 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>get upload tool url success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>An array of error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</p>
@@ -95,6 +107,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
 
     public static class GetScriptTrendingReportResponseBodyData extends TeaModel {
         /**
+         * <p>The number of handled calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>7</p>
          */
@@ -102,6 +116,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public Long callsHandled;
 
         /**
+         * <p>The number of offered calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -109,6 +125,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public Long callsOffered;
 
         /**
+         * <p>The number of rejected calls.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -116,6 +134,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public Long callsRejected;
 
         /**
+         * <p>The number of resolved calls, based on the large model\&quot;s evaluation.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -123,6 +143,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public Long callsResolved;
 
         /**
+         * <p>The configured concurrency limit.</p>
+         * 
          * <strong>example:</strong>
          * <p>13</p>
          */
@@ -130,6 +152,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public Long configuredConcurrency;
 
         /**
+         * <p>A JSON string that provides a breakdown of label distribution.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;label1&quot;:{ 
@@ -142,6 +166,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public String labelBreakDown;
 
         /**
+         * <p>The maximum talk time, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -149,6 +175,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public Long maxTalkTime;
 
         /**
+         * <p>A JSON string that provides a breakdown of rejection reasons.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;ConcurrentLimitExceeded&quot;:3
@@ -158,6 +186,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public String rejectionBreakdown;
 
         /**
+         * <p>A JSON string that provides a breakdown of call disconnection reasons.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;SilenceTimeout&quot;:1,
@@ -171,6 +201,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public String releaseReasonBreakdown;
 
         /**
+         * <p>The start time of the interval. The value is a Unix timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1774881208361</p>
          */
@@ -178,6 +210,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public Long statsTime;
 
         /**
+         * <p>A JSON string that provides a breakdown of conversation turn distribution.</p>
+         * 
          * <strong>example:</strong>
          * <p>{
          *   &quot;1&quot;:2,
@@ -188,6 +222,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public String talkTurnsDistribution;
 
         /**
+         * <p>This parameter is reserved for future use.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -195,6 +231,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public Long totalInputTokens;
 
         /**
+         * <p>This parameter is reserved for future use.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -202,6 +240,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public Long totalOutputTokens;
 
         /**
+         * <p>The total talk time, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -209,6 +249,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public Long totalTalkTime;
 
         /**
+         * <p>This parameter is reserved for future use.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -216,6 +258,8 @@ public class GetScriptTrendingReportResponseBody extends TeaModel {
         public Long totalTokens;
 
         /**
+         * <p>The peak concurrency for the interval.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */

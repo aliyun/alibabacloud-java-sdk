@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVocabularyRequest extends TeaModel {
     /**
+     * <p>The ID of the Voice Navigator instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
      */
@@ -12,6 +14,8 @@ public class DeleteVocabularyRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the vocabulary to delete.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
      */

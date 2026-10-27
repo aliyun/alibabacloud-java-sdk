@@ -5,26 +5,49 @@ import com.aliyun.tea.*;
 
 public class CreateScriptRequest extends TeaModel {
     /**
+     * <p>The concurrency.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Concurrency")
     public Integer concurrency;
 
+    /**
+     * <p>The instance description.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>First navigation instance</p>
+     */
     @NameInMap("Description")
     public String description;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The instance name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Navigation test instance</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The NLU engine. Valid values:</p>
+     * <ul>
+     * <li>PROMPTS: Prompt mode.</li>
+     * <li>FUNCTION: Function computing mode.</li>
+     * <li>BEEBOT: Workflow mode.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>BEEBOT</p>
      */

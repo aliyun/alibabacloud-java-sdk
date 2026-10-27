@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListInstructionsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data returned for the list of instructions.</p>
+     */
     @NameInMap("Data")
     public ListInstructionsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,16 +29,23 @@ public class ListInstructionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The result message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of request parameters that are echoed in the response.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>e48e45dd-e47a-4744-a063-f08cbebb1c5a</p>
      */
@@ -93,6 +107,8 @@ public class ListInstructionsResponseBody extends TeaModel {
 
     public static class ListInstructionsResponseBodyDataInstructions extends TeaModel {
         /**
+         * <p>The instruction code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Transfer00</p>
          */
@@ -100,6 +116,24 @@ public class ListInstructionsResponseBody extends TeaModel {
         public String code;
 
         /**
+         * <p>The instruction configuration, in a JSON string format.</p>
+         * <blockquote>
+         * <ul>
+         * <li><p><code>providerId</code>: The ID of the call center provider. You can obtain this ID by calling the <code>ListCallCenterProviders</code> operation.</p>
+         * </li>
+         * <li><p><code>transferMethod</code>: The transfer method. Valid values: <code>BYE</code>, <code>BRIDGE</code>, and <code>REFER</code>.</p>
+         * </li>
+         * <li><p><code>transferType</code>: The transfer target type. Valid values: <code>External</code> (external number), <code>Agent</code> (agent), and <code>SkillGroup</code> (skill group).</p>
+         * </li>
+         * <li><p><code>transferTarget</code>: The transfer target.</p>
+         * </li>
+         * <li><p><code>transferor</code>: The caller ID. If not specified, the caller\&quot;s phone number is used.</p>
+         * </li>
+         * <li><p><code>timeoutSeconds</code>: The transfer timeout, in seconds. The default value is 30.</p>
+         * </li>
+         * </ul>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>{
          *     &quot;providerId&quot;: &quot;xxxxxxxxx&quot;,
@@ -114,16 +148,26 @@ public class ListInstructionsResponseBody extends TeaModel {
         public String config;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The instruction name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>转人工指令一</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The instruction type.</p>
+         * 
          * <strong>example:</strong>
          * <p>TRANSFER</p>
          */
@@ -178,10 +222,15 @@ public class ListInstructionsResponseBody extends TeaModel {
     }
 
     public static class ListInstructionsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of instructions.</p>
+         */
         @NameInMap("Instructions")
         public java.util.List<ListInstructionsResponseBodyDataInstructions> instructions;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -189,6 +238,8 @@ public class ListInstructionsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The page size.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -196,6 +247,8 @@ public class ListInstructionsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of instructions.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

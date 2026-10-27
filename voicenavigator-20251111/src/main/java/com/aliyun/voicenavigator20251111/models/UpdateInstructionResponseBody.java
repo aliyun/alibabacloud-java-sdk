@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateInstructionResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Ok</p>
      */
@@ -12,6 +14,8 @@ public class UpdateInstructionResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The code of the instruction.</p>
+     * 
      * <strong>example:</strong>
      * <p>Transfer00</p>
      */
@@ -19,6 +23,8 @@ public class UpdateInstructionResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,16 +32,23 @@ public class UpdateInstructionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message. Returns &quot;Success&quot; if the request is successful, or an error message if it fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>14C39896-AE6D-4643-9C9A-E0566B2C2DDD</p>
      */

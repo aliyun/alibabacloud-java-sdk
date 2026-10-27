@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListLlmAccessProfilesResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The paginated list of third-party model configurations.</p>
+     */
     @NameInMap("Data")
     public ListLlmAccessProfilesResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -29,10 +38,15 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of dynamic parameters associated with the error.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>A unique identifier for the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>ED56B723-5802-5C32-865F-6E20B06D2455</p>
      */
@@ -94,6 +108,8 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
 
     public static class ListLlmAccessProfilesResponseBodyDataLlmAccessProfilesProfile extends TeaModel {
         /**
+         * <p>The API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>akm-93929110-d7c1-4014-8678-613aacd58fa2</p>
          */
@@ -101,16 +117,26 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The service endpoint.</p>
+         * 
          * <strong>example:</strong>
          * <p>api.llm.enpoint.example.com</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The name of the configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>千问Omni</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The NLU access type.</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -118,6 +144,8 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
         public String nluAccessType;
 
         /**
+         * <p>The NLU engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>BEEBOT</p>
          */
@@ -173,6 +201,8 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
 
     public static class ListLlmAccessProfilesResponseBodyDataLlmAccessProfiles extends TeaModel {
         /**
+         * <p>The configuration ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
          */
@@ -180,6 +210,8 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
         public String accessProfileId;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1747620752000</p>
          */
@@ -187,16 +219,23 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>8fe2b8b1cdd446318610ccbc70bcfff0</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The parameter configuration.</p>
+         */
         @NameInMap("Profile")
         public ListLlmAccessProfilesResponseBodyDataLlmAccessProfilesProfile profile;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1768788798</p>
          */
@@ -251,10 +290,15 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
     }
 
     public static class ListLlmAccessProfilesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of third-party model configurations.</p>
+         */
         @NameInMap("LlmAccessProfiles")
         public java.util.List<ListLlmAccessProfilesResponseBodyDataLlmAccessProfiles> llmAccessProfiles;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -262,6 +306,8 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -269,6 +315,8 @@ public class ListLlmAccessProfilesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

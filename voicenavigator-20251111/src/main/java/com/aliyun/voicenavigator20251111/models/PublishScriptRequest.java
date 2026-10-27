@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class PublishScriptRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>19ac2375-53e3-477f-abe9-6cd334227981</p>
      */
@@ -12,6 +14,8 @@ public class PublishScriptRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The scenario ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
      */
@@ -19,6 +23,8 @@ public class PublishScriptRequest extends TeaModel {
     public String scriptId;
 
     /**
+     * <p>The version ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>64241e64-190c-45d1-af66-06f51c07b091</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EndSessionResponseBody extends TeaModel {
     /**
+     * <p>The business status code. A value of OK indicates that the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class EndSessionResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,16 +23,23 @@ public class EndSessionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The HTTP response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9DB8BA95-4513-54B9-9C67-A28909CFB4AD</p>
      */

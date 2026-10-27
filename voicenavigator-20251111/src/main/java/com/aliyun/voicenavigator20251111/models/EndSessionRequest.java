@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class EndSessionRequest extends TeaModel {
     /**
+     * <p>The ID of the instance.</p>
+     * 
      * <strong>example:</strong>
      * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
      */
@@ -12,6 +14,8 @@ public class EndSessionRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The ID of the script.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a88e269-01f5-49ac-97af-5830f0ccb271</p>
      */
@@ -19,6 +23,7 @@ public class EndSessionRequest extends TeaModel {
     public String scriptId;
 
     /**
+     * <p>The ID of the session.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

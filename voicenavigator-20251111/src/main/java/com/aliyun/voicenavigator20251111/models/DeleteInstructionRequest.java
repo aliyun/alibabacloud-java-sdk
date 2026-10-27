@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteInstructionRequest extends TeaModel {
     /**
+     * <p>The instruction code.</p>
+     * 
      * <strong>example:</strong>
      * <p>Transfer00</p>
      */
@@ -12,6 +14,8 @@ public class DeleteInstructionRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
      */

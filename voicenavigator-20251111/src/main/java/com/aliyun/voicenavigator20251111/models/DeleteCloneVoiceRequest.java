@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCloneVoiceRequest extends TeaModel {
     /**
+     * <p>The cloned voice ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>e48e45dd-e47a-4744-a063-f08cbebb1c5b</p>
      */
@@ -12,6 +14,8 @@ public class DeleteCloneVoiceRequest extends TeaModel {
     public String cloneVoiceId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>e48e45dd-e47a-4744-a063-f08cbebb1c5a</p>
      */

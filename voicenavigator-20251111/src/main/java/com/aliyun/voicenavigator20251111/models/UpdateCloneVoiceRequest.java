@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateCloneVoiceRequest extends TeaModel {
     /**
+     * <p>The cloned voice ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8ee1160a-6999-478f-8df6-f33ef21f27d5</p>
      */
@@ -12,12 +14,20 @@ public class UpdateCloneVoiceRequest extends TeaModel {
     public String cloneVoiceId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0099b75d-60fd-4c63-8541-7fbba0ae6bb0</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the cloned voice.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test cloned voice</p>
+     */
     @NameInMap("Name")
     public String name;
 

@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateInstructionRequest extends TeaModel {
     /**
+     * <p>The instruction code.</p>
+     * <blockquote>
+     * <p>Notice: Globally unique.</notice></p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Transfer00</p>
      */
@@ -12,6 +17,18 @@ public class CreateInstructionRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>The instruction configuration.</p>
+     * <blockquote>
+     * <ul>
+     * <li>providerId: the ID of the human agent service provider. You can obtain the ID by calling ListCallCenterProviders.</li>
+     * <li>transferMethod: the transfer method. Valid values: BYE, BRIDGE, and REFER.</li>
+     * <li>transferType: the transfer target type. Valid values: External (external number), Agent (agent), and SkillGroup (skill group).</li>
+     * <li>transferTarget: the transfer target.</li>
+     * <li>transferor: the caller number. If this parameter is left empty, the mobile phone number of the calling customer is used by default.</li>
+     * <li>timeoutSeconds: the timeout period for transferring to a human agent, in seconds. Default value: 30.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>{
      *     &quot;providerId&quot;: &quot;xxxxxxxxx&quot;,
@@ -26,16 +43,26 @@ public class CreateInstructionRequest extends TeaModel {
     public String config;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The instruction name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Transfer to human agent instruction 1</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The instruction type.</p>
+     * 
      * <strong>example:</strong>
      * <p>TRANSFER</p>
      */

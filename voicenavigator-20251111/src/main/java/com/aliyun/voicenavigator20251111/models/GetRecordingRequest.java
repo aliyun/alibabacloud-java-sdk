@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetRecordingRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>868eef14-7515-4856-8a50-5c9a22abdbcc</p>
      */
@@ -12,6 +14,8 @@ public class GetRecordingRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The session ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>89ab28c2-eb94-4010-a539-f0eee922e371</p>
      */

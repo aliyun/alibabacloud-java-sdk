@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListScriptsResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The paginated result of the scenario list.</p>
+     */
     @NameInMap("Data")
     public ListScriptsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListScriptsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -29,10 +38,15 @@ public class ListScriptsResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>BA092E9B-3421-5862-BC75-E646B7587531</p>
      */
@@ -94,6 +108,8 @@ public class ListScriptsResponseBody extends TeaModel {
 
     public static class ListScriptsResponseBodyDataScripts extends TeaModel {
         /**
+         * <p>The concurrency.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -101,26 +117,44 @@ public class ListScriptsResponseBody extends TeaModel {
         public Integer concurrency;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1773228988000</p>
          */
         @NameInMap("CreatedTime")
         public Long createdTime;
 
+        /**
+         * <p>The description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Used for testing</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The draft version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>efbafa38-336d-4eb0-865e-c16c97a91773</p>
          */
         @NameInMap("DraftVersionId")
         public String draftVersionId;
 
+        /**
+         * <p>The scenario name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Navigation test scenario</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The NLU invocation method.</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -128,6 +162,8 @@ public class ListScriptsResponseBody extends TeaModel {
         public String nluAccessType;
 
         /**
+         * <p>The NLU engine.</p>
+         * 
          * <strong>example:</strong>
          * <p>BEEBOT</p>
          */
@@ -135,6 +171,8 @@ public class ListScriptsResponseBody extends TeaModel {
         public String nluEngine;
 
         /**
+         * <p>The number.</p>
+         * 
          * <strong>example:</strong>
          * <p>13816111993</p>
          */
@@ -142,6 +180,8 @@ public class ListScriptsResponseBody extends TeaModel {
         public String number;
 
         /**
+         * <p>The published version ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>efbafa38-336d-4eb0-865e-c16c97a91774</p>
          */
@@ -149,6 +189,8 @@ public class ListScriptsResponseBody extends TeaModel {
         public String publishedVersionId;
 
         /**
+         * <p>The scenario ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>efbafa38-336d-4eb0-865e-c16c97a91772</p>
          */
@@ -156,6 +198,8 @@ public class ListScriptsResponseBody extends TeaModel {
         public String scriptId;
 
         /**
+         * <p>The status.</p>
+         * 
          * <strong>example:</strong>
          * <p>DRAFT</p>
          */
@@ -163,6 +207,8 @@ public class ListScriptsResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1773228988000</p>
          */
@@ -274,6 +320,8 @@ public class ListScriptsResponseBody extends TeaModel {
 
     public static class ListScriptsResponseBodyData extends TeaModel {
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -281,16 +329,23 @@ public class ListScriptsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The list of scenarios.</p>
+         */
         @NameInMap("Scripts")
         public java.util.List<ListScriptsResponseBodyDataScripts> scripts;
 
         /**
+         * <p>The total count.</p>
+         * 
          * <strong>example:</strong>
          * <p>30</p>
          */

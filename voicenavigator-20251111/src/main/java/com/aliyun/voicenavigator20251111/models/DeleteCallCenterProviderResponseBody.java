@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCallCenterProviderResponseBody extends TeaModel {
     /**
+     * <p>The response code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class DeleteCallCenterProviderResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The ID of the human service provider.</p>
+     * 
      * <strong>example:</strong>
      * <p>xxxxxxxxx</p>
      */
@@ -19,6 +23,8 @@ public class DeleteCallCenterProviderResponseBody extends TeaModel {
     public String data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,16 +32,23 @@ public class DeleteCallCenterProviderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The dynamic error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>7401D698-0AAC-5909-B68E-88C68805FFB8</p>
      */

@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListRealtimeInstanceStatsResponseBody extends TeaModel {
     /**
+     * <p>The internal error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The call records.</p>
+     */
     @NameInMap("Data")
     public ListRealtimeInstanceStatsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class ListRealtimeInstanceStatsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -29,6 +38,9 @@ public class ListRealtimeInstanceStatsResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The list of error parameters.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
@@ -96,6 +108,8 @@ public class ListRealtimeInstanceStatsResponseBody extends TeaModel {
 
     public static class ListRealtimeInstanceStatsResponseBodyDataList extends TeaModel {
         /**
+         * <p>The configured concurrency.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -103,6 +117,8 @@ public class ListRealtimeInstanceStatsResponseBody extends TeaModel {
         public Long configuredConcurrency;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>88b64330a8d34e63b60c9d272f8b3950</p>
          */
@@ -110,6 +126,8 @@ public class ListRealtimeInstanceStatsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
+         * <p>The time of the statistics.</p>
+         * 
          * <strong>example:</strong>
          * <p>1776837256000</p>
          */
@@ -117,6 +135,8 @@ public class ListRealtimeInstanceStatsResponseBody extends TeaModel {
         public Long statsTime;
 
         /**
+         * <p>The used concurrency.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -163,10 +183,15 @@ public class ListRealtimeInstanceStatsResponseBody extends TeaModel {
     }
 
     public static class ListRealtimeInstanceStatsResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of real-time statistics for instances.</p>
+         */
         @NameInMap("List")
         public java.util.List<ListRealtimeInstanceStatsResponseBodyDataList> list;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -174,6 +199,8 @@ public class ListRealtimeInstanceStatsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -181,6 +208,8 @@ public class ListRealtimeInstanceStatsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */

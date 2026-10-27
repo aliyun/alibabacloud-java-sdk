@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateLlmAccessProfileShrinkRequest extends TeaModel {
     /**
+     * <p>The ID of the third-party model configuration.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
      */
@@ -12,12 +14,17 @@ public class UpdateLlmAccessProfileShrinkRequest extends TeaModel {
     public String accessProfileId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d74d6290-7cbe-4436-b5d7-014ebb0f4060</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The parameter settings.</p>
+     */
     @NameInMap("Profile")
     public String profileShrink;
 

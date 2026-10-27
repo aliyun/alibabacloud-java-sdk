@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class BridgeWebCallRequest extends TeaModel {
     /**
+     * <p>The channel ID.</p>
+     * <blockquote>
+     * <p>This parameter is valid only when AccessChannelType is set to Web or Trial.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>33606503-c22c-4547-a51c-dda5e8d87962</p>
      */
@@ -12,6 +17,15 @@ public class BridgeWebCallRequest extends TeaModel {
     public String accessChannelId;
 
     /**
+     * <p>The channel type.</p>
+     * <blockquote>
+     * <ul>
+     * <li>Text: text test window</li>
+     * <li>Test: test window</li>
+     * <li>Trial: trial link</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>Text</p>
      */
@@ -19,6 +33,8 @@ public class BridgeWebCallRequest extends TeaModel {
     public String accessChannelType;
 
     /**
+     * <p>The caller number.</p>
+     * 
      * <strong>example:</strong>
      * <p>010123*****</p>
      */
@@ -26,6 +42,8 @@ public class BridgeWebCallRequest extends TeaModel {
     public String caller;
 
     /**
+     * <p>The device ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>d4c38420-<strong><strong>-43bc-b001-56bfc274</strong></strong></p>
      */
@@ -33,6 +51,11 @@ public class BridgeWebCallRequest extends TeaModel {
     public String deviceId;
 
     /**
+     * <p>Specifies whether the test environment is used.</p>
+     * <blockquote>
+     * <p>Default value: false.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -40,6 +63,8 @@ public class BridgeWebCallRequest extends TeaModel {
     public Boolean draftVersion;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>36e9a4cd-a821-4f78-86fa-a9a4aefeea2e</p>
      */
@@ -47,6 +72,8 @@ public class BridgeWebCallRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The sampling rate.</p>
+     * 
      * <strong>example:</strong>
      * <p>8000</p>
      */
@@ -54,6 +81,8 @@ public class BridgeWebCallRequest extends TeaModel {
     public Integer sampleRate;
 
     /**
+     * <p>The script ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0a88e269-01f5-49ac-97af-5830f0ccb271</p>
      */
@@ -61,6 +90,8 @@ public class BridgeWebCallRequest extends TeaModel {
     public String scriptId;
 
     /**
+     * <p>The attached data.</p>
+     * 
      * <strong>example:</strong>
      * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
@@ -68,6 +99,13 @@ public class BridgeWebCallRequest extends TeaModel {
     public String tags;
 
     /**
+     * <p>The timeout period.</p>
+     * <blockquote>
+     * <ul>
+     * <li>If the call is not connected within the time specified by this parameter, the system actively hangs up the call. Unit: seconds. Default value: 60.</li>
+     * </ul>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>60</p>
      */

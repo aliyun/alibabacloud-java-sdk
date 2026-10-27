@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateVoiceAccessProfileRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
      */
@@ -12,12 +14,17 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The speech engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>VOLC</p>
      */
     @NameInMap("NlsEngine")
     public String nlsEngine;
 
+    /**
+     * <p>The parameter settings.</p>
+     */
     @NameInMap("Profile")
     public CreateVoiceAccessProfileRequestProfile profile;
 
@@ -52,6 +59,8 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
 
     public static class CreateVoiceAccessProfileRequestProfile extends TeaModel {
         /**
+         * <p>Required when Doubao is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>HwRnTXgwnQOlsj68URDS5_VMm4Wtapq9</p>
          */
@@ -59,6 +68,8 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
         public String accessKey;
 
         /**
+         * <p>Required when Model Studio or iFLYTEK is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-12341e259b1049e8872b47981e545f78</p>
          */
@@ -66,6 +77,8 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>Required when iFLYTEK is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>c0358c6e51c1013b446fdeb21a3a1234</p>
          */
@@ -73,6 +86,8 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
         public String apiSecret;
 
         /**
+         * <p>Required when iFLYTEK is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>5b123bfb</p>
          */
@@ -80,15 +95,29 @@ public class CreateVoiceAccessProfileRequest extends TeaModel {
         public String appId;
 
         /**
+         * <p>Required when Doubao is used.</p>
+         * 
          * <strong>example:</strong>
          * <p>2541370123</p>
          */
         @NameInMap("AppKey")
         public String appKey;
 
+        /**
+         * <p>Not used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not used</p>
+         */
         @NameInMap("AsrAppKey")
         public String asrAppKey;
 
+        /**
+         * <p>Not used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Not used</p>
+         */
         @NameInMap("TtsApiKey")
         public String ttsApiKey;
 

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteVariableRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0099b75d-60fd-4c63-8541-7fbba0ae6bb0</p>
      */
@@ -12,6 +14,8 @@ public class DeleteVariableRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The variable ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>0099b75d-60fd-4c63-8541-7fbba0ae6bb1</p>
      */

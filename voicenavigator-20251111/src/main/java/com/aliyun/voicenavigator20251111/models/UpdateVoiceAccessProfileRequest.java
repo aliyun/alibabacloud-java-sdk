@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class UpdateVoiceAccessProfileRequest extends TeaModel {
     /**
+     * <p>The access profile ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66b</p>
      */
@@ -12,6 +14,8 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
     public String accessProfileId;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
      */
@@ -19,12 +23,17 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The voice engine.</p>
+     * 
      * <strong>example:</strong>
      * <p>VOLC</p>
      */
     @NameInMap("NlsEngine")
     public String nlsEngine;
 
+    /**
+     * <p>The parameter configuration for the selected voice engine.</p>
+     */
     @NameInMap("Profile")
     public UpdateVoiceAccessProfileRequestProfile profile;
 
@@ -67,6 +76,8 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
 
     public static class UpdateVoiceAccessProfileRequestProfile extends TeaModel {
         /**
+         * <p>This parameter is required when <code>NlsEngine</code> is set to <code>VOLC</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>HwRnTXgwnQOlsj68URDS5_VMm4Wtapq9</p>
          */
@@ -74,6 +85,8 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
         public String accessKey;
 
         /**
+         * <p>This parameter is required when <code>NlsEngine</code> is set to <code>BAILIAN</code> or <code>IFLYTEK</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>sk-12341e259b1049e8872b47981e545f78</p>
          */
@@ -81,6 +94,8 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>This parameter is required when <code>NlsEngine</code> is set to <code>IFLYTEK</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>c0358c6e51c1013b446fdeb21a3a1234</p>
          */
@@ -88,6 +103,8 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
         public String apiSecret;
 
         /**
+         * <p>This parameter is required when <code>NlsEngine</code> is set to <code>IFLYTEK</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>5b123bfb</p>
          */
@@ -95,15 +112,29 @@ public class UpdateVoiceAccessProfileRequest extends TeaModel {
         public String appId;
 
         /**
+         * <p>This parameter is required when <code>NlsEngine</code> is set to <code>VOLC</code>.</p>
+         * 
          * <strong>example:</strong>
          * <p>2541370123</p>
          */
         @NameInMap("AppKey")
         public String appKey;
 
+        /**
+         * <p>Reserved for future use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>暂无使用</p>
+         */
         @NameInMap("AsrAppKey")
         public String asrAppKey;
 
+        /**
+         * <p>Reserved for future use.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>暂无使用</p>
+         */
         @NameInMap("TtsApiKey")
         public String ttsApiKey;
 

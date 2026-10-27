@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class ListScriptsShrinkRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The scenario name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Navigation test scenario</p>
+     */
     @NameInMap("Name")
     public String name;
 
     /**
+     * <p>The number.</p>
+     * 
      * <strong>example:</strong>
      * <p>13816111993</p>
      */
@@ -22,6 +32,8 @@ public class ListScriptsShrinkRequest extends TeaModel {
     public String number;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,16 +41,23 @@ public class ListScriptsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The list of scenario IDs.</p>
+     */
     @NameInMap("ScriptIds")
     public String scriptIdsShrink;
 
     /**
+     * <p>The status.</p>
+     * 
      * <strong>example:</strong>
      * <p>DRAFT</p>
      */

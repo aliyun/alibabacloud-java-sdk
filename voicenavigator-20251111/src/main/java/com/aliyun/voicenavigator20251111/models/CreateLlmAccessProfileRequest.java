@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateLlmAccessProfileRequest extends TeaModel {
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>af81a389-91f0-4157-8d82-720edd02b66a</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The parameter settings.</p>
+     */
     @NameInMap("Profile")
     public CreateLlmAccessProfileRequestProfile profile;
 
@@ -37,6 +42,8 @@ public class CreateLlmAccessProfileRequest extends TeaModel {
 
     public static class CreateLlmAccessProfileRequestProfile extends TeaModel {
         /**
+         * <p>The API key of the third-party model.</p>
+         * 
          * <strong>example:</strong>
          * <p>70tKleNtMGaaIem7us7Miw-Tf3kPzE6l</p>
          */
@@ -44,12 +51,20 @@ public class CreateLlmAccessProfileRequest extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The endpoint of the third-party model.</p>
+         * 
          * <strong>example:</strong>
          * <p>api.llm.enpoint.example.com</p>
          */
         @NameInMap("Endpoint")
         public String endpoint;
 
+        /**
+         * <p>The name of the third-party model configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Qwen-Omni</p>
+         */
         @NameInMap("Name")
         public String name;
 

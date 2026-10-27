@@ -4,10 +4,15 @@ package com.aliyun.voicenavigator20251111.models;
 import com.aliyun.tea.*;
 
 public class ListRealtimeInstanceStatsShrinkRequest extends TeaModel {
+    /**
+     * <p>The IDs of the instances. You can specify 1 to 100 instance IDs.</p>
+     */
     @NameInMap("InstanceIds")
     public String instanceIdsShrink;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -15,6 +20,8 @@ public class ListRealtimeInstanceStatsShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

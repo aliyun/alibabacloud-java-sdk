@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetScriptResponseBody extends TeaModel {
     /**
+     * <p>Internal error code</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Scenario object information</p>
+     */
     @NameInMap("Data")
     public GetScriptResponseBodyData data;
 
     /**
+     * <p>HTTP status code</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,6 +29,8 @@ public class GetScriptResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Error message</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance af81a389-91f0-4157-8d82-720edd02b66a
      *  does not exist.</p>
@@ -29,10 +38,15 @@ public class GetScriptResponseBody extends TeaModel {
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>List of dynamic error parameters</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
+     * <p>Request ID</p>
+     * 
      * <strong>example:</strong>
      * <p>51E08AA9-8D1F-55F8-84A3-40635E2F0806</p>
      */
@@ -93,13 +107,24 @@ public class GetScriptResponseBody extends TeaModel {
     }
 
     public static class GetScriptResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers extends TeaModel {
+        /**
+         * <p>The message to play when hanging up after reaching the maximum number of rounds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>感谢您的接听，祝您生活愉快，再见!</p>
+         */
         @NameInMap("ClosingStatement")
         public String closingStatement;
 
+        /**
+         * <p>List of custom interception keywords</p>
+         */
         @NameInMap("KeyWords")
         public java.util.List<String> keyWords;
 
         /**
+         * <p>TurnLimit: Maximum interaction rounds check. IntelligentVoiceAssistant: Voice assistant. InteractiveVoiceResponse: Extension transfer. KeyWords: Custom interception</p>
+         * 
          * <strong>example:</strong>
          * <p>TurnLimit</p>
          */
@@ -107,6 +132,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String triggerType;
 
         /**
+         * <p>Hangs up when the number of interaction rounds exceeds x. The range is 0 to 100. A value of 0 indicates that the hang-up feature for exceeding the round limit is disabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -154,12 +181,17 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataDraftVersionInteractionConfigEndConversationConfig extends TeaModel {
         /**
+         * <p>The hang-up action is executed x seconds after the hang-up message is played. The range is 0 to 5.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Delay")
         public Integer delay;
 
+        /**
+         * <p>List of special case interceptions</p>
+         */
         @NameInMap("Triggers")
         public java.util.List<GetScriptResponseBodyDataDraftVersionInteractionConfigEndConversationConfigTriggers> triggers;
 
@@ -188,6 +220,8 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataDraftVersionInteractionConfigSilenceDetectionConfig extends TeaModel {
         /**
+         * <p>Hang up after consecutive rounds of silence. This takes effect when NluEngine is set to PROMPTS for the current scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -195,6 +229,8 @@ public class GetScriptResponseBody extends TeaModel {
         public Integer maxRepeats;
 
         /**
+         * <p>Silence timeout period in milliseconds. If the user remains silent for longer than the specified value, a silence timeout message is played. The range is 2000 to 10000.</p>
+         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
@@ -226,22 +262,32 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataDraftVersionInteractionConfig extends TeaModel {
         /**
+         * <p>Background music ID</p>
+         * 
          * <strong>example:</strong>
          * <p>office-ambience</p>
          */
         @NameInMap("BackgroundMusicId")
         public String backgroundMusicId;
 
+        /**
+         * <p>Hang-up configuration</p>
+         */
         @NameInMap("EndConversationConfig")
         public GetScriptResponseBodyDataDraftVersionInteractionConfigEndConversationConfig endConversationConfig;
 
         /**
+         * <p>The delay before playing audio after the call is connected, in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
         @NameInMap("InitialGreetingDelayMilliseconds")
         public Integer initialGreetingDelayMilliseconds;
 
+        /**
+         * <p>Silence detection configuration</p>
+         */
         @NameInMap("SilenceDetectionConfig")
         public GetScriptResponseBodyDataDraftVersionInteractionConfigSilenceDetectionConfig silenceDetectionConfig;
 
@@ -285,12 +331,27 @@ public class GetScriptResponseBody extends TeaModel {
     }
 
     public static class GetScriptResponseBodyDataDraftVersionLabelConfig extends TeaModel {
+        /**
+         * <p>List of candidate values for the label</p>
+         */
         @NameInMap("CandidateValues")
         public java.util.List<String> candidateValues;
 
+        /**
+         * <p>Label description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户是否同意于还款截止日期前还款</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Label name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>是否同意还款</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -326,10 +387,18 @@ public class GetScriptResponseBody extends TeaModel {
     }
 
     public static class GetScriptResponseBodyDataDraftVersionScriptProfileAgentProfile extends TeaModel {
+        /**
+         * <p>Prompt JSON</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;prompts\&quot;:\&quot;我是一个聊天机器人。\&quot;}</p>
+         */
         @NameInMap("PromptsJson")
         public String promptsJson;
 
         /**
+         * <p>Scenario template ID</p>
+         * 
          * <strong>example:</strong>
          * <p>CCC_PROMPTS_DEFAULT</p>
          */
@@ -361,6 +430,8 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataDraftVersionScriptProfileFunctionMeta extends TeaModel {
         /**
+         * <p>Function service ID</p>
+         * 
          * <strong>example:</strong>
          * <p>9b752bbb-805a-4d3e-9013-eab5555c3fef</p>
          */
@@ -368,6 +439,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String functionId;
 
         /**
+         * <p>Function service name</p>
+         * 
          * <strong>example:</strong>
          * <p>my_funciton</p>
          */
@@ -375,6 +448,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String functionName;
 
         /**
+         * <p>Function trigger name</p>
+         * 
          * <strong>example:</strong>
          * <p>defaultTrigger</p>
          */
@@ -382,6 +457,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String httpTriggerName;
 
         /**
+         * <p>Function trigger URL</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run">http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run</a></p>
          */
@@ -389,6 +466,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String httpTriggerUrl;
 
         /**
+         * <p>Region where the function service is located</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -444,6 +523,8 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataDraftVersionScriptProfileNluAccessProfile extends TeaModel {
         /**
+         * <p>Third-party dialogue model configuration ID</p>
+         * 
          * <strong>example:</strong>
          * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
          */
@@ -467,36 +548,53 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataDraftVersionScriptProfile extends TeaModel {
         /**
+         * <p>Chatbot AgentKey</p>
+         * 
          * <strong>example:</strong>
          * <p>1309723684579735_p_beebot_public</p>
          */
         @NameInMap("AgentKey")
         public String agentKey;
 
+        /**
+         * <p>Dialogue agent configuration</p>
+         */
         @NameInMap("AgentProfile")
         public GetScriptResponseBodyDataDraftVersionScriptProfileAgentProfile agentProfile;
 
         /**
+         * <p>Chatbot ID</p>
+         * 
          * <strong>example:</strong>
          * <p>chatbot-cn-MQuyjjb666</p>
          */
         @NameInMap("ChatbotId")
         public String chatbotId;
 
+        /**
+         * <p>Function Compute configuration</p>
+         */
         @NameInMap("FunctionMeta")
         public GetScriptResponseBodyDataDraftVersionScriptProfileFunctionMeta functionMeta;
 
         /**
+         * <p>Dialogue model</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>Associated configuration</p>
+         */
         @NameInMap("NluAccessProfile")
         public GetScriptResponseBodyDataDraftVersionScriptProfileNluAccessProfile nluAccessProfile;
 
         /**
+         * <p>Dialogue model call method</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -504,6 +602,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String nluAccessType;
 
         /**
+         * <p>NLU engine</p>
+         * 
          * <strong>example:</strong>
          * <p>BEEBOT</p>
          */
@@ -511,6 +611,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String nluEngine;
 
         /**
+         * <p>Indicates whether the model is an Omni model.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -598,6 +700,8 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile extends TeaModel {
         /**
+         * <p>Third-party voice configuration</p>
+         * 
          * <strong>example:</strong>
          * <p>0c4f978a-73bb-4841-bd84-75c0398edd4f</p>
          */
@@ -620,9 +724,21 @@ public class GetScriptResponseBody extends TeaModel {
     }
 
     public static class GetScriptResponseBodyDataDraftVersionSynthesizerConfigPronRules extends TeaModel {
+        /**
+         * <p>Word prone to errors</p>
+         * 
+         * <strong>example:</strong>
+         * <p>还钱</p>
+         */
         @NameInMap("Pattern")
         public String pattern;
 
+        /**
+         * <p>Replacement word</p>
+         * 
+         * <strong>example:</strong>
+         * <p>环钱</p>
+         */
         @NameInMap("Replacement")
         public String replacement;
 
@@ -651,16 +767,23 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataDraftVersionSynthesizerConfig extends TeaModel {
         /**
+         * <p>TTS model</p>
+         * 
          * <strong>example:</strong>
          * <p>CosyVoice</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>Access account configuration</p>
+         */
         @NameInMap("NlsAccessProfile")
         public GetScriptResponseBodyDataDraftVersionSynthesizerConfigNlsAccessProfile nlsAccessProfile;
 
         /**
+         * <p>TTS call method</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -668,6 +791,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String nlsAccessType;
 
         /**
+         * <p>TTS engine</p>
+         * 
          * <strong>example:</strong>
          * <p>BAILIAN</p>
          */
@@ -675,16 +800,23 @@ public class GetScriptResponseBody extends TeaModel {
         public String nlsEngine;
 
         /**
+         * <p>The speech pitch.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("PitchRate")
         public Integer pitchRate;
 
+        /**
+         * <p>List of TTS intervention dictionaries</p>
+         */
         @NameInMap("PronRules")
         public java.util.List<GetScriptResponseBodyDataDraftVersionSynthesizerConfigPronRules> pronRules;
 
         /**
+         * <p>Speech rate</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -692,6 +824,8 @@ public class GetScriptResponseBody extends TeaModel {
         public Integer speechRate;
 
         /**
+         * <p>Voice</p>
+         * 
          * <strong>example:</strong>
          * <p>longanyang</p>
          */
@@ -699,6 +833,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String voice;
 
         /**
+         * <p>Volume</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -816,6 +952,8 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile extends TeaModel {
         /**
+         * <p>Third-party voice configuration ID</p>
+         * 
          * <strong>example:</strong>
          * <p>0c4f978a-73bb-4841-bd84-75c0398edd4f</p>
          */
@@ -842,6 +980,8 @@ public class GetScriptResponseBody extends TeaModel {
         public java.util.List<GetScriptResponseBodyDataDraftVersionTranscriberConfigCorrectionRules> correctionRules;
 
         /**
+         * <p>Self-learning language model ID (not currently supported)</p>
+         * 
          * <strong>example:</strong>
          * <p>0c4f978a-73bb-4841-bd84-75c0398edd6f</p>
          */
@@ -849,6 +989,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String customizationId;
 
         /**
+         * <p>Voice Activity Detection (VAD) sentence segmentation</p>
+         * 
          * <strong>example:</strong>
          * <p>500</p>
          */
@@ -856,16 +998,23 @@ public class GetScriptResponseBody extends TeaModel {
         public Integer endSilenceTimeout;
 
         /**
+         * <p>ASR model</p>
+         * 
          * <strong>example:</strong>
          * <p>Paraformer</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>Access account configuration</p>
+         */
         @NameInMap("NlsAccessProfile")
         public GetScriptResponseBodyDataDraftVersionTranscriberConfigNlsAccessProfile nlsAccessProfile;
 
         /**
+         * <p>ASR call method</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -873,6 +1022,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String nlsAccessType;
 
         /**
+         * <p>ASR engine</p>
+         * 
          * <strong>example:</strong>
          * <p>BAILIAN</p>
          */
@@ -880,6 +1031,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String nlsEngine;
 
         /**
+         * <p>Noise threshold</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -887,6 +1040,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String speechNoiseThreshold;
 
         /**
+         * <p>Hotword ID</p>
+         * 
          * <strong>example:</strong>
          * <p>0c4f978a-73bb-4841-bd84-75c0398edd5f</p>
          */
@@ -973,22 +1128,39 @@ public class GetScriptResponseBody extends TeaModel {
     }
 
     public static class GetScriptResponseBodyDataDraftVersion extends TeaModel {
+        /**
+         * <p>Interaction configuration</p>
+         */
         @NameInMap("InteractionConfig")
         public GetScriptResponseBodyDataDraftVersionInteractionConfig interactionConfig;
 
+        /**
+         * <p>List of label objects</p>
+         */
         @NameInMap("LabelConfig")
         public java.util.List<GetScriptResponseBodyDataDraftVersionLabelConfig> labelConfig;
 
+        /**
+         * <p>Dialogue capability configuration</p>
+         */
         @NameInMap("ScriptProfile")
         public GetScriptResponseBodyDataDraftVersionScriptProfile scriptProfile;
 
+        /**
+         * <p>TTS configuration</p>
+         */
         @NameInMap("SynthesizerConfig")
         public GetScriptResponseBodyDataDraftVersionSynthesizerConfig synthesizerConfig;
 
+        /**
+         * <p>ASR configuration</p>
+         */
         @NameInMap("TranscriberConfig")
         public GetScriptResponseBodyDataDraftVersionTranscriberConfig transcriberConfig;
 
         /**
+         * <p>Version ID</p>
+         * 
          * <strong>example:</strong>
          * <p>0c4f978a-73bb-4841-bd84-75c0398edd4e</p>
          */
@@ -1051,13 +1223,37 @@ public class GetScriptResponseBody extends TeaModel {
     }
 
     public static class GetScriptResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers extends TeaModel {
+        /**
+         * <ul>
+         * <li>The message to play when hanging up after reaching the maximum number of rounds.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>感谢您的接听，祝您生活愉快，再见!</p>
+         */
         @NameInMap("ClosingStatement")
         public String closingStatement;
 
+        /**
+         * <ul>
+         * <li>List of custom interception keywords</li>
+         * </ul>
+         */
         @NameInMap("KeyWords")
         public java.util.List<String> keyWords;
 
         /**
+         * <ul>
+         * <li><p><strong>TurnLimit</strong>: Maximum interaction rounds check.</p>
+         * </li>
+         * <li><p><strong>IntelligentVoiceAssistant</strong>: Voice assistant.</p>
+         * </li>
+         * <li><p><strong>InteractiveVoiceResponse</strong>: Extension transfer.</p>
+         * </li>
+         * <li><p><strong>KeyWords</strong>: Custom interception.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>TurnLimit</p>
          */
@@ -1065,6 +1261,15 @@ public class GetScriptResponseBody extends TeaModel {
         public String triggerType;
 
         /**
+         * <ul>
+         * <li><p>Hangs up when the number of interaction rounds exceeds x.</p>
+         * </li>
+         * <li><p>The range is 0 to 100.</p>
+         * </li>
+         * <li><p>A value of 0 indicates that the hang-up feature for exceeding the round limit is disabled.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -1112,12 +1317,17 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataPublishedVersionInteractionConfigEndConversationConfig extends TeaModel {
         /**
+         * <p>The hang-up action is executed x seconds after the hang-up message is played. The range is 0 to 5.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("Delay")
         public Integer delay;
 
+        /**
+         * <p>Special case interception</p>
+         */
         @NameInMap("Triggers")
         public java.util.List<GetScriptResponseBodyDataPublishedVersionInteractionConfigEndConversationConfigTriggers> triggers;
 
@@ -1146,6 +1356,9 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataPublishedVersionInteractionConfigSilenceDetectionConfig extends TeaModel {
         /**
+         * <p>Hang up after consecutive rounds of silence.<br>
+         * This takes effect when NluEngine is set to PROMPTS for the current scenario.<br></p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -1153,6 +1366,10 @@ public class GetScriptResponseBody extends TeaModel {
         public Integer maxRepeats;
 
         /**
+         * <p>Silence timeout period in milliseconds.<br>
+         * If the user remains silent for longer than the specified value, a silence timeout message is played.<br>
+         * The range is 2000 to 10000.<br><br></p>
+         * 
          * <strong>example:</strong>
          * <p>5000</p>
          */
@@ -1184,22 +1401,37 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataPublishedVersionInteractionConfig extends TeaModel {
         /**
+         * <p>Background music ID</p>
+         * 
          * <strong>example:</strong>
          * <p>office-ambience</p>
          */
         @NameInMap("BackgroundMusicId")
         public String backgroundMusicId;
 
+        /**
+         * <p>Hang-up configuration</p>
+         */
         @NameInMap("EndConversationConfig")
         public GetScriptResponseBodyDataPublishedVersionInteractionConfigEndConversationConfig endConversationConfig;
 
         /**
+         * <ul>
+         * <li><p>The delay before playing audio after the call is connected.</p>
+         * </li>
+         * <li><p>Unit: milliseconds.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2000</p>
          */
         @NameInMap("InitialGreetingDelayMilliseconds")
         public Integer initialGreetingDelayMilliseconds;
 
+        /**
+         * <p>Silence detection configuration</p>
+         */
         @NameInMap("SilenceDetectionConfig")
         public GetScriptResponseBodyDataPublishedVersionInteractionConfigSilenceDetectionConfig silenceDetectionConfig;
 
@@ -1243,12 +1475,27 @@ public class GetScriptResponseBody extends TeaModel {
     }
 
     public static class GetScriptResponseBodyDataPublishedVersionLabelConfig extends TeaModel {
+        /**
+         * <p>List of candidate values for the label</p>
+         */
         @NameInMap("CandidateValues")
         public java.util.List<String> candidateValues;
 
+        /**
+         * <p>Label description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用户是否同意于还款截止日期前还款</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Label name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>是否同意还款</p>
+         */
         @NameInMap("Name")
         public String name;
 
@@ -1284,20 +1531,36 @@ public class GetScriptResponseBody extends TeaModel {
     }
 
     public static class GetScriptResponseBodyDataPublishedVersionScriptProfileAgentProfile extends TeaModel {
+        /**
+         * <p>Dialogue agent description</p>
+         * 
+         * <strong>example:</strong>
+         * <p>用于测试</p>
+         */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>Dialogue agent name</p>
+         * 
          * <strong>example:</strong>
          * <p>test agent</p>
          */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p><strong>Prompt JSON</strong></p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;prompts\&quot;:\&quot;我是一个聊天机器人。\&quot;}</p>
+         */
         @NameInMap("PromptsJson")
         public String promptsJson;
 
         /**
+         * <p><strong>Scenario template ID</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>CCC_PROMPTS_DEFAULT</p>
          */
@@ -1345,6 +1608,8 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataPublishedVersionScriptProfileFunctionMeta extends TeaModel {
         /**
+         * <p>Function service ID. This is required when NluEngine is set to FUNCTION for the current scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>9b752bbb-805a-4d3e-9013-eab5555c3fef</p>
          */
@@ -1352,6 +1617,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String functionId;
 
         /**
+         * <p>Function service name. This is required when NluEngine is set to FUNCTION for the current scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>my_function</p>
          */
@@ -1359,6 +1626,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String functionName;
 
         /**
+         * <p>Function trigger name. This is required when NluEngine is set to FUNCTION for the current scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>defaultTrigger</p>
          */
@@ -1366,6 +1635,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String httpTriggerName;
 
         /**
+         * <p>Function trigger URL. This is required when NluEngine is set to FUNCTION for the current scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run">http://chat-xxxxx-v-yewiundukb.cn-hangzhou-xxx.run</a></p>
          */
@@ -1373,6 +1644,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String httpTriggerUrl;
 
         /**
+         * <p>Region where the function service is located. This is required when NluEngine is set to FUNCTION for the current scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -1428,6 +1701,8 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataPublishedVersionScriptProfileNluAccessProfile extends TeaModel {
         /**
+         * <p>Third-party dialogue model configuration ID</p>
+         * 
          * <strong>example:</strong>
          * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
          */
@@ -1451,36 +1726,53 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataPublishedVersionScriptProfile extends TeaModel {
         /**
+         * <p>Chatbot AgentKey. This is required when NluEngine is set to BEEBOT for the current scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>1309723684579735_p_beebot_public</p>
          */
         @NameInMap("AgentKey")
         public String agentKey;
 
+        /**
+         * <p>Dialogue agent configuration</p>
+         */
         @NameInMap("AgentProfile")
         public GetScriptResponseBodyDataPublishedVersionScriptProfileAgentProfile agentProfile;
 
         /**
+         * <p>Chatbot ID. This is required when NluEngine is set to BEEBOT for the current scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>chatbot-cn-MQuyjjb666</p>
          */
         @NameInMap("ChatbotId")
         public String chatbotId;
 
+        /**
+         * <p>Function Compute configuration</p>
+         */
         @NameInMap("FunctionMeta")
         public GetScriptResponseBodyDataPublishedVersionScriptProfileFunctionMeta functionMeta;
 
         /**
+         * <p>Dialogue model. This is required when NluEngine is set to PROMPTS for the current scenario.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p><strong>Associated configuration</strong></p>
+         */
         @NameInMap("NluAccessProfile")
         public GetScriptResponseBodyDataPublishedVersionScriptProfileNluAccessProfile nluAccessProfile;
 
         /**
+         * <p>Dialogue model call method</p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -1488,6 +1780,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String nluAccessType;
 
         /**
+         * <p>NLU engine</p>
+         * 
          * <strong>example:</strong>
          * <p>BEEBOT</p>
          */
@@ -1495,6 +1789,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String nluEngine;
 
         /**
+         * <p>Indicates whether the model is an Omni model.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -1582,6 +1878,8 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile extends TeaModel {
         /**
+         * <p>Third-party voice configuration ID (required when using third-party ASR services such as Doubao or iFLYTEK).</p>
+         * 
          * <strong>example:</strong>
          * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
          */
@@ -1604,9 +1902,21 @@ public class GetScriptResponseBody extends TeaModel {
     }
 
     public static class GetScriptResponseBodyDataPublishedVersionSynthesizerConfigPronRules extends TeaModel {
+        /**
+         * <p>Word prone to errors</p>
+         * 
+         * <strong>example:</strong>
+         * <p>还钱</p>
+         */
         @NameInMap("Pattern")
         public String pattern;
 
+        /**
+         * <p>Homophone</p>
+         * 
+         * <strong>example:</strong>
+         * <p>环钱</p>
+         */
         @NameInMap("Replacement")
         public String replacement;
 
@@ -1635,16 +1945,23 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataPublishedVersionSynthesizerConfig extends TeaModel {
         /**
+         * <p><strong>TTS model</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>CosyVoice</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p>Associated configuration</p>
+         */
         @NameInMap("NlsAccessProfile")
         public GetScriptResponseBodyDataPublishedVersionSynthesizerConfigNlsAccessProfile nlsAccessProfile;
 
         /**
+         * <p><strong>TTS call method</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -1652,6 +1969,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String nlsAccessType;
 
         /**
+         * <p><strong>TTS engine</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>BAILIAN</p>
          */
@@ -1659,16 +1978,27 @@ public class GetScriptResponseBody extends TeaModel {
         public String nlsEngine;
 
         /**
+         * <p>Pitch rate
+         * The range is -500 to 500.
+         * The default value is 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
         @NameInMap("PitchRate")
         public Integer pitchRate;
 
+        /**
+         * <p>List of TTS intervention entries</p>
+         */
         @NameInMap("PronRules")
         public java.util.List<GetScriptResponseBodyDataPublishedVersionSynthesizerConfigPronRules> pronRules;
 
         /**
+         * <p><strong>Speech rate</strong>
+         * The range is -500 to 500.
+         * The default value is 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1676,6 +2006,8 @@ public class GetScriptResponseBody extends TeaModel {
         public Integer speechRate;
 
         /**
+         * <p><strong>Voice</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>longanyang</p>
          */
@@ -1683,6 +2015,10 @@ public class GetScriptResponseBody extends TeaModel {
         public String voice;
 
         /**
+         * <p>Volume
+         * The range is 0 to 100.
+         * The default value is 50.</p>
+         * 
          * <strong>example:</strong>
          * <p>50</p>
          */
@@ -1800,6 +2136,8 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile extends TeaModel {
         /**
+         * <p>Third-party voice configuration ID (required when using third-party ASR services such as Doubao or iFLYTEK).</p>
+         * 
          * <strong>example:</strong>
          * <p>c2c9baae-9351-4c49-a8cb-6f24a83a8718</p>
          */
@@ -1826,6 +2164,8 @@ public class GetScriptResponseBody extends TeaModel {
         public java.util.List<GetScriptResponseBodyDataPublishedVersionTranscriberConfigCorrectionRules> correctionRules;
 
         /**
+         * <p>Custom language model ID for ASR</p>
+         * 
          * <strong>example:</strong>
          * <p>cd97223f-42f2-4cd9-95af-e734e2fe1fe4</p>
          */
@@ -1833,6 +2173,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String customizationId;
 
         /**
+         * <p>Silence detection (sentence segmentation is triggered when the speaking interval exceeds x milliseconds, which is Voice Activity Detection (VAD)).</p>
+         * 
          * <strong>example:</strong>
          * <p>700</p>
          */
@@ -1840,16 +2182,23 @@ public class GetScriptResponseBody extends TeaModel {
         public Integer endSilenceTimeout;
 
         /**
+         * <p>ASR model</p>
+         * 
          * <strong>example:</strong>
          * <p>Paraformer</p>
          */
         @NameInMap("Model")
         public String model;
 
+        /**
+         * <p><strong>Associated configuration</strong></p>
+         */
         @NameInMap("NlsAccessProfile")
         public GetScriptResponseBodyDataPublishedVersionTranscriberConfigNlsAccessProfile nlsAccessProfile;
 
         /**
+         * <p><strong>ASR call method</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
          */
@@ -1857,6 +2206,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String nlsAccessType;
 
         /**
+         * <p><strong>ASR engine</strong></p>
+         * 
          * <strong>example:</strong>
          * <p>BAILIAN</p>
          */
@@ -1864,6 +2215,10 @@ public class GetScriptResponseBody extends TeaModel {
         public String nlsEngine;
 
         /**
+         * <p>Noise parameter threshold. The range is -100 to 100. The following describes the values:</p>
+         * <p>The closer the value is to -100, the more likely noise is identified as speech.</p>
+         * <p>The closer the value is to 100, the more likely speech is identified as noise.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -1871,6 +2226,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String speechNoiseThreshold;
 
         /**
+         * <p>Hotword table ID (obtained from the hotword management page).</p>
+         * 
          * <strong>example:</strong>
          * <p>cd97223f-42f2-4cd9-95af-e734e2fe1fe3</p>
          */
@@ -1957,22 +2314,39 @@ public class GetScriptResponseBody extends TeaModel {
     }
 
     public static class GetScriptResponseBodyDataPublishedVersion extends TeaModel {
+        /**
+         * <p>Interaction configuration</p>
+         */
         @NameInMap("InteractionConfig")
         public GetScriptResponseBodyDataPublishedVersionInteractionConfig interactionConfig;
 
+        /**
+         * <p>Custom tag configuration</p>
+         */
         @NameInMap("LabelConfig")
         public java.util.List<GetScriptResponseBodyDataPublishedVersionLabelConfig> labelConfig;
 
+        /**
+         * <p>Dialogue capability configuration</p>
+         */
         @NameInMap("ScriptProfile")
         public GetScriptResponseBodyDataPublishedVersionScriptProfile scriptProfile;
 
+        /**
+         * <p>TTS configuration</p>
+         */
         @NameInMap("SynthesizerConfig")
         public GetScriptResponseBodyDataPublishedVersionSynthesizerConfig synthesizerConfig;
 
+        /**
+         * <p>ASR configuration</p>
+         */
         @NameInMap("TranscriberConfig")
         public GetScriptResponseBodyDataPublishedVersionTranscriberConfig transcriberConfig;
 
         /**
+         * <p>Version ID</p>
+         * 
          * <strong>example:</strong>
          * <p>8b77ff09-6a90-4784-8560-fdc2b860dc68</p>
          */
@@ -2036,6 +2410,8 @@ public class GetScriptResponseBody extends TeaModel {
 
     public static class GetScriptResponseBodyData extends TeaModel {
         /**
+         * <p>Concurrency</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -2043,6 +2419,8 @@ public class GetScriptResponseBody extends TeaModel {
         public Integer concurrency;
 
         /**
+         * <p>Creation time</p>
+         * 
          * <strong>example:</strong>
          * <p>1773228988000</p>
          */
@@ -2050,29 +2428,47 @@ public class GetScriptResponseBody extends TeaModel {
         public Long createdTime;
 
         /**
+         * <p>Description</p>
+         * 
          * <strong>example:</strong>
          * <p>test script</p>
          */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>Draft version information</p>
+         */
         @NameInMap("DraftVersion")
         public GetScriptResponseBodyDataDraftVersion draftVersion;
 
+        /**
+         * <p>Scenario name</p>
+         * 
+         * <strong>example:</strong>
+         * <p>测试场景</p>
+         */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>Natural Language Understanding (NLU) engine</p>
+         * 
          * <strong>example:</strong>
          * <p>BEEBOT</p>
          */
         @NameInMap("NluEngine")
         public String nluEngine;
 
+        /**
+         * <p>Published version information</p>
+         */
         @NameInMap("PublishedVersion")
         public GetScriptResponseBodyDataPublishedVersion publishedVersion;
 
         /**
+         * <p>Scenario ID</p>
+         * 
          * <strong>example:</strong>
          * <p>64241e64-190c-45d1-af66-06f51c07b090</p>
          */
@@ -2080,6 +2476,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String scriptId;
 
         /**
+         * <p>Status</p>
+         * 
          * <strong>example:</strong>
          * <p>DRAFT</p>
          */
@@ -2087,6 +2485,8 @@ public class GetScriptResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>Update time</p>
+         * 
          * <strong>example:</strong>
          * <p>1773228988000</p>
          */

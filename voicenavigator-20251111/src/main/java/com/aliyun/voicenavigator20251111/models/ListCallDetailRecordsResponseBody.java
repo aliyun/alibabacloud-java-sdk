@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListCallDetailRecordsResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>An object containing the returned call records.</p>
+     */
     @NameInMap("Data")
     public ListCallDetailRecordsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -22,17 +29,22 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>A list of invalid parameters in the request.</p>
+     */
     @NameInMap("Params")
     public java.util.List<String> params;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A8AED3C8-F57B-5D71-9A34-4A170287533F</p>
@@ -95,6 +107,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
 
     public static class ListCallDetailRecordsResponseBodyDataCallDetailRecords extends TeaModel {
         /**
+         * <p>The callee\&quot;s phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>15100000001</p>
          */
@@ -102,6 +116,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String callee;
 
         /**
+         * <p>The caller\&quot;s phone number.</p>
+         * 
          * <strong>example:</strong>
          * <p>4001027277</p>
          */
@@ -109,6 +125,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String caller;
 
         /**
+         * <p>The disposition code.</p>
+         * 
          * <strong>example:</strong>
          * <p>Answered</p>
          */
@@ -116,6 +134,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String dispositionCode;
 
         /**
+         * <p>The disposition reason.</p>
+         * 
          * <strong>example:</strong>
          * <p>ConcurrentLimitExceeded</p>
          */
@@ -123,6 +143,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String dispositionReason;
 
         /**
+         * <p>The total duration of the call, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>265</p>
          */
@@ -130,6 +152,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Integer duration;
 
         /**
+         * <p>The end time of the session, as a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1767315903531</p>
          */
@@ -137,6 +161,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>Indicates whether the customer\&quot;s issue was resolved.</p>
+         * 
          * <strong>example:</strong>
          * <p>false</p>
          */
@@ -144,6 +170,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Boolean issueResolved;
 
         /**
+         * <p>The party who released the call.</p>
+         * 
          * <strong>example:</strong>
          * <p>Customer</p>
          */
@@ -151,6 +179,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String releaseInitiator;
 
         /**
+         * <p>The evidence for the <code>IssueResolved</code> status.</p>
+         * 
          * <strong>example:</strong>
          * <p>unknown</p>
          */
@@ -158,6 +188,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String resolutionEvidence;
 
         /**
+         * <p>The session ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>99eebcba-7f8a-4a54-b0da-603ada79d8e2</p>
          */
@@ -165,6 +197,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String sessionId;
 
         /**
+         * <p>The start time of the session, as a UNIX timestamp in milliseconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>1767315903531</p>
          */
@@ -172,6 +206,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The talk time, in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>245</p>
          */
@@ -179,6 +215,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Integer talkTime;
 
         /**
+         * <p>The number of talk turns.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -186,6 +224,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Integer talkTurns;
 
         /**
+         * <p>The transfer target.</p>
+         * 
          * <strong>example:</strong>
          * <p>default@testinstance1</p>
          */
@@ -193,6 +233,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public String transferTarget;
 
         /**
+         * <p>The transfer type.</p>
+         * 
          * <strong>example:</strong>
          * <p>Agent</p>
          */
@@ -327,10 +369,15 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
     }
 
     public static class ListCallDetailRecordsResponseBodyData extends TeaModel {
+        /**
+         * <p>A list of call detail records.</p>
+         */
         @NameInMap("CallDetailRecords")
         public java.util.List<ListCallDetailRecordsResponseBodyDataCallDetailRecords> callDetailRecords;
 
         /**
+         * <p>The page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -338,6 +385,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
+         * <p>The number of entries to return on each page.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -345,6 +394,8 @@ public class ListCallDetailRecordsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries that match the query.</p>
+         * 
          * <strong>example:</strong>
          * <p>362</p>
          */
