@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResizeDiskParameters extends TeaModel {
     /**
-     * <p>The target disk capacity after the change.</p>
+     * <p>The target disk capacity.</p>
      */
     @NameInMap("NewDiskSize")
     public String newDiskSize;

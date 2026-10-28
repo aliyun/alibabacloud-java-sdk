@@ -4,30 +4,81 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeSnapshot extends TeaModel {
+    /**
+     * <p>The number of workloads using ancestor quotas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AncestorQuotaWorkloadNum")
     public Integer ancestorQuotaWorkloadNum;
 
+    /**
+     * <p>The number of workloads using descendant quotas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DescendantQuotaWorkloadNum")
     public Integer descendantQuotaWorkloadNum;
 
+    /**
+     * <p>The node name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>trains930928remn-master-0</p>
+     */
     @NameInMap("NodeName")
     public String nodeName;
 
+    /**
+     * <p>The CPU usage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("RequestCPU")
     public String requestCPU;
 
+    /**
+     * <p>The GPU usage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("RequestGPU")
     public String requestGPU;
 
+    /**
+     * <p>The memory usage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("RequestMemory")
     public String requestMemory;
 
+    /**
+     * <p>The number of workloads using the current quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SelfQuotaWorkloadNum")
     public Integer selfQuotaWorkloadNum;
 
+    /**
+     * <p>The number of node workloads.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("WorkloadNum")
     public Integer workloadNum;
 
+    /**
+     * <p>The node workload snapshot.</p>
+     */
     @NameInMap("Workloads")
     public java.util.List<NodeSnapshotWorkloads> workloads;
 
@@ -109,12 +160,30 @@ public class NodeSnapshot extends TeaModel {
     }
 
     public static class NodeSnapshotWorkloads extends TeaModel {
+        /**
+         * <p>The corresponding queue unit name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc1yhisjtmqh15s-master-0</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The workload ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlcxxxx</p>
+         */
         @NameInMap("WorkloadId")
         public String workloadId;
 
+        /**
+         * <p>The workload type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc</p>
+         */
         @NameInMap("WorkloadType")
         public String workloadType;
 

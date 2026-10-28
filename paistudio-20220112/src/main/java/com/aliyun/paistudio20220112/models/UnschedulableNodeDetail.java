@@ -4,9 +4,18 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UnschedulableNodeDetail extends TeaModel {
+    /**
+     * <p>The list of nodes.</p>
+     */
     @NameInMap("Nodes")
     public java.util.List<String> nodes;
 
+    /**
+     * <p>The failure cause.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NotEnoughGPU</p>
+     */
     @NameInMap("Reason")
     public String reason;
 

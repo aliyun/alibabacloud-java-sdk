@@ -5,19 +5,35 @@ import com.aliyun.tea.*;
 
 public class NodeType extends TeaModel {
     /**
+     * <p>The accelerator type of the resource node specifications (CPU/GPU).</p>
+     * 
      * <strong>example:</strong>
      * <p>CPU</p>
      */
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    /**
+     * <p>The number of allocatable CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("AllocatableCPU")
     public String allocatableCPU;
 
+    /**
+     * <p>The allocatable memory size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2Gi</p>
+     */
     @NameInMap("AllocatableMemory")
     public String allocatableMemory;
 
     /**
+     * <p>The number of CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -25,6 +41,8 @@ public class NodeType extends TeaModel {
     public String CPU;
 
     /**
+     * <p>The number of GPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>0</p>
      */
@@ -32,16 +50,26 @@ public class NodeType extends TeaModel {
     public String GPU;
 
     /**
+     * <p>The GPU memory.</p>
+     * 
      * <strong>example:</strong>
      * <p>80G</p>
      */
     @NameInMap("GPUMemory")
     public String GPUMemory;
 
+    /**
+     * <p>The GPU type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A10</p>
+     */
     @NameInMap("GPUType")
     public String GPUType;
 
     /**
+     * <p>The memory size.</p>
+     * 
      * <strong>example:</strong>
      * <p>64Gi</p>
      */
@@ -49,15 +77,29 @@ public class NodeType extends TeaModel {
     public String memory;
 
     /**
+     * <p>The resource node specifications type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ecs.g6.4xlarge</p>
      */
     @NameInMap("NodeType")
     public String nodeType;
 
+    /**
+     * <p>The number of system-reserved CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SystemReservedCPU")
     public String systemReservedCPU;
 
+    /**
+     * <p>The system-reserved memory size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2Gi</p>
+     */
     @NameInMap("SystemReservedMemory")
     public String systemReservedMemory;
 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CacheService extends TeaModel {
     /**
-     * <p>The list of data source cache information connected to the cache service. Each element corresponds to a data source and its access port.</p>
+     * <p>The list of connected data source cache information for the cache service, where each element corresponds to a data source and its access port.</p>
      */
     @NameInMap("CacheInfos")
     public java.util.List<CacheInfo> cacheInfos;
 
     /**
-     * <p>The cache service ID. This is the unique identifier of the cache service.</p>
+     * <p>The ID of the cache service, which is the unique identifier of the cache service.</p>
      * 
      * <strong>example:</strong>
      * <p>cachea1b2c3d4e5f</p>
@@ -20,7 +20,7 @@ public class CacheService extends TeaModel {
     public String cacheServiceId;
 
     /**
-     * <p>The ID of the cluster where the cache service resides.</p>
+     * <p>The ID of the cluster where the cache service is located.</p>
      * 
      * <strong>example:</strong>
      * <p>c1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6</p>
@@ -38,7 +38,7 @@ public class CacheService extends TeaModel {
     public String createdBy;
 
     /**
-     * <p>The time when the cache service was created, in UTC in ISO 8601 format.</p>
+     * <p>The time when the cache service was created, in UTC and ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08-10T03:17:31Z</p>
@@ -47,18 +47,13 @@ public class CacheService extends TeaModel {
     public String gmtCreated;
 
     /**
-     * <p>Indicates whether the service discovery of the cache service uses shard mode.</p>
+     * <p>Indicates whether the service discovery of the cache service uses the shard mode.</p>
      */
     @NameInMap("IsSharded")
     public Boolean isSharded;
 
     /**
-     * <p>The type of RDMA network interface controller used by the cache service. This parameter is returned only when SupportRDMA is set to true. Valid values:</p>
-     * <ul>
-     * <li>eic: EIC network interface controller.</li>
-     * <li>mlx: Mellanox network interface controller.</li>
-     * </ul>
-     * <p>This parameter is empty when RDMA is not enabled.</p>
+     * <p>The type of RDMA network interface controller (NIC) used by the cache service. This parameter is returned only when SupportRDMA is true. Valid values: eic: EIC NIC. mlx: Mellanox NIC. If RDMA is not enabled, this parameter is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>eic</p>
@@ -85,7 +80,10 @@ public class CacheService extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the cache service supports access through RDMA networks.</p>
+     * <p>Indicates whether the cache service supports access over an RDMA network.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("SupportRDMA")
     public String supportRDMA;
@@ -97,7 +95,7 @@ public class CacheService extends TeaModel {
     public java.util.List<String> supportedClientQuotaIds;
 
     /**
-     * <p>The tenant ID to which the cache service belongs, which is the Alibaba Cloud account ID.</p>
+     * <p>The ID of the tenant to which the cache service belongs, which is the Alibaba Cloud account ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890123456</p>
@@ -115,7 +113,7 @@ public class CacheService extends TeaModel {
     public String userId;
 
     /**
-     * <p>The VPC network information of the cache service, including the VPC, vSwitch, and security group configurations.</p>
+     * <p>The user VPC network information of the cache service, including configurations such as the VPC, vSwitch, and security group.</p>
      */
     @NameInMap("UserVpc")
     public UserVpc userVpc;

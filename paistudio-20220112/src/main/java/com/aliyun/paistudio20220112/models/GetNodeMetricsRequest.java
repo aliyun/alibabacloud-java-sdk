@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetNodeMetricsRequest extends TeaModel {
     /**
-     * <p>The end time.</p>
+     * <p>The end time in ISO 8601 format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-07-10T10:17:06</p>
@@ -30,7 +30,7 @@ public class GetNodeMetricsRequest extends TeaModel {
     public String GPUType;
 
     /**
-     * <p>The start time.</p>
+     * <p>The start time in ISO 8601 format. The time zone is UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-07-08T02:23:30.292Z</p>
@@ -41,11 +41,11 @@ public class GetNodeMetricsRequest extends TeaModel {
     /**
      * <p>The time step. Default value: 5m. Valid values for the time unit:</p>
      * <ul>
-     * <li><p>h: hours.</p>
+     * <li><p>h: Hours.</p>
      * </li>
-     * <li><p>m: minutes.</p>
+     * <li><p>m: Minutes.</p>
      * </li>
-     * <li><p>s: seconds.</p>
+     * <li><p>s: Seconds.</p>
      * </li>
      * </ul>
      * <p>If no unit is specified, the default unit is s (seconds).</p>
@@ -57,9 +57,11 @@ public class GetNodeMetricsRequest extends TeaModel {
     public String timeStep;
 
     /**
-     * <p>Specifies whether to display non-essential information. Non-essential information currently includes Labels. Valid values:</p>
-     * <p>false: does not display non-essential information (default).
-     * true: displays non-essential information.</p>
+     * <p>Specifies whether to display non-essential information. Non-essential information currently includes labels. Valid values:</p>
+     * <ul>
+     * <li>false: Does not display non-essential information. This is the default value.</li>
+     * <li>true: Displays non-essential information.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

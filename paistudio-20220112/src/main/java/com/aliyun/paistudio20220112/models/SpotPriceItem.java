@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class SpotPriceItem extends TeaModel {
     /**
+     * <p>The spot instance type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ml.gu8xf.8xlarge-gu108</p>
      */
@@ -12,6 +14,8 @@ public class SpotPriceItem extends TeaModel {
     public String instanceType;
 
     /**
+     * <p>The spot instance discount.</p>
+     * 
      * <strong>example:</strong>
      * <p>0.1</p>
      */
@@ -19,6 +23,8 @@ public class SpotPriceItem extends TeaModel {
     public Float spotDiscount;
 
     /**
+     * <p>The timestamp of the current spot instance price.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-01-17T06:00:00Z</p>
      */
@@ -26,6 +32,8 @@ public class SpotPriceItem extends TeaModel {
     public String timestamp;
 
     /**
+     * <p>The zone ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-wulanchabu-a</p>
      */

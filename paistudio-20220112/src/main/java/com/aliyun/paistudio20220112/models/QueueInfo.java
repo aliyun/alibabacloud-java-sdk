@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QueueInfo extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>roleMaximumResource</p>
      */
@@ -12,16 +14,26 @@ public class QueueInfo extends TeaModel {
     public String code;
 
     /**
+     * <p>The error type.</p>
+     * 
      * <strong>example:</strong>
      * <p>ConfigRule</p>
      */
     @NameInMap("CodeType")
     public String codeType;
 
+    /**
+     * <p>The task creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
     /**
+     * <p>The dequeue time.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;2023-06-22T00:00:00Z&quot;</p>
      */
@@ -29,6 +41,8 @@ public class QueueInfo extends TeaModel {
     public String gmtDequeuedTime;
 
     /**
+     * <p>The enqueue time.</p>
+     * 
      * <strong>example:</strong>
      * <p>“2023-06-22T00:00:00Z”</p>
      */
@@ -36,6 +50,8 @@ public class QueueInfo extends TeaModel {
     public String gmtEnqueuedTime;
 
     /**
+     * <p>The queue position change time.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;2023-06-22T00:00:00Z&quot;</p>
      */
@@ -43,6 +59,8 @@ public class QueueInfo extends TeaModel {
     public String gmtPositionModifiedTime;
 
     /**
+     * <p>The name of the underlying QueueUnit.</p>
+     * 
      * <strong>example:</strong>
      * <p>test-label-79f5498dd-9qrzs</p>
      */
@@ -50,6 +68,8 @@ public class QueueInfo extends TeaModel {
     public String name;
 
     /**
+     * <p>The queue position.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -57,6 +77,8 @@ public class QueueInfo extends TeaModel {
     public Long position;
 
     /**
+     * <p>The task priority.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -64,6 +86,8 @@ public class QueueInfo extends TeaModel {
     public Long priority;
 
     /**
+     * <p>The dequeue strategy of the queue.</p>
+     * 
      * <strong>example:</strong>
      * <p>PaiStrategyIntelligent</p>
      */
@@ -71,6 +95,8 @@ public class QueueInfo extends TeaModel {
     public String queueStrategy;
 
     /**
+     * <p>The quota used by the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>“quotamtl37ge7gkvdz”</p>
      */
@@ -78,42 +104,78 @@ public class QueueInfo extends TeaModel {
     public String quotaId;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>Current GPU Limit is 5, limited by Role PAI.AlgoDeveloper</p>
      */
     @NameInMap("Reason")
     public String reason;
 
+    /**
+     * <p>The resource usage.</p>
+     */
     @NameInMap("Resource")
     public ResourceAmount resource;
 
     /**
+     * <p>The status.</p>
+     * 
      * <strong>example:</strong>
      * <p>Enqueued</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>Specifies whether the task uses idle resources. Valid values:</p>
+     * <ul>
+     * <li>true: Used.</li>
+     * <li>false: Not used.</li>
+     * </ul>
+     */
     @NameInMap("UseOversoldResource")
     public Boolean useOversoldResource;
 
+    /**
+     * <p>The creator information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1612285282502324</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("UserName")
     public String userName;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlcxxxx</p>
      */
     @NameInMap("WorkloadId")
     public String workloadId;
 
+    /**
+     * <p>The task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-job</p>
+     */
     @NameInMap("WorkloadName")
     public String workloadName;
 
     /**
+     * <p>The specific status of DLC, DSW, or EAS.</p>
+     * 
      * <strong>example:</strong>
      * <p>PreAllocation</p>
      */
@@ -121,6 +183,8 @@ public class QueueInfo extends TeaModel {
     public String workloadStatus;
 
     /**
+     * <p>The task type.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc</p>
      */
@@ -128,12 +192,20 @@ public class QueueInfo extends TeaModel {
     public String workloadType;
 
     /**
+     * <p>The workspace of the task.</p>
+     * 
      * <strong>example:</strong>
      * <p>“432524”</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
+    /**
+     * <p>The name of the workspace where the task resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pai_dlc</p>
+     */
     @NameInMap("WorkspaceName")
     public String workspaceName;
 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTrainingJobsShrinkRequest extends TeaModel {
     /**
-     * <p>The algorithm name.</p>
+     * <p>The name of the algorithm.</p>
      * 
      * <strong>example:</strong>
      * <p>llm_train</p>
@@ -23,7 +23,7 @@ public class ListTrainingJobsShrinkRequest extends TeaModel {
     public String algorithmProvider;
 
     /**
-     * <p>The end time of the job creation time range for the query. Default value: current time.</p>
+     * <p>The end time of the creation time range used to query jobs. Default value: the current time. The time is in ISO 8601 format and the UTC time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-12-27T02:10:00Z</p>
@@ -32,7 +32,7 @@ public class ListTrainingJobsShrinkRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether the algorithm is a temporary algorithm.</p>
+     * <p>Specifies whether the algorithm is temporary.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -54,6 +54,10 @@ public class ListTrainingJobsShrinkRequest extends TeaModel {
 
     /**
      * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li>ASC: Ascending order.</li>
+     * <li>DESC: Descending order.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -62,7 +66,7 @@ public class ListTrainingJobsShrinkRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number for paging.</p>
+     * <p>The page number for the paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -89,7 +93,7 @@ public class ListTrainingJobsShrinkRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The start time of the job creation time range for the query. Default value: 7 days ago.</p>
+     * <p>The start time of the creation time range used to query jobs. Default value: 7 days ago. The time is in ISO 8601 format and the UTC time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-06-22T01:00:00Z</p>
@@ -107,7 +111,7 @@ public class ListTrainingJobsShrinkRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The training job ID.</p>
+     * <p>The ID of the training job.</p>
      * 
      * <strong>example:</strong>
      * <p>trains930928remn</p>

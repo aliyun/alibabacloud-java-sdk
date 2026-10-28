@@ -4,12 +4,30 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class DataSource extends TeaModel {
+    /**
+     * <p>The data source ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>data-source-1</p>
+     */
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
+    /**
+     * <p>The mount path of the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/mnt/data/</p>
+     */
     @NameInMap("MountPath")
     public String mountPath;
 
+    /**
+     * <p>The URI of the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/model/output/</p>
+     */
     @NameInMap("Uri")
     public String uri;
 

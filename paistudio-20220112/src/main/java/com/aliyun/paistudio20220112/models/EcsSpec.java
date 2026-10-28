@@ -4,60 +4,148 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class EcsSpec extends TeaModel {
+    /**
+     * <p>The accelerator type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CPU</p>
+     */
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    /**
+     * <p>The number of CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("Cpu")
     public Integer cpu;
 
+    /**
+     * <p>The ECS image ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>m-bp1g7004ksh0oeuc****</p>
+     */
     @NameInMap("EcsImageId")
     public String ecsImageId;
 
+    /**
+     * <p>The number of Elastic RDMA Interface (ERI) network interface controllers.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("EriQuantity")
     public Integer eriQuantity;
 
+    /**
+     * <p>The number of GPUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Gpu")
     public Integer gpu;
 
+    /**
+     * <p>The GPU computing unit specifications.</p>
+     */
     @NameInMap("GpuGUSpec")
     public String gpuGUSpec;
 
+    /**
+     * <p>The GPU memory size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
+     */
     @NameInMap("GpuMemory")
     public Integer gpuMemory;
 
+    /**
+     * <strong>example:</strong>
+     * <p>A100</p>
+     */
     @NameInMap("GpuType")
     public String gpuType;
 
+    /**
+     * <p>The GPU type alias.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A100</p>
+     */
     @NameInMap("GpuTypeAlias")
     public String gpuTypeAlias;
 
+    /**
+     * <p>The instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ml.gu7xf.8xlarge-gu108</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The machine model.</p>
+     */
     @NameInMap("MachineModel")
     public String machineModel;
 
+    /**
+     * <p>The memory resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>92</p>
+     */
     @NameInMap("Memory")
     public Integer memory;
 
+    /**
+     * <p>The network mode.</p>
+     */
     @NameInMap("NetworkMode")
     public String networkMode;
 
+    /**
+     * <p>The planned number of CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("PlannedCpu")
     public Integer plannedCpu;
 
+    /**
+     * <p>The planned memory size.</p>
+     */
     @NameInMap("PlannedMemory")
     public Integer plannedMemory;
 
+    /**
+     * <p>The resource type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>Specifies whether GPU sharing is supported.</p>
+     */
     @NameInMap("SupportGPUShare")
     public Boolean supportGPUShare;
 
     @NameInMap("SupportRDMA")
     public Boolean supportRDMA;
 
+    /**
+     * <p>Specifies whether setting the network interface controller index is supported.</p>
+     */
     @NameInMap("SupportSetNetworkCardIndex")
     public Boolean supportSetNetworkCardIndex;
 

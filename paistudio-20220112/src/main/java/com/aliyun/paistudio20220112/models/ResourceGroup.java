@@ -8,13 +8,13 @@ public class ResourceGroup extends TeaModel {
      * <p>The user ID of the creator.</p>
      * 
      * <strong>example:</strong>
-     * <p>1612285282502324</p>
+     * <p>161228528250****</p>
      */
     @NameInMap("CreatorID")
     public String creatorID;
 
     /**
-     * <p>The time the PAI resource group was created.</p>
+     * <p>The time when the PAI resource group was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -23,7 +23,7 @@ public class ResourceGroup extends TeaModel {
     public String gmtCreatedTime;
 
     /**
-     * <p>The time the PAI resource group was last modified.</p>
+     * <p>The time when the PAI resource group was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -53,14 +53,26 @@ public class ResourceGroup extends TeaModel {
      * <p>The ID of the PAI resource group.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg17tmvwiokhzaxg</p>
+     * <p>rg17tmvwiokh****</p>
      */
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <p>The type of compute resources in the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ecs</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <p>The status of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ready</p>
+     */
     @NameInMap("Status")
     public String status;
 
@@ -70,11 +82,17 @@ public class ResourceGroup extends TeaModel {
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
+    /**
+     * <p>The version of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("Version")
     public String version;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The ID of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>23000</p>

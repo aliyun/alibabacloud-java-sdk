@@ -14,7 +14,10 @@ public class WorkspaceIdName extends TeaModel {
     public String workspaceId;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>The name of the workspace to which the task belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myshellprod</p>
      */
     @NameInMap("WorkspaceName")
     public String workspaceName;

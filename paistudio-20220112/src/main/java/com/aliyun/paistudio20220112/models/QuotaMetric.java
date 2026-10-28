@@ -4,10 +4,18 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class QuotaMetric extends TeaModel {
+    /**
+     * <p>The GPU type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GU108</p>
+     */
     @NameInMap("GPUType")
     public String GPUType;
 
     /**
+     * <p>The performance metrics.</p>
+     * 
      * <strong>example:</strong>
      * <p>23000</p>
      */

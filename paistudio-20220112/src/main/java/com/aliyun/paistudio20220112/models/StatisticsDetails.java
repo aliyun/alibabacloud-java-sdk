@@ -4,9 +4,21 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class StatisticsDetails extends TeaModel {
+    /**
+     * <p>The count.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("Count")
     public Long count;
 
+    /**
+     * <p>The idle count.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>18</p>
+     */
     @NameInMap("IdleNum")
     public Long idleNum;
 

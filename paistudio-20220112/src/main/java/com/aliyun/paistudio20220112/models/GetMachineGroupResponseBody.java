@@ -5,55 +5,82 @@ import com.aliyun.tea.*;
 
 public class GetMachineGroupResponseBody extends TeaModel {
     /**
-     * <p>The number of instances in the machine group.</p>
+     * <p>The quantity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Count")
     public Long count;
 
     /**
-     * <p>The default driver.</p>
+     * <p>The default driver version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>535</p>
      */
     @NameInMap("DefaultDriver")
     public String defaultDriver;
 
     /**
-     * <p>The subscription duration. This parameter is returned only when <code>PayType</code> is <code>PrePay</code>.</p>
+     * <p>The purchase duration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("Duration")
     public String duration;
 
     /**
-     * <p>The ECS instance type of the machine group.</p>
+     * <p>The ECS instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c6.large</p>
      */
     @NameInMap("EcsType")
     public String ecsType;
 
     /**
-     * <p>The time when the machine group was created.</p>
+     * <p>The creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2026-08-10T03:17:31Z</p>
      */
     @NameInMap("GmtCreated")
     public String gmtCreated;
 
     /**
-     * <p>The expiration time. This parameter is returned only when <code>PayType</code> is <code>PrePay</code>.</p>
+     * <p>The expiration time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-08-22T00:00:00Z</p>
      */
     @NameInMap("GmtExpired")
     public String gmtExpired;
 
     /**
-     * <p>The time when the machine group was last modified.</p>
+     * <p>The modification time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
      */
     @NameInMap("GmtModified")
     public String gmtModified;
 
     /**
-     * <p>The time when the machine group started.</p>
+     * <p>The start time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
      */
     @NameInMap("GmtStarted")
     public String gmtStarted;
 
     /**
-     * <p>The ID of the machine group.</p>
+     * <p>The machine group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mg1</p>
      */
     @NameInMap("MachineGroupID")
     public String machineGroupID;
@@ -65,7 +92,10 @@ public class GetMachineGroupResponseBody extends TeaModel {
     public String orderID;
 
     /**
-     * <p>The instance ID of the order.</p>
+     * <p>The order instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>236553689400333</p>
      */
     @NameInMap("OrderInstanceId")
     public String orderInstanceId;
@@ -77,37 +107,52 @@ public class GetMachineGroupResponseBody extends TeaModel {
     public String PAIResourceID;
 
     /**
-     * <p>The payment type. Valid values: <code>PostPay</code> (pay-as-you-go) and <code>PrePay</code> (subscription).</p>
+     * <p>The billing type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrePay</p>
      */
     @NameInMap("PayType")
     public String payType;
 
     /**
-     * <p>The billing cycle. This parameter is returned only when <code>PayType</code> is <code>PrePay</code>.</p>
+     * <p>The pricing cycle.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Monthly</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
 
     /**
      * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionID")
     public String regionID;
 
     /**
      * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>F2D0392B-D749-5C48-A98A-3FAE5C9444A6</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The status of the machine group.</p>
+     * <p>The status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>The drivers that the machine group supports.</p>
+     * <p>The supported driver versions.</p>
      */
     @NameInMap("SupportedDrivers")
     public java.util.List<String> supportedDrivers;

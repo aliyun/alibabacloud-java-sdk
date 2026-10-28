@@ -4,63 +4,144 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class CapacityLock extends TeaModel {
+    /**
+     * <p>The number of available instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("availableCount")
     public Integer availableCount;
 
+    /**
+     * <p>The ID of the capacity reservation.</p>
+     */
     @NameInMap("crsReservationId")
     public String crsReservationId;
 
+    /**
+     * <p>The description of the capacity reservation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Test capacity reservation</p>
+     */
     @NameInMap("description")
     public String description;
 
+    /**
+     * <p>The expiration time of the capacity reservation.</p>
+     */
     @NameInMap("expireTime")
     public String expireTime;
 
+    /**
+     * <p>The creation time.</p>
+     */
     @NameInMap("gmtCreated")
     public String gmtCreated;
 
+    /**
+     * <p>The modification time.</p>
+     */
     @NameInMap("gmtModified")
     public String gmtModified;
 
+    /**
+     * <p>The ID of the capacity reservation lock record.</p>
+     */
     @NameInMap("id")
     public String id;
 
+    /**
+     * <p>The instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ml.gp7vf.16.40xlarge</p>
+     */
     @NameInMap("instanceType")
     public String instanceType;
 
+    /**
+     * <p>The time of the last reconciliation attempt.</p>
+     */
     @NameInMap("lastReconcileAttemptTime")
     public String lastReconcileAttemptTime;
 
+    /**
+     * <p>The last synchronization time.</p>
+     */
     @NameInMap("lastSyncTime")
     public String lastSyncTime;
 
+    /**
+     * <p>The lock service provider.</p>
+     */
     @NameInMap("lockProvider")
     public String lockProvider;
 
+    /**
+     * <p>The number of locked instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("lockedCount")
     public Integer lockedCount;
 
+    /**
+     * <p>The operator.</p>
+     */
     @NameInMap("operator")
     public String operator;
 
+    /**
+     * <p>The billing method.</p>
+     */
     @NameInMap("paymentType")
     public String paymentType;
 
+    /**
+     * <p>The ID of the private pool.</p>
+     */
     @NameInMap("privatePoolId")
     public String privatePoolId;
 
+    /**
+     * <p>The number of requested instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("requestedCount")
     public Integer requestedCount;
 
+    /**
+     * <p>The status.</p>
+     */
     @NameInMap("status")
     public String status;
 
+    /**
+     * <p>The ID of the tenant.</p>
+     */
     @NameInMap("tenantId")
     public String tenantId;
 
+    /**
+     * <p>The number of used instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("usedCount")
     public Integer usedCount;
 
+    /**
+     * <p>The zone ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-wulanchabu-a</p>
+     */
     @NameInMap("zoneId")
     public String zoneId;
 

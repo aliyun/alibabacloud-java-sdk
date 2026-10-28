@@ -5,67 +5,91 @@ import com.aliyun.tea.*;
 
 public class SpotBidPreviewItem extends TeaModel {
     /**
-     * <p>Indicates whether the spot bid is active. If set to <code>false</code>, the bid is paused.</p>
+     * <p>Specifies whether it is active.</p>
      */
     @NameInMap("active")
     public Boolean active;
 
     /**
-     * <p>Determines whether instances can be deployed across different High-Performance Network (HPN) zones. Defaults to <code>false</code>.</p>
+     * <p>Specifies whether cross-super-node zones are allowed.</p>
      */
     @NameInMap("allowCrossHpnZone")
     public Boolean allowCrossHpnZone;
 
     /**
-     * <p>The ID of the cluster where resources are provisioned.</p>
+     * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster1</p>
      */
     @NameInMap("clusterId")
     public String clusterId;
 
     /**
-     * <p>The GC level for the spot instance.</p>
+     * <p>The GC level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1</p>
      */
     @NameInMap("gcLevel")
     public String gcLevel;
 
     /**
-     * <p>The type of compute instance.</p>
+     * <p>The instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ml.gp7vf.16.40xlarge</p>
      */
     @NameInMap("instanceType")
     public String instanceType;
 
     /**
-     * <p>The name of the associated job.</p>
+     * <p>The job name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dlc1abcdefg12345</p>
      */
     @NameInMap("jobName")
     public String jobName;
 
     /**
-     * <p>The maximum discount percentage from the on-demand price.</p>
+     * <p>The maximum discount price.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.4</p>
      */
     @NameInMap("maxDiscount")
     public Double maxDiscount;
 
     /**
-     * <p>A message that provides additional details about the current phase.</p>
+     * <p>The message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bid succeeded</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>The name of the spot bid preview.</p>
+     * <p>The pre-bid name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>preview-xxxx</p>
      */
     @NameInMap("name")
     public String name;
 
     /**
-     * <p>The current phase of the spot bid preview. Valid values are <code>Pending</code>, <code>Active</code>, and <code>Failed</code>.</p>
+     * <p>The phase.</p>
      */
     @NameInMap("phase")
     public String phase;
 
     /**
-     * <p>The number of instance replicas.</p>
+     * <p>The number of replicas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
      */
     @NameInMap("replicas")
     public Integer replicas;

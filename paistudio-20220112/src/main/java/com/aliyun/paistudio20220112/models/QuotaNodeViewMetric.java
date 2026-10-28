@@ -4,73 +4,195 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class QuotaNodeViewMetric extends TeaModel {
+    /**
+     * <p>The CPU utilization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59</p>
+     */
     @NameInMap("CPUUsageRate")
     public String CPUUsageRate;
 
+    /**
+     * <p>The node import time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2022-08-25T15:20:56Z</p>
+     */
     @NameInMap("CreatedTime")
     public String createdTime;
 
+    /**
+     * <p>The disk read rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("DiskReadRate")
     public String diskReadRate;
 
+    /**
+     * <p>The disk write rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("DiskWriteRate")
     public String diskWriteRate;
 
+    /**
+     * <p>The GPU model.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>V100</p>
+     */
     @NameInMap("GPUType")
     public String GPUType;
 
+    /**
+     * <p>The memory utilization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MemoryUsageRate")
     public String memoryUsageRate;
 
+    /**
+     * <p>The network inbound rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("NetworkInputRate")
     public String networkInputRate;
 
+    /**
+     * <p>The network outbound rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("NetworkOutputRate")
     public String networkOutputRate;
 
     /**
+     * <p>The node ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>-i121212node</p>
      */
     @NameInMap("NodeID")
     public String nodeID;
 
+    /**
+     * <p>The node status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ready</p>
+     */
     @NameInMap("NodeStatus")
     public String nodeStatus;
 
+    /**
+     * <p>The GPU type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.g6.large</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 
+    /**
+     * <p>The resource quota ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quotamtl37ge7gkvdz</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <p>The used CPU.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("RequestCPU")
     public Long requestCPU;
 
+    /**
+     * <p>The used GPU.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("RequestGPU")
     public Long requestGPU;
 
+    /**
+     * <p>The used memory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>102400000</p>
+     */
     @NameInMap("RequestMemory")
     public Long requestMemory;
 
+    /**
+     * <p>The node tasks.</p>
+     */
     @NameInMap("TaskIdMap")
     public java.util.Map<String, ?> taskIdMap;
 
+    /**
+     * <p>The total CPU.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("TotalCPU")
     public Long totalCPU;
 
+    /**
+     * <p>The total GPU.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalGPU")
     public Long totalGPU;
 
+    /**
+     * <p>The total memory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("TotalMemory")
     public Long totalMemory;
 
+    /**
+     * <p>The total number of node tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalTasks")
     public Long totalTasks;
 
+    /**
+     * <p>The user list.</p>
+     */
     @NameInMap("UserIDs")
     public java.util.List<String> userIDs;
 
+    /**
+     * <p>The total number of users.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("UserNumber")
     public String userNumber;
 

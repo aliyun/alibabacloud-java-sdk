@@ -4,12 +4,21 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class SelfQuotaPreemptionConfig extends TeaModel {
+    /**
+     * <p>The priorities that can be preempted.</p>
+     */
     @NameInMap("PreemptedPriorities")
     public java.util.List<Integer> preemptedPriorities;
 
+    /**
+     * <p>The task types that can be preempted.</p>
+     */
     @NameInMap("PreemptedProducts")
     public java.util.List<String> preemptedProducts;
 
+    /**
+     * <p>The priorities that can initiate preemption.</p>
+     */
     @NameInMap("PreemptorPriorities")
     public java.util.List<Integer> preemptorPriorities;
 

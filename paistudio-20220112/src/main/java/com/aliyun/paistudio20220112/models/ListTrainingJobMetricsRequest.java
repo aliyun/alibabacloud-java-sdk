@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTrainingJobMetricsRequest extends TeaModel {
     /**
-     * <p>The end time in UTC, in ISO 8601 format. If you omit this parameter, the current time is used.</p>
+     * <p>The end time in UTC. The time must be in ISO 8601 format. If this parameter is left empty, the current time is used.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListTrainingJobMetricsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The sort order of returned metrics. Valid values: ASC or DESC.</p>
+     * <p>The time order of the returned metrics. Valid values: ASC and DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -42,7 +42,7 @@ public class ListTrainingJobMetricsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of items per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -51,7 +51,7 @@ public class ListTrainingJobMetricsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The start time in UTC, in ISO 8601 format. If you omit this parameter, the task start time is used.</p>
+     * <p>The start time in UTC. The time must be in ISO 8601 format. If this parameter is left empty, the start time of the job is used.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
      * 
      * <strong>example:</strong>

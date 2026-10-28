@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupMachineGroupShrinkRequest extends TeaModel {
     /**
-     * <p>A list of up to 20 tags.</p>
+     * <p>The list of tags to add. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;

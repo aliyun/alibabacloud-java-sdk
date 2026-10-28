@@ -4,33 +4,84 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ResourceInfos extends TeaModel {
+    /**
+     * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>c1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6</p>
+     */
     @NameInMap("ClusterId")
     public String clusterId;
 
+    /**
+     * <p>The ECS instance type information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.gn5-c8g1.2xlarge</p>
+     */
     @NameInMap("EcsSpec")
     public String ecsSpec;
 
+    /**
+     * <p>The GPU card type.</p>
+     */
     @NameInMap("GpuCardType")
     public String gpuCardType;
 
+    /**
+     * <p>The machine model.</p>
+     */
     @NameInMap("MachineModel")
     public String machineModel;
 
+    /**
+     * <p>The maximum quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("MaxQuota")
     public Long maxQuota;
 
+    /**
+     * <p>The network pod ID.</p>
+     */
     @NameInMap("NetworkPodId")
     public String networkPodId;
 
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The used quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("UsedQuota")
     public Long usedQuota;
 
+    /**
+     * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

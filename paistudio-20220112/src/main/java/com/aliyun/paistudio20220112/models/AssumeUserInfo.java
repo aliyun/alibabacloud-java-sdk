@@ -4,15 +4,33 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class AssumeUserInfo extends TeaModel {
+    /**
+     * <p>The AccessKey ID of the temporary access credential.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>STS.L4aBSCSJVMuKg5U1****</p>
+     */
     @NameInMap("AccessKeyId")
     public String accessKeyId;
 
+    /**
+     * <p>The ID of the assumed user.</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The temporary security token.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The identity type of the assumed user.</p>
+     */
     @NameInMap("Type")
     public String type;
 

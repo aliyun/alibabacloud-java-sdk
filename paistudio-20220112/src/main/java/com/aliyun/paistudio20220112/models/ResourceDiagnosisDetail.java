@@ -4,18 +4,36 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ResourceDiagnosisDetail extends TeaModel {
+    /**
+     * <p>The exceeded resources.</p>
+     */
     @NameInMap("ExceedResources")
     public java.util.List<String> exceedResources;
 
+    /**
+     * <p>The resource quota.</p>
+     */
     @NameInMap("Limit")
     public ResourceAmount limit;
 
+    /**
+     * <p>The diagnosis status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Succeeded</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The resource usage.</p>
+     */
     @NameInMap("Used")
     public ResourceAmount used;
 
+    /**
+     * <p>The related workload IDs.</p>
+     */
     @NameInMap("WorkloadIds")
     public java.util.List<String> workloadIds;
 

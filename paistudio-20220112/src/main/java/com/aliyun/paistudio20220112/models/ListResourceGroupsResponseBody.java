@@ -23,7 +23,7 @@ public class ListResourceGroupsResponseBody extends TeaModel {
     public java.util.List<ResourceGroup> resourceGroups;
 
     /**
-     * <p>The total number of matching resource groups.</p>
+     * <p>The total number of resource groups returned.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

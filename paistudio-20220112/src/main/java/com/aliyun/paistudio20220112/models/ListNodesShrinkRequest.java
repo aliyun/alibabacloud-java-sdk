@@ -10,7 +10,7 @@ public class ListNodesShrinkRequest extends TeaModel {
      * <li>CPU</li>
      * <li>GPU</li>
      * </ul>
-     * <p>Default value: empty, which indicates all types.</p>
+     * <p>If this parameter is left empty, all types are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>CPU</p>
@@ -18,17 +18,32 @@ public class ListNodesShrinkRequest extends TeaModel {
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    /**
+     * <p>The zone where the nodes reside.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>C0</p>
+     */
     @NameInMap("AvailabilityZone")
     public String availabilityZone;
 
+    /**
+     * <p>The clique ID.</p>
+     */
     @NameInMap("CliqueID")
     public String cliqueID;
 
+    /**
+     * <p>The performance level (PL) of the cloud disk.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PL2</p>
+     */
     @NameInMap("DiskPL")
     public String diskPL;
 
     /**
-     * <p>Used together with ResourceGroupIds to display nodes in the resource groups that are bound to the specified quotas.</p>
+     * <p>Used together with ResourceGroupIds to display nodes in the resource group that are bound to specific quotas.</p>
      * 
      * <strong>example:</strong>
      * <p>quotamtl37ge7gkvdz</p>
@@ -37,7 +52,7 @@ public class ListNodesShrinkRequest extends TeaModel {
     public String filterByQuotaId;
 
     /**
-     * <p>Used together with QuotaId to display nodes in the quota that belong to the specified resource groups.</p>
+     * <p>Used together with QuotaId to display nodes in the quota that belong to specific resource groups.</p>
      * 
      * <strong>example:</strong>
      * <p>rg69rj0leslwdnbe</p>
@@ -46,7 +61,7 @@ public class ListNodesShrinkRequest extends TeaModel {
     public String filterByResourceGroupIds;
 
     /**
-     * <p>The GPU type. Fuzzy match is supported.</p>
+     * <p>The GPU card type. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>T4</p>
@@ -61,28 +76,46 @@ public class ListNodesShrinkRequest extends TeaModel {
     public String healthCountShrink;
 
     /**
-     * <p>The health rate of nodes (the proportion of healthy nodes).</p>
+     * <p>The health rate of the nodes, which is the proportion of healthy nodes.</p>
      */
     @NameInMap("HealthRate")
     public String healthRateShrink;
 
+    /**
+     * <p>The name of the hypernode.</p>
+     */
     @NameInMap("HyperNode")
     public String hyperNode;
 
+    /**
+     * <p>The hyperzone where the nodes reside.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A0</p>
+     */
     @NameInMap("HyperZone")
     public String hyperZone;
 
     /**
      * <p>The layout mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Tree</p>
      */
     @NameInMap("LayoutMode")
     public String layoutMode;
 
+    /**
+     * <p>The IDs of the machine groups to which the nodes belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mg124</p>
+     */
     @NameInMap("MachineGroupIds")
     public String machineGroupIds;
 
     /**
-     * <p>The node names to display, separated by commas.</p>
+     * <p>The names of the nodes to display. Separate multiple names with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>lingjxxxx</p>
@@ -91,7 +124,7 @@ public class ListNodesShrinkRequest extends TeaModel {
     public String nodeNames;
 
     /**
-     * <p>The node statuses, separated by commas. If this parameter is not specified, nodes in all statuses are returned.</p>
+     * <p>The status of the node. Separate multiple statuses with commas. If you do not specify this parameter, the system returns a list of nodes in all statuses.</p>
      * 
      * <strong>example:</strong>
      * <p>Ready</p>
@@ -100,7 +133,7 @@ public class ListNodesShrinkRequest extends TeaModel {
     public String nodeStatuses;
 
     /**
-     * <p>The resource node specifications, separated by commas. If this parameter is not configured, nodes of all node specifications are returned.</p>
+     * <p>The list of resource node specifications. Separate multiple specifications with commas. If you do not specify this parameter, the system returns a list of machines of all resource node specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c6.xlarge</p>
@@ -111,8 +144,8 @@ public class ListNodesShrinkRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>desc: Descending order.</li>
-     * <li>asc: Ascending order.</li>
+     * <li>desc: descending order.</li>
+     * <li>asc: ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,7 +164,7 @@ public class ListNodesShrinkRequest extends TeaModel {
     public String orderInstanceIds;
 
     /**
-     * <p>The order statuses of the nodes.</p>
+     * <p>The order status of the node.</p>
      * 
      * <strong>example:</strong>
      * <p>Ready</p>
@@ -140,7 +173,7 @@ public class ListNodesShrinkRequest extends TeaModel {
     public String orderStatuses;
 
     /**
-     * <p>The page number, starting from 1.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -149,7 +182,7 @@ public class ListNodesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paged query. This parameter is used for paging.</p>
+     * <p>The number of entries to return on each page in a paged query. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -157,14 +190,26 @@ public class ListNodesShrinkRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The billing method of the node order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PREPAY</p>
+     */
     @NameInMap("PaymentType")
     public String paymentType;
 
+    /**
+     * <p>The number of pods on the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("PodNum")
     public Integer podNum;
 
     /**
-     * <p>The resource quota ID to which the node belongs.</p>
+     * <p>The ID of the resource quota to which the node belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>quotamtl37ge7gkvdz</p>
@@ -172,16 +217,22 @@ public class ListNodesShrinkRequest extends TeaModel {
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <p>The reason codes for the current status of the nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CordonByUser</p>
+     */
     @NameInMap("ReasonCodes")
     public String reasonCodes;
 
     /**
-     * <p>The IDs of resource groups, separated by commas. Either this parameter or QuotaId is required.</p>
-     * <p>Constraints:</p>
+     * <p>The list of resource group IDs. Separate multiple IDs with commas. You must specify either this parameter or QuotaId.
+     * Constraints:</p>
      * <ol>
-     * <li>The UserId of the specified ResourceGroupId must match the UserId of the request.</li>
-     * <li>The specified resource groups must be of the same type.</li>
-     * <li>The specified resource groups must be associated with the same VPC at this stage.</li>
+     * <li>The user ID of the specified resource group must match the user ID of the request.</li>
+     * <li>The resource groups in the list must be of the same type.</li>
+     * <li>The VPCs associated with the resource groups in the list must be the same.</li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -192,12 +243,15 @@ public class ListNodesShrinkRequest extends TeaModel {
 
     /**
      * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-dlc</p>
      */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 
     /**
-     * <p>The field used for sorting.</p>
+     * <p>The field based on which the results are sorted.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreateTime</p>
@@ -214,9 +268,21 @@ public class ListNodesShrinkRequest extends TeaModel {
     @NameInMap("Verbose")
     public Boolean verbose;
 
+    /**
+     * <p>The number of workloads on the node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("WorkloadNum")
     public Integer workloadNum;
 
+    /**
+     * <p>The ID of the workspace to which the nodes belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

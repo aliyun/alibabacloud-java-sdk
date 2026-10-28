@@ -4,12 +4,21 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ResourceLimitDetails extends TeaModel {
+    /**
+     * <p>The GC level.</p>
+     */
     @NameInMap("GCLevel")
     public String GCLevel;
 
+    /**
+     * <p>The resource limit details.</p>
+     */
     @NameInMap("ResourceLimit")
     public java.util.Map<String, ?> resourceLimit;
 
+    /**
+     * <p>Specifies whether to ignore the resource check.</p>
+     */
     @NameInMap("ShouldIgnoreResourceCheck")
     public Boolean shouldIgnoreResourceCheck;
 

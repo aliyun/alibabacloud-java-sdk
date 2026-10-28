@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTrainingJobResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E7C42CC7-2E85-508A-84F4-923B605FD10F</p>
@@ -14,7 +14,7 @@ public class CreateTrainingJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The training job ID.</p>
+     * <p>The ID of the training job.</p>
      * 
      * <strong>example:</strong>
      * <p>traineyfz0m2hsfv</p>

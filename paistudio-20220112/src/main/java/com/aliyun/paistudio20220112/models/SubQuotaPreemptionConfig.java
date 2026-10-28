@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class SubQuotaPreemptionConfig extends TeaModel {
     /**
+     * <p>The maximum priority of preempted nodes.</p>
+     * 
      * <strong>example:</strong>
      * <p>9</p>
      */
     @NameInMap("PreemptedPriorityUpperBound")
     public Long preemptedPriorityUpperBound;
 
+    /**
+     * <p>The preemptable node types.</p>
+     */
     @NameInMap("PreemptedProducts")
     public java.util.List<String> preemptedProducts;
 

@@ -4,42 +4,114 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class Task extends TeaModel {
+    /**
+     * <p>The actions performed by the task.</p>
+     */
     @NameInMap("Actions")
     public java.util.List<Action> actions;
 
+    /**
+     * <p>The description of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>this is a test quota</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The time when the task was activated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtActivatedTime")
     public String gmtActivatedTime;
 
+    /**
+     * <p>The time when the task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
+    /**
+     * <p>The time when the task was updated.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2024-07-10T11:49:47Z</p>
+     */
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>The time when the task was stopped.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtStoppedTime")
     public String gmtStoppedTime;
 
+    /**
+     * <p>The ID of the quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quotad2kd8ljpsno</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 
+    /**
+     * <p>The execution rules of the task.</p>
+     */
     @NameInMap("Rules")
     public Rules rules;
 
+    /**
+     * <p>The status of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Activated</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The ID of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>taskxxxx</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The name of the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("TaskName")
     public String taskName;
 
+    /**
+     * <p>The ID of the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

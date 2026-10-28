@@ -4,9 +4,18 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class OversoldUsageConfig extends TeaModel {
+    /**
+     * <p>Indicates whether it is disabled.</p>
+     */
     @NameInMap("Disabled")
     public Boolean disabled;
 
+    /**
+     * <p>The user who disabled it.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quotaxxx</p>
+     */
     @NameInMap("DisabledBy")
     public String disabledBy;
 

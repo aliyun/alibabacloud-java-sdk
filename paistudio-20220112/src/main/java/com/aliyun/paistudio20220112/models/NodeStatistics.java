@@ -4,21 +4,39 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeStatistics extends TeaModel {
+    /**
+     * <p>The total resources.</p>
+     */
     @NameInMap("ActualMinResources")
     public StatisticsResources actualMinResources;
 
+    /**
+     * <p>The GPU idle statistics.</p>
+     */
     @NameInMap("GPUDetails")
     public java.util.List<NodeStatisticsGPUDetails> GPUDetails;
 
+    /**
+     * <p>The hypernode idle statistics.</p>
+     */
     @NameInMap("HyperNodeDetails")
     public java.util.List<NodeStatisticsHyperNodeDetails> hyperNodeDetails;
 
+    /**
+     * <p>The idle resources.</p>
+     */
     @NameInMap("IdleResources")
     public StatisticsResources idleResources;
 
+    /**
+     * <p>The amount of scheduling resources.</p>
+     */
     @NameInMap("SchedulableResources")
     public StatisticsResources schedulableResources;
 
+    /**
+     * <p>The system reserved resources.</p>
+     */
     @NameInMap("SystemReservedResources")
     public StatisticsResources systemReservedResources;
 
@@ -76,9 +94,21 @@ public class NodeStatistics extends TeaModel {
     }
 
     public static class NodeStatisticsGPUDetails extends TeaModel {
+        /**
+         * <p>The count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The idle count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>16</p>
+         */
         @NameInMap("IdleNum")
         public Long idleNum;
 
@@ -106,9 +136,21 @@ public class NodeStatistics extends TeaModel {
     }
 
     public static class NodeStatisticsHyperNodeDetails extends TeaModel {
+        /**
+         * <p>The count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("Count")
         public Long count;
 
+        /**
+         * <p>The idle count.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>18</p>
+         */
         @NameInMap("IdleNum")
         public Long idleNum;
 

@@ -4,9 +4,18 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class Permission extends TeaModel {
+    /**
+     * <p>IsEnabled</p>
+     */
     @NameInMap("IsEnabled")
     public Boolean isEnabled;
 
+    /**
+     * <p>ResourceType</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Ecs</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 

@@ -14,13 +14,13 @@ public class GetSpotPriceHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A list of historical spot instance price details</p>
+     * <p>The list of historical price details of spot instances.</p>
      */
     @NameInMap("SpotPriceHistory")
     public java.util.List<SpotPriceItem> spotPriceHistory;
 
     /**
-     * <p>The total number of historical spot instance prices</p>
+     * <p>The total number of historical prices of spot instances.</p>
      * 
      * <strong>example:</strong>
      * <p>194</p>

@@ -4,18 +4,48 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class StatisticsResources extends TeaModel {
+    /**
+     * <p>The amount of CPU resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8</p>
+     */
     @NameInMap("CPU")
     public String CPU;
 
+    /**
+     * <p>The amount of GPU resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GPU")
     public String GPU;
 
+    /**
+     * <p>The number of hypernodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("HyperNodeNum")
     public Long hyperNodeNum;
 
+    /**
+     * <p>The amount of memory resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("Memory")
     public String memory;
 
+    /**
+     * <p>The number of nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12</p>
+     */
     @NameInMap("NodeNum")
     public Long nodeNum;
 

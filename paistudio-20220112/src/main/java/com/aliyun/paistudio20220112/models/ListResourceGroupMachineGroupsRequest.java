@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the user who created the machine group.</p>
+     * <p>The user ID of the machine group creator.</p>
      * 
      * <strong>example:</strong>
      * <p>1612285282502326</p>
@@ -13,6 +13,12 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     @NameInMap("CreatorID")
     public String creatorID;
 
+    /**
+     * <p>The cloud disk performance level for filtering.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PL2</p>
+     */
     @NameInMap("DiskPL")
     public String diskPL;
 
@@ -26,7 +32,7 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     public String ecsSpec;
 
     /**
-     * <p>The machine group IDs. Separate multiple IDs with a comma (,).</p>
+     * <p>The IDs of the machine groups. Separate multiple IDs with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>mg105ecqwfe49hwb</p>
@@ -44,12 +50,10 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The sort order.</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p><code>Asc</code>: Sorts the results in ascending order.</p>
-     * </li>
-     * <li><p><code>Desc</code>: Sorts the results in descending order.</p>
-     * </li>
+     * <li>Asc: Ascending order.</li>
+     * <li>Desc: Descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +63,7 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The ID of the purchase order.</p>
+     * <p>The purchased instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>236553689400333</p>
@@ -86,7 +90,7 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The payment duration. If <code>PaymentDurationUnit</code> is set to <code>Month</code>, valid values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * <p>The billing duration. If PaymentDurationUnit is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -104,7 +108,7 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     public String paymentDurationUnit;
 
     /**
-     * <p>The payment type.</p>
+     * <p>The billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>PREPAY</p>
@@ -113,7 +117,7 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The field to sort by.</p>
+     * <p>The sort field.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreatedTime</p>
@@ -122,7 +126,15 @@ public class ListResourceGroupMachineGroupsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The instance status. <code>Creating</code>: The instance is being created. <code>Ready</code>: The instance is running. <code>Expiring</code>: The instance is expiring. <code>Expired</code>: The instance has expired. <code>Stopping</code>: The instance is being stopped. <code>Stopped</code>: The instance is stopped.</p>
+     * <p>The instance status. Valid values:</p>
+     * <ul>
+     * <li>Creating: The instance is being created.</li>
+     * <li>Ready: The instance is running.</li>
+     * <li>Expiring: The instance is about to expire.</li>
+     * <li>Expired: The instance has expired.</li>
+     * <li>Stopping: The instance is being stopped.</li>
+     * <li>Stopped: The instance is stopped.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Ready</p>

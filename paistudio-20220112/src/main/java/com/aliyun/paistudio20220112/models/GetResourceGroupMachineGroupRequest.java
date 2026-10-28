@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResourceGroupMachineGroupRequest extends TeaModel {
     /**
-     * <p>A list of up to 20 tags.</p>
+     * <p>The list of tags to add. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<GetResourceGroupMachineGroupRequestTag> tag;
@@ -25,7 +25,7 @@ public class GetResourceGroupMachineGroupRequest extends TeaModel {
 
     public static class GetResourceGroupMachineGroupRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -34,7 +34,7 @@ public class GetResourceGroupMachineGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

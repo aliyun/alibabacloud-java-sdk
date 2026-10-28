@@ -5,67 +5,91 @@ import com.aliyun.tea.*;
 
 public class QueueMeta extends TeaModel {
     /**
-     * <p>The time the entry was removed from the queue.</p>
+     * <p>The time when the task was dequeued.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
      */
     @NameInMap("GmtDequeuedTime")
     public String gmtDequeuedTime;
 
     /**
-     * <p>The time the entry was added to the queue.</p>
+     * <p>The time when the task was enqueued.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
      */
     @NameInMap("GmtEnqueuedTime")
     public String gmtEnqueuedTime;
 
     /**
-     * <p>The last time the position of the entry was modified.</p>
+     * <p>The time when the position of the task in the queue was changed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
      */
     @NameInMap("GmtPositionModifiedTime")
     public String gmtPositionModifiedTime;
 
     /**
-     * <p>The name of the queue entry.</p>
+     * <p>The name of the task in the queue.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dlcxxxx</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The position of the entry in the queue.</p>
+     * <p>The position of the task in the queue. This parameter takes effect only when the task is queued.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("Position")
     public String position;
 
     /**
-     * <p>The queuing strategy for the entry.</p>
+     * <p>The dequeue strategy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PaiStrategyIntelligent</p>
      */
     @NameInMap("QueueStrategy")
     public String queueStrategy;
 
     /**
-     * <p>The ID of the associated quota.</p>
+     * <p>The resource quota queue to which the task belongs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quotad2kd8ljpsno</p>
      */
     @NameInMap("QuotaId")
     public String quotaId;
 
     /**
-     * <p>The resources that the queue entry requires.</p>
+     * <p>The resources occupied by the task in the queue.</p>
      */
     @NameInMap("Resource")
     public ResourceAmount resource;
 
     /**
-     * <p>The resources scheduled for the entry.</p>
+     * <p>The scheduled resources occupied by the task in the queue.</p>
      */
     @NameInMap("ScheduledResource")
     public String scheduledResource;
 
     /**
-     * <p>The current status of the entry.</p>
+     * <p>The status of the task in the queue, such as enqueued or dequeued.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Enqueued</p>
      */
     @NameInMap("Status")
     public String status;
 
     /**
-     * <p>Indicates whether the entry can use oversold resources.</p>
+     * <p>Specifies whether the task uses idle resources.</p>
      */
     @NameInMap("UseOversoldResource")
     public Boolean useOversoldResource;

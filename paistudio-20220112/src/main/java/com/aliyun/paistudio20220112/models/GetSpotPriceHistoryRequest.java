@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSpotPriceHistoryRequest extends TeaModel {
     /**
-     * <p>The end time for querying historical spot instance prices. Specify the time in ISO 8601 format using UTC+0, as yyyy-MM-ddTHH:mm:ssZ. Default value: empty. An empty value means the current time.</p>
+     * <p>The end time for querying the historical prices of spot instances. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Default value: null, which indicates the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-30T09:36:46Z</p>
@@ -16,12 +16,10 @@ public class GetSpotPriceHistoryRequest extends TeaModel {
     /**
      * <p>The sort order. Default value: asc. Valid values:</p>
      * <ul>
-     * <li><p>desc: descending order.</p>
-     * </li>
-     * <li><p>asc: ascending order.</p>
-     * </li>
+     * <li>desc: descending order.</li>
+     * <li>asc: ascending order.</li>
      * </ul>
-     * <p>This parameter applies only when you query historical prices for Lingjun instance types.</p>
+     * <p>This parameter takes effect only when you query the historical prices of Lingjun instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>
@@ -30,7 +28,7 @@ public class GetSpotPriceHistoryRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number of the current page. Default value: <em><strong>1</strong></em>. This parameter applies only when you query historical prices for Lingjun instance types.</p>
+     * <p>The page number. Default value: <em><strong>1</strong></em>. This parameter takes effect only when you query the historical prices of Lingjun instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,7 +37,7 @@ public class GetSpotPriceHistoryRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Default value: <strong>10</strong>. This parameter applies only when you query historical prices for Lingjun instance types.</p>
+     * <p>The number of entries per page. Default value: <strong>10</strong>. This parameter takes effect only when you query the historical prices of Lingjun instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,11 +46,11 @@ public class GetSpotPriceHistoryRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The field to sort by. Default value: GmtCreatedTime. Valid values:</p>
+     * <p>The field used for sorting. Default value: GmtCreatedTime. Valid values:</p>
      * <ul>
      * <li>GmtCreatedTime</li>
      * </ul>
-     * <p>This parameter applies only when you query historical prices for Lingjun instance types.</p>
+     * <p>This parameter takes effect only when you query the historical prices of Lingjun instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>GmtCreatedTime</p>
@@ -61,12 +59,10 @@ public class GetSpotPriceHistoryRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The retention period for the spot instance, in hours. Note that only ECS instance types support this parameter. Default value: 0. Valid values:</p>
+     * <p>The protection period of the spot instance. Unit: hours. Note that only ECS instance types support Settings for the protection period of spot instances. Default value: 0. Valid values:</p>
      * <ul>
-     * <li><p>1: Alibaba Cloud guarantees that the instance runs for at least one hour after creation. After one hour, the system compares your bid price with the current market price and checks resource inventory to decide whether to retain or revoke the instance.</p>
-     * </li>
-     * <li><p>0: Alibaba Cloud does not guarantee one-hour runtime. The system compares your bid price with the current market price and checks resource inventory to decide whether to retain or revoke the instance.</p>
-     * </li>
+     * <li>1: After the spot instance is created, Alibaba Cloud ensures that the instance runs for 1 hour without automatic release. After 1 hour, the system automatically compares the bid price with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</li>
+     * <li>0: After the spot instance is created, Alibaba Cloud does not guarantee that the instance runs for 1 hour. The system automatically compares the bid price with the marketplace price and checks resource inventory to determine whether to retain or revoke the instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,7 +72,7 @@ public class GetSpotPriceHistoryRequest extends TeaModel {
     public Integer spotDuration;
 
     /**
-     * <p>The start time for querying historical spot instance prices. This time must be no more than seven days before the end time. Specify the time in ISO 8601 format using UTC+0, as yyyy-MM-ddTHH:mm:ssZ. Default value: empty. An empty value means three days before the end time.</p>
+     * <p>The start time for querying the historical prices of spot instances. The maximum value cannot exceed 7 days before the specified end time. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC. Default value: null, which indicates 3 days before the end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-26T09:36:46Z</p>

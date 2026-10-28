@@ -4,9 +4,18 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class UserQuotaPermission extends TeaModel {
+    /**
+     * <p>The permissions.</p>
+     */
     @NameInMap("Permissions")
     public java.util.List<String> permissions;
 
+    /**
+     * <p>Quota ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>quotamtl37ge7gkvdz</p>
+     */
     @NameInMap("QuotaId")
     public String quotaId;
 

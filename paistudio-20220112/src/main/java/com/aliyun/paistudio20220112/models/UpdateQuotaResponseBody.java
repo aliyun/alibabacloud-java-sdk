@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateQuotaResponseBody extends TeaModel {
     /**
-     * <p>Quota ID。</p>
+     * <p>The quota ID.</p>
      * 
      * <strong>example:</strong>
      * <p>quota-20210126170216-mtl37ge7gkvdz</p>

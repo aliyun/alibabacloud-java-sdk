@@ -4,9 +4,18 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class EniCacheConfig extends TeaModel {
+    /**
+     * <p>The size of the cache pool.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("CachePoolSize")
     public Integer cachePoolSize;
 
+    /**
+     * <p>Specifies whether it is enabled.</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 

@@ -59,7 +59,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
 
     public static class ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec extends TeaModel {
         /**
-         * <p>The number of CPU cores of the instance.</p>
+         * <p>The number of CPU cores for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -68,7 +68,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String CPU;
 
         /**
-         * <p>The number of GPUs of the instance.</p>
+         * <p>The number of GPUs for the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -86,7 +86,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String GPUType;
 
         /**
-         * <p>The memory size of the instance. Unit: GiB.</p>
+         * <p>The memory size of the instance, in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -95,7 +95,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String memory;
 
         /**
-         * <p>The shared memory size of the instance. Unit: GiB.</p>
+         * <p>The shared memory size of the instance, in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>
@@ -170,7 +170,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String ecsSpec;
 
         /**
-         * <p>The number of resource quota instances.</p>
+         * <p>The number of instances in the resource quota.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -179,7 +179,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public Long instanceCount;
 
         /**
-         * <p>The resource quota instance specification.</p>
+         * <p>The instance configuration for the resource quota.</p>
          */
         @NameInMap("InstanceSpec")
         public ListTrainingJobsResponseBodyTrainingJobsComputeResourceInstanceSpec instanceSpec;
@@ -352,7 +352,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String datasetId;
 
         /**
-         * <p>The input data URI.</p>
+         * <p>The URI of the input data.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/input/channel/</p>
@@ -369,9 +369,21 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The ARN of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1157703270994901:role/aliyunserviceroleforpaiworkspace</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
+        /**
+         * <p>The data version name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("VersionName")
         public String versionName;
 
@@ -484,7 +496,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The output data URI.</p>
+         * <p>The URI of the output data.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket.oss-cn-hangzhou-internal.aliyuncs.com/path/to/output/channel/</p>
@@ -492,9 +504,21 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("OutputUri")
         public String outputUri;
 
+        /**
+         * <p>The ARN of the RAM role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:ram::1157703270994901:role/aliyunserviceroleforpaiworkspace</p>
+         */
         @NameInMap("RoleArn")
         public String roleArn;
 
+        /**
+         * <p>The data version name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>v1</p>
+         */
         @NameInMap("VersionName")
         public String versionName;
 
@@ -547,7 +571,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
 
     public static class ListTrainingJobsResponseBodyTrainingJobsScheduler extends TeaModel {
         /**
-         * <p>The maximum training runtime in seconds. A value of 0 indicates no limit on the maximum runtime.</p>
+         * <p>The maximum training duration, in seconds. A value of 0 indicates that the maximum running time is not limited.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -572,7 +596,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
 
     public static class ListTrainingJobsResponseBodyTrainingJobsStatusTransitions extends TeaModel {
         /**
-         * <p>The end time of the status.</p>
+         * <p>The end time of the status, in ISO 8601 format and UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-10T11:49:47Z</p>
@@ -599,7 +623,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String reasonMessage;
 
         /**
-         * <p>The start time of the status.</p>
+         * <p>The start time of the status, in ISO 8601 format and UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-10T11:49:47Z</p>
@@ -698,7 +722,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String switchId;
 
         /**
-         * <p>VPC ID。</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-abcdef****</p>
@@ -755,7 +779,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
 
     public static class ListTrainingJobsResponseBodyTrainingJobs extends TeaModel {
         /**
-         * <p>The algorithm name.</p>
+         * <p>The name of the algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>llm_train</p>
@@ -781,6 +805,9 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("AlgorithmVersion")
         public String algorithmVersion;
 
+        /**
+         * <p>The specified node configuration.</p>
+         */
         @NameInMap("AssignNodeSpec")
         public AssignNodeSpec assignNodeSpec;
 
@@ -790,9 +817,18 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         @NameInMap("ComputeResource")
         public ListTrainingJobsResponseBodyTrainingJobsComputeResource computeResource;
 
+        /**
+         * <p>The credential configuration.</p>
+         */
         @NameInMap("CredentialConfig")
         public CredentialConfig credentialConfig;
 
+        /**
+         * <p>The DLC job ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>dlc11gyi2xrc5137</p>
+         */
         @NameInMap("DlcJobId")
         public String dlcJobId;
 
@@ -809,7 +845,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public ListTrainingJobsResponseBodyTrainingJobsExperimentConfig experimentConfig;
 
         /**
-         * <p>The time when the training job was created.</p>
+         * <p>The time when the training job was created, in ISO 8601 format and UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-10T11:49:47Z</p>
@@ -818,7 +854,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String gmtCreateTime;
 
         /**
-         * <p>The time when the training job status was last updated.</p>
+         * <p>The time when the training job status was updated, in ISO 8601 format and UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-10T11:49:47Z</p>
@@ -875,7 +911,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String reasonCode;
 
         /**
-         * <p>The error message of the training job.</p>
+         * <p>The error message for the training job.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -884,7 +920,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String reasonMessage;
 
         /**
-         * <p>The role ARN used for delegated authorization.</p>
+         * <p>The ARN of the role used for authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ram::{accountID}:role/{roleName}</p>
@@ -893,7 +929,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The scheduling configuration of the training job.</p>
+         * <p>The scheduling configuration for the training job.</p>
          */
         @NameInMap("Scheduler")
         public ListTrainingJobsResponseBodyTrainingJobsScheduler scheduler;
@@ -908,7 +944,7 @@ public class ListTrainingJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The list of training job status transitions.</p>
+         * <p>The list of status transitions for the training job.</p>
          */
         @NameInMap("StatusTransitions")
         public java.util.List<ListTrainingJobsResponseBodyTrainingJobsStatusTransitions> statusTransitions;
@@ -917,13 +953,13 @@ public class ListTrainingJobsResponseBody extends TeaModel {
          * <p>The description of the training job.</p>
          * 
          * <strong>example:</strong>
-         * <p>Qwen2 large language model training.</p>
+         * <p>Qwen2 large language model training</p>
          */
         @NameInMap("TrainingJobDescription")
         public String trainingJobDescription;
 
         /**
-         * <p>The training job ID.</p>
+         * <p>The ID of the training job.</p>
          * 
          * <strong>example:</strong>
          * <p>train1layo6js8ra</p>

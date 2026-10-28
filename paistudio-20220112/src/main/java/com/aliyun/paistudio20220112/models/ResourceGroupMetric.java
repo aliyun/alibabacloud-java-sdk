@@ -4,10 +4,18 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ResourceGroupMetric extends TeaModel {
+    /**
+     * <p>The GPU type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A100</p>
+     */
     @NameInMap("GpuType")
     public String gpuType;
 
     /**
+     * <p>The performance metrics.</p>
+     * 
      * <strong>example:</strong>
      * <p>23000</p>
      */
@@ -15,6 +23,8 @@ public class ResourceGroupMetric extends TeaModel {
     public java.util.List<Metric> metrics;
 
     /**
+     * <p>The resource group ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>rg17tmvwiokhzaxg</p>
      */

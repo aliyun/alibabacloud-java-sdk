@@ -4,24 +4,66 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class TaskInstance extends TeaModel {
+    /**
+     * <p>The instance creation time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
+     */
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
 
+    /**
+     * <p>The instance end time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:02:00Z</p>
+     */
     @NameInMap("GmtEndTime")
     public String gmtEndTime;
 
+    /**
+     * <p>The task instance status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>taskxxxxx</p>
+     */
     @NameInMap("TaskId")
     public String taskId;
 
+    /**
+     * <p>The task instance ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>task-instance-xxxxx</p>
+     */
     @NameInMap("TaskInstanceId")
     public String taskInstanceId;
 
+    /**
+     * <p>The cloud account ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("TenantId")
     public String tenantId;
 
+    /**
+     * <p>The creator ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

@@ -4,12 +4,27 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class CredentialConfigItem extends TeaModel {
+    /**
+     * <p>The configuration key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("Key")
     public String key;
 
+    /**
+     * <p>The role configuration.</p>
+     */
     @NameInMap("Roles")
     public java.util.List<CredentialRole> roles;
 
+    /**
+     * <p>The credential configuration type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Role</p>
+     */
     @NameInMap("Type")
     public String type;
 

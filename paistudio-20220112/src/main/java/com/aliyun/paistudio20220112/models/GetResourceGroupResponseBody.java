@@ -14,7 +14,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String clusterID;
 
     /**
-     * <p>The provider of computing resources for the resource group.</p>
+     * <p>The type of compute resources for the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>
@@ -23,7 +23,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String computingResourceProvider;
 
     /**
-     * <p>The ID of the user who created the resource group.</p>
+     * <p>The user ID of the creator of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>1612285282502324</p>
@@ -41,7 +41,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The time when the resource group was created.</p>
+     * <p>The time when the resource group was created. The time follows the ISO 8601 standard in the UTC time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -50,7 +50,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String gmtCreatedTime;
 
     /**
-     * <p>The time when the resource group was last modified.</p>
+     * <p>The time when the resource group was updated. The time follows the ISO 8601 standard in the UTC time zone.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -68,7 +68,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
@@ -77,7 +77,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The type of computing resource for the resource group.</p>
+     * <p>The type of compute resources for the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>Ecs</p>
@@ -104,7 +104,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
     public Boolean supportRDMA;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<GetResourceGroupResponseBodyTags> tags;
@@ -115,11 +115,17 @@ public class GetResourceGroupResponseBody extends TeaModel {
     @NameInMap("UserVpc")
     public UserVpc userVpc;
 
+    /**
+     * <p>The version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
+     */
     @NameInMap("Version")
     public String version;
 
     /**
-     * <p>The workspace ID.</p>
+     * <p>The ID of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>35201</p>
@@ -254,7 +260,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
 
     public static class GetResourceGroupResponseBodyTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the instance. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>testKey</p>
@@ -263,7 +269,7 @@ public class GetResourceGroupResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value of the instance. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>testValue</p>

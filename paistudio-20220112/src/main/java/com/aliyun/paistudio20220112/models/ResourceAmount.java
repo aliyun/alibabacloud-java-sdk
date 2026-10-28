@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResourceAmount extends TeaModel {
     /**
-     * <p>Total CPU</p>
+     * <p>The total CPU amount.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -14,7 +14,7 @@ public class ResourceAmount extends TeaModel {
     public String CPU;
 
     /**
-     * <p>Total GPU cards</p>
+     * <p>The total number of GPU cards.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -23,6 +23,8 @@ public class ResourceAmount extends TeaModel {
     public String GPU;
 
     /**
+     * <p>The GPU memory.</p>
+     * 
      * <strong>example:</strong>
      * <p>80G</p>
      */
@@ -30,6 +32,8 @@ public class ResourceAmount extends TeaModel {
     public String GPUMemory;
 
     /**
+     * <p>The GPU memory, in bytes.</p>
+     * 
      * <strong>example:</strong>
      * <p>85899345920</p>
      */
@@ -37,7 +41,7 @@ public class ResourceAmount extends TeaModel {
     public Long GPUMemoryBytes;
 
     /**
-     * <p>GPU card type</p>
+     * <p>The GPU card type.</p>
      * 
      * <strong>example:</strong>
      * <p>GPU</p>
@@ -46,7 +50,7 @@ public class ResourceAmount extends TeaModel {
     public String GPUType;
 
     /**
-     * <p>Total memory</p>
+     * <p>The total memory amount.</p>
      * 
      * <strong>example:</strong>
      * <p>100Gi</p>

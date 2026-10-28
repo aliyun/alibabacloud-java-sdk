@@ -4,14 +4,26 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
+    /**
+     * <p>The number of allocatable CPU cores on each machine in the machine group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("AllocatableCpu")
     public String allocatableCpu;
 
+    /**
+     * <p>The allocatable memory size on each machine in the machine group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55</p>
+     */
     @NameInMap("AllocatableMemory")
     public String allocatableMemory;
 
     /**
-     * <p>The total number of CPU cores per machine in the machine group.</p>
+     * <p>The total number of CPU cores on each machine in the machine group.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -20,7 +32,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String cpu;
 
     /**
-     * <p>The default GPU driver version per machine in the machine group.</p>
+     * <p>The default GPU driver version of each machine in the machine group.</p>
      * 
      * <strong>example:</strong>
      * <p>535</p>
@@ -38,7 +50,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public Long ecsCount;
 
     /**
-     * <p>The ECS spec.</p>
+     * <p>The ECS instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
@@ -47,7 +59,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String ecsSpec;
 
     /**
-     * <p>The creation time of the machine group.</p>
+     * <p>The time when the machine group was created.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -65,7 +77,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String gmtExpiredTime;
 
     /**
-     * <p>The last modification time of the machine group.</p>
+     * <p>The time when the machine group was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -74,7 +86,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>The start time of the machine group.</p>
+     * <p>The time when the machine group was started.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -83,7 +95,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String gmtStartedTime;
 
     /**
-     * <p>The number of GPUs per machine in the machine group.</p>
+     * <p>The number of GPU cores on each machine in the machine group.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -92,7 +104,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String gpu;
 
     /**
-     * <p>The GPU type per machine in the machine group.</p>
+     * <p>The GPU type of each machine in the machine group.</p>
      * 
      * <strong>example:</strong>
      * <p>A100</p>
@@ -110,7 +122,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String machineGroupID;
 
     /**
-     * <p>The amount of memory per machine in the machine group.</p>
+     * <p>The memory size of each machine in the machine group.</p>
      * 
      * <strong>example:</strong>
      * <p>64</p>
@@ -128,7 +140,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The payment duration. When PaymentDurationUnit is set to Month, valid values are: 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
+     * <p>The billing duration. If PaymentDurationUnit is set to Month, valid values are 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 24, 36, 48, and 60.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -137,7 +149,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String paymentDuration;
 
     /**
-     * <p>The unit of the billing cycle for the machine group.</p>
+     * <p>The billing duration unit of the machine group.</p>
      * 
      * <strong>example:</strong>
      * <p>Month</p>
@@ -146,7 +158,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String paymentDurationUnit;
 
     /**
-     * <p>The payment type.</p>
+     * <p>The billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>PREPAY</p>
@@ -155,7 +167,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>18D5A1C6-14B8-545E-8408-0A7DDB4C6B5E</p>
@@ -164,7 +176,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group. This ID is globally unique and can be used to retrieve information about the resource group.</p>
+     * <p>The ID of the resource group. Each resource group has a globally unique ID. You can use the resource group ID to retrieve the information about the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rgf0zhfqn1d4ity2</p>
@@ -173,14 +185,15 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String resourceGroupID;
 
     /**
-     * <p>The status of the machine group.
-     * Valid values:
-     * Creating: The machine group is being created.
-     * Ready: The machine group is running.
-     * Expiring: The machine group is about to expire.
-     * Expired: The machine group has expired.
-     * Stopping: The machine group is being stopped.
-     * Stopped: The machine group has been stopped.</p>
+     * <p>The instance status. Valid values:</p>
+     * <ul>
+     * <li>Creating: The instance is being created.</li>
+     * <li>Ready: The instance is running.</li>
+     * <li>Expiring: The instance is about to expire.</li>
+     * <li>Expired: The instance has expired.</li>
+     * <li>Stopping: The instance is being stopped.</li>
+     * <li>Stopped: The instance is stopped.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Ready</p>
@@ -189,19 +202,31 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The GPU driver versions supported by the machines in the machine group.</p>
+     * <p>The GPU driver versions supported by nodes in the machine group.</p>
      */
     @NameInMap("SupportedDrivers")
     public java.util.List<String> supportedDrivers;
 
+    /**
+     * <p>The number of system-reserved CPU cores on each machine in the machine group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SystemReservedCpu")
     public String systemReservedCpu;
 
+    /**
+     * <p>The size of system-reserved memory on each machine in the machine group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("SystemReservedMemory")
     public String systemReservedMemory;
 
     /**
-     * <p>The list of tags attached to the machine group.</p>
+     * <p>The list of tags to query. The value is a JSON string that contains up to 20 tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<GetResourceGroupMachineGroupResponseBodyTags> tags;
@@ -413,7 +438,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
 
     public static class GetResourceGroupMachineGroupResponseBodyTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -422,7 +447,7 @@ public class GetResourceGroupMachineGroupResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag. Valid values of N: 1 to 20.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

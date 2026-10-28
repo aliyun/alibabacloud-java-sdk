@@ -4,18 +4,42 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class QuotaCluster extends TeaModel {
+    /**
+     * <p>The cluster type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>RayCluster</p>
+     */
     @NameInMap("ClusterType")
     public String clusterType;
 
+    /**
+     * <p>The datasource config.</p>
+     */
     @NameInMap("DataSources")
     public java.util.List<DataSource> dataSources;
 
+    /**
+     * <p>The service access endpoints.</p>
+     */
     @NameInMap("Endpoints")
     public java.util.Map<String, String> endpoints;
 
+    /**
+     * <p>The container image address.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.cn-shanghai.aliyuncs.com/pai-training/kmeans:v1.0.0</p>
+     */
     @NameInMap("Image")
     public String image;
 
+    /**
+     * <p>The status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
+     */
     @NameInMap("Status")
     public String status;
 

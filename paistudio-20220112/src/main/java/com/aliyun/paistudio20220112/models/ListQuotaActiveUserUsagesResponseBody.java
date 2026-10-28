@@ -11,7 +11,7 @@ public class ListQuotaActiveUserUsagesResponseBody extends TeaModel {
     public java.util.List<QuotaUser> quotaUserUsage;
 
     /**
-     * <p>The user usage information.</p>
+     * <p>The list of user resource usage details.</p>
      */
     @NameInMap("QuotaUserUsages")
     public java.util.List<QuotaUser> quotaUserUsages;

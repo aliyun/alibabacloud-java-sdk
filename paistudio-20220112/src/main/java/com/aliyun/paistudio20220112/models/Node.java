@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Node extends TeaModel {
     /**
-     * <p>The accelerator type of the resource node specifications (CPU/GPU).</p>
+     * <p>The accelerator type of the node specifications (CPU/GPU).</p>
      * 
      * <strong>example:</strong>
      * <p>CPU</p>
@@ -14,7 +14,7 @@ public class Node extends TeaModel {
     public String acceleratorType;
 
     /**
-     * <p>The number of CPU cores that can be allocated to users.</p>
+     * <p>The number of allocatable CPU cores.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -23,7 +23,7 @@ public class Node extends TeaModel {
     public String allocatableCPU;
 
     /**
-     * <p>The memory size that can be allocated to users.</p>
+     * <p>The allocatable memory size.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -31,6 +31,12 @@ public class Node extends TeaModel {
     @NameInMap("AllocatableMemory")
     public String allocatableMemory;
 
+    /**
+     * <p>The number of workloads that use the ancestor quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("AncestorQuotaWorkloadNum")
     public Long ancestorQuotaWorkloadNum;
 
@@ -59,7 +65,7 @@ public class Node extends TeaModel {
     public String CPU;
 
     /**
-     * <p>The creator of the resource node.</p>
+     * <p>The ID of the creator of the resource node.</p>
      * 
      * <strong>example:</strong>
      * <p>281044699048527748</p>
@@ -67,12 +73,30 @@ public class Node extends TeaModel {
     @NameInMap("CreatorId")
     public String creatorId;
 
+    /**
+     * <p>The number of workloads that use the descendant quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DescendantQuotaWorkloadNum")
     public Long descendantQuotaWorkloadNum;
 
+    /**
+     * <p>The data cloud disk capacity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("DiskCapacity")
     public Long diskCapacity;
 
+    /**
+     * <p>The data cloud disk performance level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PL2</p>
+     */
     @NameInMap("DiskPL")
     public String diskPL;
 
@@ -115,6 +139,9 @@ public class Node extends TeaModel {
 
     /**
      * <p>The creation time of the resource node.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
      */
     @NameInMap("GmtCreatedTime")
     public String gmtCreatedTime;
@@ -147,7 +174,7 @@ public class Node extends TeaModel {
     public String hyperZone;
 
     /**
-     * <p>Indicates whether the resource node is bound to a quota.</p>
+     * <p>Indicates whether a quota is bound.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -156,7 +183,7 @@ public class Node extends TeaModel {
     public Boolean isBound;
 
     /**
-     * <p>The maximum number of CPU cores.</p>
+     * <p>The limit on the number of CPU cores.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -165,7 +192,7 @@ public class Node extends TeaModel {
     public String limitCPU;
 
     /**
-     * <p>The maximum number of GPUs.</p>
+     * <p>The limit on the number of GPU cores.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -174,7 +201,7 @@ public class Node extends TeaModel {
     public String limitGPU;
 
     /**
-     * <p>The maximum memory size.</p>
+     * <p>The limit on the memory size.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -237,7 +264,7 @@ public class Node extends TeaModel {
     public String nodeStatus;
 
     /**
-     * <p>The node specifications type of the resource node.</p>
+     * <p>The type of node specifications of the resource node.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c8i.xlarge</p>
@@ -291,7 +318,7 @@ public class Node extends TeaModel {
     public String requestCPU;
 
     /**
-     * <p>The number of requested GPUs.</p>
+     * <p>The number of requested GPU cores.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -326,6 +353,12 @@ public class Node extends TeaModel {
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 
+    /**
+     * <p>The number of workloads that use this quota.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SelfQuotaWorkloadNum")
     public Long selfQuotaWorkloadNum;
 
@@ -345,7 +378,7 @@ public class Node extends TeaModel {
     public String systemReservedCPU;
 
     /**
-     * <p>The system-reserved memory size.</p>
+     * <p>The size of the system reserved memory.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

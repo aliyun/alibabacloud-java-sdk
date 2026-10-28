@@ -4,17 +4,35 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class MachineGroup extends TeaModel {
+    /**
+     * <p>The number of allocatable CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("AllocatableCpu")
     public Long allocatableCpu;
 
+    /**
+     * <p>The allocatable memory size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>55</p>
+     */
     @NameInMap("AllocatableMemory")
     public Long allocatableMemory;
 
+    /**
+     * <p>The number of CPU cores in the machine group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("Cpu")
     public Long cpu;
 
     /**
-     * <p>Machine group creator ID</p>
+     * <p>The ID of the machine group creator.</p>
      * 
      * <strong>example:</strong>
      * <p>1612285282502324</p>
@@ -23,7 +41,7 @@ public class MachineGroup extends TeaModel {
     public String creatorID;
 
     /**
-     * <p>Default driver supported by the machine group</p>
+     * <p>The default driver supported by the machine group.</p>
      * 
      * <strong>example:</strong>
      * <p>470.199.02</p>
@@ -31,14 +49,26 @@ public class MachineGroup extends TeaModel {
     @NameInMap("DefaultDriver")
     public String defaultDriver;
 
+    /**
+     * <p>The cloud disk size.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("DiskCapacity")
     public Long diskCapacity;
 
+    /**
+     * <p>The cloud disk performance level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PL0</p>
+     */
     @NameInMap("DiskPL")
     public String diskPL;
 
     /**
-     * <p>Resource count</p>
+     * <p>The resource count.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,7 +77,7 @@ public class MachineGroup extends TeaModel {
     public Long ecsCount;
 
     /**
-     * <p>ECS specification</p>
+     * <p>The ECS instance type.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.c6.large</p>
@@ -56,7 +86,7 @@ public class MachineGroup extends TeaModel {
     public String ecsSpec;
 
     /**
-     * <p>Creation Time</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -65,7 +95,7 @@ public class MachineGroup extends TeaModel {
     public String gmtCreatedTime;
 
     /**
-     * <p>Expiration Time</p>
+     * <p>The expiration time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-08-22T00:00:00Z</p>
@@ -74,7 +104,7 @@ public class MachineGroup extends TeaModel {
     public String gmtExpiredTime;
 
     /**
-     * <p>Update Time</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -83,7 +113,7 @@ public class MachineGroup extends TeaModel {
     public String gmtModifiedTime;
 
     /**
-     * <p>Start At</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -91,17 +121,35 @@ public class MachineGroup extends TeaModel {
     @NameInMap("GmtStartedTime")
     public String gmtStartedTime;
 
+    /**
+     * <p>The number of GPUs in the machine group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("Gpu")
     public Long gpu;
 
+    /**
+     * <p>The GPU memory size of the machine group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>16</p>
+     */
     @NameInMap("GpuMemory")
     public Long gpuMemory;
 
+    /**
+     * <p>The GPU type of the machine group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A100</p>
+     */
     @NameInMap("GpuType")
     public String gpuType;
 
     /**
-     * <p>Machine Group ID</p>
+     * <p>The machine group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>mg1</p>
@@ -109,11 +157,17 @@ public class MachineGroup extends TeaModel {
     @NameInMap("MachineGroupID")
     public String machineGroupID;
 
+    /**
+     * <p>The memory size of the machine group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>64</p>
+     */
     @NameInMap("Memory")
     public Long memory;
 
     /**
-     * <p>Order ID</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>“”</p>
@@ -122,7 +176,7 @@ public class MachineGroup extends TeaModel {
     public String orderInstanceId;
 
     /**
-     * <p>Duration</p>
+     * <p>The duration.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -131,7 +185,7 @@ public class MachineGroup extends TeaModel {
     public String paymentDuration;
 
     /**
-     * <p>Region ID</p>
+     * <p>region ID</p>
      * 
      * <strong>example:</strong>
      * <p>Monthly</p>
@@ -140,7 +194,7 @@ public class MachineGroup extends TeaModel {
     public String paymentDurationUnit;
 
     /**
-     * <p>Payment type</p>
+     * <p>The billing method.</p>
      * 
      * <strong>example:</strong>
      * <p>PREPAY</p>
@@ -149,7 +203,7 @@ public class MachineGroup extends TeaModel {
     public String paymentType;
 
     /**
-     * <p>Machine group error code</p>
+     * <p>The machine group error code.</p>
      * 
      * <strong>example:</strong>
      * <p>“”</p>
@@ -158,7 +212,7 @@ public class MachineGroup extends TeaModel {
     public String reasonCode;
 
     /**
-     * <p>Machine group fault message</p>
+     * <p>The machine group error message.</p>
      * 
      * <strong>example:</strong>
      * <p>“”</p>
@@ -167,7 +221,7 @@ public class MachineGroup extends TeaModel {
     public String reasonMessage;
 
     /**
-     * <p>Resource group ID</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rgf0zhfqn1d4ity2</p>
@@ -175,11 +229,17 @@ public class MachineGroup extends TeaModel {
     @NameInMap("ResourceGroupID")
     public String resourceGroupID;
 
+    /**
+     * <p>The resource type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
     /**
-     * <p>Machine group status</p>
+     * <p>The machine group status.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -188,14 +248,26 @@ public class MachineGroup extends TeaModel {
     public String status;
 
     /**
-     * <p>List of NVIDIA GPU driver versions supported by the machine group</p>
+     * <p>The list of NVIDIA GPU driver versions supported by the machine group.</p>
      */
     @NameInMap("SupportedDrivers")
     public java.util.List<String> supportedDrivers;
 
+    /**
+     * <p>The number of system-reserved CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("SystemReservedCpu")
     public Long systemReservedCpu;
 
+    /**
+     * <p>The size of system-reserved memory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("SystemReservedMemory")
     public Long systemReservedMemory;
 

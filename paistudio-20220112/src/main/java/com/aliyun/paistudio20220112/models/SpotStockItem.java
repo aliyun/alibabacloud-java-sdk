@@ -6,18 +6,24 @@ import com.aliyun.tea.*;
 public class SpotStockItem extends TeaModel {
     /**
      * <p>The instance type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ml.gp7vf.16.40xlarge</p>
      */
     @NameInMap("instanceType")
     public String instanceType;
 
     /**
-     * <p>Internal information about the stock of the spot instance type.</p>
+     * <p>The inventory details.</p>
      */
     @NameInMap("internalInfo")
     public java.util.List<SpotStockInternalInfo> internalInfo;
 
     /**
-     * <p>The stock status of the instance type. Valid values are <code>Available</code> and <code>SoldOut</code>.</p>
+     * <p>The inventory status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>High</p>
      */
     @NameInMap("stockStatus")
     public String stockStatus;

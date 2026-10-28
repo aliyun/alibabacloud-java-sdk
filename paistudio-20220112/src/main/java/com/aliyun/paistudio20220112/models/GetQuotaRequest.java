@@ -14,7 +14,7 @@ public class GetQuotaRequest extends TeaModel {
     public Boolean verbose;
 
     /**
-     * <p>Specifies whether to return the node metadata bound to the quota.</p>
+     * <p>Specifies whether to return the metadata of nodes bound to the quota.</p>
      */
     @NameInMap("WithNodeMeta")
     public Boolean withNodeMeta;

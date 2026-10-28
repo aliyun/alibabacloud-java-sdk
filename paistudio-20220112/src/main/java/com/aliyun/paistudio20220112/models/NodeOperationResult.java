@@ -4,12 +4,30 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeOperationResult extends TeaModel {
+    /**
+     * <p>The node operation status message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The node name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>trains930928remn-master-0</p>
+     */
     @NameInMap("NodeName")
     public String nodeName;
 
+    /**
+     * <p>The node operation status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Status")
     public String status;
 

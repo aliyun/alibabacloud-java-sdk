@@ -23,7 +23,7 @@ public class Quota extends TeaModel {
     public String creatorId;
 
     /**
-     * <p>The resource quota description.</p>
+     * <p>The description of the resource quota.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a test quota</p>
@@ -33,6 +33,9 @@ public class Quota extends TeaModel {
 
     /**
      * <p>The GPU type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>L20</p>
      */
     @NameInMap("GPUType")
     public String GPUType;
@@ -47,7 +50,7 @@ public class Quota extends TeaModel {
     public String gmtCreatedTime;
 
     /**
-     * <p>The time when the resource quota was last modified.</p>
+     * <p>The time when the resource quota was updated.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-06-22T00:00:00Z</p>
@@ -55,11 +58,14 @@ public class Quota extends TeaModel {
     @NameInMap("GmtModifiedTime")
     public String gmtModifiedTime;
 
+    /**
+     * <p>The list of high-performance network zones.</p>
+     */
     @NameInMap("HyperZones")
     public java.util.List<String> hyperZones;
 
     /**
-     * <p>The resource quota labels.</p>
+     * <p>The labels of the resource quota.</p>
      */
     @NameInMap("Labels")
     public java.util.List<Label> labels;
@@ -80,7 +86,7 @@ public class Quota extends TeaModel {
     public ResourceSpec min;
 
     /**
-     * <p>The parent resource quota ID.</p>
+     * <p>The ID of the parent resource quota.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -91,10 +97,10 @@ public class Quota extends TeaModel {
     /**
      * <p>The queue policy for the quota. Valid values:</p>
      * <ul>
-     * <li>PaiStrategyIntelligent: intelligent policies.</li>
-     * <li>PaiStrategyBalance: balanced policy.</li>
-     * <li>PaiStrategyRoundRobin: resource-priority policy.</li>
-     * <li>PaiStrategyStrictFIFO: FIFO policy.</li>
+     * <li>PaiStrategyIntelligent: intelligent policies</li>
+     * <li>PaiStrategyBalance: balanced policy</li>
+     * <li>PaiStrategyRoundRobin: resource priority policy</li>
+     * <li>PaiStrategyStrictFIFO: FIFO policy</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,23 +109,26 @@ public class Quota extends TeaModel {
     @NameInMap("QueueStrategy")
     public String queueStrategy;
 
+    /**
+     * <p>The specifications and status of the cluster composed of resources in the quota.</p>
+     */
     @NameInMap("QuotaCluster")
     public QuotaCluster quotaCluster;
 
     /**
-     * <p>The resource quota configuration.</p>
+     * <p>The configuration of the resource quota.</p>
      */
     @NameInMap("QuotaConfig")
     public QuotaConfig quotaConfig;
 
     /**
-     * <p>The resource quota details.</p>
+     * <p>The details of the resource quota.</p>
      */
     @NameInMap("QuotaDetails")
     public QuotaDetails quotaDetails;
 
     /**
-     * <p>The resource quota ID.</p>
+     * <p>The ID of the resource quota.</p>
      * 
      * <strong>example:</strong>
      * <p>quota12345</p>
@@ -128,7 +137,7 @@ public class Quota extends TeaModel {
     public String quotaId;
 
     /**
-     * <p>The resource quota name.</p>
+     * <p>The name of the resource quota.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-quota</p>
@@ -146,7 +155,7 @@ public class Quota extends TeaModel {
     public String reasonCode;
 
     /**
-     * <p>The error reason.</p>
+     * <p>The cause of the error.</p>
      * 
      * <strong>example:</strong>
      * <p>“”</p>
@@ -175,7 +184,7 @@ public class Quota extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The resource quota status.</p>
+     * <p>The status of the resource quota.</p>
      * 
      * <strong>example:</strong>
      * <p>Ready</p>
@@ -184,13 +193,16 @@ public class Quota extends TeaModel {
     public String status;
 
     /**
-     * <p>The list of sub-quotas under the resource quota.</p>
+     * <p>The list of sub-quotas of the resource quota.</p>
      */
     @NameInMap("SubQuotas")
     public java.util.List<QuotaIdName> subQuotas;
 
     /**
      * <p>The version.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1.0</p>
      */
     @NameInMap("Version")
     public String version;

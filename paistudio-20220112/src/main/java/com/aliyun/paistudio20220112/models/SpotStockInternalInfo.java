@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class SpotStockInternalInfo extends TeaModel {
     /**
-     * <p>The number of available Spot Instances.</p>
+     * <p>The available quantity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
      */
     @NameInMap("availableQuantity")
     public Integer availableQuantity;
 
     /**
-     * <p>The ID of the cluster.</p>
+     * <p>The cluster ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cluster1</p>
      */
     @NameInMap("clusterId")
     public String clusterId;
 
     /**
-     * <p>The ID of the high-performance network (HPN) zone.</p>
+     * <p>The high-performance network zone.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A1</p>
      */
     @NameInMap("hpnZone")
     public String hpnZone;
 
     /**
-     * <p>The total number of Spot Instances.</p>
+     * <p>The total quantity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("totalQuantity")
     public Integer totalQuantity;

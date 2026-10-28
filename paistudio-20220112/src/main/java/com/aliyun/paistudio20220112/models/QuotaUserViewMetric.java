@@ -4,69 +4,186 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class QuotaUserViewMetric extends TeaModel {
+    /**
+     * <p>The number of CPU nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
+     */
     @NameInMap("CPUNodeNumber")
     public Integer CPUNodeNumber;
 
+    /**
+     * <p>The CPU utilization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>59</p>
+     */
     @NameInMap("CPUUsageRate")
     public String CPUUsageRate;
 
+    /**
+     * <p>The CPU jobs.</p>
+     */
     @NameInMap("CpuJobNames")
     public java.util.List<String> cpuJobNames;
 
+    /**
+     * <p>The CPU node list.</p>
+     */
     @NameInMap("CpuNodeNames")
     public java.util.List<String> cpuNodeNames;
 
+    /**
+     * <p>The disk read rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("DiskReadRate")
     public String diskReadRate;
 
+    /**
+     * <p>The disk write rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>22</p>
+     */
     @NameInMap("DiskWriteRate")
     public String diskWriteRate;
 
+    /**
+     * <p>The number of GPU nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GPUNodeNumber")
     public Integer GPUNodeNumber;
 
+    /**
+     * <p>The GPU utilization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("GPUUsageRate")
     public String GPUUsageRate;
 
+    /**
+     * <p>The GPU jobs.</p>
+     */
     @NameInMap("GpuJobNames")
     public java.util.List<String> gpuJobNames;
 
+    /**
+     * <p>The GPU node list.</p>
+     */
     @NameInMap("GpuNodeNames")
     public java.util.List<String> gpuNodeNames;
 
+    /**
+     * <p>The job type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PyTorch</p>
+     */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <p>The memory utilization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
+     */
     @NameInMap("MemoryUsageRate")
     public String memoryUsageRate;
 
+    /**
+     * <p>The network input rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("NetworkInputRate")
     public String networkInputRate;
 
+    /**
+     * <p>The network output rate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("NetworkOutputRate")
     public String networkOutputRate;
 
+    /**
+     * <p>The node list.</p>
+     */
     @NameInMap("NodeNames")
     public java.util.List<String> nodeNames;
 
+    /**
+     * <p>The number of requested CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100</p>
+     */
     @NameInMap("RequestCPU")
     public Integer requestCPU;
 
+    /**
+     * <p>The number of requested GPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("RequestGPU")
     public Integer requestGPU;
 
+    /**
+     * <p>The requested memory in KB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>102400000</p>
+     */
     @NameInMap("RequestMemory")
     public Long requestMemory;
 
+    /**
+     * <p>The total number of CPU cores.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("TotalCPU")
     public Integer totalCPU;
 
+    /**
+     * <p>The total number of GPUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TotalGPU")
     public Integer totalGPU;
 
+    /**
+     * <p>The total memory in KB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10240</p>
+     */
     @NameInMap("TotalMemory")
     public Long totalMemory;
 
+    /**
+     * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("UserId")
     public String userId;
 

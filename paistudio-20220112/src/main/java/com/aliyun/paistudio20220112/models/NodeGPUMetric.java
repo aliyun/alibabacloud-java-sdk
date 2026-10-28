@@ -4,30 +4,78 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeGPUMetric extends TeaModel {
+    /**
+     * <p>The accelerator type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>GPU</p>
+     */
     @NameInMap("AcceleratorType")
     public String acceleratorType;
 
+    /**
+     * <p>The GPU count.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("GPUCount")
     public Integer GPUCount;
 
+    /**
+     * <p>The GPU metrics.</p>
+     */
     @NameInMap("GPUMetrics")
     public java.util.List<GPUMetric> GPUMetrics;
 
+    /**
+     * <p>The GPU type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>V100</p>
+     */
     @NameInMap("GPUType")
     public String GPUType;
 
+    /**
+     * <p>The memory utilization.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("MemoryUtil")
     public Float memoryUtil;
 
+    /**
+     * <p>The node ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lingj19q90jp66nq-mg1a2kc92f9nn8yd-20</p>
+     */
     @NameInMap("NodeId")
     public String nodeId;
 
+    /**
+     * <p>The node type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c8i.xlarge</p>
+     */
     @NameInMap("NodeType")
     public String nodeType;
 
+    /**
+     * <p>The total memory.</p>
+     */
     @NameInMap("TotalMemory")
     public Float totalMemory;
 
+    /**
+     * <p>The used memory.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("UsedMemory")
     public Float usedMemory;
 

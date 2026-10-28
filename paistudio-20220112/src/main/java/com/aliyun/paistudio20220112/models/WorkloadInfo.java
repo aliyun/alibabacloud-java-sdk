@@ -5,79 +5,112 @@ import com.aliyun.tea.*;
 
 public class WorkloadInfo extends TeaModel {
     /**
-     * <p>Specifies whether the workload is scheduled. Valid values are <code>true</code> and <code>false</code>.</p>
+     * <p>Specifies whether the task is scheduled.</p>
      */
     @NameInMap("IsScheduled")
     public String isScheduled;
 
     /**
-     * <p>The scheduling priority of the workload. A higher value indicates a higher priority.</p>
+     * <p>The task priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Priority")
     public Integer priority;
 
     /**
-     * <p>A list of metadata for the queues associated with the workload.</p>
+     * <p>The information about the queue where the task resides.</p>
      */
     @NameInMap("QueueMetas")
     public java.util.List<QueueMeta> queueMetas;
 
     /**
-     * <p>The ID of the tenant that contains the workload.</p>
+     * <p>The ID of the Alibaba Cloud account that created the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
      */
     @NameInMap("TenantId")
     public String tenantId;
 
     /**
-     * <p>The ID of the user who created the workload.</p>
+     * <p>The ID of the RAM user that created the task.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
      */
     @NameInMap("UserId")
     public String userId;
 
     /**
-     * <p>The name of the user who created the workload.</p>
+     * <p>The username of the task creator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
      */
     @NameInMap("UserName")
     public String userName;
 
     /**
-     * <p>The creation time of the workload, in UTC format.</p>
+     * <p>The time when the task was created.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2023-06-22T00:00:00Z</p>
      */
     @NameInMap("WorkloadCreatedTime")
     public String workloadCreatedTime;
 
     /**
-     * <p>The unique, system-generated ID for the workload.</p>
+     * <p>The task ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dlcxxxx</p>
      */
     @NameInMap("WorkloadId")
     public String workloadId;
 
     /**
-     * <p>The user-defined name of the workload.</p>
+     * <p>The task name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-job</p>
      */
     @NameInMap("WorkloadName")
     public String workloadName;
 
     /**
-     * <p>The current status of the workload. Possible values include <code>Pending</code>, <code>Running</code>, <code>Succeeded</code>, and <code>Failed</code>.</p>
+     * <p>The task status.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Running</p>
      */
     @NameInMap("WorkloadStatus")
     public String workloadStatus;
 
     /**
-     * <p>The type of the workload.</p>
+     * <p>The task type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>dlc</p>
      */
     @NameInMap("WorkloadType")
     public String workloadType;
 
     /**
-     * <p>The ID of the workspace that contains the workload.</p>
+     * <p>The ID of the workspace where the task resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>12345</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 
     /**
-     * <p>The name of the workspace that contains the workload.</p>
+     * <p>The name of the workspace where the task resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>myshellprod</p>
      */
     @NameInMap("WorkspaceName")
     public String workspaceName;

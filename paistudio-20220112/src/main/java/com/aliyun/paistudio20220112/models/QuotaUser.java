@@ -4,15 +4,36 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class QuotaUser extends TeaModel {
+    /**
+     * <p>The resources.</p>
+     */
     @NameInMap("Resources")
     public QuotaUserResources resources;
 
+    /**
+     * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123456789</p>
+     */
     @NameInMap("UserId")
     public String userId;
 
+    /**
+     * <p>The username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>The workload count.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("WorkloadCount")
     public Integer workloadCount;
 
@@ -54,9 +75,15 @@ public class QuotaUser extends TeaModel {
     }
 
     public static class QuotaUserResources extends TeaModel {
+        /**
+         * <p>The submitted resources.</p>
+         */
         @NameInMap("Submitted")
         public ResourceAmount submitted;
 
+        /**
+         * <p>The used resources.</p>
+         */
         @NameInMap("Used")
         public ResourceAmount used;
 

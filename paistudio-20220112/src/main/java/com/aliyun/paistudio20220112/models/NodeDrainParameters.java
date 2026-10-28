@@ -4,17 +4,20 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class NodeDrainParameters extends TeaModel {
+    /**
+     * <p>Specifies whether to forcibly drain the node.</p>
+     */
     @NameInMap("Force")
     public Boolean force;
 
     /**
-     * <p>Delete pods of the specified job types</p>
+     * <p>The pods of the specified job types to drain.</p>
      */
     @NameInMap("PodFromSubProducts")
     public java.util.List<String> podFromSubProducts;
 
     /**
-     * <p>Delete specified pods</p>
+     * <p>The specified pods to drain.</p>
      */
     @NameInMap("PodNames")
     public java.util.List<String> podNames;

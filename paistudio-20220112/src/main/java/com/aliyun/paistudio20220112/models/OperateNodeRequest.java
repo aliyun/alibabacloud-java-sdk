@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OperateNodeRequest extends TeaModel {
     /**
-     * <p>The operation. Valid values:	</p>
+     * <p>The operation to perform. Valid values:	</p>
      * <ul>
      * <li>Cordon: disables scheduling</li>
      * <li>Uncordon: enables scheduling</li>

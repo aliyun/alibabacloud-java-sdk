@@ -7,8 +7,8 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>desc: descending order.</li>
-     * <li>asc: ascending order.</li>
+     * <li>desc: Descending order.</li>
+     * <li>asc: Ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number of the page to return. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>999</p>
@@ -45,7 +45,7 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public Boolean selfOnly;
 
     /**
-     * <p>The field by which to sort the returned results. Valid values:</p>
+     * <p>The name of the field by which to sort the response. Valid values:</p>
      * <ul>
      * <li>QuotaId</li>
      * <li>SubmittedCPU</li>
@@ -64,7 +64,7 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The user ID for which to query resource usage.</p>
+     * <p>The ID of the user whose resource usage you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>200xxxxxx</p>
@@ -73,7 +73,7 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     public String userId;
 
     /**
-     * <p>The username for which to query resource usage.</p>
+     * <p>The username of the user whose resource usage you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -81,6 +81,12 @@ public class ListQuotaActiveUserUsagesRequest extends TeaModel {
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>The number of workloads.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("WorkloadCount")
     public Integer workloadCount;
 

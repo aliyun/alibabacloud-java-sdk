@@ -4,39 +4,66 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class ComponentSpec extends TeaModel {
+    /**
+     * <p>The code directory configuration.</p>
+     */
     @NameInMap("CodeDir")
     public Location codeDir;
 
     /**
+     * <p>The command used for submit the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Command")
     public String command;
 
+    /**
+     * <p>The hype parameter used by the algorithm.</p>
+     */
     @NameInMap("HyperParameters")
     public java.util.List<HyperParameterDefinition> hyperParameters;
 
     /**
+     * <p>The docker image used by the job of this algorithm.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>registry.cn-shanghai.aliyuncs.com/pai-training/kmeans:v1.0.0</p>
      */
     @NameInMap("Image")
     public String image;
 
+    /**
+     * <p>The input for the algorithm.</p>
+     */
     @NameInMap("InputChannels")
     public java.util.List<Channel> inputChannels;
 
     /**
+     * <p>Job type of the training job while running the algorithm.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TFJob</p>
      */
     @NameInMap("JobType")
     public String jobType;
 
+    /**
+     * <p>The output metrics of the algorithm.</p>
+     */
     @NameInMap("MetricDefinitions")
     public java.util.List<MetricDefinition> metricDefinitions;
 
+    /**
+     * <p>The outputs of the algorithm.</p>
+     */
     @NameInMap("OutputChannels")
     public java.util.List<Channel> outputChannels;
 
+    /**
+     * <p>Resource requirements.</p>
+     */
     @NameInMap("ResourceRequirements")
     public java.util.List<ConditionExpression> resourceRequirements;
 

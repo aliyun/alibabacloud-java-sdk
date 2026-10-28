@@ -4,6 +4,12 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class Action extends TeaModel {
+    /**
+     * <p>The operation type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Defrag</p>
+     */
     @NameInMap("ActionType")
     public String actionType;
 

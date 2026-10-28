@@ -4,6 +4,9 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class SandboxCacheConfig extends TeaModel {
+    /**
+     * <p>Specifies whether the sandbox cache is enabled.</p>
+     */
     @NameInMap("Enabled")
     public Boolean enabled;
 

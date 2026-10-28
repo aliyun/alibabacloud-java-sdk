@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class NodeSpec extends TeaModel {
     /**
-     * <p>Rule for attaching resource nodes.</p>
+     * <p>The resource node binding policy.</p>
      */
     @NameInMap("BindingPolicy")
     public BindingPolicy bindingPolicy;
 
     /**
-     * <p>Number of resource nodes with this specification.</p>
+     * <p>The number of resource node specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,13 +20,16 @@ public class NodeSpec extends TeaModel {
     public Long count;
 
     /**
-     * <p>Type of supernode to use. You cannot specify both a node specification and a supernode type.</p>
+     * <p>The supernode specifications in use. When you specify a specification, you cannot specify both the node specifications and the supernode at the same time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>efg3.GN9A.ch72</p>
      */
     @NameInMap("HyperType")
     public String hyperType;
 
     /**
-     * <p>Type of the resource node specification.</p>
+     * <p>The resource node specifications type.</p>
      * 
      * <strong>example:</strong>
      * <p>ecs.g6.4xlarge</p>

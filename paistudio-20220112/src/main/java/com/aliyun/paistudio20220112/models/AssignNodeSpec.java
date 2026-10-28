@@ -4,12 +4,27 @@ package com.aliyun.paistudio20220112.models;
 import com.aliyun.tea.*;
 
 public class AssignNodeSpec extends TeaModel {
+    /**
+     * <p>The anti-affinity node names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>node3</p>
+     */
     @NameInMap("AntiAffinityNodeNames")
     public String antiAffinityNodeNames;
 
+    /**
+     * <p>Specifies whether to enable the specified node.</p>
+     */
     @NameInMap("EnableAssignNode")
     public Boolean enableAssignNode;
 
+    /**
+     * <p>The node names.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>lingjxxxx</p>
+     */
     @NameInMap("NodeNames")
     public String nodeNames;
 
