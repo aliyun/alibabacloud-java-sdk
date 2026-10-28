@@ -14,7 +14,7 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     public String DBInstanceDescription;
 
     /**
-     * <p>The instance ID. Separate multiple instance IDs with commas (,).</p>
+     * <p>The instance IDs. Separate multiple instance IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb-cn-7213cjv****</p>
@@ -23,20 +23,14 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     public String DBInstanceIds;
 
     /**
-     * <p>The state of the instance. Valid values:</p>
+     * <p>The status of the instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>CREATING</strong>: The instance is being created.</p>
-     * </li>
-     * <li><p><strong>ACTIVATION</strong>: The instance is running.</p>
-     * </li>
-     * <li><p><strong>RESOURCE_CHANGING</strong>: The instance is being upgraded or downgraded.</p>
-     * </li>
-     * <li><p><strong>ORDER_PREPARING</strong>: The order is being confirmed.</p>
-     * </li>
-     * <li><p><strong>READONLY_RESOURCE_CHANGING</strong>: The instance configuration is being changed, and the instance is write-locked.</p>
-     * </li>
-     * <li><p><strong>DELETING</strong>: The instance is being deleted.</p>
-     * </li>
+     * <li><strong>CREATING</strong>: Creating.</li>
+     * <li><strong>ACTIVATION</strong>: Running.</li>
+     * <li><strong>RESOURCE_CHANGING</strong>: Changing specifications.</li>
+     * <li><strong>ORDER_PREPARING</strong>: Confirming order.</li>
+     * <li><strong>READONLY_RESOURCE_CHANGING</strong>: Changing resources (the instance is locked for write operations).</li>
+     * <li><strong>DELETING</strong>: Deleting.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,14 +49,11 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong>: Default value.</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +73,7 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group.</p>
+     * <p>The resource group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-4690g37929****</p>
@@ -94,7 +85,7 @@ public class DescribeDBInstancesShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The list of tags of instances.</p>
+     * <p>The instance tags.</p>
      */
     @NameInMap("Tag")
     public String tagShrink;

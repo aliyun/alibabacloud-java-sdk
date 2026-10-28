@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlowQueryStatsResponseBody extends TeaModel {
     /**
-     * <p>An array of slow query statistics, grouped by database.</p>
+     * <p>The slow query information by database.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -35,7 +35,7 @@ public class DescribeSlowQueryStatsResponseBody extends TeaModel {
     public Object byDatabase;
 
     /**
-     * <p>An array of slow query statistics, grouped by time bucket.</p>
+     * <p>The slow query information by time bucket.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -64,7 +64,7 @@ public class DescribeSlowQueryStatsResponseBody extends TeaModel {
     public Object byTimeBucket;
 
     /**
-     * <p>An array of slow query statistics, grouped by user.</p>
+     * <p>The slow query information by user.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -95,7 +95,7 @@ public class DescribeSlowQueryStatsResponseBody extends TeaModel {
     public Object byUser;
 
     /**
-     * <p>The percentile statistics for query latency.</p>
+     * <p>The query latency percentile information.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -119,7 +119,7 @@ public class DescribeSlowQueryStatsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The summary of slow query statistics.</p>
+     * <p>The summary information.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -148,7 +148,7 @@ public class DescribeSlowQueryStatsResponseBody extends TeaModel {
     public java.util.Map<String, ?> summary;
 
     /**
-     * <p>An array of detailed audit records for the top N slow queries.</p>
+     * <p>The audit information of the top N slow queries.</p>
      * 
      * <strong>example:</strong>
      * <p>[
@@ -202,7 +202,7 @@ public class DescribeSlowQueryStatsResponseBody extends TeaModel {
     public Object topQueries;
 
     /**
-     * <p>An array of statistics for the top N slow queries, grouped by SQL digest. Available for kernel version 5.0 and later.</p>
+     * <p>The classification information of the top N slow query fingerprints. Supported by kernel version 5.0 and later.</p>
      * 
      * <strong>example:</strong>
      * <p>[

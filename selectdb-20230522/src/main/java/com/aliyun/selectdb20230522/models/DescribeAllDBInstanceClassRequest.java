@@ -4,6 +4,12 @@ package com.aliyun.selectdb20230522.models;
 import com.aliyun.tea.*;
 
 public class DescribeAllDBInstanceClassRequest extends TeaModel {
+    /**
+     * <p>The SelectDB instance ID. This parameter is required when you create a cluster or change the specifications of a cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>selectdb-cn-7213cjv****</p>
+     */
     @NameInMap("DBInstanceId")
     public String DBInstanceId;
 

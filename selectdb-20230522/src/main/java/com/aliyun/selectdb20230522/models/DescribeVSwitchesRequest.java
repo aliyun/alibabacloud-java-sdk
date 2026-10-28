@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchesRequest extends TeaModel {
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries per page for paging.</p>
      * <blockquote>
-     * <p>Warning: This is a reserved parameter and is not supported.</warning></p>
+     * <p>Warning: Reserved parameter. Not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     /**
      * <p>The token for the next query.</p>
      * <blockquote>
-     * <p>Warning: This is a reserved parameter and is not supported.</warning></p>
+     * <p>Warning: Reserved parameter. Not supported.</warning></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class DescribeVSwitchesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The VPC ID of the instance.</p>
+     * <p>The VPC ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

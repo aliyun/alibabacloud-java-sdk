@@ -49,8 +49,8 @@ public class UpgradeDBInstanceEngineVersionRequest extends TeaModel {
     /**
      * <p>The upgrade mode.</p>
      * <ul>
-     * <li>If this parameter is left empty, the upgrade is performed immediately.</li>
-     * <li>If this parameter is set to 1, the upgrade is performed during the maintenance window.</li>
+     * <li>If you leave this parameter empty, the upgrade is performed immediately.</li>
+     * <li>If you set this parameter to 1, the upgrade is performed during the maintenance window.</li>
      * </ul>
      * 
      * <strong>example:</strong>

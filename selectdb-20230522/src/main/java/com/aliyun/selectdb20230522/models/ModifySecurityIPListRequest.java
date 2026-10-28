@@ -15,7 +15,7 @@ public class ModifySecurityIPListRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The name of the whitelist. Default value: <strong>Default</strong>.</p>
+     * <p>The name of the whitelist group. By default, the <strong>Default</strong> group is modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,14 +25,11 @@ public class ModifySecurityIPListRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The mode in which you want to modify the whitelist. Valid values:</p>
+     * <p>The modification mode of the whitelist. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: overwrites the IP addresses in the whitelist.</p>
-     * </li>
-     * <li><p><strong>1</strong>: adds IP addresses to the whitelist.</p>
-     * </li>
-     * <li><p><strong>2</strong>: removes IP addresses from the whitelist.</p>
-     * </li>
+     * <li><strong>0</strong>: Overwrites the original whitelist.</li>
+     * <li><strong>1</strong>: Adds IP addresses to the whitelist.</li>
+     * <li><strong>2</strong>: Removes IP addresses from the whitelist.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -43,7 +40,7 @@ public class ModifySecurityIPListRequest extends TeaModel {
     public String modifyMode;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

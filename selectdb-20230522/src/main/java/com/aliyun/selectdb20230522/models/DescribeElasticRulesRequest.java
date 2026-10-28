@@ -25,7 +25,7 @@ public class DescribeElasticRulesRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
-     * <p>The cloud service.</p>
+     * <p>The cloud service type.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb</p>

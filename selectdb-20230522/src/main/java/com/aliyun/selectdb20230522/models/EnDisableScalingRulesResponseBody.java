@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnDisableScalingRulesResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public EnDisableScalingRulesResponseBodyData data;
@@ -60,14 +60,7 @@ public class EnDisableScalingRulesResponseBody extends TeaModel {
         public String dbInstanceId;
 
         /**
-         * <p>Indicates whether the scheduled scaling policy is enabled.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
-         * </ul>
+         * <p>Indicates whether the time-based elastic scaling rule is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

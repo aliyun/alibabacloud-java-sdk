@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeQueryExplainResponseBody extends TeaModel {
     /**
-     * <p>The Explain result.</p>
+     * <p>The EXPLAIN result.</p>
      * 
      * <strong>example:</strong>
      * <p>+-----------------------------------------------------------------------+
@@ -51,7 +51,7 @@ public class DescribeQueryExplainResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The SQL statement for which the execution plan is retrieved. Excessively long SQL statements in audit logs may be truncated.</p>
+     * <p>The SQL statement for which the execution plan is queried. Overly long SQL statements in audit logs may be truncated.</p>
      * 
      * <strong>example:</strong>
      * <p>SELECT * FROM example_db.example_tbl</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
     /**
-     * <p>The list of instance specifications.</p>
+     * <p>The list of instance types.</p>
      */
     @NameInMap("ClassCodeList")
     public java.util.List<DescribeAllDBInstanceClassResponseBodyClassCodeList> classCodeList;
@@ -42,7 +42,7 @@ public class DescribeAllDBInstanceClassResponseBody extends TeaModel {
 
     public static class DescribeAllDBInstanceClassResponseBodyClassCodeList extends TeaModel {
         /**
-         * <p>The specification code.</p>
+         * <p>The instance type code.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb.xlarge</p>

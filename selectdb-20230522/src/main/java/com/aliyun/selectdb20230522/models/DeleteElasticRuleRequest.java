@@ -25,7 +25,7 @@ public class DeleteElasticRuleRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
-     * <p>The cloud service.</p>
+     * <p>The cloud product type.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb</p>

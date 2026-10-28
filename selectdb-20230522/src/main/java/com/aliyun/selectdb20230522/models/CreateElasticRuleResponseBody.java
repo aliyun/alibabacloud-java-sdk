@@ -42,7 +42,7 @@ public class CreateElasticRuleResponseBody extends TeaModel {
 
     public static class CreateElasticRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The target compute resource specification for the cluster.</p>
+         * <p>The target compute resource rule of the cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>selectdb.2xlarge</p>
@@ -69,7 +69,7 @@ public class CreateElasticRuleResponseBody extends TeaModel {
         public String dbInstanceId;
 
         /**
-         * <p>The start time of the time-based elastic scaling rule.</p>
+         * <p>The start time of the time-based elastic rule. The time is in the HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00</p>

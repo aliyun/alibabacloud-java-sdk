@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionsResponseBody extends TeaModel {
     /**
-     * <p>An array of regions.</p>
+     * <p>The list of region data.</p>
      */
     @NameInMap("RegionModelList")
     public java.util.List<DescribeRegionsResponseBodyRegionModelList> regionModelList;
@@ -45,13 +45,13 @@ public class DescribeRegionsResponseBody extends TeaModel {
          * <p>The zone description.</p>
          * 
          * <strong>example:</strong>
-         * <p>北京H可用区</p>
+         * <p>Beijing Zone H</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether the VPC is disabled.</p>
+         * <p>Indicates whether the zone is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -105,7 +105,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public Boolean vpcEnabled;
 
         /**
-         * <p>Indicates whether the virtual private cloud (VPC) is available.</p>
+         * <p>Indicates whether the VPC is available.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-h</p>
@@ -195,7 +195,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>An array of zones.</p>
+         * <p>The list of zones.</p>
          */
         @NameInMap("Zones")
         public java.util.List<DescribeRegionsResponseBodyRegionModelListZones> zones;

@@ -15,14 +15,14 @@ public class UpgradeDBInstanceDeploySchemeShrinkRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>A list of multi-zone configurations.</p>
+     * <p>The list of multiple zones.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MultiZone")
     public String multiZoneShrink;
 
     /**
-     * <p>The ID of the region where the instance resides.</p>
+     * <p>The ID of the region in which the instance resides.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

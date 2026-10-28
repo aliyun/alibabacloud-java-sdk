@@ -14,7 +14,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The name of the whitelist.</p>
+     * <p>The name of the whitelist group.</p>
      * 
      * <strong>example:</strong>
      * <p>group1</p>
@@ -23,7 +23,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The tag of the whitelist.</p>
+     * <p>The tag of the group.</p>
      * 
      * <strong>example:</strong>
      * <p>grouptag</p>
@@ -41,7 +41,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The IP addresses in the whitelist of the instance. Multiple IP addresses are separated by commas (,).</p>
+     * <p>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>127.0.XX.XX,127.2.XX.XX</p>
@@ -50,7 +50,7 @@ public class ModifySecurityIPListResponseBody extends TeaModel {
     public String securityIPList;
 
     /**
-     * <p>The IP address type.</p>
+     * <p>The type of the IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv4</p>

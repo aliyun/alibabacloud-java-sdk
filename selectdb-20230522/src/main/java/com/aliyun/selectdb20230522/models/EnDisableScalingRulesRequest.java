@@ -25,7 +25,7 @@ public class EnDisableScalingRulesRequest extends TeaModel {
     public String dbInstanceId;
 
     /**
-     * <p>The cloud service.</p>
+     * <p>The cloud service type.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb</p>
@@ -47,14 +47,7 @@ public class EnDisableScalingRulesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to enable the scheduled scaling policy.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
-     * </ul>
+     * <p>Specifies whether the time-based elastic policy is enabled.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

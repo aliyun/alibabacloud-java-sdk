@@ -1,3 +1,12 @@
+2026-10-28 Version: 4.1.3
+- Update API CreateDBInstance: add request parameters TdeEnabled.
+- Update API CreateDBInstance: add request parameters TdeMode.
+- Update API DescribeDBInstanceAttribute: add response parameters Body.TdeAlgorithm.
+- Update API DescribeDBInstanceAttribute: add response parameters Body.TdeEnabled.
+- Update API DescribeDBInstanceAttribute: add response parameters Body.TdeMode.
+- Update API DescribeDBInstances: add response parameters Body.Items.$.TdeEnabled.
+
+
 2026-08-25 Version: 4.1.2
 - Update API DescribeAllDBInstanceClass: add request parameters DBInstanceId.
 

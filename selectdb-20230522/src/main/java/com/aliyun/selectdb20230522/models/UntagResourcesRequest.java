@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the instances. This parameter takes effect only when you do not specify TagKey. The default value is false.</p>
+     * <p>Specifies whether to remove all tags from the instance. This parameter takes effect only when TagKey is not specified. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -24,7 +24,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>An array of instance IDs.</p>
+     * <p>The array of instance IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -40,7 +40,7 @@ public class UntagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>An array of tag keys.</p>
+     * <p>The array of tag keys.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

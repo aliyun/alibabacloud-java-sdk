@@ -13,22 +13,31 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("CacheSize")
     public String cacheSize;
 
+    /**
+     * <p>The number of cluster nodes. This parameter takes effect only in Serverless mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("ClusterNodeCount")
     public Integer clusterNodeCount;
 
+    /**
+     * <p>The cluster node type. This parameter takes effect only in Serverless mode.</p>
+     */
     @NameInMap("ClusterNodeType")
     public String clusterNodeType;
 
     /**
      * <p>The cluster specifications. Valid values:</p>
      * <ul>
-     * <li><strong>selectdb.xlarge</strong>: 4 cores, 32 GB memory.</li>
-     * <li><strong>selectdb.2xlarge</strong>: 8 cores, 64 GB memory.</li>
-     * <li><strong>selectdb.4xlarge</strong>: 16 cores, 128 GB memory.</li>
-     * <li><strong>selectdb.8xlarge</strong>: 32 cores, 256 GB memory.</li>
-     * <li><strong>selectdb.16xlarge</strong>: 16 cores, 512 GB memory.</li>
-     * <li><strong>selectdb.24xlarge</strong>: 24 cores, 768 GB memory.</li>
-     * <li><strong>selectdb.32xlarge</strong>: 32 cores, 1024 GB memory.</li>
+     * <li><strong>selectdb.xlarge</strong>: 4 cores and 32 GB.</li>
+     * <li><strong>selectdb.2xlarge</strong>: 8 cores and 64 GB.</li>
+     * <li><strong>selectdb.4xlarge</strong>: 16 cores and 128 GB.</li>
+     * <li><strong>selectdb.8xlarge</strong>: 32 cores and 256 GB.</li>
+     * <li><strong>selectdb.16xlarge</strong>: 16 cores and 512 GB.</li>
+     * <li><strong>selectdb.24xlarge</strong>: 24 cores and 768 GB.</li>
+     * <li><strong>selectdb.32xlarge</strong>: 32 cores and 1024 GB.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -59,7 +68,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The database type. Set the value to selectdb.</p>
+     * <p>The database engine type. Set the value to selectdb.</p>
      * 
      * <strong>example:</strong>
      * <p>selectdb</p>
@@ -80,9 +89,21 @@ public class ModifyDBClusterRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
+    /**
+     * <p>The maximum value of the auto-scaling range for the instance RCU (RDS Capacity Unit).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>32</p>
+     */
     @NameInMap("ScaleMax")
     public Double scaleMax;
 
+    /**
+     * <p>The minimum value of the auto-scaling range for the instance RCU (RDS Capacity Unit).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("ScaleMin")
     public Double scaleMin;
 

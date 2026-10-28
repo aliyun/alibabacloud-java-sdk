@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterConfigResponseBody extends TeaModel {
     /**
-     * <p>The details about the access denial. This parameter is returned only if Resource Access Management (RAM) authentication failed.</p>
+     * <p>The details of the access denial. This field is returned only when RAM authentication fails.</p>
      * 
      * <strong>example:</strong>
      * <p>failed</p>
@@ -14,13 +14,13 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
     public String accessDeniedDetail;
 
     /**
-     * <p>The information returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeDBClusterConfigResponseBodyData data;
 
     /**
-     * <p>The dynamic code. This parameter is not returned.</p>
+     * <p>The dynamic code. This field is not used and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -29,7 +29,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not returned.</p>
+     * <p>The dynamic message. This field is not used and can be ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>An error occurred while processing your request.</p>
@@ -93,10 +93,10 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
 
     public static class DescribeDBClusterConfigResponseBodyDataParams extends TeaModel {
         /**
-         * <p>The comments on the parameter.</p>
+         * <p>The comment of the field.</p>
          * 
          * <strong>example:</strong>
-         * <p>存储引擎并发扫描硬盘的线程数。采用线程池统一管理。</p>
+         * <p>The number of threads used by the storage engine to concurrently scan hard disks. A thread pool is used for unified management</p>
          */
         @NameInMap("Comment")
         public String comment;
@@ -111,7 +111,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
-         * <p>Indicates whether the parameter immediately takes effect without requiring a restart.</p>
+         * <p>Specifies whether the parameter takes effect dynamically without a restart.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -120,7 +120,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         public Integer isDynamic;
 
         /**
-         * <p>Indicates whether the parameter is modifiable.</p>
+         * <p>Specifies whether users are allowed to modify the parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -129,7 +129,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         public Integer isUserModifiable;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The name of the configuration item.</p>
          * 
          * <strong>example:</strong>
          * <p>doris_scanner_thread_pool_thread_num</p>
@@ -138,7 +138,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The value range of the parameter.</p>
+         * <p>The value range.</p>
          * 
          * <strong>example:</strong>
          * <p>[0-20000]</p>
@@ -147,7 +147,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         public String optional;
 
         /**
-         * <p>The category of the parameter.</p>
+         * <p>The category of the configuration item.</p>
          * 
          * <strong>example:</strong>
          * <p>Query</p>
@@ -156,7 +156,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         public String paramCategory;
 
         /**
-         * <p>The current value of the parameter.</p>
+         * <p>The current value.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -264,7 +264,7 @@ public class DescribeDBClusterConfigResponseBody extends TeaModel {
         public String dbInstanceName;
 
         /**
-         * <p>The details about each parameter returned.</p>
+         * <p>The user parameters.</p>
          */
         @NameInMap("Params")
         public java.util.List<DescribeDBClusterConfigResponseBodyDataParams> params;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionRequest extends TeaModel {
     /**
-     * <p>The prefix of the endpoint. Set the parameter to the prefix of the value of <strong>ConnectionString</strong>.</p>
+     * <p>The prefix of the target endpoint, which is the prefix of the <strong>ConnectionString</strong> parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The network type of the endpoint to be applied for. Set the value to Public.</p>
+     * <p>The network type of the new endpoint. Set the value to Public.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class AllocateInstancePublicConnectionRequest extends TeaModel {
     public String netType;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

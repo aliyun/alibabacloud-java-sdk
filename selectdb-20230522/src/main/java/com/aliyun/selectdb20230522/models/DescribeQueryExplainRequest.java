@@ -15,7 +15,7 @@ public class DescribeQueryExplainRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The Explain mode.</p>
+     * <p>The EXPLAIN mode.</p>
      * 
      * <strong>example:</strong>
      * <p>BASIC</p>

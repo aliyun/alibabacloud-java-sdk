@@ -14,7 +14,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The details about each IP address whitelist returned.</p>
+     * <p>The list of whitelist groups.</p>
      */
     @NameInMap("GroupItems")
     public java.util.List<DescribeSecurityIPListResponseBodyGroupItems> groupItems;
@@ -74,7 +74,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String aecurityIPType;
 
         /**
-         * <p>The name of the whitelist.</p>
+         * <p>The name of the whitelist group.</p>
          * 
          * <strong>example:</strong>
          * <p>group1</p>
@@ -83,7 +83,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The tag of the whitelist.</p>
+         * <p>The group tag.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -92,7 +92,7 @@ public class DescribeSecurityIPListResponseBody extends TeaModel {
         public String groupTag;
 
         /**
-         * <p>The IP addresses in the whitelist. Multiple IP addresses are separated by commas (,).</p>
+         * <p>The IP addresses in the whitelist of the instance. Separate multiple IP addresses with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.XX.XX</p>

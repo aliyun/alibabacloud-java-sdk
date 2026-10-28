@@ -54,7 +54,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         public String canPromFee;
 
         /**
-         * <p>The promotion rule description.</p>
+         * <p>The description of the promotion rule.</p>
          * 
          * <strong>example:</strong>
          * <p>789asdf</p>
@@ -66,7 +66,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
          * <p>The coupon description.</p>
          * 
          * <strong>example:</strong>
-         * <p>General coupon can deduct 100</p>
+         * <p>General coupon with a deduction of 100</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
@@ -81,7 +81,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         public String promotionName;
 
         /**
-         * <p>The coupon code.</p>
+         * <p>The coupon ID.</p>
          * 
          * <strong>example:</strong>
          * <p>732211480132</p>
@@ -147,19 +147,19 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The coupon codes.</p>
+         * <p>The coupon ID.</p>
          */
         @NameInMap("OptionalPromotions")
         public java.util.List<GetModifyBEClusterInquiryResponseBodyDataOptionalPromotions> optionalPromotions;
 
         /**
-         * <p>The unit price results of billing items.</p>
+         * <p>The unit price results of billable items.</p>
          */
         @NameInMap("PricingRules")
         public java.util.Map<String, String> pricingRules;
 
         /**
-         * <p>The estimated refund amount when converting a subscription cluster to a pay-as-you-go cluster under a subscription instance.</p>
+         * <p>The estimated refund amount when a subscription cluster under a subscription instance is changed to a pay-as-you-go cluster.</p>
          * 
          * <strong>example:</strong>
          * <p>-100</p>
@@ -168,7 +168,7 @@ public class GetModifyBEClusterInquiryResponseBody extends TeaModel {
         public String refundAmount;
 
         /**
-         * <p>The trade amount.</p>
+         * <p>The amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1.76</p>

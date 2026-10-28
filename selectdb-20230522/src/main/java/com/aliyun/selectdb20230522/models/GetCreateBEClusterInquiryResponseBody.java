@@ -42,6 +42,11 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
 
     public static class GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions extends TeaModel {
         /**
+         * <p>The discount amount.</p>
+         * <blockquote>
+         * <p>This parameter is not applicable to the Chinese site.</p>
+         * </blockquote>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -49,6 +54,8 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         public String canPromFee;
 
         /**
+         * <p>The description of the promotion rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>7afs9d</p>
          */
@@ -56,13 +63,17 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         public String optionCode;
 
         /**
+         * <p>The coupon description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>General coupon with a deduction of 100</p>
+         * <p>General coupon for a deduction of 100</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
+         * <p>The coupon name.</p>
+         * 
          * <strong>example:</strong>
          * <p>General coupon</p>
          */
@@ -70,6 +81,8 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         public String promotionName;
 
         /**
+         * <p>The coupon code.</p>
+         * 
          * <strong>example:</strong>
          * <p>775735400028</p>
          */
@@ -133,14 +146,26 @@ public class GetCreateBEClusterInquiryResponseBody extends TeaModel {
         @NameInMap("Currency")
         public String currency;
 
+        /**
+         * <p>The coupon information.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;OptionCode&quot;:&quot;7afs9d&quot;,&quot;PromotionDesc&quot;:&quot;General coupon for a deduction of 100&quot;,&quot;PromotionName&quot;:&quot;General coupon&quot;,&quot;CanPromFee&quot;:&quot;100&quot;,&quot;PromotionOptionNo&quot;:&quot;775735400028&quot;}]</p>
+         */
         @NameInMap("OptionalPromotions")
         public java.util.List<GetCreateBEClusterInquiryResponseBodyDataOptionalPromotions> optionalPromotions;
 
+        /**
+         * <p>The unit price results of billable items.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;compute_size&quot;:{&quot;priceUnit&quot;:&quot;CNY/(CU<em>hour)&quot;,&quot;payFee&quot;:&quot;0.0&quot;},&quot;cache_size&quot;:{&quot;priceUnit&quot;:&quot;CNY/(GB</em>hour)&quot;,&quot;payFee&quot;:&quot;0.0&quot;},&quot;storage_size&quot;:{&quot;priceUnit&quot;:&quot;CNY/(GB*hour)&quot;,&quot;payFee&quot;:&quot;0.0&quot;}}</p>
+         */
         @NameInMap("PricingRules")
         public java.util.Map<String, String> pricingRules;
 
         /**
-         * <p>The trade amount.</p>
+         * <p>The amount.</p>
          * 
          * <strong>example:</strong>
          * <p>1.76</p>

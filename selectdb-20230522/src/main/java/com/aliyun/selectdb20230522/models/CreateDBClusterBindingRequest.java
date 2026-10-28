@@ -35,7 +35,7 @@ public class CreateDBClusterBindingRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The region ID</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

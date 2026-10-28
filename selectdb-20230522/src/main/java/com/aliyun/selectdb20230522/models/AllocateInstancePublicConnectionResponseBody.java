@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateInstancePublicConnectionResponseBody extends TeaModel {
     /**
-     * <p>The name of the instance.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>New instance test</p>

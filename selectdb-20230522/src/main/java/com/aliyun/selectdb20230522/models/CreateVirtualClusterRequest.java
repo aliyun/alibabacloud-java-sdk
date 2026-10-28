@@ -16,7 +16,7 @@ public class CreateVirtualClusterRequest extends TeaModel {
     public String activeClusterId;
 
     /**
-     * <p>The instance name. Naming rules: must start with a letter, can contain up to 64 characters, and can include letters (case-insensitive), digits, and underscores (<em>). The name cannot contain two or more consecutive underscores (</em>), and cluster names must be unique within the same instance.</p>
+     * <p>The cluster name. The name must start with a letter and can be up to 64 characters in length. It can contain letters (case-insensitive), digits, and underscores (<em>). It cannot contain two or more consecutive underscores (</em>). Cluster names must be unique within the same instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateVirtualClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The secondary cluster ID.</p>
+     * <p>The standby cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

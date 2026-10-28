@@ -6,10 +6,8 @@ import com.aliyun.tea.*;
 public class DescribeZonesRequest extends TeaModel {
     /**
      * <ul>
-     * <li><p>If you do not specify the <strong>MaxResults</strong> request parameter, paged query is disabled. The <strong>MaxResults</strong> response parameter indicates the total number of entries.</p>
-     * </li>
-     * <li><p>If you specify the <strong>MaxResults</strong> request parameter, paged query is enabled. The <strong>MaxResults</strong> response parameter indicates the number of entries on the current page.</p>
-     * </li>
+     * <li>If you do not specify the <strong>MaxResults</strong> request parameter, you do not need to query data in batches. The value of the <strong>MaxResults</strong> response parameter indicates the total number of list entries.</li>
+     * <li>If you specify the <strong>MaxResults</strong> request parameter, you must query data in batches. The value of the <strong>MaxResults</strong> response parameter indicates the number of list entries in the current batch.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,7 +17,7 @@ public class DescribeZonesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>40831b4f-d91d-4796-9589-ad306ec528d5</p>

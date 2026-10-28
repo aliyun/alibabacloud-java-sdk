@@ -14,7 +14,7 @@ public class GetCreateBEClusterInquiryRequest extends TeaModel {
     public Long cacheSize;
 
     /**
-     * <p>The billing type.</p>
+     * <p>The billing method.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,6 +80,8 @@ public class GetCreateBEClusterInquiryRequest extends TeaModel {
     public String pricingCycle;
 
     /**
+     * <p>The coupon code.</p>
+     * 
      * <strong>example:</strong>
      * <p>2374923467</p>
      */

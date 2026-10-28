@@ -15,11 +15,11 @@ public class ModifyDBInstanceAttributeRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The instance parameter to be modified. Valid values:</p>
+     * <p>The attribute to modify. Valid values:</p>
      * <ul>
-     * <li><p><strong>MaintainTime</strong>: Modify the maintenance window of the instance in the hh:mm-hh:mm format.</p>
+     * <li><p><strong>MaintainTime</strong>: modifies the O&amp;M time. The format is hh:mm-hh:mm.</p>
      * </li>
-     * <li><p><strong>DBInstanceDescription</strong>: Modify the description of the instance.</p>
+     * <li><p><strong>DBInstanceDescription</strong>: modifies the instance description.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -31,7 +31,7 @@ public class ModifyDBInstanceAttributeRequest extends TeaModel {
     public String instanceAttributeType;
 
     /**
-     * <p>The region ID of the instance.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,11 +44,11 @@ public class ModifyDBInstanceAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The new value of the instance parameter to be modified. Examples:</p>
+     * <p>The new value of the attribute. Valid values:</p>
      * <ul>
-     * <li><p>If InstanceAttributeType is set to MaintainTime, you can set Value to 00:00-06:00.</p>
+     * <li><p>If InstanceAttributeType is set to MaintainTime, set this parameter to a time range such as 00:00-06:00.</p>
      * </li>
-     * <li><p>If InstanceAttributeType is set to DBInstanceDescription, you can set Value to testdb.</p>
+     * <li><p>If InstanceAttributeType is set to DBInstanceDescription, set this parameter to a description such as testdb.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

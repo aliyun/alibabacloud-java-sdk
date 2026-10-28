@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RestartDBClusterResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The returned information.</p>
      */
     @NameInMap("Data")
     public RestartDBClusterResponseBodyData data;

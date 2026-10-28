@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDBClusterBindingRequest extends TeaModel {
     /**
-     * <p>The ID of Cluster 1.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteDBClusterBindingRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of Cluster 2.</p>
+     * <p>The ID of the other cluster in the binding relationship.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

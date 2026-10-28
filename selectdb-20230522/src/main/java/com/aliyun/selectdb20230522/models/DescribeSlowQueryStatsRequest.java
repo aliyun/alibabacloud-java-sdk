@@ -15,7 +15,7 @@ public class DescribeSlowQueryStatsRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>The end time. Must be later than the start time. Defaults to the current time.</p>
+     * <p>The end time. It must be later than the start time. Default value: the current time. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-04-08 16:00:00</p>
@@ -34,7 +34,7 @@ public class DescribeSlowQueryStatsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start time. Defaults to 24 hours before the current time.</p>
+     * <p>The start time. Default value: 24 hours ago. Format: YYYY-MM-DD HH:mm:ss.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-04-07 16:00:00</p>
@@ -43,7 +43,7 @@ public class DescribeSlowQueryStatsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The slow query threshold, in milliseconds. The default value is 5000.</p>
+     * <p>The slow query threshold in milliseconds. Default value: 5000.</p>
      * 
      * <strong>example:</strong>
      * <p>5000</p>
@@ -52,7 +52,7 @@ public class DescribeSlowQueryStatsRequest extends TeaModel {
     public Long thresholdMs;
 
     /**
-     * <p>The number of top slow queries to return. The default value is 10.</p>
+     * <p>The number of top slow queries to return. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

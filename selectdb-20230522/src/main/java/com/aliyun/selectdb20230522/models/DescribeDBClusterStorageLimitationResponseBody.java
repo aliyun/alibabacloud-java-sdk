@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
     /**
-     * <p>The details of the access denial. This field is returned only when the RAM verification fails.</p>
+     * <p>The details about the access denial. This parameter is returned only when RAM authentication fails.</p>
      * 
      * <strong>example:</strong>
      * <p>failed</p>
@@ -20,7 +20,7 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
     public DescribeDBClusterStorageLimitationResponseBodyData data;
 
     /**
-     * <p>The dynamic code. This parameter is not used. Ignore this parameter.</p>
+     * <p>The dynamic code. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -29,7 +29,7 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic message. This parameter is not used. Ignore this parameter.</p>
+     * <p>The dynamic message. This parameter is not in use. Ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>An error occurred while processing your request.</p>
@@ -102,7 +102,7 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         public String classCode;
 
         /**
-         * <p>The number of vCPU cores.</p>
+         * <p>The number of CPU cores.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -111,7 +111,7 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         public Integer cpuCores;
 
         /**
-         * <p>The default cache size in GB.</p>
+         * <p>The default cache size. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -120,7 +120,7 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         public Integer defaultStorageInGB;
 
         /**
-         * <p>The maximum cache size in GB.</p>
+         * <p>The maximum cache size. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -129,7 +129,7 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         public Integer maxStorageInGB;
 
         /**
-         * <p>The memory size in GB.</p>
+         * <p>The memory size. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -138,7 +138,7 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         public Integer memoryInGB;
 
         /**
-         * <p>The minimum cache size in GB.</p>
+         * <p>The minimum cache size. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -147,7 +147,7 @@ public class DescribeDBClusterStorageLimitationResponseBody extends TeaModel {
         public Integer minStorageInGB;
 
         /**
-         * <p>The cache step size in GB.</p>
+         * <p>The cache step size. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

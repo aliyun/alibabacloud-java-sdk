@@ -14,14 +14,7 @@ public class DeleteElasticRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the deletion is successful.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
-     * </ul>
+     * <p>Indicates whether the deletion was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

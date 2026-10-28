@@ -25,7 +25,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the instance you want to move.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ChangeResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The type of the resource. Default value: <code>DBInstance</code>.</p>
+     * <p>The resource type.</p>
      * 
      * <strong>example:</strong>
      * <p>DBInstance</p>

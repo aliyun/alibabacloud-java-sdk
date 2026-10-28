@@ -11,7 +11,7 @@ public class DescribeZonesResponseBody extends TeaModel {
     public java.util.List<DescribeZonesResponseBodyItems> items;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of rows per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -20,7 +20,7 @@ public class DescribeZonesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results. If this parameter is empty, all results have been returned.</p>
+     * <p>The token used to start the next query. If NextToken is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>40831b4f-d91d-4796-9589-ad306ec528d5</p>

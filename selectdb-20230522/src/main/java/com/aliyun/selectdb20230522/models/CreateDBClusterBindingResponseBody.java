@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDBClusterBindingResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CreateDBClusterBindingResponseBodyData data;
@@ -51,7 +51,7 @@ public class CreateDBClusterBindingResponseBody extends TeaModel {
         public String dbClusterId;
 
         /**
-         * <p>The numeric ID.</p>
+         * <p>The numeric ID of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>6585</p>
