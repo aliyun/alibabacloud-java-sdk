@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSceneRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can get this ID by calling the ListInstances operation.</p>
+     * <p>The instance ID. You can obtain this ID by calling the ListInstances operation.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-abcdefg1234</p>

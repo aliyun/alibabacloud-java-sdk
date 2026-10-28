@@ -4,6 +4,12 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class ListParamsRequest extends TeaModel {
+    /**
+     * <p>Specifies whether the parameter is encrypted.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("Encrypted")
     public Boolean encrypted;
 
@@ -11,7 +17,7 @@ public class ListParamsRequest extends TeaModel {
      * <p>The environment to which the parameter belongs. Valid values:</p>
      * <ul>
      * <li>Daily: daily environment</li>
-     * <li>Pre: pre-release environment</li>
+     * <li>Pre: staging environment</li>
      * <li>Prod: production environment</li>
      * </ul>
      * 
@@ -22,7 +28,7 @@ public class ListParamsRequest extends TeaModel {
     public String environment;
 
     /**
-     * <p>The instance ID. You can call the ListInstances operation to obtain the instance ID.</p>
+     * <p>The instance ID. You can obtain this ID by calling the ListInstances operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +38,7 @@ public class ListParamsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The parameter name.</p>
+     * <p>The name of the parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>home</p>
@@ -50,7 +56,7 @@ public class ListParamsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -59,7 +65,7 @@ public class ListParamsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The scene ID. You can call the ListScenes operation to obtain the scene ID.</p>
+     * <p>The scene ID. You can obtain this ID by calling the ListScenes operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

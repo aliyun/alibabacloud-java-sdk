@@ -15,7 +15,12 @@ public class CloneLaboratoryRequest extends TeaModel {
     public Boolean cloneExperimentGroup;
 
     /**
-     * <p>The destination environment. Valid values: Daily, Pre (pre-release), and Prod (production).</p>
+     * <p>The runtime environment. Valid values:</p>
+     * <ul>
+     * <li>Daily: daily environment.</li>
+     * <li>Pre: pre-release environment.</li>
+     * <li>Prod: production environment.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +30,7 @@ public class CloneLaboratoryRequest extends TeaModel {
     public String environment;
 
     /**
-     * <p>The instance ID. To obtain this ID, call the <code>ListInstances</code> operation.</p>
+     * <p>Instance ID of the instance. You can call the ListInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

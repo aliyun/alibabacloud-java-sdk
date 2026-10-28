@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateTrafficControlTaskCodeRequest extends TeaModel {
     /**
-     * <p>The environment type. Valid values: <code>Daily</code> (daily environment), <code>Pre</code> (pre-release environment), and <code>Prod</code> (production environment).</p>
+     * <p>The environment to which the parameter belongs. Valid values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment).</p>
      * 
      * <strong>example:</strong>
      * <p>Daily</p>

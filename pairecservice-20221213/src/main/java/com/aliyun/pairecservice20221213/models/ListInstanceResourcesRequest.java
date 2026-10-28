@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceResourcesRequest extends TeaModel {
     /**
-     * <p>The category of the resource. Valid values:</p>
+     * <p>The resource category. Valid values:</p>
      * <ul>
      * <li><p>DataManagement</p>
      * </li>
@@ -22,8 +22,8 @@ public class ListInstanceResourcesRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The group of the resource.</p>
-     * <p>If <code>Category</code> is <code>DataManagement</code>, valid values are:</p>
+     * <p>The resource group.</p>
+     * <p>If the resource category is DataManagement, valid values are:</p>
      * <ul>
      * <li><p>storage</p>
      * </li>
@@ -34,7 +34,7 @@ public class ListInstanceResourcesRequest extends TeaModel {
      * <li><p>modeltrain</p>
      * </li>
      * </ul>
-     * <p>If <code>Category</code> is <code>Engine</code>, valid values are:</p>
+     * <p>If the resource category is Engine, valid values are:</p>
      * <ul>
      * <li><p>feature</p>
      * </li>
@@ -45,7 +45,7 @@ public class ListInstanceResourcesRequest extends TeaModel {
      * <li><p>recengine</p>
      * </li>
      * </ul>
-     * <p>If <code>Category</code> is <code>Monitor</code>, valid values are:</p>
+     * <p>If the resource category is Monitor, valid values are:</p>
      * <ul>
      * <li><p>logs</p>
      * </li>
@@ -64,7 +64,7 @@ public class ListInstanceResourcesRequest extends TeaModel {
     public String group;
 
     /**
-     * <p>The type of the resource. If specified, only resources of this type are returned.</p>
+     * <p>The resource type filter. Valid values:</p>
      * <ul>
      * <li><p>Hologres</p>
      * </li>
@@ -80,9 +80,9 @@ public class ListInstanceResourcesRequest extends TeaModel {
      * </li>
      * <li><p>DataHub</p>
      * </li>
-     * <li><p>ApsaraMQ for Kafka</p>
+     * <li><p>Kafka</p>
      * </li>
-     * <li><p>Realtime Compute for Apache Flink</p>
+     * <li><p>Flinkvvp</p>
      * </li>
      * <li><p>ACR</p>
      * </li>
@@ -94,9 +94,9 @@ public class ListInstanceResourcesRequest extends TeaModel {
      * </li>
      * <li><p>MaxCompute</p>
      * </li>
-     * <li><p>Graph Compute Service</p>
+     * <li><p>GraphCompute</p>
      * </li>
-     * <li><p>ApsaraDB for Redis</p>
+     * <li><p>Redis</p>
      * </li>
      * </ul>
      * 

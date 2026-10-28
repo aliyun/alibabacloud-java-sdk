@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListScenesRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can obtain this ID by calling the <code>ListInstances</code> operation.</p>
+     * <p>The instance ID. You can call the ListInstances operation to obtain the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-abcdefg1234</p>
@@ -14,7 +14,7 @@ public class ListScenesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The name of the scene to use as a filter.</p>
+     * <p>The scene name filter.</p>
      * 
      * <strong>example:</strong>
      * <p>scene1</p>

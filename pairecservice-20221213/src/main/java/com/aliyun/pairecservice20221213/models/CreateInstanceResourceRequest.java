@@ -7,12 +7,9 @@ public class CreateInstanceResourceRequest extends TeaModel {
     /**
      * <p>The resource category. Valid values:</p>
      * <ul>
-     * <li><p>DataManagement</p>
-     * </li>
-     * <li><p>Engine</p>
-     * </li>
-     * <li><p>Monitor</p>
-     * </li>
+     * <li>DataManagement</li>
+     * <li>Engine</li>
+     * <li>Monitor</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -24,7 +21,7 @@ public class CreateInstanceResourceRequest extends TeaModel {
 
     /**
      * <p>The resource group.</p>
-     * <p>If the resource category is DataManagement, valid values are:</p>
+     * <p>If the resource category is DataManagement, valid values:</p>
      * <ul>
      * <li><p>storage</p>
      * </li>
@@ -35,7 +32,7 @@ public class CreateInstanceResourceRequest extends TeaModel {
      * <li><p>modeltrain</p>
      * </li>
      * </ul>
-     * <p>If the resource category is Engine, valid values are:</p>
+     * <p>If the resource category is Engine, valid values:</p>
      * <ul>
      * <li><p>feature</p>
      * </li>
@@ -46,7 +43,7 @@ public class CreateInstanceResourceRequest extends TeaModel {
      * <li><p>recengine</p>
      * </li>
      * </ul>
-     * <p>If the resource category is Monitor, valid values are:</p>
+     * <p>If the resource category is Monitor, valid values:</p>
      * <ul>
      * <li><p>logs</p>
      * </li>
@@ -82,9 +79,9 @@ public class CreateInstanceResourceRequest extends TeaModel {
      * </li>
      * <li><p>DataHub</p>
      * </li>
-     * <li><p>ApsaraMQ for Kafka</p>
+     * <li><p>Kafka</p>
      * </li>
-     * <li><p>Realtime Compute for Apache Flink</p>
+     * <li><p>Flinkvvp</p>
      * </li>
      * <li><p>ACR</p>
      * </li>
@@ -96,9 +93,9 @@ public class CreateInstanceResourceRequest extends TeaModel {
      * </li>
      * <li><p>MaxCompute</p>
      * </li>
-     * <li><p>Graph Compute</p>
+     * <li><p>GraphCompute</p>
      * </li>
-     * <li><p>ApsaraDB for Redis</p>
+     * <li><p>Redis</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

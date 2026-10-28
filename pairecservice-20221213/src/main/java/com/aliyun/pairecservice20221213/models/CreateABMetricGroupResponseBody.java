@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateABMetricGroupResponseBody extends TeaModel {
     /**
-     * <p>The ID of the A/B metric group.</p>
+     * <p>The ID of the metric group.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class CreateABMetricGroupResponseBody extends TeaModel {
     public String ABMetricGroupId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E15A1443-7917-5BE0-AE70-25538ECF398D</p>

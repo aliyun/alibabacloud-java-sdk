@@ -20,7 +20,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The source recall management service version ID.</p>
+     * <p>The ID of the source recall management service version.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -59,7 +59,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
 
     public static class CreateRecallManagementServiceVersionRequestConfigsMergeConfig extends TeaModel {
         /**
-         * <p>This parameter is reserved for future use.</p>
+         * <p>The extended configuration for the merge configuration to facilitate future feature expansion.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;&quot;:&quot;&quot;}</p>
@@ -77,13 +77,13 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String filterExpression;
 
         /**
-         * <p>The IDs of tables to use for filtering results.</p>
+         * <p>The IDs of the filter tables.</p>
          */
         @NameInMap("FilterRecallManagementTableIds")
         public java.util.List<String> filterRecallManagementTableIds;
 
         /**
-         * <p>The item recall management table ID.</p>
+         * <p>The ID of the item table.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -92,13 +92,13 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String itemRecallManagementTableId;
 
         /**
-         * <p>The fields to return from the item table.</p>
+         * <p>The output fields of the item table.</p>
          */
         @NameInMap("ItemTableFields")
         public java.util.List<String> itemTableFields;
 
         /**
-         * <p>The merge type. Valid values: <code>Weight</code> and <code>Alternate</code>.</p>
+         * <p>The merge type. Valid values: <code>Weight</code>: weight. <code>Alternate</code>: alternate.</p>
          * 
          * <strong>example:</strong>
          * <p>Weight</p>
@@ -107,7 +107,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String mergeType;
 
         /**
-         * <p>The recall management service version configuration ID.</p>
+         * <p>The ID of the recall management service version configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -264,7 +264,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
 
     public static class CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsJoinConfig extends TeaModel {
         /**
-         * <p><strong>The field to join on.</strong></p>
+         * <p><strong>The Join field.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>item_id</p>
@@ -273,7 +273,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String field;
 
         /**
-         * <p><strong>The fields to include from the joined table.</strong></p>
+         * <p><strong>The output fields.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>item_id</p>
@@ -282,7 +282,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public java.util.List<String> outputFields;
 
         /**
-         * <p><strong>The ID of the table to join with.</strong></p>
+         * <p><strong>The ID of the Join table.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -341,7 +341,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public Integer fieldQuantityLimit;
 
         /**
-         * <p>Specifies whether to sort randomly.</p>
+         * <p>Specifies whether to enable random sorting.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -350,7 +350,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public Boolean isRandSort;
 
         /**
-         * <p>The sort field.</p>
+         * <p>The sort fields.</p>
          * 
          * <strong>example:</strong>
          * <p>create_time</p>
@@ -399,19 +399,19 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
 
     public static class CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperators extends TeaModel {
         /**
-         * <p>The configuration for the feature operator.</p>
+         * <p>The configuration of the Feature operator.</p>
          */
         @NameInMap("FeatureConfig")
         public CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsFeatureConfig featureConfig;
 
         /**
-         * <p>The configuration for the filter operator.</p>
+         * <p>The configuration of the Filter operator.</p>
          */
         @NameInMap("FilterConfig")
         public CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsFilterConfig filterConfig;
 
         /**
-         * <p>The configuration for the Join operator.</p>
+         * <p>The configuration of the Join operator.</p>
          */
         @NameInMap("JoinConfig")
         public CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsJoinConfig joinConfig;
@@ -426,7 +426,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String operatorType;
 
         /**
-         * <p>The configuration for the Trigger operator.</p>
+         * <p>The configuration of the Trigger operator.</p>
          */
         @NameInMap("TriggerConfig")
         public CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperatorsTriggerConfig triggerConfig;
@@ -480,7 +480,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
 
     public static class CreateRecallManagementServiceVersionRequestConfigsRecallConfigs extends TeaModel {
         /**
-         * <p>The recall description.</p>
+         * <p>The description of the recall.</p>
          * 
          * <strong>example:</strong>
          * <p>this is etrec recall</p>
@@ -489,7 +489,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String description;
 
         /**
-         * <p><strong>This parameter is reserved for future use.</strong></p>
+         * <p><strong>The extended configuration for future feature expansion.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -498,7 +498,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String extendedConfig;
 
         /**
-         * <p>The conditions for an item, formatted as an array.</p>
+         * <p>The item conditions in array format.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;option&quot;:&quot;&lt;&quot;,&quot;field&quot;:&quot;category&quot;,&quot;type&quot;:&quot;STRING&quot;,&quot;value&quot;:&quot;10&quot;}]</p>
@@ -507,7 +507,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String itemConditionArray;
 
         /**
-         * <p>The item condition expression.</p>
+         * <p>The item conditional expression.</p>
          * 
          * <strong>example:</strong>
          * <p>age&gt;20</p>
@@ -525,7 +525,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String itemVectorField;
 
         /**
-         * <p>The item vector recall management table ID.</p>
+         * <p>The ID of the item vector recall table.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -534,7 +534,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String itemVectorRecallManagementTableId;
 
         /**
-         * <p>The recall name.</p>
+         * <p>The name of the recall.</p>
          * 
          * <strong>example:</strong>
          * <p>etrec</p>
@@ -543,13 +543,13 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>A list of operators.</p>
+         * <p>The list of operators.</p>
          */
         @NameInMap("Operators")
         public java.util.List<CreateRecallManagementServiceVersionRequestConfigsRecallConfigsOperators> operators;
 
         /**
-         * <p>The priority. A lower value indicates a higher priority.</p>
+         * <p>The priority. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -558,7 +558,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public Long priority;
 
         /**
-         * <p>The recall management table ID.</p>
+         * <p>The ID of the recall management table.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -594,7 +594,7 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
         public String userVectorField;
 
         /**
-         * <p>The user vector recall management table ID.</p>
+         * <p>The ID of the user vector recall table.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -723,13 +723,13 @@ public class CreateRecallManagementServiceVersionRequest extends TeaModel {
 
     public static class CreateRecallManagementServiceVersionRequestConfigs extends TeaModel {
         /**
-         * <p><strong>Specifies how to merge recall results.</strong></p>
+         * <p><strong>The merge configuration.</strong></p>
          */
         @NameInMap("MergeConfig")
         public CreateRecallManagementServiceVersionRequestConfigsMergeConfig mergeConfig;
 
         /**
-         * <p>A list of recall configurations.</p>
+         * <p>The list of recall configurations.</p>
          */
         @NameInMap("RecallConfigs")
         public java.util.List<CreateRecallManagementServiceVersionRequestConfigsRecallConfigs> recallConfigs;

@@ -15,7 +15,7 @@ public class CreateCrowdRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The instance ID. To get this ID, call the ListInstances operation.</p>
+     * <p>The ID of the instance. You can call the ListInstances operation to obtain the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class CreateCrowdRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The crowd label.</p>
+     * <p>The label of the crowd.</p>
      * 
      * <strong>example:</strong>
      * <p>os=android</p>
@@ -34,17 +34,21 @@ public class CreateCrowdRequest extends TeaModel {
     public String label;
 
     /**
-     * <p>The crowd name.</p>
+     * <p>The name of the crowd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>xx人群</p>
+     * <p>SampleCrowd</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The source of the user data. Valid values: ● ManualInput: Users are provided in the Users parameter. ● UploadFile: Users are provided from an uploaded file.</p>
+     * <p>The source of the crowd. Valid values:</p>
+     * <ul>
+     * <li>ManualInput: Manual input.</li>
+     * <li>UploadFile: File upload.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ManualInput</p>
@@ -53,7 +57,7 @@ public class CreateCrowdRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The users to include in the crowd. Separate multiple users with commas (,).</p>
+     * <p>The users included in the crowd. Separate multiple users with commas.</p>
      * 
      * <strong>example:</strong>
      * <p>user1,user2,user3</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLaboratoryRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can obtain this ID by calling the ListInstances operation.</p>
+     * <p>Instance ID of the instance. You can call the ListInstances operation to obtain instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

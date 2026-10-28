@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateAlgorithmCustomizationScriptResponseBody extends TeaModel {
     /**
-     * <p>The log ID.</p>
+     * <p>The ID of the generated log.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>

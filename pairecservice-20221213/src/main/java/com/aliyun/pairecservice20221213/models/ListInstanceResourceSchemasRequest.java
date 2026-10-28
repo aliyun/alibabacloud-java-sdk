@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListInstanceResourceSchemasRequest extends TeaModel {
     /**
-     * <p>Filters schemas by a name prefix.</p>
+     * <p>The prefix used to filter schema names.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>

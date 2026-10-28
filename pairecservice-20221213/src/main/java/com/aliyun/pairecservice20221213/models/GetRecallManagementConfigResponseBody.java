@@ -59,7 +59,7 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
 
     public static class GetRecallManagementConfigResponseBodyNetworkConfigs extends TeaModel {
         /**
-         * <p>The private endpoint.</p>
+         * <p>The private network endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://xxx">http://xxx</a></p>
@@ -68,7 +68,7 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
         public String privateLinkAddress;
 
         /**
-         * <p>The public endpoint.</p>
+         * <p>The public network connection endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;&quot;</p>
@@ -79,15 +79,15 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
         /**
          * <p>The network connectivity status. Valid values:</p>
          * <ul>
-         * <li><p>Connecting: connecting.</p>
+         * <li><p>Connecting: Connecting.</p>
          * </li>
-         * <li><p>Connected: connected.</p>
+         * <li><p>Connected: Connected.</p>
          * </li>
-         * <li><p>ConnectionFailed: connection failed.</p>
+         * <li><p>ConnectionFailed: Connection failed.</p>
          * </li>
-         * <li><p>Updating: updating.</p>
+         * <li><p>Updating: Updating.</p>
          * </li>
-         * <li><p>UpdateFailed: update failed.</p>
+         * <li><p>UpdateFailed: Update failed.</p>
          * </li>
          * </ul>
          * 
@@ -107,7 +107,7 @@ public class GetRecallManagementConfigResponseBody extends TeaModel {
         public String token;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The ID of the virtual private cloud (VPC).</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxx</p>

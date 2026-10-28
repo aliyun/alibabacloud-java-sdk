@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateTableMetaRequest extends TeaModel {
     /**
-     * <p>The description of the data table.</p>
+     * <p>The description of the table.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a test table</p>
@@ -14,7 +14,7 @@ public class UpdateTableMetaRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The fields of the data table.</p>
+     * <p>The list of table fields.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Fields")
@@ -31,13 +31,13 @@ public class UpdateTableMetaRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The module to which the data table belongs.</p>
+     * <p>The module of the data table.</p>
      * <ul>
-     * <li><p>ABTest: a data table for A/B testing.</p>
+     * <li><p>ABTest: experiment data table.</p>
      * </li>
-     * <li><p>ExperimentTool: a data table for experiment tools.</p>
+     * <li><p>ExperimentTool: experiment tool table.</p>
      * </li>
-     * <li><p>DataDiagnosis: a data table for data diagnosis.</p>
+     * <li><p>DataDiagnosis: data diagnosis.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -150,7 +150,7 @@ public class UpdateTableMetaRequest extends TeaModel {
         public String dataType;
 
         /**
-         * <p>Indicates whether the field is a dimension field.</p>
+         * <p>Specifies whether the field is a dimension field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class UpdateTableMetaRequest extends TeaModel {
         public Boolean isDimensionField;
 
         /**
-         * <p>Indicates whether the field is a partition field.</p>
+         * <p>Specifies whether the field is a partition field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -170,17 +170,17 @@ public class UpdateTableMetaRequest extends TeaModel {
         public String isPartitionField;
 
         /**
-         * <p>The business meaning of the field.</p>
+         * <p>The meaning of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>名称字段</p>
+         * <p>Name field</p>
          */
         @NameInMap("Meaning")
         public String meaning;
 
         /**
-         * <p>The field name.</p>
+         * <p>The name of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -190,7 +190,7 @@ public class UpdateTableMetaRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The data type of the field.</p>
+         * <p>The type of the field.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

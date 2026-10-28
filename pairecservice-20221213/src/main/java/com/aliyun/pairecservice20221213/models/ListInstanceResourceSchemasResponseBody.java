@@ -20,7 +20,7 @@ public class ListInstanceResourceSchemasResponseBody extends TeaModel {
     public java.util.List<ListInstanceResourceSchemasResponseBodySchemas> schemas;
 
     /**
-     * <p>The total count of schemas.</p>
+     * <p>The total number of schemas.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

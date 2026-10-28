@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListFeatureConsistencyCheckJobScoreReportsShrinkRequest extends TeaModel {
     /**
-     * <p>A list of request IDs to exclude from the feature comparison.</p>
+     * <p>The list of request IDs to exclude during feature comparison.</p>
      */
     @NameInMap("ExcludeRequestIds")
     public String excludeRequestIdsShrink;
 
     /**
-     * <p>The ID of the instance. To obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+     * <p>The ID of the instance. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-********</p>

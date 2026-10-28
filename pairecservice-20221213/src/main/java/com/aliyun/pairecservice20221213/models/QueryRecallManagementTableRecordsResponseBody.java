@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryRecallManagementTableRecordsResponseBody extends TeaModel {
     /**
-     * <p>A list of the retrieved records.</p>
+     * <p>The data list.</p>
      */
     @NameInMap("Records")
     public java.util.List<java.util.Map<String, ?>> records;

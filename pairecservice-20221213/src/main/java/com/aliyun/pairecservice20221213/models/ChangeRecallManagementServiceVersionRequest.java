@@ -14,7 +14,7 @@ public class ChangeRecallManagementServiceVersionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The recall management service version ID.</p>
+     * <p>The version ID of the recall management service.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

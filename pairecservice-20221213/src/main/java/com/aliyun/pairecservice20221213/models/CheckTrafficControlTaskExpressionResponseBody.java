@@ -14,7 +14,7 @@ public class CheckTrafficControlTaskExpressionResponseBody extends TeaModel {
     public Boolean isValie;
 
     /**
-     * <p>If <code>IsValid</code> is <code>false</code>, this field provides the reason for the failure.</p>
+     * <p>This field is meaningful only when <code>IsValid</code> is <code>false</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>

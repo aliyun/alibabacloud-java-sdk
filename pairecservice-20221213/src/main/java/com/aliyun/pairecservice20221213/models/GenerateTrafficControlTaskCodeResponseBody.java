@@ -14,7 +14,7 @@ public class GenerateTrafficControlTaskCodeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Indicates whether the engine configuration for the pre-release environment is incomplete.</p>
+     * <p>Indicates whether configuration information is missing for the engine configuration in the pre-release environment.</p>
      * 
      * <strong>example:</strong>
      * <p>False</p>

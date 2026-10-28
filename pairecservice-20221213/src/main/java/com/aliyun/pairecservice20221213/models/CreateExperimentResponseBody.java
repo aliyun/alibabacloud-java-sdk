@@ -14,7 +14,7 @@ public class CreateExperimentResponseBody extends TeaModel {
     public String experimentId;
 
     /**
-     * <p>The unique identifier for the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>3AAA45F6-0798-5461-9360-81D133823CE7</p>

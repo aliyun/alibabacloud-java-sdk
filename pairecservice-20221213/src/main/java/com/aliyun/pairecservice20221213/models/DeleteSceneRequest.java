@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSceneRequest extends TeaModel {
     /**
-     * <p>Instance ID, which can be obtained by calling the ListInstances API.</p>
+     * <p>Instance ID of the instance. You can call the ListInstances operation to obtain instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-abcdefg1234</p>

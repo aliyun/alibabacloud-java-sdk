@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetABMetricGroupResponseBody extends TeaModel {
     /**
-     * <p>A comma-separated list of A/B testing metric IDs.</p>
+     * <p>The IDs of the ABTest metrics, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>1,2</p>
@@ -14,7 +14,7 @@ public class GetABMetricGroupResponseBody extends TeaModel {
     public String ABMetricIds;
 
     /**
-     * <p>A comma-separated list of A/B testing metric names.</p>
+     * <p>The names of the ABTest metrics, separated by commas.</p>
      * 
      * <strong>example:</strong>
      * <p>pv,uv</p>
@@ -23,16 +23,16 @@ public class GetABMetricGroupResponseBody extends TeaModel {
     public String ABMetricNames;
 
     /**
-     * <p>The metric group description.</p>
+     * <p>The description of the metric group.</p>
      * 
      * <strong>example:</strong>
-     * <p>访问量相关指标</p>
+     * <p>Traffic-related metrics</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The metric group name.</p>
+     * <p>The name of the metric group.</p>
      * 
      * <strong>example:</strong>
      * <p>visits</p>
@@ -50,7 +50,7 @@ public class GetABMetricGroupResponseBody extends TeaModel {
     public String owner;
 
     /**
-     * <p>Whether the metric group is a real-time metric group.</p>
+     * <p>Indicates whether the metric group is real-time.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -59,7 +59,7 @@ public class GetABMetricGroupResponseBody extends TeaModel {
     public Boolean realtime;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>01D22D08-BA20-5F35-8302-99115F288220</p>
@@ -68,7 +68,7 @@ public class GetABMetricGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The scene ID. You can get this ID by calling the <a href="https://icms.alibaba-inc.com/content/learn/pai?l=1%5C&m=16768%5C&n=4298955">ListScenes</a> operation.</p>
+     * <p>The ID of the scene. You can obtain the ID by calling the <a href="https://icms.alibaba-inc.com/content/learn/pai?l=1&m=16768&n=4298955">ListScenes</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

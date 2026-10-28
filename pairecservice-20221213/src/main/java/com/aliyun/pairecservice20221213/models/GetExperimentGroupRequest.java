@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetExperimentGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the instance. You can call the <code>ListInstances</code> operation to obtain this ID.</p>
+     * <p>Instance ID of the instance. You can obtain instance ID by calling the ListInstances operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

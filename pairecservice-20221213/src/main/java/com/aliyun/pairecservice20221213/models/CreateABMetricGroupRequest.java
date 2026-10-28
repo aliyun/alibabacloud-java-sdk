@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateABMetricGroupRequest extends TeaModel {
     /**
-     * <p>The A/B metric IDs. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the AB test metrics, separated by commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -19,13 +19,13 @@ public class CreateABMetricGroupRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>访问量相关指标</p>
+     * <p>Traffic-related metrics</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain this ID.</p>
+     * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class CreateABMetricGroupRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies whether the metric group is a real-time metric group.</p>
+     * <p>Specifies whether the metric group is real-time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,7 +55,7 @@ public class CreateABMetricGroupRequest extends TeaModel {
     public Boolean realtime;
 
     /**
-     * <p>The ID of the scene. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain this ID.</p>
+     * <p>The ID of the scene. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

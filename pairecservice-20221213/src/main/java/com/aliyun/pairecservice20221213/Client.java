@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies an engine configuration.</p>
+     * <p>Publishes an engine configuration.</p>
      * 
      * @param request ApplyEngineConfigRequest
      * @param headers map
@@ -62,7 +62,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Applies an engine configuration.</p>
+     * <p>Publishes an engine configuration.</p>
      * 
      * @param request ApplyEngineConfigRequest
      * @return ApplyEngineConfigResponse
@@ -162,17 +162,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Use this API to change the version of a recall management service. Ensure that the provided <code>RecallManagementServiceId</code>, <code>InstanceId</code>, and target <code>RecallManagementServiceVersionId</code> are valid, and that you have the required permissions for these resources.</p>
+     * <h2>Request description</h2>
+     * <p>You can call this API to change the version of a specific recall management service. Ensure that the provided <code>RecallManagementServiceId</code>, <code>InstanceId</code>, and target <code>RecallManagementServiceVersionId</code> are valid and that you have the required permissions to manage these resources.</p>
      * <ul>
-     * <li><strong>RecallManagementServiceId</strong>: The unique identifier of the recall management service.</li>
-     * <li><strong>InstanceId</strong>: The instance ID associated with the recall management service.</li>
-     * <li><strong>RecallManagementServiceVersionId</strong>: The target version ID to switch to.
-     * Note: Before changing the version, confirm that the new version is fully tested and ready for production.</li>
+     * <li><strong>RecallManagementServiceId</strong>: The unique identifier of the recall management service whose version you want to change.</li>
+     * <li><strong>InstanceId</strong>: Instance ID of the instance associated with the recall management service.</li>
+     * <li><strong>RecallManagementServiceVersionId</strong>: Instance ID of the target version to switch to.
+     * Note: Before you change the version, ensure that the new version has been fully tested and is ready to go live.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This API changes the version of a recall management service.</p>
+     * <p>Updates the version of a specified recall management service.</p>
      * 
      * @param request ChangeRecallManagementServiceVersionRequest
      * @param headers map
@@ -210,17 +210,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Use this API to change the version of a recall management service. Ensure that the provided <code>RecallManagementServiceId</code>, <code>InstanceId</code>, and target <code>RecallManagementServiceVersionId</code> are valid, and that you have the required permissions for these resources.</p>
+     * <h2>Request description</h2>
+     * <p>You can call this API to change the version of a specific recall management service. Ensure that the provided <code>RecallManagementServiceId</code>, <code>InstanceId</code>, and target <code>RecallManagementServiceVersionId</code> are valid and that you have the required permissions to manage these resources.</p>
      * <ul>
-     * <li><strong>RecallManagementServiceId</strong>: The unique identifier of the recall management service.</li>
-     * <li><strong>InstanceId</strong>: The instance ID associated with the recall management service.</li>
-     * <li><strong>RecallManagementServiceVersionId</strong>: The target version ID to switch to.
-     * Note: Before changing the version, confirm that the new version is fully tested and ready for production.</li>
+     * <li><strong>RecallManagementServiceId</strong>: The unique identifier of the recall management service whose version you want to change.</li>
+     * <li><strong>InstanceId</strong>: Instance ID of the instance associated with the recall management service.</li>
+     * <li><strong>RecallManagementServiceVersionId</strong>: Instance ID of the target version to switch to.
+     * Note: Before you change the version, ensure that the new version has been fully tested and is ready to go live.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This API changes the version of a recall management service.</p>
+     * <p>Updates the version of a specified recall management service.</p>
      * 
      * @param request ChangeRecallManagementServiceVersionRequest
      * @return ChangeRecallManagementServiceVersionResponse
@@ -365,11 +365,90 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation validates a traffic control task expression for a specific instance and table. Provide the correct <code>InstanceId</code>, <code>TableMetaId</code>, and <code>Expression</code> parameters.</p>
+     * <h2>Request description</h2>
+     * <p>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</p>
      * 
      * <b>summary</b> : 
-     * <p>Validates a traffic control task expression.</p>
+     * <p>Checks whether a specified recall management service is working properly.</p>
+     * 
+     * @param request CheckRecallManagementServiceRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CheckRecallManagementServiceResponse
+     */
+    public CheckRecallManagementServiceResponse checkRecallManagementServiceWithOptions(String RecallManagementServiceId, CheckRecallManagementServiceRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.contextParams)) {
+            body.put("ContextParams", request.contextParams);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.exposureList)) {
+            body.put("ExposureList", request.exposureList);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recallManagementServiceVersionId)) {
+            body.put("RecallManagementServiceVersionId", request.recallManagementServiceVersionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.recalls)) {
+            body.put("Recalls", request.recalls);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.retainFields)) {
+            body.put("RetainFields", request.retainFields);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uid)) {
+            body.put("Uid", request.uid);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CheckRecallManagementService"),
+            new TeaPair("version", "2022-12-13"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/recallmanagementservices/" + com.aliyun.openapiutil.Client.getEncodeParam(RecallManagementServiceId) + "/action/check"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CheckRecallManagementServiceResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This operation checks the status or performance of a specific recall management service by using the recall management service ID and related parameters. Ensure that the InstanceId field is correct to target the right instance. To test a specific version of the service, provide the RecallManagementServiceVersionId. You can also customize the request by using parameters such as Recalls, ContextParams, ExposureList, and RetainFields to accurately simulate real-world scenarios.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Checks whether a specified recall management service is working properly.</p>
+     * 
+     * @param request CheckRecallManagementServiceRequest
+     * @return CheckRecallManagementServiceResponse
+     */
+    public CheckRecallManagementServiceResponse checkRecallManagementService(String RecallManagementServiceId, CheckRecallManagementServiceRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.checkRecallManagementServiceWithOptions(RecallManagementServiceId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <h2>Request description</h2>
+     * <p>This API operation checks the validity of a traffic control task expression for a specified instance and data table. Make sure that the <code>InstanceId</code>, <code>TableMetaId</code>, and <code>Expression</code> parameters are accurate to correctly perform the validation.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Validates whether a specified traffic control task expression is valid.</p>
      * 
      * @param request CheckTrafficControlTaskExpressionRequest
      * @param headers map
@@ -411,11 +490,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>This operation validates a traffic control task expression for a specific instance and table. Provide the correct <code>InstanceId</code>, <code>TableMetaId</code>, and <code>Expression</code> parameters.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation checks the validity of a traffic control task expression for a specified instance and data table. Make sure that the <code>InstanceId</code>, <code>TableMetaId</code>, and <code>Expression</code> parameters are accurate to correctly perform the validation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Validates a traffic control task expression.</p>
+     * <p>Validates whether a specified traffic control task expression is valid.</p>
      * 
      * @param request CheckTrafficControlTaskExpressionRequest
      * @return CheckTrafficControlTaskExpressionResponse
@@ -593,7 +672,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clones a feature consistency check job configuration.</p>
+     * <p>Clones the feature consistency check job configuration.</p>
      * 
      * @param request CloneFeatureConsistencyCheckJobConfigRequest
      * @param headers map
@@ -627,7 +706,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clones a feature consistency check job configuration.</p>
+     * <p>Clones the feature consistency check job configuration.</p>
      * 
      * @param request CloneFeatureConsistencyCheckJobConfigRequest
      * @return CloneFeatureConsistencyCheckJobConfigResponse
@@ -640,7 +719,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clones a specified laboratory to a designated environment. You can specify whether to clone the experiment groups within the laboratory.</p>
+     * <p>Clones a specified laboratory to a specified environment and specifies whether to clone the experiment groups under the laboratory.</p>
      * 
      * @param request CloneLaboratoryRequest
      * @param headers map
@@ -682,7 +761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Clones a specified laboratory to a designated environment. You can specify whether to clone the experiment groups within the laboratory.</p>
+     * <p>Clones a specified laboratory to a specified environment and specifies whether to clone the experiment groups under the laboratory.</p>
      * 
      * @param request CloneLaboratoryRequest
      * @return CloneLaboratoryResponse
@@ -696,11 +775,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API clones an existing traffic control task to another specified instance. Ensure that the <code>InstanceId</code> you provide is valid and that you have the required permissions for the target instance.
+     * <p>You can use this API to clone an existing traffic shaping task to another specified instance. Make sure that the <code>InstanceId</code> you provide is valid and that you have the required permissions to perform operations on the instance.
      * Note: The cloning process does not affect the status or configuration of the original task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Clones a specified traffic control task to a new instance.</p>
+     * <p>Clones a specified traffic shaping task to a new instance.</p>
      * 
      * @param request CloneTrafficControlTaskRequest
      * @param headers map
@@ -735,11 +814,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This API clones an existing traffic control task to another specified instance. Ensure that the <code>InstanceId</code> you provide is valid and that you have the required permissions for the target instance.
+     * <p>You can use this API to clone an existing traffic shaping task to another specified instance. Make sure that the <code>InstanceId</code> you provide is valid and that you have the required permissions to perform operations on the instance.
      * Note: The cloning process does not affect the status or configuration of the original task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Clones a specified traffic control task to a new instance.</p>
+     * <p>Clones a specified traffic shaping task to a new instance.</p>
      * 
      * @param request CloneTrafficControlTaskRequest
      * @return CloneTrafficControlTaskResponse
@@ -799,7 +878,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an AB metric.</p>
+     * <p>Creates an AB test metric.</p>
      * 
      * @param request CreateABMetricRequest
      * @param headers map
@@ -901,7 +980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an AB metric.</p>
+     * <p>Creates an AB test metric.</p>
      * 
      * @param request CreateABMetricRequest
      * @return CreateABMetricResponse
@@ -914,7 +993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an A/B metric group.</p>
+     * <p>Creates an AB test metric group.</p>
      * 
      * @param request CreateABMetricGroupRequest
      * @param headers map
@@ -968,7 +1047,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an A/B metric group.</p>
+     * <p>Creates an AB test metric group.</p>
      * 
      * @param request CreateABMetricGroupRequest
      * @return CreateABMetricGroupResponse
@@ -1040,7 +1119,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a crowd that represents a group of users.</p>
+     * <p>Creates a crowd to represent a user group.</p>
      * 
      * @param request CreateCrowdRequest
      * @param headers map
@@ -1094,7 +1173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a crowd that represents a group of users.</p>
+     * <p>Creates a crowd to represent a user group.</p>
      * 
      * @param request CreateCrowdRequest
      * @return CreateCrowdResponse
@@ -1433,7 +1512,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an experiment group in a specified layer. You can use experiment groups to categorize experiments and observe their overall performance.</p>
+     * <p>Creates an experiment group under a specified layer. You can categorize experiment groups by experiment type to observe the overall performance of experiments by group.</p>
      * 
      * @param request CreateExperimentGroupRequest
      * @param headers map
@@ -1523,7 +1602,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an experiment group in a specified layer. You can use experiment groups to categorize experiments and observe their overall performance.</p>
+     * <p>Creates an experiment group under a specified layer. You can categorize experiment groups by experiment type to observe the overall performance of experiments by group.</p>
      * 
      * @param request CreateExperimentGroupRequest
      * @return CreateExperimentGroupResponse
@@ -1826,7 +1905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a configuration resource for a specified instance.</p>
+     * <p>Creates a configuration resource for the specified instance.</p>
      * 
      * @param request CreateInstanceResourceRequest
      * @param headers map
@@ -1872,7 +1951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a configuration resource for a specified instance.</p>
+     * <p>Creates a configuration resource for the specified instance.</p>
      * 
      * @param request CreateInstanceResourceRequest
      * @return CreateInstanceResourceResponse
@@ -2236,14 +2315,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use this API to create a new version of a recall management service.</li>
-     * <li>To create a new version from an existing one, specify the source recall management service version ID.</li>
-     * <li>You can configure detailed recall rules, such as the recall name, description, priority, and recall type.</li>
-     * <li>Configure operators such as filter, trigger, feature extraction, and join.</li>
-     * <li>The merge configuration specifies how to merge multiple recall results and supports two merge methods: weight-based and alternating.</li>
-     * <li>All configuration items are optional.</li>
+     * <li>This operation allows you to create a new version for a specific recall management service.</li>
+     * <li>You can create a new version based on an existing version by specifying the source recall management service version ID.</li>
+     * <li>You can configure detailed recall rules, including but not limited to the recall name, description, priority, and recall type.</li>
+     * <li>The operation provides flexible operator configuration options, such as filtering, triggering, feature extraction, and join operations, to meet various business requirements.</li>
+     * <li>The merge configuration allows you to specify how to merge multiple recall results. Two merge methods are supported: weight and alternate.</li>
+     * <li>All configuration items are optional. Specify them as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2289,14 +2368,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use this API to create a new version of a recall management service.</li>
-     * <li>To create a new version from an existing one, specify the source recall management service version ID.</li>
-     * <li>You can configure detailed recall rules, such as the recall name, description, priority, and recall type.</li>
-     * <li>Configure operators such as filter, trigger, feature extraction, and join.</li>
-     * <li>The merge configuration specifies how to merge multiple recall results and supports two merge methods: weight-based and alternating.</li>
-     * <li>All configuration items are optional.</li>
+     * <li>This operation allows you to create a new version for a specific recall management service.</li>
+     * <li>You can create a new version based on an existing version by specifying the source recall management service version ID.</li>
+     * <li>You can configure detailed recall rules, including but not limited to the recall name, description, priority, and recall type.</li>
+     * <li>The operation provides flexible operator configuration options, such as filtering, triggering, feature extraction, and join operations, to meet various business requirements.</li>
+     * <li>The merge configuration allows you to specify how to merge multiple recall results. Two merge methods are supported: weight and alternate.</li>
+     * <li>All configuration items are optional. Specify them as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2764,7 +2843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a scene for metric and experiment analysis.</p>
+     * <p>Creates a scenario for metric and experiment analysis.</p>
      * 
      * @param request CreateSceneRequest
      * @param headers map
@@ -2810,7 +2889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a scene for metric and experiment analysis.</p>
+     * <p>Creates a scenario for metric and experiment analysis.</p>
      * 
      * @param request CreateSceneRequest
      * @return CreateSceneResponse
@@ -3743,7 +3822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the specified layer.</p>
+     * <p>Deletes a specified layer.</p>
      * 
      * @param request DeleteLayerRequest
      * @param headers map
@@ -3777,7 +3856,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the specified layer.</p>
+     * <p>Deletes a specified layer.</p>
      * 
      * @param request DeleteLayerRequest
      * @return DeleteLayerResponse
@@ -3838,10 +3917,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation deletes a recall management service based on the RecallManagementServiceId and InstanceId. Before you call this API, ensure you have the correct information for the service to be deleted.</p>
+     * <p>This API operation deletes a specific recall management service based on the provided recall management service ID and instance ID. Make sure that you have obtained the information about the service to be deleted before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a recall management service.</p>
+     * <p>Deletes a specified recall management service.</p>
      * 
      * @param request DeleteRecallManagementServiceRequest
      * @param headers map
@@ -3876,10 +3955,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <h2>Request description</h2>
-     * <p>This operation deletes a recall management service based on the RecallManagementServiceId and InstanceId. Before you call this API, ensure you have the correct information for the service to be deleted.</p>
+     * <p>This API operation deletes a specific recall management service based on the provided recall management service ID and instance ID. Make sure that you have obtained the information about the service to be deleted before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a recall management service.</p>
+     * <p>Deletes a specified recall management service.</p>
      * 
      * @param request DeleteRecallManagementServiceRequest
      * @return DeleteRecallManagementServiceResponse
@@ -3892,11 +3971,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This operation deletes a specific version of a recall management service. You must provide the recall management service ID, the recall management service version ID, and the instance ID. This operation is irreversible, so back up all critical data before proceeding.</p>
+     * <h2>Request description</h2>
+     * <p>This operation allows you to delete a specific version of a recall management service by providing the recall management service ID, recall management service version ID, and instance ID. Back up important data before calling this operation because the deletion is irreversible.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified version of a recall management service.</p>
+     * <p>Deletes a specified recall management service version.</p>
      * 
      * @param request DeleteRecallManagementServiceVersionRequest
      * @param headers map
@@ -3930,11 +4009,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This operation deletes a specific version of a recall management service. You must provide the recall management service ID, the recall management service version ID, and the instance ID. This operation is irreversible, so back up all critical data before proceeding.</p>
+     * <h2>Request description</h2>
+     * <p>This operation allows you to delete a specific version of a recall management service by providing the recall management service ID, recall management service version ID, and instance ID. Back up important data before calling this operation because the deletion is irreversible.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a specified version of a recall management service.</p>
+     * <p>Deletes a specified recall management service version.</p>
      * 
      * @param request DeleteRecallManagementServiceVersionRequest
      * @return DeleteRecallManagementServiceVersionResponse
@@ -4010,15 +4089,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>The required <strong>path parameter</strong> <code>RecallManagementTableId</code> specifies the ID of the recall management table to delete.</li>
-     * <li>The required <strong>query parameter</strong> <code>InstanceId</code> specifies the ID of the instance.</li>
-     * <li>A successful operation returns a <code>RequestId</code> in the response body for request tracking.</li>
+     * <li>The <strong>path parameter</strong> <code>RecallManagementTableId</code> is required and specifies instance ID of the data table to delete.</li>
+     * <li>The <strong>query parameter</strong> <code>InstanceId</code> is also required and specifies instance ID of the instance on which the operation is performed.</li>
+     * <li>After a successful execution, a response body containing the request ID (<code>RequestId</code>) is returned, which can be used to track the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This API deletes a recall management table using the specified recall management table ID and instance ID.</p>
+     * <p>Deletes a recall management data table based on the specified data table ID and instance ID.</p>
      * 
      * @param request DeleteRecallManagementTableRequest
      * @param headers map
@@ -4052,15 +4131,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>The required <strong>path parameter</strong> <code>RecallManagementTableId</code> specifies the ID of the recall management table to delete.</li>
-     * <li>The required <strong>query parameter</strong> <code>InstanceId</code> specifies the ID of the instance.</li>
-     * <li>A successful operation returns a <code>RequestId</code> in the response body for request tracking.</li>
+     * <li>The <strong>path parameter</strong> <code>RecallManagementTableId</code> is required and specifies instance ID of the data table to delete.</li>
+     * <li>The <strong>query parameter</strong> <code>InstanceId</code> is also required and specifies instance ID of the instance on which the operation is performed.</li>
+     * <li>After a successful execution, a response body containing the request ID (<code>RequestId</code>) is returned, which can be used to track the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>This API deletes a recall management table using the specified recall management table ID and instance ID.</p>
+     * <p>Deletes a recall management data table based on the specified data table ID and instance ID.</p>
      * 
      * @param request DeleteRecallManagementTableRequest
      * @return DeleteRecallManagementTableResponse
@@ -4214,7 +4293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the specified scenario.</p>
+     * <p>Deletes a specified scenario.</p>
      * 
      * @param request DeleteSceneRequest
      * @param headers map
@@ -4248,7 +4327,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Delete the specified scenario.</p>
+     * <p>Deletes a specified scenario.</p>
      * 
      * @param request DeleteSceneRequest
      * @return DeleteSceneResponse
@@ -4261,7 +4340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified subcrowd.</p>
+     * <p>Deletes a specified sub-crowd.</p>
      * 
      * @param request DeleteSubCrowdRequest
      * @param headers map
@@ -4295,7 +4374,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes the specified subcrowd.</p>
+     * <p>Deletes a specified sub-crowd.</p>
      * 
      * @param request DeleteSubCrowdRequest
      * @return DeleteSubCrowdResponse
@@ -4355,15 +4434,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>TrafficControlTargetId</strong> is a required path parameter that specifies the traffic control target to delete.</li>
-     * <li><strong>InstanceId</strong> is a required query parameter that specifies the instance ID for this operation.</li>
-     * <li>A successful response includes a <code>RequestId</code> field to track the request.</li>
+     * <li><strong>TrafficControlTargetId</strong> is a required path parameter used as the identity of the specific traffic control target to delete.</li>
+     * <li><strong>InstanceId</strong> is a required query parameter that specifies the instance ID to execute the operation.</li>
+     * <li>A successful response returns a <code>RequestId</code> field for tracking the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the specified traffic control target.</p>
+     * <p>Deletes a specified traffic control target by its ID.</p>
      * 
      * @param request DeleteTrafficControlTargetRequest
      * @param headers map
@@ -4397,15 +4476,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li><strong>TrafficControlTargetId</strong> is a required path parameter that specifies the traffic control target to delete.</li>
-     * <li><strong>InstanceId</strong> is a required query parameter that specifies the instance ID for this operation.</li>
-     * <li>A successful response includes a <code>RequestId</code> field to track the request.</li>
+     * <li><strong>TrafficControlTargetId</strong> is a required path parameter used as the identity of the specific traffic control target to delete.</li>
+     * <li><strong>InstanceId</strong> is a required query parameter that specifies the instance ID to execute the operation.</li>
+     * <li>A successful response returns a <code>RequestId</code> field for tracking the request.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Deletes the specified traffic control target.</p>
+     * <p>Deletes a specified traffic control target by its ID.</p>
      * 
      * @param request DeleteTrafficControlTargetRequest
      * @return DeleteTrafficControlTargetResponse
@@ -4418,11 +4497,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API uses <code>TrafficControlTaskId</code> and <code>InstanceId</code> to delete a traffic control task.</li>
-     * <li>Ensure the <code>TrafficControlTaskId</code> and <code>InstanceId</code> are correct, or the operation may fail.</li>
-     * <li>This operation is irreversible. Proceed with caution.</li>
+     * <li>This API locates and deletes a specific traffic control task by providing the <code>TrafficControlTaskId</code> and <code>InstanceId</code>.</li>
+     * <li>Ensure that the provided <code>TrafficControlTaskId</code> and <code>InstanceId</code> are correct. Otherwise, the deletion may fail.</li>
+     * <li>Once the deletion is complete, the related data cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4460,11 +4539,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API uses <code>TrafficControlTaskId</code> and <code>InstanceId</code> to delete a traffic control task.</li>
-     * <li>Ensure the <code>TrafficControlTaskId</code> and <code>InstanceId</code> are correct, or the operation may fail.</li>
-     * <li>This operation is irreversible. Proceed with caution.</li>
+     * <li>This API locates and deletes a specific traffic control task by providing the <code>TrafficControlTaskId</code> and <code>InstanceId</code>.</li>
+     * <li>Ensure that the provided <code>TrafficControlTaskId</code> and <code>InstanceId</code> are correct. Otherwise, the deletion may fail.</li>
+     * <li>Once the deletion is complete, the related data cannot be recovered. Proceed with caution.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -4698,15 +4777,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API generates Flink code for a specified traffic control task ID, instance ID, and environment type.</li>
-     * <li>The <code>Environment</code> parameter accepts three values: <code>Daily</code> for the daily environment, <code>Pre</code> for the pre-release environment, and <code>Prod</code> for the production environment.</li>
-     * <li>Check the <code>PreNeedConfig</code> field in the response. A <code>true</code> value indicates that necessary configuration information might be missing in the pre-release environment. If this occurs, add or adjust the required settings.</li>
+     * <li>This API operation generates the corresponding Flink code based on the specified traffic control task ID, instance ID, and environment type.</li>
+     * <li>The Environment parameter supports three values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment). Make sure to select the correct value to meet your requirements.</li>
+     * <li>Check the PreNeedConfig field in the response. If the value is true, it indicates that required configuration information may be missing in the pre-release environment. Adjust or supplement the relevant settings as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Generates Flink code for a specified traffic control task ID and instance information.</p>
+     * <p>Generates the corresponding Flink code based on the specified traffic control task ID and instance information.</p>
      * 
      * @param request GenerateTrafficControlTaskCodeRequest
      * @param headers map
@@ -4744,15 +4823,15 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This API generates Flink code for a specified traffic control task ID, instance ID, and environment type.</li>
-     * <li>The <code>Environment</code> parameter accepts three values: <code>Daily</code> for the daily environment, <code>Pre</code> for the pre-release environment, and <code>Prod</code> for the production environment.</li>
-     * <li>Check the <code>PreNeedConfig</code> field in the response. A <code>true</code> value indicates that necessary configuration information might be missing in the pre-release environment. If this occurs, add or adjust the required settings.</li>
+     * <li>This API operation generates the corresponding Flink code based on the specified traffic control task ID, instance ID, and environment type.</li>
+     * <li>The Environment parameter supports three values: Daily (daily environment), Pre (pre-release environment), and Prod (production environment). Make sure to select the correct value to meet your requirements.</li>
+     * <li>Check the PreNeedConfig field in the response. If the value is true, it indicates that required configuration information may be missing in the pre-release environment. Adjust or supplement the relevant settings as needed.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Generates Flink code for a specified traffic control task ID and instance information.</p>
+     * <p>Generates the corresponding Flink code based on the specified traffic control task ID and instance information.</p>
      * 
      * @param request GenerateTrafficControlTaskCodeRequest
      * @return GenerateTrafficControlTaskCodeResponse
@@ -4859,7 +4938,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an A/B testing metric group.</p>
+     * <p>Retrieves the details of an ABTest metric group.</p>
      * 
      * @param request GetABMetricGroupRequest
      * @param headers map
@@ -4893,7 +4972,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of an A/B testing metric group.</p>
+     * <p>Retrieves the details of an ABTest metric group.</p>
      * 
      * @param request GetABMetricGroupRequest
      * @return GetABMetricGroupResponse
@@ -5112,7 +5191,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves details for a specified experiment group.</p>
+     * <p>Retrieves the details of a specified experiment group.</p>
      * 
      * @param request GetExperimentGroupRequest
      * @param headers map
@@ -5146,7 +5225,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves details for a specified experiment group.</p>
+     * <p>Retrieves the details of a specified experiment group.</p>
      * 
      * @param request GetExperimentGroupRequest
      * @return GetExperimentGroupResponse
@@ -5894,7 +5973,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified scene.</p>
+     * <p>Retrieves the details of a specified scenario.</p>
      * 
      * @param request GetSceneRequest
      * @param headers map
@@ -5928,7 +6007,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the details of a specified scene.</p>
+     * <p>Retrieves the details of a specified scenario.</p>
      * 
      * @param request GetSceneRequest
      * @return GetSceneResponse
@@ -7170,7 +7249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the score difference reports for a feature consistency check job.</p>
+     * <p>Retrieves the score report for a feature consistency check task.</p>
      * 
      * @param tmpReq ListFeatureConsistencyCheckJobScoreReportsRequest
      * @param headers map
@@ -7214,7 +7293,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the score difference reports for a feature consistency check job.</p>
+     * <p>Retrieves the score report for a feature consistency check task.</p>
      * 
      * @param request ListFeatureConsistencyCheckJobScoreReportsRequest
      * @return ListFeatureConsistencyCheckJobScoreReportsResponse
@@ -7294,11 +7373,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>To retrieve a list of all schemas for a specified resource, provide the instance ID (InstanceId) and resource ID (ResourceId). Use the optional SchemaName parameter to filter the schemas by a name prefix.</p>
+     * <h2>Request description</h2>
+     * <p>Provide the instance ID (InstanceId) and resource ID (ResourceId) to retrieve a list of all schemas for the instance resource. You can use the optional SchemaName parameter to filter results by name prefix and locate the required schemas more precisely.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists all schemas for a specified resource in an instance.</p>
+     * <p>Queries all schemas for a specified instance and resource.</p>
      * 
      * @param request ListInstanceResourceSchemasRequest
      * @param headers map
@@ -7332,11 +7411,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Description</h2>
-     * <p>To retrieve a list of all schemas for a specified resource, provide the instance ID (InstanceId) and resource ID (ResourceId). Use the optional SchemaName parameter to filter the schemas by a name prefix.</p>
+     * <h2>Request description</h2>
+     * <p>Provide the instance ID (InstanceId) and resource ID (ResourceId) to retrieve a list of all schemas for the instance resource. You can use the optional SchemaName parameter to filter results by name prefix and locate the required schemas more precisely.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists all schemas for a specified resource in an instance.</p>
+     * <p>Queries all schemas for a specified instance and resource.</p>
      * 
      * @param request ListInstanceResourceSchemasRequest
      * @return ListInstanceResourceSchemasResponse
@@ -7404,7 +7483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the resources configured for an instance.</p>
+     * <p>Retrieves the list of resources configured for an instance.</p>
      * 
      * @param request ListInstanceResourcesRequest
      * @param headers map
@@ -7446,7 +7525,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Lists the resources configured for an instance.</p>
+     * <p>Retrieves the list of resources configured for an instance.</p>
      * 
      * @param request ListInstanceResourcesRequest
      * @return ListInstanceResourcesResponse
@@ -7636,7 +7715,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of parameters.</p>
+     * <p>Retrieves the list of parameters.</p>
      * 
      * @param request ListParamsRequest
      * @param headers map
@@ -7694,7 +7773,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of parameters.</p>
+     * <p>Retrieves the list of parameters.</p>
      * 
      * @param request ListParamsRequest
      * @return ListParamsResponse
@@ -8302,7 +8381,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of scenes.</p>
+     * <p>Retrieves the list of scenes.</p>
      * 
      * @param request ListScenesRequest
      * @param headers map
@@ -8340,7 +8419,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of scenes.</p>
+     * <p>Retrieves the list of scenes.</p>
      * 
      * @param request ListScenesRequest
      * @return ListScenesResponse
@@ -8677,7 +8756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Takes an experiment offline.</p>
+     * <p>Takes the specified experiment offline.</p>
      * 
      * @param request OfflineExperimentRequest
      * @param headers map
@@ -8711,7 +8790,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Takes an experiment offline.</p>
+     * <p>Takes the specified experiment offline.</p>
      * 
      * @param request OfflineExperimentRequest
      * @return OfflineExperimentResponse
@@ -8724,7 +8803,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Takes a specified experiment group offline.</p>
+     * <p>Takes the specified experiment group offline.</p>
      * 
      * @param request OfflineExperimentGroupRequest
      * @param headers map
@@ -8758,7 +8837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Takes a specified experiment group offline.</p>
+     * <p>Takes the specified experiment group offline.</p>
      * 
      * @param request OfflineExperimentGroupRequest
      * @return OfflineExperimentGroupResponse
@@ -8881,7 +8960,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Brings a specified experiment online.</p>
+     * <p>Publishes the specified experiment online.</p>
      * 
      * @param request OnlineExperimentRequest
      * @param headers map
@@ -8915,7 +8994,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Brings a specified experiment online.</p>
+     * <p>Publishes the specified experiment online.</p>
      * 
      * @param request OnlineExperimentRequest
      * @return OnlineExperimentResponse
@@ -9335,11 +9414,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API retrieves records from a specific recall management table using the provided primary keys. You must provide a valid <code>InstanceId</code> and <code>RecallManagementTableId</code>, and a non-empty <code>PrimaryKeys</code> list. If you specify <code>RecallManagementTableVersionId</code>, the API returns records from that version; otherwise, it uses the currently published version.</p>
+     * <h2>Request description</h2>
+     * <p>This operation retrieves data records from a specific recall management table based on the specified primary keys. Ensure that the provided <code>InstanceId</code> and <code>RecallManagementTableId</code> are valid and that the <code>PrimaryKeys</code> list is not empty. If <code>RecallManagementTableVersionId</code> is specified, data of that version is returned. Otherwise, the current published version is used by default.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves records from a specified recall management table.</p>
+     * <p>Retrieves a list of records from a specified recall management table.</p>
      * 
      * @param request QueryRecallManagementTableRecordsRequest
      * @param headers map
@@ -9381,11 +9460,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>This API retrieves records from a specific recall management table using the provided primary keys. You must provide a valid <code>InstanceId</code> and <code>RecallManagementTableId</code>, and a non-empty <code>PrimaryKeys</code> list. If you specify <code>RecallManagementTableVersionId</code>, the API returns records from that version; otherwise, it uses the currently published version.</p>
+     * <h2>Request description</h2>
+     * <p>This operation retrieves data records from a specific recall management table based on the specified primary keys. Ensure that the provided <code>InstanceId</code> and <code>RecallManagementTableId</code> are valid and that the <code>PrimaryKeys</code> list is not empty. If <code>RecallManagementTableVersionId</code> is specified, data of that version is returned. Otherwise, the current published version is used by default.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves records from a specified recall management table.</p>
+     * <p>Retrieves a list of records from a specified recall management table.</p>
      * 
      * @param request QueryRecallManagementTableRecordsRequest
      * @return QueryRecallManagementTableRecordsResponse
@@ -9516,8 +9595,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to query the deployment result of a traffic control task specified by TrafficControlTaskId for a given instance ID and environment. Make sure that the specified InstanceId is associated with your account and that the Environment parameter value is valid (Daily for daily environment, Pre for staging environment, Prod for production environment). All request parameters are required.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to query the deployment results of a traffic control task with a specific TrafficControlTaskId for a given instance ID and environment. Make sure that the provided InstanceId is associated with your account and the Environment parameter value meets your expectations (Daily: daily environment, Pre: staging environment, Prod: production environment). All request parameters are required.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the deployment status and related information of a specified traffic control task in a specific environment.</p>
@@ -9558,8 +9637,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>You can call this operation to query the deployment result of a traffic control task specified by TrafficControlTaskId for a given instance ID and environment. Make sure that the specified InstanceId is associated with your account and that the Environment parameter value is valid (Daily for daily environment, Pre for staging environment, Prod for production environment). All request parameters are required.</p>
+     * <h2>Request description</h2>
+     * <p>You can use this API to query the deployment results of a traffic control task with a specific TrafficControlTaskId for a given instance ID and environment. Make sure that the provided InstanceId is associated with your account and the Environment parameter value meets your expectations (Daily: daily environment, Pre: staging environment, Prod: production environment). All request parameters are required.</p>
      * 
      * <b>summary</b> : 
      * <p>Retrieves the deployment status and related information of a specified traffic control task in a specific environment.</p>
@@ -9656,17 +9735,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Use this API to release a traffic control task for a specific instance and environment (Daily, Pre, or Prod). Your request must include the <code>TrafficControlTaskId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters.</p>
+     * <h2>Request description</h2>
+     * <p>This API allows you to publish a traffic control task for a specific instance ID and environment (daily, staging, or production). Make sure to correctly specify the <code>TrafficControlTaskId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters in the request.</p>
      * <ul>
-     * <li><code>TrafficControlTaskId</code>: The unique ID of the traffic control task.</li>
-     * <li><code>InstanceId</code>: The ID of the target instance.</li>
-     * <li><code>Environment</code>: The execution environment for the traffic control task. Valid values: <code>Daily</code>, <code>Pre</code>, and <code>Prod</code>.
-     * The request succeeds only if all required parameters are provided correctly. A successful response includes a <code>RequestId</code>.</li>
+     * <li><code>TrafficControlTaskId</code>: the unique identifier of the traffic control task to be published.</li>
+     * <li><code>InstanceId</code>: the ID of the target instance to which the traffic control settings will be applied.</li>
+     * <li><code>Environment</code>: the environment in which the traffic control task is executed. Valid values: Daily (daily environment), Pre (staging environment), and Prod (production environment). Select an environment based on your business requirements.
+     * Note: The request is processed and a RequestId is returned in the response only when all required fields are correctly provided.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a traffic control task for the specified instance and environment.</p>
+     * <p>Publishes a traffic control task for a specified instance and environment.</p>
      * 
      * @param request ReleaseTrafficControlTaskRequest
      * @param headers map
@@ -9704,17 +9783,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request</h2>
-     * <p>Use this API to release a traffic control task for a specific instance and environment (Daily, Pre, or Prod). Your request must include the <code>TrafficControlTaskId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters.</p>
+     * <h2>Request description</h2>
+     * <p>This API allows you to publish a traffic control task for a specific instance ID and environment (daily, staging, or production). Make sure to correctly specify the <code>TrafficControlTaskId</code>, <code>InstanceId</code>, and <code>Environment</code> parameters in the request.</p>
      * <ul>
-     * <li><code>TrafficControlTaskId</code>: The unique ID of the traffic control task.</li>
-     * <li><code>InstanceId</code>: The ID of the target instance.</li>
-     * <li><code>Environment</code>: The execution environment for the traffic control task. Valid values: <code>Daily</code>, <code>Pre</code>, and <code>Prod</code>.
-     * The request succeeds only if all required parameters are provided correctly. A successful response includes a <code>RequestId</code>.</li>
+     * <li><code>TrafficControlTaskId</code>: the unique identifier of the traffic control task to be published.</li>
+     * <li><code>InstanceId</code>: the ID of the target instance to which the traffic control settings will be applied.</li>
+     * <li><code>Environment</code>: the environment in which the traffic control task is executed. Valid values: Daily (daily environment), Pre (staging environment), and Prod (production environment). Select an environment based on your business requirements.
+     * Note: The request is processed and a RequestId is returned in the response only when all required fields are correctly provided.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Releases a traffic control task for the specified instance and environment.</p>
+     * <p>Publishes a traffic control task for a specified instance and environment.</p>
      * 
      * @param request ReleaseTrafficControlTaskRequest
      * @return ReleaseTrafficControlTaskResponse
@@ -10088,16 +10167,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request details</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation starts the traffic control task identified by <code>TrafficControlTaskId</code>.</li>
+     * <li>This API operation starts the traffic shaping task identified by the specified <code>TrafficControlTaskId</code>.</li>
      * <li><code>InstanceId</code> specifies the target instance.</li>
-     * <li><code>Environment</code> specifies the target environment. Valid values: Daily, Pre, and Prod.</li>
-     * <li>Ensure that all required parameters are set correctly before you call this operation. The specified <code>TrafficControlTaskId</code> must exist in the system.</li>
+     * <li>The <code>Environment</code> parameter defines the target environment for this operation (daily, staging, or production).</li>
+     * <li>Ensure that all required parameters are correctly configured before you call this operation. Specifically, the <code>TrafficControlTaskId</code> must exist in the system.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Starts a traffic control task with a specified ID for instances in different environments.</p>
+     * <p>Starts the traffic shaping task with the specified ID for instances in different environments.</p>
      * 
      * @param request StartTrafficControlTaskRequest
      * @param headers map
@@ -10135,16 +10214,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Request details</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>This operation starts the traffic control task identified by <code>TrafficControlTaskId</code>.</li>
+     * <li>This API operation starts the traffic shaping task identified by the specified <code>TrafficControlTaskId</code>.</li>
      * <li><code>InstanceId</code> specifies the target instance.</li>
-     * <li><code>Environment</code> specifies the target environment. Valid values: Daily, Pre, and Prod.</li>
-     * <li>Ensure that all required parameters are set correctly before you call this operation. The specified <code>TrafficControlTaskId</code> must exist in the system.</li>
+     * <li>The <code>Environment</code> parameter defines the target environment for this operation (daily, staging, or production).</li>
+     * <li>Ensure that all required parameters are correctly configured before you call this operation. Specifically, the <code>TrafficControlTaskId</code> must exist in the system.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Starts a traffic control task with a specified ID for instances in different environments.</p>
+     * <p>Starts the traffic shaping task with the specified ID for instances in different environments.</p>
      * 
      * @param request StartTrafficControlTaskRequest
      * @return StartTrafficControlTaskResponse
@@ -10521,18 +10600,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation allows you to update the attributes of a specified ABTest metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <code>ABMetricId</code> before calling this operation.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation allows you to update the properties of a specified AB test metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <code>ABMetricId</code> before calling this operation.</p>
      * <ul>
      * <li><code>NeedSignificance</code>: Specifies whether to perform significance analysis on the current metric. Default value: <code>false</code>.</li>
-     * <li><code>AggregationByUser</code>: When significance calculation is enabled, specifies whether to aggregate data by user or by sample. Default value: <code>false</code> (by sample).</li>
-     * <li><code>Numerator</code> and <code>Denominator</code>: The specific definitions of the numerator and denominator used in significance calculation.</li>
-     * <li><code>IsBinomialDistribution</code>: Valid only for derived metrics. Specifies whether the metric follows a binomial distribution, which affects subsequent data processing logic.
+     * <li><code>AggregationByUser</code>: When significance calculation is selected, specifies whether to aggregate data by user or by sample. Default value: <code>false</code> (by sample).</li>
+     * <li><code>Numerator</code> and <code>Denominator</code>: Represent the specific definitions of the numerator and denominator when performing significance calculation.</li>
+     * <li><code>IsBinomialDistribution</code>: Valid only for derived metrics. Indicates whether the metric follows a binomial distribution, which affects subsequent data processing logic.
      * Note: You do not need to provide all fields at the same time. Include only the parameters whose values you want to change in the request body.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the metric configuration of an existing ABTest experiment.</p>
+     * <p>Updates the metric configuration of an existing AB test.</p>
      * 
      * @param request UpdateABMetricRequest
      * @param headers map
@@ -10634,18 +10713,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
-     * <p>This API operation allows you to update the attributes of a specified ABTest metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <code>ABMetricId</code> before calling this operation.</p>
+     * <h2>Request description</h2>
+     * <p>This API operation allows you to update the properties of a specified AB test metric, including whether to calculate significance and the aggregation method. Make sure that you have obtained the correct <code>ABMetricId</code> before calling this operation.</p>
      * <ul>
      * <li><code>NeedSignificance</code>: Specifies whether to perform significance analysis on the current metric. Default value: <code>false</code>.</li>
-     * <li><code>AggregationByUser</code>: When significance calculation is enabled, specifies whether to aggregate data by user or by sample. Default value: <code>false</code> (by sample).</li>
-     * <li><code>Numerator</code> and <code>Denominator</code>: The specific definitions of the numerator and denominator used in significance calculation.</li>
-     * <li><code>IsBinomialDistribution</code>: Valid only for derived metrics. Specifies whether the metric follows a binomial distribution, which affects subsequent data processing logic.
+     * <li><code>AggregationByUser</code>: When significance calculation is selected, specifies whether to aggregate data by user or by sample. Default value: <code>false</code> (by sample).</li>
+     * <li><code>Numerator</code> and <code>Denominator</code>: Represent the specific definitions of the numerator and denominator when performing significance calculation.</li>
+     * <li><code>IsBinomialDistribution</code>: Valid only for derived metrics. Indicates whether the metric follows a binomial distribution, which affects subsequent data processing logic.
      * Note: You do not need to provide all fields at the same time. Include only the parameters whose values you want to change in the request body.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the metric configuration of an existing ABTest experiment.</p>
+     * <p>Updates the metric configuration of an existing AB test.</p>
      * 
      * @param request UpdateABMetricRequest
      * @return UpdateABMetricResponse
@@ -11041,7 +11120,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates information for a specified experiment group, such as its name and description.</p>
+     * <p>Updates the information of a specified experiment group, such as the name and description.</p>
      * 
      * @param request UpdateExperimentGroupRequest
      * @param headers map
@@ -11131,7 +11210,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates information for a specified experiment group, such as its name and description.</p>
+     * <p>Updates the information of a specified experiment group, such as the name and description.</p>
      * 
      * @param request UpdateExperimentGroupRequest
      * @return UpdateExperimentGroupResponse
@@ -12091,7 +12170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates information for a scene, such as its name and description.</p>
+     * <p>Updates scene information, such as the name and description of a scene.</p>
      * 
      * @param request UpdateSceneRequest
      * @param headers map
@@ -12137,7 +12216,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates information for a scene, such as its name and description.</p>
+     * <p>Updates scene information, such as the name and description of a scene.</p>
      * 
      * @param request UpdateSceneRequest
      * @return UpdateSceneResponse

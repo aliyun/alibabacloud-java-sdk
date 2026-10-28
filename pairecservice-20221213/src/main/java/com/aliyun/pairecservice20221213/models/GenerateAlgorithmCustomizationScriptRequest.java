@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class GenerateAlgorithmCustomizationScriptRequest extends TeaModel {
     /**
-     * <p>The deployment mode. Valid values:</p>
+     * <p>Specifies whether to generate a deployment script or perform one-click deployment. Valid values:</p>
      * <ul>
-     * <li><p><strong>EasyDeploy</strong>: Performs a one-click deployment.</p>
-     * </li>
-     * <li><p><strong>GenerateScript</strong>: Generates a deployment script.</p>
-     * </li>
+     * <li>EasyDeploy: one-click deployment</li>
+     * <li>GenerateScript: script generation</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class GenerateAlgorithmCustomizationScriptRequest extends TeaModel {
     public String deployMode;
 
     /**
-     * <p>The ID of the instance. To obtain this ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
+     * <p>The instance ID. For information about how to obtain the instance ID, see <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-test-xxx</p>
@@ -29,7 +27,7 @@ public class GenerateAlgorithmCustomizationScriptRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The data types of fields in the JSON configuration.</p>
+     * <p>The types of fields in the JSON configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;item_table&quot;:&quot;array&quot;}</p>

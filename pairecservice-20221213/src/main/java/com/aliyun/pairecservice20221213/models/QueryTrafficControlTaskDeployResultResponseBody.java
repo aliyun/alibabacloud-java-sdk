@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     /**
-     * <p>The message returned for the Flink platform deployment operation.</p>
+     * <p>The message about the deployment operation on the Flink platform.</p>
      * 
      * <strong>example:</strong>
      * <p>deploy job draft success</p>
@@ -16,9 +16,9 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     /**
      * <p>The status of deploying the draft. Valid values:</p>
      * <ul>
-     * <li>Failed: failed.</li>
-     * <li>Running: running.</li>
-     * <li>Success: succeeded.</li>
+     * <li><code>Failed</code>: Failed.</li>
+     * <li><code>Running</code>: Running.</li>
+     * <li><code>Success</code>: Successful.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     public String deployStatus;
 
     /**
-     * <p>The message returned for pushing the draft to Flink.</p>
+     * <p>The message about pushing the draft to Flink.</p>
      * 
      * <strong>example:</strong>
      * <p>push draft success</p>
@@ -39,9 +39,9 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     /**
      * <p>The status of pushing the draft to Flink. Valid values:</p>
      * <ul>
-     * <li>Failed: failed.</li>
-     * <li>Running: running.</li>
-     * <li>Success: succeeded.</li>
+     * <li><code>Failed</code>: Failed.</li>
+     * <li><code>Running</code>: Running.</li>
+     * <li><code>Success</code>: Successful.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     public String draftStatus;
 
     /**
-     * <p>The message returned for the preparation phase.</p>
+     * <p>The message about the preparation phase.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -62,9 +62,9 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     /**
      * <p>The status of the preparation phase. Valid values:</p>
      * <ul>
-     * <li>Failed: failed.</li>
-     * <li>Running: running.</li>
-     * <li>Success: succeeded.</li>
+     * <li><code>Failed</code>: Failed.</li>
+     * <li><code>Running</code>: Running.</li>
+     * <li><code>Success</code>: Successful.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The message returned for starting the Flink task.</p>
+     * <p>The message about starting the Flink task.</p>
      * 
      * <strong>example:</strong>
      * <p>start job success</p>
@@ -94,9 +94,9 @@ public class QueryTrafficControlTaskDeployResultResponseBody extends TeaModel {
     /**
      * <p>The status of starting the Flink task. Valid values:</p>
      * <ul>
-     * <li>Failed: failed.</li>
-     * <li>Running: running.</li>
-     * <li>Success: succeeded.</li>
+     * <li><code>Failed</code>: Failed.</li>
+     * <li><code>Running</code>: Running.</li>
+     * <li><code>Success</code>: Successful.</li>
      * </ul>
      * 
      * <strong>example:</strong>

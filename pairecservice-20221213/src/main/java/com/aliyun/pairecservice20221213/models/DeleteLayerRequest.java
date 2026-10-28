@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteLayerRequest extends TeaModel {
     /**
-     * <p>Instance ID, which can be obtained by calling the ListInstances API.</p>
+     * <p>The instance ID. You can call the ListInstances operation to obtain the instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-abcdefg1234</p>

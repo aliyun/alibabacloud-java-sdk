@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateABMetricResponseBody extends TeaModel {
     /**
-     * <p>The AB metric ID.</p>
+     * <p>The ID of the AB test metric.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class CreateABMetricResponseBody extends TeaModel {
     public String ABMetricId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F7AC05FF-EDE7-5C2B-B9AE-33D6DF4178BA</p>

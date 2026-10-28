@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class OnlineExperimentRequest extends TeaModel {
     /**
-     * <p>The ID of the instance, which you can obtain by calling the ListInstances API.</p>
+     * <p>The instance ID. You can obtain it by calling the ListInstances operation.</p>
      * 
      * <strong>example:</strong>
      * <p>pairec-cn-abcdefg1234</p>

@@ -4,11 +4,14 @@ package com.aliyun.pairecservice20221213.models;
 import com.aliyun.tea.*;
 
 public class CreateABMetricRequest extends TeaModel {
+    /**
+     * <p>Specifies whether to aggregate by user dimension when calculating significance. Two aggregation methods are available: by user and by sample.</p>
+     */
     @NameInMap("AggregationByUser")
     public Boolean aggregationByUser;
 
     /**
-     * <p>The metric definition.</p>
+     * <p>The definition of the metric.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,6 +21,8 @@ public class CreateABMetricRequest extends TeaModel {
     public String definition;
 
     /**
+     * <p>The denominator used for significance calculation.</p>
+     * 
      * <strong>example:</strong>
      * <p>pv</p>
      */
@@ -25,17 +30,17 @@ public class CreateABMetricRequest extends TeaModel {
     public String denominator;
 
     /**
-     * <p>The metric description.</p>
+     * <p>The description of the metric.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>pv指标</p>
+     * <p>PV metric</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The instance ID. Call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain this ID.</p>
+     * <p>Instance ID of the instance. You can call the <a href="https://help.aliyun.com/document_detail/2411819.html">ListInstances</a> operation to obtain instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,11 +49,14 @@ public class CreateABMetricRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>Specifies whether the current metric follows a binomial distribution when the metric type is a derived metric. If yes, the mean and variance of the metric are calculated based on the binomial distribution.</p>
+     */
     @NameInMap("IsBinomialDistribution")
     public Boolean isBinomialDistribution;
 
     /**
-     * <p>The ID of the left metric used to calculate the derived metric.</p>
+     * <p>The ID of the left metric for a derived metric.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -57,7 +65,7 @@ public class CreateABMetricRequest extends TeaModel {
     public String leftMetricId;
 
     /**
-     * <p>The metric name.</p>
+     * <p>The name of the metric.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,10 +74,15 @@ public class CreateABMetricRequest extends TeaModel {
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>Specifies whether to calculate significance.</p>
+     */
     @NameInMap("NeedSignificance")
     public Boolean needSignificance;
 
     /**
+     * <p>The numerator used for significance calculation.</p>
+     * 
      * <strong>example:</strong>
      * <p>click</p>
      */
@@ -77,16 +90,12 @@ public class CreateABMetricRequest extends TeaModel {
     public String numerator;
 
     /**
-     * <p>The operator used to calculate the derived metric. Valid values:</p>
+     * <p>The operator used to calculate a derived metric. Valid values:</p>
      * <ul>
-     * <li><p><code>Plus</code>: Addition</p>
-     * </li>
-     * <li><p><code>Minus</code>: Subtraction</p>
-     * </li>
-     * <li><p><code>Multiplication</code>: Multiplication</p>
-     * </li>
-     * <li><p><code>Division</code>: Division</p>
-     * </li>
+     * <li>Plus: addition.</li>
+     * <li>Minus: subtraction.</li>
+     * <li>Multiplication: multiplication.</li>
+     * <li>Division: division.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,10 +107,8 @@ public class CreateABMetricRequest extends TeaModel {
     /**
      * <p>Specifies whether the metric is a real-time metric. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: The metric is real-time.</p>
-     * </li>
-     * <li><p><code>false</code>: The metric is not real-time.</p>
-     * </li>
+     * <li>true: yes.</li>
+     * <li>false: no.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -112,7 +119,7 @@ public class CreateABMetricRequest extends TeaModel {
     public Boolean realtime;
 
     /**
-     * <p>The data source ID to which the results are written back. Call the ListInstanceResources operation to obtain this ID.</p>
+     * <p>The ID of the data source to which the data table is written back. You can call the ListInstanceResources operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -121,7 +128,7 @@ public class CreateABMetricRequest extends TeaModel {
     public String resultResourceId;
 
     /**
-     * <p>The ID of the right metric used to calculate the derived metric.</p>
+     * <p>The ID of the right metric for a derived metric.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -130,7 +137,7 @@ public class CreateABMetricRequest extends TeaModel {
     public String rightMetricId;
 
     /**
-     * <p>The scene ID. Call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain this ID.</p>
+     * <p>The ID of the scene. You can call the <a href="https://help.aliyun.com/document_detail/2402581.html">ListScenes</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -140,7 +147,7 @@ public class CreateABMetricRequest extends TeaModel {
     public String sceneId;
 
     /**
-     * <p>The statistics cycle.</p>
+     * <p>The statistical period.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -149,7 +156,7 @@ public class CreateABMetricRequest extends TeaModel {
     public Integer statisticsCycle;
 
     /**
-     * <p>The data table ID. Call the ListTableMetas operation to obtain this ID.</p>
+     * <p>The ID of the data table. You can call the ListTableMetas operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -159,12 +166,10 @@ public class CreateABMetricRequest extends TeaModel {
     public String tableMetaId;
 
     /**
-     * <p>The metric type. Valid values:</p>
+     * <p>The type of the metric. Valid values:</p>
      * <ul>
-     * <li><p><code>Single</code>: A single metric.</p>
-     * </li>
-     * <li><p><code>Derived</code>: A derived metric.</p>
-     * </li>
+     * <li>Single: single metric.</li>
+     * <li>Derived: derived metric.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

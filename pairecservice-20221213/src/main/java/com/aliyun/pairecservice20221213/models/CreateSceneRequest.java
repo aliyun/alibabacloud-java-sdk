@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSceneRequest extends TeaModel {
     /**
-     * <p>The scene description.</p>
+     * <p>The scenario description.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a test.</p>
@@ -14,7 +14,7 @@ public class CreateSceneRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The flows.</p>
+     * <p>The traffic list.</p>
      */
     @NameInMap("Flows")
     public java.util.List<CreateSceneRequestFlows> flows;
@@ -29,7 +29,7 @@ public class CreateSceneRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The scene name.</p>
+     * <p>The scenario name.</p>
      * 
      * <strong>example:</strong>
      * <p>scene1</p>
@@ -76,7 +76,7 @@ public class CreateSceneRequest extends TeaModel {
 
     public static class CreateSceneRequestFlows extends TeaModel {
         /**
-         * <p>The flow code.</p>
+         * <p>The traffic code.</p>
          * 
          * <strong>example:</strong>
          * <p>liuliang1</p>
@@ -85,10 +85,10 @@ public class CreateSceneRequest extends TeaModel {
         public String flowCode;
 
         /**
-         * <p>The flow name.</p>
+         * <p>The traffic name.</p>
          * 
          * <strong>example:</strong>
-         * <p>流量1</p>
+         * <p>Traffic 1</p>
          */
         @NameInMap("FlowName")
         public String flowName;
