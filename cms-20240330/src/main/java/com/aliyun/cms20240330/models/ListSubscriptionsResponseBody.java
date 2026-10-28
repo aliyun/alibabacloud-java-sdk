@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSubscriptionsResponseBody extends TeaModel {
     /**
+     * <p>The maximum number of records returned for the current request.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -12,14 +14,16 @@ public class ListSubscriptionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
-     * <p>xxxxxxxxxx</p>
+     * <p>2-3408-4595-9d80-****</p>
      */
     @NameInMap("nextToken")
     public String nextToken;
 
     /**
-     * <p>Id of the request</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>123-123-234-345-123</p>
@@ -27,6 +31,9 @@ public class ListSubscriptionsResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The list of subscriptions.</p>
+     */
     @NameInMap("subscriptionList")
     public java.util.List<SubscriptionForView> subscriptionList;
 

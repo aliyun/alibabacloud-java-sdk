@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ViewOncallScheduleResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
      */
@@ -12,8 +14,10 @@ public class ViewOncallScheduleResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The on-call calendar. The key is the shift name, and the value is a list of on-call shifts for the shift within the queried date range.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{&quot;testName&quot;:[{&quot;contactId&quot;:&quot;testId&quot;,&quot;contactName&quot;:&quot;张三&quot;,&quot;start&quot;:&quot;2024-10-10 09:00&quot;,&quot;end&quot;:&quot;2024-10-15 18:00&quot;}]}</p>
+     * <p>{&quot;testName&quot;:[{&quot;contactId&quot;:&quot;testId&quot;,&quot;contactName&quot;:&quot;Zhang San&quot;,&quot;start&quot;:&quot;2024-10-10 09:00&quot;,&quot;end&quot;:&quot;2024-10-15 18:00&quot;}]}</p>
      */
     @NameInMap("schedule")
     public java.util.Map<String, java.util.List<ScheduleValue>> schedule;

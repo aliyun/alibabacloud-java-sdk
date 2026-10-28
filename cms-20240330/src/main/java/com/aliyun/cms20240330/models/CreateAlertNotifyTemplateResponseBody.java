@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAlertNotifyTemplateResponseBody extends TeaModel {
     /**
+     * <p>The ID of the notification template.</p>
+     * 
      * <strong>example:</strong>
      * <p>testId</p>
      */
@@ -12,6 +14,8 @@ public class CreateAlertNotifyTemplateResponseBody extends TeaModel {
     public String alertNotifyTemplateId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>8A33DBEA-<em><strong><strong>-</strong></strong></em>-<em><strong><strong>-</strong></strong></em></p>
      */

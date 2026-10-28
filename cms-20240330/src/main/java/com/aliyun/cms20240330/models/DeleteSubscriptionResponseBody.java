@@ -14,6 +14,8 @@ public class DeleteSubscriptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The ID of the subscription.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123123123</p>
      */

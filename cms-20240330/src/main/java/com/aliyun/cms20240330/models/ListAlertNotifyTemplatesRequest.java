@@ -4,17 +4,24 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListAlertNotifyTemplatesRequest extends TeaModel {
+    /**
+     * <p>The list of notification template IDs.</p>
+     */
     @NameInMap("alertNotifyTemplateIds")
     public java.util.List<String> alertNotifyTemplateIds;
 
     /**
+     * <p>The notification template name.</p>
+     * 
      * <strong>example:</strong>
-     * <p>告警通知模板</p>
+     * <p>Alert notification template</p>
      */
     @NameInMap("alertNotifyTemplateName")
     public String alertNotifyTemplateName;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListAlertNotifyTemplatesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The page size.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class ListAlertNotifyTemplatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The template locale.</p>
+     * 
      * <strong>example:</strong>
      * <p>GO</p>
      */
@@ -36,6 +47,8 @@ public class ListAlertNotifyTemplatesRequest extends TeaModel {
     public String programLang;
 
     /**
+     * <p>The type.</p>
+     * 
      * <strong>example:</strong>
      * <p>DING</p>
      */

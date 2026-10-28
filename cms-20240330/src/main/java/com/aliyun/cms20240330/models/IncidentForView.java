@@ -5,17 +5,19 @@ import com.aliyun.tea.*;
 
 public class IncidentForView extends TeaModel {
     /**
+     * <p>The expiration time of the notification block.</p>
+     * 
      * <strong>example:</strong>
-     * <p>-1 表示未屏蔽</p>
+     * <p>-1 indicates that notifications are not blocked</p>
      */
     @NameInMap("blockingExpireTimestamp")
     public Long blockingExpireTimestamp;
 
     /**
-     * <p>The details of the incident.</p>
+     * <p>The detailed content of the incident.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;{&quot;description&quot;:&quot;ECS实例CPU过高&quot;,&quot;impact&quot;:&quot;支付服务延迟&quot;}&quot;</p>
+     * <p>&quot;{&quot;description&quot;:&quot;High CPU usage on the ECS instance&quot;,&quot;impact&quot;:&quot;Payment service delay&quot;}&quot;</p>
      */
     @NameInMap("content")
     public String content;
@@ -36,7 +38,7 @@ public class IncidentForView extends TeaModel {
     public String groupUuid;
 
     /**
-     * <p>The key-value pairs for grouping.</p>
+     * <p>The grouping key-value pairs.</p>
      */
     @NameInMap("groupingKeys")
     public java.util.Map<String, String> groupingKeys;
@@ -51,16 +53,16 @@ public class IncidentForView extends TeaModel {
     public String incidentId;
 
     /**
-     * <p>The name of the notification policy.</p>
+     * <p>The notification policy name.</p>
      * 
      * <strong>example:</strong>
-     * <p>{ &quot;contactId&quot;: &quot;contact-123&quot;, &quot;name&quot;: &quot;张三&quot; }</p>
+     * <p>{ &quot;contactId&quot;: &quot;contact-123&quot;, &quot;name&quot;: &quot;Zhang San&quot; }</p>
      */
     @NameInMap("notifyStrategyName")
     public String notifyStrategyName;
 
     /**
-     * <p>The UUID of the associated notification policy, which is used to trigger notifications.</p>
+     * <p>The UUID of the associated notification policy used to trigger notifications.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;notify-strategy-789&quot;</p>
@@ -69,7 +71,7 @@ public class IncidentForView extends TeaModel {
     public String notifyStrategyUuid;
 
     /**
-     * <p>The information about the operator.</p>
+     * <p>The operator information.</p>
      */
     @NameInMap("operator")
     public ContactForIncidentView operator;
@@ -117,10 +119,10 @@ public class IncidentForView extends TeaModel {
     public String severity;
 
     /**
-     * <p>The description of the solution.</p>
+     * <p>The solution description.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;重启ECS实例后恢复正常&quot;</p>
+     * <p>&quot;Recovered to normal after restarting the ECS instance&quot;</p>
      */
     @NameInMap("solution")
     public String solution;
@@ -135,7 +137,7 @@ public class IncidentForView extends TeaModel {
     public String state;
 
     /**
-     * <p>The name of the subscription policy.</p>
+     * <p>The subscription policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;P1-Alert-Notification&quot;</p>
@@ -152,6 +154,9 @@ public class IncidentForView extends TeaModel {
     @NameInMap("subscriptionUuid")
     public String subscriptionUuid;
 
+    /**
+     * <p>The array of tags.</p>
+     */
     @NameInMap("tags")
     public java.util.Map<String, String> tags;
 
@@ -168,7 +173,7 @@ public class IncidentForView extends TeaModel {
      * <p>The title of the incident.</p>
      * 
      * <strong>example:</strong>
-     * <p>&quot;支付服务不可用&quot;</p>
+     * <p>&quot;Payment service unavailable&quot;</p>
      */
     @NameInMap("title")
     public String title;

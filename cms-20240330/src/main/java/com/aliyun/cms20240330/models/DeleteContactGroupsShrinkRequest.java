@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContactGroupsShrinkRequest extends TeaModel {
     /**
+     * <p>The IDs of the contact groups.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("contactGroupIds")

@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertActionsShrinkRequest extends TeaModel {
     /**
+     * <p>The unique identifiers of the alert action integrations to delete.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("alertActionIds")

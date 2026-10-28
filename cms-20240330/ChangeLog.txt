@@ -1,3 +1,7 @@
+2026-10-28 Version: 10.9.0
+- Support API ListAlertHistories.
+
+
 2026-10-27 Version: 10.8.0
 - Support API ActiveContactChannel.
 - Support API CreateAlertAction.

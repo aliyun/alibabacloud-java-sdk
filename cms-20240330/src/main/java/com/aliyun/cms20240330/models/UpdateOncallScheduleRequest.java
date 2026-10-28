@@ -5,22 +5,32 @@ import com.aliyun.tea.*;
 
 public class UpdateOncallScheduleRequest extends TeaModel {
     /**
+     * <p>The name of the on-call schedule.</p>
+     * 
      * <strong>example:</strong>
      * <p>testName</p>
      */
     @NameInMap("oncallScheduleName")
     public String oncallScheduleName;
 
+    /**
+     * <p>The list of rotations.</p>
+     */
     @NameInMap("rotations")
     public java.util.List<UpdateOncallScheduleRequestRotations> rotations;
 
     /**
+     * <p>The ID of the shift reminder chatbot.</p>
+     * 
      * <strong>example:</strong>
      * <p>testId</p>
      */
     @NameInMap("shiftRobotId")
     public String shiftRobotId;
 
+    /**
+     * <p>The list of substitution rules.</p>
+     */
     @NameInMap("substitudes")
     public java.util.List<UpdateOncallScheduleRequestSubstitudes> substitudes;
 
@@ -63,18 +73,21 @@ public class UpdateOncallScheduleRequest extends TeaModel {
 
     public static class UpdateOncallScheduleRequestRotations extends TeaModel {
         /**
+         * <p>The days of the week when the rotation takes effect.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("activeDays")
         public java.util.List<Integer> activeDays;
 
         /**
+         * <p>The IDs of the contacts.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("contacts")
         public java.util.List<String> contacts;
 
         /**
+         * <p>The end time of the rotation. Format: HH:mm.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,6 +97,7 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public String rotationEndTime;
 
         /**
+         * <p>The name of the rotation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -93,6 +107,7 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public String rotationName;
 
         /**
+         * <p>The start time of the rotation. Format: HH:mm.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -102,6 +117,8 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public String rotationStartTime;
 
         /**
+         * <p>The length of the shift cycle. Used in conjunction with shiftRecurrenceFrequency, such as switching to the next on-call person every 3 days.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -109,6 +126,7 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public Integer shiftLength;
 
         /**
+         * <p>The unit of the shift cycle. Used in conjunction with shiftRecurrenceFrequency, such as switching to the next on-call person every week.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -118,6 +136,7 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public String shiftRecurrenceFrequency;
 
         /**
+         * <p>The start date of the rotation. Format: yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -127,6 +146,7 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public String startDate;
 
         /**
+         * <p>The time zone name. Uses the IANA Time Zone Database standard, such as Asia/Shanghai.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -216,6 +236,8 @@ public class UpdateOncallScheduleRequest extends TeaModel {
 
     public static class UpdateOncallScheduleRequestSubstitudes extends TeaModel {
         /**
+         * <p>The contact ID of the substitute.</p>
+         * 
          * <strong>example:</strong>
          * <p>testId</p>
          */
@@ -223,6 +245,8 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public String contactId;
 
         /**
+         * <p>The end time of the substitution. Format: YYYY-MM-DD HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-15 18:00</p>
          */
@@ -230,6 +254,8 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The contact ID of the replaced person.</p>
+         * 
          * <strong>example:</strong>
          * <p>testId</p>
          */
@@ -237,6 +263,8 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public String replacedContactId;
 
         /**
+         * <p>The start time of the substitution. Format: YYYY-MM-DD HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 09:00</p>
          */

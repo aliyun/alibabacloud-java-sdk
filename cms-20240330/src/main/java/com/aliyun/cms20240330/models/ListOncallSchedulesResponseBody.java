@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListOncallSchedulesResponseBody extends TeaModel {
+    /**
+     * <p>The list of on-call schedules.</p>
+     */
     @NameInMap("oncallSchedules")
     public java.util.List<ListOncallSchedulesResponseBodyOncallSchedules> oncallSchedules;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
      */
@@ -15,6 +20,8 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -51,13 +58,21 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
     }
 
     public static class ListOncallSchedulesResponseBodyOncallSchedulesRotations extends TeaModel {
+        /**
+         * <p>The days of the week when the rotation is active.</p>
+         */
         @NameInMap("activeDays")
         public java.util.List<Integer> activeDays;
 
+        /**
+         * <p>The IDs of the contacts.</p>
+         */
         @NameInMap("contacts")
         public java.util.List<String> contacts;
 
         /**
+         * <p>The end time of the rotation. Format: HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>24:00</p>
          */
@@ -65,6 +80,8 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public String rotationEndTime;
 
         /**
+         * <p>The name of the rotation.</p>
+         * 
          * <strong>example:</strong>
          * <p>testName</p>
          */
@@ -72,6 +89,8 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public String rotationName;
 
         /**
+         * <p>The start time of the rotation. Format: HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>00:00</p>
          */
@@ -79,6 +98,8 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public String rotationStartTime;
 
         /**
+         * <p>The length of the shift interval. Used in conjunction with shiftRecurrenceFrequency. For example, a value of 3 indicates that the on-call personnel rotates every 3 days.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -86,6 +107,8 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public Integer shiftLength;
 
         /**
+         * <p>The unit of the shift interval. Used in conjunction with shiftLength. For example, a value of Week indicates that the on-call personnel rotates every week.</p>
+         * 
          * <strong>example:</strong>
          * <p>WEEKLY</p>
          */
@@ -93,6 +116,8 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public String shiftRecurrenceFrequency;
 
         /**
+         * <p>The start date of the rotation. Format: yyyy-MM-dd.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01</p>
          */
@@ -100,6 +125,8 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public String startDate;
 
         /**
+         * <p>The name of the time zone. The IANA Time Zone Database standard is used. Example: Asia/Shanghai.</p>
+         * 
          * <strong>example:</strong>
          * <p>Asia/Shanghai</p>
          */
@@ -187,6 +214,8 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
 
     public static class ListOncallSchedulesResponseBodyOncallSchedulesSubstitudes extends TeaModel {
         /**
+         * <p>The ID of the substitute contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>testId</p>
          */
@@ -194,6 +223,8 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public String contactId;
 
         /**
+         * <p>The end time of the substitution. Format: YYYY-MM-DD HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-15 18:00</p>
          */
@@ -201,6 +232,8 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The ID of the replaced contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>testId</p>
          */
@@ -208,6 +241,8 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public String replacedContactId;
 
         /**
+         * <p>The start time of the substitution. Format: YYYY-MM-DD HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 09:00</p>
          */
@@ -255,6 +290,8 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
 
     public static class ListOncallSchedulesResponseBodyOncallSchedules extends TeaModel {
         /**
+         * <p>The unique identifier of the on-call schedule.</p>
+         * 
          * <strong>example:</strong>
          * <p>testId</p>
          */
@@ -262,26 +299,38 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public String oncallScheduleId;
 
         /**
+         * <p>The name of the on-call schedule.</p>
+         * 
          * <strong>example:</strong>
          * <p>testName</p>
          */
         @NameInMap("oncallScheduleName")
         public String oncallScheduleName;
 
+        /**
+         * <p>The list of rotations.</p>
+         */
         @NameInMap("rotations")
         public java.util.List<ListOncallSchedulesResponseBodyOncallSchedulesRotations> rotations;
 
         /**
+         * <p>The ID of the chatbot that sends shift reminders.</p>
+         * 
          * <strong>example:</strong>
          * <p>testId</p>
          */
         @NameInMap("shiftRobotId")
         public String shiftRobotId;
 
+        /**
+         * <p>The list of substitution rules.</p>
+         */
         @NameInMap("substitudes")
         public java.util.List<ListOncallSchedulesResponseBodyOncallSchedulesSubstitudes> substitudes;
 
         /**
+         * <p>The name of the workspace.</p>
+         * 
          * <strong>example:</strong>
          * <p>default-cms-5884500827389836-cn-hangzhou</p>
          */

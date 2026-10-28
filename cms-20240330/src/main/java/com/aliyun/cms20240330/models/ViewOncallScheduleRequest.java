@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ViewOncallScheduleRequest extends TeaModel {
     /**
+     * <p>The end date of the query. Format: yyyy-MM-dd. This parameter must be specified together with startDate.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-07-05</p>
      */
@@ -12,6 +14,8 @@ public class ViewOncallScheduleRequest extends TeaModel {
     public String endDate;
 
     /**
+     * <p>The start date of the query. Format: yyyy-MM-dd. This parameter must be specified together with endDate.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-04-04</p>
      */

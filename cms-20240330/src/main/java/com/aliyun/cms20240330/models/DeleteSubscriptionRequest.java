@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteSubscriptionRequest extends TeaModel {
     /**
+     * <p>The name of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
      */

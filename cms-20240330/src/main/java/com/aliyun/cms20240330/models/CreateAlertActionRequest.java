@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateAlertActionRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the alert action integration.</p>
+     * 
      * <strong>example:</strong>
      * <p>testId</p>
      */
@@ -12,6 +14,7 @@ public class CreateAlertActionRequest extends TeaModel {
     public String alertActionId;
 
     /**
+     * <p>The name of the alert action integration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,28 +23,50 @@ public class CreateAlertActionRequest extends TeaModel {
     @NameInMap("alertActionName")
     public String alertActionName;
 
+    /**
+     * <p>The event bus parameters.</p>
+     */
     @NameInMap("ebParam")
     public CreateAlertActionRequestEbParam ebParam;
 
+    /**
+     * <p>The elastic scaling parameters.</p>
+     */
     @NameInMap("essParam")
     public CreateAlertActionRequestEssParam essParam;
 
+    /**
+     * <p>The Function Compute 3.0 parameters.</p>
+     */
     @NameInMap("fc3Param")
     public CreateAlertActionRequestFc3Param fc3Param;
 
+    /**
+     * <p>The Function Compute parameters.</p>
+     */
     @NameInMap("fcParam")
     public CreateAlertActionRequestFcParam fcParam;
 
+    /**
+     * <p>The Simple Message Queue (formerly MNS) (MSMQ) parameters.</p>
+     */
     @NameInMap("mnsParam")
     public CreateAlertActionRequestMnsParam mnsParam;
 
+    /**
+     * <p>The PagerDuty parameters.</p>
+     */
     @NameInMap("pagerDutyParam")
     public CreateAlertActionRequestPagerDutyParam pagerDutyParam;
 
+    /**
+     * <p>The Simple Log Service parameters.</p>
+     */
     @NameInMap("slsParam")
     public CreateAlertActionRequestSlsParam slsParam;
 
     /**
+     * <p>The type of the alert action integration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,6 +75,9 @@ public class CreateAlertActionRequest extends TeaModel {
     @NameInMap("type")
     public String type;
 
+    /**
+     * <p>The webhook parameters.</p>
+     */
     @NameInMap("webhookParam")
     public CreateAlertActionRequestWebhookParam webhookParam;
 
@@ -148,6 +176,8 @@ public class CreateAlertActionRequest extends TeaModel {
 
     public static class CreateAlertActionRequestEbParam extends TeaModel {
         /**
+         * <p>The event source.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -155,6 +185,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String ebSource;
 
         /**
+         * <p>The name of the event bus.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -162,6 +194,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String eventBusName;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
          */
@@ -169,6 +203,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The subject.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -216,6 +252,8 @@ public class CreateAlertActionRequest extends TeaModel {
 
     public static class CreateAlertActionRequestEssParam extends TeaModel {
         /**
+         * <p>The ID of the elastic scaling group.</p>
+         * 
          * <strong>example:</strong>
          * <p>testId</p>
          */
@@ -223,6 +261,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String essGroupId;
 
         /**
+         * <p>The ID of the elastic scaling rule.</p>
+         * 
          * <strong>example:</strong>
          * <p>testId</p>
          */
@@ -230,6 +270,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String essRuleId;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -269,6 +311,8 @@ public class CreateAlertActionRequest extends TeaModel {
 
     public static class CreateAlertActionRequestFc3Param extends TeaModel {
         /**
+         * <p>The name of the function in Function Compute.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -276,6 +320,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String function;
 
         /**
+         * <p>The version or alias of the function.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -283,6 +329,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String qualifier;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-nanjing</p>
          */
@@ -322,6 +370,8 @@ public class CreateAlertActionRequest extends TeaModel {
 
     public static class CreateAlertActionRequestFcParam extends TeaModel {
         /**
+         * <p>The name of the function in Function Compute.</p>
+         * 
          * <strong>example:</strong>
          * <p>testFunction</p>
          */
@@ -329,6 +379,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String function;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */
@@ -336,6 +388,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String regionId;
 
         /**
+         * <p>The service name of Function Compute.</p>
+         * 
          * <strong>example:</strong>
          * <p>testService</p>
          */
@@ -375,6 +429,8 @@ public class CreateAlertActionRequest extends TeaModel {
 
     public static class CreateAlertActionRequestMnsParam extends TeaModel {
         /**
+         * <p>The resource type of Simple Message Queue (formerly MNS) (MSMQ).</p>
+         * 
          * <strong>example:</strong>
          * <p>queue</p>
          */
@@ -382,6 +438,12 @@ public class CreateAlertActionRequest extends TeaModel {
         public String mnsType;
 
         /**
+         * <p>The name of the resource.</p>
+         * <ul>
+         * <li>If the resource type is queue, the resource name is the queue name.</li>
+         * <li>If the resource type is topic, the resource name is the topic name.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>testName</p>
          */
@@ -389,6 +451,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
          */
@@ -428,6 +492,8 @@ public class CreateAlertActionRequest extends TeaModel {
 
     public static class CreateAlertActionRequestPagerDutyParam extends TeaModel {
         /**
+         * <p>The integration key of PagerDuty.</p>
+         * 
          * <strong>example:</strong>
          * <p>fds3wr54rvcxfr4543t6435</p>
          */
@@ -435,6 +501,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String key;
 
         /**
+         * <p>The integration webhook URL of PagerDuty. Both V1 and V2 are supported.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
          */
@@ -466,6 +534,8 @@ public class CreateAlertActionRequest extends TeaModel {
 
     public static class CreateAlertActionRequestSlsParam extends TeaModel {
         /**
+         * <p>The name of the Logstore in Simple Log Service.</p>
+         * 
          * <strong>example:</strong>
          * <p>testLogstore。</p>
          */
@@ -473,6 +543,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String logstore;
 
         /**
+         * <p>The name of the project in Simple Log Service.</p>
+         * 
          * <strong>example:</strong>
          * <p>testProject</p>
          */
@@ -480,6 +552,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String project;
 
         /**
+         * <p>The region ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-zhangjiakou</p>
          */
@@ -519,16 +593,23 @@ public class CreateAlertActionRequest extends TeaModel {
 
     public static class CreateAlertActionRequestWebhookParam extends TeaModel {
         /**
+         * <p>The data format. This parameter takes effect only when the request method is POST.</p>
+         * 
          * <strong>example:</strong>
          * <p>JSON</p>
          */
         @NameInMap("contentType")
         public String contentType;
 
+        /**
+         * <p>The request header information.</p>
+         */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
 
         /**
+         * <p>The webhook request method.</p>
+         * 
          * <strong>example:</strong>
          * <p>POST</p>
          */
@@ -536,6 +617,8 @@ public class CreateAlertActionRequest extends TeaModel {
         public String method;
 
         /**
+         * <p>The alert callback URL.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="http://www.test.com">http://www.test.com</a></p>
          */

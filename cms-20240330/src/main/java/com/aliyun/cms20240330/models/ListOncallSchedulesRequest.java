@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class ListOncallSchedulesRequest extends TeaModel {
+    /**
+     * <p>The IDs of the on-call schedules.</p>
+     */
     @NameInMap("oncallScheduleIds")
     public java.util.List<String> oncallScheduleIds;
 
     /**
+     * <p>The name of the on-call schedule.</p>
+     * 
      * <strong>example:</strong>
      * <p>testOncallScheduleName</p>
      */
@@ -15,6 +20,8 @@ public class ListOncallSchedulesRequest extends TeaModel {
     public String oncallScheduleName;
 
     /**
+     * <p>The page number. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class ListOncallSchedulesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries per page. Default value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class ListOncallSchedulesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The name of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default-cms-5884500827389836-cn-hangzhou</p>
      */

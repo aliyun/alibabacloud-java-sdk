@@ -13,6 +13,9 @@ public class GetSubscriptionResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>The subscription object.</p>
+     */
     @NameInMap("subscription")
     public SubscriptionForView subscription;
 

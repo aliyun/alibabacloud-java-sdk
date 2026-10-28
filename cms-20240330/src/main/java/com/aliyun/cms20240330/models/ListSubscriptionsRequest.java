@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListSubscriptionsRequest extends TeaModel {
     /**
+     * <p>The UUID of the AI agent. This parameter is used to filter subscriptions of a specified AI agent.</p>
+     * 
      * <strong>example:</strong>
      * <p>agent-rca-001</p>
      */
@@ -12,6 +14,12 @@ public class ListSubscriptionsRequest extends TeaModel {
     public String agentUuid;
 
     /**
+     * <p>The sort order of the returned versions. Valid values:</p>
+     * <ul>
+     * <li>asc: Ascending order. </li>
+     * <li>desc: Descending order.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>asc</p>
      */
@@ -19,6 +27,8 @@ public class ListSubscriptionsRequest extends TeaModel {
     public String direction;
 
     /**
+     * <p>Specifies whether the subscription is enabled.</p>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -26,6 +36,8 @@ public class ListSubscriptionsRequest extends TeaModel {
     public Boolean enable;
 
     /**
+     * <p>The maximum number of results per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -33,6 +45,8 @@ public class ListSubscriptionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
+     * <p>The pagination token.</p>
+     * 
      * <strong>example:</strong>
      * <p>2-3408-4595-9d80-****</p>
      */
@@ -40,6 +54,8 @@ public class ListSubscriptionsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The UUID of the notification policy. This parameter is used to filter subscriptions that are bound to a specified notification policy. The value is a 32-character string.</p>
+     * 
      * <strong>example:</strong>
      * <p>1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d</p>
      */
@@ -47,6 +63,8 @@ public class ListSubscriptionsRequest extends TeaModel {
     public String notifyStrategyUuid;
 
     /**
+     * <p>The field by which to sort the results.</p>
+     * 
      * <strong>example:</strong>
      * <p>id</p>
      */
@@ -54,6 +72,8 @@ public class ListSubscriptionsRequest extends TeaModel {
     public String orderBy;
 
     /**
+     * <p>The ID of the subscription.</p>
+     * 
      * <strong>example:</strong>
      * <p>123123123123</p>
      */
@@ -61,13 +81,21 @@ public class ListSubscriptionsRequest extends TeaModel {
     public String subscriptionId;
 
     /**
+     * <p>The name of the subscription.</p>
+     * 
      * <strong>example:</strong>
-     * <p>测试订阅</p>
+     * <p>Test subscription</p>
      */
     @NameInMap("subscriptionName")
     public String subscriptionName;
 
     /**
+     * <p>The type of the subscription. Valid values:</p>
+     * <ul>
+     * <li>NORMAL: Standard subscription.</li>
+     * <li>AI_AGENT: AI agent subscription.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */
@@ -75,6 +103,8 @@ public class ListSubscriptionsRequest extends TeaModel {
     public String subscriptionType;
 
     /**
+     * <p><strong>[Deprecated]</strong> This is an internal reserved parameter. Do not use it.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -83,6 +113,8 @@ public class ListSubscriptionsRequest extends TeaModel {
     public Boolean unbound;
 
     /**
+     * <p>The name of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>workspace-test</p>
      */

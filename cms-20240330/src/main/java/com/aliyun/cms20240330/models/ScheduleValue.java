@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ScheduleValue extends TeaModel {
     /**
+     * <p>The ID of the on-call contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>testId</p>
      */
@@ -12,6 +14,8 @@ public class ScheduleValue extends TeaModel {
     public String contactId;
 
     /**
+     * <p>The name of the on-call contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>testName</p>
      */
@@ -19,6 +23,8 @@ public class ScheduleValue extends TeaModel {
     public String contactName;
 
     /**
+     * <p>The end time. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-10-01 02:00:00</p>
      */
@@ -26,6 +32,8 @@ public class ScheduleValue extends TeaModel {
     public String end;
 
     /**
+     * <p>The start time. Format: yyyy-MM-dd HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2024-10-01 22:00:00</p>
      */

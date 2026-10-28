@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateOncallScheduleResponseBody extends TeaModel {
     /**
+     * <p>The unique identifier of the on-call schedule.</p>
+     * 
      * <strong>example:</strong>
      * <p>testOncallScheduleId</p>
      */
@@ -12,6 +14,8 @@ public class CreateOncallScheduleResponseBody extends TeaModel {
     public String oncallScheduleId;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>3B311FD9-A60B-55E0-A896-A0C73*********</p>
      */

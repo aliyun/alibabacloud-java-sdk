@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateContactGroupRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the contact group.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
     @NameInMap("contactGroupId")
     public String contactGroupId;
 
+    /**
+     * <p>The IDs of the contacts.</p>
+     */
     @NameInMap("contacts")
     public java.util.List<String> contacts;
 
     /**
+     * <p>The name of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -22,6 +29,8 @@ public class CreateContactGroupRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The name of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default-cms-5884500827389836-cn-hangzhou</p>
      */

@@ -5,18 +5,20 @@ import com.aliyun.tea.*;
 
 public class PreviewNotifyTemplateRequest extends TeaModel {
     /**
+     * <p>The rendering context data in key-value pair format. This data source is used to populate Go template placeholders in the templates, such as {{.incident.title}}.</p>
+     * 
      * <strong>example:</strong>
-     * <p>{&quot;incident&quot;:{&quot;title&quot;:&quot;CPU使用率过高&quot;,&quot;severity&quot;:&quot;P1&quot;}}</p>
+     * <p>{&quot;incident&quot;:{&quot;title&quot;:&quot;High CPU utilization&quot;,&quot;severity&quot;:&quot;P1&quot;}}</p>
      */
     @NameInMap("data")
     public Object data;
 
     /**
-     * <p>待渲染的模板列表，每项包含模板标识和模板内容</p>
+     * <p>The list of templates to be rendered. Each item includes a template identifier and the template content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;key&quot;:&quot;title&quot;,&quot;template&quot;:&quot;云监控报警: {{.incident.title}}&quot;},{&quot;key&quot;:&quot;content&quot;,&quot;template&quot;:&quot;&gt;- 级别: {{.incident.severity}}&quot;}]</p>
+     * <p>[{&quot;key&quot;:&quot;title&quot;,&quot;template&quot;:&quot;CloudMonitor alert: {{.incident.title}}&quot;},{&quot;key&quot;:&quot;content&quot;,&quot;template&quot;:&quot;&gt;- Severity: {{.incident.severity}}&quot;}]</p>
      */
     @NameInMap("templates")
     public java.util.List<PreviewNotifyTemplateRequestTemplates> templates;
@@ -44,7 +46,7 @@ public class PreviewNotifyTemplateRequest extends TeaModel {
 
     public static class PreviewNotifyTemplateRequestTemplates extends TeaModel {
         /**
-         * <p>模板标识，前端自定义，原样返回。建议使用 title / content 等语义名称</p>
+         * <p>The template identifier. This identifier is defined by the frontend and returned as-is. Use semantic names such as title or content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -54,11 +56,11 @@ public class PreviewNotifyTemplateRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Go template 语法的模板内容字符串</p>
+         * <p>The template content string in Go template syntax.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>云监控报警: {{.incident.title}}</p>
+         * <p>CloudMonitor alert: {{.incident.title}}</p>
          */
         @NameInMap("template")
         public String template;

@@ -4,10 +4,15 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class PreviewNotifyTemplateResponseBody extends TeaModel {
+    /**
+     * <p>The rendering result object, which contains two mappings: success for successfully rendered items and failed for items that failed to render.</p>
+     */
     @NameInMap("data")
     public PreviewNotifyTemplateResponseBodyData data;
 
     /**
+     * <p>The processing result message. The value is success if the request is successful, or an error message if the request fails.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -15,7 +20,7 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>请求ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>452faed9-ab3b-4340-8a92-bc7d9b98f17a</p>
@@ -23,6 +28,13 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
     @NameInMap("requestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
+     */
     @NameInMap("success")
     public Boolean success;
 
@@ -64,9 +76,15 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
     }
 
     public static class PreviewNotifyTemplateResponseBodyData extends TeaModel {
+        /**
+         * <p>The mapping of failed rendering results. The key is the template identifier, and the value is the cause of the failure, such as a template syntax error or a reference to an undefined variable.</p>
+         */
         @NameInMap("failed")
         public java.util.Map<String, ?> failed;
 
+        /**
+         * <p>The mapping of successful rendering results. The key is the template identifier, which corresponds to templates[].key in the request, and the value is the rendered string content.</p>
+         */
         @NameInMap("success")
         public java.util.Map<String, ?> success;
 

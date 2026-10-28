@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateOncallScheduleRequest extends TeaModel {
     /**
+     * <p>The unique identifier of the on-call schedule.</p>
+     * 
      * <strong>example:</strong>
      * <p>testOncallScheduleId</p>
      */
@@ -12,26 +14,38 @@ public class CreateOncallScheduleRequest extends TeaModel {
     public String oncallScheduleId;
 
     /**
+     * <p>The name of the on-call schedule.</p>
+     * 
      * <strong>example:</strong>
      * <p>testOncallScheduleName</p>
      */
     @NameInMap("oncallScheduleName")
     public String oncallScheduleName;
 
+    /**
+     * <p>The list of rotations.</p>
+     */
     @NameInMap("rotations")
     public java.util.List<CreateOncallScheduleRequestRotations> rotations;
 
     /**
+     * <p>The ID of the chatbot for shift reminders.</p>
+     * 
      * <strong>example:</strong>
      * <p>testRobotId</p>
      */
     @NameInMap("shiftRobotId")
     public String shiftRobotId;
 
+    /**
+     * <p>The list of substitution rules.</p>
+     */
     @NameInMap("substitudes")
     public java.util.List<CreateOncallScheduleRequestSubstitudes> substitudes;
 
     /**
+     * <p>The name of the workspace.</p>
+     * 
      * <strong>example:</strong>
      * <p>default-cms-5884500827389836-cn-hangzhou</p>
      */
@@ -93,18 +107,21 @@ public class CreateOncallScheduleRequest extends TeaModel {
 
     public static class CreateOncallScheduleRequestRotations extends TeaModel {
         /**
+         * <p>The days of the week when the rotation is active.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("activeDays")
         public java.util.List<Integer> activeDays;
 
         /**
+         * <p>The list of contacts.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("contacts")
         public java.util.List<String> contacts;
 
         /**
+         * <p>The end time of the rotation. Format: HH:mm.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -114,6 +131,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public String rotationEndTime;
 
         /**
+         * <p>The name of the rotation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,6 +141,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public String rotationName;
 
         /**
+         * <p>The start time of the rotation. Format: HH:mm.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -132,6 +151,8 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public String rotationStartTime;
 
         /**
+         * <p>The length of the shift interval. Use this parameter in conjunction with shiftRecurrenceFrequency. For example, set this parameter to 3 to rotate to the next on-call contact every 3 days.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -139,6 +160,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public Integer shiftLength;
 
         /**
+         * <p>The unit of the shift interval. Use this parameter in conjunction with shiftRecurrenceFrequency. For example, set this parameter to week to rotate to the next on-call contact every week.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,6 +170,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public String shiftRecurrenceFrequency;
 
         /**
+         * <p>The start date of the rotation. Format: yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -157,6 +180,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public String startDate;
 
         /**
+         * <p>The name of the time zone. The time zone must follow the <strong>IANA Time Zone Database</strong> standard, such as <code>Asia/Shanghai</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -246,6 +270,8 @@ public class CreateOncallScheduleRequest extends TeaModel {
 
     public static class CreateOncallScheduleRequestSubstitudes extends TeaModel {
         /**
+         * <p>The ID of the substitute contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>testId</p>
          */
@@ -253,6 +279,8 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public String contactId;
 
         /**
+         * <p>The end time of the substitution. Format: YYYY-MM-DD HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-15 18:00</p>
          */
@@ -260,6 +288,8 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public String endTime;
 
         /**
+         * <p>The ID of the replaced contact.</p>
+         * 
          * <strong>example:</strong>
          * <p>testId</p>
          */
@@ -267,6 +297,8 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public String replacedContactId;
 
         /**
+         * <p>The start time of the substitution. Format: YYYY-MM-DD HH:mm.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-10-10 09:00</p>
          */

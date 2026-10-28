@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ActiveContactChannelRequest extends TeaModel {
     /**
+     * <p>The activation verification code. This 32-character string is sent by the system to the mobile phone number or email address of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>0b9377d9c56b5c2ea8a41a2b3c4d5e6f</p>
      */
@@ -12,6 +14,8 @@ public class ActiveContactChannelRequest extends TeaModel {
     public String code;
 
     /**
+     * <p>The site. Valid values: cn_hangzhou (China site) and ap_southeast_1 (International site). Default value: cn_hangzhou.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn_hangzhou</p>
      */

@@ -70,7 +70,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>激活验证码</p>
+     * <p>Activates the contact channel.</p>
      * 
      * @param request ActiveContactChannelRequest
      * @param headers map
@@ -108,7 +108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>激活验证码</p>
+     * <p>Activates the contact channel.</p>
      * 
      * @param request ActiveContactChannelRequest
      * @return ActiveContactChannelResponse
@@ -520,7 +520,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建告警动作</p>
+     * <p>Creates an alert action integration.</p>
      * 
      * @param request CreateAlertActionRequest
      * @param headers map
@@ -594,7 +594,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建告警动作</p>
+     * <p>Creates an alert action integration.</p>
      * 
      * @param request CreateAlertActionRequest
      * @return CreateAlertActionResponse
@@ -607,7 +607,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建通知模板</p>
+     * <p>Creates a notification template.</p>
      * 
      * @param request CreateAlertNotifyTemplateRequest
      * @param headers map
@@ -657,7 +657,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建通知模板</p>
+     * <p>Creates a notification template.</p>
      * 
      * @param request CreateAlertNotifyTemplateRequest
      * @return CreateAlertNotifyTemplateResponse
@@ -926,7 +926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建联系人</p>
+     * <p>Creates a contact.</p>
      * 
      * @param request CreateContactRequest
      * @param headers map
@@ -984,7 +984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建联系人</p>
+     * <p>Creates a contact.</p>
      * 
      * @param request CreateContactRequest
      * @return CreateContactResponse
@@ -997,7 +997,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建联系人组</p>
+     * <p>Creates a contact group.</p>
      * 
      * @param request CreateContactGroupRequest
      * @param headers map
@@ -1043,7 +1043,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>创建联系人组</p>
+     * <p>Creates a contact group.</p>
      * 
      * @param request CreateContactGroupRequest
      * @return CreateContactGroupResponse
@@ -1673,8 +1673,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建OncallSchedule</p>
+     * <p>Creates an on-call schedule.</p>
      * 
      * @param request CreateOncallScheduleRequest
      * @param headers map
@@ -1729,8 +1732,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>创建OncallSchedule</p>
+     * <p>Creates an on-call schedule.</p>
      * 
      * @param request CreateOncallScheduleRequest
      * @return CreateOncallScheduleResponse
@@ -2547,7 +2553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除告警动作</p>
+     * <p>Deletes an alert action integration.</p>
      * 
      * @param tmpReq DeleteAlertActionsRequest
      * @param headers map
@@ -2587,7 +2593,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除告警动作</p>
+     * <p>Deletes an alert action integration.</p>
      * 
      * @param request DeleteAlertActionsRequest
      * @return DeleteAlertActionsResponse
@@ -2600,7 +2606,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除报警通知模板</p>
+     * <p>Deletes notification templates.</p>
      * 
      * @param tmpReq DeleteAlertNotifyTemplatesRequest
      * @param headers map
@@ -2640,7 +2646,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除报警通知模板</p>
+     * <p>Deletes notification templates.</p>
      * 
      * @param request DeleteAlertNotifyTemplatesRequest
      * @return DeleteAlertNotifyTemplatesResponse
@@ -2841,7 +2847,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除联系人组</p>
+     * <p>Deletes contact groups.</p>
      * 
      * @param tmpReq DeleteContactGroupsRequest
      * @param headers map
@@ -2881,7 +2887,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除联系人组</p>
+     * <p>Deletes contact groups.</p>
      * 
      * @param request DeleteContactGroupsRequest
      * @return DeleteContactGroupsResponse
@@ -2894,7 +2900,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除联系人</p>
+     * <p>Deletes a contact.</p>
      * 
      * @param tmpReq DeleteContactsRequest
      * @param headers map
@@ -2934,7 +2940,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除联系人</p>
+     * <p>Deletes a contact.</p>
      * 
      * @param request DeleteContactsRequest
      * @return DeleteContactsResponse
@@ -3588,8 +3594,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除OncallSchedule</p>
+     * <p>Deletes an on-call schedule.</p>
      * 
      * @param tmpReq DeleteOncallSchedulesRequest
      * @param headers map
@@ -3628,8 +3637,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>删除OncallSchedule</p>
+     * <p>Deletes an on-call schedule.</p>
      * 
      * @param request DeleteOncallSchedulesRequest
      * @return DeleteOncallSchedulesResponse
@@ -3969,7 +3981,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除订阅</p>
+     * <p>Deletes a subscription.</p>
      * 
      * @param request DeleteSubscriptionRequest
      * @param headers map
@@ -4003,7 +4015,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>删除订阅</p>
+     * <p>Deletes a subscription.</p>
      * 
      * @param request DeleteSubscriptionRequest
      * @return DeleteSubscriptionResponse
@@ -4456,7 +4468,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停订阅</p>
+     * <p>Disables a subscription.</p>
      * 
      * @param request DisableSubscriptionRequest
      * @param headers map
@@ -4490,7 +4502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>暂停订阅</p>
+     * <p>Disables a subscription.</p>
      * 
      * @param request DisableSubscriptionRequest
      * @return DisableSubscriptionResponse
@@ -4609,7 +4621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动订阅</p>
+     * <p>Activates a subscription.</p>
      * 
      * @param request EnableSubscriptionRequest
      * @param headers map
@@ -4643,7 +4655,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>启动订阅</p>
+     * <p>Activates a subscription.</p>
      * 
      * @param request EnableSubscriptionRequest
      * @return EnableSubscriptionResponse
@@ -4972,7 +4984,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询告警动作</p>
+     * <p>Retrieves alert action integrations.</p>
      * 
      * @param request GetAlertActionRequest
      * @param headers map
@@ -5000,7 +5012,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询告警动作</p>
+     * <p>Retrieves alert action integrations.</p>
      * 
      * @param request GetAlertActionRequest
      * @return GetAlertActionResponse
@@ -5962,8 +5974,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询 OncallSchedule</p>
+     * <p>Retrieves the on-call schedule.</p>
      * 
      * @param request GetOncallScheduleRequest
      * @param headers map
@@ -5990,8 +6005,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询 OncallSchedule</p>
+     * <p>Retrieves the on-call schedule.</p>
      * 
      * @param request GetOncallScheduleRequest
      * @return GetOncallScheduleResponse
@@ -6396,7 +6414,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取订阅</p>
+     * <p>Retrieves a subscription.</p>
      * 
      * @param request GetSubscriptionRequest
      * @param headers map
@@ -6430,7 +6448,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>获取订阅</p>
+     * <p>Retrieves a subscription.</p>
      * 
      * @param request GetSubscriptionRequest
      * @return GetSubscriptionResponse
@@ -6914,8 +6932,171 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询通知模板</p>
+     * <p>Queries CloudMonitor 2.0 alert history records.</p>
+     * 
+     * @param tmpReq ListAlertHistoriesRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAlertHistoriesResponse
+     */
+    public ListAlertHistoriesResponse listAlertHistoriesWithOptions(ListAlertHistoriesRequest tmpReq, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ListAlertHistoriesShrinkRequest request = new ListAlertHistoriesShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.labelFilter)) {
+            request.labelFilterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.labelFilter, "labelFilter", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.notificationFilter)) {
+            request.notificationFilterShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.notificationFilter, "notificationFilter", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.alertHistoryId)) {
+            query.put("alertHistoryId", request.alertHistoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.alertRuleId)) {
+            query.put("alertRuleId", request.alertRuleId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.bizSource)) {
+            query.put("bizSource", request.bizSource);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cmsNamespace)) {
+            query.put("cmsNamespace", request.cmsNamespace);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cmsProductCategory)) {
+            query.put("cmsProductCategory", request.cmsProductCategory);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.displayNameKeyWord)) {
+            query.put("displayNameKeyWord", request.displayNameKeyWord);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceKey)) {
+            query.put("instanceKey", request.instanceKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.labelFilterShrink)) {
+            query.put("labelFilter", request.labelFilterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.latestLevel)) {
+            query.put("latestLevel", request.latestLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxLevel)) {
+            query.put("maxLevel", request.maxLevel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.maxResults)) {
+            query.put("maxResults", request.maxResults);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.migrationStatus)) {
+            query.put("migrationStatus", request.migrationStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("nextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.notificationFilterShrink)) {
+            query.put("notificationFilter", request.notificationFilterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.observeRelationType)) {
+            query.put("observeRelationType", request.observeRelationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.observeResourceDomain)) {
+            query.put("observeResourceDomain", request.observeResourceDomain);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.observeResourceGlobalScope)) {
+            query.put("observeResourceGlobalScope", request.observeResourceGlobalScope);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.observeResourceInstanceId)) {
+            query.put("observeResourceInstanceId", request.observeResourceInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.observeResourceType)) {
+            query.put("observeResourceType", request.observeResourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("pageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("pageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.partitionKey)) {
+            query.put("partitionKey", request.partitionKey);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimeFrom)) {
+            query.put("startTimeFrom", request.startTimeFrom);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTimeTo)) {
+            query.put("startTimeTo", request.startTimeTo);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.status)) {
+            query.put("status", request.status);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
+            query.put("workspace", request.workspace);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAlertHistories"),
+            new TeaPair("version", "2024-03-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/alertHistories"),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAlertHistoriesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries CloudMonitor 2.0 alert history records.</p>
+     * 
+     * @param request ListAlertHistoriesRequest
+     * @return ListAlertHistoriesResponse
+     */
+    public ListAlertHistoriesResponse listAlertHistories(ListAlertHistoriesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.listAlertHistoriesWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries notification templates.</p>
      * 
      * @param tmpReq ListAlertNotifyTemplatesRequest
      * @param headers map
@@ -6975,7 +7156,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询通知模板</p>
+     * <p>Queries notification templates.</p>
      * 
      * @param request ListAlertNotifyTemplatesRequest
      * @return ListAlertNotifyTemplatesResponse
@@ -8382,8 +8563,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询值班人</p>
+     * <p>Queries the on-call contacts at a specified time.</p>
      * 
      * @param request ListOncallContactsRequest
      * @param headers map
@@ -8416,8 +8600,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查询值班人</p>
+     * <p>Queries the on-call contacts at a specified time.</p>
      * 
      * @param request ListOncallContactsRequest
      * @return ListOncallContactsResponse
@@ -8430,7 +8617,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询当前账号下所有值班排班的配置信息</p>
+     * <p>Queries on-call schedules.</p>
      * 
      * @param tmpReq ListOncallSchedulesRequest
      * @param headers map
@@ -8486,7 +8673,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询当前账号下所有值班排班的配置信息</p>
+     * <p>Queries on-call schedules.</p>
      * 
      * @param request ListOncallSchedulesRequest
      * @return ListOncallSchedulesResponse
@@ -9075,7 +9262,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询订阅规则列表</p>
+     * <p>Queries subscriptions.</p>
      * 
      * @param request ListSubscriptionsRequest
      * @param headers map
@@ -9153,7 +9340,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>查询订阅规则列表</p>
+     * <p>Queries subscriptions.</p>
      * 
      * @param request ListSubscriptionsRequest
      * @return ListSubscriptionsResponse
@@ -9239,7 +9426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List History name</p>
+     * <p>Queries the alert notification delivery history in a specified workspace by using paging, and supports filtering by conditions such as notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</p>
      * 
      * @param request ListUserNotifyHistoriesRequest
      * @param headers map
@@ -9365,7 +9552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List History name</p>
+     * <p>Queries the alert notification delivery history in a specified workspace by using paging, and supports filtering by conditions such as notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</p>
      * 
      * @param request ListUserNotifyHistoriesRequest
      * @return ListUserNotifyHistoriesResponse
@@ -9644,10 +9831,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>传入 Go template 语法的模板内容和渲染上下文数据，返回各模板的渲染结果。支持同时预览多个模板（如 title 和 content），用于前端模板编辑器的实时预览能力。</p>
+     * <p>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</p>
      * 
      * <b>summary</b> : 
-     * <p>预览通知模板渲染结果</p>
+     * <p>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</p>
      * 
      * @param request PreviewNotifyTemplateRequest
      * @param headers map
@@ -9685,10 +9872,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>传入 Go template 语法的模板内容和渲染上下文数据，返回各模板的渲染结果。支持同时预览多个模板（如 title 和 content），用于前端模板编辑器的实时预览能力。</p>
+     * <p>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</p>
      * 
      * <b>summary</b> : 
-     * <p>预览通知模板渲染结果</p>
+     * <p>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</p>
      * 
      * @param request PreviewNotifyTemplateRequest
      * @return PreviewNotifyTemplateResponse
@@ -9841,7 +10028,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重新发送激活链接</p>
+     * <p>Resends the activation link.</p>
      * 
      * @param request ResendVerifyActivateRequest
      * @param headers map
@@ -9875,7 +10062,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>重新发送激活链接</p>
+     * <p>Resends the activation link.</p>
      * 
      * @param request ResendVerifyActivateRequest
      * @return ResendVerifyActivateResponse
@@ -10391,7 +10578,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改告警动作</p>
+     * <p>Updates an alert action integration.</p>
      * 
      * @param request UpdateAlertActionRequest
      * @param headers map
@@ -10461,7 +10648,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改告警动作</p>
+     * <p>Updates an alert action integration.</p>
      * 
      * @param request UpdateAlertActionRequest
      * @return UpdateAlertActionResponse
@@ -10474,7 +10661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改已存在的告警通知模板内容。</p>
+     * <p>Updates a notification template.</p>
      * 
      * @param request UpdateAlertNotifyTemplateRequest
      * @param headers map
@@ -10512,7 +10699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改已存在的告警通知模板内容。</p>
+     * <p>Updates a notification template.</p>
      * 
      * @param request UpdateAlertNotifyTemplateRequest
      * @return UpdateAlertNotifyTemplateResponse
@@ -10718,7 +10905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改已存在的联系人的详细信息</p>
+     * <p>Updates a contact.</p>
      * 
      * @param request UpdateContactRequest
      * @param headers map
@@ -10768,7 +10955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改已存在的联系人的详细信息</p>
+     * <p>Updates a contact.</p>
      * 
      * @param request UpdateContactRequest
      * @return UpdateContactResponse
@@ -10781,7 +10968,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改已存在的联系人组信息。</p>
+     * <p>Updates a contact group.</p>
      * 
      * @param request UpdateContactGroupRequest
      * @param headers map
@@ -10819,7 +11006,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>修改已存在的联系人组信息。</p>
+     * <p>Updates a contact group.</p>
      * 
      * @param request UpdateContactGroupRequest
      * @return UpdateContactGroupResponse
@@ -11491,8 +11678,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新UpdateOncallSchedule</p>
+     * <p>Updates an on-call schedule.</p>
      * 
      * @param request UpdateOncallScheduleRequest
      * @param headers map
@@ -11537,8 +11727,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Creates an on-call schedule.</p>
+     * 
      * <b>summary</b> : 
-     * <p>更新UpdateOncallSchedule</p>
+     * <p>Updates an on-call schedule.</p>
      * 
      * @param request UpdateOncallScheduleRequest
      * @return UpdateOncallScheduleResponse
@@ -12155,8 +12348,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看值班日历</p>
+     * <p>Queries the on-call calendar of a specified on-call schedule within a given date range, and returns the contacts and start and end times of each on-call shift grouped by shift name.</p>
      * 
      * @param request ViewOncallScheduleRequest
      * @param headers map
@@ -12193,8 +12389,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</p>
+     * 
      * <b>summary</b> : 
-     * <p>查看值班日历</p>
+     * <p>Queries the on-call calendar of a specified on-call schedule within a given date range, and returns the contacts and start and end times of each on-call shift grouped by shift name.</p>
      * 
      * @param request ViewOncallScheduleRequest
      * @return ViewOncallScheduleResponse

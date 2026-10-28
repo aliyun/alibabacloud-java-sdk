@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateContactGroupResponseBody extends TeaModel {
     /**
-     * <p>Id of the request</p>
+     * <p>The unique ID of the request, which is used for log tracing and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>

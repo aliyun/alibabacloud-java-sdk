@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class DeleteContactsRequest extends TeaModel {
+    /**
+     * <p>The IDs of the contacts.</p>
+     */
     @NameInMap("contactIds")
     public java.util.List<String> contactIds;
 

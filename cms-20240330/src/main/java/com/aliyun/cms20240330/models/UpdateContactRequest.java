@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class UpdateContactRequest extends TeaModel {
     /**
+     * <p>The email address of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
      */
     @NameInMap("email")
     public String email;
 
+    /**
+     * <p>The IM user ID mappings. Multiple instant messaging tools are supported.</p>
+     */
     @NameInMap("imUserIds")
     public java.util.Map<String, String> imUserIds;
 
     /**
+     * <p>The language.</p>
+     * 
      * <strong>example:</strong>
      * <p>zh_CN</p>
      */
@@ -22,6 +29,8 @@ public class UpdateContactRequest extends TeaModel {
     public String lang;
 
     /**
+     * <p>The name of the contact.</p>
+     * 
      * <strong>example:</strong>
      * <p>test</p>
      */
@@ -29,6 +38,8 @@ public class UpdateContactRequest extends TeaModel {
     public String name;
 
     /**
+     * <p>The mobile phone number of the contact. Only mobile phone numbers in the Chinese mainland are supported.</p>
+     * 
      * <strong>example:</strong>
      * <p>150123456789</p>
      */

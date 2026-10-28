@@ -4,6 +4,9 @@ package com.aliyun.cms20240330.models;
 import com.aliyun.tea.*;
 
 public class DeleteOncallSchedulesShrinkRequest extends TeaModel {
+    /**
+     * <p>The IDs of the on-call schedules.</p>
+     */
     @NameInMap("oncallScheduleIds")
     public String oncallScheduleIdsShrink;
 

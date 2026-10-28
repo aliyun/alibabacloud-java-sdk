@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertNotifyTemplatesRequest extends TeaModel {
     /**
+     * <p>The IDs of the notification templates.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("alertNotifyTemplateIds")
