@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListKVCacheStoreAvailableVscsRequest extends TeaModel {
     /**
-     * <p>The cross-account authorization role chain, used for cross-account VSC queries in ecs or eflo scenarios.</p>
+     * <p>The cross-account authorization role chain, used for cross-account VSC queries in ECS or EFLO scenarios.</p>
      */
     @NameInMap("Arns")
     public java.util.List<ListKVCacheStoreAvailableVscsRequestArns> arns;
 
     /**
-     * <p>The ID of the compute instance.</p>
+     * <p>The compute instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,11 +21,10 @@ public class ListKVCacheStoreAvailableVscsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the compute instance. Valid values:</p>
+     * <p>The compute instance type. Valid values:</p>
      * <ul>
-     * <li>ecs</li>
-     * <li>eflo</li>
-     * <li>innerECS</li>
+     * <li>ECS</li>
+     * <li>EFLO</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -36,7 +35,7 @@ public class ListKVCacheStoreAvailableVscsRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The ID of the KVCacheStore instance.</p>
+     * <p>The KVCacheStore instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +101,7 @@ public class ListKVCacheStoreAvailableVscsRequest extends TeaModel {
 
     public static class ListKVCacheStoreAvailableVscsRequestArns extends TeaModel {
         /**
-         * <p>The UID of the target account for role assumption.</p>
+         * <p>The target UID for role assumption.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -112,7 +111,7 @@ public class ListKVCacheStoreAvailableVscsRequest extends TeaModel {
         public String assumeRoleFor;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role.</p>
+         * <p>The ARN of the RAM role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,7 +121,7 @@ public class ListKVCacheStoreAvailableVscsRequest extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The type of the role. Valid values:</p>
+         * <p>The role type. Valid values:</p>
          * <ul>
          * <li>service</li>
          * <li>user</li>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
     /**
-     * <p>The list of available HpnZone information for instances.</p>
+     * <p>The list of available HpnZones for instances.</p>
      */
     @NameInMap("InstanceHpnZones")
     public java.util.List<ListKVCacheStoreAvailableHpnZonesResponseBodyInstanceHpnZones> instanceHpnZones;
 
     /**
-     * <p>The request ID. A request ID is returned regardless of whether the call is successful.</p>
+     * <p>The request ID. This ID is returned regardless of whether the API call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>019FB5E9-F9E8-52F5-9C56-2CDF479CBEB2</p>
@@ -73,7 +73,7 @@ public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
         public java.util.List<ListKVCacheStoreAvailableHpnZonesResponseBodyInstanceHpnZonesAvailableHpnZones> availableHpnZones;
 
         /**
-         * <p>The KVCacheStore instance ID.</p>
+         * <p>The ID of the KVCacheStore instance.</p>
          * 
          * <strong>example:</strong>
          * <p>kvcs-xxxxx</p>
@@ -82,7 +82,7 @@ public class ListKVCacheStoreAvailableHpnZonesResponseBody extends TeaModel {
         public String kvcsId;
 
         /**
-         * <p>The zone ID of the instance.</p>
+         * <p>The ID of the zone where the instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>

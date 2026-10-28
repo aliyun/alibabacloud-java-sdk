@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListKVCacheStoreAttachInfoRequest extends TeaModel {
     /**
-     * <p>The list of KVCacheStore KvcsIds to query. You can specify up to 100 IDs.</p>
+     * <p>The list of KvcsIds of the KVCacheStores to query. You can specify up to 100 KvcsIds.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("KvcsIds")
     public java.util.List<String> kvcsIds;
 
     /**
-     * <p>The maximum number of entries to return per query. Valid values: 1 to 500.</p>
+     * <p>The maximum number of entries to return in a single call. Valid values: 1 to 500.</p>
      * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class ListKVCacheStoreAttachInfoRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the NextToken value returned in the previous call. You do not need to set this parameter for the first request. If NextToken is specified, the PageSize and PageNumber request parameters become ineffective, and TotalCount in the response is invalid.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the last call to this operation. You do not need to specify this parameter for the first call. If NextToken is specified, the PageSize and PageNumber request parameters become invalid, and the TotalCount value in the response is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>your-client-token</p>
@@ -31,7 +31,7 @@ public class ListKVCacheStoreAttachInfoRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number for a paged query. Used together with PageSize. If the specified page number exceeds the total number of pages, the last page of data is returned.</p>
+     * <p>The page number for a paging query. This parameter is used together with PageSize. If the specified page number exceeds the total number of pages, the last page is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -40,7 +40,7 @@ public class ListKVCacheStoreAttachInfoRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries per page for a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -57,6 +57,15 @@ public class ListKVCacheStoreAttachInfoRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <p>The ID of the compute-side VSC. If you specify this parameter, the mount records are filtered by the specified VSC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsc-dhag651dsda</p>
+     */
+    @NameInMap("VscId")
+    public String vscId;
 
     public static ListKVCacheStoreAttachInfoRequest build(java.util.Map<String, ?> map) throws Exception {
         ListKVCacheStoreAttachInfoRequest self = new ListKVCacheStoreAttachInfoRequest();
@@ -109,6 +118,14 @@ public class ListKVCacheStoreAttachInfoRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ListKVCacheStoreAttachInfoRequest setVscId(String vscId) {
+        this.vscId = vscId;
+        return this;
+    }
+    public String getVscId() {
+        return this.vscId;
     }
 
 }

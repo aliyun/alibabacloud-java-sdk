@@ -42,7 +42,7 @@ public class ListKVCacheStoreAvailableVscsResponseBody extends TeaModel {
 
     public static class ListKVCacheStoreAvailableVscsResponseBodyVscs extends TeaModel {
         /**
-         * <p>The ID of the VSC device.</p>
+         * <p>The VSC device ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vsc-xxxxx</p>

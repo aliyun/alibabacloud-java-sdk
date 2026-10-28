@@ -84,7 +84,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
 
     public static class GetKVCacheStoreResponseBodyKvCacheStore extends TeaModel {
         /**
-         * <p>The storage capacity, in GiB.</p>
+         * <p>The storage capacity in GiB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -113,9 +113,9 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         /**
          * <p>The extra status information. Valid values:</p>
          * <ul>
-         * <li>CapacityExpanding</li>
-         * <li>CapacityExpandSuccess</li>
-         * <li>CapacityExpandFail</li>
+         * <li>CapacityExpanding: The capacity is being expanded.</li>
+         * <li>CapacityExpandSuccess: The capacity expansion succeeded.</li>
+         * <li>CapacityExpandFail: The capacity expansion failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -125,7 +125,7 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         public String extraStatus;
 
         /**
-         * <p>The cluster number.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -163,8 +163,8 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         /**
          * <p>The payment type. Valid values:</p>
          * <ul>
-         * <li>PREPAY</li>
-         * <li>POSTPAY</li>
+         * <li>PREPAY: subscription.</li>
+         * <li>POSTPAY: pay-as-you-go.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,12 +194,12 @@ public class GetKVCacheStoreResponseBody extends TeaModel {
         /**
          * <p>The instance status. Valid values:</p>
          * <ul>
-         * <li>Creating</li>
-         * <li>Available</li>
-         * <li>InUse</li>
-         * <li>Stopping</li>
-         * <li>Stopped</li>
-         * <li>Deleting</li>
+         * <li>Creating: The instance is being created.</li>
+         * <li>Available: The instance is available.</li>
+         * <li>InUse: The instance is in use.</li>
+         * <li>Stopping: The instance is being stopped.</li>
+         * <li>Stopped: The instance is stopped.</li>
+         * <li>Deleting: The instance is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -20,6 +20,15 @@ public class AttachKVCacheStoreRequest extends TeaModel {
     public String clientToken;
 
     /**
+     * <p>The VSC instance type. Valid values: EFLO, ECS, and INNER_ECS. Default value: EFLO.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ECS</p>
+     */
+    @NameInMap("InstanceType")
+    public String instanceType;
+
+    /**
      * <p>The region ID, such as cn-hangzhou.</p>
      * <p>This parameter is required.</p>
      * 
@@ -55,6 +64,14 @@ public class AttachKVCacheStoreRequest extends TeaModel {
     }
     public String getClientToken() {
         return this.clientToken;
+    }
+
+    public AttachKVCacheStoreRequest setInstanceType(String instanceType) {
+        this.instanceType = instanceType;
+        return this;
+    }
+    public String getInstanceType() {
+        return this.instanceType;
     }
 
     public AttachKVCacheStoreRequest setRegionId(String regionId) {
@@ -94,11 +111,7 @@ public class AttachKVCacheStoreRequest extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The role type. Valid values:</p>
-         * <ul>
-         * <li>service</li>
-         * <li>user</li>
-         * </ul>
+         * <p>The role type. Valid values: service and user.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

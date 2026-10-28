@@ -11,7 +11,7 @@ public class DescribeRegionsResponseBody extends TeaModel {
     public java.util.List<DescribeRegionsResponseBodyRegions> regions;
 
     /**
-     * <p>The request ID. A request ID is returned regardless of whether the API call is successful.</p>
+     * <p>The request ID. The request ID is returned regardless of whether the API call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>019F6DDC-3845-542D-8E2C-60C4CC733BBD</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKVCacheStoresRequest extends TeaModel {
     /**
-     * <p>The list of KvcsId values. Separate multiple IDs with commas. A maximum of 100 IDs are supported.</p>
+     * <p>The list of KvcsId values. Separate multiple IDs with commas (,). A maximum of 100 IDs can be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>kvcs-87djda131</p>
@@ -23,7 +23,7 @@ public class ListKVCacheStoresRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The instance name filter. Prefix matching is used.</p>
+     * <p>The instance name used for filtering. Prefix matching is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>obj-detect</p>
@@ -32,7 +32,7 @@ public class ListKVCacheStoresRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response. This parameter is mutually exclusive with PageNumber.</p>
+     * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, use the NextToken value returned in the previous response. This parameter and PageNumber are mutually exclusive.</p>
      * 
      * <strong>example:</strong>
      * <p>a24c3a9cc8e6da77b10cffc4c93c7922e0b5e8707e68181f</p>
@@ -41,7 +41,7 @@ public class ListKVCacheStoresRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number. Default value: 1. This parameter takes precedence over NextToken if both are specified.</p>
+     * <p>The page number. Default value: 1. This parameter and NextToken are mutually exclusive. If both are specified, PageNumber takes precedence.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +69,7 @@ public class ListKVCacheStoresRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The instance status filter. Valid values: Creating, Available, InUse, Stopping, Stopped, and Deleting.</p>
+     * <p>The instance status used for filtering. Valid values: Creating, Available, InUse, Stopping, Stopped, and Deleting.</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
