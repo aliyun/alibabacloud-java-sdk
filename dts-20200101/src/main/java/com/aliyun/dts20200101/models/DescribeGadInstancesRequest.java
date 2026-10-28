@@ -4,6 +4,12 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeGadInstancesRequest extends TeaModel {
+    /**
+     * <p>The list of database engine types. Separate multiple types with commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MySQL,PostgreSQL,SQLServer</p>
+     */
     @NameInMap("DbEngineTypes")
     public String dbEngineTypes;
 
@@ -41,7 +47,7 @@ public class DescribeGadInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. Specify this parameter to query instances in a specific region. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -58,6 +64,12 @@ public class DescribeGadInstancesRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The ID of the secondary database instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-a1b2c3d4e5f6g7h8i</p>
+     */
     @NameInMap("SlaveDbInstanceId")
     public String slaveDbInstanceId;
 

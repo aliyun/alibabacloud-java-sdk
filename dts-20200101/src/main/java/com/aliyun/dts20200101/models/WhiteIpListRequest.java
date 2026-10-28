@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class WhiteIpListRequest extends TeaModel {
     /**
-     * <p>The UID of the destination Alibaba Cloud account.</p>
+     * <p>The Alibaba Cloud account ID of the destination.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -14,7 +14,7 @@ public class WhiteIpListRequest extends TeaModel {
     public String destAliyunUid;
 
     /**
-     * <p>The primary vSwitch of the destination for VPC NAT.</p>
+     * <p>The ID of the primary vSwitch for the destination VPC NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -32,7 +32,7 @@ public class WhiteIpListRequest extends TeaModel {
     public String destRoleName;
 
     /**
-     * <p>The secondary vSwitch of the destination for VPC NAT.</p>
+     * <p>The ID of the secondary vSwitch for the destination VPC NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -50,10 +50,10 @@ public class WhiteIpListRequest extends TeaModel {
     public String destVpcId;
 
     /**
-     * <p>The region ID of the destination instance. For details, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID of the destination instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <blockquote>
      * <ul>
-     * <li>If the destination instance is a self-managed database with a public IP address or a third-party ApsaraDB database, you can set this parameter to <strong>ap-southeast-1</strong> or the area ID that is geographically closest to the database.</li>
+     * <li>If the destination instance is a self-managed database or a third-party cloud database that has a public IP address, you can specify <strong>cn-hangzhou</strong> or the ID of the region that is geographically closest to the database.</li>
      * </ul>
      * </blockquote>
      * <ul>
@@ -67,9 +67,9 @@ public class WhiteIpListRequest extends TeaModel {
     public String destinationRegion;
 
     /**
-     * <p>The region ID of the source instance. For details, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <blockquote>
-     * <p>If the source instance is a self-managed database with a public IP address or a third-party ApsaraDB database, you can set this parameter to <strong>ap-southeast-1</strong> or the area ID that is geographically closest to the database.</p>
+     * <p>If the source instance is a self-managed database or a third-party cloud database that has a public IP address, you can specify <strong>cn-hangzhou</strong> or the ID of the region that is geographically closest to the database.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -80,7 +80,7 @@ public class WhiteIpListRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The region to which the DTS instance belongs. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -89,7 +89,7 @@ public class WhiteIpListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek26mat2ldb4oy</p>
@@ -98,7 +98,7 @@ public class WhiteIpListRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The UID of the source Alibaba Cloud account.</p>
+     * <p>The Alibaba Cloud account ID of the source.</p>
      * 
      * <strong>example:</strong>
      * <p>1971721963139419</p>
@@ -107,7 +107,7 @@ public class WhiteIpListRequest extends TeaModel {
     public String srcAliyunUid;
 
     /**
-     * <p>The primary vSwitch of the source for VPC NAT.</p>
+     * <p>The ID of the primary vSwitch for the source VPC NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -125,7 +125,7 @@ public class WhiteIpListRequest extends TeaModel {
     public String srcRoleName;
 
     /**
-     * <p>The secondary vSwitch of the source for VPC NAT.</p>
+     * <p>The ID of the secondary vSwitch for the source VPC NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -143,10 +143,10 @@ public class WhiteIpListRequest extends TeaModel {
     public String srcVpcId;
 
     /**
-     * <p>The connection method of the self-managed database or third-party ApsaraDB database. Valid values:</p>
+     * <p>The connection method of the self-managed database or third-party cloud database. Valid values:</p>
      * <ul>
      * <li><strong>internet</strong>: connected over the Internet.</li>
-     * <li><strong>vpc</strong>: connected over Express Connect, VPN Gateway, or Smart Access Gateway.</li>
+     * <li><strong>vpc</strong>: connected over an Express Connect circuit, a VPN gateway, or a Smart Access Gateway (SAG).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -157,10 +157,10 @@ public class WhiteIpListRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
+     * <p>Specifies whether the task is a zero-ETL task. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The node is a seamless integration (Zero-ETL) node.</li>
-     * <li><strong>false</strong>: The node is not a seamless integration (Zero-ETL) node.</li>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no.</li>
      * </ul>
      * 
      * <strong>example:</strong>

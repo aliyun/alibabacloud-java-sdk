@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     /**
-     * <p>The backend error code, which is incrementally numeric.</p>
+     * <p>The backend error code.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -20,7 +20,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     public java.util.List<DescribeClusterOperateLogsResponseBodyDataPoints> dataPoints;
 
     /**
-     * <p>The dynamic error message, which is used to replace the %s placeholder in the ErrMessage response parameter.</p>
+     * <p>The dynamic error message, which is used to replace the %s placeholder in the ErrMessage parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Type</p>
@@ -65,7 +65,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries displayed on the current page.</p>
+     * <p>The number of entries returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -92,7 +92,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -195,7 +195,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
 
     public static class DescribeClusterOperateLogsResponseBodyDataPoints extends TeaModel {
         /**
-         * <p>The additional remarks.</p>
+         * <p>Additional remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>null</p>
@@ -204,7 +204,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>The primary key of the log record table.</p>
+         * <p>The primary key of the log record.</p>
          * 
          * <strong>example:</strong>
          * <p>237827</p>
@@ -222,7 +222,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         public Long logDatetime;
 
         /**
-         * <p>The new parameter value when the operation type is update.</p>
+         * <p>The new parameter value if the operation type is modification.</p>
          * 
          * <strong>example:</strong>
          * <p>105</p>
@@ -231,7 +231,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         public String newValue;
 
         /**
-         * <p>The old parameter value when the operation type is update.</p>
+         * <p>The original parameter value if the operation type is modification.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -258,7 +258,7 @@ public class DescribeClusterOperateLogsResponseBody extends TeaModel {
         public String operationUser;
 
         /**
-         * <p>The call result. Indicates whether the call was successful. A value of <strong>1</strong> indicates success.</p>
+         * <p>The call result. A value of <strong>1</strong> indicates success.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCheckJobsResponseBody extends TeaModel {
     /**
-     * <p>The information about the data validation tasks.</p>
+     * <p>The information about the verification tasks.</p>
      */
     @NameInMap("CheckJobs")
     public java.util.List<DescribeCheckJobsResponseBodyCheckJobs> checkJobs;
@@ -20,7 +20,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter. &gt; If <strong>ErrMessage</strong> returns <strong>The value of input parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>[1,2,3]</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the error message of the <strong>ErrMessage</strong> parameter. &gt; If <strong>ErrMessage</strong> returns <strong>The value of input parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>[1,2,3]</strong>, it indicates that the <strong>DtsJobId</strong> request parameter is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>present environment is not support,so skip.</p>
@@ -29,7 +29,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -38,7 +38,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -65,7 +65,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of records that can be displayed on the current page.</p>
+     * <p>The maximum number of entries that can be displayed on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -92,7 +92,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -219,8 +219,8 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         /**
          * <p>The data validation method. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: full data validation.</li>
-         * <li><strong>2</strong>: incremental data validation.</li>
+         * <li><strong>1</strong>: Full data validation.</li>
+         * <li><strong>2</strong>: Incremental data validation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +248,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public Long diffSum;
 
         /**
-         * <p>The ID of the data migration, data synchronization, or change tracking instance.</p>
+         * <p>The ID of the data migration, synchronization, or change tracking instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsz8tc99sy2158b36</p>
@@ -257,7 +257,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String dtsInstanceID;
 
         /**
-         * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
+         * <p>The ID of the data migration, synchronization, or change tracking task.</p>
          * 
          * <strong>example:</strong>
          * <p>n08o6si4q338b1x</p>
@@ -266,7 +266,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String dtsJobId;
 
         /**
-         * <p>The number of rows that have been validated in the table.</p>
+         * <p>The number of verified data rows in the table.</p>
          * 
          * <strong>example:</strong>
          * <p>15094</p>
@@ -275,7 +275,10 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public Long finishCount;
 
         /**
-         * <p>The DTS task ID. &gt; In most cases, you do not need to specify this parameter.</p>
+         * <p>The ID of the DTS task.</p>
+         * <blockquote>
+         * <p>In most cases, you do not need to specify this parameter.</p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>c3d12dii27t632g</p>
@@ -293,7 +296,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String instanceClass;
 
         /**
-         * <p>The name of the data validation task.</p>
+         * <p>The name of the verification task.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstest</p>
@@ -302,7 +305,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>as0e1ks426bq3z0</p>
@@ -329,7 +332,11 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The validation result. Valid values: - <strong>0</strong>: passed. - <strong>1</strong>: failed.</p>
+         * <p>The verification result. Valid values:</p>
+         * <ul>
+         * <li><strong>0</strong>: Passed.</li>
+         * <li><strong>1</strong>: Failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -338,7 +345,7 @@ public class DescribeCheckJobsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>The total number of rows to be validated.</p>
+         * <p>The total number of verified data rows.</p>
          * 
          * <strong>example:</strong>
          * <p>159</p>

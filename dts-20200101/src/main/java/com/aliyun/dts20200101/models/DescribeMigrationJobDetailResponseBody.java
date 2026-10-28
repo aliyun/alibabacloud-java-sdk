@@ -11,7 +11,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public DescribeMigrationJobDetailResponseBodyDataSynchronizationDetailList dataSynchronizationDetailList;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -20,7 +20,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -38,7 +38,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of migration instances that can be displayed on one page.</p>
+     * <p>The maximum number of migration instances that can be displayed on a single page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -47,7 +47,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public Integer pageRecordCount;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0AE3CD0B-4148-426F-A90E-952467CC****</p>
@@ -59,7 +59,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public DescribeMigrationJobDetailResponseBodyStructureInitializationDetailList structureInitializationDetailList;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -68,7 +68,7 @@ public class DescribeMigrationJobDetailResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

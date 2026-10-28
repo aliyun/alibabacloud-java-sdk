@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMigrationJobRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be discontinued.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will soon be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -14,7 +14,7 @@ public class DeleteMigrationJobRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The ID of the data migration instance. You can call the <strong>DescribeMigrationJobs</strong> operation to query the instance ID.</p>
+     * <p>Instance ID of the data migration instance. You can query instance ID by calling the <strong>DescribeMigrationJobs</strong> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DeleteMigrationJobRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID. Set this parameter to specify the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,7 +36,7 @@ public class DeleteMigrationJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

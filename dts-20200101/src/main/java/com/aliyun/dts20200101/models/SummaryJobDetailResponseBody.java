@@ -23,7 +23,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the data migration or synchronization task.</p>
+     * <p>The ID of the migration or synchronization task.</p>
      * 
      * <strong>example:</strong>
      * <p>l3m1213ye7l****</p>
@@ -32,9 +32,9 @@ public class SummaryJobDetailResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The array of migration object information.</p>
+     * <p>The returned information about the array of migrated objects.</p>
      * <blockquote>
-     * <p>The array is returned in the following format: [{&quot;key&quot;:&quot;Function&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:22},{&quot;key&quot;:&quot;Procedure&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:26},{&quot;key&quot;:&quot;Table&quot;,&quot;state&quot;:0,&quot;totalCount&quot;:68},{&quot;key&quot;:&quot;View&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:100}].</p>
+     * <p>The array is returned in the following format: [{&quot;key&quot;:&quot;Function&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:22},{&quot;key&quot;:&quot;Procedure&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:26},{&quot;key&quot;:&quot;Table&quot;,&quot;state&quot;:0,&quot;totalCount&quot;:68},{&quot;key&quot;:&quot;View&quot;,&quot;state&quot;:5,&quot;totalCount&quot;:100}\].</p>
      * </blockquote>
      */
     @NameInMap("ProgressSummaryDetails")
@@ -117,7 +117,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
 
     public static class SummaryJobDetailResponseBodyProgressSummaryDetails extends TeaModel {
         /**
-         * <p>The object type of the migration object. Valid values: <strong>Table</strong>, <strong>Constraint</strong>, <strong>Index</strong>, <strong>View</strong>, <strong>Materialize View</strong>, <strong>Type</strong> (user-defined type), <strong>Synonym</strong>, <strong>Trigger</strong>, <strong>Function</strong>, <strong>Procedure</strong> (stored procedure), <strong>Package</strong>, <strong>Default</strong>, <strong>Rule</strong>, <strong>PlanGuide</strong> (execute plan), and <strong>Sequence</strong>.</p>
+         * <p>The migrated object type. Valid values: <strong>Table</strong> (table), <strong>Constraint</strong> (constraint), <strong>Index</strong> (index), <strong>View</strong> (view), <strong>Materialize View</strong> (materialized view), <strong>Type</strong> (custom type), <strong>Synonym</strong> (synonym), <strong>Trigger</strong> (trigger), <strong>Function</strong> (function), <strong>Procedure</strong> (stored procedure), <strong>Package</strong> (package), <strong>Default</strong> (default value), <strong>Rule</strong> (rule), <strong>PlanGuide</strong> (execute plan), and <strong>Sequence</strong> (sequence).</p>
          * 
          * <strong>example:</strong>
          * <p>Table</p>
@@ -143,7 +143,7 @@ public class SummaryJobDetailResponseBody extends TeaModel {
         public Integer state;
 
         /**
-         * <p>The total number of migration objects.</p>
+         * <p>The total number of migrated objects.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SuspendSynchronizationJobRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be deprecated.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be deprecated soon.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -17,7 +17,7 @@ public class SuspendSynchronizationJobRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID. Set this parameter to specify the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -26,7 +26,7 @@ public class SuspendSynchronizationJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -46,7 +46,7 @@ public class SuspendSynchronizationJobRequest extends TeaModel {
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>You can set this parameter to <strong>Reverse</strong> to pause the reverse synchronization link only if the topology of the data synchronization instance is two-way synchronization.</li>
+     * <li>You can set this parameter to <strong>Reverse</strong> to suspend the reverse synchronization link only when the synchronization topology of the data synchronization instance is two-way.</li>
      * </ul>
      * 
      * <strong>example:</strong>

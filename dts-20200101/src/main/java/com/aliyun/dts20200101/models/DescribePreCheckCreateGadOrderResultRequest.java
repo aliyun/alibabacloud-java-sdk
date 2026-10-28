@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePreCheckCreateGadOrderResultRequest extends TeaModel {
     /**
-     * <p>The instance ID of the GAD instance group.</p>
+     * <p>The instance ID of the global active database (GAD) instance group.</p>
      * 
      * <strong>example:</strong>
      * <p>gad-bp162d4tp0500****</p>
@@ -17,7 +17,7 @@ public class DescribePreCheckCreateGadOrderResultRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID. You can set this parameter to specify the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -26,7 +26,7 @@ public class DescribePreCheckCreateGadOrderResultRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

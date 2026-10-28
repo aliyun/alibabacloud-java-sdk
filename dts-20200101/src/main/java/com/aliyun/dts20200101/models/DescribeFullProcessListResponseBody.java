@@ -14,20 +14,20 @@ public class DescribeFullProcessListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>This parameter does not return a value. The following parameters describe the rate limiting configurations:</p>
+     * <p>This parameter does not return a value. It specifies the following bandwidth throttling configurations:</p>
      * <ul>
-     * <li><strong>dts.datamove.blaster.qps.max</strong>: the rate of queries per second to the source database.</li>
-     * <li><strong>dts.datamove.source.rps.max</strong>: the number of rows per second for full data synchronization or migration (RPS).</li>
-     * <li><strong>dts.datamove.source.bps.max</strong>: the amount of data per second for full data synchronization or migration, in bytes per second.</li>
+     * <li><strong>dts.datamove.blaster.qps.max</strong>: the maximum number of queries per second (QPS) for the source database.</li>
+     * <li><strong>dts.datamove.source.rps.max</strong>: the maximum number of rows per second (RPS) for full data synchronization or migration.</li>
+     * <li><strong>dts.datamove.source.bps.max</strong>: the maximum amount of data per second for full data synchronization or migration, in bytes per second.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>When <strong>JobCode</strong> is set to <strong>03</strong>, you must set <strong>EnableLimit</strong> to <strong>true</strong> for the three parameters to take effect.</li>
+     * <li>If <strong>JobCode</strong> is set to <strong>03</strong>, you must set <strong>EnableLimit</strong> to <strong>true</strong> for the configurations of the three parameters to take effect.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>When <strong>JobCode</strong> is set to <strong>04</strong> or <strong>07</strong>, you only need to configure <strong>dts.datamove.source.rps.max</strong> and <strong>dts.datamove.source.bps.max</strong>.</li>
-     * <li>A value of <strong>-1</strong> indicates that rate limiting is disabled.</li>
+     * <li>If <strong>JobCode</strong> is set to <strong>04</strong> or <strong>07</strong>, you only need to configure <strong>dts.datamove.source.rps.max</strong> and <strong>dts.datamove.source.bps.max</strong>.</li>
+     * <li>A value of <strong>-1</strong> indicates that no bandwidth throttling is applied.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class DescribeFullProcessListResponseBody extends TeaModel {
     public java.util.Map<String, ?> configList;
 
     /**
-     * <p>The ID of the migration, synchronization, or change tracking task.</p>
+     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
      * 
      * <strong>example:</strong>
      * <p>i03e3zty16i****</p>
@@ -49,9 +49,9 @@ public class DescribeFullProcessListResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
-     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class DescribeFullProcessListResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned when the call fails.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -70,7 +70,7 @@ public class DescribeFullProcessListResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned when the call fails.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -94,7 +94,7 @@ public class DescribeFullProcessListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C166D79D-436B-45F0-B5A5-25E1959F****</p>
@@ -103,11 +103,11 @@ public class DescribeFullProcessListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
+     * <li><p><strong>true</strong>: The request is successful.</p>
      * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
+     * <li><p><strong>false</strong>: The request fails.</p>
      * </li>
      * </ul>
      * 
@@ -213,7 +213,13 @@ public class DescribeFullProcessListResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The exception status of the task. Valid values: - <strong>notstarted</strong>: not started. - <strong>checking</strong>: being checked. - <strong>failed</strong>: failed. - <strong>finished</strong>: completed.</p>
+         * <p>The exception status of the task. Valid values:</p>
+         * <ul>
+         * <li><strong>notstarted</strong>: The task is not started.</li>
+         * <li><strong>checking</strong>: The task is being checked.</li>
+         * <li><strong>failed</strong>: The task fails.</li>
+         * <li><strong>finished</strong>: The task is completed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>notstarted</p>
@@ -235,7 +241,7 @@ public class DescribeFullProcessListResponseBody extends TeaModel {
          * <ul>
          * <li><strong>1</strong>: trusted</li>
          * <li><strong>2</strong>: suspicious</li>
-         * <li><strong>3</strong>: malicious.</li>
+         * <li><strong>3</strong>: malicious</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -245,7 +251,7 @@ public class DescribeFullProcessListResponseBody extends TeaModel {
         public String processType;
 
         /**
-         * <p>The SQL statement that is being executed.</p>
+         * <p>The running SQL statements.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -272,7 +278,7 @@ public class DescribeFullProcessListResponseBody extends TeaModel {
         public String taskID;
 
         /**
-         * <p>The time when the log was collected, in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The log collection time in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>1729650129452</p>

@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class CreateJobMonitorRuleRequest extends TeaModel {
     /**
-     * <p>The threshold for triggering an alert.</p>
+     * <p>The threshold that triggers an alert.</p>
      * <ul>
-     * <li><p>If <strong>Type</strong> is set to <strong>delay</strong>, the unit is seconds and the value must be an integer. Set the threshold based on your business requirements. A value of 10 or greater is recommended to avoid alert fluctuations caused by network issues or database loads.</p>
+     * <li><p>If <strong>Type</strong> is set to <strong>delay</strong>, the unit is seconds and the value must be an integer. You can set the threshold based on your business requirements. We recommend that you set the threshold to 10 seconds or more to prevent alerts triggered by latency fluctuations caused by network conditions or database loads.</p>
      * </li>
      * <li><p>If <strong>Type</strong> is set to <strong>full_timeout</strong>, the unit is hours and the value must be an integer.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when <strong>Type</strong> is set to <strong>delay</strong> or <strong>full_timeout</strong> and <strong>State</strong> is set to <strong>Y</strong>.</p>
+     * <p>You must specify this parameter when <strong>Type</strong> is set to <strong>delay</strong> or <strong>full_timeout</strong> and <strong>State</strong> is set to <strong>Y</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     public Long delayRuleTime;
 
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to obtain the task ID.</p>
+     * <p>The ID of the data migration, data synchronization, or change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     public Integer noticeValue;
 
     /**
-     * <p>The statistical period of the incremental verification task. Unit: minutes.</p>
+     * <p>The statistical period of the incremental data verification task. Unit: minutes.</p>
      * <blockquote>
      * <p>Valid values: 1, 5, 10, and 30.</p>
      * </blockquote>
@@ -54,15 +54,13 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The mobile phone numbers of alert contacts, separated by commas (,).</p>
+     * <p>The mobile phone numbers of the contacts to receive alert notifications. Separate multiple mobile phone numbers with commas (,).</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is supported only on the China site (aliyun.com) and only for the Chinese mainland mobile phone numbers. A maximum of 10 mobile phone numbers can be specified.</li>
+     * <li>This parameter is supported only on the Alibaba Cloud China site. Only mobile phone numbers in the Chinese mainland are supported, and you can specify up to 10 mobile phone numbers.</li>
+     * <li>The Alibaba Cloud International site does not support mobile phone alerts. You can only <a href="https://help.aliyun.com/document_detail/175876.html">configure alert rules for DTS tasks by using CloudMonitor</a>.</li>
      * </ul>
      * </blockquote>
-     * <ul>
-     * <li>The international site does not support SMS-based alerting. You can only <a href="https://help.aliyun.com/document_detail/175876.html">set alert rules for DTS tasks through the CloudMonitor monitoring platform</a>.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1361234****,1371234****</p>
@@ -71,7 +69,7 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     public String phone;
 
     /**
-     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -80,7 +78,7 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -91,8 +89,8 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the alert rule. Valid values:</p>
      * <ul>
-     * <li><strong>Y</strong>: Enable the alert rule.</li>
-     * <li><strong>N</strong>: Disable the alert rule.</li>
+     * <li><strong>Y</strong>: Enables the alert rule.</li>
+     * <li><strong>N</strong>: Disables the alert rule.</li>
      * </ul>
      * <p>Default value: <strong>Y</strong>.</p>
      * 
@@ -103,7 +101,7 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     public String state;
 
     /**
-     * <p>The number of statistical periods for the incremental verification task.</p>
+     * <p>The number of periods for the incremental data verification task.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -112,13 +110,13 @@ public class CreateJobMonitorRuleRequest extends TeaModel {
     public Integer times;
 
     /**
-     * <p>The type of the alert metric. Valid values:</p>
+     * <p>The type of the monitoring metric. Valid values:</p>
      * <ul>
-     * <li><strong>delay</strong>: the <strong>Latency</strong> metric.</li>
-     * <li><strong>error</strong>: the <strong>Migration Status</strong> metric.</li>
-     * <li><strong>full_timeout</strong>: the <strong>Full Migration Duration</strong> metric.</li>
+     * <li><strong>delay</strong>: <strong>Latency</strong>.</li>
+     * <li><strong>error</strong>: <strong>Migration status</strong>.</li>
+     * <li><strong>full_timeout</strong>: <strong>Full run duration</strong>.</li>
      * </ul>
-     * <p>Default value: <strong>error</strong>. This parameter must be manually specified.</p>
+     * <p>Default value: <strong>error</strong>. You must manually specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>delay</p>

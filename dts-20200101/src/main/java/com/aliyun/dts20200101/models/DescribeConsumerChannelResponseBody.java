@@ -11,7 +11,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
     public java.util.List<DescribeConsumerChannelResponseBodyConsumerChannels> consumerChannels;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -20,7 +20,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -47,7 +47,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of consumer groups that can be displayed on one page.</p>
+     * <p>The maximum number of consumer groups that can be displayed on a single page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -161,7 +161,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
 
     public static class DescribeConsumerChannelResponseBodyConsumerChannels extends TeaModel {
         /**
-         * <p>The consumer group ID.</p>
+         * <p>The ID of the consumer group.</p>
          * 
          * <strong>example:</strong>
          * <p>dtsor2y66j4219****</p>
@@ -173,7 +173,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
          * <p>The name of the consumer group.</p>
          * 
          * <strong>example:</strong>
-         * <p>订阅组A</p>
+         * <p>Consumer group A</p>
          */
         @NameInMap("ConsumerGroupName")
         public String consumerGroupName;
@@ -188,7 +188,7 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         public String consumerGroupUserName;
 
         /**
-         * <p>The consumption checkpoint, which is the point in time when the client consumed the last message in the subscription channel. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The consumption checkpoint, which is the time when the client consumed the last message in the change tracking channel. The time is in the yyyy-MM-ddTHH:mm:ssZ format (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-06-20T12:00:00Z</p>
@@ -197,10 +197,10 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         public String consumptionCheckpoint;
 
         /**
-         * <p>The message delay. This value is calculated as the timestamp of the latest data consumed by the downstream client minus the timestamp of the latest data in the change tracking task. The value is a UNIX timestamp. Unit: seconds.
-         * For example, if the latest data in the source database was generated at 10:00, the DTS change tracking task has read data up to 09:55, and the downstream client has consumed data up to 09:30, the message delay is the difference in UNIX timestamps between 09:55 and 09:30.</p>
+         * <p>The message delay, which is the difference between the timestamp of the latest data tracked in the change tracking task and the timestamp of the latest data consumed by the downstream client. The value is a UNIX timestamp in seconds.
+         * For example, if the latest data in the source database is generated at 10:00, the DTS change tracking task has tracked data up to 09:55, and the downstream client has consumed data up to 09:30, the message delay is the difference between the UNIX timestamps of 09:55 and 09:30.</p>
          * <blockquote>
-         * <p>If this parameter returns <strong>-1</strong>, no client is connected to the consumer group.</p>
+         * <p>If this parameter returns <strong>-1</strong>, it indicates that no client is connected to the consumer group.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -210,9 +210,9 @@ public class DescribeConsumerChannelResponseBody extends TeaModel {
         public Long messageDelay;
 
         /**
-         * <p>The total number of unconsumed messages, which is the sum of unconsumed subscription data and heartbeat messages.</p>
+         * <p>The total number of unconsumed messages, which is the sum of the number of unconsumed tracked data records and the number of heartbeat messages.</p>
          * <blockquote>
-         * <p>If this parameter returns -1, no client is connected to the consumer group.</p>
+         * <p>If this parameter returns -1, it indicates that no client is connected to the consumer group.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -8,13 +8,13 @@ public class TransferPayTypeRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The subscription duration of the instance.</p>
+     * <p>The subscription duration.</p>
      * <ul>
-     * <li>If Period is set to <strong>Year</strong>, valid values are <strong>1</strong> to <strong>5</strong>.</li>
-     * <li>If Period is set to <strong>Month</strong>, valid values are <strong>1</strong> to <strong>60</strong>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, valid values are <strong>1</strong> to <strong>5</strong>.</li>
+     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, valid values are <strong>1</strong> to <strong>60</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid and required only when ChargeType is set to <strong>Prepaid</strong>.</p>
+     * <p>This parameter is valid and required only when <strong>ChargeType</strong> is set to <strong>Prepaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -24,12 +24,12 @@ public class TransferPayTypeRequest extends TeaModel {
     public String buyCount;
 
     /**
-     * <p>The billing method after conversion. Valid values:</p>
+     * <p>The new billing method. Valid values:</p>
      * <ul>
      * <li><strong>PrePaid</strong>: subscription.</li>
      * <li><strong>PostPaid</strong>: pay-as-you-go.
      * &lt;props=&quot;china&quot;&gt;</li>
-     * <li><strong>sync_serverless</strong>: pay-as-you-go Serverless..</li>
+     * <li><strong>sync_serverless</strong>: pay-as-you-go Serverless.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -40,7 +40,7 @@ public class TransferPayTypeRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The ID of the data synchronization or change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
+     * <p>The ID of the data synchronization or change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,9 +56,9 @@ public class TransferPayTypeRequest extends TeaModel {
      * <p>The maximum number of DUs for the Serverless instance. Valid values: 2, 4, 8, and 16.
      * &lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p>This feature is currently not supported. Do not specify this parameter.
+     * <p>This feature is not supported. Do not specify this parameter.
      * &lt;props=&quot;china&quot;&gt;
-     * This parameter is valid and required only when ChargeType is set to <strong>sync_serverless</strong>..</p>
+     * This parameter is valid and required only when <strong>ChargeType</strong> is set to <strong>sync_serverless</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -68,12 +68,12 @@ public class TransferPayTypeRequest extends TeaModel {
     public Integer maxDu;
 
     /**
-     * <p>The minimum number of DTS Units (DUs) for the Serverless instance. Valid values: 1, 2, 4, 8, and 16.</p>
+     * <p>The minimum number of DUs for the Serverless instance. Valid values: 1, 2, 4, 8, and 16.</p>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p>This feature is currently not supported. Do not specify this parameter.
+     * <p>This feature is not supported. Do not specify this parameter.
      * &lt;props=&quot;china&quot;&gt;
-     * This parameter is valid and required only when ChargeType is set to <strong>sync_serverless</strong>..</p>
+     * This parameter is valid and required only when <strong>ChargeType</strong> is set to <strong>sync_serverless</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -85,11 +85,11 @@ public class TransferPayTypeRequest extends TeaModel {
     /**
      * <p>The billing method of the subscription instance. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong>: annual subscription.</li>
-     * <li><strong>Month</strong>: monthly subscription.</li>
+     * <li><strong>Year</strong>: yearly.</li>
+     * <li><strong>Month</strong>: monthly.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid and required only when ChargeType is set to <strong>PrePaid</strong> (subscription).</p>
+     * <p>This parameter is valid and required only when <strong>ChargeType</strong> is set to <strong>PrePaid</strong> (subscription).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -108,7 +108,7 @@ public class TransferPayTypeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

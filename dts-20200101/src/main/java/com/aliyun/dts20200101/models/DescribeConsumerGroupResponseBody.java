@@ -8,7 +8,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
     public DescribeConsumerGroupResponseBodyConsumerChannels consumerChannels;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -17,7 +17,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -35,7 +35,7 @@ public class DescribeConsumerGroupResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of consumer groups that can be displayed on one page.</p>
+     * <p>The maximum number of consumer groups that can be displayed on a single page.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>

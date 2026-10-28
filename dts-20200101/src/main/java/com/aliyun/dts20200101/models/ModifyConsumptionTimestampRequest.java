@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyConsumptionTimestampRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be deprecated.</p>
+     * <p>The ID of the Alibaba Cloud account. This parameter is not required and will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -14,7 +14,7 @@ public class ModifyConsumptionTimestampRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The consumption checkpoint in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z (UTC).</p>
+     * <p>The consumption checkpoint. The time is in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC time).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ModifyConsumptionTimestampRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -36,7 +36,7 @@ public class ModifyConsumptionTimestampRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

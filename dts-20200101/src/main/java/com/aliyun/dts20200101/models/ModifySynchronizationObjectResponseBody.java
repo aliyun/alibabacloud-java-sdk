@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySynchronizationObjectResponseBody extends TeaModel {
     /**
-     * <p>The error code returned when the call fails.</p>
+     * <p>The error code returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -14,7 +14,7 @@ public class ModifySynchronizationObjectResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned when the call fails.</p>
+     * <p>The error message returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -41,7 +41,7 @@ public class ModifySynchronizationObjectResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The task ID. You can call the <a href="https://help.aliyun.com/document_detail/49452.html">DescribeSynchronizationObjectModifyStatus</a> operation based on this parameter to query the status and progress of the synchronization object modification.</p>
+     * <p>The task ID. You can use this parameter to call the <a href="https://help.aliyun.com/document_detail/49452.html">DescribeSynchronizationObjectModifyStatus</a> operation to query the status and progress of the synchronization object modification.</p>
      * 
      * <strong>example:</strong>
      * <p>tl911uvi25z****</p>

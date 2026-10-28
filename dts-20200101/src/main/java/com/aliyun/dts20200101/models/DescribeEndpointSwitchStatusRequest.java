@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEndpointSwitchStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be discontinued.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated soon.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -14,7 +14,7 @@ public class DescribeEndpointSwitchStatusRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken parameter supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the value from your client. Make sure that the value is unique across different requests. The <strong>ClientToken</strong> parameter supports only ASCII characters and can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -44,7 +44,7 @@ public class DescribeEndpointSwitchStatusRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The task ID. This value is returned after you successfully call the <a href="https://help.aliyun.com/document_detail/201858.html">SwitchSynchronizationEndpoint</a> operation.</p>
+     * <p>The task ID. This value is returned after a successful call to the <a href="https://help.aliyun.com/document_detail/201858.html">SwitchSynchronizationEndpoint</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

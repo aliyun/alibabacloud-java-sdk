@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
     /**
-     * <p>The internal error code. The value is incremented.</p>
+     * <p>The backend error code, which increments numerically.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
     public Float cpuTotal;
 
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>dtscluster_h3fl1cs217sx952</p>
@@ -41,7 +41,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
     public Float diskTotal;
 
     /**
-     * <p>The disk usage of the cluster. Unit: GB.</p>
+     * <p>The used disk space of the cluster. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>96</p>
@@ -68,7 +68,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
     public Integer duUsed;
 
     /**
-     * <p>The dynamic error message. This parameter is used to replace the %s placeholder in the ErrMessage response parameter.</p>
+     * <p>The dynamic error message, which is used to replace %s in the error message returned in the ErrMessage parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Type</p>
@@ -104,7 +104,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The total memory. The value 0 is returned.</p>
+     * <p>The total memory. This parameter temporarily returns 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -113,7 +113,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
     public Float memoryTotal;
 
     /**
-     * <p>The memory usage. The value 0 is returned.</p>
+     * <p>The amount of used memory. This parameter temporarily returns 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -131,7 +131,7 @@ public class DescribeClusterUsedUtilizationResponseBody extends TeaModel {
     public Float memoryUsedPercentage;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>

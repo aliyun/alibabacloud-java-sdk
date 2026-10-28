@@ -7,7 +7,7 @@ public class ListTagResourcesRequest extends TeaModel {
     /**
      * <p>The query token.</p>
      * <blockquote>
-     * <p>If a single request does not return all results, you can pass the <strong>NextToken</strong> value returned from the previous request in the subsequent request to continue the query.</p>
+     * <p>If a single query does not return all results, you can include the <strong>NextToken</strong> value returned from the previous query in the subsequent query to retrieve more results.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID. Specify this parameter to indicate the region where the instances reside. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -36,14 +36,14 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the data migration, data synchronization, or change tracking instance. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query instance IDs.</p>
+     * <p>The IDs of the data migration, data synchronization, and change tracking instances. You can obtain the instance IDs by calling the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation.</p>
      * <blockquote>
      * <ul>
-     * <li>N specifies the sequence number of the instance ID. For example, ResourceId.0 specifies the first instance ID, and ResourceId.1 specifies the second instance ID. You can query 1 to 50 instance IDs at a time.</li>
+     * <li>N specifies the sequence number of the instance ID. For example, ResourceId.0 specifies the first instance ID, and ResourceId.1 specifies the second instance ID. You can specify 1 to 50 instance IDs at a time.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>You must specify at least one of this parameter and <strong>Tag.N.Key</strong>.</li>
+     * <li>You must specify at least one of this parameter and the <strong>Tag.N.Key</strong> parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag value that corresponds to the tag key.</p>
+     * <p>The tag values that correspond to the tag keys.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -126,11 +126,11 @@ public class ListTagResourcesRequest extends TeaModel {
          * <p>The tag key.</p>
          * <blockquote>
          * <ul>
-         * <li>N specifies the sequence number of the tag key. For example, Tag.0.Key specifies the first tag key, and Tag.1.Key specifies the second tag key. You can query 1 to 20 tag keys at a time.</li>
+         * <li>N specifies the sequence number of the tag key. For example, Tag.0.Key specifies the first tag key, and Tag.1.Key specifies the second tag key. You can specify 1 to 20 tag keys at a time.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>You must specify at least one of this parameter and <strong>ResourceId.N</strong>. An empty string is not allowed.</li>
+         * <li>You must specify at least one of this parameter and the <strong>ResourceId.N</strong> parameter. If you specify this parameter, you cannot specify an empty string.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -143,11 +143,11 @@ public class ListTagResourcesRequest extends TeaModel {
          * <p>The tag value.</p>
          * <blockquote>
          * <ul>
-         * <li>N specifies the sequence number of the tag value. For example, Tag.0.Value specifies the first tag value, and Tag.1.Value specifies the second tag value. You can query 1 to 20 tag values at a time.</li>
+         * <li>N specifies the sequence number of the tag value. For example, Tag.0.Value specifies the first tag value, and Tag.1.Value specifies the second tag value. You can specify 1 to 20 tag values at a time.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>An empty string is allowed.</li>
+         * <li>You can specify an empty string.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobPasswordRequest extends TeaModel {
     /**
-     * <p>The instance ID of the data migration, synchronization, or subscribe instance.</p>
+     * <p>The instance ID of the data migration, data synchronization, or subscribe instance.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsl3m1213ye7l****</p>
@@ -14,7 +14,7 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the data migration, synchronization, or change tracking task.</p>
+     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
      * 
      * <strong>example:</strong>
      * <p>l3m1213ye7l****</p>
@@ -23,10 +23,10 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The database to which the account belongs. Valid values:</p>
+     * <p>The database to which the account and password to be modified belong. Valid values:</p>
      * <ul>
-     * <li><strong>src</strong>: the source database.</li>
-     * <li><strong>dest</strong>: the destination database.</li>
+     * <li><strong>src</strong>: The source database.</li>
+     * <li><strong>dest</strong>: The destination database.</li>
      * </ul>
      * <blockquote>
      * <p>This parameter is required.</p>
@@ -39,9 +39,9 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
     public String endpoint;
 
     /**
-     * <p>The new password for the database account.</p>
+     * <p>The new password of the database account.</p>
      * <blockquote>
-     * <p>This parameter is required and must be different from the current password.</p>
+     * <p>This parameter is required and cannot be the same as the current password.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -69,10 +69,10 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The synchronization direction. Valid values:</p>
+     * <p>Specifies the synchronization direction. Valid values:</p>
      * <ul>
-     * <li><strong>Forward</strong>: forward.</li>
-     * <li><strong>Reverse</strong>: reverse.</li>
+     * <li><strong>Forward</strong>: Forward.</li>
+     * <li><strong>Reverse</strong>: Reverse.</li>
      * </ul>
      * <blockquote>
      * <ul>
@@ -90,7 +90,7 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
     public String synchronizationDirection;
 
     /**
-     * <p>The username of the database account to modify.</p>
+     * <p>The name of the database account.</p>
      * 
      * <strong>example:</strong>
      * <p>dtstest</p>
@@ -101,8 +101,8 @@ public class ModifyDtsJobPasswordRequest extends TeaModel {
     /**
      * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong>.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>

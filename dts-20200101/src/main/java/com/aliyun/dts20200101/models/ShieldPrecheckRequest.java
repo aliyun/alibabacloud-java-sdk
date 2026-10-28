@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ShieldPrecheckRequest extends TeaModel {
     /**
-     * <p>The ID of the data migration or synchronization instance. You can call the <strong>DescribeMigrationJobs</strong> or DescribeSynchronizationJobs operation to query the instance ID.</p>
+     * <p>Instance ID of the data migration or data synchronization instance. You can call the <strong>DescribeMigrationJobs</strong> or DescribeSynchronizationJobs operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,16 +15,16 @@ public class ShieldPrecheckRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The precheck items to skip. Separate multiple items with commas (,). Valid values:</p>
+     * <p>The precheck items. Separate multiple precheck items with commas (,). Valid values:</p>
      * <ul>
-     * <li><strong>CHECK_SAME_OBJ</strong>: checks whether objects with the same name exist.</li>
-     * <li><strong>CHECK_SAME_USER</strong>: checks whether accounts with different names exist.</li>
-     * <li><strong>CHECK_SRC</strong>: checks the source database version.</li>
-     * <li><strong>CHECK_TOPOLOGY</strong>: checks the topology version.<blockquote>
-     * <p>For the topology versions supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Topology overview</a>.</p>
+     * <li><strong>CHECK_SAME_OBJ</strong>: Checks whether objects with the same name exist.</li>
+     * <li><strong>CHECK_SAME_USER</strong>: Checks whether accounts with different names exist.</li>
+     * <li><strong>CHECK_SRC</strong>: Checks the version of the source database.</li>
+     * <li><strong>CHECK_TOPOLOGY</strong>: Checks the topology version.<blockquote>
+     * <p>For more information about the topology versions supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Topology overview</a>.</p>
      * </blockquote>
      * </li>
-     * <li><strong>CHECK_SERVER_ID</strong>: checks the server_id of the source database.</li>
+     * <li><strong>CHECK_SERVER_ID</strong>: Checks the server_id of the source database.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +44,7 @@ public class ShieldPrecheckRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

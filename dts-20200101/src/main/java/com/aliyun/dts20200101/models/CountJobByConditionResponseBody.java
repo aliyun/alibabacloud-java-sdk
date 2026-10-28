@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CountJobByConditionResponseBody extends TeaModel {
     /**
-     * <p>The internal error code. This parameter will be deprecated.</p>
+     * <p>The internal service error code. This parameter will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -14,9 +14,9 @@ public class CountJobByConditionResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
-     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, it indicates that the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class CountJobByConditionResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the call fails.</p>
+     * <p>The error code returned when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -35,7 +35,7 @@ public class CountJobByConditionResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call fails.</p>
+     * <p>The error message returned when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -62,7 +62,7 @@ public class CountJobByConditionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

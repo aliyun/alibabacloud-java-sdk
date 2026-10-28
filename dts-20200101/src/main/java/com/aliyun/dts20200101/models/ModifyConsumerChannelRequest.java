@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyConsumerChannelRequest extends TeaModel {
     /**
-     * <p>The ID of the consumer group. You can call <a href="https://help.aliyun.com/document_detail/264169.html">DescribeConsumerChannel</a> to query the consumer group ID.</p>
+     * <p>The ID of the consumer group. You can call the <a href="https://help.aliyun.com/document_detail/264169.html">DescribeConsumerChannel</a> operation to query the consumer group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ModifyConsumerChannelRequest extends TeaModel {
      * <p>The new name of the consumer group. The name can be up to 128 characters in length. Specify a descriptive name for easy identification.</p>
      * 
      * <strong>example:</strong>
-     * <p>订阅组B</p>
+     * <p>ConsumerGroupB</p>
      */
     @NameInMap("ConsumerGroupName")
     public String consumerGroupName;
@@ -26,7 +26,7 @@ public class ModifyConsumerChannelRequest extends TeaModel {
     /**
      * <p>The new password of the consumer group account.</p>
      * <ul>
-     * <li>The password must contain characters from at least two of the following categories: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>The password must contain at least two of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
      * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
      * 
@@ -39,7 +39,7 @@ public class ModifyConsumerChannelRequest extends TeaModel {
     /**
      * <p>The new username of the consumer group account.</p>
      * <ul>
-     * <li>The username can contain one or more types of the following characters: uppercase letters, lowercase letters, digits, and underscores (_).</li>
+     * <li>The username can contain uppercase letters, lowercase letters, digits, and underscores (_).</li>
      * <li>The username can be up to 16 characters in length.</li>
      * </ul>
      * 
@@ -50,9 +50,9 @@ public class ModifyConsumerChannelRequest extends TeaModel {
     public String consumerGroupUserName;
 
     /**
-     * <p>The ID of the change tracking instance. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
      * <blockquote>
-     * <p>You must specify either <strong>DtsInstanceId</strong> or <strong>DtsJobId</strong>.</p>
+     * <p>You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,9 +62,9 @@ public class ModifyConsumerChannelRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
+     * <p>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
      * <blockquote>
-     * <p>You must specify either <strong>DtsInstanceId</strong> or <strong>DtsJobId</strong>.</p>
+     * <p>You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class ModifyConsumerChannelRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The region ID of the DTS change tracking instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The ID of the region where the DTS change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class ModifyConsumerChannelRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

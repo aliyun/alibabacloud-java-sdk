@@ -14,7 +14,7 @@ public class StopDtsJobsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter. &gt; For example, if <strong>ErrMessage</strong> returns <strong>The value of input parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>[timeout]</strong>, the request parameter <strong>timeout</strong> is invalid.</p>
+     * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the error message returned in the <strong>ErrMessage</strong> parameter. &gt; If <strong>ErrMessage</strong> returns <strong>the value of input parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>[timeout]</strong>, it indicates that the <strong>timeout</strong> request parameter is invalid.</p>
      * 
      * <strong>example:</strong>
      * <p>DtsJobId</p>
@@ -59,7 +59,7 @@ public class StopDtsJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

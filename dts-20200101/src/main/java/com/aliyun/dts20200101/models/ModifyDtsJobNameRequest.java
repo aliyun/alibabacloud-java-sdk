@@ -17,12 +17,12 @@ public class ModifyDtsJobNameRequest extends TeaModel {
     /**
      * <p>The new name of the task.</p>
      * <blockquote>
-     * <p>Configure a descriptive name that has business meaning (uniqueness is not required) for easy identification.</p>
+     * <p>Specify a meaningful name for your business to facilitate identification. The name does not need to be unique.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>RDS间迁移</p>
+     * <p>Migration between RDS instances</p>
      */
     @NameInMap("DtsJobName")
     public String dtsJobName;
@@ -37,7 +37,7 @@ public class ModifyDtsJobNameRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzfkjjb5gyy6i</p>
@@ -46,10 +46,10 @@ public class ModifyDtsJobNameRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Specifies whether the node is a seamless integration (zero-ETL) node. Valid values:</p>
+     * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The node is a seamless integration (zero-ETL) node.</li>
-     * <li><strong>false</strong>: The node is not a seamless integration (zero-ETL) node.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDynamicConfigResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter will be deprecated.</p>
+     * <p>The error code. This parameter is scheduled for deprecation.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,9 +14,9 @@ public class ModifyDynamicConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class ModifyDynamicConfigResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -35,7 +35,7 @@ public class ModifyDynamicConfigResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -53,7 +53,7 @@ public class ModifyDynamicConfigResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8D81829D-1BBD-5CE8-BE75-1CAD5750****</p>
@@ -62,7 +62,7 @@ public class ModifyDynamicConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

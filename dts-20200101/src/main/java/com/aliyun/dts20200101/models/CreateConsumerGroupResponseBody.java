@@ -14,7 +14,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     public String consumerGroupID;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -23,7 +23,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -32,7 +32,7 @@ public class CreateConsumerGroupResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6063641E-BAD1-4BA7-B70B-26FFFD18****</p>

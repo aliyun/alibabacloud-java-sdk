@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     /**
-     * <p>The name of the database in the source instance that contains the table with inconsistent data.</p>
+     * <p>The name of the source database to which the table with inconsistent data belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>db_dtstest</p>
@@ -29,9 +29,9 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public java.util.List<DescribeDataCheckTableDiffDetailsResponseBodyDiffDetails> diffDetails;
 
     /**
-     * <p>The dynamic error message, which is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> response element.</p>
+     * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>Type</strong>, the request parameter <strong>Type</strong> that you specified is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>Type</strong>, the specified request parameter <strong>Type</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameter</p>
@@ -50,7 +50,7 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The value of the parameter tbName is invalid.</p>
@@ -77,7 +77,7 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
@@ -198,7 +198,7 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
 
     public static class DescribeDataCheckTableDiffDetailsResponseBodyDiffDetails extends TeaModel {
         /**
-         * <p>The specific inconsistency details, which is a JSON string.</p>
+         * <p>The specific inconsistency details in JSON string format.</p>
          * <ul>
          * <li>column: the field name.</li>
          * <li>source: the value in the source database.</li>
@@ -222,7 +222,7 @@ public class DescribeDataCheckTableDiffDetailsResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The auto-increment primary key that identifies a verification result record.</p>
+         * <p>The auto-increment primary key used to identify a verification result record.</p>
          * 
          * <strong>example:</strong>
          * <p>13058****</p>

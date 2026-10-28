@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSubscriptionInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated soon.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -14,7 +14,7 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. <strong>ClientToken</strong> can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the value from your client. Make sure that the value is unique across different requests. <strong>ClientToken</strong> supports only ASCII characters and can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -26,7 +26,7 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The page number. The value must be an integer greater than <strong>0</strong> and cannot exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than <strong>0</strong> and no more than the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -35,7 +35,7 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of records per page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>30</strong>, <strong>50</strong>, and <strong>100</strong>. Default value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -53,7 +53,7 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekz4us4iruleja</p>
@@ -64,17 +64,17 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
     /**
      * <p>The name of the change tracking instance.</p>
      * <blockquote>
-     * <p>If you specify this parameter, DTS returns the change tracking instances that contain the specified name in the response.</p>
+     * <p>If you specify this parameter, DTS returns the change tracking instances whose names contain the specified value.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>MySQL订阅</p>
+     * <p>MySQL change tracking</p>
      */
     @NameInMap("SubscriptionInstanceName")
     public String subscriptionInstanceName;
 
     /**
-     * <p>The tags of the data migration instance. These tags are used as filter conditions. If this parameter is specified, only instances that have the specified tags are returned.</p>
+     * <p>The tags of the data migration instances. This parameter is used as a filter. If this parameter is specified, only instances that have the specified tags are returned.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeSubscriptionInstancesRequestTag> tag;
@@ -158,10 +158,10 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
 
     public static class DescribeSubscriptionInstancesRequestTag extends TeaModel {
         /**
-         * <p>The key of the tag.</p>
+         * <p>The tag key.</p>
          * <blockquote>
          * <ul>
-         * <li>N specifies the sequence number of the tag key. For example, Tag.1.Key specifies the key of the first tag, and Tag.2.Key specifies the key of the second tag. You can query 1 to 20 tag keys at a time.</li>
+         * <li>N specifies the sequence number of the tag key. For example, Tag.1.Key specifies the first tag key, and Tag.2.Key specifies the second tag key. You can specify 1 to 20 tag keys at a time.</li>
          * </ul>
          * </blockquote>
          * <ul>
@@ -176,10 +176,10 @@ public class DescribeSubscriptionInstancesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * <blockquote>
          * <ul>
-         * <li>N specifies the sequence number of the tag value. For example, Tag.1.Value specifies the value of the first tag, and Tag.2.Value specifies the value of the second tag. You can query 1 to 20 tag values at a time.</li>
+         * <li>N specifies the sequence number of the tag value. For example, Tag.1.Value specifies the first tag value, and Tag.2.Value specifies the second tag value. You can specify 1 to 20 tag values at a time.</li>
          * </ul>
          * </blockquote>
          * <ul>

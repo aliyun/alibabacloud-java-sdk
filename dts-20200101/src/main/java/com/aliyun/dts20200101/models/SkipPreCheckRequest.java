@@ -15,7 +15,7 @@ public class SkipPreCheckRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the precheck task. You can call <strong>DescribePreCheckStatus</strong> to query the ID.</p>
+     * <p>The ID of the precheck task. You can call the <strong>DescribePreCheckStatus</strong> operation to query the task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>b4my3zg929a****</p>
@@ -24,7 +24,7 @@ public class SkipPreCheckRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -33,7 +33,7 @@ public class SkipPreCheckRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -42,10 +42,10 @@ public class SkipPreCheckRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Specifies whether to suppress the precheck item. Valid values:</p>
+     * <p>Specifies whether to skip the precheck item. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Suppress the precheck item.</li>
-     * <li><strong>false</strong>: Unsuppress the precheck item.</li>
+     * <li><strong>true</strong>: Skips the precheck item.</li>
+     * <li><strong>false</strong>: Does not skip the precheck item.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -56,15 +56,15 @@ public class SkipPreCheckRequest extends TeaModel {
     public Boolean skip;
 
     /**
-     * <p>The abbreviated names of the precheck items to suppress or unsuppress. Valid values:</p>
+     * <p>The abbreviations of the precheck items to skip or unskip. Valid values:</p>
      * <ul>
-     * <li><strong>[&quot;CHECK_SAME_OBJ&quot;]</strong>: check for objects with the same name.</li>
-     * <li><strong>[&quot;CHECK_SAME_USER&quot;]</strong>: check for accounts with different names.</li>
-     * <li><strong>[&quot;CHECK_SRC&quot;]</strong>: source database version check.</li>
-     * <li><strong>[&quot;CHECK_TOPOLOGY&quot;]</strong>: topology version check. For the topology versions supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Topology overview</a>.</li>
-     * <li><strong>[&quot;CHECK_SERVER_ID&quot;]</strong>: source database server_id check.</li>
-     * <li><strong>[&quot;CHECK_DEST_TABLE_EMPTY&quot;]</strong>: destination database object existence check.</li>
-     * <li><strong>[&quot;CHECK_SUPER_AUTH_DEST&quot;]</strong>: destination database super account permission check.</li>
+     * <li><strong>[&quot;CHECK_SAME_OBJ&quot;]</strong>: Checks for the existence of objects with the same name.</li>
+     * <li><strong>[&quot;CHECK_SAME_USER&quot;]</strong>: Checks for the existence of accounts with different names.</li>
+     * <li><strong>[&quot;CHECK_SRC&quot;]</strong>: Checks the version of the source database.</li>
+     * <li><strong>[&quot;CHECK_TOPOLOGY&quot;]</strong>: Checks the topology version. For more information about the topology versions supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Topology overview</a>.</li>
+     * <li><strong>[&quot;CHECK_SERVER_ID&quot;]</strong>: Checks the server_id of the source database.</li>
+     * <li><strong>[&quot;CHECK_DEST_TABLE_EMPTY&quot;]</strong>: Checks for the existence of objects in the destination database.</li>
+     * <li><strong>[&quot;CHECK_SUPER_AUTH_DEST&quot;]</strong>: Checks the permissions of the super account in the destination database.</li>
      * </ul>
      * <blockquote>
      * <p>Separate multiple item names with commas (,), for example, <strong>[&quot;CHECK_SRC&quot;,&quot;CHECK_SAME_OBJ&quot;]</strong>.</p>
@@ -77,15 +77,15 @@ public class SkipPreCheckRequest extends TeaModel {
     public String skipPreCheckItems;
 
     /**
-     * <p>The full names of the precheck items to suppress or unsuppress. This parameter corresponds to the <strong>SkipPreCheckItems</strong> parameter. Valid values:</p>
+     * <p>The names of the precheck items to skip or unskip. This parameter corresponds to the <strong>SkipPreCheckItems</strong> parameter. Valid values:</p>
      * <ul>
-     * <li><strong>[&quot;CHECK_SAME_OBJ_DETAIL&quot;]</strong>: check for objects with the same name.</li>
-     * <li><strong>[&quot;CHECK_SAME_USER_DETAIL&quot;]</strong>: check for accounts with different names.</li>
-     * <li><strong>[&quot;CHECK_SRC_DETAIL&quot;]</strong>: source database version check.</li>
-     * <li><strong>[&quot;CHECK_TOPOLOGY_DETAIL&quot;]</strong>: topology version check. For the topology versions supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Topology overview</a>.</li>
-     * <li><strong>[&quot;CHECK_SERVER_ID_DETAIL&quot;]</strong>: source database server_id check.</li>
-     * <li><strong>[&quot;CHECK_DEST_TABLE_EMPTY_DETAIL&quot;]</strong>: check whether the destination database tables are empty.</li>
-     * <li><strong>[&quot;CHECK_SUPER_AUTH_DEST_DETAIL&quot;]</strong>: check the super account permissions of the destination database.</li>
+     * <li><strong>[&quot;CHECK_SAME_OBJ_DETAIL&quot;]</strong>: Checks for the existence of objects with the same name.</li>
+     * <li><strong>[&quot;CHECK_SAME_USER_DETAIL&quot;]</strong>: Checks for the existence of accounts with different names.</li>
+     * <li><strong>[&quot;CHECK_SRC_DETAIL&quot;]</strong>: Checks the version of the source database.</li>
+     * <li><strong>[&quot;CHECK_TOPOLOGY_DETAIL&quot;]</strong>: Checks the topology version. For more information about the topology versions supported by DTS, see <a href="https://help.aliyun.com/document_detail/124115.html">Topology overview</a>.</li>
+     * <li><strong>[&quot;CHECK_SERVER_ID_DETAIL&quot;]</strong>: Checks the server_id of the source database.</li>
+     * <li><strong>[&quot;CHECK_DEST_TABLE_EMPTY_DETAIL&quot;]</strong>: Checks whether the tables in the destination database are empty.</li>
+     * <li><strong>[&quot;CHECK_SUPER_AUTH_DEST_DETAIL&quot;]</strong>: Checks the permissions of the super account in the destination database.</li>
      * </ul>
      * <blockquote>
      * <p>Separate multiple item names with commas (,), for example, <strong>[&quot;CHECK_SRC_DETAIL&quot;,&quot;CHECK_SAME_OBJ_DETAIL&quot;]</strong>.</p>

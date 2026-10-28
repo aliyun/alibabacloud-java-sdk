@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
     /**
-     * <p>The error code returned when the call fails.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -14,7 +14,7 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned when the call fails.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -23,7 +23,7 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>This parameter is discontinued.</p>
+     * <p>This parameter is deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>400</p>
@@ -43,11 +43,11 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
     /**
      * <p>The execution status of the task. Valid values:</p>
      * <ul>
-     * <li><strong>NotStarted</strong>: not started.</li>
-     * <li><strong>Initializing</strong>: initializing.</li>
-     * <li><strong>Switching</strong>: switching.</li>
-     * <li><strong>Failed</strong>: failed.</li>
-     * <li><strong>Finished</strong>: succeeded.</li>
+     * <li><strong>NotStarted</strong>: The task is not started.</li>
+     * <li><strong>Initializing</strong>: The task is being initialized.</li>
+     * <li><strong>Switching</strong>: The task is being switched.</li>
+     * <li><strong>Failed</strong>: The task failed.</li>
+     * <li><strong>Finished</strong>: The task is completed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class DescribeEndpointSwitchStatusResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

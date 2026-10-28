@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ConvertInstanceResourceGroupRequest extends TeaModel {
     /**
-     * <p>A legacy parameter. This parameter does not take effect. You do not need to pass this parameter.</p>
+     * <p>A legacy parameter. This parameter does not take effect and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>m4312mab158****</p>
@@ -14,7 +14,7 @@ public class ConvertInstanceResourceGroupRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the new resource group. You can obtain the ID from the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View basic information of a resource group</a>.</p>
+     * <p>The ID of the new resource group. You can obtain the ID from the Resource Management console. For more information, see <a href="https://help.aliyun.com/document_detail/151181.html">View the basic information of a resource group</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2r4fkrqw****</p>
@@ -23,7 +23,7 @@ public class ConvertInstanceResourceGroupRequest extends TeaModel {
     public String newResourceGroupId;
 
     /**
-     * <p>The region in which the DTS instance resides.</p>
+     * <p>The region ID of the DTS instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class ConvertInstanceResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>A parameter reserved for special business scenarios. You do not need to pass this parameter.</p>
+     * <p>A field reserved for specific business scenarios. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-3m1213ye7l****</p>
@@ -53,7 +53,7 @@ public class ConvertInstanceResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>A parameter reserved for special business scenarios. You do not need to pass this parameter.</p>
+     * <p>A field reserved for specific business scenarios. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

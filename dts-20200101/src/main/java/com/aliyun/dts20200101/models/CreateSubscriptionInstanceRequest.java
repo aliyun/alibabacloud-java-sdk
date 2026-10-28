@@ -8,7 +8,7 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     public CreateSubscriptionInstanceRequestSourceEndpoint sourceEndpoint;
 
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be discontinued.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it is about to be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -17,7 +17,7 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Generate a value from your client to make sure that the value is unique among different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The <strong>ClientToken</strong> value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -29,7 +29,7 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The billing method.</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
      * <li><strong>Postpaid</strong>: pay-as-you-go. This is the default value.</li>
      * <li><strong>Prepaid</strong>: subscription.</li>
@@ -42,13 +42,13 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The billing method of the subscription instance. Valid values:</p>
+     * <p>The billing method for a subscription instance. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong>: annual subscription.</li>
-     * <li><strong>Month</strong>: monthly subscription.</li>
+     * <li><strong>Year</strong>: yearly.</li>
+     * <li><strong>Month</strong>: monthly.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid and required only when PayType is set to <strong>Prepaid</strong> (subscription).</p>
+     * <p>This parameter is valid and required only when the billing method is set to <strong>Prepaid</strong> (subscription).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The region ID. Set this parameter to the region where the subscription object resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID. It must be the same as the region where the source object resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The region to which the change tracking instance belongs. You do not need to specify this parameter. This parameter will be discontinued.</p>
+     * <p>The region of the change tracking instance. You do not need to specify this parameter because it is about to be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -77,7 +77,7 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -86,13 +86,13 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The purchase duration of the subscription instance.</p>
+     * <p>The purchase duration of a subscription instance.</p>
      * <ul>
-     * <li>If the billing method is set to <strong>Year</strong> (annual subscription), the valid values are <strong>1 to 5</strong>.</li>
-     * <li>If the billing method is set to <strong>Month</strong> (monthly subscription), the valid values are <strong>1 to 60</strong>.</li>
+     * <li>If the billing method is set to <strong>Year</strong>, valid values are <strong>1</strong> to <strong>5</strong>.</li>
+     * <li>If the billing method is set to <strong>Month</strong>, valid values are <strong>1</strong> to <strong>60</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid and required only when PayType is set to <strong>Prepaid</strong> (subscription).</p>
+     * <p>This parameter is valid and required only when the billing method is set to <strong>Prepaid</strong> (subscription).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -188,9 +188,9 @@ public class CreateSubscriptionInstanceRequest extends TeaModel {
 
     public static class CreateSubscriptionInstanceRequestSourceEndpoint extends TeaModel {
         /**
-         * <p>数据订阅的实例类型，取值为：<strong>MySQL</strong>、<strong>PolarDB</strong>、<strong>DRDS</strong>、<strong>Oracle</strong>。</p>
+         * <p>The instance type for change tracking. Valid values: <strong>MySQL</strong>, <strong>PolarDB</strong>, <strong>DRDS</strong>, and <strong>Oracle</strong>.</p>
          * <blockquote>
-         * <p>默认取值为：<strong>MySQL</strong>。</p>
+         * <p>Default value: <strong>MySQL</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class InitDtsRdsInstanceRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The instance ID of the CEN instance. This parameter is required if the unit node is a self-managed MySQL database connected through CEN.</p>
+     * <p>The CEN instance ID. This parameter is required if the unit node is a self-managed MySQL database connected through CEN.</p>
      * <blockquote>
      * <p>You must specify either this parameter or the ApsaraDB RDS for MySQL-related parameters (<strong>EndpointRegion</strong> and <strong>EndpointInstanceId</strong>).</p>
      * </blockquote>
@@ -45,8 +45,8 @@ public class InitDtsRdsInstanceRequest extends TeaModel {
     /**
      * <p>The instance type of the unit node. Valid values:</p>
      * <ul>
-     * <li><strong>RDS</strong>: ApsaraDB RDS for MySQL instance.</li>
-     * <li><strong>CEN</strong>: self-managed MySQL database connected through CEN.</li>
+     * <li><strong>RDS</strong>: ApsaraDB RDS for MySQL instance</li>
+     * <li><strong>CEN</strong>: self-managed MySQL database connected through CEN</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,7 +56,7 @@ public class InitDtsRdsInstanceRequest extends TeaModel {
     public String endpointInstanceType;
 
     /**
-     * <p>The region in which the ApsaraDB RDS for MySQL instance resides. This parameter is required if the unit node is an ApsaraDB RDS for MySQL instance.</p>
+     * <p>The region where the ApsaraDB RDS for MySQL instance resides. This parameter is required if the unit node is an ApsaraDB RDS for MySQL instance.</p>
      * <blockquote>
      * <ul>
      * <li>You must also specify the <strong>EndpointInstanceId</strong> parameter.</li>
@@ -73,7 +73,7 @@ public class InitDtsRdsInstanceRequest extends TeaModel {
     public String endpointRegion;
 
     /**
-     * <p>The region in which the active geo-redundancy database cluster resides.</p>
+     * <p>The region where the global active-active database cluster resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -82,10 +82,10 @@ public class InitDtsRdsInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. This is a global parameter and does not need to be specified for this operation.</p>
+     * <p>The ID of the resource group. This is a global parameter and is not required for this operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>资源组ID，全局参数，当前API无需传入。</p>
+     * <p>The ID of the resource group. This is a global parameter and is not required for this operation</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

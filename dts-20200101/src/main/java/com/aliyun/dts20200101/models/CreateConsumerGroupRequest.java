@@ -14,11 +14,11 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The name of the consumer group. The name can be up to 128 characters in length. We recommend that you use a descriptive name for easy identification.</p>
+     * <p>The name of the consumer group. The name can be up to 128 characters in length. Specify a descriptive name for easy identification.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试订阅组</p>
+     * <p>Test consumer group</p>
      */
     @NameInMap("ConsumerGroupName")
     public String consumerGroupName;
@@ -26,7 +26,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     /**
      * <p>The password of the consumer group account.</p>
      * <ul>
-     * <li>The password must contain characters from at least two of the following categories: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>The password must contain at least two of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
      * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -38,8 +38,9 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String consumerGroupPassword;
 
     /**
-     * <p>The account of the consumer group.</p>
-     * <p>The account can contain uppercase letters, lowercase letters, digits, and underscores (_). The account can be up to 16 characters in length.</p>
+     * <p>The username of the consumer group.</p>
+     * <p>The username can contain uppercase letters, lowercase letters, digits, and underscores (_).
+     * The username can be up to 16 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -61,7 +62,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeConsumerChannelRequest extends TeaModel {
     /**
-     * <p>The ID of the change tracking instance. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the instance ID.</p>
+     * <p>The ID of the change tracking instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
      * <blockquote>
-     * <p>You must specify one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
+     * <p>You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,9 +17,9 @@ public class DescribeConsumerChannelRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ID of the change tracking task. You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the task ID.</p>
+     * <p>The ID of the change tracking task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
      * <blockquote>
-     * <p>You must specify one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
+     * <p>You must specify at least one of the <strong>DtsInstanceId</strong> and <strong>DtsJobId</strong> parameters.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeConsumerChannelRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than <strong>0</strong> and cannot exceed the maximum value of the INTEGER data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class DescribeConsumerChannelRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class DescribeConsumerChannelRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The parent task ChannelId of the distributed task.</p>
+     * <p>The channel ID of the parent task for a distributed task.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsan5114c52******</p>
@@ -56,7 +56,7 @@ public class DescribeConsumerChannelRequest extends TeaModel {
     public String parentChannelId;
 
     /**
-     * <p>The region ID of the DTS change tracking instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The ID of the region where the DTS change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class DescribeConsumerChannelRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek3dcgyq7pnqwa</p>

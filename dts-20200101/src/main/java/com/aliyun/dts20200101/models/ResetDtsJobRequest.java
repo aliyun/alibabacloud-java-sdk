@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetDtsJobRequest extends TeaModel {
     /**
-     * <p>The synchronization or subscribe instance ID.</p>
+     * <p>The ID of the data synchronization or subscribe instance.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsl3m1213ye7l****</p>
@@ -23,7 +23,7 @@ public class ResetDtsJobRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The region ID of the DTS instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class ResetDtsJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzn4iqlbsm7hy</p>
@@ -43,8 +43,8 @@ public class ResetDtsJobRequest extends TeaModel {
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <ul>
-     * <li><strong>Forward</strong>: forward.</li>
-     * <li><strong>Reverse</strong>: reverse.</li>
+     * <li><strong>Forward</strong>: Forward.</li>
+     * <li><strong>Reverse</strong>: Reverse.</li>
      * </ul>
      * <blockquote>
      * <ul>
@@ -52,7 +52,7 @@ public class ResetDtsJobRequest extends TeaModel {
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>You can set this parameter to <strong>Reverse</strong> to reset the reverse synchronization task only if the topology of the data synchronization instance is two-way synchronization.</li>
+     * <li>You can set this parameter to <strong>Reverse</strong> to reset the reverse synchronization link only when the data synchronization instance uses a two-way synchronization topology.</li>
      * </ul>
      * 
      * <strong>example:</strong>

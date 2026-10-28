@@ -14,7 +14,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The IP addresses of the DTS service.</p>
+     * <p>The IP address of the DTS service.</p>
      * 
      * <strong>example:</strong>
      * <p>10.151.12.0/24,47.102.181.0/24,47.101.109.0/24,120.55.129.0/24,11.115.103.0/24,47.102.234.0/24</p>
@@ -23,7 +23,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -32,7 +32,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -50,7 +50,7 @@ public class DescribeDTSIPResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

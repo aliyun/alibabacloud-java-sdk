@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter is scheduled to be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -55,7 +55,7 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID of the change tracking instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -64,7 +64,7 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -85,7 +85,7 @@ public class ModifyConsumerGroupPasswordRequest extends TeaModel {
     /**
      * <p>The new password of the consumer group.</p>
      * <ul>
-     * <li>The password must contain characters from at least two of the following categories: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>The password must contain at least two of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
      * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>

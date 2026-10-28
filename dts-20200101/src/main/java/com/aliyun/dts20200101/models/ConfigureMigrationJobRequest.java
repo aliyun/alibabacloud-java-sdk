@@ -14,7 +14,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
     public ConfigureMigrationJobRequestSourceEndpoint sourceEndpoint;
 
     /**
-     * <p>The Alibaba Cloud account ID. You do not need to specify this parameter because it will be deprecated.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter is pending deprecation.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -23,7 +23,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The start position of incremental data migration. The value is a UNIX timestamp in seconds.</p>
+     * <p>The start checkpoint for incremental data migration. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>111</p>
@@ -42,7 +42,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
     public String migrationJobId;
 
     /**
-     * <p>The name of the migration task. The name can be up to 32 characters in length. Specify a descriptive name for easy identification. Uniqueness is not required.</p>
+     * <p>The name of the migration task. The name can be up to 32 characters in length. Specify a descriptive name for easy identification. The name does not need to be unique.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
     public String migrationJobName;
 
     /**
-     * <p>The objects to be migrated. The value is a JSON string that supports regular expressions. For more information, see <a href="~141901~">Migration object configuration</a>.</p>
+     * <p>The objects to be migrated. The value is a JSON string and supports specific regular expressions. For more information, see <a href="~141901~">Configure migration objects</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
     public String migrationObject;
 
     /**
-     * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, such as whether to automatically start the precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved parameter description</a>.</p>
+     * <p>The reserved parameters of DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, such as specifying whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved parameter description</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{     &quot;autoStartModulesAfterConfig&quot;: &quot;none&quot;,     &quot;targetTableMode&quot;: 2 }</p>
@@ -74,7 +74,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The region ID of the data migration instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <blockquote>
      * <p>The region ID must be the same as the region ID of the destination database.</p>
      * </blockquote>
@@ -86,7 +86,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -197,14 +197,14 @@ public class ConfigureMigrationJobRequest extends TeaModel {
 
     public static class ConfigureMigrationJobRequestDestinationEndpoint extends TeaModel {
         /**
-         * <p>待迁入的数据库名称或鉴权数据库名称。 </p>
+         * <p>The name of the destination database or the authentication database. </p>
          * <blockquote>
          * <ul>
-         * <li>当<strong>DestinationEndpoint.EngineName</strong>取值为<strong>PostgreSQL</strong>、<strong>DRDS</strong>或<strong>MongoDB</strong>时，本参数才可用且必须传入。</li>
+         * <li>This parameter is available and required only when <strong>DestinationEndpoint.EngineName</strong> is set to <strong>PostgreSQL</strong>, <strong>DRDS</strong>, or <strong>MongoDB</strong>.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>当<strong>DestinationEndpoint.EngineName</strong>取值为<strong>PostgreSQL</strong>或<strong>DRDS</strong>时，传入待迁移的数据库名称；取值为<strong>MongoDB</strong>时，传入数据库账号的鉴权数据库名称。</li>
+         * <li>When <strong>DestinationEndpoint.EngineName</strong> is set to <strong>PostgreSQL</strong> or <strong>DRDS</strong>, specify the name of the database to be migrated. When it is set to <strong>MongoDB</strong>, specify the name of the authentication database for the database account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,9 +214,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String dataBaseName;
 
         /**
-         * <p>目标库的数据库类型。取值：<strong>MySQL</strong>、<strong>DRDS</strong>、<strong>SQLServer</strong>、<strong>PostgreSQL</strong>、<strong>PPAS</strong>、<strong>MongoDB</strong>、<strong>Redis</strong>、<strong>POLARDB</strong>、<strong>polardb_pg</strong></p>
+         * <p>The database engine of the destination database. Valid values: <strong>MySQL</strong>, <strong>DRDS</strong>, <strong>SQLServer</strong>, <strong>PostgreSQL</strong>, <strong>PPAS</strong>, <strong>MongoDB</strong>, <strong>Redis</strong>, <strong>POLARDB</strong>, and <strong>polardb_pg</strong>.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>RDS</strong>、<strong>POLARDB</strong>、<strong>ECS</strong>、<strong>LocalInstance</strong>或<strong>Express</strong>时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when <strong>DestinationEndpoint.InstanceType</strong> is set to <strong>RDS</strong>, <strong>POLARDB</strong>, <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -226,9 +226,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String engineName;
 
         /**
-         * <p>目标库的连接地址。</p>
+         * <p>The endpoint of the destination database.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>LocalInstance</strong>或<strong>Express</strong>时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when <strong>DestinationEndpoint.InstanceType</strong> is set to <strong>LocalInstance</strong> or <strong>Express</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -238,9 +238,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String IP;
 
         /**
-         * <p>目标实例ID。</p>
+         * <p>The ID of the destination instance.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>RDS</strong>、<strong>ECS</strong>、<strong>MongoDB</strong>、<strong>Redis</strong>、<strong>DRDS</strong>、<strong>PetaData</strong>、<strong>OceanBase</strong>、<strong>POLARDB</strong>、<strong>PolarDB_o</strong>、<strong>AnalyticDB</strong>或<strong>Greenplum</strong>时，本参数才可用且必须传入对应的实例ID（例如取值为<strong>ECS</strong>，则需要传入ECS实例ID）。</p>
+         * <p>This parameter is available and required only when <strong>DestinationEndpoint.InstanceType</strong> is set to <strong>RDS</strong>, <strong>ECS</strong>, <strong>MongoDB</strong>, <strong>Redis</strong>, <strong>DRDS</strong>, <strong>PetaData</strong>, <strong>OceanBase</strong>, <strong>POLARDB</strong>, <strong>PolarDB_o</strong>, <strong>AnalyticDB</strong>, or <strong>Greenplum</strong>. You must specify the corresponding instance ID. For example, if the value is <strong>ECS</strong>, specify the ID of the ECS instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -250,19 +250,19 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String instanceID;
 
         /**
-         * <p>目标库的实例类型，取值：</p>
+         * <p>The instance type of the destination database. Valid values:</p>
          * <ul>
-         * <li><strong>ECS</strong>：ECS上的自建数据库。</li>
-         * <li><strong>LocalInstance</strong>：有公网IP的自建数据库。</li>
-         * <li><strong>RDS</strong>：阿里云RDS实例。</li>
-         * <li><strong>DRDS</strong>：阿里云PolarDB-X实例。</li>
-         * <li><strong>MongoDB</strong>：阿里云MongoDB实例。</li>
-         * <li><strong>Redis</strong>：阿里云Redis实例。</li>
-         * <li><strong>PetaData</strong>：阿里云HybridDB for MySQL实例。</li>
-         * <li><strong>POLARDB</strong>：阿里云PolarDB MySQL、PolarDB PostgreSQL。</li>
-         * <li><strong>PolarDB_o</strong>：阿里云PolarDB O引擎集群。</li>
-         * <li><strong>AnalyticDB</strong>：阿里云云原生数据仓库AnalyticDB MySQL 3.0和2.0版本。</li>
-         * <li><strong>Greenplum</strong>：阿里云云原生数据仓库AnalyticDB PostgreSQL。</li>
+         * <li><strong>ECS</strong>: Self-managed database hosted on ECS.</li>
+         * <li><strong>LocalInstance</strong>: Self-managed database with a public IP address.</li>
+         * <li><strong>RDS</strong>: ApsaraDB RDS instance.</li>
+         * <li><strong>DRDS</strong>: PolarDB-X instance.</li>
+         * <li><strong>MongoDB</strong>: ApsaraDB for MongoDB instance.</li>
+         * <li><strong>Redis</strong>: ApsaraDB for Redis instance.</li>
+         * <li><strong>PetaData</strong>: HybridDB for MySQL instance.</li>
+         * <li><strong>POLARDB</strong>: PolarDB for MySQL or PolarDB for PostgreSQL cluster.</li>
+         * <li><strong>PolarDB_o</strong>: PolarDB for Oracle cluster.</li>
+         * <li><strong>AnalyticDB</strong>: AnalyticDB for MySQL 3.0 or 2.0 cluster.</li>
+         * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL cluster.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -273,9 +273,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>Oracle数据库的SID信息。</p>
+         * <p>The SID of the Oracle database.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.EngineName</strong>取值为<strong>Oracle</strong>，且<strong>Oracle</strong>数据库为非RAC实例时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when <strong>DestinationEndpoint.EngineName</strong> is set to <strong>Oracle</strong> and the Oracle database is a non-Real Application Cluster instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -285,7 +285,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String oracleSID;
 
         /**
-         * <p>目标库数据库账号的密码。</p>
+         * <p>The password of the destination database account.</p>
          * 
          * <strong>example:</strong>
          * <p>Test123456</p>
@@ -294,9 +294,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>目标库的服务端口。</p>
+         * <p>The service port number of the destination database.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>LocalInstance</strong>或<strong>Express</strong>时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when <strong>DestinationEndpoint.InstanceType</strong> is set to <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -306,9 +306,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String port;
 
         /**
-         * <p>目标库所属的地域ID。</p>
+         * <p>The ID of the region where the destination database resides.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>LocalInstance</strong>时，您可以传入<strong>cn-hangzhou</strong>或者离自建数据库地物理距离最近的地域ID，详情请参见<a href="https://help.aliyun.com/document_detail/141033.html">支持的地域列表</a>。</p>
+         * <p>When <strong>DestinationEndpoint.InstanceType</strong> is set to <strong>LocalInstance</strong>, you can specify <strong>cn-hangzhou</strong> or the ID of the region that is closest to your self-managed database. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -318,8 +318,8 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>目标库的数据库账号。</p>
-         * <p>说明 迁移不同的数据库所需的权限有所差异，详情请参见迁移方案概览中对应的配置案例。</p>
+         * <p>The database account of the destination database.</p>
+         * <p>Note: The required permissions vary based on the database engine. For more information, see the corresponding configuration examples in the migration overview.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestaccount</p>
@@ -416,13 +416,13 @@ public class ConfigureMigrationJobRequest extends TeaModel {
 
     public static class ConfigureMigrationJobRequestMigrationMode extends TeaModel {
         /**
-         * <p>是否进行全量数据迁移，取值：</p>
+         * <p>Specifies whether to perform full data migration. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>：是。</li>
-         * <li><strong>false</strong>：否。</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
-         * <p>DTS对全量数据迁移的支持情况因数据库类型不同而有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/26618.html">支持的数据库和迁移类型</a>。</p>
+         * <p>The support for full data migration varies based on the database engine. For more information, see <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -433,13 +433,13 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public Boolean dataIntialization;
 
         /**
-         * <p>是否进行增量数据迁移，取值：</p>
+         * <p>Specifies whether to perform incremental data migration. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>：是。</li>
-         * <li><strong>false</strong>：否。</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
-         * <p>DTS对增量数据迁移的支持情况因数据库类型不同而有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/26618.html">支持的数据库和迁移类型</a>。</p>
+         * <p>The support for incremental data migration varies based on the database engine. For more information, see <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -450,13 +450,13 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public Boolean dataSynchronization;
 
         /**
-         * <p>是否进行结构迁移，取值：</p>
+         * <p>Specifies whether to perform schema migration. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>：是。</li>
-         * <li><strong>false</strong>：否。</li>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
          * </ul>
          * <blockquote>
-         * <p>DTS对结构迁移的支持情况因数据库类型不同而有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/26618.html">支持的数据库和迁移类型</a>。</p>
+         * <p>The support for schema migration varies based on the database engine. For more information, see <a href="https://help.aliyun.com/document_detail/26618.html">Supported databases and migration types</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -499,14 +499,14 @@ public class ConfigureMigrationJobRequest extends TeaModel {
 
     public static class ConfigureMigrationJobRequestSourceEndpoint extends TeaModel {
         /**
-         * <p>待迁移的数据库名称或鉴权数据库名称。</p>
+         * <p>The name of the database to be migrated or the authentication database.</p>
          * <blockquote>
          * <ul>
-         * <li>当<strong>SourceEndpoint.EngineName</strong>取值为<strong>PostgreSQL</strong>或<strong>MongoDB</strong>时，本参数才可用且必须传入。</li>
+         * <li>This parameter is available and required only when <strong>SourceEndpoint.EngineName</strong> is set to <strong>PostgreSQL</strong> or <strong>MongoDB</strong>.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>当<strong>SourceEndpoint.EngineName</strong>取值为<strong>PostgreSQL</strong>时，传入待迁移的数据库名称；取值为<strong>MongoDB</strong>时，传入数据库账号的鉴权数据库名称。</li>
+         * <li>When <strong>SourceEndpoint.EngineName</strong> is set to <strong>PostgreSQL</strong>, specify the name of the database to be migrated. When it is set to <strong>MongoDB</strong>, specify the name of the authentication database for the database account.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -516,9 +516,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String databaseName;
 
         /**
-         * <p>源库的数据库类型，取值：<strong>MySQL</strong>、<strong>TiDB</strong>、<strong>SQLServer</strong>、<strong>PostgreSQL</strong>、<strong>Oracle</strong>、<strong>MongoDB</strong>、<strong>Redis</strong>、<strong>POLARDB</strong>、<strong>polardb_pg</strong>。</p>
+         * <p>The database engine of the source database. Valid values: <strong>MySQL</strong>, <strong>TiDB</strong>, <strong>SQLServer</strong>, <strong>PostgreSQL</strong>, <strong>Oracle</strong>, <strong>MongoDB</strong>, <strong>Redis</strong>, <strong>POLARDB</strong>, and <strong>polardb_pg</strong>.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>RDS</strong>、<strong>POLARDB</strong>、<strong>ECS</strong>、<strong>LocalInstance</strong>或<strong>Express</strong>时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when <strong>DestinationEndpoint.InstanceType</strong> is set to <strong>RDS</strong>, <strong>POLARDB</strong>, <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -528,9 +528,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String engineName;
 
         /**
-         * <p>源库的连接地址。</p>
+         * <p>The endpoint of the source database.</p>
          * <blockquote>
-         * <p>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>LocalInstance</strong>或<strong>Express</strong>时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when <strong>SourceEndpoint.InstanceType</strong> is set to <strong>LocalInstance</strong> or <strong>Express</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -540,14 +540,14 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String IP;
 
         /**
-         * <p>源库的实例ID。</p>
+         * <p>The ID of the source instance.</p>
          * <blockquote>
          * <ul>
-         * <li>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>RDS</strong>、<strong>ECS</strong>、<strong>Express</strong>、<strong>MongoDB</strong>、<strong>POLARDB</strong>或<strong>PolarDB_o</strong>时，本参数才可用且必须传入对应的实例ID（例如取值为<strong>ECS</strong>，则本参数传入ECS实例的ID）。</li>
+         * <li>This parameter is available and required only when <strong>SourceEndpoint.InstanceType</strong> is set to <strong>RDS</strong>, <strong>ECS</strong>, <strong>Express</strong>, <strong>MongoDB</strong>, <strong>POLARDB</strong>, or <strong>PolarDB_o</strong>. You must specify the corresponding instance ID. For example, if the value is <strong>ECS</strong>, specify the ID of the ECS instance.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>Express</strong>时，本参数传入VPC ID（即专有网络ID）。</li>
+         * <li>When <strong>SourceEndpoint.InstanceType</strong> is set to <strong>Express</strong>, specify the VPC ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -557,17 +557,17 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String instanceID;
 
         /**
-         * <p>源库的实例类型，取值：</p>
+         * <p>The instance type of the source database. Valid values:</p>
          * <ul>
-         * <li><strong>RDS</strong>：阿里云RDS实例。</li>
-         * <li><strong>ECS</strong>：ECS上的自建数据库。</li>
-         * <li><strong>LocalInstance</strong>：有公网IP的自建数据库。</li>
-         * <li><strong>Express</strong>：通过专线/VPN网关/智能接入网关接入的自建数据库。</li>
-         * <li><strong>dg</strong>：通过数据库网关DG接入的自建数据库。</li>
-         * <li><strong>cen</strong>：通过云企业网CEN接入的自建数据库。</li>
-         * <li><strong>MongoDB</strong>：阿里云MongoDB实例。</li>
-         * <li><strong>POLARDB</strong>：阿里云PolarDB MySQL、PolarDB PostgreSQL。</li>
-         * <li><strong>PolarDB_o</strong>：阿里云PolarDB O引擎集群。</li>
+         * <li><strong>RDS</strong>: ApsaraDB RDS instance.</li>
+         * <li><strong>ECS</strong>: Self-managed database hosted on Elastic Compute Service (ECS).</li>
+         * <li><strong>LocalInstance</strong>: Self-managed database with a public IP address.</li>
+         * <li><strong>Express</strong>: Self-managed database connected over Express Connect, VPN Gateway, or Smart Access Gateway.</li>
+         * <li><strong>dg</strong>: Self-managed database connected over Database Gateway.</li>
+         * <li><strong>cen</strong>: Self-managed database connected over Cloud Enterprise Network (CEN).</li>
+         * <li><strong>MongoDB</strong>: ApsaraDB for MongoDB instance.</li>
+         * <li><strong>POLARDB</strong>: PolarDB for MySQL or PolarDB for PostgreSQL cluster.</li>
+         * <li><strong>PolarDB_o</strong>: PolarDB for Oracle cluster.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -578,9 +578,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>Oracle数据库的SID信息。</p>
+         * <p>The system ID (SID) of the Oracle database.</p>
          * <blockquote>
-         * <p>当<strong>SourceEndpoint.EngineName</strong>取值为<strong>Oracle</strong>，且Oracle数据库为非RAC实例时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when <strong>SourceEndpoint.EngineName</strong> is set to <strong>Oracle</strong> and the Oracle database is a non-Real Application Cluster instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -590,9 +590,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String oracleSID;
 
         /**
-         * <p>源实例所属的阿里云账号ID。</p>
+         * <p>The Alibaba Cloud account ID to which the source instance belongs.</p>
          * <blockquote>
-         * <p>仅在配置跨阿里云账号的数据迁移时本参数才可用，且必须传入。</p>
+         * <p>This parameter is active and required only when you configure a cross-account data migration task.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -602,7 +602,7 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String ownerID;
 
         /**
-         * <p>源库数据库账号对应的密码。</p>
+         * <p>The password of the source database account.</p>
          * 
          * <strong>example:</strong>
          * <p>Test123456</p>
@@ -611,9 +611,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>源库的服务端口。</p>
+         * <p>The service port number of the source database.</p>
          * <blockquote>
-         * <p>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>LocalInstance</strong>或<strong>Express</strong>时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when <strong>SourceEndpoint.InstanceType</strong> is set to <strong>ECS</strong>, <strong>LocalInstance</strong>, or <strong>Express</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -623,9 +623,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String port;
 
         /**
-         * <p>源库所属的地域ID。</p>
+         * <p>The ID of the region where the source database resides.</p>
          * <blockquote>
-         * <p>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>LocalInstance</strong>时，您可以传入<strong>cn-hangzhou</strong>或者离自建数据库地物理距离最近的地域ID，详情请参见<a href="https://help.aliyun.com/document_detail/141033.html">支持的地域列表</a>。</p>
+         * <p>When <strong>SourceEndpoint.InstanceType</strong> is set to <strong>LocalInstance</strong>, you can specify <strong>cn-hangzhou</strong> or the ID of the region that is closest to your self-managed database. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -635,9 +635,9 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String region;
 
         /**
-         * <p>当源实例与目标实例所属阿里云账号不同时，需传入该参数，来指定源实例的授权角色，以允许目标实例阿里云账号访问源实例的实例信息。</p>
+         * <p>The RAM role that is authorized to the destination Alibaba Cloud account to access the source instance. This parameter is required when the source and destination instances belong to different Alibaba Cloud accounts.</p>
          * <blockquote>
-         * <p>角色所需的权限及授权方式，请参见<a href="https://help.aliyun.com/document_detail/48468.html">跨阿里云账号数据迁移或同步时如何配置RAM授权</a>。</p>
+         * <p>For more information about the required permissions and authorization method, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration or synchronization</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -647,8 +647,8 @@ public class ConfigureMigrationJobRequest extends TeaModel {
         public String role;
 
         /**
-         * <p>源库的数据库账号。</p>
-         * <p>说明 迁移不同的数据库所需的权限有所差异，详情请参见迁移方案概览中对应的配置案例。</p>
+         * <p>The database account of the source database.</p>
+         * <p>Note: The required permissions vary based on the database engine. For more information, see the corresponding configuration examples in the migration overview.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestaccount</p>

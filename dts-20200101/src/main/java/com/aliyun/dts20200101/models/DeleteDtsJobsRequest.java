@@ -8,11 +8,11 @@ public class DeleteDtsJobsRequest extends TeaModel {
      * <p>The IDs of the data migration, data synchronization, or change tracking tasks.</p>
      * <blockquote>
      * <ul>
-     * <li>You can specify up to 10 task IDs, separated by commas (,).</li>
+     * <li>You can specify up to 10 task IDs. Separate multiple task IDs with commas (,).</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>You can call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query the DTS task IDs.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query DTS task IDs.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,7 +23,7 @@ public class DeleteDtsJobsRequest extends TeaModel {
     public String dtsJobIds;
 
     /**
-     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class DeleteDtsJobsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>A special parameter for specific business scenarios. You do not need to configure this parameter.</p>
+     * <p>A dedicated field for special business scenarios. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>rg3m1213ye7l****</p>
@@ -41,7 +41,7 @@ public class DeleteDtsJobsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>A special parameter for specific business scenarios. You do not need to configure this parameter.</p>
+     * <p>A dedicated field for special business scenarios. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

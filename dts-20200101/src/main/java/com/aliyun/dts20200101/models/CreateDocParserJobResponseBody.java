@@ -14,7 +14,7 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The dynamic error code. This parameter will be deprecated.</p>
+     * <p>The dynamic error code. This parameter will be deprecated soon.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -23,7 +23,7 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message, which is used to replace the %s variable in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace %s in the <strong>ErrMessage</strong> response parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>present environment is not support, so skip</p>
@@ -32,7 +32,7 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the call fails.</p>
+     * <p>The error code returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -41,7 +41,7 @@ public class CreateDocParserJobResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call fails.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>

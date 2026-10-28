@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySubscriptionObjectRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be deprecated.</p>
+     * <p>The Alibaba Cloud account ID. You do not need to specify this parameter. This parameter will be deprecated soon.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -26,7 +26,7 @@ public class ModifySubscriptionObjectRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -45,7 +45,7 @@ public class ModifySubscriptionObjectRequest extends TeaModel {
     public String subscriptionInstanceId;
 
     /**
-     * <p>The subscription objects. The value is a JSON string that supports regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141902.html">Subscription object configuration</a>.</p>
+     * <p>The subscription objects. The value is a JSON string and supports specific regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141902.html">Subscription object configuration</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

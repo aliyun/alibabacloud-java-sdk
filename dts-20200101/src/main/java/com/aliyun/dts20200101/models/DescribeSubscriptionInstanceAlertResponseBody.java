@@ -14,10 +14,10 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String delayAlertPhone;
 
     /**
-     * <p>Indicates whether latency alerting is enabled. Valid values:</p>
+     * <p>Indicates whether the latency status is monitored. Valid values:</p>
      * <ul>
-     * <li><strong>enable</strong>: Enabled.</li>
-     * <li><strong>disable</strong>: Disabled.</li>
+     * <li><strong>enable</strong>: Yes.</li>
+     * <li><strong>disable</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String delayAlertStatus;
 
     /**
-     * <p>The threshold for triggering latency alerts. Unit: seconds. The value must be an integer. A value of 10 seconds is recommended.</p>
+     * <p>The threshold for triggering a latency alert. Unit: seconds. The value must be an integer. Recommended value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,7 +36,7 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String delayOverSeconds;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -45,7 +45,7 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -54,7 +54,7 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The mobile phone number of the contact for error alerts.</p>
+     * <p>The mobile phone number of the contact for exception alerts.</p>
      * 
      * <strong>example:</strong>
      * <p>13555*****</p>
@@ -63,10 +63,10 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String errorAlertPhone;
 
     /**
-     * <p>Indicates whether error alerting is enabled. Valid values:</p>
+     * <p>Indicates whether the exception status is monitored. Valid values:</p>
      * <ul>
-     * <li><strong>enable</strong>: Enabled.</li>
-     * <li><strong>disable</strong>: Disabled.</li>
+     * <li><strong>enable</strong>: Yes.</li>
+     * <li><strong>disable</strong>: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,7 +76,7 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String errorAlertStatus;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>210ec2e116055198849072222d****</p>
@@ -103,7 +103,7 @@ public class DescribeSubscriptionInstanceAlertResponseBody extends TeaModel {
     public String subscriptionInstanceName;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -7,7 +7,7 @@ public class CreateDocParserJobAdvanceRequest extends TeaModel {
     /**
      * <p>The name of the document to be parsed.</p>
      * <blockquote>
-     * <p>The name must include the file name extension. Currently, only .pdf is supported.</p>
+     * <p>The name must include the file name extension. Only .pdf is supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class CreateDocParserJobAdvanceRequest extends TeaModel {
     /**
      * <p>The OSS URL of the document to be parsed.</p>
      * <blockquote>
-     * <p>This parameter is automatically populated when you call this operation by using an SDK.</p>
+     * <p>This parameter is automatically populated when you use an SDK to call this operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,10 +50,10 @@ public class CreateDocParserJobAdvanceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The output format of the parsing result after the task is complete. Valid values:</p>
+     * <p>The format of the output result after the parsing task is completed. Valid values:</p>
      * <ul>
-     * <li><strong>zip</strong>: a ZIP compressed file.</li>
-     * <li><strong>content</strong>: plain text.</li>
+     * <li><strong>zip</strong>: ZIP archive.</li>
+     * <li><strong>content</strong>: Plain text.</li>
      * </ul>
      * 
      * <strong>example:</strong>

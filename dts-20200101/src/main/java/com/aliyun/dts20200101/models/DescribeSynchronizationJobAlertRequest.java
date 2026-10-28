@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSynchronizationJobAlertRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be discontinued.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated soon.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -14,7 +14,7 @@ public class DescribeSynchronizationJobAlertRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The value can contain a maximum of 64 ASCII characters and cannot contain non-ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must ensure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -26,7 +26,7 @@ public class DescribeSynchronizationJobAlertRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The region ID. Specify this parameter to indicate the region where the subscription channel resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID. Specify this parameter to indicate the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -35,7 +35,7 @@ public class DescribeSynchronizationJobAlertRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -46,8 +46,8 @@ public class DescribeSynchronizationJobAlertRequest extends TeaModel {
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <ul>
-     * <li><strong>Forward</strong>: forward.</li>
-     * <li><strong>Reverse</strong>: reverse.</li>
+     * <li><strong>Forward</strong>: Forward.</li>
+     * <li><strong>Reverse</strong>: Reverse.</li>
      * </ul>
      * <blockquote>
      * <p>Default value: <strong>Forward</strong>.</p>

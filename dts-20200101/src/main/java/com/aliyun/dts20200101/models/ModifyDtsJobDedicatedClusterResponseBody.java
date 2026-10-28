@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDtsJobDedicatedClusterResponseBody extends TeaModel {
     /**
-     * <p>The error code returned by the backend. The value is incremental.</p>
+     * <p>The backend error code, which is an incrementing number.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -14,7 +14,7 @@ public class ModifyDtsJobDedicatedClusterResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The dynamic error message used to replace the %s variable in the ErrMessage parameter.</p>
+     * <p>The dynamic error message, which is used to replace the %s placeholder in the error message returned in the <strong>ErrMessage</strong> response parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Type</p>
@@ -59,7 +59,7 @@ public class ModifyDtsJobDedicatedClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

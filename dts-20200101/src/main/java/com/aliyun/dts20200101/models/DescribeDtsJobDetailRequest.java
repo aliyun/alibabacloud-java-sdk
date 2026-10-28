@@ -4,11 +4,17 @@ package com.aliyun.dts20200101.models;
 import com.aliyun.tea.*;
 
 public class DescribeDtsJobDetailRequest extends TeaModel {
+    /**
+     * <p>The output type of the migration object information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>NONE</p>
+     */
     @NameInMap("DbObjectOutputType")
     public String dbObjectOutputType;
 
     /**
-     * <p>The instance ID of the data migration, data synchronization, or subscribe instance.</p>
+     * <p>The data migration, data synchronization, or subscribe instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dtsta7w132u12h****</p>
@@ -26,7 +32,7 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The ID of the region in which the task resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID of the task. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -35,7 +41,7 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -44,7 +50,7 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Specifies whether to return information about all synchronization subtasks. Default value: <strong>false</strong>, which returns only the synchronization subtask that is in progress or the most recently executed synchronization subtask.</p>
+     * <p>Specifies whether to return the information about all synchronization subtasks. Default value: <strong>false</strong>. If this parameter is set to false, only the information about the ongoing or most recently executed synchronization subtask is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -64,7 +70,7 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>The value <strong>Reverse</strong> takes effect only when the synchronization topology of the data synchronization instance is two-way synchronization.</li>
+     * <li>This parameter takes effect only when you set it to <strong>Reverse</strong> and the synchronization topology of the data synchronization instance is two-way synchronization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,10 +80,10 @@ public class DescribeDtsJobDetailRequest extends TeaModel {
     public String synchronizationDirection;
 
     /**
-     * <p>Specifies whether the task is a zero-ETL task. Valid values:</p>
+     * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The task is a zero-ETL task.</li>
-     * <li><strong>false</strong>: The task is not a zero-ETL task.</li>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong>: no.</li>
      * </ul>
      * 
      * <strong>example:</strong>

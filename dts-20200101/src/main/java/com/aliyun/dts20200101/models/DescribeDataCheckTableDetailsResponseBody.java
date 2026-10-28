@@ -23,9 +23,9 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the error message of the <strong>ErrMessage</strong> response parameter.</p>
      * <blockquote>
-     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>Type</strong>, the request parameter <strong>Type</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>Type</strong>, the specified <strong>Type</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -44,7 +44,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -62,7 +62,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public Long failedTableCount;
 
     /**
-     * <p>The total number of rows that have been verified.</p>
+     * <p>The total number of data rows that have been verified.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -107,13 +107,13 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The details of the data consistency verification results for tables.</p>
+     * <p>The details of the data table verification results.</p>
      */
     @NameInMap("TableDetails")
     public java.util.List<DescribeDataCheckTableDetailsResponseBodyTableDetails> tableDetails;
 
     /**
-     * <p>The total number of tables to be verified.</p>
+     * <p>The total number of verified tables.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -250,12 +250,12 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public Long diffCount;
 
         /**
-         * <p>The error code returned when the task fails. Valid values:</p>
+         * <p>The error code returned when an error occurs during task execution. Valid values:</p>
          * <ul>
-         * <li><strong>1</strong>: the number of tables without primary key exceeds the limit.</li>
-         * <li><strong>2</strong>: the number of rows with data inconsistency exceeds 300.</li>
+         * <li><strong>1</strong>: the number of table without primary key exceeds the limit.</li>
+         * <li><strong>2</strong>: the number of inconsistent data rows exceeds 300.</li>
          * <li><strong>3</strong>: the table to be queried does not exist.</li>
-         * <li><strong>4</strong>: the SQL statement used to query data contains a syntax error.</li>
+         * <li><strong>4</strong>: an SQL syntax error occurred while querying data.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -265,7 +265,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public Integer errorCode;
 
         /**
-         * <p>The number of rows that have been verified in the table.</p>
+         * <p>The number of data rows that have been verified in the table.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>
@@ -274,7 +274,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public Long finishCount;
 
         /**
-         * <p>The auto-increment primary key that identifies a verification result record.</p>
+         * <p>The auto-increment primary key used to identify a verification result record.</p>
          * 
          * <strong>example:</strong>
          * <p>167401241974****</p>
@@ -334,7 +334,7 @@ public class DescribeDataCheckTableDetailsResponseBody extends TeaModel {
         public String targetTbName;
 
         /**
-         * <p>The total number of rows to be verified.</p>
+         * <p>The total number of verified data rows.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>

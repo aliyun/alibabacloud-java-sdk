@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricListResponseBody extends TeaModel {
     /**
-     * <p>The backend error code, which is an incrementing number.</p>
+     * <p>The backend error code.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -20,7 +20,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public java.util.List<DescribeMetricListResponseBodyDataPoints> dataPoints;
 
     /**
-     * <p>The dynamic error message, which is used to replace the %s placeholder in the <strong>ErrMessage</strong> error message.</p>
+     * <p>The dynamic error message, which is used to replace the %s placeholder in the <strong>ErrMessage</strong> parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Type</p>
@@ -47,7 +47,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The HTTP status code corresponding to the exception.</p>
+     * <p>The HTTP status code for the exception.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -56,13 +56,14 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>Specifies the metric name. Valid values:</p>
      * <ul>
      * <li><strong>InternetOut</strong>: outbound Internet traffic, in bytes.</li>
      * <li><strong>diskusage_utilization</strong>: disk usage.</li>
      * <li><strong>IntranetInRate</strong>: inbound internal network traffic, in bytes.</li>
      * <li><strong>InternetIn</strong>: inbound Internet traffic, in bytes.</li>
-     * <li><strong>cpu_total</strong>: CPU utilization.</li>
-     * <li><strong>memory_usedutilization</strong>: memory utilization.</li>
+     * <li><strong>cpu_total</strong>: CPU usage.</li>
+     * <li><strong>memory_usedutilization</strong>: memory usage.</li>
      * <li><strong>IntranetOutRate</strong>: outbound internal network traffic, in bytes.</li>
      * </ul>
      * 
@@ -73,7 +74,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public String metricName;
 
     /**
-     * <p>Specifies whether to query a cluster or a node. Valid values:</p>
+     * <p>Specifies the query target. Valid values:</p>
      * <ul>
      * <li><strong>CLUSTER</strong>: cluster.</li>
      * <li><strong>NODE</strong>: node.</li>
@@ -88,8 +89,8 @@ public class DescribeMetricListResponseBody extends TeaModel {
     /**
      * <p>The observation value.</p>
      * <ul>
-     * <li>If <strong>MetricType</strong> is set to <strong>NODE</strong>, the value is <strong>nodeid</strong>.</li>
-     * <li>If <strong>MetricType</strong> is set to <strong>CLUSTER</strong>, the value is the ID of the dedicated cluster, which can be obtained by calling the ListDedicatedCluster operation.</li>
+     * <li>If <strong>MetricType</strong> is <strong>NODE</strong>, the value is the <strong>nodeid</strong>.</li>
+     * <li>If <strong>MetricType</strong> is <strong>CLUSTER</strong>, the value is the dedicated cluster ID, which can be obtained by calling the ListDedicatedCluster operation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -108,7 +109,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
     public Long period;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>621BB4F8-3016-4FAA-8D5A-5D3163CC****</p>
@@ -237,7 +238,7 @@ public class DescribeMetricListResponseBody extends TeaModel {
         public Float statistics;
 
         /**
-         * <p>The record timestamp, in milliseconds.</p>
+         * <p>The record timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1650872310000</p>

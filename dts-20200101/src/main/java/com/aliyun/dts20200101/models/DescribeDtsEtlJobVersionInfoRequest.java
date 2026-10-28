@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDtsEtlJobVersionInfoRequest extends TeaModel {
     /**
-     * <p>The DTS instance ID. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
+     * <p>The ID of the DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends TeaModel {
     public String dtsInstanceId;
 
     /**
-     * <p>The ETL task ID. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+     * <p>The ID of the ETL task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>l5512es7w15****</p>
@@ -33,7 +33,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Settings this parameter for paging. Default value: 20.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,7 +42,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query available regions.</p>
+     * <p>The region ID of the DTS instance. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the list of Alibaba Cloud regions.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -51,7 +51,7 @@ public class DescribeDtsEtlJobVersionInfoRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

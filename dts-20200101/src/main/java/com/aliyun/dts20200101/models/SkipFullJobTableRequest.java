@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SkipFullJobTableRequest extends TeaModel {
     /**
-     * <p>The ID of the data migration, synchronization, or change tracking task. This parameter is deprecated and no longer takes effect.</p>
+     * <p>The ID of the data migration, data synchronization, or change tracking task. <strong>[Deprecated]</strong> This parameter is deprecated and no longer takes effect.</p>
      * 
      * <strong>example:</strong>
      * <p>l3m1213ye7l****</p>
@@ -14,7 +14,7 @@ public class SkipFullJobTableRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The primary key ID of JobProgress. Each object in a full data migration task corresponds to a JobProgress entry. Specify this parameter to identify the table to skip.</p>
+     * <p>The primary key ID of JobProgress. Each object in a full data migration task corresponds to a JobProgress record. Specify this parameter to determine the tables to skip.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -23,7 +23,7 @@ public class SkipFullJobTableRequest extends TeaModel {
     public String jobProgressId;
 
     /**
-     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class SkipFullJobTableRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aek2ilvoxlrdcby</p>
@@ -41,10 +41,10 @@ public class SkipFullJobTableRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Specifies whether the node is a seamless integration (zero-ETL) node. Valid values:</p>
+     * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The node is a zero-ETL node.</li>
-     * <li><strong>false</strong>: The node is not a zero-ETL node.</li>
+     * <li><strong>true</strong>: yes</li>
+     * <li><strong>false</strong>: no</li>
      * </ul>
      * 
      * <strong>example:</strong>

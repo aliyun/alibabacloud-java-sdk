@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDtsServiceLogRequest extends TeaModel {
     /**
-     * <p>The ID of the data migration or synchronization task.</p>
+     * <p>The ID of the migration or synchronization task.</p>
      * 
      * <strong>example:</strong>
      * <p>c1yr56py103****</p>
@@ -14,14 +14,14 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The end time of the log information. You can call <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> to query the end time.</p>
+     * <p>The end time of the logs. You can call the <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> operation to query the time.</p>
      * <blockquote>
      * <ul>
-     * <li>To query the log information of a DTS subtask within a specific time range, call <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> to query the execution time of the DTS subtask.</li>
+     * <li>To query the logs of a DTS subtask within a specific time range, call the <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> operation to obtain the execution time of the DTS subtask.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>The time is a 13-digit UNIX timestamp in milliseconds. You can use a search engine to find a UNIX timestamp converter.</li>
+     * <li>Specify the time as a 13-digit UNIX timestamp in milliseconds. You can use a search engine to find a UNIX timestamp converter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,9 +31,9 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The keyword used to filter query results.</p>
+     * <p>The keyword used to filter the logs.</p>
      * <blockquote>
-     * <p>Fuzzy match is used and the keyword is case-sensitive.</p>
+     * <p>Fuzzy matching is supported and the keyword is case-sensitive.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,7 +52,7 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of log entries per page. Valid values: <strong>20</strong>, <strong>50</strong>, <strong>100</strong>, <strong>500</strong>, and <strong>1000</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of log entries to return on each page. Valid values: <strong>20</strong>, <strong>50</strong>, <strong>100</strong>, <strong>500</strong>, and <strong>1000</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -61,7 +61,7 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID. Specify this parameter to indicate the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The ID of the region where the instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -70,7 +70,7 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -79,14 +79,14 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The start time of the log information.</p>
+     * <p>The start time of the logs.</p>
      * <blockquote>
      * <ul>
-     * <li>To query the log information of a DTS subtask within a specific time range, call <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> to query the execution time of the DTS subtask.</li>
+     * <li>To query the logs of a DTS subtask within a specific time range, call the <a href="https://help.aliyun.com/document_detail/209718.html">DescribePreCheckStatus</a> operation to obtain the execution time of the DTS subtask.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>The start time is a 13-digit UNIX timestamp in milliseconds. You can use a search engine to find a UNIX timestamp converter.</li>
+     * <li>Specify the time as a 13-digit UNIX timestamp in milliseconds. You can use a search engine to find a UNIX timestamp converter.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -96,7 +96,7 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The log level of the log information. Separate multiple values with commas (,). Valid values:</p>
+     * <p>The log level. Separate multiple log levels with commas (,). Valid values:</p>
      * <ul>
      * <li><strong>NORMAL</strong>: Normal.</li>
      * <li><strong>WARN</strong>: Warning.</li>
@@ -110,11 +110,11 @@ public class DescribeDtsServiceLogRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The type of the DTS task subnode. Valid values:</p>
+     * <p>The specific sub-node type of the DTS task. Valid values:</p>
      * <ul>
-     * <li><strong>DATA_LOAD</strong>: full data migration or initial full data synchronization.</li>
-     * <li><strong>ONLINE_WRITER</strong>: incremental data migration.</li>
-     * <li><strong>SYNC_WRITER</strong>: incremental data synchronization.</li>
+     * <li><strong>DATA_LOAD</strong>: Full data migration or full data synchronization.</li>
+     * <li><strong>ONLINE_WRITER</strong>: Incremental data migration.</li>
+     * <li><strong>SYNC_WRITER</strong>: Incremental data synchronization.</li>
      * </ul>
      * 
      * <strong>example:</strong>

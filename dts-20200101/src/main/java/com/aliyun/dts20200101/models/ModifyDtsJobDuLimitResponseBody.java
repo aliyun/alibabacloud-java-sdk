@@ -14,7 +14,7 @@ public class ModifyDtsJobDuLimitResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The dynamic error message. This parameter is used to replace the %s variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace the %s placeholder in the error message returned in the <strong>ErrMessage</strong> response parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Type</p>
@@ -59,7 +59,7 @@ public class ModifyDtsJobDuLimitResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -8,7 +8,7 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
     public ListDedicatedClusterResponseBodyDedicatedClusterStatusList dedicatedClusterStatusList;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -17,7 +17,7 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -35,7 +35,7 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
     public String httpStatusCode;
 
     /**
-     * <p>The page number. The value is a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
+     * <p>The page number. The value must be an integer greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -44,7 +44,7 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of records that can be displayed on the current page.</p>
+     * <p>The maximum number of entries that can be displayed on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -62,7 +62,7 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -71,7 +71,7 @@ public class ListDedicatedClusterResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The total number of clusters that meet the specified conditions.</p>
+     * <p>The total number of clusters that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>15</p>

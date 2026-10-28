@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesResponseBody extends TeaModel {
     /**
-     * <p>The error code returned when the call fails.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -14,7 +14,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned when the call fails.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -25,7 +25,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     /**
      * <p>The query token.</p>
      * <blockquote>
-     * <p>If this request does not return all results, you can pass this <strong>NextToken</strong> value in the subsequent request to continue the query.</p>
+     * <p>If the current query does not return all results, you can include this <strong>NextToken</strong> value in the subsequent query to retrieve more results.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

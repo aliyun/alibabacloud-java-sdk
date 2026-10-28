@@ -7,14 +7,14 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     /**
      * <p>The complete text parsing content.</p>
      * <blockquote>
-     * <p>If the task type is content, ContentList splits the original document by page. Each page has a separate Markdown text entry.</p>
+     * <p>For a content task, ContentList splits the original document by page. Each page has a separate Markdown text block.</p>
      * </blockquote>
      */
     @NameInMap("ContentList")
     public java.util.List<DescribeDocParserJobResultResponseBodyContentList> contentList;
 
     /**
-     * <p>The dynamic error code. This parameter will be deprecated.</p>
+     * <p>The dynamic error code. This parameter will be deprecated soon.</p>
      * 
      * <strong>example:</strong>
      * <p>403</p>
@@ -23,9 +23,9 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message. It is used to replace the <strong>%s</strong> placeholder in the <strong>ErrMessage</strong> error message.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned when the call fails.</p>
+     * <p>The error code returned when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -44,7 +44,7 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned when the call fails.</p>
+     * <p>The error message returned when an error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -55,7 +55,7 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     /**
      * <p>The OSS download URL of the file.</p>
      * <blockquote>
-     * <p>If the task type is zip, this field returns the download URL of the zip package. The URL is valid for 30 minutes.</p>
+     * <p>For a ZIP task, this field returns the download URL of the ZIP package. The URL is valid for 30 minutes.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -92,7 +92,7 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -187,7 +187,7 @@ public class DescribeDocParserJobResultResponseBody extends TeaModel {
 
     public static class DescribeDocParserJobResultResponseBodyContentList extends TeaModel {
         /**
-         * <p>The text content of the corresponding page, which is the complete Markdown text after parsing.</p>
+         * <p>The text content of the corresponding page, which is the complete parsed Markdown text.</p>
          * 
          * <strong>example:</strong>
          * <ul>

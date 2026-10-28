@@ -14,9 +14,9 @@ public class SkipPreCheckResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The dynamic error message used to replace the %s variable in the ErrMessage parameter.</p>
+     * <p>The dynamic error message, which is used to replace the %s variable in the error message returned by the ErrMessage parameter.</p>
      * <blockquote>
-     * <p>For example, if ErrMessage returns The Value of Input Parameter %s is not valid and DynamicMessage returns JobId, the JobId request parameter is invalid.</p>
+     * <p>If the ErrMessage parameter returns The Value of Input Parameter %s is not valid and the DynamicMessage parameter returns JobId, the specified JobId request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -35,7 +35,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -80,7 +80,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
     public String scheduleJobId;
 
     /**
-     * <p>The abbreviated names of the precheck items to suppress or unsuppress.</p>
+     * <p>The abbreviations of the precheck items to skip or unskip.</p>
      * 
      * <strong>example:</strong>
      * <p>CHECK_SAME_OBJ</p>
@@ -89,7 +89,7 @@ public class SkipPreCheckResponseBody extends TeaModel {
     public String skipItems;
 
     /**
-     * <p>The full names of the precheck items to suppress or unsuppress.</p>
+     * <p>The names of the precheck items to skip or unskip.</p>
      * 
      * <strong>example:</strong>
      * <p>CHECK_SAME_OBJ_DETAIL</p>

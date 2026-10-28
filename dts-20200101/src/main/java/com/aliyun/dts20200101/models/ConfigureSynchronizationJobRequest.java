@@ -14,7 +14,7 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     public ConfigureSynchronizationJobRequestSourceEndpoint sourceEndpoint;
 
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be discontinued.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be deprecated soon.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -34,8 +34,8 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform initial full data synchronization. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes.</li>
-     * <li><strong>false</strong>: no.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * <blockquote>
      * <p>Default value: <strong>true</strong>.</p>
@@ -49,9 +49,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     public Boolean dataInitialization;
 
     /**
-     * <p>The reserved parameter of DTS. The value is a JSON string. You can specify this parameter to meet special requirements, such as specifying whether to automatically start the precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved parameter description</a>.</p>
+     * <p>The reserved parameter for DTS. The value is a JSON string. You can specify this parameter to meet specific requirements, such as whether to automatically start a precheck. For more information, see <a href="https://help.aliyun.com/document_detail/176470.html">MigrationReserved parameter description</a>.</p>
      * <blockquote>
-     * <p>For example, you can use this parameter for data synchronization between ApsaraDB for Redis Enhanced Edition (Tair) instances. For more information, see <a href="https://help.aliyun.com/document_detail/155967.html">Use OpenAPI to configure one-way or bidirectional data synchronization between ApsaraDB for Redis Enhanced Edition instances</a>.</p>
+     * <p>For example, you can use this parameter for data synchronization between Redis Enterprise instances. For more information, see <a href="https://help.aliyun.com/document_detail/155967.html">Call OpenAPI operations to configure one-way or two-way data synchronization between Redis Enterprise instances</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -84,8 +84,8 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform initial schema synchronization. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes.</li>
-     * <li><strong>false</strong>: no.</li>
+     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong>: No.</li>
      * </ul>
      * <blockquote>
      * <p>Default value: <strong>true</strong>.</p>
@@ -101,8 +101,8 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <ul>
-     * <li><strong>Forward</strong>: forward.</li>
-     * <li><strong>Reverse</strong>: reverse.</li>
+     * <li><strong>Forward</strong>: Forward synchronization.</li>
+     * <li><strong>Reverse</strong>: Reverse synchronization.</li>
      * </ul>
      * <blockquote>
      * <ul>
@@ -110,7 +110,7 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>This parameter takes effect only if you set it to <strong>Reverse</strong> and the synchronization topology of the data synchronization instance is two-way synchronization.</li>
+     * <li>This parameter takes effect only when the synchronization topology of the data synchronization instance is two-way synchronization and the value is set to <strong>Reverse</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,17 +132,17 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
     /**
      * <p>The name of the synchronization task.</p>
      * <blockquote>
-     * <p>Specify a descriptive name that makes it easy to identify the task. It does not need to be unique.</p>
+     * <p>Specify a descriptive name that is easy to identify. The name does not need to be unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>MySQL同步</p>
+     * <p>MySQL synchronization</p>
      */
     @NameInMap("SynchronizationJobName")
     public String synchronizationJobName;
 
     /**
-     * <p>The objects to be synchronized. The value is a JSON string and supports certain regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">Synchronization object configuration</a>.</p>
+     * <p>The objects to be synchronized. The value is a JSON string and supports specific regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141901.html">Configure synchronization objects</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -278,7 +278,7 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
 
     public static class ConfigureSynchronizationJobRequestDestinationEndpoint extends TeaModel {
         /**
-         * <p>目标实例中的同步对象所属数据库名称。</p>
+         * <p>The name of the database to which the synchronization objects in the destination instance belong.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -287,9 +287,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String dataBaseName;
 
         /**
-         * <p>目标库的IP地址。</p>
+         * <p>The IP address of the destination database.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数必须传入本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -299,10 +299,10 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String IP;
 
         /**
-         * <p>同步目标实例的实例ID</p>
+         * <p>The instance ID of the destination instance for synchronization.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>MaxCompute</strong>或<strong>DataHub</strong>时，本参数传入MaxCompute实例或DataHub的Project名称。
-         * 当目标实例为阿里云分析型数据库MySQL版时，传入分析型数据库MySQL版的集群ID。</p>
+         * <p>When the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong> or <strong>DataHub</strong>, set this parameter to the name of the MaxCompute project or DataHub project.
+         * If the destination instance is an Alibaba Cloud AnalyticDB for MySQL database, set this parameter to the cluster ID of the AnalyticDB for MySQL database.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -312,20 +312,20 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>目标实例类型，取值为：</p>
+         * <p>The destination instance type. Valid values:</p>
          * <ul>
-         * <li><strong>Redis</strong>：阿里云Redis实例。</li>
-         * <li><strong>RDS</strong>：阿里云RDS实例。</li>
-         * <li><strong>PolarDB</strong>：阿里云PolarDB集群（仅支持MySQL或兼容Oracle语法的引擎）。</li>
-         * <li><strong>ECS</strong>：ECS上的自建数据库。</li>
-         * <li><strong>Express</strong>：通过专线接入的本地数据库。</li>
-         * <li><strong>DataHub</strong>：阿里云DataHub实例。</li>
-         * <li><strong>MaxCompute</strong>：阿里云MaxCompute实例。</li>
-         * <li><strong>AnalyticDB</strong>：云原生数据仓库AnalyticDB MySQL  3.0和2.0版本。</li>
-         * <li><strong>Greenplum</strong>：云原生数据仓库ADB PostgreSQL版（原分析型数据库PostgreSQL版）。</li>
+         * <li><strong>Redis</strong>: Alibaba Cloud Redis instance.</li>
+         * <li><strong>RDS</strong>: ApsaraDB RDS instance.</li>
+         * <li><strong>PolarDB</strong>: PolarDB cluster (only MySQL or Oracle-compatible engines are supported).</li>
+         * <li><strong>ECS</strong>: Self-managed database hosted on ECS.</li>
+         * <li><strong>Express</strong>: Self-managed database connected over Express Connect.</li>
+         * <li><strong>DataHub</strong>: DataHub instance.</li>
+         * <li><strong>MaxCompute</strong>: MaxCompute instance.</li>
+         * <li><strong>AnalyticDB</strong>: AnalyticDB for MySQL 3.0 and 2.0.</li>
+         * <li><strong>Greenplum</strong>: AnalyticDB for PostgreSQL.</li>
          * </ul>
          * <blockquote>
-         * <p>默认取值为<strong>RDS</strong>。</p>
+         * <p>Default value: <strong>RDS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -335,10 +335,10 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>目标库数据库账号密码。</p>
+         * <p>The password of the database account for the destination database.</p>
          * <blockquote>
          * <ul>
-         * <li>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数必须传入。</li>
+         * <li>This parameter is required when the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</li>
          * </ul>
          * </blockquote>
          * 
@@ -349,9 +349,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>目标库的数据库服务端口。</p>
+         * <p>The service port number of the destination database.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -361,16 +361,16 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String port;
 
         /**
-         * <p>目标库的数据库账号。</p>
+         * <p>The database account of the destination database.</p>
          * <blockquote>
          * <ul>
-         * <li>同步不同的数据库所需的权限有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/140954.html">DTS数据同步方案概览</a>中对应的配置案例。</li>
+         * <li>The permissions required for synchronizing different databases vary. For more information, see the corresponding configuration examples in <a href="https://help.aliyun.com/document_detail/140954.html">Overview of DTS data synchronization solutions</a>.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数必须传入。</li>
-         * <li>当<strong>DestinationEndpoint.InstanceType</strong>取值为RDS且数据库版本为MySQL 5.5或MySQL 5.6，无需传入本参数和<strong>DestinationEndpoint.Password</strong>参数。</li>
-         * <li>当<strong>DestinationEndpoint.InstanceType</strong>取值为<strong>Redis</strong>时，无需传入本参数。</li>
+         * <li>This parameter is required when the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</li>
+         * <li>This parameter and the <strong>DestinationEndpoint.Password</strong> parameter are not required when the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>RDS</strong> and the database engine version is MySQL 5.5 or MySQL 5.6.</li>
+         * <li>This parameter is not required when the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>Redis</strong>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -444,9 +444,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
 
     public static class ConfigureSynchronizationJobRequestPartitionKey extends TeaModel {
         /**
-         * <p>设置增量日志表是否包含以增量更新时间对应日期信息定义的分区，取值：<strong>true</strong>或<strong>false</strong>。</p>
+         * <p>Specifies whether the incremental log table contains partitions defined by the day of the incremental update time. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>参数取值为<strong>Maxcompute</strong>时，本参数才可用。</p>
+         * <p>This parameter is available only when the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -456,9 +456,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public Boolean modifyTimeDay;
 
         /**
-         * <p>设置增量日志表是否包含以增量更新时间对应小时信息定义的分区，取值：<strong>true</strong>或<strong>false</strong>。</p>
+         * <p>Specifies whether the incremental log table contains partitions defined by the hour of the incremental update time. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>参数取值为<strong>Maxcompute</strong>时，本参数才可用。</p>
+         * <p>This parameter is available only when the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -468,9 +468,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public Boolean modifyTimeHour;
 
         /**
-         * <p>设置增量日志表是否包含以增量更新时间对应分钟信息定义的分区，取值：<strong>true</strong>或<strong>false</strong>。</p>
+         * <p>Specifies whether the incremental log table contains partitions defined by the minute of the incremental update time. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>参数取值为<strong>Maxcompute</strong>时，本参数才可用。</p>
+         * <p>This parameter is available only when the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -480,9 +480,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public Boolean modifyTimeMinute;
 
         /**
-         * <p>设置增量日志表是否包含以增量更新时间对应月份信息定义的分区，取值：<strong>true</strong>或<strong>false</strong>。</p>
+         * <p>Specifies whether the incremental log table contains partitions defined by the month of the incremental update time. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>参数取值为<strong>Maxcompute</strong>时，本参数才可用。</p>
+         * <p>This parameter is available only when the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -492,9 +492,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public Boolean modifyTimeMonth;
 
         /**
-         * <p>设置增量日志表是否包含以增量更新时间对应年份信息定义的分区，取值：<strong>true</strong>或<strong>false</strong>。</p>
+         * <p>Specifies whether the incremental log table contains partitions defined by the year of the incremental update time. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
          * <blockquote>
-         * <p>当<strong>DestinationEndpoint.InstanceType</strong>参数取值为<strong>Maxcompute</strong>时，本参数才可用。</p>
+         * <p>This parameter is available only when the <strong>DestinationEndpoint.InstanceType</strong> parameter is set to <strong>MaxCompute</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -552,7 +552,7 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
 
     public static class ConfigureSynchronizationJobRequestSourceEndpoint extends TeaModel {
         /**
-         * <p>源实例中的同步对象所属数据库名称。</p>
+         * <p>The name of the database to which the synchronization objects in the source instance belong.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -561,9 +561,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String databaseName;
 
         /**
-         * <p>源库的IP地址。</p>
+         * <p>The IP address of the source database.</p>
          * <blockquote>
-         * <p>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -573,7 +573,7 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String IP;
 
         /**
-         * <p>源实例ID。</p>
+         * <p>The instance ID of the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>rm-bp1i99e8l7913****</p>
@@ -582,18 +582,18 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>源实例类型，取值为：</p>
+         * <p>The type of the source instance. Valid values:</p>
          * <ul>
-         * <li><strong>RDS</strong>：阿里云RDS实例。</li>
-         * <li><strong>Redis</strong>：阿里云Redis实例。</li>
-         * <li><strong>PolarDB</strong>：阿里云PolarDB集群（仅支持MySQL或兼容Oracle语法的引擎）。</li>
-         * <li><strong>ECS</strong>：ECS上的自建数据库。</li>
-         * <li><strong>Express</strong>：通过专线接入的自建数据库。</li>
-         * <li><strong>dg</strong>：通过数据库网关DG接入的自建数据库。</li>
-         * <li><strong>cen</strong>：通过云企业网CEN接入的自建数据库。</li>
+         * <li><strong>RDS</strong>: ApsaraDB RDS instance.</li>
+         * <li><strong>Redis</strong>: Alibaba Cloud Redis instance.</li>
+         * <li><strong>PolarDB</strong>: PolarDB cluster (only MySQL or Oracle-compatible engines are supported).</li>
+         * <li><strong>ECS</strong>: Self-managed database hosted on Elastic Compute Service (ECS).</li>
+         * <li><strong>Express</strong>: Self-managed database connected over Express Connect.</li>
+         * <li><strong>dg</strong>: Self-managed database connected over Database Gateway.</li>
+         * <li><strong>cen</strong>: Self-managed database connected over Cloud Enterprise Network (CEN).</li>
          * </ul>
          * <blockquote>
-         * <p>默认取值为<strong>RDS</strong>。</p>
+         * <p>Default value: <strong>RDS</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -603,9 +603,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>源RDS实例所属的阿里云账号ID。</p>
+         * <p>The Alibaba Cloud account ID to which the source ApsaraDB RDS instance belongs.</p>
          * <blockquote>
-         * <p>传入本参数即代表执行跨阿里云账号的数据同步，同时您还需要传入<strong>SourceEndpoint.Role</strong>参数。</p>
+         * <p>Specifying this parameter indicates that cross-Alibaba Cloud account data synchronization is executed. You must also specify the <strong>SourceEndpoint.Role</strong> parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -615,9 +615,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String ownerID;
 
         /**
-         * <p>源库数据库账号密码。</p>
+         * <p>The password of the database account for the source database.</p>
          * <blockquote>
-         * <p>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数必须传入。</p>
+         * <p>This parameter is required only when the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -627,9 +627,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>源库的数据库服务端口。</p>
+         * <p>The service port number of the source database.</p>
          * <blockquote>
-         * <p>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -639,9 +639,9 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String port;
 
         /**
-         * <p>源实例所属云账号配置的角色名称。</p>
+         * <p>The name of the RAM role configured for the Alibaba Cloud account to which the source instance belongs.</p>
          * <blockquote>
-         * <p>执行跨阿里云账号的数据同步时须传入本参数，该角色所需的权限及授权方式请参见<a href="https://help.aliyun.com/document_detail/48468.html">跨阿里云账号数据迁移或同步时如何配置RAM授权</a>。</p>
+         * <p>This parameter is required for cross-account data synchronization. For more information about the permissions required for the role and how to grant the permissions, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration or synchronization</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -651,15 +651,15 @@ public class ConfigureSynchronizationJobRequest extends TeaModel {
         public String role;
 
         /**
-         * <p>源库的数据库账号。</p>
+         * <p>The database account of the source database.</p>
          * <blockquote>
          * <ul>
-         * <li>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>ECS</strong>、<strong>Express</strong>、<strong>dg</strong>或<strong>cen</strong>时，本参数才可用且必须传入。</li>
+         * <li>This parameter is available and required only when the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>ECS</strong>, <strong>Express</strong>, <strong>dg</strong>, or <strong>cen</strong>.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>当<strong>SourceEndpoint.InstanceType</strong>取值为<strong>Redis</strong>时，本参数无需传入。</li>
-         * <li>同步不同的数据库所需的权限有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/140954.html">DTS数据同步方案概览</a>中对应的配置案例。</li>
+         * <li>This parameter is not required when the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>Redis</strong>.</li>
+         * <li>The permissions required for synchronizing different databases vary. For more information, see the corresponding configuration examples in <a href="https://help.aliyun.com/document_detail/140954.html">Overview of DTS data synchronization solutions</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

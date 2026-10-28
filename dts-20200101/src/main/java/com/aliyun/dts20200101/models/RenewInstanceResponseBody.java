@@ -16,7 +16,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
      * <blockquote>
-     * <p>This parameter will be deprecated.</p>
+     * <p>This parameter is scheduled for deprecation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the data synchronization or change tracking task.</p>
+     * <p>The ID of the synchronization or change tracking task.</p>
      * 
      * <strong>example:</strong>
      * <p>qi0r643lc31****</p>
@@ -35,9 +35,9 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The dynamic error message, which is used to replace the %<strong>s</strong> variable in the <strong>ErrMessage</strong> response parameter.</p>
+     * <p>The dynamic error message. This parameter is used to replace the <strong>%s</strong> placeholder in the error message returned by the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
-     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified <strong>DtsJobId</strong> request parameter is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,9 +47,9 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The time when the renewal instance expires. The time is displayed in the format of <i>yyyy-MM-dd</i>T<i>HH:mm:ssZZZ</i> (UTC).</p>
+     * <p>The time when the renewed instance expires. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ssZZZ</i> format in UTC.</p>
      * <blockquote>
-     * <p><strong>ZZZ</strong> indicates the full time zone offset (&quot;+&quot; or &quot;-&quot; followed by hours and minutes), for example, <strong>+00:00</strong>.</p>
+     * <p><strong>ZZZ</strong> indicates the full time zone offset, which consists of a plus sign (+) or a minus sign (-) followed by hours and minutes. Example: <strong>+00:00</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The error code returned when the call fails.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -68,7 +68,7 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned when the call fails.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -104,10 +104,10 @@ public class RenewInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The request was successful.</li>
-     * <li><strong>false</strong>: The request failed.</li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

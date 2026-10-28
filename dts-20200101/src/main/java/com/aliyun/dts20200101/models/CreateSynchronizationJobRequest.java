@@ -11,7 +11,7 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public CreateSynchronizationJobRequestSourceEndpoint sourceEndpoint;
 
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated soon.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -20,7 +20,7 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. Generate a value from your client to ensure uniqueness across different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -29,7 +29,7 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The number of private custom ApsaraDB RDS instances attached to the source PolarDB-X instance. This parameter is required when <strong>SourceEndpoint.InstanceType</strong> is set to <strong>DRDS</strong>. Default value: <strong>1</strong>.</p>
+     * <p>The number of private custom ApsaraDB RDS instances attached to the source PolarDB-X instance. This parameter is required only when the <strong>SourceEndpoint.InstanceType</strong> parameter is set to <strong>DRDS</strong>. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,9 +38,9 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public Integer DBInstanceCount;
 
     /**
-     * <p>The region ID of the destination database for data synchronization. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID of the destination database. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <blockquote>
-     * <p>If the region specified by the <strong>SourceRegion</strong> parameter is Hong Kong (China) or a region outside China, set this parameter to the same region ID.</p>
+     * <p>If the region specified by the <strong>SourceRegion</strong> parameter is Hong Kong (China) or outside China, you must specify the same region ID for this parameter.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -56,7 +56,7 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     /**
      * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><strong>PrePaid</strong>: subscription.</li>
+     * <li><strong>PrePaid</strong>: upfront.</li>
      * <li><strong>PostPaid</strong>: pay-as-you-go. This is the default value.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -68,13 +68,13 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The billing method of the subscription instance. Valid values:</p>
+     * <p>The billing method of the upfront instance. Valid values:</p>
      * <ul>
-     * <li><strong>Year</strong>: annual subscription.</li>
-     * <li><strong>Month</strong>: monthly subscription.</li>
+     * <li><strong>Year</strong>: yearly.</li>
+     * <li><strong>Month</strong>: monthly.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid and required only when <strong>PayType</strong> is set to <strong>PrePaid</strong> (subscription).</p>
+     * <p>This parameter is valid and required only when the <strong>PayType</strong> parameter is set to <strong>PrePaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -84,7 +84,7 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The region ID of the data synchronization instance. Set this parameter to the same value as the <strong>DestRegion</strong> parameter.</p>
+     * <p>The region ID of the data synchronization instance. The value must be the same as the value of the <strong>DestRegion</strong> parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -93,7 +93,7 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -102,7 +102,7 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The region ID of the source database for data synchronization. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID of the source database. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -112,9 +112,9 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public String sourceRegion;
 
     /**
-     * <p>The specification of the data synchronization link. Valid values: <strong>micro</strong>, <strong>small</strong>, <strong>medium</strong>, <strong>large</strong>.</p>
+     * <p>The specifications of the data synchronization link. Valid values: <strong>micro</strong>, <strong>small</strong>, <strong>medium</strong>, and <strong>large</strong>.</p>
      * <blockquote>
-     * <p>For more information about the description and performance test results of each specification, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization links</a>.</p>
+     * <p>For more information about the specifications and performance tests of data synchronization links, see <a href="https://help.aliyun.com/document_detail/26605.html">Specifications of data synchronization links</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -136,7 +136,7 @@ public class CreateSynchronizationJobRequest extends TeaModel {
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>You can set this parameter to <strong>bidirectional</strong> only when both <strong>SourceEndpoint.InstanceType</strong> and <strong>DestinationEndpoint.InstanceType</strong> are set to <strong>MySQL</strong>, <strong>PolarDB</strong>, or <strong>Redis</strong>.</li>
+     * <li>You can set this parameter to <strong>bidirectional</strong> only when the <strong>SourceEndpoint.InstanceType</strong> and <strong>DestinationEndpoint.InstanceType</strong> parameters are set to <strong>MySQL</strong>, <strong>PolarDB</strong>, or <strong>Redis</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -146,13 +146,13 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public String topology;
 
     /**
-     * <p>The subscription duration of the subscription instance.</p>
+     * <p>The subscription duration of the upfront instance.</p>
      * <ul>
-     * <li>If the billing method is set to <strong>Year</strong>, valid values are <strong>1 to 5</strong>.</li>
-     * <li>If the billing method is set to <strong>Month</strong>, valid values are <strong>1 to 60</strong>.</li>
+     * <li>When the billing method is set to <strong>Year</strong> (yearly), valid values are <strong>1</strong> to <strong>5</strong>.</li>
+     * <li>When the billing method is set to <strong>Month</strong> (monthly), valid values are <strong>1</strong> to <strong>60</strong>.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is valid and required only when <strong>PayType</strong> is set to <strong>PrePaid</strong> (subscription).</p>
+     * <p>This parameter is valid and required only when the <strong>PayType</strong> parameter is set to <strong>PrePaid</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class CreateSynchronizationJobRequest extends TeaModel {
     public Integer usedTime;
 
     /**
-     * <p>The network type for Data Transmission Service. Set the value to <strong>Intranet</strong> (Express Connect).</p>
+     * <p>The network type of Data Transmission Service. The value is fixed to <strong>Intranet</strong> (Express Connect circuit).</p>
      * 
      * <strong>example:</strong>
      * <p>Intranet</p>
@@ -305,20 +305,20 @@ public class CreateSynchronizationJobRequest extends TeaModel {
 
     public static class CreateSynchronizationJobRequestDestinationEndpoint extends TeaModel {
         /**
-         * <p>目标库的实例类型，取值：</p>
+         * <p>The instance type of the destination database. Valid values:</p>
          * <ul>
-         * <li><strong>MySQL</strong>：MySQL数据库（包括RDS MySQL和自建MySQL）。</li>
-         * <li><strong>PolarDB</strong>：PolarDB集群（仅支持MySQL或兼容Oracle语法的引擎）。</li>
-         * <li><strong>Redis</strong>：Redis数据库。</li>
-         * <li><strong>MaxCompute</strong>：MaxCompute实例。</li>
+         * <li><strong>MySQL</strong>: MySQL databases, including ApsaraDB RDS for MySQL instances and self-managed MySQL databases.</li>
+         * <li><strong>PolarDB</strong>: PolarDB clusters (only MySQL or engines compatible with Oracle syntax are supported).</li>
+         * <li><strong>Redis</strong>: Redis databases.</li>
+         * <li><strong>MaxCompute</strong>: MaxCompute instances.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>默认取值为<strong>MySQL</strong>。</li>
+         * <li>Default value: <strong>MySQL</strong>.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>关于支持的源库和目标库对应情况，请参见支持的<a href="https://help.aliyun.com/document_detail/130744.html">数据库、同步初始化类型和同步拓扑</a>。</li>
+         * <li>For more information about the supported source and destination databases, see <a href="https://help.aliyun.com/document_detail/130744.html">Supported databases, initial synchronization types, and synchronization topology</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -344,20 +344,20 @@ public class CreateSynchronizationJobRequest extends TeaModel {
 
     public static class CreateSynchronizationJobRequestSourceEndpoint extends TeaModel {
         /**
-         * <p>源库的实例类型，取值：</p>
+         * <p>The instance type of the source database. Valid values:</p>
          * <ul>
-         * <li><strong>MySQL</strong>：MySQL数据库（包括RDS MySQL和自建MySQL）。</li>
-         * <li><strong>PolarDB</strong>：PolarDB集群（仅支持MySQL或兼容Oracle语法的引擎）。</li>
-         * <li><strong>Redis</strong>：Redis数据库。</li>
-         * <li><strong>DRDS</strong>：云原生分布式数据库PolarDB-X 1.0。</li>
+         * <li><strong>MySQL</strong>: MySQL databases, including ApsaraDB RDS for MySQL instances and self-managed MySQL databases.</li>
+         * <li><strong>PolarDB</strong>: PolarDB clusters (only MySQL or engines compatible with Oracle syntax are supported).</li>
+         * <li><strong>Redis</strong>: Redis databases.</li>
+         * <li><strong>DRDS</strong>: cloud-native distributed database PolarDB-X 1.0.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>默认取值为<strong>MySQL</strong>。</li>
+         * <li>Default value: <strong>MySQL</strong>.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>关于支持的源库和目标库对应情况，请参见支持的<a href="https://help.aliyun.com/document_detail/130744.html">数据库、同步初始化类型和同步拓扑</a>。</li>
+         * <li>For more information about the supported source and destination databases, see <a href="https://help.aliyun.com/document_detail/130744.html">Supported databases, initial synchronization types, and synchronization topology</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>

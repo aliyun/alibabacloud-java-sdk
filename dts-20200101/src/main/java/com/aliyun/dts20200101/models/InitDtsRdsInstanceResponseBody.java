@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InitDtsRdsInstanceResponseBody extends TeaModel {
     /**
-     * <p>The built-in account that DTS uses to connect to the unit node.</p>
+     * <p>The built-in account used by DTS to connect to the unit node.</p>
      * 
      * <strong>example:</strong>
      * <p>rdsdt_dtsacct</p>
@@ -59,7 +59,7 @@ public class InitDtsRdsInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

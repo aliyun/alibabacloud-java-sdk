@@ -7,7 +7,7 @@ public class ModifyDedicatedClusterRequest extends TeaModel {
     /**
      * <p>The ID of the dedicated cluster.</p>
      * <blockquote>
-     * <p>Either <strong>InstanceId</strong> or <strong>DedicatedClusterId</strong> must be specified.</p>
+     * <p>You must specify either the <strong>InstanceId</strong> or <strong>DedicatedClusterId</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ModifyDedicatedClusterRequest extends TeaModel {
     /**
      * <p>The instance ID of the cluster.</p>
      * <blockquote>
-     * <p>Either the <strong>InstanceId</strong> or <strong>DedicatedClusterId</strong> parameter must be specified.</p>
+     * <p>You must specify either the <strong>InstanceId</strong> or <strong>DedicatedClusterId</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ModifyDedicatedClusterRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The overcommit ratio. Unit: %.</p>
+     * <p>The oversubscription ratio. Unit: %.</p>
      * 
      * <strong>example:</strong>
      * <p>150</p>
@@ -50,7 +50,7 @@ public class ModifyDedicatedClusterRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The region in which the DTS instance resides.</p>
+     * <p>The region where the DTS instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -59,7 +59,7 @@ public class ModifyDedicatedClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMigrationJobsRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be deprecated.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -14,13 +14,10 @@ public class DescribeMigrationJobsRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>The name of the migration instance.</p>
-     * <blockquote>
-     * <p>Fuzzy match is supported.</p>
-     * </blockquote>
+     * <p>The name of the data migration instance. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>MySQL迁移</p>
+     * <p>MySQL Migration</p>
      */
     @NameInMap("MigrationJobName")
     public String migrationJobName;
@@ -29,7 +26,7 @@ public class DescribeMigrationJobsRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The page number. The value must be greater than <strong>0</strong> and must not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Valid values: an integer greater than <strong>0</strong> and up to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +35,7 @@ public class DescribeMigrationJobsRequest extends TeaModel {
     public Integer pageNum;
 
     /**
-     * <p>The number of data migration instances to display per page. Valid values: <strong>10</strong>, <strong>20</strong>, and <strong>30</strong>. Default value: <strong>30</strong>. Maximum value: <strong>30</strong>.</p>
+     * <p>The number of data migration instance records to return on each page. Valid values: <strong>10</strong>, <strong>20</strong>, and <strong>30</strong>. Default value: <strong>30</strong>. Maximum value: <strong>30</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -47,7 +44,7 @@ public class DescribeMigrationJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the data migration instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region ID of the data migration instances. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -65,7 +62,7 @@ public class DescribeMigrationJobsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The tags of the data migration instance, used as filter conditions. When this parameter is not empty, only instance tasks that have the specified tags are returned.</p>
+     * <p>The tags of the data migration instances used as a filter. If this parameter is specified, only instances with the specified tags are returned.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeMigrationJobsRequestTag> tag;
@@ -141,14 +138,14 @@ public class DescribeMigrationJobsRequest extends TeaModel {
 
     public static class DescribeMigrationJobsRequestTag extends TeaModel {
         /**
-         * <p>The tag key. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query tag keys.</p>
+         * <p>The tag key. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag key.</p>
          * <blockquote>
          * <ul>
-         * <li>N specifies the serial number of the tag key. For example, Tag.1.Key specifies the key of the first tag, and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</li>
+         * <li>N specifies the sequence number of the tag key. For example, Tag.1.Key specifies the key of the first tag, and Tag.2.Key specifies the key of the second tag. You can specify 1 to 20 tag keys at a time.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>This parameter cannot be set to an empty string.</li>
+         * <li>You cannot specify an empty string for this parameter.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -159,14 +156,14 @@ public class DescribeMigrationJobsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query tag values.</p>
+         * <p>The tag value. You can call the <a href="https://help.aliyun.com/document_detail/191187.html">ListTagResources</a> operation to query the tag value.</p>
          * <blockquote>
          * <ul>
-         * <li>N specifies the serial number of the tag value. For example, Tag.1.Value specifies the value of the first tag, and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</li>
+         * <li>N specifies the sequence number of the tag value. For example, Tag.1.Value specifies the value of the first tag, and Tag.2.Value specifies the value of the second tag. You can specify 1 to 20 tag values at a time.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>An empty string is allowed.</li>
+         * <li>You can specify an empty string for this parameter.</li>
          * </ul>
          * 
          * <strong>example:</strong>

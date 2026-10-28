@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyJobStepCheckpointRequest extends TeaModel {
     /**
-     * <p>The ID of the migration, synchronization, or tracking task.</p>
+     * <p>The ID of the data migration, data synchronization, or change tracking task.</p>
      * 
      * <strong>example:</strong>
      * <p>l5512es7w15****</p>
@@ -14,7 +14,7 @@ public class ModifyJobStepCheckpointRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The task step ID, which corresponds to the <strong>synchronization</strong> step ID returned by the ListJobStep API.</p>
+     * <p>The ID of the task step, which is the ID of the <strong>synchronization</strong> step returned by the ListJobStep operation.</p>
      * 
      * <strong>example:</strong>
      * <p>wn3z4ukia9wi9xu_0004_0000</p>
@@ -23,7 +23,7 @@ public class ModifyJobStepCheckpointRequest extends TeaModel {
     public String jobStepId;
 
     /**
-     * <p>The new offset as a UNIX timestamp in seconds. The specified value must fall within the offset range of the incremental data collection step.</p>
+     * <p>The timestamp in seconds for the new checkpoint. The new checkpoint must be within the timestamp range of the incremental data collection step.</p>
      * 
      * <strong>example:</strong>
      * <p>1760406***</p>
@@ -34,7 +34,7 @@ public class ModifyJobStepCheckpointRequest extends TeaModel {
     /**
      * <p>The region where the DTS instance resides.</p>
      * <blockquote>
-     * <p>For regions that support dedicated clusters, see <a href="https://help.aliyun.com/document_detail/417481.html">DTS dedicated cluster</a>.</p>
+     * <p>For the regions supported by dedicated clusters, see <a href="https://help.aliyun.com/document_detail/417481.html">DTS dedicated clusters</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

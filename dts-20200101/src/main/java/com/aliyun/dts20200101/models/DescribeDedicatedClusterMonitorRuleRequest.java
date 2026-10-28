@@ -17,7 +17,7 @@ public class DescribeDedicatedClusterMonitorRuleRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The region in which the instance resides.</p>
+     * <p>The region where the instance resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -26,10 +26,10 @@ public class DescribeDedicatedClusterMonitorRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. This is a global parameter that does not need to be passed in for this operation.</p>
+     * <p>The resource group ID. This is a global parameter and is not required for this API operation.</p>
      * 
      * <strong>example:</strong>
-     * <p>资源组ID，全局参数，当前API无需传入。</p>
+     * <p>The resource group ID. This is a global parameter and is not required for this API operation</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;

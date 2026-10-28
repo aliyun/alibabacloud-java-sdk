@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterUsedUtilizationRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be deprecated soon.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -14,7 +14,7 @@ public class DescribeClusterUsedUtilizationRequest extends TeaModel {
     public String accountId;
 
     /**
-     * <p>Ensures the idempotency of the request. Generate a parameter value from your client to make sure that the value is unique among different requests. <strong>ClientToken</strong> supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -23,7 +23,7 @@ public class DescribeClusterUsedUtilizationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The dedicated cluster ID if <strong>MetricType</strong> is set to <strong>CLUSTER</strong>. Otherwise, set this parameter to the <strong>nodeid</strong>.</p>
+     * <p>The ID of the dedicated cluster. Specify this parameter when <strong>MetricType</strong> is set to <strong>CLUSTER</strong>. Otherwise, specify the node ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeClusterUsedUtilizationRequest extends TeaModel {
     public String dedicatedClusterId;
 
     /**
-     * <p>The ID of the data migration or data synchronization task.</p>
+     * <p>The ID of the migration or synchronization task.</p>
      * 
      * <strong>example:</strong>
      * <p>k2gm967v16f****</p>
@@ -51,7 +51,7 @@ public class DescribeClusterUsedUtilizationRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>Specifies whether to query a cluster or a node. Valid values:</p>
+     * <p>The type of the resource to query. Valid values:</p>
      * <ul>
      * <li><strong>CLUSTER</strong> (default): cluster.</li>
      * <li><strong>NODE</strong>: node.</li>
@@ -76,7 +76,7 @@ public class DescribeClusterUsedUtilizationRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>

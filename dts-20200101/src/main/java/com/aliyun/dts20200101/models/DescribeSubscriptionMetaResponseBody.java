@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSubscriptionMetaResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -14,7 +14,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned when the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -41,13 +41,13 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The data information about the change tracking subtasks.</p>
+     * <p>The data information of the change tracking subtasks.</p>
      */
     @NameInMap("SubscriptionMetaList")
     public java.util.List<DescribeSubscriptionMetaResponseBodySubscriptionMetaList> subscriptionMetaList;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,9 +110,9 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
 
     public static class DescribeSubscriptionMetaResponseBodySubscriptionMetaList extends TeaModel {
         /**
-         * <p>The consumption checkpoint of the subtask, which is the timestamp of the first data record consumed by the client. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The consumption checkpoint of the subtask, which is the timestamp when the client consumes the first data record. The value is a UNIX timestamp in seconds.</p>
          * <blockquote>
-         * <p>You can use a search engine to find a UNIX timestamp converter.</p>
+         * <p>You can use a search engine to obtain a UNIX timestamp converter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         public Long checkpoint;
 
         /**
-         * <p>The objects of the subtask. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects of DTS tasks</a>.</p>
+         * <p>The change tracking objects of the subtask. For more information, see <a href="https://help.aliyun.com/document_detail/209545.html">Objects for data migration, synchronization, and change tracking</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{\&quot;dtstestdata\&quot;:{\&quot;name\&quot;:\&quot;dtstestdata\&quot;,\&quot;all\&quot;:false,\&quot;Table\&quot;:{\&quot;order\&quot;:{\&quot;name\&quot;:\&quot;order\&quot;,\&quot;all\&quot;:true}}}}</p>
@@ -149,7 +149,7 @@ public class DescribeSubscriptionMetaResponseBody extends TeaModel {
         public String sid;
 
         /**
-         * <p>The topic of the subtask.</p>
+         * <p>The change tracking topic of the subtask.</p>
          * 
          * <strong>example:</strong>
          * <p>cn_hangzhou_rm_bp1n0x0x5tz******_dtstestdata_version2</p>

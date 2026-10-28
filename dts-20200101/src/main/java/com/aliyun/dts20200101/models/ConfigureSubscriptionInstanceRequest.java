@@ -14,7 +14,7 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     public ConfigureSubscriptionInstanceRequestSubscriptionInstance subscriptionInstance;
 
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because it will be deprecated soon.</p>
      * 
      * <strong>example:</strong>
      * <p>12323344****</p>
@@ -26,7 +26,8 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The ID of the region where the change tracking instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The ID of the region where the change tracking instance resides. For more information, see
+     * <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -35,7 +36,7 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -60,19 +61,21 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>MySQL订阅</p>
+     * <p>MySQL change tracking</p>
      */
     @NameInMap("SubscriptionInstanceName")
     public String subscriptionInstanceName;
 
     /**
-     * <p>The network type of the change tracking instance. The only valid value is <strong>vpc</strong>, which indicates a virtual private cloud (VPC).</p>
+     * <p>The network type of the change tracking instance. Set the value to <strong>vpc</strong>, which specifies a virtual private cloud (VPC).</p>
      * <blockquote>
      * <ul>
-     * <li>If you specify this parameter, the change tracking instance is defined as the new version. You must also correctly set the <strong>SubscriptionInstance.VPCId</strong> and <strong>SubscriptionInstance.VSwitchID</strong> parameters. If you do not specify this parameter, the change tracking instance is defined as the legacy version.</li>
-     * <li>The legacy version supports change tracking for self-managed MySQL, ApsaraDB RDS for MySQL, and DRDS. The new version supports change tracking for self-managed MySQL, ApsaraDB RDS for MySQL, PolarDB for MySQL, and Oracle.</li>
+     * <li>If you specify this parameter, the change tracking instance is defined as a new version instance, and you must also correctly set the <strong>SubscriptionInstance.VPCId</strong> and <strong>SubscriptionInstance.VSwitchID</strong> parameters. If you do not specify this parameter, the change tracking instance is defined as a legacy instance.</li>
      * </ul>
      * </blockquote>
+     * <ul>
+     * <li>Legacy change tracking instances support tracking data from self-managed MySQL databases, ApsaraDB RDS for MySQL instances, and DRDS instances. New version change tracking instances support tracking data from self-managed MySQL databases, ApsaraDB RDS for MySQL instances, PolarDB for MySQL clusters, and Oracle databases.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>vpc</p>
@@ -81,7 +84,7 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
     public String subscriptionInstanceNetworkType;
 
     /**
-     * <p>The objects to be subscribed to. The value is a JSON string that supports regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141902.html">Subscription object configuration</a>.</p>
+     * <p>The objects to be tracked. The value is a JSON string and supports specific regular expressions. For more information, see <a href="https://help.aliyun.com/document_detail/141902.html">Configure the objects to be tracked</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -185,7 +188,7 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
 
     public static class ConfigureSubscriptionInstanceRequestSourceEndpoint extends TeaModel {
         /**
-         * <p>待订阅的数据库名称。</p>
+         * <p>The name of the database to be tracked.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -194,9 +197,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         public String databaseName;
 
         /**
-         * <p>源数据库的连接地址。</p>
+         * <p>The endpoint of the source database.</p>
          * <blockquote>
-         * <p>当源数据库为自建数据库时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when the source database is a self-managed database.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -206,9 +209,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         public String IP;
 
         /**
-         * <p>源实例ID。</p>
+         * <p>The instance ID of the source instance.</p>
          * <blockquote>
-         * <p>源数据库的实例类型为RDS MySQL、PolarDB-X 1.0、PolarDB MySQL时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when the source database is an ApsaraDB RDS for MySQL instance, a PolarDB-X 1.0 instance, or a PolarDB for MySQL cluster.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -218,18 +221,18 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         public String instanceID;
 
         /**
-         * <p>源数据库的实例类型，取值：</p>
+         * <p>The instance type of the source database. Valid values:</p>
          * <ul>
-         * <li><strong>RDS</strong>：RDS MySQL。</li>
-         * <li><strong>PolarDB</strong>：PolarDB MySQL。</li>
-         * <li><strong>LocalInstance</strong>：有公网IP的自建数据库。</li>
-         * <li><strong>ECS</strong>：ECS上的自建数据库。</li>
-         * <li><strong>Express</strong>：通过专线接入的自建数据库。</li>
-         * <li><strong>CEN</strong>：通过云企业网CEN接入的自建数据库。</li>
-         * <li><strong>dg</strong>：通过数据库网关接入的自建数据库。</li>
+         * <li><strong>RDS</strong>: ApsaraDB RDS for MySQL.</li>
+         * <li><strong>PolarDB</strong>: PolarDB for MySQL.</li>
+         * <li><strong>LocalInstance</strong>: a self-managed database with a public IP address.</li>
+         * <li><strong>ECS</strong>: a self-managed database hosted on an ECS instance.</li>
+         * <li><strong>Express</strong>: a self-managed database connected over an Express Connect circuit.</li>
+         * <li><strong>CEN</strong>: a self-managed database connected over a Cloud Enterprise Network (CEN) instance.</li>
+         * <li><strong>dg</strong>: a self-managed database connected over a database gateway.</li>
          * </ul>
          * <blockquote>
-         * <p>支持自建数据库的数据库类型为MySQL、Oracle，您需要提前调用<a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a>设置。</p>
+         * <p>Self-managed MySQL and Oracle databases are supported. You must call the <a href="https://help.aliyun.com/document_detail/49436.html">CreateSubscriptionInstance</a> operation to configure the database type in advance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -239,9 +242,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>Oracle数据库的SID信息。</p>
+         * <p>The system ID (SID) of the Oracle database.</p>
          * <blockquote>
-         * <p>当源数据库为自建Oracle时，且Oracle数据库为非RAC实例时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when the source database is a self-managed Oracle database and the Oracle database is not a Real Application Clusters (RAC) instance.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -251,9 +254,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         public String oracleSID;
 
         /**
-         * <p>源实例所属的阿里云账号ID。</p>
+         * <p>The Alibaba Cloud account ID of the source instance.</p>
          * <blockquote>
-         * <p>仅在配置跨阿里云账号的数据订阅时本参数才可用，且必须传入。</p>
+         * <p>This parameter is available and required only when you configure change tracking across Alibaba Cloud accounts.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -263,7 +266,7 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         public String ownerID;
 
         /**
-         * <p>源实例的数据库账号密码。</p>
+         * <p>The password of the database account of the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>Test123456</p>
@@ -272,9 +275,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         public String password;
 
         /**
-         * <p>源数据库的服务端口。</p>
+         * <p>The service port number of the source database.</p>
          * <blockquote>
-         * <p>当源数据库为自建数据库时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when the source database is a self-managed database.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -284,9 +287,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         public String port;
 
         /**
-         * <p>源实例的授权角色。当源实例与配置订阅任务所属阿里云账号不同时，需传入该参数，来指定源实例的授权角色，以允许配置订阅任务所属阿里云账号访问源实例的实例信息。</p>
+         * <p>The RAM role that is authorized to access the source instance. If the source instance and the change tracking task belong to different Alibaba Cloud accounts, you must specify this parameter to authorize the Alibaba Cloud account that owns the change tracking task to access the source instance.</p>
          * <blockquote>
-         * <p>角色所需的权限及授权方式，请参见<a href="https://help.aliyun.com/document_detail/48468.html">跨阿里云账号数据迁移或同步时如何配置RAM授权</a>。</p>
+         * <p>For more information about the required permissions and authorization methods for the RAM role, see <a href="https://help.aliyun.com/document_detail/48468.html">Configure RAM authorization for cross-account data migration or synchronization</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -296,9 +299,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         public String role;
 
         /**
-         * <p>源实例的数据库账号。</p>
+         * <p>The database account of the source instance.</p>
          * <blockquote>
-         * <p>订阅不同的数据库所需的权限有所差异，详情请参见<a href="https://help.aliyun.com/document_detail/145715.html">DTS数据订阅方案概览</a>中对应的配置案例。</p>
+         * <p>The required permissions vary based on the database to be tracked. For more information, see the corresponding configuration examples in <a href="https://help.aliyun.com/document_detail/145715.html">Overview of DTS change tracking solutions</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -396,10 +399,10 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
 
     public static class ConfigureSubscriptionInstanceRequestSubscriptionDataType extends TeaModel {
         /**
-         * <p>是否订阅DDL类型的数据，取值：</p>
+         * <p>Specifies whether to track data definition language (DDL) operations. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>：是，为默认值。</li>
-         * <li><strong>false</strong>：否。</li>
+         * <li><strong>true</strong>: yes. This is the default value.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -410,10 +413,10 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         public Boolean DDL;
 
         /**
-         * <p>是否订阅DML类型的数据，取值：</p>
+         * <p>Specifies whether to track data manipulation language (DML) operations. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>：是，为默认值。</li>
-         * <li><strong>false</strong>：否。</li>
+         * <li><strong>true</strong>: yes. This is the default value.</li>
+         * <li><strong>false</strong>: no.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -448,9 +451,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
 
     public static class ConfigureSubscriptionInstanceRequestSubscriptionInstance extends TeaModel {
         /**
-         * <p>订阅实例的专有网络ID。</p>
+         * <p>The VPC ID of the change tracking instance.</p>
          * <blockquote>
-         * <p>当<strong>SubscriptionInstanceNetworkType</strong>取值为<strong>vpc</strong>时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when <strong>SubscriptionInstanceNetworkType</strong> is set to <strong>vpc</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -460,9 +463,9 @@ public class ConfigureSubscriptionInstanceRequest extends TeaModel {
         public String VPCId;
 
         /**
-         * <p>订阅实例的虚拟交换机ID。</p>
+         * <p>The vSwitch ID of the change tracking instance.</p>
          * <blockquote>
-         * <p>当<strong>SubscriptionInstanceNetworkType</strong>取值为<strong>vpc</strong>时，本参数才可用且必须传入。</p>
+         * <p>This parameter is available and required only when <strong>SubscriptionInstanceNetworkType</strong> is set to <strong>vpc</strong>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

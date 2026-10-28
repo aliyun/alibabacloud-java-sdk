@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class DescribePreCheckStatusResponseBody extends TeaModel {
     /**
-     * <p>The list of assessment tasks.</p>
+     * <p>The list of evaluation tasks.</p>
      */
     @NameInMap("AnalysisJobProgress")
     public java.util.List<DescribePreCheckStatusResponseBodyAnalysisJobProgress> analysisJobProgress;
 
     /**
-     * <p>The task code that represents the queried subtask. Valid values:</p>
+     * <p>The task code, which represents the queried subtask. Valid values:</p>
      * <ul>
-     * <li><strong>01</strong>: precheck.</li>
-     * <li><strong>02</strong>: schema migration or initial schema synchronization.</li>
-     * <li><strong>03</strong>: full data migration or initial full data synchronization.</li>
-     * <li><strong>04</strong>: incremental data migration or incremental data synchronization.</li>
+     * <li><strong>01</strong>: Precheck.</li>
+     * <li><strong>02</strong>: Schema migration or initialization.</li>
+     * <li><strong>03</strong>: Full data migration or initialization.</li>
+     * <li><strong>04</strong>: Incremental migration or synchronization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The number of items that failed the assessment.</p>
+     * <p>The number of items that failed the evaluation.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -44,7 +44,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public Integer errorItem;
 
     /**
-     * <p>The full CIDR block check results.</p>
+     * <p>The check result for all CIDR blocks.</p>
      */
     @NameInMap("FullNetCheckJobStatus")
     public java.util.List<DescribePreCheckStatusResponseBodyFullNetCheckJobStatus> fullNetCheckJobStatus;
@@ -59,7 +59,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The ID of the data migration or data synchronization task.</p>
+     * <p>The ID of the migration or synchronization task.</p>
      * 
      * <strong>example:</strong>
      * <p>b4my3zg929a****</p>
@@ -71,13 +71,13 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
      * <p>The name of the queried subtask.</p>
      * 
      * <strong>example:</strong>
-     * <p>预检查</p>
+     * <p>Precheck</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
-     * <p>The list of specific items of the subtask and their execution progress.</p>
+     * <p>The list of specific items and the execution progress of each item for the subtask.</p>
      */
     @NameInMap("JobProgress")
     public java.util.List<DescribePreCheckStatusResponseBodyJobProgress> jobProgress;
@@ -89,7 +89,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public DescribePreCheckStatusResponseBodyNetworkDiagnosisResult networkDiagnosisResult;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Valid values: an integer greater than <strong>0</strong> and less than or equal to the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -118,13 +118,13 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     /**
      * <p>The execution status of the subtask. Valid values:</p>
      * <ul>
-     * <li><strong>NotStarted</strong>: not started.</li>
-     * <li><strong>Suspending</strong>: suspended.</li>
-     * <li><strong>Checking</strong>: being checked.</li>
-     * <li><strong>Migrating</strong>: being migrated.</li>
-     * <li><strong>Failed</strong>: failed.</li>
-     * <li><strong>Catched</strong>: incremental data migration or synchronization in progress.</li>
-     * <li><strong>Finished</strong>: completed.</li>
+     * <li><strong>NotStarted</strong>: Not started.</li>
+     * <li><strong>Suspending</strong>: Suspending.</li>
+     * <li><strong>Checking</strong>: Checking.</li>
+     * <li><strong>Migrating</strong>: Migrating.</li>
+     * <li><strong>Failed</strong>: Failed.</li>
+     * <li><strong>Catched</strong>: Incremental migration or synchronization in progress.</li>
+     * <li><strong>Finished</strong>: Finished.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,13 +134,13 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
     public String state;
 
     /**
-     * <p>The details of distributed subtasks.</p>
+     * <p>The details of the distributed subtask.</p>
      */
     @NameInMap("SubDistributedJobStatus")
     public java.util.List<DescribePreCheckStatusResponseBodySubDistributedJobStatus> subDistributedJobStatus;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -317,16 +317,16 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     public static class DescribePreCheckStatusResponseBodyAnalysisJobProgressLogs extends TeaModel {
         /**
-         * <p>The error information.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>请修改该对象</p>
+         * <p>Modify the object</p>
          */
         @NameInMap("ErrData")
         public String errData;
 
         /**
-         * <p>The error message returned by DTS when the specific item encounters an error.</p>
+         * <p>The DTS error message when the specific item fails.</p>
          * 
          * <strong>example:</strong>
          * <p>DTS-1020042 Execute sql error sql: Table \&quot;customer\&quot; already exists</p>
@@ -393,7 +393,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     public static class DescribePreCheckStatusResponseBodyAnalysisJobProgress extends TeaModel {
         /**
-         * <p>The time when the specific item was started. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
+         * <p>The start time of the specific item, in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-16T08:01:31.000+00:00</p>
@@ -411,7 +411,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Boolean canSkip;
 
         /**
-         * <p>The number of subtasks that are currently running.</p>
+         * <p>The number of currently running subtasks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -420,7 +420,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String current;
 
         /**
-         * <p>The DDL operation that was executed.</p>
+         * <p>The executed DDL operation.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE TABLE ****</p>
@@ -438,7 +438,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Integer delaySeconds;
 
         /**
-         * <p>The name of the database to which the migration object belongs in the destination instance.</p>
+         * <p>The name of the database to which the migrated object belongs in the destination instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dest</p>
@@ -447,7 +447,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String destSchema;
 
         /**
-         * <p>This parameter will be deprecated.</p>
+         * <p>This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -456,7 +456,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Long diffRow;
 
         /**
-         * <p>The error details when the item encounters an error.</p>
+         * <p>The error details when the item fails.</p>
          * 
          * <strong>example:</strong>
          * <p>ANALYSIS_MYSQL</p>
@@ -474,7 +474,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String errMsg;
 
         /**
-         * <p>The time when the assessment task was completed. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
+         * <p>The end time of the evaluation task, in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-16T08:01:31.000+00:00</p>
@@ -483,7 +483,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The ID of the assessment item in the database.</p>
+         * <p>The ID of the evaluation item in the database.</p>
          * 
          * <strong>example:</strong>
          * <p>123123</p>
@@ -492,7 +492,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the specific item is directly ignored and the next item is processed. Valid values:</p>
+         * <p>Indicates whether the specific item is directly ignored to proceed to the next specific item. Valid values:</p>
          * <ul>
          * <li><strong>N</strong>: No.</li>
          * <li><strong>Y</strong>: Yes.</li>
@@ -505,7 +505,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String ignoreFlag;
 
         /**
-         * <p>The name of the assessment item.</p>
+         * <p>The name of the evaluation item.</p>
          * 
          * <strong>example:</strong>
          * <p>ANALYSIS_MYSQL_4_ITEM</p>
@@ -514,7 +514,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String item;
 
         /**
-         * <p>The ID of the assessment task.</p>
+         * <p>The ID of the evaluation task.</p>
          * 
          * <strong>example:</strong>
          * <p>11234234xc</p>
@@ -523,13 +523,13 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The sub-assessment items.</p>
+         * <p>The sub-evaluation items.</p>
          */
         @NameInMap("Logs")
         public java.util.List<DescribePreCheckStatusResponseBodyAnalysisJobProgressLogs> logs;
 
         /**
-         * <p>The name of the assessment item.</p>
+         * <p>The name of the evaluation item.</p>
          * 
          * <strong>example:</strong>
          * <p>ANALYSIS_MYSQL_4_DETAIL</p>
@@ -538,7 +538,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String names;
 
         /**
-         * <p>The number of the assessment item.</p>
+         * <p>The number of the evaluation item.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -547,7 +547,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Integer orderNum;
 
         /**
-         * <p>This parameter will be deprecated.</p>
+         * <p>This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -556,7 +556,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String parentObj;
 
         /**
-         * <p>The repair method for the assessment item.</p>
+         * <p>The solution for the evaluation item.</p>
          * 
          * <strong>example:</strong>
          * <p>ANALYSIS_</p>
@@ -565,7 +565,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String repairMethod;
 
         /**
-         * <p>Indicates whether you have set to skip this assessment item after it failed. Valid values:</p>
+         * <p>Indicates whether the evaluation item is configured to be skipped after it fails. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Yes.</li>
          * <li><strong>false</strong>: No.</li>
@@ -578,7 +578,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Boolean skip;
 
         /**
-         * <p>The name of the database to which the migration object belongs in the source instance.</p>
+         * <p>The name of the database to which the migrated object belongs in the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -587,10 +587,10 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String sourceSchema;
 
         /**
-         * <p>The result of the assessment item. Valid values:</p>
+         * <p>The result of the evaluation item. Valid values:</p>
          * <ul>
-         * <li><strong>Failed</strong>: failed.</li>
-         * <li><strong>Success</strong>: completed.</li>
+         * <li><strong>Failed</strong>: Failed.</li>
+         * <li><strong>Success</strong>: Successful.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -600,7 +600,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The progress of sub-items of the specific item.</p>
+         * <p>The progress of the sub-items of the specific item.</p>
          * <blockquote>
          * <p>If <b>[]</b> is returned, no sub-items exist.</p>
          * </blockquote>
@@ -612,7 +612,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String sub;
 
         /**
-         * <p>The name of the target object.</p>
+         * <p>The names of the destination objects.</p>
          * 
          * <strong>example:</strong>
          * <p>testTable</p>
@@ -621,7 +621,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String targetNames;
 
         /**
-         * <p>The total number of specific items in the subtask.</p>
+         * <p>The total number of specific items for the subtask.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -914,7 +914,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     public static class DescribePreCheckStatusResponseBodyFullNetCheckJobStatusJobProgress extends TeaModel {
         /**
-         * <p>The time when the specific item was started. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
+         * <p>The start time of the specific item, in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-30T03:36:11.000+00:00</p>
@@ -936,7 +936,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Boolean canSkip;
 
         /**
-         * <p>The number of tasks that are currently running.</p>
+         * <p>The number of currently running tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -945,7 +945,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String current;
 
         /**
-         * <p>The DDL operation that was executed.</p>
+         * <p>The executed DDL operation.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE TABLE ****</p>
@@ -963,7 +963,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Integer delaySeconds;
 
         /**
-         * <p>The name of the database to which the migration object belongs in the destination instance.</p>
+         * <p>The name of the database to which the migrated object belongs in the destination instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dest</p>
@@ -972,7 +972,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String destSchema;
 
         /**
-         * <p>This parameter will be deprecated.</p>
+         * <p>This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -981,7 +981,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Long diffRow;
 
         /**
-         * <p>The error details when the specific item encounters an error.</p>
+         * <p>The error details when the specific item fails.</p>
          * 
          * <strong>example:</strong>
          * <p>CHECK__ERROR_SAME_OBJ_DETAIL</p>
@@ -990,7 +990,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String errDetail;
 
         /**
-         * <p>The error message when the specific item encounters an error.</p>
+         * <p>The error message when the specific item fails.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS project does not exist odps.`huijin</p>
@@ -999,7 +999,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String errMsg;
 
         /**
-         * <p>The time when the task was completed. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
+         * <p>The task completion time. The time follows the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-31T03:36:11.000+00:00</p>
@@ -1008,7 +1008,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The ID of the record in the metastore.</p>
+         * <p>The ID of the record in the metadatabase.</p>
          * 
          * <strong>example:</strong>
          * <p>922305811766881****</p>
@@ -1017,7 +1017,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the specific item is directly ignored and the next item is processed. Valid values:</p>
+         * <p>Indicates whether the specific item is directly ignored to proceed to the next specific item. Valid values:</p>
          * <ul>
          * <li><strong>N</strong>: No.</li>
          * <li><strong>Y</strong>: Yes.</li>
@@ -1039,7 +1039,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String item;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>l3m1213ye7l****</p>
@@ -1048,7 +1048,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The execution logs of the error.</p>
+         * <p>The execution log information for errors.</p>
          */
         @NameInMap("Logs")
         public java.util.List<DescribePreCheckStatusResponseBodyFullNetCheckJobStatusJobProgressLogs> logs;
@@ -1072,7 +1072,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Integer orderNum;
 
         /**
-         * <p>This parameter will be deprecated.</p>
+         * <p>This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -1081,7 +1081,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String parentObj;
 
         /**
-         * <p>The repair method when the precheck does not pass.</p>
+         * <p>The solution to a precheck failure.</p>
          * 
          * <strong>example:</strong>
          * <p>CHECK__ERROR_SAME_OBJ_REPAIR</p>
@@ -1090,7 +1090,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String repairMethod;
 
         /**
-         * <p>Indicates whether you have set to skip this specific item after it failed. Valid values:</p>
+         * <p>Indicates whether the specific item is configured to be skipped after it fails. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Yes.</li>
          * <li><strong>false</strong>: No.</li>
@@ -1103,7 +1103,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Boolean skip;
 
         /**
-         * <p>The name of the database to which the migration object belongs in the source instance.</p>
+         * <p>The name of the database to which the migrated object belongs in the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -1114,8 +1114,8 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The check result. Valid values:</p>
          * <ul>
-         * <li><strong>Failed</strong>: failed.</li>
-         * <li><strong>Success</strong>: completed.</li>
+         * <li><strong>Failed</strong>: The check failed.</li>
+         * <li><strong>Success</strong>: The check succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1125,7 +1125,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The progress of sub-items of the specific item.</p>
+         * <p>The progress of the sub-items of the specific item.</p>
          * <blockquote>
          * <p>If <b>[]</b> is returned, no sub-items exist.</p>
          * </blockquote>
@@ -1137,7 +1137,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String sub;
 
         /**
-         * <p>The name of the target object.</p>
+         * <p>The names of the destination objects.</p>
          * 
          * <strong>example:</strong>
          * <p>order</p>
@@ -1363,7 +1363,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     public static class DescribePreCheckStatusResponseBodyFullNetCheckJobStatus extends TeaModel {
         /**
-         * <p>The task code. <strong>01</strong> indicates precheck.</p>
+         * <p>The task code. A value of <strong>01</strong> indicates a precheck.</p>
          * 
          * <strong>example:</strong>
          * <p>01</p>
@@ -1392,12 +1392,12 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The connection method of the destination instance. Valid values:</p>
          * <ul>
-         * <li><strong>ALIYUN</strong>: <strong>cloud instance</strong>.</li>
-         * <li><strong>OTHER</strong>: <strong>public IP address</strong>.</li>
-         * <li><strong>ECS</strong>: <strong>self-managed database on ECS</strong>.</li>
-         * <li><strong>EXPRESS</strong>: <strong>Express Connect/VPN Gateway/Smart Access Gateway</strong>.</li>
-         * <li><strong>CEN</strong>: <strong>Cloud Enterprise Network (CEN)</strong>.</li>
-         * <li><strong>DG</strong>: <strong>Database Gateway (DG)</strong>.</li>
+         * <li><strong>ALIYUN</strong>: Alibaba Cloud instance.</li>
+         * <li><strong>OTHER</strong>: Public IP address.</li>
+         * <li><strong>ECS</strong>: Self-managed database hosted on ECS.</li>
+         * <li><strong>EXPRESS</strong>: Express Connect circuit, VPN gateway, or Smart Access Gateway.</li>
+         * <li><strong>CEN</strong>: Cloud Enterprise Network (CEN).</li>
+         * <li><strong>DG</strong>: Database Gateway.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1425,7 +1425,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String hostRegion;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>l3m1213ye7l****</p>
@@ -1434,7 +1434,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The task name.</p>
+         * <p>The job name.</p>
          * 
          * <strong>example:</strong>
          * <p>dts.step.fullnetcheck</p>
@@ -1443,7 +1443,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The list of specific items of the task and their execution progress.</p>
+         * <p>The list of specific items and the execution progress of each item for the task.</p>
          */
         @NameInMap("JobProgress")
         public java.util.List<DescribePreCheckStatusResponseBodyFullNetCheckJobStatusJobProgress> jobProgress;
@@ -1451,12 +1451,12 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The connection method of the source instance. Valid values:</p>
          * <ul>
-         * <li><strong>ALIYUN</strong>: <strong>cloud instance</strong>.</li>
-         * <li><strong>OTHER</strong>: <strong>public IP address</strong>.</li>
-         * <li><strong>ECS</strong>: <strong>self-managed database on ECS</strong>.</li>
-         * <li><strong>EXPRESS</strong>: <strong>Express Connect/VPN Gateway/Smart Access Gateway</strong>.</li>
-         * <li><strong>CEN</strong>: <strong>Cloud Enterprise Network (CEN)</strong>.</li>
-         * <li><strong>DG</strong>: <strong>Database Gateway (DG)</strong>.</li>
+         * <li><strong>ALIYUN</strong>: Alibaba Cloud instance.</li>
+         * <li><strong>OTHER</strong>: Public IP address.</li>
+         * <li><strong>ECS</strong>: Self-managed database hosted on ECS.</li>
+         * <li><strong>EXPRESS</strong>: Express Connect circuit, VPN gateway, or Smart Access Gateway.</li>
+         * <li><strong>CEN</strong>: Cloud Enterprise Network (CEN).</li>
+         * <li><strong>DG</strong>: Database Gateway.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1486,8 +1486,8 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The check result. Valid values:</p>
          * <ul>
-         * <li><strong>Failed</strong>: failed.</li>
-         * <li><strong>Success</strong>: completed.</li>
+         * <li><strong>Failed</strong>: The check failed.</li>
+         * <li><strong>Success</strong>: The check succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1626,7 +1626,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     public static class DescribePreCheckStatusResponseBodyJobProgressLogs extends TeaModel {
         /**
-         * <p>The error information.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE TABLE <code>dtstestdata</code>.<code>customer</code> (\n<code>runoob_id</code>  int(10) unsigned   auto_increment  COMMENT \&quot;\&quot;   NOT NULL   , \n<code>runoob_title</code>  varchar(100)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NOT NULL   , \n<code>runoob_author1216</code>  varchar(40)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NOT NULL   , \n<code>submission_date1216</code>  date     COMMENT \&quot;\&quot;   NULL   \n, PRIMARY KEY (<code>runoob_id</code>)) engine=InnoDB AUTO_INCREMENT=200001 DEFAULT CHARSET=<code>utf8</code> DEFAULT COLLATE <code>utf8_general_ci</code> ROW_FORMAT= Dynamic comment = \&quot;\&quot; ;\n</p>
@@ -1635,7 +1635,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String errData;
 
         /**
-         * <p>The error message returned by DTS when the specific item encounters an error.</p>
+         * <p>The DTS error message when the specific item fails.</p>
          * 
          * <strong>example:</strong>
          * <p>DTS-1020042 Execute sql error sql: Table \&quot;customer\&quot; already exists</p>
@@ -1702,7 +1702,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     public static class DescribePreCheckStatusResponseBodyJobProgress extends TeaModel {
         /**
-         * <p>The time when the specific item was started. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
+         * <p>The start time of the specific item, in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-16T08:01:31.000+00:00</p>
@@ -1720,7 +1720,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Boolean canSkip;
 
         /**
-         * <p>The number of subtasks that are currently running.</p>
+         * <p>The number of currently running subtasks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1729,7 +1729,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String current;
 
         /**
-         * <p>The DDL operation that was executed.</p>
+         * <p>The executed DDL operation.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE TABLE <code>dtstestdata</code>.<code>order</code> (\n<code>orderid</code>  int(11)     COMMENT \&quot;\&quot;   NOT NULL   , \n<code>username</code>  char(32)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NULL   , \n<code>ordertime</code>  datetime     COMMENT \&quot;\&quot;   NULL   , \n<code>commodity</code>  varchar(32)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NULL   , \n<code>phonenumber</code>  int(11)     COMMENT \&quot;\&quot;   NULL   , \n<code>address</code>  text  CHARSET <code>utf8mb4</code> COLLATE <code>utf8mb4_general_ci</code>    COMMENT \&quot;\&quot;   NULL   \n, PRIMARY KEY (<code>orderid</code>)) engine=InnoDB DEFAULT CHARSET=<code>gbk</code> DEFAULT COLLATE <code>gbk_chinese_ci</code> ROW_FORMAT= Dynamic comment = \&quot;\&quot; ;\n</p>
@@ -1738,7 +1738,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String ddlSql;
 
         /**
-         * <p>The synchronization latency of incremental data migration or incremental data synchronization.</p>
+         * <p>The incremental migration or synchronization latency.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1747,7 +1747,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Integer delaySeconds;
 
         /**
-         * <p>The name of the database to which the migration object belongs in the destination instance.</p>
+         * <p>The name of the database to which the migrated object belongs in the destination instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata_new</p>
@@ -1756,7 +1756,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String destSchema;
 
         /**
-         * <p>This parameter will be deprecated.</p>
+         * <p>This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1765,7 +1765,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Long diffRow;
 
         /**
-         * <p>The error details when the specific item encounters an error.</p>
+         * <p>The error details when the specific item fails.</p>
          * 
          * <strong>example:</strong>
          * <p>CHECK__ERROR_SAME_OBJ_DETAIL</p>
@@ -1774,7 +1774,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String errDetail;
 
         /**
-         * <p>The error message when the specific item encounters an error.</p>
+         * <p>The error message when the specific item fails.</p>
          * 
          * <strong>example:</strong>
          * <p>CHECK__ERROR_SAME_OBJ</p>
@@ -1783,7 +1783,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String errMsg;
 
         /**
-         * <p>The time when the specific item was completed. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>ZZ format in UTC.</p>
+         * <p>The completion time of the specific item, in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>ZZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-16T08:01:34.000+00:00</p>
@@ -1792,7 +1792,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The ID of the record in the metastore.</p>
+         * <p>The ID recorded in the metadatabase.</p>
          * 
          * <strong>example:</strong>
          * <p>5632</p>
@@ -1801,7 +1801,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the specific item is directly ignored and the next item is processed. Valid values:</p>
+         * <p>Indicates whether the specific item is directly ignored to proceed to the next specific item. Valid values:</p>
          * <ul>
          * <li><strong>N</strong>: No.</li>
          * <li><strong>Y</strong>: Yes.</li>
@@ -1823,7 +1823,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String item;
 
         /**
-         * <p>The subtask ID.</p>
+         * <p>The ID of the subtask.</p>
          * 
          * <strong>example:</strong>
          * <p>fj1c33ro168****</p>
@@ -1856,7 +1856,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Integer orderNum;
 
         /**
-         * <p>This parameter will be deprecated.</p>
+         * <p>This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -1865,7 +1865,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String parentObj;
 
         /**
-         * <p>The repair method when the specific item does not pass.</p>
+         * <p>The solution if the specific item fails.</p>
          * 
          * <strong>example:</strong>
          * <p>CHECK__ERROR_SAME_OBJ_REPAIR</p>
@@ -1874,7 +1874,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String repairMethod;
 
         /**
-         * <p>Indicates whether you have set to skip this specific item after it failed. Valid values:</p>
+         * <p>Indicates whether the specific item is configured to be skipped after it fails. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Yes.</li>
          * <li><strong>false</strong>: No.</li>
@@ -1887,7 +1887,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Boolean skip;
 
         /**
-         * <p>The name of the database to which the migration object belongs in the source instance.</p>
+         * <p>The name of the database to which the migrated object belongs in the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -1898,12 +1898,12 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The execution progress status of the specific item. Valid values:</p>
          * <ul>
-         * <li><strong>NotStarted</strong>: not started.</li>
-         * <li><strong>Checking</strong>: being checked.</li>
-         * <li><strong>Migrating</strong>: being migrated.</li>
-         * <li><strong>Failed</strong>: failed.</li>
-         * <li><strong>Warning</strong>: warning.</li>
-         * <li><strong>Success</strong>: completed.</li>
+         * <li><strong>NotStarted</strong>: Not started.</li>
+         * <li><strong>Checking</strong>: Checking.</li>
+         * <li><strong>Migrating</strong>: Migrating.</li>
+         * <li><strong>Failed</strong>: Failed.</li>
+         * <li><strong>Warning</strong>: Warning.</li>
+         * <li><strong>Success</strong>: Successful.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1913,7 +1913,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The progress of sub-items of the specific item.</p>
+         * <p>The progress of the sub-items of the specific item.</p>
          * <blockquote>
          * <p>If <b>[]</b> is returned, no sub-items exist.</p>
          * </blockquote>
@@ -1925,7 +1925,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String sub;
 
         /**
-         * <p>The name of the object to be migrated or synchronized.</p>
+         * <p>The names of the objects to be migrated or synchronized.</p>
          * 
          * <strong>example:</strong>
          * <p>order</p>
@@ -1934,7 +1934,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String targetNames;
 
         /**
-         * <p>The total number of specific items in the subtask.</p>
+         * <p>The total number of specific items for the subtask.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2151,7 +2151,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     public static class DescribePreCheckStatusResponseBodyNetworkDiagnosisResultDiagnosis extends TeaModel {
         /**
-         * <p>The documentation URL for the China region.</p>
+         * <p>The documentation URL for the China site.</p>
          * 
          * <strong>example:</strong>
          * <p>https://<em><strong>.ali</strong></em>.com/document_detail/470447.html</p>
@@ -2171,9 +2171,9 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The endpoint type. Valid values:</p>
          * <ul>
-         * <li><strong>source</strong>: source endpoint.</li>
-         * <li><strong>destination</strong>: destination endpoint.</li>
-         * <li><strong>unknown</strong>: unknown.</li>
+         * <li><strong>source</strong>: The source endpoint.</li>
+         * <li><strong>destination</strong>: The destination endpoint.</li>
+         * <li><strong>unknown</strong>: Unknown.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2192,7 +2192,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String internationalDocUrl;
 
         /**
-         * <p>The reserved field for the diagnosis result. This field is empty by default.</p>
+         * <p>The reserved field for the diagnosis result. Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>none</p>
@@ -2364,7 +2364,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     public static class DescribePreCheckStatusResponseBodySubDistributedJobStatusJobProgress extends TeaModel {
         /**
-         * <p>The time when the specific item was started. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
+         * <p>The start time of the specific item, in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-30T03:36:11.000+00:00</p>
@@ -2386,7 +2386,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Boolean canSkip;
 
         /**
-         * <p>The number of subtasks that are currently running.</p>
+         * <p>The number of currently running subtasks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2395,7 +2395,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String current;
 
         /**
-         * <p>The DDL operation that was executed.</p>
+         * <p>The executed DDL operation.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -2404,7 +2404,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String ddlSql;
 
         /**
-         * <p>The synchronization latency of incremental data migration or incremental data synchronization.</p>
+         * <p>The incremental data migration or synchronization latency.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2413,7 +2413,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Integer delaySeconds;
 
         /**
-         * <p>The name of the database to which the migration object belongs in the destination instance.</p>
+         * <p>The name of the database to which the migrated object belongs in the destination instance.</p>
          * 
          * <strong>example:</strong>
          * <p>databasetest</p>
@@ -2422,7 +2422,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String destSchema;
 
         /**
-         * <p>This parameter will be deprecated.</p>
+         * <p>This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -2431,7 +2431,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Long diffRow;
 
         /**
-         * <p>The error details when the specific item encounters an error.</p>
+         * <p>The error details when the specific item fails.</p>
          * 
          * <strong>example:</strong>
          * <p>CHECK__ERROR_SAME_OBJ_DETAIL</p>
@@ -2440,7 +2440,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String errDetail;
 
         /**
-         * <p>The error message when the specific item encounters an error.</p>
+         * <p>The error message when the specific item fails.</p>
          * 
          * <strong>example:</strong>
          * <p>ODPS project does not exist odps.`huijin</p>
@@ -2449,7 +2449,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String errMsg;
 
         /**
-         * <p>The completion time. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format in UTC.</p>
+         * <p>The completion time. The time follows the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-03-31T03:36:11.000+00:00</p>
@@ -2458,7 +2458,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The ID of the record in the metastore.</p>
+         * <p>The ID of the record in the metadatabase.</p>
          * 
          * <strong>example:</strong>
          * <p>3890****</p>
@@ -2467,7 +2467,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the specific item is directly ignored and the next item is processed. Valid values:</p>
+         * <p>Indicates whether the specific item is directly ignored to proceed to the next specific item. Valid values:</p>
          * <ul>
          * <li><strong>N</strong>: No.</li>
          * <li><strong>Y</strong>: Yes.</li>
@@ -2489,7 +2489,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String item;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>l3m1213ye7l****</p>
@@ -2498,7 +2498,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The execution logs of the error.</p>
+         * <p>The execution log information for errors.</p>
          */
         @NameInMap("Logs")
         public java.util.List<DescribePreCheckStatusResponseBodySubDistributedJobStatusJobProgressLogs> logs;
@@ -2522,7 +2522,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Integer orderNum;
 
         /**
-         * <p>This parameter will be deprecated.</p>
+         * <p>This parameter will be deprecated soon.</p>
          * 
          * <strong>example:</strong>
          * <p>None</p>
@@ -2531,7 +2531,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String parentObj;
 
         /**
-         * <p>The repair method when the precheck does not pass.</p>
+         * <p>The solution to a precheck failure.</p>
          * 
          * <strong>example:</strong>
          * <p>CHECK__ERROR_SAME_OBJ_REPAIR</p>
@@ -2540,7 +2540,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String repairMethod;
 
         /**
-         * <p>Indicates whether the item has been skipped. Valid values:</p>
+         * <p>Indicates whether the task is skipped. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: Yes.</li>
          * <li><strong>false</strong>: No.</li>
@@ -2553,7 +2553,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Boolean skip;
 
         /**
-         * <p>The name of the database to which the migration object belongs in the source instance.</p>
+         * <p>The name of the database to which the migrated object belongs in the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>databasetest</p>
@@ -2564,13 +2564,13 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The execution status of the subtask. Valid values:</p>
          * <ul>
-         * <li><strong>NotStarted</strong>: not started.</li>
-         * <li><strong>Suspending</strong>: suspended.</li>
-         * <li><strong>Checking</strong>: being checked.</li>
-         * <li><strong>Migrating</strong>: being migrated.</li>
-         * <li><strong>Failed</strong>: failed.</li>
-         * <li><strong>Catched</strong>: incremental data migration or synchronization in progress.</li>
-         * <li><strong>Finished</strong>: completed.</li>
+         * <li><strong>NotStarted</strong>: Not started.</li>
+         * <li><strong>Suspending</strong>: Suspending.</li>
+         * <li><strong>Checking</strong>: Checking.</li>
+         * <li><strong>Migrating</strong>: Migrating.</li>
+         * <li><strong>Failed</strong>: Failed.</li>
+         * <li><strong>Catched</strong>: Incremental migration or synchronization in progress.</li>
+         * <li><strong>Finished</strong>: Finished.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2580,7 +2580,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The progress of sub-items of the specific item.</p>
+         * <p>The progress of the sub-items of the specific item.</p>
          * <blockquote>
          * <p>If <b>[]</b> is returned, no sub-items exist.</p>
          * </blockquote>
@@ -2592,7 +2592,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String sub;
 
         /**
-         * <p>The name of the target object.</p>
+         * <p>The names of the destination objects.</p>
          * 
          * <strong>example:</strong>
          * <p>order</p>
@@ -2818,12 +2818,12 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
 
     public static class DescribePreCheckStatusResponseBodySubDistributedJobStatus extends TeaModel {
         /**
-         * <p>The task code that represents the queried subtask type. Valid values:</p>
+         * <p>The task code, which indicates the type of the queried subtask. Valid values:</p>
          * <ul>
-         * <li><strong>01</strong>: precheck.</li>
-         * <li><strong>02</strong>: schema migration or initial schema synchronization.</li>
-         * <li><strong>03</strong>: full data migration or initial full data synchronization.</li>
-         * <li><strong>04</strong>: incremental data migration or incremental data synchronization.</li>
+         * <li><strong>01</strong>: Precheck.</li>
+         * <li><strong>02</strong>: Schema migration or initial schema synchronization.</li>
+         * <li><strong>03</strong>: Full data migration or initial full data synchronization.</li>
+         * <li><strong>04</strong>: Incremental data migration or incremental data synchronization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2833,7 +2833,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The number of tasks that are currently failing.</p>
+         * <p>The number of failed tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -2842,7 +2842,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public Integer errorItem;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n0gm1682j6563np</p>
@@ -2860,7 +2860,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The list of specific items of the subtask and their execution progress.</p>
+         * <p>The list of specific items and the execution progress of each item for the subtask.</p>
          */
         @NameInMap("JobProgress")
         public java.util.List<DescribePreCheckStatusResponseBodySubDistributedJobStatusJobProgress> jobProgress;
@@ -2868,13 +2868,13 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         /**
          * <p>The execution status of the subtask. Valid values:</p>
          * <ul>
-         * <li><strong>NotStarted</strong>: not started.</li>
-         * <li><strong>Suspending</strong>: suspended.</li>
-         * <li><strong>Checking</strong>: being checked.</li>
-         * <li><strong>Migrating</strong>: being migrated.</li>
-         * <li><strong>Failed</strong>: failed.</li>
-         * <li><strong>Catched</strong>: incremental data migration or synchronization in progress.</li>
-         * <li><strong>Finished</strong>: completed.</li>
+         * <li><strong>NotStarted</strong>: Not started.</li>
+         * <li><strong>Suspending</strong>: Suspending.</li>
+         * <li><strong>Checking</strong>: Checking.</li>
+         * <li><strong>Migrating</strong>: Migrating.</li>
+         * <li><strong>Failed</strong>: Failed.</li>
+         * <li><strong>Catched</strong>: Incremental migration or synchronization in progress.</li>
+         * <li><strong>Finished</strong>: Finished.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2884,7 +2884,7 @@ public class DescribePreCheckStatusResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The total number of returned data entries.</p>
+         * <p>The total number of returned records.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>

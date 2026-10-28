@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransferPayTypeResponseBody extends TeaModel {
     /**
-     * <p>The billing method after conversion. Valid values:</p>
+     * <p>The new billing method. Valid values:</p>
      * <ul>
      * <li><strong>PrePaid</strong>: subscription.</li>
      * <li><strong>PostPaid</strong>: pay-as-you-go.</li>
@@ -36,9 +36,9 @@ public class TransferPayTypeResponseBody extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the error message returned in the <strong>ErrMessage</strong> parameter.</p>
      * <blockquote>
-     * <p>For example, if <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the request parameter <strong>DtsJobId</strong> is invalid.</p>
+     * <p>If <strong>ErrMessage</strong> returns <strong>The Value of Input Parameter %s is not valid</strong> and <strong>DynamicMessage</strong> returns <strong>DtsJobId</strong>, the specified request parameter <strong>DtsJobId</strong> is invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,14 +48,14 @@ public class TransferPayTypeResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The time when the subscription instance expires, in UNIX timestamp format.</p>
+     * <p>The time when the subscription instance expires. The value is a UNIX timestamp.</p>
      * <blockquote>
      * <ul>
-     * <li>If the instance is converted to pay-as-you-go, this value is empty.</li>
+     * <li>If the modified instance is a pay-as-you-go instance, this value is null.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>You can use a search engine to find a UNIX timestamp conversion tool.</li>
+     * <li>You can obtain a UNIX timestamp conversion tool by using a search engine.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -74,7 +74,7 @@ public class TransferPayTypeResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>

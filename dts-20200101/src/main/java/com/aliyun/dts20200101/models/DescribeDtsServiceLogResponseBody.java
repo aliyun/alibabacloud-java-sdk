@@ -14,7 +14,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
     public String dynamicCode;
 
     /**
-     * <p>The dynamic error message used to replace the <strong>%s</strong> variable in the <strong>ErrMessage</strong> parameter.</p>
+     * <p>The dynamic error message, which is used to replace <strong>%s</strong> in the <strong>ErrMessage</strong> response parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>DtsJobId</p>
@@ -23,7 +23,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The error code returned if the call failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -32,7 +32,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the call failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The Value of Input Parameter %s is not valid.</p>
@@ -59,7 +59,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of log entries per page.</p>
+     * <p>The number of log entries returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -77,7 +77,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task logs details of the node.</p>
+     * <p>The details of the task logs.</p>
      */
     @NameInMap("ServiceLogContexts")
     public java.util.List<DescribeDtsServiceLogResponseBodyServiceLogContexts> serviceLogContexts;
@@ -92,7 +92,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of log entries that meet the specified conditions.</p>
+     * <p>The total number of log entries that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>35</p>
@@ -195,7 +195,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
 
     public static class DescribeDtsServiceLogResponseBodyServiceLogContexts extends TeaModel {
         /**
-         * <p>The specific log information.</p>
+         * <p>The log content.</p>
          * 
          * <strong>example:</strong>
          * <p>Statistics: generator = 369173; collector = 470109; replicator = 2470; ping = 2/2/2; execute = 29/29/29; rt = 29/29/29; state = IDLE; queries = -1; exceptions = {connects = 0, replicates = 0}; infos = {}</p>
@@ -204,7 +204,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         public String context;
 
         /**
-         * <p>The status of the log entry.</p>
+         * <p>The state of the log.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -213,7 +213,7 @@ public class DescribeDtsServiceLogResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The time when the log was collected, in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The time when the log was collected. The time is displayed in the yyyy-MM-ddTHH:mm:ssZ format in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-13T09:13:39.443+00:00</p>

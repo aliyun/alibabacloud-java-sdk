@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartSynchronizationJobRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter because this parameter is about to be discontinued.</p>
+     * <p>The ID of the Alibaba Cloud account. You do not need to specify this parameter. This parameter will be deprecated.</p>
      * 
      * <strong>example:</strong>
      * <p>1689726061829****</p>
@@ -26,7 +26,7 @@ public class StartSynchronizationJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
@@ -37,13 +37,13 @@ public class StartSynchronizationJobRequest extends TeaModel {
     /**
      * <p>The synchronization direction. Valid values:</p>
      * <ul>
-     * <li><strong>Forward</strong>: forward.</li>
-     * <li><strong>Reverse</strong>: reverse.</li>
+     * <li><strong>Forward</strong>: Forward.</li>
+     * <li><strong>Reverse</strong>: Reverse.</li>
      * </ul>
      * <blockquote>
      * <ul>
      * <li>Default value: <strong>Forward</strong>.</li>
-     * <li>You can set this parameter to <strong>Reverse</strong> to start the reverse synchronization link only if the topology of the data synchronization instance is two-way synchronization.</li>
+     * <li>You can set this parameter to <strong>Reverse</strong> to start the reverse synchronization link only when the topology of the data synchronization instance is two-way.</li>
      * </ul>
      * </blockquote>
      * 
@@ -54,7 +54,7 @@ public class StartSynchronizationJobRequest extends TeaModel {
     public String synchronizationDirection;
 
     /**
-     * <p>The ID of the data synchronization instance. You can call the <strong>DescribeSynchronizationJobs</strong> operation to query the instance ID.</p>
+     * <p>Instance ID of the data synchronization instance. You can call the <strong>DescribeSynchronizationJobs</strong> operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

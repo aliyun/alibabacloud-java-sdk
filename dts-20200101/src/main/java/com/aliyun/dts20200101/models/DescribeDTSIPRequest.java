@@ -7,7 +7,7 @@ public class DescribeDTSIPRequest extends TeaModel {
     /**
      * <p>The region ID of the destination instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <blockquote>
-     * <p>If the destination instance is a self-managed database that has a public IP address, you can specify <strong>ap-southeast-1</strong> or the region ID that is geographically closest to the self-managed database.</p>
+     * <p>If the destination instance is a self-managed database with a public IP address, you can specify <strong>cn-hangzhou</strong> or the region ID that is geographically closest to the self-managed database.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeDTSIPRequest extends TeaModel {
     public String destinationEndpointRegion;
 
     /**
-     * <p>The region in which the DTS task instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region where the DTS task instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -37,7 +37,7 @@ public class DescribeDTSIPRequest extends TeaModel {
     /**
      * <p>The region ID of the source instance. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * <blockquote>
-     * <p>If the source instance is a self-managed database that has a public IP address, you can specify <strong>ap-southeast-1</strong> or the region ID that is geographically closest to the self-managed database.</p>
+     * <p>If the source instance is a self-managed database with a public IP address, you can specify <strong>cn-hangzhou</strong> or the region ID that is geographically closest to the self-managed database.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PreCheckCreateGadOrderRequest extends TeaModel {
     /**
-     * <p>The ID of the active geo-redundancy instance group.</p>
+     * <p>The ID of the global active instance group.</p>
      * 
      * <strong>example:</strong>
      * <p>gad-bp1i99e8l7913****</p>
@@ -13,6 +13,12 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The name of the primary database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo1</p>
+     */
     @NameInMap("MasterDatabaseName")
     public String masterDatabaseName;
 
@@ -29,7 +35,7 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     public String ownerId;
 
     /**
-     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
+     * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -38,7 +44,7 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfntftbiobqyky</p>
@@ -46,11 +52,17 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
+    /**
+     * <p>The name of the secondary database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>demo1</p>
+     */
     @NameInMap("SlaveDatabaseName")
     public String slaveDatabaseName;
 
     /**
-     * <p>The instance ID of the database instance that assumes the secondary role.</p>
+     * <p>The instance ID of the secondary database.</p>
      * 
      * <strong>example:</strong>
      * <p>rm-bp17562h64****</p>
@@ -59,7 +71,7 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     public String slaveDbInstanceId;
 
     /**
-     * <p>The region of the database instance that assumes the secondary role.</p>
+     * <p>The region of the secondary database instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -67,6 +79,12 @@ public class PreCheckCreateGadOrderRequest extends TeaModel {
     @NameInMap("SlaveDbInstanceRegion")
     public String slaveDbInstanceRegion;
 
+    /**
+     * <p>The architecture type of the secondary database engine.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("SlaveEngineArchType")
     public String slaveEngineArchType;
 

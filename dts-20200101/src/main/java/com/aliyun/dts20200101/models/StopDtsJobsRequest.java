@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class StopDtsJobsRequest extends TeaModel {
     /**
-     * <p>The IDs of the data migration or data synchronization tasks.</p>
+     * <p>The IDs of the migration and synchronization tasks.</p>
      * <blockquote>
      * <ul>
-     * <li>Separate multiple task IDs with commas (,).</li>
+     * <li>Separate multiple task IDs with commas (<strong>,</strong>).</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>Call <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> to query DTS task IDs.</li>
+     * <li>Call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to obtain DTS task IDs.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,7 +23,7 @@ public class StopDtsJobsRequest extends TeaModel {
     public String dtsJobIds;
 
     /**
-     * <p>The region in which the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">List of supported regions</a>.</p>
+     * <p>The region where the DTS instance resides. For more information, see <a href="https://help.aliyun.com/document_detail/141033.html">Supported regions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -32,7 +32,7 @@ public class StopDtsJobsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekzsf6yoxhfpva</p>
@@ -41,7 +41,7 @@ public class StopDtsJobsRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>Specifies whether the node is a seamless integration (zero-ETL) node. Valid values:</p>
+     * <p>Specifies whether the node is a seamless integration (Zero-ETL) node. Valid values:</p>
      * <ul>
      * <li><strong>false</strong>: No.</li>
      * <li><strong>true</strong>: Yes.</li>

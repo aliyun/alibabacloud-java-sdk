@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInitializationStatusResponseBody extends TeaModel {
     /**
-     * <p>The details of full data initialization.</p>
+     * <p>The details of initial full data synchronization.</p>
      */
     @NameInMap("DataInitializationDetails")
     public java.util.List<DescribeInitializationStatusResponseBodyDataInitializationDetails> dataInitializationDetails;
@@ -13,14 +13,14 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
     /**
      * <p>The details of incremental data synchronization.</p>
      * <blockquote>
-     * <p>This parameter set and the included response parameters will be discontinued.</p>
+     * <p>This parameter collection and its contained response parameters will be deprecated soon.</p>
      * </blockquote>
      */
     @NameInMap("DataSynchronizationDetails")
     public java.util.List<DescribeInitializationStatusResponseBodyDataSynchronizationDetails> dataSynchronizationDetails;
 
     /**
-     * <p>The error code returned if the request failed.</p>
+     * <p>The error code returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>InternalError</p>
@@ -29,7 +29,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
     public String errCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -38,7 +38,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
     public String errMessage;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>150DECD9-13FF-4929-A5DE-855BE9CC****</p>
@@ -47,7 +47,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The details of schema initialization.</p>
+     * <p>The details of initial schema synchronization.</p>
      */
     @NameInMap("StructureInitializationDetails")
     public java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetails> structureInitializationDetails;
@@ -124,7 +124,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
 
     public static class DescribeInitializationStatusResponseBodyDataInitializationDetails extends TeaModel {
         /**
-         * <p>The name of the database to which the objects to be synchronized belong in the destination instance.</p>
+         * <p>The name of the database to which the object to be synchronized belongs in the destination instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -133,7 +133,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String destinationOwnerDBName;
 
         /**
-         * <p>The error message returned when full data initialization failed.</p>
+         * <p>The error message returned if the initial full data synchronization fails.</p>
          * 
          * <strong>example:</strong>
          * <p>java.lang.NumberFormatException: For input string: &quot;&quot;</p>
@@ -144,7 +144,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         /**
          * <p>The number of rows that have been synchronized.</p>
          * <blockquote>
-         * <p>This parameter indicates the total number of rows that are actually synchronized. The value of the <strong>TotalRowNum</strong> parameter is obtained from the system table of the source database before synchronization starts. Due to time differences during synchronization, the two values may differ.</p>
+         * <p>This parameter indicates the actual total number of synchronized rows. The value of the <strong>TotalRowNum</strong> parameter is obtained from the system tables of the source database before the synchronization starts. Due to the time difference during synchronization, the values of the two parameters may differ.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String finishRowNum;
 
         /**
-         * <p>The name of the database to which the objects to be synchronized belong in the source instance.</p>
+         * <p>The name of the database to which the object to be synchronized belongs in the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -163,12 +163,12 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String sourceOwnerDBName;
 
         /**
-         * <p>The status of full data initialization. Valid values:</p>
+         * <p>The status of initial full data synchronization. Valid values:</p>
          * <ul>
-         * <li><strong>NotStarted</strong>: Not started.</li>
-         * <li><strong>Migrating</strong>: In progress.</li>
-         * <li><strong>Failed</strong>: Failed.</li>
-         * <li><strong>Finished</strong>: Completed.</li>
+         * <li><strong>NotStarted</strong>: The initialization is not started.</li>
+         * <li><strong>Migrating</strong>: The initialization is in progress.</li>
+         * <li><strong>Failed</strong>: The initialization failed.</li>
+         * <li><strong>Finished</strong>: The initialization is complete.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The table name of the synchronization object.</p>
+         * <p>The name of the table to be synchronized.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -189,7 +189,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         /**
          * <p>The total number of rows to be synchronized.</p>
          * <blockquote>
-         * <p>The value of this parameter is obtained from the system table of the source database before synchronization starts. The <strong>FinishRowNum</strong> parameter indicates the total number of rows that are actually synchronized. Due to time differences during synchronization, the two values may differ.</p>
+         * <p>The value of this parameter is obtained from the system tables of the source database before the synchronization starts. The <strong>FinishRowNum</strong> parameter indicates the actual total number of synchronized rows. Due to the time difference during synchronization, the values of the two parameters may differ.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -199,7 +199,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String totalRowNum;
 
         /**
-         * <p>The time consumed by full data initialization.</p>
+         * <p>The duration of the full data initialization.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0</p>
@@ -280,7 +280,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
 
     public static class DescribeInitializationStatusResponseBodyDataSynchronizationDetails extends TeaModel {
         /**
-         * <p>The name of the database to which the objects to be synchronized belong in the destination instance.</p>
+         * <p>The name of the database to which the object to be synchronized belongs in the destination instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -289,16 +289,16 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String destinationOwnerDBName;
 
         /**
-         * <p>The error message returned when incremental data synchronization failed.</p>
+         * <p>The error message returned if the incremental data synchronization fails.</p>
          * 
          * <strong>example:</strong>
-         * <p>任务失败太久无法恢复</p>
+         * <p>The task has failed for too long to be recovered</p>
          */
         @NameInMap("ErrorMessage")
         public String errorMessage;
 
         /**
-         * <p>The name of the database to which the objects to be synchronized belong in the source instance.</p>
+         * <p>The name of the database to which the object to be synchronized belongs in the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -309,10 +309,10 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         /**
          * <p>The status of incremental data synchronization. Valid values:</p>
          * <ul>
-         * <li><strong>NotStarted</strong>: Not started.</li>
-         * <li><strong>Migrating</strong>: In progress.</li>
-         * <li><strong>Failed</strong>: Failed.</li>
-         * <li><strong>Finished</strong>: Completed.</li>
+         * <li><strong>NotStarted</strong>: The synchronization is not started.</li>
+         * <li><strong>Migrating</strong>: The synchronization is in progress.</li>
+         * <li><strong>Failed</strong>: The synchronization failed.</li>
+         * <li><strong>Finished</strong>: The synchronization is complete.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -322,7 +322,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The table name of the synchronization object.</p>
+         * <p>The name of the table to be synchronized.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -379,7 +379,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
 
     public static class DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints extends TeaModel {
         /**
-         * <p>The name of the database to which the objects to be synchronized belong in the destination instance.</p>
+         * <p>The name of the database to which the object to be synchronized belongs in the destination instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -388,7 +388,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String destinationOwnerDBName;
 
         /**
-         * <p>The error message returned when constraint creation failed.</p>
+         * <p>The error message returned if the constraint creation fails.</p>
          * 
          * <strong>example:</strong>
          * <p>DTS-1020042 Execute sql error sql: ERROR: type &quot;geometry&quot; does not exist</p>
@@ -397,7 +397,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The syntax definition for creating the constraint.</p>
+         * <p>The schema syntax definition for creating the constraint.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE SEQUENCE &quot;public&quot;.&quot;collections_id_seq&quot;   MINVALUE 1   MAXVALUE 9223372036854775807   START 249   INCREMENT BY 1 ;</p>
@@ -406,7 +406,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String objectDefinition;
 
         /**
-         * <p>The name of the synchronization object.</p>
+         * <p>The name of the object to be synchronized.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -415,7 +415,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String objectName;
 
         /**
-         * <p>The type of the synchronization object. The value is fixed as <strong>Table</strong>.</p>
+         * <p>The type of the object to be synchronized. The value is fixed as <strong>Table</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>Table</p>
@@ -424,7 +424,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String objectType;
 
         /**
-         * <p>The name of the database to which the objects to be synchronized belong in the source instance.</p>
+         * <p>The name of the database to which the object to be synchronized belongs in the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -433,12 +433,12 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String sourceOwnerDBName;
 
         /**
-         * <p>The status of constraint creation. Valid values:</p>
+         * <p>The creation status of the constraint. Valid values:</p>
          * <ul>
-         * <li><strong>NotStarted</strong>: Not started.</li>
-         * <li><strong>Migrating</strong>: In progress.</li>
-         * <li><strong>Failed</strong>: Failed.</li>
-         * <li><strong>Finished</strong>: Completed.</li>
+         * <li><strong>NotStarted</strong>: The creation is not started.</li>
+         * <li><strong>Migrating</strong>: The creation is in progress.</li>
+         * <li><strong>Failed</strong>: The creation failed.</li>
+         * <li><strong>Finished</strong>: The creation is complete.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -512,16 +512,16 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
 
     public static class DescribeInitializationStatusResponseBodyStructureInitializationDetails extends TeaModel {
         /**
-         * <p>The constraints of the synchronization object, such as indexes and foreign keys.</p>
+         * <p>The constraints corresponding to the object to be synchronized, such as indexes and foreign keys.</p>
          * <blockquote>
-         * <p>This parameter is returned only when <strong>ObjectType</strong> is set to <strong>Table</strong> and the synchronization object has constraints.</p>
+         * <p>This parameter is returned only when <strong>ObjectType</strong> is <strong>Table</strong> and the object to be synchronized has constraints.</p>
          * </blockquote>
          */
         @NameInMap("Constraints")
         public java.util.List<DescribeInitializationStatusResponseBodyStructureInitializationDetailsConstraints> constraints;
 
         /**
-         * <p>The name of the database to which the objects to be synchronized belong in the destination instance.</p>
+         * <p>The name of the database to which the object to be synchronized belongs in the destination instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -530,7 +530,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String destinationOwnerDBName;
 
         /**
-         * <p>The error message returned when schema initialization failed.</p>
+         * <p>The error message returned if the initial schema synchronization fails.</p>
          * 
          * <strong>example:</strong>
          * <p>DTS-1020042 Execute sql error sql: Table \&quot;customer\&quot; already exists</p>
@@ -539,7 +539,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The syntax definition of the synchronization object.</p>
+         * <p>The schema syntax definition of the object to be synchronized.</p>
          * 
          * <strong>example:</strong>
          * <p>CREATE TABLE <code>dtstestdata</code>.<code>customer</code> (\n<code>customer_id</code>  int(10) unsigned   auto_increment  COMMENT \&quot;\&quot;   NOT NULL   , \n<code>customer_title</code>  varchar(100)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NOT NULL   , \n<code>customer_company1216</code>  varchar(40)  CHARSET <code>utf8</code> COLLATE <code>utf8_general_ci</code>    COMMENT \&quot;\&quot;   NOT NULL   , \n<code>submission_date1216</code>  date     COMMENT \&quot;\&quot;   NULL   \n, PRIMARY KEY (<code>customer_id</code>)) engine=InnoDB AUTO_INCREMENT=200001 DEFAULT CHARSET=<code>utf8</code> DEFAULT COLLATE <code>utf8_general_ci</code> ROW_FORMAT= Dynamic comment = \&quot;\&quot; ;\n</p>
@@ -548,7 +548,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String objectDefinition;
 
         /**
-         * <p>The name of the synchronization object.</p>
+         * <p>The name of the object to be synchronized.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -557,8 +557,8 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String objectName;
 
         /**
-         * <p>The type of the synchronization object. Valid values:
-         * <strong>Table</strong>, <strong>Constraint</strong>, <strong>Index</strong>, <strong>View</strong>, <strong>Materialize View</strong>, <strong>Type</strong>, <strong>Synonym</strong>, <strong>Trigger</strong>, <strong>Function</strong>, <strong>Procedure</strong>, <strong>Package</strong>, <strong>Default</strong>, <strong>Rule</strong>, <strong>PlanGuide</strong>, and <strong>Sequence</strong>.</p>
+         * <p>The type of the object to be synchronized. Valid values:
+         * <strong>Table</strong> (table), <strong>Constraint</strong> (constraint), <strong>Index</strong> (index), <strong>View</strong> (view), <strong>Materialize View</strong> (materialized view), <strong>Type</strong> (custom type), <strong>Synonym</strong> (synonym), <strong>Trigger</strong> (trigger), <strong>Function</strong> (function), <strong>Procedure</strong> (stored procedure), <strong>Package</strong> (package), <strong>Default</strong> (default value), <strong>Rule</strong> (rule), <strong>PlanGuide</strong> (execution plan), and <strong>Sequence</strong> (sequence).</p>
          * 
          * <strong>example:</strong>
          * <p>Table</p>
@@ -567,7 +567,7 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String objectType;
 
         /**
-         * <p>The name of the database to which the objects to be synchronized belong in the source instance.</p>
+         * <p>The name of the database to which the object to be synchronized belongs in the source instance.</p>
          * 
          * <strong>example:</strong>
          * <p>dtstestdata</p>
@@ -576,12 +576,12 @@ public class DescribeInitializationStatusResponseBody extends TeaModel {
         public String sourceOwnerDBName;
 
         /**
-         * <p>The status of schema initialization. Valid values:</p>
+         * <p>The status of initial schema synchronization. Valid values:</p>
          * <ul>
-         * <li><strong>NotStarted</strong>: Not started.</li>
-         * <li><strong>Migrating</strong>: In progress.</li>
-         * <li><strong>Failed</strong>: Failed.</li>
-         * <li><strong>Finished</strong>: Completed.</li>
+         * <li><strong>NotStarted</strong>: The initialization is not started.</li>
+         * <li><strong>Migrating</strong>: The initialization is in progress.</li>
+         * <li><strong>Failed</strong>: The initialization failed.</li>
+         * <li><strong>Finished</strong>: The initialization is complete.</li>
          * </ul>
          * 
          * <strong>example:</strong>

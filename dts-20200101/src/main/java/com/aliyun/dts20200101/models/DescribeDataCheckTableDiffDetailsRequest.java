@@ -7,8 +7,8 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     /**
      * <p>The data validation method. Valid values:</p>
      * <ul>
-     * <li><strong>1</strong>: full verification.</li>
-     * <li><strong>2</strong>: incremental verification.</li>
+     * <li><strong>1</strong>: Full validation.</li>
+     * <li><strong>2</strong>: Incremental validation.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     public Integer checkType;
 
     /**
-     * <p>The name of the database that contains the table with inconsistent data.</p>
+     * <p>The name of the database to which the table with inconsistent data belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     public String dbName;
 
     /**
-     * <p>The ID of the data migration or data synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the task ID.</p>
+     * <p>The ID of the migration or synchronization task. You can call the <a href="https://help.aliyun.com/document_detail/209702.html">DescribeDtsJobs</a> operation to query the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     public String dtsJobId;
 
     /**
-     * <p>The page number. The value must be a positive integer that does not exceed the maximum value of the Integer data type. Default value: 1.</p>
+     * <p>The page number. The value must be greater than 0 and less than or equal to the maximum value of the Integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -48,7 +48,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -57,7 +57,7 @@ public class DescribeDataCheckTableDiffDetailsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzawhxxc****</p>
