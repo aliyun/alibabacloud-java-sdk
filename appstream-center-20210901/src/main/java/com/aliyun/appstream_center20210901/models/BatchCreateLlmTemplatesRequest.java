@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCreateLlmTemplatesRequest extends TeaModel {
     /**
-     * <p>The list of model configurations to create.</p>
+     * <p>The list of model configurations to be created.</p>
      */
     @NameInMap("LlmTemplateItems")
     public java.util.List<BatchCreateLlmTemplatesRequestLlmTemplateItems> llmTemplateItems;
@@ -20,7 +20,7 @@ public class BatchCreateLlmTemplatesRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
-     * <p>The ID of the model provider template to which the models belong.</p>
+     * <p>The ID of the model provider template to which the model templates belong.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class BatchCreateLlmTemplatesRequest extends TeaModel {
 
     public static class BatchCreateLlmTemplatesRequestLlmTemplateItems extends TeaModel {
         /**
-         * <p>The model configuration JSON object.</p>
+         * <p>The JSON object for model configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -88,13 +88,13 @@ public class BatchCreateLlmTemplatesRequest extends TeaModel {
          * <p>The model description.</p>
          * 
          * <strong>example:</strong>
-         * <p>千问Plus系列模型</p>
+         * <p>Qwen Plus series models</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Specifies whether to set the model as the default model. A model group can have at most one default model.</p>
+         * <p>Specifies whether to set the model as the default model. Each model group can have at most one default model.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -103,7 +103,7 @@ public class BatchCreateLlmTemplatesRequest extends TeaModel {
         public Boolean isDefaultModel;
 
         /**
-         * <p>The model code, which must be unique within the same provider.</p>
+         * <p>The model code. It must be unique under the same provider.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3.6-plus</p>

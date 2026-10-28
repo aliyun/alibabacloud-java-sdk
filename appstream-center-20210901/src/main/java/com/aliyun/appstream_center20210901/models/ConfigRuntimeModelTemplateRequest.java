@@ -15,14 +15,14 @@ public class ConfigRuntimeModelTemplateRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
-     * <p>The list of Agent runtime IDs.</p>
+     * <p>The list of agent runtime IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RuntimeIds")
     public java.util.List<String> runtimeIds;
 
     /**
-     * <p>The Agent runtime type.</p>
+     * <p>The agent runtime type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

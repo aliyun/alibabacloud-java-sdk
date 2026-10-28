@@ -42,7 +42,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
 
     public static class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListCreditMultiplier extends TeaModel {
         /**
-         * <p>The maximum multiplier. A null value indicates no upper limit. For example, Min=1 with a null Max is displayed as 1x and above.</p>
+         * <p>The upper limit of the multiplier. If this parameter is empty, it indicates that there is no upper limit. For example, if Min is 1 and Max is empty, it is displayed as 1x and above.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -51,7 +51,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public Float max;
 
         /**
-         * <p>The minimum multiplier. When equal to Max, the multiplier is fixed. For example, Min=Max=2 is displayed as 2x.</p>
+         * <p>The lower limit of the multiplier. When it is equal to Max, it is a fixed multiplier. For example, if Min and Max are both 2, it is displayed as 2x.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -84,13 +84,13 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
 
     public static class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListInferenceMetadata extends TeaModel {
         /**
-         * <p>The list of request modalities (such as Text, Image, and Audio).</p>
+         * <p>The list of request modalities, such as Text, Image, and Audio.</p>
          */
         @NameInMap("RequestModality")
         public java.util.List<String> requestModality;
 
         /**
-         * <p>The list of response modalities (such as Text, Image, and Audio).</p>
+         * <p>The list of response modalities, such as Text, Image, and Audio.</p>
          */
         @NameInMap("ResponseModality")
         public java.util.List<String> responseModality;
@@ -120,7 +120,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
 
     public static class GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoList extends TeaModel {
         /**
-         * <p>The credit consumption multiplier. A null value indicates that the model does not participate in credit-based billing.</p>
+         * <p>The credit consumption multiplier. If this parameter is empty, it indicates that the model does not participate in credit billing.</p>
          */
         @NameInMap("CreditMultiplier")
         public GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListCreditMultiplier creditMultiplier;
@@ -129,19 +129,19 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
          * <p>The model description.</p>
          * 
          * <strong>example:</strong>
-         * <p>The Qwen3.6 native vision-language series Plus model demonstrates outstanding performance comparable to current top frontier models, with significant improvements over the 3.5 series. The model features significantly enhanced capabilities in agentic coding, frontend programming, vibe coding, multimodal universal recognition, OCR, and object localization</p>
+         * <p>The Qwen3.6 native vision-language Plus model series demonstrates exceptional performance comparable to current top-tier frontier models, with significantly improved model effects compared to the 3.5 series. The model shows significant enhancements in coding capabilities such as agentic coding, front-end programming, and vibe coding, as well as in multimodal universal recognition, OCR, and object localization</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The list of model features (such as function-calling, web-search, and structured-outputs).</p>
+         * <p>The list of model features, such as function-calling, web-search, and structured-outputs.</p>
          */
         @NameInMap("Features")
         public java.util.List<String> features;
 
         /**
-         * <p>The inference metadata (request and response modalities).</p>
+         * <p>The inference metadata, including request and response modalities.</p>
          */
         @NameInMap("InferenceMetadata")
         public GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoListInferenceMetadata inferenceMetadata;
@@ -165,7 +165,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The publish time (ISO 8601 format).</p>
+         * <p>The published time in ISO 8601 format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-03-04T06:25:17.000+00:00</p>
@@ -174,7 +174,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public String publishedTime;
 
         /**
-         * <p>The model risk type (returned only when the request parameter IncludeRiskInfo is set to true).</p>
+         * <p>The model risk type. This parameter is returned only when the IncludeRiskInfo request parameter is set to true.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -261,7 +261,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public java.util.List<GetRuntimeModelConfigResponseBodyDataModelProviderListLlmInfoList> llmInfoList;
 
         /**
-         * <p>The model provider template ID.</p>
+         * <p>The ID of the model provider template.</p>
          * 
          * <strong>example:</strong>
          * <p>mpt-xxxx</p>
@@ -270,16 +270,16 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public String modelProviderTemplateId;
 
         /**
-         * <p>The model provider template name.</p>
+         * <p>The name of the model provider template.</p>
          * 
          * <strong>example:</strong>
-         * <p>百炼</p>
+         * <p>Model Studio</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The model provider name.</p>
+         * <p>The name of the model provider.</p>
          * 
          * <strong>example:</strong>
          * <p>bailian</p>
@@ -328,7 +328,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
 
     public static class GetRuntimeModelConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The default model (format: providerName/llmCode).</p>
+         * <p>The default model, in the format of providerName/llmCode.</p>
          * 
          * <strong>example:</strong>
          * <p>bailian/qwen3.6-plus</p>
@@ -343,7 +343,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public java.util.List<GetRuntimeModelConfigResponseBodyDataModelProviderList> modelProviderList;
 
         /**
-         * <p>The configured model group ID.</p>
+         * <p>The ID of the configured model group.</p>
          * 
          * <strong>example:</strong>
          * <p>mt-xxxx</p>
@@ -352,7 +352,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public String modelTemplateId;
 
         /**
-         * <p>The model group name.</p>
+         * <p>The name of the model group.</p>
          * 
          * <strong>example:</strong>
          * <p>model-template-001</p>
@@ -361,7 +361,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public String modelTemplateName;
 
         /**
-         * <p>The model template association type (only when present).</p>
+         * <p>The model template association type.</p>
          * 
          * <strong>example:</strong>
          * <p>Runtime</p>
@@ -370,7 +370,7 @@ public class GetRuntimeModelConfigResponseBody extends TeaModel {
         public String modelTemplateRefType;
 
         /**
-         * <p>The resource group ID to which the runtime belongs (null if not assigned to a resource group).</p>
+         * <p>The ID of the resource group to which the runtime belongs. If the runtime does not belong to any resource group, the value is null.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-xxxxx</p>

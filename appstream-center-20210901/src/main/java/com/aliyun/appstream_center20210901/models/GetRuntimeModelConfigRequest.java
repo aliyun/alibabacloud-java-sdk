@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRuntimeModelConfigRequest extends TeaModel {
     /**
-     * <p>The Agent platform.</p>
+     * <p>The agent platform.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -14,7 +14,7 @@ public class GetRuntimeModelConfigRequest extends TeaModel {
     public String agentPlatform;
 
     /**
-     * <p>The Agent provider.</p>
+     * <p>The agent provider.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,9 +33,9 @@ public class GetRuntimeModelConfigRequest extends TeaModel {
     public Boolean includeRiskInfo;
 
     /**
-     * <p>The Agent runtime ID. The ID mappings are as follows:</p>
+     * <p>The ID of the agent runtime. The ID mappings are as follows:</p>
      * <p>JVS Computer: JVS Computer ID, in the format of jvs-xxxx.</p>
-     * <p>OpenClaw: Cloud computer ID, in the format of ecd-xxxx.</p>
+     * <p>OpenClaw: Cloud desktop ID, in the format of ecd-xxxx.</p>
      * <p>Hermes Agent: Hermes Agent ID, in the format of jvs-xxxx.</p>
      * <p>This parameter is required.</p>
      * 
@@ -46,7 +46,7 @@ public class GetRuntimeModelConfigRequest extends TeaModel {
     public String runtimeId;
 
     /**
-     * <p>The Agent runtime type.</p>
+     * <p>The type of the agent runtime.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,6 +54,21 @@ public class GetRuntimeModelConfigRequest extends TeaModel {
      */
     @NameInMap("RuntimeType")
     public String runtimeType;
+
+    /**
+     * <p>The smart model filter. Valid values:</p>
+     * <ul>
+     * <li>true: Queries the system wuying-preset provider models based on the business type of the runtime.</li>
+     * <li>false: Excludes wuying-preset from the effective configuration.</li>
+     * <li>Empty: Returns both smart and non-smart models in the effective configuration.
+     * The business type is read by the server from runtime.biz_type, and the BizType input parameter is not required. Risk information is still independently controlled by IncludeRiskInfo.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("SmartModel")
+    public Boolean smartModel;
 
     public static GetRuntimeModelConfigRequest build(java.util.Map<String, ?> map) throws Exception {
         GetRuntimeModelConfigRequest self = new GetRuntimeModelConfigRequest();
@@ -98,6 +113,14 @@ public class GetRuntimeModelConfigRequest extends TeaModel {
     }
     public String getRuntimeType() {
         return this.runtimeType;
+    }
+
+    public GetRuntimeModelConfigRequest setSmartModel(Boolean smartModel) {
+        this.smartModel = smartModel;
+        return this;
+    }
+    public Boolean getSmartModel() {
+        return this.smartModel;
     }
 
 }

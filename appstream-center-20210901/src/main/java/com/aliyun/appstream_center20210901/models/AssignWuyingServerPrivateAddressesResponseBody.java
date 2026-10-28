@@ -11,7 +11,7 @@ public class AssignWuyingServerPrivateAddressesResponseBody extends TeaModel {
     public java.util.List<String> assignedPrivateIpAddresses;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CBAFFAB-B697-4049-A9B1-67E1FC5F****</p>

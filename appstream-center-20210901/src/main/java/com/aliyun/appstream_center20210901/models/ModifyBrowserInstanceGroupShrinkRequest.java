@@ -20,7 +20,7 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String browserConfigShrink;
 
     /**
-     * <p>The ID of the cloud browser to modify.</p>
+     * <p>The ID of the cloud browser.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String cloudBrowserName;
 
     /**
-     * <p>The maximum resource count. This parameter takes effect for monthly active pay-as-you-go billing.</p>
+     * <p>The maximum resource count. This parameter takes effect only for the pay-as-you-go billing method based on monthly active users.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -48,7 +48,7 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     public Integer maxAmount;
 
     /**
-     * <p>The network configuration.</p>
+     * <p>The network configurations.</p>
      */
     @NameInMap("Network")
     public String networkShrink;
@@ -66,7 +66,7 @@ public class ModifyBrowserInstanceGroupShrinkRequest extends TeaModel {
     public String storagePolicyShrink;
 
     /**
-     * <p>The timers.</p>
+     * <p>The timer.</p>
      */
     @NameInMap("Timers")
     public String timersShrink;

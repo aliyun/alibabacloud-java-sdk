@@ -20,7 +20,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
     public ModifyBrowserInstanceGroupRequestBrowserConfig browserConfig;
 
     /**
-     * <p>The ID of the cloud browser to modify.</p>
+     * <p>The ID of the cloud browser.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
     public String cloudBrowserName;
 
     /**
-     * <p>The maximum resource count. This parameter takes effect for monthly active pay-as-you-go billing.</p>
+     * <p>The maximum resource count. This parameter takes effect only for the pay-as-you-go billing method based on monthly active users.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -48,7 +48,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
     public Integer maxAmount;
 
     /**
-     * <p>The network configuration.</p>
+     * <p>The network configurations.</p>
      */
     @NameInMap("Network")
     public ModifyBrowserInstanceGroupRequestNetwork network;
@@ -66,7 +66,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
     public ModifyBrowserInstanceGroupRequestStoragePolicy storagePolicy;
 
     /**
-     * <p>The timers.</p>
+     * <p>The timer.</p>
      */
     @NameInMap("Timers")
     public java.util.List<ModifyBrowserInstanceGroupRequestTimers> timers;
@@ -159,7 +159,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String bookmarkFolder;
 
         /**
-         * <p>The bookmark ID. This parameter is required only for update operations.</p>
+         * <p>The bookmark ID. This parameter is required only for modification scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>bm-12345</p>
@@ -234,7 +234,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public java.util.List<ModifyBrowserInstanceGroupRequestBrowserConfigBookmarks> bookmarks;
 
         /**
-         * <p>The bookmark list file path.</p>
+         * <p>The file path of the bookmark list.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserBookmarks/BrowserBookmarkTemplate.csv</p>
@@ -252,7 +252,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String browserParam;
 
         /**
-         * <p>Specifies whether to enable cookies synchronization.</p>
+         * <p>Specifies whether to enable cookie synchronization.</p>
          */
         @NameInMap("CookiesSync")
         public Boolean cookiesSync;
@@ -267,7 +267,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String homepage;
 
         /**
-         * <p>The list of bookmarks to remove.</p>
+         * <p>The list of bookmarks to be removed.</p>
          */
         @NameInMap("RemoveBookmarks")
         public java.util.List<String> removeBookmarks;
@@ -329,7 +329,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
 
     public static class ModifyBrowserInstanceGroupRequestNetworkRestrictedURLs extends TeaModel {
         /**
-         * <p>The domain name configuration ID. This parameter is required only when you modify an existing configuration.</p>
+         * <p>The ID of the domain name configuration. This parameter is required only when you modify the configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>ru-12345</p>
@@ -371,7 +371,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
 
     public static class ModifyBrowserInstanceGroupRequestNetwork extends TeaModel {
         /**
-         * <p>The access restriction type.</p>
+         * <p>The type of access restriction.</p>
          * 
          * <strong>example:</strong>
          * <p>ALLOW_LIST</p>
@@ -392,10 +392,10 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public java.util.List<ModifyBrowserInstanceGroupRequestNetworkRestrictedURLs> restrictedURLs;
 
         /**
-         * <p>The file path of the restricted URLs.</p>
+         * <p>The file path for network-restricted URLs.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL白名单模版.csv</p>
+         * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL_whitelist_template.csv</p>
          */
         @NameInMap("RestrictedURLsFilePath")
         public String restrictedURLsFilePath;
@@ -597,7 +597,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public Integer richTextClipboardLimit;
 
         /**
-         * <p>The size limit for rich text clipboard data transferred from the cloud.</p>
+         * <p>The rich text clipboard read size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -606,7 +606,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public Integer richTextClipboardReadLimit;
 
         /**
-         * <p>The size unit for rich text clipboard data transferred from the cloud.</p>
+         * <p>The rich text clipboard read size unit.</p>
          * 
          * <strong>example:</strong>
          * <p>KB</p>
@@ -624,7 +624,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String richTextClipboardSizeUnit;
 
         /**
-         * <p>The size limit for rich text clipboard data transferred to the cloud.</p>
+         * <p>The rich text clipboard write size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -633,7 +633,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public Integer richTextClipboardWriteLimit;
 
         /**
-         * <p>The size unit for rich text clipboard data transferred to the cloud.</p>
+         * <p>The rich text clipboard write size unit.</p>
          * 
          * <strong>example:</strong>
          * <p>KB</p>
@@ -651,7 +651,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String textClipboard;
 
         /**
-         * <p>The size limit for text clipboard data transferred from the cloud.</p>
+         * <p>The text clipboard read size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -660,7 +660,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public Integer textClipboardReadLimit;
 
         /**
-         * <p>The size unit for text clipboard data transferred from the cloud.</p>
+         * <p>The text clipboard read size unit.</p>
          * 
          * <strong>example:</strong>
          * <p>KB</p>
@@ -669,7 +669,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String textClipboardReadSizeUnit;
 
         /**
-         * <p>The size limit for text clipboard data transferred to the cloud.</p>
+         * <p>The text clipboard write size.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -678,7 +678,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public Integer textClipboardWriteLimit;
 
         /**
-         * <p>The size unit for text clipboard data transferred to the cloud.</p>
+         * <p>The text clipboard write size unit.</p>
          * 
          * <strong>example:</strong>
          * <p>KB</p>
@@ -839,7 +839,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
 
     public static class ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules extends TeaModel {
         /**
-         * <p>The IPv4 address or CIDR block to revoke.</p>
+         * <p>The IPv4 address or CIDR block to be revoked.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24</p>
@@ -848,7 +848,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String cidrIp;
 
         /**
-         * <p>The description of the access IP address whitelist rule to revoke.</p>
+         * <p>The description of the access IP address whitelist rule to be revoked.</p>
          * 
          * <strong>example:</strong>
          * <p>office network</p>
@@ -945,7 +945,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
 
     public static class ModifyBrowserInstanceGroupRequestPolicy extends TeaModel {
         /**
-         * <p>Specifies whether to enable screenshot protection.</p>
+         * <p>Specifies whether to enable screen capture prevention.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -960,19 +960,19 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public java.util.List<ModifyBrowserInstanceGroupRequestPolicyAuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
 
         /**
-         * <p>The client type access control settings.</p>
+         * <p>The logon client type control.</p>
          */
         @NameInMap("ClientTypes")
         public java.util.List<ModifyBrowserInstanceGroupRequestPolicyClientTypes> clientTypes;
 
         /**
-         * <p>The clipboard-related policy.</p>
+         * <p>The clipboard policies.</p>
          */
         @NameInMap("ClipboardPolicy")
         public ModifyBrowserInstanceGroupRequestPolicyClipboardPolicy clipboardPolicy;
 
         /**
-         * <p>The data retention policy after disconnection.</p>
+         * <p>The data retention policy upon disconnection.</p>
          * 
          * <strong>example:</strong>
          * <p>customTime</p>
@@ -981,7 +981,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String disconnectKeepSession;
 
         /**
-         * <p>The session retention duration after disconnection.</p>
+         * <p>The session retention duration upon disconnection.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -990,7 +990,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public Integer disconnectKeepSessionTime;
 
         /**
-         * <p>Specifies whether to enable the floating ball file manager.</p>
+         * <p>The floating ball file manager switch.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>
@@ -1008,7 +1008,16 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String html5FileTransfer;
 
         /**
-         * <p>Specifies whether to disconnect the session when no operation is performed.</p>
+         * <p>The cloud browser dual-screen switch.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        @NameInMap("MultiScreen")
+        public String multiScreen;
+
+        /**
+         * <p>The no-operation disconnect policy.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1017,7 +1026,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String noOperationDisconnect;
 
         /**
-         * <p>The idle timeout period before the session is disconnected, in seconds.</p>
+         * <p>The no-operation disconnect time in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1044,7 +1053,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
         public String policyVersion;
 
         /**
-         * <p>The server access IP address whitelist rules to revoke.</p>
+         * <p>The server access IP address whitelist to be revoked.</p>
          */
         @NameInMap("RevokeAccessPolicyRules")
         public java.util.List<ModifyBrowserInstanceGroupRequestPolicyRevokeAccessPolicyRules> revokeAccessPolicyRules;
@@ -1130,6 +1139,14 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
             return this.html5FileTransfer;
         }
 
+        public ModifyBrowserInstanceGroupRequestPolicy setMultiScreen(String multiScreen) {
+            this.multiScreen = multiScreen;
+            return this;
+        }
+        public String getMultiScreen() {
+            return this.multiScreen;
+        }
+
         public ModifyBrowserInstanceGroupRequestPolicy setNoOperationDisconnect(String noOperationDisconnect) {
             this.noOperationDisconnect = noOperationDisconnect;
             return this;
@@ -1212,7 +1229,7 @@ public class ModifyBrowserInstanceGroupRequest extends TeaModel {
 
     public static class ModifyBrowserInstanceGroupRequestStoragePolicy extends TeaModel {
         /**
-         * <p>The user roaming policy.</p>
+         * <p>The user roaming-related policy.</p>
          */
         @NameInMap("UserProfile")
         public ModifyBrowserInstanceGroupRequestStoragePolicyUserProfile userProfile;

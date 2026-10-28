@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteModelTemplateRequest extends TeaModel {
     /**
-     * <p>The model group ID.</p>
+     * <p>The ID of the model group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

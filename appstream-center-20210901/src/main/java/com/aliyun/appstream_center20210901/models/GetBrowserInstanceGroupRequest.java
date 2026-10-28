@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBrowserInstanceGroupRequest extends TeaModel {
     /**
-     * <p>The cloud browser group ID. This parameter is required. Specify the ID of a browser group that is created under the current account.</p>
+     * <p>The ID of the cloud browser group. This parameter is required. Specify the ID of a browser group that is created within the current account.</p>
      * 
      * <strong>example:</strong>
      * <p>big-0c7loey7fzjq****</p>

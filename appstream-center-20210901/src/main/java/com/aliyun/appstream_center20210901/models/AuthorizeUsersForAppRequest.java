@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeUsersForAppRequest extends TeaModel {
     /**
-     * <p>The application ID. The application must be deployed in the image used by the delivery group. You can obtain the ID from the Apps list returned by the <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation.</p>
+     * <p>The ID of the application. The application must be deployed in the image used by the app instance group. You can obtain the application ID from the Apps list returned by the <a href="https://help.aliyun.com/document_detail/600836.html">GetAppInstanceGroup</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class AuthorizeUsersForAppRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The delivery group ID. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to obtain the ID.</p>
-     * <p>The application specified by AppId must be deployed in the image used by this delivery group.</p>
+     * <p>The ID of the app instance group. You can call the <a href="https://help.aliyun.com/document_detail/428506.html">ListAppInstanceGroup</a> operation to query the ID.</p>
+     * <p>The application specified by AppId must be deployed in the image used by the app instance group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,17 +26,17 @@ public class AuthorizeUsersForAppRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The list of usernames to add authorization for the application. A maximum of 100 usernames can be specified in a single request.</p>
-     * <p>At least one of AuthorizeUserIds and UnAuthorizeUserIds must be specified. You can also specify both. Adding authorization is subject to the authorized user quota for the application.</p>
+     * <p>The list of usernames of the users to be authorized for the application. You can specify up to 100 usernames in a single call.</p>
+     * <p>You must specify at least one of AuthorizeUserIds and UnAuthorizeUserIds, or specify both. Adding authorization is subject to the authorized user quota limit of the application.</p>
      */
     @NameInMap("AuthorizeUserIds")
     public java.util.List<String> authorizeUserIds;
 
     /**
-     * <p>The product type. Application-level authorization applies to WUYING Cloud Application delivery groups.</p>
+     * <p>The product type. Application-level authorization applies to WUYING Cloud App app instance groups.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>CloudApp: WUYING Cloud Application.</li>
+     * <li>CloudApp: WUYING Cloud App.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -47,17 +47,17 @@ public class AuthorizeUsersForAppRequest extends TeaModel {
     public String productType;
 
     /**
-     * <p>The list of usernames to be unauthorized for the application. A maximum of 100 usernames can be specified in a single request.</p>
-     * <p>At least one of AuthorizeUserIds and UnAuthorizeUserIds must be specified. You can also specify both. Removing authorizations is not subject to quota limits.</p>
+     * <p>The list of usernames of the users whose authorization for the application is to be removed. You can specify up to 100 usernames in a single call.</p>
+     * <p>You must specify at least one of AuthorizeUserIds and UnAuthorizeUserIds, or specify both. Removing authorization is not subject to quota limits.</p>
      */
     @NameInMap("UnAuthorizeUserIds")
     public java.util.List<String> unAuthorizeUserIds;
 
     /**
-     * <p>The account information of the authorized user, which specifies the account type corresponding to the username.</p>
+     * <p>The account information of the authorized user, which is used to specify the account type corresponding to the username.</p>
      * <ul>
-     * <li>If the workspace to which the delivery group belongs is an AD workspace, <strong>this parameter is required</strong>: set Type to ad and set AdDomain to the AD domain bound to the workspace.</li>
-     * <li>If this parameter is not specified, the WUYING convenience account (simple) is used by default.</li>
+     * <li><strong>Required</strong> if the workspace to which the app instance group belongs is an AD workspace: Set Type to ad, and set AdDomain to the AD domain bound to the workspace.</li>
+     * <li>If this parameter is not specified, the default account type is WUYING convenience account (simple).</li>
      * </ul>
      */
     @NameInMap("UserMeta")
@@ -118,7 +118,7 @@ public class AuthorizeUsersForAppRequest extends TeaModel {
 
     public static class AuthorizeUsersForAppRequestUserMeta extends TeaModel {
         /**
-         * <p>The AD domain name. Specify this parameter when Type is set to ad. The value must match the AD domain bound to the workspace of the delivery group.</p>
+         * <p>The AD domain name. This parameter is required when Type is set to ad, and the value must be the same as the AD domain bound to the workspace to which the app instance group belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>

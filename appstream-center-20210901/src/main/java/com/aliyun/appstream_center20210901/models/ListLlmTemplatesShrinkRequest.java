@@ -14,7 +14,23 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     public Integer bizType;
 
     /**
-     * <p>The model code used for filtering. Fuzzy match is supported.</p>
+     * <p>The display language of the model. Valid values:</p>
+     * <ul>
+     * <li>zh-CN: Simplified Chinese.</li>
+     * <li>en-US: English.</li>
+     * <li>ja-JP: Japanese.</li>
+     * <li>zh-TW: Traditional Chinese.
+     * Default value: zh-CN. Currently, zh-TW returns Simplified Chinese, and ja-JP returns English. If the model is not included in Alibaba Cloud Model Studio or the English text is missing, the original source text is retained without automatic translation.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>en-US</p>
+     */
+    @NameInMap("Language")
+    public String language;
+
+    /**
+     * <p>The model code for filtering. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3.6-plus</p>
@@ -23,13 +39,13 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     public String llmCode;
 
     /**
-     * <p>The model template IDs used for filtering.</p>
+     * <p>The model template IDs for filtering.</p>
      */
     @NameInMap("LlmTemplateIds")
     public String llmTemplateIdsShrink;
 
     /**
-     * <p>The ID of the associated model group.</p>
+     * <p>The associated model group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>mt-xxxx</p>
@@ -38,7 +54,7 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     public String modelTemplateId;
 
     /**
-     * <p>The page number. Pages start from page 1. Both 0 and 1 return the same result.</p>
+     * <p>The page number. Pages start from 1. A value of 0 returns the same result as 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -56,7 +72,7 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the model provider template.</p>
+     * <p>The model provider template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>mpt-xxxx</p>
@@ -67,10 +83,10 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     /**
      * <p>Specifies whether to query smart models. Valid values:</p>
      * <ul>
-     * <li>true: Only LLMs under system preset smart models are returned. In this case, BizType is required.</li>
-     * <li>false: Smart model filtering is not applied.</li>
+     * <li>true: Only LLMs under system-preset smart models are returned. In this case, BizType is required.</li>
+     * <li>false: Smart models are not specifically filtered.
+     * Default value: false.</li>
      * </ul>
-     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -89,6 +105,14 @@ public class ListLlmTemplatesShrinkRequest extends TeaModel {
     }
     public Integer getBizType() {
         return this.bizType;
+    }
+
+    public ListLlmTemplatesShrinkRequest setLanguage(String language) {
+        this.language = language;
+        return this;
+    }
+    public String getLanguage() {
+        return this.language;
     }
 
     public ListLlmTemplatesShrinkRequest setLlmCode(String llmCode) {

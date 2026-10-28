@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateBrowserInstanceGroupRequest extends TeaModel {
     /**
-     * <p>The plan identifier.</p>
-     * <p>Do not specify this parameter.</p>
+     * <p>The package identifier.</p>
+     * <p>You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -17,10 +17,10 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public String appPackageType;
 
     /**
-     * <p>Specifies whether to send authorization and deauthorization notification emails.</p>
+     * <p>Specifies whether to send notification emails for authorization and deauthorization.</p>
      * <ul>
-     * <li><code>true</code>: Sends the notification.</li>
-     * <li><code>false</code>: Does not send the notification.</li>
+     * <li><code>true</code>: Sends notification emails.</li>
+     * <li><code>false</code>: Does not send notification emails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     /**
      * <p>The automatic payment parameter.</p>
-     * <p>Do not specify this parameter.</p>
+     * <p>You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -43,7 +43,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     /**
      * <p>The auto-renewal parameter.</p>
-     * <p>Do not specify this parameter.</p>
+     * <p>You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -54,7 +54,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The business region ID. This parameter is required.</p>
+     * <p>The identifier of the business region. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,8 +70,8 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public CreateBrowserInstanceGroupRequestBrowserConfig browserConfig;
 
     /**
-     * <p>The resource billing mode.</p>
-     * <p><strong>For MAU scenarios:</strong> Set this parameter to <code>AppInstance</code> to bill by instance resource.</p>
+     * <p>The resource billing method.
+     * <strong>For MAU scenarios:</strong> Set this parameter to <code>AppInstance</code>, which indicates billing by instance resources.</p>
      * 
      * <strong>example:</strong>
      * <p>AppInstance</p>
@@ -80,8 +80,8 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public String chargeResourceMode;
 
     /**
-     * <p>The billing type.</p>
-     * <p><strong>For MAU scenarios:</strong> Set this parameter to <code>PostPaid</code>, which indicates pay-as-you-go billing.</p>
+     * <p>The billing method.</p>
+     * <p><strong>For MAU scenarios:</strong> Set this parameter to PostPaid, which indicates pay-as-you-go.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -90,19 +90,19 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public String chargeType;
 
     /**
-     * <p>The name of the cloud browser group. This parameter cannot be empty. The name is used to distinguish different browser groups in business management scenarios.</p>
+     * <p>The name of the cloud browser group. This parameter cannot be empty. It is used to distinguish different browser groups in business management scenarios.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>BusinessOfficeBrowser</p>
+     * <p>Business office browser</p>
      */
     @NameInMap("CloudBrowserName")
     public String cloudBrowserName;
 
     /**
-     * <p>The image identifier used by the cloud browser. The image must be compatible with the operating system.</p>
-     * <p>If this parameter is omitted, the default image available for the account is used. If no default image is available, the creation may fail.</p>
-     * <p><strong>Usage condition:</strong> When <code>CookiesSync</code> is enabled, explicitly specify an image that supports cookie synchronization.</p>
+     * <p>The image ID used by the cloud browser. The image must be compatible with the operating system.
+     * If this parameter is omitted, the default image available for the account is used. If no default image is available, the creation may fail.
+     * <strong>Usage conditions:</strong> When CookiesSync is enabled, explicitly specify an image that supports cookie synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>img-bp13mu****</p>
@@ -111,8 +111,8 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The instance type identifier. Select an instance type that matches the target region, operating system, and inventory conditions.</p>
-     * <p>If this parameter is omitted, the default instance type is used.</p>
+     * <p>The instance type identifier. Select an instance type that matches the target region, operating system, and inventory conditions.
+     * If this parameter is omitted, the default instance type is used.</p>
      * 
      * <strong>example:</strong>
      * <p>appstreaming.general.basic</p>
@@ -121,7 +121,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The capacity configuration for the MAU billing scenario.</p>
+     * <p>The capacity configuration in MAU billing scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -130,14 +130,14 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public Integer maxAmount;
 
     /**
-     * <p>The office network and website access restriction configurations. The selected office network must belong to the current account and be located in the region specified by <code>BizRegionId</code>.</p>
+     * <p>The configurations for the office network and website access restrictions. The selected office network must belong to the current account and reside in the region specified by BizRegionId.</p>
      */
     @NameInMap("Network")
     public CreateBrowserInstanceGroupRequestNetwork network;
 
     /**
-     * <p>The node pool configuration.</p>
-     * <p>You do not need to specify this parameter.</p>
+     * <p>The node pool configuration.
+     * You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -148,8 +148,8 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public CreateBrowserInstanceGroupRequestNodePool nodePool;
 
     /**
-     * <p>The operating system type. This parameter is required.</p>
-     * <p>Only <code>Windows</code> is supported. Other operating systems are not supported.</p>
+     * <p>The operating system type. This parameter is required.
+     * Only <code>Windows</code> is supported. Other operating systems are not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Windows</p>
@@ -158,8 +158,8 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public String osType;
 
     /**
-     * <p>The number of subscription periods.</p>
-     * <p>Do not specify this parameter.</p>
+     * <p>The number of billing cycles for the purchase.</p>
+     * <p>You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -170,8 +170,8 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the subscription period.</p>
-     * <p>Do not specify this parameter.</p>
+     * <p>The unit of the billing cycle for the purchase.</p>
+     * <p>You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -182,14 +182,14 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The clipboard, video, watermark, session, and client access policy configurations.</p>
+     * <p>Configures policies for the clipboard, video, watermark, session, and client access.</p>
      */
     @NameInMap("Policy")
     public CreateBrowserInstanceGroupRequestPolicy policy;
 
     /**
-     * <p>The promotion ID. Specifies the promotional campaign to apply to the order.</p>
-     * <p>Whether the promotion is applicable depends on the campaign rules. Do not specify this parameter if no promotional campaign is used.</p>
+     * <p>The promotion identifier, which is used to specify the promotional offer applied to the order.</p>
+     * <p>Applicability and specific discounts are subject to the promotion rules. You do not need to specify this parameter if no promotional offer is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>17440009****</p>
@@ -198,20 +198,20 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public String promotionId;
 
     /**
-     * <p>The connection security policy for the browser group.</p>
+     * <p>The connection security policy of the browser group.</p>
      */
     @NameInMap("SecurityPolicy")
     public CreateBrowserInstanceGroupRequestSecurityPolicy securityPolicy;
 
     /**
-     * <p>The user data storage configuration for the browser group.</p>
+     * <p>The user data storage configuration of the browser group.</p>
      */
     @NameInMap("StoragePolicy")
     public CreateBrowserInstanceGroupRequestStoragePolicy storagePolicy;
 
     /**
-     * <p>The billing subtype.</p>
-     * <p><strong>Set this parameter to <code>mau</code> explicitly, which indicates billing by monthly active users.</strong> Omitting this field does not enable MAU billing.</p>
+     * <p>The billing sub-type.</p>
+     * <p><strong>You must explicitly set this parameter to mau, which indicates billing by monthly active users (MAUs).</strong> Omitting this parameter does not enable MAU billing.</p>
      * 
      * <strong>example:</strong>
      * <p>mau</p>
@@ -220,7 +220,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public String subPayType;
 
     /**
-     * <p>Not supported. You do not need to specify this parameter.</p>
+     * <p>This parameter is not supported and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -231,7 +231,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public java.util.List<CreateBrowserInstanceGroupRequestTag> tag;
 
     /**
-     * <p>Not supported. You do not need to specify this parameter.</p>
+     * <p>This parameter is not supported and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -242,8 +242,8 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public java.util.List<CreateBrowserInstanceGroupRequestTimers> timers;
 
     /**
-     * <p>The list of authorized user group identifiers. A maximum of 10 items are supported. The user groups must belong to the current account and match the workspace network account type.</p>
-     * <p><strong>Limit:</strong> Cannot be specified together with a non-empty <code>Users</code>.</p>
+     * <p>The list of authorized user group IDs. You can specify up to 10 IDs. The user groups must belong to the current account and match the account type of the office network.
+     * <strong>Limits:</strong> This parameter cannot be specified together with a non-empty Users parameter.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -252,14 +252,14 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
     public java.util.List<String> userGroupIds;
 
     /**
-     * <p>The authorized user account information. The value must match the user and workspace network type.</p>
+     * <p>The authorized user account information. The information must match the user and office network types.</p>
      */
     @NameInMap("UserInfo")
     public CreateBrowserInstanceGroupRequestUserInfo userInfo;
 
     /**
-     * <p>The list of authorized users. A maximum of 200 users can be specified. Users must be created in advance and must match the account type.</p>
-     * <p><strong>Restriction:</strong> This parameter cannot be specified together with a non-empty <code>UserGroupIds</code>.</p>
+     * <p>The list of authorized users. You can specify up to 200 users. The users must be created in advance and match the account type.</p>
+     * <p><strong>Limit:</strong> This parameter cannot be specified together with a non-empty UserGroupIds parameter.</p>
      */
     @NameInMap("Users")
     public java.util.List<CreateBrowserInstanceGroupRequestUsers> users;
@@ -487,26 +487,26 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestBrowserConfigBookmarks extends TeaModel {
         /**
-         * <p>The folder in which the bookmark is located. The length after trimming leading and trailing whitespace cannot exceed 64 characters.</p>
+         * <p>The folder where the bookmark is located. The length cannot exceed 64 characters after leading and trailing spaces are removed.</p>
          * 
          * <strong>example:</strong>
-         * <p>Work Portal</p>
+         * <p>Work portal</p>
          */
         @NameInMap("BookmarkFolder")
         public String bookmarkFolder;
 
         /**
-         * <p>The bookmark name. This parameter is required and cannot be empty when you create a bookmark. The length after trimming leading and trailing whitespace cannot exceed 64 characters.</p>
+         * <p>The bookmark name. This parameter is required and cannot be empty when you create a bookmark. The length cannot exceed 64 characters after leading and trailing spaces are removed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud Official Website</p>
+         * <p>Alibaba Cloud website</p>
          */
         @NameInMap("BookmarkName")
         public String bookmarkName;
 
         /**
-         * <p>The URL of the bookmark. This parameter is required when you create a bookmark. The length after trimming leading and trailing whitespace cannot exceed 1024 characters.</p>
+         * <p>The URL of the bookmark. This parameter is required when you create a bookmark. The length cannot exceed 1024 characters after leading and trailing spaces are removed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -548,35 +548,35 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestBrowserConfig extends TeaModel {
         /**
-         * <p>The list of browser bookmarks.</p>
-         * <p><strong>Limit:</strong> Cannot be specified together with a non-empty <code>BookmarksFilePath</code>. Bookmark URLs must be unique.</p>
+         * <p>The list of browser bookmarks.
+         * <strong>Limits:</strong> This parameter cannot be specified together with a non-empty BookmarksFilePath parameter, and bookmark URLs cannot be duplicated.</p>
          */
         @NameInMap("Bookmarks")
         public java.util.List<CreateBrowserInstanceGroupRequestBrowserConfigBookmarks> bookmarks;
 
         /**
-         * <p>The path of the uploaded bookmark file. Cannot be specified together with a non-empty <code>Bookmarks</code>.</p>
-         * <p><strong>File format:</strong> A headerless CSV file with four columns in the following order:</p>
+         * <p>The path of the uploaded bookmark file. This parameter cannot be specified together with a non-empty Bookmarks parameter.
+         * <strong>File format:</strong> A CSV file without a header. Specify the following four columns in order:</p>
          * <ol>
          * <li>Bookmark name.</li>
          * <li>URL.</li>
          * <li>Folder.</li>
-         * <li>Root directory type: <code>bookmark_bar</code> indicates the bookmarks bar, and <code>other</code> indicates other bookmarks.</li>
+         * <li>Root directory type: <code>bookmark_bar</code> indicates the bookmarks bar, and <code>other</code> indicates other bookmarks.
+         * <strong>Limits:</strong></li>
          * </ol>
-         * <p><strong>Limits:</strong></p>
          * <ul>
-         * <li>Fields are separated by commas. Field values cannot contain commas or line breaks. Quote escaping is not supported.</li>
+         * <li>Fields are separated by commas. Field content cannot contain commas or line breaks, and quote escaping is not supported.</li>
          * <li>The file path must belong to the upload directory specified for the current account and cannot contain <code>..</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserBookmarks/浏览器书签模版.csv</p>
+         * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserBookmarks/BrowserBookmarkTemplate.csv</p>
          */
         @NameInMap("BookmarksFilePath")
         public String bookmarksFilePath;
 
         /**
-         * <p>The browser startup parameters. For example, --incognito opens the browser in incognito mode.</p>
+         * <p>The browser startup parameters. For example, --incognito indicates that an incognito window is used.</p>
          * 
          * <strong>example:</strong>
          * <p>--incognito</p>
@@ -594,7 +594,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public Boolean cookiesSync;
 
         /**
-         * <p>The homepage URL that opens when the browser starts. The value must conform to URI syntax.</p>
+         * <p>The homepage URL opened when the browser starts. The URL must conform to the URI syntax.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>
@@ -651,7 +651,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestNetworkRestrictedURLs extends TeaModel {
         /**
-         * <p>The URL of the allowed website.</p>
+         * <p>The URL of the website that is allowed for access.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun.com</p>
@@ -678,8 +678,8 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         /**
          * <p>The website access restriction mode.</p>
          * <ul>
-         * <li><code>ALLOW_ALL</code>: Allows access to all domain names.</li>
-         * <li><code>ALLOW_LIST</code>: Allows access only to websites in the allowlist.</li>
+         * <li>ALLOW_ALL: Allows access to all domain names.</li>
+         * <li>ALLOW_LIST: Allows access only to websites in the whitelist.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -689,7 +689,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String accessRestriction;
 
         /**
-         * <p>The ID of the office network that has been created. The office network must belong to the current account and be located in the target region specified by BizRegionId.</p>
+         * <p>The identifier of the created office network. The office network must belong to the current account and reside in the target region specified by BizRegionId. You can view the office network ID on the Network &amp; Storage &gt; Office Networks page in the Elastic Desktop Service Enterprise Edition console, or call the DescribeOfficeSites operation of Elastic Desktop Service Enterprise Edition to query the ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou+dir-643067****</p>
@@ -698,31 +698,31 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The list of allowed websites. This parameter is used in <code>ALLOW_LIST</code> mode.</p>
-         * <p><strong>Restrictions:</strong></p>
+         * <p>The list of websites that are allowed for access. This parameter is used in ALLOW_LIST mode.</p>
+         * <p><strong>Limits:</strong></p>
          * <ul>
-         * <li>A maximum of 20 URLs can be specified directly. If more than 20 URLs are required, use <code>RestrictedURLsFilePath</code> to import them from a file.</li>
-         * <li>This parameter cannot be specified together with <code>RestrictedURLsFilePath</code>.</li>
-         * <li>URLs in the list cannot be duplicated.</li>
+         * <li>You can specify up to 20 URLs directly. To specify more than 20 URLs, use RestrictedURLsFilePath to import them from a file.</li>
+         * <li>This parameter cannot be specified together with RestrictedURLsFilePath.</li>
+         * <li>The URLs in the list cannot be duplicated.</li>
          * </ul>
          */
         @NameInMap("RestrictedURLs")
         public java.util.List<CreateBrowserInstanceGroupRequestNetworkRestrictedURLs> restrictedURLs;
 
         /**
-         * <p>The path of the uploaded website allowlist file. This parameter is used in <code>ALLOW_LIST</code> mode.</p>
-         * <p>If more than 20 URLs are required, use file import. A maximum of 1,000 URLs can be configured by default.</p>
-         * <p>This parameter cannot be specified together with <code>RestrictedURLs</code>.</p>
+         * <p>The path of the uploaded website whitelist file. This parameter is used in ALLOW_LIST mode.</p>
+         * <p>If you need to specify more than 20 URLs, import them from a file. By default, you can configure up to 1,000 URLs.</p>
+         * <p>This parameter cannot be specified together with RestrictedURLs.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL白名单模版.csv</p>
+         * <p>cn-hangzhou/aig_upm/xxx/temp/BrowserRestrictionUrls/URL_whitelist_template.csv</p>
          */
         @NameInMap("RestrictedURLsFilePath")
         public String restrictedURLsFilePath;
 
         /**
-         * <p>The list of vSwitch IDs.</p>
-         * <p><strong>Usage condition:</strong> Specify this parameter only when you use a custom office network. Do not specify this parameter for other types of office networks.</p>
+         * <p>The list of vSwitch identifiers.</p>
+         * <p><strong>Usage condition:</strong> This parameter is required only when you use a custom office network. Do not specify this parameter for other types of office networks.</p>
          * <p>Select vSwitches that match the target business region and the custom office network.</p>
          */
         @NameInMap("VSwitchIds")
@@ -777,8 +777,8 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestNodePool extends TeaModel {
         /**
-         * <p>The number of nodes.</p>
-         * <p>You do not need to specify this parameter.</p>
+         * <p>The number of nodes.
+         * You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -789,7 +789,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public Integer nodeAmount;
 
         /**
-         * <p>The node specifications identity.</p>
+         * <p>The identity of the node specifications.</p>
          * <p>You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
@@ -801,8 +801,8 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String nodeInstanceType;
 
         /**
-         * <p>The node scaling policy.</p>
-         * <p>You do not need to specify this parameter.</p>
+         * <p>The node scaling policy.
+         * You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -845,7 +845,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestPolicyAuthorizeAccessPolicyRules extends TeaModel {
         /**
-         * <p>The source CIDR block of clients that are allowed to access the cloud browser.</p>
+         * <p>The source CIDR block of the client that is allowed to access the cloud browser. Use the CIDR format.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24</p>
@@ -857,7 +857,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
          * <p>The description of the client access IP address whitelist rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>OfficeNetworkAccess</p>
+         * <p>Office network access</p>
          */
         @NameInMap("Description")
         public String description;
@@ -887,13 +887,13 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestPolicyClientTypes extends TeaModel {
         /**
-         * <p>The client type for which you want to configure an access policy.</p>
+         * <p>The type of the client for which you want to configure an access policy.</p>
          * <ul>
-         * <li><code>windows</code>: Windows client.</li>
-         * <li><code>macos</code>: macOS client.</li>
-         * <li><code>html5</code>: Web client.</li>
-         * <li><code>android</code>: Android client.</li>
-         * <li><code>ios</code>: iOS client.</li>
+         * <li>windows: Windows client.</li>
+         * <li>macos: macOS client.</li>
+         * <li>html5: Web client.</li>
+         * <li>android: Android client.</li>
+         * <li>ios: iOS client.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -905,8 +905,8 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         /**
          * <p>The access policy switch for the client type.</p>
          * <ul>
-         * <li><code>on</code>: Allows access from this client type.</li>
-         * <li><code>off</code>: Denies access from this client type.</li>
+         * <li>on: Allows access from this type of client.</li>
+         * <li>off: Denies access from this type of client.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -940,12 +940,12 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestPolicyClipboardPolicy extends TeaModel {
         /**
-         * <p>The clipboard transfer direction. The value is case-insensitive.</p>
+         * <p>Specifies the clipboard transfer direction. The value is not case-sensitive.</p>
          * <ul>
-         * <li><code>off</code>: Bidirectional transfer is disabled.</li>
+         * <li><code>off</code>: Prohibits bidirectional transfer.</li>
          * <li><code>read</code>: Allows copy and paste from the local PC to the cloud browser.</li>
          * <li><code>write</code>: Allows copy and paste from the cloud browser to the local PC.</li>
-         * <li><code>readwrite</code>: Bidirectional transfer is allowed.</li>
+         * <li><code>readwrite</code>: Allows bidirectional copy and paste.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -955,9 +955,9 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String clipboard;
 
         /**
-         * <p>The clipboard size limit for inbound transfer (from the local PC to the cloud browser).</p>
+         * <p>Specifies the clipboard size limit for inbound transfer (from the local PC to the cloud browser).</p>
          * <p><strong>Value range:</strong> 1 to 102400. The unit is specified by ClipboardSizeUnit.</p>
-         * <p>The value range does not change with unit conversion.</p>
+         * <p>This value range does not change with unit conversion.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -966,10 +966,10 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public Integer clipboardReadLimit;
 
         /**
-         * <p>The clipboard control granularity.</p>
+         * <p>Specifies the clipboard control granularity.</p>
          * <ul>
          * <li><code>global</code>: Unified control.</li>
-         * <li><code>grained</code>: Separate control by text, rich text, and file.</li>
+         * <li><code>grained</code>: Separate control for text, rich text, and files.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -979,7 +979,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String clipboardScope;
 
         /**
-         * <p>The clipboard size unit.</p>
+         * <p>Specifies the clipboard size unit.</p>
          * <ul>
          * <li><code>B</code>: Bytes.</li>
          * <li><code>KB</code>: 1024 bytes.</li>
@@ -992,9 +992,9 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String clipboardSizeUnit;
 
         /**
-         * <p>The clipboard size limit for outbound transfer (from the cloud browser to the local PC).</p>
+         * <p>Specifies the clipboard size limit for outbound transfer (from the cloud browser to the local PC).</p>
          * <p><strong>Value range:</strong> 1 to 102400. The unit is specified by ClipboardSizeUnit.</p>
-         * <p>The value range does not change with unit conversion.</p>
+         * <p>This value range does not change with unit conversion.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -1003,12 +1003,12 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public Integer clipboardWriteLimit;
 
         /**
-         * <p>The clipboard transfer direction. The value is case-insensitive.</p>
+         * <p>Specifies the clipboard transfer direction. The value is not case-sensitive.</p>
          * <ul>
-         * <li><code>off</code>: Bidirectional transfer is disabled.</li>
+         * <li><code>off</code>: Prohibits bidirectional transfer.</li>
          * <li><code>read</code>: Allows copy and paste from the local PC to the cloud browser.</li>
          * <li><code>write</code>: Allows copy and paste from the cloud browser to the local PC.</li>
-         * <li><code>readwrite</code>: Bidirectional transfer is allowed.</li>
+         * <li><code>readwrite</code>: Allows bidirectional copy and paste.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1018,12 +1018,12 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String fileClipboard;
 
         /**
-         * <p>The clipboard transfer direction. The value is case-insensitive.</p>
+         * <p>Specifies the clipboard transfer direction. The value is not case-sensitive.</p>
          * <ul>
-         * <li><code>off</code>: Bidirectional transfer is disabled.</li>
+         * <li><code>off</code>: Prohibits bidirectional transfer.</li>
          * <li><code>read</code>: Allows copy and paste from the local PC to the cloud browser.</li>
          * <li><code>write</code>: Allows copy and paste from the cloud browser to the local PC.</li>
-         * <li><code>readwrite</code>: Bidirectional transfer is allowed.</li>
+         * <li><code>readwrite</code>: Allows bidirectional copy and paste.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1033,9 +1033,9 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String richTextClipboard;
 
         /**
-         * <p>The rich text clipboard size limit.</p>
+         * <p>Specifies the clipboard size limit for rich text.</p>
          * <p><strong>Value range:</strong> 1 to 204800. The unit is specified by RichTextClipboardSizeUnit.</p>
-         * <p>The value range does not change with unit conversion.</p>
+         * <p>This value range does not change with unit conversion.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -1044,9 +1044,9 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public Integer richTextClipboardLimit;
 
         /**
-         * <p>The clipboard size limit for inbound transfer (from the local PC to the cloud browser).</p>
+         * <p>Specifies the clipboard size limit for inbound transfer (from the local PC to the cloud browser).</p>
          * <p><strong>Value range:</strong> 1 to 204800. The unit is specified by RichTextClipboardReadSizeUnit.</p>
-         * <p>The value range does not change with unit conversion.</p>
+         * <p>This value range does not change with unit conversion.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1055,7 +1055,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public Integer richTextClipboardReadLimit;
 
         /**
-         * <p>The clipboard size unit.</p>
+         * <p>Specifies the clipboard size unit.</p>
          * <ul>
          * <li><code>B</code>: Bytes.</li>
          * <li><code>KB</code>: 1024 bytes.</li>
@@ -1069,7 +1069,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String richTextClipboardReadSizeUnit;
 
         /**
-         * <p>The clipboard size unit.</p>
+         * <p>Specifies the clipboard size unit.</p>
          * <ul>
          * <li><code>B</code>: Bytes.</li>
          * <li><code>KB</code>: 1024 bytes.</li>
@@ -1082,9 +1082,9 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String richTextClipboardSizeUnit;
 
         /**
-         * <p>The clipboard size limit for outbound transfer (from the cloud browser to the local PC).</p>
+         * <p>Specifies the clipboard size limit for outbound transfer (from the cloud browser to the local PC).</p>
          * <p><strong>Value range:</strong> 1 to 204800. The unit is specified by RichTextClipboardWriteSizeUnit.</p>
-         * <p>The value range does not change with unit conversion.</p>
+         * <p>This value range does not change with unit conversion.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1093,7 +1093,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public Integer richTextClipboardWriteLimit;
 
         /**
-         * <p>The clipboard size unit.</p>
+         * <p>Specifies the clipboard size unit.</p>
          * <ul>
          * <li><code>B</code>: Bytes.</li>
          * <li><code>KB</code>: 1024 bytes.</li>
@@ -1107,12 +1107,12 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String richTextClipboardWriteSizeUnit;
 
         /**
-         * <p>The clipboard transfer direction. The value is case-insensitive.</p>
+         * <p>Specifies the clipboard transfer direction. The value is not case-sensitive.</p>
          * <ul>
-         * <li><code>off</code>: Bidirectional transfer is disabled.</li>
+         * <li><code>off</code>: Prohibits bidirectional transfer.</li>
          * <li><code>read</code>: Allows copy and paste from the local PC to the cloud browser.</li>
          * <li><code>write</code>: Allows copy and paste from the cloud browser to the local PC.</li>
-         * <li><code>readwrite</code>: Bidirectional transfer is allowed.</li>
+         * <li><code>readwrite</code>: Allows bidirectional copy and paste.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1122,9 +1122,9 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String textClipboard;
 
         /**
-         * <p>The clipboard size limit for inbound transfer (from the local PC to the cloud browser).</p>
+         * <p>Specifies the clipboard size limit for inbound transfer (from the local PC to the cloud browser).</p>
          * <p><strong>Value range:</strong> 1 to 102400. The unit is specified by TextClipboardReadSizeUnit.</p>
-         * <p>The value range does not change with unit conversion.</p>
+         * <p>This value range does not change with unit conversion.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1133,7 +1133,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public Integer textClipboardReadLimit;
 
         /**
-         * <p>The clipboard size unit.</p>
+         * <p>Specifies the clipboard size unit.</p>
          * <ul>
          * <li><code>B</code>: Bytes.</li>
          * <li><code>KB</code>: 1024 bytes.</li>
@@ -1147,9 +1147,9 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String textClipboardReadSizeUnit;
 
         /**
-         * <p>The clipboard size limit for outbound transfer (from the cloud browser to the local PC).</p>
+         * <p>Specifies the clipboard size limit for outbound transfer (from the cloud browser to the local PC).</p>
          * <p><strong>Value range:</strong> 1 to 102400. The unit is specified by TextClipboardWriteSizeUnit.</p>
-         * <p>The value range does not change with unit conversion.</p>
+         * <p>This value range does not change with unit conversion.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1158,7 +1158,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public Integer textClipboardWriteLimit;
 
         /**
-         * <p>The clipboard size unit.</p>
+         * <p>Specifies the clipboard size unit.</p>
          * <ul>
          * <li><code>B</code>: Bytes.</li>
          * <li><code>KB</code>: 1024 bytes.</li>
@@ -1324,7 +1324,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestPolicyVideoPolicy extends TeaModel {
         /**
-         * <p>The frame rate of the browser session.</p>
+         * <p>Specifies the frame rate for the browser session.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -1352,9 +1352,9 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
          * <p>The watermark switch. The value is case-insensitive.</p>
          * <ul>
          * <li><code>ON</code>: Enables the watermark.</li>
-         * <li><code>OFF</code>: Disables the watermark.</li>
+         * <li><code>OFF</code>: Disables the watermark.
+         * The watermark content type list is not used when the watermark is disabled.</li>
          * </ul>
-         * <p>When disabled, the watermark content type list is not used.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -1367,9 +1367,9 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
          * <ul>
          * <li><code>EndUserId</code>: The user identifier.</li>
          * <li><code>InstanceGroupId</code>: The delivery group identifier.</li>
-         * <li><code>ClientTime</code>: The current time on the client.</li>
+         * <li><code>ClientTime</code>: The current time of the client.
+         * Use the watermark types supported by the browser and the client.</li>
          * </ul>
-         * <p>Use watermark types supported by the browser and client.</p>
          */
         @NameInMap("WatermarkTypes")
         public java.util.List<String> watermarkTypes;
@@ -1399,10 +1399,10 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestPolicy extends TeaModel {
         /**
-         * <p>Specifies whether to enable screen capture prevention.</p>
+         * <p>The screen capture prevention switch.</p>
          * <ul>
-         * <li><code>on</code>: Enables screen capture prevention.</li>
-         * <li><code>off</code>: Disables screen capture prevention.</li>
+         * <li>on: Enables screen capture prevention.</li>
+         * <li>off: Disables screen capture prevention.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1412,7 +1412,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String appContentProtection;
 
         /**
-         * <p>The client access IP address whitelist. This parameter is used to restrict the source IP addresses of clients that can access the cloud browser.</p>
+         * <p>The client access IP address whitelist, which is used to restrict the source IP addresses of clients that can access the cloud browser.</p>
          */
         @NameInMap("AuthorizeAccessPolicyRules")
         public java.util.List<CreateBrowserInstanceGroupRequestPolicyAuthorizeAccessPolicyRules> authorizeAccessPolicyRules;
@@ -1424,15 +1424,15 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public java.util.List<CreateBrowserInstanceGroupRequestPolicyClientTypes> clientTypes;
 
         /**
-         * <p>Specifies the clipboard transfer direction, content type, and size limit. read indicates transfer from the local PC to the cloud browser. write indicates transfer from the cloud browser to the local PC.</p>
+         * <p>Specifies the clipboard transfer direction, content types, and size limits. read indicates transfer from the local PC to the cloud browser, and write indicates transfer from the cloud browser to the local PC.</p>
          */
         @NameInMap("ClipboardPolicy")
         public CreateBrowserInstanceGroupRequestPolicyClipboardPolicy clipboardPolicy;
 
         /**
-         * <p>The session data retention policy after disconnection.</p>
+         * <p>Specifies the data retention policy for sessions after disconnection.</p>
          * <ul>
-         * <li><code>customTime</code>: Retains the session based on the session data retention policy. Customizing the duration through <code>DisconnectKeepSessionTime</code> is not supported.</li>
+         * <li><code>customTime</code>: Retains the session according to the data retention policy. Custom duration through <code>DisconnectKeepSessionTime</code> is not supported.</li>
          * <li><code>persistent</code>: The session is not subject to automatic release based on disconnection duration.</li>
          * </ul>
          * <p><strong>Note:</strong> <code>persistent</code> is still subject to authorization and other release policies.</p>
@@ -1444,7 +1444,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String disconnectKeepSession;
 
         /**
-         * <p>Not supported. You do not need to specify this parameter.</p>
+         * <p>This parameter is not supported and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -1455,7 +1455,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public Integer disconnectKeepSessionTime;
 
         /**
-         * <p>Specifies whether to enable the floating ball file manager.</p>
+         * <p>Specifies whether to enable the file manager floating button.</p>
          * <ul>
          * <li><code>on</code>: Enabled.</li>
          * <li><code>off</code>: Disabled.</li>
@@ -1469,14 +1469,14 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String fileManager;
 
         /**
-         * <p>The file transfer policy for the web client.</p>
+         * <p>Specifies the file transfer policy for the web client.</p>
          * <ul>
-         * <li><code>off</code>: File transfer is disabled.</li>
-         * <li><code>upload</code>: Only upload is allowed.</li>
-         * <li><code>download</code>: Only download is allowed.</li>
-         * <li><code>full</code>: Both upload and download are allowed.</li>
+         * <li><code>off</code>: Prohibits file transfer.</li>
+         * <li><code>upload</code>: Allows upload only.</li>
+         * <li><code>download</code>: Allows download only.</li>
+         * <li><code>full</code>: Allows both upload and download.</li>
          * </ul>
-         * <p>Configure this parameter together with the clipboard policy.</p>
+         * <p>Configure this parameter in conjunction with the clipboard policy.</p>
          * 
          * <strong>example:</strong>
          * <p>full</p>
@@ -1485,12 +1485,21 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String html5FileTransfer;
 
         /**
-         * <p>Specifies whether to enable automatic disconnection on inactivity. The value is case-insensitive.</p>
+         * <p>Specifies whether to enable the dual-screen mode for the cloud browser.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>off</p>
+         */
+        @NameInMap("MultiScreen")
+        public String multiScreen;
+
+        /**
+         * <p>Specifies whether to enable automatic disconnection on inactivity. The value is not case-sensitive.</p>
          * <ul>
          * <li><code>on</code>: Enabled.</li>
          * <li><code>off</code>: Disabled.</li>
          * </ul>
-         * <p>When enabled, set the wait duration through <code>NoOperationDisconnectTime</code>.</p>
+         * <p>When enabled, use <code>NoOperationDisconnectTime</code> to set the idle timeout.</p>
          * 
          * <strong>example:</strong>
          * <p>on</p>
@@ -1499,8 +1508,8 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String noOperationDisconnect;
 
         /**
-         * <p>The wait duration before disconnection is triggered after user inactivity. Unit: seconds.</p>
-         * <p><strong>Prerequisite:</strong> When <code>NoOperationDisconnect</code> is enabled, specify a value greater than 0.</p>
+         * <p>Specifies the idle timeout in seconds before automatic disconnection is triggered.</p>
+         * <p><strong>Prerequisite:</strong> When <code>NoOperationDisconnect</code> is enabled, you must specify a value greater than 0.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -1509,12 +1518,12 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public Integer noOperationDisconnectTime;
 
         /**
-         * <p>The policy version. The value is case-insensitive.</p>
+         * <p>Specifies the policy version. The value is not case-sensitive.</p>
          * <ul>
          * <li><code>DEFAULT</code>: Legacy policy.</li>
          * <li><code>CENTER</code>: Centralized policy.</li>
          * </ul>
-         * <p><strong>Default value:</strong> <code>DEFAULT</code>. The actual effective policy version depends on the policy configuration available for the account.</p>
+         * <p><strong>Default value:</strong> <code>DEFAULT</code>. The effective policy version is subject to the policy configuration available for the account.</p>
          * 
          * <strong>example:</strong>
          * <p>CENTER</p>
@@ -1523,7 +1532,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String policyVersion;
 
         /**
-         * <p>The video display policy for the browser session.</p>
+         * <p>Specifies the video display policy for the browser session.</p>
          */
         @NameInMap("VideoPolicy")
         public CreateBrowserInstanceGroupRequestPolicyVideoPolicy videoPolicy;
@@ -1603,6 +1612,14 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
             return this.html5FileTransfer;
         }
 
+        public CreateBrowserInstanceGroupRequestPolicy setMultiScreen(String multiScreen) {
+            this.multiScreen = multiScreen;
+            return this;
+        }
+        public String getMultiScreen() {
+            return this.multiScreen;
+        }
+
         public CreateBrowserInstanceGroupRequestPolicy setNoOperationDisconnect(String noOperationDisconnect) {
             this.noOperationDisconnect = noOperationDisconnect;
             return this;
@@ -1650,10 +1667,10 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
          * <p>Specifies whether to skip the user authorization check when connecting to the application.</p>
          * <ul>
          * <li><code>true</code>: Skips the check.</li>
-         * <li><code>false</code>: Performs the check.</li>
+         * <li><code>false</code>: Performs the check.
+         * If SecurityPolicy is configured but this field is omitted, the user authorization check is performed.
+         * <strong>Note:</strong> This field cannot be used to skip OpenAPI authentication and RAM permission verification.</li>
          * </ul>
-         * <p>If this field is omitted when <code>SecurityPolicy</code> is configured, the user authorization check is performed.</p>
-         * <p><strong>Note:</strong> This field cannot be used to skip OpenAPI identity authentication or RAM permission verification.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1678,7 +1695,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestStoragePolicyUserProfile extends TeaModel {
         /**
-         * <p>The size of the user data roaming cloud disk. Unit: GB.</p>
+         * <p>The size of the user data roaming disk, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1689,10 +1706,10 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         /**
          * <p>Specifies whether to enable user data roaming.</p>
          * <ul>
-         * <li><code>true</code>: Enabled.</li>
-         * <li><code>false</code>: Disabled.</li>
+         * <li><code>true</code>: Enables user data roaming.</li>
+         * <li><code>false</code>: Disables user data roaming.
+         * In Windows scenarios, if this parameter is explicitly specified, the specified value is used. If this parameter is omitted, the user roaming configuration of the current account is used.</li>
          * </ul>
-         * <p>In Windows scenarios, if this field is explicitly specified, the specified value is used. If this field is omitted, the user roaming configuration of the current account is used.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1747,7 +1764,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestTag extends TeaModel {
         /**
-         * <p>Not supported. You do not need to specify this parameter.</p>
+         * <p>This parameter is not supported and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -1758,7 +1775,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>Not supported. You do not need to specify this parameter.</p>
+         * <p>This parameter is not supported and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -1793,7 +1810,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestTimers extends TeaModel {
         /**
-         * <p>Not supported. You do not need to specify this parameter.</p>
+         * <p>This parameter is not supported and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -1804,7 +1821,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>Not supported. You do not need to specify this parameter.</p>
+         * <p>This parameter is not supported and does not need to be specified.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -1842,9 +1859,9 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
          * <p>The account type of the authorized user.</p>
          * <ul>
          * <li><code>simple</code>: Convenience account.</li>
-         * <li><code>ad</code>: AD domain account.</li>
+         * <li><code>ad</code>: AD domain account.
+         * The account type must match the account types of the user and the office network.</li>
          * </ul>
-         * <p>The value must match the account type of the user and workspace network.</p>
          * 
          * <strong>example:</strong>
          * <p>simple</p>
@@ -1869,7 +1886,7 @@ public class CreateBrowserInstanceGroupRequest extends TeaModel {
 
     public static class CreateBrowserInstanceGroupRequestUsers extends TeaModel {
         /**
-         * <p>The identity of the authorized user to be granted authorization.</p>
+         * <p>The identity of the authorized user for authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>alice</p>
