@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobMetricsResponseBody extends TeaModel {
     /**
-     * <p>The node ID.</p>
+     * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-20210126170216-*******</p>
@@ -14,13 +14,13 @@ public class GetJobMetricsResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The list of node monitoring data.</p>
+     * <p>The list of job monitoring data.</p>
      */
     @NameInMap("PodMetrics")
     public java.util.List<PodMetric> podMetrics;
 
     /**
-     * <p>The request ID of this call, used for diagnostics and troubleshooting.</p>
+     * <p>The request ID, which is used for diagnostics and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>

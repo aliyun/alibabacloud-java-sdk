@@ -4,9 +4,18 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ModelConfig extends TeaModel {
+    /**
+     * <p>The name of the output model. The output model of a joint training job is registered in the Models section of AI Asset Management under this name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>model_a</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <p>The model template configuration. This configuration is required if you want to deploy the output model to Elastic Algorithm Service (EAS) with one click.</p>
+     */
     @NameInMap("ModelTemplate")
     public ModelTemplate modelTemplate;
 

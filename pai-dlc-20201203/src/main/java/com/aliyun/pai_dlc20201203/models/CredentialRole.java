@@ -4,18 +4,39 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class CredentialRole extends TeaModel {
+    /**
+     * <p>The account on whose behalf the role is assumed.</p>
+     */
     @NameInMap("AssumeRoleFor")
     public String assumeRoleFor;
 
+    /**
+     * <p>The user identity information used for role assumption.</p>
+     */
     @NameInMap("AssumeUserInfo")
     public AssumeUserInfo assumeUserInfo;
 
+    /**
+     * <p>The access policy attached during role assumption.</p>
+     */
     @NameInMap("Policy")
     public String policy;
 
+    /**
+     * <p>The ARN of the RAM role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::1872xxxxxxxxx:role/account-pai-prod</p>
+     */
     @NameInMap("RoleArn")
     public String roleArn;
 
+    /**
+     * <p>The role type. Valid values: service and user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>service</p>
+     */
     @NameInMap("RoleType")
     public String roleType;
 

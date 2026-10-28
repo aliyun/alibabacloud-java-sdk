@@ -5,25 +5,37 @@ import com.aliyun.tea.*;
 
 public class AutoscalingMetricSpec extends TeaModel {
     /**
-     * <p>The name of the metric for autoscaling. This can be a predefined or a custom metric.</p>
+     * <p>The name of the monitoring metrics used for auto scaling.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>POD_CPU_UTIL</p>
      */
     @NameInMap("MetricName")
     public String metricName;
 
     /**
-     * <p>The cooldown period, in seconds, after a scaling activity. This prevents the service from initiating another scaling action before the effects of the previous one are observable, stabilizing resource fluctuations.</p>
+     * <p>The duration of the stabilization window for the auto scaling metric, in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("StabilizationWindowSeconds")
     public Integer stabilizationWindowSeconds;
 
     /**
-     * <p>The target value for the specified metric. The autoscaling service tries to maintain the metric at or near this value.</p>
+     * <p>The target value of the monitoring metrics for auto scaling.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("TargetValue")
     public Integer targetValue;
 
     /**
-     * <p>The acceptable deviation from the <code>TargetValue</code>, specified as a percentage string. A scaling action is triggered only if the metric value moves outside the range defined by the <code>TargetValue</code> and this tolerance. This prevents scaling actions based on minor fluctuations.</p>
+     * <p>The allowed bias ratio for the target value of the monitoring metrics.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.1</p>
      */
     @NameInMap("Tolerance")
     public String tolerance;

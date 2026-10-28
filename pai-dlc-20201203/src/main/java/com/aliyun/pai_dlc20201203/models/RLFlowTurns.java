@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RLFlowTurns extends TeaModel {
     /**
-     * <p>平均生成轮数</p>
+     * <p>The average number of generation rounds.</p>
      * 
      * <strong>example:</strong>
      * <p>1.9</p>
@@ -14,7 +14,7 @@ public class RLFlowTurns extends TeaModel {
     public Double avg;
 
     /**
-     * <p>参与统计的轨迹数</p>
+     * <p>The number of traces included in the statistics.</p>
      * 
      * <strong>example:</strong>
      * <p>96</p>
@@ -23,7 +23,7 @@ public class RLFlowTurns extends TeaModel {
     public Integer count;
 
     /**
-     * <p>最大生成轮数</p>
+     * <p>The maximum number of generation rounds.</p>
      * 
      * <strong>example:</strong>
      * <p>9.2</p>
@@ -32,7 +32,7 @@ public class RLFlowTurns extends TeaModel {
     public Integer max;
 
     /**
-     * <p>生成轮数 P50</p>
+     * <p>The P50 of generation rounds.</p>
      * 
      * <strong>example:</strong>
      * <p>0.8</p>
@@ -41,7 +41,7 @@ public class RLFlowTurns extends TeaModel {
     public Integer p50;
 
     /**
-     * <p>生成轮数 P90</p>
+     * <p>The P90 of generation rounds.</p>
      * 
      * <strong>example:</strong>
      * <p>5.9</p>

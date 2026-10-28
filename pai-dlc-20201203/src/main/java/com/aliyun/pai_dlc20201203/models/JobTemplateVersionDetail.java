@@ -8,26 +8,26 @@ public class JobTemplateVersionDetail extends TeaModel {
     public java.util.Map<String, String> constraints;
 
     /**
-     * <p>Configuration content of the job template. It supports all parameter fields of the CreateJob API and is stored as a JSON object.</p>
+     * <p>任务模板的配置内容，支持 CreateJob 接口的所有参数字段，以 JSON 对象存储</p>
      */
     @NameInMap("Content")
     public String content;
 
     /**
-     * <p>User ID that created this version</p>
+     * <p>创建该版本的用户ID</p>
      */
     @NameInMap("CreatedBy")
     public String createdBy;
 
     /**
-     * <p>Creation time of this version</p>
+     * <p>该版本的创建时间</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ss.SSSZ</p>
      */
     @NameInMap("GmtCreated")
     public String gmtCreated;
 
     /**
-     * <p>Template version number</p>
+     * <p>模板版本号</p>
      */
     @NameInMap("Version")
     public Integer version;

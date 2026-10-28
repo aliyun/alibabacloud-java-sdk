@@ -4,9 +4,21 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class HyperNodeSchedulingConfig extends TeaModel {
+    /**
+     * <p>The minimum number of available instances required when the role participates in HyperNode scheduling. The value must be greater than 0.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinAvailable")
     public Integer minAvailable;
 
+    /**
+     * <p>The quality policy. Currently, only AlwaysRequire is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AlwaysRequire</p>
+     */
     @NameInMap("QualityPolicy")
     public String qualityPolicy;
 

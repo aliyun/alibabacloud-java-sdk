@@ -4,9 +4,15 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class Lifecycle extends TeaModel {
+    /**
+     * <p>The post-start action.</p>
+     */
     @NameInMap("PostStart")
     public LifecyclePostStart postStart;
 
+    /**
+     * <p>The pre-stop action.</p>
+     */
     @NameInMap("PreStop")
     public LifecyclePreStop preStop;
 
@@ -32,6 +38,9 @@ public class Lifecycle extends TeaModel {
     }
 
     public static class LifecyclePostStartExec extends TeaModel {
+        /**
+         * <p>The command.</p>
+         */
         @NameInMap("Command")
         public java.util.List<String> command;
 
@@ -51,6 +60,9 @@ public class Lifecycle extends TeaModel {
     }
 
     public static class LifecyclePostStart extends TeaModel {
+        /**
+         * <p>The exec action.</p>
+         */
         @NameInMap("Exec")
         public LifecyclePostStartExec exec;
 
@@ -70,6 +82,9 @@ public class Lifecycle extends TeaModel {
     }
 
     public static class LifecyclePreStopExec extends TeaModel {
+        /**
+         * <p>The command.</p>
+         */
         @NameInMap("Command")
         public java.util.List<String> command;
 
@@ -89,6 +104,9 @@ public class Lifecycle extends TeaModel {
     }
 
     public static class LifecyclePreStop extends TeaModel {
+        /**
+         * <p>The exec action.</p>
+         */
         @NameInMap("Exec")
         public LifecyclePreStopExec exec;
 

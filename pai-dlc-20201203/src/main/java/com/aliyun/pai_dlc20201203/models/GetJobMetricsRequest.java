@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetJobMetricsRequest extends TeaModel {
     /**
-     * <p>The end time (UTC) of the time range for querying monitoring data. Default value: the current time.</p>
+     * <p>The end time of the time range for querying monitoring data, in UTC. Default value: the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-09T16:00:00Z</p>
@@ -16,22 +16,14 @@ public class GetJobMetricsRequest extends TeaModel {
     /**
      * <p>The metric type of the monitoring data to query. Valid values:</p>
      * <ul>
-     * <li><p>GpuCoreUsage: GPU utilization.</p>
-     * </li>
-     * <li><p>GpuMemoryUsage: GPU memory usage.</p>
-     * </li>
-     * <li><p>CpuCoreUsage: CPU utilization.</p>
-     * </li>
-     * <li><p>MemoryUsage: memory usage.</p>
-     * </li>
-     * <li><p>NetworkInputRate: network input rate.</p>
-     * </li>
-     * <li><p>NetworkOutputRate: network output rate.</p>
-     * </li>
-     * <li><p>DiskReadRate: disk read rate.</p>
-     * </li>
-     * <li><p>DiskWriteRate: disk write rate.</p>
-     * </li>
+     * <li>GpuCoreUsage: the GPU usage</li>
+     * <li>GpuMemoryUsage: the GPU memory usage</li>
+     * <li>CpuCoreUsage: the CPU usage</li>
+     * <li>MemoryUsage: the memory usage</li>
+     * <li>NetworkInputRate: the network input rate</li>
+     * <li>NetworkOutputRate: the network output rate</li>
+     * <li>DiskReadRate: the disk read rate</li>
+     * <li>DiskWriteRate: the disk write rate</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +34,7 @@ public class GetJobMetricsRequest extends TeaModel {
     public String metricType;
 
     /**
-     * <p>The start time (UTC) of the time range for querying monitoring data. Default value: one hour before the current time.</p>
+     * <p>The start time of the time range for querying monitoring data, in UTC. Default value: 1 hour ago.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-08T16:00:00Z</p>

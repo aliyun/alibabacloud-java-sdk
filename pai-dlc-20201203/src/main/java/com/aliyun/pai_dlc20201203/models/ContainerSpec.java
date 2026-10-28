@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ContainerSpec extends TeaModel {
     /**
-     * <p>The command parameters.</p>
+     * <p>The command arguments.</p>
      */
     @NameInMap("Args")
     public java.util.List<String> args;
@@ -46,6 +46,9 @@ public class ContainerSpec extends TeaModel {
     @NameInMap("Resources")
     public ResourceRequirements resources;
 
+    /**
+     * <p>The container security context configuration.</p>
+     */
     @NameInMap("SecurityContext")
     public SecurityContext securityContext;
 

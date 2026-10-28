@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RLProgressProcessed extends TeaModel {
     /**
-     * <p>已处理条数</p>
+     * <p>The processed count.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class RLProgressProcessed extends TeaModel {
     public Integer done;
 
     /**
-     * <p>总条数</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

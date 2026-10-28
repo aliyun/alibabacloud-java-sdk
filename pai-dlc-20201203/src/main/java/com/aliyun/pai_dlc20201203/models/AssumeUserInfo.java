@@ -4,15 +4,33 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class AssumeUserInfo extends TeaModel {
+    /**
+     * <p>The AccessKey ID used for role assumption.</p>
+     */
     @NameInMap("AccessKeyId")
     public String accessKeyId;
 
+    /**
+     * <p>The user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>203610320085271232</p>
+     */
     @NameInMap("Id")
     public String id;
 
+    /**
+     * <p>The security token used for role assumption.</p>
+     */
     @NameInMap("SecurityToken")
     public String securityToken;
 
+    /**
+     * <p>The user identity type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sub</p>
+     */
     @NameInMap("Type")
     public String type;
 

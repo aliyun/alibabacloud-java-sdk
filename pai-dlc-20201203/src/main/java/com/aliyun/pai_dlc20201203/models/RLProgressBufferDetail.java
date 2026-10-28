@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RLProgressBufferDetail extends TeaModel {
     /**
-     * <p>已被 trainer 消费的样本数</p>
+     * <p>The number of samples consumed by the trainer.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class RLProgressBufferDetail extends TeaModel {
     public Integer consumed;
 
     /**
-     * <p>已完成样本数</p>
+     * <p>The number of finished samples.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -23,7 +23,7 @@ public class RLProgressBufferDetail extends TeaModel {
     public Integer finished;
 
     /**
-     * <p>已就绪样本数</p>
+     * <p>The number of ready samples.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -32,7 +32,7 @@ public class RLProgressBufferDetail extends TeaModel {
     public Integer ready;
 
     /**
-     * <p>buffer 标签，即 global batch 序号</p>
+     * <p>The buffer tag, which is the global batch ordinal number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class RLProgressBufferDetail extends TeaModel {
     public Integer tag;
 
     /**
-     * <p>目标样本数</p>
+     * <p>The target number of samples.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

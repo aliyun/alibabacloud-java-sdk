@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RLProgressMicro extends TeaModel {
     /**
-     * <p>当前 micro-batch 序号</p>
+     * <p>The current micro-batch ordinal number.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -14,7 +14,7 @@ public class RLProgressMicro extends TeaModel {
     public Integer current;
 
     /**
-     * <p>micro-batch 总数</p>
+     * <p>The micro-batch total count.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

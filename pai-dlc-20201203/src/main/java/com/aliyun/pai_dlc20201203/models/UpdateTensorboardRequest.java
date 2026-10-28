@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateTensorboardRequest extends TeaModel {
     /**
-     * <p>Visibility of the task. Valid values:</p>
+     * <p>The visibility of the task. Valid values:</p>
      * <ul>
-     * <li><p>PUBLIC: Visible to all users in this workspace.</p>
-     * </li>
-     * <li><p>PRIVATE: Visible only to you and administrators in this workspace.</p>
-     * </li>
+     * <li>PUBLIC: The task is visible to all users in the workspace.</li>
+     * <li>PRIVATE: The task is visible only to you and administrators in the workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class UpdateTensorboardRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>Maximum runtime. Unit: minutes.</p>
+     * <p>The maximum running duration in minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -28,11 +26,17 @@ public class UpdateTensorboardRequest extends TeaModel {
     @NameInMap("MaxRunningTimeMinutes")
     public Long maxRunningTimeMinutes;
 
+    /**
+     * <p>The scheduling priority of the TensorBoard task. Valid values: 1 to 9. A value of 1 indicates the lowest priority, and a value of 9 indicates the highest priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Priority")
     public String priority;
 
     /**
-     * <p>Workspace ID. For more information about how to get a workspace ID, see <a href="">ListWorkspaces</a>.</p>
+     * <p>The workspace ID. &lt;props=&quot;china&quot;&gt;For more information about how to obtain the workspace ID, see <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>380</p>

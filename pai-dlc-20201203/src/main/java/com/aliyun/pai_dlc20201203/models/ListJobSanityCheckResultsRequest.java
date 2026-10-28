@@ -7,8 +7,8 @@ public class ListJobSanityCheckResultsRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>desc: descending order</li>
-     * <li>asc: ascending order</li>
+     * <li>desc: Descending order.</li>
+     * <li>asc: Ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>

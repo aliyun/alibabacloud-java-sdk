@@ -4,18 +4,39 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class QuotaConfig extends TeaModel {
+    /**
+     * <p>The maximum allowed priority.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>9</p>
+     */
     @NameInMap("AllowedMaxPriority")
     public Integer allowedMaxPriority;
 
+    /**
+     * <p>Specifies whether DLC is enabled.</p>
+     */
     @NameInMap("EnableDLC")
     public Boolean enableDLC;
 
+    /**
+     * <p>Specifies whether DSW is enabled.</p>
+     */
     @NameInMap("EnableDSW")
     public Boolean enableDSW;
 
+    /**
+     * <p>Specifies whether to use tide resources.</p>
+     */
     @NameInMap("EnableTideResource")
     public Boolean enableTideResource;
 
+    /**
+     * <p>The resource level (L0, L1).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>L0</p>
+     */
     @NameInMap("ResourceLevel")
     public String resourceLevel;
 

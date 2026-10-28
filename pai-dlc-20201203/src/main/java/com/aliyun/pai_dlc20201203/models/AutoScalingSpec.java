@@ -4,18 +4,42 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class AutoScalingSpec extends TeaModel {
+    /**
+     * <p>The monitoring metrics configuration for autoscaling.</p>
+     */
     @NameInMap("AutoscalingMetricSpec")
     public AutoscalingMetricSpec autoscalingMetricSpec;
 
+    /**
+     * <p>The maximum number of replicas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
+     */
     @NameInMap("MaxReplicas")
     public Integer maxReplicas;
 
+    /**
+     * <p>The minimum number of replicas.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinReplicas")
     public Integer minReplicas;
 
+    /**
+     * <p>The Pods to delete for scale-in. This can only be modified through UpdateJob, and the number of Pods to delete must match PodCount.</p>
+     */
     @NameInMap("PodsToDelete")
     public java.util.List<String> podsToDelete;
 
+    /**
+     * <p>The autoscaling policy. Valid values: Default, ScaleByAPI, RayAutoscaler, and CloudMonitorMetric.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Default</p>
+     */
     @NameInMap("ScalingStrategy")
     public String scalingStrategy;
 

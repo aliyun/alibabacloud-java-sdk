@@ -5,22 +5,25 @@ import com.aliyun.tea.*;
 
 public class JobSettings extends TeaModel {
     /**
-     * <p>The extra advanced parameter settings.</p>
+     * <p>The additional advanced parameter settings.</p>
      */
     @NameInMap("AdvancedSettings")
     public java.util.Map<String, ?> advancedSettings;
 
     /**
-     * <p>Specifies whether to mount all RDMA network interfaces.</p>
+     * <p>Specifies whether to allocate all RDMA NICs.</p>
      */
     @NameInMap("AllocateAllRDMADevices")
     public Boolean allocateAllRDMADevices;
 
+    /**
+     * <p>Specifies whether to allow jobs to be scheduled to nodes that are marked as unschedulable or are in the workspace blacklist. If enabled, node status checks are skipped and the corresponding bypass configurations are applied.</p>
+     */
     @NameInMap("AllowUnschedulableNodes")
     public Boolean allowUnschedulableNodes;
 
     /**
-     * <p>The user ID associated with the job.</p>
+     * <p>The ID of the user associated with the job.</p>
      * 
      * <strong>example:</strong>
      * <p>16****</p>
@@ -38,13 +41,13 @@ public class JobSettings extends TeaModel {
     public String caller;
 
     /**
-     * <p>The DataJuicer task configuration.</p>
+     * <p>The DataJuicer job configuration.</p>
      */
     @NameInMap("DataJuicerConfig")
     public DataJuicerConfig dataJuicerConfig;
 
     /**
-     * <p>Specifies whether to skip inventory check. Valid values:</p>
+     * <p>Specifies whether to skip the ECS inventory check. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -65,11 +68,17 @@ public class JobSettings extends TeaModel {
     @NameInMap("Driver")
     public String driver;
 
+    /**
+     * <p>The maximum number of restarts for an elastic spot job.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5</p>
+     */
     @NameInMap("ElasticSpotJobMaxRestartTimes")
     public Integer elasticSpotJobMaxRestartTimes;
 
     /**
-     * <p>The CPU affinity setting. This setting is effective only when using general computing subscription resources.</p>
+     * <p>The CPU affinity settings. These settings take effect only when general-purpose computing subscription resources are used.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,6 +86,9 @@ public class JobSettings extends TeaModel {
     @NameInMap("EnableCPUAffinity")
     public Boolean enableCPUAffinity;
 
+    /**
+     * <p>Specifies whether to enable the DSW development mode for the job. If enabled, a sidecar container is injected into the pod.</p>
+     */
     @NameInMap("EnableDSWDev")
     public Boolean enableDSWDev;
 
@@ -94,7 +106,7 @@ public class JobSettings extends TeaModel {
     public Boolean enableErrorMonitoringInAIMaster;
 
     /**
-     * <p>Specifies whether to allow OSS append write. Valid values:</p>
+     * <p>Specifies whether to allow OSS append writes. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -120,7 +132,7 @@ public class JobSettings extends TeaModel {
     public Boolean enableRDMA;
 
     /**
-     * <p>Specifies whether to enable computing power health check for the job. Valid values:</p>
+     * <p>Specifies whether to enable computing power health checks for the job. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -133,7 +145,7 @@ public class JobSettings extends TeaModel {
     public Boolean enableSanityCheck;
 
     /**
-     * <p>Specifies whether to allow the job to use tidal resources. Valid values:</p>
+     * <p>Specifies whether to allow the job to use tide resources. Valid values:</p>
      * <ul>
      * <li>true</li>
      * <li>false</li>
@@ -146,7 +158,7 @@ public class JobSettings extends TeaModel {
     public Boolean enableTideResource;
 
     /**
-     * <p>The configuration parameters for fault tolerance monitoring after it is enabled, such as whether to enable log hang-based detection.</p>
+     * <p>The configuration parameters for fault tolerance monitoring when it is enabled, such as specifying whether to enable log hang-based detection.</p>
      * 
      * <strong>example:</strong>
      * <p>--enable-log-hang-detection true</p>
@@ -155,7 +167,7 @@ public class JobSettings extends TeaModel {
     public String errorMonitoringArgs;
 
     /**
-     * <p>The retention duration after job completion, in minutes.</p>
+     * <p>The retention duration after the job ends, in minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -164,7 +176,7 @@ public class JobSettings extends TeaModel {
     public Integer jobReservedMinutes;
 
     /**
-     * <p>The retention policy after job completion.</p>
+     * <p>The retention policy after the job ends.</p>
      * 
      * <strong>example:</strong>
      * <p>Always</p>
@@ -173,13 +185,13 @@ public class JobSettings extends TeaModel {
     public String jobReservedPolicy;
 
     /**
-     * <p>The output model configuration. This parameter is currently effective only in joint training scenarios.</p>
+     * <p>The output model configuration. This parameter takes effect only in joint training scenarios.</p>
      */
     @NameInMap("ModelConfig")
     public ModelConfig modelConfig;
 
     /**
-     * <p>The oversold resource usage mode for the job (reject/accept/only accept).</p>
+     * <p>The oversold resource usage mode for the job, which can be not accepted, accepted, or only accepted.</p>
      * 
      * <strong>example:</strong>
      * <p>AcceptQuotaOverSold</p>
@@ -197,7 +209,7 @@ public class JobSettings extends TeaModel {
     public String pipelineId;
 
     /**
-     * <p>The configuration parameters for computing power health check.</p>
+     * <p>The configuration parameters for computing power health checks.</p>
      * 
      * <strong>example:</strong>
      * <p>--sanity-check-timing=AfterJobFaultTolerant --sanity-check-timeout-ops=MarkJobFail</p>
@@ -206,6 +218,8 @@ public class JobSettings extends TeaModel {
     public String sanityCheckArgs;
 
     /**
+     * <p>The shell used to execute job commands. Valid values: /bin/sh and /bin/bash.</p>
+     * 
      * <strong>example:</strong>
      * <p>/bin/bash</p>
      */
@@ -218,6 +232,12 @@ public class JobSettings extends TeaModel {
     @NameInMap("Tags")
     public java.util.Map<String, String> tags;
 
+    /**
+     * <p>The grace period to wait for the pod to exit when the job is terminated, in seconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
+     */
     @NameInMap("TerminationGracePeriodSeconds")
     public Long terminationGracePeriodSeconds;
 

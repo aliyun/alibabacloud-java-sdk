@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEcsSpecsResponseBody extends TeaModel {
     /**
-     * <p>The list of ECS specifications.</p>
+     * <p>The list of ECS instance types.</p>
      */
     @NameInMap("EcsSpecs")
     public java.util.List<EcsSpec> ecsSpecs;
@@ -20,7 +20,7 @@ public class ListEcsSpecsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries that match the filter conditions.</p>
+     * <p>The total number of entries that meet the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

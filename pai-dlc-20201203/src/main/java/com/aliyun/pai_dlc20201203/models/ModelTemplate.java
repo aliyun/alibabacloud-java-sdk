@@ -4,12 +4,30 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class ModelTemplate extends TeaModel {
+    /**
+     * <p>The collection where the model template resides. Default value: QuickStartTemplate.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>QuickStartTemplate</p>
+     */
     @NameInMap("Collections")
     public String collections;
 
+    /**
+     * <p>The name of the model template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Qwen3-VL-32B-Instruct-PAI_template</p>
+     */
     @NameInMap("ModelName")
     public String modelName;
 
+    /**
+     * <p>The provider of the model template. Default value: pai, which indicates that the model template is officially provided by PAI.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pai</p>
+     */
     @NameInMap("Provider")
     public String provider;
 

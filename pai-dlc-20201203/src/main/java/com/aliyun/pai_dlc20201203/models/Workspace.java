@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class Workspace extends TeaModel {
     /**
+     * <p>The creator.</p>
+     * 
      * <strong>example:</strong>
      * <p>ken</p>
      */
@@ -12,6 +14,8 @@ public class Workspace extends TeaModel {
     public String creator;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:01Z</p>
      */
@@ -19,25 +23,41 @@ public class Workspace extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The last modification time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-12T14:36:01Z</p>
      */
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 
+    /**
+     * <p>The member list.</p>
+     */
     @NameInMap("Members")
     public java.util.List<Member> members;
 
+    /**
+     * <p>The resource quota list.</p>
+     */
     @NameInMap("Quotas")
     public java.util.List<Quota> quotas;
 
+    /**
+     * <p>The total resources.</p>
+     */
     @NameInMap("TotalResources")
     public Resources totalResources;
 
+    /**
+     * <p>The administrator list.</p>
+     */
     @NameInMap("WorkspaceAdmins")
     public java.util.List<Member> workspaceAdmins;
 
     /**
+     * <p>The workspace ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>ws-20210126170216-mtl37ge7gkvdz</p>
      */
@@ -45,6 +65,8 @@ public class Workspace extends TeaModel {
     public String workspaceId;
 
     /**
+     * <p>The workspace name.</p>
+     * 
      * <strong>example:</strong>
      * <p>dlc-workspace</p>
      */

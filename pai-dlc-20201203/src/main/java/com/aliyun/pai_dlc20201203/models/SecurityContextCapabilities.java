@@ -4,9 +4,15 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class SecurityContextCapabilities extends TeaModel {
+    /**
+     * <p>The list of Linux capabilities to add.</p>
+     */
     @NameInMap("Add")
     public java.util.List<String> add;
 
+    /**
+     * <p>The list of Linux capabilities to remove.</p>
+     */
     @NameInMap("Drop")
     public java.util.List<String> drop;
 

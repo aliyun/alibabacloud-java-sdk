@@ -11,7 +11,7 @@ public class ListJobsResponseBody extends TeaModel {
     public java.util.List<JobItem> jobs;
 
     /**
-     * <p>The request ID, used for diagnostics and troubleshooting.</p>
+     * <p>The request ID, which is used for diagnostics and troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -20,7 +20,7 @@ public class ListJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of jobs that match the filter conditions.</p>
+     * <p>The total number of jobs that meet the filtering conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

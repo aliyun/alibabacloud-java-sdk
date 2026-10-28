@@ -14,7 +14,7 @@ public class GetTensorboardRequest extends TeaModel {
     public String jodId;
 
     /**
-     * <p>The sharing token. Specify this parameter to use the sharing token to obtain the permission to view a specific Tensorboard job. You can extract the token from the URL returned by calling <a href="https://help.aliyun.com/document_detail/2557813.html">GetTensorboardSharedUrl</a>.</p>
+     * <p>The sharing token. Specify this parameter to use the sharing token to obtain the permissions to view a TensorBoard job. You can extract the token from the URL obtained by calling <a href="https://help.aliyun.com/document_detail/2557813.html">GetTensorboardSharedUrl</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.e

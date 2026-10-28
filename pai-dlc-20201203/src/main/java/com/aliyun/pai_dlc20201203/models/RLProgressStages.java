@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RLProgressStages extends TeaModel {
     /**
-     * <p>当前所处阶段的下标</p>
+     * <p>The index of the current stage.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -14,7 +14,7 @@ public class RLProgressStages extends TeaModel {
     public Integer currentIndex;
 
     /**
-     * <p>disagg / colocate / 空串</p>
+     * <p>The disagg, colocate, or empty string.</p>
      * 
      * <strong>example:</strong>
      * <p>colocate</p>
@@ -23,16 +23,16 @@ public class RLProgressStages extends TeaModel {
     public String mode;
 
     /**
-     * <p>阶段列表，按流水线顺序</p>
+     * <p>The list of stages in pipeline order.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;Key&quot;:&quot;generation&quot;,&quot;Label&quot;:&quot;生成&quot;,&quot;Marker&quot;:&quot;start/end generation&quot;,&quot;Optional&quot;:false,&quot;Status&quot;:&quot;done&quot;,&quot;StartTime&quot;:1787474487,&quot;EndTime&quot;:1787474487,&quot;Duration&quot;:0.483}]</p>
+     * <p>[{&quot;Key&quot;:&quot;generation&quot;,&quot;Label&quot;:&quot;Generation&quot;,&quot;Marker&quot;:&quot;start/end generation&quot;,&quot;Optional&quot;:false,&quot;Status&quot;:&quot;done&quot;,&quot;StartTime&quot;:1787474487,&quot;EndTime&quot;:1787474487,&quot;Duration&quot;:0.483}]</p>
      */
     @NameInMap("Stages")
     public java.util.List<RLProgressStage> stages;
 
     /**
-     * <p>本 step 的阶段流水线是否已走完</p>
+     * <p>Indicates whether the stage pipeline for this step is completed.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

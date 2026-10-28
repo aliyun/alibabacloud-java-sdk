@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RLProgressRollout extends TeaModel {
     /**
-     * <p>窗口内完成总数</p>
+     * <p>The total number of completed items within the window.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -14,7 +14,7 @@ public class RLProgressRollout extends TeaModel {
     public Integer finished;
 
     /**
-     * <p>rollout 已处理计数</p>
+     * <p>The rollout processed count.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class RLProgressRollout extends TeaModel {
     public RLProgressProcessed processed;
 
     /**
-     * <p>完成速率（条/分钟），由最近 120 条完成事件估算</p>
+     * <p>The completion rate (items per minute), estimated from the last 120 completion events.</p>
      * 
      * <strong>example:</strong>
      * <p>31.2</p>

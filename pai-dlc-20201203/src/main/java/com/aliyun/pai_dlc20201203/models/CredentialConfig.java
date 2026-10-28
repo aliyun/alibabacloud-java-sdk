@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class CredentialConfig extends TeaModel {
     /**
      * <p>The role identity key injected into environment variables.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("AliyunEnvRoleKey")
     public String aliyunEnvRoleKey;
@@ -17,7 +20,7 @@ public class CredentialConfig extends TeaModel {
     public java.util.List<CredentialConfigItem> credentialConfigItems;
 
     /**
-     * <p>Specifies whether to enable credential injection.</p>
+     * <p>Specifies whether credential injection is enabled.</p>
      */
     @NameInMap("EnableCredentialInject")
     public Boolean enableCredentialInject;

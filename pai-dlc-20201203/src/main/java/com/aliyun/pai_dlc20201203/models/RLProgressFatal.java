@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RLProgressFatal extends TeaModel {
     /**
-     * <p>锚点行 agent_collect_time（纳秒字符串，超 JS 安全整数）</p>
+     * <p>The agent_collect_time of the anchor line, represented as a nanosecond string that exceeds the JavaScript safe integer limit.</p>
      * 
      * <strong>example:</strong>
      * <p>1787474487713456789</p>
@@ -14,7 +14,7 @@ public class RLProgressFatal extends TeaModel {
     public String collectNs;
 
     /**
-     * <p>错误文案（截断至 500 字符）</p>
+     * <p>The error message, truncated to 500 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>CUDA out of memory. Tried to allocate 2.00 GiB</p>
@@ -23,7 +23,7 @@ public class RLProgressFatal extends TeaModel {
     public String message;
 
     /**
-     * <p>原始日志行（截断至 2000 字符）；调用 GetRLLogContext 时作为 AnchorMessage 传入</p>
+     * <p>The raw log line, truncated to 2000 characters. It is passed as AnchorMessage when calling GetRLLogContext.</p>
      * 
      * <strong>example:</strong>
      * <p>[rank0]: torch.OutOfMemoryError: CUDA out of memory. Tried to allocate 2.00 GiB</p>
@@ -32,7 +32,7 @@ public class RLProgressFatal extends TeaModel {
     public String rawMessage;
 
     /**
-     * <p>同秒内的纳秒偏移，用于同秒日志排序</p>
+     * <p>The nanosecond offset within the same second, used for sorting logs within the same second.</p>
      * 
      * <strong>example:</strong>
      * <p>123456789</p>
@@ -41,7 +41,7 @@ public class RLProgressFatal extends TeaModel {
     public Long subsecNs;
 
     /**
-     * <p>日志时间（unix 秒）</p>
+     * <p>The log time in UNIX seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1787474487</p>

@@ -5,25 +5,34 @@ import com.aliyun.tea.*;
 
 public class JobReplicaStatus extends TeaModel {
     /**
-     * <p>The number of active pods for this replica type.</p>
+     * <p>The number of replicas of this role that are currently running.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Active")
     public Integer active;
 
     /**
-     * <p>The type of spot instance in use, if any.</p>
+     * <p>The currently selected spot instance type (applies only to elastic spot tasks).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.gn6e-c12g1.3xlarge</p>
      */
     @NameInMap("CurrentSpotInstanceType")
     public String currentSpotInstanceType;
 
     /**
-     * <p>The number of dequeued pods.</p>
+     * <p>The number of replicas of this role that have been dequeued.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Dequeued")
     public Integer dequeued;
 
     /**
-     * <p>The estimated auto scaling specification.</p>
+     * <p>The estimated auto-scaling configuration for this role.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -32,13 +41,16 @@ public class JobReplicaStatus extends TeaModel {
     public AutoScalingSpec estimatedAutoScalingSpec;
 
     /**
-     * <p>The estimated number of pods for this replica type, used for auto scaling.</p>
+     * <p>The estimated number of pods for this role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2</p>
      */
     @NameInMap("EstimatedPodCount")
     public Long estimatedPodCount;
 
     /**
-     * <p>The estimated resource configuration.</p>
+     * <p>The estimated resource configuration for this role.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -47,13 +59,19 @@ public class JobReplicaStatus extends TeaModel {
     public ResourceConfig estimatedResourceConfig;
 
     /**
-     * <p>The number of queued pods.</p>
+     * <p>The number of replicas of this role that are still in the queue.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
      */
     @NameInMap("Queuing")
     public Integer queuing;
 
     /**
-     * <p>The type of the job replica.</p>
+     * <p>The role type to which the task replicas belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Worker</p>
      */
     @NameInMap("Type")
     public String type;

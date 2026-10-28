@@ -5,19 +5,29 @@ import com.aliyun.tea.*;
 
 public class FreeResourceItem extends TeaModel {
     /**
+     * <p>The resource count.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
     @NameInMap("AvailableNumber")
     public Long availableNumber;
 
+    /**
+     * <p>The cluster ID.</p>
+     */
     @NameInMap("ClusterID")
     public String clusterID;
 
+    /**
+     * <p>The cluster name.</p>
+     */
     @NameInMap("ClusterName")
     public String clusterName;
 
     /**
+     * <p>The idle resource ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>freeres-whateversth</p>
      */
@@ -25,6 +35,8 @@ public class FreeResourceItem extends TeaModel {
     public String freeResourceId;
 
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-18T12:52:15Z</p>
      */
@@ -32,6 +44,8 @@ public class FreeResourceItem extends TeaModel {
     public String gmtCreateTime;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>2021-01-18T12:52:15Z</p>
      */
@@ -39,6 +53,8 @@ public class FreeResourceItem extends TeaModel {
     public String gmtModifyTime;
 
     /**
+     * <p>The region ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>inner</p>
      */
@@ -46,6 +62,8 @@ public class FreeResourceItem extends TeaModel {
     public String regionID;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>cpu</p>
      */

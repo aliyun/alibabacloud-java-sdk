@@ -7,8 +7,8 @@ public class ListTensorboardsRequest extends TeaModel {
     /**
      * <p>The visibility of the job. Valid values:</p>
      * <ul>
-     * <li>PUBLIC: Visible to all users in this workspace.</li>
-     * <li>PRIVATE: Visible only to you and administrators in this workspace.</li>
+     * <li>PUBLIC: The job is visible to all users in the workspace.</li>
+     * <li>PRIVATE: The job is visible only to you and administrators in the workspace.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String accessibility;
 
     /**
-     * <p>The display name of the Tensorboard instance.</p>
+     * <p>The display name of the TensorBoard instance.</p>
      * 
      * <strong>example:</strong>
      * <p>TestTensorboard</p>
@@ -27,7 +27,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String displayName;
 
     /**
-     * <p>The end time of the query range. The creation time of the Tensorboard instance in UTC is used for filtering. If this parameter is left empty, the default value is the current time.</p>
+     * <p>The end time of the query interval. Filters instances by the UTC creation time of the TensorBoard instance. If this parameter is left empty, the default value is the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-09T14:45:00Z</p>
@@ -36,7 +36,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Filters Tensorboard instances by DLC job ID. See <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</p>
+     * <p>Filters TensorBoard instances by the DLC job ID. Refer to <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-xxx</p>
@@ -58,7 +58,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number of the page to return in a paged query. The value starts from 1.</p>
+     * <p>The page number of the current page in the paged query. Pages start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -67,7 +67,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of Tensorboard instances to return per page in a paged query.</p>
+     * <p>The number of TensorBoard instances to return on each page in the paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -76,10 +76,10 @@ public class ListTensorboardsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The billing type of the Tensorboard instance. Valid values:</p>
+     * <p>The billing method of the TensorBoard instance. Valid values:</p>
      * <ul>
-     * <li>Free: The Tensorboard instance uses free resources.</li>
-     * <li>Postpaid: The Tensorboard instance uses pay-as-you-go resources.</li>
+     * <li>Free: The instance uses free resources.</li>
+     * <li>Postpaid: The instance uses pay-as-you-go resources.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,8 +92,8 @@ public class ListTensorboardsRequest extends TeaModel {
      * <p>The resource quota ID.</p>
      * <blockquote>
      * <ul>
-     * <li>Currently, only whitelisted users can use resource quota resources to create Tensorboard instances. To use this feature, contact us.</li>
-     * <li>This value is valid only when the Tensorboard instance uses resource quota resources.</li>
+     * <li>Currently, only whitelisted users can use resource quotas to create TensorBoard instances. To use this feature, contact us.</li>
+     * <li>This parameter is valid only when the TensorBoard instance uses resources from a resource quota.</li>
      * </ul>
      * </blockquote>
      * 
@@ -104,7 +104,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String quotaId;
 
     /**
-     * <p>Specifies whether to return only Tensorboard instances created by the current user.</p>
+     * <p>Specifies whether to return only the TensorBoard instances created by the current logged-on user.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -113,10 +113,10 @@ public class ListTensorboardsRequest extends TeaModel {
     public Boolean showOwn;
 
     /**
-     * <p>Sorts the results by the following fields. Valid values:</p>
+     * <p>The field by which to sort the returned results. Valid values:</p>
      * <ul>
-     * <li>DisplayName: The job name.</li>
-     * <li>GmtCreateTime: The job creation time.</li>
+     * <li>DisplayName: The name of the job.</li>
+     * <li>GmtCreateTime: The creation time of the job.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,7 +126,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The data source ID. See <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</p>
+     * <p>The data source ID. Refer to <a href="https://help.aliyun.com/document_detail/459676.html">ListJobs</a> to obtain the job ID.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-xxxxxx</p>
@@ -135,7 +135,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String sourceId;
 
     /**
-     * <p>The data source type. Currently, only DLC training jobs are supported, which means the value is job.</p>
+     * <p>The data source. Currently, only DLC training jobs are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>job</p>
@@ -144,7 +144,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The start time of the query range. The creation time of the Tensorboard instance in UTC is used for filtering. If this parameter is left empty, the default value is 7 days before the current time.</p>
+     * <p>The start time of the query interval. Filters instances by the UTC creation time of the TensorBoard instance. If this parameter is left empty, the default value is 7 days before the current time.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-11-08T16:00:00Z</p>
@@ -153,13 +153,13 @@ public class ListTensorboardsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The Tensorboard status. Valid values:</p>
+     * <p>The status of the TensorBoard instance. Valid values:</p>
      * <ul>
-     * <li>Creating: Being created.</li>
-     * <li>Running: Running.</li>
-     * <li>Stopped: Stopped.</li>
-     * <li>Succeeded: Succeeded.</li>
-     * <li>Failed: Failed.</li>
+     * <li>Creating: The instance is being created.</li>
+     * <li>Running: The instance is running.</li>
+     * <li>Stopped: The instance is stopped.</li>
+     * <li>Succeeded: The instance succeeded.</li>
+     * <li>Failed: The instance failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -169,7 +169,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>Filters the Tensorboard list by Tensorboard ID.</p>
+     * <p>Filters TensorBoard instances by the TensorBoard ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tensorboard-xxx</p>
@@ -196,10 +196,10 @@ public class ListTensorboardsRequest extends TeaModel {
     public String username;
 
     /**
-     * <p>Specifies whether to show details. Valid values:</p>
+     * <p>Specifies whether to display details. Valid values:</p>
      * <ul>
-     * <li>true: Show details.</li>
-     * <li>false: Do not show details.</li>
+     * <li>true: Displays details.</li>
+     * <li>false: Does not display details.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -209,7 +209,7 @@ public class ListTensorboardsRequest extends TeaModel {
     public Boolean verbose;
 
     /**
-     * <p>The workspace ID. The Tensorboard list is retrieved based on the workspace ID. &lt;props=&quot;china&quot;&gt;See <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
+     * <p>The workspace ID. Retrieves the list of TensorBoard instances based on the workspace ID. &lt;props=&quot;china&quot;&gt;Refer to <a href="https://help.aliyun.com/document_detail/449124.html">ListWorkspaces</a> to obtain the workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>380</p>

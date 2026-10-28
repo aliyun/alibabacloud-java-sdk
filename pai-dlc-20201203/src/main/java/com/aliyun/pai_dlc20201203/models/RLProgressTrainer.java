@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RLProgressTrainer extends TeaModel {
     /**
-     * <p>micro-batch 进度</p>
+     * <p>The micro-batch progress.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -14,7 +14,7 @@ public class RLProgressTrainer extends TeaModel {
     public RLProgressMicro micro;
 
     /**
-     * <p>当前 mini batch 序号</p>
+     * <p>The current mini-batch ordinal number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class RLProgressTrainer extends TeaModel {
     public Integer miniIdx;
 
     /**
-     * <p>mini-batch 总数</p>
+     * <p>The total number of mini-batches.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -32,7 +32,7 @@ public class RLProgressTrainer extends TeaModel {
     public Integer numMinibatches;
 
     /**
-     * <p>参数同步状态</p>
+     * <p>The parameter synchronization status.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>

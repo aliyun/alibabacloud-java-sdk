@@ -4,10 +4,18 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class GPUDetail extends TeaModel {
+    /**
+     * <p>The number of GPUs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>4</p>
+     */
     @NameInMap("GPU")
     public String GPU;
 
     /**
+     * <p>The GPU type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Tesla-V100-32G</p>
      */
@@ -15,6 +23,8 @@ public class GPUDetail extends TeaModel {
     public String GPUType;
 
     /**
+     * <p>The full name of the GPU type.</p>
+     * 
      * <strong>example:</strong>
      * <p>nvidia.com/gpu-tesla-v100-sxm2-16gb</p>
      */

@@ -13,6 +13,12 @@ public class Tensorboard extends TeaModel {
     @NameInMap("Accessibility")
     public String accessibility;
 
+    /**
+     * <p>The CPU resources.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("Cpu")
     public Long cpu;
 
@@ -25,6 +31,12 @@ public class Tensorboard extends TeaModel {
     @NameInMap("DataSourceId")
     public String dataSourceId;
 
+    /**
+     * <p>The dataset type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OSS</p>
+     */
     @NameInMap("DataSourceType")
     public String dataSourceType;
 
@@ -82,17 +94,35 @@ public class Tensorboard extends TeaModel {
     @NameInMap("JobId")
     public String jobId;
 
+    /**
+     * <p>The maximum running duration in minutes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>240</p>
+     */
     @NameInMap("MaxRunningTimeMinutes")
     public Long maxRunningTimeMinutes;
 
+    /**
+     * <p>The memory size in GB.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("Memory")
     public Long memory;
 
+    /**
+     * <p>The extended fields of the dataset in JSON format. Currently, MountPath is supported, which specifies the mount path for a custom dataset.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;mountpath&quot;:&quot;/root/data/&quot;}</p>
+     */
     @NameInMap("Options")
     public String options;
 
     /**
-     * <p>The priority of the TensorBoard job.</p>
+     * <p>The priority of the Tensorboard job.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -101,7 +131,7 @@ public class Tensorboard extends TeaModel {
     public String priority;
 
     /**
-     * <p>The ID of the resource group used by TensorBoard.</p>
+     * <p>The ID of the resource group used by Tensorboard.</p>
      * 
      * <strong>example:</strong>
      * <p>quota12***</p>
@@ -110,7 +140,7 @@ public class Tensorboard extends TeaModel {
     public String quotaId;
 
     /**
-     * <p>The name of the resource quota used by TensorBoard.</p>
+     * <p>The name of the resource quota used by Tensorboard.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc-quota</p>
@@ -163,17 +193,23 @@ public class Tensorboard extends TeaModel {
     @NameInMap("SummaryPath")
     public String summaryPath;
 
+    /**
+     * <p>The absolute path of the summary.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/summary/</p>
+     */
     @NameInMap("SummaryRelativePath")
     public String summaryRelativePath;
 
     /**
-     * <p>The datasets mounted to the TensorBoard job.</p>
+     * <p>The datasets mounted to the Tensorboard job.</p>
      */
     @NameInMap("TensorboardDataSources")
     public java.util.List<TensorboardDataSourceSpec> tensorboardDataSources;
 
     /**
-     * <p>Tensorboard ID。</p>
+     * <p>The Tensorboard ID.</p>
      * 
      * <strong>example:</strong>
      * <p>tensorboard-xxx</p>
@@ -182,13 +218,13 @@ public class Tensorboard extends TeaModel {
     public String tensorboardId;
 
     /**
-     * <p>The pay-as-you-go configuration of the TensorBoard job.</p>
+     * <p>The pay-as-you-go configuration for the Tensorboard job.</p>
      */
     @NameInMap("TensorboardSpec")
     public TensorboardSpec tensorboardSpec;
 
     /**
-     * <p>Tensorboard URL。</p>
+     * <p>The Tensorboard URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://xxxxxx">http://xxxxxx</a></p>
@@ -196,6 +232,12 @@ public class Tensorboard extends TeaModel {
     @NameInMap("TensorboardUrl")
     public String tensorboardUrl;
 
+    /**
+     * <p>The token value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9*****</p>
+     */
     @NameInMap("Token")
     public String token;
 
@@ -217,6 +259,12 @@ public class Tensorboard extends TeaModel {
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>The workspace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>123***</p>
+     */
     @NameInMap("WorkspaceId")
     public String workspaceId;
 

@@ -14,7 +14,7 @@ public class GetTokenResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task sharing token, which can be used to view information about the shared task.</p>
+     * <p>The sharing token of the job, which can be used to view information about the shared job.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9*****</p>

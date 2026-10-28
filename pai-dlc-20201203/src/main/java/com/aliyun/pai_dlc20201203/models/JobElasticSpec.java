@@ -4,13 +4,24 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class JobElasticSpec extends TeaModel {
+    /**
+     * <p>The AIMaster Docker image.</p>
+     */
     @NameInMap("AIMasterDockerImage")
     public String AIMasterDockerImage;
 
+    /**
+     * <p>The resource specifications for the AIMaster role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ecs.c6.large</p>
+     */
     @NameInMap("AIMasterType")
     public String AIMasterType;
 
     /**
+     * <p>The maximum EDP parallelism.</p>
+     * 
      * <strong>example:</strong>
      * <p>16</p>
      */
@@ -18,19 +29,32 @@ public class JobElasticSpec extends TeaModel {
     public Integer EDPMaxParallelism;
 
     /**
+     * <p>The minimum EDP parallelism.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
     @NameInMap("EDPMinParallelism")
     public Integer EDPMinParallelism;
 
+    /**
+     * <p>The elastic training strategy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>chief</p>
+     */
     @NameInMap("ElasticStrategy")
     public String elasticStrategy;
 
+    /**
+     * <p>Specifies whether to enable AIMaster.</p>
+     */
     @NameInMap("EnableAIMaster")
     public Boolean enableAIMaster;
 
     /**
+     * <p>Specifies whether to enable EDP.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -38,6 +62,8 @@ public class JobElasticSpec extends TeaModel {
     public Boolean enableEDP;
 
     /**
+     * <p>Specifies whether to enable elastic training.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -45,16 +71,23 @@ public class JobElasticSpec extends TeaModel {
     public Boolean enableElasticTraining;
 
     /**
+     * <p>Specifies whether to enable the elastic PS feature.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnablePsJobElasticPS")
     public Boolean enablePsJobElasticPS;
 
+    /**
+     * <p>Specifies whether to enable elastic workers for PS jobs.</p>
+     */
     @NameInMap("EnablePsJobElasticWorker")
     public Boolean enablePsJobElasticWorker;
 
     /**
+     * <p>Specifies whether to enable PS resource estimation.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -62,6 +95,8 @@ public class JobElasticSpec extends TeaModel {
     public Boolean enablePsResourceEstimate;
 
     /**
+     * <p>The maximum parallelism.</p>
+     * 
      * <strong>example:</strong>
      * <p>8</p>
      */
@@ -69,6 +104,8 @@ public class JobElasticSpec extends TeaModel {
     public Integer maxParallelism;
 
     /**
+     * <p>The minimum parallelism.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -76,6 +113,8 @@ public class JobElasticSpec extends TeaModel {
     public Integer minParallelism;
 
     /**
+     * <p>The maximum PS parallelism.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -83,6 +122,8 @@ public class JobElasticSpec extends TeaModel {
     public Integer PSMaxParallelism;
 
     /**
+     * <p>The minimum PS parallelism.</p>
+     * 
      * <strong>example:</strong>
      * <p>4</p>
      */

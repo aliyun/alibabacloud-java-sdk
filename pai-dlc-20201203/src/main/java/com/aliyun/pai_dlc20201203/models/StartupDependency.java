@@ -4,12 +4,30 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class StartupDependency extends TeaModel {
+    /**
+     * <p>The minimum number of dependent roles that must reach the expected phase to be considered satisfied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MinReplicas")
     public String minReplicas;
 
+    /**
+     * <p>The phase that dependent roles must reach to be considered satisfied.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>ServiceReady</p>
+     */
     @NameInMap("OnPhase")
     public String onPhase;
 
+    /**
+     * <p>The type of the dependent role.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Worker</p>
+     */
     @NameInMap("Type")
     public String type;
 

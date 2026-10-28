@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ResourceRequirements extends TeaModel {
     /**
-     * <p>Resource limits</p>
+     * <p>The resource limits.</p>
      */
     @NameInMap("Limits")
     public java.util.Map<String, String> limits;
 
     /**
-     * <p>Resource requests</p>
+     * <p>The resource requests.</p>
      */
     @NameInMap("Requests")
     public java.util.Map<String, String> requests;

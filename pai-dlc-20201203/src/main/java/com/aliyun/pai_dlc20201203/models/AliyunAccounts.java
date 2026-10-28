@@ -4,15 +4,33 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class AliyunAccounts extends TeaModel {
+    /**
+     * <p>The UID of the Alibaba Cloud account.</p>
+     */
     @NameInMap("AliyunUid")
     public String aliyunUid;
 
+    /**
+     * <p>The employee ID of the internal user.</p>
+     */
     @NameInMap("EmployeeId")
     public String employeeId;
 
+    /**
+     * <p>The creation time of the record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-18T12:52:15Z</p>
+     */
     @NameInMap("GmtCreateTime")
     public String gmtCreateTime;
 
+    /**
+     * <p>The last modification time of the record.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2021-01-18T12:52:15Z</p>
+     */
     @NameInMap("GmtModifyTime")
     public String gmtModifyTime;
 

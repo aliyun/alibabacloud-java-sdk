@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTokenRequest extends TeaModel {
     /**
-     * <p>The expiration time of the sharing link in seconds. Default value: 604800. Minimum value: 0.</p>
+     * <p>The expiration time of the sharing link. Default value: 604800 seconds. Minimum value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -14,7 +14,7 @@ public class GetTokenRequest extends TeaModel {
     public Long expireTime;
 
     /**
-     * <p>The ID of the task to share.</p>
+     * <p>The ID of the job to be shared.</p>
      * 
      * <strong>example:</strong>
      * <p>dlc*******</p>
@@ -23,7 +23,7 @@ public class GetTokenRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>The type of the task to share. Valid values: job and tensorboard.</p>
+     * <p>The type of the shared job. Valid values: job and tensorboard.</p>
      * 
      * <strong>example:</strong>
      * <p>job</p>
@@ -31,6 +31,9 @@ public class GetTokenRequest extends TeaModel {
     @NameInMap("TargetType")
     public String targetType;
 
+    /**
+     * <p>The permission settings of the sharing token, which controls log download and cross-account access.</p>
+     */
     @NameInMap("TokenSettings")
     public TokenSettings tokenSettings;
 

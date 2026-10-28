@@ -4,9 +4,15 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class TokenSettings extends TeaModel {
+    /**
+     * <p>Specifies whether cross-account access through sharing links is allowed.</p>
+     */
     @NameInMap("EnableCrossAccountAccess")
     public Boolean enableCrossAccountAccess;
 
+    /**
+     * <p>Specifies whether task logs can be downloaded through sharing links.</p>
+     */
     @NameInMap("EnableLogDownloadJob")
     public Boolean enableLogDownloadJob;
 

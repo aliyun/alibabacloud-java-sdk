@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class QuotaDetail extends TeaModel {
     /**
+     * <p>The number of CPU cores.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -12,16 +14,23 @@ public class QuotaDetail extends TeaModel {
     public String CPU;
 
     /**
+     * <p>The number of GPUs.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
     @NameInMap("GPU")
     public String GPU;
 
+    /**
+     * <p>The GPU details.</p>
+     */
     @NameInMap("GPUDetails")
     public java.util.List<GPUDetail> GPUDetails;
 
     /**
+     * <p>The GPU type.</p>
+     * 
      * <strong>example:</strong>
      * <p>Tesla-V100</p>
      */
@@ -29,6 +38,8 @@ public class QuotaDetail extends TeaModel {
     public String GPUType;
 
     /**
+     * <p>The full name of the GPU type.</p>
+     * 
      * <strong>example:</strong>
      * <p>nvidia.com/gpu</p>
      */
@@ -36,6 +47,8 @@ public class QuotaDetail extends TeaModel {
     public String GPUTypeFullName;
 
     /**
+     * <p>The memory capacity.</p>
+     * 
      * <strong>example:</strong>
      * <p>10Gi</p>
      */

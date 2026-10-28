@@ -4,10 +4,15 @@ package com.aliyun.pai_dlc20201203.models;
 import com.aliyun.tea.*;
 
 public class AssignNodeSpec extends TeaModel {
+    /**
+     * <p>The list of hyper nodes to avoid during scheduling.</p>
+     */
     @NameInMap("AntiAffinityHyperNodes")
     public java.util.List<HyperNodeSpec> antiAffinityHyperNodes;
 
     /**
+     * <p>AntiAffinityNodeNames</p>
+     * 
      * <strong>example:</strong>
      * <p>lingjxxxxxxxx</p>
      */
@@ -15,16 +20,23 @@ public class AssignNodeSpec extends TeaModel {
     public String antiAffinityNodeNames;
 
     /**
+     * <p>EnableAssignNode</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("EnableAssignNode")
     public Boolean enableAssignNode;
 
+    /**
+     * <p>The list of hyper nodes to schedule to.</p>
+     */
     @NameInMap("HyperNodes")
     public java.util.List<HyperNodeSpec> hyperNodes;
 
     /**
+     * <p>NodeNames</p>
+     * 
      * <strong>example:</strong>
      * <p>lingjxxxxxxxx</p>
      */
