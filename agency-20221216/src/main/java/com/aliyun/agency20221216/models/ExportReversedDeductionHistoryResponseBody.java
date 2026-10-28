@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ExportReversedDeductionHistoryResponseBody extends TeaModel {
     /**
+     * <p>The status code of the response. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response object.</p>
+     */
     @NameInMap("Data")
     public ExportReversedDeductionHistoryResponseBodyData data;
 
     /**
+     * <p>The description of the response.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -22,6 +29,8 @@ public class ExportReversedDeductionHistoryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>asfasd123</p>
      */
@@ -67,6 +76,8 @@ public class ExportReversedDeductionHistoryResponseBody extends TeaModel {
 
     public static class ExportReversedDeductionHistoryResponseBodyData extends TeaModel {
         /**
+         * <p>The estimated duration, in minutes.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -74,6 +85,8 @@ public class ExportReversedDeductionHistoryResponseBody extends TeaModel {
         public Integer cost;
 
         /**
+         * <p>The ID of the export task.</p>
+         * 
          * <strong>example:</strong>
          * <p>2131</p>
          */

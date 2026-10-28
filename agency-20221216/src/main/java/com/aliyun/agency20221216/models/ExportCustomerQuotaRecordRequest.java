@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportCustomerQuotaRecordRequest extends TeaModel {
     /**
-     * <p>End Date Format:  yyyy-MM-dd</p>
+     * <p>The end date. Format: yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ExportCustomerQuotaRecordRequest extends TeaModel {
     public String endDate;
 
     /**
-     * <p>Customer UID</p>
+     * <p>The UID of the customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,10 +25,12 @@ public class ExportCustomerQuotaRecordRequest extends TeaModel {
     public Long endUserPk;
 
     /**
-     * <p>Multilingual Parameters, the default language is English.</br>
-     * en: English</br>
-     * zh: Chinese</br>
-     * ja: Japanese </br></p>
+     * <p>The language parameter. Default value: en. Valid values:</p>
+     * <ul>
+     * <li>en: English.</li>
+     * <li>zh: Chinese.</li>
+     * <li>ja: Japanese.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -37,10 +39,12 @@ public class ExportCustomerQuotaRecordRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>Operation Type Enum</br>
-     * all All types</br>
-     * quota_create Create quota</br>
-     * quota_amount_adjust Adjust the amount of quota</br></p>
+     * <p>The operation type. Valid values:</p>
+     * <ul>
+     * <li>all: All operations.</li>
+     * <li>quota_create: Creation.</li>
+     * <li>quota_amount_adjust: Quota amount adjustment.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +54,7 @@ public class ExportCustomerQuotaRecordRequest extends TeaModel {
     public String operationType;
 
     /**
-     * <p>Start Date Format:  yyyy-MM-dd</p>
+     * <p>The start date. Format: yyyy-MM-dd.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

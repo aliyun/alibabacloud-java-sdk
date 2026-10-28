@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InviteSubResellerRequest extends TeaModel {
     /**
-     * <p>List of invited account information, up to 5 at a time.</p>
+     * <p>The list of account information for the invitation. A maximum of five accounts can be specified at a time.</p>
      */
     @NameInMap("AccountInfoList")
     public java.util.List<InviteSubResellerRequestAccountInfoList> accountInfoList;
@@ -25,10 +25,10 @@ public class InviteSubResellerRequest extends TeaModel {
 
     public static class InviteSubResellerRequestAccountInfoList extends TeaModel {
         /**
-         * <p>Name of the distribution customer:</p>
+         * <p>The name of the distribution customer.</p>
          * <ul>
-         * <li>If the distribution customer is a company, this is the company name.</li>
-         * <li>If the distribution customer is a T2 reseller partner, this is the partner name.</li>
+         * <li>If the distribution customer is an enterprise, this is the company name.</li>
+         * <li>If the distribution customer is a T2 Reseller partner, this is the partner name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class InviteSubResellerRequest extends TeaModel {
         public String accountNickname;
 
         /**
-         * <p>Total budget quota allocated by the partner to the distribution customer (quota).</p>
+         * <p>The total budget quota that the partner allocates to the distribution customer.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -47,7 +47,7 @@ public class InviteSubResellerRequest extends TeaModel {
         public String creditLine;
 
         /**
-         * <p>Reason for applying for cross-regional association.</p>
+         * <p>The reason for applying for a cross-region association.</p>
          * 
          * <strong>example:</strong>
          * <p>XXX</p>
@@ -56,7 +56,7 @@ public class InviteSubResellerRequest extends TeaModel {
         public String crossScopeRemark;
 
         /**
-         * <p>Customer Business Manager (limited to 50 characters).</p>
+         * <p>The customer account manager. The value can be up to 50 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>张三</p>
@@ -65,7 +65,7 @@ public class InviteSubResellerRequest extends TeaModel {
         public String customerBd;
 
         /**
-         * <p>The email address to which the invitation email will be sent.</p>
+         * <p>The email address to which the invitation email is sent.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:nejatox206@getasail.com">nejatox206@getasail.com</a></p>
@@ -74,10 +74,10 @@ public class InviteSubResellerRequest extends TeaModel {
         public String emailAddress;
 
         /**
-         * <p>Initial order status:</p>
+         * <p>The initial order placement status. Valid values:</p>
          * <ul>
-         * <li>ban: Purchase Ban - The customer cannot place orders immediately after successful registration and association. The \&quot;Order Control\&quot; must be set to \&quot;Normal\&quot; before placing orders.</li>
-         * <li>normal: Normal - The customer can place orders immediately after successful registration and association.</li>
+         * <li>ban: Purchase is prohibited. After the customer is registered and associated, the customer cannot place orders to purchase cloud resources immediately. You must set the order control to Normal before the customer can place orders.</li>
+         * <li>normal: Normal. After the customer is registered and associated, the customer can place orders to purchase cloud resources immediately.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -87,11 +87,11 @@ public class InviteSubResellerRequest extends TeaModel {
         public String newBuyStatus;
 
         /**
-         * <p>Country or region of the invited T2 Reseller. The parameter should comply with the ISO 3166-1 two-letter code (Alpha-2). You can use the ListCountries API to get the current UID contract coverage area list.</p>
-         * <p>The system will automatically determine if the invitation is cross-regional based on whether the <code>registerNation</code> parameter is within the T1 contract coverage area:</p>
+         * <p>The country or region of the invited T2 Reseller. The value must comply with the ISO 3166-1 alpha-2 code. You can call the ListCountries operation to query the contract coverage area list of the current UID.</p>
+         * <p>The system automatically determines whether the invitation is cross-region based on whether this parameter falls within the T1 contract coverage area.</p>
          * <ul>
-         * <li>If it\&quot;s a cross-regional invitation, a cross-regional approval process will be initiated. After approval by Alibaba Cloud, an invitation registration email will be sent to the invited email address.</li>
-         * <li>If it\&quot;s not a cross-regional invitation, an invitation registration email will be sent directly.</li>
+         * <li>If the invitation is cross-region, a cross-region invitation approval process is initiated. After the approval is granted, an invitation registration email is sent to the specified email address.</li>
+         * <li>If the invitation is not cross-region, an invitation registration email is sent directly.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,7 +101,7 @@ public class InviteSubResellerRequest extends TeaModel {
         public String registerNation;
 
         /**
-         * <p>Description of the distribution customer.</p>
+         * <p>The description of the distribution customer.</p>
          * 
          * <strong>example:</strong>
          * <p>发展xx为客户的邀请</p>
@@ -110,7 +110,7 @@ public class InviteSubResellerRequest extends TeaModel {
         public String remark;
 
         /**
-         * <p>Do not fill in, deprecated parameter.</p>
+         * <p>This parameter is deprecated. You do not need to specify this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -119,11 +119,11 @@ public class InviteSubResellerRequest extends TeaModel {
         public String subAccountType;
 
         /**
-         * <p>Management of the shutdown policy for the distribution customer by the partner.</p>
+         * <p>The shutdown policy that the partner sets for the distribution customer.</p>
          * <ul>
-         * <li>1: delayStop - Enjoy delayed shutdown with a grace period: Alibaba Cloud takes over the resources, and when the grace period quota is exhausted, the instance will be shut down. If payment is not made within 15 days, the storage resources will be released.</li>
-         * <li>2: noStop - Manual management of overdue without stopping: The system does not manage the lifecycle of the sub-account\&quot;s resources. The partner needs to manually manage the shutdown status of the customer\&quot;s instances.</li>
-         * <li>3: immediatelyStop - Immediate shutdown upon overdue: When the available quota of the customer\&quot;s account is less than 0, the account enters an overdue state, triggering the shutdown of the instance.</li>
+         * <li>1: delayStop. The account uses the delayed shutdown quota for deferred instance shutdown. Alibaba Cloud takes over the resources. When the delayed shutdown quota is exhausted, instance shutdown is triggered. If the payment is not made within 15 days, storage resources are released.</li>
+         * <li>2: noStop. Manual management with no shutdown on overdue payment. The system does not manage the resource lifecycle of the non-trusteeship linked account. The partner must manually manage the instance shutdown status of the customer.</li>
+         * <li>3: immediatelyStop. Immediate shutdown on overdue payment. When the active quota of the customer account is less than 0, the account enters the overdue payment status and instance shutdown is triggered.</li>
          * </ul>
          * 
          * <strong>example:</strong>

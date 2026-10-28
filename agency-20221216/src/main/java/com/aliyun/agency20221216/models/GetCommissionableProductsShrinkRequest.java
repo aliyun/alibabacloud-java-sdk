@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetCommissionableProductsShrinkRequest extends TeaModel {
     /**
+     * <p>The commodity codes. Separate multiple codes with commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;oceanbase_obpre_public_intl,savingplan_common_public_intl&quot;</p>
      */
@@ -12,16 +14,23 @@ public class GetCommissionableProductsShrinkRequest extends TeaModel {
     public String commodityCodeList;
 
     /**
+     * <p>The fiscal year. If this parameter is left empty, the current fiscal year is used by default.</p>
+     * 
      * <strong>example:</strong>
      * <p>“FY26”</p>
      */
     @NameInMap("FiscalYear")
     public String fiscalYear;
 
+    /**
+     * <p>The list of display statuses for commission-eligible commodities.</p>
+     */
     @NameInMap("ListShowStatusList")
     public String listShowStatusListShrink;
 
     /**
+     * <p>The current page number. Pages start from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class GetCommissionableProductsShrinkRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Maximum value: 100.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -36,6 +47,8 @@ public class GetCommissionableProductsShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The product codes. Separate multiple codes with commas.</p>
+     * 
      * <strong>example:</strong>
      * <p>&quot;oceanbase&quot;</p>
      */
@@ -43,6 +56,8 @@ public class GetCommissionableProductsShrinkRequest extends TeaModel {
     public String pipCodeList;
 
     /**
+     * <p>The actual end month in the yyyymm format.</p>
+     * 
      * <strong>example:</strong>
      * <p>“202509”</p>
      */
@@ -50,6 +65,8 @@ public class GetCommissionableProductsShrinkRequest extends TeaModel {
     public String realEndMonth;
 
     /**
+     * <p>The actual start month in the yyyymm format.</p>
+     * 
      * <strong>example:</strong>
      * <p>“202502”</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class IssueCouponForCustomerResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
      * <p>code</p>
      */
@@ -12,6 +14,8 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -28,12 +32,17 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("data")
     public IssueCouponForCustomerResponseBodyData data;
 
@@ -84,6 +93,8 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
 
     public static class IssueCouponForCustomerResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the coupon template.</p>
+         * 
          * <strong>example:</strong>
          * <p>5075915</p>
          */
@@ -91,6 +102,8 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
         public Long couponTemplateId;
 
         /**
+         * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-03-05 18:24:07</p>
          */
@@ -98,6 +111,8 @@ public class IssueCouponForCustomerResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The UIDs to which the coupons are issued.</p>
+         * 
          * <strong>example:</strong>
          * <p>111,2222</p>
          */

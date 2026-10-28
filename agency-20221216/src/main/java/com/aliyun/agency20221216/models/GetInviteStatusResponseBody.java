@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInviteStatusResponseBody extends TeaModel {
     /**
-     * <p>Status Code. Error Code:</p>
-     * <ul>
-     * <li>3057 InviteId is empty</li>
-     * </ul>
+     * <p>The status code. Error code: 3057: InviteId is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,16 +17,16 @@ public class GetInviteStatusResponseBody extends TeaModel {
     public GetInviteStatusResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>Success</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+     * <p>The request ID. Alibaba Cloud uses this ID for error tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
@@ -38,7 +35,7 @@ public class GetInviteStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+     * <p>Indicates whether the API call is successful. Valid values: true and false. This parameter does not indicate whether subsequent business operations are successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

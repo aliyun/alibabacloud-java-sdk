@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateCouponTemplateResponseBody extends TeaModel {
     /**
+     * <p>The status code. 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public CreateCouponTemplateResponseBodyData data;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -31,6 +38,8 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -84,6 +93,12 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
 
     public static class CreateCouponTemplateResponseBodyData extends TeaModel {
         /**
+         * <p>The applicable products.</p>
+         * <ul>
+         * <li>All Products: All products.</li>
+         * <li>Custom: Custom products.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Custom</p>
          */
@@ -91,6 +106,12 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         public String applicableProducts;
 
         /**
+         * <p>The party that bears the coupon cost.</p>
+         * <ul>
+         * <li>Partner: Borne by the partner.</li>
+         * <li>Alibaba Cloud: Borne by Alibaba Cloud.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Partner</p>
          */
@@ -98,6 +119,8 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         public String costBearer;
 
         /**
+         * <p>The ID of the coupon template.</p>
+         * 
          * <strong>example:</strong>
          * <p>111111</p>
          */
@@ -105,6 +128,8 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         public Long couponTemplateID;
 
         /**
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-04-02 16:15:31</p>
          */
@@ -112,26 +137,52 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The end time of the effective period.
+         * Format: yyyy-MM-dd.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01</p>
          */
         @NameInMap("Expireddate")
         public String expireddate;
 
+        /**
+         * <p>The list of product codes.</p>
+         */
         @NameInMap("ProductType")
         public java.util.List<String> productType;
 
         /**
+         * <p>The status of the coupon template. Valid values:</p>
+         * <ul>
+         * <li>CREATED: Created.</li>
+         * <li>APPROVING: Under review.</li>
+         * <li>APPROVED: Approved.</li>
+         * <li>UNAPPROVED: Unapproved.</li>
+         * <li>ABANDONED: Abandoned.</li>
+         * <li>EXPIRED: Expired.</li>
+         * <li>EXHAUSTED: Exhausted.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>APPROVED</p>
          */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The name of the coupon template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template name</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
+         * <p>The start time of the effective period.
+         * Format: yyyy-MM-dd.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-01-01</p>
          */
@@ -139,6 +190,8 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         public String vailddate;
 
         /**
+         * <p>The duration of the relative time in days.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -146,6 +199,12 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         public String vaildperioddays;
 
         /**
+         * <p>The validity period of the coupon.</p>
+         * <ul>
+         * <li>Validity Duration: From the date of issuance.</li>
+         * <li>Custom Timeframe: Custom time period.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>Validity Duration</p>
          */
@@ -153,6 +212,8 @@ public class CreateCouponTemplateResponseBody extends TeaModel {
         public String validUntil;
 
         /**
+         * <p>The denomination.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

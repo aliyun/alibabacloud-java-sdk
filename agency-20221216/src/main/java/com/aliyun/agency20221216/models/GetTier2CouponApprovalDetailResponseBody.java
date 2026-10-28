@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
     /**
+     * <p>The return code. A value of 200 indicates success. Other values indicate error codes. For more information, see Error codes.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The response data.</p>
+     */
     @NameInMap("Data")
     public GetTier2CouponApprovalDetailResponseBodyData data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -22,6 +29,8 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>0b9a079e17691387754512757e6a1b</p>
      */
@@ -67,6 +76,12 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
 
     public static class GetTier2CouponApprovalDetailResponseBodyDataApplicantInfo extends TeaModel {
         /**
+         * <p>The applicable products. Valid values:</p>
+         * <ul>
+         * <li>UNIVERSAL: All products.</li>
+         * <li>A specific commodity code.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>UNIVERSAL</p>
          */
@@ -74,6 +89,8 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
         public String applicableProducts;
 
         /**
+         * <p>The timestamp when the application was submitted.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-21 11:24</p>
          */
@@ -81,6 +98,13 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
         public String applicationTime;
 
         /**
+         * <p>The order type for which the coupon is used. Valid values:</p>
+         * <ul>
+         * <li>ALL: Alibaba Cloud subscription.</li>
+         * <li>BILLING: Alibaba Cloud pay-as-you-go bills.</li>
+         * <li>ALL,BILLING: Alibaba Cloud subscription and pay-as-you-go bills.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ALL,BILLING</p>
          */
@@ -88,6 +112,8 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
         public String orderType;
 
         /**
+         * <p>The name of the tier-2 distributor.</p>
+         * 
          * <strong>example:</strong>
          * <p>test account</p>
          */
@@ -95,6 +121,8 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
         public String t2PartnerName;
 
         /**
+         * <p>The UID of the tier-2 distributor.</p>
+         * 
          * <strong>example:</strong>
          * <p>5248516846402795</p>
          */
@@ -102,6 +130,8 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
         public Long t2PartnerUid;
 
         /**
+         * <p>The validity period, which can be a number of valid days or a valid time range.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-21 ~ 2199-12-31</p>
          */
@@ -165,6 +195,8 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
 
     public static class GetTier2CouponApprovalDetailResponseBodyDataCouponReceiptUidList extends TeaModel {
         /**
+         * <p>The denomination.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.00</p>
          */
@@ -172,6 +204,8 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
         public String nominalValue;
 
         /**
+         * <p>The UID of the customer.</p>
+         * 
          * <strong>example:</strong>
          * <p>1703016242044705</p>
          */
@@ -202,13 +236,24 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
     }
 
     public static class GetTier2CouponApprovalDetailResponseBodyData extends TeaModel {
+        /**
+         * <p>The basic information of the application.</p>
+         */
         @NameInMap("ApplicantInfo")
         public GetTier2CouponApprovalDetailResponseBodyDataApplicantInfo applicantInfo;
 
+        /**
+         * <p>The reason for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Reason for application</p>
+         */
         @NameInMap("ApplicationReason")
         public String applicationReason;
 
         /**
+         * <p>The ID of the application form.</p>
+         * 
          * <strong>example:</strong>
          * <p>0b9a079e17691387754512757e6a1b</p>
          */
@@ -216,16 +261,31 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
         public String applicationSheetId;
 
         /**
+         * <p>The approval status. Valid values:</p>
+         * <ul>
+         * <li>1: Revoked.</li>
+         * <li>2: Under review.</li>
+         * <li>3: Rejected.</li>
+         * <li>4: Approved.</li>
+         * <li>5: Approved but issuance failed.</li>
+         * <li>8: Pending.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
         @NameInMap("ApprovalStatus")
         public String approvalStatus;
 
+        /**
+         * <p>The list of customer UIDs that receive the coupons.</p>
+         */
         @NameInMap("CouponReceiptUidList")
         public java.util.List<GetTier2CouponApprovalDetailResponseBodyDataCouponReceiptUidList> couponReceiptUidList;
 
         /**
+         * <p>The estimated remaining quota of PoC coupon benefits for new partner customers after the coupons are issued.</p>
+         * 
          * <strong>example:</strong>
          * <p>20.00</p>
          */
@@ -233,6 +293,8 @@ public class GetTier2CouponApprovalDetailResponseBody extends TeaModel {
         public String remainingQuota;
 
         /**
+         * <p>The requested amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>100.00</p>
          */

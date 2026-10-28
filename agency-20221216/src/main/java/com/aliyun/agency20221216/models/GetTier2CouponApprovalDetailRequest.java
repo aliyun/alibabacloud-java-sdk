@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class GetTier2CouponApprovalDetailRequest extends TeaModel {
     /**
+     * <p>The ID of the application form.</p>
+     * 
      * <strong>example:</strong>
      * <p>d54ca949-9b88-4514-add3-c6029c4027f4</p>
      */

@@ -5,19 +5,32 @@ import com.aliyun.tea.*;
 
 public class CouponApprovalStatusListResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<CouponApprovalStatusListResponseBodyData> data;
 
+    /**
+     * <p>The message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -25,6 +38,8 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -32,6 +47,8 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
      */
@@ -39,6 +56,8 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -108,6 +127,8 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
 
     public static class CouponApprovalStatusListResponseBodyData extends TeaModel {
         /**
+         * <p>The issuing account.</p>
+         * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@test.aliyunid.com">test@test.aliyunid.com</a></p>
          */
@@ -115,26 +136,53 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
         public String issuerAccount;
 
         /**
+         * <p>The UID of the issuing account.</p>
+         * 
          * <strong>example:</strong>
          * <p>5432738203821334</p>
          */
         @NameInMap("IssuerUid")
         public String issuerUid;
 
+        /**
+         * <p>The approval comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Approved</p>
+         */
         @NameInMap("Note")
         public String note;
 
         /**
+         * <p>The ID of the template.</p>
+         * 
          * <strong>example:</strong>
          * <p>S00000101-100040</p>
          */
         @NameInMap("TemplateId")
         public String templateId;
 
+        /**
+         * <p>The name of the coupon template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template name</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
+         * <p>The status of the coupon template. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: application revoked</li>
+         * <li><strong>2</strong>: under review</li>
+         * <li><strong>3</strong>: review rejected</li>
+         * <li><strong>4</strong>: review approved</li>
+         * <li><strong>5</strong>: review approved but issuance failed</li>
+         * <li><strong>6</strong>: automatically approved</li>
+         * <li><strong>7</strong>: automatically approved but issuance failed</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>2</p>
          */
@@ -142,6 +190,8 @@ public class CouponApprovalStatusListResponseBody extends TeaModel {
         public Long templateStatus;
 
         /**
+         * <p>The application time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-02-02 09:46:59</p>
          */

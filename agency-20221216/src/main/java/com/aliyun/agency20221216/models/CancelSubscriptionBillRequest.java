@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class CancelSubscriptionBillRequest extends TeaModel {
     /**
-     * <p>The type of the bill to which you want to cancel the subscription. Valid values: PartnerBillingItemDetailForBillingPeriod, PartnerBillingItemDetailMonthly, PartnerInstanceDetailForBillingPeriod, and PartnerInstanceDetailMonthly.</p>
+     * <p>Subscription type.</p>
+     * <ul>
+     * <li>PartnerBillingItemDetailForBillingPeriod: Billing item bill details.</li>
+     * <li>PartnerBillingItemDetailMonthly: Billing item monthly bill.</li>
+     * <li>PartnerInstanceDetailForBillingPeriod: Instance bill details.</li>
+     * <li>PartnerInstanceDetailMonthly: Instance monthly bill.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

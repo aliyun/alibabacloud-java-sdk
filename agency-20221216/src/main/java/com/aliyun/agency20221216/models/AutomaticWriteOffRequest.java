@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AutomaticWriteOffRequest extends TeaModel {
     /**
+     * <p>The automatic write-off amount. This parameter is required if automatic write-off is enabled. Valid values: 100, 500, and 1000.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -12,6 +14,11 @@ public class AutomaticWriteOffRequest extends TeaModel {
     public Long automaticWriteOffAmount;
 
     /**
+     * <p>Specifies whether to enable automatic write-off and set the automatic write-off amount. Valid values:</p>
+     * <ul>
+     * <li>true: Enables automatic write-off and sets the automatic write-off amount.</li>
+     * <li>false: Disables automatic write-off.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +28,7 @@ public class AutomaticWriteOffRequest extends TeaModel {
     public Boolean automaticWriteOffEnabled;
 
     /**
+     * <p>The UID of the customer.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +38,13 @@ public class AutomaticWriteOffRequest extends TeaModel {
     public Long customerUid;
 
     /**
+     * <p>The language. If this parameter is not specified, English is used by default. Valid values:</p>
+     * <ul>
+     * <li>en: English.</li>
+     * <li>zh: Chinese.</li>
+     * <li>ja: Japanese.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */

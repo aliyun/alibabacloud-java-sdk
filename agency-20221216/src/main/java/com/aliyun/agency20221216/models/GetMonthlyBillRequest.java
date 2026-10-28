@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetMonthlyBillRequest extends TeaModel {
     /**
-     * <p>Bill Owner type. Value Range:</br>
-     * 1: Master account</br>
-     * 2: Sub account</br></p>
+     * <p>Bill Owner type.</p>
+     * <p> Value range:</p>
+     * <p>1: Master account </p>
+     * <p>2: Sub account</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,17 +19,15 @@ public class GetMonthlyBillRequest extends TeaModel {
 
     /**
      * <p>Value Range:</p>
-     * <ul>
-     * <li>MonthlyInvoice</li>
-     * <li>MonthRefundInvoice</li>
-     * <li>MonthlySummary (Deprecated)</li>
-     * <li>MonthlyInstanceAddAdjustBill </li>
-     * <li>MonthlyInstanceRefundBill</li>
-     * <li>MonthlyAddAdjustInvoce</li>
-     * <li>MonthlyRefundAdjustInvoce </li>
-     * <li>MonthlyInstanceConsumeV2 </li>
-     * <li>MarginReportV2</li>
-     * </ul>
+     * <p>MonthlyInvoice</p>
+     * <p>MonthRefundInvoice</p>
+     * <p>MonthlySummary (Deprecated)</p>
+     * <p>MonthlyInstanceAddAdjustBill </p>
+     * <p>MonthlyInstanceRefundBill</p>
+     * <p>MonthlyAddAdjustInvoce</p>
+     * <p>MonthlyRefundAdjustInvoce </p>
+     * <p>MonthlyInstanceConsumeV2 </p>
+     * <p>MarginReportV2</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

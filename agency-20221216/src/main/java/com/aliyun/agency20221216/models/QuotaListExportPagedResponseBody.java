@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuotaListExportPagedResponseBody extends TeaModel {
     /**
-     * <p>Status code of returning result, 200 means success.</p>
+     * <p>The status code of the returned result. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Listed data of returning result</p>
+     * <p>The list of returned results.</p>
      */
     @NameInMap("Data")
     public java.util.List<QuotaListExportPagedResponseBodyData> data;
 
     /**
-     * <p>Description of returning result</p>
+     * <p>The description of the returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -29,7 +29,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Record number on each page</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>ID of the Request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>210e876f16704666020714468dab35</p>
@@ -56,7 +56,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total volume</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -127,7 +127,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
 
     public static class QuotaListExportPagedResponseBodyData extends TeaModel {
         /**
-         * <p>Create Time</p>
+         * <p>The creation time. The time is in the YYYY-MM-DD HH:mm:ss format in the UTC+8 time zone.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-21 21:31:57 UTC+8</p>
@@ -136,7 +136,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>File Name</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>5113766248601929_quota_2023-06-22_2023-12-21_all_2023122121310057</p>
@@ -145,7 +145,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>Notification Message</p>
+         * <p>The prompt message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -154,7 +154,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Display of Task Status</p>
+         * <p>The display status of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -163,10 +163,12 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Task Status Enum</br>
-         * 2: Exporting</br>
-         * 3: Export Success</br>
-         * -1: Export Fail</br></p>
+         * <p>The status code of the task. Valid values:</p>
+         * <ul>
+         * <li>2: Exporting.</li>
+         * <li>3: Export succeeded.</li>
+         * <li>-1: Export failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Export Success</p>
@@ -175,7 +177,7 @@ public class QuotaListExportPagedResponseBody extends TeaModel {
         public String statusCode;
 
         /**
-         * <p>The link to download exported file.</p>
+         * <p>The download URL of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>//aliyun-eco-market-servic-singapore.oss-ap-southeast-1.aliyuncs.com/5113766248601929_quota_2023-06-22_2023-12-21_all_2023122121310057</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomerResponseBody extends TeaModel {
     /**
-     * <p>Code indicating whether the call was successful.</p>
+     * <p>The code that indicates whether the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreateCustomerResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data indicating whether a customer was successfully created. If it\&quot;s &quot;true&quot;, the Message contains CID.</p>
+     * <p>Indicates whether the customer is created. If the value is true, the Message contains the CID.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class CreateCustomerResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>Massage indicating whether the call was successful.</p>
+     * <p>The same as the Code parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>12345</p>
@@ -32,7 +32,7 @@ public class CreateCustomerResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+     * <p>The request ID. Alibaba Cloud uses this ID for error tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>A9B725C7-3DBD-576B-AC91-F6F22AB99A77</p>
@@ -41,7 +41,12 @@ public class CreateCustomerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Candidate Value: True/False, which indicates whether the current API call it self was successful. It does not guarantee the success of subsequent business operations.</p>
+     * <p>Indicates whether the current API call is successful. Valid values:</p>
+     * <ul>
+     * <li>True</li>
+     * <li>False</li>
+     * </ul>
+     * <p>This does not indicate whether the subsequent business operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

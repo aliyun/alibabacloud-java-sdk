@@ -5,6 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetCoupondeductProductCodeRequest extends TeaModel {
     /**
+     * <p>Multi-language parameter. 
+     * Default value: none.
+     *     Chinese: zh-CN
+     *     English: en-US.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QuotaListExportPagedRequest extends TeaModel {
     /**
-     * <p>Pagination, current page number, starting from 1.</p>
+     * <p>The page number. Pages start from page 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,12 @@ public class QuotaListExportPagedRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Multilingual Parameters, the default language is English.</br>
-     * en: English</br>
-     * zh: Chinese</br>
-     * ja: Japanese </br></p>
+     * <p>The language. Default value: en. Valid values:</p>
+     * <ul>
+     * <li>en: English.</li>
+     * <li>zh: Chinese.</li>
+     * <li>ja: Japanese.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>en</p>
@@ -27,7 +29,7 @@ public class QuotaListExportPagedRequest extends TeaModel {
     public String language;
 
     /**
-     * <p>Pagination, record number on each page, maximum 100.</p>
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

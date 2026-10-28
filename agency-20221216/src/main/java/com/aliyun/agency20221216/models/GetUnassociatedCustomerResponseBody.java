@@ -5,11 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetUnassociatedCustomerResponseBody extends TeaModel {
     /**
-     * <p>Error Code, Candidate Value：</p>
-     * <ul>
-     * <li>200: OK</li>
-     * <li>1109: System error</li>
-     * </ul>
+     * <p>The error code. Valid values:
+     * 200: OK.
+     * 1109: System error.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -21,22 +19,22 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
     public GetUnassociatedCustomerResponseBodyInviteInfoList inviteInfoList;
 
     /**
-     * <p>Message information</p>
+     * <p>The message information.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>成功</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Pagination Information</p>
+     * <p>The pagination information.</p>
      */
     @NameInMap("PageInfo")
     public GetUnassociatedCustomerResponseBodyPageInfo pageInfo;
 
     /**
-     * <p>Request ID, Alibaba Cloud will track errors with this.</p>
+     * <p>The request ID. Alibaba Cloud uses this ID for error tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>23309219-4A34-589D-A3E0-9B2A3BFFD24F</p>
@@ -45,7 +43,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Candidate Value: True/False, which indicates whether the current API call itself is successful. It does not guarantee the success of subsequent business operations.</p>
+     * <p>Indicates whether the current API call itself is successful. Valid values: True and False. This does not indicate the success of subsequent business operations.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -190,7 +188,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
 
     public static class GetUnassociatedCustomerResponseBodyPageInfo extends TeaModel {
         /**
-         * <p>Pagination, current page.</p>
+         * <p>The current page number for pagination.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -199,7 +197,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         public Integer page;
 
         /**
-         * <p>Pagination, record number on each page.</p>
+         * <p>The number of records per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -208,7 +206,7 @@ public class GetUnassociatedCustomerResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Pagination, page volume in total.</p>
+         * <p>The total number of records.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>

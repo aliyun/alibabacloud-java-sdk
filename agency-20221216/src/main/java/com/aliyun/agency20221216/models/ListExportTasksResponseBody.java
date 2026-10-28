@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListExportTasksResponseBody extends TeaModel {
     /**
+     * <p>The status code of the returned result. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned list.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListExportTasksResponseBodyData> data;
 
     /**
+     * <p>The description of the returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -22,6 +29,8 @@ public class ListExportTasksResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class ListExportTasksResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class ListExportTasksResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>asda1231as</p>
      */
@@ -43,6 +56,8 @@ public class ListExportTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -112,6 +127,8 @@ public class ListExportTasksResponseBody extends TeaModel {
 
     public static class ListExportTasksResponseBodyData extends TeaModel {
         /**
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-01 10:22:11</p>
          */
@@ -119,6 +136,8 @@ public class ListExportTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The name of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>511376624869_quota_2023-06-22_2023-12-21_all_2023122121310057</p>
          */
@@ -126,6 +145,8 @@ public class ListExportTasksResponseBody extends TeaModel {
         public String fileName;
 
         /**
+         * <p>The unique ID of the export task.</p>
+         * 
          * <strong>example:</strong>
          * <p>12355</p>
          */
@@ -133,6 +154,8 @@ public class ListExportTasksResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The prompt message.</p>
+         * 
          * <strong>example:</strong>
          * <p>null</p>
          */
@@ -140,6 +163,8 @@ public class ListExportTasksResponseBody extends TeaModel {
         public String message;
 
         /**
+         * <p>The display status of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>Export Success</p>
          */
@@ -147,6 +172,13 @@ public class ListExportTasksResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The status code of the task. Valid values:</p>
+         * <ul>
+         * <li>2: Exporting.</li>
+         * <li>3: Export successful.</li>
+         * <li>-1: Export failed.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -154,6 +186,8 @@ public class ListExportTasksResponseBody extends TeaModel {
         public String statusCode;
 
         /**
+         * <p>The download URL of the file.</p>
+         * 
          * <strong>example:</strong>
          * <p>//aliyun-eco-market-servic-singapore.oss-ap-southeast-1.aliyuncs.com/511376624869_quota_2023-06-22_2023-12-21_all_2023122121310057</p>
          */

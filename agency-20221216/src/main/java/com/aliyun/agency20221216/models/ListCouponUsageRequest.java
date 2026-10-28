@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCouponUsageRequest extends TeaModel {
     /**
-     * <p>阿里云客户账号</p>
+     * <p>The Alibaba Cloud customer account.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="mailto:oqevfbveuadcrduzmf@ttirv.net">oqevfbveuadcrduzmf@ttirv.net</a></p>
@@ -14,7 +14,7 @@ public class ListCouponUsageRequest extends TeaModel {
     public String account;
 
     /**
-     * <p>优惠券模版id</p>
+     * <p>The ID of the coupon template.</p>
      * 
      * <strong>example:</strong>
      * <p>5075915</p>
@@ -23,8 +23,8 @@ public class ListCouponUsageRequest extends TeaModel {
     public Long couponTemplateId;
 
     /**
-     * <p>页码</br> 
-     *  默认值为1 最小值1</p>
+     * <p>The page number.</br> 
+     * Default value: 1. Minimum value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,8 +33,8 @@ public class ListCouponUsageRequest extends TeaModel {
     public Integer page;
 
     /**
-     * <p>分页行数 </br>
-     *   默认值20 最大值50 最小值1</p>
+     * <p>The number of entries per page.</br>
+     * Default value: 20. Maximum value: 50. Minimum value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -43,11 +43,11 @@ public class ListCouponUsageRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>优惠券状态 </br>
-     * AVAILABLE 正常 </br>
-     * EXHAUSTED 已用完 </br>
-     * EXPIRED 已过期 </br>
-     * ABANDONED 已作废 </br></p>
+     * <p>The coupon status. Valid values:</br>
+     * AVAILABLE: Normal.</br>
+     * EXHAUSTED: Used up.</br>
+     * EXPIRED: Expired.</br>
+     * ABANDONED: Voided.</br></p>
      * 
      * <strong>example:</strong>
      * <p>AVAILABLE</p>
@@ -56,8 +56,7 @@ public class ListCouponUsageRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>T2伙伴uid
-     * 如：123456789</p>
+     * <p>The UID of the T2 partner. Example: 123456789.</p>
      * 
      * <strong>example:</strong>
      * <p>123456768</p>
@@ -66,7 +65,7 @@ public class ListCouponUsageRequest extends TeaModel {
     public Long t2PartnerUid;
 
     /**
-     * <p>阿里云账号uid</p>
+     * <p>The UID of the Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>1133166938931507</p>

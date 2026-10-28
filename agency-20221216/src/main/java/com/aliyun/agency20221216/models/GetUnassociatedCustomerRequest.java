@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUnassociatedCustomerRequest extends TeaModel {
     /**
-     * <p>Pagination, current page.</p>
+     * <p>The current page number for pagination.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetUnassociatedCustomerRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>Pagination, record number on each page.</p>
+     * <p>The number of records per page for pagination.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

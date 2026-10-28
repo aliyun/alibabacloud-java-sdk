@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListTier2CouponApprovalResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data object.</p>
+     */
     @NameInMap("Data")
     public java.util.List<ListTier2CouponApprovalResponseBodyData> data;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -22,6 +29,8 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -36,6 +47,8 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
      */
@@ -43,6 +56,8 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -112,6 +127,8 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
 
     public static class ListTier2CouponApprovalResponseBodyData extends TeaModel {
         /**
+         * <p>The ID of the application form.</p>
+         * 
          * <strong>example:</strong>
          * <p>d54ca949-9b88-4514-add3-c6029c4027f4</p>
          */
@@ -119,6 +136,8 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
         public String applicationSheetId;
 
         /**
+         * <p>The application time. The time is in the YYYY-MM-DD HH:mm:ss format.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-21 11:24</p>
          */
@@ -126,6 +145,16 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
         public String applicationTime;
 
         /**
+         * <p>The approval status. Valid values:</p>
+         * <ul>
+         * <li>1: Revoked.</li>
+         * <li>2: Under review.</li>
+         * <li>3: Rejected.</li>
+         * <li>4: Approved.</li>
+         * <li>5: Approved but issuance failed.</li>
+         * <li>8: Pending.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -133,6 +162,8 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
         public String approvalStatus;
 
         /**
+         * <p>The name of the secondary distributor.</p>
+         * 
          * <strong>example:</strong>
          * <p>test account</p>
          */
@@ -140,6 +171,8 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
         public String t2PartnerName;
 
         /**
+         * <p>The UID of the secondary distributor.</p>
+         * 
          * <strong>example:</strong>
          * <p>5248516956402795</p>
          */
@@ -147,6 +180,8 @@ public class ListTier2CouponApprovalResponseBody extends TeaModel {
         public Long t2PartnerUid;
 
         /**
+         * <p>The requested amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */

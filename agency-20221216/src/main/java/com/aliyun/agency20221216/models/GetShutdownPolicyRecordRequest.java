@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetShutdownPolicyRecordRequest extends TeaModel {
     /**
+     * <p>The customer UID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class GetShutdownPolicyRecordRequest extends TeaModel {
     public Long customerUID;
 
     /**
+     * <p>The start time. If left empty, data from the last six months is returned. The time format is yyyy-MM-dd HH:mm:ss.</p>
+     * 
      * <strong>example:</strong>
      * <p>2025-12-15 10:34:36</p>
      */
@@ -21,6 +24,7 @@ public class GetShutdownPolicyRecordRequest extends TeaModel {
     public String operationTime;
 
     /**
+     * <p>The page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,6 +34,7 @@ public class GetShutdownPolicyRecordRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

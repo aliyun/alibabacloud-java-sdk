@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ProcessApprovalResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ProcessApprovalResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The approval result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class ProcessApprovalResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The prompt message.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */

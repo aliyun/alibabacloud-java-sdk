@@ -5,15 +5,27 @@ import com.aliyun.tea.*;
 
 public class GetCoupondeductProductCodeResponseBody extends TeaModel {
     /**
+     * <p>The result code. Valid values:
+     * 200: OK.</p>
+     * 
      * <strong>example:</strong>
      * <p>code</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetCoupondeductProductCodeResponseBodyData> data;
 
+    /**
+     * <p>The message information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
@@ -27,6 +39,8 @@ public class GetCoupondeductProductCodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -80,6 +94,8 @@ public class GetCoupondeductProductCodeResponseBody extends TeaModel {
 
     public static class GetCoupondeductProductCodeResponseBodyData extends TeaModel {
         /**
+         * <p>The product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>code1</p>
          */

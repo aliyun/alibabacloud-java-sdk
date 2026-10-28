@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeductOutstandingBalanceRequest extends TeaModel {
     /**
-     * <p>The Deducted Credit to be offset.</p>
+     * <p>The amount of deducted credit to reduce.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeductOutstandingBalanceRequest extends TeaModel {
     public String deductAmount;
 
     /**
-     * <p>Account UID of Distribution Customer.</p>
+     * <p>The UID of the reseller\&quot;s customer account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

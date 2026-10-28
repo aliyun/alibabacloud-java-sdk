@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class EditNewBuyStatusRequest extends TeaModel {
     /**
-     * <p>New Purchase Status</br></p>
+     * <p>The new purchase status. Valid values:</p>
      * <ul>
-     * <li><p>cancelBan: Cancel the restriction for New Purchase request</br></p>
-     * </li>
-     * <li><p>ban: ban the New Purchase request</br></p>
-     * </li>
+     * <li>cancelBan: allows new purchases</li>
+     * <li>ban: prohibits new purchases.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class EditNewBuyStatusRequest extends TeaModel {
     public String newBuyStatus;
 
     /**
-     * <p>Customer UID</p>
+     * <p>The UID of the customer.</p>
      * 
      * <strong>example:</strong>
      * <p>1133166938931507</p>

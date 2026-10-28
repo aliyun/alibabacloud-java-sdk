@@ -5,19 +5,32 @@ import com.aliyun.tea.*;
 
 public class QueryAutomaticWriteOffChangeRecordsResponseBody extends TeaModel {
     /**
+     * <p>The status code of the response. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of query results.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryAutomaticWriteOffChangeRecordsResponseBodyData> data;
 
+    /**
+     * <p>The message of the response.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>8cd24f2917797624314748873d0096</p>
      */
@@ -62,10 +75,18 @@ public class QueryAutomaticWriteOffChangeRecordsResponseBody extends TeaModel {
     }
 
     public static class QueryAutomaticWriteOffChangeRecordsResponseBodyData extends TeaModel {
+        /**
+         * <p>The content of the operation.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Enable automatic write-off and select 500 USD</p>
+         */
         @NameInMap("ChangeContent")
         public String changeContent;
 
         /**
+         * <p>The operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>12312312</p>
          */
@@ -73,6 +94,8 @@ public class QueryAutomaticWriteOffChangeRecordsResponseBody extends TeaModel {
         public String operateId;
 
         /**
+         * <p>The description of the operation source.</p>
+         * 
          * <strong>example:</strong>
          * <p>API</p>
          */
@@ -80,6 +103,8 @@ public class QueryAutomaticWriteOffChangeRecordsResponseBody extends TeaModel {
         public String operateSource;
 
         /**
+         * <p>The time of the operation. Format: YYYY-MM-DD HH:mm:ss UTC+8.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-15 10:34:36 UTC+8</p>
          */

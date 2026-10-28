@@ -14,16 +14,26 @@ public class AutomaticWriteOffResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>Indicates whether the configuration is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>6fc1309b17543600398356606d0096</p>
      */

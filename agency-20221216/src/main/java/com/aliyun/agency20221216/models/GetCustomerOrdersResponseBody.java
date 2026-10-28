@@ -5,22 +5,41 @@ import com.aliyun.tea.*;
 
 public class GetCustomerOrdersResponseBody extends TeaModel {
     /**
+     * <p>The result code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetCustomerOrdersResponseBodyData> data;
 
+    /**
+     * <p>The message. The value is the same as the Code parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The message. The value is the same as the Code parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Msg")
     public String msg;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +47,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -44,6 +65,12 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>200: OK.</li>
+     * <li>201: Parameter error.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -51,6 +78,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -136,6 +165,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
 
     public static class GetCustomerOrdersResponseBodyData extends TeaModel {
         /**
+         * <p>The customer account.</p>
+         * 
          * <strong>example:</strong>
          * <p>test_123</p>
          */
@@ -143,6 +174,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public String customerAccount;
 
         /**
+         * <p>The account manager.</p>
+         * 
          * <strong>example:</strong>
          * <p>myBd</p>
          */
@@ -150,6 +183,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public String customerManager;
 
         /**
+         * <p>The customer UID.</p>
+         * 
          * <strong>example:</strong>
          * <p>123456</p>
          */
@@ -157,6 +192,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public Long customerNo;
 
         /**
+         * <p>The order ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>236414227150922</p>
          */
@@ -164,6 +201,13 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public Long orderId;
 
         /**
+         * <p>The order source. Valid values:</p>
+         * <ul>
+         * <li>0: Regular customer.</li>
+         * <li>1: Enterprise customer.</li>
+         * <li>2: Tier-2 distributor.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -171,6 +215,13 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public String orderSource;
 
         /**
+         * <p>The order status. Valid values:</p>
+         * <ul>
+         * <li>1: Unpaid.</li>
+         * <li>2: Canceled.</li>
+         * <li>3: Paid.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -178,6 +229,16 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public Integer orderStatus;
 
         /**
+         * <p>The order type. Valid values:</p>
+         * <ul>
+         * <li>BUY: New purchase.</li>
+         * <li>UPGRADE: Upgrade.</li>
+         * <li>DOWNGRADE: Downgrade.</li>
+         * <li>RENEW: Renewal.</li>
+         * <li>REFUND: Refund.</li>
+         * <li>OTHERS: Others.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>BUY</p>
          */
@@ -185,6 +246,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public String orderType;
 
         /**
+         * <p>The original order price.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.92</p>
          */
@@ -192,6 +255,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public Double originalCost;
 
         /**
+         * <p>The payment method.</p>
+         * 
          * <strong>example:</strong>
          * <p>3:32</p>
          */
@@ -199,6 +264,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public String paymentMethod;
 
         /**
+         * <p>The payment time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-13 13:02:02</p>
          */
@@ -206,6 +273,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public String paymentTime;
 
         /**
+         * <p>The payable amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>3.92</p>
          */
@@ -213,6 +282,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public Double pretaxCost;
 
         /**
+         * <p>The product details.</p>
+         * 
          * <strong>example:</strong>
          * <p>oss</p>
          */
@@ -220,6 +291,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public String productDetail;
 
         /**
+         * <p>The product detail code.</p>
+         * 
          * <strong>example:</strong>
          * <p>snapshot</p>
          */
@@ -227,6 +300,8 @@ public class GetCustomerOrdersResponseBody extends TeaModel {
         public String productType;
 
         /**
+         * <p>The order placement time. Format: YYYY-MM-DD HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-08-13 13:02:02</p>
          */

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class GetDailyBillRequest extends TeaModel {
     /**
-     * <p>Bill Owner type. Value Range:</br>
-     * 1: Master account</br>
-     * 2: Sub account</br></p>
+     * <p>The type of the bill owner. Valid values:</p>
+     * <p>1: reseller partner account </p>
+     * <p>2: reseller customer account</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,12 +17,16 @@ public class GetDailyBillRequest extends TeaModel {
     public String billOwner;
 
     /**
-     * <p>BillType. Value Range:</br></p>
+     * <p>The bill type. Valid values:</p>
      * <ul>
-     * <li>DailyOrder(Deprecated)</li>
-     * <li>DailyBill (Deprecated)</li>
-     * <li>DailyInstanceBill (Deprecated)</li>
-     * <li>DailyInstanceBillV2</li>
+     * <li><p>DailyOrder (deprecated)</p>
+     * </li>
+     * <li><p>DailyBill (deprecated)</p>
+     * </li>
+     * <li><p>DailyInstanceBill (deprecated) </p>
+     * </li>
+     * <li><p>DailyInstanceBillV2</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

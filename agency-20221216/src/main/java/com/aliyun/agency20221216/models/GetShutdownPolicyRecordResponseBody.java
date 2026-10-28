@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetShutdownPolicyRecordResponseBody extends TeaModel {
     /**
+     * <p>The result code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>Indicates whether the customer was created. If the value is true, the Message contains the CID.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetShutdownPolicyRecordResponseBodyData> data;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>210e876f16704666020714468dab35</p>
      */
@@ -36,6 +47,8 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +56,8 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -112,6 +127,16 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
 
     public static class GetShutdownPolicyRecordResponseBodyData extends TeaModel {
         /**
+         * <p>The current policy. Valid values:</p>
+         * <ul>
+         * <li>immediatelyStop: immediate shutdown upon overdue payment.</li>
+         * <li>delayStop: deferred shutdown quota applied.</li>
+         * <li>noStop: no shutdown upon overdue payment.
+         * [_single.resp.200.props.Data.items.CurrentPolicy.enum.immediatelyStop ]Immediate shutdown upon overdue payment.
+         * [_single.resp.200.props.Data.items.CurrentPolicy.enum.noStop ]No shutdown upon overdue payment.
+         * [_single.resp.200.props.Data.items.CurrentPolicy.enum.delayStop ]Deferred shutdown quota applied.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>noStop</p>
          */
@@ -119,6 +144,13 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
         public String currentPolicy;
 
         /**
+         * <p>The method by which the operation was initiated. Valid values:</p>
+         * <ul>
+         * <li>API: API.</li>
+         * <li>ACPN: ACPN.</li>
+         * <li>ALIYUN_BIZ: Alibaba Cloud internal.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ACPN</p>
          */
@@ -126,6 +158,8 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
         public String operationPath;
 
         /**
+         * <p>The operation time (UTC+8).</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-15 10:34:36</p>
          */
@@ -133,6 +167,8 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
         public String operationTime;
 
         /**
+         * <p>The operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>11111111111</p>
          */
@@ -140,6 +176,16 @@ public class GetShutdownPolicyRecordResponseBody extends TeaModel {
         public String operator;
 
         /**
+         * <p>The policy before the change. Valid values:</p>
+         * <ul>
+         * <li>immediatelyStop: immediate shutdown upon overdue payment.</li>
+         * <li>delayStop: deferred shutdown quota applied.</li>
+         * <li>noStop: no shutdown upon overdue payment.
+         * [_single.resp.200.props.Data.items.PreviousPolicy.enum.immediatelyStop ]Immediate shutdown upon overdue payment.
+         * [_single.resp.200.props.Data.items.PreviousPolicy.enum.noStop ]No shutdown upon overdue payment.
+         * [_single.resp.200.props.Data.items.PreviousPolicy.enum.delayStop ]Deferred shutdown quota applied.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>immediatelyStop</p>
          */

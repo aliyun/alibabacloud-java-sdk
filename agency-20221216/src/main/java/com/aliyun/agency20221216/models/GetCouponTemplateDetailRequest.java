@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCouponTemplateDetailRequest extends TeaModel {
     /**
+     * <p>The ID of the coupon template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

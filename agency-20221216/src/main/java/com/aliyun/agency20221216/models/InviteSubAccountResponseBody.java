@@ -5,9 +5,11 @@ import com.aliyun.tea.*;
 
 public class InviteSubAccountResponseBody extends TeaModel {
     /**
-     * <p>Error Code: </br>
-     * • 200 OK</br>
-     * • 1109 System Error</br></p>
+     * <p>The fault code. Valid values:</p>
+     * <ul>
+     * <li>200: OK.</li>
+     * <li>1109: System Error.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -16,16 +18,16 @@ public class InviteSubAccountResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Message</br></p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>success</p>
+     * <p>成功</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>Request ID, Alibaba Cloud will track errors with this ID.</p>
+     * <p>The request ID. Alibaba Cloud uses this ID for fault tracking.</p>
      * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
@@ -37,7 +39,7 @@ public class InviteSubAccountResponseBody extends TeaModel {
     public InviteSubAccountResponseBodyResults results;
 
     /**
-     * <p>Candidate Values: True/False, this value states if the current API calling action is successful. It does not guarantee the success of subsequent business operations.</p>
+     * <p>Indicates whether the current API invocation is successful. Valid values: True and False. This does not indicate whether the subsequent business operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

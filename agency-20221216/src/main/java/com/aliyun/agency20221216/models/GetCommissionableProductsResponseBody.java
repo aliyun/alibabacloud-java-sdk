@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class GetCommissionableProductsResponseBody extends TeaModel {
     /**
+     * <p>The status code of the response. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list of returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetCommissionableProductsResponseBodyData> data;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +29,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -29,6 +38,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>2103a30617045934095083027d88c5</p>
      */
@@ -36,6 +47,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call is successful. Valid values: True and False. This parameter indicates only the success of the API call and does not indicate the success of subsequent business operations.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -43,6 +56,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -112,6 +127,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
 
     public static class GetCommissionableProductsResponseBodyData extends TeaModel {
         /**
+         * <p>The actual start month in the yyyymm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>“202502”</p>
          */
@@ -119,6 +136,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         public String actualStartMonth;
 
         /**
+         * <p>The commodity code.</p>
+         * 
          * <strong>example:</strong>
          * <p>“oceanbase_obpre_public_intl”</p>
          */
@@ -126,6 +145,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         public String commodityCode;
 
         /**
+         * <p>The commodity name.</p>
+         * 
          * <strong>example:</strong>
          * <p>“ApsaraDB for OceanBase Pre”</p>
          */
@@ -133,6 +154,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         public String commodityName;
 
         /**
+         * <p>Specifies whether the commodity is eligible for commission.</p>
+         * 
          * <strong>example:</strong>
          * <p>Yes</p>
          */
@@ -140,6 +163,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         public String eligibleForCommission;
 
         /**
+         * <p>Specifies whether the commodity is eligible for discounts.</p>
+         * 
          * <strong>example:</strong>
          * <p>Yes</p>
          */
@@ -147,6 +172,17 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         public String eligibleForDiscount;
 
         /**
+         * <p>Specifies whether the commodity is counted towards performance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Yes</p>
+         */
+        @NameInMap("EligibleForPerformance")
+        public String eligibleForPerformance;
+
+        /**
+         * <p>The actual end month in the yyyymm format.</p>
+         * 
          * <strong>example:</strong>
          * <p>“202509”</p>
          */
@@ -154,6 +190,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         public String endMonth;
 
         /**
+         * <p>Specifies whether the commodity is a product line incentive commodity.</p>
+         * 
          * <strong>example:</strong>
          * <p>Yes</p>
          */
@@ -161,6 +199,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         public String productCampaign;
 
         /**
+         * <p>The product code.</p>
+         * 
          * <strong>example:</strong>
          * <p>“oceanbase”</p>
          */
@@ -168,6 +208,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         public String productCode;
 
         /**
+         * <p>The product name.</p>
+         * 
          * <strong>example:</strong>
          * <p>“ApsaraDB for OceanBase”</p>
          */
@@ -175,6 +217,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         public String productName;
 
         /**
+         * <p>Specifies whether the product is a core product.</p>
+         * 
          * <strong>example:</strong>
          * <p>Yes</p>
          */
@@ -182,6 +226,8 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         public String sevenCoreProducts;
 
         /**
+         * <p>The display status of the product.</p>
+         * 
          * <strong>example:</strong>
          * <p>“ONLINE”</p>
          */
@@ -231,6 +277,14 @@ public class GetCommissionableProductsResponseBody extends TeaModel {
         }
         public String getEligibleForDiscount() {
             return this.eligibleForDiscount;
+        }
+
+        public GetCommissionableProductsResponseBodyData setEligibleForPerformance(String eligibleForPerformance) {
+            this.eligibleForPerformance = eligibleForPerformance;
+            return this;
+        }
+        public String getEligibleForPerformance() {
+            return this.eligibleForPerformance;
         }
 
         public GetCommissionableProductsResponseBodyData setEndMonth(String endMonth) {

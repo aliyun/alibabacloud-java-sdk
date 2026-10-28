@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelCouponRequest extends TeaModel {
     /**
+     * <p>The coupon ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class CancelCouponResponseBody extends TeaModel {
     /**
+     * <p>The status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,16 +14,26 @@ public class CancelCouponResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The operation result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
     @NameInMap("Data")
     public Boolean data;
 
+    /**
+     * <p>The message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>成功</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
      */
@@ -29,6 +41,8 @@ public class CancelCouponResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

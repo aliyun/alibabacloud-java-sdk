@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListTier2CouponApprovalRequest extends TeaModel {
     /**
+     * <p>The ID of the application form.</p>
+     * 
      * <strong>example:</strong>
      * <p>d54ca949-9b88-4514-add3-c6029c4027f4</p>
      */
@@ -12,6 +14,16 @@ public class ListTier2CouponApprovalRequest extends TeaModel {
     public String applicationSheetId;
 
     /**
+     * <p>The approval status. Valid values:</p>
+     * <ul>
+     * <li>1: Revoked.</li>
+     * <li>2: Under review.</li>
+     * <li>3: Rejected.</li>
+     * <li>4: Approved.</li>
+     * <li>5: Approved but issuance failed.</li>
+     * <li>8: Pending.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +31,7 @@ public class ListTier2CouponApprovalRequest extends TeaModel {
     public String approvalStatus;
 
     /**
+     * <p>The page number. Pages start from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +41,7 @@ public class ListTier2CouponApprovalRequest extends TeaModel {
     public Integer currentPage;
 
     /**
+     * <p>The number of entries per page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +51,8 @@ public class ListTier2CouponApprovalRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The name of the secondary distributor.</p>
+     * 
      * <strong>example:</strong>
      * <p>test account</p>
      */
@@ -44,6 +60,8 @@ public class ListTier2CouponApprovalRequest extends TeaModel {
     public String t2PartnerName;
 
     /**
+     * <p>The UID of the secondary distributor.</p>
+     * 
      * <strong>example:</strong>
      * <p>5248516956402795</p>
      */

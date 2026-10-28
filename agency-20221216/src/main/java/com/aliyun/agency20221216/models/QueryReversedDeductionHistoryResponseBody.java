@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
     /**
+     * <p>The status code of the returned result. A value of 200 indicates success.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The list data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<QueryReversedDeductionHistoryResponseBodyData> data;
 
     /**
+     * <p>The description of the returned result.</p>
+     * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
      */
@@ -22,6 +29,8 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The current page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -29,6 +38,8 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -36,6 +47,8 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>asda1231as</p>
      */
@@ -43,6 +56,8 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>12</p>
      */
@@ -112,6 +127,8 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
 
     public static class QueryReversedDeductionHistoryResponseBodyData extends TeaModel {
         /**
+         * <p>The offset amount.</p>
+         * 
          * <strong>example:</strong>
          * <p>1.00</p>
          */
@@ -119,6 +136,8 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
         public String offsetAmount;
 
         /**
+         * <p>The method used to initiate the operation, such as API or ACPN.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACPN</p>
          */
@@ -126,6 +145,8 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
         public String operationSubmitType;
 
         /**
+         * <p>The operation time. Format: YYYY-MM-DD HH:mm:ss UTC+8.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-01 10:22:11 UTC+8</p>
          */
@@ -133,6 +154,8 @@ public class QueryReversedDeductionHistoryResponseBody extends TeaModel {
         public String operationTime;
 
         /**
+         * <p>The UID of the operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>132</p>
          */

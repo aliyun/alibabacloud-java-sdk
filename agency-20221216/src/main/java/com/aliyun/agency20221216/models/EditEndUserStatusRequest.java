@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class EditEndUserStatusRequest extends TeaModel {
     /**
-     * <p>Shutdown Status</br></p>
+     * <h3>Shutdown status</h3>
      * <ul>
-     * <li><p>postPayFreeze, the account have been blocked</br></p>
-     * </li>
-     * <li><p>postPayThaw, the account have been unlocked</br></p>
-     * </li>
+     * <li>postPayFreeze: pay-as-you-go resource suspension</li>
+     * <li>postPayThaw: pay-as-you-go resource resumption.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class EditEndUserStatusRequest extends TeaModel {
     public String creditStatus;
 
     /**
-     * <p>UID</p>
+     * <p>The UID of the customer to be processed.</p>
      * 
      * <strong>example:</strong>
      * <p>1792155717328010</p>

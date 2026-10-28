@@ -5,19 +5,32 @@ import com.aliyun.tea.*;
 
 public class GetCouponTemplateDetailResponseBody extends TeaModel {
     /**
+     * <p>The result code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The operation result.</p>
+     */
     @NameInMap("Data")
     public GetCouponTemplateDetailResponseBodyData data;
 
+    /**
+     * <p>The prompt message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Success</p>
+     */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>
      */
@@ -25,6 +38,8 @@ public class GetCouponTemplateDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -78,6 +93,14 @@ public class GetCouponTemplateDetailResponseBody extends TeaModel {
 
     public static class GetCouponTemplateDetailResponseBodyData extends TeaModel {
         /**
+         * <p>The applicable products. Valid values:</p>
+         * <ul>
+         * <li><p>UNIVERSAL: all products</p>
+         * </li>
+         * <li><p>a specific commodity code</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>UNIVERSAL</p>
          */
@@ -85,16 +108,28 @@ public class GetCouponTemplateDetailResponseBody extends TeaModel {
         public String applicableProducts;
 
         /**
+         * <p>The party that bears the coupon cost. Valid values:
+         * ● cost_by_self: The cost is borne by the caller.
+         * ● aliyun_poc: The cost is borne by Alibaba Cloud.</p>
+         * 
          * <strong>example:</strong>
          * <p>aliyun_poc</p>
          */
         @NameInMap("CostBearer")
         public String costBearer;
 
+        /**
+         * <p>The remarks of the coupon.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>For testing</p>
+         */
         @NameInMap("CouponDescription")
         public String couponDescription;
 
         /**
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
+         * 
          * <strong>example:</strong>
          * <p>2024-11-21 18:18:22</p>
          */
@@ -102,6 +137,8 @@ public class GetCouponTemplateDetailResponseBody extends TeaModel {
         public String createdTime;
 
         /**
+         * <p>The face value.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -109,6 +146,14 @@ public class GetCouponTemplateDetailResponseBody extends TeaModel {
         public Double denomination;
 
         /**
+         * <p>The maximum number of coupons that each person can claim. Valid values:</p>
+         * <ul>
+         * <li><p>1: Each person can claim one coupon.</p>
+         * </li>
+         * <li><p>0: No limit applies.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -116,16 +161,34 @@ public class GetCouponTemplateDetailResponseBody extends TeaModel {
         public Integer limitPerPerson;
 
         /**
+         * <p>The order type. Valid values:</p>
+         * <ul>
+         * <li>ALL: Alibaba Cloud upfront order</li>
+         * <li>BILLING: Alibaba Cloud pay-as-you-go bill</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ALL,BILLING</p>
          */
         @NameInMap("PurchaseType")
         public String purchaseType;
 
+        /**
+         * <p>The reason for the template application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>For testing</p>
+         */
         @NameInMap("ReasonForApplication")
         public String reasonForApplication;
 
         /**
+         * <p>The status. Valid values:</p>
+         * <ul>
+         * <li>APPROVED: approved</li>
+         * <li>ABANDONED: voided</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>APPROVED</p>
          */
@@ -133,16 +196,32 @@ public class GetCouponTemplateDetailResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The template ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1576</p>
          */
         @NameInMap("TemplateId")
         public Long templateId;
 
+        /**
+         * <p>The name of the coupon template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Template name</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
+         * <p>The validity period. This parameter is used together with the validity period type.</p>
+         * <ul>
+         * <li><p>If the validity period type is relative time, the validity period is the number of valid days.</p>
+         * </li>
+         * <li><p>If the validity period type is absolute time, the validity period is a time period.</p>
+         * </li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */
@@ -150,6 +229,12 @@ public class GetCouponTemplateDetailResponseBody extends TeaModel {
         public String validUntil;
 
         /**
+         * <p>The type of the validity period. Valid values:</p>
+         * <ul>
+         * <li>0: relative time</li>
+         * <li>1: absolute time</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */

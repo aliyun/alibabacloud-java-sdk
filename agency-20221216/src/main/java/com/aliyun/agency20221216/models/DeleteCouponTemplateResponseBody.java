@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteCouponTemplateResponseBody extends TeaModel {
     /**
+     * <p>The result code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class DeleteCouponTemplateResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The operation result.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -19,6 +23,8 @@ public class DeleteCouponTemplateResponseBody extends TeaModel {
     public Boolean data;
 
     /**
+     * <p>The result message.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,6 +32,8 @@ public class DeleteCouponTemplateResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>A747A00F-E096-5244-88B3-3E474BAE3AE4</p>
      */
@@ -33,6 +41,8 @@ public class DeleteCouponTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */

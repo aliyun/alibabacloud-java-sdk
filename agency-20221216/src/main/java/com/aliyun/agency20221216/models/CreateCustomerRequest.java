@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomerRequest extends TeaModel {
     /**
-     * <p>Customer\&quot;s name.</p>
+     * <p>The customer name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,8 @@ public class CreateCustomerRequest extends TeaModel {
     public String customerName;
 
     /**
-     * <p>The source/channel that allow client to connected with us. Please enumerate with Customer Source.</p>
+     * <p>The customer source.
+     * Use the Customer Source enumeration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,26 +26,28 @@ public class CreateCustomerRequest extends TeaModel {
     public String customerSource;
 
     /**
-     * <p>The sub-industry that Customer\&quot;s business belongs to. Please enumerate with Customer Trade.</p>
+     * <p>The customer sub-industry.
+     * Use the Customer Sub Trade enumeration.</p>
      * 
      * <strong>example:</strong>
-     * <p>0101</p>
+     * <p>020501</p>
      */
     @NameInMap("CustomerSubTrade")
     public String customerSubTrade;
 
     /**
-     * <p>The industry that Customer\&quot;s business belongs to. Please enumerate with Customer Trade.</p>
+     * <p>The customer industry name.
+     * Use the Customer Trade enumeration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>01</p>
+     * <p>0205</p>
      */
     @NameInMap("CustomerTrade")
     public String customerTrade;
 
     /**
-     * <p>The region that Customer choose to launch the Cloud Service. Please use ListCountries to confirm the valid region list for current UID.</p>
+     * <p>The region to which the customer belongs. Call ListCountries to obtain the list of available regions for the current UID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

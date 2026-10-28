@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubscriptionBillResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class SubscriptionBillResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data that is returned.</p>
+     * <p>The data returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,16 +23,16 @@ public class SubscriptionBillResponseBody extends TeaModel {
     public Boolean data;
 
     /**
-     * <p>The message that is returned.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>Successful</p>
+     * <p>成功</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9C14ADFE-DF0A-54D4-8BD5-45D0839246B4</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetWarningThresholdRequest extends TeaModel {
     /**
-     * <p>The UID of the partner‘s customer.</p>
+     * <p>The UID of the reseller customer account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SetWarningThresholdRequest extends TeaModel {
     public Long uid;
 
     /**
-     * <p>Percentage, 1 to 100. When the available credit limit is lower than the credit limit percentage, an email is sent to the main account.</p>
+     * <p>The percentage value. Valid values: 1 to 100. When the available credit drops below this percentage of the total credit limit, an alert email is sent to the reseller partner account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

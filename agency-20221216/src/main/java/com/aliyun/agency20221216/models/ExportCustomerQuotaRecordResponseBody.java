@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
     /**
-     * <p>Code</p>
+     * <p>code</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Data</p>
+     * <p>The data.</p>
      */
     @NameInMap("Data")
     public ExportCustomerQuotaRecordResponseBodyData data;
 
     /**
-     * <p>Description</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -29,7 +29,7 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>ID of the Request</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>210bc4b416874189683843905d9f9a</p>
@@ -76,7 +76,7 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
 
     public static class ExportCustomerQuotaRecordResponseBodyData extends TeaModel {
         /**
-         * <p>Estimated duration, in minutes.</p>
+         * <p>The estimated time required, in minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -85,7 +85,7 @@ public class ExportCustomerQuotaRecordResponseBody extends TeaModel {
         public Integer cost;
 
         /**
-         * <p>ID of Export task</p>
+         * <p>The ID of the export task.</p>
          * 
          * <strong>example:</strong>
          * <p>1231</p>

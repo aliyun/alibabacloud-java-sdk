@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListExportTasksRequest extends TeaModel {
     /**
+     * <p>The ID of the export task.</p>
+     * 
      * <strong>example:</strong>
      * <p>12343</p>
      */
@@ -12,6 +14,13 @@ public class ListExportTasksRequest extends TeaModel {
     public Long id;
 
     /**
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li>en: English.</li>
+     * <li>zh: Chinese.</li>
+     * <li>ja: Japanese.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>en</p>
      */
@@ -19,6 +28,7 @@ public class ListExportTasksRequest extends TeaModel {
     public String language;
 
     /**
+     * <p>The current page number. Pages start from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +38,7 @@ public class ListExportTasksRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page. Maximum value: 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,6 +48,11 @@ public class ListExportTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The export scenario code. Valid values:</p>
+     * <ul>
+     * <li>intlCustomerQuotaRecord: Customer management, quota transaction export.</li>
+     * <li>intlExportUsageDeductHistory: Customer management, deduction detail export.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

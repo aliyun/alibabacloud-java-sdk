@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCreditInfoRequest extends TeaModel {
     /**
-     * <p>Message Information</p>
+     * <p>The UID of the sub-account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

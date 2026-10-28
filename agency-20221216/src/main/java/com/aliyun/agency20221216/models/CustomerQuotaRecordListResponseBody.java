@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CustomerQuotaRecordListResponseBody extends TeaModel {
     /**
-     * <p>Status code of returning result, 200 means success.</p>
+     * <p>The status code of the returned result. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Listed data of returning result</p>
+     * <p>The list of returned results.</p>
      */
     @NameInMap("Data")
     public java.util.List<CustomerQuotaRecordListResponseBodyData> data;
 
     /**
-     * <p>Description of returning data</p>
+     * <p>The description of the returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -29,7 +29,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
     public String msg;
 
     /**
-     * <p>Current page number</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +38,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Record number on each page</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +47,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>ID of request</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2103a0ae16849855284594613d874e</p>
@@ -56,7 +56,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total volume</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -127,7 +127,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
 
     public static class CustomerQuotaRecordListResponseBodyData extends TeaModel {
         /**
-         * <p>The way to submit the quota adjustment operation. API/ACPN</p>
+         * <p>The method used to submit the operation, such as API or ACPN.</p>
          * 
          * <strong>example:</strong>
          * <p>ACPN</p>
@@ -136,7 +136,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         public String operationSubmitType;
 
         /**
-         * <p>The time of submit the quota adjustment operation.</p>
+         * <p>The time when the operation was performed. Format: YYYY-MM-DD HH:mm:ss UTC+8.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-15 10:34:36 UTC+8</p>
@@ -145,10 +145,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         public String operationTime;
 
         /**
-         * <p>Operation Type Enum</br>
-         * all All types</br>
-         * quota_create Create quota</br>
-         * quota_amount_adjust Adjust the amount of quota</br></p>
+         * <p>The code of the change type. Valid values: all: All, quota_create: Create, quota_amount_adjust: Quota adjustment.</p>
          * 
          * <strong>example:</strong>
          * <p>quota_amount_adjust</p>
@@ -157,7 +154,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         public String operationTypeCode;
 
         /**
-         * <p>The description of submitted quota adjustment operation.</p>
+         * <p>The description of the change type.</p>
          * 
          * <strong>example:</strong>
          * <p>Quota Adjustment</p>
@@ -166,7 +163,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         public String operationTypeDesc;
 
         /**
-         * <p>The UID of operator(Partner\&quot;s UID).</p>
+         * <p>The UID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>5113766248601929</p>
@@ -175,7 +172,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         public String operationUid;
 
         /**
-         * <p>Updated quota amount</p>
+         * <p>The amount after the update.</p>
          * 
          * <strong>example:</strong>
          * <p>121.00</p>
@@ -184,7 +181,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         public String updateAfterAmount;
 
         /**
-         * <p>The difference amount between updated quota and original quota.</p>
+         * <p>The changed amount.</p>
          * 
          * <strong>example:</strong>
          * <p>-100.00</p>
@@ -193,7 +190,7 @@ public class CustomerQuotaRecordListResponseBody extends TeaModel {
         public String updateAmount;
 
         /**
-         * <p>Original quota amount</p>
+         * <p>The amount before the update.</p>
          * 
          * <strong>example:</strong>
          * <p>221.00</p>

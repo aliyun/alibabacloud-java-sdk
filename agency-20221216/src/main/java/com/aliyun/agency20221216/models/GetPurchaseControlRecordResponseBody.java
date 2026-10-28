@@ -5,16 +5,26 @@ import com.aliyun.tea.*;
 
 public class GetPurchaseControlRecordResponseBody extends TeaModel {
     /**
+     * <p>The result code. Value range:</p>
+     * <ul>
+     * <li>200: OK.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public java.util.List<GetPurchaseControlRecordResponseBodyData> data;
 
     /**
+     * <p>The page number.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,6 +32,8 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -38,6 +50,8 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the operation was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -45,6 +59,8 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of entries.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -114,6 +130,12 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
 
     public static class GetPurchaseControlRecordResponseBodyData extends TeaModel {
         /**
+         * <p>The change type. Valid values:</p>
+         * <ul>
+         * <li>ban: new purchases are prohibited.</li>
+         * <li>cancelBan: the purchase prohibition is canceled.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>ban</p>
          */
@@ -121,6 +143,8 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
         public String changedType;
 
         /**
+         * <p>The method by which the operation was initiated.</p>
+         * 
          * <strong>example:</strong>
          * <p>ACPN</p>
          */
@@ -128,6 +152,8 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
         public String operationPath;
 
         /**
+         * <p>The operation time (UTC+8).</p>
+         * 
          * <strong>example:</strong>
          * <p>2023-12-15 10:34:36</p>
          */
@@ -135,6 +161,8 @@ public class GetPurchaseControlRecordResponseBody extends TeaModel {
         public String operationTime;
 
         /**
+         * <p>The operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>292828565558721922</p>
          */

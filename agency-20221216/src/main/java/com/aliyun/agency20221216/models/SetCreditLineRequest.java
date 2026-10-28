@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetCreditLineRequest extends TeaModel {
     /**
-     * <p>New Credit Line</p>
+     * <p>The new credit limit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SetCreditLineRequest extends TeaModel {
     public String creditLine;
 
     /**
-     * <p>The UID of Sub Account.</p>
+     * <p>The UID of the sub-account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
