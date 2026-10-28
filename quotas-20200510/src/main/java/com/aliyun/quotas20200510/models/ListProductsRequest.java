@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of entries to return for this query.</p>
      * <p>Valid values: 1 to 200. Default value: 30.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListProductsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     * <p>The token that marks the position from which the query starts. An empty value indicates that the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>

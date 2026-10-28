@@ -5,24 +5,27 @@ import com.aliyun.tea.*;
 
 public class ListDependentQuotasRequest extends TeaModel {
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviated name of the cloud service.</p>
      * <blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</p>
+     * <p>For more information about how to obtain the abbreviated name of a cloud service, see <code>ProductCode</code> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>csk</p>
+     * <p>cloudsso</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
      * <p>The quota ID.</p>
+     * <blockquote>
+     * <p>For more information about how to obtain the quota ID of a target cloud service, see <code>QuotaActionCode</code> in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>q_i5uzm3</p>
+     * <p>q_system-policy-per-access-configuration</p>
      */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;

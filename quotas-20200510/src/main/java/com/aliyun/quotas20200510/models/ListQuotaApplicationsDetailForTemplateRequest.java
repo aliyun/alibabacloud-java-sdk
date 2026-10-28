@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud account that is used to submit the quota increase application.</p>
+     * <p>The Alibaba Cloud account for which the quota increase is requested.</p>
      * 
      * <strong>example:</strong>
      * <p>135048337611****</p>
@@ -23,7 +23,7 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     public String batchQuotaApplicationId;
 
     /**
-     * <p>The maximum number of records that can be returned for the query.</p>
+     * <p>The maximum number of records to return for the current query.</p>
      * <p>Valid values: 1 to 100. Default value: 30.</p>
      * 
      * <strong>example:</strong>
@@ -33,9 +33,9 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which you want to start the query.</p>
+     * <p>The token that marks the position from which the query starts.</p>
      * <blockquote>
-     * <p> An empty value indicates that the query starts from the beginning.</p>
+     * <p>If you do not specify this parameter, the query starts from the beginning.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
      * <blockquote>
-     * <p> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <code>ProductCode</code> in the response.</p>
+     * <p>For more information about how to obtain the abbreviation of an Alibaba Cloud service name, see the <code>ProductCode</code> parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,11 +66,14 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     public String quotaActionCode;
 
     /**
-     * <p>The type of the quota. Valid values:</p>
+     * <p>The quota type. Valid values:</p>
      * <ul>
-     * <li>CommonQuota: general quota</li>
-     * <li>FlowControl: API rate limit</li>
-     * <li>WhiteListLabel: privilege</li>
+     * <li><p>CommonQuota: General quota.</p>
+     * </li>
+     * <li><p>FlowControl: API rate limit quota.</p>
+     * </li>
+     * <li><p>WhiteListLabel: Privilege quota.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,12 +83,16 @@ public class ListQuotaApplicationsDetailForTemplateRequest extends TeaModel {
     public String quotaCategory;
 
     /**
-     * <p>The approval state of the quota increase application. Valid values:</p>
+     * <p>The approval status of the quota increase request. Valid values:</p>
      * <ul>
-     * <li>Disagree: The application is rejected.</li>
-     * <li>Agree: The application is approved.</li>
-     * <li>Process: The application is in review.</li>
-     * <li>Cancel: The application is canceled.</li>
+     * <li><p>Disagree: The request is rejected.</p>
+     * </li>
+     * <li><p>Agree: The request is approved.</p>
+     * </li>
+     * <li><p>Process: The request is in review.</p>
+     * </li>
+     * <li><p>Cancel: The request is closed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

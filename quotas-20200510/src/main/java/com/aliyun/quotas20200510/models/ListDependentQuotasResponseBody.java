@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDependentQuotasResponseBody extends TeaModel {
     /**
-     * <p>The quotas on which the specified quota depends.</p>
+     * <p>The list of quotas on which the target quota depends.</p>
      */
     @NameInMap("Quotas")
     public java.util.List<ListDependentQuotasResponseBodyQuotas> quotas;
@@ -42,22 +42,22 @@ public class ListDependentQuotasResponseBody extends TeaModel {
 
     public static class ListDependentQuotasResponseBodyQuotasDimensions extends TeaModel {
         /**
-         * <p>The dimensions of the quotas on which the specified quota depends.</p>
+         * <p>The quota dimension on which the dependent dimension of the target quota depends.</p>
          */
         @NameInMap("DependentDimension")
         public java.util.List<String> dependentDimension;
 
         /**
-         * <p>The key of the quota dimension.</p>
+         * <p>The key of the quota dimension on which the target quota depends.</p>
          * 
          * <strong>example:</strong>
-         * <p>regionId</p>
+         * <p>[]</p>
          */
         @NameInMap("DimensionKey")
         public String dimensionKey;
 
         /**
-         * <p>The dimension values.</p>
+         * <p>The value of the quota dimension on which the dependent dimension of the target quota depends.</p>
          */
         @NameInMap("DimensionValues")
         public java.util.List<String> dimensionValues;
@@ -95,34 +95,34 @@ public class ListDependentQuotasResponseBody extends TeaModel {
 
     public static class ListDependentQuotasResponseBodyQuotas extends TeaModel {
         /**
-         * <p>The dimensions of the quotas on which the specified quota depends.</p>
+         * <p>The quota dimensions on which the target quota depends.</p>
          */
         @NameInMap("Dimensions")
         public java.util.List<ListDependentQuotasResponseBodyQuotasDimensions> dimensions;
 
         /**
-         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <p>The abbreviated name of the cloud service.</p>
          * 
          * <strong>example:</strong>
-         * <p>ecs</p>
+         * <p>ram</p>
          */
         @NameInMap("ProductCode")
         public String productCode;
 
         /**
-         * <p>The quota ID.</p>
+         * <p>The ID of the quota on which the target quota depends.</p>
          * 
          * <strong>example:</strong>
-         * <p>q_elastic-network-interfaces</p>
+         * <p>q_laxtn4</p>
          */
         @NameInMap("QuotaActionCode")
         public String quotaActionCode;
 
         /**
-         * <p>The relationship percentage between the specified quota and the quotas on which the specified quota depends.</p>
+         * <p>The ratio between the target quota and the dependent quota.</p>
          * 
          * <strong>example:</strong>
-         * <p>50</p>
+         * <p>100</p>
          */
         @NameInMap("Scale")
         public Float scale;

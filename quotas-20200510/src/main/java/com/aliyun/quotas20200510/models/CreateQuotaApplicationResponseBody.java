@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateQuotaApplicationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The ID of the quota increase request.</p>
      * 
      * <strong>example:</strong>
      * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
@@ -14,7 +14,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public String applicationId;
 
     /**
-     * <p>The time when the application was submitted.</p>
+     * <p>The time when the quota increase request was submitted. The time is in ISO 8601 format and in UTC. The value ends with Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-19T09:25:56Z</p>
@@ -23,7 +23,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public String applyTime;
 
     /**
-     * <p>The quota value that is approved.</p>
+     * <p>The approved quota value.</p>
      * 
      * <strong>example:</strong>
      * <p>804</p>
@@ -32,7 +32,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public Float approveValue;
 
     /**
-     * <p>The result of the application.</p>
+     * <p>The review comments on the quota increase request.</p>
      * 
      * <strong>example:</strong>
      * <p>Agree</p>
@@ -41,16 +41,16 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public String auditReason;
 
     /**
-     * <p>The requested value of the quota.</p>
+     * <p>The requested quota value.</p>
      * 
      * <strong>example:</strong>
-     * <p>12</p>
+     * <p>804</p>
      */
     @NameInMap("DesireValue")
     public Integer desireValue;
 
     /**
-     * <p>The quota dimension.</p>
+     * <p>The quota dimensions.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
@@ -59,7 +59,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public java.util.Map<String, ?> dimension;
 
     /**
-     * <p>The time when the new quota value takes effect.</p>
+     * <p>The effective period of the quota. The time is in ISO 8601 format and in UTC. The value ends with Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-19T09:25:56Z</p>
@@ -68,7 +68,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public String effectiveTime;
 
     /**
-     * <p>The time when the new quota expires.</p>
+     * <p>The time when the quota expires. The time is in ISO 8601 format and in UTC. The value ends with Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-01-20T09:25:56Z</p>
@@ -77,10 +77,12 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>Indicates whether the notification about the application result is sent. Valid values:</p>
+     * <p>Indicates whether a notification is sent about the request result. Valid values:</p>
      * <ul>
-     * <li>0: The notification is not sent.</li>
-     * <li>3: The notification is sent.</li>
+     * <li><p>0: no notification is sent.</p>
+     * </li>
+     * <li><p>3: a notification is sent.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -90,10 +92,10 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public Long noticeType;
 
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviation of the cloud service name.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecs-spec</p>
+     * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
@@ -102,7 +104,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
      * <p>The quota ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecs.c5.large</p>
+     * <p>q_security-groups</p>
      */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
@@ -111,7 +113,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
      * <p>The Alibaba Cloud Resource Name (ARN) of the quota.</p>
      * 
      * <strong>example:</strong>
-     * <p>acs:quotas:cn-hangzhou:*:quota/ecs/ecs.m2.medium/prepaid/classic/instancetype/cn-hangzhou-b</p>
+     * <p>acs:quotas::141339776561****:quota/ecs/q_security-groups</p>
      */
     @NameInMap("QuotaArn")
     public String quotaArn;
@@ -120,7 +122,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
      * <p>The description of the quota.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecs.c5.large</p>
+     * <p>The maximum number of security groups that can be owned by the current account.</p>
      */
     @NameInMap("QuotaDescription")
     public String quotaDescription;
@@ -129,7 +131,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
      * <p>The name of the quota.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecs.c5.large</p>
+     * <p>Maximum Number of Security Groups</p>
      */
     @NameInMap("QuotaName")
     public String quotaName;
@@ -144,7 +146,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public String quotaUnit;
 
     /**
-     * <p>The reason for the application.</p>
+     * <p>The reason for the quota increase request.</p>
      * 
      * <strong>example:</strong>
      * <p>Scale Out</p>
@@ -153,7 +155,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public String reason;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>D47B3A10-CDAC-5412-B2EE-EC9A3DBE9053</p>
@@ -162,14 +164,7 @@ public class CreateQuotaApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The approval state of the quota increase application.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Cancel: The application is canceled.</li>
-     * <li>Agree: The application is approved.</li>
-     * <li>Process: The application is in review.</li>
-     * <li>Disagree: The application is rejected.</li>
-     * </ul>
+     * <p>The approval status of the quota increase request.</p>
      * 
      * <strong>example:</strong>
      * <p>Process</p>

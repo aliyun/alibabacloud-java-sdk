@@ -5,13 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListQuotaApplicationsRequest extends TeaModel {
     /**
-     * <p>The quota dimensions.</p>
+     * <p>The quota dimensions.
+     * The dimensions are properties of a quota item. A combination of dimensions (Dimensions) and a quota ID (QuotaActionCode) uniquely identifies a quota item.</p>
+     * <blockquote>
+     * <p>Some cloud services require dimensions. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The <code>Requisite</code> response parameter indicates whether a dimension is required.</p>
+     * </blockquote>
      */
     @NameInMap("Dimensions")
     public java.util.List<ListQuotaApplicationsRequestDimensions> dimensions;
 
     /**
-     * <p>The keyword that you want to use to search for the application.</p>
+     * <p>The keyword for searching quota increase applications.</p>
      * 
      * <strong>example:</strong>
      * <p>Cluster</p>
@@ -20,7 +24,7 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of records to return in this query.</p>
      * <p>Valid values: 1 to 200. Default value: 30.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +34,7 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     * <p>The token that marks the position from which you want to start the query. Leave this parameter empty to query from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -39,7 +43,7 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviation of the cloud service name.</p>
      * 
      * <strong>example:</strong>
      * <p>csk</p>
@@ -48,7 +52,7 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The ID of the quota.</p>
+     * <p>The quota ID.</p>
      * 
      * <strong>example:</strong>
      * <p>q_i5uzm3</p>
@@ -57,11 +61,11 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public String quotaActionCode;
 
     /**
-     * <p>The quota type. Valid values:</p>
+     * <p>The quota category. Valid values:</p>
      * <ul>
-     * <li>CommonQuota: general quota</li>
-     * <li>FlowControl: API rate limit</li>
-     * <li>WhiteListLabel: whitelist quota</li>
+     * <li>CommonQuota: general quota.</li>
+     * <li>FlowControl: API rate limit.</li>
+     * <li>WhiteListLabel: privilege.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,12 +75,16 @@ public class ListQuotaApplicationsRequest extends TeaModel {
     public String quotaCategory;
 
     /**
-     * <p>The approval state of the quota increase application. Valid values:</p>
+     * <p>The approval status of the quota increase application. Valid values:</p>
      * <ul>
-     * <li>Disagree: The application is rejected.</li>
-     * <li>Agree: The application is approved.</li>
-     * <li>Process: The application is in review.</li>
-     * <li>Cancel: The application is canceled.</li>
+     * <li><p>Disagree: Rejected.</p>
+     * </li>
+     * <li><p>Agree: Approved.</p>
+     * </li>
+     * <li><p>Process: Under review.</p>
+     * </li>
+     * <li><p>Cancel: Closed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -156,9 +164,9 @@ public class ListQuotaApplicationsRequest extends TeaModel {
 
     public static class ListQuotaApplicationsRequestDimensions extends TeaModel {
         /**
-         * <p>The key of the dimension.</p>
+         * <p>The key of the quota dimension.</p>
          * <blockquote>
-         * <p> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <p><code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> must be specified together. The valid values of N depend on the number of dimensions supported by the cloud service. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The length of the returned array is the value of N.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -168,9 +176,9 @@ public class ListQuotaApplicationsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the dimension.</p>
+         * <p>The value of the quota dimension.</p>
          * <blockquote>
-         * <p> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <p><code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> must be specified together. The valid values of N depend on the number of dimensions supported by the cloud service. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The length of the returned array is the value of N.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -6,14 +6,9 @@ import com.aliyun.tea.*;
 public class CreateQuotaApplicationRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p> This parameter is deprecated and is not recommended.</p>
+     * <p>Notice: This parameter is deprecated and is not recommended.</p>
      * </blockquote>
-     * <p>The mode in which you want the application to be reviewed.</p>
-     * <p>Valid values: </p>
-     * <ul>
-     * <li>Async</li>
-     * <li>Sync</li>
-     * </ul>
+     * <p>The quota review mode.</p>
      * 
      * <strong>example:</strong>
      * <p>Sync</p>
@@ -22,15 +17,13 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     public String auditMode;
 
     /**
-     * <p>The requested value of the quota.</p>
+     * <p>The requested quota value.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can specify the DesireValue parameter based on the values of the <code>TotalUsage</code> and <code>ApplicableRange</code> parameters that are returned by the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation.</p>
-     * </li>
-     * <li><p>Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit an application to increase the value of the quota.</p>
-     * </li>
+     * <li>Set the requested quota value based on the <code>TotalUsage</code> (quota usage) and <code>ApplicableRange</code> (applicable range of the quota) of the target quota in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</li>
+     * <li>Quota increase requests are reviewed by the technical support of each cloud service. To increase the chances of approval, provide a reasonable requested value and a detailed reason when you submit the request.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -40,18 +33,20 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     public Float desireValue;
 
     /**
-     * <p>The quota dimensions. A quota item is uniquely determined by the values of Dimensions and QuotaActionCode.</p>
+     * <p>The quota dimensions.
+     * The dimensions are attributes of the quota. The combination of dimensions (Dimensions) and quota ID (QuotaActionCode) uniquely identifies a quota.</p>
      * <blockquote>
-     * <p> Some dimensions are required. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the quota dimensions that are supported by an Alibaba Cloud service. The value of <code>Requisite</code> in the response indicates whether a dimension is required.</p>
+     * <p>Some cloud services require dimensions. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The <code>Requisite</code> response parameter indicates whether a dimension is required.</p>
      * </blockquote>
      */
     @NameInMap("Dimensions")
     public java.util.List<CreateQuotaApplicationRequestDimensions> dimensions;
 
     /**
-     * <p>The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</p>
+     * <p>The UTC time when the quota takes effect.
+     * This parameter is applicable only to privileges (WhiteListLabel). </p>
      * <blockquote>
-     * <p> If you do not specify an end time, the default end time is 99 years after the quota application is submitted.</p>
+     * <p>If you do not specify an effective period, the default value is 99 years from the start time of the current quota.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -62,11 +57,6 @@ public class CreateQuotaApplicationRequest extends TeaModel {
 
     /**
      * <p>The language of the quota alert notification.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>en: English</li>
-     * <li>zh: Chinese</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -75,9 +65,10 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     public String envLanguage;
 
     /**
-     * <p>The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</p>
+     * <p>The UTC time when the quota expires.
+     * This parameter is applicable only to privileges (WhiteListLabel). </p>
      * <blockquote>
-     * <p> If you do not specify a start time, the default start time is the time when the quota application is submitted.</p>
+     * <p>If you do not specify an expiration time, the default value is the submission time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,9 +78,9 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>Specifies whether to send a notification about the application result. Valid values:</p>
+     * <p>Specifies whether to send a notification about the request result. Valid values:</p>
      * <ul>
-     * <li>0 (default): no</li>
+     * <li>0 (default): does not send a notification.</li>
      * <li>3: sends a notification.</li>
      * </ul>
      * 
@@ -100,9 +91,9 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     public Integer noticeType;
 
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviation of the cloud service name.</p>
      * <blockquote>
-     * <p> To query the abbreviation of an Alibaba Cloud service name, check the <code>ProductCode</code> parameter that is described in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+     * <p>For information about how to obtain the abbreviation of a cloud service name, see <code>ProductCode</code> in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -115,7 +106,7 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     /**
      * <p>The quota ID.</p>
      * <blockquote>
-     * <p> To query the quota ID of an Alibaba Cloud service, check the <code>QuotaActionCode</code> parameter that is described in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+     * <p>For information about how to obtain the quota ID of a cloud service, see <code>QuotaActionCode</code> in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -126,14 +117,8 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     public String quotaActionCode;
 
     /**
-     * <p>The type of the quota. Valid values:</p>
+     * <p>The quota type.</p>
      * <p>Default value: CommonQuota.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>FlowControl: API rate limit</li>
-     * <li>WhiteListLabel: whitelist quota</li>
-     * <li>CommonQuota: general quota</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CommonQuota</p>
@@ -142,9 +127,9 @@ public class CreateQuotaApplicationRequest extends TeaModel {
     public String quotaCategory;
 
     /**
-     * <p>The reason for the application.</p>
+     * <p>The reason for the quota increase request.</p>
      * <blockquote>
-     * <p>Applications are reviewed by the technical support team of each Alibaba Cloud service. To increase the success rate of your application, you must specify a reasonable quota value and detailed reasons when you submit an application to increase the value of the quota.</p>
+     * <p>Quota increase requests are reviewed by the technical support of each cloud service. To increase the chances of approval, provide a reasonable requested value and a detailed reason when you submit the request.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -249,9 +234,9 @@ public class CreateQuotaApplicationRequest extends TeaModel {
 
     public static class CreateQuotaApplicationRequestDimensions extends TeaModel {
         /**
-         * <p>The key of the dimension.</p>
+         * <p>The key of the quota dimension.</p>
          * <blockquote>
-         * <p> You must configure <code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> at the same time. The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the dimensions that are supported by an Alibaba Cloud service. The number of elements in the returned array is N.</p>
+         * <p><code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> must be specified together. The valid values of N depend on the number of dimensions supported by the cloud service. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The length of the returned array is the value of N.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -261,9 +246,9 @@ public class CreateQuotaApplicationRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the dimension.</p>
+         * <p>The value of the quota dimension.</p>
          * <blockquote>
-         * <p> You must configure <code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> at the same time. The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service. You can call the <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> operation to query the dimensions that are supported by an Alibaba Cloud service. The number of elements in the returned array is N.</p>
+         * <p><code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> must be specified together. The valid values of N depend on the number of dimensions supported by the cloud service. You can call <a href="~~ListProductQuotaDimensions~~">ListProductQuotaDimensions</a> to query the quota dimensions supported by a cloud service. The length of the returned array is the value of N.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

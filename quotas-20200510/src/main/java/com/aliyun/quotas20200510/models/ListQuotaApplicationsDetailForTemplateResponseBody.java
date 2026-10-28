@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records that can be returned for the query.</p>
+     * <p>The maximum number of records returned for the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -14,7 +14,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which you want to start the query.</p>
+     * <p>The token that marks the position from which the next query starts.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
     public String nextToken;
 
     /**
-     * <p>The details of the quota increase application.</p>
+     * <p>A list of quota application details.</p>
      */
     @NameInMap("QuotaApplications")
     public java.util.List<ListQuotaApplicationsDetailForTemplateResponseBodyQuotaApplications> quotaApplications;
@@ -38,7 +38,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>The total number of records that are returned for the query.</p>
+     * <p>The total number of records returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9</p>
@@ -93,7 +93,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
 
     public static class ListQuotaApplicationsDetailForTemplateResponseBodyQuotaApplicationsPeriod extends TeaModel {
         /**
-         * <p>The unit of the calculation cycle of the quota.</p>
+         * <p>The unit of the calculation cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>second</p>
@@ -102,7 +102,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         public String periodUnit;
 
         /**
-         * <p>The value of the calculation cycle of the quota.</p>
+         * <p>The value of the calculation cycle.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -135,7 +135,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
 
     public static class ListQuotaApplicationsDetailForTemplateResponseBodyQuotaApplications extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account.</p>
+         * <p>The Alibaba Cloud account.</p>
          * 
          * <strong>example:</strong>
          * <p>175376458581****</p>
@@ -144,7 +144,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         public String aliyunUid;
 
         /**
-         * <p>The ID of the quota increase application.</p>
+         * <p>The ID of the quota increase request.</p>
          * 
          * <strong>example:</strong>
          * <p>b926571d-cc09-4711-b547-58a615f0****</p>
@@ -153,7 +153,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         public String applicationId;
 
         /**
-         * <p>The time when the quota increase application was submitted. The value is displayed in UTC.</p>
+         * <p>The UTC time when the quota increase request was submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-15T09:13:53Z</p>
@@ -162,7 +162,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         public String applyTime;
 
         /**
-         * <p>The quota value that is approved.</p>
+         * <p>The approved quota value.</p>
          * 
          * <strong>example:</strong>
          * <p>101</p>
@@ -171,7 +171,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         public Double approveValue;
 
         /**
-         * <p>The approval result of the quota increase application.</p>
+         * <p>The reason for the approval.</p>
          * 
          * <strong>example:</strong>
          * <p>Agree</p>
@@ -189,7 +189,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         public String batchQuotaApplicationId;
 
         /**
-         * <p>The requested value of the quota.</p>
+         * <p>The requested quota value.</p>
          * 
          * <strong>example:</strong>
          * <p>60</p>
@@ -198,7 +198,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         public Double desireValue;
 
         /**
-         * <p>The start time of the validity period of the quota. The value is displayed in UTC.</p>
+         * <p>The UTC time when the new quota value takes effect.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-15T11:46:25Z</p>
@@ -207,10 +207,12 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         public String effectiveTime;
 
         /**
-         * <p>The language of the quota alert notification. Valid values:</p>
+         * <p>The language of the alert notification. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese.</p>
+         * </li>
+         * <li><p>en: English.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -220,7 +222,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         public String envLanguage;
 
         /**
-         * <p>The end time of the validity period of the quota. The value is displayed in UTC.</p>
+         * <p>The UTC time when the new quota value expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-17T11:46:25Z</p>
@@ -229,10 +231,12 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         public String expireTime;
 
         /**
-         * <p>Indicates whether Quota Center sends a notification about the application result. Valid values:</p>
+         * <p>Indicates whether a notification is sent for the quota increase request. Valid values:</p>
          * <ul>
-         * <li>0: no</li>
-         * <li>3: yes</li>
+         * <li><p>0: No.</p>
+         * </li>
+         * <li><p>3: Yes.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -277,9 +281,12 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         /**
          * <p>The quota type. Valid values:</p>
          * <ul>
-         * <li>CommonQuota (default): general quota</li>
-         * <li>WhiteListLabel: privilege</li>
-         * <li>FlowControl: API rate limit</li>
+         * <li><p>CommonQuota (default): General quota.</p>
+         * </li>
+         * <li><p>WhiteListLabel: Privilege quota.</p>
+         * </li>
+         * <li><p>FlowControl: API rate limit quota.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -304,7 +311,7 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         public java.util.Map<String, String> quotaDimension;
 
         /**
-         * <p>The quota name.</p>
+         * <p>The name of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>Maximum Number of Nodes</p>
@@ -322,21 +329,25 @@ public class ListQuotaApplicationsDetailForTemplateResponseBody extends TeaModel
         public String quotaUnit;
 
         /**
-         * <p>The reason for the quota increase application.</p>
+         * <p>The reason for the quota increase request.</p>
          * 
          * <strong>example:</strong>
-         * <p>Business expansion</p>
+         * <p>Maximum Number of Nodes</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>The approval status of the quota increase application. Valid values:</p>
+         * <p>The approval status of the quota increase request. Valid values:</p>
          * <ul>
-         * <li>Disagree: The application is rejected.</li>
-         * <li>Agree: The application is approved.</li>
-         * <li>Process: The application is pending approval.</li>
-         * <li>Cancel: The application is canceled.</li>
+         * <li><p>Disagree: The request is rejected.</p>
+         * </li>
+         * <li><p>Agree: The request is approved.</p>
+         * </li>
+         * <li><p>Process: The request is in review.</p>
+         * </li>
+         * <li><p>Cancel: The request is closed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

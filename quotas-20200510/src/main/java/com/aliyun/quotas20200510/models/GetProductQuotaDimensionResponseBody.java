@@ -11,7 +11,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
     public GetProductQuotaDimensionResponseBodyQuotaDimension quotaDimension;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1FA5F0E2-368E-4BA4-A8D0-6060FC6BB8F3</p>
@@ -42,10 +42,10 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
 
     public static class GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail extends TeaModel {
         /**
-         * <p>The name of the quota dimension.</p>
+         * <p>The name of the quota dimension value.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("Name")
         public String name;
@@ -54,7 +54,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
          * <p>The value of the quota dimension.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("Value")
         public String value;
@@ -84,7 +84,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
 
     public static class GetProductQuotaDimensionResponseBodyQuotaDimension extends TeaModel {
         /**
-         * <p>The quota dimensions on which the quota dimension that you want to query is dependent.</p>
+         * <p>The quota dimensions of the cloud service on which the target quota depends.</p>
          */
         @NameInMap("DependentDimensions")
         public java.util.List<String> dependentDimensions;
@@ -92,14 +92,20 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
         /**
          * <p>The key of the quota dimension. Valid values:</p>
          * <ul>
-         * <li>regionId: the region ID.</li>
-         * <li>zoneId: the zone ID.</li>
-         * <li>chargeType: the billing method.</li>
-         * <li>networkType: the network type.</li>
+         * <li><p>regionId: region</p>
+         * </li>
+         * <li><p>zoneId: zone</p>
+         * </li>
+         * <li><p>chargeType: billing method</p>
+         * </li>
+         * <li><p>networkType: network type</p>
+         * </li>
+         * <li><p>resourceType: resource type</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>regionId</p>
+         * <p>zoneId</p>
          */
         @NameInMap("DimensionKey")
         public String dimensionKey;
@@ -111,7 +117,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
         public java.util.List<GetProductQuotaDimensionResponseBodyQuotaDimensionDimensionValueDetail> dimensionValueDetail;
 
         /**
-         * <p>The values of the quota dimension.</p>
+         * <p>The list of quota dimension values.</p>
          */
         @NameInMap("DimensionValues")
         public java.util.List<String> dimensionValues;
@@ -120,7 +126,7 @@ public class GetProductQuotaDimensionResponseBody extends TeaModel {
          * <p>The name of the quota dimension.</p>
          * 
          * <strong>example:</strong>
-         * <p>region</p>
+         * <p>Zone</p>
          */
         @NameInMap("Name")
         public String name;

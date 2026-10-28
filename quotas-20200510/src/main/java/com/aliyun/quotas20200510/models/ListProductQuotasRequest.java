@@ -14,25 +14,25 @@ public class ListProductQuotasRequest extends TeaModel {
      * <p>The code of the dimension group.</p>
      * 
      * <strong>example:</strong>
-     * <p>entconsole_w1j3msbo2g</p>
+     * <p>entconsole_w1j3ms****</p>
      */
     @NameInMap("GroupCode")
     public String groupCode;
 
     /**
-     * <p>The keyword that you want to use to search for the quotas.</p>
+     * <p>The search keyword for the quota.</p>
      * <blockquote>
-     * <p> This parameter is available only for quotas that belong to ECS Quotas by Instance Type. The keyword is used to match the values of <code>QuotaName</code> and <code>QuotaActionCode</code>.</p>
+     * <p>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). The search scope includes <code>QuotaName</code> and <code>QuotaActionCode</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>ecs-spec</p>
+     * <p>security</p>
      */
     @NameInMap("KeyWord")
     public String keyWord;
 
     /**
-     * <p>The maximum number of records that can be returned for the query.</p>
+     * <p>The maximum number of entries to return in a single request.</p>
      * <p>Valid values: 1 to 100. Default value: 30.</p>
      * 
      * <strong>example:</strong>
@@ -42,49 +42,43 @@ public class ListProductQuotasRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The token used to retrieve the next page of results.</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first and last requests.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>Leave this parameter empty for the first request or when no more results are available.</li>
+     * <li>If more results are available, set this parameter to the NextToken value returned when you invoke the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>AAAAAd****</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviation of the cloud service.</p>
      * <blockquote>
-     * <p> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of the <code>ProductCode</code> parameter.</p>
+     * <p>For more information about how to obtain the abbreviation of a cloud service, see <code>ProductCode</code> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecs-spec</p>
+     * <p>ecs</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
 
     /**
-     * <p>The quota ID.</p>
+     * <p>The ID of the quota.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecs.g5.2xlarge</p>
+     * <p>q_security-groups</p>
      */
     @NameInMap("QuotaActionCode")
     public String quotaActionCode;
 
     /**
-     * <p>The type of the quota.</p>
+     * <p>The quota category.</p>
      * <p>Default value: CommonQuota.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>FlowControl: API rate limit</li>
-     * <li>WhiteListLabel: privilege</li>
-     * <li>CommonQuota: general quota</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>FlowControl</p>
@@ -93,16 +87,10 @@ public class ListProductQuotasRequest extends TeaModel {
     public String quotaCategory;
 
     /**
-     * <p>The field based on which you want to sort the returned records.</p>
+     * <p>The sorting method supported by the quota.</p>
      * <blockquote>
-     * <p> This parameter is available only for quotas that belong to ECS Quotas by Instance Type. You can leave this parameter empty.</p>
+     * <p>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). If no Settings are specified, it is left empty.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>TOTAL: sorts the returned records based on the total quota.</li>
-     * <li>TIME: sorts the returned records based on the time when the quota was last modified.</li>
-     * <li>RESERVED: sorts the returned records based on the reserved quota.</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>TIME</p>
@@ -111,15 +99,10 @@ public class ListProductQuotasRequest extends TeaModel {
     public String sortField;
 
     /**
-     * <p>The order in which you want to sort the returned records.</p>
+     * <p>The sorting method supported by the quota.</p>
      * <blockquote>
-     * <p> This parameter is available only for quotas that belong to ECS Quotas by Instance Type. You can leave this parameter empty.</p>
+     * <p>This parameter applies only to Elastic Computing Service server instance type quotas (ecs-spec). If no Settings are specified, it is left empty.</p>
      * </blockquote>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li>Descending</li>
-     * <li>Ascending</li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Ascending</p>
@@ -214,9 +197,9 @@ public class ListProductQuotasRequest extends TeaModel {
 
     public static class ListProductQuotasRequestDimensions extends TeaModel {
         /**
-         * <p>The key of the dimension.</p>
+         * <p>The key of the quota dimension.</p>
          * <blockquote>
-         * <p> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <p>The value range of N depends on the number of dimensions supported by the corresponding cloud service.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -226,9 +209,9 @@ public class ListProductQuotasRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the dimension.</p>
+         * <p>The value of the quota dimension.</p>
          * <blockquote>
-         * <p> The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <p>The value range of N depends on the number of dimensions supported by the corresponding cloud service.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

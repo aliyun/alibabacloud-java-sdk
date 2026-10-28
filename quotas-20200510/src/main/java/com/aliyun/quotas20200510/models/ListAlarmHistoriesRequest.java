@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlarmHistoriesRequest extends TeaModel {
     /**
-     * <p>The ID of the alert.</p>
+     * <p>The alert ID.</p>
      * 
      * <strong>example:</strong>
      * <p>18b3be23-b7b0-4d45-91bc-d0c331aa****</p>
@@ -14,7 +14,7 @@ public class ListAlarmHistoriesRequest extends TeaModel {
     public String alarmId;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>20201024</p>
@@ -23,7 +23,7 @@ public class ListAlarmHistoriesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The keyword that is used for the query.</p>
+     * <p>The search keyword.</p>
      * 
      * <strong>example:</strong>
      * <p>Quantity</p>
@@ -32,7 +32,7 @@ public class ListAlarmHistoriesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The maximum number of records that can be returned for the query.</p>
+     * <p>The maximum number of entries to return for the current query.</p>
      * <p>Valid values: 1 to 200. Default value: 30.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListAlarmHistoriesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which you want to start the query. If you leave this parameter empty, the query starts from the beginning.</p>
+     * <p>The token that specifies the starting position of the query. An empty value indicates that the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -51,9 +51,9 @@ public class ListAlarmHistoriesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviation of the cloud service name.</p>
      * <blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</p>
+     * <p>For more information about the cloud services that support Quota Center, see <a href="https://help.aliyun.com/document_detail/182368.html">Cloud services that support Quota Center</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ListAlarmHistoriesRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start time of the query.</p>
      * 
      * <strong>example:</strong>
      * <p>20201020</p>

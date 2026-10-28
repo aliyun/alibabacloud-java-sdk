@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetQuotaApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The ID of the quota increase application.</p>
      * 
      * <strong>example:</strong>
      * <p>d314d6ae-867d-484c-9009-3d421a80****</p>

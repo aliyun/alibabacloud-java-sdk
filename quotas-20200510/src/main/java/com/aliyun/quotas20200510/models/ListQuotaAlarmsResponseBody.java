@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotaAlarmsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records that are returned for the query.</p>
+     * <p>The maximum number of records returned for the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,9 +14,9 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position at which the query ends.</p>
+     * <p>A pagination token. It can be used in the next request to retrieve a new page of results.</p>
      * <blockquote>
-     * <p>An empty value indicates that all data is returned.</p>
+     * <p>If this parameter is empty, all results have been returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,13 +26,13 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The details about the quota alert rules.</p>
+     * <p>The details of the quota usage alerts.</p>
      */
     @NameInMap("QuotaAlarms")
     public java.util.List<ListQuotaAlarmsResponseBodyQuotaAlarms> quotaAlarms;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>87F3B755-3BD2-4C76-B36A-93247002918C</p>
@@ -41,7 +41,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of quota alerts.</p>
+     * <p>The total number of quota usage alerts.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -96,7 +96,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
 
     public static class ListQuotaAlarmsResponseBodyQuotaAlarms extends TeaModel {
         /**
-         * <p>The ID of the alert.</p>
+         * <p>The alert ID.</p>
          * 
          * <strong>example:</strong>
          * <p>a2efa7fc-832f-47bb-8054-39e28012****</p>
@@ -105,16 +105,16 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         public String alarmId;
 
         /**
-         * <p>The name of the alert event.</p>
+         * <p>The alert name.</p>
          * 
          * <strong>example:</strong>
-         * <p>rules</p>
+         * <p>q_hvnoqv alarm</p>
          */
         @NameInMap("AlarmName")
         public String alarmName;
 
         /**
-         * <p>The time when the quota alert was created.</p>
+         * <p>The time when the quota usage alert was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-27T07:23:34Z</p>
@@ -123,10 +123,12 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Indicates whether the alert threshold was reached. Valid values:</p>
+         * <p>Indicates whether the quota usage exceeds the alert threshold. Valid values:</p>
          * <ul>
-         * <li>false</li>
-         * <li>true</li>
+         * <li><p>false</p>
+         * </li>
+         * <li><p>true</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -136,15 +138,15 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         public Boolean exceedThreshold;
 
         /**
-         * <p>The alert notification methods.</p>
+         * <p>The notification channels of the quota alert.</p>
          */
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
         /**
-         * <p>The alert contact.</p>
+         * <p>The notification object of the alert.</p>
          * <blockquote>
-         * <p> Valid value: accountContact. Only the account contact is supported.</p>
+         * <p>The value can only be accountContact, which specifies the contacts of the account.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -163,7 +165,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the quota.</p>
+         * <p>The quota ID.</p>
          * 
          * <strong>example:</strong>
          * <p>q_hvnoqv</p>
@@ -190,7 +192,7 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         public Float quotaUsage;
 
         /**
-         * <p>The value of the quota.</p>
+         * <p>The quota value.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -219,8 +221,10 @@ public class ListQuotaAlarmsResponseBody extends TeaModel {
         /**
          * <p>The type of the quota alert. Valid values:</p>
          * <ul>
-         * <li>used: The alert is created for the used quota.</li>
-         * <li>usable: The alert is created for the available quota.</li>
+         * <li><p>used: an alert for the used quota.</p>
+         * </li>
+         * <li><p>usable: an alert for the available quota.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -43,7 +43,7 @@ public class ListQuotaApplicationTemplatesRequest extends TeaModel {
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
      * <blockquote>
-     * <p> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <code>ProductCode</code> in the response.</p>
+     * <p>To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <code>ProductCode</code> in the response.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -64,9 +64,12 @@ public class ListQuotaApplicationTemplatesRequest extends TeaModel {
     /**
      * <p>The quota type. Valid values:</p>
      * <ul>
-     * <li>CommonQuota: general quota.</li>
-     * <li>WhiteListLabel: whitelist quota.</li>
-     * <li>FlowControl: API rate limit.</li>
+     * <li><p>CommonQuota: general quota.</p>
+     * </li>
+     * <li><p>WhiteListLabel: whitelist quota.</p>
+     * </li>
+     * <li><p>FlowControl: API rate limit.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

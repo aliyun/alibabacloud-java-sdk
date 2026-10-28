@@ -54,7 +54,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
          * <p>The name of the quota alert.</p>
          * 
          * <strong>example:</strong>
-         * <p>tf-testacccn-hangzhouquotasquotaalarm81611</p>
+         * <p>q_security-groups alarm</p>
          */
         @NameInMap("AlarmName")
         public String alarmName;
@@ -69,13 +69,13 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The alert notification methods.</p>
+         * <p>The notification channels for the alert.</p>
          */
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
         /**
-         * <p>The alert contact.</p>
+         * <p>The notification recipient of the quota alert.</p>
          * 
          * <strong>example:</strong>
          * <p>accountContact</p>
@@ -111,7 +111,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         public java.util.Map<String, ?> quotaDimension;
 
         /**
-         * <p>The used quota.</p>
+         * <p>The quota usage.</p>
          * 
          * <strong>example:</strong>
          * <p>28</p>
@@ -129,7 +129,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         public Float quotaValue;
 
         /**
-         * <p>The numeric value of the alert threshold.</p>
+         * <p>The numeric value of the quota alert threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>29</p>
@@ -138,7 +138,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         public Float threshold;
 
         /**
-         * <p>The percentage of the alert threshold.</p>
+         * <p>The percentage of the quota alert threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -147,10 +147,10 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         public Float thresholdPercent;
 
         /**
-         * <p>The type of the quota alert. Valid values:</p>
+         * <p>The Alarm Metric of the quota alerting. Valid values:</p>
          * <ul>
-         * <li>used: The alert is created for the used quota.</li>
-         * <li>usable: The alert is created for the available quota.</li>
+         * <li>used: Alerting on the used quota usage.</li>
+         * <li>usable: Alerting on the remaining active quota.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class GetQuotaAlarmResponseBody extends TeaModel {
         public String thresholdType;
 
         /**
-         * <p>The webhook URL. Quota Center sends alert notifications to the specified URL by using HTTP POST requests.</p>
+         * <p>The public URL to which Quota Center sends alert messages by using HTTP POST requests.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://alert.aliyun.com/callback">https://alert.aliyun.com/callback</a></p>

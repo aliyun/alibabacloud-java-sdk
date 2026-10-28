@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListQuotaAlarmsRequest extends TeaModel {
     /**
-     * <p>The name of the alert.</p>
+     * <p>The name of the quota usage alert.</p>
      * 
      * <strong>example:</strong>
-     * <p>rules</p>
+     * <p>q_hvnoqv alarm</p>
      */
     @NameInMap("AlarmName")
     public String alarmName;
 
     /**
-     * <p>The maximum number of records that you want to return for the query.</p>
+     * <p>The maximum number of records to return.</p>
      * <p>Valid values: 1 to 200. Default value: 30.</p>
      * 
      * <strong>example:</strong>
@@ -24,9 +24,9 @@ public class ListQuotaAlarmsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which you want to start the query.</p>
+     * <p>The token that specifies the start point of the query.</p>
      * <blockquote>
-     * <p>An empty value indicates that the query starts from the beginning.</p>
+     * <p>If you do not specify this parameter, the query starts from the beginning.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class ListQuotaAlarmsRequest extends TeaModel {
     /**
      * <p>The abbreviation of the Alibaba Cloud service name.</p>
      * <blockquote>
-     * <p> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440554.html">ListProducts</a> operation and check the value of <code>ProductCode</code> in the response.</p>
+     * <p>To obtain the abbreviation of an Alibaba Cloud service name, see the <code>ProductCode</code> parameter in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,13 +50,13 @@ public class ListQuotaAlarmsRequest extends TeaModel {
     /**
      * <p>The quota ID.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>To obtain the quota ID of a cloud service, call the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation and check the value of <code>QuotaActionCode</code> in the response.</p>
+     * <li><p>To obtain the quota ID of an Alibaba Cloud service, see the <code>QuotaActionCode</code> parameter in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
      * </li>
-     * <li><p>If you specify this parameter, you must specify <code>ProductCode</code>.</p>
+     * <li><p>If you specify this parameter, you must also specify <code>ProductCode</code>.</p>
      * </li>
      * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>q_hvnoqv</p>
@@ -125,15 +125,15 @@ public class ListQuotaAlarmsRequest extends TeaModel {
 
     public static class ListQuotaAlarmsRequestQuotaDimensions extends TeaModel {
         /**
-         * <p>The key of the dimension.</p>
+         * <p>The key of the quota dimension.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <li><p>The number of key-value pairs that you can specify for the quota dimensions varies based on the Alibaba Cloud service.</p>
          * </li>
-         * <li><p>This parameter is required if you set the <code>ProductCode</code> parameter to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>.</p>
+         * <li><p>If you set <code>ProductCode</code> to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>, you must specify both the key and value for the quota dimension.</p>
          * </li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>regionId</p>
@@ -142,15 +142,15 @@ public class ListQuotaAlarmsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the dimension.</p>
+         * <p>The value of the quota dimension.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
+         * <li><p>The number of key-value pairs that you can specify for the quota dimensions varies based on the Alibaba Cloud service.</p>
          * </li>
-         * <li><p>This parameter is required if you set the <code>ProductCode</code> parameter to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>.</p>
+         * <li><p>If you set <code>ProductCode</code> to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>, you must specify both the key and value for the quota dimension.</p>
          * </li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

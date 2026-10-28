@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProductsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records that are returned for the query.</p>
+     * <p>The maximum number of entries returned for this query.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -14,7 +14,7 @@ public class ListProductsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     * <p>The token that marks the position of the returned query data. An empty value indicates that all data has been queried.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -23,13 +23,13 @@ public class ListProductsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The information about the Alibaba Cloud services.</p>
+     * <p>The information about the Alibaba Cloud service.</p>
      */
     @NameInMap("ProductInfo")
     public java.util.List<ListProductsResponseBodyProductInfo> productInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1DA9C136-11BC-4C39-ADC6-B86276128072</p>
@@ -38,7 +38,7 @@ public class ListProductsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that are returned for the query.</p>
+     * <p>The total number of entries returned for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,10 +93,12 @@ public class ListProductsResponseBody extends TeaModel {
 
     public static class ListProductsResponseBodyProductInfo extends TeaModel {
         /**
-         * <p>Indicates whether the Alibaba Cloud service supports general quotas. Valid values:</p>
+         * <p>Specifies whether general quotas are supported. Valid values:</p>
          * <ul>
-         * <li>support: The Alibaba Cloud service supports general quotas.</li>
-         * <li>unsupport: The Alibaba Cloud service does not support general quotas.</li>
+         * <li><p>support: Supported.</p>
+         * </li>
+         * <li><p>unsupport: Not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,13 +108,13 @@ public class ListProductsResponseBody extends TeaModel {
         public String commonQuotaSupport;
 
         /**
-         * <blockquote>
-         * <p> This parameter is discontinued and is not recommended.</p>
-         * </blockquote>
-         * <p>Indicates whether the Alibaba Cloud service supports dynamic quota adjustment. Valid values:</p>
+         * <p><notice><strong>[Deprecated]</strong> We recommend that you do not use this parameter.</notice></p>
+         * <p>Specifies whether dynamic quota adjustment is supported. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true</p>
+         * </li>
+         * <li><p>false</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -122,10 +124,12 @@ public class ListProductsResponseBody extends TeaModel {
         public Boolean dynamic;
 
         /**
-         * <p>Indicates whether the Alibaba Cloud service supports API rate limits. Valid values:</p>
+         * <p>Specifies whether API rate limits are supported. Valid values:</p>
          * <ul>
-         * <li>support: The Alibaba Cloud service supports API rate limits.</li>
-         * <li>unsupport: The Alibaba Cloud service does not support API rate limits.</li>
+         * <li><p>support: Supported.</p>
+         * </li>
+         * <li><p>unsupport: Not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -189,10 +193,12 @@ public class ListProductsResponseBody extends TeaModel {
         public String secondCategoryNameEn;
 
         /**
-         * <p>Indicates whether the Alibaba Cloud service supports whitelist quotas. Valid values:</p>
+         * <p>Specifies whether privileges are supported. Valid values:</p>
          * <ul>
-         * <li>support: The Alibaba Cloud service supports whitelist quotas.</li>
-         * <li>unsupport: The Alibaba Cloud service does not support whitelist quotas.</li>
+         * <li><p>support: Supported.</p>
+         * </li>
+         * <li><p>unsupport: Not supported.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

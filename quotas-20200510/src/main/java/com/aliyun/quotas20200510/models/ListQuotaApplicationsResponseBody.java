@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotaApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records that are returned for the query.</p>
+     * <p>The maximum number of records returned in this query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     * <p>The token that marks the position of the returned data. An empty value indicates that all data has been returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
     public java.util.List<ListQuotaApplicationsResponseBodyQuotaApplications> quotaApplications;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>730925FB-0BD0-40AC-AF3A-A6C6E9716879</p>
@@ -38,7 +38,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of applications.</p>
+     * <p>The total number of quota increase applications.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,13 +93,13 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
 
     public static class ListQuotaApplicationsResponseBodyQuotaApplicationsPeriod extends TeaModel {
         /**
-         * <p>The unit of the calculation cycle. Valid values:</p>
+         * <p>The unit of the quota calculation period. Valid values:</p>
          * <ul>
-         * <li>second</li>
-         * <li>minute</li>
-         * <li>hour</li>
-         * <li>day</li>
-         * <li>week</li>
+         * <li>second: seconds.</li>
+         * <li>minute: minutes.</li>
+         * <li>hour: hours.</li>
+         * <li>day: days.</li>
+         * <li>week: weeks.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public String periodUnit;
 
         /**
-         * <p>The value of the calculation cycle.</p>
+         * <p>The value of the quota calculation period.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -142,7 +142,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
 
     public static class ListQuotaApplicationsResponseBodyQuotaApplications extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The ID of the quota increase application.</p>
          * 
          * <strong>example:</strong>
          * <p>b926571d-cc09-4711-b547-58a615f0****</p>
@@ -151,7 +151,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The time when the application was submitted.</p>
+         * <p>The time when the quota increase application was submitted. The value is in ISO 8601 format, in UTC, and ends with Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-15T09:13:53Z</p>
@@ -160,7 +160,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public String applyTime;
 
         /**
-         * <p>The quota value that is approved.</p>
+         * <p>The approved quota value of the quota increase application.</p>
          * 
          * <strong>example:</strong>
          * <p>101</p>
@@ -169,7 +169,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public Float approveValue;
 
         /**
-         * <p>The result of the application.</p>
+         * <p>The approval comment for the quota increase application.</p>
          * 
          * <strong>example:</strong>
          * <p>Agree</p>
@@ -178,7 +178,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public String auditReason;
 
         /**
-         * <p>The remarks of the application.</p>
+         * <p>The remarks of the quota increase application.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -187,7 +187,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The quota value that is approved.</p>
+         * <p>The requested quota value of the quota increase application.</p>
          * 
          * <strong>example:</strong>
          * <p>101</p>
@@ -196,7 +196,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public Float desireValue;
 
         /**
-         * <p>The dimension of the application.</p>
+         * <p>The quota dimensions of the quota increase application.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
@@ -205,7 +205,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public java.util.Map<String, ?> dimension;
 
         /**
-         * <p>The time when the application took effect.</p>
+         * <p>The effective period of the quota increase application. The value is in ISO 8601 format, in UTC, and ends with Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-15T11:46:25Z</p>
@@ -214,7 +214,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
-         * <p>The time when the application expired.</p>
+         * <p>The expiration time of the quota increase application. The value is in ISO 8601 format, in UTC, and ends with Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-17T11:46:25Z</p>
@@ -223,10 +223,10 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>Indicates whether Quota Center sends a notification about the application result. Valid values:</p>
+         * <p>Indicates whether a notification is sent for the quota increase application result. Valid values:</p>
          * <ul>
-         * <li>0: A notification about the application result is not sent.</li>
-         * <li>3: A notification about the application result is sent.</li>
+         * <li>0: No.</li>
+         * <li>3: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -236,13 +236,13 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public Integer noticeType;
 
         /**
-         * <p>The calculation cycle of the quota.</p>
+         * <p>The quota calculation period.</p>
          */
         @NameInMap("Period")
         public ListQuotaApplicationsResponseBodyQuotaApplicationsPeriod period;
 
         /**
-         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <p>The abbreviation of the cloud service name.</p>
          * 
          * <strong>example:</strong>
          * <p>csk</p>
@@ -251,7 +251,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the quota.</p>
+         * <p>The quota ID.</p>
          * 
          * <strong>example:</strong>
          * <p>q_i5uzm3</p>
@@ -269,10 +269,10 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public String quotaArn;
 
         /**
-         * <p>The quota type. Valid values:</p>
+         * <p>The quota category. Valid values:</p>
          * <ul>
          * <li>CommonQuota (default): general quota.</li>
-         * <li>WhiteListLabel: whitelist quota.</li>
+         * <li>WhiteListLabel: privilege.</li>
          * <li>FlowControl: API rate limit.</li>
          * </ul>
          * 
@@ -286,7 +286,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
          * <p>The description of the quota.</p>
          * 
          * <strong>example:</strong>
-         * <p>The maximum number of nodes in a cluster</p>
+         * <p>The maximum number of nodes in a cluster.</p>
          */
         @NameInMap("QuotaDescription")
         public String quotaDescription;
@@ -301,7 +301,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public String quotaName;
 
         /**
-         * <p>The unit of the new quota value.</p>
+         * <p>The unit of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>Node</p>
@@ -310,7 +310,7 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public String quotaUnit;
 
         /**
-         * <p>The reason for the application.</p>
+         * <p>The reason for the quota increase application.</p>
          * 
          * <strong>example:</strong>
          * <p>Business expansion</p>
@@ -319,12 +319,16 @@ public class ListQuotaApplicationsResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The status of the application. Valid values:</p>
+         * <p>The approval status of the quota increase application. Valid values:</p>
          * <ul>
-         * <li>Disagree: The application is rejected.</li>
-         * <li>Agree: The application is approved.</li>
-         * <li>Process: The application is being reviewed.</li>
-         * <li>Cancel: The application is canceled.</li>
+         * <li><p>Disagree: Rejected.</p>
+         * </li>
+         * <li><p>Agree: Approved.</p>
+         * </li>
+         * <li><p>Process: Under review.</p>
+         * </li>
+         * <li><p>Cancel: Closed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

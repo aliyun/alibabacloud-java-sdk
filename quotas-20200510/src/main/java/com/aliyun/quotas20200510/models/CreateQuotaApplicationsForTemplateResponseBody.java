@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
     /**
-     * <p>The Alibaba Cloud accounts for which the quotas are applied.</p>
+     * <p>The list of Alibaba Cloud accounts that belong to the resource directory members for which quotas are applied.</p>
      */
     @NameInMap("AliyunUids")
     public java.util.List<String> aliyunUids;
 
     /**
-     * <p>The ID of the quota application batch.</p>
+     * <p>The batch ID of the quota application.</p>
      * 
      * <strong>example:</strong>
      * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
@@ -20,7 +20,7 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
     public String batchQuotaApplicationId;
 
     /**
-     * <p>The Alibaba Cloud accounts of the members in a resource directory whose quota increase request is rejected, and the reason for the rejection.</p>
+     * <p>The list of Alibaba Cloud accounts that belong to the resource directory members for which quota applications failed and the reasons for the failures.</p>
      */
     @NameInMap("FailResults")
     public java.util.List<CreateQuotaApplicationsForTemplateResponseBodyFailResults> failResults;
@@ -73,7 +73,7 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
 
     public static class CreateQuotaApplicationsForTemplateResponseBodyFailResults extends TeaModel {
         /**
-         * <p>The Alibaba Cloud account of the members in a resource directory whose quota increase request is rejected.</p>
+         * <p>The Alibaba Cloud account that belongs to the resource directory member for which the quota application failed.</p>
          * 
          * <strong>example:</strong>
          * <p>135048337611****</p>
@@ -82,7 +82,7 @@ public class CreateQuotaApplicationsForTemplateResponseBody extends TeaModel {
         public String aliyunUid;
 
         /**
-         * <p>The reason for the rejection.</p>
+         * <p>The reason for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>The quota adjustment application is being processed. Please try again later.</p>

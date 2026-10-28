@@ -11,25 +11,25 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
     public java.util.List<ListProductDimensionGroupsResponseBodyDimensionGroups> dimensionGroups;
 
     /**
-     * <p>The maximum number of records that are returned for the query.</p>
+     * <p>The maximum number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>3</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     * <p>The token that marks the position where the returned query results end. An empty value indicates that all data is returned.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>21</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>057D210F-F2FC-5329-A536-26C16628BB09</p>
@@ -38,10 +38,10 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that are returned for the query.</p>
+     * <p>The total number of entries that match the query.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>3</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -93,7 +93,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
 
     public static class ListProductDimensionGroupsResponseBodyDimensionGroups extends TeaModel {
         /**
-         * <p>The key of the dimension group.</p>
+         * <p>The keys of the dimension group.</p>
          */
         @NameInMap("DimensionKeys")
         public java.util.List<String> dimensionKeys;
@@ -102,7 +102,7 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
          * <p>The code of the dimension group.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss_wf1ngqmd7q</p>
+         * <p>entconsole_zjzp4d****</p>
          */
         @NameInMap("GroupCode")
         public String groupCode;
@@ -111,16 +111,16 @@ public class ListProductDimensionGroupsResponseBody extends TeaModel {
          * <p>The name of the dimension group.</p>
          * 
          * <strong>example:</strong>
-         * <p>OSS_Group</p>
+         * <p>Resource sharing</p>
          */
         @NameInMap("GroupName")
         public String groupName;
 
         /**
-         * <p>The service code.</p>
+         * <p>The code of the Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
-         * <p>oss</p>
+         * <p>entconsole</p>
          */
         @NameInMap("ProductCode")
         public String productCode;

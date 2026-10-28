@@ -98,11 +98,16 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         /**
          * <p>The unit of the calculation cycle. Valid values:</p>
          * <ul>
-         * <li>second</li>
-         * <li>minute</li>
-         * <li>hour</li>
-         * <li>day</li>
-         * <li>week</li>
+         * <li><p>second</p>
+         * </li>
+         * <li><p>minute</p>
+         * </li>
+         * <li><p>hour</p>
+         * </li>
+         * <li><p>day</p>
+         * </li>
+         * <li><p>week</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -153,8 +158,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         /**
          * <p>The type of the adjustable value. Valid values:</p>
          * <ul>
-         * <li>continuous</li>
-         * <li>discontinuous</li>
+         * <li><p>continuous</p>
+         * </li>
+         * <li><p>discontinuous</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,8 +201,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         /**
          * <p>The language of the quota alert notification. Valid values:</p>
          * <ul>
-         * <li>zh: Chinese</li>
-         * <li>en: English</li>
+         * <li><p>zh: Chinese</p>
+         * </li>
+         * <li><p>en: English</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -225,8 +234,10 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether Quota Center sends a notification about the application result. Valid values:</p>
          * <ul>
-         * <li>0: no</li>
-         * <li>3: yes</li>
+         * <li><p>0: no</p>
+         * </li>
+         * <li><p>3: yes</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -262,9 +273,12 @@ public class ListQuotaApplicationTemplatesResponseBody extends TeaModel {
         /**
          * <p>The type of the quota. Valid values:</p>
          * <ul>
-         * <li>CommonQuota: general quota</li>
-         * <li>FlowControl: API rate limit</li>
-         * <li>WhiteListLabel: privilege</li>
+         * <li><p>CommonQuota: general quota</p>
+         * </li>
+         * <li><p>FlowControl: API rate limit</p>
+         * </li>
+         * <li><p>WhiteListLabel: privilege</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

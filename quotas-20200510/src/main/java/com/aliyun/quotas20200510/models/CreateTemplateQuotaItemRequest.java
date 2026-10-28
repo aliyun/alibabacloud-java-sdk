@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class CreateTemplateQuotaItemRequest extends TeaModel {
     /**
-     * <p>The requested value of the quota.</p>
+     * <p>The requested quota value.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li><p>You can specify DesireValue based on the values of <code>TotalUsage</code> and <code>ApplicableRange</code> in the response to the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation.</p>
-     * </li>
-     * <li><p>Applications are reviewed by the technical support team for each cloud service. To increase the success rate of your application, specify a reasonable quota value and a detailed reason.</p>
-     * </li>
+     * <li>Set the requested quota value based on the <code>TotalUsage</code> (quota usage) and <code>ApplicableRange</code> (applicable range for the quota item) of the target quota in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</li>
+     * <li>Quota applications are reviewed by the technical support team of each cloud service. To increase the approval rate, specify a reasonable requested value and provide a detailed reason when you apply for a quota increase.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,9 +27,10 @@ public class CreateTemplateQuotaItemRequest extends TeaModel {
     public java.util.List<CreateTemplateQuotaItemRequestDimensions> dimensions;
 
     /**
-     * <p>The start time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</p>
+     * <p>The UTC time when the quota takes effect.
+     * This parameter applies only to privileges (WhiteListLabel). </p>
      * <blockquote>
-     * <p>If you leave this parameter empty, the quota takes effect immediately.</p>
+     * <p>An empty value indicates that the quota takes effect immediately.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,8 +42,8 @@ public class CreateTemplateQuotaItemRequest extends TeaModel {
     /**
      * <p>The language of the quota alert notification. Valid values:</p>
      * <ul>
-     * <li>zh (default value): Chinese</li>
-     * <li>en: English</li>
+     * <li>zh (default): Chinese.</li>
+     * <li>en: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,9 +53,10 @@ public class CreateTemplateQuotaItemRequest extends TeaModel {
     public String envLanguage;
 
     /**
-     * <p>The end time of the validity period of the quota. Specify the value in UTC. This parameter is valid only if you set the QuotaCategory parameter to WhiteListLabel.</p>
+     * <p>The UTC time when the quota expires.
+     * This parameter applies only to privileges (WhiteListLabel). </p>
      * <blockquote>
-     * <p>If you leave this parameter empty, no end time is specified.</p>
+     * <p>An empty value indicates that no UTC expiration time is specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -66,10 +66,10 @@ public class CreateTemplateQuotaItemRequest extends TeaModel {
     public String expireTime;
 
     /**
-     * <p>Specifies whether to send a notification about the application result. Valid values:</p>
+     * <p>Specifies whether to send a notification for the quota application result. Valid values:</p>
      * <ul>
-     * <li>0 (default value): no</li>
-     * <li>3: yes</li>
+     * <li>0 (default): No.</li>
+     * <li>3: Yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,9 +79,9 @@ public class CreateTemplateQuotaItemRequest extends TeaModel {
     public Long noticeType;
 
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviation of the cloud service.</p>
      * <blockquote>
-     * <p> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <code>ProductCode</code> in the response.</p>
+     * <p>For information about how to obtain the abbreviation of a cloud service, see <code>ProductCode</code> in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -94,7 +94,7 @@ public class CreateTemplateQuotaItemRequest extends TeaModel {
     /**
      * <p>The quota ID.</p>
      * <blockquote>
-     * <p> To obtain the quota ID of an Alibaba Cloud service, call the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation and check the value of <code>QuotaActionCode</code> in the response.</p>
+     * <p>For information about how to obtain the quota ID of a cloud service, see <code>QuotaActionCode</code> in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -105,11 +105,11 @@ public class CreateTemplateQuotaItemRequest extends TeaModel {
     public String quotaActionCode;
 
     /**
-     * <p>The quota type. Valid values:</p>
+     * <p>The quota category. Valid values:</p>
      * <ul>
-     * <li>CommonQuota: general quota</li>
-     * <li>WhiteListLabel: privilege</li>
-     * <li>FlowControl: API rate limit</li>
+     * <li>CommonQuota: general quota.</li>
+     * <li>WhiteListLabel: privilege.</li>
+     * <li>FlowControl: API rate limit.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -197,15 +197,13 @@ public class CreateTemplateQuotaItemRequest extends TeaModel {
 
     public static class CreateTemplateQuotaItemRequestDimensions extends TeaModel {
         /**
-         * <p>The key of the dimension.</p>
+         * <p>The key of the quota dimension.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
-         * </li>
-         * <li><p>This parameter is required if you set the <code>ProductCode</code> parameter to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>.</p>
-         * </li>
+         * <li>The value range of N depends on the number of dimensions supported by the cloud service.</li>
+         * <li>If <code>ProductCode</code> is <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>, you must specify both the key and the value of the quota dimension.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>regionId</p>
@@ -214,15 +212,13 @@ public class CreateTemplateQuotaItemRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the dimension.</p>
+         * <p>The value of the quota dimension.</p>
          * <blockquote>
-         * </blockquote>
          * <ul>
-         * <li><p>The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service.</p>
-         * </li>
-         * <li><p>This parameter is required if you set the <code>ProductCode</code> parameter to <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>.</p>
-         * </li>
+         * <li>The value range of N depends on the number of dimensions supported by the cloud service.</li>
+         * <li>If <code>ProductCode</code> is <code>ecs</code>, <code>ecs-spec</code>, <code>actiontrail</code>, or <code>ess</code>, you must specify both the key and the value of the quota dimension.</li>
          * </ul>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

@@ -5,22 +5,28 @@ import com.aliyun.tea.*;
 
 public class CreateQuotaAlarmRequest extends TeaModel {
     /**
-     * <p>Quota alarm name</p>
+     * <p>The name of the quota alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>q_344t4 alarm</p>
+     * <p>q_hvnoqv alarm</p>
      */
     @NameInMap("AlarmName")
     public String alarmName;
 
+    /**
+     * <p>The original context information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{}</p>
+     */
     @NameInMap("OriginalContext")
     public String originalContext;
 
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviation of the cloud service.</p>
      * <blockquote>
-     * <p> To query the abbreviation of an Alibaba Cloud service name, check the <code>ProductCode</code> parameter that is described in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
+     * <p>For more information about how to obtain the abbreviation of a cloud service, see ProductCode in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,7 +39,7 @@ public class CreateQuotaAlarmRequest extends TeaModel {
     /**
      * <p>The quota ID.</p>
      * <blockquote>
-     * <p> To obtain the quota ID of an Alibaba Cloud service, call the <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a> operation and check the value of <code>QuotaActionCode</code> in the response.</p>
+     * <p>For more information about how to obtain the quota ID of a cloud service, see QuotaActionCode in <a href="https://help.aliyun.com/document_detail/440554.html">ListProductQuotas</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,23 +50,26 @@ public class CreateQuotaAlarmRequest extends TeaModel {
     public String quotaActionCode;
 
     /**
-     * <p>The quota dimensions. A quota item is uniquely identified by the values of <code>Dimensions</code> and <code>QuotaActionCode</code>.</p>
+     * <p>The quota dimensions.
+     * The dimensions are properties of a quota item. A quota item is uniquely identified by Dimensions and QuotaActionCode.</p>
      * <blockquote>
-     * <p> This parameter is required for specific Alibaba Cloud services. You can call the <a href="https://help.aliyun.com/document_detail/440553.html">ListProductQuotaDimensions</a> operation to query the quota dimensions that are supported by an Alibaba Cloud service. The value of <code>Requisite</code> in the response indicates whether a dimension is required.</p>
+     * <p>Some dimensions are required for specific cloud services. You can call the <a href="https://help.aliyun.com/document_detail/440553.html">ListProductQuotaDimensions</a> operation to query the supported quota dimensions of a cloud service. The Requisite response parameter indicates whether a dimension is required.</p>
      * </blockquote>
      */
     @NameInMap("QuotaDimensions")
     public java.util.List<CreateQuotaAlarmRequestQuotaDimensions> quotaDimensions;
 
     /**
-     * <p>The numerical value of the quota alarm threshold. Value settings:</p>
+     * <p>The numeric value of the quota alert threshold. Valid values:</p>
      * <ul>
-     * <li>When <code>ThresholdType</code> is set to <code>used</code>, an alarm notification will be sent if the used amount of the quota is greater than or equal to the preset value. The quota alarm threshold must be greater than the used amount of the quota.</li>
-     * <li>When <code>ThresholdType</code> is set to <code>usable</code>, an alarm notification will be sent if the remaining available amount of the quota is less than or equal to the preset value. The quota alarm threshold must be less than the remaining available amount of the quota.<blockquote>
-     * <p>One of this parameter and ThresholdPercent must be set.</p>
-     * </blockquote>
+     * <li><p>If ThresholdType is set to used, you receive an alert notification when the used quota is greater than or equal to the specified value. The quota alert threshold must be greater than the used quota.</p>
+     * </li>
+     * <li><p>If ThresholdType is set to usable, you receive an alert notification when the available quota is less than or equal to the specified value. The quota alert threshold must be less than the available quota.</p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <p>You must specify either this parameter or ThresholdPercent.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>150</p>
@@ -69,14 +78,16 @@ public class CreateQuotaAlarmRequest extends TeaModel {
     public Float threshold;
 
     /**
-     * <p>The percentage of the quota alert threshold. Values:</p>
+     * <p>The percentage of the quota alert threshold. Valid values:</p>
      * <ul>
-     * <li>When <code>ThresholdType</code> is set to <code>used</code>, you will receive an alert notification if the used amount of the quota is greater than or equal to the preset percentage. The value range is (50%, 100%].</li>
-     * <li>When <code>ThresholdType</code> is set to <code>usable</code>, you will receive an alert notification if the remaining available amount of the quota is less than or equal to the preset percentage. The value range is (0%, 50%].<blockquote>
-     * <p>One of this parameter and Threshold must be set.</p>
-     * </blockquote>
+     * <li><p>If ThresholdType is set to used, you receive an alert notification when the used quota is greater than or equal to the specified percentage. Valid values: (50%, 100%].</p>
+     * </li>
+     * <li><p>If ThresholdType is set to usable, you receive an alert notification when the available quota is less than or equal to the specified percentage. Valid values: (0%, 50%].</p>
      * </li>
      * </ul>
+     * <blockquote>
+     * <p>You must specify either this parameter or Threshold.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -85,10 +96,10 @@ public class CreateQuotaAlarmRequest extends TeaModel {
     public Float thresholdPercent;
 
     /**
-     * <p>The type of the quota alert. Valid values:</p>
+     * <p>The quota alert type. Valid values:</p>
      * <ul>
-     * <li>used (default): The alert is created for the used quota.</li>
-     * <li>usable: The alert is created for the available quota.</li>
+     * <li>used: alerts on the used quota. This is the default value.</li>
+     * <li>usable: alerts on the remaining available quota.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,7 +109,7 @@ public class CreateQuotaAlarmRequest extends TeaModel {
     public String thresholdType;
 
     /**
-     * <p>The quota center sends alert information to the specified public URL address via a POST request using the HTTP protocol.</p>
+     * <p>The public URL to which Quota Center sends alert notifications by using HTTP POST requests.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://alert.aliyun.com/callback">https://alert.aliyun.com/callback</a></p>
@@ -185,9 +196,9 @@ public class CreateQuotaAlarmRequest extends TeaModel {
 
     public static class CreateQuotaAlarmRequestQuotaDimensions extends TeaModel {
         /**
-         * <p>The key of the dimension.</p>
+         * <p>The key of the quota dimension.</p>
          * <blockquote>
-         * <p> You must configure <code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> at the same time. The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service. You can call the <a href="https://help.aliyun.com/document_detail/440553.html">ListProductQuotaDimensions</a> operation to query the dimensions that are supported by an Alibaba Cloud service. The number of items in the returned array is N.</p>
+         * <p>You must specify both Dimensions.N.Key and Dimensions.N.Value. The value range of N depends on the number of dimensions supported by the cloud service. You can call the <a href="https://help.aliyun.com/document_detail/440553.html">ListProductQuotaDimensions</a> operation to query the supported quota dimensions. The length of the returned array is the maximum value of N.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -197,9 +208,9 @@ public class CreateQuotaAlarmRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the dimension.</p>
+         * <p>The value of the quota dimension.</p>
          * <blockquote>
-         * <p> You must configure <code>Dimensions.N.Key</code> and <code>Dimensions.N.Value</code> at the same time. The value range of N varies based on the number of dimensions that are supported by the related Alibaba Cloud service. You can call the <a href="https://help.aliyun.com/document_detail/440553.html">ListProductQuotaDimensions</a> operation to query the dimensions that are supported by an Alibaba Cloud service. The number of items in the returned array is N.</p>
+         * <p>You must specify both Dimensions.N.Key and Dimensions.N.Value. The value range of N depends on the number of dimensions supported by the cloud service. You can call the <a href="https://help.aliyun.com/document_detail/440553.html">ListProductQuotaDimensions</a> operation to query the supported quota dimensions. The length of the returned array is the maximum value of N.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

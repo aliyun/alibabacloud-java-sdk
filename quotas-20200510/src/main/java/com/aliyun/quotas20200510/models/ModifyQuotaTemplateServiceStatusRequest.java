@@ -7,8 +7,10 @@ public class ModifyQuotaTemplateServiceStatusRequest extends TeaModel {
     /**
      * <p>The status of the quota template. Valid values:</p>
      * <ul>
-     * <li>\-1: The quota template is disabled.</li>
-     * <li>1: The quota template is enabled.</li>
+     * <li><p>-1: The quota template is disabled.</p>
+     * </li>
+     * <li><p>1: The quota template is enabled.</p>
+     * </li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetQuotaApplicationResponseBody extends TeaModel {
     /**
-     * <p>The details of the quota application.</p>
+     * <p>The details of the quota increase application.</p>
      */
     @NameInMap("QuotaApplication")
     public GetQuotaApplicationResponseBodyQuotaApplication quotaApplication;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7BBD1D37-094C-4485-8B7D-64682F82BC18</p>
@@ -42,7 +42,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
 
     public static class GetQuotaApplicationResponseBodyQuotaApplication extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The ID of the quota increase application.</p>
          * 
          * <strong>example:</strong>
          * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
@@ -51,7 +51,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public String applicationId;
 
         /**
-         * <p>The time when the application was submitted.</p>
+         * <p>The time when the quota increase application was submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-19T09:25:56Z</p>
@@ -69,7 +69,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public Float approveValue;
 
         /**
-         * <p>The result of the application.</p>
+         * <p>The review comments for the quota increase application.</p>
          * 
          * <strong>example:</strong>
          * <p>Agree</p>
@@ -78,7 +78,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public String auditReason;
 
         /**
-         * <p>The expected value of the quota.</p>
+         * <p>The requested quota value.</p>
          * 
          * <strong>example:</strong>
          * <p>804</p>
@@ -87,8 +87,8 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public Integer desireValue;
 
         /**
-         * <p>The dimension.</p>
-         * <p>Format: <code>{&quot;regionId&quot;:&quot;Region&quot;}</code>.</p>
+         * <p>The quota dimension.</p>
+         * <p>Format: <code>{&quot;regionId&quot;:&quot;region&quot;}</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;cn-shanghai&quot;,&quot;cn-hangzhou&quot;]</p>
@@ -97,7 +97,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public java.util.Map<String, ?> dimension;
 
         /**
-         * <p>The time when the new quota value takes effect.</p>
+         * <p>The effective period of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-19 15:30:00</p>
@@ -106,7 +106,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
-         * <p>The time when the new quota expires.</p>
+         * <p>The time when the quota expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-29 15:30:00</p>
@@ -115,11 +115,11 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The method of that is used to send alert notifications. Valid values:</p>
+         * <p>The notification type. Valid values:</p>
          * <ul>
-         * <li>0: Quota Center does not send a notification.</li>
-         * <li>1: Quota Center sends an email notification.</li>
-         * <li>2: Quota Center sends an SMS notification.</li>
+         * <li>0: no notification</li>
+         * <li>1: email notification</li>
+         * <li>2: SMS notification</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -129,7 +129,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public Long noticeType;
 
         /**
-         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <p>The abbreviation of the cloud service name.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -138,7 +138,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public String productCode;
 
         /**
-         * <p>The ID of the quota.</p>
+         * <p>The quota ID.</p>
          * 
          * <strong>example:</strong>
          * <p>q_security-groups</p>
@@ -147,7 +147,7 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public String quotaActionCode;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the quota.</p>
+         * <p>The ARN of the quota.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:quotas:cn-hangzhou:120886317861****:quota/ecs/q_security-groups/</p>
@@ -156,11 +156,11 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public String quotaArn;
 
         /**
-         * <p>The quota type. Valid values:</p>
+         * <p>The quota category. Valid values:</p>
          * <ul>
-         * <li>CommonQuota: general quota.</li>
-         * <li>FlowControl: API rate limit.</li>
-         * <li>WhiteListLabel: whitelist quota.</li>
+         * <li>CommonQuota: general quota</li>
+         * <li>FlowControl: API rate limit</li>
+         * <li>WhiteListLabel: privilege</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,16 +170,16 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public String quotaCategory;
 
         /**
-         * <p>The description of the quota.</p>
+         * <p>The quota description.</p>
          * 
          * <strong>example:</strong>
-         * <p>The maximum number of security groups that can be owned by the current account</p>
+         * <p>The maximum number of security groups that can be owned by the current account.</p>
          */
         @NameInMap("QuotaDescription")
         public String quotaDescription;
 
         /**
-         * <p>The name of the quota.</p>
+         * <p>The quota name.</p>
          * 
          * <strong>example:</strong>
          * <p>Maximum Number of Security Groups</p>
@@ -188,16 +188,16 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public String quotaName;
 
         /**
-         * <p>The unit of the new quota value.</p>
+         * <p>The quota unit.</p>
          * 
          * <strong>example:</strong>
-         * <p>Count</p>
+         * <p>AMOUNT</p>
          */
         @NameInMap("QuotaUnit")
         public String quotaUnit;
 
         /**
-         * <p>The reason for the application.</p>
+         * <p>The reason for the quota increase application.</p>
          * 
          * <strong>example:</strong>
          * <p>Scale Out</p>
@@ -206,12 +206,16 @@ public class GetQuotaApplicationResponseBody extends TeaModel {
         public String reason;
 
         /**
-         * <p>The status of the application. Valid values:</p>
+         * <p>The approval status of the quota increase application. Valid values:</p>
          * <ul>
-         * <li>Disagree: The application is rejected.</li>
-         * <li>Agree: The application is approved.</li>
-         * <li>Process: The application is being reviewed.</li>
-         * <li>Cancel: The application is closed.</li>
+         * <li><p>Disagree: Rejected.</p>
+         * </li>
+         * <li><p>Agree: Approved.</p>
+         * </li>
+         * <li><p>Process: Under review.</p>
+         * </li>
+         * <li><p>Cancel: Closed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -7,7 +7,7 @@ public class DeleteQuotaAlarmRequest extends TeaModel {
     /**
      * <p>The ID of the quota alert.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a> operation to obtain the ID of a quota alert.</p>
+     * <p>For more information about how to obtain the ID of a quota alert, see <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

@@ -5,10 +5,12 @@ import com.aliyun.tea.*;
 
 public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether retries are allowed. Valid values:</p>
+     * <p>Indicates whether the request can be retried. Valid values:</p>
      * <ul>
-     * <li>false</li>
-     * <li>true</li>
+     * <li><p>false: The request cannot be retried.</p>
+     * </li>
+     * <li><p>true: The request can be retried.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +38,7 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The parameters whose values are invalid.</p>
+     * <p>The array of error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -69,7 +71,7 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The quota application ID.</p>
+     * <p>The ID of the quota application.</p>
      * 
      * <strong>example:</strong>
      * <p>219f1ff6-6205-495f-bda7-90d2fe945e****</p>
@@ -89,8 +91,10 @@ public class RemindQuotaApplicationApprovalResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the request was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li><p>true: The request was successful.</p>
+     * </li>
+     * <li><p>false: The request failed.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

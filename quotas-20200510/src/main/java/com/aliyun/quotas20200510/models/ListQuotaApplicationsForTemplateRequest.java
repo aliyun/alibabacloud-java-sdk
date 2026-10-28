@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListQuotaApplicationsForTemplateRequest extends TeaModel {
     /**
-     * <p>The UTC time when the quota application ends.</p>
+     * <p>The end of the time range to query. The value is in UTC.</p>
+     * <blockquote>
+     * <p>The interval between <code>ApplyStartTime</code> and <code>ApplyEndTime</code> must be 7 days or less. If you do not set these two parameters, quota applications submitted within the last 7 days are queried.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2023-05-22T16:00:00Z</p>
@@ -14,7 +17,10 @@ public class ListQuotaApplicationsForTemplateRequest extends TeaModel {
     public String applyEndTime;
 
     /**
-     * <p>The UTC time when the quota application starts.</p>
+     * <p>The beginning of the time range to query. The value is in UTC.</p>
+     * <blockquote>
+     * <p>The interval between <code>ApplyStartTime</code> and <code>ApplyEndTime</code> must be 7 days or less. If you do not set these two parameters, quota applications submitted within the last 7 days are queried.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2023-05-22T16:00:00Z</p>
@@ -23,7 +29,7 @@ public class ListQuotaApplicationsForTemplateRequest extends TeaModel {
     public String applyStartTime;
 
     /**
-     * <p>The ID of the quota application batch.</p>
+     * <p>The ID of the batch quota application.</p>
      * 
      * <strong>example:</strong>
      * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
@@ -32,7 +38,7 @@ public class ListQuotaApplicationsForTemplateRequest extends TeaModel {
     public String batchQuotaApplicationId;
 
     /**
-     * <p>The maximum number of entries to return for a single request.</p>
+     * <p>The maximum number of results to return for a single request.</p>
      * <p>Valid values: 1 to 100. Default value: 30.</p>
      * 
      * <strong>example:</strong>
@@ -42,9 +48,9 @@ public class ListQuotaApplicationsForTemplateRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which you want to start the query.</p>
+     * <p>The token that marks the start of the data to read.</p>
      * <blockquote>
-     * <p> An empty value indicates that the query starts from the beginning.</p>
+     * <p>If you do not set this parameter, the query starts from the beginning.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,9 +60,9 @@ public class ListQuotaApplicationsForTemplateRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviation of the Alibaba Cloud service.</p>
      * <blockquote>
-     * <p> To query the abbreviation of an Alibaba Cloud service name, call the <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a> operation and check the value of <code>ProductCode</code> in the response.</p>
+     * <p>For more information about how to obtain the abbreviation of an Alibaba Cloud service, see the <code>ProductCode</code> parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -77,9 +83,12 @@ public class ListQuotaApplicationsForTemplateRequest extends TeaModel {
     /**
      * <p>The type of the quota. Valid values:</p>
      * <ul>
-     * <li>CommonQuota: general quota</li>
-     * <li>FlowControl: API rate limit</li>
-     * <li>WhiteListLabel: privilege</li>
+     * <li><p>CommonQuota: general quota.</p>
+     * </li>
+     * <li><p>FlowControl: API rate limit.</p>
+     * </li>
+     * <li><p>WhiteListLabel: privilege.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

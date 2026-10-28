@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether retries are allowed. Valid values:</p>
+     * <p>Specifies whether retries are allowed. Valid values:</p>
      * <ul>
-     * <li>false</li>
-     * <li>true</li>
+     * <li>false: Retries are not allowed.</li>
+     * <li>true: Retries are allowed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -36,7 +36,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
     public String dynamicMessage;
 
     /**
-     * <p>The parameters whose values are invalid.</p>
+     * <p>The error parameters.</p>
      */
     @NameInMap("ErrorArgs")
     public java.util.List<?> errorArgs;
@@ -69,7 +69,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The information about quota application approval.</p>
+     * <p>The response object.</p>
      */
     @NameInMap("Module")
     public GetQuotaApplicationApprovalResponseBodyModule module;
@@ -84,10 +84,10 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Specifies whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true</li>
-     * <li>false</li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
 
     public static class GetQuotaApplicationApprovalResponseBodyModule extends TeaModel {
         /**
-         * <p>The average amount of time required to approve quota applications. Unit: hour.</p>
+         * <p>The average approval time for the quota application. Unit: hours.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -192,7 +192,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         public Integer approvalHours;
 
         /**
-         * <p>The interval between two consecutive approval reminders. Unit: hour.</p>
+         * <p>The approval reminder interval for the quota application. Unit: hours.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -201,10 +201,10 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         public Integer reminderIntervalHours;
 
         /**
-         * <p>Indicates whether approval reminders are supported for quota applications. Valid values:</p>
+         * <p>Specifies whether approval reminders are supported for the quota application. Valid values:</p>
          * <ul>
-         * <li>false</li>
-         * <li>true</li>
+         * <li>false: Not supported.</li>
+         * <li>true: Supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -214,7 +214,7 @@ public class GetQuotaApplicationApprovalResponseBody extends TeaModel {
         public Boolean supportReminder;
 
         /**
-         * <p>The reason why approval reminders are not supported for quota applications.</p>
+         * <p>The reason why approval reminders are not supported for the quota application.</p>
          * 
          * <strong>example:</strong>
          * <p>can only be remind once within the interval</p>

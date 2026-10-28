@@ -7,7 +7,7 @@ public class UpdateQuotaAlarmRequest extends TeaModel {
     /**
      * <p>The ID of the quota alert.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a> operation to obtain the ID of a quota alert.</p>
+     * <p>For more information about how to obtain the ID of a quota alert, see <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,7 +20,7 @@ public class UpdateQuotaAlarmRequest extends TeaModel {
     /**
      * <p>The name of the quota alert.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a> operation to obtain the name of a quota alert.</p>
+     * <p>For more information about how to obtain the name of a quota alert, see <a href="https://help.aliyun.com/document_detail/440561.html">ListQuotaAlarms</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -33,11 +33,13 @@ public class UpdateQuotaAlarmRequest extends TeaModel {
     /**
      * <p>The numeric value of the alert threshold. Valid values:</p>
      * <ul>
-     * <li>If you set the <code>ThresholdType</code> parameter to <code>used</code>, you will receive an alert notification when the used quota is greater than or equal to the preset alert threshold. The alert threshold must be greater than the current used quota.</li>
-     * <li>If you set the <code>ThresholdType</code> parameter to <code>usable</code>, you will receive an alert notification when the available quota is less than or equal to the preset alert threshold. The alert threshold must be less than the current available quota.</li>
+     * <li><p>If you set <code>ThresholdType</code> to <code>used</code>, an alert is triggered when the used quota is greater than or equal to this value. The alert threshold must be greater than the current used quota.</p>
+     * </li>
+     * <li><p>If you set <code>ThresholdType</code> to <code>usable</code>, an alert is triggered when the usable quota is less than or equal to this value. The alert threshold must be less than the current usable quota.</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p>You must set one of the Threshold and ThresholdPercent parameters.</p>
+     * <p>You must set either Threshold or ThresholdPercent.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -49,11 +51,13 @@ public class UpdateQuotaAlarmRequest extends TeaModel {
     /**
      * <p>The percentage of the alert threshold. Valid values:</p>
      * <ul>
-     * <li>If you set <code>ThresholdType</code> to <code>used</code>, you receive an alert notification when the used quota is greater than or equal to the preset percentage of the alert threshold. Value range: (50%, 100%].</li>
-     * <li>If you set <code>ThresholdType</code> to <code>usable</code>, you receive an alert notification when the available quota is less than or equal to the preset percentage of the alert threshold. Value range: (0%, 50%].</li>
+     * <li><p>If you set <code>ThresholdType</code> to <code>used</code>, an alert is triggered when the percentage of the used quota is greater than or equal to this value. The value must be in the range of (50%, 100%].</p>
+     * </li>
+     * <li><p>If you set <code>ThresholdType</code> to <code>usable</code>, an alert is triggered when the percentage of the usable quota is less than or equal to this value. The value must be in the range of (0%, 50%].</p>
+     * </li>
      * </ul>
      * <blockquote>
-     * <p> You must set one of Threshold and ThresholdPercent.</p>
+     * <p>You must set either Threshold or ThresholdPercent.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,8 +69,10 @@ public class UpdateQuotaAlarmRequest extends TeaModel {
     /**
      * <p>The type of the quota alert. Valid values:</p>
      * <ul>
-     * <li>used (default): The alert is created for the used quota.</li>
-     * <li>usable: The alert is created for the available quota.</li>
+     * <li><p>used (default): The alert is triggered based on the used quota.</p>
+     * </li>
+     * <li><p>usable: The alert is triggered based on the usable quota.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -76,7 +82,7 @@ public class UpdateQuotaAlarmRequest extends TeaModel {
     public String thresholdType;
 
     /**
-     * <p>The webhook URL. Quota Center sends alert notifications to the specified URL by using HTTP POST requests.</p>
+     * <p>The webhook URL. Quota Center sends alert notifications to this URL using an HTTP POST request.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://alert.aliyun.com/callback">https://alert.aliyun.com/callback</a></p>

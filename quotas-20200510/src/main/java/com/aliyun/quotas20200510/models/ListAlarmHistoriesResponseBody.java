@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAlarmHistoriesResponseBody extends TeaModel {
     /**
-     * <p>The details of the quota alert records.</p>
+     * <p>The details of the quota alert history records.</p>
      */
     @NameInMap("AlarmHistories")
     public java.util.List<ListAlarmHistoriesResponseBodyAlarmHistories> alarmHistories;
 
     /**
-     * <p>The maximum number of records that are returned for the query.</p>
+     * <p>The maximum number of entries returned for the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -20,7 +20,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     * <p>The token that marks the position of the returned query data. An empty value indicates that all data has been queried.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +29,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CB38DDF9-B1E0-48C1-9966-19C443C2841E</p>
@@ -38,7 +38,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that are returned for the query.</p>
+     * <p>The total number of entries returned for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -96,13 +96,13 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
          * <p>The name of the quota alert.</p>
          * 
          * <strong>example:</strong>
-         * <p>security_groups</p>
+         * <p>q_security-groups alarm</p>
          */
         @NameInMap("AlarmName")
         public String alarmName;
 
         /**
-         * <p>The time when the quota alert rule was created.</p>
+         * <p>The time when the quota alert was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-24T09:20:09Z</p>
@@ -111,13 +111,13 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The notification methods of the quota alert.</p>
+         * <p>The notification channels for the quota alert.</p>
          */
         @NameInMap("NotifyChannels")
         public java.util.List<String> notifyChannels;
 
         /**
-         * <p>The quota alert contact.</p>
+         * <p>The notification recipients of the quota alert.</p>
          * 
          * <strong>example:</strong>
          * <p>accountContact</p>
@@ -126,7 +126,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         public String notifyTarget;
 
         /**
-         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <p>The abbreviation of the cloud service name.</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -144,7 +144,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         public String quotaActionCode;
 
         /**
-         * <p>The used quota.</p>
+         * <p>The quota usage.</p>
          * 
          * <strong>example:</strong>
          * <p>31</p>
@@ -153,7 +153,7 @@ public class ListAlarmHistoriesResponseBody extends TeaModel {
         public Float quotaUsage;
 
         /**
-         * <p>The threshold to trigger quota alerts.</p>
+         * <p>The value of the quota alert threshold.</p>
          * 
          * <strong>example:</strong>
          * <p>29</p>

@@ -5,29 +5,32 @@ import com.aliyun.tea.*;
 
 public class GetProductQuotaDimensionRequest extends TeaModel {
     /**
-     * <p>The information about quota dimensions.</p>
+     * <p>The quota dimensions on which the target quota dimension depends.</p>
      */
     @NameInMap("DependentDimensions")
     public java.util.List<GetProductQuotaDimensionRequestDependentDimensions> dependentDimensions;
 
     /**
-     * <p>The key of the quota dimension.</p>
+     * <p>The key of the target quota dimension.</p>
+     * <blockquote>
+     * <p>If the target quota dimension has dependent quota dimensions, you must specify the keys and values of the dependent quota dimensions at the same time.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>regionId</p>
+     * <p>zoneId</p>
      */
     @NameInMap("DimensionKey")
     public String dimensionKey;
 
     /**
-     * <p>The abbreviation of the Alibaba Cloud service name.</p>
+     * <p>The abbreviation of the cloud service.</p>
      * <blockquote>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/182368.html">Alibaba Cloud services that support Quota Center</a>.</p>
+     * <p>For more information about how to obtain the abbreviation of a cloud service, see the ProductCode parameter in <a href="https://help.aliyun.com/document_detail/440555.html">ListProducts</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>ecs-spec</p>
+     * <p>disk</p>
      */
     @NameInMap("ProductCode")
     public String productCode;
@@ -63,9 +66,12 @@ public class GetProductQuotaDimensionRequest extends TeaModel {
 
     public static class GetProductQuotaDimensionRequestDependentDimensions extends TeaModel {
         /**
-         * <p>The key of the quota dimension on which the quota dimension that you want to query is dependent.</p>
+         * <p>The key of the quota dimension on which the target quota dimension depends.</p>
          * <blockquote>
-         * <p>The value range of N varies based on the number of quota dimensions that are supported by the specified Alibaba Cloud service.</p>
+         * <ul>
+         * <li>The value of N depends on the number of quota dimensions on which the target quota dimension depends.</li>
+         * <li>You must specify the key and value of a dependent quota dimension at the same time.</li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -75,9 +81,12 @@ public class GetProductQuotaDimensionRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the quota dimension on which the quota dimension that you want to query is dependent.</p>
+         * <p>The value of the quota dimension on which the target quota dimension depends.</p>
          * <blockquote>
-         * <p>The value range of N varies based on the number of quota dimensions that are supported by the specified Alibaba Cloud service.</p>
+         * <ul>
+         * <li>The value of N depends on the number of quota dimensions on which the target quota dimension depends.</li>
+         * <li>You must specify the key and value of a dependent quota dimension at the same time.</li>
+         * </ul>
          * </blockquote>
          * 
          * <strong>example:</strong>

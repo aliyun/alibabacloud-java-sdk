@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records that are returned for the query.</p>
+     * <p>The maximum number of entries returned for this query.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>5</p>
      */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position at which the query ends. An empty value indicates that all data is returned.</p>
+     * <p>The pagination token that indicates the position of the returned data. If this parameter is not returned, it indicates that all data has been queried.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>84</p>
      */
     @NameInMap("NextToken")
     public String nextToken;
@@ -29,7 +29,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensions> quotaDimensions;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7ED584FB-ECBF-4A2A-969D-F54D25EFABF9</p>
@@ -38,10 +38,10 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that are returned for the query.</p>
+     * <p>The total number of entries returned for this request.</p>
      * 
      * <strong>example:</strong>
-     * <p>10</p>
+     * <p>5</p>
      */
     @NameInMap("TotalCount")
     public Integer totalCount;
@@ -93,7 +93,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
 
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions extends TeaModel {
         /**
-         * <p>The key of the quota dimension on which the quota dimension that you want to query is dependent.</p>
+         * <p>The key of the quota dimension on which the target quota dimension depends.</p>
          * 
          * <strong>example:</strong>
          * <p>regionId</p>
@@ -102,7 +102,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the quota dimension on which the quota dimension that you want to query is dependent.</p>
+         * <p>The value of the quota dimension on which the target quota dimension depends.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -135,16 +135,16 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
 
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail extends TeaModel {
         /**
-         * <p>The quota dimensions on which the quota dimension that you want to query is dependent.</p>
+         * <p>The quota dimensions on which the target quota dimension depends.</p>
          */
         @NameInMap("DependentDimensions")
         public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetailDependentDimensions> dependentDimensions;
 
         /**
-         * <p>The name of the quota dimension.</p>
+         * <p>The name of the quota dimension value.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("Name")
         public String name;
@@ -153,7 +153,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
          * <p>The value of the quota dimension.</p>
          * 
          * <strong>example:</strong>
-         * <p>cn-hangzhou</p>
+         * <p>cn-hangzhou-b</p>
          */
         @NameInMap("Value")
         public String value;
@@ -191,7 +191,7 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
 
     public static class ListProductQuotaDimensionsResponseBodyQuotaDimensions extends TeaModel {
         /**
-         * <p>The quota dimensions on which the quota dimension that you want to query is dependent.</p>
+         * <p>The quota dimensions on which the target quota dimension depends.</p>
          */
         @NameInMap("DependentDimensions")
         public java.util.List<String> dependentDimensions;
@@ -199,10 +199,16 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         /**
          * <p>The key of the quota dimension. Valid values:</p>
          * <ul>
-         * <li>regionId: the region ID.</li>
-         * <li>zoneId: the zone ID.</li>
-         * <li>chargeType: the billing method.</li>
-         * <li>networkType: the network type.</li>
+         * <li><p>regionId: the region ID.</p>
+         * </li>
+         * <li><p>zoneId: the zone ID.</p>
+         * </li>
+         * <li><p>chargeType: the billing method.</p>
+         * </li>
+         * <li><p>networkType: the network type.</p>
+         * </li>
+         * <li><p>resourceType: the resource type.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,13 +218,13 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         public String dimensionKey;
 
         /**
-         * <p>The details about the dimension value.</p>
+         * <p>The details of the quota dimension value.</p>
          */
         @NameInMap("DimensionValueDetail")
         public java.util.List<ListProductQuotaDimensionsResponseBodyQuotaDimensionsDimensionValueDetail> dimensionValueDetail;
 
         /**
-         * <p>The dimension values.</p>
+         * <p>The list of quota dimension values.</p>
          */
         @NameInMap("DimensionValues")
         public java.util.List<String> dimensionValues;
@@ -233,10 +239,12 @@ public class ListProductQuotaDimensionsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the quota dimension is required when you query quota dimensions. Valid values:</p>
+         * <p>Specifies whether the quota dimension is required when you query quota dimensions. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><p>true: The quota dimension is required.</p>
+         * </li>
+         * <li><p>false: The quota dimension is optional.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>

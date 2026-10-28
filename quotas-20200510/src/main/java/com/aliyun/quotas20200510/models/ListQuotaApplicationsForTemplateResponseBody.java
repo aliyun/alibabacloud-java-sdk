@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records that can be returned for the query.</p>
+     * <p>The maximum number of records returned for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -14,7 +14,7 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that marks the position from which you want to start the query.</p>
+     * <p>The token that marks the start of the data to read.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The queried quota application records.</p>
+     * <p>The list of historical quota applications.</p>
      */
     @NameInMap("QuotaBatchApplications")
     public java.util.List<ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplications> quotaBatchApplications;
@@ -38,7 +38,7 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records that are returned for the query.</p>
+     * <p>The total number of records returned for the request.</p>
      * 
      * <strong>example:</strong>
      * <p>67</p>
@@ -93,7 +93,7 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
 
     public static class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplicationsAuditStatusVos extends TeaModel {
         /**
-         * <p>The number of approval tickets.</p>
+         * <p>The number of applications.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -102,12 +102,16 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The approval state of the quota increase application. Valid values:</p>
+         * <p>The approval status of the quota increase application. Valid values:</p>
          * <ul>
-         * <li>Disagree: The application is rejected.</li>
-         * <li>Agree: The application is approved.</li>
-         * <li>Process: The application is in review.</li>
-         * <li>Cancel: The application is canceled.</li>
+         * <li><p>Disagree: denied.</p>
+         * </li>
+         * <li><p>Agree: approved.</p>
+         * </li>
+         * <li><p>Process: pending approval.</p>
+         * </li>
+         * <li><p>Cancel: closed.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -141,13 +145,13 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
 
     public static class ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplications extends TeaModel {
         /**
-         * <p>The Alibaba Cloud accounts that correspond to the resource directory members for which the quotas are applied.</p>
+         * <p>The list of Alibaba Cloud accounts of the members in a resource directory for which the quota applications are submitted.</p>
          */
         @NameInMap("AliyunUids")
         public java.util.List<String> aliyunUids;
 
         /**
-         * <p>The time when the quota increase application was submitted. The value is displayed in UTC.</p>
+         * <p>The UTC time when the quota increase application was submitted.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-09-23T02:38:18Z</p>
@@ -162,7 +166,7 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
         public java.util.List<ListQuotaApplicationsForTemplateResponseBodyQuotaBatchApplicationsAuditStatusVos> auditStatusVos;
 
         /**
-         * <p>The ID of the quota application batch.</p>
+         * <p>The ID of the batch quota application.</p>
          * 
          * <strong>example:</strong>
          * <p>d314d6ae-867d-484c-9009-3d421a80****</p>
@@ -171,7 +175,7 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
         public String batchQuotaApplicationId;
 
         /**
-         * <p>The requested value of the quota.</p>
+         * <p>The requested quota value.</p>
          * 
          * <strong>example:</strong>
          * <p>105</p>
@@ -181,7 +185,7 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
 
         /**
          * <p>The quota dimensions.</p>
-         * <p>Format example: {&quot;regionId&quot;:&quot;cn-hangzhou&quot;}.</p>
+         * <p>Format: {&quot;regionId&quot;:&quot;cn-hangzhou&quot;}.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;regionId&quot;:&quot;cn-hangzhou&quot;}</p>
@@ -190,7 +194,7 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
         public java.util.Map<String, ?> dimensions;
 
         /**
-         * <p>The start time of the validity period of the quota. The value is displayed in UTC.</p>
+         * <p>The UTC time when the quota takes effect.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-22T16:00:00Z</p>
@@ -199,7 +203,7 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
-         * <p>The end time of the validity period of the quota. The value is displayed in UTC.</p>
+         * <p>The UTC time when the quota expires.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-14T02:08:56Z</p>
@@ -208,7 +212,7 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
         public String expireTime;
 
         /**
-         * <p>The abbreviation of the Alibaba Cloud service name.</p>
+         * <p>The abbreviation of the Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc</p>
@@ -226,11 +230,14 @@ public class ListQuotaApplicationsForTemplateResponseBody extends TeaModel {
         public String quotaActionCode;
 
         /**
-         * <p>The quota type. Valid values:</p>
+         * <p>The type of the quota. Valid values:</p>
          * <ul>
-         * <li>CommonQuota: general quota</li>
-         * <li>FlowControl: API rate limit</li>
-         * <li>WhiteListLabel: privilege</li>
+         * <li><p>CommonQuota: general quota.</p>
+         * </li>
+         * <li><p>FlowControl: API rate limit.</p>
+         * </li>
+         * <li><p>WhiteListLabel: privilege.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
