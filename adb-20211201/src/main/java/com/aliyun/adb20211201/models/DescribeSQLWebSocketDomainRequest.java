@@ -7,7 +7,7 @@ public class DescribeSQLWebSocketDomainRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> API to query the details of all clusters in your account, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the cluster IDs.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,11 +17,11 @@ public class DescribeSQLWebSocketDomainRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The application module name.</p>
+     * <p>The name of the application module.</p>
      * <ul>
-     * <li><p><code>SQLWebSocket</code>: The module for SQL development.</p>
+     * <li><p>SQLWebSocket: SQL development.</p>
      * </li>
-     * <li><p><code>Assistant</code>: The module for the intelligent assistant.</p>
+     * <li><p>Assistant: intelligent assistant.</p>
      * </li>
      * </ul>
      * 
@@ -34,7 +34,7 @@ public class DescribeSQLWebSocketDomainRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> API to query the region IDs supported by AnalyticDB for MySQL.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region IDs supported by AnalyticDB for MySQL Data Warehouse Edition.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

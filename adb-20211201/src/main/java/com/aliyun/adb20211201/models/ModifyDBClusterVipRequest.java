@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterVipRequest extends TeaModel {
     /**
-     * <p>The endpoint of the cluster.</p>
+     * <p>The connection string.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-2ze8mbuai974s4y2500000169.ads.aliyuncs.com</p>
@@ -16,7 +16,7 @@ public class ModifyDBClusterVipRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL Data Lakehouse Edition clusters within a region, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster ID of an AnalyticDB for MySQL Data Lakehouse Edition cluster in a specific region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -29,10 +29,10 @@ public class ModifyDBClusterVipRequest extends TeaModel {
     /**
      * <p>The VPC ID.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>The new <strong>VPC</strong> must reside in the same region as the cluster.</li>
+     * <li>The <strong>VPC</strong> must be in the same region as the cluster.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,10 +44,10 @@ public class ModifyDBClusterVipRequest extends TeaModel {
     /**
      * <p>The vSwitch ID.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>The new vSwitch must reside in the same zone as the cluster.</li>
+     * <li>The new vSwitch must be in the same zone as the cluster.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

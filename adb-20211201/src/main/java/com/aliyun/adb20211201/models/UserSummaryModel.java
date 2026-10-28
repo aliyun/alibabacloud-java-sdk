@@ -4,18 +4,36 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class UserSummaryModel extends TeaModel {
+    /**
+     * <p>The list of access tokens for the user.</p>
+     */
     @NameInMap("AccessTokens")
     public java.util.List<AccessTokenModel> accessTokens;
 
     @NameInMap("Host")
     public String host;
 
+    /**
+     * <p>The ID of the associated Alibaba Cloud RAM user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1444832459****</p>
+     */
     @NameInMap("RamUser")
     public String ramUser;
 
+    /**
+     * <p>The user status.</p>
+     */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_user</p>
+     */
     @NameInMap("UserName")
     public String userName;
 

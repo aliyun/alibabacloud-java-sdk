@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKnowledgeUploadUserRequest extends TeaModel {
     /**
-     * <p>The ADB instance ID.</p>
+     * <p>The ID of the ADB instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,16 @@ public class ListKnowledgeUploadUserRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The location of the knowledge base document.</p>
-     * <p>This parameter is required.</p>
+     * <p>The file ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>213141</p>
+     */
+    @NameInMap("FileId")
+    public String fileId;
+
+    /**
+     * <p>The address of the knowledge base document.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucket/doc.pdf</p>
@@ -35,6 +43,14 @@ public class ListKnowledgeUploadUserRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public ListKnowledgeUploadUserRequest setFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public String getFileId() {
+        return this.fileId;
     }
 
     public ListKnowledgeUploadUserRequest setFileLocation(String fileLocation) {

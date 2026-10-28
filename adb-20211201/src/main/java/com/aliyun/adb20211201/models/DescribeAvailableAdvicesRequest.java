@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableAdvicesRequest extends TeaModel {
     /**
-     * <p>The date when the advice was generated, in the <code>yyyyMMdd</code> format.</p>
+     * <p>The generation date of the suggestion, in the yyyyMMdd format.</p>
      * <blockquote>
-     * <p>Advice is generated daily. To query for advice, specify a date at least one day before the current date. For example, if you query on June 27, 2024, set this parameter to <code>20240626</code> or an earlier date.</p>
+     * <p>Data is generated after daily analysis in the early morning. Therefore, you must specify a date of T-1 or earlier to query the data. For example, if today is 20240627, you must specify 20240626 or an earlier date.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,12 +17,10 @@ public class DescribeAvailableAdvicesRequest extends TeaModel {
     public Long adviceDate;
 
     /**
-     * <p>The type of advice. Valid values:</p>
+     * <p>The type of the suggestion. Valid values:</p>
      * <ul>
-     * <li><p><strong>INDEX</strong>: index optimization.</p>
-     * </li>
-     * <li><p><strong>TIERING</strong>: hot and cold data tiering.</p>
-     * </li>
+     * <li><strong>INDEX</strong>: Index optimization.</li>
+     * <li><strong>TIERING</strong>: Hot and cold data optimization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +40,7 @@ public class DescribeAvailableAdvicesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The keyword for a fuzzy search on table names.</p>
+     * <p>The query keyword. Fuzzy search by table name is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>you_table_name</p>
@@ -51,16 +49,12 @@ public class DescribeAvailableAdvicesRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The display language for the advice. Valid values:</p>
+     * <p>The display language of the suggestions. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong>: Simplified Chinese (default).</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
-     * <li><p><strong>ja</strong>: Japanese.</p>
-     * </li>
-     * <li><p><strong>zh-tw</strong>: Traditional Chinese.</p>
-     * </li>
+     * <li><strong>zh</strong>: Simplified Chinese (default).</li>
+     * <li><strong>en</strong>: English.</li>
+     * <li><strong>ja</strong>: Japanese.</li>
+     * <li><strong>zh-tw</strong>: Traditional Chinese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,29 +64,22 @@ public class DescribeAvailableAdvicesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies the sort order for the results. The value is a JSON string. Example: <code>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. The JSON string contains the following key-value pairs:</p>
+     * <p>The field by which to sort the query results. The value is a JSON string. Example: <code>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Parameters:</p>
      * <ul>
-     * <li><p><code>Field</code>: the field to sort by. Valid values:</p>
-     * <ul>
-     * <li><p><code>SchemaName</code>: the database name.</p>
-     * </li>
-     * <li><p><code>TableName</code>: the table name.</p>
-     * </li>
-     * <li><p><code>Benefit</code>: the expected benefit.</p>
-     * </li>
+     * <li><code>Field</code>: the sort field. Valid values:<ul>
+     * <li><code>SchemaName</code>: the database name.</li>
+     * <li><code>TableName</code>: the table name.</li>
+     * <li><code>Benefit</code>: the expected optimization benefit.</li>
      * </ul>
      * </li>
-     * <li><p><code>Type</code>: the sort order. Valid values:</p>
-     * <ul>
-     * <li><p><code>Asc</code>: ascending order.</p>
-     * </li>
-     * <li><p><code>Desc</code>: descending order.</p>
-     * </li>
+     * <li><code>Type</code>: the sort order. Valid values:<ul>
+     * <li><code>Asc</code>: ascending order.</li>
+     * <li><code>Desc</code>: descending order.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>By default, results are sorted by expected benefit in descending order.</p>
+     * <p>If this parameter is not specified, the results are sorted in descending order of the expected optimization benefit by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,7 +89,7 @@ public class DescribeAvailableAdvicesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. The value must be an integer that is greater than 0. Default value: 1.</p>
+     * <p>The page number. Valid values: greater than 0 and up to the maximum value of the Integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -113,12 +100,9 @@ public class DescribeAvailableAdvicesRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -138,7 +122,7 @@ public class DescribeAvailableAdvicesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>A concatenation of the database name and the table name.</p>
+     * <p>The concatenated string of the database name and table name.</p>
      * 
      * <strong>example:</strong>
      * <p>tpch.lineitem</p>

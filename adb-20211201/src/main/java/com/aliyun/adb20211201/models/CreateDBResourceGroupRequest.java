@@ -742,12 +742,24 @@ public class CreateDBResourceGroupRequest extends TeaModel {
     }
 
     public static class CreateDBResourceGroupRequestRayConfigStorageMounts extends TeaModel {
+        /**
+         * <strong>example:</strong>
+         * <p>/mnt/data01</p>
+         */
         @NameInMap("MountPath")
         public String mountPath;
 
+        /**
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
         @NameInMap("StorageId")
         public Long storageId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>training-data</p>
+         */
         @NameInMap("StorageName")
         public String storageName;
 

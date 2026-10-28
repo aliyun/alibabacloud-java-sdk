@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKnowledgeTagsRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL instance.</p>
+     * <p>The ADB instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,16 @@ public class ListKnowledgeTagsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <p>The file ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2112314</p>
+     */
+    @NameInMap("FileId")
+    public String fileId;
+
+    /**
      * <p>The location of the knowledge base document.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucket/doc.pdf</p>
@@ -35,6 +43,14 @@ public class ListKnowledgeTagsRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public ListKnowledgeTagsRequest setFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public String getFileId() {
+        return this.fileId;
     }
 
     public ListKnowledgeTagsRequest setFileLocation(String fileLocation) {

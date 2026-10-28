@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TableDetailModel extends TeaModel {
     /**
-     * <p>External data source.</p>
+     * <p>The external data source.</p>
      * 
      * <strong>example:</strong>
      * <p>oss</p>
@@ -14,13 +14,13 @@ public class TableDetailModel extends TeaModel {
     public String catalog;
 
     /**
-     * <p>Column information.</p>
+     * <p>The column information.</p>
      */
     @NameInMap("Columns")
     public java.util.List<ColDetailModel> columns;
 
     /**
-     * <p>Creation time.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-01-05 13:17:55</p>
@@ -28,14 +28,20 @@ public class TableDetailModel extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The creation source of the table.</p>
+     */
     @NameInMap("CreatedBySource")
     public String createdBySource;
 
+    /**
+     * <p>The user who created the table.</p>
+     */
     @NameInMap("CreatedByUser")
     public String createdByUser;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>Description</p>
@@ -43,11 +49,17 @@ public class TableDetailModel extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The storage location of the table data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss://**************</p>
+     */
     @NameInMap("Location")
     public String location;
 
     /**
-     * <p>Owner.</p>
+     * <p>The owner.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -55,11 +67,14 @@ public class TableDetailModel extends TeaModel {
     @NameInMap("Owner")
     public String owner;
 
+    /**
+     * <p>The table property parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.Map<String, String> parameters;
 
     /**
-     * <p>Logical database name.</p>
+     * <p>The logical database name.</p>
      * 
      * <strong>example:</strong>
      * <p>schemaName</p>
@@ -68,7 +83,7 @@ public class TableDetailModel extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>Logical table name.</p>
+     * <p>The logical table name.</p>
      * 
      * <strong>example:</strong>
      * <p>tableName</p>
@@ -77,7 +92,7 @@ public class TableDetailModel extends TeaModel {
     public String tableName;
 
     /**
-     * <p>Table type.</p>
+     * <p>The table type.</p>
      * 
      * <strong>example:</strong>
      * <p>PHYSICAL_SCHEMA_NAME</p>
@@ -86,7 +101,7 @@ public class TableDetailModel extends TeaModel {
     public String tableType;
 
     /**
-     * <p>Update time.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-01-05 13:17:55</p>

@@ -11,7 +11,7 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
     public GetSparkAppMetricsResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -51,7 +51,7 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
         public Long outputRowsCount;
 
         /**
-         * <p>The number of scanned bytes.</p>
+         * <p>The size of the scanned data in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>
@@ -84,7 +84,7 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
 
     public static class GetSparkAppMetricsResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the Spark application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>s202302051515shfa865f8000****</p>
@@ -93,7 +93,7 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The attempt ID of the Spark application.</p>
+         * <p>The retry ID of the Spark application.</p>
          * 
          * <strong>example:</strong>
          * <p>s202301061000hz57d797b0000201-****</p>
@@ -111,10 +111,10 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
         public String eventLogPath;
 
         /**
-         * <p>Indicates whether parsing is complete. Valid values:</p>
+         * <p>Indicates whether the parsing is completed. Valid values:</p>
          * <ul>
-         * <li>true</li>
-         * <li>false</li>
+         * <li><strong>true</strong>: Completed.</li>
+         * <li><strong>false</strong>: Not completed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class GetSparkAppMetricsResponseBody extends TeaModel {
         public Boolean finished;
 
         /**
-         * <p>The metrics.</p>
+         * <p>The metric data.</p>
          */
         @NameInMap("ScanMetrics")
         public GetSparkAppMetricsResponseBodyDataScanMetrics scanMetrics;

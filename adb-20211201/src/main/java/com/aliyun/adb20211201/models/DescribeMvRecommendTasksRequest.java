@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeMvRecommendTasksRequest extends TeaModel {
     /**
-     * <p>A static field. This parameter cannot be modified.</p>
+     * <p>A fixed value. This parameter cannot be modified.</p>
      * 
      * <strong>example:</strong>
-     * <p>Modification is not supported.</p>
+     * <p>Not modifiable</p>
      */
     @NameInMap("ActionInner")
     public String actionInner;
@@ -23,10 +23,10 @@ public class DescribeMvRecommendTasksRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>A static field. This parameter cannot be modified.</p>
+     * <p>A fixed value. This parameter cannot be modified.</p>
      * 
      * <strong>example:</strong>
-     * <p>Modification is not supported.</p>
+     * <p>Not modifiable</p>
      */
     @NameInMap("From")
     public String from;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBackupsResponseBody extends TeaModel {
     /**
-     * <p>The free backup space. Unit: bytes.</p>
+     * <p>The free quota for backup sets. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -35,7 +35,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CE17270B-F8F8-5A31-9DB4-DADDFDAD7940</p>
@@ -44,7 +44,7 @@ public class DescribeBackupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total size of the backup sets. Unit: bytes.</p>
+     * <p>The total size of backup sets. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>64953700</p>

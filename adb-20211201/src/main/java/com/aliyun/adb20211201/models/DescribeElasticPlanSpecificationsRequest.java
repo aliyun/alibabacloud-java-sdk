@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticPlanSpecificationsRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,12 +20,12 @@ public class DescribeElasticPlanSpecificationsRequest extends TeaModel {
     /**
      * <p>The name of the resource group.</p>
      * <blockquote>
+     * <ul>
+     * <li>To query the specifications supported by the elastic plan of an Interactive resource group (compute resource type), you must specify the resource group name. To query the specifications supported by the elastic plan of the storage acceleration service (EIU), you do not need to specify the resource group name.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>This parameter must be specified only when you query the resource specifications that are supported by an interactive resource group.</p>
-     * </li>
-     * <li><p>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the name of a resource group within a cluster.</p>
-     * </li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/459446.html">DescribeDBResourceGroup</a> operation to query the resource group name of a specific cluster.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,10 @@ public class DescribeElasticPlanSpecificationsRequest extends TeaModel {
     public String resourceGroupName;
 
     /**
-     * <p>The type of the scaling plan. Valid values:</p>
+     * <p>The type of the elastic plan. Valid values:</p>
      * <ul>
-     * <li>EXECUTOR: the interactive resource group type, which specifies the computing resource type.</li>
-     * <li>WORKER: the elastic I/O unit (EIU) type.</li>
+     * <li>EXECUTOR: Interactive resource group, which is the compute resource type.</li>
+     * <li>WORKER: storage acceleration service (EIU).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

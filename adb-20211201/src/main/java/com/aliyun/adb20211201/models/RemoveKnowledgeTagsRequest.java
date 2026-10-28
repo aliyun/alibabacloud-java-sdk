@@ -15,8 +15,16 @@ public class RemoveKnowledgeTagsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The location of the knowledge base document.</p>
-     * <p>This parameter is required.</p>
+     * <p>The file ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>2131234</p>
+     */
+    @NameInMap("FileId")
+    public String fileId;
+
+    /**
+     * <p>The knowledge base document location.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucket/doc.pdf</p>
@@ -25,7 +33,7 @@ public class RemoveKnowledgeTagsRequest extends TeaModel {
     public String fileLocation;
 
     /**
-     * <p>The JSON string of the tag array to delete.</p>
+     * <p>The JSON string of the tag array to be deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;tag_key&quot;:&quot;biz.scene&quot;,&quot;tag_value&quot;:&quot;test&quot;}]</p>
@@ -44,6 +52,14 @@ public class RemoveKnowledgeTagsRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public RemoveKnowledgeTagsRequest setFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public String getFileId() {
+        return this.fileId;
     }
 
     public RemoveKnowledgeTagsRequest setFileLocation(String fileLocation) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSparkCodeLogResponseBody extends TeaModel {
     /**
-     * <p>The content of the log.</p>
+     * <p>The log content.</p>
      * 
      * <strong>example:</strong>
      * <blockquote>
@@ -30,10 +30,10 @@ public class DescribeSparkCodeLogResponseBody extends TeaModel {
     public String log;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The additional information about the call result. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, <strong>Success</strong> is returned.</li>
-     * <li>If the request failed, an error message is returned.</li>
+     * <li>If the request succeeds, <strong>Success</strong> is returned. </li>
+     * <li>If an exception occurs, the specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeSparkCodeLogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1CD65640-9963-5D60-929C-118F2C84070E</p>
@@ -52,10 +52,10 @@ public class DescribeSparkCodeLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

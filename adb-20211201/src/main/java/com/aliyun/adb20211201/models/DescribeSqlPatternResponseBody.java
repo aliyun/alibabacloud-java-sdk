@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlPatternResponseBody extends TeaModel {
     /**
-     * <p>The queried SQL pattern.</p>
+     * <p>The list details.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeSqlPatternResponseBodyItems> items;
@@ -38,7 +38,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -93,9 +93,9 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
 
     public static class DescribeSqlPatternResponseBodyItems extends TeaModel {
         /**
-         * <p>The IP address of the client.</p>
+         * <p>The client IP address.</p>
          * <blockquote>
-         * <p> This parameter is returned only when <strong>Type</strong> is set to <strong>accessip</strong>.</p>
+         * <p>This parameter is returned only when the Type parameter is set to accessip.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String accessIP;
 
         /**
-         * <p>The average execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+         * <p>The average execution time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0625</p>
@@ -114,7 +114,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String avgCpuTime;
 
         /**
-         * <p>The average peak memory usage of the SQL pattern within the query time range. Unit: KB.</p>
+         * <p>The average peak memory. Unit: KB.</p>
          * 
          * <strong>example:</strong>
          * <p>240048</p>
@@ -123,7 +123,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String avgPeakMemory;
 
         /**
-         * <p>The average amount of data scanned based on the SQL pattern within the query time range. Unit: KB.</p>
+         * <p>The average scan size. Unit: KB.</p>
          * 
          * <strong>example:</strong>
          * <p>244</p>
@@ -150,7 +150,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String avgTaskCount;
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+         * <p>The cluster ID.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-bp1ej1nq9n6****</p>
@@ -159,7 +159,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String instanceName;
 
         /**
-         * <p>The maximum execution duration of the SQL pattern within the query time range. Unit: milliseconds.</p>
+         * <p>The maximum execution time of the SQL statement. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>17</p>
@@ -168,7 +168,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String maxCpuTime;
 
         /**
-         * <p>The maximum peak memory usage of the SQL pattern within the query time range. Unit: KB.</p>
+         * <p>The Peak Volume memory. Unit: KB.</p>
          * 
          * <strong>example:</strong>
          * <p>480096</p>
@@ -177,7 +177,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String maxPeakMemory;
 
         /**
-         * <p>The maximum amount of data scanned based on the SQL pattern within the query time range. Unit: KB.</p>
+         * <p>The maximum scan size. Unit: KB.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -213,7 +213,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String pattern;
 
         /**
-         * <p>The number of queries performed in association with the SQL pattern within the query time range.</p>
+         * <p>The total number of queries.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>
@@ -222,7 +222,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         public String queryCount;
 
         /**
-         * <p>The start date of the query.</p>
+         * <p>The query date.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-30</p>
@@ -233,7 +233,7 @@ public class DescribeSqlPatternResponseBody extends TeaModel {
         /**
          * <p>The username.</p>
          * <blockquote>
-         * <p> This parameter is returned only when <strong>Type</strong> is left empty or set to <strong>user</strong>.</p>
+         * <p>This parameter is returned only when the Type parameter is left empty or set to user.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

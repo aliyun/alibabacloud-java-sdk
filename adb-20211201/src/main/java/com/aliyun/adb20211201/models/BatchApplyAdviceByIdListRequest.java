@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchApplyAdviceByIdListRequest extends TeaModel {
     /**
-     * <p>The date when the suggestions were generated. Format: yyyyMMdd.</p>
+     * <p>The date when the suggestion was generated. Format: yyyyMMdd.</p>
      * 
      * <strong>example:</strong>
      * <p>20221115</p>
@@ -14,7 +14,7 @@ public class BatchApplyAdviceByIdListRequest extends TeaModel {
     public Long adviceDate;
 
     /**
-     * <p>The list of suggestion IDs to apply in batches. Separate multiple suggestion IDs with commas (,).</p>
+     * <p>The list of suggestion IDs to be applied in batches. Separate multiple suggestion IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>c2589ff3-e86c-4f19-80c8-2aeb7dd9****,53414470-ebf4-4a53-a312-8a1ad8fd****,6e8dce84-fec8-4b0b-9c04-b0cea12c****,b3b9703d-55ca-47e0-96dd-6a4a9dbf****</p>
@@ -32,7 +32,7 @@ public class BatchApplyAdviceByIdListRequest extends TeaModel {
     public String applyType;
 
     /**
-     * <p>Specifies whether to immediately start a build task.</p>
+     * <p>Specifies whether to immediately start the build task.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

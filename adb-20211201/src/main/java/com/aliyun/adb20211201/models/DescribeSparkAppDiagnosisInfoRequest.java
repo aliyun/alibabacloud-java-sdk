@@ -39,7 +39,7 @@ public class DescribeSparkAppDiagnosisInfoRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>zh</p>
+     * <p>PYTHON</p>
      */
     @NameInMap("Language")
     public String language;

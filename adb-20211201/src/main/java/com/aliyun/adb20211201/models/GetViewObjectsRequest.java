@@ -33,13 +33,12 @@ public class GetViewObjectsRequest extends TeaModel {
     public String filterViewName;
 
     /**
-     * <p>The view type.</p>
-     * <p>Valid values:</p>
+     * <p>The view type. Valid values:</p>
      * <ul>
      * <li>VIRTUAL_VIEW</li>
      * <li>MATERIALIZED_VIEW</li>
      * </ul>
-     * <p>Default value: null.</p>
+     * <p>Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>VIRTUAL_VIEW</p>
@@ -48,13 +47,13 @@ public class GetViewObjectsRequest extends TeaModel {
     public String filterViewType;
 
     /**
-     * <p>The sorting field.</p>
-     * <p>Valid values for Type:</p>
+     * <p>The sort field.
+     * Valid values for the sort type:</p>
      * <ul>
      * <li>Asc</li>
      * <li>Desc</li>
      * </ul>
-     * <p>Valid values for Field:</p>
+     * <p>Valid values for the sort field:</p>
      * <ul>
      * <li>ViewName</li>
      * <li>CreateTime</li>
@@ -80,9 +79,9 @@ public class GetViewObjectsRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><strong>30</strong> (default).</li>
-     * <li><strong>50</strong>.</li>
-     * <li><strong>100</strong>.</li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>

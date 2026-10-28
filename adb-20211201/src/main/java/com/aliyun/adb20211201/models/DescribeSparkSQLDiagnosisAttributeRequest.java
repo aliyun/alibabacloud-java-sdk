@@ -7,7 +7,7 @@ public class DescribeSparkSQLDiagnosisAttributeRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query a list of Spark application IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612475.html">ListSparkApps</a> operation to query the ID of the Spark application.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,10 +20,10 @@ public class DescribeSparkSQLDiagnosisAttributeRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to view the information of all clusters in the specified region, including cluster IDs.</li>
      * </ul>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DescribeSparkSQLDiagnosisAttributeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The ID of the query executed within the Spark application.</p>
+     * <p>The internal query execution ID of the Spark application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeSparkSQLDiagnosisAttributeRequest extends TeaModel {
     public Long innerQueryId;
 
     /**
-     * <p>The language in which to return the query results. Valid values:</p>
+     * <p>The language type. The description of the system access policy is returned in this language.</p>
      * <ul>
      * <li>en: English.</li>
      * <li>zh: Chinese.</li>
@@ -59,7 +59,7 @@ public class DescribeSparkSQLDiagnosisAttributeRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

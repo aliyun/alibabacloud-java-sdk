@@ -42,7 +42,7 @@ public class GetSparkAppStateResponseBody extends TeaModel {
 
     public static class GetSparkAppStateResponseBodyData extends TeaModel {
         /**
-         * <p>The Spark application ID.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>s202204191546hzpread6a896000****</p>
@@ -51,7 +51,7 @@ public class GetSparkAppStateResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -69,7 +69,7 @@ public class GetSparkAppStateResponseBody extends TeaModel {
         public String DBClusterId;
 
         /**
-         * <p>The alert message returned for the operation, such as task execution failure or insufficient resources. If no alert occurs, null is returned.</p>
+         * <p>The alert message returned, such as task execution failure or insufficient resources. This parameter is empty if no alerts are generated.</p>
          * 
          * <strong>example:</strong>
          * <p>Insufficient resources.</p>
@@ -78,19 +78,19 @@ public class GetSparkAppStateResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The execution state of the application. Valid values:</p>
+         * <p>The execution status of the application. Valid values:</p>
          * <ul>
-         * <li><strong>SUBMITTED</strong></li>
-         * <li><strong>STARTING</strong></li>
-         * <li><strong>RUNNING</strong></li>
-         * <li><strong>FAILING</strong></li>
-         * <li><strong>FAILED</strong></li>
-         * <li><strong>KILLING</strong></li>
-         * <li><strong>KILLED</strong></li>
-         * <li><strong>SUCCEEDING</strong></li>
-         * <li><strong>COMPLETED</strong></li>
-         * <li><strong>FATAL</strong></li>
-         * <li><strong>UNKNOWN</strong></li>
+         * <li><strong>SUBMITTED</strong>: Submitted.</li>
+         * <li><strong>STARTING</strong>: Starting.</li>
+         * <li><strong>RUNNING</strong>: Running.</li>
+         * <li><strong>FAILING</strong>: Failing. The task failed and the environment is being cleaned up.</li>
+         * <li><strong>FAILED</strong>: Failed.</li>
+         * <li><strong>KILLING</strong>: Killing. The task is being terminated and the environment is being cleaned up.</li>
+         * <li><strong>KILLED</strong>: Killed.</li>
+         * <li><strong>SUCCEEDING</strong>: Succeeding. The task execution is complete and the environment is being cleaned up.</li>
+         * <li><strong>COMPLETED</strong>: Completed.</li>
+         * <li><strong>FATAL</strong>: Fatal error.</li>
+         * <li><strong>UNKNOWN</strong>: Unknown error.</li>
          * </ul>
          * 
          * <strong>example:</strong>

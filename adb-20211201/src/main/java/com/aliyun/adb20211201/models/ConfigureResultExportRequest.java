@@ -7,7 +7,7 @@ public class ConfigureResultExportRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the information about all AnalyticDB for MySQL clusters within a region, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to view the cluster IDs of all AnalyticDB for MySQL clusters in the destination region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -20,8 +20,8 @@ public class ConfigureResultExportRequest extends TeaModel {
     /**
      * <p>The export type. Valid values:</p>
      * <ul>
-     * <li>SLS: Specifies that the export destination is SLS.</li>
-     * <li>OSS: Specifies that the export destination is OSS.</li>
+     * <li>SLS: Exports data to SLS.</li>
+     * <li>OSS: Exports data to OSS.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,13 +31,13 @@ public class ConfigureResultExportRequest extends TeaModel {
     public String exportType;
 
     /**
-     * <p>The OSS configuration details if the destination is of the OSS type.</p>
+     * <p>The OSS configuration information when the export destination is OSS.</p>
      */
     @NameInMap("OssInfo")
     public ConfigureResultExportRequestOssInfo ossInfo;
 
     /**
-     * <p>The ID of the region where the instance resides.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class ConfigureResultExportRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The SLS configuration details if the destination is of the SLS type.</p>
+     * <p>The SLS configuration information when the export destination is SLS.</p>
      */
     @NameInMap("SlsInfo")
     public ConfigureResultExportRequestSlsInfo slsInfo;
@@ -99,7 +99,7 @@ public class ConfigureResultExportRequest extends TeaModel {
 
     public static class ConfigureResultExportRequestOssInfo extends TeaModel {
         /**
-         * <p>The OSS path where the result sets are stored.</p>
+         * <p>The OSS path where the export results are stored.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://testBucketName/data_result</p>
@@ -108,7 +108,7 @@ public class ConfigureResultExportRequest extends TeaModel {
         public String exportBasePath;
 
         /**
-         * <p>The name of the resource group that runs the job.</p>
+         * <p>The name of the resource group in which the export SQL statement is executed.</p>
          * 
          * <strong>example:</strong>
          * <p>aps</p>
@@ -117,7 +117,7 @@ public class ConfigureResultExportRequest extends TeaModel {
         public String resourceGroup;
 
         /**
-         * <p>The expiration time of the OSS file. Unit: days. Minimum: 1 day, maximum: 30 days. Values outside this range will result in an error.</p>
+         * <p>The expiration time of the OSS file. Unit: days. The minimum value is 1 day and the maximum value is 30 days. An error is returned if the value is out of range.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -158,7 +158,7 @@ public class ConfigureResultExportRequest extends TeaModel {
 
     public static class ConfigureResultExportRequestSlsInfo extends TeaModel {
         /**
-         * <p>The expiration time of the Logstore temporarily generated during the result set export. Unit: days. The Logstore is automatically deleted after it expires. Minimum value: 1 day, maximum: 30 days. Values outside this range will result in an error.</p>
+         * <p>The expiration time of the temporary Logstore generated for result set export. Unit: days. The Logstore is automatically deleted after expiration. The minimum value is 1 day and the maximum value is 30 days. An error is returned if the value is out of range.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -167,7 +167,7 @@ public class ConfigureResultExportRequest extends TeaModel {
         public Integer logstoreTtl;
 
         /**
-         * <p>The name of the resource group that runs the job.</p>
+         * <p>The name of the resource group in which the export SQL statement is executed.</p>
          * 
          * <strong>example:</strong>
          * <p>aps</p>

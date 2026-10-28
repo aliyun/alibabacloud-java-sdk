@@ -14,7 +14,7 @@ public class GetLakeStorageRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The lake storage ID.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <ul>

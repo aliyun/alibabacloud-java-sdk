@@ -5,9 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeSqlPatternRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition (V3.0) cluster.</p>
+     * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters within a region.</p>
+     * <p>You can call the DescribeDBClusters operation to query the IDs of all clusters in a specified region.
+     * <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,40 +19,40 @@ public class DescribeSqlPatternRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The order by which to sort query results. Specify the parameter value in the JSON string format. Example: <code>[{&quot;Field&quot;:&quot;Pattern&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Parameters:</p>
+     * <p>Specifies the sorting of query results by a specified field. The format is a JSON character string, such as <code>[{&quot;Field&quot;:&quot;Pattern&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. Parameters:</p>
      * <ul>
-     * <li><p><code>Field</code> specifies the field by which to sort the query results. Valid values:</p>
+     * <li><p>Field: the sorting field. Valid values:</p>
      * <ul>
-     * <li><code>Pattern</code>: the SQL pattern.</li>
-     * <li><code>AccessIP</code>: the IP address of the client.</li>
-     * <li><code>User</code>: the username.</li>
-     * <li><code>QueryCount</code>: the number of queries performed in association with the SQL pattern within the time range to query.</li>
-     * <li><code>AvgPeakMemory</code>: the average peak memory usage of the SQL pattern within the time range to query. Unit: KB.</li>
-     * <li><code>MaxPeakMemory</code>: the maximum peak memory usage of the SQL pattern within the time range to query. Unit: KB.</li>
-     * <li><code>AvgCpuTime</code>: the average execution duration of the SQL pattern within the time range to query. Unit: milliseconds.</li>
-     * <li><code>MaxCpuTime</code>: the maximum execution duration of the SQL pattern within the time range to query. Unit: milliseconds.</li>
-     * <li><code>AvgStageCount</code>: the average number of stages.</li>
-     * <li><code>MaxStageCount</code>: the maximum number of stages.</li>
-     * <li><code>AvgTaskCount</code>: the average number of tasks.</li>
-     * <li><code>MaxTaskCount</code>: the maximum number of tasks.</li>
-     * <li><code>AvgScanSize</code>: the average amount of data scanned based on the SQL pattern within the time range to query. Unit: KB.</li>
-     * <li><code>MaxScanSize</code>: the maximum amount of data scanned based on the SQL pattern within the time range to query. Unit: KB.</li>
+     * <li>Pattern: SQL pattern.</li>
+     * <li>AccessIP: client IP address.</li>
+     * <li>User: username.</li>
+     * <li>QueryCount: total number of queries.</li>
+     * <li>AvgPeakMemory: average peak memory. Unit: KB.</li>
+     * <li>MaxPeakMemory: Peak Volume memory. Unit: KB.</li>
+     * <li>AvgCpuTime: average computing duration. Unit: milliseconds.</li>
+     * <li>MaxCpuTime: maximum computing duration. Unit: milliseconds.</li>
+     * <li>AvgStageCount: average number of stages.</li>
+     * <li>MaxStageCount: maximum number of stages.</li>
+     * <li>AvgTaskCount: average number of tasks.</li>
+     * <li>MaxTaskCount: maximum number of tasks.</li>
+     * <li>AvgScanSize: average scan size. Unit: KB.</li>
+     * <li>MaxScanSize: maximum scan size. Unit: KB.</li>
      * </ul>
      * </li>
-     * <li><p><code>Type</code> specifies the sorting order. Valid values:</p>
+     * <li><p>Type: the sorting method. Valid values:</p>
      * <ul>
-     * <li><code>Asc</code>: ascending order.</li>
-     * <li><code>Desc</code>: descending order.</li>
+     * <li>Asc: ascending sorting.</li>
+     * <li>Desc: descending sorting.</li>
      * </ul>
      * </li>
      * </ul>
      * <blockquote>
+     * <ul>
+     * <li>If no Settings are specified for this parameter, the results are sorted in ascending order by the Pattern field by default.</li>
+     * </ul>
      * </blockquote>
      * <ul>
-     * <li><p>If you do not specify this parameter, query results are sorted in ascending order of <code>Pattern</code>.</p>
-     * </li>
-     * <li><p>If you want to sort query results by <code>AccessIP</code>, you must set the <code>Type</code> parameter to <code>accessip</code>. If you want to sort query results by <code>User</code>, you must leave the <code>Type</code> parameter empty or set it to <code>user</code>.</p>
-     * </li>
+     * <li>To perform sorting by the AccessIP field, you must set the Type parameter to accessip. To perform sorting by the User field, you must leave the Type parameter empty or set it to user.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,7 +62,8 @@ public class DescribeSqlPatternRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: 1.</p>
+     * <p>The page number. Valid values: integers greater than 0 and no greater than the maximum value of the Integer type.
+     * Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -85,7 +87,7 @@ public class DescribeSqlPatternRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the cluster.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,9 +97,9 @@ public class DescribeSqlPatternRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The keyword that is used for the query.</p>
+     * <p>The keyword that the SQL pattern must contain.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, all SQL patterns of the AnalyticDB for MySQL cluster within the time period specified by <code>StartTime</code> are returned.</p>
+     * <p>If this parameter is not specified, the details of all SQL patterns for the cluster on the date specified by the StartTime parameter are returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,9 +109,9 @@ public class DescribeSqlPatternRequest extends TeaModel {
     public String sqlPattern;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-dd format. The time must be in UTC.</p>
+     * <p>The start date of the query. The time is in UTC and formatted as yyyy-MM-dd.</p>
      * <blockquote>
-     * <p>Only data within the last 30 days can be queried.</p>
+     * <p>You can only query data within the last 30 days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -119,13 +121,13 @@ public class DescribeSqlPatternRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The dimension by which to aggregate the SQL patterns. Valid values:</p>
+     * <p>Aggregates SQL patterns by a specified dimension. Valid values:</p>
      * <ul>
-     * <li><code>user</code>: aggregates the SQL patterns by user.</li>
-     * <li><code>accessip</code>: aggregates the SQL patterns by client IP address.</li>
+     * <li>user: aggregates by user.</li>
+     * <li>accessip: aggregates by access IP address.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, the SQL patterns are aggregated by <code>user</code>.</p>
+     * <p>If this parameter is not specified, SQL patterns are aggregated by user by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

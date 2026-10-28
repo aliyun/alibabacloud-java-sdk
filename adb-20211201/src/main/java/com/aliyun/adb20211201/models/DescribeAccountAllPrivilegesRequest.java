@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAccountAllPrivilegesRequest extends TeaModel {
     /**
-     * <p>The database account name for the cluster.</p>
+     * <p>The name of the database account in the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,8 @@ public class DescribeAccountAllPrivilegesRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The cluster ID for the Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
-     * &lt;props=&quot;intl&quot;&gt;The cluster ID for the Data Lakehouse Edition.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class DescribeAccountAllPrivilegesRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>If the response is truncated, use the <code>Marker</code> value from the response in this field to retrieve the next set of results.</p>
+     * <p>If the returned results are truncated, you can set this parameter to the <code>Marker</code> value from the response to retrieve the subsequent entries.</p>
      * 
      * <strong>example:</strong>
      * <p>EXAMPLE</p>

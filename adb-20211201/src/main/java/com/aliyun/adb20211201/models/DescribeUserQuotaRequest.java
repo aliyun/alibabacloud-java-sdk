@@ -15,10 +15,7 @@ public class DescribeUserQuotaRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The region ID.</p>
-     * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the most recent region list.</p>
-     * </blockquote>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of the specified cluster.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

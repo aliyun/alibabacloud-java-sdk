@@ -7,7 +7,7 @@ public class ExecuteSparkReplStatementRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query Spark application IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query the application ID of Spark.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class ExecuteSparkReplStatementRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The code that you want to execute.</p>
+     * <p>The code to execute.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ExecuteSparkReplStatementRequest extends TeaModel {
     public String codeType;
 
     /**
-     * <p>The ID of the session that you want to use to execute the code.</p>
+     * <p>The session ID for executing the code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

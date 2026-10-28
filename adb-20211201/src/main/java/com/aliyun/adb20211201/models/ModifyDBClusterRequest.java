@@ -4,10 +4,18 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class ModifyDBClusterRequest extends TeaModel {
+    /**
+     * <p>The number of AI nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3</p>
+     */
     @NameInMap("AINodeNumber")
     public Integer AINodeNumber;
 
     /**
+     * <p>The AI node specifications.</p>
+     * 
      * <strong>example:</strong>
      * <p>ADB.MLPlus.4</p>
      */
@@ -15,7 +23,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String AINodeSpec;
 
     /**
-     * <p>The compute reserved resources. Valid values: 0 ACU to 4096 ACU, in increments of 16. 1 ACU is approximately equivalent to 1 core and 4 GB of memory.</p>
+     * <p>The reserved compute resources. Valid values: 0 ACU to 4096 ACU. Step: 16. 1 ACU is approximately equal to 1 core and 4 GB of memory.</p>
      * <blockquote>
      * <p>Include the unit when you specify this parameter.</p>
      * </blockquote>
@@ -29,7 +37,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     /**
      * <p>The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster ID of a Data Lakehouse Edition cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the ID of the Data Lakehouse Edition cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,10 +48,10 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to allocate all compute reserved resources to the default resource group (user_default). Valid values:</p>
+     * <p>Specifies whether to allocate all reserved compute resources to the default resource group (user_default). Valid values:</p>
      * <ul>
-     * <li>true (default): All compute reserved resources are allocated to the default resource group.</li>
-     * <li>false: Not all compute reserved resources are allocated to the default resource group.</li>
+     * <li>true (default): Yes.</li>
+     * <li>false: No.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +63,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     /**
      * <p>The product form. Valid values:</p>
      * <ul>
-     * <li><strong>IntegrationForm</strong>: integrated form.</li>
+     * <li><strong>IntegrationForm</strong>: Integration form.</li>
      * <li><strong>LegacyForm</strong>: Data Lakehouse Edition.</li>
      * </ul>
      * 
@@ -66,9 +74,18 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String productForm;
 
     /**
+     * <p>The target product version. When you switch from LegacyForm to IntegrationForm Enterprise Edition in-place, set this parameter to enterprise_version and specify ProductForm, ReservedNodeSize, and ReservedNodeCount at the same time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>enterprise_version</p>
+     */
+    @NameInMap("ProductVersion")
+    public String productVersion;
+
+    /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of a specified Data Lakehouse Edition cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of the specified Data Lakehouse Edition cluster.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -80,9 +97,9 @@ public class ModifyDBClusterRequest extends TeaModel {
     /**
      * <p>The number of reserved nodes. </p>
      * <ul>
-     * <li>Enterprise Edition: The default value is 3. The value increases in increments of 3.</li>
-     * <li>Basic Edition: The default value is 1.<blockquote>
-     * <p>This parameter is required only when ProductForm is set to IntegrationForm.</p>
+     * <li>For Enterprise Edition, the default value is 3 and the step is 3.</li>
+     * <li>For Basic Edition, the default value is 1.<blockquote>
+     * <p>Specify this parameter only when ProductForm is set to IntegrationForm.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -94,9 +111,9 @@ public class ModifyDBClusterRequest extends TeaModel {
     public Integer reservedNodeCount;
 
     /**
-     * <p>The node specifications of storage reserved resources. Valid values: 8ACU, 12ACU, and 16ACU.</p>
+     * <p>The node specifications for reserved storage resources. Valid values: 8 ACU, 12 ACU, and 16 ACU.</p>
      * <blockquote>
-     * <p>Include the unit when you specify this parameter. This parameter is required only when ProductForm is set to IntegrationForm.</p>
+     * <p>Include the unit when you specify this parameter. Specify this parameter only when ProductForm is set to IntegrationForm.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -106,7 +123,7 @@ public class ModifyDBClusterRequest extends TeaModel {
     public String reservedNodeSize;
 
     /**
-     * <p>The storage reserved resources. Valid values: 0 ACU to 2064 ACU, in increments of 24. 1 ACU is approximately equivalent to 1 core and 4 GB of memory.</p>
+     * <p>The reserved storage resources. Valid values: 0 ACU to 2064 ACU. Step: 24. 1 ACU is approximately equal to 1 core and 4 GB of memory.</p>
      * <blockquote>
      * <p>Include the unit when you specify this parameter.</p>
      * </blockquote>
@@ -168,6 +185,14 @@ public class ModifyDBClusterRequest extends TeaModel {
     }
     public String getProductForm() {
         return this.productForm;
+    }
+
+    public ModifyDBClusterRequest setProductVersion(String productVersion) {
+        this.productVersion = productVersion;
+        return this;
+    }
+    public String getProductVersion() {
+        return this.productVersion;
     }
 
     public ModifyDBClusterRequest setRegionId(String regionId) {

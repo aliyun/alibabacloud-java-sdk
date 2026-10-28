@@ -21,8 +21,8 @@ public class ModifyAccountPrivilegesShrinkRequest extends TeaModel {
     public String accountPrivilegesShrink;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-     * &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,12 +31,24 @@ public class ModifyAccountPrivilegesShrinkRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The list of PromQL write permissions.</p>
+     */
     @NameInMap("PromqlInsertPrivileges")
     public String promqlInsertPrivilegesShrink;
 
+    /**
+     * <p>The percentage of PromQL query nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.6</p>
+     */
     @NameInMap("PromqlSelectNodePercentage")
     public Double promqlSelectNodePercentage;
 
+    /**
+     * <p>The list of PromQL query permissions.</p>
+     */
     @NameInMap("PromqlSelectPrivileges")
     public String promqlSelectPrivilegesShrink;
 
@@ -50,6 +62,12 @@ public class ModifyAccountPrivilegesShrinkRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_group</p>
+     */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The message about the call result. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, a <strong>Success</strong> message is returned.</li>
-     * <li>If the request failed, an error message is returned.</li>
+     * <li><strong>Success</strong>: The request is successful. </li>
+     * <li>Specific error message: Returned when an exception occurs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,10 @@ public class DescribeAdviceServiceEnabledResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the suggestion feature is enabled. Valid values:</p>
+     * <p>Indicates whether the advisory service is enabled. Valid values:</p>
      * <ul>
-     * <li><strong>True</strong></li>
-     * <li><strong>False</strong></li>
+     * <li><strong>True</strong>: The advisory service is enabled. </li>
+     * <li><strong>False</strong>: The advisory service is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

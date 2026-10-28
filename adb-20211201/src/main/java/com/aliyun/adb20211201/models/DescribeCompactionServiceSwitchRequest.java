@@ -14,6 +14,15 @@ public class DescribeCompactionServiceSwitchRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The ID of the region where the instance resides. The value must be the same as the region of the instance specified by DBClusterId.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
+    @NameInMap("RegionId")
+    public String regionId;
+
     public static DescribeCompactionServiceSwitchRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeCompactionServiceSwitchRequest self = new DescribeCompactionServiceSwitchRequest();
         return TeaModel.build(map, self);
@@ -25,6 +34,14 @@ public class DescribeCompactionServiceSwitchRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public DescribeCompactionServiceSwitchRequest setRegionId(String regionId) {
+        this.regionId = regionId;
+        return this;
+    }
+    public String getRegionId() {
+        return this.regionId;
     }
 
 }

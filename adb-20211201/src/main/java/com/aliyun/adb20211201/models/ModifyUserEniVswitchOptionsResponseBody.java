@@ -30,7 +30,7 @@ public class ModifyUserEniVswitchOptionsResponseBody extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Success</p>
+     * <p>SUCCESS</p>
      */
     @NameInMap("Message")
     public String message;

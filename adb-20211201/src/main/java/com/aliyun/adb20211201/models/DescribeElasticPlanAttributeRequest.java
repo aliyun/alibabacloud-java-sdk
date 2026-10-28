@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticPlanAttributeRequest extends TeaModel {
     /**
-     * <p>The cluster ID.</p>
+     * <p>The ID of the cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/454250.html">DescribeDBClusters</a> operation to query the cluster ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,9 +18,9 @@ public class DescribeElasticPlanAttributeRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The name of the scaling plan.</p>
+     * <p>The name of the elastic plan.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/601334.html">DescribeElasticPlans</a> operation to query the names of scaling plans.</p>
+     * <p>Call the <a href="https://help.aliyun.com/document_detail/601334.html">DescribeElasticPlans</a> operation to query the name of the elastic plan for the cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

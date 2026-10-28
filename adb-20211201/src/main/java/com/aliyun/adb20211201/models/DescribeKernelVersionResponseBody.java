@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeKernelVersionResponseBody extends TeaModel {
     /**
-     * <p>The minor versions to which you can update the current minor version of the cluster.</p>
+     * <p>The list of target versions to which the current version can be upgraded.</p>
      */
     @NameInMap("AvailableKernelVersions")
     public java.util.List<DescribeKernelVersionResponseBodyAvailableKernelVersions> availableKernelVersions;
 
     /**
-     * <p>The maintenance expiration time of the version. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. After the time arrives, the system no longer maintains the version. If any issues occur, update the minor version of the cluster to a later version.</p>
+     * <p>The end-of-support date of the version. The time is in the yyyy-MM-DD HH:mm:ss format. After this date, the system no longer maintains this version. If any issues occur, upgrade to a later version.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-01-12T16:00:00Z</p>
@@ -20,7 +20,7 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
     public String expireDate;
 
     /**
-     * <p>The minor version of the cluster. Example: <strong>3.1.8</strong>.</p>
+     * <p>The kernel version number of the cluster. Example: <strong>3.1.8</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>3.1.8</p>
@@ -29,7 +29,7 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
     public String kernelVersion;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>
@@ -76,7 +76,7 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
 
     public static class DescribeKernelVersionResponseBodyAvailableKernelVersions extends TeaModel {
         /**
-         * <p>The maintenance expiration time of the version. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC. After the time arrives, the system no longer maintains the version. If any issues occur, update the minor version of the cluster to a later version.</p>
+         * <p>The end-of-support date of the version. The time is in the yyyy-MM-DD HH:mm:ss format. After this date, the system no longer maintains this version. If any issues occur, upgrade to a later version.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-17T16:00:00Z</p>
@@ -85,7 +85,7 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
         public String expireDate;
 
         /**
-         * <p>The minor version. Example: <strong>3.1.9</strong>.</p>
+         * <p>The kernel version number of the cluster. Example: <strong>3.1.9</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>3.1.9</p>
@@ -94,7 +94,7 @@ public class DescribeKernelVersionResponseBody extends TeaModel {
         public String kernelVersion;
 
         /**
-         * <p>The time when the minor version was released. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The release time of the kernel version. The time format is yyyy-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-17T16:00:00Z</p>

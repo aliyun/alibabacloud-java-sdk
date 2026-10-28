@@ -15,10 +15,10 @@ public class GetKnowledgeRecallRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The array of images to retrieve during image retrieval. Currently, only one image is supported.</p>
+     * <p>The array of images to search for image retrieval. Currently, only one image is supported. The image must be Base64-encoded and passed in JSON format. Set the base64 key to the encoded image and the mime_type key to the image format. For more information, see the examples.</p>
      * 
      * <strong>example:</strong>
-     * <p>[     {       &quot;base64&quot;: &quot;/9j/4AAQSkZJRgABAQ...&quot;,       &quot;mime_type&quot;: &quot;image/jpeg&quot;     }   ]</p>
+     * <p>[{&quot;base64&quot;: &quot;/9j/4AAQSkZJRgABAQ...&quot;, &quot;mime_type&quot;: &quot;image/jpeg&quot;}]</p>
      */
     @NameInMap("Images")
     public String images;

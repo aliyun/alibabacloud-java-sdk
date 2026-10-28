@@ -15,8 +15,14 @@ public class AddKnowledgeTagsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
+     * <strong>example:</strong>
+     * <p>21321</p>
+     */
+    @NameInMap("FileId")
+    public String fileId;
+
+    /**
      * <p>The location of the knowledge base document.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucketName/path/to/file.pdf</p>
@@ -44,6 +50,14 @@ public class AddKnowledgeTagsRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public AddKnowledgeTagsRequest setFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public String getFileId() {
+        return this.fileId;
     }
 
     public AddKnowledgeTagsRequest setFileLocation(String fileLocation) {

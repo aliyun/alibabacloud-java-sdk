@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeUserQuotaResponseBody extends TeaModel {
     /**
-     * <p>The available elastic AnalyticDB compute units (ACUs).</p>
+     * <p>The available elastic ACUs.</p>
      * 
      * <strong>example:</strong>
      * <p>512 ACU</p>
@@ -23,7 +23,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The available reserved computing resources.</p>
+     * <p>The available reserved compute resources.</p>
      * 
      * <strong>example:</strong>
      * <p>48 ACU</p>
@@ -32,7 +32,7 @@ public class DescribeUserQuotaResponseBody extends TeaModel {
     public String reserverdCompteACU;
 
     /**
-     * <p>The available reserved storage resources.</p>
+     * <p>The available storage compute resources.</p>
      * 
      * <strong>example:</strong>
      * <p>24 ACU</p>

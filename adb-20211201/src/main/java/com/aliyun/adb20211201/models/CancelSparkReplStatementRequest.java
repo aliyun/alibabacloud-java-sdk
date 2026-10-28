@@ -7,7 +7,7 @@ public class CancelSparkReplStatementRequest extends TeaModel {
     /**
      * <p>The application ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query Spark application IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/455888.html">ListSparkApps</a> operation to query the Spark application ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

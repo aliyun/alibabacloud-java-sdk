@@ -15,8 +15,16 @@ public class AddKnowledgeUploadUserRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The location of the knowledge base document.</p>
-     * <p>This parameter is required.</p>
+     * <p>The ID of the file.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>3214123</p>
+     */
+    @NameInMap("FileId")
+    public String fileId;
+
+    /**
+     * <p>The path of the knowledge base document.</p>
      * 
      * <strong>example:</strong>
      * <p>oss://bucketName/path/to/file.pdf</p>
@@ -25,7 +33,7 @@ public class AddKnowledgeUploadUserRequest extends TeaModel {
     public String fileLocation;
 
     /**
-     * <p>The JSON string of the authorized user array.</p>
+     * <p>The JSON string of the authorized users array.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,6 +53,14 @@ public class AddKnowledgeUploadUserRequest extends TeaModel {
     }
     public String getDBClusterId() {
         return this.DBClusterId;
+    }
+
+    public AddKnowledgeUploadUserRequest setFileId(String fileId) {
+        this.fileId = fileId;
+        return this;
+    }
+    public String getFileId() {
+        return this.fileId;
     }
 
     public AddKnowledgeUploadUserRequest setFileLocation(String fileLocation) {

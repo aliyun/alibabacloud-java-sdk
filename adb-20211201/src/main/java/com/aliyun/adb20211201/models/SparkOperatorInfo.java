@@ -4,9 +4,21 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class SparkOperatorInfo extends TeaModel {
+    /**
+     * <p>The metric value.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("MetricValue")
     public Long metricValue;
 
+    /**
+     * <p>The operator name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TableScan</p>
+     */
     @NameInMap("OperatorName")
     public byte[] operatorName;
 

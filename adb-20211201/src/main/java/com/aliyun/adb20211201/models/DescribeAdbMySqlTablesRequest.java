@@ -5,6 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeAdbMySqlTablesRequest extends TeaModel {
     /**
+     * <p>The name of the external data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss</p>
+     * 
      * <strong>if can be null:</strong>
      * <p>true</p>
      */
@@ -25,7 +30,7 @@ public class DescribeAdbMySqlTablesRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of a specified cluster.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/454314.html">DescribeRegions</a> operation to query the region ID of the specified cluster.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -36,7 +41,7 @@ public class DescribeAdbMySqlTablesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The database name.</p>
+     * <p>The name of the database.</p>
      * 
      * <strong>example:</strong>
      * <p>adb_demo</p>

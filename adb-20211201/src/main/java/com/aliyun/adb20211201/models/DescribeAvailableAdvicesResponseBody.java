@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAvailableAdvicesResponseBody extends TeaModel {
     /**
-     * <p>The optimization advice items.</p>
+     * <p>The details.</p>
      */
     @NameInMap("Items")
     public java.util.List<DescribeAvailableAdvicesResponseBodyItems> items;
 
     /**
-     * <p>The page number. The value is greater than 0 and less than or equal to the maximum value of the integer data type. Default value: 1.</p>
+     * <p>The page number. Valid values: greater than 0 and up to the maximum value of the Integer data type. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,14 +20,11 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Valid values:</p>
+     * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>30</strong> (default)</p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>30</strong> (default)</li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,13 +43,13 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The names of databases and tables.</p>
+     * <p>The concatenated string of the database name and table name.</p>
      */
     @NameInMap("SchemaTableNames")
     public java.util.List<String> schemaTableNames;
 
     /**
-     * <p>The total number of entries returned. The value is greater than or equal to 0 and less than or equal to the maximum value of the integer data type. Default value: 0.</p>
+     * <p>The total number of returned results. Valid values: greater than or equal to 0 and up to the maximum value of the Integer data type. Default value: 0.</p>
      * 
      * <strong>example:</strong>
      * <p>10192</p>
@@ -115,7 +112,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
 
     public static class DescribeAvailableAdvicesResponseBodyItems extends TeaModel {
         /**
-         * <p>The date when the advice was generated. The date is displayed in the yyyyMMdd format.</p>
+         * <p>The time when the suggestion was generated, in the yyyyMMdd format.</p>
          * 
          * <strong>example:</strong>
          * <p>20221124</p>
@@ -124,7 +121,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public String adviceDate;
 
         /**
-         * <p>The advice ID.</p>
+         * <p>The suggestion ID.</p>
          * 
          * <strong>example:</strong>
          * <p>dcd04135-0925-4aed-a5a7-e7d92cb1****</p>
@@ -133,12 +130,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public String adviceId;
 
         /**
-         * <p>The type of the advice. Valid values:</p>
+         * <p>The type of the suggestion. Valid values:</p>
          * <ul>
-         * <li><p><strong>INDEX</strong>: index optimization.</p>
-         * </li>
-         * <li><p><strong>TIERING</strong>: hot and cold data optimization.</p>
-         * </li>
+         * <li><strong>INDEX</strong>: Index optimization.</li>
+         * <li><strong>TIERING</strong>: Hot and cold data optimization.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -148,10 +143,10 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public String adviceType;
 
         /**
-         * <p>The benefits of the advice.</p>
+         * <p>The benefit of the suggestion.</p>
          * 
          * <strong>example:</strong>
-         * <p>节省0.4 GB的存储空间。</p>
+         * <p>Saves 0.4 GB of storage space</p>
          */
         @NameInMap("Benefit")
         public String benefit;
@@ -166,7 +161,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public String indexFields;
 
         /**
-         * <p>The page number. The value is greater than 0 and less than or equal to the maximum value of the integer data type. Default value: 1.</p>
+         * <p>The page number. Valid values: greater than 0 and up to the maximum value of the Integer data type. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -175,14 +170,11 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public Long pageNumber;
 
         /**
-         * <p>The number of entries to return on each page. Valid values:</p>
+         * <p>The number of entries per page. Valid values:</p>
          * <ul>
-         * <li><p><strong>30</strong> (default)</p>
-         * </li>
-         * <li><p><strong>50</strong></p>
-         * </li>
-         * <li><p><strong>100</strong></p>
-         * </li>
+         * <li><strong>30</strong> (default)</li>
+         * <li><strong>50</strong></li>
+         * <li><strong>100</strong></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -192,16 +184,16 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public Long pageSize;
 
         /**
-         * <p>The reason why the optimization advice is generated.</p>
+         * <p>The reason for generating optimization suggestions.</p>
          * 
          * <strong>example:</strong>
-         * <p>15天未使用，历史使用统计概率小于1%</p>
+         * <p>Not used for 15 days, and the historical usage probability is less than 1%</p>
          */
         @NameInMap("Reason")
         public String reason;
 
         /**
-         * <p>The SQL statement that is used to apply the advice.</p>
+         * <p>The SQL statement to apply the suggestion.</p>
          * 
          * <strong>example:</strong>
          * <p>alter table <code>schema1</code>.<code>table1</code> drop key col1_1_idx</p>
@@ -228,7 +220,7 @@ public class DescribeAvailableAdvicesResponseBody extends TeaModel {
         public String tableName;
 
         /**
-         * <p>The total number of entries returned. The value is greater than or equal to 0 and less than or equal to the maximum value of the integer data type. Default value: 0.</p>
+         * <p>The total number of returned results. Valid values: greater than or equal to 0 and up to the maximum value of the Integer data type. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>10192</p>

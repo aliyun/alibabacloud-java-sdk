@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AllocateClusterPublicConnectionResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>868EF07F-D0B2-5043-B092-0C14CD00B65A</p>

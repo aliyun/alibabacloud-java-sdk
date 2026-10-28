@@ -42,7 +42,7 @@ public class AddKnowledgeUploadUserResponseBody extends TeaModel {
 
     public static class AddKnowledgeUploadUserResponseBodyDataSkipped extends TeaModel {
         /**
-         * <p>The reason why the user was skipped.</p>
+         * <p>The reason for skipping.</p>
          * 
          * <strong>example:</strong>
          * <p>conflicts error</p>
@@ -84,7 +84,7 @@ public class AddKnowledgeUploadUserResponseBody extends TeaModel {
 
     public static class AddKnowledgeUploadUserResponseBodyData extends TeaModel {
         /**
-         * <p>The location of the knowledge base file.</p>
+         * <p>The path of the knowledge base file.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucketName/path/to/file.pfg</p>
@@ -93,7 +93,7 @@ public class AddKnowledgeUploadUserResponseBody extends TeaModel {
         public String fileLocation;
 
         /**
-         * <p>The prompt message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -108,10 +108,10 @@ public class AddKnowledgeUploadUserResponseBody extends TeaModel {
         public java.util.List<AddKnowledgeUploadUserResponseBodyDataSkipped> skipped;
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: The request is successful.</li>
+         * <li><strong>false</strong>: The request fails.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class AddKnowledgeUploadUserResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>The number of users that were successfully added.</p>
+         * <p>The number of successfully added users.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

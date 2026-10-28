@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>A5C433C2-001F-58E3-99F5-3274C14DF8BD</p>
@@ -32,13 +32,13 @@ public class DescribeElasticPlanSpecificationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried resource specifications.</p>
+     * <p>The list of supported specifications.</p>
      */
     @NameInMap("Specifications")
     public java.util.List<String> specifications;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

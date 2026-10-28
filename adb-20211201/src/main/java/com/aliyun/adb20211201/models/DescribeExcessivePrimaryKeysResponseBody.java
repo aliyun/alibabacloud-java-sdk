@@ -227,7 +227,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
          * <p>The queried primary key fields.</p>
          * 
          * <strong>example:</strong>
-         * <p>id,date</p>
+         * <p>2</p>
          */
         @NameInMap("PrimaryKeyColumns")
         public String primaryKeyColumns;
@@ -236,7 +236,7 @@ public class DescribeExcessivePrimaryKeysResponseBody extends TeaModel {
          * <p>The number of primary key fields.</p>
          * 
          * <strong>example:</strong>
-         * <p>2</p>
+         * <p>3</p>
          */
         @NameInMap("PrimaryKeyCount")
         public Integer primaryKeyCount;

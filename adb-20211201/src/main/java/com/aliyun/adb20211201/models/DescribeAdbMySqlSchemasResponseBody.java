@@ -7,8 +7,8 @@ public class DescribeAdbMySqlSchemasResponseBody extends TeaModel {
     /**
      * <p>The additional information about the call result. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, <strong>Success</strong> is returned. </li>
-     * <li>If the request failed, a specific error code is returned.</li>
+     * <li><strong>Success</strong>: The request is successful. </li>
+     * <li>Specific error code: An exception occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>

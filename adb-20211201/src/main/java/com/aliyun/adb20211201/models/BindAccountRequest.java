@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindAccountRequest extends TeaModel {
     /**
-     * <p>A standard database account.</p>
+     * <p>The standard database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,8 @@ public class BindAccountRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>ID of the cluster. Applies to Enterprise Edition, Basic Edition, or Data Lakehouse Edition clusters.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +26,7 @@ public class BindAccountRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>ID of the Alibaba Cloud RAM user to bind.</p>
+     * <p>The ID of the Alibaba Cloud RAM user to bind.</p>
      * 
      * <strong>example:</strong>
      * <p>1444832459****</p>
@@ -34,7 +35,7 @@ public class BindAccountRequest extends TeaModel {
     public String ramUser;
 
     /**
-     * <p>List of Alibaba Cloud RAM user IDs to bind. You can bind only one RAM user at a time. If you specify this parameter, the RamUser parameter is ignored.</p>
+     * <p>The list of IDs of the Alibaba Cloud RAM users to bind. Currently, only one RAM user can be bound. If you specify this parameter, the RamUser parameter does not take effect.</p>
      */
     @NameInMap("RamUserList")
     public java.util.List<String> ramUserList;

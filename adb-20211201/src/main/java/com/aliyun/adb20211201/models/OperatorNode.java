@@ -4,27 +4,69 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class OperatorNode extends TeaModel {
+    /**
+     * <p>The child operator queue.</p>
+     */
     @NameInMap("children")
     public java.util.List<OperatorNode> children;
 
+    /**
+     * <p>The operator ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("id")
     public Integer id;
 
+    /**
+     * <p>The total number of nodes at the tree level of the operator.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("levelWidth")
     public Integer levelWidth;
 
+    /**
+     * <p>The level of the operator in the tree.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("nodeDepth")
     public Integer nodeDepth;
 
+    /**
+     * <p>The operator name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TableScan</p>
+     */
     @NameInMap("nodeName")
     public String nodeName;
 
+    /**
+     * <p>The left-to-right position of the node at the corresponding level.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("nodeWidth")
     public Integer nodeWidth;
 
+    /**
+     * <p>The parent operator ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
     @NameInMap("parentId")
     public Integer parentId;
 
+    /**
+     * <p>The operator statistics information.</p>
+     */
     @NameInMap("stats")
     public OperatorNodeStats stats;
 
@@ -98,18 +140,45 @@ public class OperatorNode extends TeaModel {
     }
 
     public static class OperatorNodeStats extends TeaModel {
+        /**
+         * <p>The data volume.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("bytes")
         public Long bytes;
 
+        /**
+         * <p>The number of output rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("outputRows")
         public Long outputRows;
 
+        /**
+         * <p>The operator parameters.</p>
+         */
         @NameInMap("parameters")
         public String parameters;
 
+        /**
+         * <p>The maximum memory size consumed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("peakMemory")
         public Long peakMemory;
 
+        /**
+         * <p>The execution time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("timeCost")
         public Long timeCost;
 

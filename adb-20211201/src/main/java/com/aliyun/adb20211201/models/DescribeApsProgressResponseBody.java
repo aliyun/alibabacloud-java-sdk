@@ -25,7 +25,7 @@ public class DescribeApsProgressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The success rate.</p>
+     * <p>The success percentage.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -34,7 +34,7 @@ public class DescribeApsProgressResponseBody extends TeaModel {
     public Integer successPercentage;
 
     /**
-     * <p>The total number of migrated tables returned.</p>
+     * <p>The total number of successfully migrated tables.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -43,7 +43,7 @@ public class DescribeApsProgressResponseBody extends TeaModel {
     public Integer successTableCount;
 
     /**
-     * <p>The total number of tables to be migrated.</p>
+     * <p>The total number of tables.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -98,7 +98,7 @@ public class DescribeApsProgressResponseBody extends TeaModel {
 
     public static class DescribeApsProgressResponseBodyApsHiveProgress extends TeaModel {
         /**
-         * <p>The name of the database.</p>
+         * <p>The database name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -107,7 +107,7 @@ public class DescribeApsProgressResponseBody extends TeaModel {
         public String dbName;
 
         /**
-         * <p>The migration progress.</p>
+         * <p>The progress.</p>
          * 
          * <strong>example:</strong>
          * <p>95</p>
@@ -125,7 +125,7 @@ public class DescribeApsProgressResponseBody extends TeaModel {
         public String speed;
 
         /**
-         * <p>The name of the table.</p>
+         * <p>The table name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

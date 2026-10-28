@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSparkAppMetricsRequest extends TeaModel {
     /**
-     * <p>The ID of the Spark application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,10 @@ public class GetSparkAppMetricsRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL clusters within a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612397.html">DescribeDBClusters</a> operation to query the IDs of all clusters in the target region.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

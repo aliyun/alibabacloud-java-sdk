@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBadSqlDetectionResponseBody extends TeaModel {
     /**
-     * <p>The information about the request denial.</p>
+     * <p>The details of the access denial.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -31,7 +31,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The queried detection items and detection results.</p>
+     * <p>The list of detection items and detection results.</p>
      */
     @NameInMap("DetectionItems")
     public java.util.List<DescribeBadSqlDetectionResponseBodyDetectionItems> detectionItems;
@@ -46,7 +46,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -101,7 +101,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
 
     public static class DescribeBadSqlDetectionResponseBodyDetectionItemsResultsDiagnosisResults extends TeaModel {
         /**
-         * <p>The diagnostic code.</p>
+         * <p>The diagnosis code.</p>
          * 
          * <strong>example:</strong>
          * <p>Large amounts of data are returned to the client.</p>
@@ -110,7 +110,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The information about the diagnostic result.</p>
+         * <p>The details of the diagnosis result.</p>
          * 
          * <strong>example:</strong>
          * <p>Large amounts of data are returned to the client. Import the data to OSS.</p>
@@ -177,9 +177,9 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
 
     public static class DescribeBadSqlDetectionResponseBodyDetectionItemsResults extends TeaModel {
         /**
-         * <p>The total execution duration. Unit: milliseconds.</p>
+         * <p>The total time consumed by the query. Unit: milliseconds.</p>
          * <blockquote>
-         * <p> This value is the cumulative value of the <code>QueuedTime</code>, <code>TotalPlanningTime</code>, and <code>ExecutionTime</code> parameters.</p>
+         * <p>This time metric is the sum of the <code>QueuedTime</code>, <code>TotalPlanningTime</code>, and <code>ExecutionTime</code> metrics.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -189,13 +189,13 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         public Long cost;
 
         /**
-         * <p>The diagnostic result items.</p>
+         * <p>The collection of self-diagnosis results for the query.</p>
          */
         @NameInMap("DiagnosisResults")
         public java.util.List<DescribeBadSqlDetectionResponseBodyDetectionItemsResultsDiagnosisResults> diagnosisResults;
 
         /**
-         * <p>The total CPU time consumed by all operators in the stage, which is equivalent to the total CPU time of the stage. You can use this parameter to determine which parts of the stage consume a large amount of computing resources. Unit: milliseconds.</p>
+         * <p>The total time consumed by operators within the stage, which is equivalent to the CPU time of the stage. This metric plays an active role in determining which parts of the query consume more compute resource. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>2345</p>
@@ -213,7 +213,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         public Long outputDataSize;
 
         /**
-         * <p>The SQL pattern ID.</p>
+         * <p>The ID of the SQL pattern.</p>
          * 
          * <strong>example:</strong>
          * <p>3467484070025860498</p>
@@ -222,7 +222,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         public String patternId;
 
         /**
-         * <p>The peak memory. Unit: bytes.</p>
+         * <p>The peak memory usage of the query. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>234</p>
@@ -231,7 +231,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         public Long peakMemory;
 
         /**
-         * <p>The query ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>202410161002191720161451770345363xxxx</p>
@@ -240,9 +240,9 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         public String processId;
 
         /**
-         * <p>The SQL statement.</p>
+         * <p>The details of the SQL statement.</p>
          * <blockquote>
-         * <p> For performance considerations, an SQL statement cannot exceed 5,120 characters in length. Otherwise, the SQL statement is truncated. You can call the <a href="https://help.aliyun.com/document_detail/308212.html">DownloadDiagnosisRecords</a> operation to download the information about SQL statements that meet a query condition for an AnalyticDB for MySQL cluster, including the complete SQL statements.</p>
+         * <p>For performance reasons, a maximum of 5,120 characters of an SQL statement can be displayed. SQL statements that exceed this limit are truncated. You can call the <a href="https://help.aliyun.com/document_detail/308212.html">DownloadDiagnosisRecords</a> operation to download the summary information of SQL statements that meet specified conditions, including the complete SQL statements.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -261,7 +261,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         public Long scanSize;
 
         /**
-         * <p>The start time of the query. The time follows the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mm:ssZ</em> format. The time is displayed in UTC.</p>
+         * <p>The start time of the query. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-06T02:11:00Z</p>
@@ -270,7 +270,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The total number of stages generated.</p>
+         * <p>The total number of stages generated by the query.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -375,7 +375,7 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
 
     public static class DescribeBadSqlDetectionResponseBodyDetectionItems extends TeaModel {
         /**
-         * <p>The information about the detection result.</p>
+         * <p>The detection result message.</p>
          * 
          * <strong>example:</strong>
          * <p>SQL statements that result in high peak memory are detected.</p>
@@ -393,13 +393,13 @@ public class DescribeBadSqlDetectionResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The detection result items.</p>
+         * <p>The collection of detection results.</p>
          */
         @NameInMap("Results")
         public java.util.List<DescribeBadSqlDetectionResponseBodyDetectionItemsResults> results;
 
         /**
-         * <p>The severity level of the detection result. Valid values:</p>
+         * <p>The status of the detection result. Valid values:</p>
          * <ul>
          * <li>NORMAL</li>
          * <li>WARNING</li>

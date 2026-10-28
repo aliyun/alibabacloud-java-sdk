@@ -51,10 +51,10 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The type of access policy denial. Valid values:</p>
+         * <p>The type of denial by the access policy. Valid values:</p>
          * <ul>
-         * <li>ImplicitDeny: The resource owner has not configured a relevant access policy for the current user. Unauthorized operations are denied by default.</li>
-         * <li>ExplicitDeny: The RAM policy configured by the resource owner explicitly denies the current user authorization to access the corresponding resource.</li>
+         * <li>ImplicitDeny: The resource owner has not configured a relevant access policy for the current user, and operations without authorization are denied by default.</li>
+         * <li>ExplicitDeny: The RAM policy configured by the resource owner explicitly denies the current user access to the corresponding resource.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -64,13 +64,13 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
         public String noPermissionType;
 
         /**
-         * <p>The type of the policy that caused the permission denial. Valid values:</p>
+         * <p>The type of the policy that causes the permission denial. Valid values:</p>
          * <ul>
-         * <li>ControlPolicy: control policy.</li>
-         * <li>SessionPolicy: an additional permission policy attached to a temporary token.</li>
-         * <li>AssumeRolePolicy: the trust policy of a RAM role.</li>
-         * <li>AccountLevelIdentityBasedPolicy: an identity-access policy at the account authorization scope, including custom policies and system policies.</li>
-         * <li>ResourceGroupLevelIdentityBasedPolicy: an identity-access policy at the resource group authorization scope, including custom policies and system policies.</li>
+         * <li>ControlPolicy: The control policy.</li>
+         * <li>SessionPolicy: An additional permission policy attached to the temporary token.</li>
+         * <li>AssumeRolePolicy: The trust policy of the RAM role.</li>
+         * <li>AccountLevelIdentityBasedPolicy: The identity-access policy at the account level, including custom policies and system policies.</li>
+         * <li>ResourceGroupLevelIdentityBasedPolicy: The identity-access policy at the resource group level, including custom policies and system policies.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
         public String principalType;
 
         /**
-         * <p>The information about the authentication target, which can be the Resource Access Management (RAM) users ID of the current user or the role information of the current accessor.</p>
+         * <p>The information about the authentication object, which can be the ID of the Resource Access Management (RAM) users of the current user or the role information of the current accessor.</p>
          * 
          * <strong>example:</strong>
          * <p>223345695632****</p>
@@ -167,16 +167,16 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
 
     public static class GetADBSparkNecessaryRAMPermissionsResponseBodyData extends TeaModel {
         /**
-         * <p>The diagnostic information returned when the permission check fails.</p>
+         * <p>The diagnostic information about the permission check failure. This parameter is returned when the permission check fails.</p>
          */
         @NameInMap("DeniedDetail")
         public GetADBSparkNecessaryRAMPermissionsResponseBodyDataDeniedDetail deniedDetail;
 
         /**
-         * <p>Indicates whether the current user has the basic permissions to use ADB Spark. Valid values:</p>
+         * <p>Indicates whether the user has the basic permissions required to use ADB Spark. Valid values:</p>
          * <ul>
-         * <li>true: The check is passed. The user has the basic permissions.</li>
-         * <li>false: The check failed. The user is missing some permissions.</li>
+         * <li>true: The check passed, and the user has the basic permissions.</li>
+         * <li>false: The check failed, and the user lacks some permissions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -186,7 +186,7 @@ public class GetADBSparkNecessaryRAMPermissionsResponseBody extends TeaModel {
         public Boolean passed;
 
         /**
-         * <p>The recommended RAM configuration based on the diagnostic information.</p>
+         * <p>The recommended configurations in the RAM system based on the diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>Grant the system RAM policy \&quot;AliyunADBDeveloperAccess\&quot; to current RAM user can quickly solve this issue.</p>

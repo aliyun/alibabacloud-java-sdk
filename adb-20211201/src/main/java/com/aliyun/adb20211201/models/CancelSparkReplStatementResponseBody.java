@@ -42,7 +42,7 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
 
     public static class CancelSparkReplStatementResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the Alibaba Cloud account that owns the cluster.</p>
+         * <p>The Alibaba Cloud account to which the cluster belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>190063530332****</p>
@@ -51,7 +51,7 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
         public Long aliyunUid;
 
         /**
-         * <p>The code that is executed.</p>
+         * <p>The input code.</p>
          * 
          * <strong>example:</strong>
          * <p>print(1+1)</p>
@@ -60,12 +60,12 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The code execution status. Valid values:</p>
+         * <p>The execution status of the code. Valid values:</p>
          * <ul>
-         * <li>CANCELLED</li>
-         * <li>RUNNING</li>
-         * <li>SUCCEEDED</li>
-         * <li>ERROR</li>
+         * <li>CANCELLED: The execution is canceled.</li>
+         * <li>RUNNING: The execution is in progress.</li>
+         * <li>SUCCEEDED: The execution is successful.</li>
+         * <li>ERROR: The execution failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -75,7 +75,7 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
         public String codeState;
 
         /**
-         * <p>The code type. Valid values:</p>
+         * <p>The type of the code. Valid values:</p>
          * <ul>
          * <li>SCALA</li>
          * <li>PYTHON</li>
@@ -88,13 +88,13 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
         public String codeType;
 
         /**
-         * <p>The column names.</p>
+         * <p>The column names of the table when the output is a table.</p>
          */
         @NameInMap("Columns")
         public java.util.List<String> columns;
 
         /**
-         * <p>The end time of the execution. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The end time of the execution, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1730968056000</p>
@@ -112,7 +112,7 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
         public String error;
 
         /**
-         * <p>The code execution result, which is a JSON string that conforms to Apache Livy.</p>
+         * <p>The code execution result. The value is a JSON-formatted string that complies with the Apache Livy output standard.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;text/plain&quot;: &quot;2&quot;}</p>
@@ -121,10 +121,10 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
         public String output;
 
         /**
-         * <p>The execution result type, which is in the JSON format. Valid values:</p>
+         * <p>The serialization format of the execution result. The structure is a JSON object. Valid values:</p>
          * <ul>
-         * <li>TEXT: the text content that conforms to Apache Livy.</li>
-         * <li>TABLE: the table content that conforms to Apache Livy.</li>
+         * <li>TEXT: The output is text content that complies with the Apache Livy standard.</li>
+         * <li>TABLE: The output is table content that complies with the Apache Livy standard.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class CancelSparkReplStatementResponseBody extends TeaModel {
         public String outputType;
 
         /**
-         * <p>The start time of the execution. This value is a UNIX timestamp representing the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The start time of the execution, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1730968056000</p>

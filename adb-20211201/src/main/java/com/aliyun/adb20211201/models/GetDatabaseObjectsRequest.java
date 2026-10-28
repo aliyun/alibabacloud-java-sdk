@@ -14,7 +14,7 @@ public class GetDatabaseObjectsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The owner of the database.</p>
+     * <p>The owner.</p>
      * 
      * <strong>example:</strong>
      * <p>admin</p>
@@ -23,7 +23,7 @@ public class GetDatabaseObjectsRequest extends TeaModel {
     public String filterOwner;
 
     /**
-     * <p>The name of the database.</p>
+     * <p>The database name.</p>
      * 
      * <strong>example:</strong>
      * <p>test_db</p>
@@ -32,12 +32,18 @@ public class GetDatabaseObjectsRequest extends TeaModel {
     public String filterSchemaName;
 
     /**
-     * <p>The order in which you want to sort the query results. Valid values:</p>
+     * <p>The sort field.
+     * Valid values for Type:</p>
      * <ul>
      * <li>Asc</li>
      * <li>Desc</li>
      * </ul>
-     * <p>Valid values for Field: DatabaseName, CreateTime, and UpdateTime. -CreateTime; -UpdateTime;</p>
+     * <p>Valid values for Field:</p>
+     * <ul>
+     * <li>DatabseName</li>
+     * <li>CreateTime</li>
+     * <li>UpdateTime</li>
+     * </ul>
      * <p>Default value: {&quot;Type&quot;: &quot;Desc&quot;,&quot;Field&quot;: &quot;DatabaseName&quot;}.</p>
      * 
      * <strong>example:</strong>
@@ -50,7 +56,7 @@ public class GetDatabaseObjectsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be greater than 0 and no greater than the maximum value of the Integer data type. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -74,7 +80,7 @@ public class GetDatabaseObjectsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region ID of the database.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

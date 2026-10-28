@@ -24,7 +24,7 @@ public class DescribeApsHiveWorkloadRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The data link task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -51,7 +51,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String authNodeNum;
 
         /**
-         * <p>The node specifications of authentication nodes.</p>
+         * <p>The authentication node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -60,7 +60,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String authNodeSpec;
 
         /**
-         * <p>The number of write nodes.</p>
+         * <p>The number of insert nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -69,7 +69,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String insertNodeNum;
 
         /**
-         * <p>The node specifications of write nodes.</p>
+         * <p>The insert node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -78,7 +78,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String insertNodeSpec;
 
         /**
-         * <p>The cache size of query nodes.</p>
+         * <p>The cache size of the query node.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -96,7 +96,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String selectNodeNum;
 
         /**
-         * <p>The node specifications of query nodes.</p>
+         * <p>The query node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -105,7 +105,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String selectNodeSpec;
 
         /**
-         * <p>The disk size of storage nodes.</p>
+         * <p>The disk size of the storage node.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -114,7 +114,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String storageNodeDiskSize;
 
         /**
-         * <p>The disk type of storage nodes.</p>
+         * <p>The disk type of the storage node.</p>
          * 
          * <strong>example:</strong>
          * <p>essd_pl1</p>
@@ -132,7 +132,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String storageNodeNum;
 
         /**
-         * <p>The node specifications of storage nodes.</p>
+         * <p>The storage node specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>8ACU</p>
@@ -237,7 +237,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
     public static class DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlanRules extends TeaModel {
         /**
-         * <p>The end time in cron expression format. The interval must be at least 1 hour.</p>
+         * <p>The end time in cron expression format. The interval must be no less than 1 hour.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 3 * * ?</p>
@@ -246,7 +246,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String endCronExpression;
 
         /**
-         * <p>The start time in cron expression format. The interval must be at least 1 hour.</p>
+         * <p>The start time in cron expression format. The interval must be no less than 1 hour.</p>
          * 
          * <strong>example:</strong>
          * <p>0 0 2 * * ?</p>
@@ -279,7 +279,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
     public static class DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan extends TeaModel {
         /**
-         * <p>Indicates whether the plan is enabled.</p>
+         * <p>Indicates whether the GPU time-based elastic plan is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -336,7 +336,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String inferenceEngine;
 
         /**
-         * <p>The LLM model.</p>
+         * <p>The large language model (LLM).</p>
          * 
          * <strong>example:</strong>
          * <p>Deepseek-R1</p>
@@ -377,7 +377,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
     public static class DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigAppConfig extends TeaModel {
         /**
-         * <p>The Ray application name.</p>
+         * <p>The name of the Ray application.</p>
          * 
          * <strong>example:</strong>
          * <p>app01</p>
@@ -386,7 +386,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The Ray application type.</p>
+         * <p>The type of the Ray application.</p>
          * 
          * <strong>example:</strong>
          * <p>IsaacLab</p>
@@ -453,6 +453,12 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         @NameInMap("StorageId")
         public Long storageId;
 
+        /**
+         * <p>The name of the mounted storage.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>training-data</p>
+         */
         @NameInMap("StorageName")
         public String storageName;
 
@@ -525,7 +531,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public Integer minWorkerQuantity;
 
         /**
-         * <p>The disk capacity per worker.</p>
+         * <p>The disk size of each worker.</p>
          * 
          * <strong>example:</strong>
          * <p>100G</p>
@@ -534,7 +540,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String workerDiskCapacity;
 
         /**
-         * <p>The worker specification name.</p>
+         * <p>The specification of the worker.</p>
          * 
          * <strong>example:</strong>
          * <p>large</p>
@@ -543,7 +549,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String workerSpecName;
 
         /**
-         * <p>The Ray worker resource type.</p>
+         * <p>The resource type of the Ray worker.</p>
          * 
          * <strong>example:</strong>
          * <p>CPU</p>
@@ -627,9 +633,9 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         /**
          * <p>The Ray cluster type. Valid values:</p>
          * <ul>
-         * <li><p>BASIC: basic type, non-high-availability.</p>
+         * <li><p><strong>BASIC</strong>: the basic type, which is not highly available.</p>
          * </li>
-         * <li><p>HIGH_AVAILABILITY: high-availability type.</p>
+         * <li><p><strong>HIGH_AVAILABILITY</strong>: the high-availability type.</p>
          * </li>
          * </ul>
          * 
@@ -640,7 +646,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>Indicates whether ENI is enabled.</p>
+         * <p>Specifies whether to enable the elastic network interface (ENI).</p>
          * 
          * <strong>if can be null:</strong>
          * <p>false</p>
@@ -658,7 +664,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String headAllocateUnit;
 
         /**
-         * <p>The disk capacity of the head node.</p>
+         * <p>The disk size of the head node.</p>
          * 
          * <strong>example:</strong>
          * <p>100Gi</p>
@@ -685,7 +691,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String headSpecType;
 
         /**
-         * <p>The Ray cluster address.</p>
+         * <p>The address of the Ray cluster.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://ray-cluster-address.example.com">http://ray-cluster-address.example.com</a></p>
@@ -694,7 +700,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String rayClusterAddress;
 
         /**
-         * <p>The Ray Dashboard address.</p>
+         * <p>The address of the Ray dashboard.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://ray-dashboard-address.example.com">http://ray-dashboard-address.example.com</a></p>
@@ -703,7 +709,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String rayDashboardAddress;
 
         /**
-         * <p>The Ray Grafana address.</p>
+         * <p>The address of Ray Grafana.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://ray-grafana-address.example.com">http://ray-grafana-address.example.com</a></p>
@@ -712,7 +718,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String rayGrafanaAddress;
 
         /**
-         * <p>The Ray Serve public address.</p>
+         * <p>The public endpoint of Ray Serve.</p>
          * 
          * <strong>example:</strong>
          * <p>1.2.3.4:8100</p>
@@ -721,11 +727,17 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String rayServePublicAddress;
 
         /**
-         * <p>The list of storage mounts.</p>
+         * <p>The list of mounted storage.</p>
          */
         @NameInMap("StorageMounts")
         public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoRayConfigStorageMounts> storageMounts;
 
+        /**
+         * <p>The custom Python dependencies for RayCluster. Specify the content in the requirements.txt format, with one pip dependency per line. A maximum of 200 lines are allowed, and each line cannot exceed 512 characters. Version constraints, extras, PEP 440 direct URLs, and # comments are supported, but shell metacharacters are not supported. This parameter applies only to AI resource groups of the RayCluster type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>numpy==1.24.0</p>
+         */
         @NameInMap("UserDefinedRequirements")
         public String userDefinedRequirements;
 
@@ -856,7 +868,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
 
     public static class DescribeDBResourceGroupResponseBodyGroupsInfoRules extends TeaModel {
         /**
-         * <p>The resource group name.</p>
+         * <p>The name of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>user_default</p>
@@ -865,7 +877,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The query execution time threshold, in milliseconds (ms).</p>
+         * <p>The threshold for query execution time. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>180000</p>
@@ -874,7 +886,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String queryTime;
 
         /**
-         * <p>The name of the target resource group.</p>
+         * <p>The name of the destination resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>job</p>
@@ -921,7 +933,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public DescribeDBResourceGroupResponseBodyGroupsInfoAtmConfig atmConfig;
 
         /**
-         * <p>The automatic stop interval, in the format of a number followed by m (minutes). The value ranges from 0m or 5m to 10080m. A value of 0m indicates that automatic stop is disabled.</p>
+         * <p>The auto-stop interval. The value is in the format of a number followed by &quot;m&quot;, which indicates minutes. Valid values range from 0m or 5m to 10080m. A value of 0m indicates that the resource group does not automatically stop.</p>
          * 
          * <strong>example:</strong>
          * <p>0m</p>
@@ -945,7 +957,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String classification;
 
         /**
-         * <p>A reserved parameter. Not applicable.</p>
+         * <p>The reserved parameter. This parameter is not applicable.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -954,7 +966,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String clusterMode;
 
         /**
-         * <p>A reserved parameter. Not applicable.</p>
+         * <p>The reserved parameter. This parameter is not applicable.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -963,7 +975,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String clusterSizeResource;
 
         /**
-         * <p>The time when the resource group was created, in UTC. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i>.</p>
+         * <p>The time when the resource group was created. The time is displayed in UTC in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-29T03:34:30Z</p>
@@ -972,7 +984,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The minimum elastic computing resources, in ACUs.</p>
+         * <p>The minimum elastic compute resources. Unit: ACU.</p>
          * 
          * <strong>example:</strong>
          * <p>16ACU</p>
@@ -981,12 +993,12 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String elasticMinComputeResource;
 
         /**
-         * <p>Indicates whether the spot instance feature is enabled for the resource group. After the spot instance feature is enabled, the unit price of resources is reduced, but the resources may be released. Valid values:</p>
+         * <p>Specifies whether to enable the spot instance feature for the resource group. After you enable this feature, the unit price of resources decreases, but the instances may be released. Valid values:</p>
          * <ul>
-         * <li><strong>True</strong>: The spot instance feature is enabled.</li>
-         * <li><strong>False</strong>: The spot instance feature is disabled.</li>
+         * <li><strong>True</strong>: enables the spot instance feature.</li>
+         * <li><strong>False</strong>: disables the spot instance feature.</li>
          * </ul>
-         * <p>Only Job-type resource groups can be set to True.</p>
+         * <p>This parameter can be set to True only for Job resource groups.</p>
          * 
          * <strong>example:</strong>
          * <p>True</p>
@@ -1010,13 +1022,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public java.util.Map<String, ?> engineParams;
 
         /**
-         * <p>The GPU time-sharing elastic plan.</p>
+         * <p>The GPU time-based elastic plan.</p>
          */
         @NameInMap("GpuElasticPlan")
         public DescribeDBResourceGroupResponseBodyGroupsInfoGpuElasticPlan gpuElasticPlan;
 
         /**
-         * <p>The resource group name.</p>
+         * <p>The name of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>test1</p>
@@ -1029,7 +1041,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
          * <ul>
          * <li><strong>Interactive</strong></li>
          * <li><strong>Job</strong><blockquote>
-         * <p>For more information about resource groups of the Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group introduction (Data Lakehouse Edition)</a>.</p>
+         * <p>For more information about Data Lakehouse Edition resource groups, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview (Data Lakehouse Edition)</a>.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -1050,7 +1062,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String groupUsers;
 
         /**
-         * <p>A reserved parameter. Not applicable.</p>
+         * <p>The reserved parameter. This parameter is not applicable.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -1059,7 +1071,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public Integer maxClusterCount;
 
         /**
-         * <p>The maximum reserved computing resources, in ACUs.</p>
+         * <p>The maximum reserved compute resources. Unit: ACU.</p>
          * 
          * <strong>example:</strong>
          * <p>512ACU</p>
@@ -1077,7 +1089,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public Integer maxGpuQuantity;
 
         /**
-         * <p>The job routing rule message.</p>
+         * <p>The message of the job delivery rule.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1087,7 +1099,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>A reserved parameter. Not applicable.</p>
+         * <p>The reserved parameter. This parameter is not applicable.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -1096,7 +1108,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public Integer minClusterCount;
 
         /**
-         * <p>The minimum reserved computing resources, in ACUs.</p>
+         * <p>The minimum reserved compute resources. Unit: ACU.</p>
          * 
          * <strong>example:</strong>
          * <p>0ACU</p>
@@ -1120,13 +1132,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public DescribeDBResourceGroupResponseBodyGroupsInfoRayConfig rayConfig;
 
         /**
-         * <p>The job routing rules.</p>
+         * <p>The job delivery rules.</p>
          */
         @NameInMap("Rules")
         public java.util.List<DescribeDBResourceGroupResponseBodyGroupsInfoRules> rules;
 
         /**
-         * <p>A reserved parameter. Not applicable.</p>
+         * <p>The reserved parameter. This parameter is not applicable.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -1135,11 +1147,11 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public Integer runningClusterCount;
 
         /**
-         * <p>The scaling policy of the resource group. Valid values:</p>
+         * <p>The scale-out policy of the resource group. Valid values:</p>
          * <ul>
-         * <li>AutoScaling: enables the AutoScaling automatic scaling policy.</li>
-         * <li>Disable: disables automatic scaling.</li>
-         * <li>MultiCluster: enables the MultiCluster automatic scaling policy.</li>
+         * <li>AutoScaling: enables the AutoScaling policy.</li>
+         * <li>Disable: disables auto scaling.</li>
+         * <li>MultiCluster: enables the MultiCluster policy.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1158,13 +1170,13 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String specName;
 
         /**
-         * <p>The resource group status. Valid values:</p>
+         * <p>The status of the resource group. Valid values:</p>
          * <ul>
-         * <li><strong>Pending</strong>: being created.</li>
-         * <li><strong>Running</strong>: running.</li>
-         * <li><strong>Scaling</strong>: being scaled.</li>
-         * <li><strong>Deleting</strong>: being deleted.</li>
-         * <li><strong>Deleted</strong>: deleted.</li>
+         * <li><strong>Pending</strong>: The resource group is being created.</li>
+         * <li><strong>Running</strong>: The resource group is running.</li>
+         * <li><strong>Scaling</strong>: The resource group is being scaled.</li>
+         * <li><strong>Deleting</strong>: The resource group is being deleted.</li>
+         * <li><strong>Deleted</strong>: The resource group is deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1174,7 +1186,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The name of the target resource group.</p>
+         * <p>The name of the destination resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1183,7 +1195,7 @@ public class DescribeDBResourceGroupResponseBody extends TeaModel {
         public String targetResourceGroupName;
 
         /**
-         * <p>The time when the resource group was last updated, in UTC. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i>.</p>
+         * <p>The time when the resource group was updated. The time is displayed in UTC in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-31T03:34:30Z</p>

@@ -129,7 +129,7 @@ public class CreateApsDatasoureShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The Simple Log Service (SLS) information for the data source to be created.</p>
+     * <p>The Simple Log Service (SLS) information.</p>
      * 
      * <strong>example:</strong>
      * <ul>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateAccountShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the account.</p>
+     * <p>The description of the account. The description must meet the following requirements:</p>
      * <ul>
-     * <li>Cannot start with <code>http://</code> or <code>https://</code>.</li>
-     * <li>Cannot exceed 256 characters in length.</li>
+     * <li>It cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>It can be up to 256 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class CreateAccountShrinkRequest extends TeaModel {
     /**
      * <p>The name of the database account. The name must meet the following requirements:</p>
      * <ul>
-     * <li>Starts with a lowercase letter and ends with a lowercase letter or digit.</li>
-     * <li>Contains only lowercase letters, digits, or underscores (_).</li>
+     * <li>It must start with a lowercase letter and end with a lowercase letter or a digit.</li>
+     * <li>It can contain only lowercase letters, digits, and underscores (_).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -32,11 +32,11 @@ public class CreateAccountShrinkRequest extends TeaModel {
     public String accountName;
 
     /**
-     * <p>The password of the database account.</p>
+     * <p>The password of the database account. The password must meet the following requirements:</p>
      * <ul>
-     * <li>Must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
+     * <li>It must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
      * <li>Special characters include: <code>!@#$%^&amp;*()_+-=</code></li>
-     * <li>Must be 8 to 32 characters in length.</li>
+     * <li>It must be 8 to 32 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -74,8 +74,8 @@ public class CreateAccountShrinkRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
-     * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+     * <li><strong>AnalyticDB</strong> (default): AnalyticDB for MySQL engine.</li>
+     * <li><strong>Clickhouse</strong>: wide table engine.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,21 +84,39 @@ public class CreateAccountShrinkRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The list of PromQL write permissions.</p>
+     */
     @NameInMap("PromqlInsertPrivileges")
     public String promqlInsertPrivilegesShrink;
 
+    /**
+     * <p>The percentage of PromQL query nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.6</p>
+     */
     @NameInMap("PromqlSelectNodePercentage")
     public Double promqlSelectNodePercentage;
 
+    /**
+     * <p>The list of PromQL query permissions.</p>
+     */
     @NameInMap("PromqlSelectPrivileges")
     public String promqlSelectPrivilegesShrink;
 
     /**
-     * <p>The list of Alibaba Cloud RAM user IDs to bind. Currently, only one RAM user can be bound.</p>
+     * <p>The IDs of the Alibaba Cloud Resource Access Management (RAM) users to bind. Currently, only one RAM user can be bound.</p>
      */
     @NameInMap("RamUserList")
     public String ramUserListShrink;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_group</p>
+     */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 

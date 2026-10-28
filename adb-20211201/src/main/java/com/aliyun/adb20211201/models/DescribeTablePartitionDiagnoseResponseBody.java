@@ -186,7 +186,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
          * <p>The detection result.</p>
          * 
          * <strong>example:</strong>
-         * <p>检测到表存在分区不合理的情况</p>
+         * <p>Multiple oversized non-partitioned tables are detected.</p>
          */
         @NameInMap("Message")
         public String message;
@@ -195,7 +195,7 @@ public class DescribeTablePartitionDiagnoseResponseBody extends TeaModel {
          * <p>The name of the detection item.</p>
          * 
          * <strong>example:</strong>
-         * <p>表分区合理性检测</p>
+         * <p>Improper partition field diagnostics</p>
          */
         @NameInMap("Name")
         public String name;

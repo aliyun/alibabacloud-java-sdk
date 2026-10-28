@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSQLPatternsRequest extends TeaModel {
     /**
-     * <p>The ID of the AnalyticDB for MySQL (Data Lakehouse Edition) cluster.</p>
+     * <p>The ID of the AnalyticDB for MySQL Data Lakehouse Edition cluster.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> API to find the cluster IDs of all AnalyticDB for MySQL (Data Lakehouse Edition) clusters in a specific region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the details of all AnalyticDB for MySQL Data Lakehouse Edition clusters in a specified region, including the cluster IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. The time must be in UTC and formatted as <em>yyyy-MM-ddTHH:mm:ssZ</em>.</p>
+     * <p>The end time of the query. Specify the time in UTC in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format.</p>
      * <blockquote>
      * <p>The end time must be later than the start time.</p>
      * </blockquote>
@@ -30,7 +30,7 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The keyword for filtering the query results.</p>
+     * <p>The search keyword.</p>
      * 
      * <strong>example:</strong>
      * <p>SELECT</p>
@@ -39,16 +39,12 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The response language. Valid values:</p>
+     * <p>The language configuration. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong>: Simplified Chinese (default)</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
-     * <li><p><strong>ja</strong>: Japanese</p>
-     * </li>
-     * <li><p><strong>zh-tw</strong>: Traditional Chinese</p>
-     * </li>
+     * <li><strong>zh</strong>: Simplified Chinese (default language).</li>
+     * <li><strong>en</strong>: English.</li>
+     * <li><strong>ja</strong>: Japanese.</li>
+     * <li><strong>zh-tw</strong>: Traditional Chinese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,40 +54,27 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The sort order for the results. Specify this parameter as a JSON string, for example, <code>[{&quot;Field&quot;:&quot;AverageQueryTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. The string consists of the following fields:</p>
+     * <p>The sorting rule for the query results. The format is a JSON character string. Example: <code>[{&quot;Field&quot;:&quot;AverageQueryTime&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</code>. The JSON character string contains the following parameters:</p>
      * <ul>
-     * <li><p><code>Field</code>: the sort field. Valid values:</p>
+     * <li><p><code>Field</code>: the field by which to sort the results. Valid values:</p>
      * <ul>
-     * <li><p><code>PatternCreationTime</code>: The earliest submission time of the pattern.</p>
-     * </li>
-     * <li><p><code>AverageQueryTime</code>: The average query time of the pattern.</p>
-     * </li>
-     * <li><p><code>MaxQueryTime</code>: The maximum query time of the pattern.</p>
-     * </li>
-     * <li><p><code>AverageExecutionTime</code>: The average execution time of the pattern.</p>
-     * </li>
-     * <li><p><code>MaxExecutionTime</code>: The maximum execution time of the pattern.</p>
-     * </li>
-     * <li><p><code>AveragePeakMemory</code>: The average peak memory of the pattern.</p>
-     * </li>
-     * <li><p><code>MaxPeakMemory</code>: The maximum peak memory of the pattern.</p>
-     * </li>
-     * <li><p><code>AverageScanSize</code>: The average scanned data size of the pattern.</p>
-     * </li>
-     * <li><p><code>MaxScanSize</code>: The maximum scanned data size of the pattern.</p>
-     * </li>
-     * <li><p><code>QueryCount</code>: The query count of the pattern.</p>
-     * </li>
-     * <li><p><code>FailedCount</code>: The failure count of the pattern.</p>
-     * </li>
+     * <li><code>PatternCreationTime</code>: the earliest commit time of the pattern within the query time range.</li>
+     * <li><code>AverageQueryTime</code>: the average total time consumed by the pattern within the query time range.</li>
+     * <li><code>MaxQueryTime</code>: the maximum total time consumed by the pattern within the query time range.</li>
+     * <li><code>AverageExecutionTime</code>: the average execution duration of the pattern within the query time range.</li>
+     * <li><code>MaxExecutionTime</code>: the maximum execution duration of the pattern within the query time range.</li>
+     * <li><code>AveragePeakMemory</code>: the average peak memory usage of the pattern within the query time range.</li>
+     * <li><code>MaxPeakMemory</code>: the maximum peak memory usage of the pattern within the query time range.</li>
+     * <li><code>AverageScanSize</code>: the average amount of data read by the pattern within the query time range.</li>
+     * <li><code>MaxScanSize</code>: the maximum amount of data read by the pattern within the query time range.</li>
+     * <li><code>QueryCount</code>: the number of executions of the pattern within the query time range.</li>
+     * <li><code>FailedCount</code>: the number of failed executions of the pattern within the query time range.</li>
      * </ul>
      * </li>
-     * <li><p><code>Type</code>: the sort order. Valid values (case-insensitive):</p>
+     * <li><p><code>Type</code>: the sort order. The value is not case-sensitive. Valid values:</p>
      * <ul>
-     * <li><p><code>Asc</code>: ascending order.</p>
-     * </li>
-     * <li><p><code>Desc</code>: descending order.</p>
-     * </li>
+     * <li><code>Asc</code>: ascending order.</li>
+     * <li><code>Desc</code>: descending order.</li>
      * </ul>
      * </li>
      * </ul>
@@ -103,7 +86,8 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number. Must be an integer greater than 0. Default: 1.</p>
+     * <p>The page number. Valid values: integers greater than 0 and up to the maximum integer value.
+     * Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -114,14 +98,10 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     /**
      * <p>The number of entries per page. Valid values:</p>
      * <ul>
-     * <li><p><strong>10</strong> (default)</p>
-     * </li>
-     * <li><p><strong>30</strong></p>
-     * </li>
-     * <li><p><strong>50</strong></p>
-     * </li>
-     * <li><p><strong>100</strong></p>
-     * </li>
+     * <li><strong>10</strong> (default value)</li>
+     * <li><strong>30</strong></li>
+     * <li><strong>50</strong></li>
+     * <li><strong>100</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -131,7 +111,7 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -140,18 +120,21 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The hash value of the SQL pattern, which is used to filter a specific SQL pattern.</p>
+     */
     @NameInMap("SqlPatternHash")
     public Long sqlPatternHash;
 
     /**
-     * <p>The start of the time range to query. The time must be in UTC and formatted as <em>yyyy-MM-ddTHH:mm:ssZ</em>.</p>
+     * <p>The start time of the query. Specify the time in UTC in the <i>yyyy-MM-ddTHH:mm:ssZ</i> format.</p>
      * <blockquote>
      * <ul>
-     * <li>Data is available for the last 14 days only.</li>
+     * <li>You can only query data from the last 14 days.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>The time range cannot exceed 24 hours.</li>
+     * <li>The interval between the start time and the end time cannot exceed 24 hours.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -161,7 +144,7 @@ public class DescribeSQLPatternsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The username of the database account used to execute the SQL statements.</p>
+     * <p>The name of the database account that executes the SQL statement.</p>
      * 
      * <strong>example:</strong>
      * <p>test_user</p>

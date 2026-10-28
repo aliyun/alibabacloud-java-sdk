@@ -4,18 +4,36 @@ package com.aliyun.adb20211201.models;
 import com.aliyun.tea.*;
 
 public class AccessTokenModel extends TeaModel {
+    /**
+     * <p>The access token.</p>
+     * 
+     * <strong>example:</strong>
+     * <hr>
+     */
     @NameInMap("AccessToken")
     public String accessToken;
 
+    /**
+     * <p>The comment for the access token.</p>
+     */
     @NameInMap("Comment")
     public String comment;
 
+    /**
+     * <p>The creation time of the access token.</p>
+     */
     @NameInMap("CreatedAt")
     public String createdAt;
 
+    /**
+     * <p>The expiration time of the access token.</p>
+     */
     @NameInMap("ExpiredAt")
     public String expiredAt;
 
+    /**
+     * <p>The status of the access token.</p>
+     */
     @NameInMap("Status")
     public String status;
 

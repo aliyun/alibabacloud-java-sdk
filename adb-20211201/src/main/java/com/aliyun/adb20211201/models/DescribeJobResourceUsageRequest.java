@@ -16,7 +16,7 @@ public class DescribeJobResourceUsageRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC).</p>
+     * <p>The end time of the query. The end time must be later than the start time. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC time).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -49,11 +49,17 @@ public class DescribeJobResourceUsageRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <p>The name of the Spark application, which is used to filter job resource usage.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SparkTest</p>
+     */
     @NameInMap("SparkAppName")
     public String sparkAppName;
 
     /**
-     * <p>The start time of the query. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC).</p>
+     * <p>The start time of the query. Format: <i>yyyy-MM-ddTHH:mm:ssZ</i> (UTC time).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

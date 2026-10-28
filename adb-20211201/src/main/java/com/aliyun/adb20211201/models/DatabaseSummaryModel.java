@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DatabaseSummaryModel extends TeaModel {
     /**
-     * <p>Creation time.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-01-05 13:17:55</p>
@@ -13,17 +13,26 @@ public class DatabaseSummaryModel extends TeaModel {
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The creation source of the database.</p>
+     */
     @NameInMap("CreatedBySource")
     public String createdBySource;
 
+    /**
+     * <p>The user who created the database.</p>
+     */
     @NameInMap("CreatedByUser")
     public String createdByUser;
 
+    /**
+     * <p>The database type.</p>
+     */
     @NameInMap("DbType")
     public String dbType;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>description</p>
@@ -31,11 +40,14 @@ public class DatabaseSummaryModel extends TeaModel {
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The data storage location of the database.</p>
+     */
     @NameInMap("Location")
     public String location;
 
     /**
-     * <p>Owner.</p>
+     * <p>The owner.</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -44,7 +56,7 @@ public class DatabaseSummaryModel extends TeaModel {
     public String owner;
 
     /**
-     * <p>logical database name.</p>
+     * <p>The logical database name.</p>
      * 
      * <strong>example:</strong>
      * <p>testSchema</p>
@@ -53,7 +65,7 @@ public class DatabaseSummaryModel extends TeaModel {
     public String schemaName;
 
     /**
-     * <p>Update time.</p>
+     * <p>The update time.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-01-05 13:17:55</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SearchSemanticViewsResponseBody extends TeaModel {
     /**
-     * <p>A list of semantic view objects.</p>
+     * <p>The response data body.</p>
      */
     @NameInMap("Data")
     public java.util.List<SemanticViewModel> data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>1AD222E9-E606-4A42-BF6D-8A4442913CEF</p>

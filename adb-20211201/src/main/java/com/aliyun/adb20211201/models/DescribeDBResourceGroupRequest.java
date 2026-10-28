@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDBResourceGroupRequest extends TeaModel {
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster is of Enterprise Edition, Basic Edition, or Data Lakehouse Edition.
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
      * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class DescribeDBResourceGroupRequest extends TeaModel {
     /**
      * <p>The name of the resource group.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the information about all resource groups in the specified cluster is returned.</p>
+     * <p>If you do not specify this parameter, information about all resource groups in the specified cluster is returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeDBResourceGroupRequest extends TeaModel {
      * <ul>
      * <li><strong>Interactive</strong></li>
      * <li><strong>Job</strong><blockquote>
-     * <p>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group introduction</a>.</p>
+     * <p>For more information about resource groups in Data Lakehouse Edition, see <a href="https://help.aliyun.com/document_detail/428610.html">Resource group overview</a>.</p>
      * </blockquote>
      * </li>
      * </ul>

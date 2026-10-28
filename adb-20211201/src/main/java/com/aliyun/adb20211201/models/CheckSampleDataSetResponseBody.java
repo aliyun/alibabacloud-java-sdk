@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckSampleDataSetResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0CE655C3-C211-513D-A42F-D4AE2D1A867C</p>
@@ -16,11 +16,11 @@ public class CheckSampleDataSetResponseBody extends TeaModel {
     /**
      * <p>The status of the built-in dataset. Valid values:</p>
      * <ul>
-     * <li><p><strong>SUCCEED</strong>: The dataset loaded successfully.</p>
+     * <li><p><strong>SUCCEED</strong>: Loaded successfully.</p>
      * </li>
-     * <li><p><strong>INIT</strong>: Loading in progress.</p>
+     * <li><p><strong>INIT</strong>: Loading.</p>
      * </li>
-     * <li><p><strong>FAILED</strong>: Failed to load the dataset.</p>
+     * <li><p><strong>FAILED</strong>: Load failed.</p>
      * </li>
      * <li><p><strong>UNINITIALIZED</strong>: Not loaded.</p>
      * </li>

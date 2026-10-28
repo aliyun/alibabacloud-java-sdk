@@ -42,12 +42,7 @@ public class DescribeCompactionServiceSwitchResponseBody extends TeaModel {
 
     public static class DescribeCompactionServiceSwitchResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the remote build feature is enabled.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>true</li>
-         * <li>false</li>
-         * </ul>
+         * <p>Indicates whether the remote build service is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

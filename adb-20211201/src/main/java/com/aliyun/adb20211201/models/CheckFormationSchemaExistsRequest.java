@@ -7,7 +7,7 @@ public class CheckFormationSchemaExistsRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the cluster IDs of all AnalyticDB for MySQL Data Lakehouse Edition (V3.0) clusters in a region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all AnalyticDB for MySQL Data Lakehouse Edition (3.0) clusters in the destination region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +18,10 @@ public class CheckFormationSchemaExistsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to enable prefix mode. Valid values:</p>
+     * <p>Specifies whether to enable the prefix mode. Valid values:</p>
      * <ul>
-     * <li>true: Enable prefix mode.</li>
-     * <li>false: Disable prefix mode.</li>
+     * <li>true: Yes.</li>
+     * <li>false: No.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +42,7 @@ public class CheckFormationSchemaExistsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>schema 。</p>
+     * <p>The schema.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

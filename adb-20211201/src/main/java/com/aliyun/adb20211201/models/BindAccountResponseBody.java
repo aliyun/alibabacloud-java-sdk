@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BindAccountResponseBody extends TeaModel {
     /**
-     * <p>ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DFF27323-3868-5F8A-917D-5D1D06B6BC0D</p>

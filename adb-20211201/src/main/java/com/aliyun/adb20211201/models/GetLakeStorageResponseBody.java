@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLakeStorageResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code or the error code.</p>
+     * <p>The status code or POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The queried lake storage.</p>
+     * <p>The returned data.</p>
      * 
      * <strong>example:</strong>
      * <ul>
@@ -25,7 +25,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
     public GetLakeStorageResponseBodyData data;
 
     /**
-     * <p>The response code. The status code 200 indicates that the request was successful.</p>
+     * <p>The HTTP status code returned for the request. A value of 200 indicates that the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -34,10 +34,10 @@ public class GetLakeStorageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The additional information about the call result. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, a success message is returned.****</li>
-     * <li>If the request failed, an error message is returned.</li>
+     * <li>If the request is normal, <strong>Ok</strong> is returned.                                </li>
+     * <li>If the request is abnormal, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,10 +56,10 @@ public class GetLakeStorageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong></li>
-     * <li><strong>false</strong></li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String account;
 
         /**
-         * <p>The read permissions.</p>
+         * <p>The read permission.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -152,7 +152,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The write permissions.</p>
+         * <p>The write permission.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -201,7 +201,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
 
     public static class GetLakeStorageResponseBodyData extends TeaModel {
         /**
-         * <p>The time when the lake storage was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-05-15T07:24:58Z</p>
@@ -210,7 +210,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The creator UID.</p>
+         * <p>The UID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -219,7 +219,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String creatorUid;
 
         /**
-         * <p>The ID of the AnalyticDB for MySQL cluster.</p>
+         * <p>The ADB instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>amv-*******</p>
@@ -257,7 +257,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String lakeStorageId;
 
         /**
-         * <p>The operator UID.</p>
+         * <p>The UID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -266,7 +266,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String operatorUid;
 
         /**
-         * <p>The owner UID.</p>
+         * <p>The UID of the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -286,7 +286,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String partitionCount;
 
         /**
-         * <p>The permissions on the lake storage.</p>
+         * <p>The permissions of the lake storage.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -306,7 +306,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of data rows.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -317,7 +317,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public Long rowCount;
 
         /**
-         * <p>The number of the tables.</p>
+         * <p>The number of databases and tables.</p>
          * 
          * <strong>example:</strong>
          * <ul>
@@ -328,7 +328,7 @@ public class GetLakeStorageResponseBody extends TeaModel {
         public Integer tableCount;
 
         /**
-         * <p>The time when the lake storage was last updated.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-14T02:28:41Z</p>

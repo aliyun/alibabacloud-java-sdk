@@ -7,7 +7,7 @@ public class GetADBSparkNecessaryRAMPermissionsRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>Call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all clusters in a specific region.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/129857.html">DescribeDBClusters</a> operation to query the IDs of all clusters in the specified region.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

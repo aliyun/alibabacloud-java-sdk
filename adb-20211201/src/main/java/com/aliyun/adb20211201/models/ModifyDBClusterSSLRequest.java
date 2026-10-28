@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBClusterSSLRequest extends TeaModel {
     /**
-     * <p>The private or public endpoint for which the server certificate needs to be created or updated.</p>
+     * <p>The internal or public endpoint for which to create or update a server certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>amv-***********.ads.aliyuncs.com</p>
@@ -24,12 +24,11 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>Specifies whether to enable SSL encryption. Valid values:</p>
+     * <p>Specifies whether to enable SSL connection encryption. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enabled</li>
-     * <li><strong>false</strong>: disabled</li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -45,6 +44,20 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <p>The SSL operation. This parameter and EnableSSL are mutually exclusive. Valid values:</p>
+     * <ul>
+     * <li>Enable: Enables SSL.</li>
+     * <li>Disable: Disables SSL.</li>
+     * <li>Update: Updates the validity period of an enabled SSL certificate and retains the current endpoint bound to the certificate. When you set this parameter to Update, do not specify ConnectionString, or specify an endpoint that is the same as the current endpoint bound to the certificate.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Update</p>
+     */
+    @NameInMap("SSLEnabled")
+    public String SSLEnabled;
 
     public static ModifyDBClusterSSLRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyDBClusterSSLRequest self = new ModifyDBClusterSSLRequest();
@@ -81,6 +94,14 @@ public class ModifyDBClusterSSLRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public ModifyDBClusterSSLRequest setSSLEnabled(String SSLEnabled) {
+        this.SSLEnabled = SSLEnabled;
+        return this;
+    }
+    public String getSSLEnabled() {
+        return this.SSLEnabled;
     }
 
 }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyApsJobRequest extends TeaModel {
     /**
-     * <p>The job ID.</p>
+     * <p>The task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyApsJobRequest extends TeaModel {
     public String apsJobId;
 
     /**
-     * <p>The objects to be synchronized.</p>
+     * <p>The list of synchronization objects.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ModifyApsJobRequest extends TeaModel {
     public String dbList;
 
     /**
-     * <p>The partitions.</p>
+     * <p>The list of partitions.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>

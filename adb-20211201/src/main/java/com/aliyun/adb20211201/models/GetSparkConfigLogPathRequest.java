@@ -9,7 +9,7 @@ public class GetSparkConfigLogPathRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>amv-bp19lm077co*****</p>
+     * <p>am-adsdxxxx</p>
      */
     @NameInMap("DBClusterId")
     public String DBClusterId;

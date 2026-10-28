@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKnowledgeUploadUserResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public ListKnowledgeUploadUserResponseBodyData data;
@@ -42,7 +42,7 @@ public class ListKnowledgeUploadUserResponseBody extends TeaModel {
 
     public static class ListKnowledgeUploadUserResponseBodyData extends TeaModel {
         /**
-         * <p>The location of the knowledge base file.</p>
+         * <p>The address of the knowledge base file.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket/doc.pdf</p>
@@ -51,7 +51,7 @@ public class ListKnowledgeUploadUserResponseBody extends TeaModel {
         public String fileLocation;
 
         /**
-         * <p>The prompt message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -60,10 +60,10 @@ public class ListKnowledgeUploadUserResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

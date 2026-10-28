@@ -21,8 +21,8 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
     public java.util.List<ModifyAccountPrivilegesRequestAccountPrivileges> accountPrivileges;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-     * &lt;props=&quot;intl&quot;&gt;The cluster ID of the Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,12 +31,24 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
     @NameInMap("DBClusterId")
     public String DBClusterId;
 
+    /**
+     * <p>The list of PromQL write permissions.</p>
+     */
     @NameInMap("PromqlInsertPrivileges")
     public java.util.List<String> promqlInsertPrivileges;
 
+    /**
+     * <p>The percentage of PromQL query nodes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.6</p>
+     */
     @NameInMap("PromqlSelectNodePercentage")
     public Double promqlSelectNodePercentage;
 
+    /**
+     * <p>The list of PromQL query permissions.</p>
+     */
     @NameInMap("PromqlSelectPrivileges")
     public java.util.List<String> promqlSelectPrivileges;
 
@@ -50,6 +62,12 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_group</p>
+     */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 
@@ -124,7 +142,7 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
 
     public static class ModifyAccountPrivilegesRequestAccountPrivilegesPrivilegeObject extends TeaModel {
         /**
-         * <p>The column to which permissions are granted. This parameter is required when the privilege level is column.</p>
+         * <p>The authorized column. This parameter is required when the permission level is column.</p>
          * 
          * <strong>example:</strong>
          * <p>column1</p>
@@ -133,7 +151,7 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
         public String column;
 
         /**
-         * <p>The database to which permissions are granted. This parameter is required when the privilege level is database, table, or column.</p>
+         * <p>The authorized database. This parameter is required when the permission level is database, table, or column.</p>
          * 
          * <strong>example:</strong>
          * <p>tsdb1</p>
@@ -142,7 +160,7 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
         public String database;
 
         /**
-         * <p>The table to which permissions are granted. This parameter is required when the privilege level is table or column.</p>
+         * <p>The authorized table. This parameter is required when the permission level is table or column.</p>
          * 
          * <strong>example:</strong>
          * <p>table1</p>
@@ -183,13 +201,13 @@ public class ModifyAccountPrivilegesRequest extends TeaModel {
 
     public static class ModifyAccountPrivilegesRequestAccountPrivileges extends TeaModel {
         /**
-         * <p>The privilege object, which is a tuple of database, table, and column.</p>
+         * <p>The permission object, which is a triplet of database, table, and column.</p>
          */
         @NameInMap("PrivilegeObject")
         public ModifyAccountPrivilegesRequestAccountPrivilegesPrivilegeObject privilegeObject;
 
         /**
-         * <p>The privilege level, obtained from the <code>DescribeEnabledPrivileges</code> operation.</p>
+         * <p>The permission level obtained from the <code>DescribeEnabledPrivileges</code> operation.</p>
          * 
          * <strong>example:</strong>
          * <p>Global</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApsCopyWorkloadResponseBody extends TeaModel {
     /**
-     * <p>The API status or POP error code.</p>
+     * <p>The API status code or POP error code.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidInput</p>
@@ -34,10 +34,10 @@ public class CreateApsCopyWorkloadResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The additional information about the result. Valid values:</p>
+     * <p>The additional information about the call result. Valid values:</p>
      * <ul>
-     * <li>If the request was successful, Success is returned.</li>
-     * <li>If the request failed, a specific error code is returned.</li>
+     * <li>If the request is normal, Success is returned.</li>
+     * <li>If the request is abnormal, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>

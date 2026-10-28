@@ -25,7 +25,7 @@ public class BindDBResourceGroupWithUserRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The name of the database account. It can be a standard account or a privileged account.</p>
+     * <p>The database account to be associated. You can associate a standard database account or a privileged database account.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

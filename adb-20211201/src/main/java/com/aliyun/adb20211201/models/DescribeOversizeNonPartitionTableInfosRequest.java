@@ -15,9 +15,9 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the <em>yyyy-MM-ddTHH:mmZ</em> format. The time must be in UTC.</p>
+     * <p>The end time of the query. The time is in UTC and follows the <i>yyyy-MM-ddTHH:mm:ssZ</i> format.</p>
      * <blockquote>
-     * <p> The end time must be later than the start time. The specified time range must be less than seven days.</p>
+     * <p>The end time must be later than the start time. The interval between the start time and the end time must be less than 7 days.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,12 +27,12 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language of file titles and error messages. Valid values:</p>
+     * <p>The language of the title for the downloaded file and specific error messages. Valid values:</p>
      * <ul>
-     * <li><strong>zh (default)</strong>: simplified Chinese.</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong>: Simplified Chinese. This is the default value.</li>
+     * <li><strong>en</strong>: English.</li>
      * <li><strong>ja</strong>: Japanese.</li>
-     * <li><strong>zh-tw</strong>: traditional Chinese.</li>
+     * <li><strong>zh-tw</strong>: Traditional Chinese.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,8 +42,7 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The order by which to sort query results. Specify the parameter value in the JSON format.</p>
-     * <p>Example:</p>
+     * <p>The sorting rule for a specified field. The value is a JSON array. You must specify the fields to be sorted and the sorting order in sequence. Example:</p>
      * <pre><code>[
      * 
      *     {
@@ -56,8 +55,9 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends TeaModel {
      * 
      * ]
      * </code></pre>
-     * <p>Field specifies the field by which to sort the query results. Set the value to Name. Type specifies the sorting order. Valid values: Desc and Asc.</p>
-     * <p>Field and Type are case-insensitive.</p>
+     * <p>Field: the name of the field to be sorted. Only the Name field is supported.
+     * Type: the sorting order. Valid values: Desc for descending order, and Asc for ascending order.</p>
+     * <p>The values are not case-sensitive.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Field&quot;:&quot;SchemaName&quot;,&quot;Type&quot;:&quot;Asc&quot;}]</p>
@@ -72,7 +72,7 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Pages start from page 1. Default value: <strong>1</strong>.</p>
+     * <p>The page number. The value must be a positive integer. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -98,7 +98,7 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/143074.html">DescribeRegions</a> operation to query the region ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -115,8 +115,9 @@ public class DescribeOversizeNonPartitionTableInfosRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the yyyy-MM-ddTHH:mmZ format. The time must be in UTC.</p>
+     * <p>The start time of the query. The time is in UTC and follows the yyyy-MM-ddTHH:mmZ format.</p>
      * <blockquote>
+     * <p>SQL audit logs can be queried only when SQL audit is enabled. You can query SQL audit logs generated within the last 30 days. If SQL audit is disabled and then re-enabled, you can query only the SQL audit logs generated after it is re-enabled.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

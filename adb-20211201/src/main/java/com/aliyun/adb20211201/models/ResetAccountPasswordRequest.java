@@ -20,7 +20,7 @@ public class ResetAccountPasswordRequest extends TeaModel {
     /**
      * <p>The database account.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612430.html">DescribeAccounts</a> operation to query the database account information of a specified cluster, including the database account.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/612430.html">DescribeAccounts</a> operation to query the database account information of a specified cluster, including the database accounts.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -34,7 +34,7 @@ public class ResetAccountPasswordRequest extends TeaModel {
      * <p>The password of the database account.</p>
      * <ul>
      * <li>The password must contain at least three of the following character types: uppercase letters, lowercase letters, digits, and special characters.</li>
-     * <li>The following special characters are supported: <code>!@#$%^&amp;*()_+-=</code></li>
+     * <li>Special characters include: <code>!@#$%^&amp;*()_+-=</code></li>
      * <li>The password must be 8 to 32 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -46,7 +46,7 @@ public class ResetAccountPasswordRequest extends TeaModel {
     public String accountPassword;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The ID of the cluster. The cluster can be an Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
      * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
@@ -59,8 +59,8 @@ public class ResetAccountPasswordRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</li>
-     * <li><strong>Clickhouse</strong>: the wide table engine.</li>
+     * <li><strong>AnalyticDB</strong> (default): AnalyticDB for MySQL engine.</li>
+     * <li><strong>Clickhouse</strong>: wide table engine.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,6 +69,12 @@ public class ResetAccountPasswordRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_group</p>
+     */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 

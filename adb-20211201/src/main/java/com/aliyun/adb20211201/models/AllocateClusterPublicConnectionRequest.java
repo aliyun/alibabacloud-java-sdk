@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class AllocateClusterPublicConnectionRequest extends TeaModel {
     /**
-     * <p>The prefix of the public connection address.</p>
+     * <p>Specifies the prefix of the public endpoint. The prefix must meet the following requirements:</p>
      * <ul>
-     * <li><p>It must begin with a lowercase letter and can contain only lowercase letters, digits, and hyphens (-).</p>
-     * </li>
-     * <li><p>It must be no more than 30 characters long.</p>
-     * </li>
+     * <li>It must start with a lowercase letter and can contain lowercase letters, digits, and hyphens (-).</li>
+     * <li>It can be up to 30 characters in length.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +18,8 @@ public class AllocateClusterPublicConnectionRequest extends TeaModel {
     public String connectionStringPrefix;
 
     /**
-     * <p>&lt;props=&quot;china&quot;&gt;The cluster ID of an Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
-     * &lt;props=&quot;intl&quot;&gt;The cluster ID of a Data Lakehouse Edition cluster.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The ID of the Enterprise Edition, Basic Edition, or Data Lakehouse Edition cluster.
+     * &lt;props=&quot;intl&quot;&gt;The ID of the Data Lakehouse Edition cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,10 +31,8 @@ public class AllocateClusterPublicConnectionRequest extends TeaModel {
     /**
      * <p>The database engine. Valid values:</p>
      * <ul>
-     * <li><p><strong>AnalyticDB</strong> (default): the AnalyticDB for MySQL engine.</p>
-     * </li>
-     * <li><p><strong>Clickhouse</strong>: the wide table engine.</p>
-     * </li>
+     * <li><strong>AnalyticDB</strong> (default): AnalyticDB for MySQL engine.</li>
+     * <li><strong>Clickhouse</strong>: wide table engine.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,6 +41,12 @@ public class AllocateClusterPublicConnectionRequest extends TeaModel {
     @NameInMap("Engine")
     public String engine;
 
+    /**
+     * <p>The name of the resource group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_group</p>
+     */
     @NameInMap("ResourceGroupName")
     public String resourceGroupName;
 

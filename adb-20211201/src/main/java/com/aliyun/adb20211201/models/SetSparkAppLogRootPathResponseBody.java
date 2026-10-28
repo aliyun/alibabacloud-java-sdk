@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetSparkAppLogRootPathResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public SetSparkAppLogRootPathResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>D65A809F-34CE-4550-9BC1-0ED21ETG380</p>
@@ -42,7 +42,7 @@ public class SetSparkAppLogRootPathResponseBody extends TeaModel {
 
     public static class SetSparkAppLogRootPathResponseBodyData extends TeaModel {
         /**
-         * <p>The default log path.</p>
+         * <p>The recommended default path.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://testBucketname/to/log</p>
@@ -51,7 +51,7 @@ public class SetSparkAppLogRootPathResponseBody extends TeaModel {
         public String defaultLogPath;
 
         /**
-         * <p>Indicates whether a log path exists.</p>
+         * <p>Indicates whether the log path exists.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -69,7 +69,7 @@ public class SetSparkAppLogRootPathResponseBody extends TeaModel {
         public String modifiedTimestamp;
 
         /**
-         * <p>The modifier ID.</p>
+         * <p>The ID of the modifier.</p>
          * 
          * <strong>example:</strong>
          * <p>11111111</p>

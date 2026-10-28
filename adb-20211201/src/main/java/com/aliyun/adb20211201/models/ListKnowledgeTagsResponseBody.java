@@ -93,7 +93,7 @@ public class ListKnowledgeTagsResponseBody extends TeaModel {
         public String fileLocation;
 
         /**
-         * <p>The prompt message.</p>
+         * <p>The message.</p>
          * 
          * <strong>example:</strong>
          * <p>Successful</p>
@@ -102,10 +102,10 @@ public class ListKnowledgeTagsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Indicates whether the request is successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: The request was successful.</li>
-         * <li><strong>false</strong>: The request failed.</li>
+         * <li><strong>true</strong>: Successful.</li>
+         * <li><strong>false</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +115,7 @@ public class ListKnowledgeTagsResponseBody extends TeaModel {
         public Boolean success;
 
         /**
-         * <p>The list details.</p>
+         * <p>The details of the list.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListKnowledgeTagsResponseBodyDataTags> tags;
