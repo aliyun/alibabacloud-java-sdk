@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
     /**
-     * <p>The list of authorized delivery groups on the current page. This is an empty list if the user has no authorized delivery groups that match the conditions.</p>
+     * <p>The list of authorized delivery groups on the current page. If the user does not have any authorized delivery groups that meet the conditions, an empty list is returned.</p>
      */
     @NameInMap("AppInstanceGroupModels")
     public java.util.List<ListAuthorizedAppInstanceGroupByUserResponseBodyAppInstanceGroupModels> appInstanceGroupModels;
 
     /**
-     * <p>The current page number. This value is the same as the PageNumber request parameter.</p>
+     * <p>The current page number. The value is the same as the PageNumber request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of delivery groups returned per page. This value is the same as the PageSize request parameter.</p>
+     * <p>The number of delivery groups returned per page. The value is the same as the PageSize request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of authorized delivery groups that match the filter conditions.</p>
+     * <p>The total number of authorized delivery groups that meet the filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -102,7 +102,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
         public String appIcon;
 
         /**
-         * <p>The application ID. Pass this value to the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation to obtain a connection ticket for the application.</p>
+         * <p>The application ID. When you call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation to obtain the connection ticket for the application, specify this value.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-i87mycyn419nu****</p>
@@ -114,7 +114,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
          * <p>The application name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Office App</p>
+         * <p>Office applications</p>
          */
         @NameInMap("AppName")
         public String appName;
@@ -195,7 +195,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
         public String appCenterImageId;
 
         /**
-         * <p>The delivery group ID. You can pass this value to the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation to specify the delivery group to connect to.</p>
+         * <p>The delivery group ID. When you call the <a href="~~GetConnectionTicket~~">GetConnectionTicket</a> operation, you can specify this value to indicate the delivery group to connect to.</p>
          * 
          * <strong>example:</strong>
          * <p>aig-9ciijz60n4xsv****</p>
@@ -207,7 +207,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
          * <p>The delivery group name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Office App</p>
+         * <p>Office applications</p>
          */
         @NameInMap("AppInstanceGroupName")
         public String appInstanceGroupName;
@@ -222,13 +222,13 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
         public String appInstanceType;
 
         /**
-         * <p>The list of applications deployed in the delivery group. This list includes all deployed applications in the delivery group image and is not affected by the AppId or AppName request parameters.</p>
+         * <p>The list of applications deployed in the delivery group. This list includes all applications deployed in the delivery group image and is not affected by the AppId and AppName request parameters.</p>
          */
         @NameInMap("Apps")
         public java.util.List<ListAuthorizedAppInstanceGroupByUserResponseBodyAppInstanceGroupModelsApps> apps;
 
         /**
-         * <p>The expiration time of the delivery group. The value is in the ISO 8601 datetime format with milliseconds and a time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
+         * <p>The expiration time of the delivery group. The time is in ISO 8601 format with milliseconds and a time zone offset of +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-27T16:00:00.000+00:00</p>
@@ -237,7 +237,7 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
         public String expiredTime;
 
         /**
-         * <p>The creation time of the delivery group. The value is in the ISO 8601 datetime format with milliseconds and a time zone offset. The returned time zone offset is +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
+         * <p>The creation time of the delivery group. The time is in ISO 8601 format with milliseconds and a time zone offset of +00:00. Format: yyyy-MM-ddTHH:mm:ss.SSS+HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-26T15:06:16.000+00:00</p>
@@ -255,17 +255,17 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The delivery group status. Valid values:</p>
+         * <p>The status of the delivery group. Valid values:</p>
          * <ul>
-         * <li>DEPLOYING: The delivery group is being created or starting resources and is not yet connectable.</li>
-         * <li>DEPLOYED: The delivery group is deployed. Resources are ready but the delivery group has not been listed for service.</li>
-         * <li>PUBLISHED: The delivery group is published and listed. Users can connect to and use the delivery group.</li>
-         * <li>STOPPING: The delivery group is being delisted and is stopping service.</li>
-         * <li>STOPPED: The delivery group is delisted and has stopped service. Users cannot connect.</li>
-         * <li>MAINTAINING: The delivery group is being maintained or updated.</li>
-         * <li>FAILED: The delivery group failed to publish. Resource initialization failed.</li>
-         * <li>MAINTAIN_FAILED: The update failed. Maintenance or changes were not successful.</li>
-         * <li>DELETING: The delivery group is being deleted.</li>
+         * <li>DEPLOYING: Deploying. The delivery group is creating or starting resources and cannot be connected to.</li>
+         * <li>DEPLOYED: Deployed. Resources are ready but the delivery group is not published for external services.</li>
+         * <li>PUBLISHED: Published. The delivery group is published and users can connect to it.</li>
+         * <li>STOPPING: Unpublishing. The delivery group is stopping services.</li>
+         * <li>STOPPED: Unpublished. The delivery group has stopped services and users cannot connect to it.</li>
+         * <li>MAINTAINING: Updating. The delivery group is undergoing maintenance or changes.</li>
+         * <li>FAILED: Publishing failed. Resource initialization failed.</li>
+         * <li>MAINTAIN_FAILED: Update failed. Maintenance or changes were not successful.</li>
+         * <li>DELETING: Deleting. The delivery group is being deleted.</li>
          * </ul>
          * <blockquote>
          * <p>Deleted delivery groups are not returned.</p>
@@ -276,6 +276,21 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <p>Specifies whether mixed authorization of users and user groups is supported.</p>
+         */
+        @NameInMap("SupportUserGroupMixedAuth")
+        public Boolean supportUserGroupMixedAuth;
+
+        /**
+         * <p>The authorization mode for users and user groups.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Mixed</p>
+         */
+        @NameInMap("UserGroupAuthMode")
+        public String userGroupAuthMode;
 
         public static ListAuthorizedAppInstanceGroupByUserResponseBodyAppInstanceGroupModels build(java.util.Map<String, ?> map) throws Exception {
             ListAuthorizedAppInstanceGroupByUserResponseBodyAppInstanceGroupModels self = new ListAuthorizedAppInstanceGroupByUserResponseBodyAppInstanceGroupModels();
@@ -352,6 +367,22 @@ public class ListAuthorizedAppInstanceGroupByUserResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public ListAuthorizedAppInstanceGroupByUserResponseBodyAppInstanceGroupModels setSupportUserGroupMixedAuth(Boolean supportUserGroupMixedAuth) {
+            this.supportUserGroupMixedAuth = supportUserGroupMixedAuth;
+            return this;
+        }
+        public Boolean getSupportUserGroupMixedAuth() {
+            return this.supportUserGroupMixedAuth;
+        }
+
+        public ListAuthorizedAppInstanceGroupByUserResponseBodyAppInstanceGroupModels setUserGroupAuthMode(String userGroupAuthMode) {
+            this.userGroupAuthMode = userGroupAuthMode;
+            return this;
+        }
+        public String getUserGroupAuthMode() {
+            return this.userGroupAuthMode;
         }
 
     }

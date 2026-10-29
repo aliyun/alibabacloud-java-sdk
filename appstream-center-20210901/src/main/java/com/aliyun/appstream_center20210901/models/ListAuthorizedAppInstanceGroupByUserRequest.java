@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     /**
-     * <p>The application ID. Fuzzy matching is supported: delivery groups that contain a deployed application whose ID includes the specified string are returned. You can obtain the application ID from the Apps list returned by this operation.</p>
-     * <p>If this parameter is not specified, no filtering by application ID is applied.</p>
+     * <p>The application ID. Fuzzy match is supported. Delivery groups in which the IDs of deployed applications contain this string are returned. You can obtain the application ID from the Apps list returned by this operation.</p>
+     * <p>If this parameter is not specified, delivery groups are not filtered by application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ca-i87mycyn419nu****</p>
@@ -15,8 +15,8 @@ public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The delivery group ID. Fuzzy matching is supported: delivery groups whose IDs contain the specified string are returned. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the delivery group ID.</p>
-     * <p>If this parameter is not specified, no filtering by delivery group ID is applied.</p>
+     * <p>The delivery group ID. Fuzzy match is supported. Delivery groups whose IDs contain this string are returned. You can call the <a href="~~ListAppInstanceGroup~~">ListAppInstanceGroup</a> operation to obtain the ID.</p>
+     * <p>If this parameter is not specified, delivery groups are not filtered by delivery group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>aig-9ciijz60n4xsv****</p>
@@ -25,29 +25,29 @@ public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     public String appInstanceGroupId;
 
     /**
-     * <p>The delivery group name. Fuzzy matching is supported. For example, if you set this parameter to <code>Office App</code>, delivery groups whose names contain <code>Office App</code> (such as <code>My Office App</code> or <code>Office App A</code>) are returned.</p>
-     * <p>If this parameter is not specified, no filtering by delivery group name is applied.</p>
+     * <p>The delivery group name. Fuzzy match is supported. For example, if you specify Office applications, delivery groups whose names contain Office applications (such as My office applications and Office applications A) are returned.</p>
+     * <p>If this parameter is not specified, delivery groups are not filtered by delivery group name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Office App</p>
+     * <p>Office applications</p>
      */
     @NameInMap("AppInstanceGroupName")
     public String appInstanceGroupName;
 
     /**
-     * <p>The application name. Fuzzy matching is supported: delivery groups that contain a deployed application whose name includes the specified string are returned.</p>
-     * <p>If this parameter is not specified, no filtering by application name is applied.</p>
+     * <p>The application name. Fuzzy match is supported. Delivery groups in which the names of deployed applications contain this string are returned.</p>
+     * <p>If this parameter is not specified, delivery groups are not filtered by application name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Office App</p>
+     * <p>Office applications</p>
      */
     @NameInMap("AppName")
     public String appName;
 
     /**
-     * <p>The username. An <strong>exact match</strong> is performed on the username to query the delivery groups for which the user has been granted delivery group-level authorization.</p>
+     * <p>The username. Exact match is used to query the delivery groups for which the user has been granted delivery group-level authorization.</p>
      * <blockquote>
-     * <p>This parameter is required. If this parameter is not specified, the error code <code>InvalidParameter.UserId</code> is returned.</p>
+     * <p>This parameter is required. If this parameter is not specified, the InvalidParameter.UserId error code is returned.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -58,7 +58,16 @@ public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The page number. Pages start from page 1.</p>
+     * <p>The office network ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shenzhen+dir-436909****</p>
+     */
+    @NameInMap("OfficeSiteId")
+    public String officeSiteId;
+
+    /**
+     * <p>The page number. Pages start from 1.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -78,16 +87,16 @@ public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The product type. The value must match the product type of the delivery groups to query. Only delivery groups of the specified product type are returned.</p>
+     * <p>The product type. The value must be the same as the product type of the delivery groups to be queried. Only delivery groups of this product type are returned.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li>CloudApp: WUYING Cloud Application.</li>
-     * <li>CloudBrowser: cloud browser.</li>
+     * <li>CloudApp: Wuying Cloud App.</li>
+     * <li>CloudBrowser: Cloud Browser.</li>
      * <li>WuyingServer: Enterprise Edition workstation.</li>
-     * <li>WuyingWorkstation: Personal Edition Lingjun container workstation.</li>
-     * <li>WuyingWorkstationTeam: Team Edition Lingjun container workstation.</li>
-     * <li>WuyingWorkstationBusiness: Dedicated Edition Lingjun container workstation.</li>
-     * <li>AndroidCloud: cloud phone.</li>
+     * <li>WuyingWorkstation: Personal Edition Linggou container workstation.</li>
+     * <li>WuyingWorkstationTeam: Team Edition Linggou container workstation.</li>
+     * <li>WuyingWorkstationBusiness: Exclusive Edition Linggou container workstation.</li>
+     * <li>AndroidCloud: Cloud Phone.</li>
      * <li>AIAgent: AgentBay (AI agent).</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -141,6 +150,14 @@ public class ListAuthorizedAppInstanceGroupByUserRequest extends TeaModel {
     }
     public String getEndUserId() {
         return this.endUserId;
+    }
+
+    public ListAuthorizedAppInstanceGroupByUserRequest setOfficeSiteId(String officeSiteId) {
+        this.officeSiteId = officeSiteId;
+        return this;
+    }
+    public String getOfficeSiteId() {
+        return this.officeSiteId;
     }
 
     public ListAuthorizedAppInstanceGroupByUserRequest setPageNumber(Integer pageNumber) {
