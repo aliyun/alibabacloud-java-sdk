@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChatRequest extends TeaModel {
     /**
-     * <p>Optional. The agent ID used for the service. You can specify the agent generated after enabling the DAS Agent or a manually created agent. If not specified, the default agent is used.</p>
+     * <p>Optional. The agent ID used for the service. You can specify the agent generated after enabling the DAS agent or a manually created agent. If not specified, the default agent is used.</p>
      * 
      * <strong>example:</strong>
      * <p>ag-472T0DxtmjIxxxxx</p>
@@ -35,13 +35,13 @@ public class ChatRequest extends TeaModel {
      * <p>The user interaction feedback.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;metadata&quot;:{&quot;a2uiClientDataModel&quot;:{&quot;decided&quot;:true,&quot;interaction&quot;:{&quot;request&quot;:{&quot;allowFreeText&quot;:true,&quot;question&quot;:&quot;question?&quot;,&quot;options&quot;:[{&quot;label&quot;:&quot;162&quot;,&quot;value&quot;:&quot;162&quot;},{&quot;label&quot;:&quot;242&quot;,&quot;value&quot;:&quot;242&quot;},{&quot;label&quot;:&quot;243&quot;,&quot;value&quot;:&quot;243&quot;},{&quot;label&quot;:&quot;486&quot;,&quot;value&quot;:&quot;486&quot;}]},&quot;kind&quot;:&quot;choice&quot;,&quot;interruptId&quot;:&quot;5857955e-4856-4ab3-969e-f8b4c484bda4&quot;,&quot;status&quot;:&quot;pending&quot;},&quot;free_text&quot;:&quot;&quot;},&quot;a2uiAction&quot;:{&quot;name&quot;:&quot;das_interaction_response&quot;,&quot;context&quot;:{&quot;value&quot;:&quot;162&quot;},&quot;surfaceId&quot;:&quot;render-choice-7c03eb4f927f42ff8c30b30a2cc0797d&quot;,&quot;sourceComponentId&quot;:&quot;opts-0&quot;,&quot;timestamp&quot;:&quot;2026-09-15T06:54:15.556Z&quot;}},&quot;payload&quot;:{&quot;value&quot;:&quot;162&quot;},&quot;interruptId&quot;:&quot;5857955e-4856-4ab3-969e-f8b4c484bda4&quot;,&quot;status&quot;:&quot;resolved&quot;}]</p>
+     * <p>[{&quot;metadata&quot;:{&quot;a2uiClientDataModel&quot;:{&quot;decided&quot;:true,&quot;interaction&quot;:{&quot;request&quot;:{&quot;allowFreeText&quot;:true,&quot;question&quot;:&quot;question?&quot;,&quot;options&quot;:[{&quot;label&quot;:&quot;162 items&quot;,&quot;value&quot;:&quot;162&quot;},{&quot;label&quot;:&quot;242 items&quot;,&quot;value&quot;:&quot;242&quot;},{&quot;label&quot;:&quot;243 items&quot;,&quot;value&quot;:&quot;243&quot;},{&quot;label&quot;:&quot;486 items&quot;,&quot;value&quot;:&quot;486&quot;}]},&quot;kind&quot;:&quot;choice&quot;,&quot;interruptId&quot;:&quot;5857955e-4856-4ab3-969e-f8b4c484bda4&quot;,&quot;status&quot;:&quot;pending&quot;},&quot;free_text&quot;:&quot;&quot;},&quot;a2uiAction&quot;:{&quot;name&quot;:&quot;das_interaction_response&quot;,&quot;context&quot;:{&quot;value&quot;:&quot;162&quot;},&quot;surfaceId&quot;:&quot;render-choice-7c03eb4f927f42ff8c30b30a2cc0797d&quot;,&quot;sourceComponentId&quot;:&quot;opts-0&quot;,&quot;timestamp&quot;:&quot;2026-09-15T06:54:15.556Z&quot;}},&quot;payload&quot;:{&quot;value&quot;:&quot;162&quot;},&quot;interruptId&quot;:&quot;5857955e-4856-4ab3-969e-f8b4c484bda4&quot;,&quot;status&quot;:&quot;resolved&quot;}]</p>
      */
     @NameInMap("Resume")
     public String resume;
 
     /**
-     * <p>Optional. The session ID, which is a UUID string. If not specified, a new session is created by default. The same session ID must be maintained for contextual conversations.</p>
+     * <p>Optional. The session ID, which is a UUID string. If not specified, a new session is created by default. Keep the same session ID for contextual conversations.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-xxxxxxxxxxxx</p>

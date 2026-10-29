@@ -1,3 +1,7 @@
+2026-10-29 Version: 4.1.0
+- Support API CreateYaoChiAgentConfirm.
+
+
 2026-10-27 Version: 4.0.2
 - Update API Chat: add response parameters Body.Code.
 - Update API Chat: add response parameters Body.Message.
