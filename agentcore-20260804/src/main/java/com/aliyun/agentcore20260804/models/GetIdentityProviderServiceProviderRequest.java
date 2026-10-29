@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIdentityProviderServiceProviderRequest extends TeaModel {
     /**
-     * <p>查询参数必填，仅支持精确值 SAML；响应返回 SAML。</p>
+     * <p>The query parameter is required and only supports the exact value SAML. The response returns SAML.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

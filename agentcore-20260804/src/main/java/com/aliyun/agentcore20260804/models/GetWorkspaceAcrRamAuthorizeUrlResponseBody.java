@@ -126,7 +126,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlResponseBody extends TeaModel {
         public String acrInstanceId;
 
         /**
-         * <p>The RAM authorization URL used to create or append target ACR permissions for the shared role.</p>
+         * <p>The RAM authorization URL for creating or appending target ACR permissions for the shared role.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

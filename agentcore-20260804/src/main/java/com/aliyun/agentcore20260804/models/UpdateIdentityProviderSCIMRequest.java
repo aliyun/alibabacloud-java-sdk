@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateIdentityProviderSCIMRequest extends TeaModel {
     /**
-     * <p>Submits business parameters as described in this API. The body parameters of the public API are mapped to the backend wrapper by the gateway. Do not mix them with the backend direct connection body wrapper.</p>
+     * <p>Submits the business parameters as described in this API. The body parameters of the public API are mapped to the backend wrapper by the gateway. Do not mix them with the backend direct connection body wrapper.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("body")
@@ -26,7 +26,7 @@ public class UpdateIdentityProviderSCIMRequest extends TeaModel {
 
     public static class UpdateIdentityProviderSCIMRequestBody extends TeaModel {
         /**
-         * <p>Do not set this parameter to true during CustomSSO initialization. You can only update it later by calling UpdateIdentityProviderSCIM. Determine the result based on operationStatus.</p>
+         * <p>Specifies whether to enable synchronization. Do not set this parameter to true during CustomSSO initialization. You can only update this parameter by calling UpdateIdentityProviderSCIM later. Determine the result based on the operationStatus field.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("syncEnabled")

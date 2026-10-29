@@ -1,3 +1,24 @@
+2026-10-29 Version: 3.1.0
+- Support API FindCustomAgentImagePreparation.
+- Support API GetCustomAgentImagePreparation.
+- Update API CreateCustomAgent: add request parameters body.customImage.
+- Update API CreateCustomAgent: add response parameters Body.data.currentImage.
+- Update API CreateCustomAgent: add response parameters Body.data.customImage.
+- Update API CreateCustomAgent: add response parameters Body.data.imagePreparation.
+- Update API CreateManagedAgent: add request parameters body.promptVariables.
+- Update API CreateManagedAgent: add response parameters Body.data.promptVariables.
+- Update API GetCustomAgent: add response parameters Body.data.currentImage.
+- Update API GetCustomAgent: add response parameters Body.data.customImage.
+- Update API GetCustomAgent: add response parameters Body.data.imagePreparation.
+- Update API GetManagedAgent: add response parameters Body.data.promptVariables.
+- Update API UpdateCustomAgent: add request parameters body.customImage.
+- Update API UpdateCustomAgent: add response parameters Body.data.currentImage.
+- Update API UpdateCustomAgent: add response parameters Body.data.customImage.
+- Update API UpdateCustomAgent: add response parameters Body.data.imagePreparation.
+- Update API UpdateManagedAgent: add request parameters body.promptVariables.
+- Update API UpdateManagedAgent: add response parameters Body.data.promptVariables.
+
+
 2026-10-27 Version: 3.0.1
 - Update API GetIdentityProviderSCIM: add response parameters Body.data.status.
 - Update API UpdateIdentityProviderSCIM: add response parameters Body.data.operationStatus.

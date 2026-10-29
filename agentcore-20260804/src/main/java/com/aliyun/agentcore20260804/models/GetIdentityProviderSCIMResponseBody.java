@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIdentityProviderSCIMResponseBody extends TeaModel {
     /**
-     * <p>If the request fails, handle the error based on the HTTP status code and the message.</p>
+     * <p>The business result code. Use this code along with the HTTP status code and message for error handling.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result structure. For details, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not guarantee that the background task is completed.</p>
+     * <p>The SCIM actual configuration, expected synchronization switch, and independent operation status. For the result structure, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not guarantee that the background task is complete.</p>
      */
     @NameInMap("data")
     public GetIdentityProviderSCIMResponseBodyData data;
 
     /**
-     * <p>The processing status of the current request. This is not equivalent to the final result of the background task.</p>
+     * <p>The HTTP status code of the current request. This code indicates the processing status of the request and is not equivalent to the final result of the background task.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request acceptance or error message. For the results of an asynchronous task, check the corresponding query operation.</p>
+     * <p>Task result message. It indicates that the request is accepted or provides an error message. For asynchronous tasks, you must check task results by calling the corresponding query operation.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Used to associate the current call with troubleshooting. Retain this parameter when a failure occurs.</p>
+     * <p>The request ID. It is used to associate the current call with troubleshooting. Retain this ID when a failure occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>request-example</p>
@@ -47,7 +47,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the current request is successful. A value of true indicates that the current request is processed successfully. For asynchronous writes, you still need to continue querying the task results.</p>
+     * <p>Indicates whether the current request is successful. A value of true indicates that the request is processed successfully. For asynchronous write operations, you must continue to query the task results.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
 
     public static class GetIdentityProviderSCIMResponseBodyDataConfiguration extends TeaModel {
         /**
-         * <p>The URL configured for the external provisioning system. The presence of a URL does not mean that the external configuration is complete or that AC synchronization is enabled.</p>
+         * <p>The URL configured for the external provisioning system. The presence of a URL does not indicate that external configuration is complete or that AC synchronization is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/scim/v2">https://example.com/scim/v2</a></p>
@@ -116,12 +116,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
         public String baseUrl;
 
         /**
-         * <p>The receiving status of AgentIdentity. Valid values:</p>
-         * <ul>
-         * <li>Enabled: SCIM receiving is enabled.</li>
-         * <li>Disabled: SCIM receiving is disabled.
-         * This is not equivalent to the expected value of syncEnabled for AC.</li>
-         * </ul>
+         * <p>The AgentIdentity receiving status. Enabled indicates that SCIM receiving is enabled. Disabled indicates that it is disabled. This is not equivalent to the expected value of syncEnabled for AC.</p>
          * 
          * <strong>example:</strong>
          * <p>Enabled</p>
@@ -154,21 +149,21 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
 
     public static class GetIdentityProviderSCIMResponseBodyData extends TeaModel {
         /**
-         * <p>The actual SAML configuration is read back on demand only in GetIdentityProvider. SCIM queries and preparations return the actual receiving status and URL.</p>
+         * <p>The actual receiving status and URL. The actual SAML configuration is read back on demand only in GetIdentityProvider. SCIM queries and preparations return the actual receiving status and URL.</p>
          */
         @NameInMap("configuration")
         public GetIdentityProviderSCIMResponseBodyDataConfiguration configuration;
 
         /**
-         * <p>Independent of the SAML logon binding status. Valid values:</p>
+         * <p>The status of the most recent SCIM operation task. This status is independent of the SAML logon binding status. Valid values:</p>
          * <ul>
-         * <li>PENDING: Waiting to be executed.</li>
-         * <li>RUNNING: Being executed.</li>
+         * <li>PENDING: Waiting for execution.</li>
+         * <li>RUNNING: Executing.</li>
          * <li>PAUSED: Paused.</li>
          * <li>SUCCESS: Succeeded.</li>
          * <li>FAILED: Failed.</li>
          * <li>CANCELED: Canceled.
-         * If there are no tasks, null is returned or this parameter is not returned. This parameter only indicates the most recent SCIM switch and the first full import task when it is enabled. It does not indicate credential issuance, external provisioning connection tests, or the health of continuous incremental synchronization. The client polls this operation when the status is PENDING or RUNNING.</li>
+         * If there are no tasks, it returns null or is not returned. This status only represents the most recent SCIM switch and the initial full import task when enabled. It does not indicate credential issuance, external provisioning connection tests, or continuous incremental synchronization health. Clients poll this operation when the status is PENDING or RUNNING.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +173,16 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
         public String operationStatus;
 
         /**
-         * <p>UNCONFIGURED：尚未准备完成；WAITING_CONFIGURATION：接收 Enabled、有效 HTTPS URL 和至少一个有效 Token 均已具备，等待外部配置并确认启用；UPDATING：启用或停用任务 PENDING/RUNNING；READY：同步已启用且本次启用任务成功，接收、URL 和 Token 仍可用；DISABLED：停用任务成功，保留配置、凭据和用户；UPDATE_FAILED：操作失败、暂停、取消，或期望启用时配置／凭据不可用。与 SAML/OIDC 状态独立，READY 不证明 Matrix 执行或持续增量链路已验收。</p>
+         * <p>The independent SCIM configuration status. Valid values:</p>
+         * <ul>
+         * <li>UNCONFIGURED: Preparation is not complete.</li>
+         * <li>WAITING_CONFIGURATION: Receiving is enabled, a valid HTTPS URL and at least one valid token are available, waiting for external configuration and enablement confirmation.</li>
+         * <li>UPDATING: The enablement or disablement task is PENDING or RUNNING.</li>
+         * <li>READY: Synchronization is enabled and the current enablement task succeeded, and the receiving end, URL, and token are still available.</li>
+         * <li>DISABLED: The disablement task succeeded, and the configuration, credentials, and users are retained.</li>
+         * <li>UPDATE_FAILED: The operation failed, was paused, was canceled, or the configuration and credentials are unavailable when enablement is expected.
+         * This status is independent of the SAML or OIDC status. READY does not prove that Matrix execution or the continuous incremental link has been accepted.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -187,7 +191,7 @@ public class GetIdentityProviderSCIMResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Specifies whether local synchronization is expected. Do not set this parameter to true during CustomSSO initialization. You can only update this parameter by calling UpdateIdentityProviderSCIM. Determine the result based on operationStatus.</p>
+         * <p>Specifies whether local synchronization is expected. You must determine whether it takes effect based on the actual configuration and task records. Do not set this parameter to true during CustomSSO initialization. You can only update it later by calling UpdateIdentityProviderSCIM, and determine the result based on operationStatus.</p>
          */
         @NameInMap("syncEnabled")
         public Boolean syncEnabled;

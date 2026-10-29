@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
     /**
-     * <p>失败时结合 HTTP 状态及 message 处理。</p>
+     * <p>If the request fails, handle the error based on the HTTP status code and the message.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,13 +14,13 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>结果结构见本接口返回字段；异步写接口的返回表示受理，不保证后台任务已完成。</p>
+     * <p>For the result structure, see the response fields of this operation. The response of an asynchronous write operation indicates that the request is accepted, but does not guarantee that the background task is completed.</p>
      */
     @NameInMap("data")
     public GetIdentityProviderServiceProviderResponseBodyData data;
 
     /**
-     * <p>本次请求的处理状态，不等同后台任务最终结果。</p>
+     * <p>The processing status of the current request. This is not equivalent to the final result of the background task.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>请求受理或错误消息；异步任务结果需按对应查询接口核对。</p>
+     * <p>The request acceptance or error message. For the result of an asynchronous task, check the corresponding query operation.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -38,7 +38,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>用于关联本次调用与排障，失败时请保留。</p>
+     * <p>The ID used to associate the current call with troubleshooting. Keep this ID if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>request-example</p>
@@ -47,7 +47,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>true 表示本次请求处理成功；异步写入仍需继续查询任务结果。</p>
+     * <p>A value of true indicates that the current request is processed successfully. For asynchronous writes, you must continue to query the task result.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
 
     public static class GetIdentityProviderServiceProviderResponseBodyData extends TeaModel {
         /**
-         * <p>我方 SAML 断言消费地址，配置到外部 IdP。</p>
+         * <p>The SAML assertion consumer service (ACS) URL of the SP. Configure this URL in the external IdP.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://sp.example.com/saml/acs">https://sp.example.com/saml/acs</a></p>
@@ -116,7 +116,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
         public String acsUrl;
 
         /**
-         * <p>我方 SP 的实体标识，配置到外部 IdP；不是外部 IdP Entity ID。</p>
+         * <p>The entity ID of the SP. Configure this ID in the external IdP. This is not the entity ID of the external IdP.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://sp.example.com/entity">https://sp.example.com/entity</a></p>
@@ -125,7 +125,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>我方 SP Metadata XML，供外部 IdP 导入；不能作为 IdP XML 提交 SAML 配置。</p>
+         * <p>The SP metadata XML for the external IdP to import. You cannot submit this XML as the IdP XML for SAML configuration.</p>
          * 
          * <strong>example:</strong>
          * <p><EntityDescriptor xmlns="urn:oasis:names:tc:SAML:2.0:metadata" entityID="https://sp.example.com/entity"><SPSSODescriptor protocolSupportEnumeration="urn:oasis:names:tc:SAML:2.0:protocol"><AssertionConsumerService Binding="urn:oasis:names:tc:SAML:2.0:bindings:HTTP-POST" Location="https://sp.example.com/saml/acs" index="0"/></SPSSODescriptor></EntityDescriptor></p>
@@ -134,7 +134,7 @@ public class GetIdentityProviderServiceProviderResponseBody extends TeaModel {
         public String metadataXml;
 
         /**
-         * <p>查询参数必填，仅支持精确值 SAML；响应返回 SAML。</p>
+         * <p>The query parameter is required and only supports the exact value SAML. The response returns SAML.</p>
          * 
          * <strong>example:</strong>
          * <p>SAML</p>

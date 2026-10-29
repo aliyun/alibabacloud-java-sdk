@@ -25,7 +25,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestBodyMetadata extends TeaModel {
         /**
-         * <p>The app ID of the Feishu application. This parameter is required when the binding type is Feishu.</p>
+         * <p>The app ID of the Lark application. This parameter is required when the binding type is Feishu.</p>
          * 
          * <strong>example:</strong>
          * <p>cli_exampleappid01</p>
@@ -34,7 +34,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String appId;
 
         /**
-         * <p>The appKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</p>
+         * <p>The AppKey of the DingTalk application. This parameter is required when the binding type is DingTalk.</p>
          * 
          * <strong>example:</strong>
          * <p>dingexampleappkey01</p>
@@ -43,7 +43,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String appKey;
 
         /**
-         * <p>Required. The secret of the external identity provider application. This parameter is used only for writing and is not returned by the query API.</p>
+         * <p>Required. The secret of the external identity provider application. This parameter is used only for writing and is not returned by query API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>example-app-secret</p>
@@ -52,7 +52,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String appSecret;
 
         /**
-         * <p>The corpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</p>
+         * <p>The CorpId of the DingTalk enterprise. This parameter is required when the binding type is DingTalk.</p>
          * 
          * <strong>example:</strong>
          * <p>dingexamplecorpid01</p>
@@ -61,7 +61,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String corpId;
 
         /**
-         * <p>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by the query API.</p>
+         * <p>The data encryption key for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by query API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>example-encrypt-key</p>
@@ -70,7 +70,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public String encryptKey;
 
         /**
-         * <p>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by the query API.</p>
+         * <p>The verification token for event subscription. The value must be the same as the one configured in the external identity provider application. This parameter is used only for writing and is not returned by query API operations.</p>
          * 
          * <strong>example:</strong>
          * <p>example-verification-token</p>
@@ -135,7 +135,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
 
     public static class CreateIdentityProviderRequestBodySyncScope extends TeaModel {
         /**
-         * <p>When the mode is SelectedDepartments, at least one non-empty department ID must be included, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</p>
+         * <p>When the mode is SelectedDepartments, the list must contain at least one non-empty department ID, which should be obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;10001&quot;]</p>
@@ -144,12 +144,7 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public java.util.List<String> departmentIds;
 
         /**
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>AllAuthorized: The full authorization scope, which is limited by the application address book authorization.</li>
-         * <li>SelectedDepartments: The selected departments and all their sub-departments.
-         * When you explicitly submit syncScope, you must provide a valid mode, which is verified by the backend.</li>
-         * </ul>
+         * <p>AllAuthorized: the full authorization scope, which is limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. When explicitly submitting syncScope, you must provide a valid mode, which is verified by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>SelectedDepartments</p>
@@ -198,25 +193,25 @@ public class CreateIdentityProviderRequest extends TeaModel {
         public Boolean loginEnabled;
 
         /**
-         * <p>The application configuration of the external identity provider. When you bind DingTalk, you must provide appKey, appSecret, and corpId. When you bind Feishu, you must provide appId and appSecret.</p>
+         * <p>The application configuration of the external identity provider. When you bind DingTalk, you must provide appKey, appSecret, and corpId. When you bind Lark, you must provide appId and appSecret.</p>
          */
         @NameInMap("metadata")
         public CreateIdentityProviderRequestBodyMetadata metadata;
 
         /**
-         * <p>Specifies whether to enable organization member synchronization. After this feature is enabled, the external identity provider synchronizes organization members as workspace users.</p>
+         * <p>Specifies whether to enable organization member synchronization. If enabled, the external identity provider synchronizes organization members as workspace users.</p>
          */
         @NameInMap("syncEnabled")
         public Boolean syncEnabled;
 
         /**
-         * <p>Controls the first synchronization when DingTalk or Feishu is bound. If this parameter is omitted or set to null, the default value is true. If this parameter is set to false, only the configuration is saved, and synchronization is explicitly triggered later. CustomSSO does not use the vendor pull link.</p>
+         * <p>Controls the first synchronization when DingTalk or Lark is bound. If omitted or set to null, the default value is true. If set to false, only the configuration is saved, and synchronization is explicitly triggered later. CustomSSO does not use the vendor pull link.</p>
          */
         @NameInMap("syncOnBind")
         public Boolean syncOnBind;
 
         /**
-         * <p>Retains the department-based synchronization scope definition. If this parameter is omitted during creation, the default value is AllAuthorized, and the first vendor synchronization is determined by syncOnBind. If this parameter is omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</p>
+         * <p>Retains the department-based synchronization scope definition. If omitted during creation, the default value is AllAuthorized. The first vendor synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating and saving the scope does not automatically perform full synchronization.</p>
          */
         @NameInMap("syncScope")
         public CreateIdentityProviderRequestBodySyncScope syncScope;

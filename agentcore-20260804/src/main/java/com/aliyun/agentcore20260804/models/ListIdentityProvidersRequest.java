@@ -14,7 +14,7 @@ public class ListIdentityProvidersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The cursor for querying the next page. Do not specify this parameter for the first call. For subsequent calls, specify the nextToken value returned from the previous call.</p>
+     * <p>The cursor for querying the next page. Do not specify this parameter in the first call. Specify the nextToken returned in the previous call for subsequent calls.</p>
      * 
      * <strong>example:</strong>
      * <p>aWRlbnRpdHktcHJvdmlkZXItb2Zmc2V0OjEw</p>

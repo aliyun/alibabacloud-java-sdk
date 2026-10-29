@@ -15,7 +15,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlRequest extends TeaModel {
     public String acrInstanceId;
 
     /**
-     * <p>The target ACR namespace, which corresponds to artifact.container.namespace of the agent. This is not a Kubernetes namespace. This parameter, together with the instance and repository, determines the authorization scope.</p>
+     * <p>The target ACR namespace, which corresponds to artifact.container.namespace of the agent. This is not a Kubernetes namespace. It determines the authorization scope together with the instance and repository.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetWorkspaceAcrRamAuthorizeUrlRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The name of the target repository, which corresponds to artifact.container.repo of the agent. The name cannot contain tags, namespaces, or path separators. Wildcards are not supported.</p>
+     * <p>The target repository name, which corresponds to artifact.container.repo of the agent. It does not include tags, namespaces, or path separators. Wildcards are not supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -38,7 +38,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The response message. Returns an error description if the request fails.</p>
+     * <p>The response message. An error description is returned if the request fails.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -167,7 +167,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String bindingType;
 
         /**
-         * <p>Required for manual entry. Must be non-empty and up to 2048 characters. Existing configurations cannot be changed. This is different from the local entity ID returned by SP queries.</p>
+         * <p>Required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. Existing configurations cannot be changed. This is different from the local entity ID returned in SP queries.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -176,7 +176,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>Required for manual entry. Must be an absolute HTTPS URL without user credentials or fragments.</p>
+         * <p>Required for manual entry. It must be an absolute HTTPS URL without user credentials or fragments.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -279,7 +279,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String corpId;
 
         /**
-         * <p>Required for manual entry. Must be non-empty and up to 2048 characters. Existing configurations cannot be changed. This is different from the local entity ID returned by SP queries.</p>
+         * <p>Required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. Existing configurations cannot be changed. This is different from the local entity ID returned in SP queries.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -288,7 +288,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>Required for manual entry. Must be an absolute HTTPS URL without user credentials or fragments.</p>
+         * <p>Required for manual entry. It must be an absolute HTTPS URL without user credentials or fragments.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -370,7 +370,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String bindingType;
 
         /**
-         * <p>Required for manual entry. Must be non-empty and up to 2048 characters. Existing configurations cannot be changed. This is different from the local entity ID returned by SP queries.</p>
+         * <p>Required for manual entry. It must be non-empty and contain a maximum of 2,048 characters. Existing configurations cannot be changed. This is different from the local entity ID returned in SP queries.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/entity">https://idp.example.com/entity</a></p>
@@ -379,7 +379,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String entityId;
 
         /**
-         * <p>Required for manual entry. Must be an absolute HTTPS URL without user credentials or fragments.</p>
+         * <p>Required for manual entry. It must be an absolute HTTPS URL without user credentials or fragments.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://idp.example.com/sso">https://idp.example.com/sso</a></p>
@@ -388,7 +388,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String loginUrl;
 
         /**
-         * <p>Required as a non-empty array for manual entry. Uses PEM X.509 certificate text. Validates the current validity period. A maximum of two certificates are allowed after deduplication.</p>
+         * <p>A non-empty array is required for manual entry. Use PEM X.509 certificate text. The current validity period is verified. A maximum of two certificates are allowed after deduplication.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;-----BEGIN CERTIFICATE-----\\nMIICwDCCAaigAwIBAgIULlsHLfcADyBax5ZtFlj+YGzZVo0wDQYJKoZIhvcNAQEL\\nBQAwGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMB4XDTI2MDEwMTAwMDAwMFoX\\nDTM2MDEwMTAwMDAwMFowGjEYMBYGA1UEAwwPaWRwLmV4YW1wbGUuY29tMIIBIjAN\\nBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAto0DN0W1CrPRzK9QZ9A1aApb4Lg8\\noGlp2c0PbN3LokXe/HzwxCMXx65IDnrenttxzTwp9BgUnUN/3LRzWaOL2UQ/vNYN\\nW9LFLkI1T64UPyI7eyi28YlALhb41xkYhEp7rz+MjqifBzVZeTDUxBYtbK2hAhbY\\nEL1+udwsXEx0KB7xuQ/rbI2OKeqAEAD1tfYg7T/SM2wrXNYhx+o1HtchM4/0I8Ok\\nkk27JQ4y3ofzC5sTySmFF1Y7XcpSd+5WSyazedhkAieo8AB01DkJV6nnKfH8sH0E\\nBsnH3FP8FhqCLrIeEkjX9B9OcIRLGjiZqx4u/ryW1QhMldnv+pFfNjWy/wIDAQAB\\nMA0GCSqGSIb3DQEBCwUAA4IBAQC1hSQG8AwtGOoX2gKBK4Hi5XBrBreij8WlLTUW\\nld0FINQ0Rg84f/27CjDthywj6wgxCesCuOVFhpxQa1UacsP/Gcai1aKABtLWImca\\nWECRYK5gDkwhTMFKM9mXA26hH1l4v/UR2iTpEK9H78egC4W7bs2LDTpPryuaNKTq\\nP2O0tMbNkAHB8yecz5LxHXnxadL9Egow25g2RClvpifWqDnuS9TSbKkIWLcPLjoc\\nJj2K9ILpBwhXiXi/BiSgyYTLiYvVvih9vX4s+hKGZNJc0j92YLiOHDF0XH1oxgdV\\njfTmRiedeb2VZJZElptD92z0AqFR7z2d5B+OqpPA2gjuMLV5\\n-----END CERTIFICATE-----&quot;]</p>
@@ -437,7 +437,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
 
     public static class ListIdentityProvidersResponseBodyItemsSyncScope extends TeaModel {
         /**
-         * <p>Must contain at least one non-empty department ID when set to SelectedDepartments. The IDs should be obtained from ListIdentityProviderDepartments. Pass an empty array or omit this parameter when set to AllAuthorized.</p>
+         * <p>When the mode is SelectedDepartments, it must contain at least one non-empty department ID obtained from ListIdentityProviderDepartments. When the mode is AllAuthorized, pass an empty array or omit this field.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;10001&quot;]</p>
@@ -446,7 +446,12 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public java.util.List<String> departmentIds;
 
         /**
-         * <p>AllAuthorized: the full authorization scope, limited by the application address book authorization. SelectedDepartments: the selected departments and all their sub-departments. A valid mode must be provided and verified by the backend when syncScope is explicitly submitted.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>AllAuthorized: The full authorization scope, limited by the application address book authorization.</li>
+         * <li>SelectedDepartments: The selected departments and all their sub-departments.
+         * You must provide a valid mode when explicitly submitting syncScope. The backend verifies the mode.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>SelectedDepartments</p>
@@ -479,7 +484,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
 
     public static class ListIdentityProvidersResponseBodyItems extends TeaModel {
         /**
-         * <p>The actual SAML configuration is retrieved on demand only through GetIdentityProvider. SCIM queries and provisioning return the actual receiving status and URL.</p>
+         * <p>The actual SAML configuration is read on demand only by GetIdentityProvider. SCIM queries and preparations return the actual received status and URLs.</p>
          */
         @NameInMap("configuration")
         public ListIdentityProvidersResponseBodyItemsConfiguration configuration;
@@ -494,7 +499,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The event subscription callback URL. Configure this URL in the external identity provider application to receive organization change events. Returns an empty string if the user pool is not activated.</p>
+         * <p>The event subscription callback URL. You must configure this URL in the external identity provider application to receive organization change events. An empty string is returned if the user pool is not activated.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456">http://auth.cn-hangzhou.agentteams.aliyuncs.com/roa/dingtalk/event/up-123456</a></p>
@@ -512,7 +517,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String identityProviderType;
 
         /**
-         * <p>The logon callback URL. Configure this URL in the external identity provider application. Returns an empty string if the user pool is not activated.</p>
+         * <p>The logon callback URL. You must configure this URL in the external identity provider application. An empty string is returned if the user pool is not activated.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback">https://signin-cn-hangzhou.aliyunagentid.com/up-123456/dingtalk/callback</a></p>
@@ -533,7 +538,7 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public ListIdentityProvidersResponseBodyItemsMetadata metadata;
 
         /**
-         * <p>Only SAML is currently supported. May not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</p>
+         * <p>Only SAML is currently supported. This field may not be returned if no valid configuration is saved. OIDC placeholder initialization is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>SAML</p>
@@ -542,13 +547,24 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>Input supports either XML or full manual entry. Queries return the standardized configuration and do not echo the original XML. Can be omitted if not configured.</p>
+         * <p>The input supports either XML or complete manual entry. Queries return the standardized configuration and do not echo the original XML. This field can be omitted if it is not configured.</p>
          */
         @NameInMap("saml")
         public ListIdentityProvidersResponseBodyItemsSaml saml;
 
         /**
-         * <p>The binding status. Valid values: CONFIGURED (the configuration is accepted and waiting for user pool activation), SYNCING (synchronizing organization members), SYNCED (organization member synchronization is completed), READY (the binding is effective), SYNC_FAILED (organization member synchronization failed), UPDATING (updating the configuration), UPDATE_FAILED (configuration update failed), DISCONNECTING (disconnecting), DISCONNECT_FAILED (disconnection failed).</p>
+         * <p>The binding status. Valid values:</p>
+         * <ul>
+         * <li>CONFIGURED: The configuration is accepted and waiting for user pool activation.</li>
+         * <li>SYNCING: Organization members are being synchronized.</li>
+         * <li>SYNCED: Organization member synchronization is complete.</li>
+         * <li>READY: The binding is in effect.</li>
+         * <li>SYNC_FAILED: Organization member synchronization failed.</li>
+         * <li>UPDATING: The configuration is being updated.</li>
+         * <li>UPDATE_FAILED: Configuration update failed.</li>
+         * <li>DISCONNECTING: The binding is being disconnected.</li>
+         * <li>DISCONNECT_FAILED: Disconnection failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>READY</p>
@@ -557,13 +573,13 @@ public class ListIdentityProvidersResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>Specifies whether to enable organization member synchronization. If enabled, the external identity provider synchronizes organization members as workspace users.</p>
+         * <p>Specifies whether to enable organization member synchronization. If enabled, organization members are synchronized as workspace users by this external identity provider.</p>
          */
         @NameInMap("syncEnabled")
         public Boolean syncEnabled;
 
         /**
-         * <p>Follows the department-based synchronization scope definition. If omitted during creation, the default is AllAuthorized. The first vendor synchronization is determined by syncOnBind. If omitted or null during an update, the original value is retained. Updating the saved scope does not automatically trigger full synchronization.</p>
+         * <p>Follows the department-based synchronization scope definition. If omitted during creation, the default value is AllAuthorized, and the first provider synchronization is determined by syncOnBind. If omitted or set to null during an update, the original value is retained. Updating the saved scope does not automatically trigger full synchronization.</p>
          */
         @NameInMap("syncScope")
         public ListIdentityProvidersResponseBodyItemsSyncScope syncScope;
