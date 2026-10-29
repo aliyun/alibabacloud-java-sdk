@@ -4,12 +4,32 @@ package com.aliyun.saf20190521.models;
 import com.aliyun.tea.*;
 
 public class ExecuteRequestMLRequest extends TeaModel {
+    /**
+     * <p>The language.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>en</p>
+     */
     @NameInMap("Lang")
     public String lang;
 
+    /**
+     * <p>The service product code. Set this parameter to saf_de because this operation supports only custom events.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>saf_de</p>
+     */
     @NameInMap("Service")
     public String service;
 
+    /**
+     * <p>The service input parameters in JSON format. You must include the eventCode property of the custom event in the JSON string.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;accountId&quot;: &quot;1233***&quot;}</p>
+     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 

@@ -4,9 +4,21 @@ package com.aliyun.saf20190521.models;
 import com.aliyun.tea.*;
 
 public class RequestDecisionRequest extends TeaModel {
+    /**
+     * <p>The event code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>de_*</p>
+     */
     @NameInMap("EventCode")
     public String eventCode;
 
+    /**
+     * <p>The service input parameters. The value is a complete JSON string.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;accountId&quot;: &quot;1233***&quot;}</p>
+     */
     @NameInMap("ServiceParameters")
     public String serviceParameters;
 

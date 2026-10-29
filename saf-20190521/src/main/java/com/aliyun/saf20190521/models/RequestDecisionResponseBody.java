@@ -4,16 +4,39 @@ package com.aliyun.saf20190521.models;
 import com.aliyun.tea.*;
 
 public class RequestDecisionResponseBody extends TeaModel {
+    /**
+     * <p>The status code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>The data information, which includes fields such as tags, score, and extend.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;score&quot;: 80.4, &quot;tags&quot;: &quot;ra0601,rnk0002,rn0312&quot;}</p>
+     */
     @NameInMap("Data")
     public java.util.Map<String, ?> data;
 
+    /**
+     * <p>The result message.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>OK</p>
+     */
     @NameInMap("Message")
     public String message;
 
-    // Id of the request
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A5F41DC6-2070-5CE7-8B2D-7A23D882932D</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

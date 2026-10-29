@@ -3,16 +3,10 @@ package com.aliyun.saf20190521;
 
 import com.aliyun.tea.*;
 import com.aliyun.saf20190521.models.*;
-import com.aliyun.teautil.*;
-import com.aliyun.teautil.models.*;
-import com.aliyun.teaopenapi.*;
-import com.aliyun.teaopenapi.models.*;
-import com.aliyun.openapiutil.*;
-import com.aliyun.endpointutil.*;
 
 public class Client extends com.aliyun.teaopenapi.Client {
 
-    public Client(Config config) throws Exception {
+    public Client(com.aliyun.teaopenapi.models.Config config) throws Exception {
         super(config);
         this._endpointRule = "regional";
         this._endpointMap = TeaConverter.buildMap(
@@ -35,45 +29,29 @@ public class Client extends com.aliyun.teaopenapi.Client {
         return com.aliyun.endpointutil.Client.getEndpointRules(productId, regionId, endpointRule, network, suffix);
     }
 
-    public ExecuteExtendServiceResponse executeExtendServiceWithOptions(ExecuteExtendServiceRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Detects risks. This API operation supports public service invocation and allows you to invoke custom events.</p>
+     * 
+     * @param request ExecuteRequestRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteRequestResponse
+     */
+    public ExecuteRequestResponse executeRequestWithOptions(ExecuteRequestRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("Region", request.region);
-        query.put("Service", request.service);
-        query.put("ServiceParameters", request.serviceParameters);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
-        ));
-        Params params = Params.build(TeaConverter.buildMap(
-            new TeaPair("action", "ExecuteExtendService"),
-            new TeaPair("version", "2019-05-21"),
-            new TeaPair("protocol", "HTTPS"),
-            new TeaPair("pathname", "/"),
-            new TeaPair("method", "POST"),
-            new TeaPair("authType", "AK"),
-            new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
-            new TeaPair("bodyType", "json")
-        ));
-        return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteExtendServiceResponse());
-    }
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            query.put("Service", request.service);
+        }
 
-    public ExecuteExtendServiceResponse executeExtendService(ExecuteExtendServiceRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
-        return this.executeExtendServiceWithOptions(request, runtime);
-    }
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            query.put("ServiceParameters", request.serviceParameters);
+        }
 
-    public ExecuteRequestResponse executeRequestWithOptions(ExecuteRequestRequest request, RuntimeOptions runtime) throws Exception {
-        com.aliyun.teautil.Common.validateModel(request);
-        java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("Service", request.service);
-        query.put("ServiceParameters", request.serviceParameters);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ExecuteRequest"),
             new TeaPair("version", "2019-05-21"),
             new TeaPair("protocol", "HTTPS"),
@@ -81,28 +59,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteRequestResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Detects risks. This API operation supports public service invocation and allows you to invoke custom events.</p>
+     * 
+     * @param request ExecuteRequestRequest
+     * @return ExecuteRequestResponse
+     */
     public ExecuteRequestResponse executeRequest(ExecuteRequestRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeRequestWithOptions(request, runtime);
     }
 
-    public ExecuteRequestMLResponse executeRequestMLWithOptions(ExecuteRequestMLRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Detects risks. This operation supports only custom event calls and is available only in the Malaysia region.</p>
+     * 
+     * @param request ExecuteRequestMLRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteRequestMLResponse
+     */
+    public ExecuteRequestMLResponse executeRequestMLWithOptions(ExecuteRequestMLRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("Lang", request.lang);
-        query.put("Service", request.service);
-        query.put("ServiceParameters", request.serviceParameters);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            query.put("Service", request.service);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            query.put("ServiceParameters", request.serviceParameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ExecuteRequestML"),
             new TeaPair("version", "2019-05-21"),
             new TeaPair("protocol", "HTTPS"),
@@ -110,28 +111,51 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteRequestMLResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Detects risks. This operation supports only custom event calls and is available only in the Malaysia region.</p>
+     * 
+     * @param request ExecuteRequestMLRequest
+     * @return ExecuteRequestMLResponse
+     */
     public ExecuteRequestMLResponse executeRequestML(ExecuteRequestMLRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeRequestMLWithOptions(request, runtime);
     }
 
-    public ExecuteRequestSGResponse executeRequestSGWithOptions(ExecuteRequestSGRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Detects risks. This API allows you to invoke public services and custom events.</p>
+     * 
+     * @param request ExecuteRequestSGRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExecuteRequestSGResponse
+     */
+    public ExecuteRequestSGResponse executeRequestSGWithOptions(ExecuteRequestSGRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("Lang", request.lang);
-        query.put("Service", request.service);
-        query.put("ServiceParameters", request.serviceParameters);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        if (!com.aliyun.teautil.Common.isUnset(request.lang)) {
+            query.put("Lang", request.lang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.service)) {
+            query.put("Service", request.service);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            query.put("ServiceParameters", request.serviceParameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "ExecuteRequestSG"),
             new TeaPair("version", "2019-05-21"),
             new TeaPair("protocol", "HTTPS"),
@@ -139,27 +163,47 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new ExecuteRequestSGResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Detects risks. This API allows you to invoke public services and custom events.</p>
+     * 
+     * @param request ExecuteRequestSGRequest
+     * @return ExecuteRequestSGResponse
+     */
     public ExecuteRequestSGResponse executeRequestSG(ExecuteRequestSGRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.executeRequestSGWithOptions(request, runtime);
     }
 
-    public RequestDecisionResponse requestDecisionWithOptions(RequestDecisionRequest request, RuntimeOptions runtime) throws Exception {
+    /**
+     * <b>summary</b> : 
+     * <p>Detects risks. This operation supports only custom event calls.</p>
+     * 
+     * @param request RequestDecisionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return RequestDecisionResponse
+     */
+    public RequestDecisionResponse requestDecisionWithOptions(RequestDecisionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
         com.aliyun.teautil.Common.validateModel(request);
         java.util.Map<String, Object> query = new java.util.HashMap<>();
-        query.put("EventCode", request.eventCode);
-        query.put("ServiceParameters", request.serviceParameters);
-        OpenApiRequest req = OpenApiRequest.build(TeaConverter.buildMap(
-            new TeaPair("query", com.aliyun.openapiutil.Client.query(query)),
-            new TeaPair("body", com.aliyun.teautil.Common.toMap(request))
+        if (!com.aliyun.teautil.Common.isUnset(request.eventCode)) {
+            query.put("EventCode", request.eventCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serviceParameters)) {
+            query.put("ServiceParameters", request.serviceParameters);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
         ));
-        Params params = Params.build(TeaConverter.buildMap(
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
             new TeaPair("action", "RequestDecision"),
             new TeaPair("version", "2019-05-21"),
             new TeaPair("protocol", "HTTPS"),
@@ -167,14 +211,21 @@ public class Client extends com.aliyun.teaopenapi.Client {
             new TeaPair("method", "POST"),
             new TeaPair("authType", "AK"),
             new TeaPair("style", "RPC"),
-            new TeaPair("reqBodyType", "json"),
+            new TeaPair("reqBodyType", "formData"),
             new TeaPair("bodyType", "json")
         ));
         return TeaModel.toModel(this.callApi(params, req, runtime), new RequestDecisionResponse());
     }
 
+    /**
+     * <b>summary</b> : 
+     * <p>Detects risks. This operation supports only custom event calls.</p>
+     * 
+     * @param request RequestDecisionRequest
+     * @return RequestDecisionResponse
+     */
     public RequestDecisionResponse requestDecision(RequestDecisionRequest request) throws Exception {
-        RuntimeOptions runtime = new RuntimeOptions();
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.requestDecisionWithOptions(request, runtime);
     }
 }
