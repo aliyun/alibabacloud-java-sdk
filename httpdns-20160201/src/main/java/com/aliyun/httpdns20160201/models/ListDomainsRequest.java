@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListDomainsRequest extends TeaModel {
     /**
+     * <p>The number of the current page. Starting value: 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListDomainsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
+     * <p>The number of entries to return on each page for paging in a paged query. Settings: Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */

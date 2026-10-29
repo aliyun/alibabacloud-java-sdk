@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDomainsRequest extends TeaModel {
     /**
+     * <p>The HTTPDNS account ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>123456</p>
      */
@@ -12,6 +14,8 @@ public class DescribeDomainsRequest extends TeaModel {
     public String accountId;
 
     /**
+     * <p>The current page number. Minimum value: 1. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeDomainsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of entries per page for a paged query. Maximum value: 100. Default value: 20.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */

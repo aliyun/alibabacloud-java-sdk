@@ -8,6 +8,8 @@ public class ListDomainsResponseBody extends TeaModel {
     public ListDomainsResponseBodyDomainInfos domainInfos;
 
     /**
+     * <p>The total number of domain names in the list.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +17,8 @@ public class ListDomainsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
+     * <p>The number of domain names returned in this query.</p>
+     * 
      * <strong>example:</strong>
      * <p>5</p>
      */
@@ -22,6 +26,8 @@ public class ListDomainsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>50F9C40E-188D-4208-BE2C-7427E531****</p>
      */
@@ -29,6 +35,8 @@ public class ListDomainsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>The total number of domain names in the list.</p>
+     * 
      * <strong>example:</strong>
      * <p>18</p>
      */

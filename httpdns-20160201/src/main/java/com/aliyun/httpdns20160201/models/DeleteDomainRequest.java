@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDomainRequest extends TeaModel {
     /**
+     * <p>The HTTPDNS account ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>12****</p>
      */
@@ -12,6 +14,7 @@ public class DeleteDomainRequest extends TeaModel {
     public String accountId;
 
     /**
+     * <p>The domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

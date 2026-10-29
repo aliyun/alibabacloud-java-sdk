@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetResolveCountSummaryRequest extends TeaModel {
     /**
+     * <p>The data granularity of the statistics. Valid values: <strong>day</strong> and <strong>month</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class GetResolveCountSummaryRequest extends TeaModel {
     public String granularity;
 
     /**
+     * <p>The time span for the statistics.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

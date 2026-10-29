@@ -4,6 +4,9 @@ package com.aliyun.httpdns20160201.models;
 import com.aliyun.tea.*;
 
 public class RefreshResolveCacheShrinkRequest extends TeaModel {
+    /**
+     * <p>The list of domain names to refresh.</p>
+     */
     @NameInMap("Domains")
     public String domainsShrink;
 

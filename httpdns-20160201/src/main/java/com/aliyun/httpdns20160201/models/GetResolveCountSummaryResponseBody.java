@@ -5,12 +5,17 @@ import com.aliyun.tea.*;
 
 public class GetResolveCountSummaryResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>3106FFF3-3612-542A-B2CD-3CF4CD48****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The statistics result.</p>
+     */
     @NameInMap("ResolveSummary")
     public GetResolveCountSummaryResponseBodyResolveSummary resolveSummary;
 
@@ -40,6 +45,8 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         public Long doh;
 
         /**
+         * <p>The number of IPv4 HTTP resolution requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -47,6 +54,8 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         public Long http;
 
         /**
+         * <p>The number of IPv6 HTTP resolution requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -57,6 +66,8 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         public String httpAes;
 
         /**
+         * <p>The number of IPv4 HTTPS resolution requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */
@@ -64,6 +75,8 @@ public class GetResolveCountSummaryResponseBody extends TeaModel {
         public Long https;
 
         /**
+         * <p>The number of IPv6 HTTPS resolution requests.</p>
+         * 
          * <strong>example:</strong>
          * <p>123</p>
          */

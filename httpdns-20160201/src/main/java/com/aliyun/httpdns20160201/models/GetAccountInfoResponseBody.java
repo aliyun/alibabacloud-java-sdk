@@ -4,10 +4,15 @@ package com.aliyun.httpdns20160201.models;
 import com.aliyun.tea.*;
 
 public class GetAccountInfoResponseBody extends TeaModel {
+    /**
+     * <p>The current account information.</p>
+     */
     @NameInMap("AccountInfo")
     public GetAccountInfoResponseBodyAccountInfo accountInfo;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>50F9C40E-188D-4208-BE2C-74271337****</p>
      */
@@ -37,35 +42,71 @@ public class GetAccountInfoResponseBody extends TeaModel {
 
     public static class GetAccountInfoResponseBodyAccountInfo extends TeaModel {
         /**
+         * <p>The account ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1337****</p>
          */
         @NameInMap("AccountId")
         public String accountId;
 
+        /**
+         * <p>Indicates whether the DNS over HTTPS (DoH) feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DohEnabled")
         public Boolean dohEnabled;
 
+        /**
+         * <p>Indicates whether DoH is used to resolve all domain names.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
         @NameInMap("DohResolveAllEnabled")
         public Boolean dohResolveAllEnabled;
 
+        /**
+         * <p>The number of DoH resolutions for the current month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10000</p>
+         */
         @NameInMap("MonthDohResolveCount")
         public Long monthDohResolveCount;
 
         /**
+         * <p>The monthly free resolution quota. This is the number of times you can call the HTTPDNS service for domain name resolution free of charge each calendar month.</p>
+         * 
          * <strong>example:</strong>
          * <p>1500000</p>
          */
         @NameInMap("MonthFreeCount")
         public Integer monthFreeCount;
 
+        /**
+         * <p>The number of HTTP AES-encrypted resolutions for the current month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MonthHttpAesResolveCount")
         public Long monthHttpAesResolveCount;
 
+        /**
+         * <p>The number of HTTPS AES-encrypted resolutions for the current month.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("MonthHttpsAesResolveCount")
         public Long monthHttpsAesResolveCount;
 
         /**
+         * <p>The total number of HTTPS resolutions for the current month.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -73,6 +114,8 @@ public class GetAccountInfoResponseBody extends TeaModel {
         public Integer monthHttpsResolveCount;
 
         /**
+         * <p>The total number of HTTP resolutions for the current month.</p>
+         * 
          * <strong>example:</strong>
          * <p>9927326</p>
          */
@@ -80,6 +123,8 @@ public class GetAccountInfoResponseBody extends TeaModel {
         public Integer monthResolveCount;
 
         /**
+         * <p>The number of resource plans. This is a legacy field and is always set to 0.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -87,6 +132,8 @@ public class GetAccountInfoResponseBody extends TeaModel {
         public Integer packageCount;
 
         /**
+         * <p>The signing secret.</p>
+         * 
          * <strong>example:</strong>
          * <p>50F9C40E****</p>
          */
@@ -94,6 +141,8 @@ public class GetAccountInfoResponseBody extends TeaModel {
         public String signSecret;
 
         /**
+         * <p>The number of requests to authenticated API operations.</p>
+         * 
          * <strong>example:</strong>
          * <p>611523</p>
          */
@@ -101,6 +150,8 @@ public class GetAccountInfoResponseBody extends TeaModel {
         public Long signedCount;
 
         /**
+         * <p>The number of requests to unauthenticated API operations.</p>
+         * 
          * <strong>example:</strong>
          * <p>1523</p>
          */
@@ -108,6 +159,8 @@ public class GetAccountInfoResponseBody extends TeaModel {
         public Long unsignedCount;
 
         /**
+         * <p>Indicates whether unauthenticated API operations are enabled.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -115,6 +168,13 @@ public class GetAccountInfoResponseBody extends TeaModel {
         public Boolean unsignedEnabled;
 
         /**
+         * <p>The HTTPDNS account status code. Valid values:</p>
+         * <ul>
+         * <li>1: The account is normal.</li>
+         * <li>2: The account has an overdue payment.</li>
+         * <li>3: The account is suspended.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

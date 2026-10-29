@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteDomainResponseBody extends TeaModel {
     /**
+     * <p>The domain name.</p>
+     * 
      * <strong>example:</strong>
      * <p><a href="http://www.example.com">www.example.com</a></p>
      */
@@ -12,6 +14,8 @@ public class DeleteDomainResponseBody extends TeaModel {
     public String domainName;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FA8C2599-362D-4113-8FB4-E88A40C2****</p>
      */

@@ -14,6 +14,8 @@ public class RefreshResolveCacheResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The response message.</p>
+     * 
      * <strong>example:</strong>
      * <p>success</p>
      */
@@ -21,6 +23,8 @@ public class RefreshResolveCacheResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>FA8C2599-362D-4113-8FB4-E88A40C2****</p>
      */
