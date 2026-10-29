@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryAskLumaLogRequest extends TeaModel {
     /**
-     * <p>The cursor for pagination. Set this parameter to the messageId of the last entry on the previous page.</p>
+     * <p>The cursor, which is the message ID of the last record on the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJ0cyI6MTcxN...</p>
@@ -14,7 +14,7 @@ public class QueryAskLumaLogRequest extends TeaModel {
     public String after;
 
     /**
-     * <p>The agent name. If this parameter is not specified, all agent call logs are queried.</p>
+     * <p>The name of the agent. If this parameter is not specified, all agents are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>demo-luma-agent</p>

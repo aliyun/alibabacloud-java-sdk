@@ -24,7 +24,7 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     public String eventStreamingName;
 
     /**
-     * <p>The event filtering rule. If you do not specify this parameter, all events are matched.</p>
+     * <p>The event filtering rule. If this parameter is not specified, all events are matched.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -49,37 +49,40 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     public String filterPattern;
 
     /**
-     * <p>The general JSON Configurations for the event provider. This parameter is mutually exclusive with Source. Specify one of the two parameters.</p>
+     * <p>The common JSON configurations for the event provider. This parameter is mutually exclusive with the Source parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;key&quot;:&quot;value&quot;}</p>
      */
     @NameInMap("Metadata")
     public String metadata;
 
     /**
-     * <p>The runtime parameters.</p>
+     * <p>The runtime environment parameters.</p>
      */
     @NameInMap("RunOptions")
     public String runOptionsShrink;
 
     /**
-     * <p>The event target. You must select exactly one type of Sink.</p>
+     * <p>The event target. You must select one and only one sink.</p>
      */
     @NameInMap("Sink")
     public String sinkShrink;
 
     /**
-     * <p>The event provider. You must select exactly one Source type.</p>
+     * <p>The event provider. You must specify exactly one source.</p>
      */
     @NameInMap("Source")
     public String sourceShrink;
 
     /**
-     * <p>The list of tags. A maximum of 20 tags can be specified.</p>
+     * <p>The list of tags. You can specify up to 20 tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateEventStreamingShrinkRequestTags> tags;
 
     /**
-     * <p>The Transform-related configurations.</p>
+     * <p>The transform configurations.</p>
      */
     @NameInMap("Transforms")
     public String transformsShrink;
@@ -164,12 +167,18 @@ public class CreateEventStreamingShrinkRequest extends TeaModel {
     public static class CreateEventStreamingShrinkRequestTags extends TeaModel {
         /**
          * <p>The tag key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>env</p>
          */
         @NameInMap("Key")
         public String key;
 
         /**
          * <p>The tag value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>prod</p>
          */
         @NameInMap("Value")
         public String value;

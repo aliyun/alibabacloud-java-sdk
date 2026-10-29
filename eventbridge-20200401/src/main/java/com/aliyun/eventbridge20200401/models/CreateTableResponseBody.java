@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTableResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class CreateTableResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -96,7 +96,7 @@ public class CreateTableResponseBody extends TeaModel {
 
     public static class CreateTableResponseBodyData extends TeaModel {
         /**
-         * <p>The ARN of the table.</p>
+         * <p>The table ARN.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:eventbridge:cn-hangzhou:123456789:catalog/my_catalog/namespace/my_namespace/table/my_table</p>

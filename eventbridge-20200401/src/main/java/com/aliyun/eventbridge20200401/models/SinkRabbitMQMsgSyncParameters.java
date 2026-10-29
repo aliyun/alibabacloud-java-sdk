@@ -4,51 +4,132 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class SinkRabbitMQMsgSyncParameters extends TeaModel {
+    /**
+     * <p>The message body.</p>
+     */
     @NameInMap("Body")
     public SinkRabbitMQMsgSyncParametersBody body;
 
+    /**
+     * <p>The endpoint of the ApsaraMQ for RabbitMQ cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rabbitmq-cn-hangzhou-2x***.com</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <p>The exchange. This parameter is required only when the TargetType parameter is set to Exchange.</p>
+     */
     @NameInMap("Exchange")
     public SinkRabbitMQMsgSyncParametersExchange exchange;
 
+    /**
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rabbitmq-cn-a1b2c3d4e5f</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the ApsaraMQ for RabbitMQ instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cloud</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The maximum number of hops allowed for message forwarding in a federation task. Messages that exceed this limit are dropped.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MaxHops")
     public String maxHops;
 
+    /**
+     * <p>The message ID.</p>
+     */
     @NameInMap("MessageId")
     public SinkRabbitMQMsgSyncParametersMessageId messageId;
 
+    /**
+     * <p>The network type used to connect to the ApsaraMQ for RabbitMQ instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrivateNetwork</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The password used to connect to the ApsaraMQ for RabbitMQ cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourPassword</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The message properties.</p>
+     */
     @NameInMap("Properties")
     public SinkRabbitMQMsgSyncParametersProperties properties;
 
+    /**
+     * <p>The routing key of the message. This parameter is required only when the TargetType parameter is set to Exchange.</p>
+     */
     @NameInMap("RoutingKey")
     public SinkRabbitMQMsgSyncParametersRoutingKey routingKey;
 
+    /**
+     * <p>The ID of the security group to which the nodes of the ApsaraMQ for RabbitMQ cluster belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The username used to connect to the ApsaraMQ for RabbitMQ cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>The IDs of the vSwitches in the VPC where the ApsaraMQ for RabbitMQ cluster resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-a1b2c3d4e5f6g7h8i9j0k</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
+    /**
+     * <p>The name of the virtual host (vhost) in the ApsaraMQ for RabbitMQ cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-001</p>
+     */
     @NameInMap("VirtualHostName")
     public String virtualHostName;
 
+    /**
+     * <p>The ID of the VPC where the ApsaraMQ for RabbitMQ cluster resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -186,12 +267,30 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
     }
 
     public static class SinkRabbitMQMsgSyncParametersBody extends TeaModel {
+        /**
+         * <p>The method used to generate the message body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template string used to format parameter values. This parameter is used only when Form is set to TEMPLATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The value expression of the message body.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$.data.body</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -227,12 +326,30 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
     }
 
     public static class SinkRabbitMQMsgSyncParametersExchange extends TeaModel {
+        /**
+         * <p>The method used to generate the target exchange.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template string used to format parameter values. This parameter is used only when Form is set to TEMPLATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The value expression of the target exchange.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$.data.exchange</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -268,12 +385,30 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
     }
 
     public static class SinkRabbitMQMsgSyncParametersMessageId extends TeaModel {
+        /**
+         * <p>The method used to generate the message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template string used to format parameter values. This parameter is used only when Form is set to TEMPLATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The value expression of the message ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$.data.messageId</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -309,12 +444,30 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
     }
 
     public static class SinkRabbitMQMsgSyncParametersProperties extends TeaModel {
+        /**
+         * <p>The method used to generate the message properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template string used to format parameter values. This parameter is used only when Form is set to TEMPLATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The value expression of the message properties.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$.data.properties</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -350,12 +503,30 @@ public class SinkRabbitMQMsgSyncParameters extends TeaModel {
     }
 
     public static class SinkRabbitMQMsgSyncParametersRoutingKey extends TeaModel {
+        /**
+         * <p>The method used to generate the routing key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template string used to format parameter values. This parameter is used only when Form is set to TEMPLATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The value expression of the routing key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$.data.routingKey</p>
+         */
         @NameInMap("Value")
         public String value;
 

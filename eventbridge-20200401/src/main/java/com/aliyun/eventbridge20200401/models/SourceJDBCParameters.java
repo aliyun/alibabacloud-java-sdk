@@ -6,90 +6,135 @@ import com.aliyun.tea.*;
 public class SourceJDBCParameters extends TeaModel {
     /**
      * <p>The maximum number of rows returned per query. Default value: 1000. Maximum value: 10000.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
      */
     @NameInMap("BatchSize")
     public Integer batchSize;
 
     /**
-     * <p>The custom SQL query statement (advanced mode). This parameter is mutually exclusive with TableName.</p>
+     * <p>The custom SQL query statement for advanced mode. This parameter is mutually exclusive with TableName.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>SELECT * FROM example_table</p>
      */
     @NameInMap("CustomQuery")
     public String customQuery;
 
     /**
-     * <p>The incrementing column name. Required when QueryMode is set to <code>incrementing</code> or <code>timestamp_incrementing</code>.</p>
+     * <p>The name of the auto-increment column. This parameter is required when QueryMode is set to <code>incrementing</code> or <code>timestamp_incrementing</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>id</p>
      */
     @NameInMap("IncrementingColumn")
     public String incrementingColumn;
 
     /**
-     * <p>The JDBC connection URL. ClickHouse example: <code>jdbc:clickhouse://host:8123/database</code>; MySQL example: <code>jdbc:mysql://host:3306/database</code>. The system automatically identifies the database type.</p>
+     * <p>The JDBC connection URL. ClickHouse example: <code>jdbc:clickhouse://host:8123/database</code>. MySQL example: <code>jdbc:mysql://host:3306/database</code>. The system automatically identifies the database type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>jdbc:mysql://host:3306/database</p>
      */
     @NameInMap("JdbcUrl")
     public String jdbcUrl;
 
     /**
-     * <p>The network type. Valid values: <code>PublicNetwork</code> (public network); <code>PrivateNetwork</code> (VPC private network, requires VpcId, VSwitchIds, and SecurityGroupId to be configured).</p>
+     * <p>The network type. Valid values: <code>PublicNetwork</code> (public network) and <code>PrivateNetwork</code> (VPC private network, which requires VpcId, VSwitchIds, and SecurityGroupId to be configured).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PublicNetwork</p>
      */
     @NameInMap("Network")
     public String network;
 
     /**
      * <p>The database password.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example_password</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
-     * <p>The polling interval, in seconds. Minimum value: 10. Default value: 60.</p>
+     * <p>The polling interval in seconds. Minimum value: 10. Default value: 60.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60</p>
      */
     @NameInMap("PollingInterval")
     public Integer pollingInterval;
 
     /**
-     * <p>The query mode. Valid values: <code>bulk</code> (full query); <code>incrementing</code> (incrementing column tracking); <code>timestamp</code> (timestamp tracking); <code>timestamp_incrementing</code> (timestamp and incrementing column dual tracking).</p>
+     * <p>The query mode. Valid values: <code>bulk</code> (full query), <code>incrementing</code> (auto-increment column tracking), <code>timestamp</code> (timestamp tracking), and <code>timestamp_incrementing</code> (dual tracking by timestamp and auto-increment column).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>bulk</p>
      */
     @NameInMap("QueryMode")
     public String queryMode;
 
     /**
-     * <p>The SQL query timeout period, in seconds. Default value: 30. Maximum value: 300.</p>
+     * <p>The SQL query timeout in seconds. Default value: 30. Maximum value: 300.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30</p>
      */
     @NameInMap("QueryTimeout")
     public Integer queryTimeout;
 
     /**
-     * <p>The security group ID. Required when Network is set to PrivateNetwork.</p>
+     * <p>The security group ID. This parameter is required when Network is set to PrivateNetwork.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
-     * <p>The target table name. This parameter is mutually exclusive with CustomQuery. Required when custom SQL is not used.</p>
+     * <p>The name of the target table. This parameter is mutually exclusive with CustomQuery and is required when custom SQL is not used.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example_table</p>
      */
     @NameInMap("TableName")
     public String tableName;
 
     /**
-     * <p>The timestamp column name. Required when QueryMode is set to <code>timestamp</code> or <code>timestamp_incrementing</code>.</p>
+     * <p>The name of the timestamp column. This parameter is required when QueryMode is set to <code>timestamp</code> or <code>timestamp_incrementing</code>.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>updated_at</p>
      */
     @NameInMap("TimestampColumn")
     public String timestampColumn;
 
     /**
      * <p>The database username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example_user</p>
      */
     @NameInMap("Username")
     public String username;
 
     /**
-     * <p>The vSwitch ID. Required when Network is set to PrivateNetwork.</p>
+     * <p>The vSwitch IDs. This parameter is required when Network is set to PrivateNetwork.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-a1b2c3d4e5f6g7h8i9j0k</p>
      */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
     /**
-     * <p>The VPC ID. Required when Network is set to PrivateNetwork.</p>
+     * <p>The VPC ID. This parameter is required when Network is set to PrivateNetwork.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEventAnalysisJobShrinkRequest extends TeaModel {
     /**
-     * <p>The identifier of the source resource.</p>
+     * <p>The source resource identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

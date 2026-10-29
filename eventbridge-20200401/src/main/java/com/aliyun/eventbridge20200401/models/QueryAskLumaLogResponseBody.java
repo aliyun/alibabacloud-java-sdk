@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryAskLumaLogResponseBody extends TeaModel {
     /**
-     * <p>The response code. Valid values:</p>
-     * <p>200: The request was successful.    </p>
-     * <p>Other values: An error occurred. For more information, see error codes.</p>
+     * <p>The return code of the API operation:</p>
+     * <p>200: The call is successful.    </p>
+     * <p>Other values: An error code. For more information, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -34,7 +34,7 @@ public class QueryAskLumaLogResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier that Alibaba Cloud generates for the request.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>6FB52207-7621-5292-BDF2-A17E2E984160</p>
@@ -43,7 +43,7 @@ public class QueryAskLumaLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Returns true if the operation is successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

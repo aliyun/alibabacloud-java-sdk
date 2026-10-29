@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchLumaKnowledgeBaseRequest extends TeaModel {
     /**
-     * <p>The name of the Agent.</p>
+     * <p>The name of the agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SearchLumaKnowledgeBaseRequest extends TeaModel {
     public String agentName;
 
     /**
-     * <p>The name of the data catalog bound to the Agent. You can call ListLumaCatalogs to obtain the catalog name.</p>
+     * <p>The name of the data catalog bound to the agent. You can call ListLumaCatalogs to obtain this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class SearchLumaKnowledgeBaseRequest extends TeaModel {
     public String catalog;
 
     /**
-     * <p>The name of the knowledge base bound to the Agent. You can call ListLumaKnowledgeBases to obtain the knowledge base name.</p>
+     * <p>The name of the knowledge base bound to the agent. You can call ListLumaKnowledgeBases to obtain this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class SearchLumaKnowledgeBaseRequest extends TeaModel {
     public String knowledgeBaseName;
 
     /**
-     * <p>A JSON string that filters the retrieval scope based on document metadata. For available fields, refer to the MetadataSchema of the knowledge base.</p>
+     * <p>The metadata filter conditions. The value is a JSON string used to filter the recall scope based on document metadata. For available fields, see the MetadataSchema of the knowledge base.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;category&quot;:&quot;faq&quot;}</p>
@@ -44,7 +44,7 @@ public class SearchLumaKnowledgeBaseRequest extends TeaModel {
     public String metadataFilter;
 
     /**
-     * <p>Valid values: vector (AISearch), keyword (keyword match), hybrid (hybrid search). If not specified, the retrieve configuration of the knowledge base is used.</p>
+     * <p>The retrieve mode. Valid values: vector (AISearch), keyword (keyword retrieve), and hybrid (hybrid retrieve). If you do not specify this parameter, the retrieve configuration of the knowledge base is used.</p>
      * 
      * <strong>example:</strong>
      * <p>hybrid</p>
@@ -53,7 +53,7 @@ public class SearchLumaKnowledgeBaseRequest extends TeaModel {
     public String mode;
 
     /**
-     * <p>The name of the namespace bound to the Agent. You can call ListLumaNamespaces to obtain the namespace name.</p>
+     * <p>The name of the namespace bound to the agent. You can call ListLumaNamespaces to obtain this value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class SearchLumaKnowledgeBaseRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The natural language query for retrieval.</p>
+     * <p>The search query in natural language.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class SearchLumaKnowledgeBaseRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>Specifies whether to enable reranking for the retrieved results. Reranking improves accuracy but increases latency. If not specified, the retrieval configuration of the knowledge base is used.</p>
+     * <p>Specifies whether to enable reranking. If enabled, the recalled results are reranked to improve precision at the cost of longer execution duration. If you do not specify this parameter, the search configuration of the knowledge base is used.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -82,7 +82,7 @@ public class SearchLumaKnowledgeBaseRequest extends TeaModel {
     public Boolean rerank;
 
     /**
-     * <p>Valid values: 1 to 100. If not specified, the retrieval configuration of the knowledge base is used.</p>
+     * <p>The number of text chunks to return. Valid values: 1 to 100. If you do not specify this parameter, the search configuration of the knowledge base is used.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

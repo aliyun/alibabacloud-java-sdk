@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNamespaceResponseBody extends TeaModel {
     /**
-     * <p>API response code, 200 indicates success</p>
+     * <p>The response code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public CreateNamespaceResponseBodyData data;
 
     /**
-     * <p>API response message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Operation success</p>
@@ -29,7 +29,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -38,7 +38,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the operation was successful</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class CreateNamespaceResponseBody extends TeaModel {
 
     public static class CreateNamespaceResponseBodyData extends TeaModel {
         /**
-         * <p>Namespace ARN</p>
+         * <p>The ARN of the namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:eventbridge:cn-hangzhou:123456789:catalog/my_catalog/namespace/my_namespace</p>

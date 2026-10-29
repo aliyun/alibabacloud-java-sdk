@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListKnowledgeBasesResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of Success indicates that the call was successful. If the call failed, a specific error code is returned.</p>
+     * <p>The response code. A value of Success indicates that the call is successful. If the call fails, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The query result of the knowledge base list, including knowledge base entries and pagination information.</p>
+     * <p>The query results of the knowledge base list, including knowledge base entries and pagination information.</p>
      */
     @NameInMap("Data")
     public ListKnowledgeBasesResponseBodyData data;
 
     /**
-     * <p>The message returned by the operation. The value Operation success is returned if the call was successful. A specific error description is returned if the call failed.</p>
+     * <p>The response message. If the call is successful, the value is Operation success. If the call fails, a specific error description is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Operation success</p>
@@ -38,7 +38,7 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. A value of true indicates success.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates that the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -102,7 +102,7 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         public java.util.List<KnowledgeBase> knowledgeBases;
 
         /**
-         * <p>The maximum number of results per page that was applied to this request.</p>
+         * <p>The actual maximum number of results per page that takes effect for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -111,7 +111,7 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The pagination token (an opaque string) for the next page. Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
+         * <p>The pagination token for the next page. It is an opaque string. You can pass this token as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>ca1eb85f5d99c7d6a97e6****</p>
@@ -120,7 +120,7 @@ public class ListKnowledgeBasesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of knowledge bases that match the filter conditions. Use an empty NextToken value as the termination condition for pagination.</p>
+         * <p>The total number of knowledge bases that meet the filter conditions. Pagination ends when NextToken is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

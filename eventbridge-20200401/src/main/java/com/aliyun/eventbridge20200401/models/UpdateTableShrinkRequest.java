@@ -8,7 +8,7 @@ public class UpdateTableShrinkRequest extends TeaModel {
      * <p>Add column</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}</p>
+     * <p>{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;Primary key&quot;}</p>
      */
     @NameInMap("AddColumn")
     public String addColumnShrink;
@@ -72,7 +72,7 @@ public class UpdateTableShrinkRequest extends TeaModel {
      * <p>Update column comment</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Name&quot;:&quot;id&quot;,&quot;Comment&quot;:&quot;主键ID&quot;}</p>
+     * <p>{&quot;Name&quot;:&quot;id&quot;,&quot;Comment&quot;:&quot;Primary key ID&quot;}</p>
      */
     @NameInMap("UpdateColumnComment")
     public String updateColumnCommentShrink;

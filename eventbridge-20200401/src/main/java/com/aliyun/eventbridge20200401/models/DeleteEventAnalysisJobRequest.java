@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteEventAnalysisJobRequest extends TeaModel {
     /**
-     * <p>The identifier of the source resource.</p>
+     * <p>The source resource identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class DeleteEventAnalysisJobRequest extends TeaModel {
 
     public static class DeleteEventAnalysisJobRequestSourceResourceKafka extends TeaModel {
         /**
-         * <p>The instance ID of the Kafka instance.</p>
+         * <p>The Kafka instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>alikafka_post-cn-xxx</p>
@@ -88,7 +88,7 @@ public class DeleteEventAnalysisJobRequest extends TeaModel {
 
     public static class DeleteEventAnalysisJobRequestSourceResourceRocketMQ extends TeaModel {
         /**
-         * <p>The instance ID of the RocketMQ instance.</p>
+         * <p>The RocketMQ instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rmq-cn-xxx</p>

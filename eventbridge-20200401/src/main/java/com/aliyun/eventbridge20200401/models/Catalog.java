@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class Catalog extends TeaModel {
     /**
-     * <p>The comment or description of the data catalog.</p>
+     * <p>The comment of the data catalog.</p>
      * 
      * <strong>example:</strong>
      * <p>Test data catalog</p>
@@ -14,7 +14,7 @@ public class Catalog extends TeaModel {
     public String comment;
 
     /**
-     * <p>The connection name associated with a mounted catalog. This parameter has a value only when Provider is set to MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, or Iceberg.</p>
+     * <p>The name of the connection associated with a mounted catalog. This property has a value only when the provider is MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, or Iceberg.</p>
      * 
      * <strong>example:</strong>
      * <p>my_connection</p>
@@ -23,7 +23,7 @@ public class Catalog extends TeaModel {
     public String connectionName;
 
     /**
-     * <p>The unique identifier name of the data catalog.</p>
+     * <p>The unique name of the data catalog.</p>
      * 
      * <strong>example:</strong>
      * <p>my_catalog</p>
@@ -32,7 +32,7 @@ public class Catalog extends TeaModel {
     public String name;
 
     /**
-     * <p>The extended properties (JSON object). For the Elasticsearch type, this includes information such as IndexPattern.</p>
+     * <p>The extended properties as a JSON object. The Elasticsearch type includes information such as IndexPattern.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;IndexPattern&quot;:&quot;my-index-*&quot;}</p>
@@ -41,7 +41,7 @@ public class Catalog extends TeaModel {
     public java.util.Map<String, ?> properties;
 
     /**
-     * <p>The data source provider. EventHouse indicates built-in storage. MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, and Iceberg indicate externally mounted sources.</p>
+     * <p>The data source provider. EventHouse uses built-in storage, while MySQL, PostgreSQL, Elasticsearch, OSS_TABLES, SLS, OTS, MaxCompute, MongoDB, Redis, SQLServer, ClickHouse, Oracle, Hive, and Iceberg are externally mounted.</p>
      * 
      * <strong>example:</strong>
      * <p>EventHouse</p>

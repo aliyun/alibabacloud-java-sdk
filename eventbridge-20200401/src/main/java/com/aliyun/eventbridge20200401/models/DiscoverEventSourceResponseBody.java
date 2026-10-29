@@ -240,12 +240,18 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
 
         /**
          * <p>The estimated number of rows. Unit: rows.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("EstimatedRows")
         public Long estimatedRows;
 
         /**
          * <p>The number of days before binary logs (binlogs) expire. Unit: days.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("ExpireLogsDays")
         public Integer expireLogsDays;
@@ -273,6 +279,9 @@ public class DiscoverEventSourceResponseBody extends TeaModel {
 
         /**
          * <p>The maximum idle time for a non-interactive connection. Unit: seconds.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>86400</p>
          */
         @NameInMap("WaitTimeout")
         public Integer waitTimeout;

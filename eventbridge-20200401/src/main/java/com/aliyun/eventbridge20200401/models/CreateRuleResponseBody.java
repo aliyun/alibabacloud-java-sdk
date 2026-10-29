@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateRuleResponseBody extends TeaModel {
     /**
-     * <p>The response code. The value Success indicates that the request is successful. Other values indicate that the request failed. For more information about error codes, see Error codes.</p>
+     * <p>The response code. A value of Success indicates that the request is successful. Other values indicate error codes. For more information, see Error codes.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class CreateRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public CreateRuleResponseBodyData data;
@@ -38,7 +38,7 @@ public class CreateRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful. A value of true indicates that the operation is successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

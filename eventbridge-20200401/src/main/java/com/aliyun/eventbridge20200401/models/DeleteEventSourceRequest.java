@@ -6,6 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteEventSourceRequest extends TeaModel {
     /**
      * <p>The event bus to which the event source is attached.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>eEXaMPLEBUSNameAaAaAa</p>
      */
     @NameInMap("EventBusName")
     public String eventBusName;

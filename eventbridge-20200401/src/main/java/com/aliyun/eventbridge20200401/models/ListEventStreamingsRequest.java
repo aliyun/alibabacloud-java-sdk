@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventStreamingsRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return per request. You can use this parameter together with NextToken to implement paging.</p>
-     * <blockquote>
-     * <p>Notice: The maximum number of entries to return per request cannot exceed 100.</p>
-     * </blockquote>
+     * <p>Specifies the maximum number of entries to return per request. You can use this parameter together with NextToken to paginate results.&gt;Notice: The maximum number of entries returned per request cannot exceed 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -17,7 +14,7 @@ public class ListEventStreamingsRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The name prefix of the event stream.</p>
+     * <p>The prefix of the event stream name.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -26,7 +23,7 @@ public class ListEventStreamingsRequest extends TeaModel {
     public String namePrefix;
 
     /**
-     * <p>If the number of entries that match the specified conditions exceeds the value of Limit, a NextToken is returned.</p>
+     * <p>The token that is returned when Limit is specified and additional results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,13 +41,13 @@ public class ListEventStreamingsRequest extends TeaModel {
     public String sinkArn;
 
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the event source.</p>
+     * <p>The ARN of the event source.</p>
      */
     @NameInMap("SourceArn")
     public String sourceArn;
 
     /**
-     * <p>The tags used for filtering.</p>
+     * <p>The tags used to filter results.</p>
      */
     @NameInMap("Tags")
     public java.util.List<ListEventStreamingsRequestTags> tags;

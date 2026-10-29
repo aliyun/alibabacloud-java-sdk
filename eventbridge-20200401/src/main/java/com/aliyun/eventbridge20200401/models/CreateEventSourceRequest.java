@@ -8,7 +8,7 @@ public class CreateEventSourceRequest extends TeaModel {
      * <p>The description of the event source.</p>
      * 
      * <strong>example:</strong>
-     * <p>RabbitMQ event source</p>
+     * <p>Event source of the RabbitMQ type</p>
      */
     @NameInMap("Description")
     public String description;
@@ -34,7 +34,7 @@ public class CreateEventSourceRequest extends TeaModel {
     public String eventSourceName;
 
     /**
-     * <p>The configuration of the external data source.</p>
+     * <p>The external data source configuration.</p>
      */
     @NameInMap("ExternalSourceConfig")
     public java.util.Map<String, ?> externalSourceConfig;
@@ -58,49 +58,49 @@ public class CreateEventSourceRequest extends TeaModel {
     public Boolean linkedExternalSource;
 
     /**
-     * <p>Parameters for an HTTP endpoint event source.</p>
+     * <p>The request parameter SourceHttpEventParameters.</p>
      */
     @NameInMap("SourceHttpEventParameters")
     public CreateEventSourceRequestSourceHttpEventParameters sourceHttpEventParameters;
 
     /**
-     * <p>Parameters for the Message Queue for Apache Kafka event source.</p>
+     * <p>The request parameter SourceKafkaParameters.</p>
      */
     @NameInMap("SourceKafkaParameters")
     public CreateEventSourceRequestSourceKafkaParameters sourceKafkaParameters;
 
     /**
-     * <p>Parameters for the Message Service (MNS) event source. The <code>RegionId</code>, <code>IsBase64Decode</code>, and <code>QueueName</code> parameters are required for this type.</p>
+     * <p>The parameters for a Simple Message Queue (formerly MNS) event source. If you select Simple Message Queue (formerly MNS) as the event source, the RegionId, IsBase64Decode, and QueueName parameters are required.</p>
      */
     @NameInMap("SourceMNSParameters")
     public CreateEventSourceRequestSourceMNSParameters sourceMNSParameters;
 
     /**
-     * <p>Parameters for the Object Storage Service (OSS) event source.</p>
+     * <p>The parameters for an OSS event source.</p>
      */
     @NameInMap("SourceOSSEventParameters")
     public CreateEventSourceRequestSourceOSSEventParameters sourceOSSEventParameters;
 
     /**
-     * <p>Parameters for the Message Queue for RabbitMQ event source.</p>
+     * <p>The request parameter SourceRabbitMQParameters.</p>
      */
     @NameInMap("SourceRabbitMQParameters")
     public CreateEventSourceRequestSourceRabbitMQParameters sourceRabbitMQParameters;
 
     /**
-     * <p>Parameters for the Message Queue for Apache RocketMQ event source.</p>
+     * <p>The request parameter SourceRocketMQParameters.</p>
      */
     @NameInMap("SourceRocketMQParameters")
     public CreateEventSourceRequestSourceRocketMQParameters sourceRocketMQParameters;
 
     /**
-     * <p>Parameters for the Simple Log Service (SLS) event source.</p>
+     * <p>The parameters for a Simple Log Service event source.</p>
      */
     @NameInMap("SourceSLSParameters")
     public CreateEventSourceRequestSourceSLSParameters sourceSLSParameters;
 
     /**
-     * <p>Parameters for a scheduled event source.</p>
+     * <p>The request parameter SourceScheduledEventParameters.</p>
      */
     @NameInMap("SourceScheduledEventParameters")
     public CreateEventSourceRequestSourceScheduledEventParameters sourceScheduledEventParameters;
@@ -224,52 +224,40 @@ public class CreateEventSourceRequest extends TeaModel {
 
     public static class CreateEventSourceRequestSourceHttpEventParameters extends TeaModel {
         /**
-         * <p>The IP address range for security settings. This parameter is required only if you set <code>SecurityConfig</code> to <code>ip</code>. You can specify a single IP address or a CIDR block.</p>
+         * <p>The CIDR block for security configuration. This parameter is required only when the SecurityConfig parameter is set to ip. You can enter a CIDR block or an IP address.</p>
          */
         @NameInMap("Ip")
         public java.util.List<String> ip;
 
         /**
-         * <p>The HTTP request methods supported by the webhook. You can specify more than one method. Valid values:</p>
+         * <p>The HTTP request methods supported by the generated webhook. You can select multiple values. Valid values:</p>
          * <ul>
-         * <li><p><code>GET</code></p>
-         * </li>
-         * <li><p><code>POST</code></p>
-         * </li>
-         * <li><p><code>PUT</code></p>
-         * </li>
-         * <li><p><code>PATCH</code></p>
-         * </li>
-         * <li><p><code>DELETE</code></p>
-         * </li>
-         * <li><p><code>HEAD</code></p>
-         * </li>
-         * <li><p><code>OPTIONS</code></p>
-         * </li>
-         * <li><p><code>TRACE</code></p>
-         * </li>
-         * <li><p><code>CONNECT</code></p>
-         * </li>
+         * <li>GET</li>
+         * <li>POST</li>
+         * <li>PUT</li>
+         * <li>PATCH</li>
+         * <li>DELETE</li>
+         * <li>HEAD</li>
+         * <li>OPTIONS</li>
+         * <li>TRACE</li>
+         * <li>CONNECT</li>
          * </ul>
          */
         @NameInMap("Method")
         public java.util.List<String> method;
 
         /**
-         * <p>The security domain names. This parameter is required only if you set <code>SecurityConfig</code> to <code>referer</code>. You can specify one or more domain names.</p>
+         * <p>The secure domain name for security configuration. This parameter is required only when the SecurityConfig parameter is set to referer. You can enter a domain name.</p>
          */
         @NameInMap("Referer")
         public java.util.List<String> referer;
 
         /**
-         * <p>The type of security configuration. Valid values:</p>
+         * <p>The type of the security configuration. Valid values:</p>
          * <ul>
-         * <li><p><code>none</code>: No configuration is required.</p>
-         * </li>
-         * <li><p><code>ip</code>: IP address range.</p>
-         * </li>
-         * <li><p><code>referer</code>: Security domain name.</p>
-         * </li>
+         * <li>none: No configuration is required.</li>
+         * <li>ip: CIDR block.</li>
+         * <li>referer: Secure domain name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -279,14 +267,11 @@ public class CreateEventSourceRequest extends TeaModel {
         public String securityConfig;
 
         /**
-         * <p>The supported protocol for the webhook. Valid values:</p>
+         * <p>The protocol type supported by the generated webhook. Valid values:</p>
          * <ul>
-         * <li><p><code>HTTP</code></p>
-         * </li>
-         * <li><p><code>HTTPS</code></p>
-         * </li>
-         * <li><p><code>HTTP&amp;HTTPS</code></p>
-         * </li>
+         * <li>HTTP</li>
+         * <li>HTTPS</li>
+         * <li>HTTP&amp;HTTPS</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -344,7 +329,7 @@ public class CreateEventSourceRequest extends TeaModel {
 
     public static class CreateEventSourceRequestSourceKafkaParameters extends TeaModel {
         /**
-         * <p>The consumer group ID.</p>
+         * <p>The group ID of the consumer that subscribes to the topic.</p>
          * 
          * <strong>example:</strong>
          * <p>wechat_peer_****</p>
@@ -362,7 +347,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The concurrent consumption quota (number of consumers).</p>
+         * <p>The concurrency quota, which is the number of consumers.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -371,7 +356,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public Integer maximumTasks;
 
         /**
-         * <p>The network type. Valid values are <code>Default</code> and <code>PublicNetwork</code>. Specify <code>PublicNetwork</code> if the instance is in a VPC.</p>
+         * <p>The network configuration. Valid values: Default and PublicNetwork.</p>
          * 
          * <strong>example:</strong>
          * <p>Default</p>
@@ -380,7 +365,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String network;
 
         /**
-         * <p>The consumer offset reset policy.</p>
+         * <p>The consumption offset.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -398,7 +383,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The security group ID. This parameter is required if <code>Network</code> is set to <code>PublicNetwork</code>.</p>
+         * <p>The security group ID. Required for self-managed networks.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-8vbf66aoyp0wfzrz****</p>
@@ -407,7 +392,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The topic name.</p>
+         * <p>The name of the topic.</p>
          * 
          * <strong>example:</strong>
          * <p>prod_ma_dispatch_center_call_re****</p>
@@ -416,7 +401,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String topic;
 
         /**
-         * <p>The vSwitch ID. This parameter is required if <code>Network</code> is set to <code>PublicNetwork</code>.</p>
+         * <p>The vSwitch ID. Required for self-managed networks.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp127azpeirmwu4q9****</p>
@@ -425,7 +410,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String vSwitchIds;
 
         /**
-         * <p>The VPC ID. This parameter is required if <code>Network</code> is set to <code>PublicNetwork</code>.</p>
+         * <p>The VPC ID. Required for self-managed networks.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-2ze5ejm986a73qq3v****</p>
@@ -522,7 +507,7 @@ public class CreateEventSourceRequest extends TeaModel {
 
     public static class CreateEventSourceRequestSourceMNSParameters extends TeaModel {
         /**
-         * <p>Specifies whether to enable Base64 decoding. Valid values: <code>true</code> and <code>false</code>.</p>
+         * <p>Specifies whether to enable Base64 decoding. A value of true indicates that Base64 decoding is enabled. Valid values: true and false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -531,7 +516,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public Boolean isBase64Decode;
 
         /**
-         * <p>The name of the queue in Message Service (MNS).</p>
+         * <p>The name of the Simple Message Queue (formerly MNS) queue.</p>
          * 
          * <strong>example:</strong>
          * <p>MyQueue</p>
@@ -540,8 +525,8 @@ public class CreateEventSourceRequest extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The region where the Message Service (MNS) queue is located.
-         * You can specify the following regions: <code>cn-qingdao</code>, <code>cn-beijing</code>, <code>cn-zhangjiakou</code>, <code>cn-huhehaote</code>, <code>cn-wulanchabu</code>, <code>cn-hangzhou</code>, <code>cn-shanghai</code>, <code>cn-shenzhen</code>, <code>cn-guangzhou</code>, <code>cn-chengdu</code>, <code>cn-hongkong</code>, <code>ap-southeast-1</code>, <code>ap-southeast-2</code>, <code>ap-southeast-3</code>, <code>ap-southeast-5</code>, <code>ap-northeast-1</code>, <code>eu-central-1</code>, <code>us-west-1</code>, <code>us-east-1</code>, <code>ap-south-1</code>, <code>me-east-1</code>, and <code>cn-north-2-gov-1</code>.</p>
+         * <p>The region where the Simple Message Queue (formerly MNS) queue resides.
+         * Valid values: cn-qingdao, cn-beijing, cn-zhangjiakou, cn-huhehaote, cn-wulanchabu, cn-hangzhou, cn-shanghai, cn-shenzhen, cn-guangzhou, cn-chengdu, cn-hongkong, ap-southeast-1, ap-southeast-2, ap-southeast-3, ap-southeast-5, ap-northeast-1, eu-central-1, us-west-1, us-east-1, ap-south-1, me-east-1, and cn-north-2-gov-1.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -583,18 +568,27 @@ public class CreateEventSourceRequest extends TeaModel {
     public static class CreateEventSourceRequestSourceOSSEventParametersMatchRules extends TeaModel {
         /**
          * <p>The prefix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>fun/document/</p>
          */
         @NameInMap("Prefix")
         public String prefix;
 
         /**
          * <p>The suffix.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>document</p>
          */
         @NameInMap("Suffix")
         public String suffix;
 
         /**
          * <p>The name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>bucketName</p>
          */
         @NameInMap("Name")
         public String name;
@@ -652,13 +646,16 @@ public class CreateEventSourceRequest extends TeaModel {
         public java.util.List<String> eventTypes;
 
         /**
-         * <p>The match rules.</p>
+         * <p>The matching rules.</p>
          */
         @NameInMap("MatchRules")
         public java.util.List<java.util.List<CreateEventSourceRequestSourceOSSEventParametersMatchRules>> matchRules;
 
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the Security Token Service (STS) role.</p>
+         * <p>The ARN of the STS role.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>acs:eventbridge:cn-hangzhou:**</p>
          */
         @NameInMap("StsRoleArn")
         public String stsRoleArn;
@@ -696,7 +693,7 @@ public class CreateEventSourceRequest extends TeaModel {
 
     public static class CreateEventSourceRequestSourceRabbitMQParameters extends TeaModel {
         /**
-         * <p>The ID of the Message Queue for RabbitMQ instance. For more information, see Limits.</p>
+         * <p>The instance ID of the ApsaraMQ for RabbitMQ instance. For more information, see Limits.</p>
          * 
          * <strong>example:</strong>
          * <p>amqp-cn-nif22u74****</p>
@@ -705,7 +702,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The name of the queue on the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+         * <p>The queue name of the ApsaraMQ for RabbitMQ instance, such as eb-connect. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -714,7 +711,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The region where the Message Queue for RabbitMQ instance resides.</p>
+         * <p>The region where the ApsaraMQ for RabbitMQ instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -723,7 +720,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the virtual host (vhost) of the Message Queue for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+         * <p>The vhost name of the ApsaraMQ for RabbitMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>eb-connect</p>
@@ -772,7 +769,7 @@ public class CreateEventSourceRequest extends TeaModel {
 
     public static class CreateEventSourceRequestSourceRocketMQParameters extends TeaModel {
         /**
-         * <p>The authentication type. You can set this parameter to <code>ACL</code> or leave it empty.</p>
+         * <p>The authentication type. Valid values: ACL. You can also leave this parameter empty.</p>
          * 
          * <strong>example:</strong>
          * <p>ACL</p>
@@ -781,7 +778,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String authType;
 
         /**
-         * <p>The consumer group ID on the Message Queue for Apache RocketMQ instance.</p>
+         * <p>The group ID of the ApsaraMQ for RocketMQ instance.</p>
          * 
          * <strong>example:</strong>
          * <p>GID-test</p>
@@ -790,7 +787,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String groupID;
 
         /**
-         * <p>The instance endpoint.</p>
+         * <p>The endpoint of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>registry-vpc****.aliyuncs.com</p>
@@ -799,7 +796,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String instanceEndpoint;
 
         /**
-         * <p>The ID of the Message Queue for Apache RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+         * <p>The instance ID of the ApsaraMQ for RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>MQ_INST_164901546557****_BAAN****</p>
@@ -808,22 +805,25 @@ public class CreateEventSourceRequest extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>This parameter is not in use.</p>
+         * <p>The network type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PublicNetwork</p>
          */
         @NameInMap("InstanceNetwork")
         public String instanceNetwork;
 
         /**
-         * <p>The password for the instance.</p>
+         * <p>The password of the instance.</p>
          * 
          * <strong>example:</strong>
-         * <hr>
+         * <p>yourPassword</p>
          */
         @NameInMap("InstancePassword")
         public String instancePassword;
 
         /**
-         * <p>The security group ID. This parameter is required if the instance is deployed in a VPC.</p>
+         * <p>The security group ID. Required for VPCs.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-catalog-eventlist****</p>
@@ -834,10 +834,8 @@ public class CreateEventSourceRequest extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><p><code>Cloud_4</code>: For v4.0 instances.</p>
-         * </li>
-         * <li><p><code>Cloud_5</code>: For v5.0 instances.</p>
-         * </li>
+         * <li>Cloud_4: Version 4.0 instance.</li>
+         * <li>Cloud_5: Version 5.0 instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -847,7 +845,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The username for the instance.</p>
+         * <p>The username of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>root</p>
@@ -856,7 +854,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String instanceUsername;
 
         /**
-         * <p>The vSwitch ID. This parameter is required if the instance is deployed in a VPC.</p>
+         * <p>The vSwitch ID. Required for VPCs.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp10rbrt6rb6vrd89****</p>
@@ -865,7 +863,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String instanceVSwitchIds;
 
         /**
-         * <p>The ID of the virtual private cloud (VPC). This parameter is required if the instance is deployed in a VPC.</p>
+         * <p>The ID of the virtual private cloud (VPC). Required for VPCs.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-bp1a4gmlk31hyg6pt****</p>
@@ -874,7 +872,13 @@ public class CreateEventSourceRequest extends TeaModel {
         public String instanceVpcId;
 
         /**
-         * <p>The consumer offset from which message consumption starts. Valid values:</p>
+         * <p>The consumption offset of the message. Valid values:</p>
+         * <ul>
+         * <li>CONSUME_FROM_LAST_OFFSET: Consumes messages from the latest offset.</li>
+         * <li>CONSUME_FROM_FIRST_OFFSET: Consumes messages from the earliest offset.</li>
+         * <li>CONSUME_FROM_TIMESTAMP: Consumes messages from the offset at a specified point in time.
+         * Default value: CONSUME_FROM_LAST_OFFSET.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CONSUME_FROM_LAST_OFFSET</p>
@@ -883,7 +887,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String offset;
 
         /**
-         * <p>The region where the Message Queue for Apache RocketMQ instance resides.</p>
+         * <p>The region where the ApsaraMQ for RocketMQ instance resides.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -892,7 +896,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The tag used to filter messages.</p>
+         * <p>The filter tag of the message.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -901,7 +905,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String tag;
 
         /**
-         * <p>The point in time to start consumption, specified as a timestamp. This parameter is valid only if you set the <code>Offset</code> parameter to <code>CONSUME_FROM_TIMESTAMP</code>.</p>
+         * <p>The timestamp. This parameter takes effect only when the Offset parameter is set to CONSUME_FROM_TIMESTAMP.</p>
          * 
          * <strong>example:</strong>
          * <p>1636597951964</p>
@@ -910,7 +914,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public Long timestamp;
 
         /**
-         * <p>The name of the topic on the Message Queue for Apache RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
+         * <p>The topic name of the ApsaraMQ for RocketMQ instance. For more information, see <a href="https://help.aliyun.com/document_detail/163289.html">Limits</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>mytopic</p>
@@ -1055,7 +1059,7 @@ public class CreateEventSourceRequest extends TeaModel {
 
     public static class CreateEventSourceRequestSourceSLSParameters extends TeaModel {
         /**
-         * <p>The consumer offset. Specifies where to start consumption. Valid values are <code>begin</code> (earliest offset), <code>end</code> (latest offset), or a specific UNIX timestamp.</p>
+         * <p>The start consumption offset. You can set this parameter to begin to consume from the earliest offset, end to consume from the latest offset, or a specific timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>end</p>
@@ -1064,7 +1068,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String consumePosition;
 
         /**
-         * <p>The Logstore in Simple Log Service.</p>
+         * <p>The Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>test-logstore</p>
@@ -1073,7 +1077,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String logStore;
 
         /**
-         * <p>The Log Project in Simple Log Service.</p>
+         * <p>The Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>test-project</p>
@@ -1082,7 +1086,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String project;
 
         /**
-         * <p>The RAM role that EventBridge assumes to read logs from Simple Log Service. When you create this role in the RAM console, select <strong>Alibaba Cloud Service</strong> as the trusted entity and <strong>EventBridge</strong> as the trusted service. For more information about the permissions for this role, see Custom event sources for Simple Log Service (SLS).</p>
+         * <p>When granting authorization to EventBridge to read Simple Log Service logs by using this role, the following conditions must be met: When you create the role in the Resource Access Management (RAM) console, you must select Alibaba Cloud Service as the trusted entity and EventBridge as the trusted service. For more information about the access policy for this role, see Custom event source: Simple Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>testRole</p>
@@ -1140,7 +1144,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String schedule;
 
         /**
-         * <p>The time zone in which the cron expression is executed.</p>
+         * <p>The time zone for cron execution.</p>
          * 
          * <strong>example:</strong>
          * <p>GMT+0:00</p>
@@ -1149,7 +1153,7 @@ public class CreateEventSourceRequest extends TeaModel {
         public String timeZone;
 
         /**
-         * <p>A user-defined JSON string.</p>
+         * <p>The JSON string.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;a&quot;: &quot;b&quot;}</p>

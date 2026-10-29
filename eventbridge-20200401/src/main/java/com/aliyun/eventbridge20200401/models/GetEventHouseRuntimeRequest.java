@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEventHouseRuntimeRequest extends TeaModel {
     /**
-     * <p>The name of the EventHouse Runtime. If this parameter is not specified, the default Runtime is queried.</p>
+     * <p>The name of the EventHouse runtime. If this parameter is not specified, the default runtime is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>

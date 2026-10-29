@@ -8,7 +8,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
      * <p>The description of the event bus.</p>
      * 
      * <strong>example:</strong>
-     * <p>连接配置描述信息</p>
+     * <p>Connection configuration description</p>
      */
     @NameInMap("Description")
     public String description;
@@ -33,7 +33,7 @@ public class CreateAgentShrinkRequest extends TeaModel {
      * <p>You are an IoT data analytics assistant...</p>
      * 
      * <strong>example:</strong>
-     * <p>我想要她，你这样增加请求头获取用户IP CF-Connecting-IP%3B</p>
+     * <p>I want her, you add the request header to obtain the user IP CF-Connecting-IP%3B</p>
      */
     @NameInMap("Prompt")
     public String prompt;

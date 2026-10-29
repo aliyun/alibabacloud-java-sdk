@@ -6,78 +6,117 @@ import com.aliyun.tea.*;
 public class SourceMySQLParameters extends TeaModel {
     /**
      * <p>The name of the database.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>database1</p>
      */
     @NameInMap("DatabaseName")
     public String databaseName;
 
     /**
      * <p>The hostname or IP address of the database server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rm-bp1vxxx.mysql.rds.aliyuncs.com</p>
      */
     @NameInMap("HostName")
     public String hostName;
 
     /**
      * <p>Indicates whether to include schema changes.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
      */
     @NameInMap("IncludeSchemaChanges")
     public String includeSchemaChanges;
 
     /**
      * <p>The network type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrivateNetwork</p>
      */
     @NameInMap("NetworkType")
     public String networkType;
 
     /**
      * <p>The password for the user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
      */
     @NameInMap("Password")
     public String password;
 
     /**
      * <p>The database server port.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>80</p>
      */
     @NameInMap("Port")
     public Integer port;
 
     /**
      * <p>The ID of the region that contains the data source.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
      */
     @NameInMap("RegionId")
     public String regionId;
 
     /**
      * <p>The ID of the security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
      */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
     /**
      * <p>The snapshot mode.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>when_needed</p>
      */
     @NameInMap("SnapshotMode")
     public String snapshotMode;
 
     /**
      * <p>The names of tables to synchronize. Separate multiple table names with a comma.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>database1.table1</p>
      */
     @NameInMap("TableNames")
     public String tableNames;
 
     /**
      * <p>The database username.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example_user</p>
      */
     @NameInMap("User")
     public String user;
 
     /**
      * <p>The VSwitch IDs. Separate multiple IDs with a comma.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[vsw-a1b2c3d4e5f6g7h8i9j0k]</p>
      */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
     /**
      * <p>The ID of the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
      */
     @NameInMap("VpcId")
     public String vpcId;

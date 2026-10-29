@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateKnowledgeBaseResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of Success indicates a successful operation. An error code is returned if the operation fails.</p>
+     * <p>The response code. Success indicates that the call was successful. If the call fails, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -20,7 +20,7 @@ public class CreateKnowledgeBaseResponseBody extends TeaModel {
     public KnowledgeBase data;
 
     /**
-     * <p>The response message. A value of Operation success is returned if the operation succeeds. A specific error description is returned if the operation fails.</p>
+     * <p>The response message. Operation success is returned if the call is successful. A specific error description is returned if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Operation success</p>
@@ -38,7 +38,7 @@ public class CreateKnowledgeBaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful. A value of true indicates success.</p>
+     * <p>Indicates whether the call was successful. A value of true indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -14,7 +14,7 @@ public class ListUserDefinedEventSourcesRequest extends TeaModel {
     public String eventBusName;
 
     /**
-     * <p>The maximum number of entries to return per request. You can use this parameter with NextToken for pagination. The maximum value is 100.</p>
+     * <p>The maximum number of entries to return per request. You can use this parameter with NextToken to paginate results. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -32,7 +32,7 @@ public class ListUserDefinedEventSourcesRequest extends TeaModel {
     public String namePrefix;
 
     /**
-     * <p>The token used to retrieve the next page of results. Set this parameter to the NextToken value returned from a previous call.</p>
+     * <p>The token returned when Limit is specified and additional results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

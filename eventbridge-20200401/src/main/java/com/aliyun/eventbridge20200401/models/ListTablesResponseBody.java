@@ -17,7 +17,7 @@ public class ListTablesResponseBody extends TeaModel {
      * <p>Response data</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Tables&quot;:[{&quot;Name&quot;:&quot;my_table&quot;,&quot;Comment&quot;:&quot;测试事件表&quot;}],&quot;NextToken&quot;:&quot;10&quot;,&quot;Total&quot;:1}</p>
+     * <p>{&quot;Tables&quot;:[{&quot;Name&quot;:&quot;my_table&quot;,&quot;Comment&quot;:&quot;Test event table&quot;}],&quot;NextToken&quot;:&quot;10&quot;,&quot;Total&quot;:1}</p>
      */
     @NameInMap("Data")
     public ListTablesResponseBodyData data;

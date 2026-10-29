@@ -4,18 +4,39 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class SinkMQTTParameters extends TeaModel {
+    /**
+     * <p>The ID of the destination MQTT instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>mqtt-cn-a1b2c3d4e5f</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The user properties.</p>
+     */
     @NameInMap("Mqtt5UserProperty")
     public SinkMQTTParametersMqtt5UserProperty mqtt5UserProperty;
 
+    /**
+     * <p>The parent topic of the destination MQTT instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-topic</p>
+     */
     @NameInMap("ParentTopic")
     public String parentTopic;
 
+    /**
+     * <p>The message payload.</p>
+     */
     @NameInMap("Payload")
     public SinkMQTTParametersPayload payload;
 
+    /**
+     * <p>The subtopic name.</p>
+     */
     @NameInMap("SubTopic")
     public SinkMQTTParametersSubTopic subTopic;
 
@@ -65,12 +86,30 @@ public class SinkMQTTParameters extends TeaModel {
     }
 
     public static class SinkMQTTParametersMqtt5UserProperty extends TeaModel {
+        /**
+         * <p>The method used to generate the parameter value. Valid values: CONSTANT (constant), JSONPATH (extracted from event content), and TEMPLATE (template).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template string used to format the parameter value. This parameter is used only when Form is set to TEMPLATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The source content of the parameter value specified by Form. When Form is set to CONSTANT, this value is the content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO CONTENT</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -106,12 +145,30 @@ public class SinkMQTTParameters extends TeaModel {
     }
 
     public static class SinkMQTTParametersPayload extends TeaModel {
+        /**
+         * <p>The method used to generate the message content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ORIGINAL</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template string used to format the parameter value. This parameter is used only when Form is set to TEMPLATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The source content of the parameter value specified by Form. When Form is set to CONSTANT, this value is the content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>DEMO CONTENT</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -147,12 +204,30 @@ public class SinkMQTTParameters extends TeaModel {
     }
 
     public static class SinkMQTTParametersSubTopic extends TeaModel {
+        /**
+         * <p>The method used to generate the parameter value. Valid values: CONSTANT (constant), JSONPATH (extracted from event content), and TEMPLATE (template).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template string used to format the parameter value. This parameter is used only when Form is set to TEMPLATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The source content of the parameter value specified by Form. When Form is set to CONSTANT, this value is the content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUB-TOPIC</p>
+         */
         @NameInMap("Value")
         public String value;
 

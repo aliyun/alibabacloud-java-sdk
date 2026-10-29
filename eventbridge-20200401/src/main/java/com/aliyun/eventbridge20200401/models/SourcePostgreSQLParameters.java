@@ -4,42 +4,120 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class SourcePostgreSQLParameters extends TeaModel {
+    /**
+     * <p>The name of the PostgreSQL database to connect to.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>analytics_db</p>
+     */
     @NameInMap("DatabaseName")
     public String databaseName;
 
+    /**
+     * <p>The hostname or IP address of the PostgreSQL database server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>pgm-bp1xxxxx.pg.rds.aliyuncs.com</p>
+     */
     @NameInMap("HostName")
     public String hostName;
 
+    /**
+     * <p>The network type used to connect to the PostgreSQL data source. Valid values: PublicNetwork (public network) and PrivateNetwork (VPC).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrivateNetwork</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The password of the database connection user.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>your_password</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The connection port of the PostgreSQL database server.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>5432</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>The ID of the region where the PostgreSQL data source resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The name of the PostgreSQL schema to synchronize.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_schema</p>
+     */
     @NameInMap("SchemaName")
     public String schemaName;
 
+    /**
+     * <p>The ID of the security group used to connect to the PostgreSQL instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The snapshot mode used when PostgreSQL data synchronization is started for the first time.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>when_needed</p>
+     */
     @NameInMap("SnapshotMode")
     public String snapshotMode;
 
+    /**
+     * <p>The names of the PostgreSQL tables to synchronize. Separate multiple table names with commas. Each table name must be in the {SchemaName}.{TableName} format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test_schema.test_table</p>
+     */
     @NameInMap("TableNames")
     public String tableNames;
 
+    /**
+     * <p>The username for the database connection.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>readonly_user</p>
+     */
     @NameInMap("User")
     public String user;
 
+    /**
+     * <p>The ID of the vSwitch in the VPC.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[vsw-a1b2c3d4e5f6g7h8i9j0k]</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
+    /**
+     * <p>The ID of the VPC where the PostgreSQL instance resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

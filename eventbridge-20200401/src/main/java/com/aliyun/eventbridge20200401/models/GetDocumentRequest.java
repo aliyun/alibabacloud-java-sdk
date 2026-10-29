@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDocumentRequest extends TeaModel {
     /**
-     * <p>The data catalog to which the knowledge base belongs. This parameter, together with Namespace and KnowledgeBaseName, uniquely identifies a knowledge base. You can call ListCatalogs to obtain this value.</p>
+     * <p>The data catalog to which the knowledge base belongs. It is used together with Namespace and KnowledgeBaseName to locate the knowledge base. You can call the ListCatalogs operation to obtain the value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetDocumentRequest extends TeaModel {
     public String catalog;
 
     /**
-     * <p>The document ID.</p>
+     * <p>The ID of the document.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetDocumentRequest extends TeaModel {
     public String documentId;
 
     /**
-     * <p>The name of the knowledge base. The name is unique within the namespace and is determined at creation time. It cannot be modified.</p>
+     * <p>The name of the knowledge base. The name must be unique within the namespace. It is specified upon creation and cannot be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class GetDocumentRequest extends TeaModel {
     public String knowledgeBaseName;
 
     /**
-     * <p>The namespace to which the knowledge base belongs. The namespace must belong to the specified data catalog. This parameter, together with Catalog and KnowledgeBaseName, uniquely identifies a knowledge base. You can call ListNamespaces to obtain this value.</p>
+     * <p>The namespace to which the knowledge base belongs. The namespace must belong to the specified data catalog. It is used together with Catalog and KnowledgeBaseName to locate the knowledge base. You can call the ListNamespaces operation to obtain the value.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

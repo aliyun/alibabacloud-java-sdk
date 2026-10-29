@@ -8,7 +8,7 @@ public class UpdateRuleResponseBody extends TeaModel {
      * <p>The response code. The value Success indicates that the request was successful. Other values indicate that the request failed. For information about error codes, see Error codes.</p>
      * 
      * <strong>example:</strong>
-     * <p>Success</p>
+     * <p>200</p>
      */
     @NameInMap("Code")
     public String code;

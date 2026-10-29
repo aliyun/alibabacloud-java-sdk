@@ -21,7 +21,7 @@ public class EventCenterQueryEventsShrinkRequest extends TeaModel {
     public String busName;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 0 to 10,000. The default value is 100.</p>
+     * <p>The maximum number of results to return. Valid values: 0 to 10000. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -30,7 +30,7 @@ public class EventCenterQueryEventsShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>The token used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

@@ -4,33 +4,93 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class SinkRabbitMQMetaParameters extends TeaModel {
+    /**
+     * <p>The endpoint of the ApsaraMQ for RabbitMQ cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rabbitmq-cn-a1b2c3d4e5f-cn-hangzhou-vpc.amqp.aliyuncs.com</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <p>The ID of the ApsaraMQ for RabbitMQ instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rabbitmq-cn-a1b2c3d4e5f</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the ApsaraMQ for RabbitMQ instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cloud</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The network type used to connect to the ApsaraMQ for RabbitMQ instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrivateNetwork</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The password used to connect to the ApsaraMQ for RabbitMQ cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourPassword</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The ID of the security group to which the servers of the ApsaraMQ for RabbitMQ cluster belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The username used to connect to the ApsaraMQ for RabbitMQ cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>The IDs of the vSwitches in the VPC where the ApsaraMQ for RabbitMQ cluster is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-a1b2c3d4e5f6g7h8i9j0k</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
+    /**
+     * <p>The name of the virtual host (vhost) in the ApsaraMQ for RabbitMQ cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-001</p>
+     */
     @NameInMap("VirtualHostName")
     public String virtualHostName;
 
+    /**
+     * <p>The ID of the VPC where the ApsaraMQ for RabbitMQ cluster is deployed.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

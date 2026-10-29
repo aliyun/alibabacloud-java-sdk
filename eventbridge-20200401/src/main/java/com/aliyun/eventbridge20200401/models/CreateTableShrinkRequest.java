@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTableShrinkRequest extends TeaModel {
     /**
-     * <p>The data catalog to which the table belongs.</p>
+     * <p>The data catalog.</p>
      * 
      * <strong>example:</strong>
      * <p>my_catalog</p>
@@ -26,22 +26,22 @@ public class CreateTableShrinkRequest extends TeaModel {
      * <p>The column definitions.</p>
      * 
      * <strong>example:</strong>
-     * <p>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;主键&quot;}]</p>
+     * <p>[{&quot;Name&quot;:&quot;id&quot;,&quot;Type&quot;:&quot;bigint&quot;,&quot;Comment&quot;:&quot;Primary key&quot;}]</p>
      */
     @NameInMap("Columns")
     public String columnsShrink;
 
     /**
-     * <p>The description.</p>
+     * <p>The comment.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试事件表</p>
+     * <p>Test event table</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The name of the table.</p>
+     * <p>The table name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CreateTableShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The namespace to which the table belongs.</p>
+     * <p>The namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>my_namespace</p>

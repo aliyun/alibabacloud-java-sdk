@@ -14,7 +14,7 @@ public class AskLumaResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response body.</p>
+     * <p>The business response body.</p>
      */
     @NameInMap("Data")
     public AskLumaResult data;
@@ -29,7 +29,7 @@ public class AskLumaResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>97FB3BAE-XXXXXX-36435495B7EB</p>
@@ -38,7 +38,7 @@ public class AskLumaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

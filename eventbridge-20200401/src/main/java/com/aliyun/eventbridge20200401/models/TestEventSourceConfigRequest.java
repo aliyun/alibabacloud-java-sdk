@@ -26,6 +26,9 @@ public class TestEventSourceConfigRequest extends TeaModel {
     public static class TestEventSourceConfigRequestSourceMySQLParameters extends TeaModel {
         /**
          * <p>The list of allowed CIDR blocks.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.0.2.0/24</p>
          */
         @NameInMap("AllowedCIDRs")
         public String allowedCIDRs;
@@ -95,6 +98,9 @@ public class TestEventSourceConfigRequest extends TeaModel {
 
         /**
          * <p>The snapshot mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>when_needed</p>
          */
         @NameInMap("SnapshotMode")
         public String snapshotMode;

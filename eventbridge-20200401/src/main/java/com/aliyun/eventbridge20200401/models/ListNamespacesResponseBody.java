@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNamespacesResponseBody extends TeaModel {
     /**
-     * <p>Response code. 200 indicates success.</p>
+     * <p>The response code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class ListNamespacesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Response data</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public ListNamespacesResponseBodyData data;
 
     /**
-     * <p>Response message</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Operation success</p>
@@ -29,7 +29,7 @@ public class ListNamespacesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -38,7 +38,7 @@ public class ListNamespacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Whether the operation succeeded</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,13 +93,13 @@ public class ListNamespacesResponseBody extends TeaModel {
 
     public static class ListNamespacesResponseBodyData extends TeaModel {
         /**
-         * <p>Namespace list</p>
+         * <p>The list of namespaces.</p>
          */
         @NameInMap("Namespaces")
         public java.util.List<Namespace> namespaces;
 
         /**
-         * <p>Next page token</p>
+         * <p>The next page token.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -108,7 +108,7 @@ public class ListNamespacesResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>Total count</p>
+         * <p>The total number of items.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

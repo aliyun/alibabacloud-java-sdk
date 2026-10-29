@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the event rule.</p>
+     * <p>The description of the event bus.</p>
      * 
      * <strong>example:</strong>
-     * <p>SMQ filter rule</p>
+     * <p>Filter rule for Simple Message Queue (formerly MNS) (SMQ)</p>
      */
     @NameInMap("Description")
     public String description;
@@ -24,13 +24,18 @@ public class CreateRuleShrinkRequest extends TeaModel {
     public String eventBusName;
 
     /**
-     * <p>A list of event targets.</p>
+     * <p>The list of event targets.</p>
      */
     @NameInMap("EventTargets")
     public String eventTargetsShrink;
 
     /**
-     * <p>The event pattern, in JSON format. Supported pattern types are <code>stringEqual</code> and <code>stringExpression</code>. Each field can contain a maximum of five expressions in a map structure.</p>
+     * <p>The event pattern in JSON format. The following patterns are supported:</p>
+     * <ul>
+     * <li>stringEqual pattern</li>
+     * <li>stringExpression pattern
+     * Each field supports up to five expressions in a map structure.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +72,11 @@ public class CreateRuleShrinkRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The status of the event rule. Valid values: <code>ENABLE</code>: The rule is enabled. This is the default value. <code>DISABLE</code>: The rule is disabled.</p>
+     * <p>The status of the rule. Valid values:</p>
+     * <ul>
+     * <li>ENABLE: The rule is enabled. This is the default status.</li>
+     * <li>DISABLE: The rule is disabled.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ENABLE</p>

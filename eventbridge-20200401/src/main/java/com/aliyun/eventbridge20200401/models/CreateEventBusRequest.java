@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEventBusRequest extends TeaModel {
     /**
-     * <p>The description of the event bus.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>demo</p>
@@ -14,7 +14,7 @@ public class CreateEventBusRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether the request is successful. The value true indicates that the request is successful.</p>
+     * <p>The name of the event bus.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

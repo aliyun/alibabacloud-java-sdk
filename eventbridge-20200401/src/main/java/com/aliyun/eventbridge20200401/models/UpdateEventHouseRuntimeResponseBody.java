@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEventHouseRuntimeResponseBody extends TeaModel {
     /**
-     * <p>The response code. Success indicates that the operation is successful.</p>
+     * <p>The response code. A value of Success indicates that the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class UpdateEventHouseRuntimeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The Runtime information.</p>
+     * <p>The runtime information.</p>
      */
     @NameInMap("Data")
     public EventHouseRuntime data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message returned by the API operation.</p>
      * 
      * <strong>example:</strong>
      * <p>Operation success</p>
@@ -38,7 +38,7 @@ public class UpdateEventHouseRuntimeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful.</p>
+     * <p>Indicates whether the operation was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

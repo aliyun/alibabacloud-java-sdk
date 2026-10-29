@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApiDestinationResponseBody extends TeaModel {
     /**
-     * <p>The returned response code. The value Success indicates that the request is successful.</p>
+     * <p>The API status code or POP error code. Valid values: Success: The operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class CreateApiDestinationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned if the API destination is created.</p>
+     * <p>The data structure returned upon successful creation of the API destination.</p>
      */
     @NameInMap("Date")
     public CreateApiDestinationResponseBodyDate date;

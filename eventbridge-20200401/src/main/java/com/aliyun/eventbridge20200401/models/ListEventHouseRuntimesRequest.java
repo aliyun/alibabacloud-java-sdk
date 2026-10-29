@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventHouseRuntimesRequest extends TeaModel {
     /**
-     * <p>The maximum number of runtimes to return per page. If this parameter is not specified or set to 0, the default value 20 is used. Maximum value: 100.</p>
+     * <p>The maximum number of runtimes to return per page. If this parameter is not specified or is set to 0, the default value 20 is used. The maximum value is 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,7 +14,10 @@ public class ListEventHouseRuntimesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Not required for the first query. For subsequent queries, use the NextToken returned in the previous response. An empty value indicates that no more pages are available.</p>
+     * <p>The token for the next page. You do not need to specify this parameter for the first query. For subsequent queries, use the NextToken value returned in the previous response. An empty value indicates that there are no more pages.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>10</p>
      */
     @NameInMap("NextToken")
     public String nextToken;

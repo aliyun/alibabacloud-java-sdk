@@ -4,18 +4,45 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class BaiLianAgentTransformParameters extends TeaModel {
+    /**
+     * <p>The API key for Model Studio.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Q34****</p>
+     */
     @NameInMap("ApiKey")
     public String apiKey;
 
+    /**
+     * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0123456789abcdef0123456789abcdef</p>
+     */
     @NameInMap("ApplicationId")
     public String applicationId;
 
+    /**
+     * <p>The prompt.</p>
+     */
     @NameInMap("Prompt")
     public BaiLianAgentTransformParametersPrompt prompt;
 
+    /**
+     * <p>The throttling limit in requests per minute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1000</p>
+     */
     @NameInMap("RequestPerMinute")
     public Long requestPerMinute;
 
+    /**
+     * <p>The throttling limit in tokens per minute.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>100000</p>
+     */
     @NameInMap("TokenPerMinute")
     public Long tokenPerMinute;
 
@@ -65,12 +92,30 @@ public class BaiLianAgentTransformParameters extends TeaModel {
     }
 
     public static class BaiLianAgentTransformParametersPrompt extends TeaModel {
+        /**
+         * <p>The template form.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The template value.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$.data.message</p>
+         */
         @NameInMap("Value")
         public String value;
 

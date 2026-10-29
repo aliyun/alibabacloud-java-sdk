@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchLumaKnowledgeBaseResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</p>
+     * <p>The response code. The value is Success if the call is successful, or a specific error code if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class SearchLumaKnowledgeBaseResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The retrieval result from the knowledge base bound to the Agent.</p>
+     * <p>The search results from the knowledge base bound to the agent.</p>
      */
     @NameInMap("Data")
     public SearchLumaKnowledgeBaseResponseBodyData data;
 
     /**
-     * <p>The message returned by the operation. The value is Operation success if the call succeeds, or a specific error description if the call fails.</p>
+     * <p>The response message. The value is Operation success if the call is successful, or a specific error description if the call fails.</p>
      * 
      * <strong>example:</strong>
      * <p>Operation success</p>
@@ -29,7 +29,7 @@ public class SearchLumaKnowledgeBaseResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique identifier of the request, used for troubleshooting and ticket feedback.</p>
+     * <p>The unique identifier of the request. You can use this ID for troubleshooting and submitting tickets.</p>
      * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -38,7 +38,7 @@ public class SearchLumaKnowledgeBaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. A value of true indicates success.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates that the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class SearchLumaKnowledgeBaseResponseBody extends TeaModel {
 
     public static class SearchLumaKnowledgeBaseResponseBodyData extends TeaModel {
         /**
-         * <p>The list of matched text chunks, sorted by relevance.</p>
+         * <p>The list of text chunks matched by the search, sorted by relevance.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;DocumentId&quot;:&quot;doc-bp1xxxxxxxxxxxx&quot;,&quot;ChunkSeq&quot;:3,&quot;Content&quot;:&quot;EventBridge supports event routing&quot;}]</p>
@@ -102,7 +102,7 @@ public class SearchLumaKnowledgeBaseResponseBody extends TeaModel {
         public java.util.List<KnowledgeBaseSearchChunk> chunks;
 
         /**
-         * <p>The time spent on the retrieval, in milliseconds.</p>
+         * <p>The duration of the search, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1200</p>

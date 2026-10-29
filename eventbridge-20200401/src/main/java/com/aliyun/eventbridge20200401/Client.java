@@ -56,7 +56,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries data using natural language.</p>
+     * <p>Performs a natural language query.</p>
      * 
      * @param request AskLumaRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -100,7 +100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries data using natural language.</p>
+     * <p>Performs a natural language query.</p>
      * 
      * @param request AskLumaRequest
      * @return AskLumaResponse
@@ -112,10 +112,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Checks for a service-linked role by name.</p>
+     * <p>Checks whether a service-linked role exists based on the name of the service-linked role.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether a service-linked role is authorized for an account.</p>
+     * <p>Checks whether the account has service-linked role authorization.</p>
      * 
      * @param request CheckServiceLinkedRoleForProductRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -147,10 +147,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Checks for a service-linked role by name.</p>
+     * <p>Checks whether a service-linked role exists based on the name of the service-linked role.</p>
      * 
      * <b>summary</b> : 
-     * <p>Checks whether a service-linked role is authorized for an account.</p>
+     * <p>Checks whether the account has service-linked role authorization.</p>
      * 
      * @param request CheckServiceLinkedRoleForProductRequest
      * @return CheckServiceLinkedRoleForProductResponse
@@ -224,10 +224,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create an API destination.</p>
+     * <p>Creates API destination information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an API destination.</p>
+     * <p>Creates API destination information.</p>
      * 
      * @param tmpReq CreateApiDestinationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -277,10 +277,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to create an API destination.</p>
+     * <p>Creates API destination information.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an API destination.</p>
+     * <p>Creates API destination information.</p>
      * 
      * @param request CreateApiDestinationRequest
      * @return CreateApiDestinationResponse
@@ -760,7 +760,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Namespace</p>
+     * <p>Creates a namespace.</p>
      * 
      * @param request CreateNamespaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -806,7 +806,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create Namespace</p>
+     * <p>Creates a namespace.</p>
      * 
      * @param request CreateNamespaceRequest
      * @return CreateNamespaceResponse
@@ -894,10 +894,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates the service-linked role (SLR) that is associated with a specified product.</p>
+     * <p>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates the service-linked role (SLR) that is associated with a specified product.</p>
+     * <p>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</p>
      * 
      * @param request CreateServiceLinkedRoleForProductRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -929,10 +929,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates the service-linked role (SLR) that is associated with a specified product.</p>
+     * <p>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates the service-linked role (SLR) that is associated with a specified product.</p>
+     * <p>Creates a service-linked role based on the service-linked role name associated with an Alibaba Cloud service.</p>
      * 
      * @param request CreateServiceLinkedRoleForProductRequest
      * @return CreateServiceLinkedRoleForProductResponse
@@ -944,10 +944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an event target under the specified rule.</p>
+     * <p>Creates an event target under a specified rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a data catalog</p>
+     * <p>Creates a data catalog.</p>
      * 
      * @param tmpReq CreateTableRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1013,10 +1013,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates an event target under the specified rule.</p>
+     * <p>Creates an event target under a specified rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create a data catalog</p>
+     * <p>Creates a data catalog.</p>
      * 
      * @param request CreateTableRequest
      * @return CreateTableResponse
@@ -1072,7 +1072,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an API destination.</p>
+     * <p>Deletes a specified API destination.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an API destination.</p>
@@ -1107,7 +1107,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete an API destination.</p>
+     * <p>Deletes a specified API destination.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an API destination.</p>
@@ -1122,10 +1122,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete a connection.</p>
+     * <p>Deletes the specified connection configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a connection.</p>
+     * <p>Deletes the specified connection configuration.</p>
      * 
      * @param request DeleteConnectionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1157,10 +1157,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to delete a connection.</p>
+     * <p>Deletes the specified connection configuration.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a connection.</p>
+     * <p>Deletes the specified connection configuration.</p>
      * 
      * @param request DeleteConnectionRequest
      * @return DeleteConnectionResponse
@@ -1272,7 +1272,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an EventHouse Runtime.</p>
+     * <p>Deletes an EventHouse runtime.</p>
      * 
      * @param request DeleteEventHouseRuntimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1304,7 +1304,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an EventHouse Runtime.</p>
+     * <p>Deletes an EventHouse runtime.</p>
      * 
      * @param request DeleteEventHouseRuntimeRequest
      * @return DeleteEventHouseRuntimeResponse
@@ -1870,7 +1870,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries events from the event center.</p>
+     * <p>Queries events in the event analysis feature.</p>
      * 
      * @param tmpReq EventCenterQueryEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1922,7 +1922,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries events from the event center.</p>
+     * <p>Queries events in the event analysis feature.</p>
      * 
      * @param request EventCenterQueryEventsRequest
      * @return EventCenterQueryEventsResponse
@@ -2166,7 +2166,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a chunk.</p>
+     * <p>Retrieves the details of a chunk.</p>
      * 
      * @param request GetChunkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2214,7 +2214,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a chunk.</p>
+     * <p>Retrieves the details of a chunk.</p>
      * 
      * @param request GetChunkRequest
      * @return GetChunkResponse
@@ -2332,7 +2332,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the download URL of a document.</p>
+     * <p>Retrieves the download URL for a document.</p>
      * 
      * @param request GetDocumentDownloadUrlRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2380,7 +2380,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the download URL of a document.</p>
+     * <p>Retrieves the download URL for a document.</p>
      * 
      * @param request GetDocumentDownloadUrlRequest
      * @return GetDocumentDownloadUrlResponse
@@ -2442,7 +2442,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status and operation progress of an EventHouse Runtime.</p>
+     * <p>Queries the status and operation progress of an EventHouse runtime.</p>
      * 
      * @param request GetEventHouseRuntimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2474,7 +2474,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the status and operation progress of an EventHouse Runtime.</p>
+     * <p>Queries the status and operation progress of an EventHouse runtime.</p>
      * 
      * @param request GetEventHouseRuntimeRequest
      * @return GetEventHouseRuntimeResponse
@@ -3128,10 +3128,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Gets the details of an event rule.</p>
+     * <p>Retrieves the details of an event rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of an event rule.</p>
+     * <p>Queries the details of an event rule.</p>
      * 
      * @param request GetRuleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3167,10 +3167,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Gets the details of an event rule.</p>
+     * <p>Retrieves the details of an event rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the details of an event rule.</p>
+     * <p>Queries the details of an event rule.</p>
      * 
      * @param request GetRuleRequest
      * @return GetRuleResponse
@@ -3441,7 +3441,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of document chunks.</p>
+     * <p>Queries a list of document chunks.</p>
      * 
      * @param request ListChunksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3501,7 +3501,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of document chunks.</p>
+     * <p>Queries a list of document chunks.</p>
      * 
      * @param request ListChunksRequest
      * @return ListChunksResponse
@@ -3579,7 +3579,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of documents.</p>
+     * <p>Queries the list of documents.</p>
      * 
      * @param request ListDocumentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3635,7 +3635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of documents.</p>
+     * <p>Queries the list of documents.</p>
      * 
      * @param request ListDocumentsRequest
      * @return ListDocumentsResponse
@@ -3823,7 +3823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of knowledge bases.</p>
+     * <p>Queries the list of knowledge bases.</p>
      * 
      * @param request ListKnowledgeBasesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3867,7 +3867,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a list of knowledge bases.</p>
+     * <p>Queries the list of knowledge bases.</p>
      * 
      * @param request ListKnowledgeBasesRequest
      * @return ListKnowledgeBasesResponse
@@ -4291,7 +4291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query namespace list</p>
+     * <p>Queries the list of namespaces.</p>
      * 
      * @param request ListNamespacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4331,7 +4331,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query namespace list</p>
+     * <p>Queries the list of namespaces.</p>
      * 
      * @param request ListNamespacesRequest
      * @return ListNamespacesResponse
@@ -4521,10 +4521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries all custom event sources.</p>
+     * <p>Queries all external event sources.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation queries all custom event sources.</p>
+     * <p>Queries all external event sources.</p>
      * 
      * @param request ListUserDefinedEventSourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4568,10 +4568,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries all custom event sources.</p>
+     * <p>Queries all external event sources.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation queries all custom event sources.</p>
+     * <p>Queries all external event sources.</p>
      * 
      * @param request ListUserDefinedEventSourcesRequest
      * @return ListUserDefinedEventSourcesResponse
@@ -4741,10 +4741,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates or updates event targets for a specified rule.</p>
+     * <p>Creates or updates an event target under a specified rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create or update event targets for the specified rule.</p>
+     * <p>Creates or updates an event target under a specified rule.</p>
      * 
      * @param tmpReq PutTargetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4790,10 +4790,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates or updates event targets for a specified rule.</p>
+     * <p>Creates or updates an event target under a specified rule.</p>
      * 
      * <b>summary</b> : 
-     * <p>Create or update event targets for the specified rule.</p>
+     * <p>Creates or updates an event target under a specified rule.</p>
      * 
      * @param request PutTargetsRequest
      * @return PutTargetsResponse
@@ -4915,7 +4915,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query event store data</p>
+     * <p>Queries event warehouse data.</p>
      * 
      * @param request QueryEventHouseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4951,7 +4951,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query event store data</p>
+     * <p>Queries event warehouse data.</p>
      * 
      * @param request QueryEventHouseRequest
      * @return QueryEventHouseResponse
@@ -5195,10 +5195,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries for event traces within a specified time range.</p>
+     * <p>Queries the event trace within a specified time range.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation queries <code>event trace</code> data within a <code>time range</code>.</p>
+     * <p>Queries the event trace within a specified time range.</p>
      * 
      * @param request QueryTracedEventsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5262,10 +5262,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries for event traces within a specified time range.</p>
+     * <p>Queries the event trace within a specified time range.</p>
      * 
      * <b>summary</b> : 
-     * <p>This operation queries <code>event trace</code> data within a <code>time range</code>.</p>
+     * <p>Queries the event trace within a specified time range.</p>
      * 
      * @param request QueryTracedEventsRequest
      * @return QueryTracedEventsResponse
@@ -5280,7 +5280,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries event content.</p>
      * 
      * <b>summary</b> : 
-     * <p>Executes a SQL statement to query event warehouse data. This operation is suitable for scenarios where the exact SQL is known, without natural language conversion or conversation context. Returns a structured result set.</p>
+     * <p>Executes an SQL statement to query data in the event warehouse. Applicable to scenarios where the exact SQL statement is known, requiring no natural language conversion or dialog context. Returns a structured result set.</p>
      * 
      * @param request QueryWithSQLRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5319,7 +5319,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>Queries event content.</p>
      * 
      * <b>summary</b> : 
-     * <p>Executes a SQL statement to query event warehouse data. This operation is suitable for scenarios where the exact SQL is known, without natural language conversion or conversation context. Returns a structured result set.</p>
+     * <p>Executes an SQL statement to query data in the event warehouse. Applicable to scenarios where the exact SQL statement is known, requiring no natural language conversion or dialog context. Returns a structured result set.</p>
      * 
      * @param request QueryWithSQLRequest
      * @return QueryWithSQLResponse
@@ -5409,7 +5409,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves knowledge base search results.</p>
+     * <p>Searches a knowledge base.</p>
      * 
      * @param request SearchKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5485,7 +5485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves knowledge base search results.</p>
+     * <p>Searches a knowledge base.</p>
      * 
      * @param request SearchKnowledgeBaseRequest
      * @return SearchKnowledgeBaseResponse
@@ -5497,10 +5497,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves content from a knowledge base bound to a Luma Agent and returns relevant text chunks along with their relevance scores.</p>
+     * <p>Retrieves content in the knowledge base bound to a Luma agent and returns relevant text chunks along with their relevance scores.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves content from a knowledge base bound to a Luma Agent and returns relevant text chunks along with their relevance scores.</p>
+     * <p>Retrieves content in the knowledge base bound to a Luma agent and returns relevant text chunks along with their relevance scores.</p>
      * 
      * @param request SearchLumaKnowledgeBaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5564,10 +5564,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves content from a knowledge base bound to a Luma Agent and returns relevant text chunks along with their relevance scores.</p>
+     * <p>Retrieves content in the knowledge base bound to a Luma agent and returns relevant text chunks along with their relevance scores.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves content from a knowledge base bound to a Luma Agent and returns relevant text chunks along with their relevance scores.</p>
+     * <p>Retrieves content in the knowledge base bound to a Luma agent and returns relevant text chunks along with their relevance scores.</p>
      * 
      * @param request SearchLumaKnowledgeBaseRequest
      * @return SearchLumaKnowledgeBaseResponse
@@ -5629,10 +5629,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this action to test an event pattern before you apply it to a rule.</p>
+     * <p>Tests whether the event pattern matches the provided JSON-formatted event.</p>
      * 
      * <b>summary</b> : 
-     * <p>Tests if an event pattern matches a given event.</p>
+     * <p>Tests whether the event pattern matches the provided JSON-formatted event.</p>
      * 
      * @param request TestEventPatternRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5668,10 +5668,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Use this action to test an event pattern before you apply it to a rule.</p>
+     * <p>Tests whether the event pattern matches the provided JSON-formatted event.</p>
      * 
      * <b>summary</b> : 
-     * <p>Tests if an event pattern matches a given event.</p>
+     * <p>Tests whether the event pattern matches the provided JSON-formatted event.</p>
      * 
      * @param request TestEventPatternRequest
      * @return TestEventPatternResponse
@@ -5965,10 +5965,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to update an event bus.</p>
+     * <p>Modifies an event bus.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates an event bus.</p>
+     * <p>Modifies an event bus.</p>
      * 
      * @param request UpdateEventBusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6004,10 +6004,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this operation to update an event bus.</p>
+     * <p>Modifies an event bus.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates an event bus.</p>
+     * <p>Modifies an event bus.</p>
      * 
      * @param request UpdateEventBusRequest
      * @return UpdateEventBusResponse
@@ -6019,7 +6019,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an EventHouse Runtime.</p>
+     * <p>Updates the EventHouse runtime.</p>
      * 
      * @param request UpdateEventHouseRuntimeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6055,7 +6055,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an EventHouse Runtime.</p>
+     * <p>Updates the EventHouse runtime.</p>
      * 
      * @param request UpdateEventHouseRuntimeRequest
      * @return UpdateEventHouseRuntimeResponse
@@ -6067,10 +6067,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to update an event source.</p>
+     * <p>Updates the configuration of an event source.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates an event source.</p>
+     * <p>Updates the configuration of an event source.</p>
      * 
      * @param tmpReq UpdateEventSourceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6192,10 +6192,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can call this API operation to update an event source.</p>
+     * <p>Updates the configuration of an event source.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates an event source.</p>
+     * <p>Updates the configuration of an event source.</p>
      * 
      * @param request UpdateEventSourceRequest
      * @return UpdateEventSourceResponse

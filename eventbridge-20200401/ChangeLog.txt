@@ -1,3 +1,14 @@
+2026-10-29 Version: 7.7.1
+- Update API UpdateEventStreaming: add request parameters Sink.SinkRabbitMQParameters.NetworkType.
+- Update API UpdateEventStreaming: add request parameters Sink.SinkRabbitMQParameters.SecurityGroupId.
+- Update API UpdateEventStreaming: add request parameters Sink.SinkRabbitMQParameters.VSwitchIds.
+- Update API UpdateEventStreaming: add request parameters Sink.SinkRabbitMQParameters.VpcId.
+- Update API UpdateEventStreaming: add request parameters Source.SourceRabbitMQParameters.NetworkType.
+- Update API UpdateEventStreaming: add request parameters Source.SourceRabbitMQParameters.SecurityGroupId.
+- Update API UpdateEventStreaming: add request parameters Source.SourceRabbitMQParameters.VSwitchIds.
+- Update API UpdateEventStreaming: add request parameters Source.SourceRabbitMQParameters.VpcId.
+
+
 2026-09-18 Version: 7.7.0
 - Support API CreateKnowledgeBase.
 - Support API DeleteKnowledgeBase.

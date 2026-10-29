@@ -12,6 +12,9 @@ public class SinkBaiLianParameters extends TeaModel {
 
     /**
      * <p>The type of the Model Studio application to invoke.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>KnowledgeBase</p>
      */
     @NameInMap("ApplicationType")
     public String applicationType;
@@ -24,12 +27,18 @@ public class SinkBaiLianParameters extends TeaModel {
 
     /**
      * <p>Context information for the application. The value must be a JSON object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
      */
     @NameInMap("Context")
     public Object context;
 
     /**
      * <p>Additional key-value pairs to pass to the target. The value must be a valid JSON object.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;k1&quot;:&quot;v1&quot;}</p>
      */
     @NameInMap("Extend")
     public Object extend;
@@ -54,6 +63,9 @@ public class SinkBaiLianParameters extends TeaModel {
 
     /**
      * <p>The unique ID of the Model Studio workspace.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>llm-a1b2c3d4e5f6g7h8</p>
      */
     @NameInMap("WorkspaceId")
     public String workspaceId;
@@ -138,18 +150,27 @@ public class SinkBaiLianParameters extends TeaModel {
     public static class SinkBaiLianParametersAfter extends TeaModel {
         /**
          * <p>The method for generating the value. The <code>JSONPATH</code> option extracts data from the event payload. Valid values: <code>CONSTANT</code>, <code>JSONPATH</code>, and <code>TEMPLATE</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
          */
         @NameInMap("Form")
         public String form;
 
         /**
          * <p>The template string for formatting the value. This parameter is used only when <code>Form</code> is set to <code>TEMPLATE</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
 
         /**
          * <p>The source content for the value, as specified by the <code>Form</code> parameter. For example, if <code>Form</code> is <code>JSONPATH</code>, this value must be a JSONPath expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("Value")
         public String value;
@@ -188,18 +209,27 @@ public class SinkBaiLianParameters extends TeaModel {
     public static class SinkBaiLianParametersBefore extends TeaModel {
         /**
          * <p>The method for generating the value. The <code>JSONPATH</code> option extracts data from the event payload. Valid values: <code>CONSTANT</code>, <code>JSONPATH</code>, and <code>TEMPLATE</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
          */
         @NameInMap("Form")
         public String form;
 
         /**
          * <p>The template string for formatting the value. This parameter is used only when <code>Form</code> is set to <code>TEMPLATE</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
 
         /**
          * <p>The source content for the value, as specified by the <code>Form</code> parameter. For example, if <code>Form</code> is <code>JSONPATH</code>, this value must be a JSONPath expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("Value")
         public String value;
@@ -238,18 +268,27 @@ public class SinkBaiLianParameters extends TeaModel {
     public static class SinkBaiLianParametersOffset extends TeaModel {
         /**
          * <p>The method for generating the value. The <code>JSONPATH</code> option extracts data from the event payload. Valid values: <code>CONSTANT</code>, <code>JSONPATH</code>, and <code>TEMPLATE</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
          */
         @NameInMap("Form")
         public String form;
 
         /**
          * <p>The template string for formatting the value. This parameter is used only when <code>Form</code> is set to <code>TEMPLATE</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
 
         /**
          * <p>The source content for the value, as specified by the <code>Form</code> parameter. For example, if <code>Form</code> is <code>JSONPATH</code>, this value must be a JSONPath expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("Value")
         public String value;
@@ -288,18 +327,27 @@ public class SinkBaiLianParameters extends TeaModel {
     public static class SinkBaiLianParametersOp extends TeaModel {
         /**
          * <p>The method for generating the value. The <code>JSONPATH</code> option extracts data from the event payload. Valid values: <code>CONSTANT</code>, <code>JSONPATH</code>, and <code>TEMPLATE</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
          */
         @NameInMap("Form")
         public String form;
 
         /**
          * <p>The template string for formatting the value. This parameter is used only when <code>Form</code> is set to <code>TEMPLATE</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
          */
         @NameInMap("Template")
         public String template;
 
         /**
          * <p>The source content for the value, as specified by the <code>Form</code> parameter. For example, if <code>Form</code> is <code>JSONPATH</code>, this value must be a JSONPath expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("Value")
         public String value;
@@ -338,18 +386,27 @@ public class SinkBaiLianParameters extends TeaModel {
     public static class SinkBaiLianParametersPartition extends TeaModel {
         /**
          * <p>The method for generating the value. The <code>JSONPATH</code> option extracts data from the event payload. Valid values: <code>CONSTANT</code>, <code>JSONPATH</code>, and <code>TEMPLATE</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
          */
         @NameInMap("Form")
         public String form;
 
         /**
          * <p>The template string for formatting the value. This parameter is used only when <code>Form</code> is set to <code>TEMPLATE</code>.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>${partition}</p>
          */
         @NameInMap("Template")
         public String template;
 
         /**
          * <p>The source content for the value, as specified by the <code>Form</code> parameter. For example, if <code>Form</code> is <code>JSONPATH</code>, this value must be a JSONPath expression.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example</p>
          */
         @NameInMap("Value")
         public String value;

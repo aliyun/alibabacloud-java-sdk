@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateKnowledgeBaseRequest extends TeaModel {
     /**
-     * <p>The EventHouse catalog to which the knowledge base belongs. This parameter, together with Namespace and KnowledgeBaseName, uniquely identifies the knowledge base. This parameter cannot be modified after the knowledge base is created. System catalogs cannot be bound.</p>
+     * <p>The EventHouse catalog to which the knowledge base belongs. This parameter, together with Namespace and KnowledgeBaseName, uniquely identifies the knowledge base. This parameter cannot be modified after the knowledge base is created. You cannot bind a system catalog.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
     public String catalog;
 
     /**
-     * <p>Optional. The default chunking strategy for the knowledge base. This strategy applies only to documents uploaded after the configuration is set. If this parameter is not specified, the system default chunking strategy is used.</p>
+     * <p>Optional. The default chunking strategy for the knowledge base. This strategy applies only to documents uploaded after the configuration. If this parameter is not specified, the system default chunking strategy is used.</p>
      */
     @NameInMap("ChunkConfiguration")
     public CreateKnowledgeBaseRequestChunkConfiguration chunkConfiguration;
@@ -30,7 +30,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Optional. The vector dimensions. The value is validated against the embedding model: text-embedding-v3 supports 64, 128, 256, 512, 768, and 1024. text-embedding-v4 supports 64, 128, 256, 512, 768, 1024, 1536, and 2048. qwen3.7-text-embedding supports 256, 512, 768, 1024, 1536, 2048, and 2560. qwen3.7-text-embedding-flash supports 256, 512, 768, and 1024. Default value: 1024 (the default dimension of the model). This parameter cannot be modified after the knowledge base is created. Even if the dimensions are the same, you must rebuild the knowledge base when switching models.</p>
+     * <p>Optional. The vector dimensions. This parameter is attached to the embedding model for validation. Valid values for text-embedding-v3: 64, 128, 256, 512, 768, and 1024. Valid values for text-embedding-v4: 64, 128, 256, 512, 768, 1024, 1536, and 2048. Valid values for qwen3.7-text-embedding: 256, 512, 768, 1024, 1536, 2048, and 2560. Valid values for qwen3.7-text-embedding-flash: 256, 512, 768, and 1024. If this parameter is not specified, the default dimension of the model, 1024, is used. This parameter cannot be modified after the knowledge base is created. To change the model, you must rebuild the knowledge base, even if the dimensions remain the same.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -39,7 +39,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
     public Integer embeddingDimension;
 
     /**
-     * <p>Optional. The embedding model used for vectorization. This parameter cannot be modified after the knowledge base is created. Valid values: text-embedding-v3, text-embedding-v4, qwen3.7-text-embedding, and qwen3.7-text-embedding-flash. Only Bailian Tongyi models are supported. Third-party models are not supported. Default value: text-embedding-v4.</p>
+     * <p>Optional. The embedding model. This parameter cannot be modified after the knowledge base is created. Valid values: text-embedding-v3, text-embedding-v4, qwen3.7-text-embedding, and qwen3.7-text-embedding-flash. Only Qwen models provided by Model Studio are supported. Third-party models are not supported. Default value: text-embedding-v4.</p>
      * 
      * <strong>example:</strong>
      * <p>text-embedding-v4</p>
@@ -48,7 +48,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
     public String embeddingModel;
 
     /**
-     * <p>The name of the knowledge base. The name must be unique within the namespace.</p>
+     * <p>The name of the knowledge base. The name must be unique within the same namespace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +58,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
     public String knowledgeBaseName;
 
     /**
-     * <p>Declares the metadata fields of the knowledge base. When you upload documents, the metadata can contain only the fields declared here. This parameter cannot be modified after the knowledge base is created.</p>
+     * <p>Declares the metadata fields for the knowledge base. When you upload documents, the metadata can only contain the fields declared here. This parameter cannot be modified after the knowledge base is created.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;Name&quot;:&quot;department&quot;,&quot;Type&quot;:&quot;STRING&quot;}]</p>
@@ -77,7 +77,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>Optional. The default search configuration at the knowledge base level. This configuration takes effect when the corresponding parameters are not specified in search requests. You can modify this configuration after creation by calling UpdateKnowledgeBase.</p>
+     * <p>Optional. The default search configuration at the knowledge base level. This configuration takes effect when the corresponding parameters are not specified in a search request. You can modify this configuration by calling UpdateKnowledgeBase after the knowledge base is created.</p>
      */
     @NameInMap("SearchConfiguration")
     public CreateKnowledgeBaseRequestSearchConfiguration searchConfiguration;
@@ -170,7 +170,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
         public Boolean removeUrlsAndEmails;
 
         /**
-         * <p>Specifies whether to replace consecutive whitespace characters (spaces, line breaks, and tabs) with a single space.</p>
+         * <p>Specifies whether to replace consecutive whitespace characters, such as spaces, line breaks, and tabs, with a single space.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -203,7 +203,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
 
     public static class CreateKnowledgeBaseRequestChunkConfiguration extends TeaModel {
         /**
-         * <p>Required for the BY_HEADING strategy. Valid values: 1 to 6. This parameter is ignored for other strategies. Headings at or above the specified level are used as split boundaries. For example, if you set this parameter to 2, both H1 and H2 headings are used as split boundaries. Deeper-level headings are not used for splitting and are retained in the chunk body. If the content within a section exceeds MaxChunkSize, the system falls back to splitting by paragraphs or sentences. Documents without headings fall back to intelligent chunking.</p>
+         * <p>Required for the BY_HEADING strategy. Valid values: 1 to 6. This parameter is ignored for other strategies. Headings at or above the specified level are used as chunking boundaries. For example, if you set this parameter to 2, both H1 and H2 headings are used as boundaries. Lower-level headings are not used as boundaries and are retained in the chunk text. If the section content exceeds MaxChunkSize, the system falls back to chunking by paragraph or sentence. For documents without headings, the system falls back to intelligent chunking.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -212,7 +212,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
         public Integer headingLevel;
 
         /**
-         * <p>The maximum character length of a single chunk. Valid values: 1 to 6000 (characters). An error is returned if the value exceeds the limit.</p>
+         * <p>The maximum number of characters in a single chunk. Valid values: 1 to 6000. An error is reported if the limit is exceeded.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -221,7 +221,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
         public Integer maxChunkSize;
 
         /**
-         * <p>Takes effect only for the BY_LENGTH strategy. This parameter is ignored for other strategies. Specifies the overlap length (in characters) between adjacent chunks. If the value is greater than 0, the beginning of the next chunk repeats the content from the end of the previous chunk within this window. The overlap does not cause a chunk to exceed MaxChunkSize. Default value: 0, which indicates no overlap.</p>
+         * <p>Applies only to the BY_LENGTH strategy. This parameter is ignored for other strategies. The overlap size between adjacent chunks, in characters. If the value is greater than 0, the beginning of the next chunk repeats the content at the end of the previous chunk within this window. The overlap does not cause the chunk to exceed MaxChunkSize. Default value: 0, which indicates no overlap.</p>
          * 
          * <strong>example:</strong>
          * <p>40</p>
@@ -230,15 +230,15 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
         public Integer overlapSize;
 
         /**
-         * <p>The pre-processing rules.</p>
+         * <p>The preprocessing rules.</p>
          */
         @NameInMap("PreprocessRules")
         public CreateKnowledgeBaseRequestChunkConfigurationPreprocessRules preprocessRules;
 
         /**
-         * <p>Required for the BY_SEPARATOR strategy. This parameter is ignored for other strategies. The system splits content by matching the literal string as a whole (not as a regular expression). The maximum length is 32 characters. Example: \
+         * <p>Required for the BY_SEPARATOR strategy. This parameter is ignored for other strategies. The literal string used to split the text. Regular expressions are not supported. The maximum length is 32 characters. Example: \
          * \
-         *  for paragraph separators.</p>
+         *  for paragraph breaks.</p>
          * 
          * <strong>example:</strong>
          * <p>\\n\\n</p>
@@ -247,13 +247,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
         public String separator;
 
         /**
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>AUTO: Intelligent chunking (heading-aware + paragraph packing).</li>
-         * <li>BY_LENGTH: Sliding window chunking by length. You can specify OverlapSize.</li>
-         * <li>BY_SEPARATOR: Chunking by separator. You must specify Separator.</li>
-         * <li>BY_HEADING: Chunking by heading level. You must specify HeadingLevel.</li>
-         * </ul>
+         * <p>The chunking strategy. AUTO indicates intelligent chunking, which is heading-aware and groups paragraphs. BY_LENGTH indicates sliding window chunking by length, where you can specify OverlapSize. BY_SEPARATOR indicates chunking by separator, where you must specify Separator. BY_HEADING indicates chunking by heading level, where you must specify HeadingLevel. Valid values: AUTO, BY_LENGTH, BY_SEPARATOR, and BY_HEADING.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -329,7 +323,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Valid values: STRING, LONG, DOUBLE, BOOLEAN, and DATETIME.</p>
+         * <p>The type of the field. Valid values: STRING, LONG, DOUBLE, BOOLEAN, and DATETIME.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -339,7 +333,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>When ValueMode is set to CONSTANT, this parameter specifies a fixed value. An empty value indicates that the value can be assigned during upload. When ValueMode is set to SYSTEM_VARIABLE, this parameter specifies a system variable name, such as DOCUMENT_NAME, FILE_TYPE, FILE_SIZE, DOCUMENT_UPLOAD_TIME, SOURCE_TYPE, SOURCE_URI, or SOURCE_MODIFIED_TIME.</p>
+         * <p>The value configuration. If ValueMode is set to CONSTANT, this parameter specifies a fixed value. If it is left empty, you can assign a value during upload. If ValueMode is set to SYSTEM_VARIABLE, this parameter specifies a system variable name, such as DOCUMENT_NAME, FILE_TYPE, FILE_SIZE, DOCUMENT_UPLOAD_TIME, SOURCE_TYPE, SOURCE_URI, or SOURCE_MODIFIED_TIME.</p>
          * 
          * <strong>example:</strong>
          * <p>EventHouse</p>
@@ -348,11 +342,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
         public String value;
 
         /**
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>CONSTANT: Constant. If Value is not empty, all documents use the fixed value. If Value is empty, the value can be assigned during upload.</li>
-         * <li>SYSTEM_VARIABLE: System variable. Value specifies the variable name. The system automatically generates the value, and the value cannot be overridden during upload.</li>
-         * </ul>
+         * <p>The value mode. CONSTANT indicates a constant. If Value is not empty, all documents use the fixed value. If Value is empty, you can assign a value during upload. SYSTEM_VARIABLE indicates a system variable. Value specifies the variable name, which is automatically generated by the system and cannot be overwritten during upload.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -402,12 +392,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
 
     public static class CreateKnowledgeBaseRequestSearchConfiguration extends TeaModel {
         /**
-         * <p>Valid values:</p>
-         * <ul>
-         * <li>KEYWORD: Keyword retrieval.</li>
-         * <li>VECTOR: Vector retrieval.</li>
-         * <li>HYBRID: Hybrid retrieval.</li>
-         * </ul>
+         * <p>The search mode. KEYWORD indicates keyword retrieve. VECTOR indicates AISearch. HYBRID indicates hybrid retrieve. Valid values: KEYWORD, VECTOR, and HYBRID.</p>
          * 
          * <strong>example:</strong>
          * <p>HYBRID</p>
@@ -416,12 +401,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>Takes effect only in hybrid search mode. Valid values:</p>
-         * <ul>
-         * <li>RRF: Reciprocal rank fusion.</li>
-         * <li>WEIGHTED: Weighted normalization fusion. Use this value together with VectorWeight.</li>
-         * </ul>
-         * <p>Default value: RRF.</p>
+         * <p>Applies only to the hybrid search mode. RRF indicates reciprocal rank fusion. WEIGHTED indicates weighted normalization fusion, which is used together with VectorWeight. Default value: RRF.</p>
          * 
          * <strong>example:</strong>
          * <p>RRF</p>
@@ -430,7 +410,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
         public String rankAlgorithm;
 
         /**
-         * <p>Takes effect only in hybrid search mode. Specifies whether to enable reranking by default when the search request does not specify a Rerank parameter.</p>
+         * <p>Applies only to the hybrid search mode. Specifies whether to enable reranking by default when a search request does not specify the Rerank parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -439,7 +419,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
         public Boolean rerankEnabled;
 
         /**
-         * <p>The default reranking model used when the search request does not specify a RerankModel parameter. Valid values: qwen3-rerank. Default value: qwen3-rerank.</p>
+         * <p>The default rerank model used when a search request does not specify the RerankModel parameter. Valid value: qwen3-rerank. Default value: qwen3-rerank.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3-rerank</p>
@@ -466,7 +446,7 @@ public class CreateKnowledgeBaseRequest extends TeaModel {
         public Integer topK;
 
         /**
-         * <p>The vector weight for the WEIGHTED fusion algorithm. Valid values: 0 to 1. The keyword weight equals 1 minus this value. Default value: 0.7.</p>
+         * <p>The vector weight for the WEIGHTED fusion algorithm. Valid values: 0 to 1. The keyword weight is 1 minus this value. Default value: 0.7.</p>
          * 
          * <strong>example:</strong>
          * <p>0.7</p>

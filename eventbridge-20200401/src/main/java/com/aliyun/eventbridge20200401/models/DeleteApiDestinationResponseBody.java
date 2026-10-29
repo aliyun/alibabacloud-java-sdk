@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteApiDestinationResponseBody extends TeaModel {
     /**
-     * <p>The returned response code. The value Success indicates that the request is successful.</p>
+     * <p>The API operation status or POP error code. Valid values: Success: The operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class DeleteApiDestinationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message. If the request is successful, success is returned. If the request failed, an error code is returned.</p>
+     * <p>The additional information. If the request is normal, success is returned. If the request is abnormal, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

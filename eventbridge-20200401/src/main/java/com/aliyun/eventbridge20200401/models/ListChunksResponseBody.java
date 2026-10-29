@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChunksResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of Success indicates a successful call. If the call fails, a specific error code is returned.</p>
+     * <p>The response code. A value of Success indicates that the call is successful. If the call fails, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class ListChunksResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The chunk list query result, which contains chunk entries and pagination information.</p>
+     * <p>The query result of the chunk list, which includes chunk entries and pagination information.</p>
      */
     @NameInMap("Data")
     public ListChunksResponseBodyData data;
 
     /**
-     * <p>The message returned by the operation. The value is Operation success if the call succeeds, or a specific error description if the call fails.</p>
+     * <p>The prompt message returned by the API. If the call is successful, the value is Operation success. If the call fails, a specific error description is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Operation success</p>
@@ -38,7 +38,7 @@ public class ListChunksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. A value of true indicates success.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates that the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -102,7 +102,7 @@ public class ListChunksResponseBody extends TeaModel {
         public java.util.List<KnowledgeBaseChunk> chunks;
 
         /**
-         * <p>The maximum number of results per page that took effect for this request.</p>
+         * <p>The actual maximum number of results per page that takes effect for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -111,7 +111,7 @@ public class ListChunksResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The pagination token for the next page (an opaque string). Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
+         * <p>The pagination token for the next page, which is an opaque string. Pass this value to the NextToken parameter of the next request to obtain the next page. An empty value indicates that no more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>ca1eb85f5d99c7d6a97e6****</p>
@@ -120,7 +120,7 @@ public class ListChunksResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of chunks in the specified document when DocumentId is specified. In full knowledge base mode (when DocumentId is not specified), this field is not returned. Pagination ends when NextToken is empty.</p>
+         * <p>The total number of chunks in the specified document. This parameter is returned only when DocumentId is specified. In full-base mode (when DocumentId is not specified), this parameter is not returned, and pagination ends when NextToken is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>

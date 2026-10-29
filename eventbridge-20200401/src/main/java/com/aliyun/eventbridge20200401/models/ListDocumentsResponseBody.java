@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDocumentsResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of Success indicates a successful operation. If the operation fails, a specific error code is returned.</p>
+     * <p>The response code of the API operation. A value of Success indicates that the call is successful. If the call fails, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class ListDocumentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The document list query result, which contains document entries and pagination information.</p>
+     * <p>The query result of the document list, which includes document entries and pagination information.</p>
      */
     @NameInMap("Data")
     public ListDocumentsResponseBodyData data;
 
     /**
-     * <p>The message returned by the operation. The value is Operation success if the operation succeeds, or a specific error description if the operation fails.</p>
+     * <p>The prompt message returned by the API operation. If the call is successful, the value is Operation success. If the call fails, a specific error description is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Operation success</p>
@@ -29,7 +29,7 @@ public class ListDocumentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique ID of the request. Use this ID for troubleshooting and when you submit a ticket.</p>
+     * <p>The unique identifier of the request, which is used for troubleshooting and ticket submission.</p>
      * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -38,7 +38,7 @@ public class ListDocumentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. A value of true indicates success.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates that the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class ListDocumentsResponseBody extends TeaModel {
 
     public static class ListDocumentsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of document entries in the knowledge base. Each entry contains information such as the document ID, file name, processing status, size, number of chunks, and metadata.</p>
+         * <p>The list of document entries in the knowledge base. Each entry includes information such as the document ID, file name, processing status, size, number of chunks, and metadata.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;DocumentId&quot;:&quot;doc-bp1xxxxxxxxxxxx&quot;,&quot;FileName&quot;:&quot;manual.pdf&quot;,&quot;Status&quot;:&quot;COMPLETED&quot;,&quot;ChunkCount&quot;:120}]</p>
@@ -102,7 +102,7 @@ public class ListDocumentsResponseBody extends TeaModel {
         public java.util.List<KnowledgeBaseDocument> documents;
 
         /**
-         * <p>The maximum number of results per page that took effect for this request.</p>
+         * <p>The actual maximum number of results per page that takes effect for the current request.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -111,7 +111,7 @@ public class ListDocumentsResponseBody extends TeaModel {
         public Integer maxResults;
 
         /**
-         * <p>The pagination token for the next page (an opaque string). Pass this value as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
+         * <p>The pagination token for the next page, which is an opaque string. You can pass this token as the NextToken parameter in the next request to retrieve the next page. An empty value indicates that no more data is available.</p>
          * 
          * <strong>example:</strong>
          * <p>ca1eb85f5d99c7d6a97e6****</p>
@@ -120,7 +120,7 @@ public class ListDocumentsResponseBody extends TeaModel {
         public String nextToken;
 
         /**
-         * <p>The total number of documents that match the filter conditions. Use an empty NextToken value as the termination condition for pagination.</p>
+         * <p>The total number of documents that meet the filtering conditions. Pagination ends when NextToken is empty.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

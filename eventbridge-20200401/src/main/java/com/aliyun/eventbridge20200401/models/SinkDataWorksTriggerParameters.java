@@ -4,6 +4,12 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class SinkDataWorksTriggerParameters extends TeaModel {
+    /**
+     * <p>Specifies whether to enable the DataWorks trigger.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Enable")
     public String enable;
 

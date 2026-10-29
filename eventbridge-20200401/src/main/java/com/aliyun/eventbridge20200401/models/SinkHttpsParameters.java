@@ -4,27 +4,69 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class SinkHttpsParameters extends TeaModel {
+    /**
+     * <p>HTTP Body</p>
+     */
     @NameInMap("Body")
     public SinkHttpsParametersBody body;
 
+    /**
+     * <p>The HTTP method.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>POST</p>
+     */
     @NameInMap("Method")
     public String method;
 
+    /**
+     * <p>The network type, PrivateNetwork/PublicNetwork.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PublicNetwork</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>The security group.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-a1b2c3d4e5f6g7h8i9j0</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>HTTP Token</p>
+     * 
+     * <strong>example:</strong>
+     * <p>token-****</p>
+     */
     @NameInMap("Token")
     public String token;
 
+    /**
+     * <p>The HTTP/HTTPS address.</p>
+     */
     @NameInMap("URL")
     public SinkHttpsParametersURL URL;
 
+    /**
+     * <p>The vSwitch IDs.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-a1b2c3d4e5f6g7h8i9j0k</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
+    /**
+     * <p>vpc ID</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-a1b2c3d4e5f6g7h8i9j0k</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 
@@ -98,12 +140,30 @@ public class SinkHttpsParameters extends TeaModel {
     }
 
     public static class SinkHttpsParametersBody extends TeaModel {
+        /**
+         * <p>Form</p>
+         * 
+         * <strong>example:</strong>
+         * <p>TEMPLATE</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>Template</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;message&quot;:&quot;${message}&quot;}</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>Value</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;message&quot;:&quot;$.data.message&quot;}</p>
+         */
         @NameInMap("Value")
         public String value;
 
@@ -139,12 +199,30 @@ public class SinkHttpsParameters extends TeaModel {
     }
 
     public static class SinkHttpsParametersURL extends TeaModel {
+        /**
+         * <p>Form</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONSTANT</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>Template</p>
+         * 
+         * <strong>example:</strong>
+         * <p>https://${host}/events</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>Value</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example.com/events">https://example.com/events</a></p>
+         */
         @NameInMap("Value")
         public String value;
 

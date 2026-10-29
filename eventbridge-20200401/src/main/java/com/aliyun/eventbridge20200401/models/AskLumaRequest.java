@@ -37,7 +37,7 @@ public class AskLumaRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Help me collect statistics on recent order data</p>
+     * <p>Help me summarize the recent order data</p>
      */
     @NameInMap("Question")
     public String question;

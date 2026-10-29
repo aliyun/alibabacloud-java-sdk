@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteKnowledgeBaseResponseBody extends TeaModel {
     /**
-     * <p>The response code. Success indicates a successful call. If the call fails, a specific error code is returned.</p>
+     * <p>The response code of the API operation. A value of Success indicates that the call is successful. If the call fails, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -20,7 +20,7 @@ public class DeleteKnowledgeBaseResponseBody extends TeaModel {
     public KnowledgeBase data;
 
     /**
-     * <p>The response message. Operation success is returned if the call succeeds. A specific error description is returned if the call fails.</p>
+     * <p>The message returned by the API operation. If the call is successful, the value is Operation success. If the call fails, a specific error description is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>Operation success</p>
@@ -29,7 +29,7 @@ public class DeleteKnowledgeBaseResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>34AD682D-5B91-5773-8132-AA38C130****</p>
@@ -38,7 +38,7 @@ public class DeleteKnowledgeBaseResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. A value of true indicates success.</p>
+     * <p>Indicates whether the call is successful. A value of true indicates that the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

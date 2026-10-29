@@ -4,48 +4,138 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class SourceRabbitMQMetaParameters extends TeaModel {
+    /**
+     * <p>The access endpoint of the RabbitMQ cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rabbitmq-cn-a1b2c3d4e5f-cn-hangzhou-vpc.amqp.aliyuncs.com</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <p>The added suffix.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rabbitmq-cn-a1b2c3d4e5f_example_123e4567-e89b-42d3-a456-426614174000</p>
+     */
     @NameInMap("InnerNameSuffix")
     public String innerNameSuffix;
 
+    /**
+     * <p>The ID of the ApsaraMQ for RabbitMQ (MSMQ message queue) instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rabbitmq-cn-a1b2c3d4e5f</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>The type of the source RabbitMQ instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Cloud</p>
+     */
     @NameInMap("InstanceType")
     public String instanceType;
 
+    /**
+     * <p>The maximum number of hops allowed for message forwarding in a federation task. Messages that exceed this limit are dropped.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("MaxHops")
     public String maxHops;
 
+    /**
+     * <p>The network type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>PrivateNetwork</p>
+     */
     @NameInMap("NetworkType")
     public String networkType;
 
+    /**
+     * <p>Specifies whether to consume messages in order.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
     @NameInMap("OrderConsume")
     public String orderConsume;
 
+    /**
+     * <p>The password used to connect to the RabbitMQ cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>yourPassword</p>
+     */
     @NameInMap("Password")
     public String password;
 
+    /**
+     * <p>The regular expression used to filter exchanges.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>^example_.*</p>
+     */
     @NameInMap("Regex")
     public String regex;
 
+    /**
+     * <p>The ID of the security group to which the machines of the RabbitMQ cluster belong.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>sg-bp1****</p>
+     */
     @NameInMap("SecurityGroupId")
     public String securityGroupId;
 
+    /**
+     * <p>The type of synchronized metadata.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>queue</p>
+     */
     @NameInMap("SyncMetaType")
     public String syncMetaType;
 
+    /**
+     * <p>The username used to connect to the RabbitMQ cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>admin</p>
+     */
     @NameInMap("Username")
     public String username;
 
+    /**
+     * <p>The ID of the vSwitch in the VPC where the RabbitMQ cluster resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vsw-bp1****</p>
+     */
     @NameInMap("VSwitchIds")
     public String vSwitchIds;
 
+    /**
+     * <p>The name of the virtual host (vhost) in the RabbitMQ cluster.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-001</p>
+     */
     @NameInMap("VirtualHostName")
     public String virtualHostName;
 
+    /**
+     * <p>The ID of the VPC where the RabbitMQ cluster resides.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>vpc-8vb****</p>
+     */
     @NameInMap("VpcId")
     public String vpcId;
 

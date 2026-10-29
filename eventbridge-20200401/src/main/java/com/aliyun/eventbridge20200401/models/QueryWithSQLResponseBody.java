@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class QueryWithSQLResponseBody extends TeaModel {
     /**
-     * <p>The response code. Valid values:</p>
+     * <p>The response code returned by the API operation. Valid values:</p>
      * <ul>
-     * <li><p>Success: The request was successful.    </p>
+     * <li><p>Success: The request is successful.    </p>
      * </li>
-     * <li><p>Other values: An error occurred. For more information, see error codes.</p>
+     * <li><p>Other values: An error code. For more information, see Error codes.</p>
      * </li>
      * </ul>
      * 
@@ -44,7 +44,13 @@ public class QueryWithSQLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. A value of true indicates success. A value of false indicates failure.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li><p>true: The operation is successful.</p>
+     * </li>
+     * <li><p>false: The operation fails.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -99,7 +105,7 @@ public class QueryWithSQLResponseBody extends TeaModel {
 
     public static class QueryWithSQLResponseBodyData extends TeaModel {
         /**
-         * <p>The query result rows.</p>
+         * <p>The rows in the query result.</p>
          */
         @NameInMap("Rows")
         public java.util.List<Row> rows;

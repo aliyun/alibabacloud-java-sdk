@@ -8,7 +8,7 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
      * <p>The description of the event source.</p>
      * 
      * <strong>example:</strong>
-     * <p>RabbitMQ event source</p>
+     * <p>Event source of the RabbitMQ type</p>
      */
     @NameInMap("Description")
     public String description;
@@ -34,7 +34,7 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
     public String eventSourceName;
 
     /**
-     * <p>The configuration of the external data source.</p>
+     * <p>The external data source configuration.</p>
      */
     @NameInMap("ExternalSourceConfig")
     public String externalSourceConfigShrink;
@@ -58,49 +58,49 @@ public class CreateEventSourceShrinkRequest extends TeaModel {
     public Boolean linkedExternalSource;
 
     /**
-     * <p>Parameters for an HTTP endpoint event source.</p>
+     * <p>The request parameter SourceHttpEventParameters.</p>
      */
     @NameInMap("SourceHttpEventParameters")
     public String sourceHttpEventParametersShrink;
 
     /**
-     * <p>Parameters for the Message Queue for Apache Kafka event source.</p>
+     * <p>The request parameter SourceKafkaParameters.</p>
      */
     @NameInMap("SourceKafkaParameters")
     public String sourceKafkaParametersShrink;
 
     /**
-     * <p>Parameters for the Message Service (MNS) event source. The <code>RegionId</code>, <code>IsBase64Decode</code>, and <code>QueueName</code> parameters are required for this type.</p>
+     * <p>The parameters for a Simple Message Queue (formerly MNS) event source. If you select Simple Message Queue (formerly MNS) as the event source, the RegionId, IsBase64Decode, and QueueName parameters are required.</p>
      */
     @NameInMap("SourceMNSParameters")
     public String sourceMNSParametersShrink;
 
     /**
-     * <p>Parameters for the Object Storage Service (OSS) event source.</p>
+     * <p>The parameters for an OSS event source.</p>
      */
     @NameInMap("SourceOSSEventParameters")
     public String sourceOSSEventParametersShrink;
 
     /**
-     * <p>Parameters for the Message Queue for RabbitMQ event source.</p>
+     * <p>The request parameter SourceRabbitMQParameters.</p>
      */
     @NameInMap("SourceRabbitMQParameters")
     public String sourceRabbitMQParametersShrink;
 
     /**
-     * <p>Parameters for the Message Queue for Apache RocketMQ event source.</p>
+     * <p>The request parameter SourceRocketMQParameters.</p>
      */
     @NameInMap("SourceRocketMQParameters")
     public String sourceRocketMQParametersShrink;
 
     /**
-     * <p>Parameters for the Simple Log Service (SLS) event source.</p>
+     * <p>The parameters for a Simple Log Service event source.</p>
      */
     @NameInMap("SourceSLSParameters")
     public String sourceSLSParametersShrink;
 
     /**
-     * <p>Parameters for a scheduled event source.</p>
+     * <p>The request parameter SourceScheduledEventParameters.</p>
      */
     @NameInMap("SourceScheduledEventParameters")
     public String sourceScheduledEventParametersShrink;

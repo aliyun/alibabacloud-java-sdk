@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateEventHouseRuntimeRequest extends TeaModel {
     /**
-     * <p>The number of CUs for the EventHouse Runtime. The value must be greater than 0.</p>
+     * <p>The number of compute units (CUs) for the EventHouse runtime. The value must be greater than 0.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpdateEventHouseRuntimeRequest extends TeaModel {
     public Integer cu;
 
     /**
-     * <p>The name of the EventHouse Runtime. If this parameter is not specified, the default Runtime is used. In most cases, you do not need to specify this parameter.</p>
+     * <p>The name of the EventHouse runtime. If you do not specify this parameter, the default runtime is used. Typically, you do not need to specify this parameter in the initial phase.</p>
      * 
      * <strong>example:</strong>
      * <p>default</p>

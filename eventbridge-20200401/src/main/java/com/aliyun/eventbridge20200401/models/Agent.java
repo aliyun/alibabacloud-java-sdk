@@ -4,9 +4,21 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class Agent extends TeaModel {
+    /**
+     * <p>The creation time in UNIX milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1717200000000</p>
+     */
     @NameInMap("CreatedAt")
     public Long createdAt;
 
+    /**
+     * <p>The description of the agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>IoT device data query agent</p>
+     */
     @NameInMap("Description")
     public String description;
 
@@ -28,15 +40,36 @@ public class Agent extends TeaModel {
     @NameInMap("McpServerName")
     public String mcpServerName;
 
+    /**
+     * <p>The associated table metadata.</p>
+     */
     @NameInMap("Metadata")
     public Metadata metadata;
 
+    /**
+     * <p>The name of the agent.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>my-agent</p>
+     */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The custom prompt.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>You are an IoT data analytics assistant...</p>
+     */
     @NameInMap("Prompt")
     public String prompt;
 
+    /**
+     * <p>The update time in UNIX milliseconds.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1717200000000</p>
+     */
     @NameInMap("UpdatedAt")
     public Long updatedAt;
 

@@ -21,7 +21,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
     public String busName;
 
     /**
-     * <p>The maximum number of results to return. Valid values: 0 to 10,000. The default value is 100.</p>
+     * <p>The maximum number of results to return. Valid values: 0 to 10000. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -30,7 +30,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token to retrieve the next page of results.</p>
+     * <p>The token used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -120,18 +120,24 @@ public class EventCenterQueryEventsRequest extends TeaModel {
     public static class EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters extends TeaModel {
         /**
          * <p>The column name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>source</p>
          */
         @NameInMap("Column")
         public String column;
 
         /**
          * <p>The operator.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>=</p>
          */
         @NameInMap("Op")
         public String op;
 
         /**
-         * <p>A list of values to use with the operator.</p>
+         * <p>The list of values used with the operator.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -178,7 +184,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public String column;
 
         /**
-         * <p>The logical operator for combining nested filters.</p>
+         * <p>The logical combination method for nested filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>AND</p>
@@ -187,7 +193,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public String nestedFilterCombination;
 
         /**
-         * <p>A list of nested filters.</p>
+         * <p>The list of nested filter conditions.</p>
          */
         @NameInMap("NestedFilters")
         public java.util.List<EventCenterQueryEventsRequestBodyParametersFiltersNestedFilters> nestedFilters;
@@ -202,7 +208,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public String op;
 
         /**
-         * <p>The values to use with the operator.</p>
+         * <p>The values used with the operator.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -315,19 +321,19 @@ public class EventCenterQueryEventsRequest extends TeaModel {
 
     public static class EventCenterQueryEventsRequestBodyParameters extends TeaModel {
         /**
-         * <p>An array of column names to use as dimensions for splitting the dataset.</p>
+         * <p>Further splits the dataset by specific dimensions (column names).</p>
          */
         @NameInMap("Breakdowns")
         public java.util.List<String> breakdowns;
 
         /**
-         * <p>The calculations to perform on specified columns.</p>
+         * <p>Performs calculations on the specified columns by using operators.</p>
          */
         @NameInMap("Calculations")
         public java.util.List<EventCenterQueryEventsRequestBodyParametersCalculations> calculations;
 
         /**
-         * <p>The end timestamp for the event query. Unit: milliseconds.</p>
+         * <p>The end timestamp for querying events, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687861201814</p>
@@ -336,7 +342,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>The logical operator for combining filter conditions.</p>
+         * <p>The logic for combining filter conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>AND</p>
@@ -345,13 +351,13 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public String filterCombination;
 
         /**
-         * <p>A list of filter conditions.</p>
+         * <p>The list of filter conditions.</p>
          */
         @NameInMap("Filters")
         public java.util.List<EventCenterQueryEventsRequestBodyParametersFilters> filters;
 
         /**
-         * <p>The time granularity, in seconds, for querying time series data. The minimum value is 1. This is a suggested value; the actual granularity is returned in the response.</p>
+         * <p>The time granularity, which is the minimum time unit for querying time series data. Unit: seconds. Minimum value: 1. This parameter is a recommended value. The actual granularity is subject to the returned value.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -360,7 +366,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public Integer granularity;
 
         /**
-         * <p>The maximum number of events to query. Valid values: 1 to 10,000.</p>
+         * <p>The maximum number of events to query. Valid values: 1 to 10000.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -369,7 +375,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public Integer limit;
 
         /**
-         * <p>The starting position of the query. The count starts from 0.</p>
+         * <p>The starting position of the current query. The value starts from 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -378,13 +384,13 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public Integer offset;
 
         /**
-         * <p>The sort order for the query results. This parameter applies only when QueryType is set to table.</p>
+         * <p>Sorts the query results. This parameter is valid only for queries where QueryType is set to table.</p>
          */
         @NameInMap("Orders")
         public java.util.List<EventCenterQueryEventsRequestBodyParametersOrders> orders;
 
         /**
-         * <p>The start timestamp for the event query. Unit: milliseconds.</p>
+         * <p>The start timestamp for querying events, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1687860901814</p>
@@ -393,7 +399,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The time range. Unit: milliseconds. The minimum value is 1,000.</p>
+         * <p>The time range. Unit: milliseconds. Minimum value: 1000.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -507,12 +513,9 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         /**
          * <p>The query type. Valid values:</p>
          * <ul>
-         * <li><p><strong>timeseries</strong>: queries time series data.</p>
-         * </li>
-         * <li><p><strong>table</strong>: queries table data.</p>
-         * </li>
-         * <li><p><strong>timeseries_and_table</strong>: queries both time series data and table data.</p>
-         * </li>
+         * <li><strong>timeseries</strong>: time series data</li>
+         * <li><strong>table</strong>: tabular data</li>
+         * <li><strong>timeseries_and_table</strong>: both time series and tabular data</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -523,7 +526,7 @@ public class EventCenterQueryEventsRequest extends TeaModel {
         public String queryType;
 
         /**
-         * <p>The schema ID.</p>
+         * <p>The ID of the schema.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

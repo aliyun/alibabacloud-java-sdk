@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEventHouseRuntimesResponseBody extends TeaModel {
     /**
-     * <p>The response code. Success indicates that the operation was successful.</p>
+     * <p>The response code. A value of Success indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,13 +14,13 @@ public class ListEventHouseRuntimesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The runtime list result.</p>
+     * <p>The runtime list results.</p>
      */
     @NameInMap("Data")
     public ListEventHouseRuntimesResponseBodyData data;
 
     /**
-     * <p>The message returned by the operation.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Operation success</p>
@@ -38,7 +38,7 @@ public class ListEventHouseRuntimesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,22 +93,32 @@ public class ListEventHouseRuntimesResponseBody extends TeaModel {
 
     public static class ListEventHouseRuntimesResponseBodyData extends TeaModel {
         /**
+         * <p>The maximum number of runtimes returned per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("MaxResults")
         public Integer maxResults;
 
+        /**
+         * <p>The token for the next page. An empty value indicates that there are no more pages.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
+         */
         @NameInMap("NextToken")
         public String nextToken;
 
         /**
-         * <p>The list of runtimes.</p>
+         * <p>The runtime list.</p>
          */
         @NameInMap("Runtimes")
         public java.util.List<EventHouseRuntime> runtimes;
 
         /**
+         * <p>The total number of runtimes that meet the query conditions.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */

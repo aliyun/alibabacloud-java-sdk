@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateAgentResponseBody extends TeaModel {
     /**
-     * <p>The response code. Valid values:</p>
+     * <p>The API response code. Valid values:</p>
      * <ul>
-     * <li><p>Success: The request was successful.</p>
+     * <li><p>Success: indicates success.</p>
      * </li>
-     * <li><p>Other values: An error occurred. For more information, see Error codes.</p>
+     * <li><p>Other values: indicates an error code. For more information, see Error codes.</p>
      * </li>
      * </ul>
      * 
@@ -44,7 +44,11 @@ public class CreateAgentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true: The request was successful. false: The request failed.</p>
+     * <p>Specifies whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

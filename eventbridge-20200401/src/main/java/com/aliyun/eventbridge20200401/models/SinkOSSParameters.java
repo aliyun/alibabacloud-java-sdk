@@ -4,39 +4,105 @@ package com.aliyun.eventbridge20200401.models;
 import com.aliyun.tea.*;
 
 public class SinkOSSParameters extends TeaModel {
+    /**
+     * <p>The name of the OSS bucket used to store event data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test</p>
+     */
     @NameInMap("BucketName")
     public String bucketName;
 
+    /**
+     * <p>The compression type of the delivered files.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>gzip</p>
+     */
     @NameInMap("CompressionType")
     public String compressionType;
 
+    /**
+     * <p>The event content transformation configuration before delivery to OSS.</p>
+     */
     @NameInMap("ContentTransform")
     public SinkOSSParametersContentTransform contentTransform;
 
+    /**
+     * <p>The endpoint of the destination OSS service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
+     */
     @NameInMap("Endpoint")
     public String endpoint;
 
+    /**
+     * <p>The storage path for event data in the OSS bucket.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>/EB-test/</p>
+     */
     @NameInMap("PathFormat")
     public String pathFormat;
 
+    /**
+     * <p>The region ID of the destination OSS service.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-hangzhou</p>
+     */
     @NameInMap("RegionId")
     public String regionId;
 
+    /**
+     * <p>The ARN of the RAM role used to deliver data to OSS.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>acs:ram::1234567890123456:role/example-eventbridge-role</p>
+     */
     @NameInMap("RoleArn")
     public String roleArn;
 
+    /**
+     * <p>The time window for batch aggregation of event data.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>60000</p>
+     */
     @NameInMap("RotateIntervalMs")
     public String rotateIntervalMs;
 
+    /**
+     * <p>The file size threshold for batch aggregation.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1048576</p>
+     */
     @NameInMap("RotateSizeBytes")
     public String rotateSizeBytes;
 
+    /**
+     * <p>Specifies whether SSL is enabled.</p>
+     */
     @NameInMap("SSLEnabled")
     public Boolean SSLEnabled;
 
+    /**
+     * <p>The number of concurrent delivery tasks.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
     @NameInMap("TaskConcurrency")
     public String taskConcurrency;
 
+    /**
+     * <p>The time zone used for time variables in the storage path.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>UTC+8:00</p>
+     */
     @NameInMap("TimeZone")
     public String timeZone;
 
@@ -142,12 +208,30 @@ public class SinkOSSParameters extends TeaModel {
     }
 
     public static class SinkOSSParametersContentTransform extends TeaModel {
+        /**
+         * <p>The transformation method for the delivered content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>JSONPATH</p>
+         */
         @NameInMap("Form")
         public String form;
 
+        /**
+         * <p>The template string used to format parameter values. This parameter is used only when Form is set to TEMPLATE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>The value of ${key} is ${value}!</p>
+         */
         @NameInMap("Template")
         public String template;
 
+        /**
+         * <p>The value expression used to generate the delivered content.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>$.data.message</p>
+         */
         @NameInMap("Value")
         public String value;
 
