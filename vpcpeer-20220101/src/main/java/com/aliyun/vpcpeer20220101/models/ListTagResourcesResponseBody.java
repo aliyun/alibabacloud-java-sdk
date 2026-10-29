@@ -14,10 +14,10 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, it indicates that no next query is to be sent.</li>
-     * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent queries are available.</li>
+     * <li>If <strong>NextToken</strong> returns a value, the value indicates the token used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DE65F6B7-7566-4802-9007-96F2494AC512</p>
@@ -36,7 +36,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resources to which the tags are added.</p>
+     * <p>The information about the resources to which tags are bound.</p>
      */
     @NameInMap("TagResources")
     public java.util.List<TagResources> tagResources;
@@ -80,7 +80,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
 
     public static class TagResources extends TeaModel {
         /**
-         * <p>The region of the requester VPC.</p>
+         * <p>The region of the initiator of the VPC peering connection.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -89,7 +89,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The ID of the resource.</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pcc-bp16qjewdsunr41m1****</p>
@@ -98,7 +98,7 @@ public class ListTagResourcesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the resource. The value is set to <strong>PeerConnection</strong>, which indicates a VPC peering connection.</p>
+         * <p>The resource type. Valid values: <strong>PeerConnection</strong> (VPC peering connection).</p>
          * 
          * <strong>example:</strong>
          * <p>PeerConnection</p>

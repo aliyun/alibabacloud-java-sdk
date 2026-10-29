@@ -15,9 +15,9 @@ public class ModifyVpcPeerConnectionRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class ModifyVpcPeerConnectionRequest extends TeaModel {
 
     /**
      * <p>The new description of the VPC peering connection.</p>
-     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>newdescription</p>
@@ -37,10 +37,10 @@ public class ModifyVpcPeerConnectionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to only precheck the request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: checks the request without performing the operation. The system prechecks the required parameters, request syntax, and limits. If the request fails the precheck, an error message is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: performs a dry run without modifying the information. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, an error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, a 2xx HTTP status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,7 +50,23 @@ public class ModifyVpcPeerConnectionRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the VPC peering connection whose name or description you want to modify.</p>
+     * <p>Specifies whether the jumbo frame feature is enabled for the VPC peering connection. Valid values:</p>
+     * <ul>
+     * <li>true: enabled.</li>
+     * <li>false: disabled.<blockquote>
+     * <p>Note: To specify this parameter, make sure that you create a cross-region peering connection.</p>
+     * </blockquote>
+     * </li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("EnableJumboFrame")
+    public Boolean enableJumboFrame;
+
+    /**
+     * <p>The instance ID of the VPC peering connection whose name or description you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -60,17 +76,10 @@ public class ModifyVpcPeerConnectionRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Type of connection. Valid values:</p>
-     * <ul>
-     * <li><p>Platinum.</p>
-     * </li>
-     * <li><p>Gold: default value.</p>
-     * </li>
-     * </ul>
+     * <p>The link type.</p>
+     * <p>Valid values: Platinum and Gold. Default value: Gold.</p>
      * <blockquote>
-     * <ul>
-     * <li>If you need to specify this parameter, ensure that the VPC peering connection is an inter-region connection.</li>
-     * </ul>
+     * <p>To specify this parameter, make sure that you create a cross-region peering connection.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -81,7 +90,7 @@ public class ModifyVpcPeerConnectionRequest extends TeaModel {
 
     /**
      * <p>The new name of the VPC peering connection.</p>
-     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>vpcpeername</p>
@@ -124,6 +133,14 @@ public class ModifyVpcPeerConnectionRequest extends TeaModel {
     }
     public Boolean getDryRun() {
         return this.dryRun;
+    }
+
+    public ModifyVpcPeerConnectionRequest setEnableJumboFrame(Boolean enableJumboFrame) {
+        this.enableJumboFrame = enableJumboFrame;
+        return this;
+    }
+    public Boolean getEnableJumboFrame() {
+        return this.enableJumboFrame;
     }
 
     public ModifyVpcPeerConnectionRequest setInstanceId(String instanceId) {

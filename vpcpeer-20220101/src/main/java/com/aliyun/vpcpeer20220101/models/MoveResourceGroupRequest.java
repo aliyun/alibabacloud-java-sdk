@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the new resource group.</p>
+     * <p>The ID of the resource group to which you want to move the VPC peering connection.</p>
      * <blockquote>
-     * <p> You can use resource groups to manage resources within your Alibaba Cloud account by group. This helps you resolve issues such as resource grouping and permission management for your Alibaba Cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is resource management?</a></p>
+     * <p>A resource group is a mechanism that allows you to group and manage resources within an Alibaba Cloud account. Resource groups help you resolve the complexities of resource grouping and authorization management within a single cloud account. For more information, see <a href="https://help.aliyun.com/document_detail/94475.html">What is Resource Management</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -19,7 +19,7 @@ public class MoveResourceGroupRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resource.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the VPC peering connection.</p>
+     * <p>The instance ID of the VPC peering connection whose resource group you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The resource type. Set the value to <strong>PeerConnection</strong>, which specifies a VPC peering connection.</p>
+     * <p>The resource type. Valid value: <strong>PeerConnection</strong>: VPC peering connection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UnTagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags from the specified resource. Valid values:</p>
+     * <p>Specifies whether to remove all tags from the resource. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: removes all tags from the specified resource.</li>
-     * <li><strong>false</strong>: does not remove all tags from the specified resource. This is the default value.</li>
+     * <li><strong>true</strong>: Removes all tags from the resource.</li>
+     * <li><strong>false</strong> (default): Does not remove all tags from the resource.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,9 +19,9 @@ public class UnTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among all requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate the token value on your client and ensure that it is unique across different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, <strong>ClientToken</strong> is set to the value of <strong>RequestId</strong>. The value of <strong>RequestId</strong> for each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -31,8 +31,8 @@ public class UnTagResourcesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The region ID of the tag.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the tag resides. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,14 +42,14 @@ public class UnTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of resources.</p>
+     * <p>The ID of the resource. You can specify up to 20 resource IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>PeerConnection</strong>, which specifies a VPC peering connection.</p>
+     * <p>The resource type. Valid value: <strong>PeerConnection</strong>, which indicates a VPC peering connection.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,8 +59,8 @@ public class UnTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The key of the tag that you want to remove. You can specify at most 20 tag keys. It can be an empty string.</p>
-     * <p>It can be up to 128 characters in length. It cannot start with <code>acs:</code> or <code>aliyun</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+     * <p>The tag key that you want to remove. You can specify up to 20 tag keys. If you need to pass this parameter, you can enter an empty string.</p>
+     * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
      */
     @NameInMap("TagKey")
     public java.util.List<String> tagKey;

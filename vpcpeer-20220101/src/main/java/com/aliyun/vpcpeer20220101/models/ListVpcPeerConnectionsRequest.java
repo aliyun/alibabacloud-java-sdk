@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVpcPeerConnectionsRequest extends TeaModel {
     /**
-     * <p>The ID of the VPC peering connection that you want to query.</p>
+     * <p>The instance ID of the VPC peering connection that you want to query.</p>
      * 
      * <strong>example:</strong>
      * <p>pcc-lnk0m24khwvtkm****</p>
@@ -14,7 +14,7 @@ public class ListVpcPeerConnectionsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,10 +32,10 @@ public class ListVpcPeerConnectionsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The token that is used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request.</li>
-     * <li>You must specify the token that is obtained from the previous query as the value of NextToken.</li>
+     * <li>If this is your first request or no subsequent request is to be sent, leave this parameter empty.</li>
+     * <li>If a subsequent request is to be sent, set the value to the NextToken value returned from the last API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,8 +45,8 @@ public class ListVpcPeerConnectionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the region where you want to query VPC peering connections.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the VPC peering connection that you want to query.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -56,22 +56,22 @@ public class ListVpcPeerConnectionsRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group.</p>
-     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group?</a></p>
+     * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/94475.html">What is a resource group</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>rg-acfm2ggeub5uf3y</p>
+     * <p>rg-acfmxazb4ph6aiy****</p>
      */
     @NameInMap("ResourceGroupId")
     public String resourceGroupId;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<Tags> tags;
 
     /**
-     * <p>The ID of the requester VPC or accepter VPC of the VPC peering connection that you want to query.</p>
+     * <p>Filters the results by the VPC IDs of the initiator and acceptor. The filter does not distinguish between the initiator and the acceptor. If you specify only one VPC ID, the results are filtered based on the specified VPC ID.</p>
      */
     @NameInMap("VpcId")
     public java.util.List<String> vpcId;
@@ -147,8 +147,8 @@ public class ListVpcPeerConnectionsRequest extends TeaModel {
 
     public static class Tags extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. The tag key cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. You can specify up to 20 tag keys. If you specify this parameter, it cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -157,8 +157,8 @@ public class ListVpcPeerConnectionsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value. You can specify up to 20 tag values. If you specify this parameter, it can be an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

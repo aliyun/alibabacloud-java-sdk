@@ -5,11 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>Tag Type:</p>
+     * <p>The tag type. Valid values:</p>
      * <ul>
-     * <li>All(Default)</li>
-     * <li>Custom</li>
-     * <li>System</li>
+     * <li><p>All (default)</p>
+     * </li>
+     * <li><p>Custom</p>
+     * </li>
+     * <li><p>System</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,10 +31,12 @@ public class ListTagResourcesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used for the next query. Valid values:</p>
+     * <p>The pagination token. Valid values:</p>
      * <ul>
-     * <li>If this is your first query or no subsequent query is to be sent, ignore this parameter.</li>
-     * <li>If a next query is to be sent, set the value to the value of <strong>NextToken</strong> that is returned in the last call.</li>
+     * <li><p>If this is your first request or no subsequent requests are to be made, leave this parameter empty.</p>
+     * </li>
+     * <li><p>If a subsequent request is to be made, set this parameter to the value of <strong>NextToken</strong> returned from the previous API call.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +47,7 @@ public class ListTagResourcesRequest extends TeaModel {
 
     /**
      * <p>The region ID of the resource.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,14 +57,14 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The resource IDs. You can specify up to 20 resource IDs.</p>
      */
     @NameInMap("ResourceId")
     @Deprecated
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The type of the resource. Set the value to <strong>PeerConnection</strong>, which specifies a VPC peering connection.</p>
+     * <p>The resource type. Valid values: <strong>PeerConnection</strong> (VPC peering connection).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +74,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The tag information.</p>
      */
     @NameInMap("Tag")
     @Deprecated
@@ -140,10 +145,10 @@ public class ListTagResourcesRequest extends TeaModel {
 
     public static class Tag extends TeaModel {
         /**
-         * <p>The tag key. You can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. This parameter cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <blockquote>
-         * <p> You must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> that consists of <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>.</p>
+         * <p>You must specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>) parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -153,10 +158,10 @@ public class ListTagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. This parameter can be an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <blockquote>
-         * <p> You must specify <strong>ResourceId.N</strong> or <strong>Tag.N</strong> that consists of <strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>.</p>
+         * <p>You must specify at least one of the <strong>ResourceId.N</strong> and <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>) parameters.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

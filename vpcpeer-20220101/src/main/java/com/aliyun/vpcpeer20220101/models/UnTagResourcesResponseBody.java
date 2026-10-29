@@ -14,10 +14,10 @@ public class UnTagResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the tags are removed. Valid values:</p>
+     * <p>Indicates whether the unbinding was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: yes</li>
-     * <li><strong>false</strong>: no</li>
+     * <li><strong>true</strong>: The creation and binding were successful.</li>
+     * <li><strong>false</strong>: The creation and binding failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
