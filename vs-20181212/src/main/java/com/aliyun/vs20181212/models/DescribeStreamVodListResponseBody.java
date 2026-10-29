@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeStreamVodListResponseBody extends TeaModel {
     /**
-     * <p>VOD record list</p>
+     * <p>The list of video-on-demand records.</p>
      */
     @NameInMap("Records")
     public java.util.List<DescribeStreamVodListResponseBodyRecords> records;
 
     /**
-     * <p>Request ID of this task.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -42,7 +42,7 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
 
     public static class DescribeStreamVodListResponseBodyRecords extends TeaModel {
         /**
-         * <p>VOD record end time (unix timestamp, unit: seconds)</p>
+         * <p>The end time of the video-on-demand records. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1634873413</p>
@@ -51,7 +51,7 @@ public class DescribeStreamVodListResponseBody extends TeaModel {
         public Long endTime;
 
         /**
-         * <p>VOD record start time (unix timestamp, unit: seconds)</p>
+         * <p>The start time of the video-on-demand records. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1639077653</p>

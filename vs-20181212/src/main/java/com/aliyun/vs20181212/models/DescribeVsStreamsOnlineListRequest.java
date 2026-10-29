@@ -24,13 +24,11 @@ public class DescribeVsStreamsOnlineListRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time.</p>
      * <blockquote>
      * <ul>
-     * <li><p>Specify the time in the UTC format. Example: 2016-06-30T19:00:00Z.</p>
-     * </li>
-     * <li><p>The time range between EndTime and StartTime cannot exceed 30 days.</p>
-     * </li>
+     * <li>The time must be in UTC. Example: 2016-06-30T19:00:00Z.</li>
+     * <li>The interval between EndTime and StartTime cannot exceed 30 days.</li>
      * </ul>
      * </blockquote>
      * 
@@ -43,14 +41,10 @@ public class DescribeVsStreamsOnlineListRequest extends TeaModel {
     /**
      * <p>The sorting method. Valid values:</p>
      * <ul>
-     * <li><p>stream_name_desc: sorts by stream name in descending order.</p>
-     * </li>
-     * <li><p>stream_name_asc: sorts by stream name in ascending order.</p>
-     * </li>
-     * <li><p>publish_time_desc: sorts by ingest time in descending order.</p>
-     * </li>
-     * <li><p>publish_time_asc (default): sorts by ingest time in ascending order.</p>
-     * </li>
+     * <li>stream_name_desc: sorts by live stream name in descending order.</li>
+     * <li>stream_name_asc: sorts by live stream name in ascending order.</li>
+     * <li>publish_time_desc: sorts by stream ingest time in descending order.</li>
+     * <li>publish_time_asc: sorts by stream ingest time in ascending order. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,12 +76,10 @@ public class DescribeVsStreamsOnlineListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether to perform a fuzzy match for the stream name. Valid values:</p>
+     * <p>Specifies whether to use fuzzy match for the stream name. Valid values:</p>
      * <ul>
-     * <li><p>fuzzy: fuzzy match</p>
-     * </li>
-     * <li><p>strict: exact match</p>
-     * </li>
+     * <li>fuzzy: fuzzy match.</li>
+     * <li>strict: exact match.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -97,9 +89,9 @@ public class DescribeVsStreamsOnlineListRequest extends TeaModel {
     public String queryType;
 
     /**
-     * <p>The start of the time range to query.</p>
+     * <p>The start time.</p>
      * <blockquote>
-     * <p>Specify the time in the UTC format. Example: 2016-06-29T19:00:00Z.</p>
+     * <p>The time must be in UTC. Example: 2016-06-29T19:00:00Z.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -120,12 +112,9 @@ public class DescribeVsStreamsOnlineListRequest extends TeaModel {
     /**
      * <p>The stream type. Valid values:</p>
      * <ul>
-     * <li><p>all (default): all streams</p>
-     * </li>
-     * <li><p>raw: raw streams</p>
-     * </li>
-     * <li><p>trans: transcoded streams</p>
-     * </li>
+     * <li>all: all streams. This is the default value.</li>
+     * <li>raw: raw streams.</li>
+     * <li>trans: transcoded streams.</li>
      * </ul>
      * 
      * <strong>example:</strong>

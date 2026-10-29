@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListEdgeWorkersResponseBody extends TeaModel {
     /**
-     * <p>The list of loads.</p>
+     * <p>The list of workloads.</p>
      */
     @NameInMap("Instances")
     public java.util.List<ListEdgeWorkersResponseBodyInstances> instances;
 
     /**
-     * <p>The page number of the query list. The value starts from 1. Default value: 1.</p>
+     * <p>The page number of the list to query. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Settings for paging. Maximum value: 100. Default value: 100.</p>
+     * <p>The Settings for the number of lines per page during paging and paged query. Maximum value: 100. Default value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -93,7 +93,7 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
 
     public static class ListEdgeWorkersResponseBodyInstances extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time is expressed in the ISO 8601 standard and includes a time zone offset. Format: YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-14T15:20:37+08:00</p>
@@ -102,7 +102,7 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The expiration time.</p>
+         * <p>The end time. The time is expressed in the ISO 8601 standard and includes a time zone offset. Format: YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-05-14T15:20:37+08:00</p>
@@ -120,7 +120,7 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         public String hiveId;
 
         /**
-         * <p>The load ID.</p>
+         * <p>The workload ID.</p>
          * 
          * <strong>example:</strong>
          * <p>as-d135ca4425c24b99b79cd0b6c552cac9</p>
@@ -138,7 +138,7 @@ public class ListEdgeWorkersResponseBody extends TeaModel {
         public String planId;
 
         /**
-         * <p>The specification.</p>
+         * <p>The specifications.</p>
          * 
          * <strong>example:</strong>
          * <p>crs.xic.s1</p>

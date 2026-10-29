@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
     /**
-     * <p>Number of failed cloud application service instances</p>
+     * <p>The number of cloud application service instances that failed to be associated.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,13 +14,13 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
     public String failedInstanceCount;
 
     /**
-     * <p>List of instances that failed to associate</p>
+     * <p>The list of instances that failed to be associated.</p>
      */
     @NameInMap("FailedInstances")
     public java.util.List<AssociateRenderingProjectInstancesResponseBodyFailedInstances> failedInstances;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -29,7 +29,7 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Number of successful cloud application service instances</p>
+     * <p>The number of successfully associated cloud application service instances.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -38,7 +38,7 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
     public String successInstanceCount;
 
     /**
-     * <p>List of successfully associated instances</p>
+     * <p>The list of successfully associated instances.</p>
      */
     @NameInMap("SuccessInstances")
     public java.util.List<AssociateRenderingProjectInstancesResponseBodySuccessInstances> successInstances;
@@ -90,7 +90,7 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
 
     public static class AssociateRenderingProjectInstancesResponseBodyFailedInstances extends TeaModel {
         /**
-         * <p>Failure reason</p>
+         * <p>The cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>invalid id</p>
@@ -99,7 +99,7 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Cloud application service instance ID</p>
+         * <p>The instance ID of the cloud application service.</p>
          * 
          * <strong>example:</strong>
          * <p>render-b45f28650ffe4591bf4c5c95996a428c</p>
@@ -132,7 +132,7 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
 
     public static class AssociateRenderingProjectInstancesResponseBodySuccessInstances extends TeaModel {
         /**
-         * <p>Description</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -141,7 +141,7 @@ public class AssociateRenderingProjectInstancesResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Cloud application service instance ID</p>
+         * <p>The instance ID of the cloud application service.</p>
          * 
          * <strong>example:</strong>
          * <p>render-5130e2feb23f442fb9456a3d977f03d4</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyTasksRequest extends TeaModel {
     /**
-     * <p>The HiveId used as a filter condition to query tasks executed under the specified HiveId.</p>
+     * <p>The Hive ID, used as a filter to query tasks executed under the specified Hive.</p>
      * 
      * <strong>example:</strong>
      * <p>hive-26cd567b35c04a0a90f0xxxxx</p>
@@ -23,7 +23,7 @@ public class DescribeComfyTasksRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of records to display on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -32,13 +32,16 @@ public class DescribeComfyTasksRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The Comfy workflow ID used as a filter condition.</p>
+     * <p>The ID of the Comfy task, used as a filter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>6c8234f4-d1e1-4cea-b08b-7926fbdea144</p>
      */
     @NameInMap("TaskId")
     public String taskId;
 
     /**
-     * <p>The task status used as a filter condition.</p>
+     * <p>The task state, used as a filter.</p>
      * 
      * <strong>example:</strong>
      * <p>QUEUED</p>
@@ -47,7 +50,7 @@ public class DescribeComfyTasksRequest extends TeaModel {
     public String taskState;
 
     /**
-     * <p>The Comfy workflow ID used as a filter condition.</p>
+     * <p>The ID of the Comfy workflow, used as a filter.</p>
      * 
      * <strong>example:</strong>
      * <p>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</p>

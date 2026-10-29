@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class UpdateRenderingProjectRequest extends TeaModel {
     /**
-     * <p>Project description</p>
+     * <p>The project description.</p>
      * 
      * <strong>example:</strong>
-     * <p>目录1</p>
+     * <p>Directory 1</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Project ID</p>
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,15 +24,7 @@ public class UpdateRenderingProjectRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>Default naming rules:</p>
-     * <ol>
-     * <li><p>Length 1-128</p>
-     * </li>
-     * <li><p>Lowercase letters, numbers, underscores (_), hyphens (-), and periods (.).</p>
-     * </li>
-     * <li><p>The first and last characters must be letters or digits. At least one of ProjectName, SessionAttribs, or Description must be specified.</p>
-     * </li>
-     * </ol>
+     * <p>The custom project name, which serves as the unique identifier of the project. Default naming conventions: 1. The length must be 1 to 128 characters. 2. The name can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.). 3. The first and last characters must be letters or digits. At least one of ProjectName, SessionAttribs, or Description must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>idata_content</p>
@@ -41,7 +33,7 @@ public class UpdateRenderingProjectRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>Session attributes</p>
+     * <p>The session attributes.</p>
      */
     @NameInMap("SessionAttribs")
     public UpdateRenderingProjectRequestSessionAttribs sessionAttribs;
@@ -85,13 +77,11 @@ public class UpdateRenderingProjectRequest extends TeaModel {
 
     public static class UpdateRenderingProjectRequestSessionAttribs extends TeaModel {
         /**
-         * <p>The mode used to start cloud application services for the session. Valid values:</p>
-         * <ol>
-         * <li><p>Async: asynchronous</p>
-         * </li>
-         * <li><p>Sync: synchronization</p>
-         * </li>
-         * </ol>
+         * <p>The mode in which the session starts the cloud application service. Valid values:</p>
+         * <ul>
+         * <li>Async: asynchronous.</li>
+         * <li>Sync: synchronous.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Async</p>

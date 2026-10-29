@@ -14,7 +14,7 @@ public class CreateComfyUserDataDirResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The returned message. If the request fails, this parameter contains the failure reason.</p>
+     * <p>The description. If Status is Failed, this field contains the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>conn failed!</p>
@@ -23,7 +23,7 @@ public class CreateComfyUserDataDirResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteRenderingInstanceConfigurationShrinkRequest extends TeaModel {
     /**
-     * <p>Configuration content. Purge all configured modules by default.</p>
+     * <p>The configuration content. By default, all configured modules are cleared.</p>
      */
     @NameInMap("Configuration")
     public String configurationShrink;
 
     /**
-     * <p>Cloud application service instance ID.</p>
+     * <p>The cloud application service instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

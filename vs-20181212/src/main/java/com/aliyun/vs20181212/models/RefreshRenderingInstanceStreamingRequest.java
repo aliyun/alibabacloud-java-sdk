@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class RefreshRenderingInstanceStreamingRequest extends TeaModel {
     /**
-     * <p>Client information.</p>
+     * <p>The client information.</p>
      */
     @NameInMap("ClientInfo")
     public RefreshRenderingInstanceStreamingRequestClientInfo clientInfo;
 
     /**
-     * <p>Cloud application service instance ID.</p>
+     * <p>The instance ID of the cloud application service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class RefreshRenderingInstanceStreamingRequest extends TeaModel {
 
     public static class RefreshRenderingInstanceStreamingRequestClientInfo extends TeaModel {
         /**
-         * <p>Client IP address.</p>
+         * <p>The IP address of the client.</p>
          * 
          * <strong>example:</strong>
          * <p>172.21.128.110</p>
@@ -52,7 +52,7 @@ public class RefreshRenderingInstanceStreamingRequest extends TeaModel {
         public String clientIp;
 
         /**
-         * <p>Indicates if the client is new.</p>
+         * <p>Specifies whether the client is a new client.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

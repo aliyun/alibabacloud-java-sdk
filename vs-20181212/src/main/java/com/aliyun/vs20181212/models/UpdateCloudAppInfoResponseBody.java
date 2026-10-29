@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudAppInfoResponseBody extends TeaModel {
     /**
-     * <p>The patch ID.</p>
+     * <p>The ID of the patch package.</p>
      * 
      * <strong>example:</strong>
      * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
@@ -14,7 +14,7 @@ public class UpdateCloudAppInfoResponseBody extends TeaModel {
     public String patchId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>

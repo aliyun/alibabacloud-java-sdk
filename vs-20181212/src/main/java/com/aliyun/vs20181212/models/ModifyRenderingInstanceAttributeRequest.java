@@ -5,8 +5,16 @@ import com.aliyun.tea.*;
 
 public class ModifyRenderingInstanceAttributeRequest extends TeaModel {
     /**
-     * <p>Password for the device.</p>
-     * <p>This parameter is required.</p>
+     * <p>The name of the instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TestInstance</p>
+     */
+    @NameInMap("InstanceName")
+    public String instanceName;
+
+    /**
+     * <p>The device password.</p>
      * 
      * <strong>example:</strong>
      * <p>Toehold2020</p>
@@ -15,7 +23,7 @@ public class ModifyRenderingInstanceAttributeRequest extends TeaModel {
     public String password;
 
     /**
-     * <p>ID of the cloud application service instance.</p>
+     * <p>The cloud application service instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,6 +35,14 @@ public class ModifyRenderingInstanceAttributeRequest extends TeaModel {
     public static ModifyRenderingInstanceAttributeRequest build(java.util.Map<String, ?> map) throws Exception {
         ModifyRenderingInstanceAttributeRequest self = new ModifyRenderingInstanceAttributeRequest();
         return TeaModel.build(map, self);
+    }
+
+    public ModifyRenderingInstanceAttributeRequest setInstanceName(String instanceName) {
+        this.instanceName = instanceName;
+        return this;
+    }
+    public String getInstanceName() {
+        return this.instanceName;
     }
 
     public ModifyRenderingInstanceAttributeRequest setPassword(String password) {

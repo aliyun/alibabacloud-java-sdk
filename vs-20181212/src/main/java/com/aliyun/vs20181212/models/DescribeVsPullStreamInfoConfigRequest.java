@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVsPullStreamInfoConfigRequest extends TeaModel {
     /**
-     * <p>The stream pulling domain.</p>
+     * <p>The pull stream domain name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

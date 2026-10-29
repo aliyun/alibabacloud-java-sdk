@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCloudAppInfoShrinkRequest extends TeaModel {
     /**
-     * <p>The cloud application ID, which corresponds to a unique application package.</p>
+     * <p>The ID of the cloud application, which corresponds to a unique application package.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -18,41 +18,31 @@ public class UpdateCloudAppInfoShrinkRequest extends TeaModel {
      * <p>The description of the application.</p>
      * 
      * <strong>example:</strong>
-     * <p>For testing purposes</p>
+     * <p>Used for testing</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The information about the patch package to upload.</p>
-     * <ol>
-     * <li>Not supported when PkgType is set to android.</li>
-     * <li>Only one patch can be in the uploading state at a time for the same AppId (only one patch in a non-final state is allowed per AppId).</li>
-     * </ol>
+     * <p>The information about the patch package to be uploaded. 1. This parameter is not supported when PkgType is set to android. 2. Only one patch package can be in the uploading state (non-final state) for the same AppId at a time.</p>
      */
     @NameInMap("Patch")
     public String patchShrink;
 
     /**
-     * <p>The cloud application labels. You can select multiple labels. This operation resets the cloud application labels.</p>
-     * <ol>
-     * <li>Valid values:
-     *   a. hot
-     *   b. game
-     *   c. app</li>
-     * <li>Special cases:
-     *   a. To delete all labels, set this parameter to [&quot;NULL&quot;].</li>
-     * </ol>
+     * <p>The tags of the cloud application. You can specify multiple tags to reset the cloud application tags. Valid values:</p>
+     * <ul>
+     * <li>hot</li>
+     * <li>game</li>
+     * <li>app
+     * To delete all tags, set the value to [&quot;NULL&quot;].</li>
+     * </ul>
      */
     @NameInMap("PkgLabels")
     public String pkgLabelsShrink;
 
     /**
-     * <p>The stable PatchId. When a PatchId is not specified during business operations (such as session startup), this PatchId is used by default. Not supported when PkgType is set to android.
-     * Special values:</p>
-     * <ol>
-     * <li>origin: cancels the patch version and uses the initial version by default.</li>
-     * </ol>
+     * <p>The ID of the stable patch. This is the default patch ID used in customer business scenarios, such as session startup, when no patch ID is specified. This parameter is not supported when PkgType is set to android. Special value: origin: cancels the patch version and uses the initial version by default.</p>
      * 
      * <strong>example:</strong>
      * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyComfyWorkflowResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is returned only if the request fails.</p>
+     * <p>The error code. If the activity status is Fail, a specific error code is returned. If the activity status is Success, this parameter is not returned.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The creation time.</p>
+     * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-07T02:27:06Z</p>
@@ -26,13 +26,13 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
      * <p>The workflow description.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是一个图生视频的工作流</p>
+     * <p>This is an image-to-video workflow</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The returned message. This parameter provides error details if the request fails.</p>
+     * <p>The message. If the status is Failed, this parameter contains the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>conn failed!</p>
@@ -44,7 +44,7 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
      * <p>The workflow name.</p>
      * 
      * <strong>example:</strong>
-     * <p>图生视频工作流示例</p>
+     * <p>Image-to-video workflow example</p>
      */
     @NameInMap("Name")
     public String name;
@@ -59,7 +59,7 @@ public class ModifyComfyWorkflowResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The update time.</p>
+     * <p>The update time of the task. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-05-07T02:27:06Z</p>

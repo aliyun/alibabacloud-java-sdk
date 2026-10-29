@@ -14,7 +14,7 @@ public class DeleteComfyWorkflowResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>

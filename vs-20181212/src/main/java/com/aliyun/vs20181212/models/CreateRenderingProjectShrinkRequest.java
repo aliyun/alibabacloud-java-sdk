@@ -5,24 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateRenderingProjectShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the project. The description can be 0 to 255 characters in length.</p>
+     * <p>The description of the project. The description must be 0 to 255 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>项目概述</p>
+     * <p>Project overview</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The custom name of the project. This name is the unique identifier for the project.
-     * The name must meet the following requirements:</p>
+     * <p>The custom project name, which serves as the unique identifier for the project.
+     * Naming conventions:</p>
      * <ol>
-     * <li><p>Be 1 to 128 characters in length.</p>
-     * </li>
-     * <li><p>Contain only lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</p>
-     * </li>
-     * <li><p>Start and end with a letter or a digit.</p>
-     * </li>
+     * <li>The length must be 1 to 128 characters.</li>
+     * <li>The name can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</li>
+     * <li>The first and last characters must be letters or digits.</li>
      * </ol>
      * <p>This parameter is required.</p>
      * 
@@ -33,7 +30,7 @@ public class CreateRenderingProjectShrinkRequest extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The session properties.</p>
+     * <p>The session attributes.</p>
      */
     @NameInMap("SessionAttribs")
     public String sessionAttribsShrink;

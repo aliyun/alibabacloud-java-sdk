@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyUserDataUploadUrlRequest extends TeaModel {
     /**
-     * <p>The content type of the file.</p>
+     * <p>The content type of the file to be uploaded.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeComfyUserDataUploadUrlRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The MD5 hash of the file to be uploaded. This value must be the file\&quot;s actual MD5 hash. The file size is also verified during the upload.</p>
+     * <p>The MD5 value of the file to be uploaded. This value must be the exact MD5 value of the file. The file MD5 value is verified when the upload URL is used.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeComfyUserDataUploadUrlRequest extends TeaModel {
     public String fileMd5;
 
     /**
-     * <p>The name of the file to upload. The filename can be a single file, such as \<code>1.jpg\\</code>, or include a path, such as \<code>directory1/1.jpg\\</code>.</p>
+     * <p>The name of the file to be uploaded. The file name format can be a single file name (such as 1.jpg) or a path format (such as directory1/1.jpg).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class DescribeComfyUserDataUploadUrlRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The actual size of the file in bytes. This value must be the exact size of the file. The file size is verified when you use the upload URL.</p>
+     * <p>The actual size of the file to be uploaded, in bytes. This value must be the exact size of the file in bytes. The file size is verified when the upload URL is used.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -14,7 +14,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The description.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The page number of the returned list.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. The default value is 20.</p>
+     * <p>The number of entries per page. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -58,6 +58,9 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
     @NameInMap("Total")
     public Integer total;
 
+    /**
+     * <p>The list of user data.</p>
+     */
     @NameInMap("UserDatas")
     public java.util.List<DescribeComfyUserDatasResponseBodyUserDatas> userDatas;
 
@@ -124,7 +127,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
 
     public static class DescribeComfyUserDatasResponseBodyUserDatas extends TeaModel {
         /**
-         * <p>The name of the file or folder.</p>
+         * <p>The name of the file or directory.</p>
          * 
          * <strong>example:</strong>
          * <p>myfile</p>
@@ -142,7 +145,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         public Long fileSize;
 
         /**
-         * <p>The entry type. Valid values are \<code>file\\</code> and \<code>dir\\</code>.</p>
+         * <p>The file type. Valid values: file and dir.</p>
          * 
          * <strong>example:</strong>
          * <p>file</p>
@@ -151,7 +154,7 @@ public class DescribeComfyUserDatasResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The time the file was last modified.</p>
+         * <p>The last modified time. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1776646928000</p>

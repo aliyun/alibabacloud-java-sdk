@@ -5,15 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeVsDevicesDataRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The end time must be later than the start time.</p>
+     * <p>The end time of the data to retrieve. The end time must be later than the start time.</p>
      * <blockquote>
      * <ul>
-     * <li><p>The date must follow the ISO 8601 standard and be in UTC. The format is YYYY-MM-DDThh:mm:ssZ.</p>
-     * </li>
-     * <li><p>The minimum data granularity is 5 minutes.</p>
-     * </li>
-     * <li><p>If you do not specify this parameter, data from the last 24 hours is retrieved by default.</p>
-     * </li>
+     * <li>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</li>
+     * <li>The minimum data granularity is 5 minutes.</li>
+     * <li>If you do not specify this parameter, the data of the last 24 hours is retrieved by default.</li>
      * </ul>
      * </blockquote>
      * 
@@ -24,7 +21,7 @@ public class DescribeVsDevicesDataRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>You can query by space ID.</p>
+     * <p>The workspace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>348*****174-cn-qingdao</p>
@@ -36,15 +33,12 @@ public class DescribeVsDevicesDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The start of the time range to query.</p>
+     * <p>The start time of the data to retrieve.    </p>
      * <blockquote>
      * <ul>
-     * <li><p>The date must follow the ISO 8601 standard and be in UTC. The format is YYYY-MM-DDThh:mm:ssZ.</p>
-     * </li>
-     * <li><p>The minimum data granularity is 5 minutes.</p>
-     * </li>
-     * <li><p>If you do not specify this parameter, data from the last 24 hours is retrieved by default.</p>
-     * </li>
+     * <li>Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</li>
+     * <li>The minimum data granularity is 5 minutes.</li>
+     * <li>If you do not specify this parameter, the data of the last 24 hours is retrieved by default.</li>
      * </ul>
      * </blockquote>
      * 

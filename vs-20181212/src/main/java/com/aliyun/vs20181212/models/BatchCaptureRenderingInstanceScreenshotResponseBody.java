@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaModel {
     /**
-     * <p>The dry run result.</p>
+     * <p>The data pre-check result.</p>
      */
     @NameInMap("Datatest")
     public BatchCaptureRenderingInstanceScreenshotResponseBodyDatatest datatest;
@@ -20,7 +20,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
     public Long failedCount;
 
     /**
-     * <p>The list of instances for which screenshots failed.</p>
+     * <p>The list of instances for which screenshot capture failed.</p>
      */
     @NameInMap("FailedItems")
     public java.util.List<BatchCaptureRenderingInstanceScreenshotResponseBodyFailedItems> failedItems;
@@ -129,7 +129,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
 
     public static class BatchCaptureRenderingInstanceScreenshotResponseBodyDatatest extends TeaModel {
         /**
-         * <p>The dry run result.</p>
+         * <p>The pre-check result.</p>
          */
         @NameInMap("Result")
         public BatchCaptureRenderingInstanceScreenshotResponseBodyDatatestResult result;
@@ -151,7 +151,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
 
     public static class BatchCaptureRenderingInstanceScreenshotResponseBodyFailedItems extends TeaModel {
         /**
-         * <p>The error code of the failure.</p>
+         * <p>The error code for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -160,7 +160,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
         public String errCode;
 
         /**
-         * <p>The error message of the failure.</p>
+         * <p>The reason for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Not Applied</p>
@@ -169,7 +169,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
         public String errMessage;
 
         /**
-         * <p>The instance ID of the cloud application service instance.</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-072da95539d3402da90353b244191722</p>
@@ -210,7 +210,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
 
     public static class BatchCaptureRenderingInstanceScreenshotResponseBodySuccessItems extends TeaModel {
         /**
-         * <p>The time when the screenshot was created.</p>
+         * <p>The time when the screenshot was created. The time is displayed in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-19T14:46:37+08:00</p>
@@ -228,7 +228,7 @@ public class BatchCaptureRenderingInstanceScreenshotResponseBody extends TeaMode
         public String downloadUrl;
 
         /**
-         * <p>The instance ID of the cloud application service instance.</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-1ada8cd82783407b99fa202826fc6447</p>

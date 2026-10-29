@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallCloudAppResponseBody extends TeaModel {
     /**
-     * <p>The number of cloud application service instances that failed.</p>
+     * <p>The number of cloud application service instances on which the operation failed.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,13 +14,13 @@ public class UninstallCloudAppResponseBody extends TeaModel {
     public Integer failedInstanceCount;
 
     /**
-     * <p>List of failed cloud application service instances</p>
+     * <p>The list of cloud application service instances on which the operation failed.</p>
      */
     @NameInMap("FailedInstances")
     public java.util.List<UninstallCloudAppResponseBodyFailedInstances> failedInstances;
 
     /**
-     * <p>Request ID</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -29,7 +29,7 @@ public class UninstallCloudAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Number of successfully uninstalled cloud application instances</p>
+     * <p>The number of cloud application service instances on which the operation succeeded.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -38,7 +38,7 @@ public class UninstallCloudAppResponseBody extends TeaModel {
     public Integer successInstanceCount;
 
     /**
-     * <p>A list of service instances for which the cloud application was uninstalled successfully.</p>
+     * <p>The list of cloud application service instances on which the operation succeeded.</p>
      */
     @NameInMap("SuccessInstances")
     public java.util.List<UninstallCloudAppResponseBodySuccessInstances> successInstances;
@@ -90,7 +90,7 @@ public class UninstallCloudAppResponseBody extends TeaModel {
 
     public static class UninstallCloudAppResponseBodyFailedInstances extends TeaModel {
         /**
-         * <p>Error code</p>
+         * <p>The error code for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>300000</p>
@@ -99,7 +99,7 @@ public class UninstallCloudAppResponseBody extends TeaModel {
         public Integer errCode;
 
         /**
-         * <p>Error message</p>
+         * <p>The cause of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Rejected due to timeout</p>
@@ -108,7 +108,7 @@ public class UninstallCloudAppResponseBody extends TeaModel {
         public String errMessage;
 
         /**
-         * <p>Cloud application instance ID</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-b45f28650ffe4591bf4c5c95996a428c</p>
@@ -149,7 +149,7 @@ public class UninstallCloudAppResponseBody extends TeaModel {
 
     public static class UninstallCloudAppResponseBodySuccessInstances extends TeaModel {
         /**
-         * <p>Cloud application instance ID</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-e6cf423c787e4e43b460a788da254fe3</p>

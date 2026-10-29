@@ -5,26 +5,26 @@ import com.aliyun.tea.*;
 
 public class CreateComfyWorkflowRequest extends TeaModel {
     /**
-     * <p>The workflow description.</p>
+     * <p>The description of the workflow.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是一个图生视频的工作流</p>
+     * <p>This is a workflow for image-to-video</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The workflow name.</p>
+     * <p>The name of the workflow.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>图生视频的工作流示例</p>
+     * <p>Sample workflow for image-to-video</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>The JSON definition of the workflow.</p>
+     * <p>The workflow JSON.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

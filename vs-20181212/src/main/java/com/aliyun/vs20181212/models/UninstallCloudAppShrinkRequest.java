@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UninstallCloudAppShrinkRequest extends TeaModel {
     /**
-     * <p>Cloud application ID</p>
+     * <p>The ID of the cloud application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,17 +15,15 @@ public class UninstallCloudAppShrinkRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Page number for paged queries of instance associations in the project. Results are sorted by association time in descending order. This parameter applies only when ProjectId is not empty. It limits the maximum number of instances affected by this operation to control impact scope. Default value: 1.</p>
+     * <p>The page number for instance associations in a project. By default, a paged query sorts results in descending order of instance association time. This parameter is valid only when ProjectId is not empty. It limits the maximum number of instances on which the action is executed in the project to control the impact scope of the action. Default value: 1.</p>
      * <ol>
-     * <li><p>Valid PageNumber range:
-     * a. Recommended method: Calculate the upper limit based on the total number of instances associated with the project. You can get this count using the ListRenderingProjectInstances API.
-     * b. Alternative method: Check the API response to determine whether PageNumber has reached the upper limit. This avoids manual calculation. PageNumber has reached the upper limit if either of the following occurs:
-     * ⅰ. The API returns HTTP status 403 and error code 200301.
-     * ⅱ. The sum of SuccessInstanceCount and FailedInstanceCount in the response is less than PageSize.</p>
-     * </li>
-     * <li><p>Example scenario:
-     * a. Full uninstall across all project instances: If the project has more instances than PageSize (default 100), call UninstallCloudApp multiple times, incrementing PageNumber by 1 each time. Track uninstall progress using the ListCloudAppInstallations API.</p>
-     * </li>
+     * <li>Valid values of PageNumber:
+     *   a. [Recommended] Method 1: Calculate the upper limit based on the total number of instances associated with the project. You can call the ListRenderingProjectInstances operation to obtain the total number.
+     *   b. Method 2: Determine whether PageNumber reaches the upper limit for the project based on the response. [Advantage: No need to calculate the valid value range]. PageNumber reaches the upper limit if the response meets any of the following conditions:
+     *  i. The response returns HTTP status code 403 and error code 200301.
+     *  ii. The sum of SuccessInstanceCount and FailedInstanceCount in the response is less than PageSize.</li>
+     * <li>Scenario example:
+     *   a. Uninstall instances in a project in full: If the number of instances in the project is greater than PageSize (default value: 100), you can call the Uninstall operation multiple times and increment PageNumber by 1 each time to uninstall all instances. You can call the ListCloudAppInstallations operation to query the uninstallation progress of the instances in the project.</li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -35,7 +33,7 @@ public class UninstallCloudAppShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Maximum number of instances selected in the project. This parameter applies only when ProjectId is not empty. It limits the maximum number of instances affected by this operation to control impact scope. Default value: 100. Valid values: 1 to 100.</p>
+     * <p>The maximum number of selected instances in a project. This parameter is valid only when ProjectId is not empty. It limits the maximum number of instances on which the action is executed in the project to control the impact scope of the action. Default value: 100. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -44,14 +42,11 @@ public class UninstallCloudAppShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>ID of the patch package to uninstall. Supported only on Windows.</p>
+     * <p>The ID of the patch package to uninstall. This parameter is supported only in Windows scenarios.</p>
      * <ol>
-     * <li><p>Default: uninstall the StablePatchId.</p>
-     * </li>
-     * <li><p>Set to origin to uninstall the original version.</p>
-     * </li>
-     * <li><p>Set to all to uninstall all installed versions.</p>
-     * </li>
+     * <li>By default, the StablePatchId is uninstalled.</li>
+     * <li>If you set this parameter to origin, the original version is uninstalled.</li>
+     * <li>If you set this parameter to all, all installed versions are uninstalled.</li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -61,7 +56,7 @@ public class UninstallCloudAppShrinkRequest extends TeaModel {
     public String patchId;
 
     /**
-     * <p>Project ID</p>
+     * <p>The ID of the project.</p>
      * 
      * <strong>example:</strong>
      * <p>project-422bc38dfgh5eb44149f135ef76304f63b</p>
@@ -70,7 +65,7 @@ public class UninstallCloudAppShrinkRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>Cloud application instance ID</p>
+     * <p>The cloud application service instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -79,7 +74,7 @@ public class UninstallCloudAppShrinkRequest extends TeaModel {
     public String renderingInstanceId;
 
     /**
-     * <p>List of cloud application instance IDs</p>
+     * <p>The list of cloud application service instance IDs.</p>
      */
     @NameInMap("RenderingInstanceIds")
     public String renderingInstanceIdsShrink;

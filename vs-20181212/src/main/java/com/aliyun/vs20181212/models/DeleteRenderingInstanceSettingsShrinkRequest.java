@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteRenderingInstanceSettingsShrinkRequest extends TeaModel {
     /**
-     * <p>List of attribute names.</p>
+     * <p>The list of attribute names.</p>
      */
     @NameInMap("AttributeNames")
     public String attributeNamesShrink;
 
     /**
-     * <p>ID of the cloud application service instance.</p>
+     * <p>The cloud application service instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>render-9f8c57355d224ad7beaf95e145f22111</p>

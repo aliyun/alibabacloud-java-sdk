@@ -110,7 +110,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
 
     public static class DescribeDevicesResponseBodyDevicesDirectory extends TeaModel {
         /**
-         * <p>The time when the directory was created.</p>
+         * <p>The time when the directory was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-28T17:00:17Z</p>
@@ -119,16 +119,16 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The description of the directory.</p>
+         * <p>The directory description.</p>
          * 
          * <strong>example:</strong>
-         * <p>目录1</p>
+         * <p>Directory 1</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The ID of the group to which the directory belongs.</p>
+         * <p>The ID of the workspace to which the directory belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>348*****174-cn-qingdao</p>
@@ -146,10 +146,10 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The name of the directory.</p>
+         * <p>The directory name.</p>
          * 
          * <strong>example:</strong>
-         * <p>目录1</p>
+         * <p>Directory 1</p>
          */
         @NameInMap("Name")
         public String name;
@@ -313,23 +313,13 @@ public class DescribeDevicesResponseBody extends TeaModel {
 
     public static class DescribeDevicesResponseBodyDevices extends TeaModel {
         /**
-         * <p>The GB/T 28181 alarm subscription method. Valid values:</p>
+         * <p>The subscribed national standard alarm methods. Valid values:</p>
          * <ul>
-         * <li><p>0 (all)</p>
-         * </li>
-         * <li><p>5 (video alarm)</p>
-         * </li>
-         * <li><p>7 (other alarm)</p>
-         * </li>
+         * <li>0: All.</li>
+         * <li>5: Video alarm.</li>
+         * <li>7: Other alarms.
+         * An empty value indicates no subscription. You can specify multiple values separated by commas (,).</li>
          * </ul>
-         * <blockquote>
-         * <ul>
-         * <li><p>An empty value indicates that no alarm is subscribed.</p>
-         * </li>
-         * <li><p>Specify multiple values. Separate them with commas (,).</p>
-         * </li>
-         * </ul>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -338,7 +328,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String alarmMethod;
 
         /**
-         * <p>Indicates whether directory reporting is enabled for the platform device.</p>
+         * <p>Specifies whether to enable directory reporting for platform devices.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -347,7 +337,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public Boolean autoDirectory;
 
         /**
-         * <p>Indicates whether to enable position subscription for the device.</p>
+         * <p>Specifies whether to enable device position subscription.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -356,7 +346,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public Boolean autoPos;
 
         /**
-         * <p>Indicates whether to automatically start the stream.</p>
+         * <p>Specifies whether to automatically start the stream.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -365,7 +355,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public Boolean autoStart;
 
         /**
-         * <p>The time when the channels were synchronized.</p>
+         * <p>The channel synchronization time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-28T17:01:17Z</p>
@@ -374,7 +364,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String channelSyncTime;
 
         /**
-         * <p>The time when the device was created.</p>
+         * <p>The time when the device was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-28T17:00:17Z</p>
@@ -383,10 +373,10 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String createdTime;
 
         /**
-         * <p>The description of the device.</p>
+         * <p>The device description.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx路口摄像头</p>
+         * <p>Camera at the XXX intersection</p>
          */
         @NameInMap("Description")
         public String description;
@@ -407,10 +397,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String directoryId;
 
         /**
-         * <p>The serial number of the device.</p>
-         * <blockquote>
-         * <p>This parameter applies only to the AUVSP and ODCAP protocols.</p>
-         * </blockquote>
+         * <p>The device serial number. This parameter is applicable only to the AUVSP and ODCAP protocols.</p>
          * 
          * <strong>example:</strong>
          * <p>7D0*****4C0</p>
@@ -419,7 +406,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String dsn;
 
         /**
-         * <p>Indicates whether the device is enabled.</p>
+         * <p>Specifies whether the device is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -428,10 +415,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The GB/T 28181 ID of the device.</p>
-         * <blockquote>
-         * <p>This parameter applies only to the GB/T 28181 protocol.</p>
-         * </blockquote>
+         * <p>The national standard ID of the device. This parameter is applicable only to the national standard protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>310000000****0000002</p>
@@ -440,7 +424,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String gbId;
 
         /**
-         * <p>The ID of the group to which the device belongs.</p>
+         * <p>The ID of the workspace to which the device belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>348*****174-cn-qingdao</p>
@@ -488,7 +472,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
          * <p>The device name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xxx路口摄像头</p>
+         * <p>Camera at the XXX intersection</p>
          */
         @NameInMap("Name")
         public String name;
@@ -548,7 +532,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The time when the device was registered.</p>
+         * <p>The time when the device was registered. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-02-28T17:00:17Z</p>
@@ -557,7 +541,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String registeredTime;
 
         /**
-         * <p>The stream statistics of the device.</p>
+         * <p>The stream statistics information of the device.</p>
          */
         @NameInMap("Stats")
         public DescribeDevicesResponseBodyDevicesStats stats;
@@ -565,14 +549,10 @@ public class DescribeDevicesResponseBody extends TeaModel {
         /**
          * <p>The device status. Valid values:</p>
          * <ul>
-         * <li><p>on (online)</p>
-         * </li>
-         * <li><p>off (offline)</p>
-         * </li>
-         * <li><p>failed</p>
-         * </li>
-         * <li><p>new (unregistered)</p>
-         * </li>
+         * <li>on: Online.</li>
+         * <li>off: Offline.</li>
+         * <li>failed: Locked.</li>
+         * <li>new: Unregistered.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -584,12 +564,9 @@ public class DescribeDevicesResponseBody extends TeaModel {
         /**
          * <p>The device type. Valid values:</p>
          * <ul>
-         * <li><p>ipc (camera)</p>
-         * </li>
-         * <li><p>platform</p>
-         * </li>
-         * <li><p>ied (intelligent edge device)</p>
-         * </li>
+         * <li>ipc: Camera.</li>
+         * <li>platform: Platform.</li>
+         * <li>ied: Intelligent device.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -608,7 +585,7 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String url;
 
         /**
-         * <p>The username for the device.</p>
+         * <p>The device username.</p>
          * 
          * <strong>example:</strong>
          * <p>admin</p>
@@ -617,10 +594,10 @@ public class DescribeDevicesResponseBody extends TeaModel {
         public String username;
 
         /**
-         * <p>The manufacturer of the device.</p>
+         * <p>The device vendor.</p>
          * 
          * <strong>example:</strong>
-         * <p>公司A</p>
+         * <p>Company A</p>
          */
         @NameInMap("Vendor")
         public String vendor;

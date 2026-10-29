@@ -23,13 +23,13 @@ public class ListPublicKeysResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>A list of public keys.</p>
+     * <p>The list of user public keys.</p>
      */
     @NameInMap("PublicKeys")
     public java.util.List<ListPublicKeysResponseBodyPublicKeys> publicKeys;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -93,7 +93,7 @@ public class ListPublicKeysResponseBody extends TeaModel {
 
     public static class ListPublicKeysResponseBodyPublicKeys extends TeaModel {
         /**
-         * <p>The content of the public key. The content is encoded in Base64 format by default.</p>
+         * <p>The encoded content of the public key. Default encoding format: Base64.</p>
          * 
          * <strong>example:</strong>
          * <p>verify_30d89ccb0905c8c7882c1d14a991954b</p>
@@ -105,13 +105,13 @@ public class ListPublicKeysResponseBody extends TeaModel {
          * <p>The description of the public key.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试使用</p>
+         * <p>For testing purposes</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The public key group.</p>
+         * <p>The group of the public key.</p>
          * 
          * <strong>example:</strong>
          * <p>mygroup</p>
@@ -131,10 +131,8 @@ public class ListPublicKeysResponseBody extends TeaModel {
         /**
          * <p>The type of the public key. Valid values:</p>
          * <ul>
-         * <li><p><strong>adb</strong>: ADB key</p>
-         * </li>
-         * <li><p><strong>ssh</strong>: SSH key</p>
-         * </li>
+         * <li><strong>adb</strong>: ADB key</li>
+         * <li><strong>ssh</strong>: SSH key</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,7 +142,7 @@ public class ListPublicKeysResponseBody extends TeaModel {
         public String keyType;
 
         /**
-         * <p>The time when the public key was uploaded.</p>
+         * <p>The time when the public key was uploaded. The time is specified in the ISO 8601 standard with a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-11T14:26:48+08:00</p>

@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ManageLoginRequest extends TeaModel {
     /**
-     * <p>Name of the management action. Valid values:</p>
+     * <p>The name of the management action. Valid values:</p>
      * <ol>
-     * <li><p>open — Activate the public key. This is the default value.</p>
-     * </li>
-     * <li><p>close — Deactivate the public key.</p>
-     * </li>
+     * <li>open - Activate the public key, default value</li>
+     * <li>close - Deactivate the public key</li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ManageLoginRequest extends TeaModel {
     public String actionName;
 
     /**
-     * <p>Name of the public key group. If you do not specify KeyName, all public keys in this group are applied.</p>
+     * <p>The public key group. If KeyName is not specified, all public keys in KeyGroup are delivered.</p>
      * 
      * <strong>example:</strong>
      * <p>mygroup</p>
@@ -29,7 +27,7 @@ public class ManageLoginRequest extends TeaModel {
     public String keyGroup;
 
     /**
-     * <p>Name of the public key. You must specify either KeyName or KeyGroup.</p>
+     * <p>The name of the public key. At least one of KeyName and KeyGroup must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>mykey</p>
@@ -38,7 +36,7 @@ public class ManageLoginRequest extends TeaModel {
     public String keyName;
 
     /**
-     * <p>ID of the Cloud Application Service instance.</p>
+     * <p>The instance ID of the cloud application service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,6 +4,12 @@ package com.aliyun.vs20181212.models;
 import com.aliyun.tea.*;
 
 public class DescribeVsUserResourcePackageResponseBody extends TeaModel {
+    /**
+     * <p>The request ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>84839536-2B7E-457D-9D8C-82E6C7D4E1A3</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 

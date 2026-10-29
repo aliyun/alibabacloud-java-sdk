@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeComfyTaskWaitingQueueRequest extends TeaModel {
     /**
-     * <p>The waiting queue information of a specified Hive.</p>
+     * <p>The ID of the specified Hive.</p>
      * 
      * <strong>example:</strong>
      * <p>hive-26cd567b35c04a0a90f0xxxxx</p>

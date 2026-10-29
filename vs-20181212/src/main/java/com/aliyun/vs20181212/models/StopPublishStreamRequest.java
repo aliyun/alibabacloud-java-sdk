@@ -5,7 +5,11 @@ import com.aliyun.tea.*;
 
 public class StopPublishStreamRequest extends TeaModel {
     /**
+     * <p>The ID of the cloud application service instance for which to stop desktop capture and streaming.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
      */
     @NameInMap("InstanceId")
     public String instanceId;

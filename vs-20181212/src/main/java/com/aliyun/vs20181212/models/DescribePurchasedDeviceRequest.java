@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePurchasedDeviceRequest extends TeaModel {
     /**
-     * <p>Device ID.</p>
+     * <p>The device ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

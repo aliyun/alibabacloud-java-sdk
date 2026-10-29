@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFilePushStatusesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned results.</p>
+     * <p>The page number of the returned list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query.</p>
+     * <p>The Settings for the number of entries per page during paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,13 +23,13 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The list of file push status records.</p>
+     * <p>The list of file push statuses.</p>
      */
     @NameInMap("PushStatuses")
     public java.util.List<ListFilePushStatusesResponseBodyPushStatuses> pushStatuses;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -38,7 +38,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matching file push records.</p>
+     * <p>The total number of matched file push records.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,7 +93,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
 
     public static class ListFilePushStatusesResponseBodyPushStatuses extends TeaModel {
         /**
-         * <p>The file ID.</p>
+         * <p>The ID of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>f-1671accd4dafdag3er256cvgewt13f7141db2f7</p>
@@ -102,7 +102,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The file name.</p>
+         * <p>The name of the file.</p>
          * 
          * <strong>example:</strong>
          * <p>myfile</p>
@@ -111,7 +111,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The scheduled push start time.</p>
+         * <p>The start time of the push. The time is displayed in the ISO 8601 standard with time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-26T16:32:20+08:00</p>
@@ -120,7 +120,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String pushTime;
 
         /**
-         * <p>The cloud application service instance ID.</p>
+         * <p>The instance ID of the cloud application service.</p>
          * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -129,17 +129,13 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String renderingInstanceId;
 
         /**
-         * <p>The file push status. Valid values:</p>
-         * <ol>
-         * <li><p>Created</p>
-         * </li>
-         * <li><p>Doing</p>
-         * </li>
-         * <li><p>Success: desired state</p>
-         * </li>
-         * <li><p>Failed: desired state</p>
-         * </li>
-         * </ol>
+         * <p>The push status of the file. Valid values:</p>
+         * <ul>
+         * <li>Created</li>
+         * <li>Doing</li>
+         * <li>Success: final state.</li>
+         * <li>Failed: final state.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -148,7 +144,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The status description.</p>
+         * <p>The description of the status.</p>
          * 
          * <strong>example:</strong>
          * <p>push success</p>
@@ -157,7 +153,7 @@ public class ListFilePushStatusesResponseBody extends TeaModel {
         public String statusDescription;
 
         /**
-         * <p>The latest update time of the status.</p>
+         * <p>The latest update time of the status. The time is displayed in the ISO 8601 standard with time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-26T17:02:10+08:00</p>

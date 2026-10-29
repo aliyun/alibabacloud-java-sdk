@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UploadPublicKeyRequest extends TeaModel {
     /**
-     * <p>Base64-encoded public key content.</p>
+     * <p>The encoded content of the public key. The default encoding format is Base64.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,23 +15,21 @@ public class UploadPublicKeyRequest extends TeaModel {
     public String content;
 
     /**
-     * <p>Description of the public key.</p>
+     * <p>The description of the public key.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试使用</p>
+     * <p>For testing purposes</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Group for the public key. Used for public key management.</p>
+     * <p>The group of the public key. Used for public key management.
+     * Naming conventions:</p>
      * <ol>
-     * <li><p>Length: 0 to 255 characters.</p>
-     * </li>
-     * <li><p>Valid characters: lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</p>
-     * </li>
-     * <li><p>First character must be a letter or digit.</p>
-     * </li>
+     * <li>The length must be 0 to 255 characters.</li>
+     * <li>The name can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</li>
+     * <li>The first character must be a letter or a digit.</li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -41,16 +39,13 @@ public class UploadPublicKeyRequest extends TeaModel {
     public String keyGroup;
 
     /**
-     * <p>Name of the public key. Must be unique.</p>
+     * <p>The name of the public key. The name must be unique.
+     * Naming conventions:</p>
      * <ol>
-     * <li><p>Length: 8 to 255 characters.</p>
-     * </li>
-     * <li><p>Valid characters: lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</p>
-     * </li>
-     * <li><p>First character must be a letter or digit.</p>
-     * </li>
-     * <li><p>Prefix cannot be group-.</p>
-     * </li>
+     * <li>The length must be 8 to 255 characters.</li>
+     * <li>The name can contain lowercase letters, digits, underscores (_), hyphens (-), and periods (.).</li>
+     * <li>The first character must be a letter or a digit.</li>
+     * <li>The prefix cannot be &quot;group-&quot;.</li>
      * </ol>
      * <p>This parameter is required.</p>
      * 
@@ -61,12 +56,10 @@ public class UploadPublicKeyRequest extends TeaModel {
     public String keyName;
 
     /**
-     * <p>Type of the public key. Valid values:</p>
+     * <p>The type of the public key. Valid values:</p>
      * <ul>
-     * <li><p><strong>adb</strong>: ADB key.</p>
-     * </li>
-     * <li><p><strong>ssh</strong>: SSH key.</p>
-     * </li>
+     * <li><strong>adb</strong>: ADB key.</li>
+     * <li><strong>ssh</strong>: SSH key.</li>
      * </ul>
      * 
      * <strong>example:</strong>

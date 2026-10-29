@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartRenderingSessionRequest extends TeaModel {
     /**
-     * <p>Cloud application ID</p>
+     * <p>The cloud application ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
@@ -14,7 +14,7 @@ public class StartRenderingSessionRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Unique ID of the client</p>
+     * <p>The unique ID of the end user.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,18 +24,16 @@ public class StartRenderingSessionRequest extends TeaModel {
     public String clientId;
 
     /**
-     * <p>Client parameter information</p>
+     * <p>The parameter information of the end user.</p>
      */
     @NameInMap("ClientParams")
     public StartRenderingSessionRequestClientParams clientParams;
 
     /**
-     * <p>Cloud application patch ID.</p>
+     * <p>The cloud application patch package ID.</p>
      * <ol>
-     * <li><p>By default, start the stable version of the AppId (if no stable patch version is set, the original version is used).</p>
-     * </li>
-     * <li><p>If you enter &quot;origin&quot;, start the original version.</p>
-     * </li>
+     * <li>By default, the stable version of the application specified by AppId is started. If no stable patch version is set, the original version is started.</li>
+     * <li>If you specify origin, the original version is started.</li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -45,7 +43,7 @@ public class StartRenderingSessionRequest extends TeaModel {
     public String patchId;
 
     /**
-     * <p>Project ID</p>
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -101,7 +99,7 @@ public class StartRenderingSessionRequest extends TeaModel {
 
     public static class StartRenderingSessionRequestClientParams extends TeaModel {
         /**
-         * <p>Client IP address. This IP address is used by default for scheduling instances based on proximity.</p>
+         * <p>The IP address of the end user. By default, this IP address is used for proximity-based instance scheduling.</p>
          * 
          * <strong>example:</strong>
          * <p>106.11.43.1</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGroupRequest extends TeaModel {
     /**
-     * <p>Space ID.</p>
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeGroupRequest extends TeaModel {
     public String id;
 
     /**
-     * <p>Specifies whether to return the statistics of devices in the group. The default value is false.</p>
+     * <p>Specifies whether to return the statistics information of the devices in the workspace. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

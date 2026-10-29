@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelComfyTaskRequest extends TeaModel {
     /**
-     * <p>The ID of the Comfy task to cancel.</p>
+     * <p>The ID of the Comfy task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

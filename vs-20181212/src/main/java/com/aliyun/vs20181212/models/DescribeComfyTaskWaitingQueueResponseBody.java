@@ -14,7 +14,7 @@ public class DescribeComfyTaskWaitingQueueResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The description.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -32,7 +32,7 @@ public class DescribeComfyTaskWaitingQueueResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The waiting queue information.</p>
+     * <p>The task waiting queue information.</p>
      */
     @NameInMap("TaskWaitingQueue")
     public DescribeComfyTaskWaitingQueueResponseBodyTaskWaitingQueue taskWaitingQueue;

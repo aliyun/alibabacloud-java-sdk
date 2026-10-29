@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisassociateRenderingProjectInstancesRequest extends TeaModel {
     /**
-     * <p>The ID of the project.</p>
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DisassociateRenderingProjectInstancesRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>A list of cloud application service instance IDs.</p>
+     * <p>The list of cloud application service instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RenderingInstanceIds")

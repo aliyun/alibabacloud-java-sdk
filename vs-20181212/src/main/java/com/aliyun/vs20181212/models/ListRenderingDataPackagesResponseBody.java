@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRenderingDataPackagesResponseBody extends TeaModel {
     /**
-     * <p>A list of data packages for the cloud application service.</p>
+     * <p>The list of cloud application service data packages.</p>
      */
     @NameInMap("DataPackages")
     public java.util.List<ListRenderingDataPackagesResponseBodyDataPackages> dataPackages;
@@ -20,7 +20,7 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of Graphic Computing Service instances.</p>
+     * <p>The total number of cloud rendering instances.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -61,10 +61,8 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         /**
          * <p>The category. Valid values:</p>
          * <ul>
-         * <li><p>Package</p>
-         * </li>
-         * <li><p>Baseline</p>
-         * </li>
+         * <li>Package: package</li>
+         * <li>Baseline: baseline</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,7 +72,7 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The creation time of the Graphic Computing Service instance.</p>
+         * <p>The creation time of the cloud rendering instance. The time is displayed in the YYYY-MM-DDTHH:mm:ss+HH:mm format and follows the ISO 8601 standard with a time zone offset.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-15T10:23:06+08:00</p>
@@ -83,7 +81,7 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The ID of the data pack.</p>
+         * <p>The ID of the data package.</p>
          * 
          * <strong>example:</strong>
          * <p>dp-449ea3d16c0841b8bf33ec5bbc86a152</p>
@@ -92,7 +90,7 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public String dataPackageId;
 
         /**
-         * <p>Remarks.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -101,7 +99,7 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the Graphic Computing Service instance.</p>
+         * <p>The ID of the cloud application service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>render-342012a227dc4ddf91f024639e43051a</p>
@@ -110,7 +108,7 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public String renderingInstanceId;
 
         /**
-         * <p>The size of the data pack.</p>
+         * <p>The size of the data package.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -119,11 +117,11 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public Integer size;
 
         /**
-         * <p>The status of the data pack. Valid values:
-         * available
-         * packing
-         * failed
-         * bonded</p>
+         * <p>The status of the data package. Valid values:
+         * available: available for binding
+         * packing: in progress
+         * failed: failed
+         * bonded: bound</p>
          * 
          * <strong>example:</strong>
          * <p>available</p>
@@ -132,7 +130,7 @@ public class ListRenderingDataPackagesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-06T02:03:59Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListFilesRequest extends TeaModel {
     /**
-     * <p>This parameter filters data by time range. It must conform to the ISO 8601 standard and use UTC time in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-31T06:00:00Z</p>
@@ -14,7 +14,7 @@ public class ListFilesRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>File ID. Each ID corresponds to a unique active file.</p>
+     * <p>The ID of the file, which corresponds to a unique available file.</p>
      * 
      * <strong>example:</strong>
      * <p>f-1671accd4dafdag3er256cvgewt13f7141db2f7</p>
@@ -23,7 +23,7 @@ public class ListFilesRequest extends TeaModel {
     public String fileId;
 
     /**
-     * <p>File name.</p>
+     * <p>The name of the file.</p>
      * 
      * <strong>example:</strong>
      * <p>myfile</p>
@@ -32,7 +32,7 @@ public class ListFilesRequest extends TeaModel {
     public String fileName;
 
     /**
-     * <p>The page number to retrieve. Page numbering starts at 1.Default value: 1.</p>
+     * <p>The page number of the list to query. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListFilesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of rows per page for a paged query. The value must be in the range of 1 to 100. The default is 10.</p>
+     * <p>The Settings for the number of entries per page during paging in a paged query. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class ListFilesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Start time of the time range filter. Specify in ISO 8601 format using UTC time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-30T16:00:00Z</p>

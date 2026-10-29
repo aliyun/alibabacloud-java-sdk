@@ -8,20 +8,17 @@ public class SetVsDomainCertificateRequest extends TeaModel {
      * <p>The certificate name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Cert-77****7</p>
+     * <p>Cert-77****6</p>
      */
     @NameInMap("CertName")
     public String certName;
 
     /**
-     * <p>The certificate type.</p>
+     * <p>The certificate type. Valid values:</p>
      * <ul>
-     * <li><p>upload: Upload certificate</p>
-     * </li>
-     * <li><p>cas: Alibaba Cloud Security certificate</p>
-     * </li>
-     * <li><p>free: Personal test certificate (Free Edition)</p>
-     * </li>
+     * <li>upload: uploaded certificate</li>
+     * <li>cas: SSL Certificates Service certificate</li>
+     * <li>free: free certificate</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +30,7 @@ public class SetVsDomainCertificateRequest extends TeaModel {
     /**
      * <p>The accelerated domain name to which the certificate belongs.</p>
      * <blockquote>
-     * <p>The domain must use HTTPS acceleration.</p>
+     * <p>The domain name must use HTTPS acceleration.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -44,7 +41,7 @@ public class SetVsDomainCertificateRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>Set to 1 to skip the certificate name duplication check and overwrite an existing certificate with the same name.</p>
+     * <p>If you set this parameter to 1, the system ignores the validation for duplicate certificate names and overwrites the existing certificate with the same name.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -65,7 +62,7 @@ public class SetVsDomainCertificateRequest extends TeaModel {
     public String region;
 
     /**
-     * <p>The private key content. Omit this parameter if you disable the certificate. Provide the private key content if you configure a certificate.</p>
+     * <p>The content of the private key. This parameter is not required if the certificate is disabled. If you configure a certificate, enter the private key content.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxxx</p>
@@ -74,12 +71,10 @@ public class SetVsDomainCertificateRequest extends TeaModel {
     public String SSLPri;
 
     /**
-     * <p>Whether to enable the HTTPS certificate. Valid values:</p>
+     * <p>Specifies whether the HTTPS certificate is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>on</strong>: Enable.</p>
-     * </li>
-     * <li><p><strong>off</strong> (default): Disable.</p>
-     * </li>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled. This is the default value.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -90,7 +85,7 @@ public class SetVsDomainCertificateRequest extends TeaModel {
     public String SSLProtocol;
 
     /**
-     * <p>The public certificate content. Omit this parameter if you disable the certificate. Provide the certificate content if you configure a certificate.</p>
+     * <p>The content of the security certificate. This parameter is not required if the certificate is disabled. If you configure a certificate, enter the certificate content.</p>
      * 
      * <strong>example:</strong>
      * <p>328uiuii28****82dsada81</p>

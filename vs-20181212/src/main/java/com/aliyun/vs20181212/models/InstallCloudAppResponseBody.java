@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class InstallCloudAppResponseBody extends TeaModel {
     /**
-     * <p>Number of failed cloud application service instances</p>
+     * <p>The number of failed cloud application service instances.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,13 +14,13 @@ public class InstallCloudAppResponseBody extends TeaModel {
     public Integer failedInstanceCount;
 
     /**
-     * <p>List of failed cloud application service instances</p>
+     * <p>The list of failed cloud application service instances.</p>
      */
     @NameInMap("FailedInstances")
     public java.util.List<InstallCloudAppResponseBodyFailedInstances> failedInstances;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -29,7 +29,7 @@ public class InstallCloudAppResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Number of successful cloud application service instances</p>
+     * <p>The number of successful cloud application service instances.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -38,7 +38,7 @@ public class InstallCloudAppResponseBody extends TeaModel {
     public Integer successInstanceCount;
 
     /**
-     * <p>List of successful cloud application service instances</p>
+     * <p>The list of successful cloud application service instances.</p>
      */
     @NameInMap("SuccessInstances")
     public java.util.List<InstallCloudAppResponseBodySuccessInstances> successInstances;
@@ -90,7 +90,7 @@ public class InstallCloudAppResponseBody extends TeaModel {
 
     public static class InstallCloudAppResponseBodyFailedInstances extends TeaModel {
         /**
-         * <p>Failure error code</p>
+         * <p>The failure error code.</p>
          * 
          * <strong>example:</strong>
          * <p>300000</p>
@@ -99,7 +99,7 @@ public class InstallCloudAppResponseBody extends TeaModel {
         public Integer errCode;
 
         /**
-         * <p>Failure reason message</p>
+         * <p>The failure reason information.</p>
          * 
          * <strong>example:</strong>
          * <p>Rejected due to timeout</p>
@@ -108,7 +108,7 @@ public class InstallCloudAppResponseBody extends TeaModel {
         public String errMessage;
 
         /**
-         * <p>Cloud application service instance ID</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-b45f28650ffe4591bf4c5c95996a428c</p>
@@ -149,7 +149,7 @@ public class InstallCloudAppResponseBody extends TeaModel {
 
     public static class InstallCloudAppResponseBodySuccessInstances extends TeaModel {
         /**
-         * <p>Cloud application service instance ID</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-5130e2feb23f442fb9456a3d977f03d4</p>

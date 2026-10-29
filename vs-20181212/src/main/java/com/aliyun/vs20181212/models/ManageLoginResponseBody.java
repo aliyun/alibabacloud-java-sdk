@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ManageLoginResponseBody extends TeaModel {
     /**
-     * <p>Connection information.</p>
+     * <p>The connection information.</p>
      */
     @NameInMap("LoginInfo")
     public ManageLoginResponseBodyLoginInfo loginInfo;
 
     /**
-     * <p>ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -42,7 +42,7 @@ public class ManageLoginResponseBody extends TeaModel {
 
     public static class ManageLoginResponseBodyLoginInfo extends TeaModel {
         /**
-         * <p>Port for ADB connections.</p>
+         * <p>The port for the ADB connection.</p>
          * 
          * <strong>example:</strong>
          * <p>10005</p>
@@ -51,7 +51,7 @@ public class ManageLoginResponseBody extends TeaModel {
         public Integer adbLoginPort;
 
         /**
-         * <p>Host for SSH connections.</p>
+         * <p>The host for the SSH connection.</p>
          * 
          * <strong>example:</strong>
          * <p>12.10.4.10</p>
@@ -60,7 +60,7 @@ public class ManageLoginResponseBody extends TeaModel {
         public String loginHostname;
 
         /**
-         * <p>Port for SSH connections.</p>
+         * <p>The port for the SSH connection.</p>
          * 
          * <strong>example:</strong>
          * <p>10004</p>

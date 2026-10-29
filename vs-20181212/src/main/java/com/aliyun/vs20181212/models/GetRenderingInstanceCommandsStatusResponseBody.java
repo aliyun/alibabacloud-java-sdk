@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRenderingInstanceCommandsStatusResponseBody extends TeaModel {
     /**
-     * <p>Description. When Status=Failed, this field contains the failure reason.</p>
+     * <p>The description. When Status is Failed, this field includes the cause of the failure.</p>
      * 
      * <strong>example:</strong>
      * <p>conn failed!</p>
@@ -23,7 +23,7 @@ public class GetRenderingInstanceCommandsStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Command execution result string</p>
+     * <p>The execution result string of the command.</p>
      * 
      * <strong>example:</strong>
      * <p>Thu Jun 27 16:06:26 CST 2024</p>
@@ -32,15 +32,12 @@ public class GetRenderingInstanceCommandsStatusResponseBody extends TeaModel {
     public String result;
 
     /**
-     * <p>Command execution status. Valid values:</p>
-     * <ol>
-     * <li><p>Doing: Executing</p>
-     * </li>
-     * <li><p>Success: Succeeded</p>
-     * </li>
-     * <li><p>Failed: Failed. The system automatically retries within the timeout period. You can either wait or resend the request.</p>
-     * </li>
-     * </ol>
+     * <p>The command execution status. Valid values:</p>
+     * <ul>
+     * <li>Doing: Executing.</li>
+     * <li>Success: Succeeded.</li>
+     * <li>Failed: Failed. Within the timeout period, the system automatically retries the command. You can continue to wait or initiate a new request.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

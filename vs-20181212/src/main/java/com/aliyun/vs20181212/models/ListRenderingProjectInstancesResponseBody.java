@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRenderingProjectInstancesResponseBody extends TeaModel {
     /**
-     * <p>List of cloud application service instances</p>
+     * <p>The list of cloud application service instances.</p>
      */
     @NameInMap("RenderingInstances")
     public java.util.List<ListRenderingProjectInstancesResponseBodyRenderingInstances> renderingInstances;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -20,7 +20,7 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of cloud application service instances</p>
+     * <p>The total number of cloud application service instances.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -59,16 +59,16 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
 
     public static class ListRenderingProjectInstancesResponseBodyRenderingInstancesStateInfo extends TeaModel {
         /**
-         * <p>Description of the current status</p>
+         * <p>The status description.</p>
          * 
          * <strong>example:</strong>
-         * <p>正在会话中</p>
+         * <p>In a session</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>Instance status</p>
+         * <p>The project instance status.</p>
          * 
          * <strong>example:</strong>
          * <p>InUse</p>
@@ -77,7 +77,7 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>Time when the status was last updated</p>
+         * <p>The latest update time of the status. The time is in the ISO 8601 standard and includes a time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-11T18:19:04+08:00</p>
@@ -118,7 +118,7 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
 
     public static class ListRenderingProjectInstancesResponseBodyRenderingInstances extends TeaModel {
         /**
-         * <p>Time when the instance was associated with the project</p>
+         * <p>The association time. The time is in the ISO 8601 standard and includes a time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-11T18:19:04+08:00</p>
@@ -127,7 +127,7 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
         public String associationTime;
 
         /**
-         * <p>Cloud application service instance</p>
+         * <p>The ID of the cloud application service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -136,7 +136,7 @@ public class ListRenderingProjectInstancesResponseBody extends TeaModel {
         public String renderingInstanceId;
 
         /**
-         * <p>Status information for the project instance</p>
+         * <p>The project instance status information.</p>
          */
         @NameInMap("StateInfo")
         public ListRenderingProjectInstancesResponseBodyRenderingInstancesStateInfo stateInfo;

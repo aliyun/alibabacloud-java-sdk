@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCloudAppsRequest extends TeaModel {
     /**
-     * <p>The cloud application ID, which corresponds to a unique application package.</p>
+     * <p>The ID of the cloud application, which corresponds to a unique application package.</p>
      * 
      * <strong>example:</strong>
      * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
@@ -14,7 +14,7 @@ public class ListCloudAppsRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The application name.</p>
+     * <p>The name of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>com.aaa.bbb</p>
@@ -23,7 +23,7 @@ public class ListCloudAppsRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The application version.</p>
+     * <p>The version of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0</p>
@@ -32,7 +32,7 @@ public class ListCloudAppsRequest extends TeaModel {
     public String appVersion;
 
     /**
-     * <p>The start time for time range filtering. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-09-30T02:23:00Z</p>
@@ -41,7 +41,7 @@ public class ListCloudAppsRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies whether to return only the latest submitted version of each application. Default value: false.</p>
+     * <p>Specifies whether to return only the latest submitted version of the application. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -50,8 +50,7 @@ public class ListCloudAppsRequest extends TeaModel {
     public Boolean latestVersionOnly;
 
     /**
-     * <p>The page number of the query list. Minimum value: 1.
-     * Default value: 1.</p>
+     * <p>The page number of the list to query. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -60,8 +59,7 @@ public class ListCloudAppsRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page for a paged query. Valid values: 1 to 100.
-     * Default value: 10.</p>
+     * <p>The number of entries to return on each page during paging for a paged query. Settings: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -70,15 +68,13 @@ public class ListCloudAppsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The cloud application label.</p>
-     * <ol>
-     * <li>Valid values:
-     * a. hot
-     * b. game
-     * c. app</li>
-     * <li>Special case:
-     * a. To query applications without a label, enter &quot;NULL&quot;.</li>
-     * </ol>
+     * <p>The label of the cloud application. Valid values:</p>
+     * <ul>
+     * <li>hot</li>
+     * <li>game</li>
+     * <li>app
+     * To query cloud applications without labels, set this parameter to NULL.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>app</p>
@@ -87,12 +83,12 @@ public class ListCloudAppsRequest extends TeaModel {
     public String pkgLabel;
 
     /**
-     * <p>The installation package type. Valid values:</p>
-     * <ol>
+     * <p>The type of the installation package. Valid values:</p>
+     * <ul>
      * <li>android</li>
      * <li>win</li>
      * <li>android_appmarket</li>
-     * </ol>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>android</p>
@@ -101,7 +97,7 @@ public class ListCloudAppsRequest extends TeaModel {
     public String pkgType;
 
     /**
-     * <p>The start time for time range filtering. Specify the time in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The start time of the time range filter. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-09-29T16:00:00Z</p>
@@ -110,13 +106,13 @@ public class ListCloudAppsRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The application upload status. Valid values:</p>
-     * <ol>
-     * <li>Success: desired state, succeeded.</li>
-     * <li>Failed: desired state, failed.</li>
+     * <p>The upload status of the application. Valid values:</p>
+     * <ul>
+     * <li>Success: The upload is successful. This is a final state.</li>
+     * <li>Failed: The upload failed. This is a final state.</li>
      * <li>Created</li>
      * <li>Doing</li>
-     * </ol>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateRenderingDataPackageRequest extends TeaModel {
     /**
-     * <p>Data type. Valid values:</p>
+     * <p>The data type. Valid values:</p>
      * <ul>
-     * <li><p>Package (default value).</p>
-     * </li>
-     * <li><p>Baseline.</p>
-     * </li>
+     * <li>Package (default)</li>
+     * <li>Baseline</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class CreateRenderingDataPackageRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>Description.</p>
+     * <p>The description.</p>
      * 
      * <strong>example:</strong>
      * <p>testdescription</p>
@@ -29,9 +27,9 @@ public class CreateRenderingDataPackageRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Billing type. Valid values:</p>
+     * <p>The billing type. Valid values:</p>
      * <ul>
-     * <li>Hour: Hour.</li>
+     * <li>Hour: hourly.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +39,7 @@ public class CreateRenderingDataPackageRequest extends TeaModel {
     public String instanceBillingCycle;
 
     /**
-     * <p>Cloud application service instance ID (Note: This operation is only for crs.cp.\* series instance types.)</p>
+     * <p>The instance ID of the Cloud Application Service. Note: This operation applies only to crs.cp.* series instance types.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

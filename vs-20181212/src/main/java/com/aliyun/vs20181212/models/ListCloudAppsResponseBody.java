@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCloudAppsResponseBody extends TeaModel {
     /**
-     * <p>The list of cloud application information.</p>
+     * <p>The list of cloud applications.</p>
      */
     @NameInMap("CloudApps")
     public java.util.List<ListCloudAppsResponseBodyCloudApps> cloudApps;
 
     /**
-     * <p>The page number of the query list.</p>
+     * <p>The page number of the returned list.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page for the paged query.</p>
+     * <p>The Settings for the number of entries returned on each page during paging for a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -38,7 +38,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of matched cloud applications.</p>
+     * <p>The total number of cloud applications that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,7 +93,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
 
     public static class ListCloudAppsResponseBodyCloudApps extends TeaModel {
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>cap-b06b26edfhytbn b94a75ae1a79efc90eb</p>
@@ -102,7 +102,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>com.aaa.bbb</p>
@@ -111,7 +111,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The application version.</p>
+         * <p>The version of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>1.5.0</p>
@@ -120,7 +120,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String appVersion;
 
         /**
-         * <p>The application description.</p>
+         * <p>The description of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -129,7 +129,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The installation package format.</p>
+         * <p>The format of the installation package.</p>
          * 
          * <strong>example:</strong>
          * <p>apk</p>
@@ -138,7 +138,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String pkgFormat;
 
         /**
-         * <p>The installation package type. Valid values: android and win.</p>
+         * <p>The type of the installation package, such as android or win.</p>
          * 
          * <strong>example:</strong>
          * <p>android</p>
@@ -147,7 +147,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String pkgType;
 
         /**
-         * <p>The relative path of the post-command within the application package. Only win type applications are supported.</p>
+         * <p>The relative path of the post-command in the application package. This parameter is supported only for Windows applications.</p>
          * 
          * <strong>example:</strong>
          * <p>install.ps1</p>
@@ -156,7 +156,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String postCommandPath;
 
         /**
-         * <p>The timeout period for post-command execution, in seconds. Only win type applications are supported.</p>
+         * <p>The timeout period for executing the post-command, in seconds. This parameter is supported only for Windows applications.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -165,7 +165,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public Integer postCommandTimeoutSec;
 
         /**
-         * <p>The ID of the stable version patch package.</p>
+         * <p>The ID of the stable patch package.</p>
          * 
          * <strong>example:</strong>
          * <p>patch-7bdf679812484df08a956b73e0b3bdf6</p>
@@ -174,15 +174,13 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String stablePatchId;
 
         /**
-         * <p>The application upload status. Valid values:</p>
-         * <ol>
+         * <p>The upload status of the application. Valid values:</p>
+         * <ul>
          * <li>Created</li>
          * <li>Doing</li>
-         * <li>Success: desired state.</li>
-         * <li>Failed: desired state.</li>
-         * <li>Deleting</li>
-         * <li>DeleteFailed: desired state.</li>
-         * </ol>
+         * <li>Success: This is a final state.</li>
+         * <li>Failed: This is a final state.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -191,7 +189,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The status description.</p>
+         * <p>The description of the status.</p>
          * 
          * <strong>example:</strong>
          * <p>upload success</p>
@@ -200,7 +198,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String statusDescription;
 
         /**
-         * <p>The latest status update time.</p>
+         * <p>The time when the status was last updated. The time is displayed in the ISO 8601 standard with a time zone offset, in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-28T14:48:34+08:00</p>
@@ -209,7 +207,7 @@ public class ListCloudAppsResponseBody extends TeaModel {
         public String updateTime;
 
         /**
-         * <p>The application upload time.</p>
+         * <p>The time when the application was uploaded. The time is displayed in the ISO 8601 standard with a time zone offset, in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-28T14:28:14+08:00</p>

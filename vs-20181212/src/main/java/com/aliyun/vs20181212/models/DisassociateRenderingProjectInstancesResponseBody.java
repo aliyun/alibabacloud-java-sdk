@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel {
     /**
-     * <p>The number of cloud application service instances that failed to dissociate.</p>
+     * <p>The number of cloud application service instances that failed to be dissociated.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,13 +14,13 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
     public String failedInstanceCount;
 
     /**
-     * <p>A list of instances that failed to dissociate.</p>
+     * <p>The list of instances that failed to be dissociated.</p>
      */
     @NameInMap("FailedInstances")
     public java.util.List<DisassociateRenderingProjectInstancesResponseBodyFailedInstances> failedInstances;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -29,7 +29,7 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The number of cloud application service instances that were successfully dissociated.</p>
+     * <p>The number of successfully dissociated cloud application service instances.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -38,7 +38,7 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
     public String successInstanceCount;
 
     /**
-     * <p>A list of instances that were successfully dissociated.</p>
+     * <p>The list of successfully dissociated instances.</p>
      */
     @NameInMap("SuccessInstances")
     public java.util.List<DisassociateRenderingProjectInstancesResponseBodySuccessInstances> successInstances;
@@ -90,16 +90,16 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
 
     public static class DisassociateRenderingProjectInstancesResponseBodyFailedInstances extends TeaModel {
         /**
-         * <p>The reason for failure.</p>
+         * <p>The cause of the failure.</p>
          * 
          * <strong>example:</strong>
-         * <p>会话中</p>
+         * <p>In session</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>A cloud application service instance ID.</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-421cd2a1125947c19fcd5c7dd2c7d31e</p>
@@ -132,7 +132,7 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
 
     public static class DisassociateRenderingProjectInstancesResponseBodySuccessInstances extends TeaModel {
         /**
-         * <p>The result message.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -141,7 +141,7 @@ public class DisassociateRenderingProjectInstancesResponseBody extends TeaModel 
         public String message;
 
         /**
-         * <p>A cloud application service instance ID.</p>
+         * <p>The cloud application service instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>render-e6cf423c787e4e43b460a788da254fe3</p>

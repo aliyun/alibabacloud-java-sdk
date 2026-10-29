@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVodStreamURLResponseBody extends TeaModel {
     /**
-     * <p>流播放协议</p>
+     * <p>The stream playback protocol.</p>
      * 
      * <strong>example:</strong>
      * <p>rtsp</p>
@@ -14,7 +14,7 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
     public String outProtocol;
 
     /**
-     * <p>流播放端口</p>
+     * <p>The stream playback port.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -23,7 +23,7 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
     public Long port;
 
     /**
-     * <p>该条任务请求ID。</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -32,7 +32,7 @@ public class DescribeVodStreamURLResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>流播放URL</p>
+     * <p>The stream playback URL.</p>
      * 
      * <strong>example:</strong>
      * <p>rtsp://domain/live/stream?sign=xxxxxx</p>

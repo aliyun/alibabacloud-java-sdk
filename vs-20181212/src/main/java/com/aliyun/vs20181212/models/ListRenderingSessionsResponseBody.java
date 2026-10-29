@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRenderingSessionsResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -14,13 +14,13 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Session list</p>
+     * <p>The session list.</p>
      */
     @NameInMap("Sessions")
     public java.util.List<ListRenderingSessionsResponseBodySessions> sessions;
 
     /**
-     * <p>Total number of matching sessions</p>
+     * <p>The total number of matched sessions.</p>
      * 
      * <strong>example:</strong>
      * <p>8</p>
@@ -59,7 +59,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
 
     public static class ListRenderingSessionsResponseBodySessions extends TeaModel {
         /**
-         * <p>Cloud application ID</p>
+         * <p>The cloud application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cap-4e1a6a425495458ba78693b8ac6600ea</p>
@@ -68,7 +68,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>Client ID</p>
+         * <p>The ID of the end client.</p>
          * 
          * <strong>example:</strong>
          * <p>fd6b2134-7954-4754-8915-5fb8b0469622</p>
@@ -77,7 +77,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         public String clientId;
 
         /**
-         * <p>Cloud application patch ID. An empty value indicates the original version.</p>
+         * <p>The ID of the cloud application patch package. A null value indicates the original version.</p>
          * 
          * <strong>example:</strong>
          * <p>patch-03fa76e8e13a49b6a966b063d9d309b4</p>
@@ -86,7 +86,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         public String patchId;
 
         /**
-         * <p>Cloud application service instance ID</p>
+         * <p>The instance ID of the cloud application service.</p>
          * 
          * <strong>example:</strong>
          * <p>render-a10722fb84b243f6ba02a89a2e5c838d</p>
@@ -95,7 +95,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         public String renderingInstanceId;
 
         /**
-         * <p>Session ID</p>
+         * <p>The session ID.</p>
          * 
          * <strong>example:</strong>
          * <p>session-i205217481741918129226</p>
@@ -104,7 +104,7 @@ public class ListRenderingSessionsResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>Start time</p>
+         * <p>The start time. The time is in the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format and is in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-04T01:23:00Z</p>

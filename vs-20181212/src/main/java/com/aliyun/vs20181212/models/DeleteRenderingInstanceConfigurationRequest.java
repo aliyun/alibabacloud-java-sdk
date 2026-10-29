@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteRenderingInstanceConfigurationRequest extends TeaModel {
     /**
-     * <p>Configuration content. Purge all configured modules by default.</p>
+     * <p>The configuration content. By default, all configured modules are cleared.</p>
      */
     @NameInMap("Configuration")
     public java.util.List<DeleteRenderingInstanceConfigurationRequestConfiguration> configuration;
 
     /**
-     * <p>Cloud application service instance ID.</p>
+     * <p>The cloud application service instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,13 +43,13 @@ public class DeleteRenderingInstanceConfigurationRequest extends TeaModel {
 
     public static class DeleteRenderingInstanceConfigurationRequestConfiguration extends TeaModel {
         /**
-         * <p>List attribute names to purge. Purge all configured attributes for this module by default.</p>
+         * <p>The list of attribute names whose configurations are to be cleared. By default, all configured attributes of the module are cleared.</p>
          */
         @NameInMap("AttributeNames")
         public java.util.List<String> attributeNames;
 
         /**
-         * <p>Module name.</p>
+         * <p>The name of the module.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

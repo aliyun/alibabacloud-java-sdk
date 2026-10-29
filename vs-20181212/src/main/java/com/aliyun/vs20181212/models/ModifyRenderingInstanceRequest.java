@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyRenderingInstanceRequest extends TeaModel {
     /**
-     * <p>ID of the cloud application service instance. You can only upgrade or downgrade to another instance type in the same series.</p>
+     * <p>The instance ID of the cloud application service instance. Note: Only Upgrade/Downgrade within the same instance family is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ModifyRenderingInstanceRequest extends TeaModel {
     public String renderingInstanceId;
 
     /**
-     * <p>Instance type of the cloud application service instance.</p>
+     * <p>The specifications of the cloud application service instance.</p>
      * 
      * <strong>example:</strong>
      * <p>crs.cp.l1</p>
@@ -24,7 +24,7 @@ public class ModifyRenderingInstanceRequest extends TeaModel {
     public String renderingSpec;
 
     /**
-     * <p>Cloud storage capacity used by the cloud application service instance. This is not local storage.</p>
+     * <p>The cloud storage capacity used by the cloud application service instance. Note: This is not local storage.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

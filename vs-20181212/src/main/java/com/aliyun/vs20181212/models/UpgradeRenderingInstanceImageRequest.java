@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradeRenderingInstanceImageRequest extends TeaModel {
     /**
-     * <p>The image ID.</p>
+     * <p>The ID of the image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class UpgradeRenderingInstanceImageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The list of cloud application service instance IDs. A maximum of 100 IDs can be specified.</p>
+     * <p>The IDs of the cloud application service instances. A maximum of 100 instance IDs can be specified.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RenderingInstanceIds")

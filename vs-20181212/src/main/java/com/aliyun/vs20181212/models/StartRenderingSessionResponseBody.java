@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartRenderingSessionResponseBody extends TeaModel {
     /**
-     * <p>Instance hostname. By default, this is the EIP used for access.</p>
+     * <p>The instance hostname. The default value is the access elastic IP address (EIP).</p>
      * 
      * <strong>example:</strong>
      * <p>cn-xxx.ecr.aliyuncs.com</p>
@@ -14,7 +14,7 @@ public class StartRenderingSessionResponseBody extends TeaModel {
     public String hostname;
 
     /**
-     * <p>Is this a repeated request</p>
+     * <p>Indicates whether the request is a repeated request.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,19 +23,19 @@ public class StartRenderingSessionResponseBody extends TeaModel {
     public Boolean isRepeatedRequest;
 
     /**
-     * <p>Cloud application service instance location information</p>
+     * <p>The location information of the cloud application service instance.</p>
      */
     @NameInMap("Location")
     public StartRenderingSessionResponseBodyLocation location;
 
     /**
-     * <p>Port mapping information</p>
+     * <p>The port mapping information.</p>
      */
     @NameInMap("PortMappings")
     public java.util.List<StartRenderingSessionResponseBodyPortMappings> portMappings;
 
     /**
-     * <p>Cloud application service instance ID</p>
+     * <p>The cloud application service instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>render-9f8c57355d224ad7beaf95e145f22111</p>
@@ -44,7 +44,7 @@ public class StartRenderingSessionResponseBody extends TeaModel {
     public String renderingInstanceId;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -53,7 +53,7 @@ public class StartRenderingSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Session ID</p>
+     * <p>The session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>session-i205217481741918129226</p>
@@ -62,7 +62,7 @@ public class StartRenderingSessionResponseBody extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>Session state information</p>
+     * <p>The session state information.</p>
      */
     @NameInMap("StateInfo")
     public StartRenderingSessionResponseBodyStateInfo stateInfo;
@@ -138,7 +138,7 @@ public class StartRenderingSessionResponseBody extends TeaModel {
 
     public static class StartRenderingSessionResponseBodyLocation extends TeaModel {
         /**
-         * <p>Province code of the cloud application service instance</p>
+         * <p>The province code of the cloud application service instance.</p>
          * 
          * <strong>example:</strong>
          * <p>610000</p>
@@ -163,7 +163,7 @@ public class StartRenderingSessionResponseBody extends TeaModel {
 
     public static class StartRenderingSessionResponseBodyPortMappings extends TeaModel {
         /**
-         * <p>External port or port range, such as 22. For a port range, separate the start and end ports with a forward slash (/), for example, 10/20.</p>
+         * <p>The public port or port range, such as 22. For a port range, separate the start port and end port with a forward slash (/), for example, 10/20.</p>
          * 
          * <strong>example:</strong>
          * <p>10013/10020</p>
@@ -172,7 +172,7 @@ public class StartRenderingSessionResponseBody extends TeaModel {
         public String externalPort;
 
         /**
-         * <p>Internal port or port range. Ports correspond one-to-one with external ports. For a port range, separate the start and end ports with a forward slash (/), for example, 10/20.</p>
+         * <p>The internal port or port range. The internal port corresponds to the public port on a one-to-one basis. For a port range, separate the start port and end port with a forward slash (/), for example, 10/20.</p>
          * 
          * <strong>example:</strong>
          * <p>49008/49015</p>
@@ -205,16 +205,16 @@ public class StartRenderingSessionResponseBody extends TeaModel {
 
     public static class StartRenderingSessionResponseBodyStateInfo extends TeaModel {
         /**
-         * <p>State description</p>
+         * <p>The state description.</p>
          * 
          * <strong>example:</strong>
-         * <p>会话启动中</p>
+         * <p>Session starting</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>Session state</p>
+         * <p>The session state.</p>
          * 
          * <strong>example:</strong>
          * <p>SessionStarting</p>
@@ -223,7 +223,7 @@ public class StartRenderingSessionResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>Last update time of the state</p>
+         * <p>The time when the state was last updated. The value is a UTC time in the YYYY-MM-DDTHH:mmZ format based on the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-05-06T06:37Z</p>

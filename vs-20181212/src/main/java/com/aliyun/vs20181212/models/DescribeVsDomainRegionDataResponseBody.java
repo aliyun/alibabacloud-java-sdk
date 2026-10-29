@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
     /**
-     * <p>Time interval, in seconds.</p>
+     * <p>The time interval.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -14,7 +14,7 @@ public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
     public String dataInterval;
 
     /**
-     * <p>The domain name that is accelerated by Visual Edge Computing Service.</p>
+     * <p>The domain name of Visual Edge Computing Service.</p>
      * 
      * <strong>example:</strong>
      * <p>example.aliyundoc.com</p>
@@ -23,7 +23,7 @@ public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
     public String domainName;
 
     /**
-     * <p>End time.</p>
+     * <p>The end time. The time is in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-31T15:59:59Z</p>
@@ -32,7 +32,7 @@ public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -41,7 +41,7 @@ public class DescribeVsDomainRegionDataResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Start time.</p>
+     * <p>The start time in UTC. The time follows the ISO 8601 standard and is formatted as YYYY-MM-DDTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-30T16:00:00Z</p>

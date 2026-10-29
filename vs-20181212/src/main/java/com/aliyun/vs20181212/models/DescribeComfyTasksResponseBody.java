@@ -14,7 +14,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The description.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -34,7 +34,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
     /**
      * <p>The page size.</p>
      * <blockquote>
-     * <p>Only available for recording queries.</p>
+     * <p>Only for recording queries.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The task list.</p>
+     * <p>The list of tasks.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<DescribeComfyTasksResponseBodyTasks> tasks;
@@ -130,7 +130,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
 
     public static class DescribeComfyTasksResponseBodyTasks extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time, represented as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780387493000</p>
@@ -139,7 +139,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The task end time.</p>
+         * <p>The end time of the task, represented as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780387494000</p>
@@ -148,7 +148,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The resource pool ID used by the task.</p>
+         * <p>The ID of the resource pool used by the task.</p>
          * 
          * <strong>example:</strong>
          * <p>hive-26cd567b35c04a0a90f017388207b2</p>
@@ -157,7 +157,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String hiveId;
 
         /**
-         * <p>The task status.</p>
+         * <p>The task error message.</p>
          */
         @NameInMap("TaskErrorMessage")
         public String taskErrorMessage;
@@ -172,7 +172,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The task status.</p>
+         * <p>The task state.</p>
          * 
          * <strong>example:</strong>
          * <p>RUNNING</p>
@@ -181,13 +181,16 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String taskState;
 
         /**
-         * <p>The task status.</p>
+         * <p>The task state message.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>任务执行成功</p>
          */
         @NameInMap("TaskStateMessage")
         public String taskStateMessage;
 
         /**
-         * <p>The last modified time.</p>
+         * <p>The last modified time, represented as a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1780387494000</p>
@@ -196,7 +199,7 @@ public class DescribeComfyTasksResponseBody extends TeaModel {
         public String updatedTime;
 
         /**
-         * <p>The Comfy workflow ID used by the task.</p>
+         * <p>The ID of the Comfy workflow used by the task.</p>
          * 
          * <strong>example:</strong>
          * <p>wf_adb32aed-ccdc-42ae-b4d4-a21181ac8a5f</p>

@@ -14,7 +14,7 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -23,7 +23,7 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of workflows on the current page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +50,7 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of workflows that match the query.</p>
+     * <p>The total number of workflows.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>A list of Comfy workflows.</p>
+     * <p>The list of workflows.</p>
      */
     @NameInMap("Workflows")
     public java.util.List<DescribeComfyWorkflowsResponseBodyWorkflows> workflows;
@@ -127,7 +127,7 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
 
     public static class DescribeComfyWorkflowsResponseBodyWorkflows extends TeaModel {
         /**
-         * <p>The time when the workflow was created.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard and includes a time zone offset. The format is YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-02-03T07:31:45+08:00</p>
@@ -139,22 +139,22 @@ public class DescribeComfyWorkflowsResponseBody extends TeaModel {
          * <p>The workflow description.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个图生视频工作流</p>
+         * <p>This is an image-to-video workflow</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The workflow name.</p>
+         * <p>The name of the workflow.</p>
          * 
          * <strong>example:</strong>
-         * <p>图生视频工作流</p>
+         * <p>Image-to-video workflow</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The time when the workflow was last updated.</p>
+         * <p>The update time. The time is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1778897586</p>

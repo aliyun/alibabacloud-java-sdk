@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListEdgeWorkersRequest extends TeaModel {
     /**
-     * <p>The expiration time.</p>
+     * <p>The end time. The time is expressed in the ISO 8601 standard and includes a time zone offset. Format: YYYY-MM-DDTHH:mm:ss+HH:mm.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-05-14T15:20:37+08:00</p>
@@ -23,7 +23,7 @@ public class ListEdgeWorkersRequest extends TeaModel {
     public java.util.List<String> hiveIds;
 
     /**
-     * <p>The list of load IDs.</p>
+     * <p>The list of workload IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>ew-xxxxxx</p>
@@ -32,7 +32,7 @@ public class ListEdgeWorkersRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The page number of the query list. The value starts from 1. Default value: 1.</p>
+     * <p>The page number of the list to query. Pages start from 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class ListEdgeWorkersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Settings for paging. Maximum value: 100. Default value: 10.</p>
+     * <p>The Settings for the number of lines per page during paging and paged query. Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -59,7 +59,7 @@ public class ListEdgeWorkersRequest extends TeaModel {
     public java.util.List<String> planIds;
 
     /**
-     * <p>The specification.</p>
+     * <p>The specifications.</p>
      * 
      * <strong>example:</strong>
      * <p>ew.gn8t6xlarge-rb.x1p</p>
@@ -68,7 +68,7 @@ public class ListEdgeWorkersRequest extends TeaModel {
     public String spec;
 
     /**
-     * <p>The time range filter parameter. The value is in the ISO 8601 standard in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The start time of the time range filter. The time is expressed in the ISO 8601 standard and must be in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-05-25T06:35:26+08:00</p>

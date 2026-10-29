@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeRenderingInstanceConfigurationShrinkRequest extends TeaModel {
     /**
-     * <p>The configuration to query. By default, the configurations of all modules are returned.</p>
+     * <p>The configuration content to be queried. By default, all modules are queried.</p>
      */
     @NameInMap("Configuration")
     public String configurationShrink;
 
     /**
-     * <p>The ID of the cloud application service instance.</p>
+     * <p>The instance ID of the cloud application service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

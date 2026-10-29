@@ -11,7 +11,7 @@ public class CreateDeviceAlarmRequest extends TeaModel {
      * <li>1: motion detection alerting</li>
      * <li>2: intelligent alerting</li>
      * <li>3: switch alerting</li>
-     * <li>4: video loss alerting.</li>
+     * <li>4: video loss alerting</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -66,7 +66,7 @@ public class CreateDeviceAlarmRequest extends TeaModel {
      * <li>0: none</li>
      * <li>1: JPEG image</li>
      * <li>2: video</li>
-     * <li>3: GIF image.</li>
+     * <li>3: GIF image</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -92,6 +92,9 @@ public class CreateDeviceAlarmRequest extends TeaModel {
     /**
      * <p>The alert subtype.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("SubAlarm")
     public Integer subAlarm;

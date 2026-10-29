@@ -6,23 +6,21 @@ import com.aliyun.tea.*;
 public class CreateRenderingInstanceRequest extends TeaModel {
     /**
      * <blockquote>
-     * <p>Unless you have specific requirements, keep the default values. For customers with special requirements, fill in the relevant parameters after communication and confirmation.</p>
+     * <p>Unless you have special requirements, keep the default value. If you have special requirements, consult and confirm before specifying this parameter.</p>
      * </blockquote>
-     * <p>Attribute information.</p>
+     * <p>The attribute information.</p>
      */
     @NameInMap("Attributes")
     public CreateRenderingInstanceRequestAttributes attributes;
 
     /**
      * <blockquote>
-     * <p>This value is valid only when <code>InstanceChargeType</code> is <code>PrePaid</code> (subscription).</p>
+     * <p>This parameter takes effect only when <code>InstanceChargeType</code> is set to <code>PrePaid</code> (subscription).</p>
      * </blockquote>
-     * <p>Enable or disable auto-renewal. Values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enable.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disable.</p>
-     * </li>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong>: disables auto-renewal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,18 +30,18 @@ public class CreateRenderingInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>Client information.</p>
+     * <p>The client information.</p>
      */
     @NameInMap("ClientInfo")
     public CreateRenderingInstanceRequestClientInfo clientInfo;
 
     /**
      * <blockquote>
-     * <p>This value is valid only when <code>InstanceChargeType</code> is <code>PostPaid</code> (pay-as-you-go).</p>
+     * <p>This parameter takes effect only when <code>InstanceChargeType</code> is set to <code>PostPaid</code> (pay-as-you-go).</p>
      * </blockquote>
-     * <p>Billing type. Valid values:</p>
+     * <p>The billing cycle. Valid values:</p>
      * <ul>
-     * <li>Hour: Hourly.</li>
+     * <li>Hour: hour.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,12 +51,10 @@ public class CreateRenderingInstanceRequest extends TeaModel {
     public String instanceBillingCycle;
 
     /**
-     * <p>The billing method for the instance. Valid values:</p>
+     * <p>The billing method of the instance. Valid values:</p>
      * <ul>
-     * <li><p>PrePaid (default): Subscription.</p>
-     * </li>
-     * <li><p>PostPaid: Pay-as-you-go.</p>
-     * </li>
+     * <li>PrePaid (default): subscription.</li>
+     * <li>PostPaid: pay-as-you-go.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,11 +65,11 @@ public class CreateRenderingInstanceRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>Only one billing method is allowed. If a billing method already exists, the new value is invalid by default, and the existing one prevails. Note that this field is required when a user makes the first purchase.</p>
+     * <p>Only one billing method is supported. If a billing method already exists, the new value is invalid by default, and the existing billing method prevails. Note that this parameter is required when you purchase the instance for the first time.</p>
      * </blockquote>
-     * <p>Network billing type. Value:</p>
+     * <p>The network billing type. Valid values:</p>
      * <ul>
-     * <li>95BandwidthByMonth: Monthly 95th percentile bandwidth.</li>
+     * <li>95BandwidthByMonth: monthly 95th percentile bandwidth.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,7 +79,7 @@ public class CreateRenderingInstanceRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>Maximum bandwidth, in Mbps. Default is 10.</p>
+     * <p>The maximum bandwidth. Unit: Mbit/s. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,30 +89,20 @@ public class CreateRenderingInstanceRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>This value is valid only when <code>InstanceChargeType</code> is <code>PrePaid</code> (subscription).</p>
+     * <p>This parameter takes effect only when <code>InstanceChargeType</code> is set to <code>PrePaid</code> (subscription).</p>
      * </blockquote>
-     * <p>The subscription period. Valid values (Note: 12 is converted to one year; other values are in months):</p>
+     * <p>The subscription duration. Valid values (note: if you select 12, it is calculated as one year, and other values are calculated in months):</p>
      * <ul>
-     * <li><p>1 (default)</p>
-     * </li>
-     * <li><p>2</p>
-     * </li>
-     * <li><p>3</p>
-     * </li>
-     * <li><p>4</p>
-     * </li>
-     * <li><p>5</p>
-     * </li>
-     * <li><p>6</p>
-     * </li>
-     * <li><p>7</p>
-     * </li>
-     * <li><p>8</p>
-     * </li>
-     * <li><p>9</p>
-     * </li>
-     * <li><p>12</p>
-     * </li>
+     * <li>1 (default)</li>
+     * <li>2</li>
+     * <li>3</li>
+     * <li>4</li>
+     * <li>5</li>
+     * <li>6</li>
+     * <li>7</li>
+     * <li>8</li>
+     * <li>9</li>
+     * <li>12</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -126,14 +112,11 @@ public class CreateRenderingInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>Cloud application service instance specifications.</p>
+     * <p>The specifications of the cloud application service instance.</p>
      * <ul>
-     * <li><p>For crs.cp.\* series specifications, choose between subscription or pay-as-you-go billing.</p>
-     * </li>
-     * <li><p>For crs.vm.\* series specifications, choose between subscription or pay-as-you-go billing.</p>
-     * </li>
-     * <li><p>For other series, only subscription billing is supported.</p>
-     * </li>
+     * <li>For the crs.cp.* series, the billing method can be subscription or pay-as-you-go.</li>
+     * <li>For the crs.vm.* series, the billing method can be subscription or pay-as-you-go.</li>
+     * <li>For other series, only the subscription billing method is supported.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -144,7 +127,7 @@ public class CreateRenderingInstanceRequest extends TeaModel {
     public String renderingSpec;
 
     /**
-     * <p>The cloud storage capacity used by the cloud application service instance (Note: not local storage).</p>
+     * <p>The cloud storage capacity used by the cloud application service instance. Note: This is not local storage.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -239,7 +222,7 @@ public class CreateRenderingInstanceRequest extends TeaModel {
 
     public static class CreateRenderingInstanceRequestAttributes extends TeaModel {
         /**
-         * <p>Streaming service.</p>
+         * <p>The streaming service.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -248,7 +231,7 @@ public class CreateRenderingInstanceRequest extends TeaModel {
         public String edgeMediaService;
 
         /**
-         * <p>Inbound access configuration.</p>
+         * <p>The inbound network configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -257,7 +240,7 @@ public class CreateRenderingInstanceRequest extends TeaModel {
         public String inAccess;
 
         /**
-         * <p>Outbound access configuration.</p>
+         * <p>The outbound network configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -266,7 +249,7 @@ public class CreateRenderingInstanceRequest extends TeaModel {
         public String outAccess;
 
         /**
-         * <p>Resource domain.</p>
+         * <p>The resource domain.</p>
          * 
          * <strong>example:</strong>
          * <p>Public</p>
@@ -315,7 +298,7 @@ public class CreateRenderingInstanceRequest extends TeaModel {
 
     public static class CreateRenderingInstanceRequestClientInfo extends TeaModel {
         /**
-         * <p>Client IP address.</p>
+         * <p>The IP address of the client.</p>
          * 
          * <strong>example:</strong>
          * <p>172.21.128.110</p>

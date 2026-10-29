@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListRenderingProjectsResponseBody extends TeaModel {
     /**
-     * <p>Project list</p>
+     * <p>The list of projects.</p>
      */
     @NameInMap("Projects")
     public java.util.List<ListRenderingProjectsResponseBodyProjects> projects;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -20,7 +20,7 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of matching projects</p>
+     * <p>The total number of matched projects.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -59,7 +59,7 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
 
     public static class ListRenderingProjectsResponseBodyProjectsSessionAttribs extends TeaModel {
         /**
-         * <p>Startup mode</p>
+         * <p>The startup mode.</p>
          * 
          * <strong>example:</strong>
          * <p>Sync</p>
@@ -84,7 +84,7 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
 
     public static class ListRenderingProjectsResponseBodyProjects extends TeaModel {
         /**
-         * <p>Project creation time</p>
+         * <p>The time when the project was created. The time follows the ISO 8601 standard and includes a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-09-09T18:44:49+08:00</p>
@@ -93,7 +93,7 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Project description</p>
+         * <p>The project description.</p>
          * 
          * <strong>example:</strong>
          * <p>description</p>
@@ -102,7 +102,7 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Project ID</p>
+         * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>project-422bc38dfgh5eb44149f135ef76304f63b</p>
@@ -111,7 +111,7 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>Project name</p>
+         * <p>The project name.</p>
          * 
          * <strong>example:</strong>
          * <p>prod-project</p>
@@ -120,13 +120,13 @@ public class ListRenderingProjectsResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>Project session attributes</p>
+         * <p>The session attributes of the project.</p>
          */
         @NameInMap("SessionAttribs")
         public ListRenderingProjectsResponseBodyProjectsSessionAttribs sessionAttribs;
 
         /**
-         * <p>Last update time</p>
+         * <p>The time when the project was updated. The time follows the ISO 8601 standard and includes a time zone offset in the YYYY-MM-DDTHH:mm:ss+HH:mm format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-09T18:44:49+08:00</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePurchasedDeviceResponseBody extends TeaModel {
     /**
-     * <p>Device creation time.</p>
+     * <p>The time when the device was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2018-12-10T21:00:00Z</p>
@@ -14,16 +14,16 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String createdTime;
 
     /**
-     * <p>Device description.</p>
+     * <p>The device description.</p>
      * 
      * <strong>example:</strong>
-     * <p>xxx路口摄像头</p>
+     * <p>Camera at xxx intersection</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Space ID.</p>
+     * <p>The group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>348*****174-cn-qingdao</p>
@@ -32,16 +32,16 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String groupId;
 
     /**
-     * <p>Space name.</p>
+     * <p>The group name.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试空间</p>
+     * <p>Test group</p>
      */
     @NameInMap("GroupName")
     public String groupName;
 
     /**
-     * <p>Device ID.</p>
+     * <p>The device ID.</p>
      * 
      * <strong>example:</strong>
      * <p>33763****77224964-cn-qingdao</p>
@@ -50,7 +50,7 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>Device name.</p>
+     * <p>The device name.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -59,7 +59,7 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>Order ID.</p>
+     * <p>The order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2117*****0447</p>
@@ -68,7 +68,7 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>Region where the space belongs, also known as the service center.</p>
+     * <p>The region to which the group belongs, which is the service center.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-qingdao</p>
@@ -77,7 +77,7 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String region;
 
     /**
-     * <p>Device registration code.</p>
+     * <p>The device registration code.</p>
      * 
      * <strong>example:</strong>
      * <p>12345*****67890</p>
@@ -86,7 +86,7 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String registerCode;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -95,14 +95,11 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Device child type. Valid values:</p>
+     * <p>The device subtype. Valid values:</p>
      * <ul>
-     * <li><p>bullet (bullet camera)</p>
-     * </li>
-     * <li><p>dome (dome camera)</p>
-     * </li>
-     * <li><p>ptz (PTZ)</p>
-     * </li>
+     * <li>bullet: Bullet camera.</li>
+     * <li>dome: Dome camera.</li>
+     * <li>ptz: PTZ camera.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,14 +109,11 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String subType;
 
     /**
-     * <p>Device type. Valid values:</p>
+     * <p>The device type. Valid values:</p>
      * <ul>
-     * <li><p>ipc (camera)</p>
-     * </li>
-     * <li><p>platform</p>
-     * </li>
-     * <li><p>ied (intelligent device)</p>
-     * </li>
+     * <li>ipc: Camera.</li>
+     * <li>platform: Platform.</li>
+     * <li>ied: Intelligent device.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,7 +123,7 @@ public class DescribePurchasedDeviceResponseBody extends TeaModel {
     public String type;
 
     /**
-     * <p>Device vendor.</p>
+     * <p>The device vendor.</p>
      * 
      * <strong>example:</strong>
      * <p>8yd*****qem</p>

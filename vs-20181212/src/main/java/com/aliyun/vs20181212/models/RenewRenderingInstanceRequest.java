@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class RenewRenderingInstanceRequest extends TeaModel {
     /**
-     * <p>Enable or disable auto-renewal. Valid values:</p>
+     * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enable.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disable.</p>
-     * </li>
+     * <li><strong>true</strong>: Enabled.</li>
+     * <li><strong>false</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class RenewRenderingInstanceRequest extends TeaModel {
     public Boolean autoRenew;
 
     /**
-     * <p>The duration of the subscription. Valid values are 1 (default), 2, 3, 4, 5, 6, 7, 8, 9, 12. A value of 12 is converted to one year; other values are in months.</p>
+     * <p>The subscription duration. Valid values: 1, 2, 3, 4, 5, 6, 7, 8, 9, and 12. Default value: 1. A value of 12 indicates one year, while other values indicate months.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -29,7 +27,7 @@ public class RenewRenderingInstanceRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>Cloud application service instance ID.</p>
+     * <p>The cloud application service instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

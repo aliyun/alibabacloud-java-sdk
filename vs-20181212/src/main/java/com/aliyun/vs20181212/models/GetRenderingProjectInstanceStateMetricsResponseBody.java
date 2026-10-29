@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetRenderingProjectInstanceStateMetricsResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>BEA5625F-8FCF-48F4-851B-CA63946DA664</p>
@@ -14,7 +14,7 @@ public class GetRenderingProjectInstanceStateMetricsResponseBody extends TeaMode
     public String requestId;
 
     /**
-     * <p>List of project instance state statistics</p>
+     * <p>The list of statistics information for project instance status.</p>
      */
     @NameInMap("StateMetrics")
     public java.util.List<GetRenderingProjectInstanceStateMetricsResponseBodyStateMetrics> stateMetrics;
@@ -42,7 +42,7 @@ public class GetRenderingProjectInstanceStateMetricsResponseBody extends TeaMode
 
     public static class GetRenderingProjectInstanceStateMetricsResponseBodyStateMetrics extends TeaModel {
         /**
-         * <p>Number of instances</p>
+         * <p>The number of instances.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -51,7 +51,7 @@ public class GetRenderingProjectInstanceStateMetricsResponseBody extends TeaMode
         public String count;
 
         /**
-         * <p>Project instance state</p>
+         * <p>The instance status of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>Idle</p>

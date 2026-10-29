@@ -12,7 +12,7 @@ public class UpdateRenderingInstanceConfigurationShrinkRequest extends TeaModel 
     public String configurationShrink;
 
     /**
-     * <p>The ID of the cloud application service instance.</p>
+     * <p>The instance ID of the cloud application service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
