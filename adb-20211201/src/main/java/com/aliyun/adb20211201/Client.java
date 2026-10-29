@@ -11610,6 +11610,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>Creates a reference record for a knowledge base file.</p>
+     * 
+     * @param request ForkKnowledgeFileRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ForkKnowledgeFileResponse
+     */
+    public ForkKnowledgeFileResponse forkKnowledgeFileWithOptions(ForkKnowledgeFileRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            query.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileLocation)) {
+            query.put("FileLocation", request.fileLocation);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tags)) {
+            query.put("Tags", request.tags);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.uploadUser)) {
+            query.put("UploadUser", request.uploadUser);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ForkKnowledgeFile"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ForkKnowledgeFileResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Creates a reference record for a knowledge base file.</p>
+     * 
+     * @param request ForkKnowledgeFileRequest
+     * @return ForkKnowledgeFileResponse
+     */
+    public ForkKnowledgeFileResponse forkKnowledgeFile(ForkKnowledgeFileRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.forkKnowledgeFileWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>Generates an executable SQL statement from a semantic SQL statement.</p>
      * 
      * @param request GenerateSqlBySemanticSqlRequest
@@ -14005,6 +14065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.fileIds)) {
             query.put("FileIds", request.fileIds);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileLocation)) {
+            query.put("FileLocation", request.fileLocation);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.page)) {
@@ -18332,6 +18396,58 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public SuspendApsJobResponse suspendApsJob(SuspendApsJobRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.suspendApsJobWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a reparse task for a knowledge base file.</p>
+     * 
+     * @param request TriggerKnowledgeFileParseRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TriggerKnowledgeFileParseResponse
+     */
+    public TriggerKnowledgeFileParseResponse triggerKnowledgeFileParseWithOptions(TriggerKnowledgeFileParseRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBClusterId)) {
+            query.put("DBClusterId", request.DBClusterId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileId)) {
+            query.put("FileId", request.fileId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileLocation)) {
+            query.put("FileLocation", request.fileLocation);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TriggerKnowledgeFileParse"),
+            new TeaPair("version", "2021-12-01"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TriggerKnowledgeFileParseResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Submits a reparse task for a knowledge base file.</p>
+     * 
+     * @param request TriggerKnowledgeFileParseRequest
+     * @return TriggerKnowledgeFileParseResponse
+     */
+    public TriggerKnowledgeFileParseResponse triggerKnowledgeFileParse(TriggerKnowledgeFileParseRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.triggerKnowledgeFileParseWithOptions(request, runtime);
     }
 
     /**

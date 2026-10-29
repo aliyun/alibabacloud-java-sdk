@@ -119,7 +119,7 @@ public class AddKnowledgeTagsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The number of tags that were successfully updated.</p>
+         * <p>The number of tags that were successfully modified.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -134,7 +134,7 @@ public class AddKnowledgeTagsResponseBody extends TeaModel {
         public java.util.List<AddKnowledgeTagsResponseBodyDataSkipped> skipped;
 
         /**
-         * <p>Indicates whether the request was successful. Valid values:</p>
+         * <p>Specifies whether the request was successful. Valid values:</p>
          * <ul>
          * <li><strong>true</strong>: The request was successful.</li>
          * <li><strong>false</strong>: The request failed.</li>
