@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class QueryPenetrationTestDetailRequest extends TeaModel {
     /**
-     * <p>The unique ID of the application record.</p>
+     * <p>The unique identity of the application record.</p>
      * <blockquote>
-     * <p>This field is of the Long type. Precision loss may occur when you serialize or deserialize the value. Make sure that the value does not exceed 9007199254740991.</p>
+     * <p>This field is of the Long type. Precision loss may occur during the procedure to serialize or deserialize the numeric sequence. Ensure that the value does not exceed 9007199254740991.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

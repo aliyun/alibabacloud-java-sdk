@@ -19,7 +19,7 @@ public class QueryPenetrationTestListRequest extends TeaModel {
     /**
      * <p>The number of entries to return on each page.</p>
      * <blockquote>
-     * <p>Valid values: 1 to 100. Default value: 10.</p>
+     * <p>Valid values: 1 to 100. Starting value: 1. Default value: 10.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

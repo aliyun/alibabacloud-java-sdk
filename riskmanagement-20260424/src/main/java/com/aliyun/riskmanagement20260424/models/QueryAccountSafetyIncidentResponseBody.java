@@ -7,7 +7,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p> 200: The request was successful. Other codes (500, 400, etc.): An error occurred.</p>
+     * <p>200: Success. Other values (such as 500 or 400): Error codes.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
     public QueryAccountSafetyIncidentResponseBodyData data;
 
     /**
-     * <p>The prompt message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful‌</p>
@@ -41,7 +41,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
      * <li><strong>true</strong></li>
      * <li><strong>false</strong></li>
@@ -100,7 +100,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
 
     public static class QueryAccountSafetyIncidentResponseBodyDataListDateExtras extends TeaModel {
         /**
-         * <p>The time when the alert ended.</p>
+         * <p>The end time of the alert.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -112,7 +112,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String alertEndTime;
 
         /**
-         * <p>The time when the first alert was triggered.</p>
+         * <p>The time of the first alert.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -124,7 +124,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String alertStartTime;
 
         /**
-         * <p>The time of the latest detection.</p>
+         * <p>The time of the latest check.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -168,7 +168,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
 
     public static class QueryAccountSafetyIncidentResponseBodyDataList extends TeaModel {
         /**
-         * <p>The control action code.</p>
+         * <p>The code of the control action name.</p>
          * 
          * <strong>example:</strong>
          * <p>success_service</p>
@@ -177,16 +177,16 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String actionCode;
 
         /**
-         * <p>The control action name.</p>
+         * <p>The name of the control action.</p>
          * 
          * <strong>example:</strong>
-         * <p>Penalty directly succeeded</p>
+         * <p>Penalty applied successfully</p>
          */
         @NameInMap("ActionName")
         public String actionName;
 
         /**
-         * <p>The time when the control action was removed.</p>
+         * <p>The time when the control is revoked.</p>
          * <blockquote>
          * <p>Format: yyyy-MM-dd HH:mm:ss</p>
          * </blockquote>
@@ -196,6 +196,15 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
          */
         @NameInMap("AntiPunishTime")
         public String antiPunishTime;
+
+        /**
+         * <p>The cloud service code.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ram</p>
+         */
+        @NameInMap("BusinessCode")
+        public String businessCode;
 
         /**
          * <p>The called API operation.</p>
@@ -231,7 +240,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String eventImpact;
 
         /**
-         * <p>The control event name.</p>
+         * <p>The name of the control event.</p>
          * 
          * <strong>example:</strong>
          * <p>ak leak.</p>
@@ -240,7 +249,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String eventName;
 
         /**
-         * <p>The event reason.</p>
+         * <p>The cause of the event.</p>
          * 
          * <strong>example:</strong>
          * <p>ak leak.</p>
@@ -249,10 +258,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String eventReason;
 
         /**
-         * <p>The event subtype name.</p>
+         * <p>The name of the event subtype.</p>
          * 
          * <strong>example:</strong>
-         * <p>Suspicious identity calling sensitive API</p>
+         * <p>Suspicious identity calling sensitive APIs</p>
          */
         @NameInMap("EventType")
         public String eventType;
@@ -291,7 +300,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String punishTime;
 
         /**
-         * <p>The hardening suggestion.</p>
+         * <p>The hardening suggestions.</p>
          * 
          * <strong>example:</strong>
          * <p>suggestion</p>
@@ -300,7 +309,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String reinforcement;
 
         /**
-         * <p>The cloud resource ID.</p>
+         * <p>The ID of the cloud resource.</p>
          * 
          * <strong>example:</strong>
          * <p>i-2zeanc2b2vgfpbvp60cs</p>
@@ -309,7 +318,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The controlled object type.</p>
+         * <p>The control object type.</p>
          * 
          * <strong>example:</strong>
          * <p>customer</p>
@@ -320,10 +329,10 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         /**
          * <p>The event status. Valid values:</p>
          * <ul>
-         * <li><strong>Executing</strong>: In progress.</li>
-         * <li><strong>Removed</strong>: Removed.</li>
-         * <li><strong>Alerting</strong>: Alerting.</li>
-         * <li><strong>Ended</strong>: Ended.</li>
+         * <li><strong>Executing</strong>: The event is being executed.</li>
+         * <li><strong>Removed</strong>: The event is removed.</li>
+         * <li><strong>Alerting</strong>: The event is in the alerting state.</li>
+         * <li><strong>Ended</strong>: The event has ended.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -333,7 +342,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The handling suggestion.</p>
+         * <p>The remediation suggestions.</p>
          * 
          * <strong>example:</strong>
          * <p>suggestion</p>
@@ -342,7 +351,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String tip;
 
         /**
-         * <p>The help topic name.</p>
+         * <p>The name of the help document.</p>
          * 
          * <strong>example:</strong>
          * <p>help</p>
@@ -351,7 +360,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String userGuideName;
 
         /**
-         * <p>The help topic URL.</p>
+         * <p>The URL of the help document.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.aliyun.com/">https://xxx.aliyun.com/</a></p>
@@ -386,6 +395,14 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         }
         public String getAntiPunishTime() {
             return this.antiPunishTime;
+        }
+
+        public QueryAccountSafetyIncidentResponseBodyDataList setBusinessCode(String businessCode) {
+            this.businessCode = businessCode;
+            return this;
+        }
+        public String getBusinessCode() {
+            return this.businessCode;
         }
 
         public QueryAccountSafetyIncidentResponseBodyDataList setCallApi(String callApi) {
@@ -537,7 +554,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public String current;
 
         /**
-         * <p>The number of assets displayed on each page in a paged query.</p>
+         * <p>The number of assets displayed per page when you configure Settings for paging in a paged query.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -593,7 +610,7 @@ public class QueryAccountSafetyIncidentResponseBody extends TeaModel {
         public java.util.List<QueryAccountSafetyIncidentResponseBodyDataList> list;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The pagination information.</p>
          */
         @NameInMap("PageInfo")
         public QueryAccountSafetyIncidentResponseBodyDataPageInfo pageInfo;

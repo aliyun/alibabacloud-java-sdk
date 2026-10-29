@@ -635,7 +635,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Immediately terminates a penetration test.</p>
+     * <p>Immediately ends a penetration test.</p>
      * 
      * @param request EndPenetrationTestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -667,7 +667,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Immediately terminates a penetration test.</p>
+     * <p>Immediately ends a penetration test.</p>
      * 
      * @param request EndPenetrationTestRequest
      * @return EndPenetrationTestResponse
@@ -1610,6 +1610,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.actionCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.actionCodes, "ActionCodes", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.businessCodes)) {
+            request.businessCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.businessCodes, "BusinessCodes", "json");
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(tmpReq.caseCodes)) {
             request.caseCodesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.caseCodes, "CaseCodes", "json");
         }
@@ -1629,6 +1633,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.aliyunLang)) {
             query.put("AliyunLang", request.aliyunLang);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.businessCodesShrink)) {
+            query.put("BusinessCodes", request.businessCodesShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.caseCode)) {
@@ -2361,7 +2369,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a penetration test application.</p>
+     * <p>Submits a penetration test request.</p>
      * 
      * @param request SubmitPenetrationTestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2429,7 +2437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Submits a penetration test application.</p>
+     * <p>Submits a penetration test request.</p>
      * 
      * @param request SubmitPenetrationTestRequest
      * @return SubmitPenetrationTestResponse

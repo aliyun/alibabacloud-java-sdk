@@ -7,8 +7,8 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><strong>200</strong>: Successful.</li>
-     * <li><strong>Other values (such as 400 and 500)</strong>: Failed.</li>
+     * <li><strong>200</strong>: Success.</li>
+     * <li><strong>Other values (such as 400 and 500)</strong>: Failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,9 +42,9 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call was successful.                               </li>
+     * <li><strong>true</strong>: The call is successful.                               </li>
      * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
@@ -112,9 +112,9 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         /**
          * <p>The type of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>EIP</strong>: Public IP address of a VPC.</li>
-         * <li><strong>SLB</strong>: Server Load Balancer (SLB) instance for load balancing.</li>
-         * <li><strong>ECS</strong>: Public IP address of an ECS instance in the classic network.</li>
+         * <li><strong>EIP</strong>: The public IP address of a VPC.</li>
+         * <li><strong>SLB</strong>: Server Load Balancer.</li>
+         * <li><strong>ECS</strong>: The public IP address of an ECS instance in the classic network.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,9 +124,9 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         public String assetType;
 
         /**
-         * <p>The unique identity ID of the alerting event record.</p>
+         * <p>The unique identifier of the alert event record.</p>
          * <blockquote>
-         * <p>The data type of this field is Long. Precision loss may occur during the procedure to serialize or deserialize the numeric sequence. Make sure that the value does not exceed 9007199254740991.</p>
+         * <p>The data type of this field is Long. Precision loss may occur during the serialization or deserialization process. Make sure that the value does not exceed 9007199254740991.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -145,13 +145,13 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The status of the task. Valid values:</p>
          * <ul>
          * <li><strong>early_end</strong>: The user applied for early termination.</li>
          * <li><strong>expired</strong>: The authorization expired.</li>
-         * <li><strong>auditing</strong>: Under review.</li>
-         * <li><strong>approved</strong>: Approved.</li>
-         * <li><strong>rejected</strong>: Rejected.</li>
+         * <li><strong>auditing</strong>: The application is being reviewed.</li>
+         * <li><strong>approved</strong>: The application is approved.</li>
+         * <li><strong>rejected</strong>: The application is rejected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -243,9 +243,9 @@ public class QueryPenetrationTestListResponseBody extends TeaModel {
 
     public static class QueryPenetrationTestListResponseBodyDataPageInfo extends TeaModel {
         /**
-         * <p>The page number of the returned page.</p>
+         * <p>The page number from which the query results are displayed.</p>
          * <blockquote>
-         * <p>Default value: 1, which indicates the first page.</p>
+         * <p>Default value: 1, which indicates that the query results are displayed starting from the first page.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

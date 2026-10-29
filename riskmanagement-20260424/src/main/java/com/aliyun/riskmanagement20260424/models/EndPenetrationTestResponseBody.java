@@ -7,7 +7,7 @@ public class EndPenetrationTestResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>200: Success. Other values (such as 500 and 400): error codes.</p>
+     * <p>200: Success. Other values (such as 500 and 400): Error codes.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,10 +35,10 @@ public class EndPenetrationTestResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call is successful.                                </li>
-     * <li><strong>false</strong>: The call fails.</li>
+     * <li><strong>true</strong>: The call was successful.                                </li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

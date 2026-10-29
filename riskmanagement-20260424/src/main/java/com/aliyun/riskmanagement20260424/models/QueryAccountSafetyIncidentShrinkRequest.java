@@ -11,7 +11,7 @@ public class QueryAccountSafetyIncidentShrinkRequest extends TeaModel {
     public String actionCodesShrink;
 
     /**
-     * <p>The internationalization language. Default value: zh. Valid values:</p>
+     * <p>The language. Default value: zh. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong>: Chinese.</li>
      * <li><strong>en</strong>: English.</li>
@@ -24,9 +24,15 @@ public class QueryAccountSafetyIncidentShrinkRequest extends TeaModel {
     public String aliyunLang;
 
     /**
+     * <p>The set of cloud service codes.</p>
+     */
+    @NameInMap("BusinessCodes")
+    public String businessCodesShrink;
+
+    /**
      * <p>The event name code.</p>
      * <blockquote>
-     * <p>This parameter does not take effect when the CaseCodes parameter is not empty.</p>
+     * <p>This parameter does not take effect if the CaseCodes parameter is not empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +59,7 @@ public class QueryAccountSafetyIncidentShrinkRequest extends TeaModel {
     /**
      * <p>The event ID.</p>
      * <blockquote>
-     * <p>This parameter does not take effect when the EventIds parameter is not empty.</p>
+     * <p>This parameter does not take effect if the EventIds parameter is not empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,7 +75,7 @@ public class QueryAccountSafetyIncidentShrinkRequest extends TeaModel {
     public String eventIdsShrink;
 
     /**
-     * <p>The number of records per page. Valid values: 1 to 100.</p>
+     * <p>The number of entries to return on each page. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -113,13 +119,13 @@ public class QueryAccountSafetyIncidentShrinkRequest extends TeaModel {
     /**
      * <p>The event status. Valid values:</p>
      * <ul>
-     * <li><strong>Executing</strong>: In progress.</li>
-     * <li><strong>Removed</strong>: Removed.</li>
-     * <li><strong>Alerting</strong>: Alerting.</li>
-     * <li><strong>Ended</strong>: Ended.</li>
+     * <li><strong>Executing</strong>: The event is being executed.</li>
+     * <li><strong>Removed</strong>: The event is removed.</li>
+     * <li><strong>Alerting</strong>: The event is in the alerting state.</li>
+     * <li><strong>Ended</strong>: The event has ended.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter does not take effect when the Statuses parameter is not empty.</p>
+     * <p>This parameter does not take effect if the Statuses parameter is not empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -153,6 +159,14 @@ public class QueryAccountSafetyIncidentShrinkRequest extends TeaModel {
     }
     public String getAliyunLang() {
         return this.aliyunLang;
+    }
+
+    public QueryAccountSafetyIncidentShrinkRequest setBusinessCodesShrink(String businessCodesShrink) {
+        this.businessCodesShrink = businessCodesShrink;
+        return this;
+    }
+    public String getBusinessCodesShrink() {
+        return this.businessCodesShrink;
     }
 
     public QueryAccountSafetyIncidentShrinkRequest setCaseCode(String caseCode) {

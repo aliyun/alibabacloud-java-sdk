@@ -7,8 +7,8 @@ public class QueryPenetrationTestDetailResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><strong>200</strong>: success</li>
-     * <li><strong>Other values (400, 500)</strong>: failure</li>
+     * <li><strong>200</strong>: Success.</li>
+     * <li><strong>Other values (400 and 500)</strong>: Failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class QueryPenetrationTestDetailResponseBody extends TeaModel {
     public QueryPenetrationTestDetailResponseBodyData data;
 
     /**
-     * <p>The description.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -42,10 +42,10 @@ public class QueryPenetrationTestDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: The call is successful.                               </li>
-     * <li><strong>false</strong>: The call failed.</li>
+     * <li><strong>false</strong>: The call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,11 +110,11 @@ public class QueryPenetrationTestDetailResponseBody extends TeaModel {
         public Long applyTime;
 
         /**
-         * <p>The asset type. Valid values:</p>
+         * <p>The type of the asset. Valid values:</p>
          * <ul>
-         * <li><strong>EIP</strong>: public IP address of a VPC</li>
-         * <li><strong>SLB</strong>: load balancing</li>
-         * <li><strong>ECS</strong>: public IP address of an ECS instance in the classic network</li>
+         * <li><strong>EIP</strong>: public IP address in a VPC.</li>
+         * <li><strong>SLB</strong>: load balancing.</li>
+         * <li><strong>ECS</strong>: public IP address in the classic network.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,9 +124,9 @@ public class QueryPenetrationTestDetailResponseBody extends TeaModel {
         public String assetType;
 
         /**
-         * <p>The unique ID of the application record.</p>
+         * <p>The unique identity of the application record.</p>
          * <blockquote>
-         * <p>This field is of the Long type. Precision loss may occur when you serialize or deserialize the value. Make sure that the value does not exceed 9007199254740991.</p>
+         * <p>This field is of the Long type. Precision loss may occur during the procedure to serialize or deserialize the numeric sequence. Ensure that the value does not exceed 9007199254740991.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -145,10 +145,12 @@ public class QueryPenetrationTestDetailResponseBody extends TeaModel {
         public String ip;
 
         /**
-         * <p>Indicates whether the test is performed by a third-party service provider.</p>
+         * <p>Indicates whether the test is performed by a third-party service provider. Valid values:</p>
          * <ul>
-         * <li>true: Yes.</li>
-         * <li>false: No.</li>
+         * <li><p>true: Yes.</p>
+         * </li>
+         * <li><p>false: No.</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,11 +162,11 @@ public class QueryPenetrationTestDetailResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><strong>early_end</strong>: The user applies for early termination.</li>
+         * <li><strong>early_end</strong>: The user applied for early termination.</li>
          * <li><strong>expired</strong>: The authorization has expired.</li>
-         * <li><strong>auditing</strong>: The application is being reviewed.</li>
-         * <li><strong>approved</strong>: The application is approved.</li>
-         * <li><strong>rejected</strong>: The application is rejected.</li>
+         * <li><strong>auditing</strong>: Under review.</li>
+         * <li><strong>approved</strong>: Approved.</li>
+         * <li><strong>rejected</strong>: Rejected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,7 +179,7 @@ public class QueryPenetrationTestDetailResponseBody extends TeaModel {
          * <p>The test content.</p>
          * <blockquote>
          * <ul>
-         * <li>The content must be within 500 characters. Carefully fill in the content to increase the chance of passing the review.</li>
+         * <li>Maximum 500 characters. Provide detailed information to increase the chance of passing the review.</li>
          * </ul>
          * </blockquote>
          * 
@@ -199,7 +201,7 @@ public class QueryPenetrationTestDetailResponseBody extends TeaModel {
         /**
          * <p>The source IP addresses used for the test.</p>
          * <blockquote>
-         * <p>You can specify up to 50 IP addresses. Separate multiple IP addresses with line breaks or commas (,). Specify 0.0.0.0 to allow all IP addresses. CIDR blocks are not supported, such as 140.168.0.0/16.</p>
+         * <p>A maximum of 50 IP addresses are supported. Separate multiple IP addresses with line breaks or commas (,). Specify 0.0.0.0 to allow all IP addresses. CIDR blocks are not supported, such as 140.168.0.0/16.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -220,7 +222,7 @@ public class QueryPenetrationTestDetailResponseBody extends TeaModel {
         /**
          * <p>The test steps.</p>
          * <blockquote>
-         * <p>The content must be within 500 characters. Carefully fill in the content to increase the chance of passing the review.</p>
+         * <p>Maximum 500 characters. Provide detailed information to increase the chance of passing the review.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
