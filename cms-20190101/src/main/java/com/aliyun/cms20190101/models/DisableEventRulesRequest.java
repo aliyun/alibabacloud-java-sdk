@@ -8,11 +8,8 @@ public class DisableEventRulesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The names of the event-triggered alert rules.</p>
+     * <p>The names of the alert rules.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ruleName1</p>
      */
     @NameInMap("RuleNames")
     public java.util.List<String> ruleNames;

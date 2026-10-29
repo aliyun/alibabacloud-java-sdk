@@ -35,11 +35,7 @@ public class DeleteContactResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
-     * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
-     * </ul>
+     * <p>Indicates whether the operation was successful. A value of true indicates success, and false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

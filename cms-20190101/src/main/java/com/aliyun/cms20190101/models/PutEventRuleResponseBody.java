@@ -17,7 +17,7 @@ public class PutEventRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The number of rows affected when the Event-triggered Alert Rule is created or modified.</p>
+     * <p>The number of rows affected when the event-triggered alert rule is created or modified.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

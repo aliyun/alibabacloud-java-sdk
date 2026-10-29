@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateInstantSiteMonitorRequest extends TeaModel {
     /**
-     * <p>The URL or IP address of the detection task.</p>
+     * <p>The URL or IP address of the synthetic monitoring task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
     public String address;
 
     /**
-     * <p>The type of the detection points. Valid values: PC and MOBILE. PC indicates detection points on PCs. MOBILE indicates detection points on mobile devices. Default value: PC.</p>
+     * <p>The type of detection points. Valid values: PC and MOBILE. PC indicates fixed-line network detection points. MOBILE indicates mobile network detection points. Default value: PC.</p>
      * 
      * <strong>example:</strong>
      * <p>PC</p>
@@ -24,10 +24,10 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
     public String agentGroup;
 
     /**
-     * <p>The detection points. If you do not specify this parameter, the system randomly selects three detection points.</p>
-     * <p>The value must be a JSON array. Example: <code>[{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;, &quot;type&quot;:&quot;IDC&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;, &quot;type&quot;:&quot;LASTMILE&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}]</code>. These values correspond to Beijing, Hangzhou, and Qingdao.</p>
-     * <p>The type parameter specifies the type of the detection point. If AgentGroup is set to PC, valid values for type are IDC and LASTMILE. IDC indicates that the detection point is deployed in a data center. LASTMILE indicates that the detection point is deployed on the PC of a netizen that is connected to the last mile of an ISP network. The type parameter is optional. The default value is IDC. You do not need to specify this parameter if AgentGroup is set to MOBILE.</p>
-     * <p>For more information about how to obtain detection points, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
+     * <p>The detection point information. If this parameter is left empty, the system randomly selects three detection points.</p>
+     * <p>The value is in <code>JSONArray</code> format. Example: [{&quot;city&quot;:&quot;546&quot;,&quot;isp&quot;:&quot;465&quot;, &quot;type&quot;:&quot;IDC&quot;},{&quot;city&quot;:&quot;572&quot;,&quot;isp&quot;:&quot;465&quot;, &quot;type&quot;:&quot;LASTMILE&quot;},{&quot;city&quot;:&quot;738&quot;,&quot;isp&quot;:&quot;465&quot;}], which correspond to Beijing, Hangzhou, and Qingdao respectively.</p>
+     * <p>The type field specifies the detection point type. When AgentGroup is set to PC, valid values are IDC and LASTMILE. IDC indicates detection points deployed in data centers. LASTMILE indicates detection points deployed in end-user homes that use fixed-line networks. The type field is optional and defaults to IDC. When AgentGroup is set to MOBILE, this field does not need to be specified.</p>
+     * <p>For information about how to obtain detection point information, see <a href="https://help.aliyun.com/document_detail/115045.html">DescribeSiteMonitorISPCityList</a>.</p>
      * <blockquote>
      * <p>You must specify either <code>IspCities</code> or <code>RandomIspCity</code>.</p>
      * </blockquote>
@@ -39,7 +39,7 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
     public String ispCities;
 
     /**
-     * <p>The extended options for the protocol type of the detection task. The extended options vary based on the protocol type.</p>
+     * <p>The advanced extended options for the protocol type of the synthetic monitoring task. Different protocol types correspond to different extended options.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;time_out&quot;:5000}</p>
@@ -51,7 +51,7 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
      * <p>The number of detection points.</p>
      * <blockquote>
      * <ul>
-     * <li>You must specify either <code>IspCities</code> or <code>RandomIspCity</code>. If you specify <code>RandomIspCity</code>, <code>IspCities</code> is ignored.</li>
+     * <li>You must specify either <code>IspCities</code> or <code>RandomIspCity</code>.- If you set the <code>RandomIspCity</code> parameter, the <code>IspCities</code> parameter becomes invalid.</li>
      * </ul>
      * </blockquote>
      * 
@@ -65,13 +65,10 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the detection task.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;</p>
-     * <p>The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</p>
-     * <p>&lt;props=&quot;intl&quot;&gt;</p>
-     * <p>The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</p>
-     * <p>&lt;props=&quot;partner&quot;&gt;</p>
-     * <p>The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</p>
+     * <p>The name of the synthetic monitoring task.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;The name must be 4 to 100 characters in length and can contain letters, digits, underscores (_), and Chinese characters.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;The name must be 4 to 100 characters in length and can contain letters, digits, and underscores (_).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +78,8 @@ public class CreateInstantSiteMonitorRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The type of the detection task. Valid values: HTTP, PING, TCP, UDP, and DNS.</p>
+     * <p>The type of the synthetic monitoring task.
+     * Valid values: HTTP, PING, TCP, UDP, and DNS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

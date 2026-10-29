@@ -23,7 +23,7 @@ public class DescribeHostAvailabilityListRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The IDs of the availability monitoring tasks. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of multiple availability monitoring tasks. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>123456,345678</p>
@@ -33,7 +33,7 @@ public class DescribeHostAvailabilityListRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +43,7 @@ public class DescribeHostAvailabilityListRequest extends TeaModel {
 
     /**
      * <p>The number of entries per page.</p>
-     * <p>Minimum value: 1. Default value: 10</p>
+     * <p>Minimum value: 1. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

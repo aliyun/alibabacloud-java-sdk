@@ -10,9 +10,6 @@ public class EnableEventRulesRequest extends TeaModel {
     /**
      * <p>The names of the event rules to enable.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>ruleName1</p>
      */
     @NameInMap("RuleNames")
     public java.util.List<String> ruleNames;

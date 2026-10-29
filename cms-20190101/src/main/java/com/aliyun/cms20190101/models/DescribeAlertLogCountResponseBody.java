@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertLogCountResponseBody extends TeaModel {
     /**
-     * <p>The statistics of alert logs.</p>
+     * <p>The alert history statistics.</p>
      */
     @NameInMap("AlertLogCount")
     public java.util.List<DescribeAlertLogCountResponseBodyAlertLogCount> alertLogCount;
 
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>The value 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,11 +41,11 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 
@@ -102,7 +102,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
 
     public static class DescribeAlertLogCountResponseBodyAlertLogCountLogs extends TeaModel {
         /**
-         * <p>The name of the dimension field based on which alert logs are aggregated.</p>
+         * <p>The field name of the alert history statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>product</p>
@@ -111,7 +111,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The value of the dimension field based on which alert logs are aggregated.</p>
+         * <p>The field value of the alert history statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS</p>
@@ -144,7 +144,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
 
     public static class DescribeAlertLogCountResponseBodyAlertLogCount extends TeaModel {
         /**
-         * <p>The number of alert logs.</p>
+         * <p>The number of alert history statistics.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -153,7 +153,7 @@ public class DescribeAlertLogCountResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The details about alert logs.</p>
+         * <p>The details of the alert history statistics.</p>
          */
         @NameInMap("Logs")
         public java.util.List<DescribeAlertLogCountResponseBodyAlertLogCountLogs> logs;

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>The value 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,11 +44,11 @@ public class DeleteMonitorGroupNotifyPolicyResponseBody extends TeaModel {
     public Integer result;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutMonitoringConfigResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class PutMonitoringConfigResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>Specified parameter EnableInstallAgentNewECS is not valid.</p>
@@ -35,11 +35,11 @@ public class PutMonitoringConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 

@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertLogHistogramResponseBody extends TeaModel {
     /**
-     * <p>The number of alert logs that were generated during each interval of a time period.</p>
+     * <p>The histogram list of alert history.</p>
      */
     @NameInMap("AlertLogHistogramList")
     public java.util.List<DescribeAlertLogHistogramResponseBodyAlertLogHistogramList> alertLogHistogramList;
 
     /**
-     * <p>The response code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>The value 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,11 +41,11 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 
@@ -102,7 +102,7 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
 
     public static class DescribeAlertLogHistogramResponseBodyAlertLogHistogramList extends TeaModel {
         /**
-         * <p>The number of alert logs.</p>
+         * <p>The number of alert history entries.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -111,7 +111,7 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The start timestamp of the queried alert logs.</p>
+         * <p>The start timestamp for querying alert history.</p>
          * <p>Unit: seconds.</p>
          * 
          * <strong>example:</strong>
@@ -121,7 +121,7 @@ public class DescribeAlertLogHistogramResponseBody extends TeaModel {
         public Long from;
 
         /**
-         * <p>The end timestamp of the queried alert logs.</p>
+         * <p>The end timestamp for querying alert history.</p>
          * <p>Unit: seconds.</p>
          * 
          * <strong>example:</strong>

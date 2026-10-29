@@ -14,7 +14,7 @@ public class Matcher extends TeaModel {
     public String label;
 
     /**
-     * <p>The matching mode of the metric dimension. Only EQUALS is supported. Default value: EQUALS.</p>
+     * <p>The matching method for the metric dimension. Only EQUALS is supported. Default value: EQUALS.</p>
      * 
      * <strong>example:</strong>
      * <p>EQUALS</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMonitorGroupsRequest extends TeaModel {
     /**
-     * <p>The ID of the dynamic tag rule.</p>
+     * <p>The ID of the dynamic rule matching.</p>
      * 
      * <strong>example:</strong>
      * <p>6b882d9a-5117-42e2-9d0c-4749a0c6****</p>
@@ -14,7 +14,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public String dynamicTagRuleId;
 
     /**
-     * <p>The tag key of the application group that is created using a dynamic tag rule.</p>
+     * <p>The tag key used to create the application group by using dynamic rule matching.</p>
      * 
      * <strong>example:</strong>
      * <p>GroupKey1</p>
@@ -23,7 +23,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public String groupFounderTagKey;
 
     /**
-     * <p>The tag value of the application group that is created using a dynamic tag rule.</p>
+     * <p>The tag value used to create the application group by using dynamic rule matching.</p>
      * 
      * <strong>example:</strong>
      * <p>GroupValue1</p>
@@ -32,7 +32,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public String groupFounderTagValue;
 
     /**
-     * <p>The IDs of the application groups. Separate multiple IDs with commas (,).</p>
+     * <p>The application group ID. Separate multiple application group IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>92****</p>
@@ -41,7 +41,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the application group.</p>
+     * <p>The application group name.</p>
      * 
      * <strong>example:</strong>
      * <p>testGroup124</p>
@@ -50,12 +50,10 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>Specifies whether to include the history of alert templates that are applied to the application group in the response. Valid values:</p>
+     * <p>Specifies whether to include the history of alert templates that have been applied to the application group in the response. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: Include the history.</li>
+     * <li>false: Do not include the history.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +63,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public Boolean includeTemplateHistory;
 
     /**
-     * <p>The ID of the instance. This parameter is used to query the application group to which the specified instance belongs.</p>
+     * <p>The resource instance ID. This parameter is used to query the application group to which the specified instance belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>i-abcdefgh12****</p>
@@ -74,7 +72,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The keyword for the search.</p>
+     * <p>The search keyword.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -84,7 +82,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
 
     /**
      * <p>The page number.</p>
-     * <p>Pages start from page 1. Default value: 1.</p>
+     * <p>Minimum value: 1. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,8 +91,8 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
-     * <p>Pages start from page 1. Default value: 30.</p>
+     * <p>The number of entries per page.</p>
+     * <p>Minimum value: 1. Default value: 30.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -108,10 +106,8 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     /**
      * <p>Specifies whether to include alert contact groups in the response. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: Include alert contact groups.</li>
+     * <li>false: Do not include alert contact groups.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -129,12 +125,13 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     /**
      * <p>The type of the application group. Valid values:</p>
      * <ul>
-     * <li><p>custom: a custom application group.</p>
-     * </li>
-     * <li><p>ehpc_cluster: an application group that is synchronized from an E-HPC cluster.</p>
-     * </li>
-     * <li><p>kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster.</p>
-     * </li>
+     * <li>custom: a custom application group.</li>
+     * <li>ehpc_cluster: an application group synchronized from an EHPC cluster.</li>
+     * <li>kubernetes: an application group synchronized from Container Service for Kubernetes.</li>
+     * <li>tag: an application group automatically created by using tags.</li>
+     * <li>resMgr: an application group created from a resource group.</li>
+     * <li>ess: an application group synchronized from Auto Scaling (ESS).</li>
+     * <li>aone_group: an application group synchronized from or associated with an Aone application.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -146,18 +143,13 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
     /**
      * <p>The type of the application group. Valid values:</p>
      * <ul>
-     * <li><p>custom: a custom application group.</p>
-     * </li>
-     * <li><p>ehpc_cluster: an application group that is synchronized from an E-HPC cluster.</p>
-     * </li>
-     * <li><p>kubernetes: an application group that is synchronized from a Container Service for Kubernetes (ACK) cluster.</p>
-     * </li>
-     * <li><p>tag: an application group that is automatically created based on tags.</p>
-     * </li>
-     * <li><p>resMgr: an application group that is created based on a resource group.</p>
-     * </li>
-     * <li><p>ess: an application group that is synchronized from Auto Scaling (ESS).</p>
-     * </li>
+     * <li>custom: a custom application group.</li>
+     * <li>ehpc_cluster: an application group synchronized from an EHPC cluster.</li>
+     * <li>kubernetes: an application group synchronized from Container Service for Kubernetes.</li>
+     * <li>tag: an application group automatically created by using tags.</li>
+     * <li>resMgr: an application group created from a resource group.</li>
+     * <li>ess: an application group synchronized from Auto Scaling (ESS).</li>
+     * <li>aone_group: an application group synchronized from or associated with an Aone application.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -293,7 +285,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
 
     public static class DescribeMonitorGroupsRequestTag extends TeaModel {
         /**
-         * <p>The key of tag N. Valid values of N: 1 to 5.</p>
+         * <p>The tag key of the application group. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>tagKey1</p>
@@ -302,7 +294,7 @@ public class DescribeMonitorGroupsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of tag N. Valid values of N: 1 to 5.</p>
+         * <p>The tag value of the application group. Valid values of N: 1 to 5.</p>
          * 
          * <strong>example:</strong>
          * <p>tagValue1</p>

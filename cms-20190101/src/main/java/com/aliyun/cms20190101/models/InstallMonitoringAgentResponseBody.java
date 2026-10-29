@@ -7,7 +7,7 @@ public class InstallMonitoringAgentResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>A value of 200 indicates that the request was successful.</p>
+     * <p>A status code of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

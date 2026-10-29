@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class MetricStat extends TeaModel {
     /**
-     * <p>The additional information about the monitored object (instance).</p>
+     * <p>The additional information of the monitored object (instance).</p>
      */
     @NameInMap("Associated")
     public java.util.Map<String, String> associated;
 
     /**
-     * <p>The dimension information that is used to identify the monitored object (instance).</p>
+     * <p>The dimension information used to identify the monitored object (instance).</p>
      */
     @NameInMap("Dimensions")
     public java.util.List<Dimension> dimensions;
 
     /**
-     * <p>The recorded time of the monitoring data. Unit: milliseconds. For non-raw data (aggregated data), the value of LogTime is NULL.</p>
+     * <p>The recording time of the monitoring data, in milliseconds. For non-raw data (aggregated data), LogTime is null.</p>
      * 
      * <strong>example:</strong>
      * <p>1683686550073</p>
@@ -26,13 +26,13 @@ public class MetricStat extends TeaModel {
     public Long logTime;
 
     /**
-     * <p>The measured value of the metric. The parameter contains multiple values by default.</p>
+     * <p>The measurement values of the metric (multi-value mode by default).</p>
      */
     @NameInMap("Measurements")
     public java.util.Map<String, ?> measurements;
 
     /**
-     * <p>The metric that is used to monitor the cloud service.</p>
+     * <p>The name of the metric for the cloud service.</p>
      * 
      * <strong>example:</strong>
      * <p>cpu_idle</p>
@@ -41,7 +41,7 @@ public class MetricStat extends TeaModel {
     public String metric;
 
     /**
-     * <p>The namespace of the cloud service.</p>
+     * <p>The data namespace of the cloud service.</p>
      * 
      * <strong>example:</strong>
      * <p>acs_ecs_dashboard</p>
@@ -50,7 +50,7 @@ public class MetricStat extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The time interval based on which the metric value is measured.</p>
+     * <p>The time interval of the metric.</p>
      * <p>Unit: seconds.</p>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class MetricStat extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The timestamp of the monitoring data. Unit: milliseconds.</p>
+     * <p>The timestamp of the monitoring data, in milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1641454680000</p>

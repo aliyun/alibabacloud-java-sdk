@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSystemEventAttributeResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the call is successful.</p>
+     * <p>A value of 200 indicates that the call was successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message that is returned. If the call is successful, <code>success</code> is returned. If the call fails, an error message is returned.</p>
+     * <p>The returned message. If the call is successful, <code>success</code> is returned. If the call fails, an error message is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -26,7 +26,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>60912C8D-B340-4253-ADE7-61ACDFD25CFC</p>
@@ -35,7 +35,7 @@ public class DescribeSystemEventAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values: True: The call is successful. false: The call fails.</p>
+     * <p>Indicates whether the call was successful. A value of true indicates that the call was successful. A value of false indicates that the call failed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class CreateHybridMonitorTaskRequest extends TeaModel {
     /**
-     * <p>The tags of the metric.</p>
+     * <p>The labels of the metric.</p>
      * <blockquote>
-     * <p>This parameter is required only when TaskType is set to <code>aliyun_sls</code>.</p>
+     * <p>This parameter is required only when <code>TaskType</code> is set to <code>aliyun_sls</code>.</p>
      * </blockquote>
      */
     @NameInMap("AttachLabels")
     public java.util.List<CreateHybridMonitorTaskRequestAttachLabels> attachLabels;
 
     /**
-     * <p>The IDs of the accounts of other cloud providers that are connected to CloudMonitor.</p>
+     * <p>The list of primary account IDs of other cloud providers that are imported into CloudMonitor.</p>
      */
     @NameInMap("CloudAccessId")
     public java.util.List<String> cloudAccessId;
@@ -27,7 +27,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
      * </ul>
      * <p>Unit: seconds.</p>
      * <blockquote>
-     * <p>This parameter is required only when TaskType is set to <code>aliyun_sls</code>.</p>
+     * <p>This parameter is required only when <code>TaskType</code> is set to <code>aliyun_sls</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,8 +39,8 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     /**
      * <p>The type of the collection target for monitoring data.</p>
      * <ul>
-     * <li>If TaskType is set to <code>aliyun_fc</code>, set this parameter to <code>aliyun_fc</code>.</li>
-     * <li>If TaskType is set to <code>aliyun_sls</code>, set this parameter to the name of the Logstore group for SLS logs.</li>
+     * <li>If <code>TaskType</code> is set to <code>aliyun_fc</code>, enter <code>aliyun_fc</code>.</li>
+     * <li>If <code>TaskType</code> is set to <code>aliyun_sls</code>, enter the name of the Logstore group for SLS logs.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -54,16 +54,16 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
      * <p>The description of the monitoring task.</p>
      * 
      * <strong>example:</strong>
-     * <p>Alibaba Cloud product data ingestion task.</p>
+     * <p>Alibaba Cloud service data import task.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The application group ID.</p>
      * <p>For information about how to obtain the application group ID, see <a href="https://help.aliyun.com/document_detail/115032.html">DescribeMonitorGroups</a>.</p>
      * <blockquote>
-     * <p>This parameter is required only when TaskType is set to <code>aliyun_sls</code>.</p>
+     * <p>This parameter is required only when <code>TaskType</code> is set to <code>aliyun_sls</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,8 +73,8 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The name of the metric repository.</p>
-     * <p>For information about how to obtain the name of a metric repository, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
+     * <p>The name of the namespace.</p>
+     * <p>For information about how to obtain the namespace name, see <a href="https://help.aliyun.com/document_detail/428880.html">DescribeHybridMonitorNamespaceList</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,19 +87,19 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The configurations of SLS logs.</p>
+     * <p>The SLS log configuration.</p>
      * <blockquote>
-     * <p>This parameter is required only when TaskType is set to <code>aliyun_sls</code>.</p>
+     * <p>This parameter is required only when <code>TaskType</code> is set to <code>aliyun_sls</code>.</p>
      * </blockquote>
      */
     @NameInMap("SLSProcessConfig")
     public CreateHybridMonitorTaskRequestSLSProcessConfig SLSProcessConfig;
 
     /**
-     * <p>The ID of the member account.</p>
-     * <p>When you call this operation by using a management account, you can connect any Alibaba Cloud service of any member account in the resource directory to Hybrid Cloud Monitoring. This allows you to use the resource directory to monitor the Alibaba Cloud services of member accounts across the enterprise in a unified manner.</p>
+     * <p>The member ID.</p>
+     * <p>When you invoke this operation by using a management account, you can use cloud native mode to import Alibaba Cloud services of any member in the resource folder into Hybrid Cloud Monitoring. This allows you to use the resource directory to monitor Alibaba Cloud services across accounts in CloudMonitor. You can go to <strong>Settings</strong> to configure this feature.</p>
      * <blockquote>
-     * <p>This parameter is required only when TaskType is set to <code>aliyun_fc</code>.</p>
+     * <p>This parameter is required only when <code>TaskType</code> is set to <code>aliyun_fc</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     public String targetUserId;
 
     /**
-     * <p>The IDs of the member accounts. Separate multiple IDs with commas (,).</p>
+     * <p>The member IDs. Separate multiple member IDs with commas (,).</p>
      * <blockquote>
      * <p>This parameter is required only when you call this operation by using a management account.</p>
      * </blockquote>
@@ -123,8 +123,8 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     /**
      * <p>The name of the monitoring task.</p>
      * <ul>
-     * <li>If TaskType is set to <code>aliyun_fc</code>, specify the name of the data import task for the Alibaba Cloud service.</li>
-     * <li>If TaskType is set to <code>aliyun_sls</code>, specify the metric name for SLS logs.</li>
+     * <li>If <code>TaskType</code> is set to <code>aliyun_fc</code>, enter the name of the data import task for the Alibaba Cloud service.</li>
+     * <li>If <code>TaskType</code> is set to <code>aliyun_sls</code>, enter the metric name for SLS logs.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -136,8 +136,8 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     /**
      * <p>The type of the monitoring task. Valid values:</p>
      * <ul>
-     * <li>aliyun_fc: data import task for an Alibaba Cloud service.</li>
-     * <li>aliyun_sls: metric for SLS logs.</li>
+     * <li>aliyun_fc: a data import task for Alibaba Cloud services.</li>
+     * <li>aliyun_sls: a metric for SLS logs.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -148,12 +148,12 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
     public String taskType;
 
     /**
-     * <p>The configuration file of the Alibaba Cloud service that is connected to Hybrid Cloud Monitoring.</p>
+     * <p>The configuration file of the Alibaba Cloud service to be imported into Hybrid Cloud Monitoring.</p>
      * <ul>
-     * <li>namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</li>
-     * <li>metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</li>
+     * <li>namespace: the namespace of the Alibaba Cloud service. For information about how to query the namespace, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</li>
+     * <li>metric_list: the metrics of the Alibaba Cloud service. For information about how to query the metrics, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a>.</li>
      * </ul>
-     * <p>The following example shows a sample configuration file:</p>
+     * <p>The following example shows the configuration file:</p>
      * <pre><code>products:
      * - namespace: acs_ecs_dashboard
      *   metric_info:
@@ -173,7 +173,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
      *     - MySQL_TPS
      * </code></pre>
      * <blockquote>
-     * <p>This parameter is required only when TaskType is set to <code>aliyun_fc</code>.</p>
+     * <p>This parameter is required when <code>TaskType</code> is set to <code>aliyun_fc</code>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -301,7 +301,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     public static class CreateHybridMonitorTaskRequestAttachLabels extends TeaModel {
         /**
-         * <p>The tag key of the metric.</p>
+         * <p>The label key of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>app_service</p>
@@ -310,7 +310,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The tag value of the metric.</p>
+         * <p>The label value of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>testValue</p>
@@ -343,7 +343,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigExpress extends TeaModel {
         /**
-         * <p>The alias of the arithmetic operation result on the extended fields of SLS log statistics results.</p>
+         * <p>The alias of the arithmetic operation result of the extended field for SLS log statistical results.</p>
          * 
          * <strong>example:</strong>
          * <p>SuccRate</p>
@@ -352,7 +352,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
         public String alias;
 
         /**
-         * <p>The result of arithmetic operations on the extended fields of SLS log statistics results.</p>
+         * <p>The arithmetic operation results of the extended fields for SLS log statistical results.</p>
          * 
          * <strong>example:</strong>
          * <p>success_count</p>
@@ -385,7 +385,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigFilterFilters extends TeaModel {
         /**
-         * <p>The method used to filter parameter values in SLS logs. Valid values:</p>
+         * <p>The filter method for parameter values in SLS logs. Valid values:</p>
          * <ul>
          * <li><code>contain</code>: contains.</li>
          * <li><code>notContain</code>: does not contain.</li>
@@ -497,7 +497,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigGroupBy extends TeaModel {
         /**
-         * <p>The alias of the SLS log statistics result.</p>
+         * <p>The alias of the SLS log statistical result.</p>
          * 
          * <strong>example:</strong>
          * <p>ApiResult</p>
@@ -539,7 +539,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfigStatistics extends TeaModel {
         /**
-         * <p>The alias of the SLS log statistics result.</p>
+         * <p>The alias of the SLS log statistical result.</p>
          * 
          * <strong>example:</strong>
          * <p>level_count</p>
@@ -548,18 +548,18 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
         public String alias;
 
         /**
-         * <p>Aggregates log data within the statistical period by using the specified statistical method. Valid values:</p>
+         * <p>The statistical method used to aggregate log data within the statistical period. Valid values:</p>
          * <ul>
          * <li>count: counts the number of occurrences.</li>
          * <li>sum: calculates the sum.</li>
          * <li>avg: calculates the average.</li>
          * <li>max: returns the maximum value.</li>
          * <li>min: returns the minimum value.</li>
-         * <li>value: samples within the statistical period.</li>
+         * <li>value: samples within the period.</li>
          * <li>countps: calculates the average count per second for the specified field within the statistical period.</li>
          * <li>sumps: calculates the average sum per second for the specified field within the statistical period.</li>
-         * <li>distinct: counts the number of occurrences of the specified field after deduplication within the statistical period.</li>
-         * <li>distribution: counts the number of occurrences of field values within a specified range.</li>
+         * <li>distinct: calculates the number of occurrences of the specified field after deduplication within the statistical period.</li>
+         * <li>distribution: calculates the number of occurrences of field values within a specified range.</li>
          * <li>percentile: calculates the distribution value of field values, such as P50.</li>
          * </ul>
          * 
@@ -572,9 +572,9 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
         /**
          * <p>The statistical value of SLS logs.</p>
          * <ul>
-         * <li><p>If Function is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 200.</p>
+         * <li><p>If <code>Function</code> is set to <code>distribution</code>, this parameter specifies the lower limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 200.</p>
          * </li>
-         * <li><p>If Function is set to <code>percentile</code>, this parameter specifies the percentile of the statistical distribution. For example, 0.5 indicates P50.</p>
+         * <li><p>If <code>Function</code> is set to <code>percentile</code>, this parameter specifies the percentile of the statistical distribution. For example, 0.5 indicates P50.</p>
          * </li>
          * </ul>
          * 
@@ -587,7 +587,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
         /**
          * <p>The statistical value of SLS logs.</p>
          * <blockquote>
-         * <p>This parameter is required only when Function is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 299.</p>
+         * <p>This parameter is required only when <code>Function</code> is set to <code>distribution</code>. It specifies the upper limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 299.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -654,7 +654,7 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
 
     public static class CreateHybridMonitorTaskRequestSLSProcessConfig extends TeaModel {
         /**
-         * <p>The result of arithmetic operations on the extended fields of SLS log statistics results.</p>
+         * <p>The arithmetic operation results of the extended fields for SLS log statistical results.</p>
          */
         @NameInMap("Express")
         public java.util.List<CreateHybridMonitorTaskRequestSLSProcessConfigExpress> express;
@@ -666,13 +666,13 @@ public class CreateHybridMonitorTaskRequest extends TeaModel {
         public CreateHybridMonitorTaskRequestSLSProcessConfigFilter filter;
 
         /**
-         * <p>Aggregates data by spatial dimension, which is equivalent to the GROUP BY clause in SQL.</p>
+         * <p>Aggregates data by spatial dimensions, equivalent to Group By in SQL.</p>
          */
         @NameInMap("GroupBy")
         public java.util.List<CreateHybridMonitorTaskRequestSLSProcessConfigGroupBy> groupBy;
 
         /**
-         * <p>The method used to aggregate SLS log data.</p>
+         * <p>The statistical method for SLS logs.</p>
          */
         @NameInMap("Statistics")
         public java.util.List<CreateHybridMonitorTaskRequestSLSProcessConfigStatistics> statistics;

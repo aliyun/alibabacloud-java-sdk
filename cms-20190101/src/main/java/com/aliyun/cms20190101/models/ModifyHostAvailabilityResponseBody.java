@@ -7,7 +7,7 @@ public class ModifyHostAvailabilityResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,11 +35,11 @@ public class ModifyHostAvailabilityResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: The operation was successful.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: The operation failed.</p>
      * </li>
      * </ul>
      * 

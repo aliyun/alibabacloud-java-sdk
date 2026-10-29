@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAlertLogCountRequest extends TeaModel {
     /**
-     * <p>The alert group.</p>
+     * <p>The alert contact group.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS_Group</p>
@@ -14,11 +14,11 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public String contactGroup;
 
     /**
-     * <p>The end timestamp of the alert logs to be queried.</p>
+     * <p>The end timestamp for querying alert history.</p>
      * <p>Unit: milliseconds.</p>
-     * <p>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the <code>AlertLogCount</code> parameter is empty.</p>
+     * <p>You can query only the alert history within the last year. If the query time range exceeds one year, the <code>AlertLogCount</code> response parameter is empty.</p>
      * <blockquote>
-     * <p>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. The start time and end time must be specified or left empty at the same time. If you do not specify the start time and end time, the alert logs within the last 15 minutes are queried by default.</p>
+     * <p>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. Both parameters must be specified or left empty at the same time. If neither is specified, the alert history of the last 15 minutes is queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,11 +28,11 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The type of the alert event. Valid values:</p>
+     * <p>The alert type. Valid values:</p>
      * <ul>
      * <li><p>TRIGGERED: The alert is triggered.</p>
      * </li>
-     * <li><p>RESOLVED: The alert is resolved.</p>
+     * <li><p>RESOLVED: The alert recovers.</p>
      * </li>
      * </ul>
      * 
@@ -43,18 +43,13 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The dimension based on which data is aggregated. This parameter is similar to the Group By clause of SQL statements. Valid values:</p>
+     * <p>Aggregates data by a spatial dimension, which is equivalent to the Group By clause in SQL. Valid values:</p>
      * <ul>
-     * <li><p><code>product</code>: aggregates data by cloud service.</p>
-     * </li>
-     * <li><p><code>level</code>: aggregates data by alert level.</p>
-     * </li>
-     * <li><p><code>groupId</code>: aggregates data by application group.</p>
-     * </li>
-     * <li><p><code>contactGroup</code>: aggregates data by alert group.</p>
-     * </li>
-     * <li><p><code>product,metricName</code>: aggregates data both by cloud service and by metric.</p>
-     * </li>
+     * <li><code>product</code>: aggregates by Alibaba Cloud service.</li>
+     * <li><code>level</code>: aggregates by alert level.</li>
+     * <li><code>groupId</code>: aggregates by application group.</li>
+     * <li><code>contactGroup</code>: aggregates by alert contact group.</li>
+     * <li><code>product,metricName</code>: aggregates by Alibaba Cloud service and metric.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -65,7 +60,7 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public String groupBy;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The application group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7301****</p>
@@ -74,7 +69,7 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The statistical period of alert logs. Unit: minutes.</p>
+     * <p>The period for obtaining logs. Unit: minutes.</p>
      * 
      * <strong>example:</strong>
      * <p>360</p>
@@ -83,13 +78,15 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public String lastMin;
 
     /**
-     * <p>The level and notification method of the alert. Valid values:</p>
-     * <ul>
-     * <li><p>P4: Alert notifications are sent by using emails and DingTalk chatbots.</p>
-     * </li>
-     * <li><p>OK: No alert is generated.</p>
-     * </li>
-     * </ul>
+     * <p>The alert level and notification method. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- P2: Phone call + text message + email + DingTalk chatbot.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- P3: Text message + email + DingTalk chatbot.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- P4: Email + DingTalk chatbot.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;- OK: No alert.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;- P4: Email + DingTalk chatbot.</p>
+     * <p>&lt;props=&quot;intl&quot;&gt;- OK: No alert.</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;- P4: Email + DingTalk chatbot.</p>
+     * <p>&lt;props=&quot;partner&quot;&gt;- OK: No alert.</p>
      * 
      * <strong>example:</strong>
      * <p>P4</p>
@@ -98,9 +95,9 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The name of the metric.</p>
+     * <p>The metric name.</p>
      * <blockquote>
-     * <p>For more information about the metrics of different cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>For information about the metrics of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -110,9 +107,9 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The namespace of the cloud service.</p>
+     * <p>The namespace of the Alibaba Cloud service.</p>
      * <blockquote>
-     * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>For information about the namespaces of Alibaba Cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,19 +119,7 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The dimension based on which data is aggregated. This parameter is equivalent to the GROUP BY clause in SQL. Valid values:</p>
-     * <ul>
-     * <li><p><code>product</code>: aggregates data by cloud service.</p>
-     * </li>
-     * <li><p><code>level</code>: aggregates data by alert level.</p>
-     * </li>
-     * <li><p><code>groupId</code>: aggregates data by application group.</p>
-     * </li>
-     * <li><p><code>contactGroup</code>: aggregates data by alert contact group.</p>
-     * </li>
-     * <li><p><code>product,metricName</code>: aggregates data both by cloud service and by metric.</p>
-     * </li>
-     * </ul>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -143,7 +128,7 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -152,7 +137,7 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The abbreviation of the service name.</p>
+     * <p>The abbreviation of the Alibaba Cloud service name.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>
@@ -165,7 +150,7 @@ public class DescribeAlertLogCountRequest extends TeaModel {
 
     /**
      * <p>The ID of the alert rule.</p>
-     * <p>For more information about how to obtain the ID of an alert rule, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
+     * <p>For information about how to obtain the alert rule ID, see <a href="https://help.aliyun.com/document_detail/114941.html">DescribeMetricRuleList</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>bfae2ca5b4e07d2c7278772e***********</p>
@@ -183,7 +168,7 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The keyword based on which the alert logs to be counted are searched.</p>
+     * <p>The search keyword for querying alert history statistics.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -192,20 +177,17 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public String searchKey;
 
     /**
-     * <p>The status of the alert. Valid values:</p>
+     * <p>The alert status. Valid values:</p>
      * <ul>
-     * <li><p>0: The alert is triggered or cleared.</p>
-     * </li>
-     * <li><p>1: The alert is generated not during the effective period.</p>
-     * </li>
-     * <li><p>2: The alert is muted and not triggered in a specified period.</p>
-     * </li>
-     * <li><p>3: The host is restarting.</p>
-     * </li>
-     * <li><p>4: Notifications are not sent for the alert.</p>
-     * </li>
+     * <li>0: An alert is triggered or the alert recovers to Normal.</li>
+     * <li>1: The alert rule is not effective.</li>
+     * <li>2: The mute period.</li>
+     * <li>3: The host is restarting.</li>
+     * <li>4: Alerts are not send.</li>
      * </ul>
-     * <p>When the value of the SendStatus parameter is 0, the value P4 of the Level parameter indicates a triggered alert and the value OK indicates a cleared alert.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;When the alert status is 0, if the value of Level is P2, P3, or P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
+     * &lt;props=&quot;intl&quot;&gt;When the alert status is 0, if the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.
+     * &lt;props=&quot;partner&quot;&gt;When the alert status is 0, if the value of Level is P4, an alert is triggered. If the value of Level is OK, the alert recovers to Normal.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -214,20 +196,21 @@ public class DescribeAlertLogCountRequest extends TeaModel {
     public String sendStatus;
 
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated and does not need to be specified.</p>
      * 
      * <strong>example:</strong>
      * <p>无</p>
      */
     @NameInMap("SourceType")
+    @Deprecated
     public String sourceType;
 
     /**
-     * <p>The start timestamp of the alert logs to be queried.</p>
+     * <p>The start timestamp for querying alert history.</p>
      * <p>Unit: milliseconds.</p>
-     * <p>You can query only the alert logs within the last year. If the query time is longer than one year, the return value of the <code>AlertLogCount</code> parameter is empty.</p>
+     * <p>You can query only the alert history within the last year. If the query time range exceeds one year, the <code>AlertLogCount</code> response parameter is empty.</p>
      * <blockquote>
-     * <p>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. The start time and end time must be specified or left empty at the same time. If you do not specify the start time and end time, the alert logs within the last 15 minutes are queried by default.</p>
+     * <p>The interval between the start time (StartTime) and end time (EndTime) must be less than or equal to 15 days. Both parameters must be specified or left empty at the same time. If neither is specified, the alert history of the last 15 minutes is queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -377,6 +360,7 @@ public class DescribeAlertLogCountRequest extends TeaModel {
         return this.sendStatus;
     }
 
+    @Deprecated
     public DescribeAlertLogCountRequest setSourceType(String sourceType) {
         this.sourceType = sourceType;
         return this;

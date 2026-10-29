@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricLastResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The monitoring data.</p>
+     * <p>The monitoring data list.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;timestamp&quot;:1548777660000,&quot;userId&quot;:&quot;123456789876****&quot;,&quot;instanceId&quot;:&quot;i-abcdefgh12****&quot;,&quot;Minimum&quot;:93.1,&quot;Average&quot;:99.52,&quot;Maximum&quot;:100}]</p>
@@ -35,7 +35,7 @@ public class DescribeMetricLastResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The pagination cursor.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
@@ -63,11 +63,11 @@ public class DescribeMetricLastResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 

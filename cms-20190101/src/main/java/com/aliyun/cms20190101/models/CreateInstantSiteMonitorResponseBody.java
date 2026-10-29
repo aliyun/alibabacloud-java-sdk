@@ -7,7 +7,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>A value of 200 indicates that the call is successful.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The results of the one-time detection task.</p>
+     * <p>The result list of the one-time synthetic monitoring task creation.</p>
      */
     @NameInMap("CreateResultList")
     public java.util.List<CreateInstantSiteMonitorResponseBodyCreateResultList> createResultList;
@@ -43,10 +43,8 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
-     * </li>
-     * <li><p>false: The operation failed.</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +100,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
 
     public static class CreateInstantSiteMonitorResponseBodyCreateResultList extends TeaModel {
         /**
-         * <p>The ID of the detection task.</p>
+         * <p>The ID of the synthetic monitoring task.</p>
          * 
          * <strong>example:</strong>
          * <p>2c8dbdf9-a3ab-46a1-85a4-f094965e****</p>
@@ -111,7 +109,7 @@ public class CreateInstantSiteMonitorResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The name of the detection task.</p>
+         * <p>The name of the synthetic monitoring task.</p>
          * 
          * <strong>example:</strong>
          * <p>task1</p>

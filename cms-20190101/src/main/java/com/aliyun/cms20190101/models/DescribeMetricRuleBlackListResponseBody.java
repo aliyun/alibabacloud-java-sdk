@@ -7,7 +7,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>A value of 200 indicates that the request was successful.</p>
+     * <p>The value 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The blacklist policies.</p>
+     * <p>The list of alert blacklist policies.</p>
      */
     @NameInMap("DescribeMetricRuleBlackList")
     public java.util.List<DescribeMetricRuleBlackListResponseBodyDescribeMetricRuleBlackList> describeMetricRuleBlackList;
@@ -43,9 +43,9 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false: The operation failed.</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 
@@ -56,7 +56,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of blacklist policies.</p>
+     * <p>The total number of alert blacklist policies.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -119,7 +119,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
 
     public static class DescribeMetricRuleBlackListResponseBodyDescribeMetricRuleBlackListMetrics extends TeaModel {
         /**
-         * <p>The name of the metric.</p>
+         * <p>The name of the monitoring metrics.</p>
          * 
          * <strong>example:</strong>
          * <p>disk_utilization</p>
@@ -128,7 +128,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The extended dimension of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> means that the blacklist policy is applied to all C drives of an Elastic Compute Service (ECS) instance.</p>
+         * <p>The extension dimension information of the instance. For example, <code>{&quot;device&quot;:&quot;C:&quot;}</code> indicates that the blacklist policy is applied to all C drives of the ECS instance under the Alibaba Cloud service.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;device&quot;:&quot;C:&quot;}]</p>
@@ -161,7 +161,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
 
     public static class DescribeMetricRuleBlackListResponseBodyDescribeMetricRuleBlackList extends TeaModel {
         /**
-         * <p>The category of the Alibaba Cloud service. For example, Redis has different editions, such as <code>kvstore_standard</code> (Standard Edition), <code>kvstore_sharding</code> (Cluster Edition), and <code>kvstore_splitrw</code> (Read/write Splitting Edition).</p>
+         * <p>The category of the Alibaba Cloud service. For example, ApsaraDB for Redis has <code>kvstore_standard</code> (Standard Edition), <code>kvstore_sharding</code> (Cluster Edition), and <code>kvstore_splitrw</code> (read/write splitting Edition).</p>
          * 
          * <strong>example:</strong>
          * <p>ecs</p>
@@ -170,7 +170,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String category;
 
         /**
-         * <p>The timestamp that indicates when the blacklist policy was created.</p>
+         * <p>The timestamp when the alert blacklist policy was created.</p>
          * <p>Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,8 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time range during which the blacklist policy is effective.</p>
+         * <p>The effective period of the alert blacklist policy.</p>
+         * <p>The value is in the HH:mm-HH:mm format (24-hour clock). The default time zone is UTC+8. For example, &quot;00:00-23:59&quot; indicates that the policy takes effect all day.</p>
          * 
          * <strong>example:</strong>
          * <p>00:00-23:59</p>
@@ -189,8 +190,8 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String effectiveTime;
 
         /**
-         * <p>The timestamp that indicates when the alert blacklist policy is no longer in effect.</p>
-         * <p>The timestamp is measured in milliseconds.</p>
+         * <p>The start timestamp of the alert blacklist policy.</p>
+         * <p>Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640608200000</p>
@@ -199,8 +200,8 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public Long enableEndTime;
 
         /**
-         * <p>The time when the alert blacklist policy expires.</p>
-         * <p>This is a UNIX timestamp in milliseconds.</p>
+         * <p>The end timestamp of the alert blacklist policy.</p>
+         * <p>Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1640237400000</p>
@@ -209,7 +210,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public Long enableStartTime;
 
         /**
-         * <p>The ID of the blacklist policy.</p>
+         * <p>The ID of the alert blacklist policy.</p>
          * 
          * <strong>example:</strong>
          * <p>93514c96-ceb8-47d8-8ee3-93b6d98b****</p>
@@ -218,17 +219,17 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The instances of the Alibaba Cloud service in the blacklist policy.</p>
+         * <p>The instances of the specified Alibaba Cloud service in the alert blacklist policy.</p>
          */
         @NameInMap("Instances")
         public java.util.List<String> instances;
 
         /**
-         * <p>The status of the blacklist policy. Valid values:</p>
+         * <p>The status of the alert blacklist policy. Valid values:</p>
          * <ul>
-         * <li><p>true: enabled.</p>
+         * <li><p>true: Enabled.</p>
          * </li>
-         * <li><p>false: disabled.</p>
+         * <li><p>false: Disabled.</p>
          * </li>
          * </ul>
          * 
@@ -239,13 +240,13 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public Boolean isEnable;
 
         /**
-         * <p>The metrics of the instance.</p>
+         * <p>The monitoring metrics of the instances.</p>
          */
         @NameInMap("Metrics")
         public java.util.List<DescribeMetricRuleBlackListResponseBodyDescribeMetricRuleBlackListMetrics> metrics;
 
         /**
-         * <p>The name of the blacklist policy.</p>
+         * <p>The name of the alert blacklist policy.</p>
          * 
          * <strong>example:</strong>
          * <p>Blacklist-01</p>
@@ -263,11 +264,11 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The scope of the blacklist policy. Valid values:</p>
+         * <p>The effective scope of the alert blacklist policy. Valid values:</p>
          * <ul>
-         * <li><p>USER: The blacklist policy takes effect only for the current Alibaba Cloud account.</p>
+         * <li><p>USER: The alert blacklist policy takes effect only within the current Alibaba Cloud account.</p>
          * </li>
-         * <li><p>GROUP: The blacklist policy takes effect for the specified application groups.</p>
+         * <li><p>GROUP: The alert blacklist policy takes effect in the specified application groups.</p>
          * </li>
          * </ul>
          * 
@@ -284,7 +285,7 @@ public class DescribeMetricRuleBlackListResponseBody extends TeaModel {
         public java.util.List<String> scopeValue;
 
         /**
-         * <p>The timestamp that indicates when the blacklist policy was modified.</p>
+         * <p>The timestamp when the alert blacklist policy was last modified.</p>
          * <p>Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The value 200 indicates success.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,13 +29,13 @@ public class CreateMonitorGroupNotifyPolicyResponseBody extends TeaModel {
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
-     * <p>13356BCA-3EC3-4748-A771-2064DA69AEF1</p>
+     * <p>B7AF834D-D38B-4A46-920B-FE974EB7E135</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
     /**
-     * <p>The number of entries returned for the creation result.</p>
+     * <p>The number of affected rows.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

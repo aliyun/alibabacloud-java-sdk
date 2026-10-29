@@ -1,3 +1,24 @@
+2026-10-29 Version: 9.0.11
+- Update API ApplyMetricRuleTemplate: add request parameters DryRun.
+- Update API CreateDynamicTagGroup: add request parameters DryRun.
+- Update API CreateMonitorGroup: add request parameters DryRun.
+- Update API CreateMonitorGroupInstances: add request parameters DryRun.
+- Update API DeleteMetricRules: add request parameters DryRun.
+- Update API DeleteMonitorGroup: add request parameters DryRun.
+- Update API DeleteMonitorGroupInstances: add request parameters DryRun.
+- Update API DescribeSiteMonitorAttribute: add response parameters Body.SiteMonitors.OptionJson.sse.
+- Update API DisableMetricRules: add request parameters DryRun.
+- Update API EnableActiveMetricRule: add request parameters ClientToken.
+- Update API EnableActiveMetricRule: add request parameters DryRun.
+- Update API EnableMetricRules: add request parameters DryRun.
+- Update API InstallMonitoringAgent: add request parameters DryRun.
+- Update API PutGroupMetricRule: add request parameters DryRun.
+- Update API PutMonitorGroupDynamicRule: add request parameters DryRun.
+- Update API PutMonitoringConfig: add request parameters DryRun.
+- Update API PutResourceMetricRule: add request parameters DryRun.
+- Update API PutResourceMetricRules: add request parameters DryRun.
+
+
 2026-06-17 Version: 9.0.10
 - Update API DescribeMetricRuleList: add response parameters Body.Alarms.$.SendOK.
 

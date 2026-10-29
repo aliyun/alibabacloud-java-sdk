@@ -41,7 +41,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String contactGroups;
 
     /**
-     * <p>The effective time range of the alert rule. Valid values: 00:00-23:59.</p>
+     * <p>The time range during which the alert rule is effective. Valid values: 00:00-23:59.</p>
      * 
      * <strong>example:</strong>
      * <p>00:00-23:59</p>
@@ -59,7 +59,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String emailSubject;
 
     /**
-     * <p>The number of alert retries.</p>
+     * <p>The number of retries for the alert.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,7 +81,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The alert level. Valid values:</p>
+     * <p>The severity level of the alert. Valid values:</p>
      * <ul>
      * <li>CRITICAL: critical.</li>
      * <li>WARN: warning.</li>
@@ -96,9 +96,9 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The metric name.</p>
+     * <p>The name of the metric.</p>
      * <blockquote>
-     * <p>For more information about how to obtain the metric name, see <a href="https://help.aliyun.com/document_detail/115005.html">DescribeCustomMetricList</a>.</p>
+     * <p>For information about how to obtain the metric name, see <a href="https://help.aliyun.com/document_detail/115005.html">DescribeCustomMetricList</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -109,7 +109,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The aggregation period of the custom monitoring data. Unit: seconds. Set the value to 60 or a multiple of 60. Default value: the original reporting period of the custom monitoring data.</p>
+     * <p>The aggregation period of the custom monitoring data. Unit: seconds. The value must be 60 or a multiple of 60. Default value: the original reporting period of the custom monitoring data.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -152,7 +152,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     /**
      * <p>The mute for period. Unit: seconds. Default value: 86400 (1 day).</p>
      * <blockquote>
-     * <p>If the monitoring data continuously exceeds the alert threshold, only one alert notification is sent within each mute for period.</p>
+     * <p>If monitoring data continuously exceeds the alert rule threshold, only one alert notification is sent within each mute for period.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -162,7 +162,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public Integer silenceTime;
 
     /**
-     * <p>The statistical method for alerts.</p>
+     * <p>The statistical method for the alert.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -182,7 +182,7 @@ public class PutCustomMetricRuleRequest extends TeaModel {
     public String threshold;
 
     /**
-     * <p>The alert callback URL. An HTTP POST request is sent to the specified URL when an alert is triggered.</p>
+     * <p>The webhook URL that is called when an alert is triggered. A POST request is sent to this URL.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a></p>

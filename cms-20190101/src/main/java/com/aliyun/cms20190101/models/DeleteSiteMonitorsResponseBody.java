@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteSiteMonitorsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The value 200 indicates success.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,7 +23,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
     public DeleteSiteMonitorsResponseBodyData data;
 
     /**
-     * <p>The returned message. If the request is successful, a success message is returned. If the request fails, the failure reason is returned, such as <code>TaskId not found</code>.</p>
+     * <p>The returned message. If the request is successful, a success message is returned. If the request fails, the cause of the failure is returned, such as <code>TaskId not found</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Request succeeded.</p>
@@ -32,7 +32,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>123BCC5D-8B63-48EA-B747-9A8995BE7AA6</p>
@@ -41,7 +41,7 @@ public class DeleteSiteMonitorsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation is successful. The value true indicates success. The value false indicates failure.</p>
+     * <p>Indicates whether the operation was successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

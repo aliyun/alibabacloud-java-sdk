@@ -5,12 +5,23 @@ import com.aliyun.tea.*;
 
 public class InstallMonitoringAgentRequest extends TeaModel {
     /**
+     * <p>Specifies whether to perform a dry run on the request. The dry run includes checks on permissions and instance status. Valid values:</p>
+     * <ul>
+     * <li><strong>false</strong> (default): Sends a normal request. After the request passes the check, the name and description of the route table are directly modified.</li>
+     * <li><strong>true</strong>: Sends a dry run request. Only checks are performed, and the name and description of the route table are not modified. Check items include whether required parameters are specified and the request format. If the check fails, an error is returned. If the check succeeds, the DryRunOperation error code is returned.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
      * <p>Specifies whether to forcibly install the CloudMonitor agent. Valid values:</p>
      * <ul>
-     * <li><p>true (default): Forcibly installs the agent.</p>
-     * </li>
-     * <li><p>false: Does not forcibly install the agent.</p>
-     * </li>
+     * <li>true (default): Forcibly installs the agent.</li>
+     * <li>false: Does not forcibly install the agent.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,17 +31,17 @@ public class InstallMonitoringAgentRequest extends TeaModel {
     public Boolean force;
 
     /**
-     * <p>The installation command. This command installs the CloudMonitor agent on all Alibaba Cloud hosts that belong to your Alibaba Cloud account. Valid values:</p>
+     * <p>Installs the CloudMonitor agent on all Alibaba Cloud hosts within the current Alibaba Cloud account. Valid values:</p>
      * <ul>
-     * <li><p><code>onlyInstallNotHasAgent</code>: Installs the latest version of the CloudMonitor agent only on Alibaba Cloud hosts where the agent is not installed.</p>
+     * <li><p>onlyInstallNotHasAgent: Installs the latest version of the agent only on Alibaba Cloud hosts on which the CloudMonitor agent is not installed.</p>
      * </li>
-     * <li><p><code>onlyUpgradeAgent</code>: Upgrades the CloudMonitor agent only on Alibaba Cloud hosts where an earlier version of the agent is installed.</p>
+     * <li><p>onlyUpgradeAgent: Upgrades the agent only on Alibaba Cloud hosts on which a non-latest version of the CloudMonitor agent is installed.</p>
      * </li>
-     * <li><p><code>installAndUpgrade</code>: Installs the latest version of the CloudMonitor agent on Alibaba Cloud hosts where the agent is not installed, and upgrades the agent on Alibaba Cloud hosts where an earlier version of the agent is installed.</p>
+     * <li><p>installAndUpgrade: Installs the latest version of the agent on Alibaba Cloud hosts on which the CloudMonitor agent is not installed, and upgrades the agent on Alibaba Cloud hosts on which a non-latest version of the CloudMonitor agent is installed.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If you set this parameter, the <code>InstanceIds</code> parameter is invalid.</p>
+     * <p>If you specify this parameter, the InstanceIds parameter becomes invalid.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,10 +51,10 @@ public class InstallMonitoringAgentRequest extends TeaModel {
     public String installCommand;
 
     /**
-     * <p>The IDs of the Alibaba Cloud hosts.</p>
-     * <p>You can specify from 1 to 10 instance IDs.</p>
+     * <p>The ID of the Alibaba Cloud host.</p>
+     * <p>Valid values of N: 1 to 10.</p>
      * <blockquote>
-     * <p>You must specify either <code>InstallCommand</code> or <code>InstanceIds</code>.</p>
+     * <p>You must specify either InstallCommand or InstanceIds.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,6 +69,14 @@ public class InstallMonitoringAgentRequest extends TeaModel {
     public static InstallMonitoringAgentRequest build(java.util.Map<String, ?> map) throws Exception {
         InstallMonitoringAgentRequest self = new InstallMonitoringAgentRequest();
         return TeaModel.build(map, self);
+    }
+
+    public InstallMonitoringAgentRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public InstallMonitoringAgentRequest setForce(Boolean force) {

@@ -38,11 +38,11 @@ public class CreateGroupMetricRulesResponseBody extends TeaModel {
     public CreateGroupMetricRulesResponseBodyResources resources;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: Successful.</p>
+     * <li><p>true: The operation is successful.</p>
      * </li>
-     * <li><p>false: Failed.</p>
+     * <li><p>false: The operation failed.</p>
      * </li>
      * </ul>
      * 

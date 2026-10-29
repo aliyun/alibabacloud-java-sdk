@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeSiteMonitorListRequest extends TeaModel {
     /**
-     * <p>The type of detection points used by the task. Valid values:</p>
+     * <p>The type of monitoring nodes used by the task. Valid values:</p>
      * <ul>
      * <li><p>PC: PC-based detection points.</p>
      * </li>
-     * <li><p>MOBILE: mobile-based detection points.</p>
+     * <li><p>MOBILE: Mobile-based detection points.</p>
      * </li>
-     * <li><p>FC: internal detection points.</p>
+     * <li><p>FC: Internal detection points.</p>
      * </li>
      * </ul>
      * 

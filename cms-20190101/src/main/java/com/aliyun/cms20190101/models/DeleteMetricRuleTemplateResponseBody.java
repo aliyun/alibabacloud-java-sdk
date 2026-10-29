@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The value 200 indicates success.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -41,11 +41,7 @@ public class DeleteMetricRuleTemplateResponseBody extends TeaModel {
     public DeleteMetricRuleTemplateResponseBodyResource resource;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
-     * <ul>
-     * <li>true: The operation was successful.</li>
-     * <li>false: The operation failed.</li>
-     * </ul>
+     * <p>Indicates whether the operation is successful. A value of true indicates success, and a value of false indicates failure.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

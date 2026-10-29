@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateHybridMonitorTaskResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The HTTP status code.</p>
      * <blockquote>
      * <p>200 indicates success.</p>
      * </blockquote>
@@ -37,8 +37,8 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: successful.</li>
-     * <li>false: failed.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class CreateHybridMonitorTaskResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The ID of the monitoring task.</p>
+     * <p>The monitoring task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>36****</p>

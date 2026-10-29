@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyHybridMonitorTaskRequest extends TeaModel {
     /**
-     * <p>The tags of the metric.</p>
+     * <p>The labels of the metric.</p>
      */
     @NameInMap("AttachLabels")
     public java.util.List<ModifyHybridMonitorTaskRequestAttachLabels> attachLabels;
@@ -30,7 +30,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
      * <p>The description of the monitoring task.</p>
      * 
      * <strong>example:</strong>
-     * <p>SLS log monitoring data.</p>
+     * <p>SLS log monitoring data</p>
      */
     @NameInMap("Description")
     public String description;
@@ -128,7 +128,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     public static class ModifyHybridMonitorTaskRequestAttachLabels extends TeaModel {
         /**
-         * <p>The tag key of the metric.</p>
+         * <p>The label key of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>app_service</p>
@@ -137,7 +137,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The tag value of the metric.</p>
+         * <p>The label value of the metric.</p>
          * 
          * <strong>example:</strong>
          * <p>testValue</p>
@@ -170,7 +170,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfigExpress extends TeaModel {
         /**
-         * <p>The alias of the arithmetic operation result of the extended field in the SLS log statistics result.</p>
+         * <p>The alias of the arithmetic result of the extended fields for the SLS log statistics result.</p>
          * 
          * <strong>example:</strong>
          * <p>SuccRate</p>
@@ -179,7 +179,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public String alias;
 
         /**
-         * <p>The arithmetic operation result of the extended field in the SLS log statistics result.</p>
+         * <p>The arithmetic result of the extended fields for the SLS log statistics result.</p>
          * 
          * <strong>example:</strong>
          * <p>success_count</p>
@@ -289,8 +289,8 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         /**
          * <p>The relationship between multiple filter conditions. Valid values:</p>
          * <ul>
-         * <li>and (default): Logs are processed only when all filter conditions are met.</li>
-         * <li>or: Logs are processed when any filter condition is met.</li>
+         * <li>and (default): The log is processed only when all filter conditions are met.</li>
+         * <li>or: The log is processed when any filter condition is met.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -377,17 +377,17 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         /**
          * <p>The statistical method used to aggregate log data within a statistical period. Valid values:</p>
          * <ul>
-         * <li>count: counts the number of occurrences.</li>
+         * <li>count: counts the number of entries.</li>
          * <li>sum: calculates the sum.</li>
          * <li>avg: calculates the average.</li>
          * <li>max: returns the maximum value.</li>
          * <li>min: returns the minimum value.</li>
          * <li>value: samples within the period.</li>
-         * <li>countps: calculates the per-second average of the count for the specified field within the statistical period.</li>
-         * <li>sumps: calculates the per-second average of the sum for the specified field within the statistical period.</li>
+         * <li>countps: calculates the average count per second for the specified field within the statistical period.</li>
+         * <li>sumps: calculates the average sum per second for the specified field within the statistical period.</li>
          * <li>distinct: calculates the number of occurrences of the specified field after deduplication within the statistical period.</li>
          * <li>distribution: calculates the number of occurrences of field values within a specified range.</li>
-         * <li>percentile: calculates the distribution value of field values, such as P50.</li>
+         * <li>percentile: calculates the distribution value of field values, for example, P50.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -414,7 +414,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         /**
          * <p>The statistical value of the SLS log.</p>
          * <blockquote>
-         * <p>This parameter is required only when <code>Function</code> is set to <code>distribution</code>. It specifies the upper limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 299.</p>
+         * <p>This parameter is required only when <code>Function</code> is set to <code>distribution</code>. This parameter specifies the upper limit of the statistical range. For example, to count the number of 2XX HTTP status codes, set this parameter to 299.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -481,7 +481,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
 
     public static class ModifyHybridMonitorTaskRequestSLSProcessConfig extends TeaModel {
         /**
-         * <p>The arithmetic operation result of the extended field in the SLS log statistics result.</p>
+         * <p>The arithmetic result of the extended fields for the SLS log statistics result.</p>
          */
         @NameInMap("Express")
         public java.util.List<ModifyHybridMonitorTaskRequestSLSProcessConfigExpress> express;
@@ -493,7 +493,7 @@ public class ModifyHybridMonitorTaskRequest extends TeaModel {
         public ModifyHybridMonitorTaskRequestSLSProcessConfigFilter filter;
 
         /**
-         * <p>Aggregates data by spatial dimension, which is equivalent to GROUP BY in SQL.</p>
+         * <p>The spatial dimension used to aggregate data, which is equivalent to the GROUP BY clause in SQL.</p>
          */
         @NameInMap("GroupBy")
         public java.util.List<ModifyHybridMonitorTaskRequestSLSProcessConfigGroupBy> groupBy;

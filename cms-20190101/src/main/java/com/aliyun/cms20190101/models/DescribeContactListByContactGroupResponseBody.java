@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeContactListByContactGroupResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
     public DescribeContactListByContactGroupResponseBodyContacts contacts;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The group is not exists.</p>
@@ -38,11 +38,11 @@ public class DescribeContactListByContactGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: Success.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: Failure.</p>
      * </li>
      * </ul>
      * 

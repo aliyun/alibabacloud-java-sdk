@@ -14,9 +14,9 @@ public class BatchExportResponseBody extends TeaModel {
     public Long anchor;
 
     /**
-     * <p>The status code.</p>
+     * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p>The value 200 indicates success.</p>
+     * <p>A status code of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,9 +26,9 @@ public class BatchExportResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The cursor that is used to call this operation again.</p>
+     * <p>The cursor used for the next call to this operation.</p>
      * <blockquote>
-     * <p>If the returned result is <code>null</code>, the monitoring data has been exported.</p>
+     * <p>If the return value is <code>null</code>, the monitoring data export is complete.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,16 +38,18 @@ public class BatchExportResponseBody extends TeaModel {
     public String cursor;
 
     /**
-     * <p>The data returned by this call.</p>
+     * <p>The data returned in the current call.</p>
      */
     @NameInMap("DataResults")
     public java.util.List<MetricStat> dataResults;
 
     /**
-     * <p>Indicates whether the data has been exported. Valid values:</p>
+     * <p>Indicates whether the data export is complete. Valid values:</p>
      * <ul>
-     * <li>true: Some data has not been exported.</li>
-     * <li>false: All data has been exported.</li>
+     * <li><p>true: The data export is incomplete.</p>
+     * </li>
+     * <li><p>false: The data export is complete.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +59,7 @@ public class BatchExportResponseBody extends TeaModel {
     public Boolean hasNext;
 
     /**
-     * <p>The number of data entries returned for this call.</p>
+     * <p>The number of data records returned in the current call.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -86,9 +88,9 @@ public class BatchExportResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: successful</p>
+     * <li><p>true: The operation was successful.</p>
      * </li>
-     * <li><p>false: failed</p>
+     * <li><p>false: The operation failed.</p>
      * </li>
      * </ul>
      * 

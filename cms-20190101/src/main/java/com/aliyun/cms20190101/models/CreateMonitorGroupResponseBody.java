@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorGroupResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The status code.</p>
      * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,7 +26,7 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The specified resource is not found.</p>
@@ -44,11 +44,11 @@ public class CreateMonitorGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: The operation was successful.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: The operation failed.</p>
      * </li>
      * </ul>
      * 

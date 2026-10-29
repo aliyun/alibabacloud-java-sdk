@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutMonitoringConfigRequest extends TeaModel {
     /**
-     * <p>This parameter is deprecated.</p>
+     * <p>This parameter is not required.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -13,12 +13,15 @@ public class PutMonitoringConfigRequest extends TeaModel {
     @NameInMap("AutoInstall")
     public Boolean autoInstall;
 
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
-     * <p>Specifies whether to automatically install the CloudMonitor agent on new ECS instances. Valid values:</p>
+     * <p>Specifies whether to automatically install the CloudMonitor agent on newly purchased ECS instances. Valid values:</p>
      * <ul>
-     * <li><p>true (default): The CloudMonitor agent is automatically installed on new ECS instances.</p>
+     * <li><p>true (default): The CloudMonitor agent is automatically installed on newly purchased ECS instances.</p>
      * </li>
-     * <li><p>false: The CloudMonitor agent is not automatically installed on new ECS instances.</p>
+     * <li><p>false: The CloudMonitor agent is not automatically installed on newly purchased ECS instances.</p>
      * </li>
      * </ul>
      * 
@@ -42,6 +45,14 @@ public class PutMonitoringConfigRequest extends TeaModel {
     }
     public Boolean getAutoInstall() {
         return this.autoInstall;
+    }
+
+    public PutMonitoringConfigRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public PutMonitoringConfigRequest setEnableInstallAgentNewECS(Boolean enableInstallAgentNewECS) {

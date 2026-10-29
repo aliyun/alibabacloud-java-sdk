@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p>A value of 200 indicates that the request was successful.</p>
+     * <p>A value of 200 indicates that the operation is successful.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,12 +44,10 @@ public class BatchCreateInstantSiteMonitorResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
-     * </li>
-     * <li><p>false: The operation failed.</p>
-     * </li>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

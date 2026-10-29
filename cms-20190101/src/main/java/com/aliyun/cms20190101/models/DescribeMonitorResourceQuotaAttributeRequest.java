@@ -8,12 +8,10 @@ public class DescribeMonitorResourceQuotaAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to return information about used quotas. Valid values:</p>
+     * <p>Specifies whether the response includes used quotas. Valid values:</p>
      * <ul>
-     * <li><p>true (default): yes</p>
-     * </li>
-     * <li><p>false: no</p>
-     * </li>
+     * <li>true (default): Included.</li>
+     * <li>false: Not included.</li>
      * </ul>
      * 
      * <strong>example:</strong>

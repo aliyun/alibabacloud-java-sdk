@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeSystemEventAttributeRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query.</p>
-     * <p>The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.</p>
+     * <p>The end time.</p>
+     * <p>The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970.</p>
      * 
      * <strong>example:</strong>
      * <p>1552221584949</p>
@@ -15,9 +15,9 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The type of the system event.</p>
+     * <p>The event type.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the types of system events.</p>
+     * <p>For more information about valid values for the event type, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -36,14 +36,11 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
     public String groupId;
 
     /**
-     * <p>The level of the system event. Valid values:</p>
+     * <p>The event level. Valid values:</p>
      * <ul>
-     * <li><p>CRITICAL: critical</p>
-     * </li>
-     * <li><p>WARN: warning</p>
-     * </li>
-     * <li><p>INFO: information</p>
-     * </li>
+     * <li>CRITICAL: critical.</li>
+     * <li>WARN: warning.</li>
+     * <li>INFO: information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,9 +50,9 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>The name of the system event.</p>
+     * <p>The event name.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the names of system events.</p>
+     * <p>For more information about valid values for the event name, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,7 +62,7 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The page number.</p>
      * <p>Valid values: 1 to 100000000.</p>
      * <p>Default value: 1.</p>
      * 
@@ -76,9 +73,9 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * <p>Valid values: 1 to 100.</p>
-     * <p>Default value: 10</p>
+     * <p>Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -87,9 +84,9 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The abbreviation of the service name.</p>
+     * <p>The abbreviation of the product name.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the abbreviations of service names.</p>
+     * <p>For more information about valid values for the product name abbreviation, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -102,11 +99,11 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The keywords that are used to search for the system event. Valid values:</p>
+     * <p>The keywords used to search event content. Valid values:</p>
      * <ul>
-     * <li><p>If you want to search for the system event whose content contains a and b, set the value to <code>a and b</code>.</p>
+     * <li><p>If the event content you want to search for includes both a and b, you can search for <code>a and b</code>.</p>
      * </li>
-     * <li><p>If you want to search for the system event whose content contains a or b, set the value to <code>a or b</code>.</p>
+     * <li><p>If the event content you want to search for includes either a or b, you can search for <code>a or b</code>.</p>
      * </li>
      * </ul>
      * 
@@ -117,8 +114,8 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
     public String searchKeywords;
 
     /**
-     * <p>The beginning of the time range to query.</p>
-     * <p>The value must be a UNIX timestamp. It is the number of seconds that have elapsed since 00:00:00 UTC, January 1, 1970.</p>
+     * <p>The start time.</p>
+     * <p>The value is a UNIX timestamp that represents the number of milliseconds that have elapsed since January 1, 1970.</p>
      * 
      * <strong>example:</strong>
      * <p>1552199984949</p>
@@ -127,9 +124,9 @@ public class DescribeSystemEventAttributeRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The status of the system event.</p>
+     * <p>The event status.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a> operation to query the statuses of system events.</p>
+     * <p>For more information about valid values for the event status, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

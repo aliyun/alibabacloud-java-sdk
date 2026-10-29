@@ -7,7 +7,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>The value 200 indicates success.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -44,12 +44,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
     public DescribeSiteMonitorAttributeResponseBodySiteMonitors siteMonitors;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: Successful.</p>
-     * </li>
-     * <li><p>false: Failed.</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -338,8 +336,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomScheduleDays days;
 
         /**
-         * <p>The custom monitoring end time.</p>
-         * <p>Unit: hours.</p>
+         * <p>The custom detection end time.
+         * Unit: hours.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -348,8 +346,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Integer endHour;
 
         /**
-         * <p>The custom monitoring start time.</p>
-         * <p>Unit: hours.</p>
+         * <p>The custom detection start time.
+         * Unit: hours.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -358,7 +356,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Integer startHour;
 
         /**
-         * <p>The time zone for custom monitoring.</p>
+         * <p>The time zone for the custom detection.</p>
          * 
          * <strong>example:</strong>
          * <p>local</p>
@@ -579,7 +577,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAuthInfo extends TeaModel {
         /**
-         * <p>Supported only in multi-step monitoring. The AccessKey ID used for Alibaba Cloud authentication. We recommend that you use encrypted storage.</p>
+         * <p>Supported only in multi-step synthetic monitoring. The AccessKey ID used for Alibaba Cloud authentication. We recommend that you store it in an encrypted format.</p>
          * 
          * <strong>example:</strong>
          * <p>testAk</p>
@@ -588,7 +586,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String accessKeyId;
 
         /**
-         * <p>Supported only in multi-step monitoring. The AccessKey secret used for Alibaba Cloud authentication. We recommend that you use encrypted storage.</p>
+         * <p>Supported only in multi-step synthetic monitoring. The AccessKey secret used for Alibaba Cloud authentication. We recommend that you store it in an encrypted format.</p>
          * 
          * <strong>example:</strong>
          * <p>testSk</p>
@@ -597,7 +595,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String accessKeySecret;
 
         /**
-         * <p>Supported only in multi-step monitoring. The API action of the request when using Alibaba Cloud operations.</p>
+         * <p>Supported only in multi-step synthetic monitoring. The API operation requested when using Alibaba Cloud operations.</p>
          * 
          * <strong>example:</strong>
          * <p>example_api</p>
@@ -606,7 +604,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String apiAction;
 
         /**
-         * <p>Supported only in multi-step monitoring. The API version of the request when using Alibaba Cloud operations.</p>
+         * <p>Supported only in multi-step synthetic monitoring. The API version requested when using Alibaba Cloud operations.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-01-01</p>
@@ -660,7 +658,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>Supported only in multi-step monitoring. The region ID of the request when using Alibaba Cloud authentication.</p>
+         * <p>Supported only in multi-step synthetic monitoring. The region ID requested when using Alibaba Cloud authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -672,7 +670,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonAuthInfoScopes scopes;
 
         /**
-         * <p>The service name of the request when using AWS authentication.</p>
+         * <p>The service name requested when using AWS authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>example_service_name</p>
@@ -690,7 +688,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String sessionToken;
 
         /**
-         * <p>The authorization server URL in OAuth 2.0.</p>
+         * <p>The address of the authentication server in OAuth 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.example.com">https://www.example.com</a></p>
@@ -699,7 +697,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String tokenUrl;
 
         /**
-         * <p>The authentication type. HTTP Basic Authentication is supported. Valid values: basic.</p>
+         * <p>The authentication type. Currently, only HTTP Basic Authentication is supported. Valid value: basic.</p>
          * 
          * <strong>example:</strong>
          * <p>basic</p>
@@ -708,7 +706,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Specifies whether the key is stored in the client cookie for digest authentication.</p>
+         * <p>Specifies whether the key is stored in the client cookie during digest authentication.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -726,7 +724,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String username;
 
         /**
-         * <p>Supported only in multi-step monitoring. Specifies whether additional resources exist when using Alibaba Cloud authentication for this step.</p>
+         * <p>Supported only in multi-step synthetic monitoring. Specifies whether the operation involves additional resources when Alibaba Cloud authentication is used in this step.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1431,8 +1429,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * <p>Specifies whether to ignore certificate errors. Valid values:</p>
          * <ul>
-         * <li>false: Does not ignore certificate errors.</li>
-         * <li>true: Ignores certificate errors.</li>
+         * <li>false: Certificate errors are not ignored.</li>
+         * <li>true: Certificate errors are ignored.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1458,7 +1456,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonConfigVariables configVariables;
 
         /**
-         * <p>The cookie for the HTTP request.</p>
+         * <p>The cookie sent in the HTTP request.</p>
          * 
          * <strong>example:</strong>
          * <p>lang=en</p>
@@ -1467,10 +1465,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String cookie;
 
         /**
-         * <p>Specifies whether to enable automatic MTR network diagnostics after a task failure. Valid values:</p>
+         * <p>Specifies whether to enable automatic MTR network diagnostics after a task fails. Valid values:</p>
          * <ul>
-         * <li>false: Disabled.</li>
-         * <li>true: Enabled.</li>
+         * <li>false: Automatic MTR network diagnostics are disabled.</li>
+         * <li>true: Automatic MTR network diagnostics are enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1480,10 +1478,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Boolean diagnosisMtr;
 
         /**
-         * <p>Specifies whether to enable automatic PING network latency detection after a task failure. Valid values:</p>
+         * <p>Specifies whether to enable automatic ping network latency detection after a task fails. Valid values:</p>
          * <ul>
-         * <li>false: Disabled.</li>
-         * <li>true: Enabled.</li>
+         * <li>false: Automatic ping network latency detection is disabled.</li>
+         * <li>true: Automatic ping network latency detection is enabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1493,7 +1491,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Boolean diagnosisPing;
 
         /**
-         * <p>The DNS hijacking configuration list.</p>
+         * <p>The DNS hijacking whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.taobao.com:www.taobao.com.danuoyi.tbcache.com">www.taobao.com:www.taobao.com.danuoyi.tbcache.com</a></p>
@@ -1506,7 +1504,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          * <ul>
          * <li>IN_DNS: The expected aliases or IP addresses are all included in the DNS response.</li>
          * <li>DNS_IN: All DNS responses are included in the expected aliases or IP addresses.</li>
-         * <li>EQUAL: The DNS response exactly matches the expected aliases or IP addresses.</li>
+         * <li>EQUAL: The DNS response is exactly the same as the expected aliases or IP addresses.</li>
          * <li>ANY: The DNS response and the expected aliases or IP addresses have an intersection.</li>
          * </ul>
          * 
@@ -1519,7 +1517,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * <p>The IP address of the DNS server.</p>
          * <blockquote>
-         * <p>This parameter applies only to the DNS monitoring type.</p>
+         * <p>This parameter applies only to DNS monitoring.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1529,13 +1527,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String dnsServer;
 
         /**
-         * <p>The DNS resolution type. This parameter applies only to the DNS monitoring type. Valid values:</p>
+         * <p>The DNS record type. This parameter applies only to DNS monitoring. Valid values:</p>
          * <ul>
-         * <li>A: Specifies the IP address corresponding to a hostname or domain name.</li>
+         * <li>A: Specifies the IP address that corresponds to a hostname or domain name.</li>
          * <li>CNAME: Maps multiple domain names to another domain name.</li>
          * <li>NS: Specifies the DNS server that resolves a domain name.</li>
          * <li>MX: Points a domain name to a mail server address.</li>
-         * <li>TXT: A description of the hostname or domain name. The text length is limited to 512 bytes and is typically used for SPF (Sender Policy Framework) records for anti-spam purposes.</li>
+         * <li>TXT: Provides a description of a hostname or domain name. The text length is limited to 512 bytes. It is typically used as a Sender Policy Framework (SPF) record for anti-spam purposes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1545,10 +1543,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String dnsType;
 
         /**
-         * <p>Specifies whether the WebSocket task is allowed to return no message or an empty message. Valid values:</p>
+         * <p>Specifies whether to allow a WebSocket task to return no message or an empty message. Valid values:</p>
          * <ul>
-         * <li>false (default): Not allowed.</li>
-         * <li>true: Allowed.</li>
+         * <li>false (default): No.</li>
+         * <li>true: Yes.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1558,7 +1556,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Boolean emptyMessage;
 
         /**
-         * <p>Specifies whether to enable packet capture for this task.</p>
+         * <p>Specifies whether to enable packet capture for the task.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1575,7 +1573,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * <p>The alias or address to be resolved.</p>
          * <blockquote>
-         * <p>This parameter applies only to the DNS monitoring type.</p>
+         * <p>This parameter applies only to DNS monitoring.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1587,7 +1585,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * <p>The packet loss rate.</p>
          * <blockquote>
-         * <p>This parameter applies only to the PING monitoring type.</p>
+         * <p>This parameter applies only to ping monitoring.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -1597,7 +1595,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Float failureRate;
 
         /**
-         * <p>The HTTP request header.</p>
+         * <p>The HTTP request headers.</p>
          * 
          * <strong>example:</strong>
          * <p>testKey:testValue</p>
@@ -1606,7 +1604,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String header;
 
         /**
-         * <p>The number of hops for traceroute diagnostics when a PING task fails.</p>
+         * <p>The number of hops for traceroute diagnostics when a ping task fails.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -1615,7 +1613,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Integer hops;
 
         /**
-         * <p>The custom host for HTTP tasks. The format is ip1,ip2:address. Multiple mappings can be configured. The left side of the colon contains A records or CNAMEs that the domain name can be resolved to, separated by commas. The right side of the colon is the domain name.</p>
+         * <p>The custom host for an HTTP task. The format is <code>ip1,ip2:address</code>. You can configure multiple lines of mappings. The left side of the colon contains the A records or CNAMEs to which the domain name can be resolved, separated by commas. The right side of the colon is the domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>127.0.0.1:<a href="http://www.aliyun.com">www.aliyun.com</a></p>
@@ -1624,7 +1622,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String hostBinding;
 
         /**
-         * <p>Specifies how the custom host takes effect. Valid values: 0 (random) and 1 (round-robin).</p>
+         * <p>The effective method of the custom host. Valid values:</p>
+         * <ul>
+         * <li>0: Random.</li>
+         * <li>1: Round-robin.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1637,7 +1639,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
          * <ul>
          * <li>get </li>
          * <li>post</li>
-         * <li>head.</li>
+         * <li>head</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1647,7 +1649,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String httpMethod;
 
         /**
-         * <p>The timeout period for a single PING request using the ICMP protocol. Unit: milliseconds.</p>
+         * <p>The timeout period for a single ping in a ping task that uses the ICMP protocol. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -1656,7 +1658,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Integer icmpTimeoutMillis;
 
         /**
-         * <p>The network type of the task. Valid values: v4, v6, and auto. Default value: v4.</p>
+         * <p>The network type of the task. Valid values:</p>
+         * <ul>
+         * <li>v4</li>
+         * <li>v6</li>
+         * <li>auto
+         * Default value: v4.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>v4</p>
@@ -1665,10 +1673,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String ipNetwork;
 
         /**
-         * <p>Specifies whether to decode and store the password using Base64. Valid values:</p>
+         * <p>Specifies whether to decode and store the password in Base64. Valid values:</p>
          * <ul>
-         * <li>true: The password is decoded and stored using Base64.</li>
-         * <li>false: The password is not decoded and stored using Base64.</li>
+         * <li>true: The password is decoded and stored in Base64.</li>
+         * <li>false: The password is not decoded and stored in Base64.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1678,7 +1686,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String isBase64Encode;
 
         /**
-         * <p>Specifies whether alert rules are included. Valid values:</p>
+         * <p>Specifies whether to include alert rules. Valid values:</p>
          * <ul>
          * <li>0: Yes.</li>
          * <li>1: No.</li>
@@ -1700,7 +1708,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String maxTlsVersion;
 
         /**
-         * <p>The minimum TLS version. TLS 1.2 and later are supported by default. TLS 1.0 and 1.1 are disabled. To support these versions, modify the configuration.</p>
+         * <p>The minimum TLS version. By default, TLS 1.2 and later versions are supported. TLS 1.0 and 1.1 are disabled. You can modify the configuration if you still need to support them.</p>
          * 
          * <strong>example:</strong>
          * <p>tlsv1.2</p>
@@ -1709,7 +1717,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String minTlsVersion;
 
         /**
-         * <p>The password for SMTP, POP3, or FTP monitoring types.</p>
+         * <p>The password for SMTP, POP3, or FTP monitoring.</p>
          * 
          * <strong>example:</strong>
          * <p>123****</p>
@@ -1718,7 +1726,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String password;
 
         /**
-         * <p>The number of PING packets for the PING monitoring type.</p>
+         * <p>The number of pings for ping monitoring.</p>
          * 
          * <strong>example:</strong>
          * <p>29</p>
@@ -1727,7 +1735,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Integer pingNum;
 
         /**
-         * <p>The PING port. This parameter applies to TCP PING.</p>
+         * <p>The ping port. This parameter applies to TCP ping.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -1736,14 +1744,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Integer pingPort;
 
         /**
-         * <p>The PING protocol type. Valid values:</p>
+         * <p>The ping protocol type. Valid values:</p>
          * <ul>
-         * <li><p>icmp</p>
-         * </li>
-         * <li><p>tcp</p>
-         * </li>
-         * <li><p>udp.</p>
-         * </li>
+         * <li>icmp</li>
+         * <li>tcp</li>
+         * <li>udp</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1753,7 +1758,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String pingType;
 
         /**
-         * <p>The port for TCP, UDP, SMTP, or POP3 monitoring types.</p>
+         * <p>The port for TCP, UDP, SMTP, or POP3 monitoring.</p>
          * 
          * <strong>example:</strong>
          * <p>110</p>
@@ -1762,7 +1767,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The certificate file name of the private certificate.</p>
+         * <p>The name of the private certificate file.</p>
          * 
          * <strong>example:</strong>
          * <p>cert.pem</p>
@@ -1780,10 +1785,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>Specifies whether the browser monitoring task uses the QUIC protocol. Valid values:</p>
+         * <p>Specifies whether to use the QUIC protocol for browser monitoring. Valid values:</p>
          * <ul>
-         * <li>true: Uses the QUIC protocol.</li>
-         * <li>false: Does not use the QUIC protocol.
+         * <li>true: The QUIC protocol is used.</li>
+         * <li>false: The QUIC protocol is not used.
          * Default value: false.</li>
          * </ul>
          * 
@@ -1797,7 +1802,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonQuicTarget quicTarget;
 
         /**
-         * <p>The request content for the HTTP monitoring type.</p>
+         * <p>The request content for HTTP monitoring.</p>
          * 
          * <strong>example:</strong>
          * <p>aa=bb</p>
@@ -1808,8 +1813,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * <p>The format of the HTTP request content. Valid values:</p>
          * <ul>
-         * <li>hex: hexadecimal.</li>
-         * <li>txt: text.</li>
+         * <li>hex: Hexadecimal format.</li>
+         * <li>txt: Text format.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1830,8 +1835,8 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         /**
          * <p>The format of the HTTP response content. Valid values:</p>
          * <ul>
-         * <li>hex: hexadecimal.</li>
-         * <li>txt: text.</li>
+         * <li>hex: Hexadecimal format.</li>
+         * <li>txt: Text format.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1841,7 +1846,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String responseFormat;
 
         /**
-         * <p>The number of retries after a monitoring failure.</p>
+         * <p>The number of retries after a monitoring task fails.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1850,7 +1855,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Integer retryDelay;
 
         /**
-         * <p>This parameter takes effect for SMTP monitoring tasks. Set this parameter to 1 to use a secure connection. Default value: 0.</p>
+         * <p>Applies to SMTP tasks. A value of 1 indicates that a secure connection is used. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1868,7 +1873,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Boolean screenShot;
 
         /**
-         * <p>For browser monitoring tasks, specifies whether to scroll to the bottom of the page after it is opened.</p>
+         * <p>Specifies whether to scroll to the bottom of the page after the page is opened in a browser monitoring task.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1885,9 +1890,19 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         @NameInMap("server_name")
         public String serverName;
 
+        /**
+         * <p>Specifies whether to enable Server-Sent Events (SSE) monitoring.</p>
+         */
+        @NameInMap("sse")
+        public Boolean sse;
+
         @NameInMap("steps")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonSteps steps;
 
+        /**
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
         @NameInMap("strict_mode")
         public Boolean strictMode;
 
@@ -1910,7 +1925,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Long timeOut;
 
         /**
-         * <p>The deployment region of the target application when integrating with Managed Service for OpenTelemetry.</p>
+         * <p>The deployment region of the target application when integrating with the OpenTelemetry edition of Managed Service for Observability.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -1919,12 +1934,11 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String traceRegion;
 
         /**
-         * <p>Settings for the Tracing Analysis protocol used when integrating with Managed Service for OpenTelemetry.
-         * Valid values:</p>
+         * <p>The tracing protocol used for integration with the OpenTelemetry edition of Tracing Analysis. Valid values:</p>
          * <ul>
          * <li>OpenTelemetry</li>
          * <li>Zipkin</li>
-         * <li>Jaeger.</li>
+         * <li>Jaeger</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1937,7 +1951,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonTrafficHijackElementBlacklist trafficHijackElementBlacklist;
 
         /**
-         * <p>When a redirect occurs, if the number of resources loaded by the browser exceeds this value, traffic hijacking is considered to have occurred. When this value is 0, no verification is performed. Default value: 0.</p>
+         * <p>When a redirect occurs, traffic hijacking is detected if the number of resources loaded by the browser exceeds this value. If this value is set to 0, no verification is performed. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1955,7 +1969,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public Boolean usePrivateCrt;
 
         /**
-         * <p>Specifies whether to use an SSL connection when performing a TCP task.</p>
+         * <p>Specifies whether to establish an SSL connection when executing a TCP task.</p>
          * 
          * <strong>example:</strong>
          * <p>tlsv1.0</p>
@@ -1973,7 +1987,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String username;
 
         /**
-         * <p>The additional wait time after the page is opened in a browser monitoring task.</p>
+         * <p>The additional wait time after a page is opened in a browser probing task.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -2402,6 +2416,14 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
             return this.serverName;
         }
 
+        public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setSse(Boolean sse) {
+            this.sse = sse;
+            return this;
+        }
+        public Boolean getSse() {
+            return this.sse;
+        }
+
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson setSteps(DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJsonSteps steps) {
             this.steps = steps;
             return this;
@@ -2510,7 +2532,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig extends TeaModel {
         /**
-         * <p>The region where the target site of the internal network monitoring task is located.</p>
+         * <p>The region where the target site of the internal network probing task is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing</p>
@@ -2519,7 +2541,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The ID of the security group associated with the internal network monitoring task.</p>
+         * <p>The ID of the security group applied to the internal network probing task.</p>
          * 
          * <strong>example:</strong>
          * <p>sg-xxxxxx</p>
@@ -2528,7 +2550,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The ID of the VPC associated with the internal network monitoring task.</p>
+         * <p>The ID of the VPC associated with the internal network probing task.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-xxxxxx</p>
@@ -2537,7 +2559,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The ID of the vSwitch associated with the internal network monitoring task.</p>
+         * <p>The ID of the vSwitch associated with the internal network probing task.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-xxxxxx</p>
@@ -2586,7 +2608,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
 
     public static class DescribeSiteMonitorAttributeResponseBodySiteMonitors extends TeaModel {
         /**
-         * <p>The monitored address of the monitoring task.</p>
+         * <p>The detection address of the monitoring task.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://aliyun.com">https://aliyun.com</a></p>
@@ -2595,13 +2617,10 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String address;
 
         /**
-         * <p>The type of detection point. Default value: PC.
-         * Valid values:</p>
+         * <p>The type of the detection point. Default value: PC. Valid values:</p>
          * <ul>
-         * <li><p>PC: wired network.</p>
-         * </li>
-         * <li><p>MOBILE: mobile network.</p>
-         * </li>
+         * <li>PC: Fixed-line network.</li>
+         * <li>MOBILE: Mobile network.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -2611,13 +2630,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String agentGroup;
 
         /**
-         * <p>The custom monitoring schedule. You can select a time range from Monday to Sunday for monitoring.</p>
+         * <p>The custom detection period. You can only select a specific time range from Monday to Sunday for detection.</p>
          */
         @NameInMap("CustomSchedule")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsCustomSchedule customSchedule;
 
         /**
-         * <p>The monitoring interval. Unit: minutes. Valid values: 1, 5, 15, 30, and 60.</p>
+         * <p>The interval of the monitoring task. Unit: minutes. Valid values: 1, 5, 15, 30, and 60.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -2629,13 +2648,13 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsIspCities ispCities;
 
         /**
-         * <p>The extended options. Each monitoring type has different extended options. For more information, see <a href="https://help.aliyun.com/document_detail/115048.html">CreateSiteMonitor</a>.</p>
+         * <p>The extended options. Each detection type has different extended options. For more information, see <a href="https://help.aliyun.com/document_detail/115048.html">CreateSiteMonitor</a>.</p>
          */
         @NameInMap("OptionJson")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsOptionJson optionJson;
 
         /**
-         * <p>The ID of the monitoring task.</p>
+         * <p>The ID of the site monitoring task.</p>
          * 
          * <strong>example:</strong>
          * <p>cc641dff-c19d-45f3-ad0a-818a0c4f****</p>
@@ -2666,7 +2685,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String taskState;
 
         /**
-         * <p>The type of the monitoring task. Site monitoring task types include HTTP(S), PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
+         * <p>The type of the monitoring task. Site monitoring tasks support the following types: HTTP(S), PING, TCP, UDP, DNS, SMTP, POP3, and FTP.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -2675,7 +2694,7 @@ public class DescribeSiteMonitorAttributeResponseBody extends TeaModel {
         public String taskType;
 
         /**
-         * <p>The VPC configuration for the internal network monitoring task.</p>
+         * <p>The VPC configuration for the internal network probing task.</p>
          */
         @NameInMap("VpcConfig")
         public DescribeSiteMonitorAttributeResponseBodySiteMonitorsVpcConfig vpcConfig;

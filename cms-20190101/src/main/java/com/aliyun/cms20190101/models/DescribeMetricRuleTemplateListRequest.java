@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     /**
-     * <p>Specifies whether to display the history of applying the alert templates to application groups. Valid values:</p>
+     * <p>Specifies whether to display the history of applying the alert template to application groups. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: Displays the history.</p>
      * </li>
-     * <li><p>false (default)</p>
+     * <li><p>false: Does not display the history. This is the default value.</p>
      * </li>
      * </ul>
      * 
@@ -20,7 +20,7 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     public Boolean history;
 
     /**
-     * <p>The keyword of the alert template name.</p>
+     * <p>The keyword in the alert template name.</p>
      * 
      * <strong>example:</strong>
      * <p>ECS</p>
@@ -38,11 +38,11 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The sorting order. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p>true (default): ascending order</p>
+     * <li><p>true: Ascending order. This is the default value.   </p>
      * </li>
-     * <li><p>false: descending order</p>
+     * <li><p>false: Descending order.</p>
      * </li>
      * </ul>
      * 
@@ -53,11 +53,11 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     public Boolean order;
 
     /**
-     * <p>The sorting basis. Valid values:</p>
+     * <p>The sort field. Valid values:</p>
      * <ul>
-     * <li><p>gmtMotified: sorts alert templates by modification time</p>
+     * <li><p>gmtMotified: Modification date.  </p>
      * </li>
-     * <li><p>gmtCreate (default): sorts alert templates by creation time</p>
+     * <li><p>gmtCreate: Creation date. This is the default value.</p>
      * </li>
      * </ul>
      * 
@@ -78,7 +78,7 @@ public class DescribeMetricRuleTemplateListRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

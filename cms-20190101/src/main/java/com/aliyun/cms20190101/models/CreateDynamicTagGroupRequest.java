@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class CreateDynamicTagGroupRequest extends TeaModel {
     /**
-     * <p>The alert contact groups. The value of N can be from 1 to 100. Alert notifications for the application group are sent to the alert contacts in these alert contact groups.</p>
-     * <p>An alert contact group can contain one or more alert contacts. For more information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>. For more information about how to obtain alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
+     * <p>The alert contact groups. Valid values of N: 1 to 100. Alert notifications for the application group are sent to the alert contacts in the alert contact groups.</p>
+     * <p>An alert contact group contains one or more alert contacts. For more information about how to create alert contacts and alert contact groups, see <a href="https://help.aliyun.com/document_detail/114923.html">PutContact</a> and <a href="https://help.aliyun.com/document_detail/114929.html">PutContactGroup</a>. For more information about how to query alert contact groups, see <a href="https://help.aliyun.com/document_detail/114922.html">DescribeContactGroupList</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,11 +16,24 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public java.util.List<String> contactGroupList;
 
     /**
-     * <p>Specifies whether to automatically install the CloudMonitor agent for the application group. CloudMonitor automatically installs the agent on the hosts in the application group. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><p>true: enabled.</p>
+     * <li><strong>true</strong>: Performs a dry run without creating the application group. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the dry run, an error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong>: Performs a dry run and sends the actual request. If the request passes the dry run, the application group is created. This is the default value.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
+    /**
+     * <p>Specifies whether to enable automatic installation of the CloudMonitor agent for the application group. CloudMonitor automatically installs the CloudMonitor agent on the hosts in the application group. Valid values:</p>
+     * <ul>
+     * <li><p>true: Enables automatic installation.</p>
      * </li>
-     * <li><p>false (default): disabled.</p>
+     * <li><p>false: Disables automatic installation. This is the default value.</p>
      * </li>
      * </ul>
      * 
@@ -31,11 +44,11 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public Boolean enableInstallAgent;
 
     /**
-     * <p>Specifies whether to automatically subscribe to event notifications for the application group. When a critical or warning event occurs on a resource in the application group, CloudMonitor sends an alert notification. Valid values:</p>
+     * <p>Specifies whether to enable automatic subscription to event notifications for the application group. When critical or warning events occur on resources in the application group, CloudMonitor sends alert notifications. Valid values:</p>
      * <ul>
-     * <li><p>true: enabled.</p>
+     * <li><p>true: Enables automatic subscription.</p>
      * </li>
-     * <li><p>false (default): disabled.</p>
+     * <li><p>false: Disables automatic subscription. This is the default value.</p>
      * </li>
      * </ul>
      * 
@@ -46,19 +59,17 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public Boolean enableSubscribeEvent;
 
     /**
-     * <p>The match expressions that are used to create an application group from tags.</p>
+     * <p>The matching expression used to generate the application group based on tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("MatchExpress")
     public java.util.List<CreateDynamicTagGroupRequestMatchExpress> matchExpress;
 
     /**
-     * <p>The relationship between the conditional expressions for the tag values. Valid values:</p>
+     * <p>The relationship between the conditional expressions of the resource tag values. Valid values:</p>
      * <ul>
-     * <li><p>and (default)</p>
-     * </li>
-     * <li><p>or</p>
-     * </li>
+     * <li>and: Uses the AND logical operator. This is the default value.</li>
+     * <li>or: Uses the OR logical operator.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +93,7 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public String tagKey;
 
     /**
-     * <p>The ID of the region to which the tag belongs.</p>
+     * <p>The region ID of the tag.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -91,7 +102,7 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     public String tagRegionId;
 
     /**
-     * <p>The ID of the alert template.</p>
+     * <p>The IDs of the alert templates.</p>
      * <p>For more information about how to query the IDs of alert templates, see <a href="https://help.aliyun.com/document_detail/114982.html">DescribeMetricRuleTemplateList</a>.</p>
      * 
      * <strong>example:</strong>
@@ -111,6 +122,14 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
     }
     public java.util.List<String> getContactGroupList() {
         return this.contactGroupList;
+    }
+
+    public CreateDynamicTagGroupRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public CreateDynamicTagGroupRequest setEnableInstallAgent(Boolean enableInstallAgent) {
@@ -179,7 +198,7 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
 
     public static class CreateDynamicTagGroupRequestMatchExpress extends TeaModel {
         /**
-         * <p>The key of the tag that is used to create the group. If multiple resources have this tag key, the resources that meet the filter conditions are added to the same group based on the same key-value pair.</p>
+         * <p>The tag key used to create the group. If multiple resources contain this key, the resources that meet the filter conditions are added to the same group based on the same key-value pair.</p>
          * 
          * <strong>example:</strong>
          * <p>appname</p>
@@ -188,7 +207,7 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
         public String tagName;
 
         /**
-         * <p>The value of the resource tag. The value of N is 1.</p>
+         * <p>The tag value of the resource. Valid values of N: 1.</p>
          * <blockquote>
          * <p>You must specify both the <code>MatchExpress.N.TagValueMatchFunction</code> and <code>MatchExpress.N.TagValue</code> parameters.</p>
          * </blockquote>
@@ -200,20 +219,14 @@ public class CreateDynamicTagGroupRequest extends TeaModel {
         public String tagValue;
 
         /**
-         * <p>The method that is used to match the values of resource tags. The value of N is 1. Valid values:</p>
+         * <p>The matching method for the tag value of the resource. Valid values of N: 1. Valid values:</p>
          * <ul>
-         * <li><p>contains: includes.</p>
-         * </li>
-         * <li><p>startWith: prefix.</p>
-         * </li>
-         * <li><p>endWith: suffix.</p>
-         * </li>
-         * <li><p>notContains: does not include.</p>
-         * </li>
-         * <li><p>equals: equals.</p>
-         * </li>
-         * <li><p>all: all.</p>
-         * </li>
+         * <li>contains: includes the specified value</li>
+         * <li>startWith: starts with the specified value</li>
+         * <li>endWith: ends with the specified value</li>
+         * <li>notContains: does not include the specified value</li>
+         * <li>equals: equals the specified value</li>
+         * <li>all: all values</li>
          * </ul>
          * <blockquote>
          * <p>You must specify both the <code>MatchExpress.N.TagValueMatchFunction</code> and <code>MatchExpress.N.TagValue</code> parameters.</p>

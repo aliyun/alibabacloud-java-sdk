@@ -7,7 +7,7 @@ public class DisableEventRulesResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>A value of 200 indicates that the request was successful.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,11 +35,11 @@ public class DisableEventRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
+     * <li><p>true: Successful.</p>
      * </li>
-     * <li><p>false: The operation failed.</p>
+     * <li><p>false: Failed.</p>
      * </li>
      * </ul>
      * 

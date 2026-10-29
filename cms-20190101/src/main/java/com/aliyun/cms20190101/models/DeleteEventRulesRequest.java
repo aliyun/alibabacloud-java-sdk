@@ -5,11 +5,8 @@ import com.aliyun.tea.*;
 
 public class DeleteEventRulesRequest extends TeaModel {
     /**
-     * <p>The names of the event-triggered alert rules to delete.</p>
+     * <p>The names of the rules to delete.</p>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>rule1</p>
      */
     @NameInMap("RuleNames")
     public java.util.List<String> ruleNames;

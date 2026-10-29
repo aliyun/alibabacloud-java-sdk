@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeContactGroupListRequest extends TeaModel {
     /**
-     * <p>Page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeContactGroupListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of records per page.</p>
+     * <p>The number of records per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

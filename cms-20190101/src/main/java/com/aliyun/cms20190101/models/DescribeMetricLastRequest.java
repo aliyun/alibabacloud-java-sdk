@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeMetricLastRequest extends TeaModel {
     /**
      * <p>The monitoring dimensions of the specified resource.</p>
-     * <p>Set the value to a collection of <code>key:value</code> pairs. Example: <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> or <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
+     * <p>Format: a collection of <code>key:value</code> pairs. Example: <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> or <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
      * <blockquote>
-     * <p>You can query a maximum of 50 instances in each request.</p>
+     * <p>A maximum of 50 instances can be queried in a single request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,15 +18,16 @@ public class DescribeMetricLastRequest extends TeaModel {
     public String dimensions;
 
     /**
-     * <p>The end of the time range to query monitoring data.</p>
-     * <ul>
-     * <li><p>For second-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 20 minutes earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</p>
-     * </li>
-     * <li><p>For minute-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and 2 hours earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</p>
-     * </li>
-     * <li><p>For hour-level data, the start time is obtained by comparing the time that is specified by the StartTime parameter and two days earlier of the time that is specified by the EndTime parameter. The earlier one of the compared points in time is used as the start time.</p>
-     * </li>
-     * </ul>
+     * <p>The end time for querying the metric.</p>
+     * <p>The system automatically limits the query start time (query window size) based on data granularity:</p>
+     * <ol>
+     * <li>Second-level data: The maximum query span is 20 minutes (start time = Max(startTime, EndTime - 20min)).</li>
+     * <li>Minute-level data: The maximum query span is 2 hours (start time = Max(startTime, EndTime - 2h)).</li>
+     * <li>Hour-level data: The maximum query span is 2 days (start time = Max(startTime, EndTime - 2d)).</li>
+     * </ol>
+     * <blockquote>
+     * <p>If the specified startTime is earlier than the limit, the system automatically uses the limit as the actual query start time.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2019-01-31 10:10:00</p>
@@ -35,7 +36,7 @@ public class DescribeMetricLastRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The expression that is used to calculate the query results in real time.</p>
+     * <p>The expression for real-time computation on existing query results.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;groupby&quot;:[&quot;userId&quot;,&quot;instanceId&quot;]}</p>
@@ -44,10 +45,10 @@ public class DescribeMetricLastRequest extends TeaModel {
     public String express;
 
     /**
-     * <p>The number of entries per page.</p>
-     * <p>Default value: 1000. This value indicates that a maximum of 1,000 entries of monitoring data can be returned on each page.</p>
+     * <p>The number of entries per page for monitoring data. This parameter is used for paged query.</p>
+     * <p>Default value: 1000, which indicates 1000 entries of monitoring data per page.</p>
      * <blockquote>
-     * <p>The maximum value of the Length parameter for each request is 1440.</p>
+     * <p>The maximum value of Length in a single request is 1440.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,8 +58,8 @@ public class DescribeMetricLastRequest extends TeaModel {
     public String length;
 
     /**
-     * <p>The metric that is used to monitor the cloud service.</p>
-     * <p>For more information about metric names, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>The metric name of the cloud service.</p>
+     * <p>For information about metric names, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +70,7 @@ public class DescribeMetricLastRequest extends TeaModel {
 
     /**
      * <p>The namespace of the cloud service.</p>
-     * <p>For more information about the namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</p>
+     * <p>For information about namespaces of cloud services, see <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,12 +80,10 @@ public class DescribeMetricLastRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The pagination token.</p>
+     * <p>The pagination cursor.</p>
      * <ul>
-     * <li><p>If the number of results exceeds the maximum number of entries allowed on a single page, a pagination token is returned.</p>
-     * </li>
-     * <li><p>This token can be used as an input parameter to obtain the next page of results. If all results are obtained, no token is returned.</p>
-     * </li>
+     * <li>If the query results that match the filter conditions exceed the page size, a pagination cursor is returned.</li>
+     * <li>To retrieve the next page of data, use the returned cursor value as the request parameter until no cursor value is returned, which indicates that all data has been retrieved.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -98,10 +97,13 @@ public class DescribeMetricLastRequest extends TeaModel {
      * <p>Valid values: 15, 60, 900, and 3600.</p>
      * <p>Unit: seconds.</p>
      * <blockquote>
-     * </blockquote>
      * <ul>
-     * <li>If this parameter is not specified, monitoring data is queried based on the period in which metric values are reported. The statistical period of metrics (<code>MetricName</code>) varies for each cloud service. The statistical period of metrics is displayed in the <code>MinPeriods</code> column on the <strong>Metrics</strong> page for each cloud service. For more information, see <a href="https://help.aliyun.com/document_detail/163515.html">Appendix 1: Metrics</a>.</li>
+     * <li>If you do not set the statistical period, monitoring data is queried based on the reporting period that was specified when the metric was registered.<ul>
+     * <li>The statistical period varies by metric (<code>MetricName</code>) for each cloud service. For more information, see the <code>Min Periods</code> column on the metric list page of the target cloud service in <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service monitoring metrics</a>.</li>
      * </ul>
+     * </li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -113,7 +115,11 @@ public class DescribeMetricLastRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start of the time range to query monitoring data.</p>
+     * <p>The start time.</p>
+     * <p>Two formats are supported: 1. A UNIX timestamp string in milliseconds (ms), which represents the number of milliseconds elapsed since 1970-01-01 00:00:00 UTC. 2. A time string in the ISO 8601 format of YYYY-MM-DDThh:mm:ssZ in UTC.</p>
+     * <blockquote>
+     * <p>The query range uses a left-exclusive and right-inclusive mode. StartTime cannot be equal to or greater than EndTime, and the interval between them must be less than or equal to 31 days.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>2019-01-31 10:00:00</p>

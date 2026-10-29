@@ -14,7 +14,7 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     public String city;
 
     /**
-     * <p>Specifies whether to return only detection points in data centers.</p>
+     * <p>Specifies whether to query only IDC detection points.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -23,7 +23,7 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     public Boolean idcProbe;
 
     /**
-     * <p>Specifies whether to return only IPv4 detection points.</p>
+     * <p>Specifies whether to show only IPv4 nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     public Boolean ipv4;
 
     /**
-     * <p>Specifies whether to return only IPv6 detection points.</p>
+     * <p>Specifies whether to show only IPv6 nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -41,7 +41,7 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     public Boolean ipv6;
 
     /**
-     * <p>The name or ID of the carrier.</p>
+     * <p>The name or ID of the carrier detection point.</p>
      * 
      * <strong>example:</strong>
      * <p>China Unicom</p>
@@ -50,7 +50,7 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     public String isp;
 
     /**
-     * <p>Specifies whether to return only last-mile detection points.</p>
+     * <p>Specifies whether to query only Lastmile residential broadband nodes.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -59,7 +59,7 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     public Boolean lmProbe;
 
     /**
-     * <p>Specifies whether to return only mobile detection points.</p>
+     * <p>Specifies whether to query only mobile detection points.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -73,10 +73,8 @@ public class DescribeSyntheticProbeListRequest extends TeaModel {
     /**
      * <p>Specifies whether to return all detection points. Valid values:</p>
      * <ul>
-     * <li><p>false (default): Returns the detection points that are available to you.</p>
-     * </li>
-     * <li><p>true: Returns all detection points.</p>
-     * </li>
+     * <li>false: Returns only the detection points available to the user. This is the default value.</li>
+     * <li>true: Returns all detection points.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSiteMonitorsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to delete the alert rules associated with the tasks. Valid values:</p>
+     * <p>Specifies whether to delete alert rules when you delete the tasks. Valid values:</p>
      * <ul>
      * <li><p>true (default): Deletes the alert rules.</p>
      * </li>

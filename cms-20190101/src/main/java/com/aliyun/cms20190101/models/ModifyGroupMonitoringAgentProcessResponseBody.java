@@ -7,7 +7,7 @@ public class ModifyGroupMonitoringAgentProcessResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>A status code of 200 indicates that the request was successful.</p>
+     * <p>A value of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,10 +37,8 @@ public class ModifyGroupMonitoringAgentProcessResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
-     * </li>
-     * <li><p>false: The operation failed.</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,10 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEventRuleListResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
-     * <blockquote>
-     * <p>The status code 200 indicates that the request was successful.</p>
-     * </blockquote>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +17,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     public DescribeEventRuleListResponseBodyEventRules eventRules;
 
     /**
-     * <p>The error message returned.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>User not authorized to operate on the specified resource.</p>
@@ -38,11 +35,11 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
+     * <li><p>true: The operation was successful.</p>
      * </li>
-     * <li><p>false</p>
+     * <li><p>false: The operation failed.</p>
      * </li>
      * </ul>
      * 
@@ -53,7 +50,7 @@ public class DescribeEventRuleListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>21</p>

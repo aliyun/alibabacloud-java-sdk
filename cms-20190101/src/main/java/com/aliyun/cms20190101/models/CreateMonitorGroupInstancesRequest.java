@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class CreateMonitorGroupInstancesRequest extends TeaModel {
+    @NameInMap("DryRun")
+    public String dryRun;
+
     /**
      * <p>The ID of the application group.</p>
      * <p>This parameter is required.</p>
@@ -27,6 +30,14 @@ public class CreateMonitorGroupInstancesRequest extends TeaModel {
     public static CreateMonitorGroupInstancesRequest build(java.util.Map<String, ?> map) throws Exception {
         CreateMonitorGroupInstancesRequest self = new CreateMonitorGroupInstancesRequest();
         return TeaModel.build(map, self);
+    }
+
+    public CreateMonitorGroupInstancesRequest setDryRun(String dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public String getDryRun() {
+        return this.dryRun;
     }
 
     public CreateMonitorGroupInstancesRequest setGroupId(String groupId) {

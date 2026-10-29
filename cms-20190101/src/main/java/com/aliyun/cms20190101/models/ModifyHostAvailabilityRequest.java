@@ -11,20 +11,20 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
     public ModifyHostAvailabilityRequestTaskOption taskOption;
 
     /**
-     * <p>The alert configurations.</p>
+     * <p>The alert configuration list.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AlertConfigEscalationList")
     public java.util.List<ModifyHostAvailabilityRequestAlertConfigEscalationList> alertConfigEscalationList;
 
     /**
-     * <p>The information about the resources for which alerts are triggered.</p>
+     * <p>The alert trigger targets.</p>
      */
     @NameInMap("AlertConfigTargetList")
     public java.util.List<ModifyHostAvailabilityRequestAlertConfigTargetList> alertConfigTargetList;
 
     /**
-     * <p>The ID of the application group.</p>
+     * <p>The application group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The ID of the availability monitoring task.</p>
+     * <p>The availability monitoring task ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,9 +44,9 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>The ECS instances that are monitored. Valid values of N: 1 to 21.</p>
+     * <p>The list of ECS instances that initiate detection. Valid values of N: 1 to 21.</p>
      * <blockquote>
-     * <p>This parameter must be specified when <code>TaskScope</code> is set to <code>GROUP_SPEC_INSTANCE</code>.</p>
+     * <p>If <code>TaskScope</code> is set to <code>GROUP_SPEC_INSTANCE</code>, you must set this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,12 +69,10 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
     public String taskName;
 
     /**
-     * <p>The range of instances that are monitored by the availability monitoring task. Valid values:</p>
+     * <p>The detection scope of the availability monitoring task. Valid values:</p>
      * <ul>
-     * <li><p>GROUP: All ECS instances in the application group are monitored.</p>
-     * </li>
-     * <li><p>GROUP_SPEC_INSTANCE: Specified ECS instances in the application group are monitored. The TaskScope parameter must be used in combination with the InstanceList parameter. The InstanceList parameter specifies the ECS instances to be monitored.</p>
-     * </li>
+     * <li>GROUP: uses all ECS instances in the current application group as detection probes.</li>
+     * <li>GROUP_SPEC_INSTANCE: uses specified ECS instances in the current application group as detection probes. If you set this parameter to GROUP_SPEC_INSTANCE, you must also set InstanceList to specify the ECS instances that initiate detection.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,10 +168,10 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
 
     public static class ModifyHostAvailabilityRequestAlertConfig extends TeaModel {
         /**
-         * <p>The end of the time range during which the alert rule is effective. Valid values: 0 to 23.</p>
-         * <p>For example, if the <code>AlertConfig.StartTime</code> parameter is set to 0 and the <code>AlertConfig.EndTime</code> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
+         * <p>The end time when the alert takes effect.</p>
+         * <p>Unit: hours (h). Valid values: 0 to 23. For example, a value of 22 indicates 22:00:00.</p>
          * <blockquote>
-         * <p>Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+         * <p>If the alert is not within the effective period, alert notifications are not sent even if the threshold is exceeded.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -183,8 +181,12 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public Integer endTime;
 
         /**
-         * <p>The alert notification methods. Valid values:</p>
-         * <p>0: Alert notifications are sent by using emails and DingTalk chatbots.</p>
+         * <p>The alert notification type. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- 2: phone call + text message + email + DingTalk chatbot.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- 1: text message + email + DingTalk chatbot.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- 0: email + DingTalk chatbot.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;0: email + DingTalk chatbot.</p>
+         * <p>&lt;props=&quot;partner&quot;&gt;0: email + DingTalk chatbot.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -194,7 +196,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public Integer notifyType;
 
         /**
-         * <p>The mute period during which new alerts are not sent even if the trigger conditions are met. Unit: seconds. Default value: 86400. The default value indicates one day.</p>
+         * <p>The mute period. Unit: seconds. Default value: 86400 (1 day).</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -203,10 +205,10 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public Integer silenceTime;
 
         /**
-         * <p>The beginning of the time range during which the alert rule is effective. Valid values: 0 to 23.</p>
-         * <p>For example, if the <code>AlertConfig.StartTime</code> parameter is set to 0 and the <code>AlertConfig.EndTime</code> parameter is set to 22, the alert rule is effective from 00:00:00 to 22:00:00.</p>
+         * <p>The start time when the alert takes effect.</p>
+         * <p>Unit: hours (h). Valid values: 0 to 23. For example, a value of 0 indicates 00:00:00.</p>
          * <blockquote>
-         * <p>Alert notifications are sent based on the specified threshold only if the alert rule is effective.</p>
+         * <p>If the alert is not within the effective period, alert notifications are not sent even if the threshold is exceeded.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -216,7 +218,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public Integer startTime;
 
         /**
-         * <p>The callback URL.</p>
+         * <p>The webhook address.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com/webhook.json">https://www.aliyun.com/webhook.json</a></p>
@@ -273,7 +275,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
 
     public static class ModifyHostAvailabilityRequestTaskOption extends TeaModel {
         /**
-         * <p>The header of the HTTP request. Format: <code>Parameter name:Parameter value</code>. Separate multiple parameters with carriage return characters. Example:</p>
+         * <p>The header of the HTTP request. Format: <code>Parameter:Value</code>. Separate multiple parameters with carriage returns. Example:</p>
          * <pre><code>params1:value1
          * params2:value2
          * </code></pre>
@@ -285,17 +287,14 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public String httpHeader;
 
         /**
-         * <p>The HTTP request method. Valid values:</p>
+         * <p>The method of the detection type. Valid values:</p>
          * <ul>
-         * <li><p>GET</p>
-         * </li>
-         * <li><p>POST</p>
-         * </li>
-         * <li><p>HEAD</p>
-         * </li>
+         * <li>GET</li>
+         * <li>POST</li>
+         * <li>HEAD</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter must be specified when TaskType is set to HTTP. For more information about how to configure the TaskType parameter, see <a href="https://help.aliyun.com/document_detail/115317.html">CreateHostAvailability</a>.</p>
+         * <p>If the detection task type is HTTP, you must set this parameter. For information about how to set the detection task type, see <a href="https://help.aliyun.com/document_detail/115317.html">CreateHostAvailability</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -305,15 +304,13 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public String httpMethod;
 
         /**
-         * <p>The method to trigger an alert. The alert can be triggered based on whether the specified alert rule is included in the response body. Valid values:</p>
+         * <p>The alert rule for matching HTTP response content. Valid values:</p>
          * <ul>
-         * <li><p>true: If the HTTP response body includes the alert rule, an alert is triggered.</p>
-         * </li>
-         * <li><p>false: If the HTTP response does not include the alert rule, an alert is triggered.</p>
-         * </li>
+         * <li>true: An alert is triggered if the HTTP response content contains the specified alert rule.</li>
+         * <li>false: An alert is triggered if the HTTP response content does not contain the specified alert rule.</li>
          * </ul>
          * <blockquote>
-         * <p>This parameter must be specified when TaskType is set to HTTP. For more information about how to configure the TaskType parameter, see <a href="https://help.aliyun.com/document_detail/115317.html">CreateHostAvailability</a>.</p>
+         * <p>If the detection task type is HTTP, you must set this parameter. For information about how to set the detection task type, see <a href="https://help.aliyun.com/document_detail/115317.html">CreateHostAvailability</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -323,7 +320,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public Boolean httpNegative;
 
         /**
-         * <p>The content of the HTTP POST request.</p>
+         * <p>The POST content of the HTTP detection request.</p>
          * 
          * <strong>example:</strong>
          * <p>params1=value1</p>
@@ -332,7 +329,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public String httpPostContent;
 
         /**
-         * <p>The character set that is used in the HTTP response.</p>
+         * <p>The response character set for the HTTP detection type.</p>
          * <blockquote>
          * <p>Only UTF-8 is supported.</p>
          * </blockquote>
@@ -344,7 +341,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public String httpResponseCharset;
 
         /**
-         * <p>The response to the HTTP request.</p>
+         * <p>The POST content of the HTTP detection response.</p>
          * 
          * <strong>example:</strong>
          * <p>ok</p>
@@ -353,7 +350,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public String httpResponseMatchContent;
 
         /**
-         * <p>The URI that you want to monitor. This parameter is required if the TaskType parameter is set to HTTP or Telnet.</p>
+         * <p>The URI for HTTP or Telnet detection types.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://www.aliyun.com">https://www.aliyun.com</a>
@@ -363,9 +360,9 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public String httpURI;
 
         /**
-         * <p>The interval at which detection requests are sent. Unit: seconds. Valid values: 15, 30, 60, 120, 300, 900, 1800, and 3600.</p>
+         * <p>The detection frequency. Unit: seconds. Valid values: 15, 30, 60, 120, 300, 900, 1800, and 3600.</p>
          * <blockquote>
-         * <p>This parameter is available only for the CloudMonitor agent V3.5.1 or later.</p>
+         * <p>Only CloudMonitor agent 3.5.1 or later supports this parameter.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -375,9 +372,9 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public Integer interval;
 
         /**
-         * <p>The domain name or IP address that you want to monitor.</p>
+         * <p>The domain name or address to detect.</p>
          * <blockquote>
-         * <p>This parameter is required if the TaskType parameter is set to PING. For more information about how to set the TaskType parameter, see <a href="https://help.aliyun.com/document_detail/115317.html">CreateHostAvailability</a>.</p>
+         * <p>If the detection task type is PING, you must set this parameter. For information about how to set the detection task type, see <a href="https://help.aliyun.com/document_detail/115317.html">CreateHostAvailability</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -467,21 +464,16 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
 
     public static class ModifyHostAvailabilityRequestAlertConfigEscalationList extends TeaModel {
         /**
-         * <p>The method used to calculate the metric values that trigger alerts. Valid values of N: 1 to 21. The value of this parameter varies based on the metric. The following items show the correspondence between metrics and calculation methods:</p>
+         * <p>The statistical method for the alert. Valid values of N: 1 to 21. The statistical method varies by metric:</p>
          * <ul>
-         * <li><p>HttpStatus: Value</p>
-         * </li>
-         * <li><p>HttpLatency: Average</p>
-         * </li>
-         * <li><p>TelnetStatus: Value</p>
-         * </li>
-         * <li><p>TelnetLatency: Average</p>
-         * </li>
-         * <li><p>PingLostRate: Average</p>
-         * </li>
+         * <li>HttpStatus: Value.</li>
+         * <li>HttpLatency: Average.</li>
+         * <li>TelnetStatus: Value.</li>
+         * <li>TelnetLatency: Average.</li>
+         * <li>PingLostRate: Average.</li>
          * </ul>
          * <blockquote>
-         * <p>The value Value indicates the original value and is used for metrics such as status codes. The value Average indicates the average value and is used for metrics such as the latency and packet loss rate.</p>
+         * <p>The statistical method for status codes is the original value (Value). The statistical method for latency or packet loss rate is the average value (Average).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -491,18 +483,13 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public String aggregate;
 
         /**
-         * <p>The metric for which the alert feature is enabled. Valid values of N: 1 to 21. Valid values:</p>
+         * <p>The metric for the alert. Valid values of N: 1 to 21. Valid values:</p>
          * <ul>
-         * <li><p>HttpStatus: HTTP status code</p>
-         * </li>
-         * <li><p>HttpLatency: HTTP response time</p>
-         * </li>
-         * <li><p>TelnetStatus: Telnet status code</p>
-         * </li>
-         * <li><p>TelnetLatency: Telnet response time</p>
-         * </li>
-         * <li><p>PingLostRate: Ping packet loss rate</p>
-         * </li>
+         * <li>HttpStatus: HTTP status code.</li>
+         * <li>HttpLatency: HTTP latency.</li>
+         * <li>TelnetStatus: TELNET status code.</li>
+         * <li>TelnetLatency: TELNET latency.</li>
+         * <li>PingLostRate: PING packet loss rate.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -513,18 +500,13 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public String metricName;
 
         /**
-         * <p>The comparison operator that is used in the alert rule. Valid values of N: 1 to 21. Valid values:</p>
+         * <p>The comparison operator for the alert rule. Valid values of N: 1 to 21. Valid values:</p>
          * <ul>
-         * <li><p><code>&gt;</code></p>
-         * </li>
-         * <li><p><code>&gt;=</code></p>
-         * </li>
-         * <li><p><code>&lt;</code></p>
-         * </li>
-         * <li><p><code>&lt;=</code></p>
-         * </li>
-         * <li><p><code>=</code></p>
-         * </li>
+         * <li><code>&gt;</code></li>
+         * <li><code>&gt;=</code></li>
+         * <li><code>&lt;</code></li>
+         * <li><code>&lt;=</code></li>
+         * <li><code>=</code></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -535,7 +517,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public String operator;
 
         /**
-         * <p>The consecutive number of times for which the metric value meets the alert condition before an alert is triggered. Valid values of N: 1 to 21.</p>
+         * <p>The number of alert retries. Valid values of N: 1 to 21.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -601,29 +583,25 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
 
     public static class ModifyHostAvailabilityRequestAlertConfigTargetList extends TeaModel {
         /**
-         * <p>The Alibaba Cloud Resource Name (ARN) of the resource.</p>
-         * <p>Format: <code>acs:{Service name abbreviation}:{regionId}:{userId}:/{Resource type}/{Resource name}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. Fields:</p>
+         * <p>The resource ARN.</p>
+         * <p>Format: <code>acs:{AbbreviatedCloudServiceName}:{regionId}:{userId}:/{ResourceType}/{ResourceName}/message</code>. Example: <code>acs:mns:cn-hangzhou:120886317861****:/queues/test123/message</code>. The parameters are described as follows:</p>
          * <ul>
-         * <li><p>{Service name abbreviation}: the abbreviation of the service name. Set the value to Simple Message Queue (formerly MNS) (SMQ).</p>
+         * <li><p>{AbbreviatedCloudServiceName}: Only Simple Message Queue (formerly MNS) is supported.</p>
          * </li>
-         * <li><p>{userId}: the ID of the Alibaba Cloud account.</p>
+         * <li><p>{userId}: The Alibaba Cloud account ID.</p>
          * </li>
-         * <li><p>{regionId}: the region ID of the SMQ queue or topic.</p>
+         * <li><p>{regionId}: The region where Simple Message Queue (formerly MNS) or the topic resides.</p>
          * </li>
-         * <li><p>{Resource type}: the type of the resource for which alerts are triggered. Valid values:</p>
+         * <li><p>{ResourceType}: The type of the resource that accepts alerts. Valid values:</p>
          * <ul>
-         * <li><p><strong>queues</strong></p>
-         * </li>
-         * <li><p><strong>topics</strong></p>
-         * </li>
+         * <li><strong>queues</strong>: queue.</li>
+         * <li><strong>topics</strong>: topic.</li>
          * </ul>
          * </li>
-         * <li><p>{Resource name}: the resource name.</p>
+         * <li><p>{ResourceName}: The resource name.</p>
          * <ul>
-         * <li><p>If the resource type is <strong>queues</strong>, the resource name is the queue name.</p>
-         * </li>
-         * <li><p>If the resource type is <strong>topics</strong>, the resource name is the topic name.</p>
-         * </li>
+         * <li>If the resource type is <strong>queues</strong>, the resource name is the queue name.</li>
+         * <li>If the resource type is <strong>topics</strong>, the resource name is the topic name.</li>
          * </ul>
          * </li>
          * </ul>
@@ -635,7 +613,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public String arn;
 
         /**
-         * <p>The ID of the resource for which alerts are triggered.</p>
+         * <p>The ID of the alert trigger target.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -644,7 +622,7 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The parameters of the alert callback. The parameters are in the JSON format.</p>
+         * <p>The JSON-formatted parameters for the alert callback.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;customField1&quot;:&quot;value1&quot;,&quot;customField2&quot;:&quot;$.name&quot;}</p>
@@ -655,12 +633,9 @@ public class ModifyHostAvailabilityRequest extends TeaModel {
         /**
          * <p>The alert level. Valid values:</p>
          * <ul>
-         * <li><p>INFO</p>
-         * </li>
-         * <li><p>WARN</p>
-         * </li>
-         * <li><p>CRITICAL</p>
-         * </li>
+         * <li>INFO: information.</li>
+         * <li>WARN: warning.</li>
+         * <li>CRITICAL: critical.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateMonitorGroupNotifyPolicyRequest extends TeaModel {
     /**
-     * <p>The end timestamp for pausing notifications.</p>
-     * <p>The value is a UNIX timestamp, which represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The end timestamp.</p>
+     * <p>Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1623208500000</p>
+     * <p>1551761781273</p>
      */
     @NameInMap("EndTime")
     public Long endTime;
@@ -20,13 +20,14 @@ public class CreateMonitorGroupNotifyPolicyRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>7301****</p>
+     * <p>6780****</p>
      */
     @NameInMap("GroupId")
     public String groupId;
 
     /**
-     * <p>The type of the pause notification. Currently, only PauseNotify is supported.</p>
+     * <p>The type of the pause notification.</p>
+     * <p>Currently, only PauseNotify is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,12 +40,12 @@ public class CreateMonitorGroupNotifyPolicyRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start timestamp for pausing notifications.</p>
-     * <p>The value is a UNIX timestamp, which represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+     * <p>The start timestamp.</p>
+     * <p>Unit: milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1622949300000</p>
+     * <p>1551761781273</p>
      */
     @NameInMap("StartTime")
     public Long startTime;

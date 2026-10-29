@@ -38,7 +38,11 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. Valid values: true: The operation was successful. false: The operation failed.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,16 +97,16 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
 
     public static class DescribeSyntheticProbeListResponseBodyIspCityList extends TeaModel {
         /**
-         * <p>The name of the area in Chinese.</p>
+         * <p>The Chinese name of the region.</p>
          * 
          * <strong>example:</strong>
-         * <p>华北</p>
+         * <p>North China</p>
          */
         @NameInMap("AreaCn")
         public String areaCn;
 
         /**
-         * <p>The name of the area in English.</p>
+         * <p>The English name of the region.</p>
          * 
          * <strong>example:</strong>
          * <p>Huabei</p>
@@ -120,16 +124,16 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public String city;
 
         /**
-         * <p>The name of the city in Chinese.</p>
+         * <p>The Chinese name of the city.</p>
          * 
          * <strong>example:</strong>
-         * <p>北京</p>
+         * <p>Beijing</p>
          */
         @NameInMap("CityCn")
         public String cityCn;
 
         /**
-         * <p>The name of the city in English.</p>
+         * <p>The English name of the city.</p>
          * 
          * <strong>example:</strong>
          * <p>Beijing</p>
@@ -147,16 +151,16 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public String country;
 
         /**
-         * <p>The name of the country in Chinese.</p>
+         * <p>The Chinese name of the country.</p>
          * 
          * <strong>example:</strong>
-         * <p>中国</p>
+         * <p>China</p>
          */
         @NameInMap("CountryCn")
         public String countryCn;
 
         /**
-         * <p>The name of the country or region in English.</p>
+         * <p>The English name of the country or region.</p>
          * 
          * <strong>example:</strong>
          * <p>China</p>
@@ -165,7 +169,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public String countryEn;
 
         /**
-         * <p>The number of IPv4 detection points in data centers.</p>
+         * <p>The number of IPv4 nodes in the IDC.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -174,7 +178,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public Integer idcV4ProbeCount;
 
         /**
-         * <p>The number of IDC IPv6 nodes.</p>
+         * <p>The number of IPv6 nodes in the IDC.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -198,16 +202,16 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public String isp;
 
         /**
-         * <p>The name of the carrier in Chinese.</p>
+         * <p>The Chinese name of the carrier.</p>
          * 
          * <strong>example:</strong>
-         * <p>联通</p>
+         * <p>China Unicom</p>
          */
         @NameInMap("IspCn")
         public String ispCn;
 
         /**
-         * <p>The name of the carrier in English.</p>
+         * <p>The English name of the carrier.</p>
          * 
          * <strong>example:</strong>
          * <p>China-Unicom</p>
@@ -216,7 +220,7 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public String ispEn;
 
         /**
-         * <p>The number of last-mile detection points.</p>
+         * <p>The number of Lastmile detection points.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -243,16 +247,16 @@ public class DescribeSyntheticProbeListResponseBody extends TeaModel {
         public String region;
 
         /**
-         * <p>The name of the province in Chinese.</p>
+         * <p>The Chinese name of the province.</p>
          * 
          * <strong>example:</strong>
-         * <p>江西省</p>
+         * <p>Jiangxi</p>
          */
         @NameInMap("RegionCn")
         public String regionCn;
 
         /**
-         * <p>The name of the province in English.</p>
+         * <p>The English name of the province.</p>
          * 
          * <strong>example:</strong>
          * <p>Jiangxi</p>

@@ -47,7 +47,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:  </p>
+     * <p>Indicates whether the request was successful. Valid values:  </p>
      * <ul>
      * <li><code>true</code>: Successful.</li>
      * <li><code>false</code>: Failed.</li>
@@ -60,7 +60,7 @@ public class DescribeExporterRuleListResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>

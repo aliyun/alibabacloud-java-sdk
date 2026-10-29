@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class PutResourceMetricRulesResponseBody extends TeaModel {
     /**
-     * <p>状态码。</p>
+     * <p>The HTTP status code.</p>
      * <blockquote>
-     * <p>200表示成功。</p>
+     * <p>A status code of 200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +20,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     public PutResourceMetricRulesResponseBodyFailedListResult failedListResult;
 
     /**
-     * <p>错误信息。</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>The request processing has failed due to some unknown error.</p>
@@ -29,7 +29,7 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>请求ID。</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15D1440E-BF24-5A41-93E4-36864635179E</p>
@@ -38,11 +38,11 @@ public class PutResourceMetricRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>操作是否成功。取值：</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li><p>true：成功。</p>
+     * <li><p>true: The operation was successful.</p>
      * </li>
-     * <li><p>false：失败。</p>
+     * <li><p>false: The operation failed.</p>
      * </li>
      * </ul>
      * 

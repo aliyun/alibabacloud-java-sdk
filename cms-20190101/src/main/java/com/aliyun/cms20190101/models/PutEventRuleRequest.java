@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PutEventRuleRequest extends TeaModel {
     /**
-     * <p>The description of the Event-triggered Alert Rule.</p>
+     * <p>The description of the event-triggered alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>Event alert test</p>
@@ -14,14 +14,14 @@ public class PutEventRuleRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The pattern of the Event-triggered Alert Rule.</p>
+     * <p>The pattern of the event-triggered alert rule.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("EventPattern")
     public java.util.List<PutEventRuleRequestEventPattern> eventPattern;
 
     /**
-     * <p>The type of the Event-triggered Alert Rule. Valid values:</p>
+     * <p>The type of the event-triggered alert rule. Valid values:</p>
      * <ul>
      * <li>SYSTEM: system event.</li>
      * <li>CUSTOM: custom event.</li>
@@ -34,7 +34,7 @@ public class PutEventRuleRequest extends TeaModel {
     public String eventType;
 
     /**
-     * <p>The ID of the application group to which the Event-triggered Alert Rule belongs.</p>
+     * <p>The ID of the application group to which the event-triggered alert rule belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>7378****</p>
@@ -46,7 +46,7 @@ public class PutEventRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The name of the Event-triggered Alert Rule.</p>
+     * <p>The name of the event-triggered alert rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -65,10 +65,10 @@ public class PutEventRuleRequest extends TeaModel {
     public Long silenceTime;
 
     /**
-     * <p>The status of the Event-triggered Alert Rule. Valid values:</p>
+     * <p>The status of the event-triggered alert rule. Valid values:</p>
      * <ul>
-     * <li>ENABLED: enabled.</li>
-     * <li>DISABLED: disabled.</li>
+     * <li>ENABLED: Enabled.</li>
+     * <li>DISABLED: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -157,7 +157,7 @@ public class PutEventRuleRequest extends TeaModel {
         public String customFilters;
 
         /**
-         * <p>The type of the Event-triggered Alert Rule. Valid values of N: 1 to 50. Valid values:</p>
+         * <p>The type of the event-triggered alert rule. Valid values of N: 1 to 50. Valid values:</p>
          * <ul>
          * <li><p>StatusNotification: fault notification.</p>
          * </li>
@@ -176,7 +176,7 @@ public class PutEventRuleRequest extends TeaModel {
         public java.util.List<String> eventTypeList;
 
         /**
-         * <p>The level of the Event-triggered Alert Rule. Valid values of N: 1 to 50. Valid values:</p>
+         * <p>The level of the event-triggered alert rule. Valid values of N: 1 to 50. Valid values:</p>
          * <ul>
          * <li><p>CRITICAL: critical.</p>
          * </li>
@@ -195,7 +195,7 @@ public class PutEventRuleRequest extends TeaModel {
         public java.util.List<String> levelList;
 
         /**
-         * <p>The name of the Event-triggered Alert Rule. Valid values of N: 1 to 50.</p>
+         * <p>The name of the event-triggered alert rule. Valid values of N: 1 to 50.</p>
          * 
          * <strong>example:</strong>
          * <p>Agent_Status_Stopped</p>
@@ -206,7 +206,7 @@ public class PutEventRuleRequest extends TeaModel {
         /**
          * <p>The Alibaba Cloud service type. Valid values of N: 1 to 50.</p>
          * <blockquote>
-         * <p>For information about the Alibaba Cloud services supported by Event-triggered Alert Rules, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
+         * <p>For information about the Alibaba Cloud services supported by event-triggered alert rules, see <a href="https://help.aliyun.com/document_detail/114972.html">DescribeSystemEventMetaList</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -229,7 +229,7 @@ public class PutEventRuleRequest extends TeaModel {
         public String SQLFilter;
 
         /**
-         * <p>The status of the Event-triggered Alert Rule. Valid values of N: 1 to 50.</p>
+         * <p>The status of the event-triggered alert rule. Valid values of N: 1 to 50.</p>
          * 
          * <strong>example:</strong>
          * <p>Failed</p>

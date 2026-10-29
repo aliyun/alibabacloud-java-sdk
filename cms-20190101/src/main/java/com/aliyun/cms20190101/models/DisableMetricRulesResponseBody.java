@@ -7,7 +7,7 @@ public class DisableMetricRulesResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <blockquote>
-     * <p>A value of 200 indicates that the request was successful.</p>
+     * <p>200 indicates success.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,11 @@ public class DisableMetricRulesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful. A value of \<code>true\\</code> indicates success and a value of \<code>false\\</code> indicates failure.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

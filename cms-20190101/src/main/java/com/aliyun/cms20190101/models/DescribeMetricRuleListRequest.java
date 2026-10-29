@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMetricRuleListRequest extends TeaModel {
     /**
-     * <p>The state of the alert rule. Valid values:</p>
+     * <p>The status of the alert rule. Valid values:</p>
      * <ul>
      * <li>OK: Normal.</li>
      * <li>ALARM: Alert.</li>
@@ -20,7 +20,7 @@ public class DescribeMetricRuleListRequest extends TeaModel {
 
     /**
      * <p>The monitoring dimensions of the specified resource.</p>
-     * <p>Format: a collection of <code>key:value</code> pairs. Example: <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> and <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
+     * <p>Format: A collection of <code>key:value</code> pairs, for example, <code>{&quot;userId&quot;:&quot;120886317861****&quot;}</code> and <code>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;instanceId&quot;:&quot;i-2ze2d6j5uhg20x47****&quot;}</p>
@@ -31,8 +31,8 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     /**
      * <p>The enabled state of the alert rule. Valid values:</p>
      * <ul>
-     * <li>true: enabled.</li>
-     * <li>false: disabled.</li>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,8 +53,8 @@ public class DescribeMetricRuleListRequest extends TeaModel {
 
     /**
      * <p>The metric name.</p>
-     * <p>For information about how to obtain metric names, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
-     * <p>Note: For composite metrics, you can retrieve results only by the first metric.</p>
+     * <p>For information about how to obtain metric names, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
+     * <p>Note: For composite metrics, you can only search by the first metric.</p>
      * 
      * <strong>example:</strong>
      * <p>cpu_total</p>
@@ -63,8 +63,8 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     public String metricName;
 
     /**
-     * <p>The namespace of the Alibaba Cloud service.</p>
-     * <p>For information about how to obtain the namespace of an Alibaba Cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">cloud service monitoring metrics</a>.</p>
+     * <p>The namespace of the cloud service.</p>
+     * <p>For information about how to obtain the namespace of a cloud service, see <a href="https://help.aliyun.com/document_detail/98846.html">DescribeMetricMetaList</a> or <a href="https://help.aliyun.com/document_detail/163515.html">Cloud service metrics</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>acs_ecs_dashboard</p>
@@ -96,7 +96,7 @@ public class DescribeMetricRuleListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The IDs of the alert rules. Separate multiple IDs with commas (,). You can query up to 20 alert rules at a time.</p>
+     * <p>The IDs of alert rules. Separate multiple IDs with commas (,). You can query up to 20 alert rules at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>applyTemplate344cfd42-0f32-4fd6-805a-88d7908a****</p>
@@ -106,7 +106,7 @@ public class DescribeMetricRuleListRequest extends TeaModel {
 
     /**
      * <p>The name of the alert rule.</p>
-     * <p>This parameter supports fuzzy match.</p>
+     * <p>This parameter supports fuzzy search.</p>
      * 
      * <strong>example:</strong>
      * <p>Rule_01</p>

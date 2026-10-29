@@ -4,6 +4,9 @@ package com.aliyun.cms20190101.models;
 import com.aliyun.tea.*;
 
 public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
+    @NameInMap("DryRun")
+    public Boolean dryRun;
+
     /**
      * <p>The ID of the application group.</p>
      * <p>This parameter is required.</p>
@@ -42,6 +45,14 @@ public class PutMonitorGroupDynamicRuleRequest extends TeaModel {
     public static PutMonitorGroupDynamicRuleRequest build(java.util.Map<String, ?> map) throws Exception {
         PutMonitorGroupDynamicRuleRequest self = new PutMonitorGroupDynamicRuleRequest();
         return TeaModel.build(map, self);
+    }
+
+    public PutMonitorGroupDynamicRuleRequest setDryRun(Boolean dryRun) {
+        this.dryRun = dryRun;
+        return this;
+    }
+    public Boolean getDryRun() {
+        return this.dryRun;
     }
 
     public PutMonitorGroupDynamicRuleRequest setGroupId(Long groupId) {
