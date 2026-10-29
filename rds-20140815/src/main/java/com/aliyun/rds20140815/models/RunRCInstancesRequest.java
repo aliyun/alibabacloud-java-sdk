@@ -70,6 +70,9 @@ public class RunRCInstancesRequest extends TeaModel {
 
     /**
      * <p>The business information.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;rds_ai_app&quot;:&quot;true&quot;}</p>
      */
     @NameInMap("BusinessInfo")
     public String businessInfo;

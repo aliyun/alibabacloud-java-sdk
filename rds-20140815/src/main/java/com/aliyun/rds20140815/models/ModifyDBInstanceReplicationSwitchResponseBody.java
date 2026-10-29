@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceReplicationSwitchResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>9F8C06AD-3F37-57A0-ABBF-ABD7824F55CE</p>

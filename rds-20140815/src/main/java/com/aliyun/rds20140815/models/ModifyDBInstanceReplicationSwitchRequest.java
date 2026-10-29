@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyDBInstanceReplicationSwitchRequest extends TeaModel {
     /**
-     * <p>The instance ID. You can call the DescribeDBInstances operation to query the instance ID.</p>
+     * <p>Instance ID of the instance. You can call the DescribeDBInstances operation to query instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,10 +15,10 @@ public class ModifyDBInstanceReplicationSwitchRequest extends TeaModel {
     public String DBInstanceId;
 
     /**
-     * <p>Specifies whether to enable or disable native replication mode. Valid values:</p>
+     * <p>Specifies whether to enable or disable the native replication mode. Valid values:</p>
      * <ul>
-     * <li><strong>ON</strong>: Enable native replication.</li>
-     * <li><strong>OFF</strong>: Disable native replication.</li>
+     * <li><strong>ON</strong>: enables the native replication mode.</li>
+     * <li><strong>OFF</strong>: disables the native replication mode.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +39,7 @@ public class ModifyDBInstanceReplicationSwitchRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. This parameter can be left empty.</p>
+     * <p>The ID of the resource group. This parameter can be left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmy****</p>

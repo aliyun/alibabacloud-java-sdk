@@ -4109,7 +4109,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -4118,7 +4118,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96105.html">Create a database on an ApsaraDB RDS for MySQL instance</a></li>
@@ -4128,7 +4128,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a database in an ApsaraDB RDS instance.</p>
+     * <p>Creates a database on an ApsaraDB RDS instance.</p>
      * 
      * @param request CreateDatabaseRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4200,7 +4200,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3>Supported engines</h3>
+     * <h3>Supported database engines</h3>
      * <ul>
      * <li>ApsaraDB RDS for MySQL</li>
      * <li>ApsaraDB RDS for PostgreSQL</li>
@@ -4209,7 +4209,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * <h3>Related documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, read the documentation carefully to fully understand the prerequisites and impacts.</p>
      * </blockquote>
      * <ul>
      * <li><a href="https://help.aliyun.com/document_detail/96105.html">Create a database on an ApsaraDB RDS for MySQL instance</a></li>
@@ -4219,7 +4219,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a database in an ApsaraDB RDS instance.</p>
+     * <p>Creates a database on an ApsaraDB RDS instance.</p>
      * 
      * @param request CreateDatabaseRequest
      * @return CreateDatabaseResponse
@@ -17356,6 +17356,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询操作权限</p>
+     * 
+     * @param request DescribeOperatorPermissionRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeOperatorPermissionResponse
+     */
+    public DescribeOperatorPermissionResponse describeOperatorPermissionWithOptions(DescribeOperatorPermissionRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceId)) {
+            query.put("DBInstanceId", request.DBInstanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerAccount)) {
+            query.put("OwnerAccount", request.ownerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.ownerId)) {
+            query.put("OwnerId", request.ownerId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerAccount)) {
+            query.put("ResourceOwnerAccount", request.resourceOwnerAccount);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceOwnerId)) {
+            query.put("ResourceOwnerId", request.resourceOwnerId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeOperatorPermission"),
+            new TeaPair("version", "2014-08-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeOperatorPermissionResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询操作权限</p>
+     * 
+     * @param request DescribeOperatorPermissionRequest
+     * @return DescribeOperatorPermissionResponse
+     */
+    public DescribeOperatorPermissionResponse describeOperatorPermission(DescribeOperatorPermissionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeOperatorPermissionWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <h3>Supported engines</h3>
      * <ul>
@@ -25801,20 +25861,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the minor version update policy for an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Modifies the minor version upgrade method for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server instances.</p>
      * 
      * @param request ModifyDBInstanceAutoUpgradeMinorVersionRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -25868,20 +25928,20 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h3>Applicable engines</h3>
      * <ul>
-     * <li>RDS MySQL</li>
-     * <li>RDS PostgreSQL</li>
+     * <li>ApsaraDB RDS for MySQL</li>
+     * <li>ApsaraDB RDS for PostgreSQL</li>
      * </ul>
-     * <h3>Related documentation</h3>
+     * <h3>Related feature documentation</h3>
      * <blockquote>
-     * <p>Notice: Before you call this operation, read the following documentation and make sure that you fully understand the prerequisites and impacts of this operation.</p>
+     * <p>Notice: Before you call this operation, carefully read the feature documentation to ensure that you fully understand the prerequisites and the impacts of the operation.</p>
      * </blockquote>
      * <ul>
-     * <li><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for an ApsaraDB RDS for MySQL instance</a></li>
-     * <li><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for an ApsaraDB RDS for PostgreSQL instance</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/96059.html">Modify the automatic upgrade settings for ApsaraDB RDS for MySQL</a></li>
+     * <li><a href="https://help.aliyun.com/document_detail/146895.html">Modify the automatic upgrade settings for ApsaraDB RDS for PostgreSQL</a></li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the minor version update policy for an ApsaraDB RDS for MySQL or ApsaraDB RDS for PostgreSQL instance.</p>
+     * <p>Modifies the minor version upgrade method for ApsaraDB RDS for MySQL, ApsaraDB RDS for PostgreSQL, and ApsaraDB RDS for SQL Server instances.</p>
      * 
      * @param request ModifyDBInstanceAutoUpgradeMinorVersionRequest
      * @return ModifyDBInstanceAutoUpgradeMinorVersionResponse
@@ -27399,17 +27459,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ApsaraDB RDS for MySQL instances with native replication enabled must meet the following requirements:</p>
+     * <p>To enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</p>
      * <ul>
-     * <li>Database engine version: MySQL 5.7</li>
-     * <li>Instance edition: Basic Edition</li>
+     * <li>DPI engine version: MySQL 5.7</li>
+     * <li>Edition: Basic Edition</li>
      * <li>Billing method: pay-as-you-go or subscription</li>
-     * <li>Minor engine version: 20240930 or later
-     * For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">RDS native replication</a>.</li>
+     * <li>Milvus version: 20240930 or later
+     * For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">Native replication for ApsaraDB RDS</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables native replication mode for an ApsaraDB RDS instance by calling the ModifyDBInstanceReplicationSwitch operation.</p>
+     * <p>Enables or disables the native replication mode for an ApsaraDB RDS instance.</p>
      * 
      * @param request ModifyDBInstanceReplicationSwitchRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -27457,17 +27517,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>ApsaraDB RDS for MySQL instances with native replication enabled must meet the following requirements:</p>
+     * <p>To enable the native replication feature for an ApsaraDB RDS for MySQL instance, the following requirements must be met:</p>
      * <ul>
-     * <li>Database engine version: MySQL 5.7</li>
-     * <li>Instance edition: Basic Edition</li>
+     * <li>DPI engine version: MySQL 5.7</li>
+     * <li>Edition: Basic Edition</li>
      * <li>Billing method: pay-as-you-go or subscription</li>
-     * <li>Minor engine version: 20240930 or later
-     * For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">RDS native replication</a>.</li>
+     * <li>Milvus version: 20240930 or later
+     * For more information about native replication, see <a href="https://help.aliyun.com/document_detail/2856530.html">Native replication for ApsaraDB RDS</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables native replication mode for an ApsaraDB RDS instance by calling the ModifyDBInstanceReplicationSwitch operation.</p>
+     * <p>Enables or disables the native replication mode for an ApsaraDB RDS instance.</p>
      * 
      * @param request ModifyDBInstanceReplicationSwitchRequest
      * @return ModifyDBInstanceReplicationSwitchResponse

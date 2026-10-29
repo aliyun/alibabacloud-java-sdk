@@ -16,14 +16,14 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The commodity code of the instance. Valid values:</p>
      * <ul>
-     * <li><strong>bards</strong>: pay-as-you-go primary instance (Chinese site)</li>
-     * <li><strong>rds</strong> (default): subscription primary instance (Chinese site)</li>
-     * <li><strong>rords</strong>: pay-as-you-go read-only instance (Chinese site)</li>
-     * <li><strong>rds_rordspre_public_cn</strong>: subscription read-only instance (Chinese site)</li>
-     * <li><strong>bards_intl</strong>: pay-as-you-go primary instance (International site)</li>
-     * <li><strong>rds_intl</strong>: subscription primary instance (International site)</li>
-     * <li><strong>rords_intl</strong>: pay-as-you-go read-only instance (International site)</li>
-     * <li><strong>rds_rordspre_public_intl</strong>: subscription read-only instance (International site)</li>
+     * <li><strong>bards</strong>: pay-as-you-go primary instance (Alibaba Cloud China site)</li>
+     * <li><strong>rds</strong> (default): subscription primary instance (Alibaba Cloud China site)</li>
+     * <li><strong>rords</strong>: pay-as-you-go read-only instance (Alibaba Cloud China site)</li>
+     * <li><strong>rds_rordspre_public_cn</strong>: subscription read-only instance (Alibaba Cloud China site)</li>
+     * <li><strong>bards_intl</strong>: pay-as-you-go primary instance (Alibaba Cloud International site)</li>
+     * <li><strong>rds_intl</strong>: subscription primary instance (Alibaba Cloud International site)</li>
+     * <li><strong>rords_intl</strong>: pay-as-you-go read-only instance (Alibaba Cloud International site)</li>
+     * <li><strong>rds_rordspre_public_intl</strong>: subscription read-only instance (Alibaba Cloud International site)</li>
      * </ul>
      * <blockquote>
      * <p>This parameter is required when you query the pricing of a read-only instance.</p>
@@ -46,10 +46,10 @@ public class DescribePriceRequest extends TeaModel {
     public String DBInstanceClass;
 
     /**
-     * <p>Instance ID of the instance for which you want to change the specifications or renew the subscription.</p>
+     * <p>Instance ID of the instance whose specifications you want to change or that you want to renew.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is required when you query the price for changing the specifications or renewing the subscription of an instance.</li>
+     * <li>This parameter is required when you query the price for changing the specifications or renewing an instance.</li>
      * <li>If the instance is a read-only instance, you must specify instance ID of its primary instance.</li>
      * </ul>
      * </blockquote>
@@ -119,19 +119,19 @@ public class DescribePriceRequest extends TeaModel {
      * <p>&lt;props=&quot;china&quot;&gt;The database engine version. Valid values:</p>
      * <ul>
      * <li><strong>MySQL</strong>: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong></li>
-     * <li><strong>SQL Server</strong>: <strong>08r2_ent_ha</strong> (cloud disk edition, discontinued), <strong>2008r2</strong> (high-performance local disk, discontinued), <strong>2012</strong> (Enterprise Edition Basic), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2014_ent_ha</strong>, <strong>2014_std_ha</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, and <strong>2022_web</strong></li>
+     * <li><strong>SQL Server</strong>: <strong>08r2_ent_ha</strong> (cloud disk edition, discontinued), <strong>2008r2</strong> (Premium Local SSD, discontinued), <strong>2012</strong> (Enterprise Edition Standalone), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2014_ent_ha</strong>, <strong>2014_std_ha</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, and <strong>2022_web</strong></li>
      * <li><strong>PostgreSQL</strong>: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, and <strong>15.0</strong></li>
      * <li><strong>MariaDB</strong>: <strong>10.3</strong></li>
      * </ul>
      * <p>&lt;props=&quot;intl&quot;&gt;The database engine version. Valid values:</p>
      * <ul>
      * <li><strong>MySQL</strong>: <strong>5.5</strong>, <strong>5.6</strong>, <strong>5.7</strong>, and <strong>8.0</strong></li>
-     * <li><strong>SQL Server</strong>: <strong>08r2_ent_ha</strong> (cloud disk edition, discontinued), <strong>2008r2</strong> (high-performance local disk, discontinued), <strong>2012</strong> (Enterprise Edition Basic), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, and <strong>2022_web</strong></li>
+     * <li><strong>SQL Server</strong>: <strong>08r2_ent_ha</strong> (cloud disk edition, discontinued), <strong>2008r2</strong> (Premium Local SSD, discontinued), <strong>2012</strong> (Enterprise Edition Standalone), <strong>2012_ent_ha</strong>, <strong>2012_std_ha</strong>, <strong>2012_web</strong>, <strong>2016_ent_ha</strong>, <strong>2016_std_ha</strong>, <strong>2016_web</strong>, <strong>2017_ent</strong>, <strong>2017_std_ha</strong>, <strong>2017_web</strong>, <strong>2019_ent</strong>, <strong>2019_std_ha</strong>, <strong>2019_web</strong>, <strong>2022_ent</strong>, <strong>2022_std_ha</strong>, and <strong>2022_web</strong></li>
      * <li><strong>PostgreSQL</strong>: <strong>10.0</strong>, <strong>11.0</strong>, <strong>12.0</strong>, <strong>13.0</strong>, <strong>14.0</strong>, and <strong>15.0</strong></li>
      * <li><strong>MariaDB</strong>: <strong>10.3</strong></li>
      * </ul>
      * <blockquote>
-     * <p>For an ApsaraDB RDS for SQL Server instance, <code>_ent</code> indicates the Enterprise Cluster Edition, <code>_ent_ha</code> indicates the Enterprise Edition, <code>_std_ha</code> indicates the Standard Edition, and <code>_web</code> indicates the Web Edition.</p>
+     * <p>For SQL Server instances, <code>_ent</code> indicates the Enterprise Cluster Edition, <code>_ent_ha</code> indicates the Enterprise Edition, <code>_std_ha</code> indicates the Standard Edition, and <code>_web</code> indicates the Web Edition.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -199,7 +199,7 @@ public class DescribePriceRequest extends TeaModel {
     public Integer quantity;
 
     /**
-     * <p>The region ID. You can call the DescribeRegions operation to obtain the region ID.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -238,8 +238,8 @@ public class DescribePriceRequest extends TeaModel {
     /**
      * <p>The subscription duration. Valid values:</p>
      * <ul>
-     * <li>If the <strong>TimeType</strong> parameter is set to <strong>Year</strong>, the value of the UsedTime parameter ranges from <strong>1</strong> to <strong>100</strong>.</li>
-     * <li>If the <strong>TimeType</strong> parameter is set to <strong>Month</strong>, the value of the UsedTime parameter ranges from <strong>1</strong> to <strong>999</strong>.</li>
+     * <li>If the <strong>TimeType</strong> parameter is set to <strong>Year</strong>, the value ranges from <strong>1</strong> to <strong>100</strong>.</li>
+     * <li>If the <strong>TimeType</strong> parameter is set to <strong>Month</strong>, the value ranges from <strong>1</strong> to <strong>999</strong>.</li>
      * </ul>
      * <p>Default value: <strong>1</strong>.</p>
      * 
@@ -495,7 +495,7 @@ public class DescribePriceRequest extends TeaModel {
         public Double maxCapacity;
 
         /**
-         * <p>The minimum number of RCUs allowed for automatic scaling of the instance.</p>
+         * <p>The minimum number of RDS capacity units (RCUs) allowed for automatic scaling of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
