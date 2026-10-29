@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeAgentTaskRequest extends TeaModel {
     /**
-     * <p>The additional prompt. This parameter takes effect only when the task is passively paused, such as pausing to wait for user confirmation.</p>
+     * <p>The additional prompt. This parameter takes effect only when the task is passively paused, such as when waiting for user confirmation.</p>
      * 
      * <strong>example:</strong>
      * <p>The verification code is ***</p>
@@ -27,10 +27,10 @@ public class ResumeAgentTaskRequest extends TeaModel {
     public java.util.List<String> taskIds;
 
     /**
-     * <p>The ID of the tool invoke to resume.</p>
+     * <p>The ID of the tool invocation to be resumed.</p>
      * 
      * <strong>example:</strong>
-     * <p>ca*****01</p>
+     * <p>call-0001</p>
      */
     @NameInMap("ToolCallId")
     public String toolCallId;
@@ -77,7 +77,7 @@ public class ResumeAgentTaskRequest extends TeaModel {
          * <p>The custom input content in the clarification answer.</p>
          * 
          * <strong>example:</strong>
-         * <p>Simply ****</p>
+         * <p>Return directly to the desktop</p>
          */
         @NameInMap("CustomValue")
         public String customValue;
@@ -86,7 +86,7 @@ public class ResumeAgentTaskRequest extends TeaModel {
          * <p>The ID of the clarification item.</p>
          * 
          * <strong>example:</strong>
-         * <p>cl*****-1</p>
+         * <p>clarify-1</p>
          */
         @NameInMap("Id")
         public String id;

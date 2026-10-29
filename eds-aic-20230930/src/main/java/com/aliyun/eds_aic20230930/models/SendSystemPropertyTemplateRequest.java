@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SendSystemPropertyTemplateRequest extends TeaModel {
     /**
-     * <p>A list of instance IDs.</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
-     * <p>The ID of the property template.</p>
+     * <p>The property template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>ap-angyvganxlf****</p>
@@ -20,7 +20,7 @@ public class SendSystemPropertyTemplateRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>A list of property template IDs. If you provide multiple template IDs, the system randomly matches the specified instances with the provided templates.</p>
+     * <p>The list of property template IDs. If multiple templates are provided, the specified instances are randomly matched with all the provided property templates.</p>
      */
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;

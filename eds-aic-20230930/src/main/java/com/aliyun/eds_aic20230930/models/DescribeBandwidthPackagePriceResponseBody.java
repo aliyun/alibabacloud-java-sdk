@@ -4,16 +4,24 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
+    /**
+     * <p>The price.</p>
+     */
     @NameInMap("Price")
     public DescribeBandwidthPackagePriceResponseBodyPrice price;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The promotion rules.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<DescribeBandwidthPackagePriceResponseBodyRules> rules;
 
@@ -48,6 +56,8 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
 
     public static class DescribeBandwidthPackagePriceResponseBodyPricePromotions extends TeaModel {
         /**
+         * <p>The promotion code.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhui_quan</p>
          */
@@ -55,6 +65,8 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
         public String optionCode;
 
         /**
+         * <p>The promotion description.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhui</p>
          */
@@ -62,6 +74,8 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
         public String promotionDesc;
 
         /**
+         * <p>The ID of the promotion.</p>
+         * 
          * <strong>example:</strong>
          * <p>91381816****</p>
          */
@@ -69,6 +83,8 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
         public String promotionId;
 
         /**
+         * <p>The name of the promotion.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhui</p>
          */
@@ -76,6 +92,8 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
         public String promotionName;
 
         /**
+         * <p>Indicates whether the promotion is selected.</p>
+         * 
          * <strong>example:</strong>
          * <p>ture</p>
          */
@@ -131,6 +149,9 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
 
     public static class DescribeBandwidthPackagePriceResponseBodyPrice extends TeaModel {
         /**
+         * <p>&lt;props=&quot;china&quot;&gt;The currency unit (CNY).
+         * &lt;props=&quot;intl&quot;&gt;The currency unit (USD).</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -138,6 +159,8 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>274.75</p>
          */
@@ -145,16 +168,25 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
         public Float discountPrice;
 
         /**
+         * <p>The original price.</p>
+         * <p>&lt;props=&quot;china&quot;&gt;Unit: CNY.</p>
+         * <p>&lt;props=&quot;intl&quot;&gt;Unit: USD.</p>
+         * 
          * <strong>example:</strong>
          * <p>8800</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The promotion information.</p>
+         */
         @NameInMap("Promotions")
         public java.util.List<DescribeBandwidthPackagePriceResponseBodyPricePromotions> promotions;
 
         /**
+         * <p>The transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>213.52</p>
          */
@@ -210,6 +242,8 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
 
     public static class DescribeBandwidthPackagePriceResponseBodyRules extends TeaModel {
         /**
+         * <p>The rule description.</p>
+         * 
          * <strong>example:</strong>
          * <p>description</p>
          */
@@ -217,6 +251,8 @@ public class DescribeBandwidthPackagePriceResponseBody extends TeaModel {
         public String description;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>a7gesyly7o34qy****</p>
          */

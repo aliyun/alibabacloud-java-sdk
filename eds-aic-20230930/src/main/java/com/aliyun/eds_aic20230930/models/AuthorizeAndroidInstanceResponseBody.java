@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AuthorizeAndroidInstanceResponseBody extends TeaModel {
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceGroupPriceRequest extends TeaModel {
     /**
+     * <p>The number of instance groups.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeInstanceGroupPriceRequest extends TeaModel {
     public Integer amount;
 
     /**
+     * <p>The ID of the bandwidth plan.</p>
+     * 
      * <strong>example:</strong>
      * <p>np-shdbbkdubb****</p>
      */
@@ -19,6 +23,7 @@ public class DescribeInstanceGroupPriceRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,8 @@ public class DescribeInstanceGroupPriceRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The image ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>imgc-0aae4rgm5umzo****</p>
      */
@@ -35,6 +42,7 @@ public class DescribeInstanceGroupPriceRequest extends TeaModel {
     public String imageId;
 
     /**
+     * <p>The instance group specifications.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,6 +52,8 @@ public class DescribeInstanceGroupPriceRequest extends TeaModel {
     public String instanceGroupSpec;
 
     /**
+     * <p>The instance version. You do not need to specify this parameter. The system automatically matches the value.</p>
+     * 
      * <strong>example:</strong>
      * <p>basic</p>
      */
@@ -51,6 +61,8 @@ public class DescribeInstanceGroupPriceRequest extends TeaModel {
     public String instanceVersion;
 
     /**
+     * <p>The number of instances in the instance group.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
@@ -58,6 +70,8 @@ public class DescribeInstanceGroupPriceRequest extends TeaModel {
     public Integer numberOfInstances;
 
     /**
+     * <p>The order type.</p>
+     * 
      * <strong>example:</strong>
      * <p>CREATE</p>
      */
@@ -65,6 +79,8 @@ public class DescribeInstanceGroupPriceRequest extends TeaModel {
     public String orderType;
 
     /**
+     * <p>The subscription period. The unit is specified by PeriodUnit. Default value: 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>2</p>
      */
@@ -72,6 +88,8 @@ public class DescribeInstanceGroupPriceRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the subscription period. Default value: Month.</p>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -79,6 +97,8 @@ public class DescribeInstanceGroupPriceRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The ID of the promotion.</p>
+     * 
      * <strong>example:</strong>
      * <p>88436689****</p>
      */
@@ -86,6 +106,8 @@ public class DescribeInstanceGroupPriceRequest extends TeaModel {
     public String promotionId;
 
     /**
+     * <p>The sales mode. You do not need to specify this parameter. The system automatically matches the value.</p>
+     * 
      * <strong>example:</strong>
      * <p>Instance</p>
      */

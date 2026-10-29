@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBandwidthPackagePriceRequest extends TeaModel {
     /**
+     * <p>The peak bandwidth of the network. Unit: Mbit/s.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,7 @@ public class DescribeBandwidthPackagePriceRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -23,6 +25,17 @@ public class DescribeBandwidthPackagePriceRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The billing method of the bandwidth plan. Valid values:</p>
+     * <p>&lt;props=&quot;china&quot;&gt;</p>
+     * <ul>
+     * <li><strong>PayByBandwidth</strong> (default): billing by bandwidth.</li>
+     * <li><strong>PayBy95</strong>: billing by traditional 95th percentile. IPv6 Internet bandwidth does not support billing by traditional 95th percentile by default. To use this billing method, contact your account manager.</li>
+     * </ul>
+     * <p>&lt;props=&quot;intl&quot;&gt;</p>
+     * <ul>
+     * <li><strong>PayByBandwidth</strong> (default): billing by bandwidth.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>PayByBandwidth</p>
      */
@@ -30,6 +43,8 @@ public class DescribeBandwidthPackagePriceRequest extends TeaModel {
     public String internetChargeType;
 
     /**
+     * <p>The subscription duration of the resource. The unit is specified by <code>PeriodUnit</code>. Valid values: 1 month, 2 months, 3 months, 6 months, 1 year, 2 years, and 3 years.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -37,6 +52,12 @@ public class DescribeBandwidthPackagePriceRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the subscription duration of the resource. Valid values:</p>
+     * <ul>
+     * <li><strong>Month</strong>: Month.</li>
+     * <li><strong>Year</strong>: Year.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -44,6 +65,8 @@ public class DescribeBandwidthPackagePriceRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The ID of the promotion.</p>
+     * 
      * <strong>example:</strong>
      * <p>50003308011****</p>
      */
@@ -51,6 +74,8 @@ public class DescribeBandwidthPackagePriceRequest extends TeaModel {
     public String promotionId;
 
     /**
+     * <p>The payment channel.</p>
+     * 
      * <strong>example:</strong>
      * <p>JvsMobile</p>
      */

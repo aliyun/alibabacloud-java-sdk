@@ -42,7 +42,7 @@ public class ActivateEdgeMobileAgentResponseBody extends TeaModel {
 
     public static class ActivateEdgeMobileAgentResponseBodyData extends TeaModel {
         /**
-         * <p>The assigned API key. The plaintext value is returned only upon the first activation.</p>
+         * <p>The assigned API key. The plaintext is returned only upon the first activation.</p>
          * 
          * <strong>example:</strong>
          * <p>cpk-81vfd8t8zdfxdf*****</p>

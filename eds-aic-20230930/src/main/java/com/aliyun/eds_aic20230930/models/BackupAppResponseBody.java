@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BackupAppResponseBody extends TeaModel {
     /**
-     * <p>The number of instances that are backed up.</p>
+     * <p>The number of backed-up instances.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class BackupAppResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The response elements.</p>
+     * <p>The returned result object.</p>
      */
     @NameInMap("Data")
     public java.util.List<BackupAppResponseBodyData> data;
@@ -76,7 +76,7 @@ public class BackupAppResponseBody extends TeaModel {
 
     public static class BackupAppResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the cloud phone instance.</p>
+         * <p>The instance ID of the cloud phone.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-34pqe4r0kd9kn****</p>

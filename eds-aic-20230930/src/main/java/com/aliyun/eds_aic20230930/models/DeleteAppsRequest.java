@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAppsRequest extends TeaModel {
     /**
-     * <p>The IDs of the applications.</p>
+     * <p>The list of application IDs.</p>
      */
     @NameInMap("AppIdList")
     public java.util.List<String> appIdList;

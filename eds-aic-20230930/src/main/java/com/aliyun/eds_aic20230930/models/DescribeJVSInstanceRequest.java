@@ -11,7 +11,7 @@ public class DescribeJVSInstanceRequest extends TeaModel {
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The maximum number of results per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

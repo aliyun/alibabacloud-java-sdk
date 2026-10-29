@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SetAdbSecureRequest extends TeaModel {
     /**
-     * <p>The IDs of the cloud phone instances. You can specify a maximum of 50 cloud phone instances.</p>
+     * <p>The list of cloud phone instance IDs. Up to 50 instances are supported.</p>
      */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 
     /**
-     * <p>The status of the ADB authentication feature.</p>
+     * <p>The ADB authentication status.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -4,16 +4,24 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCreditPackagePriceResponseBody extends TeaModel {
+    /**
+     * <p>The price.</p>
+     */
     @NameInMap("Price")
     public DescribeCreditPackagePriceResponseBodyPrice price;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>6C8439B9-7DBF-57F4-92AE-55A9B9D3****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The promotion rules.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<DescribeCreditPackagePriceResponseBodyRules> rules;
 
@@ -48,6 +56,8 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
 
     public static class DescribeCreditPackagePriceResponseBodyPricePriceDetailModulePrice extends TeaModel {
         /**
+         * <p>The discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
@@ -55,13 +65,17 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
         public String discountPrice;
 
         /**
+         * <p>The name of the billing module.</p>
+         * 
          * <strong>example:</strong>
-         * <p>1000积分</p>
+         * <p>1000 credits</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -69,6 +83,8 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
         public String originalPrice;
 
         /**
+         * <p>The transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -116,16 +132,23 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
 
     public static class DescribeCreditPackagePriceResponseBodyPricePriceDetail extends TeaModel {
         /**
+         * <p>The discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
         @NameInMap("DiscountPrice")
         public Float discountPrice;
 
+        /**
+         * <p>The prices of the modules.</p>
+         */
         @NameInMap("ModulePrice")
         public java.util.List<DescribeCreditPackagePriceResponseBodyPricePriceDetailModulePrice> modulePrice;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -133,6 +156,8 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CloudPhoneAIPackage</p>
          */
@@ -140,6 +165,8 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -195,6 +222,8 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
 
     public static class DescribeCreditPackagePriceResponseBodyPricePromotions extends TeaModel {
         /**
+         * <p>The coupon code.</p>
+         * 
          * <strong>example:</strong>
          * <p>daily</p>
          */
@@ -202,13 +231,17 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
         public String optionCode;
 
         /**
+         * <p>The coupon description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>日常优惠</p>
+         * <p>Regular discount</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
+         * <p>The ID of the promotion.</p>
+         * 
          * <strong>example:</strong>
          * <p>50003308011****</p>
          */
@@ -216,13 +249,17 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
         public String promotionId;
 
         /**
+         * <p>The coupon name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>日常优惠</p>
+         * <p>Regular discount</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
+         * <p>Indicates whether the coupon is selected.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -278,6 +315,13 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
 
     public static class DescribeCreditPackagePriceResponseBodyPrice extends TeaModel {
         /**
+         * <p>The currency. Valid values:</p>
+         * <ul>
+         * <li>CNY: Chinese yuan</li>
+         * <li>USD: US dollar</li>
+         * <li>JPY: Japanese yen</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -285,6 +329,8 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
@@ -292,19 +338,29 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
         public Float discountPrice;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The price details.</p>
+         */
         @NameInMap("PriceDetail")
         public java.util.List<DescribeCreditPackagePriceResponseBodyPricePriceDetail> priceDetail;
 
+        /**
+         * <p>The promotion information.</p>
+         */
         @NameInMap("Promotions")
         public java.util.List<DescribeCreditPackagePriceResponseBodyPricePromotions> promotions;
 
         /**
+         * <p>The transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -368,13 +424,17 @@ public class DescribeCreditPackagePriceResponseBody extends TeaModel {
 
     public static class DescribeCreditPackagePriceResponseBodyRules extends TeaModel {
         /**
+         * <p>The promotion description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>日常优惠</p>
+         * <p>Regular discount</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>3s2f42fis7pmb9****</p>
          */

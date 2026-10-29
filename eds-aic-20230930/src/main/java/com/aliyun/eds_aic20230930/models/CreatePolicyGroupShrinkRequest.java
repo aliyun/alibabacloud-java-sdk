@@ -14,7 +14,7 @@ public class CreatePolicyGroupShrinkRequest extends TeaModel {
     public String cameraRedirect;
 
     /**
-     * <p>The clipboard permission.</p>
+     * <p>The clipboard permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>readwrite</p>
@@ -23,7 +23,7 @@ public class CreatePolicyGroupShrinkRequest extends TeaModel {
     public String clipboard;
 
     /**
-     * <p>The file transfer policy for the web client.</p>
+     * <p>The file transfer policy for the Wuying web client.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -32,7 +32,7 @@ public class CreatePolicyGroupShrinkRequest extends TeaModel {
     public String html5FileTransfer;
 
     /**
-     * <p>The local disk mapping permission.</p>
+     * <p>The local disk mapping permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -50,7 +50,7 @@ public class CreatePolicyGroupShrinkRequest extends TeaModel {
     public String lockResolution;
 
     /**
-     * <p>Network redirection.</p>
+     * <p>The network redirection settings.</p>
      */
     @NameInMap("NetRedirectPolicy")
     public String netRedirectPolicyShrink;
@@ -74,7 +74,7 @@ public class CreatePolicyGroupShrinkRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The resolution height, in pixels.</p>
+     * <p>The height of the resolution. Unit: pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>1280</p>
@@ -83,7 +83,7 @@ public class CreatePolicyGroupShrinkRequest extends TeaModel {
     public Integer resolutionHeight;
 
     /**
-     * <p>The resolution width, in pixels.</p>
+     * <p>The width of the resolution. Unit: pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>720</p>
@@ -92,7 +92,7 @@ public class CreatePolicyGroupShrinkRequest extends TeaModel {
     public Integer resolutionWidth;
 
     /**
-     * <p>Screen watermark.</p>
+     * <p>The screen watermark settings.</p>
      */
     @NameInMap("Watermark")
     public String watermarkShrink;

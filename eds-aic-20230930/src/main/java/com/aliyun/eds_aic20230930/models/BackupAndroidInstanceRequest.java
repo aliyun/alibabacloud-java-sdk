@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BackupAndroidInstanceRequest extends TeaModel {
     /**
-     * <p>A list of instance IDs.</p>
+     * <p>The list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AndroidInstanceIdList")
@@ -21,14 +21,14 @@ public class BackupAndroidInstanceRequest extends TeaModel {
     public String backupFileName;
 
     /**
-     * <p>The upload URL for the backup file.</p>
+     * <p>The upload URL of the backup file.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackupFilePath")
     public String backupFilePath;
 
     /**
-     * <p>The description of the full instance backup.</p>
+     * <p>The description of the full backup.</p>
      * 
      * <strong>example:</strong>
      * <p>this is a backup android instance</p>
@@ -37,7 +37,13 @@ public class BackupAndroidInstanceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The region where the backup is stored.</p>
+     * <p>The list of application package names to exclude from the full backup. For matched applications, only APK collection is skipped, and user data is backed up as usual. If this parameter is not specified, no applications are excluded.</p>
+     */
+    @NameInMap("ExcludeAppList")
+    public java.util.List<String> excludeAppList;
+
+    /**
+     * <p>The backup region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -81,6 +87,14 @@ public class BackupAndroidInstanceRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public BackupAndroidInstanceRequest setExcludeAppList(java.util.List<String> excludeAppList) {
+        this.excludeAppList = excludeAppList;
+        return this;
+    }
+    public java.util.List<String> getExcludeAppList() {
+        return this.excludeAppList;
     }
 
     public BackupAndroidInstanceRequest setUploadEndpoint(String uploadEndpoint) {

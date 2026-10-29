@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BackupAndroidInstanceResponseBody extends TeaModel {
     /**
-     * <p>The number of instances that were backed up.</p>
+     * <p>The number of backed-up instances.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,13 +14,13 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The returned result objects.</p>
+     * <p>The returned result object.</p>
      */
     @NameInMap("Data")
     public java.util.List<BackupAndroidInstanceResponseBodyData> data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>440D7342-5FC2-5E7C-B2DB-D0B4EAC2BDF1</p>
@@ -29,7 +29,7 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the task.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>t-14xwibw7pyrjd****</p>
@@ -85,7 +85,7 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
         public String androidInstanceId;
 
         /**
-         * <p>The ID of the backup file.</p>
+         * <p>The backup file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>bf-b0qbg3pbpjkn7****</p>
@@ -103,7 +103,7 @@ public class BackupAndroidInstanceResponseBody extends TeaModel {
         public String backupFileName;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t-bp67acfmxazb4p****</p>

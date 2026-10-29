@@ -4,16 +4,24 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
+    /**
+     * <p>The price.</p>
+     */
     @NameInMap("Price")
     public DescribeCloudPhoneNodeRenewPriceResponseBodyPrice price;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>1A923337-44D9-5CAD-9A53-95084BD4****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The promotion rules.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<DescribeCloudPhoneNodeRenewPriceResponseBodyRules> rules;
 
@@ -48,6 +56,8 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
 
     public static class DescribeCloudPhoneNodeRenewPriceResponseBodyPricePriceDetailModulePrice extends TeaModel {
         /**
+         * <p>The discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>878.15</p>
          */
@@ -55,6 +65,8 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
         public String discountPrice;
 
         /**
+         * <p>The name of the module.</p>
+         * 
          * <strong>example:</strong>
          * <p>PhoneData</p>
          */
@@ -62,6 +74,8 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
         public String moduleName;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>1090</p>
          */
@@ -69,6 +83,8 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
         public String originalPrice;
 
         /**
+         * <p>The transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>73.87</p>
          */
@@ -116,6 +132,8 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
 
     public static class DescribeCloudPhoneNodeRenewPriceResponseBodyPricePriceDetail extends TeaModel {
         /**
+         * <p>The discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>274.75</p>
          */
@@ -123,16 +141,23 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
         public Float discountPrice;
 
         /**
+         * <p>The matrix ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cpn-9rz9ou1l0wq30****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The price of each module.</p>
+         */
         @NameInMap("ModulePrice")
         public java.util.List<DescribeCloudPhoneNodeRenewPriceResponseBodyPricePriceDetailModulePrice> modulePrice;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>2087.0</p>
          */
@@ -140,6 +165,8 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CloudPhoneMatrix</p>
          */
@@ -147,6 +174,8 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
         public String resourceType;
 
         /**
+         * <p>The transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>1099.0</p>
          */
@@ -210,6 +239,8 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
 
     public static class DescribeCloudPhoneNodeRenewPriceResponseBodyPricePromotions extends TeaModel {
         /**
+         * <p>The promotion code.</p>
+         * 
          * <strong>example:</strong>
          * <p>youhui_quan</p>
          */
@@ -217,13 +248,17 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
         public String optionCode;
 
         /**
+         * <p>The promotion description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>日常优惠</p>
+         * <p>Daily promotion</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
+         * <p>The promotion ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>91381816****</p>
          */
@@ -231,13 +266,17 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
         public String promotionId;
 
         /**
+         * <p>The promotion name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>日常优惠</p>
+         * <p>Daily promotion</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
+         * <p>Indicates whether the promotion is selected.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -293,6 +332,8 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
 
     public static class DescribeCloudPhoneNodeRenewPriceResponseBodyPrice extends TeaModel {
         /**
+         * <p>The currency.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -300,6 +341,8 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>274.75</p>
          */
@@ -307,19 +350,29 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
         public Float discountPrice;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>1860</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The price details.</p>
+         */
         @NameInMap("PriceDetail")
         public java.util.List<DescribeCloudPhoneNodeRenewPriceResponseBodyPricePriceDetail> priceDetail;
 
+        /**
+         * <p>The promotion information.</p>
+         */
         @NameInMap("Promotions")
         public java.util.List<DescribeCloudPhoneNodeRenewPriceResponseBodyPricePromotions> promotions;
 
         /**
+         * <p>The transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>769.3</p>
          */
@@ -383,13 +436,17 @@ public class DescribeCloudPhoneNodeRenewPriceResponseBody extends TeaModel {
 
     public static class DescribeCloudPhoneNodeRenewPriceResponseBodyRules extends TeaModel {
         /**
+         * <p>The description of the rule.</p>
+         * 
          * <strong>example:</strong>
-         * <p>满40减20</p>
+         * <p>20 off for orders over 40</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>2023110611****</p>
          */

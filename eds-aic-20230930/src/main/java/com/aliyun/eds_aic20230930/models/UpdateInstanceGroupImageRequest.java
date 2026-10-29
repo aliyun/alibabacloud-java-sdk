@@ -15,7 +15,7 @@ public class UpdateInstanceGroupImageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>A list of instance group IDs.</p>
+     * <p>The list of instance group IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceGroupIds")

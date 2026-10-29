@@ -4,10 +4,15 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeCloudPhoneNodeRenewPriceRequest extends TeaModel {
+    /**
+     * <p>The list of cloud phone matrix IDs.</p>
+     */
     @NameInMap("NodeIds")
     public java.util.List<String> nodeIds;
 
     /**
+     * <p>The subscription period. The unit is specified by PeriodUnit.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -15,6 +20,12 @@ public class DescribeCloudPhoneNodeRenewPriceRequest extends TeaModel {
     public Integer period;
 
     /**
+     * <p>The unit of the subscription period. Valid values:</p>
+     * <ul>
+     * <li><strong>Month</strong>: Month.</li>
+     * <li><strong>Year</strong>: Year.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -22,6 +33,8 @@ public class DescribeCloudPhoneNodeRenewPriceRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The ID of the promotion.</p>
+     * 
      * <strong>example:</strong>
      * <p>50003308011****</p>
      */

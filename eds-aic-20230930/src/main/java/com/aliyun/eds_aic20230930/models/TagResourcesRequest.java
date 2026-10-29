@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class TagResourcesRequest extends TeaModel {
     /**
-     * <p>The list of cloud phone IDs. The list can contain 1 to 50 IDs.</p>
+     * <p>The list of resource IDs, which are cloud phone IDs. You can specify 1 to 50 IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. The value must be \<code>ALIYUN::ACP::INSTANCE\\</code>.</p>
+     * <p>The resource type. Set the value to ALIYUN::ACP::INSTANCE.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The list of tags. The list can contain 1 to 20 tags.</p>
+     * <p>The list of tags. You can specify 1 to 20 tags.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Tag")
@@ -59,7 +59,7 @@ public class TagResourcesRequest extends TeaModel {
 
     public static class TagResourcesRequestTag extends TeaModel {
         /**
-         * <p>The tag key. The key can be up to 128 characters in length. It cannot be an empty string. The key cannot start with \<code>aliyun\\</code> or \<code>acs:\\</code> and cannot contain \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+         * <p>The tag key. It cannot be an empty string. It can be up to 128 characters in length, cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>department</p>
@@ -68,7 +68,7 @@ public class TagResourcesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. The value can be up to 128 characters in length and can be an empty string. The value cannot start with \<code>acs:\\</code> and cannot contain \<code>http\\://\\</code> or \<code>https\\://\\</code>.</p>
+         * <p>The tag value. It can be an empty string. It can be up to 128 characters in length, cannot start with acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>design</p>

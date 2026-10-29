@@ -14,7 +14,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public String cameraRedirect;
 
     /**
-     * <p>The clipboard permission.</p>
+     * <p>The clipboard permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>readwrite</p>
@@ -23,7 +23,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public String clipboard;
 
     /**
-     * <p>The file transfer policy for the web client.</p>
+     * <p>The file transfer policy for the Wuying web client.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -32,7 +32,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public String html5FileTransfer;
 
     /**
-     * <p>The local disk mapping permission.</p>
+     * <p>The local disk mapping permissions.</p>
      * 
      * <strong>example:</strong>
      * <p>off</p>
@@ -50,7 +50,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public String lockResolution;
 
     /**
-     * <p>Network redirection.</p>
+     * <p>The network redirection settings.</p>
      */
     @NameInMap("NetRedirectPolicy")
     public CreatePolicyGroupRequestNetRedirectPolicy netRedirectPolicy;
@@ -74,7 +74,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public String policyType;
 
     /**
-     * <p>The resolution height, in pixels.</p>
+     * <p>The height of the resolution. Unit: pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>1280</p>
@@ -83,7 +83,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public Integer resolutionHeight;
 
     /**
-     * <p>The resolution width, in pixels.</p>
+     * <p>The width of the resolution. Unit: pixels.</p>
      * 
      * <strong>example:</strong>
      * <p>720</p>
@@ -92,7 +92,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
     public Integer resolutionWidth;
 
     /**
-     * <p>Screen watermark.</p>
+     * <p>The screen watermark settings.</p>
      */
     @NameInMap("Watermark")
     public CreatePolicyGroupRequestWatermark watermark;
@@ -243,7 +243,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String customProxy;
 
         /**
-         * <p>The IP address of the transparent proxy. The IP address must be in IPv4 format.</p>
+         * <p>The transparent proxy IP address. The format is an IPv4 address.</p>
          * 
          * <strong>example:</strong>
          * <p>47.100.XX.XX</p>
@@ -270,7 +270,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String port;
 
         /**
-         * <p>The proxy password. The password must be 1 to 256 characters in length. It cannot contain Chinese characters or whitespace characters.</p>
+         * <p>The proxy password. The password must be 1 to 256 characters in length and cannot contain Chinese characters or whitespace characters.</p>
          * 
          * <strong>example:</strong>
          * <p>password</p>
@@ -288,7 +288,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String proxyType;
 
         /**
-         * <p>The proxy username. The username must be 1 to 256 characters in length. It cannot contain Chinese characters or whitespace characters.</p>
+         * <p>The proxy username. The username must be 1 to 256 characters in length and cannot contain Chinese characters or whitespace characters.</p>
          * 
          * <strong>example:</strong>
          * <p>username</p>
@@ -297,7 +297,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public String proxyUserName;
 
         /**
-         * <p>The list of proxy rules. You can specify up to 100 rules.</p>
+         * <p>The list of proxy rules. A maximum of 100 rules can be configured.</p>
          */
         @NameInMap("Rules")
         public java.util.List<CreatePolicyGroupRequestNetRedirectPolicyRules> rules;
@@ -384,7 +384,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public Integer watermarkColor;
 
         /**
-         * <p>The custom text for the watermark. The text can be up to 10 characters long and cannot contain emojis.</p>
+         * <p>The custom text for the watermark. The text must be up to 10 characters in length and cannot contain emoji.</p>
          * 
          * <strong>example:</strong>
          * <p>custom text</p>
@@ -402,7 +402,7 @@ public class CreatePolicyGroupRequest extends TeaModel {
         public Integer watermarkFontSize;
 
         /**
-         * <p>Specifies whether to enable the screen watermark.</p>
+         * <p>The screen watermark switch.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>

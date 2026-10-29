@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAICloudPhoneRequest extends TeaModel {
     /**
-     * <p>The quantity to purchase.</p>
+     * <p>The quantity.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CreateAICloudPhoneRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The bandwidth package ID.</p>
+     * <p>The ID of the bandwidth plan.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class CreateAICloudPhoneRequest extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The region ID for the purchase.</p>
+     * <p>The ID of the region for the purchase.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class CreateAICloudPhoneRequest extends TeaModel {
     public String bizRegionId;
 
     /**
-     * <p>The image ID.</p>
+     * <p>The ID of the image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class CreateAICloudPhoneRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The instance group name.</p>
+     * <p>The name of the instance group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -64,10 +64,10 @@ public class CreateAICloudPhoneRequest extends TeaModel {
     public String instanceGroupName;
 
     /**
-     * <p>The instance group specification. Valid values:</p>
+     * <p>The specification of the instance group. Valid values:</p>
      * <ul>
-     * <li>STANDARD: standard.</li>
-     * <li>MEDIUM: advanced.</li>
+     * <li>STANDARD: Standard.</li>
+     * <li>MEDIUM: Advanced.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -78,7 +78,7 @@ public class CreateAICloudPhoneRequest extends TeaModel {
     public String instanceGroupSpec;
 
     /**
-     * <p>The purchase duration.</p>
+     * <p>The subscription duration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CreateAICloudPhoneRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The unit of the purchase duration.</p>
+     * <p>The unit of the subscription duration.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class CreateAICloudPhoneRequest extends TeaModel {
     public String periodUnit;
 
     /**
-     * <p>The policy group ID.</p>
+     * <p>The ID of the policy group.</p>
      * 
      * <strong>example:</strong>
      * <p>pg-0bjrh3oxk2q0xxxxx</p>
@@ -107,7 +107,7 @@ public class CreateAICloudPhoneRequest extends TeaModel {
     public String policyGroupId;
 
     /**
-     * <p>The coupon ID.</p>
+     * <p>The ID of the coupon.</p>
      * 
      * <strong>example:</strong>
      * <p>youhuiquan_promotion_xxx</p>

@@ -135,7 +135,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
 
     public static class DescribeMobileAgentPackageResponseBodyPackageList extends TeaModel {
         /**
-         * <p>The expiration time. The time format is YYYY-MM-DD HH:mm:ss.</p>
+         * <p>The expiration time. Format: YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-30 00:00:00</p>
@@ -150,7 +150,7 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
         public java.util.List<String> instanceIds;
 
         /**
-         * <p>The package credit quota.</p>
+         * <p>The credit quota of the package.</p>
          * 
          * <strong>example:</strong>
          * <p>8000</p>
@@ -178,6 +178,9 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
 
         /**
          * <p>The name of the package specification.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Flagship Edition (Custom)</p>
          */
         @NameInMap("PackageSpecName")
         public String packageSpecName;
@@ -193,12 +196,18 @@ public class DescribeMobileAgentPackageResponseBody extends TeaModel {
 
         /**
          * <p>The end time of the package period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-11-02T15:59Z</p>
          */
         @NameInMap("PeriodEndTime")
         public String periodEndTime;
 
         /**
          * <p>The start time of the package period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-16T15:29Z</p>
          */
         @NameInMap("PeriodStartTime")
         public String periodStartTime;

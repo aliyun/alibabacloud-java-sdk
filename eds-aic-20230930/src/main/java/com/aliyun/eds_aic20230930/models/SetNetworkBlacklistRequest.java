@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class SetNetworkBlacklistRequest extends TeaModel {
     /**
-     * <p>Domain name blacklist.</p>
+     * <p>The domain name blacklist.</p>
      * <blockquote>
-     * <p>Supports a maximum of 200 domain names.</p>
+     * <p>A maximum of 200 domain names are supported.</p>
      * </blockquote>
      */
     @NameInMap("DomainBlacklist")
     public java.util.List<String> domainBlacklist;
 
     /**
-     * <p>IP address blacklist.</p>
+     * <p>The IP address blacklist.</p>
      * <blockquote>
-     * <p>Supports a maximum of 200 IP addresses or IP address segments.</p>
+     * <p>A maximum of 200 IP addresses or CIDR blocks are supported.</p>
      * </blockquote>
      */
     @NameInMap("IpBlacklist")

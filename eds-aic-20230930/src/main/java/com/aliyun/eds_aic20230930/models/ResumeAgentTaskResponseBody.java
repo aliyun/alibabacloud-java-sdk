@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResumeAgentTaskResponseBody extends TeaModel {
     /**
-     * <p>The status code of the API operation.</p>
+     * <p>The API status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message returned by the API operation.</p>
+     * <p>The API response message.</p>
      * 
      * <strong>example:</strong>
      * <p>Success.</p>
@@ -78,20 +78,13 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         /**
          * <p>The current status of the task. Valid values:</p>
          * <ul>
-         * <li><p>PENDING: The task is being created.</p>
-         * </li>
-         * <li><p>RUNNING: The task is running.</p>
-         * </li>
-         * <li><p>COMPLETED: The task is completed.</p>
-         * </li>
-         * <li><p>FAILED: The task failed.</p>
-         * </li>
-         * <li><p>TIMEOUT: The task execution timed out.</p>
-         * </li>
-         * <li><p>PAUSING: The task is being paused.</p>
-         * </li>
-         * <li><p>PAUSED: The task is paused.</p>
-         * </li>
+         * <li>PENDING: The task is being created.</li>
+         * <li>RUNNING: The task is running.</li>
+         * <li>COMPLETED: The task is completed.</li>
+         * <li>FAILED: The task failed.</li>
+         * <li>TIMEOUT: The task execution timed out.</li>
+         * <li>PAUSING: The task is being paused.</li>
+         * <li>PAUSED: The task is paused.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -101,7 +94,7 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         public String currentStatus;
 
         /**
-         * <p>The reason why the task resumption failed.</p>
+         * <p>The reason why the task failed to resume.</p>
          * 
          * <strong>example:</strong>
          * <p>Task status [COMPLETED] does not support resume, only PAUSED tasks can be resumed.</p>
@@ -110,7 +103,7 @@ public class ResumeAgentTaskResponseBody extends TeaModel {
         public String failedReason;
 
         /**
-         * <p>The ID of the Mobile node.</p>
+         * <p>The Mobile node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>acp-ek65k51zoxia3x8xz</p>

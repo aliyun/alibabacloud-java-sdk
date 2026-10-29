@@ -30,7 +30,7 @@ public class BackupFileRequest extends TeaModel {
     public String backupFileName;
 
     /**
-     * <p>The upload path of the backup file.</p>
+     * <p>The upload address of the backup file.</p>
      * <blockquote>
      * <p>If you upload the backup file to an OSS bucket, call the describeBuckets operation to obtain the bucketName, and select ossObjectList to obtain the key. The key is the folder path in the OSS bucket. Concatenate them into <code>oss://${bucketName}/${key}</code>.</p>
      * </blockquote>
@@ -49,13 +49,19 @@ public class BackupFileRequest extends TeaModel {
     public String description;
 
     /**
+     * <p>The list of application package names excluded from full instance backup. Matched applications only skip APK collection, and user data is backed up as usual. If this parameter is not specified, no applications are excluded.</p>
+     */
+    @NameInMap("ExcludeAppList")
+    public java.util.List<String> excludeAppList;
+
+    /**
      * <p>The list of file paths in the Android container to exclude from the backup.</p>
      */
     @NameInMap("ExcludeSourceFilePathList")
     public java.util.List<String> excludeSourceFilePathList;
 
     /**
-     * <p>The list of application package names to back up.</p>
+     * <p>The list of package names of the applications to back up.</p>
      */
     @NameInMap("SourceAppList")
     public java.util.List<String> sourceAppList;
@@ -67,9 +73,9 @@ public class BackupFileRequest extends TeaModel {
     public java.util.List<String> sourceFilePathList;
 
     /**
-     * <p>The domain name of the backup endpoint.</p>
+     * <p>The domain name of the backup address.</p>
      * <blockquote>
-     * <p>If you upload the backup file to an OSS bucket, call the describeBuckets operation to obtain the bucket. If the cloud phone and the bucket are in the same region, obtain the intranetEndpoint field. If they are in different regions, obtain the extranetEndpoint field.</p>
+     * <p>If you upload the backup file to an OSS bucket, call the describeBuckets operation to obtain the bucket. If the Cloud Phone instance and the bucket are in the same region, obtain the intranetEndpoint field. If they are in different regions, obtain the extranetEndpoint field.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -130,6 +136,14 @@ public class BackupFileRequest extends TeaModel {
     }
     public String getDescription() {
         return this.description;
+    }
+
+    public BackupFileRequest setExcludeAppList(java.util.List<String> excludeAppList) {
+        this.excludeAppList = excludeAppList;
+        return this;
+    }
+    public java.util.List<String> getExcludeAppList() {
+        return this.excludeAppList;
     }
 
     public BackupFileRequest setExcludeSourceFilePathList(java.util.List<String> excludeSourceFilePathList) {

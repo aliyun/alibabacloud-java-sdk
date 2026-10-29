@@ -1,3 +1,10 @@
+2026-10-29 Version: 3.33.1
+- Update API BackupAndroidInstance: add request parameters ExcludeAppList.
+- Update API BackupFile: add request parameters ExcludeAppList.
+- Update API RecoverAndroidInstance: add request parameters ExcludeAppList.
+- Update API RecoveryFile: add request parameters ExcludeAppList.
+
+
 2026-10-23 Version: 3.33.0
 - Support API DescribeBandwidthPackagePrice.
 - Support API DescribeCloudPhoneNodePrice.

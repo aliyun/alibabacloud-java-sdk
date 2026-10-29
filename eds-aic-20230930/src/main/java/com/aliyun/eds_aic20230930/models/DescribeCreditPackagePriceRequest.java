@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeCreditPackagePriceRequest extends TeaModel {
     /**
+     * <p>The number of credits.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -12,6 +14,8 @@ public class DescribeCreditPackagePriceRequest extends TeaModel {
     public Integer creditAmount;
 
     /**
+     * <p>The number of credit boost packages to purchase. Valid values: 1 to 99.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -19,6 +23,8 @@ public class DescribeCreditPackagePriceRequest extends TeaModel {
     public String packageAmount;
 
     /**
+     * <p>The subscription period of the resource. The unit is specified by PeriodUnit. Valid values: 3 months, 6 months, and 1 year.</p>
+     * 
      * <strong>example:</strong>
      * <p>3</p>
      */
@@ -26,6 +32,12 @@ public class DescribeCreditPackagePriceRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>The billing time unit of the subscription Billable methods. Valid values:</p>
+     * <ul>
+     * <li><strong>Year</strong>: year</li>
+     * <li><strong>Month</strong> (default): month</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -33,6 +45,8 @@ public class DescribeCreditPackagePriceRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The ID of the promotion.</p>
+     * 
      * <strong>example:</strong>
      * <p>50003308011****</p>
      */

@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RebootCloudPhoneNodesResponseBody extends TeaModel {
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>4610632D-D661-5982-B3D7-5D3FD183F****</p>
      */

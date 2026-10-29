@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class RecoveryFileRequest extends TeaModel {
     /**
-     * <p>The IDs of the instances.</p>
+     * <p>The list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
     /**
-     * <p>Specifies whether to back up the whole instance.</p>
+     * <p>Specifies whether to back up the entire device.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -30,19 +30,18 @@ public class RecoveryFileRequest extends TeaModel {
     public String backupFileId;
 
     /**
-     * <p>The OSS path to which the backup file is uploaded.</p>
-     * <blockquote>
-     * <p>When calling the describeBuckets operation to retrieve a bucket name, you must also call the ossObjectList operation to obtain the object key. Combine these to form the full path: oss\://${bucketName}/${key}.</p>
-     * </blockquote>
+     * <p>The OSS URL to which the backup file is uploaded.
+     * <notice>Call the describeBuckets operation to obtain the bucketName, and select ossObjectList to obtain the key. The key is the path of the backup file. Concatenate them into &quot;oss://${bucketName}/${key}&quot;.</notice></p>
      */
     @NameInMap("BackupFilePath")
     public String backupFilePath;
 
+    @NameInMap("ExcludeAppList")
+    public java.util.List<String> excludeAppList;
+
     /**
-     * <p>The endpoint of the OSS bucket that stores the backup file.</p>
-     * <blockquote>
-     * <p>: When calling the DescribeBuckets operation to query buckets, retrieve the IntranetEndpoint value if the cloud phone and the OSS bucket are in the same region. If they are in different regions, retrieve the ExtranetEndpoint value instead.</p>
-     * </blockquote>
+     * <p>The domain name of the backup address.
+     * <notice>Call the DescribeBuckets operation to obtain the bucket. If the cloud phone and the bucket are in the same region, obtain the IntranetEndpoint field. If they are in different regions, obtain the ExtranetEndpoint field.</notice></p>
      * 
      * <strong>example:</strong>
      * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
@@ -51,7 +50,7 @@ public class RecoveryFileRequest extends TeaModel {
     public String uploadEndpoint;
 
     /**
-     * <p>The type of the backup.</p>
+     * <p>The backup type.</p>
      * 
      * <strong>example:</strong>
      * <p>OSS</p>
@@ -94,6 +93,14 @@ public class RecoveryFileRequest extends TeaModel {
     }
     public String getBackupFilePath() {
         return this.backupFilePath;
+    }
+
+    public RecoveryFileRequest setExcludeAppList(java.util.List<String> excludeAppList) {
+        this.excludeAppList = excludeAppList;
+        return this;
+    }
+    public java.util.List<String> getExcludeAppList() {
+        return this.excludeAppList;
     }
 
     public RecoveryFileRequest setUploadEndpoint(String uploadEndpoint) {

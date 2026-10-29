@@ -11,7 +11,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     public java.util.List<DescribeJVSInstanceResponseBodyData> data;
 
     /**
-     * <p>The maximum number of results returned in this request.</p>
+     * <p>The maximum number of results returned in the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that indicates the starting position of the current query. If this parameter is empty, the query starts from the beginning.</p>
+     * <p>The token that specifies the starting position for the query. An empty value indicates that the query starts from the beginning.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6kU+SQXzm0H9mu/FiSc****</p>
@@ -111,6 +111,9 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
     public static class DescribeJVSInstanceResponseBodyDataAgentVersion extends TeaModel {
         /**
          * <p>The AI Engine version upgrade status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SUCCESS</p>
          */
         @NameInMap("UpgradeStatus")
         public String upgradeStatus;
@@ -158,7 +161,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public Long creditLimit;
 
         /**
-         * <p>The limit period.</p>
+         * <p>The credit limit period.</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -210,6 +213,9 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
 
         /**
          * <p>The skill installation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-10-22 13:45:18</p>
          */
         @NameInMap("InstalledAt")
         public String installedAt;
@@ -298,7 +304,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
 
     public static class DescribeJVSInstanceResponseBodyDataUsedCredit extends TeaModel {
         /**
-         * <p>The number of credits.</p>
+         * <p>The credit amount.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -346,7 +352,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public DescribeJVSInstanceResponseBodyDataAgentVersion agentVersion;
 
         /**
-         * <p>The creation time. The time is in UTC and follows the ISO 8601 standard.</p>
+         * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-10T01:31:32Z</p>
@@ -355,13 +361,13 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The credit limit configuration. If multiple configurations are delivered, the subsequent configurations overwrite the previous ones.</p>
+         * <p>The credit limit configuration. Subsequent quota configurations overwrite previous configurations.</p>
          */
         @NameInMap("CreditConfig")
         public java.util.List<DescribeJVSInstanceResponseBodyDataCreditConfig> creditConfig;
 
         /**
-         * <p>The expiration time. The time is in UTC and follows the ISO 8601 standard.</p>
+         * <p>The expiration time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-10T01:31:32Z</p>
@@ -394,7 +400,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String jvsPackageId;
 
         /**
-         * <p>The modification time. The time is in UTC and follows the ISO 8601 standard.</p>
+         * <p>The modification time. The time is displayed in UTC and follows the ISO 8601 standard.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-04-10T01:31:32Z</p>
@@ -412,7 +418,7 @@ public class DescribeJVSInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The used credits.</p>
+         * <p>The used credit.</p>
          */
         @NameInMap("UsedCredit")
         public java.util.List<DescribeJVSInstanceResponseBodyDataUsedCredit> usedCredit;

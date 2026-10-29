@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AuthorizeAndroidInstanceRequest extends TeaModel {
     /**
-     * <p>List of instance IDs.</p>
+     * <p>The list of instance IDs.</p>
      */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
-     * <p>User ID to be assigned.</p>
+     * <p>The ID of the user to assign.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -20,7 +20,7 @@ public class AuthorizeAndroidInstanceRequest extends TeaModel {
     public String authorizeUserId;
 
     /**
-     * <p>User ID to be unassigned.</p>
+     * <p>The ID of the user to unassign.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

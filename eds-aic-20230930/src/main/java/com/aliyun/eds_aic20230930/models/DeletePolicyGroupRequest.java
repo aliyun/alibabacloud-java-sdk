@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeletePolicyGroupRequest extends TeaModel {
     /**
-     * <p>A list of policy group IDs. If any specified policy group is associated with an existing instance group, the entire operation fails.</p>
+     * <p>The list of policy IDs. If any policy is associated with an undeleted instance group, the entire deletion operation fails.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PolicyGroupIds")

@@ -4,16 +4,24 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
+    /**
+     * <p>The price.</p>
+     */
     @NameInMap("Price")
     public DescribeInstanceGroupPriceResponseBodyPrice price;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>90E4F2B7-BBDA-534D-B872-CCC798996F69</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The rule information.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<DescribeInstanceGroupPriceResponseBodyRules> rules;
 
@@ -48,6 +56,8 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
 
     public static class DescribeInstanceGroupPriceResponseBodyPricePromotions extends TeaModel {
         /**
+         * <p>The coupon code.</p>
+         * 
          * <strong>example:</strong>
          * <p>code</p>
          */
@@ -55,13 +65,17 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
         public String optionCode;
 
         /**
+         * <p>The coupon description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>日常优惠</p>
+         * <p>Regular promotion</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
+         * <p>The promotion ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>86744342****</p>
          */
@@ -69,13 +83,17 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
         public String promotionId;
 
         /**
+         * <p>The coupon name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>日常优惠</p>
+         * <p>Regular promotion</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
+         * <p>Indicates whether the promotion is selected.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -131,6 +149,8 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
 
     public static class DescribeInstanceGroupPriceResponseBodyPrice extends TeaModel {
         /**
+         * <p>The currency unit.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -138,6 +158,8 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
         public String currency;
 
         /**
+         * <p>The discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>12618.0</p>
          */
@@ -145,16 +167,23 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
         public Float discountPrice;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>18134.0</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The promotion information.</p>
+         */
         @NameInMap("Promotions")
         public java.util.List<DescribeInstanceGroupPriceResponseBodyPricePromotions> promotions;
 
         /**
+         * <p>The transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>70.0</p>
          */
@@ -210,13 +239,17 @@ public class DescribeInstanceGroupPriceResponseBody extends TeaModel {
 
     public static class DescribeInstanceGroupPriceResponseBodyRules extends TeaModel {
         /**
+         * <p>The rule description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>日常优惠</p>
+         * <p>Regular promotion</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>yhpcxb4qhgp2k4****</p>
          */

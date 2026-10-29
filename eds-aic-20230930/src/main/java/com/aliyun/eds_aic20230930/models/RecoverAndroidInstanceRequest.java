@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RecoverAndroidInstanceRequest extends TeaModel {
     /**
-     * <p>A list of instance IDs.</p>
+     * <p>The list of instance IDs.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AndroidInstanceIdList")
@@ -21,14 +21,20 @@ public class RecoverAndroidInstanceRequest extends TeaModel {
     public String backupFileId;
 
     /**
-     * <p>The OSS URL where the backup file is uploaded.</p>
+     * <p>The OSS address to which the backup file is uploaded.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BackupFilePath")
     public String backupFilePath;
 
     /**
-     * <p>The region where the backup is located.</p>
+     * <p>The list of app package names excluded from the full-device restore. Excluded apps are not uninstalled and their APKs are not installed, which is compatible with legacy backups that contain APKs. Only user data is replaced. Empty shells must be installed by the customer by using the pm install command. If this parameter is not specified, no apps are excluded.</p>
+     */
+    @NameInMap("ExcludeAppList")
+    public java.util.List<String> excludeAppList;
+
+    /**
+     * <p>The backup region.</p>
      * 
      * <strong>example:</strong>
      * <p>oss-cn-hangzhou-internal.aliyuncs.com</p>
@@ -73,6 +79,14 @@ public class RecoverAndroidInstanceRequest extends TeaModel {
     }
     public String getBackupFilePath() {
         return this.backupFilePath;
+    }
+
+    public RecoverAndroidInstanceRequest setExcludeAppList(java.util.List<String> excludeAppList) {
+        this.excludeAppList = excludeAppList;
+        return this;
+    }
+    public java.util.List<String> getExcludeAppList() {
+        return this.excludeAppList;
     }
 
     public RecoverAndroidInstanceRequest setUploadEndpoint(String uploadEndpoint) {

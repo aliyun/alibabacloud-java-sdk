@@ -4,16 +4,24 @@ package com.aliyun.eds_aic20230930.models;
 import com.aliyun.tea.*;
 
 public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaModel {
+    /**
+     * <p>The price.</p>
+     */
     @NameInMap("Price")
     public DescribeMobileAgentPackagePriceForRenewResponseBodyPrice price;
 
     /**
+     * <p>Id of the request</p>
+     * 
      * <strong>example:</strong>
      * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The rule information.</p>
+     */
     @NameInMap("Rules")
     public java.util.List<DescribeMobileAgentPackagePriceForRenewResponseBodyRules> rules;
 
@@ -48,6 +56,8 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
 
     public static class DescribeMobileAgentPackagePriceForRenewResponseBodyPricePriceDetailModulePrice extends TeaModel {
         /**
+         * <p>The discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>629.7</p>
          */
@@ -55,13 +65,17 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
         public String discountPrice;
 
         /**
+         * <p>The module name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>高级版</p>
+         * <p>Advanced Edition</p>
          */
         @NameInMap("ModuleName")
         public String moduleName;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>1680</p>
          */
@@ -69,6 +83,8 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
         public String originalPrice;
 
         /**
+         * <p>The transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>94.85</p>
          */
@@ -116,6 +132,8 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
 
     public static class DescribeMobileAgentPackagePriceForRenewResponseBodyPricePriceDetail extends TeaModel {
         /**
+         * <p>The discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -123,16 +141,23 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
         public Float discountPrice;
 
         /**
+         * <p>The instance ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>cmag-shdbcudbaib****</p>
          */
         @NameInMap("InstanceId")
         public String instanceId;
 
+        /**
+         * <p>The module prices.</p>
+         */
         @NameInMap("ModulePrice")
         public java.util.List<DescribeMobileAgentPackagePriceForRenewResponseBodyPricePriceDetailModulePrice> modulePrice;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
@@ -140,6 +165,8 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
         public Float originalPrice;
 
         /**
+         * <p>The resource type.</p>
+         * 
          * <strong>example:</strong>
          * <p>CloudPhoneMobileAgent</p>
          */
@@ -147,6 +174,8 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
         public String resourceType;
 
         /**
+         * <p>The transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
@@ -210,6 +239,8 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
 
     public static class DescribeMobileAgentPackagePriceForRenewResponseBodyPricePromotions extends TeaModel {
         /**
+         * <p>The coupon code.</p>
+         * 
          * <strong>example:</strong>
          * <p>daily</p>
          */
@@ -217,13 +248,17 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
         public String optionCode;
 
         /**
+         * <p>The coupon description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>日常优惠</p>
+         * <p>Regular discount</p>
          */
         @NameInMap("PromotionDesc")
         public String promotionDesc;
 
         /**
+         * <p>The promotion ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>91381816****</p>
          */
@@ -231,13 +266,17 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
         public String promotionId;
 
         /**
+         * <p>The coupon name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>日常优惠</p>
+         * <p>Regular discount</p>
          */
         @NameInMap("PromotionName")
         public String promotionName;
 
         /**
+         * <p>Indicates whether the coupon is selected.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -293,6 +332,8 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
 
     public static class DescribeMobileAgentPackagePriceForRenewResponseBodyPrice extends TeaModel {
         /**
+         * <p>The currency.</p>
+         * 
          * <strong>example:</strong>
          * <p>CNY</p>
          */
@@ -300,6 +341,8 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
         public String currency;
 
         /**
+         * <p>The discounted price.</p>
+         * 
          * <strong>example:</strong>
          * <p>200</p>
          */
@@ -307,19 +350,29 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
         public Float discountPrice;
 
         /**
+         * <p>The original price.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000</p>
          */
         @NameInMap("OriginalPrice")
         public Float originalPrice;
 
+        /**
+         * <p>The price details.</p>
+         */
         @NameInMap("PriceDetail")
         public java.util.List<DescribeMobileAgentPackagePriceForRenewResponseBodyPricePriceDetail> priceDetail;
 
+        /**
+         * <p>The promotion information.</p>
+         */
         @NameInMap("Promotions")
         public java.util.List<DescribeMobileAgentPackagePriceForRenewResponseBodyPricePromotions> promotions;
 
         /**
+         * <p>The transaction price.</p>
+         * 
          * <strong>example:</strong>
          * <p>800</p>
          */
@@ -383,13 +436,17 @@ public class DescribeMobileAgentPackagePriceForRenewResponseBody extends TeaMode
 
     public static class DescribeMobileAgentPackagePriceForRenewResponseBodyRules extends TeaModel {
         /**
+         * <p>The rule description.</p>
+         * 
          * <strong>example:</strong>
-         * <p>日常优惠</p>
+         * <p>Regular discount</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The rule ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>20230629****</p>
          */

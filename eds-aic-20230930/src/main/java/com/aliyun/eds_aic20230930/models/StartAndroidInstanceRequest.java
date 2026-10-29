@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class StartAndroidInstanceRequest extends TeaModel {
     /**
-     * <p>List of instances.</p>
+     * <p>The list of instances.</p>
      */
     @NameInMap("AndroidInstanceIds")
     public java.util.List<String> androidInstanceIds;
 
     /**
-     * <p>The billing mode. This parameter is deprecated.</p>
+     * <p>The sales mode. <strong>[Deprecated]</strong></p>
      * 
      * <strong>example:</strong>
      * <p>Instance</p>

@@ -14,7 +14,7 @@ public class RecoveryFileResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The backup file that is restored.</p>
+     * <p>The returned result object.</p>
      * 
      * <strong>example:</strong>
      * <p>6AD56E39-430B-5401-AB4A-7B086454****</p>
@@ -23,7 +23,7 @@ public class RecoveryFileResponseBody extends TeaModel {
     public java.util.List<RecoveryFileResponseBodyData> data;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6AD56E39-430B-5401-AB4A-7B086454****</p>
@@ -32,7 +32,7 @@ public class RecoveryFileResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the batch task.</p>
+     * <p>The batch task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>t-3eourrxaoliqq****</p>

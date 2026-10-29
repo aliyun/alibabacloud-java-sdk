@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAndroidInstanceGroupRequest extends TeaModel {
     /**
-     * <p>A list of instance group IDs.</p>
+     * <p>The list of instance group IDs.</p>
      */
     @NameInMap("InstanceGroupIds")
     public java.util.List<String> instanceGroupIds;

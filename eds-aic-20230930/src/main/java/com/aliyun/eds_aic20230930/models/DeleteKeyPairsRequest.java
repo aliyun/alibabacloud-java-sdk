@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteKeyPairsRequest extends TeaModel {
     /**
-     * <p>The IDs of the ADB key pairs.</p>
+     * <p>The list of key pair IDs.</p>
      */
     @NameInMap("KeyPairIds")
     public java.util.List<String> keyPairIds;

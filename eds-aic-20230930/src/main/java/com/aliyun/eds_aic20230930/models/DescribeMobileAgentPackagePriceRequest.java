@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeMobileAgentPackagePriceRequest extends TeaModel {
     /**
+     * <p>The number of MobileAgent packages.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class DescribeMobileAgentPackagePriceRequest extends TeaModel {
     public String amount;
 
     /**
+     * <p>The region ID for the purchase.</p>
+     * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
      */
@@ -19,6 +23,8 @@ public class DescribeMobileAgentPackagePriceRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The number of credits.</p>
+     * 
      * <strong>example:</strong>
      * <p>1000</p>
      */
@@ -26,6 +32,8 @@ public class DescribeMobileAgentPackagePriceRequest extends TeaModel {
     public Integer creditAmount;
 
     /**
+     * <p>The specifications of the MobileAgent package.</p>
+     * 
      * <strong>example:</strong>
      * <p>advanced</p>
      */
@@ -33,6 +41,8 @@ public class DescribeMobileAgentPackagePriceRequest extends TeaModel {
     public String mobileAgentPackageSpec;
 
     /**
+     * <p>The subscription duration of the purchased resource. The unit is specified by PeriodUnit. Valid value: 1 month.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -40,6 +50,12 @@ public class DescribeMobileAgentPackagePriceRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>The duration unit of the subscription billing method. Valid values:</p>
+     * <ul>
+     * <li><strong>Year</strong>: Year.</li>
+     * <li><strong>Month</strong> (default): Month.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -47,6 +63,8 @@ public class DescribeMobileAgentPackagePriceRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The ID of the promotion.</p>
+     * 
      * <strong>example:</strong>
      * <p>50003308011****</p>
      */

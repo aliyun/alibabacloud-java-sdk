@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class SendFileRequest extends TeaModel {
     /**
-     * <p>The IDs of one or more cloud phone instances.</p>
+     * <p>The list of instances.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AndroidInstanceIdList")
     public java.util.List<String> androidInstanceIdList;
 
     /**
-     * <p>Specifies whether to automatically install the application after the file is uploaded.</p>
+     * <p>Specifies whether to automatically install the uploaded application.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -21,7 +21,7 @@ public class SendFileRequest extends TeaModel {
     public Boolean autoInstall;
 
     /**
-     * <p>A client-generated token that ensures request idempotence and prevents duplicate submissions. The token can contain up to 100 characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. The token can be up to 100 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>425F351C-3F8E-5218-A520-B6311D0D****</p>
@@ -29,13 +29,16 @@ public class SendFileRequest extends TeaModel {
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The MD5 value of the input file.</p>
+     */
     @NameInMap("FileMd5")
     public String fileMd5;
 
     /**
-     * <p>The destination path on the cloud phone.</p>
+     * <p>The upload path inside the cloud phone to which the file is uploaded.</p>
      * <blockquote>
-     * <p>If <code>UploadType</code> is <code>OSS</code> or <code>OSS_BRIDGED</code>, <code>SourceFilePath</code> must specify a directory, for example, <code>/sdcard/Download/</code>. If <code>UploadType</code> is <code>DOWNLOAD_URL</code>, <code>SourceFilePath</code> must specify a full file path, for example, <code>/sdcard/Download/MyFile.txt</code>.</p>
+     * <p>If UploadType is OSS or OSS_BRIDGED, the upload path SourceFilePath inside the cloud phone must be a directory, such as /sdcard/Download. If UploadType is DOWNLOAD_URL, the upload path SourceFilePath inside the cloud phone must be a file, such as /sdcard/Download/MyFile.txt.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -46,9 +49,9 @@ public class SendFileRequest extends TeaModel {
     public String sourceFilePath;
 
     /**
-     * <p>The name for the destination file on the cloud phone.</p>
+     * <p>The name of the file uploaded from OSS to the cloud phone.</p>
      * <blockquote>
-     * <p>This parameter is optional and takes effect only when <code>UploadType</code> is set to <code>OSS</code> or <code>OSS_BRIDGED</code>. If you specify this parameter, the file is saved with this name in the path specified by <code>SourceFilePath</code>. If you leave this parameter empty, the source file name is used. This parameter is ignored when <code>UploadType</code> is set to <code>DOWNLOAD_URL</code>.</p>
+     * <p>If UploadType is OSS or OSS_BRIDGED, the TargetFileName parameter is optional. If TargetFileName is empty, the original file name is retained when the OSS file is uploaded to the cloud phone. If TargetFileName is not empty, the file name in the SourceFilePath directory on the cloud phone is set to the value of TargetFileName. If UploadType is DOWNLOAD_URL, the TargetFileName parameter does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -58,9 +61,9 @@ public class SendFileRequest extends TeaModel {
     public String targetFileName;
 
     /**
-     * <p>The service endpoint of Object Storage Service (OSS). This parameter is required if <code>UploadType</code> is <code>OSS</code> or <code>OSS_BRIDGED</code>.</p>
+     * <p>The service domain name for uploading files to OSS. This parameter is required when UploadType is set to OSS or OSS_BRIDGED.</p>
      * <blockquote>
-     * <p>If the cloud phone instance and the OSS bucket are in the same region, you can specify an internal endpoint to accelerate data transfer and avoid public data transfer costs. For example, the internal endpoint for the China (Hangzhou) region is <code>oss-cn-hangzhou-internal.aliyuncs.com</code>. For a complete list of endpoints, see <a href="https://help.aliyun.com/document_detail/31837.html">OSS regions and endpoints</a>.</p>
+     * <p>If the cloud phone and the OSS bucket are in the same region, you can use an internal endpoint to accelerate the transmission speed and avoid Internet traffic fees. For example, the internal endpoint for the China (Hangzhou) region is <code>oss-cn-hangzhou-internal.aliyuncs.com</code>. For more information about the mapping between regions and endpoints, see <a href="https://help.aliyun.com/document_detail/31837.html">Regions and endpoints</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,14 +73,11 @@ public class SendFileRequest extends TeaModel {
     public String uploadEndpoint;
 
     /**
-     * <p>The storage type of the source file. Valid values:</p>
+     * <p>The storage type of the file to be uploaded.</p>
      * <ul>
-     * <li><p><strong>OSS</strong>: The file is stored in Object Storage Service (OSS).</p>
-     * </li>
-     * <li><p><strong>DOWNLOAD_URL</strong>: The file is accessible via a public download link.</p>
-     * </li>
-     * <li><p><strong>OSS_BRIDGED</strong>: The service first downloads the file from a public download link to an internal OSS bucket, and then distributes it to the cloud phone instances over the internal network.</p>
-     * </li>
+     * <li>OSS: The file to be uploaded is an OSS resource.</li>
+     * <li>DOWNLOAD_URL: The file to be uploaded is a public download URL.</li>
+     * <li>OSS_BRIDGED: The file is synchronized to OSS through a public download URL and then distributed to cloud phone instances over the OSS internal network.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -89,13 +89,11 @@ public class SendFileRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li>If <code>UploadType</code> is <code>OSS</code>, this parameter specifies the URI of the source object in Object Storage Service (OSS).</li>
-     * </ul>
-     * <blockquote>
-     * <p>The URI must be in the <code>oss://&lt;bucket-name&gt;/&lt;object-key&gt;</code> format. The specified OSS bucket name must have the <code>cloudphone-saved-bucket-</code> prefix, for example, <code>cloudphone-saved-bucket-example</code>.</p>
+     * <li>If UploadType is OSS, UploadUrl is the cloud address of the file uploaded to OSS.<blockquote>
+     * <p>The OSS bucket name must start with the prefix &quot;cloudphone-saved-bucket-&quot;, such as &quot;cloudphone-saved-bucket-example&quot;. You must create an OSS folder as the backup directory. The format of UploadUrl is &quot;oss://&quot; + &quot;Bucket name&quot; + &quot;/&quot; + &quot;Folder name&quot; + &quot;Uploaded file name&quot;.</p>
      * </blockquote>
-     * <ul>
-     * <li>If <code>UploadType</code> is <code>DOWNLOAD_URL</code> or <code>OSS_BRIDGED</code>, this parameter specifies the public download link of the source file.</li>
+     * </li>
+     * <li>If UploadType is DOWNLOAD or OSS_BRIDGED, UploadUrl is the public download URL of the file.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

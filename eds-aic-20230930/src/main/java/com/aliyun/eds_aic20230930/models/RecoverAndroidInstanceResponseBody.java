@@ -14,7 +14,7 @@ public class RecoverAndroidInstanceResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The returned result objects.</p>
+     * <p>The returned result object.</p>
      */
     @NameInMap("Data")
     public java.util.List<RecoverAndroidInstanceResponseBodyData> data;

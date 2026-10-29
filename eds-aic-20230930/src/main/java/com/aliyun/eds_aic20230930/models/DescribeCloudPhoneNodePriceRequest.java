@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudPhoneNodePriceRequest extends TeaModel {
     /**
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class DescribeCloudPhoneNodePriceRequest extends TeaModel {
     public String bizRegionId;
 
     /**
+     * <p>The billing method.</p>
+     * 
      * <strong>example:</strong>
      * <p>PrePaid</p>
      */
@@ -21,6 +24,8 @@ public class DescribeCloudPhoneNodePriceRequest extends TeaModel {
     public String chargeType;
 
     /**
+     * <p>The number of cloud phone matrices to purchase.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -28,6 +33,14 @@ public class DescribeCloudPhoneNodePriceRequest extends TeaModel {
     public String count;
 
     /**
+     * <p>Specifies whether to use a single image disk. Default value: false. Valid values:</p>
+     * <ul>
+     * <li><p>true: Uses only the system disk.</p>
+     * </li>
+     * <li><p>false: Uses the system disk and the shared internal storage image disk.</p>
+     * </li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>false</p>
      */
@@ -35,6 +48,8 @@ public class DescribeCloudPhoneNodePriceRequest extends TeaModel {
     public Boolean isSingleImgDisk;
 
     /**
+     * <p>The subscription period of the resource. The unit is specified by PeriodUnit. Valid values: 1 month, 2 months, 3 months, 6 months, and 1 year.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -42,6 +57,12 @@ public class DescribeCloudPhoneNodePriceRequest extends TeaModel {
     public String period;
 
     /**
+     * <p>The unit of the subscription period. Valid values:</p>
+     * <ul>
+     * <li><strong>Month</strong>: Month.</li>
+     * <li><strong>Year</strong>: Year.</li>
+     * </ul>
+     * 
      * <strong>example:</strong>
      * <p>Month</p>
      */
@@ -49,6 +70,8 @@ public class DescribeCloudPhoneNodePriceRequest extends TeaModel {
     public String periodUnit;
 
     /**
+     * <p>The number of provisioned instances, which refers to the number of cloud phone instances in the matrix.</p>
+     * 
      * <strong>example:</strong>
      * <p>40</p>
      */
@@ -56,6 +79,8 @@ public class DescribeCloudPhoneNodePriceRequest extends TeaModel {
     public Integer phoneCount;
 
     /**
+     * <p>The size of the dedicated internal storage. Unit: GiB.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -63,6 +88,8 @@ public class DescribeCloudPhoneNodePriceRequest extends TeaModel {
     public Integer phoneDataVolume;
 
     /**
+     * <p>The promotion ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>50003308011****</p>
      */
@@ -70,6 +97,11 @@ public class DescribeCloudPhoneNodePriceRequest extends TeaModel {
     public String promotionId;
 
     /**
+     * <p>The size of the shared internal storage. Unit: GiB.</p>
+     * <blockquote>
+     * <p>The minimum size of the shared internal storage must be greater than the number of instances in the matrix multiplied by 10 GiB.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -77,6 +109,7 @@ public class DescribeCloudPhoneNodePriceRequest extends TeaModel {
     public Integer serverShareDataVolume;
 
     /**
+     * <p>The specifications of the cloud phone matrix.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,6 +119,8 @@ public class DescribeCloudPhoneNodePriceRequest extends TeaModel {
     public String serverType;
 
     /**
+     * <p>The size of the swap space.</p>
+     * 
      * <strong>example:</strong>
      * <p>10</p>
      */
