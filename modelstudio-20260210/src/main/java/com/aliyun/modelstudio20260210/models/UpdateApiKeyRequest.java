@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class UpdateApiKeyRequest extends TeaModel {
     /**
-     * <p>The API Key permission settings.</p>
+     * <p>The API key permission settings.</p>
      * <blockquote>
-     * <p>Do not specify this parameter or specify it completely for each UpdateApiKey operation. Otherwise, the configuration may not match your expectations.</p>
+     * <p>When calling the UpdateApiKey operation, either leave this section empty or fill it out completely. Otherwise, the configuration may not match your expectations.</p>
      * </blockquote>
      */
     @NameInMap("auth")
@@ -54,7 +54,7 @@ public class UpdateApiKeyRequest extends TeaModel {
         public java.util.List<String> accessibleModels;
 
         /**
-         * <p>Specifies whether all models with inference permissions in the workspace are accessible. Valid values:</p>
+         * <p>Specifies whether to allow access to all models that have been granted inference permissions in the workspace. Valid values:</p>
          * <ul>
          * <li>true</li>
          * <li>false</li>
@@ -88,10 +88,10 @@ public class UpdateApiKeyRequest extends TeaModel {
 
     public static class UpdateApiKeyRequestAuth extends TeaModel {
         /**
-         * <p>The IP access whitelist.</p>
+         * <p>The IP address whitelist.</p>
          * <blockquote>
          * <ul>
-         * <li>When you customize the permission scope, if the IP access whitelist is not specified, the server sets it to IPv4 (0.0.0.0/0) and IPv6 (::/0) by default, which allows all traffic.</li>
+         * <li>When customizing the permission scope, if the IP address whitelist is not specified, the server sets the default values to IPv4 (0.0.0.0/0) and IPv6 (::/0), which allows all traffic.</li>
          * </ul>
          * </blockquote>
          */
@@ -107,7 +107,7 @@ public class UpdateApiKeyRequest extends TeaModel {
         /**
          * <p>The permission type. Valid values:</p>
          * <ul>
-         * <li>All: full permissions.</li>
+         * <li>All: all permissions.</li>
          * <li>Custom: custom permissions.</li>
          * </ul>
          * 

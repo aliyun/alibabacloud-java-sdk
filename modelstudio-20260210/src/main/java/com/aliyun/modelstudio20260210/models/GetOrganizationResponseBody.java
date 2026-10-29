@@ -38,7 +38,7 @@ public class GetOrganizationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0CB5868D-C6E5-59A6-A20A-C39EB2E75BDE</p>
@@ -117,7 +117,7 @@ public class GetOrganizationResponseBody extends TeaModel {
          * <p>The organization description.</p>
          * 
          * <strong>example:</strong>
-         * <p>组织描述</p>
+         * <p>Organization description</p>
          */
         @NameInMap("Description")
         public String description;
@@ -132,7 +132,7 @@ public class GetOrganizationResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-11-13T02:11:56Z</p>
@@ -144,7 +144,7 @@ public class GetOrganizationResponseBody extends TeaModel {
          * <p>The organization name.</p>
          * 
          * <strong>example:</strong>
-         * <p>组织名称</p>
+         * <p>Organization name</p>
          */
         @NameInMap("Name")
         public String name;
@@ -168,7 +168,7 @@ public class GetOrganizationResponseBody extends TeaModel {
         public String orgId;
 
         /**
-         * <p>The business account identifier of the organization owner. The value is aliyunUid for the ALIYUN type and userIdentifier for the SSO type.</p>
+         * <p>The business account identifier of the organization owner. For the ALIYUN type, the value is aliyunUid. For the SSO type, the value is userIdentifier.</p>
          * 
          * <strong>example:</strong>
          * <p>1543686331379464</p>
@@ -186,7 +186,7 @@ public class GetOrganizationResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The status. Valid values: ACTIVE and FROZEN.</p>
+         * <p>The status of the organization. Valid values: ACTIVE and FROZEN.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>

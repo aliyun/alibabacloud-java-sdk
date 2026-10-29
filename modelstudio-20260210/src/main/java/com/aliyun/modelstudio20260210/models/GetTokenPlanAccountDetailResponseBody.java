@@ -38,7 +38,7 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>C0DC05D9-C506-519B-AFF3-2B00165176E4</p>
@@ -49,8 +49,8 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -116,7 +116,7 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
         /**
          * <p>The member status. Valid values:</p>
          * <ul>
-         * <li>ACTIVE </li>
+         * <li>ACTIVE</li>
          * <li>FROZEN</li>
          * </ul>
          * 
@@ -198,7 +198,7 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
 
     public static class GetTokenPlanAccountDetailResponseBodyDataOrgMemberships extends TeaModel {
         /**
-         * <p>The organization member status. Valid values:</p>
+         * <p>The status of the organization member. Valid values:</p>
          * <ul>
          * <li>ACTIVE </li>
          * <li>INITIAL </li>
@@ -321,7 +321,7 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
         public String accountType;
 
         /**
-         * <p>The Alibaba Cloud UID. This parameter applies only to accounts of the ALIYUN type.</p>
+         * <p>The Alibaba Cloud UID of an ALIYUN account.</p>
          * 
          * <strong>example:</strong>
          * <p>1122334455</p>
@@ -330,7 +330,7 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
         public String aliyunUid;
 
         /**
-         * <p>The time when the account was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>Thu May 28 14:33:52 CST 2026</p>
@@ -339,7 +339,7 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The email address. This parameter applies only to accounts of the SSO type.</p>
+         * <p>The email address of an SSO account.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@email.com">test@email.com</a></p>
@@ -348,7 +348,11 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>The global status of the account. A value of 0 indicates Normal. A value of 1 indicates Frozen.</p>
+         * <p>The global status of the account. Valid values:</p>
+         * <ul>
+         * <li>0: Normal.</li>
+         * <li>1: Frozen.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -366,7 +370,7 @@ public class GetTokenPlanAccountDetailResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of organization memberships in a tree structure (organization → workspace).</p>
+         * <p>The list of organization memberships in a tree structure from organization to workspace.</p>
          */
         @NameInMap("OrgMemberships")
         public java.util.List<GetTokenPlanAccountDetailResponseBodyDataOrgMemberships> orgMemberships;

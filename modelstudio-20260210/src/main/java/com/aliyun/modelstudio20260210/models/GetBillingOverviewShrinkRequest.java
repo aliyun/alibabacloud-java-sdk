@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBillingOverviewShrinkRequest extends TeaModel {
     /**
-     * <p>The billing month. This parameter is required.</p>
+     * <p>The billing month.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08</p>
@@ -14,10 +14,19 @@ public class GetBillingOverviewShrinkRequest extends TeaModel {
     public String billMonth;
 
     /**
-     * <p>The filter condition.</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("filter")
     public String filterShrink;
+
+    /**
+     * <p>The time granularity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MONTH</p>
+     */
+    @NameInMap("granularity")
+    public String granularity;
 
     /**
      * <p>The list of grouping conditions. Currently, you must specify exactly one grouping dimension.</p>
@@ -26,7 +35,7 @@ public class GetBillingOverviewShrinkRequest extends TeaModel {
     public String groupByShrink;
 
     /**
-     * <p>The response language. Default value: en-US.</p>
+     * <p>The language of the response. Default value: en-US.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -35,13 +44,19 @@ public class GetBillingOverviewShrinkRequest extends TeaModel {
     public String locale;
 
     /**
-     * <p>The region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
     @NameInMap("regionId")
     public String regionId;
+
+    /**
+     * <p>The query time range, which includes the start and end times. Both the start and end times are included in the query range. The time format must be consistent with the granularity, and the start time cannot be later than the end time.</p>
+     */
+    @NameInMap("timePeriod")
+    public String timePeriodShrink;
 
     /**
      * <p>The number of groups to return. Valid values: 1 to 20. Default value: 20.</p>
@@ -53,7 +68,7 @@ public class GetBillingOverviewShrinkRequest extends TeaModel {
     public Integer topNum;
 
     /**
-     * <p>Specifies whether to filter out groups with a zero amount. Default value: true.</p>
+     * <p>Specifies whether to filter out groups with an amount of 0. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -82,6 +97,14 @@ public class GetBillingOverviewShrinkRequest extends TeaModel {
         return this.filterShrink;
     }
 
+    public GetBillingOverviewShrinkRequest setGranularity(String granularity) {
+        this.granularity = granularity;
+        return this;
+    }
+    public String getGranularity() {
+        return this.granularity;
+    }
+
     public GetBillingOverviewShrinkRequest setGroupByShrink(String groupByShrink) {
         this.groupByShrink = groupByShrink;
         return this;
@@ -104,6 +127,14 @@ public class GetBillingOverviewShrinkRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public GetBillingOverviewShrinkRequest setTimePeriodShrink(String timePeriodShrink) {
+        this.timePeriodShrink = timePeriodShrink;
+        return this;
+    }
+    public String getTimePeriodShrink() {
+        return this.timePeriodShrink;
     }
 
     public GetBillingOverviewShrinkRequest setTopNum(Integer topNum) {

@@ -29,7 +29,7 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the API call is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
      * <li>true: Successful.</li>
      * <li>false: Failed.</li>
@@ -89,7 +89,7 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
         public Long assignedSeats;
 
         /**
-         * <p>The total credits quota for the seat.</p>
+         * <p>The total credits quota for seats.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -98,7 +98,7 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
         public Double seatCredits;
 
         /**
-         * <p>The refresh time of the current cycle, in milliseconds.</p>
+         * <p>The refresh time of the current cycle in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1781422734</p>
@@ -195,13 +195,13 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
 
     public static class GetSubscriptionStatsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of seat information, grouped by specType.</p>
+         * <p>The list of seat information grouped by specType.</p>
          */
         @NameInMap("Items")
         public java.util.List<GetSubscriptionStatsResponseBodyDataItems> items;
 
         /**
-         * <p>The subscription end time, in milliseconds.</p>
+         * <p>The subscription end time in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1781422734</p>
@@ -210,7 +210,7 @@ public class GetSubscriptionStatsResponseBody extends TeaModel {
         public Long subscriptionEndTime;
 
         /**
-         * <p>The subscription start time, in milliseconds.</p>
+         * <p>The subscription start time in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1781422733</p>

@@ -11,7 +11,7 @@ public class BatchRevokeSeatsRequest extends TeaModel {
     public java.util.List<BatchRevokeSeatsRequestItems> items;
 
     /**
-     * <p>The language. Valid values: zh-CN and en-US.</p>
+     * <p>The locale. Valid values: zh-CN and en-US.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>

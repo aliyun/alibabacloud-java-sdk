@@ -11,7 +11,7 @@ public class BatchAssignSeatsRequest extends TeaModel {
     public java.util.List<String> accountIds;
 
     /**
-     * <p>The language. Valid values: zh-CN and en-US.</p>
+     * <p>The locale. Valid values: zh-CN and en-US.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -22,9 +22,9 @@ public class BatchAssignSeatsRequest extends TeaModel {
     /**
      * <p>The seat type. Valid values:</p>
      * <ul>
-     * <li>standard: standard seat</li>
-     * <li>pro: pro seat</li>
-     * <li>max: premium seat</li>
+     * <li>standard: Standard seat.</li>
+     * <li>pro: Pro seat.</li>
+     * <li>max: Max seat.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

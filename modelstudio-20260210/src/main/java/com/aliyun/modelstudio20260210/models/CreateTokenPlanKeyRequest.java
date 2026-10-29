@@ -18,7 +18,7 @@ public class CreateTokenPlanKeyRequest extends TeaModel {
      * <p>The description of the key.</p>
      * 
      * <strong>example:</strong>
-     * <p>APIKEY描述</p>
+     * <p>API key description</p>
      */
     @NameInMap("Description")
     public String description;

@@ -11,7 +11,7 @@ public class UpdateOrganizationMemberRequest extends TeaModel {
     public java.util.List<String> accountIds;
 
     /**
-     * <p>The code of the new role. When you perform a batch operation, all specified accounts are changed to this role.</p>
+     * <p>The code of the new role. In batch operations, this role is applied to all specified accounts.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

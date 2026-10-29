@@ -126,30 +126,84 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
     }
 
     public static class ListOrganizationMembersResponseBodyDataPackLimitInfo extends TeaModel {
+        /**
+         * <p>The currently available quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50000</p>
+         */
         @NameInMap("AvailableLimit")
         public Double availableLimit;
 
+        /**
+         * <p>The end time of the current cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792476000001</p>
+         */
         @NameInMap("CycleEndTime")
         public Long cycleEndTime;
 
+        /**
+         * <p>The start time of the current cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792476000000</p>
+         */
         @NameInMap("CycleStartTime")
         public Long cycleStartTime;
 
+        /**
+         * <p>The frozen quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("FrozenCredits")
         public Double frozenCredits;
 
+        /**
+         * <p>Indicates whether a quota limit exists for the shared usage package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("HasShareLimit")
         public Boolean hasShareLimit;
 
+        /**
+         * <p>Indicates whether the quota is currently available.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true/false</p>
+         */
         @NameInMap("IsAvailable")
         public Boolean isAvailable;
 
+        /**
+         * <p>The time when the quota limit configuration was last modified.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792476000000</p>
+         */
         @NameInMap("LastConfirmedTime")
         public Long lastConfirmedTime;
 
+        /**
+         * <p>The upper limit of the quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>50000</p>
+         */
         @NameInMap("UpperLimit")
         public Double upperLimit;
 
+        /**
+         * <p>The used quota.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
+         */
         @NameInMap("UsedCredits")
         public Double usedCredits;
 
@@ -233,21 +287,57 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
     }
 
     public static class ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList extends TeaModel {
+        /**
+         * <p>The start time of the current cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792476000001</p>
+         */
         @NameInMap("CycleEndTime")
         public Long cycleEndTime;
 
+        /**
+         * <p>The start time of the current cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792476000000</p>
+         */
         @NameInMap("CycleStartTime")
         public Long cycleStartTime;
 
+        /**
+         * <p>The remaining entitlement quota for the current cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32259</p>
+         */
         @NameInMap("CycleSurplusValue")
         public Double cycleSurplusValue;
 
+        /**
+         * <p>The total entitlement quota for the current cycle.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>250000</p>
+         */
         @NameInMap("CycleTotalValue")
         public Double cycleTotalValue;
 
+        /**
+         * <p>The entitlement type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CREDITS</p>
+         */
         @NameInMap("EquityType")
         public String equityType;
 
+        /**
+         * <p>The unit of measurement for the entitlement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Credit</p>
+         */
         @NameInMap("EquityUnit")
         public String equityUnit;
 
@@ -307,27 +397,72 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
     }
 
     public static class ListOrganizationMembersResponseBodyDataSubscriptionInfo extends TeaModel {
+        /**
+         * <p>The end time of the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792476000002</p>
+         */
         @NameInMap("EndTime")
         public Long endTime;
 
+        /**
+         * <p>The list of subscription entitlements.</p>
+         */
         @NameInMap("EquityList")
         public java.util.List<ListOrganizationMembersResponseBodyDataSubscriptionInfoEquityList> equityList;
 
+        /**
+         * <p>The code of the subscription instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>subs-1234567</p>
+         */
         @NameInMap("InstanceCode")
         public String instanceCode;
 
+        /**
+         * <p>The billing method.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>total</p>
+         */
         @NameInMap("PayMode")
         public String payMode;
 
+        /**
+         * <p>The code of the subscription product.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sfm_tokenplanteams_dp_cn</p>
+         */
         @NameInMap("ProductCode")
         public String productCode;
 
+        /**
+         * <p>The specification type of the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>standard</p>
+         */
         @NameInMap("SpecType")
         public String specType;
 
+        /**
+         * <p>The start time of the subscription.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1792476000000</p>
+         */
         @NameInMap("StartTime")
         public Long startTime;
 
+        /**
+         * <p>The subscription status.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>NORMAL</p>
+         */
         @NameInMap("Status")
         public String status;
 
@@ -404,7 +539,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
 
     public static class ListOrganizationMembersResponseBodyData extends TeaModel {
         /**
-         * <p>The member business ID.</p>
+         * <p>The business ID of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>112233</p>
@@ -440,7 +575,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         public String apiKeyId;
 
         /**
-         * <p>The member email address.</p>
+         * <p>The email address of the member.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@email.com">test@email.com</a></p>
@@ -467,7 +602,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         public String maskedApiKey;
 
         /**
-         * <p>The organization ID.</p>
+         * <p>The ID of the organization.</p>
          * 
          * <strong>example:</strong>
          * <p>org_123456789</p>
@@ -475,17 +610,20 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         @NameInMap("OrgId")
         public String orgId;
 
+        /**
+         * <p>The upper limit information for the shared usage package available to the member.</p>
+         */
         @NameInMap("PackLimitInfo")
         public ListOrganizationMembersResponseBodyDataPackLimitInfo packLimitInfo;
 
         /**
-         * <p>The list of member roles.</p>
+         * <p>The list of roles for the member.</p>
          */
         @NameInMap("Roles")
         public java.util.List<String> roles;
 
         /**
-         * <p>The seat resource allocate ID.</p>
+         * <p>The resource allocation ID of the seat.</p>
          * 
          * <strong>example:</strong>
          * <p>seat_123456</p>
@@ -494,11 +632,11 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         public String seatId;
 
         /**
-         * <p>The seat specification type. Valid values:</p>
+         * <p>The specification type of the seat. Valid values:</p>
          * <ul>
          * <li>standard: Standard seat.</li>
          * <li>pro: Pro seat.</li>
-         * <li>max: Max seat.</li>
+         * <li>max: Premium seat.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -508,7 +646,7 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         public String specType;
 
         /**
-         * <p>The member status.</p>
+         * <p>The status of the member.</p>
          * 
          * <strong>example:</strong>
          * <p>ACTIVE</p>
@@ -516,6 +654,9 @@ public class ListOrganizationMembersResponseBody extends TeaModel {
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The subscription information of the member.</p>
+         */
         @NameInMap("SubscriptionInfo")
         public ListOrganizationMembersResponseBodyDataSubscriptionInfo subscriptionInfo;
 

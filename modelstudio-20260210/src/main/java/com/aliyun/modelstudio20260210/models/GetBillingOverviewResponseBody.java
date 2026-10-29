@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBillingOverviewResponseBody extends TeaModel {
     /**
-     * <p>The request result code.</p>
+     * <p>The result code of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class GetBillingOverviewResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The bill overview data.</p>
+     * <p>The billing overview data.</p>
      */
     @NameInMap("data")
     public GetBillingOverviewResponseBodyData data;
 
     /**
-     * <p>The request result message.</p>
+     * <p>The description of the request result.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -38,7 +38,7 @@ public class GetBillingOverviewResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -102,13 +102,13 @@ public class GetBillingOverviewResponseBody extends TeaModel {
         public String amount;
 
         /**
-         * <p>The list of commodity codes associated with the current group.</p>
+         * <p>The list of commodity codes involved in the current group.</p>
          */
         @NameInMap("articleCodes")
         public java.util.List<String> articleCodes;
 
         /**
-         * <p>The grouping dimension value. A null value is returned as DIMENSION_FILTER_NULL_VALUE.</p>
+         * <p>The value of the grouping dimension. If the value is null, DIMENSION_FILTER_NULL_VALUE is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>inference</p>
@@ -117,7 +117,7 @@ public class GetBillingOverviewResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The display name of the group, which is affected by the locale parameter. A null value is displayed as -.</p>
+         * <p>The display name of the group, which is affected by the locale parameter. If the value is null, a hyphen (-) is displayed.</p>
          * 
          * <strong>example:</strong>
          * <p>Model invocation</p>
@@ -126,7 +126,7 @@ public class GetBillingOverviewResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ratio of the group amount to the total amount of the top N groups.</p>
+         * <p>The proportion of the group amount to the total amount of the top N groups.</p>
          * 
          * <strong>example:</strong>
          * <p>0.10</p>
@@ -192,7 +192,7 @@ public class GetBillingOverviewResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The top N groups sorted by amount in descending order.</p>
+         * <p>The list of top N groups sorted by amount in descending order.</p>
          */
         @NameInMap("groups")
         public java.util.List<GetBillingOverviewResponseBodyDataGroups> groups;

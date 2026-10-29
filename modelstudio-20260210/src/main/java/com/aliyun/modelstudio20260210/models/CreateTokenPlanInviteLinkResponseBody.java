@@ -29,10 +29,10 @@ public class CreateTokenPlanInviteLinkResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
      * <ul>
-     * <li>true: The call was successful.</li>
-     * <li>false: The call failed.</li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

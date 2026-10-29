@@ -14,7 +14,7 @@ public class GetTokenPlanOrgInviteConfigResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data result of the current category statistics.</p>
+     * <p>The statistical data results for the current category.</p>
      */
     @NameInMap("Data")
     public GetTokenPlanOrgInviteConfigResponseBodyData data;
@@ -29,7 +29,7 @@ public class GetTokenPlanOrgInviteConfigResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the API call is successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
      * <li>true: Successful.</li>
      * <li>false: Failed.</li>
@@ -80,7 +80,7 @@ public class GetTokenPlanOrgInviteConfigResponseBody extends TeaModel {
 
     public static class GetTokenPlanOrgInviteConfigResponseBodyData extends TeaModel {
         /**
-         * <p>The default organization role ID to assign. Valid values:</p>
+         * <p>The ID of the default assigned organization role. Valid values:</p>
          * <ul>
          * <li>SYSTEM_ROLE_ORG_ADMIN</li>
          * <li>SYSTEM_ROLE_ORG_MEMBER</li>
@@ -102,7 +102,7 @@ public class GetTokenPlanOrgInviteConfigResponseBody extends TeaModel {
         public String orgId;
 
         /**
-         * <p>The default seat allocation strategy. Valid values:</p>
+         * <p>The default seat assignment strategy. Valid values:</p>
          * <ul>
          * <li>HIGH_TO_LOW</li>
          * <li>LOW_TO_HIGH </li>

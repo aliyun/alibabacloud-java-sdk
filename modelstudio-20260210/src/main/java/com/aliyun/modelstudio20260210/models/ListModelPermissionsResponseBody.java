@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListModelPermissionsResponseBody extends TeaModel {
     /**
-     * <p>The error code. This value is empty when the call is successful.</p>
+     * <p>The error code. This parameter is empty if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class ListModelPermissionsResponseBody extends TeaModel {
     public java.util.List<ListModelPermissionsResponseBodyList> list;
 
     /**
-     * <p>The maximum number of entries returned per request.</p>
+     * <p>The maximum number of records returned in a single call.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,7 @@ public class ListModelPermissionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next request.</p>
+     * <p>The pagination token for the next request.</p>
      * 
      * <strong>example:</strong>
      * <p>lwytFRtLdNk=</p>
@@ -56,7 +56,7 @@ public class ListModelPermissionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>36045E0A-551D-592D-B1BC-4C56596CE59E</p>
@@ -74,7 +74,7 @@ public class ListModelPermissionsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -161,7 +161,7 @@ public class ListModelPermissionsResponseBody extends TeaModel {
 
     public static class ListModelPermissionsResponseBodyListPermissions extends TeaModel {
         /**
-         * <p>The model deployment authorization. A value of true indicates that the model has been granted authorization. A value of false indicates that the model has not been granted authorization.</p>
+         * <p>The model deployment permission. A value of true indicates that the model is authorized for deployment. A value of false indicates that the model is not authorized.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -170,7 +170,7 @@ public class ListModelPermissionsResponseBody extends TeaModel {
         public Boolean deploy;
 
         /**
-         * <p>The model training authorization. A value of true indicates that the model has been granted training authorization. A value of false indicates that the model has not been granted authorization.</p>
+         * <p>The model training permission. A value of true indicates that the model is authorized for fine-tuning. A value of false indicates that the model is not authorized.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -179,7 +179,7 @@ public class ListModelPermissionsResponseBody extends TeaModel {
         public Boolean fineTune;
 
         /**
-         * <p>Indicates whether the model has inference permission. A value of true indicates that the model is authorized. A value of false indicates that the model is not authorized.</p>
+         * <p>The model invocation permission. A value of true indicates that the model is authorized for inference. A value of false indicates that the model is not authorized.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -229,7 +229,7 @@ public class ListModelPermissionsResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>The model name.</p>
+         * <p>The name of the model.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>

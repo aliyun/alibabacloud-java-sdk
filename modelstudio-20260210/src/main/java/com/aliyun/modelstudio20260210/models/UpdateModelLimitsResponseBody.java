@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateModelLimitsResponseBody extends TeaModel {
     /**
-     * <p>The error code. This parameter is empty when the request is successful.</p>
+     * <p>The error code. This parameter is empty if the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,7 +32,7 @@ public class UpdateModelLimitsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E4C14AE6-E987-5C2F-9230-9960AB48F4F2</p>

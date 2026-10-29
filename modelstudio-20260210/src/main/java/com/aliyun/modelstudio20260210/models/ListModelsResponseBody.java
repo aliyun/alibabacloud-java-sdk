@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListModelsResponseBody extends TeaModel {
     /**
+     * <p>The error code. This field is empty when the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -12,6 +14,8 @@ public class ListModelsResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The error message. This field is empty when the call is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>The specified parameter is invalid</p>
      */
@@ -19,6 +23,8 @@ public class ListModelsResponseBody extends TeaModel {
     public String errorMessage;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -26,16 +32,23 @@ public class ListModelsResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>The maximum number of records returned per request.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
     @NameInMap("maxResults")
     public Long maxResults;
 
+    /**
+     * <p>The list of models.</p>
+     */
     @NameInMap("models")
     public java.util.List<ListModelsResponseBodyModels> models;
 
     /**
+     * <p>The token for the next request.</p>
+     * 
      * <strong>example:</strong>
      * <p>lwytFRtLdNk=</p>
      */
@@ -43,6 +56,8 @@ public class ListModelsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The unique identifier of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>36045E0A-551D-592D-B1BC-4C56596CE59E</p>
      */
@@ -50,6 +65,8 @@ public class ListModelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
+     * <p>Indicates whether the API call was successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -57,6 +74,8 @@ public class ListModelsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
+     * <p>The total number of records.</p>
+     * 
      * <strong>example:</strong>
      * <p>100</p>
      */
@@ -141,9 +160,15 @@ public class ListModelsResponseBody extends TeaModel {
     }
 
     public static class ListModelsResponseBodyModelsInferenceMetadata extends TeaModel {
+        /**
+         * <p>The input modality. Valid values: Text, Image, Audio, and Video.</p>
+         */
         @NameInMap("requestModality")
         public java.util.List<String> requestModality;
 
+        /**
+         * <p>The output modality. Valid values: Text, Image, Audio, and Video.</p>
+         */
         @NameInMap("responseModality")
         public java.util.List<String> responseModality;
 
@@ -172,6 +197,8 @@ public class ListModelsResponseBody extends TeaModel {
 
     public static class ListModelsResponseBodyModelsModelInfo extends TeaModel {
         /**
+         * <p>The context length.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -179,6 +206,8 @@ public class ListModelsResponseBody extends TeaModel {
         public Long contextWindow;
 
         /**
+         * <p>The maximum input length.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -186,6 +215,8 @@ public class ListModelsResponseBody extends TeaModel {
         public Long maxInputTokens;
 
         /**
+         * <p>The maximum output length.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -193,6 +224,8 @@ public class ListModelsResponseBody extends TeaModel {
         public Long maxOutputTokens;
 
         /**
+         * <p>The maximum chain-of-thought length.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -200,6 +233,8 @@ public class ListModelsResponseBody extends TeaModel {
         public Long maxReasoningTokens;
 
         /**
+         * <p>The maximum input length in thinking mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -207,6 +242,8 @@ public class ListModelsResponseBody extends TeaModel {
         public Long reasoningMaxInputTokens;
 
         /**
+         * <p>The maximum output length in thinking mode.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -270,6 +307,8 @@ public class ListModelsResponseBody extends TeaModel {
 
     public static class ListModelsResponseBodyModelsPricesPrices extends TeaModel {
         /**
+         * <p>The price. The currency unit depends on the account type: ￥ for accounts in the Chinese mainland and $ for international accounts.</p>
+         * 
          * <strong>example:</strong>
          * <p>12</p>
          */
@@ -277,6 +316,8 @@ public class ListModelsResponseBody extends TeaModel {
         public String price;
 
         /**
+         * <p>The price type.</p>
+         * 
          * <strong>example:</strong>
          * <p>input</p>
          */
@@ -284,6 +325,8 @@ public class ListModelsResponseBody extends TeaModel {
         public String priceName;
 
         /**
+         * <p>The billing method.</p>
+         * 
          * <strong>example:</strong>
          * <p>Per 1M tokens</p>
          */
@@ -291,6 +334,13 @@ public class ListModelsResponseBody extends TeaModel {
         public String priceUnit;
 
         /**
+         * <p>The time band. Valid values:</p>
+         * <ul>
+         * <li>peak: Peak hours.</li>
+         * <li>offpeak: Off-peak hours.</li>
+         * <li>standard: No time-based tiering.</li>
+         * </ul>
+         * 
          * <strong>example:</strong>
          * <p>standard</p>
          */
@@ -337,10 +387,15 @@ public class ListModelsResponseBody extends TeaModel {
     }
 
     public static class ListModelsResponseBodyModelsPrices extends TeaModel {
+        /**
+         * <p>The model pricing.</p>
+         */
         @NameInMap("prices")
         public java.util.List<ListModelsResponseBodyModelsPricesPrices> prices;
 
         /**
+         * <p>The tier name. If tiered pricing is not used, the value is Default.</p>
+         * 
          * <strong>example:</strong>
          * <p>Default</p>
          */
@@ -371,43 +426,66 @@ public class ListModelsResponseBody extends TeaModel {
     }
 
     public static class ListModelsResponseBodyModels extends TeaModel {
+        /**
+         * <p>The model type.</p>
+         */
         @NameInMap("capabilities")
         public java.util.List<String> capabilities;
 
         /**
+         * <p>The model description.</p>
+         * 
          * <strong>example:</strong>
          * <p>provided by qwen</p>
          */
         @NameInMap("description")
         public String description;
 
+        /**
+         * <p>The list of model capabilities.</p>
+         */
         @NameInMap("features")
         public java.util.List<String> features;
 
+        /**
+         * <p>The modality type.</p>
+         */
         @NameInMap("inferenceMetadata")
         public ListModelsResponseBodyModelsInferenceMetadata inferenceMetadata;
 
         /**
+         * <p>The model name for exact match.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
         @NameInMap("model")
         public String model;
 
+        /**
+         * <p>The model information, including various context lengths.</p>
+         */
         @NameInMap("modelInfo")
         public ListModelsResponseBodyModelsModelInfo modelInfo;
 
         /**
+         * <p>The model name for fuzzy match.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
          */
         @NameInMap("name")
         public String name;
 
+        /**
+         * <p>The list of model pricing.</p>
+         */
         @NameInMap("prices")
         public java.util.List<ListModelsResponseBodyModelsPrices> prices;
 
         /**
+         * <p>The model provider.</p>
+         * 
          * <strong>example:</strong>
          * <p>qwen</p>
          */
@@ -415,6 +493,8 @@ public class ListModelsResponseBody extends TeaModel {
         public String provider;
 
         /**
+         * <p>The release time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1779268196000</p>
          */

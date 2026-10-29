@@ -28,7 +28,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an account and directly adds it as a member.</p>
+     * <p>Creates an account and directly adds a member.</p>
      * 
      * @param request AddOrganizationMemberRequest
      * @param headers map
@@ -70,7 +70,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an account and directly adds it as a member.</p>
+     * <p>Creates an account and directly adds a member.</p>
      * 
      * @param request AddOrganizationMemberRequest
      * @return AddOrganizationMemberResponse
@@ -83,7 +83,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Assigns seats in batches to the member level.</p>
+     * <p>Assigns seats to member accounts in batches.</p>
      * 
      * @param request BatchAssignSeatsRequest
      * @param headers map
@@ -125,7 +125,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Assigns seats in batches to the member level.</p>
+     * <p>Assigns seats to member accounts in batches.</p>
      * 
      * @param request BatchAssignSeatsRequest
      * @return BatchAssignSeatsResponse
@@ -138,7 +138,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes member-level seats in batches.</p>
+     * <p>Revokes member-level seats in bulk.</p>
      * 
      * @param tmpReq BatchRevokeSeatsRequest
      * @param headers map
@@ -182,7 +182,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes member-level seats in batches.</p>
+     * <p>Revokes member-level seats in bulk.</p>
      * 
      * @param request BatchRevokeSeatsRequest
      * @return BatchRevokeSeatsResponse
@@ -195,7 +195,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Before using large models or applications in Alibaba Cloud Model Studio, create an API key as an authentication credential.</p>
+     * <p>Creates an API key as an authentication credential before using large models or applications in Alibaba Cloud Model Studio.</p>
      * 
      * @param request CreateApiKeyRequest
      * @param headers map
@@ -239,7 +239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Before using large models or applications in Alibaba Cloud Model Studio, create an API key as an authentication credential.</p>
+     * <p>Creates an API key as an authentication credential before using large models or applications in Alibaba Cloud Model Studio.</p>
      * 
      * @param request CreateApiKeyRequest
      * @return CreateApiKeyResponse
@@ -252,17 +252,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A user can have only one valid invitation link at a time.
+     * <p>A user can have only one valid invitation link.
      * If the user already has a valid invitation link, this operation returns the existing link.
-     * To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link first.
-     * This operation returns only the generated token. The invitation link is assembled in the following format: <code>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</code></p>
+     * To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link.
+     * This operation returns only the generated token. The invitation link is concatenated in the following format: <code>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</code>.</p>
      * <ul>
      * <li>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</li>
-     * <li>For the China site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</li>
+     * <li>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a TokenPlan member invitation link.</p>
+     * <p>Creates an invitation link for a TokenPlan member.</p>
      * 
      * @param request CreateTokenPlanInviteLinkRequest
      * @param headers map
@@ -300,17 +300,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A user can have only one valid invitation link at a time.
+     * <p>A user can have only one valid invitation link.
      * If the user already has a valid invitation link, this operation returns the existing link.
-     * To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link first.
-     * This operation returns only the generated token. The invitation link is assembled in the following format: <code>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</code></p>
+     * To create a new link, call the RevokeTokenPlanInviteLink operation to invalidate the current link.
+     * This operation returns only the generated token. The invitation link is concatenated in the following format: <code>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</code>.</p>
      * <ul>
      * <li>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</li>
-     * <li>For the China site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</li>
+     * <li>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a TokenPlan member invitation link.</p>
+     * <p>Creates an invitation link for a TokenPlan member.</p>
      * 
      * @param request CreateTokenPlanInviteLinkRequest
      * @return CreateTokenPlanInviteLinkResponse
@@ -425,7 +425,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an authentication credential API key.</p>
+     * <p>Deletes an authentication API key.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -451,7 +451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an authentication credential API key.</p>
+     * <p>Deletes an authentication API key.</p>
      * @return DeleteApiKeyResponse
      */
     public DeleteApiKeyResponse deleteApiKey(String apiKeyId) throws Exception {
@@ -462,12 +462,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A workspace can be deleted only if the following conditional requirements are met:</p>
+     * <p>You can delete a workspace only if it meets the following conditional requirements:</p>
      * <ol>
      * <li>The workspace is not the default workspace.</li>
-     * <li>The workspace is not used to purchase other products, such as AMB.</li>
-     * <li>In permission management, the workspace is not granted to Resource Access Management (RAM) users or RAM roles.</li>
-     * <li>The workspace does not contain any resources, such as API keys, model deployments, or knowledge bases.</li>
+     * <li>The workspace is not used to purchase other services, such as AMB.</li>
+     * <li>The workspace is not granted to Resource Access Management (RAM) users or RAM roles in permission management.</li>
+     * <li>No resources exist in the workspace, such as API keys, model deployments, or knowledge bases.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -499,12 +499,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A workspace can be deleted only if the following conditional requirements are met:</p>
+     * <p>You can delete a workspace only if it meets the following conditional requirements:</p>
      * <ol>
      * <li>The workspace is not the default workspace.</li>
-     * <li>The workspace is not used to purchase other products, such as AMB.</li>
-     * <li>In permission management, the workspace is not granted to Resource Access Management (RAM) users or RAM roles.</li>
-     * <li>The workspace does not contain any resources, such as API keys, model deployments, or knowledge bases.</li>
+     * <li>The workspace is not used to purchase other services, such as AMB.</li>
+     * <li>The workspace is not granted to Resource Access Management (RAM) users or RAM roles in permission management.</li>
+     * <li>No resources exist in the workspace, such as API keys, model deployments, or knowledge bases.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -521,7 +521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>An API key that is already disabled cannot be disabled again.</p>
+     * <p>You cannot disable an API key repeatedly.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables an API key.</p>
@@ -552,7 +552,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>An API key that is already disabled cannot be disabled again.</p>
+     * <p>You cannot disable an API key repeatedly.</p>
      * 
      * <b>summary</b> : 
      * <p>Disables an API key.</p>
@@ -568,7 +568,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>An API key that is already enabled cannot be enabled again.</p>
+     * <p>You cannot enable an API key multiple times.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables an API key.</p>
@@ -599,7 +599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>An API key that is already enabled cannot be enabled again.</p>
+     * <p>You cannot enable an API key multiple times.</p>
      * 
      * <b>summary</b> : 
      * <p>Enables an API key.</p>
@@ -652,7 +652,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the bill overview.</p>
+     * <p>Queries the billing overview.</p>
      * 
      * @param tmpReq GetBillingOverviewRequest
      * @param headers map
@@ -671,6 +671,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             request.groupByShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.groupBy, "groupBy", "json");
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.timePeriod)) {
+            request.timePeriodShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.timePeriod, "timePeriod", "json");
+        }
+
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.billMonth)) {
             query.put("billMonth", request.billMonth);
@@ -678,6 +682,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.filterShrink)) {
             query.put("filter", request.filterShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.granularity)) {
+            query.put("granularity", request.granularity);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupByShrink)) {
@@ -690,6 +698,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
             query.put("regionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timePeriodShrink)) {
+            query.put("timePeriod", request.timePeriodShrink);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.topNum)) {
@@ -720,7 +732,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the bill overview.</p>
+     * <p>Queries the billing overview.</p>
      * 
      * @param request GetBillingOverviewRequest
      * @return GetBillingOverviewResponse
@@ -733,7 +745,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries bill trends.</p>
+     * <p>Queries the billing trends.</p>
      * 
      * @param tmpReq GetBillingTrendRequest
      * @param headers map
@@ -767,6 +779,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.groupByShrink)) {
             query.put("groupBy", request.groupByShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeHistoryPeriod)) {
+            query.put("includeHistoryPeriod", request.includeHistoryPeriod);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.locale)) {
@@ -809,7 +825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries bill trends.</p>
+     * <p>Queries the billing trends.</p>
      * 
      * @param request GetBillingTrendRequest
      * @return GetBillingTrendResponse
@@ -822,10 +838,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves information about a specified organization by OrgId.</p>
+     * <p>Retrieves the details of a specified organization by using the organization ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about a specified organization.</p>
+     * <p>Retrieves the details of a specified organization.</p>
      * 
      * @param request GetOrganizationRequest
      * @param headers map
@@ -853,10 +869,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves information about a specified organization by OrgId.</p>
+     * <p>Retrieves the details of a specified organization by using the organization ID.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves information about a specified organization.</p>
+     * <p>Retrieves the details of a specified organization.</p>
      * 
      * @param request GetOrganizationRequest
      * @return GetOrganizationResponse
@@ -869,7 +885,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries organization member statistics information, including the total number of members, the number of administrators, the number of regular members, the number of members with allocated seats, and the number of members without allocated seats.</p>
+     * <p>Queries the statistics information of organization members, including the total number of members, the number of administrators, the number of regular members, the number of members with allocated seats, and the number of members without allocated seats.</p>
      * 
      * @param request GetOrganizationMemberSeatStatsRequest
      * @param headers map
@@ -897,7 +913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries organization member statistics information, including the total number of members, the number of administrators, the number of regular members, the number of members with allocated seats, and the number of members without allocated seats.</p>
+     * <p>Queries the statistics information of organization members, including the total number of members, the number of administrators, the number of regular members, the number of members with allocated seats, and the number of members without allocated seats.</p>
      * 
      * @param request GetOrganizationMemberSeatStatsRequest
      * @return GetOrganizationMemberSeatStatsResponse
@@ -910,7 +926,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries seat details by paging.</p>
+     * <p>Performs a paging query on seat details.</p>
      * 
      * @param request GetSubscriptionSeatDetailsRequest
      * @param headers map
@@ -964,7 +980,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries seat details by paging.</p>
+     * <p>Performs a paging query on seat details.</p>
      * 
      * @param request GetSubscriptionSeatDetailsRequest
      * @return GetSubscriptionSeatDetailsResponse
@@ -977,7 +993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of members and seats for member management.</p>
+     * <p>Queries the member and seat count information for member management.</p>
      * 
      * @param request GetSubscriptionStatsRequest
      * @param headers map
@@ -1005,7 +1021,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the number of members and seats for member management.</p>
+     * <p>Queries the member and seat count information for member management.</p>
      * 
      * @param request GetSubscriptionStatsRequest
      * @return GetSubscriptionStatsResponse
@@ -1018,10 +1034,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the TokenPlan management platform account information when the user is logged in.</p>
+     * <p>Retrieves the account information from the TokenPlan management platform when logged on.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the TokenPlan account details and organization information.</p>
+     * <p>Retrieves the details and organization information of a TokenPlan account.</p>
      * 
      * @param request GetTokenPlanAccountDetailRequest
      * @param headers map
@@ -1049,10 +1065,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the TokenPlan management platform account information when the user is logged in.</p>
+     * <p>Retrieves the account information from the TokenPlan management platform when logged on.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the TokenPlan account details and organization information.</p>
+     * <p>Retrieves the details and organization information of a TokenPlan account.</p>
      * 
      * @param request GetTokenPlanAccountDetailRequest
      * @return GetTokenPlanAccountDetailResponse
@@ -1065,14 +1081,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation returns only the generated token and expiration time. The invitation link is assembled in the following format: <code>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</code></p>
+     * <p>This operation returns only the generated token and expiration time. The invitation link is concatenated in the following format: <code>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</code>.</p>
      * <ul>
      * <li>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</li>
      * <li>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the TokenPlan member invitation link.</p>
+     * <p>Retrieves the invitation link for a TokenPlan member.</p>
      * 
      * @param request GetTokenPlanInviteLinkRequest
      * @param headers map
@@ -1100,14 +1116,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation returns only the generated token and expiration time. The invitation link is assembled in the following format: <code>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</code></p>
+     * <p>This operation returns only the generated token and expiration time. The invitation link is concatenated in the following format: <code>https://{host}/accept-invite?token=[token]&amp;orgId=[orgId]</code>.</p>
      * <ul>
      * <li>For the China site, the host is tokenplan-enterprise.bailian.aliyunportal.com.</li>
      * <li>For the international site, the host is tokenplan-enterprise.modelstudio.aliyunportal.com.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the TokenPlan member invitation link.</p>
+     * <p>Retrieves the invitation link for a TokenPlan member.</p>
      * 
      * @param request GetTokenPlanInviteLinkRequest
      * @return GetTokenPlanInviteLinkResponse
@@ -1295,18 +1311,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use <code>workspaceId</code> to specify the workspace to query (required, cannot be empty).</li>
-     * <li>Token-based pagination is used: <code>nextToken</code> is a string-type offset. Do not pass it for the first page. <code>maxResults</code> defaults to 20. If the upper limit is exceeded, <code>InvalidParameter.maxResults</code> is returned.</li>
-     * <li><code>authorizationScope</code> controls the query dimension: <code>AUTHORIZED</code> = models that have been authorized for the specified action. <code>AUTHORIZABLE</code> = full authorizable catalog.</li>
-     * <li><code>modelAction</code> specifies the authorization action dimension. Currently only <code>INFERENCE</code> is supported. If left empty, it defaults to <code>INFERENCE</code>.</li>
-     * <li><code>filter</code> supports filtering by <code>name</code> (fuzzy match on model and name) or <code>model</code> (exact match on a single model).</li>
-     * <li>Returns a <code>TokenBasedPage</code> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</li>
+     * <li>Specify the workspace to query by using <code>workspaceId</code> (required and cannot be empty).</li>
+     * <li>Uses token-based pagination: <code>nextToken</code> is a string offset and is not required for the first page. The default value of <code>maxResults</code> is 20. If the value exceeds the upper limit, the <code>InvalidParameter.maxResults</code> error is returned.</li>
+     * <li><code>authorizationScope</code> controls the query dimension: <code>AUTHORIZED</code> specifies models that are authorized for the specified action, and <code>AUTHORIZABLE</code> specifies all authorizable directories.</li>
+     * <li><code>modelAction</code> specifies the authorization action dimension. Currently, only <code>INFERENCE</code> is supported. If this parameter is left empty, the default value <code>INFERENCE</code> is used.</li>
+     * <li><code>filter</code> supports filtering by <code>name</code> (fuzzy match for model and name) or <code>model</code> (exact match for a single model).</li>
+     * <li>Returns <code>TokenBasedPage</code>, which contains the authorization status (inference, fine-tuning, and deployment) and throttling information for each model.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries model authorizations for a workspace.</p>
+     * <p>Queries model authorizations in a workspace.</p>
      * 
      * @param request ListModelPermissionsRequest
      * @param headers map
@@ -1360,18 +1376,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h2>Operation description</h2>
+     * <h2>Request description</h2>
      * <ul>
-     * <li>Use <code>workspaceId</code> to specify the workspace to query (required, cannot be empty).</li>
-     * <li>Token-based pagination is used: <code>nextToken</code> is a string-type offset. Do not pass it for the first page. <code>maxResults</code> defaults to 20. If the upper limit is exceeded, <code>InvalidParameter.maxResults</code> is returned.</li>
-     * <li><code>authorizationScope</code> controls the query dimension: <code>AUTHORIZED</code> = models that have been authorized for the specified action. <code>AUTHORIZABLE</code> = full authorizable catalog.</li>
-     * <li><code>modelAction</code> specifies the authorization action dimension. Currently only <code>INFERENCE</code> is supported. If left empty, it defaults to <code>INFERENCE</code>.</li>
-     * <li><code>filter</code> supports filtering by <code>name</code> (fuzzy match on model and name) or <code>model</code> (exact match on a single model).</li>
-     * <li>Returns a <code>TokenBasedPage</code> that contains the authorization status (inference/fineTune/deploy) and rate limit information for each model.</li>
+     * <li>Specify the workspace to query by using <code>workspaceId</code> (required and cannot be empty).</li>
+     * <li>Uses token-based pagination: <code>nextToken</code> is a string offset and is not required for the first page. The default value of <code>maxResults</code> is 20. If the value exceeds the upper limit, the <code>InvalidParameter.maxResults</code> error is returned.</li>
+     * <li><code>authorizationScope</code> controls the query dimension: <code>AUTHORIZED</code> specifies models that are authorized for the specified action, and <code>AUTHORIZABLE</code> specifies all authorizable directories.</li>
+     * <li><code>modelAction</code> specifies the authorization action dimension. Currently, only <code>INFERENCE</code> is supported. If this parameter is left empty, the default value <code>INFERENCE</code> is used.</li>
+     * <li><code>filter</code> supports filtering by <code>name</code> (fuzzy match for model and name) or <code>model</code> (exact match for a single model).</li>
+     * <li>Returns <code>TokenBasedPage</code>, which contains the authorization status (inference, fine-tuning, and deployment) and throttling information for each model.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries model authorizations for a workspace.</p>
+     * <p>Queries model authorizations in a workspace.</p>
      * 
      * @param request ListModelPermissionsRequest
      * @return ListModelPermissionsResponse
@@ -1384,7 +1400,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型元数据-查询基础模型列表</p>
+     * <p>Queries a list of models.</p>
      * 
      * @param tmpReq ListModelsRequest
      * @param headers map
@@ -1464,7 +1480,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>模型元数据-查询基础模型列表</p>
+     * <p>Queries a list of models.</p>
      * 
      * @param request ListModelsRequest
      * @return ListModelsResponse
@@ -1477,7 +1493,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of organization members (including seat information). Supports filtering by name, status, and seat assignment, and supports pagination.</p>
+     * <p>Queries a list of organization members, including seat information. Supports filtering by name, status, and seat allocation status, and supports pagination.</p>
      * 
      * @param request ListOrganizationMembersRequest
      * @param headers map
@@ -1527,7 +1543,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the list of organization members (including seat information). Supports filtering by name, status, and seat assignment, and supports pagination.</p>
+     * <p>Queries a list of organization members, including seat information. Supports filtering by name, status, and seat allocation status, and supports pagination.</p>
      * 
      * @param request ListOrganizationMembersRequest
      * @return ListOrganizationMembersResponse
@@ -1752,7 +1768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes a TokenPlan member invitation link.</p>
+     * <p>Revokes the TokenPlan member invitation link.</p>
      * 
      * @param request RevokeTokenPlanInviteLinkRequest
      * @param headers map
@@ -1780,7 +1796,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Revokes a TokenPlan member invitation link.</p>
+     * <p>Revokes the TokenPlan member invitation link.</p>
      * 
      * @param request RevokeTokenPlanInviteLinkRequest
      * @return RevokeTokenPlanInviteLinkResponse
@@ -1793,7 +1809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the API Key value changes. The API Key ID remains unchanged.</p>
+     * <p>Only the API key changes. The API key ID remains unchanged.</p>
      * 
      * <b>summary</b> : 
      * <p>Resets a UAC API key.</p>
@@ -1830,7 +1846,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Only the API Key value changes. The API Key ID remains unchanged.</p>
+     * <p>Only the API key changes. The API key ID remains unchanged.</p>
      * 
      * <b>summary</b> : 
      * <p>Resets a UAC API key.</p>
@@ -1897,7 +1913,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits the information of an API Key authentication credential.</p>
+     * <p>Modifies the information of an API key.</p>
      * 
      * @param request UpdateApiKeyRequest
      * @param headers map
@@ -1937,7 +1953,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Edits the information of an API Key authentication credential.</p>
+     * <p>Modifies the information of an API key.</p>
      * 
      * @param request UpdateApiKeyRequest
      * @return UpdateApiKeyResponse
@@ -1950,7 +1966,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the model throttling configuration for a workspace.</p>
+     * <p>Updates the model throttling settings for a workspace.</p>
      * 
      * @param tmpReq UpdateModelLimitsRequest
      * @param headers map
@@ -1994,7 +2010,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the model throttling configuration for a workspace.</p>
+     * <p>Updates the model throttling settings for a workspace.</p>
      * 
      * @param request UpdateModelLimitsRequest
      * @return UpdateModelLimitsResponse
@@ -2007,7 +2023,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates model authorization for a workspace.</p>
+     * <p>Updates the model authorization for a workspace.</p>
      * 
      * @param request UpdateModelPermissionsRequest
      * @param headers map
@@ -2049,7 +2065,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates model authorization for a workspace.</p>
+     * <p>Updates the model authorization for a workspace.</p>
      * 
      * @param request UpdateModelPermissionsRequest
      * @return UpdateModelPermissionsResponse
@@ -2062,7 +2078,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies organization information.</p>
+     * <p>Modifies the organization information.</p>
      * 
      * @param request UpdateOrganizationRequest
      * @param headers map
@@ -2100,7 +2116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies organization information.</p>
+     * <p>Modifies the organization information.</p>
      * 
      * @param request UpdateOrganizationRequest
      * @return UpdateOrganizationResponse

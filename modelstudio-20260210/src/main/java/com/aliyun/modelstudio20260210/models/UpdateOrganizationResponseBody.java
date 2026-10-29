@@ -38,7 +38,7 @@ public class UpdateOrganizationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The unique ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>EC0B0D42-A88C-55F5-AF48-498B8207F6BC</p>
@@ -47,10 +47,10 @@ public class UpdateOrganizationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the API call is successful. Valid values:</p>
+     * <p>Indicates whether the API call was successful. Valid values:</p>
      * <ul>
-     * <li>true: Successful.</li>
-     * <li>false: Failed.</li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,16 +114,16 @@ public class UpdateOrganizationResponseBody extends TeaModel {
 
     public static class UpdateOrganizationResponseBodyData extends TeaModel {
         /**
-         * <p>The organization description.</p>
+         * <p>The description of the organization.</p>
          * 
          * <strong>example:</strong>
-         * <p>组织描述</p>
+         * <p>Organization description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the organization was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-11T02:19:27Z</p>
@@ -132,7 +132,7 @@ public class UpdateOrganizationResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The time when the organization was updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-08 13:59:11</p>
@@ -141,16 +141,16 @@ public class UpdateOrganizationResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The organization name.</p>
+         * <p>The name of the organization.</p>
          * 
          * <strong>example:</strong>
-         * <p>组织名称</p>
+         * <p>Organization name</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The product namespace ID.</p>
+         * <p>The ID of the product namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>namespace-1</p>
@@ -159,7 +159,7 @@ public class UpdateOrganizationResponseBody extends TeaModel {
         public String namespaceId;
 
         /**
-         * <p>The organization ID.</p>
+         * <p>The ID of the organization.</p>
          * 
          * <strong>example:</strong>
          * <p>org_123456789</p>
@@ -168,7 +168,7 @@ public class UpdateOrganizationResponseBody extends TeaModel {
         public String orgId;
 
         /**
-         * <p>The business account identifier of the organization owner. The value is aliyunUid for the ALIYUN type and userIdentifier for the SSO type.</p>
+         * <p>The business account identifier of the organization owner. For the ALIYUN type, the value is aliyunUid. For the SSO type, the value is userIdentifier.</p>
          * 
          * <strong>example:</strong>
          * <p>1269388320468566</p>

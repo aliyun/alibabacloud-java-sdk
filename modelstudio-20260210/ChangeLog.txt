@@ -1,3 +1,10 @@
+2026-10-29 Version: 2.2.4
+- Update API GetBillingOverview: add request parameters granularity.
+- Update API GetBillingOverview: add request parameters timePeriod.
+- Update API GetBillingTrend: add request parameters includeHistoryPeriod.
+- Update API GetBillingTrend: add response parameters Body.data.historyPeriod.
+
+
 2026-10-19 Version: 2.2.3
 - Update API ListModelLimits: add response parameters Body.limits.$.workspaceId.
 - Update API ListModels: add response parameters Body.models.$.prices.$.prices.$.timeBand.

@@ -15,7 +15,7 @@ public class UpdateModelLimitsRequest extends TeaModel {
     public String workspaceId;
 
     /**
-     * <p>The throttling values for the workspace.</p>
+     * <p>The throttling limits for the workspace.</p>
      */
     @NameInMap("workspaceLimits")
     public java.util.List<UpdateModelLimitsRequestWorkspaceLimits> workspaceLimits;
@@ -55,7 +55,7 @@ public class UpdateModelLimitsRequest extends TeaModel {
          * <p>The throttling operation type. Valid values:</p>
          * <ul>
          * <li><strong>OVERLAY</strong>: Sets or overwrites the throttling configuration.</li>
-         * <li><strong>DELETE</strong>: Deletes the throttling configuration (restores to no throttling).</li>
+         * <li><strong>DELETE</strong>: Deletes the throttling configuration to restore the unlimited state.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class UpdateModelLimitsRequest extends TeaModel {
         public String operationType;
 
         /**
-         * <p>The request throttling value.</p>
+         * <p>The request throttling limit.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -74,7 +74,7 @@ public class UpdateModelLimitsRequest extends TeaModel {
         public Long requestLimit;
 
         /**
-         * <p>The time period for request throttling. Unit: seconds.</p>
+         * <p>The time period for request throttling, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -83,7 +83,7 @@ public class UpdateModelLimitsRequest extends TeaModel {
         public Long requestLimitPeriod;
 
         /**
-         * <p>The usage throttling value.</p>
+         * <p>The usage throttling limit.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -92,7 +92,7 @@ public class UpdateModelLimitsRequest extends TeaModel {
         public Long usageLimit;
 
         /**
-         * <p>The time period for usage throttling. Unit: seconds.</p>
+         * <p>The time period for usage throttling, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

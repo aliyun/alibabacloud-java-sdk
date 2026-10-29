@@ -29,11 +29,11 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Indicates whether the workspace is successfully deleted. Valid values:</p>
+     * <p>Indicates whether the deletion is successful. Valid values:</p>
      * <ul>
-     * <li><p>true: Succeeded.</p>
+     * <li><p>true: successful</p>
      * </li>
-     * <li><p>false: Failed.</p>
+     * <li><p>false: failed</p>
      * </li>
      * </ul>
      * 
@@ -64,8 +64,8 @@ public class DeleteWorkspaceResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the API call is successful. Valid values:</p>
      * <ul>
-     * <li>true: Succeeded.</li>
-     * <li>false: Failed.</li>
+     * <li>true: successful</li>
+     * <li>false: failed</li>
      * </ul>
      * 
      * <strong>example:</strong>

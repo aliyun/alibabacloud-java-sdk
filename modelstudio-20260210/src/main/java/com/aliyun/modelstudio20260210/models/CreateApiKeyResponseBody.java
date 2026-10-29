@@ -47,10 +47,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: Succeeded.</li>
-     * <li>false: Failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
 
     public static class CreateApiKeyResponseBodyApiKey extends TeaModel {
         /**
-         * <p>API Key ID。</p>
+         * <p>The API key ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1858636</p>
@@ -125,7 +125,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         /**
          * <p>The value of the API key.</p>
          * <blockquote>
-         * <p>Notice: Copy your API key immediately. Store it securely. Anyone who obtains this key can initiate service requests on your behalf and incur charges. If you lose the key, you can reset it or create a new one.</p>
+         * <p>Notice: Copy your API key immediately. Keep it secure. Anyone who obtains this key can initiate service requests and incur charges on your behalf. If the key is lost, you can reset it or create a new one.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

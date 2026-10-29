@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBillingTrendShrinkRequest extends TeaModel {
     /**
-     * <p>The dimension filter conditions.</p>
+     * <p>The dimension filter condition.</p>
      */
     @NameInMap("filter")
     public String filterShrink;
@@ -20,13 +20,22 @@ public class GetBillingTrendShrinkRequest extends TeaModel {
     public String granularity;
 
     /**
-     * <p>The grouping conditions. This parameter must contain one and only one element.</p>
+     * <p>The grouping condition. This parameter must contain exactly one element.</p>
      */
     @NameInMap("groupBy")
     public String groupByShrink;
 
     /**
-     * <p>The response language. Default value: en-US.</p>
+     * <p>Specifies whether to query the previous non-overlapping period of the same length. Default value: false.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>false</p>
+     */
+    @NameInMap("includeHistoryPeriod")
+    public Boolean includeHistoryPeriod;
+
+    /**
+     * <p>The language of the response. Default value: en-US.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -44,13 +53,13 @@ public class GetBillingTrendShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The query time range, including the start time and end time. This parameter is required.</p>
+     * <p>The time range to query, including the start time and end time. This parameter is required.</p>
      */
     @NameInMap("timePeriod")
     public String timePeriodShrink;
 
     /**
-     * <p>The number of groups to return. Valid values: 1 to 20. Default value: 20. The remaining groups are merged into &quot;Others&quot;.</p>
+     * <p>The number of groups to return. Valid values: 1 to 20. Default value: 20. The remaining groups are merged into &quot;Other&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -59,7 +68,7 @@ public class GetBillingTrendShrinkRequest extends TeaModel {
     public Integer topNum;
 
     /**
-     * <p>Specifies whether to filter out groups with a zero amount. Default value: true.</p>
+     * <p>Specifies whether to filter out groups with an amount of 0. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -94,6 +103,14 @@ public class GetBillingTrendShrinkRequest extends TeaModel {
     }
     public String getGroupByShrink() {
         return this.groupByShrink;
+    }
+
+    public GetBillingTrendShrinkRequest setIncludeHistoryPeriod(Boolean includeHistoryPeriod) {
+        this.includeHistoryPeriod = includeHistoryPeriod;
+        return this;
+    }
+    public Boolean getIncludeHistoryPeriod() {
+        return this.includeHistoryPeriod;
     }
 
     public GetBillingTrendShrinkRequest setLocale(String locale) {

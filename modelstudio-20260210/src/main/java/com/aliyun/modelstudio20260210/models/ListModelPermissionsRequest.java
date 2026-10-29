@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListModelPermissionsRequest extends TeaModel {
     /**
-     * <p>The authorization query dimension. Valid values:</p>
+     * <p>The query dimension for the authorization scope.</p>
      * <ul>
-     * <li><strong>AUTHORIZED</strong>: models that have been authorized for the specified modelAction. Use this value together with modelAction.</li>
-     * <li><strong>AUTHORIZABLE</strong>: full authorizable catalog.</li>
+     * <li><strong>AUTHORIZED</strong>: models that are authorized for the specified modelAction. This value must be used together with modelAction.</li>
+     * <li><strong>AUTHORIZABLE</strong>: all authorizable directories.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListModelPermissionsRequest extends TeaModel {
     public ListModelPermissionsRequestFilter filter;
 
     /**
-     * <p>The maximum number of entries to return per page. Default value: 20. If the upper limit is exceeded, the error code InvalidParameter.maxResults is returned.</p>
+     * <p>The maximum number of entries to return on each page. Default value: 20. If the value exceeds the upper limit, the <code>InvalidParameter.maxResults</code> error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -33,9 +33,9 @@ public class ListModelPermissionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The authorization action dimension. Valid values:</p>
+     * <p>The authorization action dimension.</p>
      * <ul>
-     * <li><strong>INFERENCE</strong>: model inference authorization.</li>
+     * <li><strong>INFERENCE</strong>: model invocation authorization.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListModelPermissionsRequest extends TeaModel {
     public String modelAction;
 
     /**
-     * <p>The pagination token (offset) for the next page. Do not pass this parameter for the first page.</p>
+     * <p>The pagination token that is used to retrieve the next page. This parameter is not required for the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>lwytFRtLdNk=</p>
@@ -54,7 +54,7 @@ public class ListModelPermissionsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The workspace ID. This parameter is required and cannot be empty.</p>
+     * <p>The ID of the workspace. This parameter is required.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

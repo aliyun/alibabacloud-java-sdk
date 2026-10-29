@@ -23,7 +23,12 @@ public class GetSubscriptionSeatDetailsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The seat assignment status filter. Set to true for assigned seats, false for unassigned seats, or null for all seats.</p>
+     * <p>The filter for the seat assignment status. Valid values:</p>
+     * <ul>
+     * <li>true: assigned</li>
+     * <li>false: unassigned</li>
+     * <li>null: all</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -43,9 +48,9 @@ public class GetSubscriptionSeatDetailsRequest extends TeaModel {
     /**
      * <p>The seat type (specType). Valid values:</p>
      * <ul>
-     * <li>standard: standard seat.</li>
-     * <li>pro: pro seat.</li>
-     * <li>max: premium seat.</li>
+     * <li>standard: standard seat</li>
+     * <li>pro: advanced seat</li>
+     * <li>max: premium seat</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -55,7 +60,7 @@ public class GetSubscriptionSeatDetailsRequest extends TeaModel {
     public String seatType;
 
     /**
-     * <p>The list of seat statuses used for filtering.</p>
+     * <p>The list of seat statuses for filtering.</p>
      */
     @NameInMap("StatusList")
     public java.util.List<String> statusList;

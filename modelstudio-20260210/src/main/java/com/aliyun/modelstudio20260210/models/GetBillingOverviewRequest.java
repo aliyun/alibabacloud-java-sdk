@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBillingOverviewRequest extends TeaModel {
     /**
-     * <p>The billing month. This parameter is required.</p>
+     * <p>The billing month.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-08</p>
@@ -14,10 +14,19 @@ public class GetBillingOverviewRequest extends TeaModel {
     public String billMonth;
 
     /**
-     * <p>The filter condition.</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("filter")
     public GetBillingOverviewRequestFilter filter;
+
+    /**
+     * <p>The time granularity.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MONTH</p>
+     */
+    @NameInMap("granularity")
+    public String granularity;
 
     /**
      * <p>The list of grouping conditions. Currently, you must specify exactly one grouping dimension.</p>
@@ -26,7 +35,7 @@ public class GetBillingOverviewRequest extends TeaModel {
     public java.util.List<GetBillingOverviewRequestGroupBy> groupBy;
 
     /**
-     * <p>The response language. Default value: en-US.</p>
+     * <p>The language of the response. Default value: en-US.</p>
      * 
      * <strong>example:</strong>
      * <p>zh-CN</p>
@@ -35,13 +44,19 @@ public class GetBillingOverviewRequest extends TeaModel {
     public String locale;
 
     /**
-     * <p>The region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
      */
     @NameInMap("regionId")
     public String regionId;
+
+    /**
+     * <p>The query time range, which includes the start and end times. Both the start and end times are included in the query range. The time format must be consistent with the granularity, and the start time cannot be later than the end time.</p>
+     */
+    @NameInMap("timePeriod")
+    public GetBillingOverviewRequestTimePeriod timePeriod;
 
     /**
      * <p>The number of groups to return. Valid values: 1 to 20. Default value: 20.</p>
@@ -53,7 +68,7 @@ public class GetBillingOverviewRequest extends TeaModel {
     public Integer topNum;
 
     /**
-     * <p>Specifies whether to filter out groups with a zero amount. Default value: true.</p>
+     * <p>Specifies whether to filter out groups with an amount of 0. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -82,6 +97,14 @@ public class GetBillingOverviewRequest extends TeaModel {
         return this.filter;
     }
 
+    public GetBillingOverviewRequest setGranularity(String granularity) {
+        this.granularity = granularity;
+        return this;
+    }
+    public String getGranularity() {
+        return this.granularity;
+    }
+
     public GetBillingOverviewRequest setGroupBy(java.util.List<GetBillingOverviewRequestGroupBy> groupBy) {
         this.groupBy = groupBy;
         return this;
@@ -106,6 +129,14 @@ public class GetBillingOverviewRequest extends TeaModel {
         return this.regionId;
     }
 
+    public GetBillingOverviewRequest setTimePeriod(GetBillingOverviewRequestTimePeriod timePeriod) {
+        this.timePeriod = timePeriod;
+        return this;
+    }
+    public GetBillingOverviewRequestTimePeriod getTimePeriod() {
+        return this.timePeriod;
+    }
+
     public GetBillingOverviewRequest setTopNum(Integer topNum) {
         this.topNum = topNum;
         return this;
@@ -124,7 +155,7 @@ public class GetBillingOverviewRequest extends TeaModel {
 
     public static class GetBillingOverviewRequestFilterDimensions extends TeaModel {
         /**
-         * <p>The filter field. For more information, see the &quot;Additional information&quot; section below.</p>
+         * <p>The filter field. For more information, see the &quot;Additional notes&quot; section below.</p>
          * 
          * <strong>example:</strong>
          * <p>CHARGE_TYPE</p>
@@ -202,7 +233,7 @@ public class GetBillingOverviewRequest extends TeaModel {
 
     public static class GetBillingOverviewRequestGroupBy extends TeaModel {
         /**
-         * <p>The grouping dimension code. For more information, see the &quot;Additional information&quot; section below.</p>
+         * <p>The code of the grouping dimension. For more information, see the &quot;Additional notes&quot; section below.</p>
          * 
          * <strong>example:</strong>
          * <p>BASE_MODEL</p>
@@ -221,6 +252,48 @@ public class GetBillingOverviewRequest extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+    }
+
+    public static class GetBillingOverviewRequestTimePeriod extends TeaModel {
+        /**
+         * <p>The end time of the query. This time point is included in the query range. The format is determined by granularity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202609</p>
+         */
+        @NameInMap("end")
+        public String end;
+
+        /**
+         * <p>The start time of the query. This time point is included in the query range. The format is determined by granularity.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>202609</p>
+         */
+        @NameInMap("start")
+        public String start;
+
+        public static GetBillingOverviewRequestTimePeriod build(java.util.Map<String, ?> map) throws Exception {
+            GetBillingOverviewRequestTimePeriod self = new GetBillingOverviewRequestTimePeriod();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBillingOverviewRequestTimePeriod setEnd(String end) {
+            this.end = end;
+            return this;
+        }
+        public String getEnd() {
+            return this.end;
+        }
+
+        public GetBillingOverviewRequestTimePeriod setStart(String start) {
+            this.start = start;
+            return this;
+        }
+        public String getStart() {
+            return this.start;
         }
 
     }

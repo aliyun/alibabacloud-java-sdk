@@ -14,13 +14,13 @@ public class GetBillingTrendResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetBillingTrendResponseBodyData data;
 
     /**
-     * <p>The request result description.</p>
+     * <p>The description of the request result.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -38,7 +38,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -93,7 +93,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
 
     public static class GetBillingTrendResponseBodyDataCostTotals extends TeaModel {
         /**
-         * <p>The total amount.</p>
+         * <p>The total cost amount.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -178,7 +178,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String amount;
 
         /**
-         * <p>The grouping dimension value.</p>
+         * <p>The dimension value of the group.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
@@ -187,7 +187,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The display name of the group. This value is affected by the locale parameter.</p>
+         * <p>The display name of the group, which is affected by the locale input parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
@@ -260,18 +260,94 @@ public class GetBillingTrendResponseBody extends TeaModel {
 
     }
 
-    public static class GetBillingTrendResponseBodyDataResultByTimePeriodDetails extends TeaModel {
+    public static class GetBillingTrendResponseBodyDataHistoryPeriodCostTotals extends TeaModel {
         /**
-         * <p>The amount of the group within the current period.</p>
+         * <p>The total cost amount.</p>
          * 
          * <strong>example:</strong>
-         * <p>20</p>
+         * <p>1000</p>
          */
         @NameInMap("amount")
         public String amount;
 
         /**
-         * <p>The grouping dimension value. Data beyond the top N uses DIMENSION_GROUP_OTHERS_VALUE.</p>
+         * <p>The currency of the amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
+        @NameInMap("currency")
+        public String currency;
+
+        /**
+         * <p>The pretax amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>800</p>
+         */
+        @NameInMap("pretaxAmount")
+        public String pretaxAmount;
+
+        /**
+         * <p>The tax amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>200</p>
+         */
+        @NameInMap("taxAmount")
+        public String taxAmount;
+
+        public static GetBillingTrendResponseBodyDataHistoryPeriodCostTotals build(java.util.Map<String, ?> map) throws Exception {
+            GetBillingTrendResponseBodyDataHistoryPeriodCostTotals self = new GetBillingTrendResponseBodyDataHistoryPeriodCostTotals();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodCostTotals setAmount(String amount) {
+            this.amount = amount;
+            return this;
+        }
+        public String getAmount() {
+            return this.amount;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodCostTotals setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodCostTotals setPretaxAmount(String pretaxAmount) {
+            this.pretaxAmount = pretaxAmount;
+            return this;
+        }
+        public String getPretaxAmount() {
+            return this.pretaxAmount;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodCostTotals setTaxAmount(String taxAmount) {
+            this.taxAmount = taxAmount;
+            return this;
+        }
+        public String getTaxAmount() {
+            return this.taxAmount;
+        }
+
+    }
+
+    public static class GetBillingTrendResponseBodyDataHistoryPeriodGroupByTotal extends TeaModel {
+        /**
+         * <p>The total amount of the current group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>246</p>
+         */
+        @NameInMap("amount")
+        public String amount;
+
+        /**
+         * <p>The dimension value of the group. If the value is null, DIMENSION_FILTER_NULL_VALUE is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
@@ -280,7 +356,389 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The display name of the group. This value is affected by the locale parameter.</p>
+         * <p>The display name of the group, which is affected by the locale parameter. If the value is null, a hyphen (-) is displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The total pretax amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("pretaxAmount")
+        public String pretaxAmount;
+
+        /**
+         * <p>The total tax amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>146</p>
+         */
+        @NameInMap("taxAmount")
+        public String taxAmount;
+
+        public static GetBillingTrendResponseBodyDataHistoryPeriodGroupByTotal build(java.util.Map<String, ?> map) throws Exception {
+            GetBillingTrendResponseBodyDataHistoryPeriodGroupByTotal self = new GetBillingTrendResponseBodyDataHistoryPeriodGroupByTotal();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodGroupByTotal setAmount(String amount) {
+            this.amount = amount;
+            return this;
+        }
+        public String getAmount() {
+            return this.amount;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodGroupByTotal setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodGroupByTotal setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodGroupByTotal setPretaxAmount(String pretaxAmount) {
+            this.pretaxAmount = pretaxAmount;
+            return this;
+        }
+        public String getPretaxAmount() {
+            return this.pretaxAmount;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodGroupByTotal setTaxAmount(String taxAmount) {
+            this.taxAmount = taxAmount;
+            return this;
+        }
+        public String getTaxAmount() {
+            return this.taxAmount;
+        }
+
+    }
+
+    public static class GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails extends TeaModel {
+        /**
+         * <p>The amount of the current group.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>526</p>
+         */
+        @NameInMap("amount")
+        public String amount;
+
+        /**
+         * <p>The dimension value of the group. If the value is null, DIMENSION_FILTER_NULL_VALUE is returned.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
+         */
+        @NameInMap("key")
+        public String key;
+
+        /**
+         * <p>The display name of the group, which is affected by the locale parameter. If the value is null, a hyphen (-) is displayed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The percentage of the group amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
+        @NameInMap("percentage")
+        public String percentage;
+
+        /**
+         * <p>The total pretax amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("pretaxAmount")
+        public String pretaxAmount;
+
+        /**
+         * <p>The total tax amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>426</p>
+         */
+        @NameInMap("taxAmount")
+        public String taxAmount;
+
+        public static GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails build(java.util.Map<String, ?> map) throws Exception {
+            GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails self = new GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails setAmount(String amount) {
+            this.amount = amount;
+            return this;
+        }
+        public String getAmount() {
+            return this.amount;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails setPercentage(String percentage) {
+            this.percentage = percentage;
+            return this;
+        }
+        public String getPercentage() {
+            return this.percentage;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails setPretaxAmount(String pretaxAmount) {
+            this.pretaxAmount = pretaxAmount;
+            return this;
+        }
+        public String getPretaxAmount() {
+            return this.pretaxAmount;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails setTaxAmount(String taxAmount) {
+            this.taxAmount = taxAmount;
+            return this;
+        }
+        public String getTaxAmount() {
+            return this.taxAmount;
+        }
+
+    }
+
+    public static class GetBillingTrendResponseBodyDataHistoryPeriodResultByTimeTotal extends TeaModel {
+        /**
+         * <p>The total cost amount of the current period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>600</p>
+         */
+        @NameInMap("amount")
+        public String amount;
+
+        /**
+         * <p>The currency of the amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CNY</p>
+         */
+        @NameInMap("currency")
+        public String currency;
+
+        /**
+         * <p>The total pretax amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>100</p>
+         */
+        @NameInMap("pretaxAmount")
+        public String pretaxAmount;
+
+        /**
+         * <p>The total tax amount.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>500</p>
+         */
+        @NameInMap("taxAmount")
+        public String taxAmount;
+
+        public static GetBillingTrendResponseBodyDataHistoryPeriodResultByTimeTotal build(java.util.Map<String, ?> map) throws Exception {
+            GetBillingTrendResponseBodyDataHistoryPeriodResultByTimeTotal self = new GetBillingTrendResponseBodyDataHistoryPeriodResultByTimeTotal();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTimeTotal setAmount(String amount) {
+            this.amount = amount;
+            return this;
+        }
+        public String getAmount() {
+            return this.amount;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTimeTotal setCurrency(String currency) {
+            this.currency = currency;
+            return this;
+        }
+        public String getCurrency() {
+            return this.currency;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTimeTotal setPretaxAmount(String pretaxAmount) {
+            this.pretaxAmount = pretaxAmount;
+            return this;
+        }
+        public String getPretaxAmount() {
+            return this.pretaxAmount;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTimeTotal setTaxAmount(String taxAmount) {
+            this.taxAmount = taxAmount;
+            return this;
+        }
+        public String getTaxAmount() {
+            return this.taxAmount;
+        }
+
+    }
+
+    public static class GetBillingTrendResponseBodyDataHistoryPeriodResultByTime extends TeaModel {
+        /**
+         * <p>The statistical period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20260801</p>
+         */
+        @NameInMap("period")
+        public String period;
+
+        /**
+         * <p>The cost groups that actually exist in the current period.</p>
+         */
+        @NameInMap("periodDetails")
+        public java.util.List<GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails> periodDetails;
+
+        /**
+         * <p>The total costs of the current period.</p>
+         */
+        @NameInMap("total")
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTimeTotal total;
+
+        public static GetBillingTrendResponseBodyDataHistoryPeriodResultByTime build(java.util.Map<String, ?> map) throws Exception {
+            GetBillingTrendResponseBodyDataHistoryPeriodResultByTime self = new GetBillingTrendResponseBodyDataHistoryPeriodResultByTime();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTime setPeriod(String period) {
+            this.period = period;
+            return this;
+        }
+        public String getPeriod() {
+            return this.period;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTime setPeriodDetails(java.util.List<GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails> periodDetails) {
+            this.periodDetails = periodDetails;
+            return this;
+        }
+        public java.util.List<GetBillingTrendResponseBodyDataHistoryPeriodResultByTimePeriodDetails> getPeriodDetails() {
+            return this.periodDetails;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTime setTotal(GetBillingTrendResponseBodyDataHistoryPeriodResultByTimeTotal total) {
+            this.total = total;
+            return this;
+        }
+        public GetBillingTrendResponseBodyDataHistoryPeriodResultByTimeTotal getTotal() {
+            return this.total;
+        }
+
+    }
+
+    public static class GetBillingTrendResponseBodyDataHistoryPeriod extends TeaModel {
+        /**
+         * <p>The total costs within the historical range, including the top N items and Other.</p>
+         */
+        @NameInMap("costTotals")
+        public GetBillingTrendResponseBodyDataHistoryPeriodCostTotals costTotals;
+
+        /**
+         * <p>The total costs of the top N groups and the optional Other group within the historical period.</p>
+         */
+        @NameInMap("groupByTotal")
+        public java.util.List<GetBillingTrendResponseBodyDataHistoryPeriodGroupByTotal> groupByTotal;
+
+        /**
+         * <p>The list of cost trends sorted in ascending order by time.</p>
+         */
+        @NameInMap("resultByTime")
+        public java.util.List<GetBillingTrendResponseBodyDataHistoryPeriodResultByTime> resultByTime;
+
+        public static GetBillingTrendResponseBodyDataHistoryPeriod build(java.util.Map<String, ?> map) throws Exception {
+            GetBillingTrendResponseBodyDataHistoryPeriod self = new GetBillingTrendResponseBodyDataHistoryPeriod();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriod setCostTotals(GetBillingTrendResponseBodyDataHistoryPeriodCostTotals costTotals) {
+            this.costTotals = costTotals;
+            return this;
+        }
+        public GetBillingTrendResponseBodyDataHistoryPeriodCostTotals getCostTotals() {
+            return this.costTotals;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriod setGroupByTotal(java.util.List<GetBillingTrendResponseBodyDataHistoryPeriodGroupByTotal> groupByTotal) {
+            this.groupByTotal = groupByTotal;
+            return this;
+        }
+        public java.util.List<GetBillingTrendResponseBodyDataHistoryPeriodGroupByTotal> getGroupByTotal() {
+            return this.groupByTotal;
+        }
+
+        public GetBillingTrendResponseBodyDataHistoryPeriod setResultByTime(java.util.List<GetBillingTrendResponseBodyDataHistoryPeriodResultByTime> resultByTime) {
+            this.resultByTime = resultByTime;
+            return this;
+        }
+        public java.util.List<GetBillingTrendResponseBodyDataHistoryPeriodResultByTime> getResultByTime() {
+            return this.resultByTime;
+        }
+
+    }
+
+    public static class GetBillingTrendResponseBodyDataResultByTimePeriodDetails extends TeaModel {
+        /**
+         * <p>The amount of the group in the current period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>20</p>
+         */
+        @NameInMap("amount")
+        public String amount;
+
+        /**
+         * <p>The dimension value of the group. For data other than the top N items, DIMENSION_GROUP_OTHERS_VALUE is used.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>qwen-plus</p>
+         */
+        @NameInMap("key")
+        public String key;
+
+        /**
+         * <p>The display name of the group, which is affected by the locale input parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
@@ -298,7 +756,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String percentage;
 
         /**
-         * <p>The pretax amount of the group within the current period.</p>
+         * <p>The pretax amount of the group in the current period.</p>
          * 
          * <strong>example:</strong>
          * <p>18.87</p>
@@ -307,7 +765,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String pretaxAmount;
 
         /**
-         * <p>The tax amount of the group within the current period.</p>
+         * <p>The tax amount of the group in the current period.</p>
          * 
          * <strong>example:</strong>
          * <p>1.13</p>
@@ -372,7 +830,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
 
     public static class GetBillingTrendResponseBodyDataResultByTimeTotal extends TeaModel {
         /**
-         * <p>The total amount for the current period.</p>
+         * <p>The total cost amount of the current period.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -381,7 +839,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String amount;
 
         /**
-         * <p>The currency of the amount for the current period.</p>
+         * <p>The currency of the amount in the current period.</p>
          * 
          * <strong>example:</strong>
          * <p>CNY</p>
@@ -390,7 +848,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String currency;
 
         /**
-         * <p>The pretax amount for the current period.</p>
+         * <p>The pretax amount of the current period.</p>
          * 
          * <strong>example:</strong>
          * <p>28.30</p>
@@ -399,7 +857,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public String pretaxAmount;
 
         /**
-         * <p>The tax amount for the current period.</p>
+         * <p>The tax amount of the current period.</p>
          * 
          * <strong>example:</strong>
          * <p>1.70</p>
@@ -448,7 +906,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
 
     public static class GetBillingTrendResponseBodyDataResultByTime extends TeaModel {
         /**
-         * <p>The statistical period. DAY returns yyyyMMdd. MONTH returns yyyyMM.</p>
+         * <p>The statistical period. DAY returns yyyyMMdd, and MONTH returns yyyyMM.</p>
          * 
          * <strong>example:</strong>
          * <p>20260801</p>
@@ -463,7 +921,7 @@ public class GetBillingTrendResponseBody extends TeaModel {
         public java.util.List<GetBillingTrendResponseBodyDataResultByTimePeriodDetails> periodDetails;
 
         /**
-         * <p>The total cost for the current period.</p>
+         * <p>The total costs of the current period.</p>
          */
         @NameInMap("total")
         public GetBillingTrendResponseBodyDataResultByTimeTotal total;
@@ -501,19 +959,25 @@ public class GetBillingTrendResponseBody extends TeaModel {
 
     public static class GetBillingTrendResponseBodyData extends TeaModel {
         /**
-         * <p>The total cost for the entire query time range, including the top N groups and &quot;Others&quot;.</p>
+         * <p>The total costs within the entire query time range, including the top N items and Other.</p>
          */
         @NameInMap("costTotals")
         public GetBillingTrendResponseBodyDataCostTotals costTotals;
 
         /**
-         * <p>The total cost of the top N groups and the optional &quot;Others&quot; group within the period.</p>
+         * <p>The total costs of the top N groups and the optional Other group within the period.</p>
          */
         @NameInMap("groupByTotal")
         public java.util.List<GetBillingTrendResponseBodyDataGroupByTotal> groupByTotal;
 
         /**
-         * <p>The cost trend list sorted by time in ascending order.</p>
+         * <p>The historical period data, which is returned when the includeHistoryPeriod input parameter is set to true.</p>
+         */
+        @NameInMap("historyPeriod")
+        public GetBillingTrendResponseBodyDataHistoryPeriod historyPeriod;
+
+        /**
+         * <p>The list of cost trends sorted in ascending order by time.</p>
          */
         @NameInMap("resultByTime")
         public java.util.List<GetBillingTrendResponseBodyDataResultByTime> resultByTime;
@@ -537,6 +1001,14 @@ public class GetBillingTrendResponseBody extends TeaModel {
         }
         public java.util.List<GetBillingTrendResponseBodyDataGroupByTotal> getGroupByTotal() {
             return this.groupByTotal;
+        }
+
+        public GetBillingTrendResponseBodyData setHistoryPeriod(GetBillingTrendResponseBodyDataHistoryPeriod historyPeriod) {
+            this.historyPeriod = historyPeriod;
+            return this;
+        }
+        public GetBillingTrendResponseBodyDataHistoryPeriod getHistoryPeriod() {
+            return this.historyPeriod;
         }
 
         public GetBillingTrendResponseBodyData setResultByTime(java.util.List<GetBillingTrendResponseBodyDataResultByTime> resultByTime) {

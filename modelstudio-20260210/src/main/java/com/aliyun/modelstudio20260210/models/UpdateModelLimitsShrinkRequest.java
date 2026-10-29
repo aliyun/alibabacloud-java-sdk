@@ -15,7 +15,7 @@ public class UpdateModelLimitsShrinkRequest extends TeaModel {
     public String workspaceId;
 
     /**
-     * <p>The throttling values for the workspace.</p>
+     * <p>The throttling limits for the workspace.</p>
      */
     @NameInMap("workspaceLimits")
     public String workspaceLimitsShrink;
