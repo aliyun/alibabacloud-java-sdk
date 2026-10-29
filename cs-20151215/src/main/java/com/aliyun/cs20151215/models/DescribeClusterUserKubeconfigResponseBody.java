@@ -14,7 +14,7 @@ public class DescribeClusterUserKubeconfigResponseBody extends TeaModel {
     public String config;
 
     /**
-     * <p>The expiration time of the kubeconfig file. The time is displayed in UTC and follows the RFC 3339 format.</p>
+     * <p>The expiration time of the kubeconfig file. The time is displayed in UTC and follows the RFC 3339 standard.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-03-10T09:56:17Z</p>

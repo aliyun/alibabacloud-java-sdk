@@ -1375,7 +1375,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a node pool for a cluster. A node pool is a logical collection of nodes that share the same attributes. It allows unified management and O&amp;M of nodes, such as node upgrades and elastic scaling. You can use the automated O&amp;M capabilities of node pools to reduce O&amp;M costs. These capabilities include automatic repair of OS CVE vulnerabilities, automatic recovery of faulty nodes, and automatic upgrades of kubelet and containerd versions.</p>
+     * <p>Creates a node pool. A node pool is a logical collection of nodes with the same property, which allows unified management and O&amp;M of nodes, such as node upgrades and elastic scaling. You can further use the automated O&amp;M features of node pools, such as automatic repair of OS CVE vulnerabilities, automatic recovery of faulty nodes, and automatic upgrades of kubelet and containerd versions, to reduce O&amp;M costs. You can invoke CreateClusterNodePool to create a node pool for a cluster.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @param headers map
@@ -1469,7 +1469,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a node pool for a cluster. A node pool is a logical collection of nodes that share the same attributes. It allows unified management and O&amp;M of nodes, such as node upgrades and elastic scaling. You can use the automated O&amp;M capabilities of node pools to reduce O&amp;M costs. These capabilities include automatic repair of OS CVE vulnerabilities, automatic recovery of faulty nodes, and automatic upgrades of kubelet and containerd versions.</p>
+     * <p>Creates a node pool. A node pool is a logical collection of nodes with the same property, which allows unified management and O&amp;M of nodes, such as node upgrades and elastic scaling. You can further use the automated O&amp;M features of node pools, such as automatic repair of OS CVE vulnerabilities, automatic recovery of faulty nodes, and automatic upgrades of kubelet and containerd versions, to reduce O&amp;M costs. You can invoke CreateClusterNodePool to create a node pool for a cluster.</p>
      * 
      * @param request CreateClusterNodePoolRequest
      * @return CreateClusterNodePoolResponse
@@ -3365,12 +3365,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The default validity period of the certificate issued for a kubeconfig file is three years. Within 180 days before expiration, you can obtain a refreshed kubeconfig file with rotated credentials through the Container Service for Kubernetes console or by calling the API operation to retrieve the cluster kubeconfig. The new kubeconfig certificate remains valid for three years. The old kubeconfig credentials remain valid until the certificate expires. Obtain the rotated credentials promptly based on the kubeconfig expiration time displayed in the console or returned by the API operation.</li>
-     * <li>Properly manage the kubeconfig credentials used for cluster management, and revoke them promptly when they are no longer needed. This prevents security risks such as data leaks caused by kubeconfig exposure.</li>
+     * <li>The default validity period of a certificate issued for a kubeconfig file is three years. Within 180 days before expiration, you can obtain a refreshed kubeconfig file with rotated certificates through the Container Service for Kubernetes console or by calling the API operation to retrieve the cluster kubeconfig. The new kubeconfig certificate remains valid for three years. The old kubeconfig credentials remain valid until the certificate expires. Obtain the rotated credentials promptly based on the kubeconfig expiration time displayed in the console or returned by the API operation.</li>
+     * <li>Properly manage the kubeconfig credentials for cluster management and revoke them promptly when they are no longer needed to prevent security risks such as data leaks caused by kubeconfig exposure.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the kubeconfig file of a cluster.</p>
+     * <p>Retrieves the kubeconfig of a cluster.</p>
      * 
      * @param request DescribeClusterUserKubeconfigRequest
      * @param headers map
@@ -3409,12 +3409,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>The default validity period of the certificate issued for a kubeconfig file is three years. Within 180 days before expiration, you can obtain a refreshed kubeconfig file with rotated credentials through the Container Service for Kubernetes console or by calling the API operation to retrieve the cluster kubeconfig. The new kubeconfig certificate remains valid for three years. The old kubeconfig credentials remain valid until the certificate expires. Obtain the rotated credentials promptly based on the kubeconfig expiration time displayed in the console or returned by the API operation.</li>
-     * <li>Properly manage the kubeconfig credentials used for cluster management, and revoke them promptly when they are no longer needed. This prevents security risks such as data leaks caused by kubeconfig exposure.</li>
+     * <li>The default validity period of a certificate issued for a kubeconfig file is three years. Within 180 days before expiration, you can obtain a refreshed kubeconfig file with rotated certificates through the Container Service for Kubernetes console or by calling the API operation to retrieve the cluster kubeconfig. The new kubeconfig certificate remains valid for three years. The old kubeconfig credentials remain valid until the certificate expires. Obtain the rotated credentials promptly based on the kubeconfig expiration time displayed in the console or returned by the API operation.</li>
+     * <li>Properly manage the kubeconfig credentials for cluster management and revoke them promptly when they are no longer needed to prevent security risks such as data leaks caused by kubeconfig exposure.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the kubeconfig file of a cluster.</p>
+     * <p>Retrieves the kubeconfig of a cluster.</p>
      * 
      * @param request DescribeClusterUserKubeconfigRequest
      * @return DescribeClusterUserKubeconfigResponse
@@ -4119,7 +4119,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of policy governance in a specified ACK cluster. Container security policies for ACK clusters provide a comprehensive built-in rule library that includes Compliance, Infra, K8s-general, and PSP to ensure the secure operation of containers in production environments. This operation retrieves details such as the counts of enabled policies at different severity levels, policy governance audit logs, and interception and alerting statistics.</p>
+     * <p>Queries the details of policy governance for a specified ACK cluster. Container security policies for ACK clusters provide a comprehensive set of built-in rule libraries, including Compliance, Infra, K8s-general, and PSP, to ensure the secure operation of containers in production environments. You can use this operation to retrieve information such as the counts of enabled policies at different severity levels, policy governance audit logs, and interception and alerting statistics.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4145,7 +4145,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of policy governance in a specified ACK cluster. Container security policies for ACK clusters provide a comprehensive built-in rule library that includes Compliance, Infra, K8s-general, and PSP to ensure the secure operation of containers in production environments. This operation retrieves details such as the counts of enabled policies at different severity levels, policy governance audit logs, and interception and alerting statistics.</p>
+     * <p>Queries the details of policy governance for a specified ACK cluster. Container security policies for ACK clusters provide a comprehensive set of built-in rule libraries, including Compliance, Infra, K8s-general, and PSP, to ensure the secure operation of containers in production environments. You can use this operation to retrieve information such as the counts of enabled policies at different severity levels, policy governance audit logs, and interception and alerting statistics.</p>
      * @return DescribePolicyGovernanceInClusterResponse
      */
     public DescribePolicyGovernanceInClusterResponse describePolicyGovernanceInCluster(String clusterId) throws Exception {
@@ -5445,11 +5445,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: This API is not yet available. Stay tuned.</notice></p>
+     * <p>Notice: This API is not yet available. Stay tuned.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of self-healing rules.</p>
+     * <p>Retrieves a list of self-healing rules.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -5476,11 +5476,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <blockquote>
-     * <p>Notice: This API is not yet available. Stay tuned.</notice></p>
+     * <p>Notice: This API is not yet available. Stay tuned.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the list of self-healing rules.</p>
+     * <p>Retrieves a list of self-healing rules.</p>
      * @return ListAutoRepairPoliciesResponse
      */
     public ListAutoRepairPoliciesResponse listAutoRepairPolicies(String clusterId) throws Exception {
