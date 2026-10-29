@@ -4,39 +4,15 @@ package com.aliyun.dms20250414.models;
 import com.aliyun.tea.*;
 
 public class AgenticDatabaseEngineMeta extends TeaModel {
-    /**
-     * <p>The catalog name in the database engine.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>def</p>
-     */
     @NameInMap("CatalogName")
     public String catalogName;
 
-    /**
-     * <p>The character set encoding of the database.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>utf8mb4</p>
-     */
     @NameInMap("Encoding")
     public String encoding;
 
-    /**
-     * <p>The schema name.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>public</p>
-     */
     @NameInMap("SchemaName")
     public String schemaName;
 
-    /**
-     * <p>The storage capacity of the database, in MB.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>1024</p>
-     */
     @NameInMap("StorageCapacity")
     public Long storageCapacity;
 

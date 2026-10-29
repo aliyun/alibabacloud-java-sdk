@@ -1,3 +1,7 @@
+2026-10-29 Version: 4.4.0
+- Support API ListAgenticSecurityPolicies.
+
+
 2026-10-23 Version: 4.3.1
 - Update API CreateDataAgentSkillMeta: add request parameters SkillId.
 - Update API SendChatMessage: add request parameters DataSource.Uri.

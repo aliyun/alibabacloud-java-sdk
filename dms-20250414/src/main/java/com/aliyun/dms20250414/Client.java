@@ -4513,6 +4513,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</p>
+     * <ul>
+     * <li>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</li>
+     * <li>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</li>
+     * <li>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</li>
+     * <li>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the user security policy of the current Alibaba Cloud account by page and returns the enabled system default security policy.</p>
+     * 
+     * @param request ListAgenticSecurityPoliciesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListAgenticSecurityPoliciesResponse
+     */
+    public ListAgenticSecurityPoliciesResponse listAgenticSecurityPoliciesWithOptions(ListAgenticSecurityPoliciesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.includeArchived)) {
+            query.put("IncludeArchived", request.includeArchived);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.page)) {
+            query.put("Page", request.page);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.policyStatus)) {
+            query.put("PolicyStatus", request.policyStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.size)) {
+            query.put("Size", request.size);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListAgenticSecurityPolicies"),
+            new TeaPair("version", "2025-04-14"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListAgenticSecurityPoliciesResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>This operation returns the enabled system default policies and the user policies of the current Alibaba Cloud account.</p>
+     * <ul>
+     * <li>System default policies are placed at the beginning of the list. Only policies in the ON (enabled) state are returned. They are not filtered by PolicyStatus or IncludeArchived.</li>
+     * <li>Page and Size are used to paginate user policies. Each call also returns up to Size enabled system default policies. Therefore, the number of items in Data may be greater than Size, and the same system default policies may be repeatedly returned during pagination.</li>
+     * <li>TotalCount is the sum of the number of all enabled system default policies and the number of user policies that meet the filter conditions.</li>
+     * <li>You can use Readonly to distinguish between the two types of policies: true indicates a system default policy, and false indicates a user policy.</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the user security policy of the current Alibaba Cloud account by page and returns the enabled system default security policy.</p>
+     * 
+     * @param request ListAgenticSecurityPoliciesRequest
+     * @return ListAgenticSecurityPoliciesResponse
+     */
+    public ListAgenticSecurityPoliciesResponse listAgenticSecurityPolicies(ListAgenticSecurityPoliciesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listAgenticSecurityPoliciesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</p>
      * 
