@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEpnInstanceRequest extends TeaModel {
     /**
-     * <p>The name of the EPN instance.</p>
+     * <p>The name of the Edge-to-Edge network instance.</p>
      * 
      * <strong>example:</strong>
      * <p>test EPNInstanceName</p>
@@ -14,7 +14,7 @@ public class CreateEpnInstanceRequest extends TeaModel {
     public String EPNInstanceName;
 
     /**
-     * <p>The type of the EPN instance. Set the value to <strong>EdgeToEdge</strong>.</p>
+     * <p>The type of the Edge-to-Edge communication instance. Valid value: <strong>EdgeToEdge</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,18 +24,14 @@ public class CreateEpnInstanceRequest extends TeaModel {
     public String EPNInstanceType;
 
     /**
-     * <p>The billing method for network usage. Valid values:</p>
+     * <p>The network billing type. Valid values:</p>
      * <ul>
-     * <li><p><strong>BandwidthByDay</strong>: Pay by daily peak bandwidth.</p>
-     * </li>
-     * <li><p><strong>95BandwidthByMonth</strong>: Pay by monthly 95th percentile bandwidth.</p>
-     * </li>
-     * <li><p><strong>PayByBandwidth4thMonth</strong>: Pay by monthly fourth peak bandwidth.</p>
-     * </li>
-     * <li><p><strong>PayByBandwidth</strong>: Pay by fixed bandwidth.</p>
-     * </li>
+     * <li><strong>BandwidthByDay</strong>: Daily peak bandwidth.</li>
+     * <li><strong>95BandwidthByMonth</strong>: Monthly 95th percentile peak bandwidth.</li>
+     * <li><strong>PayByBandwidth4thMonth</strong>: Monthly fourth peak bandwidth.</li>
+     * <li><strong>PayByBandwidth</strong>: Bandwidth with defined specifications.</li>
      * </ul>
-     * <p>You can specify only one metering method for network usage and cannot overwrite the existing metering method.</p>
+     * <p>Only one of the Billable methods is supported. If a billing method already exists, the new value is invalid by default, and the existing one prevails.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +41,7 @@ public class CreateEpnInstanceRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The maximum outbound public bandwidth. Unit: Mbit/s. Valid values: 1 to 100.</p>
+     * <p>The maximum outbound bandwidth to the Internet. Unit: Mbit/s. Valid values: 1 to 100.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,12 +53,9 @@ public class CreateEpnInstanceRequest extends TeaModel {
     /**
      * <p>The networking mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>SpeedUp</strong>: intelligent acceleration network (Internet)</p>
-     * </li>
-     * <li><p><strong>Connection</strong>: internal network</p>
-     * </li>
-     * <li><p><strong>SpeedUpAndConnection</strong>: intelligent acceleration network and internal network</p>
-     * </li>
+     * <li><strong>SpeedUp</strong>: Intelligent acceleration (Internet).</li>
+     * <li><strong>Connection</strong>: Internal network connectivity (internal network mode).</li>
+     * <li><strong>SpeedUpAndConnection</strong>: Intelligent acceleration and internal network connectivity (internal network mode).</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

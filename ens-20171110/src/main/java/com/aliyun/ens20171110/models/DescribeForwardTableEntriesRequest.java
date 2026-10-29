@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeForwardTableEntriesRequest extends TeaModel {
     /**
-     * <p>The EIP in the DNAT entry. The public IP address is used to access the Internet.</p>
+     * <p>The elastic IP address that provides public network access in the DNAT entry.</p>
      * 
      * <strong>example:</strong>
      * <p>36.XXX.XXX.72</p>
@@ -32,7 +32,7 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     public String forwardEntryName;
 
     /**
-     * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+     * <p>The private IP address of the instance that communicates with the Internet through the DNAT entry.</p>
      * 
      * <strong>example:</strong>
      * <p>10.XXX.XXX.50</p>
@@ -41,13 +41,13 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     public String internalIp;
 
     /**
-     * <p>The protocol. Valid values:</p>
+     * <p>The protocol type. Valid values:</p>
      * <ul>
-     * <li><p><strong>TCP</strong>: forwards TCP packets.</p>
+     * <li><p><strong>TCP</strong>: Forwards TCP packets.</p>
      * </li>
-     * <li><p><strong>UDP</strong>: forwards UDP packets.</p>
+     * <li><p><strong>UDP</strong>: Forwards UDP packets.</p>
      * </li>
-     * <li><p><strong>Any</strong>: forwards all packets.</p>
+     * <li><p><strong>Any</strong>: Forwards packets of all protocols.</p>
      * </li>
      * </ul>
      * 
@@ -68,7 +68,7 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The page number. Pages start from page <strong>1</strong>.</p>
+     * <p>The page number of the list to query. Pages start from <strong>1</strong>.</p>
      * <p>Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeForwardTableEntriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Maximum value: <strong>100</strong>.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Maximum value: <strong>100</strong>.</p>
      * <p>Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>

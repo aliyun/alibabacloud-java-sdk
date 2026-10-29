@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationResponseBody extends TeaModel {
     /**
-     * <p>The ID of the application. This is the unique identifier of the edge application.</p>
+     * <p>The application ID generated upon successful creation. It is the unique identifier of the edge application service.</p>
      * 
      * <strong>example:</strong>
      * <p>d0639abf-789a-4527-b420-031d2cd9ad9b</p>
@@ -14,7 +14,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>CEF72CEB-54B6-4AE8-B225-F876FF7BA984</p>

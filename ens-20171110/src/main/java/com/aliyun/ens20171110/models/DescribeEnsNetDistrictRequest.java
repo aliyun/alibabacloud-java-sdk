@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsNetDistrictRequest extends TeaModel {
     /**
-     * <p>The code of the region.</p>
-     * <p>If you do not specify this parameter, only nodes in the regions of the level that is specified by the NetLevelCode parameter are queried.</p>
-     * <p>If you specify this parameter, only nodes in the regions of the level that is specified by this parameter are queried.</p>
+     * <p>The region code.</p>
+     * <p>If this parameter is left empty, only the edge zones under the specified NetLevelCode are queried.</p>
+     * <p>If this parameter is specified, only the child edge zones under the specified NetDistrictCode are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>100106</p>
@@ -16,19 +16,19 @@ public class DescribeEnsNetDistrictRequest extends TeaModel {
     public String netDistrictCode;
 
     /**
-     * <p>Region code</p>
+     * <p>The region code.</p>
      */
     @NameInMap("NetDistrictCodeNode")
     public Boolean netDistrictCodeNode;
 
     /**
-     * <p>The level of the region.</p>
+     * <p>The region level. Valid values:</p>
      * <ul>
-     * <li><p><strong>Big</strong>: area</p>
+     * <li><p><strong>Big</strong>: Area.</p>
      * </li>
-     * <li><p><strong>Middle</strong>: province</p>
+     * <li><p><strong>Middle</strong>: Province.</p>
      * </li>
-     * <li><p><strong>Small</strong>: city</p>
+     * <li><p><strong>Small</strong>: City.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

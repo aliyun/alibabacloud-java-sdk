@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetLoadBalancerStatusRequest extends TeaModel {
     /**
-     * <p>The ID of the ELB instance.</p>
+     * <p>The instance ID of the load balancing instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,10 @@ public class SetLoadBalancerStatusRequest extends TeaModel {
     public String loadBalancerId;
 
     /**
-     * <p>The new instance status. Valid values:</p>
+     * <p>The updated instance status. Valid values:</p>
      * <ul>
-     * <li><p><strong>Active</strong></p>
-     * </li>
-     * <li><p><strong>InActive</strong></p>
-     * </li>
+     * <li><strong>Active</strong>: Runs the load balancing instance. Listeners in the instance can forward accepted traffic based on rules.</li>
+     * <li><strong>InActive</strong>: Stops the load balancing instance. Listeners in the instance no longer forward accepted traffic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

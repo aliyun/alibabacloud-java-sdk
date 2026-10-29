@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsRouteTablesResponseBody extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -23,7 +23,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>DC51ACB0-460D-5CA0-BA2D-E1F3B5547AE9</p>
@@ -32,13 +32,13 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the route tables.</p>
+     * <p>The route table information.</p>
      */
     @NameInMap("RouteTables")
     public java.util.List<DescribeEnsRouteTablesResponseBodyRouteTables> routeTables;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -93,12 +93,10 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
 
     public static class DescribeEnsRouteTablesResponseBodyRouteTables extends TeaModel {
         /**
-         * <p>The type of the resource with which the route table is associated. Valid values:</p>
+         * <p>The type of resource associated with the route table. Valid values:</p>
          * <ul>
-         * <li><p><strong>VSwitch</strong></p>
-         * </li>
-         * <li><p><strong>Gateway</strong></p>
-         * </li>
+         * <li><strong>VSwitch</strong>: vSwitch</li>
+         * <li><strong>Gateway</strong>: gateway</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -108,7 +106,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         public String associateType;
 
         /**
-         * <p>The time when the route table was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The creation time. The time is displayed in UTC and follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-03-08T08:35:18Z</p>
@@ -126,7 +124,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the edge node.</p>
+         * <p>The ENS edge zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-15</p>
@@ -135,7 +133,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>Specifies whether it is the default gateway route table.</p>
+         * <p>Indicates whether the route table is the default gateway route table.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -144,7 +142,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         public Boolean isDefaultGatewayRouteTable;
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n-5v9lufsezl4g****</p>
@@ -153,7 +151,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         public String networkId;
 
         /**
-         * <p>The ID of the route table.</p>
+         * <p>The route table ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rt-5xde2bit9****</p>
@@ -162,8 +160,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         public String routeTableId;
 
         /**
-         * <p>The name of the route table that you want to query.</p>
-         * <p>The name must be 2 to 128 characters in length, and can contain letters, digits, periods (.), underscores (_), and hyphens (-).</p>
+         * <p>The name of the route table.</p>
          * 
          * <strong>example:</strong>
          * <p>test-tf-vtb7</p>
@@ -174,7 +171,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li>Available: The route table is available.</li>
+         * <li>Available: available</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -184,12 +181,10 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the route table. Examples:</p>
+         * <p>The type of the route table. Valid values:</p>
          * <ul>
-         * <li><p>Custom: custom route table.</p>
-         * </li>
-         * <li><p>System: system route table.</p>
-         * </li>
+         * <li>Custom: custom route table</li>
+         * <li>System: system route table</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -199,7 +194,7 @@ public class DescribeEnsRouteTablesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The vSwitches that are associated with the route table.</p>
+         * <p>The list of vSwitches associated with the route table.</p>
          */
         @NameInMap("VSwitchIds")
         public java.util.List<String> vSwitchIds;

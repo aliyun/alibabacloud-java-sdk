@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEnsServiceResponseBody extends TeaModel {
     /**
-     * <p>The service code. 0 is returned for a successful request. An error code is returned for a failed request.</p>
+     * <p>The business code. A value of 0 is returned for a successful call, and an error code is returned for a failed call.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportImageRequest extends TeaModel {
     /**
-     * <p>The ID of the image.</p>
+     * <p>The image ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ExportImageRequest extends TeaModel {
     public String imageId;
 
     /**
-     * <p>The OSS bucket to which you want to export the image.</p>
+     * <p>The OSS bucket used to store the exported image.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ExportImageRequest extends TeaModel {
     public String OSSBucket;
 
     /**
-     * <p>The prefix of the object as which you want to store the image in the OSS bucket. The prefix must be 1 to 30 characters in length and can contain digits and letters.</p>
+     * <p>The prefix of the OSS object. The prefix must be 1 to 30 characters in length and can contain letters and digits.</p>
      */
     @NameInMap("OSSPrefix")
     public String OSSPrefix;
@@ -41,7 +41,7 @@ public class ExportImageRequest extends TeaModel {
     public String OSSRegionId;
 
     /**
-     * <p>The name of the Resource Access Management (RAM) role.</p>
+     * <p>The name of the authorized role.</p>
      * 
      * <strong>example:</strong>
      * <p>AliyunMNSLoggingRole</p>

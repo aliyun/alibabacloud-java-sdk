@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSnatEntryRequest extends TeaModel {
     /**
-     * <p>The ID of the SNAT entry that you want to delete.</p>
+     * <p>The ID of the SNAT entry to be deleted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

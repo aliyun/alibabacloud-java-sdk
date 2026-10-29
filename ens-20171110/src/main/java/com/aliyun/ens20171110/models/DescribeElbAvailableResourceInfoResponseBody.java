@@ -11,7 +11,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
     public java.util.List<DescribeElbAvailableResourceInfoResponseBodyElbAvailableResourceInfo> elbAvailableResourceInfo;
 
     /**
-     * <p>The common parameter. The ID of the request. Each request has a unique ID, which is active for troubleshooting.</p>
+     * <p>The common parameter. The ID of each request is unique and active for troubleshooting and locating issues.</p>
      * 
      * <strong>example:</strong>
      * <p>25AAD194-4A37-51CF-B1CA-1E86FDAC23A6</p>
@@ -54,7 +54,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         public String area;
 
         /**
-         * <p>The quantity available for purchase.</p>
+         * <p>The Quantity available for purchase.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -72,7 +72,7 @@ public class DescribeElbAvailableResourceInfoResponseBody extends TeaModel {
         public String enName;
 
         /**
-         * <p>The ID of the ENS edge zone.</p>
+         * <p>The edge zone ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-guangdong-10</p>

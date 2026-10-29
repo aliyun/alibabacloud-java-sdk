@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeFileSystemsResponseBody extends TeaModel {
     /**
-     * <p>The information about the file systems.</p>
+     * <p>The collection of file system information.</p>
      */
     @NameInMap("FileSystems")
     public java.util.List<DescribeFileSystemsResponseBodyFileSystems> fileSystems;
@@ -29,7 +29,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>762DD527-358B-1E48-8005-CCE3ED4EB9E0</p>
@@ -38,7 +38,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,7 +93,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     public static class DescribeFileSystemsResponseBodyFileSystemsMountTargets extends TeaModel {
         /**
-         * <p>The path of the mount target.</p>
+         * <p>The mount target path.</p>
          * 
          * <strong>example:</strong>
          * <p><em>.</em>.<em>.</em>:/${FileSystemName}/{MountTargetName}</p>
@@ -102,7 +102,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String mountTargetDomain;
 
         /**
-         * <p>The name of the mount target.</p>
+         * <p>The mount target name.</p>
          * 
          * <strong>example:</strong>
          * <p>target1</p>
@@ -111,7 +111,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String mountTargetName;
 
         /**
-         * <p>The ID of the network.</p>
+         * <p>The network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n-****</p>
@@ -120,16 +120,12 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String netWorkId;
 
         /**
-         * <p>The status of the mount target. Valid values:</p>
+         * <p>The mount target status. Valid values:</p>
          * <ul>
-         * <li><p>active: The mount target is available.</p>
-         * </li>
-         * <li><p>inactive: The mount target is unavailable.</p>
-         * </li>
-         * <li><p>pending: The task is running.</p>
-         * </li>
-         * <li><p>deleting: The mount target is being deleted.</p>
-         * </li>
+         * <li>active: Available.</li>
+         * <li>inactive: Unavailable.</li>
+         * <li>pending: Processing a task.</li>
+         * <li>deleting: Being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -179,7 +175,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
 
     public static class DescribeFileSystemsResponseBodyFileSystems extends TeaModel {
         /**
-         * <p>The capacity of the file system. Unit: MiB.</p>
+         * <p>The capacity. Unit: MiB.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>
@@ -197,7 +193,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -206,7 +202,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-beijing-cmcc</p>
@@ -215,7 +211,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>The ID of the file system.</p>
+         * <p>The file system ID.</p>
          * 
          * <strong>example:</strong>
          * <p>c50f8*****</p>
@@ -224,7 +220,7 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String fileSystemId;
 
         /**
-         * <p>The name of the file system.</p>
+         * <p>The file system name.</p>
          * 
          * <strong>example:</strong>
          * <p>FileSystem1</p>
@@ -233,7 +229,8 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String fileSystemName;
 
         /**
-         * <p>The storage usage of the file system. The value of this parameter is the maximum storage usage of the file system over the last hour. Unit: bytes.</p>
+         * <p>The file system usage.
+         * Non-real-time usage. It indicates the maximum usage in the previous hour. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>102400</p>
@@ -242,13 +239,13 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public Long meteredSize;
 
         /**
-         * <p>The information about mount targets.</p>
+         * <p>The collection of mount target information.</p>
          */
         @NameInMap("MountTargets")
         public java.util.List<DescribeFileSystemsResponseBodyFileSystemsMountTargets> mountTargets;
 
         /**
-         * <p>The billing method. PostPaid is returned. PostPaid indicates the pay-as-you-go billing method.</p>
+         * <p>The billing method. Valid values: PostPaid (pay-as-you-go).</p>
          * 
          * <strong>example:</strong>
          * <p>PostPaid</p>
@@ -257,12 +254,10 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String payType;
 
         /**
-         * <p>The protocol type of the file system. Valid values:</p>
+         * <p>The file system protocol type. Valid values:</p>
          * <ul>
-         * <li><p>NFS: Network File System (NFS)</p>
-         * </li>
-         * <li><p>SMB: Server Message Block (SMB)</p>
-         * </li>
+         * <li>NFS: NFS protocol.</li>
+         * <li>SMB: SMB protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -272,20 +267,14 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         public String protocolType;
 
         /**
-         * <p>The status of the file system. Valid values:</p>
+         * <p>The file system status. Valid values:</p>
          * <ul>
-         * <li><p>pending: The file system is being created or modified.</p>
-         * </li>
-         * <li><p>running: The file system is available. Before you create a mount target for the file system, make sure that the file system is in the running state.</p>
-         * </li>
-         * <li><p>stopped: The file system is unavailable.</p>
-         * </li>
-         * <li><p>extending: The file system is being scaled out.</p>
-         * </li>
-         * <li><p>stopping: The file system is being disabled.</p>
-         * </li>
-         * <li><p>deleting: The file system is being deleted.</p>
-         * </li>
+         * <li>pending: The file system is processing a node.</li>
+         * <li>running: The file system is active. You can perform What to do next, such as creating a mount target, only when the status is running.</li>
+         * <li>stopped: The file system is unavailable.</li>
+         * <li>extending: The file system is being expanded.</li>
+         * <li>stopping: The file system is being stopped.</li>
+         * <li>deleting: The file system is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -297,10 +286,8 @@ public class DescribeFileSystemsResponseBody extends TeaModel {
         /**
          * <p>The storage type. Valid values:</p>
          * <ul>
-         * <li><p>capacity: Capacity NAS file systems</p>
-         * </li>
-         * <li><p>performance: Performance NAS file systems</p>
-         * </li>
+         * <li>capacity: Storage-optimized.</li>
+         * <li>performance: Extreme.</li>
          * </ul>
          * 
          * <strong>example:</strong>

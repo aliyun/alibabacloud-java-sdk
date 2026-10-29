@@ -14,7 +14,7 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The elastic network interface (ENI) ID.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-58z57orgmt6d1****</p>
@@ -23,7 +23,7 @@ public class LeaveSecurityGroupRequest extends TeaModel {
     public String networkInterfaceId;
 
     /**
-     * <p>The ID of the security group.</p>
+     * <p>The security group ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

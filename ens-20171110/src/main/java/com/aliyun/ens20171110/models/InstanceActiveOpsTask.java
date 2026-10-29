@@ -4,9 +4,15 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class InstanceActiveOpsTask extends TeaModel {
+    /**
+     * <p>instance active ops task id</p>
+     */
     @NameInMap("InstanceActiveOpsTaskId")
     public String instanceActiveOpsTaskId;
 
+    /**
+     * <p>the status of instance active ops task</p>
+     */
     @NameInMap("InstanceActiveOpsTaskStatus")
     public String instanceActiveOpsTaskStatus;
 

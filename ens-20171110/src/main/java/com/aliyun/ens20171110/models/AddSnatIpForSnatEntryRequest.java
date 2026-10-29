@@ -15,7 +15,7 @@ public class AddSnatIpForSnatEntryRequest extends TeaModel {
     public String snatEntryId;
 
     /**
-     * <p>The EIP specified in the SNAT entry.</p>
+     * <p>The EIP in the SNAT entry.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

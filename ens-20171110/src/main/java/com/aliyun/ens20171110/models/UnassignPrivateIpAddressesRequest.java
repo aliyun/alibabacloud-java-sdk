@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnassignPrivateIpAddressesRequest extends TeaModel {
     /**
-     * <p>The ID of the ENI.</p>
+     * <p>The ID of the network interface controller (NIC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

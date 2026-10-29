@@ -14,7 +14,7 @@ public class CreateEnsRouteEntryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the route.</p>
+     * <p>The route entry ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rte-5vb5q8sk0lyoscx8539ds</p>

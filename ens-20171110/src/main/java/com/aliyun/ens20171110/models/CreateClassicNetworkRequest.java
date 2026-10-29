@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateClassicNetworkRequest extends TeaModel {
     /**
-     * <p>The CIDR block of the network. You can use one of the following CIDR blocks or their subnets as the CIDR block of the network:</p>
+     * <p>The CIDR block of the network. You can use the following CIDR blocks or their subsets as the CIDR block of the network:</p>
      * <ul>
-     * <li><p>10.0.0.0/8 (default)</p>
-     * </li>
-     * <li><p>172.16.0.0/12</p>
-     * </li>
-     * <li><p>192.168.0.0/16</p>
-     * </li>
+     * <li>10.0.0.0/8 (default).</li>
+     * <li>172.16.0.0/12.</li>
+     * <li>192.168.0.0/16.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,7 +20,10 @@ public class CreateClassicNetworkRequest extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>The description of the network. The name must be 2 to 256 characters in length. It must start with a letter but cannot start with http\:// or https\://.</p>
+     * <p>The description of the network. The description must meet the following rules:</p>
+     * <ul>
+     * <li>It must be 2 to 256 characters in length. It must start with a letter or a Chinese character, and cannot start with http:// or https://.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>This is my vswitch.</p>
@@ -32,7 +32,7 @@ public class CreateClassicNetworkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the edge node.</p>
+     * <p>The edge zone ID of ENS.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,14 +42,11 @@ public class CreateClassicNetworkRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The name of the network. The name must meet the following requirements:</p>
+     * <p>The name of the network. The name must meet the following rules:</p>
      * <ul>
-     * <li><p>The name must be 2 to 128 characters in length.</p>
-     * </li>
-     * <li><p>The name must start with a letter but cannot start with http\:// or https\://.</p>
-     * </li>
-     * <li><p>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
-     * </li>
+     * <li>It must be 2 to 128 characters in length, and can contain English and Chinese characters.</li>
+     * <li>It must start with an uppercase or lowercase letter or a Chinese character, and cannot start with http:// or https://.</li>
+     * <li>It can contain digits, colons (:), underscores (_), and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>

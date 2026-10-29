@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifySnapshotAttributeRequest extends TeaModel {
     /**
-     * <p>The description of the snapshot. The description must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the snapshot. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testDescription</p>
@@ -14,7 +14,7 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the snapshot.</p>
+     * <p>The snapshot ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,8 +24,7 @@ public class ModifySnapshotAttributeRequest extends TeaModel {
     public String snapshotId;
 
     /**
-     * <p>The name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. It can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
-     * <p>The name cannot start with <strong>auto</strong> because snapshots whose names start with auto are recognized as automatic snapshots.</p>
+     * <p>The display name of the snapshot. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. The name can contain digits, half-width colons (:), underscores (_), and hyphens (-). To prevent name conflicts with automatic snapshots, the name cannot start with <strong>auto</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>testSnapshotName</p>

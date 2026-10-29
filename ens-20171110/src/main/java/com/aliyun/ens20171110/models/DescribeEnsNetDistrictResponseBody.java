@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsNetDistrictResponseBody extends TeaModel {
     /**
-     * <p>The returned service code. A value of 0 indicates that the operation was successful.</p>
+     * <p>The business code. A value of 0 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

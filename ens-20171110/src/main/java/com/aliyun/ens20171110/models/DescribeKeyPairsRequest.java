@@ -14,18 +14,14 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public String keyPairId;
 
     /**
-     * <p>The name of the key pair that you want to bind to the simple application server. The name must be 2 to 128 characters in length. The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>. The name can contain the following characters:</p>
+     * <p>The name of the key pair. The name must be 2 to 128 characters in length and can contain letters and Chinese characters. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain the following characters:</p>
      * <ul>
-     * <li><p>Numbers.</p>
-     * </li>
-     * <li><p>:</p>
-     * </li>
-     * <li><p>_</p>
-     * </li>
-     * <li><p>.</p>
-     * </li>
+     * <li>Digits</li>
+     * <li>:</li>
+     * <li>_</li>
+     * <li>.</li>
      * </ul>
-     * <p>You can specify only one name. By default, all key pairs are queried.</p>
+     * <p>Only a single name is supported. By default, information about all key pairs is queried.</p>
      * 
      * <strong>example:</strong>
      * <p>TestKeyPairName</p>
@@ -34,7 +30,7 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The page number of the returned page. Valid values: integers that are greater than 0. Default value: 1.</p>
+     * <p>The page number. Valid values: integers greater than 0. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +39,7 @@ public class DescribeKeyPairsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: integers that are greater than 0. Default value: 10.</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Valid values: integers greater than 0. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

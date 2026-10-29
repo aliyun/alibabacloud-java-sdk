@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     /**
-     * <p>The name of the listener. The name must be <strong>1</strong> to <strong>80</strong> characters long.</p>
+     * <p>The name of the listener. The name must be <strong>1</strong> to <strong>80</strong> characters in length.</p>
      * <blockquote>
      * <p>The name cannot start with <code>http://</code> or <code>https://</code>.</p>
      * </blockquote>
@@ -17,12 +17,10 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to enable EIP passthrough. Valid values:</p>
+     * <p>Specifies whether to enable EIP pass-through. Valid values:</p>
      * <ul>
-     * <li><p><strong>on</strong>: Enables EIP passthrough.</p>
-     * </li>
-     * <li><p><strong>off</strong> (default): Disables EIP passthrough.</p>
-     * </li>
+     * <li><strong>on</strong>: Enables EIP pass-through.</li>
+     * <li><strong>off</strong>: Disables EIP pass-through. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +30,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public String eipTransmit;
 
     /**
-     * <p>The timeout for established connections, in seconds. The value must be an integer from <strong>10</strong> to <strong>900</strong>. The default value is <strong>900</strong>.</p>
+     * <p>The connection timeout period. Valid values: <strong>10</strong> to <strong>900</strong>. Default value: <strong>900</strong>. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -41,7 +39,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public Integer establishedTimeout;
 
     /**
-     * <p>The port used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. Defaults to the backend server port (<code>BackendServerPort</code>) if not specified.</p>
+     * <p>The port used for health checks. Valid values: <strong>1</strong> to <strong>65535</strong>. If no Settings are specified for this parameter, the backend service port (BackendServerPort) is used.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -50,17 +48,14 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public Integer healthCheckConnectPort;
 
     /**
-     * <p>The timeout for a health check response. If a backend ENS instance does not respond within this timeout period, the health check fails.</p>
+     * <p>The timeout period for a health check response. If a backend ENS instance does not respond within the specified timeout period, the health check fails.</p>
      * <ul>
-     * <li><p>Default value: 5</p>
-     * </li>
-     * <li><p>Valid values: <strong>1</strong> to <strong>300</strong></p>
-     * </li>
-     * <li><p>Unit: seconds</p>
-     * </li>
+     * <li>Default value: 5.</li>
+     * <li>Valid values: <strong>1</strong> to <strong>300</strong>.</li>
+     * <li>Unit: seconds.</li>
      * </ul>
      * <blockquote>
-     * <p>If the value of <code>HealthCheckConnectTimeout</code> is less than the value of <code>HealthCheckInterval</code>, the system ignores <code>HealthCheckConnectTimeout</code> and uses the value of <code>HealthCheckInterval</code> as the timeout period.</p>
+     * <p>If the value of HealthCheckConnectTimeout is less than the value of HealthCheckInterval, HealthCheckConnectTimeout is invalid and the timeout period is the value of HealthCheckInterval.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,7 +65,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public Integer healthCheckConnectTimeout;
 
     /**
-     * <p>The expected response string for a UDP listener health check. The string can contain only letters and digits and must be at most 64 characters long.</p>
+     * <p>The response string for UDP health checks. The string can contain only letters and digits and can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -79,7 +74,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public String healthCheckExp;
 
     /**
-     * <p>The interval, in seconds, between consecutive health checks. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The interval between two consecutive health checks. Valid values: <strong>1</strong> to <strong>50</strong>. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -88,7 +83,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public Integer healthCheckInterval;
 
     /**
-     * <p>The request string for a UDP listener health check. The string can contain only letters and digits and must be at most 64 characters long.</p>
+     * <p>The request string for UDP health checks. The string can contain only letters and digits and can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>hello</p>
@@ -97,7 +92,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public String healthCheckReq;
 
     /**
-     * <p>The number of consecutive successful health checks required to mark an unhealthy backend server as healthy. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * <p>The number of consecutive successful health checks that must occur before a backend server is declared healthy (from fail to success). Valid values: <strong>2</strong> to <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>
@@ -106,7 +101,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public Integer healthyThreshold;
 
     /**
-     * <p>The listener port to modify. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The frontend port of the listener whose attributes you want to modify. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -116,7 +111,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public Integer listenerPort;
 
     /**
-     * <p>The ID of the load balancer instance.</p>
+     * <p>The ID of the load balancing instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,20 +123,13 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     /**
      * <p>The scheduling algorithm. Valid values:</p>
      * <ul>
-     * <li><p><strong>wrr</strong>: Weighted Round Robin. Backend servers with higher weights receive a larger proportion of requests.</p>
-     * </li>
-     * <li><p><strong>wlc</strong>: Weighted Least Connections. Requests are distributed based on both the weights and the number of active connections of backend servers. If servers have the same weight, the server with the fewest active connections receives more requests.</p>
-     * </li>
-     * <li><p><strong>rr</strong>: Round Robin. Requests are distributed to backend servers in sequence.</p>
-     * </li>
-     * <li><p><strong>sch</strong>: Source IP Hash. A consistent hash based on the source IP address. Requests from the same source IP address are routed to the same backend server.</p>
-     * </li>
-     * <li><p><strong>tch</strong>: 4-Tuple Hash. A consistent hash based on the 4-tuple (source IP, destination IP, source port, and destination port). Flows with the same 4-tuple are routed to the same backend server.</p>
-     * </li>
-     * <li><p><strong>qch</strong>: QUIC Connection ID Hash. A consistent hash based on the QUIC Connection ID. Requests with the same QUIC Connection ID are routed to the same backend server.</p>
-     * </li>
-     * <li><p><strong>iqch</strong>: iQUIC CID Hash. A consistent hash based on three specific bytes (from the second to the fourth byte) of the iQUIC CID. Requests with identical values in these three bytes are routed to the same backend server.</p>
-     * </li>
+     * <li><strong>wrr</strong>: Backend servers with higher weights receive more requests.</li>
+     * <li><strong>wlc</strong>: Requests are distributed based on the weights and actual loads (connections) of backend servers. If two backend servers have the same weight, the backend server with fewer connections receives more requests.</li>
+     * <li><strong>rr</strong>: Requests are evenly and sequentially distributed to backend servers.</li>
+     * <li><strong>sch</strong>: Consistent hashing based on source IP addresses. Requests from the same source IP address are distributed to the same backend server.</li>
+     * <li><strong>tch</strong>: Consistent hashing based on quadruples (source IP address, destination IP address, source port, and destination port). Requests from the same stream are distributed to the same backend server.</li>
+     * <li><strong>qch</strong>: Consistent hashing based on QUIC connection IDs. Requests with the same QUIC connection ID are distributed to the same backend server.</li>
+     * <li><strong>iqch</strong>: Consistent hashing based on specific three bytes of the iQUIC CID. Requests with the same second to fourth bytes are distributed to the same backend server.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -151,7 +139,7 @@ public class SetLoadBalancerUDPListenerAttributeRequest extends TeaModel {
     public String scheduler;
 
     /**
-     * <p>The number of consecutive failed health checks required to mark a healthy backend server as unhealthy. Valid values: <strong>2</strong> to <strong>10</strong>.</p>
+     * <p>The number of consecutive failed health checks that must occur before a backend server is declared unhealthy (from success to fail). Valid values: <strong>2</strong> to <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>4</p>

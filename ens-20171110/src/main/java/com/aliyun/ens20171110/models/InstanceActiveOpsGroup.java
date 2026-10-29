@@ -4,6 +4,9 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class InstanceActiveOpsGroup extends TeaModel {
+    /**
+     * <p>the instance list of instance active group</p>
+     */
     @NameInMap("InstanceIds")
     public java.util.List<String> instanceIds;
 

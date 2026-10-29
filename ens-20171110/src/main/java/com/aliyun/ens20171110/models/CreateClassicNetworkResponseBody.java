@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClassicNetworkResponseBody extends TeaModel {
     /**
-     * <p>The ID of the network.</p>
+     * <p>The network ID.</p>
      * 
      * <strong>example:</strong>
      * <p>n-5s9ayrxsd9hszrlt5fgv2****</p>

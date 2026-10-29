@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RunServiceScheduleRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class RunServiceScheduleRequest extends TeaModel {
     public String clientIp;
 
     /**
-     * <p>The directory to which the data file is mounted. The value must be a full path and cannot be \&quot;/../\&quot;. Example: [&quot;/data/app01&quot;, &quot;/data/user&quot;]. Specify the relative path of the virtual device for this parameter. For example, specify /data for this parameter when the actual path of the virtual device is /data/{input path}.</p>
+     * <p>The list of directories of user data files to be mounted. The directories must be absolute paths, and the \&quot;/../\&quot; format is not supported. Example: [&quot;/data/app01&quot;, &quot;/data/user&quot;]. Note: The input directory path is relative to the /data directory of the virtual device. The actual path on the virtual device is /data/{input path}.</p>
      * 
      * <strong>example:</strong>
      * <p>[\&quot;/data/app01\&quot;, \&quot;/data/user\&quot;]</p>
@@ -34,7 +34,7 @@ public class RunServiceScheduleRequest extends TeaModel {
     public String directorys;
 
     /**
-     * <p>The parameter does not take effect.</p>
+     * <p>Invalid parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>android</p>
@@ -43,7 +43,7 @@ public class RunServiceScheduleRequest extends TeaModel {
     public String podConfigName;
 
     /**
-     * <p>The maximum duration for locking an idle device. Unit: seconds. This parameter takes effect only if you set ServiceAction to PreSchedule. Default value: 300.</p>
+     * <p>The maximum time to lock an idle device, in seconds. This parameter takes effect only when ServiceAction is set to PreSchedule. Default value: 300.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -52,7 +52,7 @@ public class RunServiceScheduleRequest extends TeaModel {
     public Integer preLockedTimeout;
 
     /**
-     * <p>The scheduling policy of the device. The value must be a JSON string.</p>
+     * <p>The device scheduling policy. The value is a string in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;selectLevel\&quot;: \&quot;RegionId\&quot;, \&quot;values\&quot;: [\&quot;cn-chengdu-telecom-2\&quot;]  }</p>
@@ -61,26 +61,19 @@ public class RunServiceScheduleRequest extends TeaModel {
     public String scheduleStrategy;
 
     /**
-     * <p>The scheduling operation. The value must be of the enumeration type. Valid values:</p>
-     * <p>Container scenario:</p>
+     * <p>The scheduling service operation. Valid values:</p>
+     * <p>Container scenarios:</p>
      * <ul>
-     * <li><p>Start: selects and activates an idle cloud device.</p>
-     * </li>
-     * <li><p>Stop: stops and releases the cloud device.</p>
-     * </li>
-     * <li><p>Console: performs the scheduling operation when the device is in the scheduling state.</p>
-     * </li>
+     * <li>Start: Selects and activates a schedulable cloud device and starts the service.</li>
+     * <li>Stop: Stops and releases the cloud device.</li>
+     * <li>Console: Interacts with the device by using commands when the UUID is in the scheduling state.</li>
      * </ul>
-     * <p>Bare metal instance or virtual machine scenario:</p>
+     * <p>Bare metal or virtual machine scenarios:</p>
      * <ul>
-     * <li><p>PreSchedule: locks a virtual machine instance for scheduling.</p>
-     * </li>
-     * <li><p>Confirm: confirms the scheduling operation.</p>
-     * </li>
-     * <li><p>Cancel: cancels the scheduling operation.</p>
-     * </li>
-     * <li><p>Console: performs the scheduling operation when the device is in the scheduling state.</p>
-     * </li>
+     * <li>PreSchedule: Pre-schedules and locks a virtual machine instance.</li>
+     * <li>Confirm: Confirms the scheduling.</li>
+     * <li>Cancel: Cancels the scheduling.</li>
+     * <li>Console: Interacts with the device by using commands when the UUID is in the scheduling state.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -91,7 +84,7 @@ public class RunServiceScheduleRequest extends TeaModel {
     public String serviceAction;
 
     /**
-     * <p>The service commands. The value must be a JSON string.</p>
+     * <p>The list of container service commands. The value is a string in JSON array format.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;containerName\&quot;: \&quot;android\&quot;,       \&quot;commands\&quot;:[\&quot;cat /tmp/token.json\&quot;]    },    {      \&quot;commands\&quot;:[\&quot;ls -l /data/data\&quot;]    }]</p>

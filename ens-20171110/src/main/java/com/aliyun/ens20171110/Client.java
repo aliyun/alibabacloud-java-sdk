@@ -152,13 +152,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 5 times per second per user.</li>
-     * <li>Internal networks and IPv4 addresses are not supported.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 5 calls per second.</li>
+     * <li>Internal networks and IPv4 are not supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds an IPv6 network interface controller (NIC). A public IP address is automatically assigned at the same time.</p>
+     * <p>Adds an IPv6 network interface and automatically assigns a public IP address.</p>
      * 
      * @param request AddNetworkInterfaceToInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -199,13 +199,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 5 times per second per user.</li>
-     * <li>Internal networks and IPv4 addresses are not supported.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 5 calls per second.</li>
+     * <li>Internal networks and IPv4 are not supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Adds an IPv6 network interface controller (NIC). A public IP address is automatically assigned at the same time.</p>
+     * <p>Adds an IPv6 network interface and automatically assigns a public IP address.</p>
      * 
      * @param request AddNetworkInterfaceToInstanceRequest
      * @return AddNetworkInterfaceToInstanceResponse
@@ -217,7 +217,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds an elastic IP address (EIP) to a Source Network Address Translation (SNAT) entry.</p>
+     * <p>Adds a public elastic IP address (EIP) to a SNAT rule.</p>
      * 
      * @param request AddSnatIpForSnatEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -253,7 +253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Adds an elastic IP address (EIP) to a Source Network Address Translation (SNAT) entry.</p>
+     * <p>Adds a public elastic IP address (EIP) to a SNAT rule.</p>
      * 
      * @param request AddSnatIpForSnatEntryRequest
      * @return AddSnatIpForSnatEntryResponse
@@ -265,7 +265,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Assigns secondary private IP addresses to an elastic network interface (ENI).</p>
+     * <p>Invokes AssignPrivateIpAddresses to assign secondary private IP addresses to an elastic network interface controller (NIC).</p>
      * 
      * @param request AssignPrivateIpAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -301,7 +301,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Assigns secondary private IP addresses to an elastic network interface (ENI).</p>
+     * <p>Invokes AssignPrivateIpAddresses to assign secondary private IP addresses to an elastic network interface controller (NIC).</p>
      * 
      * @param request AssignPrivateIpAddressesRequest
      * @return AssignPrivateIpAddressesResponse
@@ -369,21 +369,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you To associate an HAVIP, take note of the following items:</p>
+     * <p>When you invoke this operation to associate a high availability virtual IP address (HaVip), take note of the following items:</p>
      * <ul>
-     * <li>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</li>
-     * <li>The HAVIP and ENS instance must belong to the same vSwitch.</li>
-     * <li>The ENS instance must be in the Running or Stopped state.</li>
-     * <li>The HAVIP must be in the Available or InUse state.</li>
-     * <li>AssociateHaVip is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the DescribeHaVips operation to query the status of an HAVIP:<ul>
-     * <li>If the HAVIP is in the Associating state, the HAVIP is being associated.<!----></li>
-     * <li>If the HAVIP is in the InUse state, the HAVIP is associated.</li>
+     * <li>After a HaVip is associated, you do not need to restart the ENS instance. However, you must configure the HaVip on the elastic network interface controller (NIC) of the ENS instance.</li>
+     * <li>The HaVip and the ENS instance to be associated must belong to the same vSwitch.</li>
+     * <li>The ENS instance to be associated must be in the Running or Stopped state.</li>
+     * <li>The HaVip instance must be in the Available or InUse state.</li>
+     * <li>The AssociateHaVip operation is an asynchronous operation. After you invoke this operation, the system returns a request ID, but the HaVip is not immediately associated. The association task is still running in the background. You can invoke the DescribeHaVips operation to query the association status of the HaVip:<ul>
+     * <li>If the HaVip is in the Associating state, the HaVip is being associated.</li>
+     * </ul>
+     * <ul>
+     * <li>If the HaVip is in the InUse state, the HaVip is associated.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a high-availability virtual IP address (HAVIP) with an Edge Node Service (ENS) instance or elastic network interface (ENI).</p>
+     * <p>Invokes the AssociateHaVip operation to associate a high availability virtual IP address (HaVip) with an Edge Node Service (ENS) instance or an ENS elastic network interface controller (NIC).</p>
      * 
      * @param request AssociateHaVipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -423,21 +425,23 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you To associate an HAVIP, take note of the following items:</p>
+     * <p>When you invoke this operation to associate a high availability virtual IP address (HaVip), take note of the following items:</p>
      * <ul>
-     * <li>An HAVIP immediately takes effect after it is associated. You do not need to restart the ENS instance. However, you need to associate the HAVIP with the ENI of the ENS instance.</li>
-     * <li>The HAVIP and ENS instance must belong to the same vSwitch.</li>
-     * <li>The ENS instance must be in the Running or Stopped state.</li>
-     * <li>The HAVIP must be in the Available or InUse state.</li>
-     * <li>AssociateHaVip is an asynchronous operation. After a request is sent, the system returns a request ID and runs the task in the background. You can call the DescribeHaVips operation to query the status of an HAVIP:<ul>
-     * <li>If the HAVIP is in the Associating state, the HAVIP is being associated.<!----></li>
-     * <li>If the HAVIP is in the InUse state, the HAVIP is associated.</li>
+     * <li>After a HaVip is associated, you do not need to restart the ENS instance. However, you must configure the HaVip on the elastic network interface controller (NIC) of the ENS instance.</li>
+     * <li>The HaVip and the ENS instance to be associated must belong to the same vSwitch.</li>
+     * <li>The ENS instance to be associated must be in the Running or Stopped state.</li>
+     * <li>The HaVip instance must be in the Available or InUse state.</li>
+     * <li>The AssociateHaVip operation is an asynchronous operation. After you invoke this operation, the system returns a request ID, but the HaVip is not immediately associated. The association task is still running in the background. You can invoke the DescribeHaVips operation to query the association status of the HaVip:<ul>
+     * <li>If the HaVip is in the Associating state, the HaVip is being associated.</li>
+     * </ul>
+     * <ul>
+     * <li>If the HaVip is in the InUse state, the HaVip is associated.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Associates a high-availability virtual IP address (HAVIP) with an Edge Node Service (ENS) instance or elastic network interface (ENI).</p>
+     * <p>Invokes the AssociateHaVip operation to associate a high availability virtual IP address (HaVip) with an Edge Node Service (ENS) instance or an ENS elastic network interface controller (NIC).</p>
      * 
      * @param request AssociateHaVipRequest
      * @return AssociateHaVipResponse
@@ -517,7 +521,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Attaches a disk to an Edge Node Service (ENS) instance.</p>
+     * <p>Mounts a data cloud disk to an ENS instance.</p>
      * 
      * @param request AttachDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -557,7 +561,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Attaches a disk to an Edge Node Service (ENS) instance.</p>
+     * <p>Mounts a data cloud disk to an ENS instance.</p>
      * 
      * @param request AttachDiskRequest
      * @return AttachDiskResponse
@@ -570,15 +574,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Maximum request rate per user: 10 requests per second.</li>
-     * <li>After the command script runs successfully, the instance restarts and loads automatically.</li>
-     * <li>Instance requirements: minimum size of 2C4G and CentOS 7.4 or later image.
-     * &lt;props=&quot;china&quot;&gt;
-     * Before calling this operation, <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>After the command script is successfully executed, the instance automatically restarts.</li>
+     * <li>Instance requirements: The minimum instance specification is 2 vCPUs and 4 GiB of memory, and the image must be CentOS 7.4 or later.
+     * &lt;props=&quot;china&quot;&gt;Before you call this operation, you must <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Add ENS instances to Container Service for Kubernetes.</p>
+     * <p>Adds an Edge Node Service (ENS) instance to Container Service for Kubernetes.</p>
      * 
      * @param request AttachEnsInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -615,15 +618,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Maximum request rate per user: 10 requests per second.</li>
-     * <li>After the command script runs successfully, the instance restarts and loads automatically.</li>
-     * <li>Instance requirements: minimum size of 2C4G and CentOS 7.4 or later image.
-     * &lt;props=&quot;china&quot;&gt;
-     * Before calling this operation, <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
+     * <li>After the command script is successfully executed, the instance automatically restarts.</li>
+     * <li>Instance requirements: The minimum instance specification is 2 vCPUs and 4 GiB of memory, and the image must be CentOS 7.4 or later.
+     * &lt;props=&quot;china&quot;&gt;Before you call this operation, you must <a href="https://cs.console.aliyun.com/#/k8s/overview">activate Container Service for Kubernetes</a>.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Add ENS instances to Container Service for Kubernetes.</p>
+     * <p>Adds an Edge Node Service (ENS) instance to Container Service for Kubernetes.</p>
      * 
      * @param request AttachEnsInstancesRequest
      * @return AttachEnsInstancesResponse
@@ -763,15 +765,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can only attach a key pair to stopped instances.</p>
+     * <h2>Operation description</h2>
+     * <p>This batch operation attaches a key pair to instances. You can only perform this operation on stopped instances.</p>
      * <ul>
-     * <li>Specify up to 30 instances per call.</li>
-     * <li>Specify either <code>KeyPairName</code> or <code>KeyPairId</code>.</li>
-     * <li>We recommend using <code>KeyPairId</code>, as <code>KeyPairName</code> will be deprecated.</li>
+     * <li>You can attach the key pair to a maximum of 30 instances in a single call.</li>
+     * <li>You must specify at least one of the KeyPairName and KeyPairId parameters.</li>
+     * <li>Specify KeyPairId when you call this operation. The KeyPairName parameter will be deprecated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Attaches an SSH key pair to up to 30 instances in a single call.</p>
+     * <p>Attaches an SSH key pair to a batch of specified instances. A maximum of 30 instances can be specified in a single call.</p>
      * 
      * @param tmpReq AttachKeyPairRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -817,15 +820,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can only attach a key pair to stopped instances.</p>
+     * <h2>Operation description</h2>
+     * <p>This batch operation attaches a key pair to instances. You can only perform this operation on stopped instances.</p>
      * <ul>
-     * <li>Specify up to 30 instances per call.</li>
-     * <li>Specify either <code>KeyPairName</code> or <code>KeyPairId</code>.</li>
-     * <li>We recommend using <code>KeyPairId</code>, as <code>KeyPairName</code> will be deprecated.</li>
+     * <li>You can attach the key pair to a maximum of 30 instances in a single call.</li>
+     * <li>You must specify at least one of the KeyPairName and KeyPairId parameters.</li>
+     * <li>Specify KeyPairId when you call this operation. The KeyPairName parameter will be deprecated.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Attaches an SSH key pair to up to 30 instances in a single call.</p>
+     * <p>Attaches an SSH key pair to a batch of specified instances. A maximum of 30 instances can be specified in a single call.</p>
      * 
      * @param request AttachKeyPairRequest
      * @return AttachKeyPairResponse
@@ -837,17 +841,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following limits:</p>
+     * <p>Note the following when you call this operation:</p>
      * <ul>
-     * <li>The ENI must be in the Available state.</li>
-     * <li>An ENI can be attached to only one instance that is the same zone and the same Virtual Private Cloud (VPC).</li>
+     * <li>The elastic network interfaces (ENIs) must be in the Available state.</li>
+     * <li>Each ENI can be attached to only one instance in the same zone and VPC at a time.</li>
      * <li>The instance must be in the Stopped state.</li>
-     * <li>A maximum of 10 ENIs can be attached to an instance.</li>
-     * <li>This operation is an asynchronous operation. After you To attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</li>
+     * <li>You can attach up to 10 elastic network interfaces (ENIs) to an instance.</li>
+     * <li>This operation is asynchronous. After the call succeeds, you can query the ENI status to check the operation result.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Attaches an Elastic Network Interface (ENI) to an Edge Node Service (ECS) instance.</p>
+     * <p>Attaches elastic network interfaces (ENIs) to an ENS instance.</p>
      * 
      * @param request AttachNetworkInterfaceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -883,17 +887,17 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, take note of the following limits:</p>
+     * <p>Note the following when you call this operation:</p>
      * <ul>
-     * <li>The ENI must be in the Available state.</li>
-     * <li>An ENI can be attached to only one instance that is the same zone and the same Virtual Private Cloud (VPC).</li>
+     * <li>The elastic network interfaces (ENIs) must be in the Available state.</li>
+     * <li>Each ENI can be attached to only one instance in the same zone and VPC at a time.</li>
      * <li>The instance must be in the Stopped state.</li>
-     * <li>A maximum of 10 ENIs can be attached to an instance.</li>
-     * <li>This operation is an asynchronous operation. After you To attach an ENI, you can view the status of the ENI to check whether the ENI is attached.</li>
+     * <li>You can attach up to 10 elastic network interfaces (ENIs) to an instance.</li>
+     * <li>This operation is asynchronous. After the call succeeds, you can query the ENI status to check the operation result.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Attaches an Elastic Network Interface (ENI) to an Edge Node Service (ECS) instance.</p>
+     * <p>Attaches elastic network interfaces (ENIs) to an ENS instance.</p>
      * 
      * @param request AttachNetworkInterfaceRequest
      * @return AttachNetworkInterfaceResponse
@@ -973,10 +977,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In the security group-related API documents, outbound traffic refers to the traffic that is sent by the source device and received at the destination device.</p>
+     * <p>In the API documentation for security groups, the initiator of traffic is the source, and the receiver of data transmission is the destination.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an outbound security group rule. This operation allows or denies the outbound traffic from the instances in the security group to other devices.</p>
+     * <p>Invokes AuthorizeSecurityGroupEgress to specify the outbound access permissions for a security group, allowing or denying instances in the security group to send outbound traffic to other devices.</p>
      * 
      * @param request AuthorizeSecurityGroupEgressRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1032,10 +1036,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>In the security group-related API documents, outbound traffic refers to the traffic that is sent by the source device and received at the destination device.</p>
+     * <p>In the API documentation for security groups, the initiator of traffic is the source, and the receiver of data transmission is the destination.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates an outbound security group rule. This operation allows or denies the outbound traffic from the instances in the security group to other devices.</p>
+     * <p>Invokes AuthorizeSecurityGroupEgress to specify the outbound access permissions for a security group, allowing or denying instances in the security group to send outbound traffic to other devices.</p>
      * 
      * @param request AuthorizeSecurityGroupEgressRequest
      * @return AuthorizeSecurityGroupEgressResponse
@@ -1513,7 +1517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an edge application that allows you to manage Edge Node Service (ENS) nodes in containers, bare metal instances, and virtual machines.</p>
+     * <p>Creates an edge application service to host edge services on containers (virtual devices), bare metal instances, or virtual machines.</p>
      * 
      * @param request CreateApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1549,7 +1553,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an edge application that allows you to manage Edge Node Service (ENS) nodes in containers, bare metal instances, and virtual machines.</p>
+     * <p>Creates an edge application service to host edge services on containers (virtual devices), bare metal instances, or virtual machines.</p>
      * 
      * @param request CreateApplicationRequest
      * @return CreateApplicationResponse
@@ -1561,7 +1565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a classic network</p>
+     * <p>Creates a classic VPC.</p>
      * 
      * @param request CreateClassicNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1605,7 +1609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a classic network</p>
+     * <p>Creates a classic VPC.</p>
      * 
      * @param request CreateClassicNetworkRequest
      * @return CreateClassicNetworkResponse
@@ -2179,7 +2183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an edge private network (EPN) instance.</p>
+     * <p>Creates an Edge-to-Edge network instance.</p>
      * 
      * @param request CreateEpnInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2227,7 +2231,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an edge private network (EPN) instance.</p>
+     * <p>Creates an Edge-to-Edge network instance.</p>
      * 
      * @param request CreateEpnInstanceRequest
      * @return CreateEpnInstanceResponse
@@ -2732,12 +2736,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API call frequency: 100 times per second.</li>
-     * <li>Per-user call frequency: 5 times per second.</li>
+     * <li>API rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 5 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a load balancing instance by calling the CreateLoadBalancer operation.</p>
+     * <p>Creates a load balancing instance.</p>
      * 
      * @param request CreateLoadBalancerRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2802,12 +2806,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API call frequency: 100 times per second.</li>
-     * <li>Per-user call frequency: 5 times per second.</li>
+     * <li>API rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 5 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a load balancing instance by calling the CreateLoadBalancer operation.</p>
+     * <p>Creates a load balancing instance.</p>
      * 
      * @param request CreateLoadBalancerRequest
      * @return CreateLoadBalancerResponse
@@ -3725,16 +3729,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A Shared Data Group (SDG) is a data partition image of a virtual device. You can save the data partition of a virtual device as an SDG. The SDG can then be deployed to the data partition of other virtual devices for fast data sharing and application deployment. The following describes the workflow of SDG-related operations:</p>
+     * <p>A Data Sharing Group (SDG) can be regarded as an image of a data partition on a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be used for deployment to the data partitions of other virtual devices to enable fast data distribution and application. The workflow for SDG-related operations is as follows:</p>
      * <ul>
-     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, a blank cloud disk (also called a raw cloud disk) is mounted to device A (InstanceId) for SDG creation.</li>
-     * <li>Install applications, deliver files, and perform other required operations on AIC instance A (InstanceId).</li>
-     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk of AIC instance A as SDG A.</li>
-     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC instance B. This process is asynchronous. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available and has the same applications as AIC instance A.</li>
+     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, an empty cloud disk (also known as the original cloud disk) is mounted to instance A (InstanceId) for SDG creation.</li>
+     * <li>Perform required operations on AIC instance A (InstanceId), such as installing applications and distributing files.</li>
+     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk on AIC instance A as SDG A.</li>
+     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to another AIC instance B. This process is executed asynchronously. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available, and the applications on AIC instance B are identical to those on AIC instance A.
+     * <strong>Before you begin</strong></li>
+     * <li>Before you call this operation, the AIC instance must be in the <strong>success</strong> state. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation and check the AICInstances[].State field to confirm the status.</li>
+     * <li>It usually takes 30 to 60 minutes to create an ARM server. Wait until the State changes from <strong>creating</strong> to <strong>success</strong> before you call this operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Shared Data Group (SDG) on an Android in Container (AIC) instance.</p>
+     * <p>Creates an SDG on an AIC instance.</p>
      * 
      * @param request CreateSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3762,16 +3769,19 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>A Shared Data Group (SDG) is a data partition image of a virtual device. You can save the data partition of a virtual device as an SDG. The SDG can then be deployed to the data partition of other virtual devices for fast data sharing and application deployment. The following describes the workflow of SDG-related operations:</p>
+     * <p>A Data Sharing Group (SDG) can be regarded as an image of a data partition on a virtual device. You can save a data partition of a virtual device as an SDG. A created SDG can be used for deployment to the data partitions of other virtual devices to enable fast data distribution and application. The workflow for SDG-related operations is as follows:</p>
      * <ul>
-     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, a blank cloud disk (also called a raw cloud disk) is mounted to device A (InstanceId) for SDG creation.</li>
-     * <li>Install applications, deliver files, and perform other required operations on AIC instance A (InstanceId).</li>
-     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk of AIC instance A as SDG A.</li>
-     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to AIC instance B. This process is asynchronous. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available and has the same applications as AIC instance A.</li>
+     * <li>Call the <a href="~~CreateSDG~~">CreateSDG</a> operation to create an SDG. The SDG is bound to AIC instance A (InstanceId). After the SDG is created, an empty cloud disk (also known as the original cloud disk) is mounted to instance A (InstanceId) for SDG creation.</li>
+     * <li>Perform required operations on AIC instance A (InstanceId), such as installing applications and distributing files.</li>
+     * <li>Call the <a href="~~SaveSDG~~">SaveSDG</a> operation to save the data cloud disk on AIC instance A as SDG A.</li>
+     * <li>Call the <a href="~~DeploySDG~~">DeploySDG</a> operation to deploy SDG A to another AIC instance B. This process is executed asynchronously. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation to query the status of AIC instance B. When the status changes back to success, AIC instance B is available, and the applications on AIC instance B are identical to those on AIC instance A.
+     * <strong>Before you begin</strong></li>
+     * <li>Before you call this operation, the AIC instance must be in the <strong>success</strong> state. You can call the <a href="~~DescribeARMServerInstances~~">DescribeARMServerInstances</a> operation and check the AICInstances[].State field to confirm the status.</li>
+     * <li>It usually takes 30 to 60 minutes to create an ARM server. Wait until the State changes from <strong>creating</strong> to <strong>success</strong> before you call this operation.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Shared Data Group (SDG) on an Android in Container (AIC) instance.</p>
+     * <p>Creates an SDG on an AIC instance.</p>
      * 
      * @param request CreateSDGRequest
      * @return CreateSDGResponse
@@ -5381,7 +5391,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a network access control list (ACL).</p>
+     * <p>Deletes a network ACL.</p>
      * 
      * @param request DeleteNetworkAclRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5413,7 +5423,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a network access control list (ACL).</p>
+     * <p>Deletes a network ACL.</p>
      * 
      * @param request DeleteNetworkAclRequest
      * @return DeleteNetworkAclResponse
@@ -5815,7 +5825,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a source network address translation (SNAT) entry from a specified SNAT table.</p>
+     * <p>Deletes a specified SNAT entry.</p>
      * 
      * @param request DeleteSnatEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5847,7 +5857,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a source network address translation (SNAT) entry from a specified SNAT table.</p>
+     * <p>Deletes a specified SNAT entry.</p>
      * 
      * @param request DeleteSnatEntryRequest
      * @return DeleteSnatEntryResponse
@@ -5859,7 +5869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an elastic IP address (EIP) from a source network address translation (SNAT) entry.</p>
+     * <p>Deletes a public EIP from an SNAT rule.</p>
      * 
      * @param request DeleteSnatIpForSnatEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5895,7 +5905,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an elastic IP address (EIP) from a source network address translation (SNAT) entry.</p>
+     * <p>Deletes a public EIP from an SNAT rule.</p>
      * 
      * @param request DeleteSnatIpForSnatEntryRequest
      * @return DeleteSnatIpForSnatEntryResponse
@@ -6357,7 +6367,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic properties, resources, and container status of an application.</p>
+     * <p>Queries the basic attributes, resources, and container statuses of an application.</p>
      * 
      * @param request DescribeApplicationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6405,7 +6415,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the basic properties, resources, and container status of an application.</p>
+     * <p>Queries the basic attributes, resources, and container statuses of an application.</p>
      * 
      * @param request DescribeApplicationRequest
      * @return DescribeApplicationResponse
@@ -6578,7 +6588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available resources in a region.</p>
+     * <p>Queries the available cloud disk resources in a region.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeCloudDiskAvailableResourceInfoResponse
@@ -6601,7 +6611,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the available resources in a region.</p>
+     * <p>Queries the available cloud disk resources in a region.</p>
      * @return DescribeCloudDiskAvailableResourceInfoResponse
      */
     public DescribeCloudDiskAvailableResourceInfoResponse describeCloudDiskAvailableResourceInfo() throws Exception {
@@ -6711,7 +6721,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>To add an existing ENS instance to an ECK cluster as a worker node or re-add a node to a node pool, call the DescribeClusterAttachScripts operation to get the required script.</p>
+     * <p>Retrieves the script for adding existing nodes to a cluster node pool. If you need to add existing ENS instances to an ECK cluster as worker nodes, or re-add node instances to a node pool after removing worker nodes, ECK supports manually adding existing nodes to a node pool. You can call the DescribeClusterAttachScripts operation to retrieve the script for adding existing nodes.</p>
      * 
      * @param request DescribeClusterAttachScriptsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -6751,7 +6761,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>To add an existing ENS instance to an ECK cluster as a worker node or re-add a node to a node pool, call the DescribeClusterAttachScripts operation to get the required script.</p>
+     * <p>Retrieves the script for adding existing nodes to a cluster node pool. If you need to add existing ENS instances to an ECK cluster as worker nodes, or re-add node instances to a node pool after removing worker nodes, ECK supports manually adding existing nodes to a node pool. You can call the DescribeClusterAttachScripts operation to retrieve the script for adding existing nodes.</p>
      * 
      * @param request DescribeClusterAttachScriptsRequest
      * @return DescribeClusterAttachScriptsResponse
@@ -7541,7 +7551,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of available resources for purchase when you create an instance by calling DescribeElbAvailableResourceInfo.</p>
+     * <p>Queries the specifications of available resources for creating an instance.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeElbAvailableResourceInfoResponse
@@ -7564,7 +7574,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of available resources for purchase when you create an instance by calling DescribeElbAvailableResourceInfo.</p>
+     * <p>Queries the specifications of available resources for creating an instance.</p>
      * @return DescribeElbAvailableResourceInfoResponse
      */
     public DescribeElbAvailableResourceInfoResponse describeElbAvailableResourceInfo() throws Exception {
@@ -7666,7 +7676,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries elastic IP addresses (EIPs) in Edge Node Service (ENS).</p>
+     * <p>Queries elastic IP addresses (EIPs).</p>
      * 
      * @param request DescribeEnsEipAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7746,7 +7756,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries elastic IP addresses (EIPs) in Edge Node Service (ENS).</p>
+     * <p>Queries elastic IP addresses (EIPs).</p>
      * 
      * @param request DescribeEnsEipAddressesRequest
      * @return DescribeEnsEipAddressesResponse
@@ -7758,7 +7768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke DescribeEnsNetDistrict to query the regions where edge service resources can be created.</p>
+     * <p>Invokes the DescribeEnsNetDistrict operation to query the regions where EPS resources can be created.</p>
      * 
      * @param request DescribeEnsNetDistrictRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7798,7 +7808,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Invoke DescribeEnsNetDistrict to query the regions where edge service resources can be created.</p>
+     * <p>Invokes the DescribeEnsNetDistrict operation to query the regions where EPS resources can be created.</p>
      * 
      * @param request DescribeEnsNetDistrictRequest
      * @return DescribeEnsNetDistrictResponse
@@ -8049,7 +8059,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the usage summary of ENS virtual machines (VMs), disks, and networks.</p>
+     * <p>Queries the summary of virtual machine, disk, and network usage in Edge Node Service (ENS).</p>
      * 
      * @param request DescribeEnsResourceUsageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8077,7 +8087,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the usage summary of ENS virtual machines (VMs), disks, and networks.</p>
+     * <p>Queries the summary of virtual machine, disk, and network usage in Edge Node Service (ENS).</p>
      * 
      * @param request DescribeEnsResourceUsageRequest
      * @return DescribeEnsResourceUsageResponse
@@ -8089,7 +8099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries route entries.</p>
+     * <p>Queries the routing entry list.</p>
      * 
      * @param request DescribeEnsRouteEntryListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8153,7 +8163,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries route entries.</p>
+     * <p>Queries the routing entry list.</p>
      * 
      * @param request DescribeEnsRouteEntryListRequest
      * @return DescribeEnsRouteEntryListResponse
@@ -8165,7 +8175,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries route tables.</p>
+     * <p>Queries the list of route tables.</p>
      * 
      * @param request DescribeEnsRouteTablesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8229,7 +8239,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries route tables.</p>
+     * <p>Queries the list of route tables.</p>
      * 
      * @param request DescribeEnsRouteTablesRequest
      * @return DescribeEnsRouteTablesResponse
@@ -8813,7 +8823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query NAS file system information.</p>
+     * <p>Invokes DescribeFileSystems to query NAS file system info.</p>
      * 
      * @param request DescribeFileSystemsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8841,7 +8851,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query NAS file system information.</p>
+     * <p>Invokes DescribeFileSystems to query NAS file system info.</p>
      * 
      * @param request DescribeFileSystemsRequest
      * @return DescribeFileSystemsResponse
@@ -8853,7 +8863,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a DNAT rule.</p>
+     * <p>Invokes DescribeForwardEntryAttribute to query the details of a specified DNAT rule.</p>
      * 
      * @param request DescribeForwardEntryAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8885,7 +8895,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a DNAT rule.</p>
+     * <p>Invokes DescribeForwardEntryAttribute to query the details of a specified DNAT rule.</p>
      * 
      * @param request DescribeForwardEntryAttributeRequest
      * @return DescribeForwardEntryAttributeResponse
@@ -8897,7 +8907,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Destination Network Address Translation (DNAT) entries that you created.</p>
+     * <p>Queries created DNAT entries.</p>
      * 
      * @param request DescribeForwardTableEntriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8957,7 +8967,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries Destination Network Address Translation (DNAT) entries that you created.</p>
+     * <p>Queries created DNAT entries.</p>
      * 
      * @param request DescribeForwardTableEntriesRequest
      * @return DescribeForwardTableEntriesResponse
@@ -9269,7 +9279,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>to query whether auto-renewal is enabled for an instance.</p>
+     * <p>Queries the auto-renewal information of instances.</p>
      * 
      * @param request DescribeInstanceAutoRenewAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9305,7 +9315,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>to query whether auto-renewal is enabled for an instance.</p>
+     * <p>Queries the auto-renewal information of instances.</p>
      * 
      * @param request DescribeInstanceAutoRenewAttributeRequest
      * @return DescribeInstanceAutoRenewAttributeResponse
@@ -9367,10 +9377,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</p>
+     * <p>Queries the boot configuration. This operation is supported only for heterogeneous instances (PCFarm bare metal instances).</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</p>
+     * <p>Queries the boot configuration. Only heterogeneous instances (PCFarm bare metal instances) are supported.</p>
      * 
      * @param request DescribeInstanceBootConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9414,10 +9424,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</p>
+     * <p>Queries the boot configuration. This operation is supported only for heterogeneous instances (PCFarm bare metal instances).</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the boot configuration of a heterogeneous PC Farm bare metal instance.</p>
+     * <p>Queries the boot configuration. Only heterogeneous instances (PCFarm bare metal instances) are supported.</p>
      * 
      * @param request DescribeInstanceBootConfigurationRequest
      * @return DescribeInstanceBootConfigurationResponse
@@ -9866,11 +9876,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>API call rate: 100 calls per second.</li>
-     * <li>Per-user call rate: 10 calls per second.</li>
+     * <li>API call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified load balancing instance.</p>
+     * <p>Invokes the DescribeLoadBalancerAttribute operation to query the details of a specified load balancing instance.</p>
      * 
      * @param request DescribeLoadBalancerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9904,11 +9914,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>API call rate: 100 calls per second.</li>
-     * <li>Per-user call rate: 10 calls per second.</li>
+     * <li>API call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a specified load balancing instance.</p>
+     * <p>Invokes the DescribeLoadBalancerAttribute operation to query the details of a specified load balancing instance.</p>
      * 
      * @param request DescribeLoadBalancerAttributeRequest
      * @return DescribeLoadBalancerAttributeResponse
@@ -9921,12 +9931,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration of an HTTP listener.</p>
+     * <p>Queries the configurations of an HTTP listener.</p>
      * 
      * @param request DescribeLoadBalancerHTTPListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9963,12 +9973,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the configuration of an HTTP listener.</p>
+     * <p>Queries the configurations of an HTTP listener.</p>
      * 
      * @param request DescribeLoadBalancerHTTPListenerAttributeRequest
      * @return DescribeLoadBalancerHTTPListenerAttributeResponse
@@ -9981,8 +9991,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10023,8 +10033,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -10092,7 +10102,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries listeners of Edge Load Balancer (ELB) instances.</p>
+     * <p>Invokes DescribeLoadBalancerListeners to query the listeners of a load balancing instance.</p>
      * 
      * @param request DescribeLoadBalancerListenersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10140,7 +10150,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries listeners of Edge Load Balancer (ELB) instances.</p>
+     * <p>Invokes DescribeLoadBalancerListeners to query the listeners of a load balancing instance.</p>
      * 
      * @param request DescribeLoadBalancerListenersRequest
      * @return DescribeLoadBalancerListenersResponse
@@ -10152,7 +10162,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of an Edge Load Balancer (ELB) instance.</p>
+     * <p>Invokes DescribeLoadBalancerSpec to query load balancing specifications.</p>
      * 
      * @param request DescribeLoadBalancerSpecRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10180,7 +10190,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of an Edge Load Balancer (ELB) instance.</p>
+     * <p>Invokes DescribeLoadBalancerSpec to query load balancing specifications.</p>
      * 
      * @param request DescribeLoadBalancerSpecRequest
      * @return DescribeLoadBalancerSpecResponse
@@ -10198,7 +10208,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Call the <code>DescribeLoadBalancerTCPListenerAttribute</code> operation to query the configuration of a TCP listener.</p>
+     * <p>Queries the configuration of a TCP listener.</p>
      * 
      * @param request DescribeLoadBalancerTCPListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10240,7 +10250,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Call the <code>DescribeLoadBalancerTCPListenerAttribute</code> operation to query the configuration of a TCP listener.</p>
+     * <p>Queries the configuration of a TCP listener.</p>
      * 
      * @param request DescribeLoadBalancerTCPListenerAttributeRequest
      * @return DescribeLoadBalancerTCPListenerAttributeResponse
@@ -10313,12 +10323,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API call rate: 100 calls per second.</li>
-     * <li>Call rate per user: 10 calls per second.</li>
+     * <li>API rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invokes the DescribeLoadBalancers operation to query the list of created load balancing instances.</p>
+     * <p>Invokes DescribeLoadBalancers to query the list of created load balancing instances.</p>
      * 
      * @param request DescribeLoadBalancersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10347,12 +10357,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API call rate: 100 calls per second.</li>
-     * <li>Call rate per user: 10 calls per second.</li>
+     * <li>API rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Invokes the DescribeLoadBalancers operation to query the list of created load balancing instances.</p>
+     * <p>Invokes DescribeLoadBalancers to query the list of created load balancing instances.</p>
      * 
      * @param request DescribeLoadBalancersRequest
      * @return DescribeLoadBalancersResponse
@@ -10412,7 +10422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries mount target information by calling DescribeMountTargets.</p>
+     * <p>Queries mount target information.</p>
      * 
      * @param request DescribeMountTargetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10460,7 +10470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries mount target information by calling DescribeMountTargets.</p>
+     * <p>Queries mount target information.</p>
      * 
      * @param request DescribeMountTargetsRequest
      * @return DescribeMountTargetsResponse
@@ -10472,7 +10482,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the resources that you can purchase when creating a NAS file system.</p>
+     * <p>Queries the available resources for purchase when creating a NAS file system.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeNASAvailableResourceInfoResponse
@@ -10495,7 +10505,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Query the resources that you can purchase when creating a NAS file system.</p>
+     * <p>Queries the available resources for purchase when creating a NAS file system.</p>
      * @return DescribeNASAvailableResourceInfoResponse
      */
     public DescribeNASAvailableResourceInfoResponse describeNASAvailableResourceInfo() throws Exception {
@@ -10585,7 +10595,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can invoke the DescribeNetworkAcls API to query created network ACLs.</p>
+     * <p>Queries created network ACLs.</p>
      * 
      * @param request DescribeNetworkAclsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10633,7 +10643,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>You can invoke the DescribeNetworkAcls API to query created network ACLs.</p>
+     * <p>Queries created network ACLs.</p>
      * 
      * @param request DescribeNetworkAclsRequest
      * @return DescribeNetworkAclsResponse
@@ -11001,7 +11011,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the most recent price of an Edge Node Service (ENS) instance.</p>
+     * <p>Queries the latest prices of Edge Node Service (ENS) resources.</p>
      * 
      * @param tmpReq DescribePriceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11071,7 +11081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the most recent price of an Edge Node Service (ENS) instance.</p>
+     * <p>Queries the latest prices of Edge Node Service (ENS) resources.</p>
      * 
      * @param request DescribePriceRequest
      * @return DescribePriceResponse
@@ -11163,7 +11173,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of resources that you can purchase.</p>
+     * <p>Queries the specifications of resources available for purchase.</p>
      * 
      * @param runtime runtime options for this request RuntimeOptions
      * @return DescribeReservedResourceResponse
@@ -11186,7 +11196,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the specifications of resources that you can purchase.</p>
+     * <p>Queries the specifications of resources available for purchase.</p>
      * @return DescribeReservedResourceResponse
      */
     public DescribeReservedResourceResponse describeReservedResource() throws Exception {
@@ -12358,7 +12368,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot To detach a disk that is created together with an instance.</p>
+     * <p>Detaches a pay-as-you-go data cloud disk from an ENS instance. Only separately purchased pay-as-you-go disks can be detached. Disks created along with the instance are not supported.</p>
      * 
      * @param request DetachDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12394,7 +12404,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches a pay-as-you-go disk from an Edge Node Service (ENS) instance. You cannot To detach a disk that is created together with an instance.</p>
+     * <p>Detaches a pay-as-you-go data cloud disk from an ENS instance. Only separately purchased pay-as-you-go disks can be detached. Disks created along with the instance are not supported.</p>
      * 
      * @param request DetachDiskRequest
      * @return DetachDiskResponse
@@ -12653,11 +12663,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This O\&amp;M task currently supports only the <code>Instance:SystemUpgrade.Migrate</code> event type for migrations due to an underlying upgrade.</li>
+     * <li>This O&amp;M operation currently supports only the following event type: Instance:SystemUpgrade.Migrate (migration required for underlying upgrades).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Migrates an instance across physical nodes in response to an O&amp;M event.</p>
+     * <p>Migrates an instance across nodes after an O&amp;M event occurs on the instance.</p>
      * 
      * @param request EventMigrateInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12714,11 +12724,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This O\&amp;M task currently supports only the <code>Instance:SystemUpgrade.Migrate</code> event type for migrations due to an underlying upgrade.</li>
+     * <li>This O&amp;M operation currently supports only the following event type: Instance:SystemUpgrade.Migrate (migration required for underlying upgrades).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Migrates an instance across physical nodes in response to an O&amp;M event.</p>
+     * <p>Migrates an instance across nodes after an O&amp;M event occurs on the instance.</p>
      * 
      * @param request EventMigrateInstanceRequest
      * @return EventMigrateInstanceResponse
@@ -12731,11 +12741,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation currently supports only the following Event Type: Instance:SystemMaintenance.Reboot (an Instance Reboot due to System Maintenance).</li>
+     * <li>This O&amp;M operation currently supports only the following event type: Instance:SystemMaintenance.Reboot (instance restart due to system maintenance).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Reboots an Instance affected by an Operational Event.</p>
+     * <p>Restarts an instance after an O&amp;M event occurs.</p>
      * 
      * @param request EventRebootInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12784,11 +12794,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>This operation currently supports only the following Event Type: Instance:SystemMaintenance.Reboot (an Instance Reboot due to System Maintenance).</li>
+     * <li>This O&amp;M operation currently supports only the following event type: Instance:SystemMaintenance.Reboot (instance restart due to system maintenance).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Reboots an Instance affected by an Operational Event.</p>
+     * <p>Restarts an instance after an O&amp;M event occurs.</p>
      * 
      * @param request EventRebootInstanceRequest
      * @return EventRebootInstanceResponse
@@ -12918,7 +12928,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports a custom image to an Object Storage Service (OSS) bucket in the same region.</p>
+     * <p>Exports a custom image to an Object Storage Service (OSS) bucket in the same region as the image.</p>
      * 
      * @param request ExportImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12966,7 +12976,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Exports a custom image to an Object Storage Service (OSS) bucket in the same region.</p>
+     * <p>Exports a custom image to an Object Storage Service (OSS) bucket in the same region as the image.</p>
      * 
      * @param request ExportImageRequest
      * @return ExportImageResponse
@@ -13401,12 +13411,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After the key pair is imported, ENS stores the public key. You must securely store the private key.</li>
-     * <li>The key pair can be only in the ssh-rsa format.</li>
+     * <li>After the key pair is imported, Alibaba Cloud ENS stores the public key. You must securely store the private key of the key pair.</li>
+     * <li>Only the ssh-rsa format is supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports the public key of a Rivest–Shamir–Adleman (RSA)-encrypted key pair that is generated by a third-party tool.</p>
+     * <p>Imports the public key of an RSA key pair generated by other tools.</p>
      * 
      * @param request ImportKeyPairRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13443,12 +13453,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>After the key pair is imported, ENS stores the public key. You must securely store the private key.</li>
-     * <li>The key pair can be only in the ssh-rsa format.</li>
+     * <li>After the key pair is imported, Alibaba Cloud ENS stores the public key. You must securely store the private key of the key pair.</li>
+     * <li>Only the ssh-rsa format is supported.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Imports the public key of a Rivest–Shamir–Adleman (RSA)-encrypted key pair that is generated by a third-party tool.</p>
+     * <p>Imports the public key of an RSA key pair generated by other tools.</p>
      * 
      * @param request ImportKeyPairRequest
      * @return ImportKeyPairResponse
@@ -13719,10 +13729,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you remove an instance from a security group, the instance must be in the Stopped or Running state.</p>
+     * <p>The instance must be in the Stopped or Running state before you remove it from a security group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes an instance from a security group.</p>
+     * <p>Removes an ENS instance from the specified security group.</p>
      * 
      * @param request LeaveSecurityGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13762,10 +13772,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Before you remove an instance from a security group, the instance must be in the Stopped or Running state.</p>
+     * <p>The instance must be in the Stopped or Running state before you remove it from a security group.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes an instance from a security group.</p>
+     * <p>Removes an ENS instance from the specified security group.</p>
      * 
      * @param request LeaveSecurityGroupRequest
      * @return LeaveSecurityGroupResponse
@@ -14962,13 +14972,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You cannot reset the instance password when the instance status is Starting.</li>
-     * <li>You cannot modify the instance password when the instance status is Running.</li>
-     * <li>After resetting the password, restart the instance in the console or invoke the RebootInstance operation for the change to take effect. Restarting the instance from within the operating system does not take effect.</li>
+     * <li>You cannot reset the password of an instance when the instance status is Starting.</li>
+     * <li>You cannot modify the password of an instance when the instance status is Running.</li>
+     * <li>After you reset the password, you must restart the instance in the console or invoke the RebootInstance operation for the changes to take effect. Restarting the instance from within the operating system does not take effect.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls ModifyInstanceAttribute to modify instance attributes, including the instance password and name.</p>
+     * <p>Modifies the attributes of an instance, including the instance password and name.</p>
      * 
      * @param request ModifyInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15021,13 +15031,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You cannot reset the instance password when the instance status is Starting.</li>
-     * <li>You cannot modify the instance password when the instance status is Running.</li>
-     * <li>After resetting the password, restart the instance in the console or invoke the RebootInstance operation for the change to take effect. Restarting the instance from within the operating system does not take effect.</li>
+     * <li>You cannot reset the password of an instance when the instance status is Starting.</li>
+     * <li>You cannot modify the password of an instance when the instance status is Running.</li>
+     * <li>After you reset the password, you must restart the instance in the console or invoke the RebootInstance operation for the changes to take effect. Restarting the instance from within the operating system does not take effect.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Calls ModifyInstanceAttribute to modify instance attributes, including the instance password and name.</p>
+     * <p>Modifies the attributes of an instance, including the instance password and name.</p>
      * 
      * @param request ModifyInstanceAttributeRequest
      * @return ModifyInstanceAttributeResponse
@@ -15231,24 +15241,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The instance that you want to manage must be in the Stopped state. When you modify the parameters of a scaling group, the following limits apply:</p>
+     * <p>When you call this operation, the ENS instance must be in the Stopped state.
+     * Note the following when you modify the attributes:</p>
      * <ul>
      * <li>Instance:<ul>
-     * <li>Instances that are associated with SLB are not supported.</li>
+     * <li>Instances associated with load balancing are not supported.</li>
      * </ul>
      * </li>
      * <li>Network:<ul>
-     * <li>Instances that are associated with EIPs are not supported.</li>
-     * <li>Instances that are associated with high-availability virtual IP addresses are not supported.</li>
-     * <li>Instances that have been used as next hops in the routing table are not supported.</li>
-     * <li>Secondary ENIs cannot be attached to the ECS instance.</li>
+     * <li>Instances bound to an elastic IP address (EIP) are not supported.</li>
+     * <li>Instances bound to a high-availability virtual IP address (HAVIP) are not supported.</li>
+     * <li>Instances used as the next hop in a route table are not supported.</li>
+     * <li>Instances bound to secondary elastic network interfaces (ENIs) are not supported.</li>
      * <li>Instances configured with secondary IP addresses are not supported.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the private IP address or vSwitch of a VPC-type ECS instance.</p>
+     * <p>Modifies the private IP address and vSwitch of an Edge Node Service (ENS) instance.</p>
      * 
      * @param request ModifyInstanceNetworkAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15288,24 +15299,25 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The instance that you want to manage must be in the Stopped state. When you modify the parameters of a scaling group, the following limits apply:</p>
+     * <p>When you call this operation, the ENS instance must be in the Stopped state.
+     * Note the following when you modify the attributes:</p>
      * <ul>
      * <li>Instance:<ul>
-     * <li>Instances that are associated with SLB are not supported.</li>
+     * <li>Instances associated with load balancing are not supported.</li>
      * </ul>
      * </li>
      * <li>Network:<ul>
-     * <li>Instances that are associated with EIPs are not supported.</li>
-     * <li>Instances that are associated with high-availability virtual IP addresses are not supported.</li>
-     * <li>Instances that have been used as next hops in the routing table are not supported.</li>
-     * <li>Secondary ENIs cannot be attached to the ECS instance.</li>
+     * <li>Instances bound to an elastic IP address (EIP) are not supported.</li>
+     * <li>Instances bound to a high-availability virtual IP address (HAVIP) are not supported.</li>
+     * <li>Instances used as the next hop in a route table are not supported.</li>
+     * <li>Instances bound to secondary elastic network interfaces (ENIs) are not supported.</li>
      * <li>Instances configured with secondary IP addresses are not supported.</li>
      * </ul>
      * </li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the private IP address or vSwitch of a VPC-type ECS instance.</p>
+     * <p>Modifies the private IP address and vSwitch of an Edge Node Service (ENS) instance.</p>
      * 
      * @param request ModifyInstanceNetworkAttributeRequest
      * @return ModifyInstanceNetworkAttributeResponse
@@ -15318,12 +15330,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about an Edge Load Balancer (ELB) instance.</p>
+     * <p>Invokes ModifyLoadBalancerAttribute to modify the information of a load balancing instance.</p>
      * 
      * @param request ModifyLoadBalancerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15360,12 +15372,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the information about an Edge Load Balancer (ELB) instance.</p>
+     * <p>Invokes ModifyLoadBalancerAttribute to modify the information of a load balancing instance.</p>
      * 
      * @param request ModifyLoadBalancerAttributeRequest
      * @return ModifyLoadBalancerAttributeResponse
@@ -15611,7 +15623,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information about a snapshot.</p>
+     * <p>Modifies the attributes of a snapshot.</p>
      * 
      * @param request ModifySnapshotAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15651,7 +15663,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the information about a snapshot.</p>
+     * <p>Modifies the attributes of a snapshot.</p>
      * 
      * @param request ModifySnapshotAttributeRequest
      * @return ModifySnapshotAttributeResponse
@@ -16136,12 +16148,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can configure up to 1,000 rules.</li>
-     * <li>If an object matches multiple rules, the rule with the earliest expiration time applies.</li>
+     * <li>Up to 1,000 rules are supported.</li>
+     * <li>If an object matches multiple rules, the rule with the earliest expiration time takes precedence.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call the PutBucketLifecycle operation to set lifecycle rules for a bucket.</p>
+     * <p>Configures lifecycle rules for objects.</p>
      * 
      * @param request PutBucketLifecycleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16198,12 +16210,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can configure up to 1,000 rules.</li>
-     * <li>If an object matches multiple rules, the rule with the earliest expiration time applies.</li>
+     * <li>Up to 1,000 rules are supported.</li>
+     * <li>If an object matches multiple rules, the rule with the earliest expiration time takes precedence.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>You can call the PutBucketLifecycle operation to set lifecycle rules for a bucket.</p>
+     * <p>Configures lifecycle rules for objects.</p>
      * 
      * @param request PutBucketLifecycleRequest
      * @return PutBucketLifecycleResponse
@@ -16945,7 +16957,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes IP addresses from an edge private network (EPN) instance.</p>
+     * <p>Removes instances from a public network.</p>
      * 
      * @param request RemovePublicIpsFromEpnInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16981,7 +16993,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes IP addresses from an edge private network (EPN) instance.</p>
+     * <p>Removes instances from a public network.</p>
      * 
      * @param request RemovePublicIpsFromEpnInstanceRequest
      * @return RemovePublicIpsFromEpnInstanceResponse
@@ -17499,7 +17511,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resizes a pay-as-you-go disk that you purchase.</p>
+     * <p>Invokes the ResizeDisk operation to resize a separately purchased pay-as-you-go cloud disk instance.</p>
      * 
      * @param request ResizeDiskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -17535,7 +17547,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Resizes a pay-as-you-go disk that you purchase.</p>
+     * <p>Invokes the ResizeDisk operation to resize a separately purchased pay-as-you-go cloud disk instance.</p>
      * 
      * @param request ResizeDiskRequest
      * @return ResizeDiskResponse
@@ -18005,7 +18017,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Schedules the nearest idle resources including instances and pods for your device based on the user ID and IP address and initializes the virtual environment.</p>
+     * <p>Optimally schedules idle resources (instances or container pods) for a terminal device based on the customer ID and IP address, and initializes the virtual device environment.</p>
      * 
      * @param request RunServiceScheduleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18069,7 +18081,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Schedules the nearest idle resources including instances and pods for your device based on the user ID and IP address and initializes the virtual environment.</p>
+     * <p>Optimally schedules idle resources (instances or container pods) for a terminal device based on the customer ID and IP address, and initializes the virtual device environment.</p>
      * 
      * @param request RunServiceScheduleRequest
      * @return RunServiceScheduleResponse
@@ -18372,12 +18384,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an HTTPS listener.</p>
+     * <p>Modifies the configurations of an HTTPS listener.</p>
      * 
      * @param request SetLoadBalancerHTTPSListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18474,12 +18486,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API rate limit: 100 calls per second.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies an HTTPS listener.</p>
+     * <p>Modifies the configurations of an HTTPS listener.</p>
      * 
      * @param request SetLoadBalancerHTTPSListenerAttributeRequest
      * @return SetLoadBalancerHTTPSListenerAttributeResponse
@@ -18492,12 +18504,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the status of an Edge Load Balancer (ELB) instance.</p>
+     * <p>Invokes SetLoadBalancerStatus to modify the instance status of a load balancing instance.</p>
      * 
      * @param request SetLoadBalancerStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18534,12 +18546,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Modifies the status of an Edge Load Balancer (ELB) instance.</p>
+     * <p>Invokes SetLoadBalancerStatus to modify the instance status of a load balancing instance.</p>
      * 
      * @param request SetLoadBalancerStatusRequest
      * @return SetLoadBalancerStatusResponse
@@ -18668,12 +18680,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API call rate limit: 100 requests/second.</li>
-     * <li>Per-user rate limit: 10 requests/second.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Call <code>SetLoadBalancerUDPListenerAttribute</code> to modify a UDP listener.</p>
+     * <p>Modifies the configurations of a UDP listener.</p>
      * 
      * @param request SetLoadBalancerUDPListenerAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18754,12 +18766,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>API call rate limit: 100 requests/second.</li>
-     * <li>Per-user rate limit: 10 requests/second.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Rate limit per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Call <code>SetLoadBalancerUDPListenerAttribute</code> to modify a UDP listener.</p>
+     * <p>Modifies the configurations of a UDP listener.</p>
      * 
      * @param request SetLoadBalancerUDPListenerAttributeRequest
      * @return SetLoadBalancerUDPListenerAttributeResponse
@@ -18825,7 +18837,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts an edge network instance.</p>
+     * <p>Starts an edge-to-edge communication instance.</p>
      * 
      * @param request StartEpnInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18857,7 +18869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Starts an edge network instance.</p>
+     * <p>Starts an edge-to-edge communication instance.</p>
      * 
      * @param request StartEpnInstanceRequest
      * @return StartEpnInstanceResponse
@@ -19087,7 +19099,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops an EPN instance.</p>
+     * <p>Stops an Edge-to-Edge communication instance.</p>
      * 
      * @param request StopEpnInstanceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19119,7 +19131,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Stops an EPN instance.</p>
+     * <p>Stops an Edge-to-Edge communication instance.</p>
      * 
      * @param request StopEpnInstanceRequest
      * @return StopEpnInstanceResponse
@@ -19523,7 +19535,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unassigns secondary private IP addresses from an elastic network interface (ENI).</p>
+     * <p>Unassigns one or more secondary private IP addresses from an elastic network interface (ENI).</p>
      * 
      * @param request UnassignPrivateIpAddressesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19559,7 +19571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unassigns secondary private IP addresses from an elastic network interface (ENI).</p>
+     * <p>Unassigns one or more secondary private IP addresses from an elastic network interface (ENI).</p>
      * 
      * @param request UnassignPrivateIpAddressesRequest
      * @return UnassignPrivateIpAddressesResponse
@@ -19571,7 +19583,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates a high-availability virtual IP address (HAVIP) from an Edge Node Service (ENS) instance or Elastic Network Interface (ENI).</p>
+     * <p>Disassociates a HaVip from an ENS instance or a network interface controller (NIC).</p>
      * 
      * @param request UnassociateHaVipRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19607,7 +19619,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Disassociates a high-availability virtual IP address (HAVIP) from an Edge Node Service (ENS) instance or Elastic Network Interface (ENI).</p>
+     * <p>Disassociates a HaVip from an ENS instance or a network interface controller (NIC).</p>
      * 
      * @param request UnassociateHaVipRequest
      * @return UnassociateHaVipResponse
@@ -19841,7 +19853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes user tags from a resource.</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19885,7 +19897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Removes user tags from a resource.</p>
+     * <p>Removes tags from resources.</p>
      * 
      * @param request UntagResourcesRequest
      * @return UntagResourcesResponse

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyInstanceNetworkAttributeRequest extends TeaModel {
     /**
-     * <p>The ID of the ENS instance.</p>
+     * <p>The ENS instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,8 @@ public class ModifyInstanceNetworkAttributeRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The new private IP address of the ECS instance. By default, if this parameter is empty, a private IP address is randomly assigned from the CIDR block of the specified vSwitch.</p>
+     * <p>The new private IP address.
+     * Default value: If this parameter is not specified, an IP address is randomly assigned from the CIDR block of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -24,14 +25,11 @@ public class ModifyInstanceNetworkAttributeRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The vSwitch IDs.</p>
+     * <p>The vSwitch ID.</p>
      * <ul>
-     * <li><p>If you set this parameter to the ID of the current vSwitch, the vSwitch of the ECS instance remains unchanged.</p>
-     * </li>
-     * <li><p>The input ID is a new vSwitch, and the new and old vSwitches must belong to the same node.</p>
-     * </li>
-     * <li><p>By default, if this parameter is not specified, a private IP address is randomly assigned from within the CIDR block of the specified vSwitch.</p>
-     * </li>
+     * <li>If the specified ID is the current vSwitch of the instance, the vSwitch of the instance remains unchanged.</li>
+     * <li>If the specified ID is a new vSwitch, the new and old vSwitches must belong to the same edge zone.</li>
+     * <li>If this parameter is not specified, a value is randomly assigned from the CIDR block of the original vSwitch.</li>
      * </ul>
      * 
      * <strong>example:</strong>

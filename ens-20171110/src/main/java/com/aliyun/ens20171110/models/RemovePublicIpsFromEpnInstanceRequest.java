@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RemovePublicIpsFromEpnInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the EPN instance.</p>
+     * <p>The edge-to-edge communication instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class RemovePublicIpsFromEpnInstanceRequest extends TeaModel {
     public String EPNInstanceId;
 
     /**
-     * <p>The information about the public IP addresses that you want to delete.</p>
+     * <p>The information about the public IP addresses to be removed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

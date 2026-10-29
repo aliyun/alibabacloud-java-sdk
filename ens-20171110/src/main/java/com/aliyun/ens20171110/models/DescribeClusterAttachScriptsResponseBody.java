@@ -14,7 +14,7 @@ public class DescribeClusterAttachScriptsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The cluster attachment script, Base64-encoded.</p>
+     * <p>The cluster onboarding script.</p>
      * 
      * <strong>example:</strong>
      * <p>Y2QgWnhiU0o=</p>

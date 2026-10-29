@@ -8,7 +8,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
     public RunServiceScheduleResponseBodyCommandResults commandResults;
 
     /**
-     * <p>The index number of the scheduled virtual device (pod).</p>
+     * <p>The index of the scheduled target virtual device (container pod).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
     public Integer index;
 
     /**
-     * <p>The ID of the scheduled instance.</p>
+     * <p>The ID of the target instance.</p>
      * 
      * <strong>example:</strong>
      * <p>i-5qvji3mom4ec013dyygmtxlkj</p>
@@ -26,7 +26,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The IP address of the scheduled instance.</p>
+     * <p>The IP address of the scheduled target instance.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.246.11</p>
@@ -35,7 +35,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
     public String instanceIp;
 
     /**
-     * <p>The start port of the scheduled instance.</p>
+     * <p>The start port of the scheduled target instance.</p>
      * 
      * <strong>example:</strong>
      * <p>1024</p>
@@ -44,7 +44,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
     public Integer instancePort;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -53,7 +53,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is repeated. This parameter is not returned if ServcieAction is set to Console.</p>
+     * <p>Specifies whether the operation is repeated for ServiceAction values other than Console.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -62,7 +62,7 @@ public class RunServiceScheduleResponseBody extends TeaModel {
     public String requestRepeated;
 
     /**
-     * <p>The TCP port range of the scheduled instance or container. The value is in the ${from}-$-{to} format. Example: 80-88.</p>
+     * <p>The TCP service port range of the scheduled target virtual machine instance or container. Format: ${from}-${to}. Example: 80-88.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;80-88&quot;</p>

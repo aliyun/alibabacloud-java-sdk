@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribePriceResponseBody extends TeaModel {
     /**
-     * <p>The price information.</p>
+     * <p>The price information list.</p>
      */
     @NameInMap("PriceInfo")
     public DescribePriceResponseBodyPriceInfo priceInfo;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>694EB8FF-446C-5B1E-8146-9629E492551F</p>
@@ -42,12 +42,11 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyPriceInfoPrice extends TeaModel {
         /**
-         * <p>The type of currency.</p>
+         * <p>The currency. Valid values:</p>
+         * <p>&lt;props=&quot;china&quot;&gt;- CNY: Chinese yuan.</p>
          * <ul>
-         * <li><p>USD: US dollar</p>
-         * </li>
-         * <li><p>JPY: Japanese Yen</p>
-         * </li>
+         * <li>USD: US dollar.</li>
+         * <li>JPY: Japanese yen.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -75,7 +74,7 @@ public class DescribePriceResponseBody extends TeaModel {
         public Float originalPrice;
 
         /**
-         * <p>The final price.</p>
+         * <p>The transaction price.</p>
          * 
          * <strong>example:</strong>
          * <p>126.75</p>
@@ -124,7 +123,7 @@ public class DescribePriceResponseBody extends TeaModel {
 
     public static class DescribePriceResponseBodyPriceInfo extends TeaModel {
         /**
-         * <p>The price.</p>
+         * <p>The price information.</p>
          */
         @NameInMap("Price")
         public DescribePriceResponseBodyPriceInfoPrice price;

@@ -14,7 +14,7 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The IDs of ENS nodes. Array length: 1 to 100.</p>
+     * <p>The array of ENS edge zone IDs. The array length is 1 to 100.</p>
      */
     @NameInMap("EnsRegionIds")
     public java.util.List<String> ensRegionIds;
@@ -65,7 +65,7 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Settings for paging.</p>
+     * <p>The number of entries per page in paging queries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -74,7 +74,7 @@ public class DescribeHaVipsRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The HaVip status. Valid values:</p>
+     * <p>The status of the HaVip. Valid values:</p>
      * <ul>
      * <li>Creating: The HaVip is being created.</li>
      * <li>Available: The HaVip is available.</li>

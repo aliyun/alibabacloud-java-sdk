@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AttachKeyPairRequest extends TeaModel {
     /**
-     * <p>A list of instance IDs.</p>
+     * <p>The list of instance IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,7 +30,7 @@ public class AttachKeyPairRequest extends TeaModel {
     public String keyPairId;
 
     /**
-     * <p>The key pair name.</p>
+     * <p>The name of the key pair.</p>
      * 
      * <strong>example:</strong>
      * <p>test-kp</p>

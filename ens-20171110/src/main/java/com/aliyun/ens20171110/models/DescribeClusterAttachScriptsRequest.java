@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClusterAttachScriptsRequest extends TeaModel {
     /**
-     * <p>The ID of the ECK cluster.</p>
+     * <p>The cluster ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the node pool to which the node will be added.</p>
+     * <p>The node pool ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class DescribeClusterAttachScriptsRequest extends TeaModel {
     public String nodepoolId;
 
     /**
-     * <p>Optional parameters for the script, provided as a JSON string.</p>
+     * <p>The optional parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;key1\&quot;:\&quot;val1\&quot;}</p>

@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
-     * <p>The edge application template. The value must be a JSON string that contains the following information:</p>
+     * <p>The edge application template in JSON format. It contains the following information:</p>
      * <ul>
-     * <li><p>Basic information such as the name of the application</p>
-     * </li>
-     * <li><p>Information such as resource specifications and network security configurations</p>
-     * </li>
-     * <li><p>Service specifications</p>
-     * </li>
-     * <li><p>Required resources</p>
-     * </li>
+     * <li>Basic information such as the application name.</li>
+     * <li>Resource specifications and network security configurations.</li>
+     * <li>Business configurations.</li>
+     * <li>Resource requirements.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

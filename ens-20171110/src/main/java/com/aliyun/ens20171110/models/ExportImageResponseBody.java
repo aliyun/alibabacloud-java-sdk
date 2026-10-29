@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ExportImageResponseBody extends TeaModel {
     /**
-     * <p>The URL that points to the exported image.</p>
+     * <p>The URL of the exported image.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://oss.url">http://oss.url</a></p>
@@ -14,7 +14,7 @@ public class ExportImageResponseBody extends TeaModel {
     public String exportedImageURL;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>43A426AD-3F2E-5DD9-9C08-D4DBDCA48D85</p>

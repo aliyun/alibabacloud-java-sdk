@@ -14,15 +14,15 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String billingCycle;
 
     /**
-     * <p>Ensures the idempotency of the request to avoid duplicate operations caused by multiple retries.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. This prevents duplicate operations caused by multiple retries.</p>
      * <ul>
-     * <li><p>Generate a parameter value from your client and ensure that the value is unique across different requests. The ClientToken value supports only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <li><p>Generate the value from your client and ensure that it is unique among different requests. The client token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * </li>
-     * <li><p>If you use a ClientToken that has been used before and the other request parameters remain unchanged, the client receives the same result as the first submission, with no impact on your server-side state.</p>
+     * <li><p>If you resubmit a request with a used client token and all other request parameters remain unchanged, the client receives the same response as the first request, and the server state remains unaffected.</p>
      * </li>
-     * <li><p>You can retry when the API times out or returns the PROCESSING error code, and idempotency takes effect. If the return result is an HTTP 200 status code, the retry returns the same result as the previous call with no impact on your server-side state. If the return result is an HTTP 4xx status code and the error code is not PROCESSING, idempotency does not take effect.</p>
+     * <li><p>You can retry the request when the operation times out or the error code is PROCESSING, and the idempotence remains valid. If the HTTP status code 200 is returned, the client receives the same response after a retry, and the server state remains unaffected. If an HTTP 4xx status code is returned and the error code is not PROCESSING, the idempotence is invalid.</p>
      * </li>
-     * <li><p>The ClientToken is valid for 10 minutes.</p>
+     * <li><p>The client token is valid for 10 minutes.</p>
      * </li>
      * </ul>
      * 
@@ -33,7 +33,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The ID of the ENS edge zone.</p>
+     * <p>The ENS edge zone ID. Not all ENS edge zones support creating an Edge Load Balancer (ELB) instance. Before calling this operation, verify that the target edge zone supports this feature.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,9 +43,9 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String ensRegionId;
 
     /**
-     * <p>The name of the load balancing instance. The name must be 1 to 80 characters in length and can contain letters and Chinese characters. If you do not specify this parameter, the system automatically assigns an instance name.</p>
+     * <p>The name of the load balancing instance. The name must be 1 to 80 characters in length, and can contain English letters and Chinese characters. If you do not specify this parameter, the system randomly allocates a name to the instance.</p>
      * <blockquote>
-     * <p>The name cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name cannot start with http:// or https://.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -65,10 +65,10 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String loadBalancerSpec;
 
     /**
-     * <p>The type of the Edge Load Balancing instance.</p>
+     * <p>The type of the edge load balancing (ELB) instance. Valid values:</p>
      * <ul>
-     * <li>CLB: Classic Load Balancing instance.</li>
-     * <li>InternetDR: Public pattern load balancing instance.</li>
+     * <li>CLB: traditional load balancing instance.</li>
+     * <li>InternetDR: public pattern load balancing instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String loadBalancerType;
 
     /**
-     * <p>The network ID of the Edge Load Balancing (ELB) instance to create.</p>
+     * <p>The network ID of the edge load balancing (ELB) instance to be created.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String networkId;
 
     /**
-     * <p>The billing type. PostPaid (currently the only supported type): pay-as-you-go.</p>
+     * <p>The billing method. Currently, only PostPaid (pay-as-you-go) is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -98,7 +98,7 @@ public class CreateLoadBalancerRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The ID of the vSwitch to which the VPC instance belongs.</p>
+     * <p>The ID of the vSwitch to which the VPC-connected instance belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateEpnInstanceResponseBody extends TeaModel {
     /**
-     * <p>The ID of the EPN instance.</p>
+     * <p>The Edge-to-Edge network instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>epn-xxxxx</p>

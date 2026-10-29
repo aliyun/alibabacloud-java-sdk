@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResizeDiskRequest extends TeaModel {
     /**
-     * <p>The ID of the disk that you want to resize.</p>
+     * <p>The instance ID of the cloud disk to resize.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ResizeDiskRequest extends TeaModel {
     public String diskId;
 
     /**
-     * <p>The size of the disk that you want to resize. Unit: GiB.</p>
+     * <p>The target size of the cloud disk, in GiB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

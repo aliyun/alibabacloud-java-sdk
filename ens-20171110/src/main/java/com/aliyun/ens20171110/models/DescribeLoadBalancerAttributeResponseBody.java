@@ -14,7 +14,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public String address;
 
     /**
-     * <p>The IP version of the load balancing instance. Valid values: ipv4 or ipv6.</p>
+     * <p>The IP version of the load balancing instance. Valid values: ipv4 and ipv6.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv4</p>
@@ -38,7 +38,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public java.util.List<DescribeLoadBalancerAttributeResponseBodyBackendServers> backendServers;
 
     /**
-     * <p>The peak bandwidth of the load balancing instance. The default value is -1, which indicates that bandwidth is not throttled.</p>
+     * <p>The peak bandwidth of the load balancing instance. Default value: -1, which indicates that bandwidth is not throttled.</p>
      * 
      * <strong>example:</strong>
      * <p>-1</p>
@@ -47,7 +47,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The creation time of the load balancing instance (UTC).</p>
+     * <p>The time when the load balancing instance was created. The time is displayed in UTC.</p>
      * 
      * <strong>example:</strong>
      * <p>2019-05-21T12:22:00Z</p>
@@ -56,7 +56,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The end time of the load balancing instance in ISO 8601 UTC format (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The expiration time of the load balancing instance. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2020-05-21T12:22:00Z</p>
@@ -65,7 +65,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The ENS node ID.</p>
+     * <p>The ID of the ENS edge zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-chengdu-telecom</p>
@@ -104,7 +104,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     public String loadBalancerName;
 
     /**
-     * <p>The specification of the load balancing instance.</p>
+     * <p>The specifications of the load balancing instance.</p>
      * 
      * <strong>example:</strong>
      * <p>elb.s2.medium</p>
@@ -115,8 +115,8 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
     /**
      * <p>The listener status of the load balancing instance. Valid values:</p>
      * <ul>
-     * <li><strong>Active</strong>: The listeners of the instance can forward received traffic based on rules.</li>
-     * <li><strong>InActive</strong>: The listeners of the instance no longer forward received traffic.</li>
+     * <li><strong>Active</strong>: The listeners in the instance can forward accepted traffic based on rules.</li>
+     * <li><strong>InActive</strong>: The listeners in the instance no longer forward accepted traffic.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -453,7 +453,7 @@ public class DescribeLoadBalancerAttributeResponseBody extends TeaModel {
         public Integer forwardPort;
 
         /**
-         * <p>Indicates whether listener forwarding is enabled.</p>
+         * <p>Specifies whether listener forwarding is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>off</p>

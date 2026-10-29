@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssignPrivateIpAddressesResponseBody extends TeaModel {
     /**
-     * <p>Details about the ENI and the secondary private IP addresses that are assigned to the ENI.</p>
+     * <p>The set of information about the elastic network interface controller (NIC) to which secondary private IP addresses are assigned.</p>
      */
     @NameInMap("AssignedPrivateIpAddressesSet")
     public AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet assignedPrivateIpAddressesSet;
@@ -42,7 +42,7 @@ public class AssignPrivateIpAddressesResponseBody extends TeaModel {
 
     public static class AssignPrivateIpAddressesResponseBodyAssignedPrivateIpAddressesSet extends TeaModel {
         /**
-         * <p>The ID of the ENI.</p>
+         * <p>The ID of the elastic network interface controller (NIC).</p>
          * 
          * <strong>example:</strong>
          * <p>eni-uf620pb4d19ljnu4a64m</p>

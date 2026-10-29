@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeExportImageStatusResponseBody extends TeaModel {
     /**
-     * <p>The export status of the image. Valid values:</p>
+     * <p>The image export status. Valid values:</p>
      * <ul>
-     * <li><p>Exporting</p>
-     * </li>
-     * <li><p>Exported</p>
-     * </li>
-     * <li><p>ExportError</p>
-     * </li>
-     * <li><p>Unexported</p>
-     * </li>
+     * <li>Exporting: The image is being exported.</li>
+     * <li>Exported: The image is exported.</li>
+     * <li>ExportError: An error occurred during the image export.</li>
+     * <li>Unexported: The image is not exported.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +20,7 @@ public class DescribeExportImageStatusResponseBody extends TeaModel {
     public String imageExportStatus;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>14BBB3A0-3DBE-54F5-AEC8-01D3F6B1EBE2</p>

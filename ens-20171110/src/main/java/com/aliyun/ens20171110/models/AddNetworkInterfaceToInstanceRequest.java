@@ -14,7 +14,7 @@ public class AddNetworkInterfaceToInstanceRequest extends TeaModel {
     public Boolean autoStart;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,8 @@ public class AddNetworkInterfaceToInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The network. The value is a JSON string. Only IPv6 is supported. Sample code of an IPv6 network: [{ &quot;ipType&quot;: &quot;public&quot;, &quot;ipAddressType&quot;: &quot;ipv6&quot; }]</p>
+     * <p>The network parameters in JSON string format. Currently, only IPv6 is supported. An example of adding an IPv6 gateway is as follows:
+     * [{&quot;ipType&quot;: &quot;public&quot;, &quot;ipAddressType&quot;: &quot;ipv6&quot;}]</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

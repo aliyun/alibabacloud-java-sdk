@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,13 +32,13 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the routes.</p>
+     * <p>The route entry information.</p>
      */
     @NameInMap("RouteEntrys")
     public java.util.List<DescribeEnsRouteEntryListResponseBodyRouteEntrys> routeEntrys;
 
     /**
-     * <p>The number of returned entries.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>7</p>
@@ -93,7 +93,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
 
     public static class DescribeEnsRouteEntryListResponseBodyRouteEntrysNextHops extends TeaModel {
         /**
-         * <p>The ID of the next hop.</p>
+         * <p>The instance ID of the next hop.</p>
          * 
          * <strong>example:</strong>
          * <p>i-bp1111yup9991890woxq</p>
@@ -102,7 +102,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         public String nextHopId;
 
         /**
-         * <p>The instance ID of the next hop.</p>
+         * <p>The name of the next hop instance.</p>
          * 
          * <strong>example:</strong>
          * <p>testInstance</p>
@@ -111,7 +111,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         public String nextHopName;
 
         /**
-         * <p>The type of the next hop. Valid values:</p>
+         * <p>The next hop type.</p>
          * 
          * <strong>example:</strong>
          * <p>Instance</p>
@@ -152,7 +152,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
 
     public static class DescribeEnsRouteEntryListResponseBodyRouteEntrys extends TeaModel {
         /**
-         * <p>The time when the IP address was created. The time is displayed in UTC.</p>
+         * <p>The creation time in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-16T03:50:05Z</p>
@@ -161,7 +161,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Enter a description for the route.</p>
+         * <p>The description of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>Test</p>
@@ -170,7 +170,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The destination CIDR block of the route.</p>
+         * <p>The destination CIDR block of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>101.0.45.0/24</p>
@@ -179,13 +179,13 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         public String destinationCidrBlock;
 
         /**
-         * <p>The information about the next hop.</p>
+         * <p>The next hop information.</p>
          */
         @NameInMap("NextHops")
         public java.util.List<DescribeEnsRouteEntryListResponseBodyRouteEntrysNextHops> nextHops;
 
         /**
-         * <p>The ID of the route.</p>
+         * <p>The ID of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>rte-2zeksx7h436f5unk349m1</p>
@@ -194,7 +194,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         public String routeEntryId;
 
         /**
-         * <p>The name of the route.</p>
+         * <p>The name of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>test0</p>
@@ -212,7 +212,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         public String routeTableId;
 
         /**
-         * <p>The source CIDR block. This field is used when you configure a route entry in the gateway route table. This field is not supported in the vSwitch route table.</p>
+         * <p>The source CIDR block. This parameter is used when you configure a routing entry in a gateway route table and is not supported in a vSwitch route table.</p>
          * 
          * <strong>example:</strong>
          * <p>10.XXX.XXX.0/24</p>
@@ -221,7 +221,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         public String sourceCidrBlock;
 
         /**
-         * <p>The status of the route entry. Valid values:</p>
+         * <p>The status of the route entry.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -230,7 +230,7 @@ public class DescribeEnsRouteEntryListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the route entry.</p>
+         * <p>The type of the routing entry.</p>
          * 
          * <strong>example:</strong>
          * <p>Custom</p>

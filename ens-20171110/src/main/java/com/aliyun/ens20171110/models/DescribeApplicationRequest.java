@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationRequest extends TeaModel {
     /**
-     * <p>The ID of the application. You can call the ListApplications operation to obtain the application ID.</p>
+     * <p>The ID of the application. You can obtain the ID by calling the ListApplications operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeApplicationRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The version number of the application. Separate multiple version numbers with commas (,). If you want to query data of all versions of applications, specify All for this parameter. By default, only data of applications in the stable versions are queried.</p>
+     * <p>The business service version numbers of the application. Multiple values are supported and separated by commas (,). If you enter All, data of all versions is returned. By default, only data associated with the stable version number is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>v1,v2</p>
@@ -24,18 +24,13 @@ public class DescribeApplicationRequest extends TeaModel {
     public String appVersions;
 
     /**
-     * <p>The region level by which edge resources of the application are collected. The value is of the enumeration type. Valid values:</p>
+     * <p>The regional statistical level of the application edge resources. Valid values:</p>
      * <ul>
-     * <li><p>National: Chinese mainland</p>
-     * </li>
-     * <li><p>Big: area</p>
-     * </li>
-     * <li><p>Middle: province</p>
-     * </li>
-     * <li><p>Small: city</p>
-     * </li>
-     * <li><p>RegionId: edge node</p>
-     * </li>
+     * <li>National: nationwide</li>
+     * <li>Big: region</li>
+     * <li>Middle: province</li>
+     * <li>Small: city</li>
+     * <li>RegionId: edge node</li>
      * </ul>
      * <p>Default value: National.</p>
      * 
@@ -46,7 +41,7 @@ public class DescribeApplicationRequest extends TeaModel {
     public String level;
 
     /**
-     * <p>Specifies whether to return other information about the application, such as statistics on resource instances and pods. The value must be a JSON string. By default, all information is returned.</p>
+     * <p>Specifies whether to return information about statistical resource instances and container pods. The value is a JSON string. By default, all information is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;appInfo\&quot;:true,\&quot;detailStat\&quot;: true, \&quot;appVersionStat\&quot;: true, \&quot;districtStat\&quot;:true ,\&quot;instanceStat\&quot;: true, \&quot;podCountStat\&quot;: true}</p>
@@ -55,7 +50,7 @@ public class DescribeApplicationRequest extends TeaModel {
     public String outDetailStatParams;
 
     /**
-     * <p>The resource filtering condition.</p>
+     * <p>The resource filter conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>[{\&quot;regionCode\&quot;: \&quot;cn-wuxi-telecom_unicom_cmcc-3\&quot;,    \&quot;ispCode\&quot;: \&quot;telecom\&quot;,    \&quot;count\&quot;: 2	},{    \&quot;regionCode\&quot;: \&quot;cn-shanghai-cmcc\&quot;,    \&quot;count\&quot;: 4	}]</p>

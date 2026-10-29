@@ -8,7 +8,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
     public DescribeEnsEipAddressesResponseBodyEipAddresses eipAddresses;
 
     /**
-     * <p>The page number of the query list. Valid values: &gt; 0. Default value: 1.</p>
+     * <p>The page number. Valid values: greater than 0. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeEnsEipAddressesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging queries. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
+     * <p>The number of entries per page in a paging query. Default value: 10. Valid values: <strong>10</strong> to <strong>100</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>

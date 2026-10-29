@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateHaVipRequest extends TeaModel {
     /**
-     * <p>The ID of the HAVIP.</p>
+     * <p>The ID of the HaVip instance to be associated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class AssociateHaVipRequest extends TeaModel {
     public String haVipId;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,12 +25,10 @@ public class AssociateHaVipRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the instance to be associated with the HAVIP. Valid values:</p>
+     * <p>The type of the instance with which you want to associate the HaVip. Valid values:</p>
      * <ul>
-     * <li><p>EnsInstance (default): ENS instance</p>
-     * </li>
-     * <li><p>NetworkInterface: elastic network interface (ENI)</p>
-     * </li>
+     * <li>EnsInstance: ENS instance. This is the default value.</li>
+     * <li>NetworkInterface: elastic network interface controller (NIC). If the instance with which you want to associate the HaVip is an elastic network interface controller (NIC), you must specify this parameter.</li>
      * </ul>
      * 
      * <strong>example:</strong>

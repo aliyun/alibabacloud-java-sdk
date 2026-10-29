@@ -4,12 +4,21 @@ package com.aliyun.ens20171110.models;
 import com.aliyun.tea.*;
 
 public class InstanceOperateResponse extends TeaModel {
+    /**
+     * <p>code</p>
+     */
     @NameInMap("Code")
     public Long code;
 
+    /**
+     * <p>instance id</p>
+     */
     @NameInMap("InstanceId")
     public String instanceId;
 
+    /**
+     * <p>message</p>
+     */
     @NameInMap("Message")
     public String message;
 

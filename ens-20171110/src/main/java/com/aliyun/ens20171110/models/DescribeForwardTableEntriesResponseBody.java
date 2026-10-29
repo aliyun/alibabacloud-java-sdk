@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     /**
-     * <p>Details of DNAT entries.</p>
+     * <p>The details of the queried DNAT entries.</p>
      */
     @NameInMap("ForwardTableEntries")
     public java.util.List<DescribeForwardTableEntriesResponseBodyForwardTableEntries> forwardTableEntries;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -38,7 +38,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,7 +93,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
 
     public static class DescribeForwardTableEntriesResponseBodyForwardTableEntries extends TeaModel {
         /**
-         * <p>The EIP in the DNAT entry. The public IP address is used to access the Internet.</p>
+         * <p>The elastic IP address that provides public network access in the DNAT entry.</p>
          * 
          * <strong>example:</strong>
          * <p>120.XXX.XXX.70</p>
@@ -102,7 +102,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         public String externalIp;
 
         /**
-         * <p>The external port or port range that is used in port forwarding.</p>
+         * <p>The external port or port range used for port forwarding.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -129,7 +129,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         public String forwardEntryName;
 
         /**
-         * <p>The probe port of DNAT.</p>
+         * <p>The health check port of the DNAT entry.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -138,7 +138,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         public String healthCheckPort;
 
         /**
-         * <p>The private IP address of the instance that uses the DNAT entry for Internet communication.</p>
+         * <p>The private IP address of the instance that communicates with the Internet through the DNAT entry.</p>
          * 
          * <strong>example:</strong>
          * <p>10.XXX.XXX.3</p>
@@ -147,7 +147,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         public String internalIp;
 
         /**
-         * <p>The internal port or port range that is used for port forwarding.</p>
+         * <p>The internal port or port range used for port forwarding.</p>
          * 
          * <strong>example:</strong>
          * <p>22</p>
@@ -156,13 +156,13 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         public String internalPort;
 
         /**
-         * <p>The protocol. Valid values:</p>
+         * <p>The protocol type. Valid values:</p>
          * <ul>
-         * <li><p><strong>TCP</strong>: forwards TCP packets.</p>
+         * <li><p><strong>TCP</strong>: Forwards TCP packets.</p>
          * </li>
-         * <li><p><strong>UDP</strong>: forwards UDP packets.</p>
+         * <li><p><strong>UDP</strong>: Forwards UDP packets.</p>
          * </li>
-         * <li><p><strong>Any</strong>: forwards all packets.</p>
+         * <li><p><strong>Any</strong>: Forwards packets of all protocols.</p>
          * </li>
          * </ul>
          * 
@@ -182,7 +182,7 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
-         * <p>The secondary EIP that is used to access the Internet.</p>
+         * <p>The standby elastic IP address that provides public network access.</p>
          * 
          * <strong>example:</strong>
          * <p>101.XXX.XXX.7</p>
@@ -191,16 +191,12 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         public String standbyExternalIp;
 
         /**
-         * <p>The status of the secondary EIP. Valid values:</p>
+         * <p>The status of the standby elastic IP address. Valid values:</p>
          * <ul>
-         * <li><p>Running</p>
-         * </li>
-         * <li><p>Stopping</p>
-         * </li>
-         * <li><p>Stopped</p>
-         * </li>
-         * <li><p>Starting</p>
-         * </li>
+         * <li>Running: Enabled.</li>
+         * <li>Stopping: Disabling.</li>
+         * <li>Stopped: Disabled.</li>
+         * <li>Starting: Enabling.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,12 +208,9 @@ public class DescribeForwardTableEntriesResponseBody extends TeaModel {
         /**
          * <p>The status of the DNAT entry. Valid values:</p>
          * <ul>
-         * <li><p>Pending: The DNAT entry is being created or modified.</p>
-         * </li>
-         * <li><p>Available: The DNAT entry is available.</p>
-         * </li>
-         * <li><p>Deleting: The DNAT entry is being deleted.</p>
-         * </li>
+         * <li>Pending: The entry is being configured, created, or modified.</li>
+         * <li>Available: The entry is available.</li>
+         * <li>Deleting: The entry is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

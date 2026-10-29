@@ -5,16 +5,13 @@ import com.aliyun.tea.*;
 
 public class ImportKeyPairRequest extends TeaModel {
     /**
-     * <p>The name of the key pair. The name must conform to the following naming conventions:</p>
+     * <p>The name of the key pair. The name must meet the following requirements:</p>
      * <ul>
-     * <li><p>The name must be 2 to 128 characters in length.</p>
-     * </li>
-     * <li><p>The name must start with a letter but cannot start with <code>http://</code> or <code>https://</code>.</p>
-     * </li>
-     * <li><p>The name can contain letters, digits, colons (:), underscores (_), and hyphens (-).</p>
-     * </li>
+     * <li>The name must be 2 to 128 characters in length.</li>
+     * <li>The name must start with a letter or a Chinese character, and cannot start with <code>http://</code> or <code>https://</code>.</li>
+     * <li>The name can contain digits, colons (:), underscores (_), and hyphens (-).</li>
      * </ul>
-     * <p>You can specify the name of only one key pair.</p>
+     * <p>Only one key pair name can be specified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +21,7 @@ public class ImportKeyPairRequest extends TeaModel {
     public String keyPairName;
 
     /**
-     * <p>The public key of the key pair. You can specify only one public key.</p>
+     * <p>The public key content of the key pair. Only one public key can be specified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
