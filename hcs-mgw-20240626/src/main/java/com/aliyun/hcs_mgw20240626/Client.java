@@ -221,9 +221,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To create a migration report, you must have the permission on mgw:CreateImportReport.</p>
      * <ul>
-     * <li>If you specify that a migration report is to be generated when you create a migration task, you do not need to call this operation. If you do not specify that a migration report is to be generated when you create a migration task, you can call this operation to create a migration report for an execution with the specified ID.</li>
+     * <li>To create a migration report, you must have the mgw:CreateImportReport permission.</li>
+     * <li>If you specified to create a migration report when creating the task, you do not need to call this operation. Otherwise, you can call this operation to create a migration report for a specified execution ID.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -264,9 +264,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To create a migration report, you must have the permission on mgw:CreateImportReport.</p>
      * <ul>
-     * <li>If you specify that a migration report is to be generated when you create a migration task, you do not need to call this operation. If you do not specify that a migration report is to be generated when you create a migration task, you can call this operation to create a migration report for an execution with the specified ID.</li>
+     * <li>To create a migration report, you must have the mgw:CreateImportReport permission.</li>
+     * <li>If you specified to create a migration report when creating the task, you do not need to call this operation. Otherwise, you can call this operation to create a migration report for a specified execution ID.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -689,10 +689,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To query the information about a migration task, you must have the permission on mgw:GetImportJob.</p>
+     * <ul>
+     * <li>To retrieve a migration task, you must have the mgw:GetImportJob permission.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the details of a migration task.</p>
+     * <p>Retrieves the details of a migration task.</p>
      * 
      * @param request GetJobRequest
      * @param headers map
@@ -729,10 +731,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To query the information about a migration task, you must have the permission on mgw:GetImportJob.</p>
+     * <ul>
+     * <li>To retrieve a migration task, you must have the mgw:GetImportJob permission.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the details of a migration task.</p>
+     * <p>Retrieves the details of a migration task.</p>
      * 
      * @param request GetJobRequest
      * @return GetJobResponse
@@ -745,13 +749,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To query the retry information about a migration task, you must have the permission on mgw:GetImportJobResult.</p>
      * <ul>
-     * <li>If files fail to be migrated during a migration task, a list of files that fail to be migrated is generated. You can call this operation to query this list. You can create a data address based on this list and create a subtask. This way, you can migrate these files again.</li>
+     * <li>To retrieve task retry information, you must have the mgw:GetImportJobResult permission.</li>
+     * <li>If a task has failed files, the migration service generates a list of these failed files. Call this operation to retrieve the details of the list. You can then create a new data address and a subtask to remigrate the failed files.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the list of files that fail to be migrated when files fail to be migrated during a migration task.</p>
+     * <p>Retrieves the retry information for failed files in a migration task.</p>
      * 
      * @param request GetJobResultRequest
      * @param headers map
@@ -788,13 +792,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To query the retry information about a migration task, you must have the permission on mgw:GetImportJobResult.</p>
      * <ul>
-     * <li>If files fail to be migrated during a migration task, a list of files that fail to be migrated is generated. You can call this operation to query this list. You can create a data address based on this list and create a subtask. This way, you can migrate these files again.</li>
+     * <li>To retrieve task retry information, you must have the mgw:GetImportJobResult permission.</li>
+     * <li>If a task has failed files, the migration service generates a list of these failed files. Call this operation to retrieve the details of the list. You can then create a new data address and a subtask to remigrate the failed files.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Obtains the list of files that fail to be migrated when files fail to be migrated during a migration task.</p>
+     * <p>Retrieves the retry information for failed files in a migration task.</p>
      * 
      * @param request GetJobResultRequest
      * @return GetJobResultResponse
@@ -1043,10 +1047,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To query a list of migration tasks, you must have the permission on mgw:ListImportJob.</p>
+     * <ul>
+     * <li>To list migration tasks, you must have the mgw:ListImportJob permission.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the migration tasks created by a user in the specific region.</p>
+     * <p>Lists the migration tasks in the region.</p>
      * 
      * @param request ListJobRequest
      * @param headers map
@@ -1095,10 +1101,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>  To query a list of migration tasks, you must have the permission on mgw:ListImportJob.</p>
+     * <ul>
+     * <li>To list migration tasks, you must have the mgw:ListImportJob permission.</li>
+     * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Lists the migration tasks created by a user in the specific region.</p>
+     * <p>Lists the migration tasks in the region.</p>
      * 
      * @param request ListJobRequest
      * @return ListJobResponse

@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListJobRequest extends TeaModel {
     /**
-     * <p>Specifies whether to return subtasks.\
-     * Valid values: true and false.</p>
+     * <p>Specifies whether to return subtasks.<br>Valid values: true, false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -15,9 +14,7 @@ public class ListJobRequest extends TeaModel {
     public Boolean all;
 
     /**
-     * <p>Specifies the number of migration tasks to be returned.\
-     * Valid values: 0 - 1000 (excluding 0).\
-     * Default value: 1000.</p>
+     * <p>Specifies the number of migration tasks to return.<br>Valid values: 1 to 1000.<br>Default value: 1000.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -26,8 +23,7 @@ public class ListJobRequest extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The marker after which the migration tasks are listed.\
-     * By default, this parameter is left empty.</p>
+     * <p>Specifies the marker after which migration tasks are listed.<br>Default value: None.</p>
      * 
      * <strong>example:</strong>
      * <p>test_marker</p>
@@ -36,7 +32,7 @@ public class ListJobRequest extends TeaModel {
     public String marker;
 
     /**
-     * <p>The name of the parent task. If this parameter is specified, all subtasks of the parent task are returned.</p>
+     * <p>The name of the parent task. If you specify this parameter, all subtasks of the parent task are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>test_parent_job_name</p>

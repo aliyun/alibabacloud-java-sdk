@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListJobResp extends TeaModel {
     /**
-     * <p>The queried tasks.</p>
+     * <p>The task detail list.</p>
      */
     @NameInMap("ImportJob")
     public java.util.List<GetJobResp> importJob;
 
     /**
-     * <p>The position from which the next list operation starts.</p>
+     * <p>The start point for the next task listing.</p>
      * 
      * <strong>example:</strong>
      * <p>test_nex_marker</p>
@@ -20,7 +20,7 @@ public class ListJobResp extends TeaModel {
     public String nextMarker;
 
     /**
-     * <p>Indicates whether the queried results are truncated.</p>
+     * <p>Indicates whether the result is truncated.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TimeFilter extends TeaModel {
     /**
-     * <p>The time when the migration task ended.</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2006-12-31T59:59:59Z</p>
@@ -14,7 +14,7 @@ public class TimeFilter extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The time when the migration task started.</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2006-01-01T00:00:00Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateReportRequest extends TeaModel {
     /**
-     * <p>The details for creating the migration report.</p>
+     * <p>The details for creating a migration report.</p>
      */
     @NameInMap("CreateReport")
     public CreateReportInfo createReport;

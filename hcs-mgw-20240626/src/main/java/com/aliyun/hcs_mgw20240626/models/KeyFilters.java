@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class KeyFilters extends TeaModel {
     /**
-     * <p>The excluded file name.</p>
+     * <p>The excluded file names.</p>
      */
     @NameInMap("Excludes")
     public KeyFilterItem excludes;
 
     /**
-     * <p>The included file name.</p>
+     * <p>The included file names.</p>
      */
     @NameInMap("Includes")
     public KeyFilterItem includes;

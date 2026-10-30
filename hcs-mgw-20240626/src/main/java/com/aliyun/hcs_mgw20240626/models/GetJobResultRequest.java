@@ -9,7 +9,7 @@ public class GetJobResultRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>2</p>
+     * <p>1</p>
      */
     @NameInMap("runtimeId")
     public Integer runtimeId;

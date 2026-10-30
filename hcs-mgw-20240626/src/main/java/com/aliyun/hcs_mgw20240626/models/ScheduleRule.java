@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ScheduleRule extends TeaModel {
     /**
-     * <p>The maximum number of times that the migration task is automatically scheduled. Each time the migration task is run, the execution ID increases by one until the task is run the specified number of times. The task is automatically scheduled based on the specified start time and pause time. The task is no longer automatically scheduled after the task is run the specified number of times. However, you can still manually start the task.</p>
+     * <p>The maximum number of automatic scheduling rounds. Within this limit, a task execution ID is automatically scheduled based on the start and pause times. One round consists of a complete task execution from start to finish. If the limit is exceeded, automatic scheduling stops, but the task can still be executed manually.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ScheduleRule extends TeaModel {
     public Long maxScheduleCount;
 
     /**
-     * <p>The time when the migration task started. You can use a CRON expression to specify the time. The interval at which the migration task is run is at least 1 hour.</p>
+     * <p>The start time specified by a cron expression. The interval must be at least 1 hour.</p>
      * 
      * <strong>example:</strong>
      * <p>0 0 * * * ?</p>
@@ -23,7 +23,7 @@ public class ScheduleRule extends TeaModel {
     public String startCronExpression;
 
     /**
-     * <p>The time when the migration task paused. You can use a CRON expression to specify the time. The interval at which the migration task is run is at least 1 hour.</p>
+     * <p>The pause time specified by a cron expression. The interval must be at least 1 hour.</p>
      * 
      * <strong>example:</strong>
      * <p>0 0 * * * ?</p>

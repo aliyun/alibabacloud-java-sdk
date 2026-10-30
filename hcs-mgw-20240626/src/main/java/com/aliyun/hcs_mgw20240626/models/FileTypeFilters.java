@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class FileTypeFilters extends TeaModel {
     /**
-     * <p>Specifies whether to filter out files in directories.</p>
+     * <p>The directory files to filter.</p>
      * 
      * <strong>example:</strong>
-     * <p>fasle</p>
+     * <p>false</p>
      */
     @NameInMap("ExcludeDir")
     public Boolean excludeDir;
 
     /**
-     * <p>Specifies whether to filter out symbolic links.</p>
+     * <p>The symbolic links to filter.</p>
      * 
      * <strong>example:</strong>
-     * <p>fasle</p>
+     * <p>false</p>
      */
     @NameInMap("ExcludeSymlink")
     public Boolean excludeSymlink;
