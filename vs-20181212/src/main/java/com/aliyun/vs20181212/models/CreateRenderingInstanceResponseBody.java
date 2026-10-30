@@ -14,6 +14,12 @@ public class CreateRenderingInstanceResponseBody extends TeaModel {
     public String renderingInstanceId;
 
     /**
+     * <p>The instance ID list of the cloud application service.</p>
+     */
+    @NameInMap("RenderingInstanceIds")
+    public java.util.List<String> renderingInstanceIds;
+
+    /**
      * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
@@ -33,6 +39,14 @@ public class CreateRenderingInstanceResponseBody extends TeaModel {
     }
     public String getRenderingInstanceId() {
         return this.renderingInstanceId;
+    }
+
+    public CreateRenderingInstanceResponseBody setRenderingInstanceIds(java.util.List<String> renderingInstanceIds) {
+        this.renderingInstanceIds = renderingInstanceIds;
+        return this;
+    }
+    public java.util.List<String> getRenderingInstanceIds() {
+        return this.renderingInstanceIds;
     }
 
     public CreateRenderingInstanceResponseBody setRequestId(String requestId) {
