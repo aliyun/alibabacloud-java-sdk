@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGpuClusterListAlarmRecordRequest extends TeaModel {
     /**
-     * <p>Query by a specific cluster, such as &quot;cluster1&quot;. To query multiple clusters, separate them with commas: &quot;cluster1,cluster2,cluster3&quot;.</p>
+     * <p>The cluster to query. Specify a cluster, such as &quot;cluster1&quot;. To query multiple clusters, separate them with commas, such as &quot;cluster1,cluster2,cluster3&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;cluster1&quot;</p>
@@ -14,7 +14,7 @@ public class GetGpuClusterListAlarmRecordRequest extends TeaModel {
     public String alarmCluster;
 
     /**
-     * <p>Filter anomalies by instance ID or container.</p>
+     * <p>The instance ID or container used to filter anomalies.</p>
      * 
      * <strong>example:</strong>
      * <p>instance id</p>
@@ -23,7 +23,7 @@ public class GetGpuClusterListAlarmRecordRequest extends TeaModel {
     public String alarmExtInfo;
 
     /**
-     * <p>Query by a specific task, such as &quot;task1&quot;. To query multiple tasks, separate them with commas: &quot;task1,task2,task3&quot;.</p>
+     * <p>The task to query. Specify a task, such as &quot;task1&quot;. To query multiple tasks, separate them with commas, such as &quot;task1,task2,task3&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>task id</p>
@@ -32,7 +32,7 @@ public class GetGpuClusterListAlarmRecordRequest extends TeaModel {
     public String alarmTask;
 
     /**
-     * <p>Query by a specific point in time, such as &quot;2025-08-22 18:16:25&quot;. Query by a time range using the &quot;start,end&quot; format, such as &quot;2025-08-22 18:16:25,2025-08-23 18:16:25&quot;.</p>
+     * <p>The specific time or time range to query. Specify a specific time, such as &quot;2025-08-22 18:16:25&quot;. To specify a time range, use the &quot;start,end&quot; format, such as &quot;2025-08-22 18:16:25,2025-08-23 18:16:25&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;2025-08-22 18:16:25,2025-08-23 18:16:25&quot;</p>
@@ -41,7 +41,7 @@ public class GetGpuClusterListAlarmRecordRequest extends TeaModel {
     public String alarmTime;
 
     /**
-     * <p>Filter by anomaly type, such as GPU memory access out-of-bounds or task hang.</p>
+     * <p>The anomaly type used to filter results, such as GPU memory access out of bounds or task hang.</p>
      * 
      * <strong>example:</strong>
      * <p>cuda error</p>
@@ -70,7 +70,7 @@ public class GetGpuClusterListAlarmRecordRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Filter by task status, such as blocking, running, exited, or restart.</p>
+     * <p>The task status used to filter results. Valid values: blocking, running, exited, and restart.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>

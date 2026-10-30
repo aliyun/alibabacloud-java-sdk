@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAgentConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the component associated with the configuration to delete.</p>
+     * <p>The ID of the component associated with the configuration to be deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>

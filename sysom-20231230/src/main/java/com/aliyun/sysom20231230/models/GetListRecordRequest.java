@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetListRecordRequest extends TeaModel {
     /**
-     * <p>The ID of the analysis record to query the status for.</p>
+     * <p>The ID of the specified analysis record.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxxxxx-f37b-478d-87f6-2259ed8766bf</p>

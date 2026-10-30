@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGpuClusterTopologyRequest extends TeaModel {
     /**
-     * <p>Used when viewing collective communication topology. Specifies the topology relationship for a given channel ID within a communication group, such as the inter-rank communication topology (tree or ring topology). Must be used together with communication_id and topo_type.</p>
-     * <p>⚠️ Use the channel filter parameter of the GetGpuClusterArgsOptions operation to retrieve the list of channel_id values for a specified communication_id.</p>
+     * <p>The ID of the channel. Used to view the collective communication topology and the topology relationships of a specified channel ID under a specified communication group, such as the communication, tree, or ring topology among ranks within a communication group. This parameter must be used together with communication_id and topo_type. You can call the GetGpuClusterArgsOptions operation with the channel filter parameter to obtain the list of channel_id values under a specified communication_id.</p>
      * 
      * <strong>example:</strong>
      * <p>communicationId =0x412523235123
@@ -17,7 +16,7 @@ public class GetGpuClusterTopologyRequest extends TeaModel {
     public String channelId;
 
     /**
-     * <p>The cluster name. Select a cluster from the cluster list returned by the GetListGpuCluster operation.</p>
+     * <p>The name of the cluster. You can select a cluster from the cluster list obtained by calling the GetListGpuCluster operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -27,8 +26,7 @@ public class GetGpuClusterTopologyRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>Used when viewing collective communication topology. Specifies the topology relationship for a given communication group ID, such as the inter-rank communication topology (tree or ring topology) within a communication group. Must be used together with channel_id and topo_type.</p>
-     * <p>⚠️ Use the communication filter type of the GetGpuClusterArgsOptions operation to retrieve the list of communication_id values.</p>
+     * <p>The ID of the communication group. Used to view the collective communication topology and the topology relationships of a specified communication group ID, such as the communication, tree, or ring topology among ranks within a communication group. This parameter must be used together with channel_id and topo_type. You can call the GetGpuClusterArgsOptions operation with the communication filter type to obtain the list of communication_id values.</p>
      * 
      * <strong>example:</strong>
      * <p>communicationId =0x412523235123
@@ -39,7 +37,7 @@ public class GetGpuClusterTopologyRequest extends TeaModel {
     public String communicationId;
 
     /**
-     * <p>The GPU topology information for the specified list of instances.</p>
+     * <p>The list of instances for which to query GPU topology information.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;instance1&quot;, &quot;instance2&quot;,&quot;instance3&quot;]</p>
@@ -48,7 +46,7 @@ public class GetGpuClusterTopologyRequest extends TeaModel {
     public Object instanceIdList;
 
     /**
-     * <p>The GPU topology information for the specified list of pods.</p>
+     * <p>The list of pods for which to query GPU topology information.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;pod1&quot;, &quot;pod2&quot;,&quot;pod3&quot;]</p>
@@ -57,7 +55,7 @@ public class GetGpuClusterTopologyRequest extends TeaModel {
     public Object podList;
 
     /**
-     * <p>The timestamp for the query. Defaults to the current time. Must be a second-level timestamp.</p>
+     * <p>The query timestamp. Default value: the current time. The timestamp must be accurate to seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1709740800</p>
@@ -66,7 +64,7 @@ public class GetGpuClusterTopologyRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The GPU topology information for the specified list of nodes.</p>
+     * <p>The list of tasks for which to query GPU topology information.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;task1&quot;, &quot;task2&quot;]</p>
@@ -75,8 +73,7 @@ public class GetGpuClusterTopologyRequest extends TeaModel {
     public Object taskIdList;
 
     /**
-     * <p>Used when viewing collective communication topology. Specifies the topology relationship for a given topology type within a communication group and channel, such as the inter-rank communication topology (tree or ring topology). Must be used together with communication_id and channel_id.</p>
-     * <p>⚠️ Use the topoType filter parameter of the GetGpuClusterArgsOptions operation to retrieve the list of topo_type values for a specified communication_id and channel_id.</p>
+     * <p>The topology type. Used to view the collective communication topology and the topology relationships of a specified topology type under a specified communication group and channel ID, such as the communication, tree, or ring topology among ranks within a communication group. This parameter must be used together with communication_id and channel_id. You can call the GetGpuClusterArgsOptions operation with the topoType filter parameter to obtain the list of topo_type values under a specified communication_id and channel_id.</p>
      * 
      * <strong>example:</strong>
      * <p>communicationId =0x412523235123

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAgentConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the component whose configuration you want to update.</p>
+     * <p>The ID of the component whose configuration is to be updated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

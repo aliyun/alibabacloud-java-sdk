@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGpuClusterListAlarmRecordResponseBody extends TeaModel {
     /**
-     * <p>The value is &quot;Success&quot; or &quot;Sysom.ServerError&quot;.</p>
+     * <p>The response code. Valid values: Success and Sysom.ServerError.</p>
      * 
      * <strong>example:</strong>
      * <p>Success or Sysom.ServerError</p>
@@ -20,7 +20,7 @@ public class GetGpuClusterListAlarmRecordResponseBody extends TeaModel {
     public java.util.List<GetGpuClusterListAlarmRecordResponseBodyData> data;
 
     /**
-     * <p>When code is not &quot;Success&quot;, message contains the error information.</p>
+     * <p>The error message returned when the code is not Success.</p>
      * 
      * <strong>example:</strong>
      * <p>server error</p>
@@ -93,7 +93,7 @@ public class GetGpuClusterListAlarmRecordResponseBody extends TeaModel {
 
     public static class GetGpuClusterListAlarmRecordResponseBodyData extends TeaModel {
         /**
-         * <p>The cluster where the alert was triggered.</p>
+         * <p>The cluster where the alert is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>cluster1</p>
@@ -102,7 +102,7 @@ public class GetGpuClusterListAlarmRecordResponseBody extends TeaModel {
         public String alarmCluster;
 
         /**
-         * <p>The additional information about the alert.</p>
+         * <p>The extended information of the alert.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -124,7 +124,7 @@ public class GetGpuClusterListAlarmRecordResponseBody extends TeaModel {
         public String alarmId;
 
         /**
-         * <p>The event log associated with the alert.</p>
+         * <p>The alerting event log.</p>
          * 
          * <strong>example:</strong>
          * <p>cuda OOM：xxxxx</p>
@@ -142,7 +142,7 @@ public class GetGpuClusterListAlarmRecordResponseBody extends TeaModel {
         public String alarmTask;
 
         /**
-         * <p>The date and time when the alert was triggered.</p>
+         * <p>The date and time when the alert is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-22 18:16:25</p>
@@ -255,7 +255,7 @@ public class GetGpuClusterListAlarmRecordResponseBody extends TeaModel {
         public Object alarmTopology;
 
         /**
-         * <p>The Alarm Metric for alerting.</p>
+         * <p>The alerting type.</p>
          * 
          * <strong>example:</strong>
          * <p>cuda OOM</p>
@@ -264,7 +264,7 @@ public class GetGpuClusterListAlarmRecordResponseBody extends TeaModel {
         public String alarmType;
 
         /**
-         * <p>The task status.</p>
+         * <p>The status of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>running、blocking、restart、exited、failed</p>

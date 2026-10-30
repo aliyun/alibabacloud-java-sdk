@@ -412,7 +412,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an alert policy for push notifications.</p>
+     * <p>Creates an alert push policy.</p>
      * 
      * @param request CreateAlertStrategyRequest
      * @param headers map
@@ -458,7 +458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates an alert policy for push notifications.</p>
+     * <p>Creates an alert push policy.</p>
      * 
      * @param request CreateAlertStrategyRequest
      * @return CreateAlertStrategyResponse
@@ -536,6 +536,69 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.createClusterVpcEndpointConnectionWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>本接口仅创建会话，不发送消息，也不触发 Agent 执行。</li>
+     * <li>创建成功后，使用返回的 sessionId 调用 GenerateCopilotStreamResponse 发送消息。</li>
+     * <li>会话 ID 由服务端生成，不支持调用方指定。</li>
+     * <li>每次成功调用均创建一个独立会话。本接口不提供客户端幂等参数，重复调用可能创建多个会话。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>创建 Copilot 会话</p>
+     * 
+     * @param request CreateCopilotSessionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateCopilotSessionResponse
+     */
+    public CreateCopilotSessionResponse createCopilotSessionWithOptions(CreateCopilotSessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.name)) {
+            body.put("name", request.name);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateCopilotSession"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/copilot/sessions"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateCopilotSessionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>本接口仅创建会话，不发送消息，也不触发 Agent 执行。</li>
+     * <li>创建成功后，使用返回的 sessionId 调用 GenerateCopilotStreamResponse 发送消息。</li>
+     * <li>会话 ID 由服务端生成，不支持调用方指定。</li>
+     * <li>每次成功调用均创建一个独立会话。本接口不提供客户端幂等参数，重复调用可能创建多个会话。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>创建 Copilot 会话</p>
+     * 
+     * @param request CreateCopilotSessionRequest
+     * @return CreateCopilotSessionResponse
+     */
+    public CreateCopilotSessionResponse createCopilotSession(CreateCopilotSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.createCopilotSessionWithOptions(request, headers, runtime);
     }
 
     /**
@@ -807,6 +870,75 @@ public class Client extends com.aliyun.teaopenapi.Client {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         java.util.Map<String, String> headers = new java.util.HashMap<>();
         return this.deleteAlertStrategyWithOptions(request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>仅支持删除当前用户的会话。</li>
+     * <li>会话存在尚未结束的执行时，不允许删除。请先通过 GenerateCopilotStreamResponse 接口发送 action=stop，确认执行结束后再删除。</li>
+     * <li>删除后，无法再通过会话查询接口获取该会话及其历史记录。</li>
+     * <li>会话不存在或不属于当前用户时返回错误。重复删除同一个会话不保证成功。</li>
+     * <li>删除会话不会撤销已经执行的操作，也不会删除产生该会话的定时任务。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除指定的 Copilot 会话</p>
+     * 
+     * @param request DeleteCopilotSessionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteCopilotSessionResponse
+     */
+    public DeleteCopilotSessionResponse deleteCopilotSessionWithOptions(DeleteCopilotSessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.agentId)) {
+            query.put("agentId", request.agentId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sessionId)) {
+            query.put("sessionId", request.sessionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers),
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteCopilotSession"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/copilot/delete-session"),
+            new TeaPair("method", "DELETE"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteCopilotSessionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>仅支持删除当前用户的会话。</li>
+     * <li>会话存在尚未结束的执行时，不允许删除。请先通过 GenerateCopilotStreamResponse 接口发送 action=stop，确认执行结束后再删除。</li>
+     * <li>删除后，无法再通过会话查询接口获取该会话及其历史记录。</li>
+     * <li>会话不存在或不属于当前用户时返回错误。重复删除同一个会话不保证成功。</li>
+     * <li>删除会话不会撤销已经执行的操作，也不会删除产生该会话的定时任务。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>删除指定的 Copilot 会话</p>
+     * 
+     * @param request DeleteCopilotSessionRequest
+     * @return DeleteCopilotSessionResponse
+     */
+    public DeleteCopilotSessionResponse deleteCopilotSession(DeleteCopilotSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.deleteCopilotSessionWithOptions(request, headers, runtime);
     }
 
     /**
@@ -1165,7 +1297,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves component configurations.</p>
+     * <p>Retrieves the component configuration.</p>
      * 
      * @param request GetAgentConfigRequest
      * @param headers map
@@ -1219,7 +1351,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves component configurations.</p>
+     * <p>Retrieves the component configuration.</p>
      * 
      * @param request GetAgentConfigRequest
      * @return GetAgentConfigResponse
@@ -1232,7 +1364,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the execution status of an Agent installation task.</p>
+     * <p>Retrieves the execution status of an agent installation task.</p>
      * 
      * @param request GetAgentTaskRequest
      * @param headers map
@@ -1266,7 +1398,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the execution status of an Agent installation task.</p>
+     * <p>Retrieves the execution status of an agent installation task.</p>
      * 
      * @param request GetAgentTaskRequest
      * @return GetAgentTaskResponse
@@ -1279,10 +1411,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. Check the <code>data.status</code> field in the response to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
+     * <p>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response to determine the status. If <code>data.status</code> is <code>Success</code>, the diagnosis is successful, and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves diagnostic results.</p>
+     * <p>Retrieves the diagnostic results.</p>
      * 
      * @param request GetAifgResultRequest
      * @param headers map
@@ -1316,10 +1448,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. Check the <code>data.status</code> field in the response to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic results from <code>data.result</code>.</p>
+     * <p>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response to determine the status. If <code>data.status</code> is <code>Success</code>, the diagnosis is successful, and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves diagnostic results.</p>
+     * <p>Retrieves the diagnostic results.</p>
      * 
      * @param request GetAifgResultRequest
      * @return GetAifgResultResponse
@@ -1332,10 +1464,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response data to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * <p>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response to determine the status. If <code>data.status</code> is <code>Success</code>, the diagnosis is successful, and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the URL link of a diagnostic result.</p>
+     * <p>Retrieves the URL for diagnostic results.</p>
      * 
      * @param request GetAifgUrlRequest
      * @param headers map
@@ -1369,10 +1501,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The diagnostic process is asynchronous. When you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response data to determine the current state. When <code>data.status == Success</code>, the diagnosis is complete and you can read the diagnostic result from <code>data.result</code>.</p>
+     * <p>The diagnostic process is asynchronous. Therefore, when you call this operation, the diagnosis may still be in progress. You can check the <code>data.status</code> field in the response to determine the status. If <code>data.status</code> is <code>Success</code>, the diagnosis is successful, and you can read the diagnostic results from <code>data.result</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the URL link of a diagnostic result.</p>
+     * <p>Retrieves the URL for diagnostic results.</p>
      * 
      * @param request GetAifgUrlRequest
      * @return GetAifgUrlResponse
@@ -1432,7 +1564,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves an alert rule of a user by policy ID.</p>
+     * <p>Retrieves an alert policy for a user based on the policy ID.</p>
      * 
      * @param request GetAlertStrategyRequest
      * @param headers map
@@ -1466,7 +1598,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves an alert rule of a user by policy ID.</p>
+     * <p>Retrieves an alert policy for a user based on the policy ID.</p>
      * 
      * @param request GetAlertStrategyRequest
      * @return GetAlertStrategyResponse
@@ -1589,6 +1721,65 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
+     * <ul>
+     * <li>仅支持查询当前用户的会话，一次查询一个会话。</li>
+     * <li>返回会话详情及执行摘要，不返回聊天内容。查询历史消息和事件，请调用 ListCopilotSessionMessages。</li>
+     * <li>会话的 status 表示是否归档。判断是否正在执行，应读取 activeTurn。</li>
+     * <li>lastTurn 表示最近一次执行，不一定已经结束；执行过程中，activeTurn 和 lastTurn 可以指向同一轮执行。</li>
+     * <li>会话不存在、已删除或不属于当前用户时返回错误。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>获取 Copilot 会话与执行状态</p>
+     * 
+     * @param request GetCopilotSessionRequest
+     * @param headers map
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetCopilotSessionResponse
+     */
+    public GetCopilotSessionResponse getCopilotSessionWithOptions(String sessionId, GetCopilotSessionRequest request, java.util.Map<String, String> headers, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("headers", headers)
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetCopilotSession"),
+            new TeaPair("version", "2023-12-30"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/api/v1/copilot/sessions/" + com.aliyun.openapiutil.Client.getEncodeParam(sessionId) + ""),
+            new TeaPair("method", "GET"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "ROA"),
+            new TeaPair("reqBodyType", "json"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetCopilotSessionResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <ul>
+     * <li>仅支持查询当前用户的会话，一次查询一个会话。</li>
+     * <li>返回会话详情及执行摘要，不返回聊天内容。查询历史消息和事件，请调用 ListCopilotSessionMessages。</li>
+     * <li>会话的 status 表示是否归档。判断是否正在执行，应读取 activeTurn。</li>
+     * <li>lastTurn 表示最近一次执行，不一定已经结束；执行过程中，activeTurn 和 lastTurn 可以指向同一轮执行。</li>
+     * <li>会话不存在、已删除或不属于当前用户时返回错误。</li>
+     * </ul>
+     * 
+     * <b>summary</b> : 
+     * <p>获取 Copilot 会话与执行状态</p>
+     * 
+     * @param request GetCopilotSessionRequest
+     * @return GetCopilotSessionResponse
+     */
+    public GetCopilotSessionResponse getCopilotSession(String sessionId, GetCopilotSessionRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        java.util.Map<String, String> headers = new java.util.HashMap<>();
+        return this.getCopilotSessionWithOptions(sessionId, request, headers, runtime);
+    }
+
+    /**
+     * <b>description</b> :
      * <p>Queries published hotfixes in batches by CVE ID. You can filter the results by full kernel version.</p>
      * 
      * <b>summary</b> : 
@@ -1699,14 +1890,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After installing the component for the target ACK cluster:</p>
+     * <p>After you install the component for the target ACK cluster:</p>
      * <ol>
-     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances are included in the first batch.</li>
-     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component without user intervention.</li>
+     * <li>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the GPU cluster parameter list.</p>
+     * <p>Retrieves the list of parameters for a GPU cluster.</p>
      * 
      * @param request GetGpuClusterArgsOptionsRequest
      * @param headers map
@@ -1744,14 +1935,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After installing the component for the target ACK cluster:</p>
+     * <p>After you install the component for the target ACK cluster:</p>
      * <ol>
-     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 instances are included in the first batch.</li>
-     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component without user intervention.</li>
+     * <li>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the GPU cluster parameter list.</p>
+     * <p>Retrieves the list of parameters for a GPU cluster.</p>
      * 
      * @param request GetGpuClusterArgsOptionsRequest
      * @return GetGpuClusterArgsOptionsResponse
@@ -1764,10 +1955,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After installing the component on the target ACK cluster:</p>
+     * <p>After you install the component for the target ACK cluster:</p>
      * <ol>
-     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
-     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without user intervention.</li>
+     * <li>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -1833,10 +2024,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After installing the component on the target ACK cluster:</p>
+     * <p>After you install the component for the target ACK cluster:</p>
      * <ol>
-     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
-     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without user intervention.</li>
+     * <li>When the cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</li>
      * </ol>
      * 
      * <b>summary</b> : 
@@ -1853,14 +2044,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you install the component on the target ACK cluster:</p>
+     * <p>After you install the component for the target ACK cluster:</p>
      * <ol>
-     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
-     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without requiring manual intervention.</li>
+     * <li>When the cluster is initially managed, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the GPU cluster topology.</p>
+     * <p>Retrieves the topology of a GPU cluster.</p>
      * 
      * @param request GetGpuClusterTopologyRequest
      * @param headers map
@@ -1922,14 +2113,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you install the component on the target ACK cluster:</p>
+     * <p>After you install the component for the target ACK cluster:</p>
      * <ol>
-     * <li>When a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only the first 50 nodes are processed in the first batch.</li>
-     * <li>The operating system console periodically checks the scaling status of managed clusters. When a new ECS instance is added to a cluster, the console automatically installs the component on it without requiring manual intervention.</li>
+     * <li>When the cluster is initially managed, the component is installed on all ECS instances currently in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</li>
+     * <li>The operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on the instance without user intervention.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the GPU cluster topology.</p>
+     * <p>Retrieves the topology of a GPU cluster.</p>
      * 
      * @param request GetGpuClusterTopologyRequest
      * @return GetGpuClusterTopologyResponse
@@ -2130,7 +2321,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The hotfix task process is asynchronous. When you call this operation, the task may still be running. You can check the <code>data.status</code> field in the response to determine the task status. If <code>data.status</code> is <code>Success</code>, the task succeeded, and you can obtain the task result from the <code>data.result</code> field.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status of an asynchronous task for CVE hotfixes on a node.</p>
+     * <p>Queries the status of an asynchronous CVE hotfix task.</p>
      * 
      * @param request GetHotfixTaskRequest
      * @param headers map
@@ -2167,7 +2358,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>The hotfix task process is asynchronous. When you call this operation, the task may still be running. You can check the <code>data.status</code> field in the response to determine the task status. If <code>data.status</code> is <code>Success</code>, the task succeeded, and you can obtain the task result from the <code>data.result</code> field.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the status of an asynchronous task for CVE hotfixes on a node.</p>
+     * <p>Queries the status of an asynchronous CVE hotfix task.</p>
      * 
      * @param request GetHotfixTaskRequest
      * @return GetHotfixTaskResponse
@@ -2609,14 +2800,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After installing the component for the target ACK cluster:</p>
+     * <p>After you install components for the target ACK cluster:</p>
      * <ol>
-     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</li>
-     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</li>
+     * <li>When the cluster is managed for the first time, the system installs components on all Elastic Compute Service (ECS) instances in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</li>
+     * <li>The Operating System console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the Operating System console automatically installs components without user intervention.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of GPU clusters.</p>
+     * <p>Queries the list of GPU clusters.</p>
      * 
      * @param request GetListGpuClusterRequest
      * @param headers map
@@ -2654,14 +2845,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After installing the component for the target ACK cluster:</p>
+     * <p>After you install components for the target ACK cluster:</p>
      * <ol>
-     * <li>First, when a cluster is managed for the first time, the component is installed on all ECS instances currently in the cluster. If the cluster contains more than 50 nodes, only 50 instances are included in the first batch.</li>
-     * <li>Then, the operating system console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the operating system console automatically installs the component on it without user intervention.</li>
+     * <li>When the cluster is managed for the first time, the system installs components on all Elastic Compute Service (ECS) instances in the cluster. If the cluster has more than 50 nodes, only 50 nodes are installed in the first batch.</li>
+     * <li>The Operating System console periodically checks the scaling status of the managed cluster. When a new ECS instance is added to the cluster, the Operating System console automatically installs components without user intervention.</li>
      * </ol>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of GPU clusters.</p>
+     * <p>Queries the list of GPU clusters.</p>
      * 
      * @param request GetListGpuClusterRequest
      * @return GetListGpuClusterResponse
@@ -3308,10 +3499,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation asynchronously installs the agent. After the operation is called, a task ID is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * <p>Calling this operation to install hotfixes is asynchronous. After the operation is called, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Installs CVE hotfixes asynchronously on specified instances.</p>
+     * <p>Installs CVE hotfixes asynchronously on the specified instances.</p>
      * 
      * @param request InstallHotfixRequest
      * @param headers map
@@ -3349,10 +3540,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation asynchronously installs the agent. After the operation is called, a task ID is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * <p>Calling this operation to install hotfixes is asynchronous. After the operation is called, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Installs CVE hotfixes asynchronously on specified instances.</p>
+     * <p>Installs CVE hotfixes asynchronously on the specified instances.</p>
      * 
      * @param request InstallHotfixRequest
      * @return InstallHotfixResponse
@@ -3702,10 +3893,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of regions where the current user has machines managed by SysOM. If the user has ECS instances in a region but those instances are not managed by SysOM, that region does not appear in the results.</p>
+     * <p>This operation retrieves the list of regions where the current user has machines managed by SysOM. If a user has ECS instances in a region but they are not managed by SysOM, the region will not appear in the API response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of diagnostic tasks.</p>
+     * <p>Retrieves the list of diagnostic tasks.</p>
      * 
      * @param request ListAifgJobsRequest
      * @param headers map
@@ -3759,10 +3950,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of regions where the current user has machines managed by SysOM. If the user has ECS instances in a region but those instances are not managed by SysOM, that region does not appear in the results.</p>
+     * <p>This operation retrieves the list of regions where the current user has machines managed by SysOM. If a user has ECS instances in a region but they are not managed by SysOM, the region will not appear in the API response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of diagnostic tasks.</p>
+     * <p>Retrieves the list of diagnostic tasks.</p>
      * 
      * @param request ListAifgJobsRequest
      * @return ListAifgJobsResponse
@@ -3875,7 +4066,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves all alert policies configured by the user for push notifications.</p>
+     * <p>Retrieves all alert notification policies for the user.</p>
      * 
      * @param request ListAlertStrategiesRequest
      * @param headers map
@@ -3925,7 +4116,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves all alert policies configured by the user for push notifications.</p>
+     * <p>Retrieves all alert notification policies for the user.</p>
      * 
      * @param request ListAlertStrategiesRequest
      * @return ListAlertStrategiesResponse
@@ -4818,10 +5009,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of regions where the current user has instances managed by SysOM. If a user has ECS instances in a region but none of them are managed by SysOM, that region is not included in the response.</p>
+     * <p>This operation retrieves the list of regions where the current user has instances managed by SysOM. If you have ECS instances in a region but they are not managed by SysOM, the region is not included in the response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists all regions that contain managed instances.</p>
+     * <p>Lists all regions with managed instances.</p>
      * 
      * @param headers map
      * @param runtime runtime options for this request RuntimeOptions
@@ -4847,10 +5038,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation retrieves the list of regions where the current user has instances managed by SysOM. If a user has ECS instances in a region but none of them are managed by SysOM, that region is not included in the response.</p>
+     * <p>This operation retrieves the list of regions where the current user has instances managed by SysOM. If you have ECS instances in a region but they are not managed by SysOM, the region is not included in the response.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists all regions that contain managed instances.</p>
+     * <p>Lists all regions with managed instances.</p>
      * @return ListRegionsResponse
      */
     public ListRegionsResponse listRegions() throws Exception {
@@ -4908,10 +5099,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The call to this operation to install the agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to obtain the execution status of the task.</p>
+     * <p>Calling this API operation to install the agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Asynchronously queries the CVE hotfix status on specified instances.</p>
+     * <p>Asynchronously queries the CVE hotfix status on the specified instances.</p>
      * 
      * @param request QueryHotfixStatusRequest
      * @param headers map
@@ -4949,10 +5140,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The call to this operation to install the agent is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to obtain the execution status of the task.</p>
+     * <p>Calling this API operation to install the agent is asynchronous. After the call, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Asynchronously queries the CVE hotfix status on specified instances.</p>
+     * <p>Asynchronously queries the CVE hotfix status on the specified instances.</p>
      * 
      * @param request QueryHotfixStatusRequest
      * @return QueryHotfixStatusResponse
@@ -5121,7 +5312,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</p>
+     * <p>Currently, only comparative analysis of the same PID across different steps under the same AI Infra analysis record is supported.</p>
      * 
      * <b>summary</b> : 
      * <p>Triggers AI application diagnostics.</p>
@@ -5170,7 +5361,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Currently, only comparative analysis of the same PID across different steps within the same AI Infra analysis record is supported.</p>
+     * <p>Currently, only comparative analysis of the same PID across different steps under the same AI Infra analysis record is supported.</p>
      * 
      * <b>summary</b> : 
      * <p>Triggers AI application diagnostics.</p>
@@ -5367,10 +5558,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * <p>Calling this API to install the agent is asynchronous. After you call this API, a task_id is returned. You can use this ID to call the GetHotfixTask API to obtain the execution status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Asynchronously uninstalls CVE hotfixes from the specified instances.</p>
+     * <p>Asynchronously uninstalls a CVE hotfix from a specified instance.</p>
      * 
      * @param request UninstallHotfixRequest
      * @param headers map
@@ -5408,10 +5599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation is asynchronous. After you call this operation, a task_id is returned. You can use this ID to call the GetHotfixTask operation to query the execution status of the task.</p>
+     * <p>Calling this API to install the agent is asynchronous. After you call this API, a task_id is returned. You can use this ID to call the GetHotfixTask API to obtain the execution status of the task.</p>
      * 
      * <b>summary</b> : 
-     * <p>Asynchronously uninstalls CVE hotfixes from the specified instances.</p>
+     * <p>Asynchronously uninstalls a CVE hotfix from a specified instance.</p>
      * 
      * @param request UninstallHotfixRequest
      * @return UninstallHotfixResponse
@@ -5424,10 +5615,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the configuration is updated, the new configuration is delivered to all resources that use it.</p>
+     * <p>After the configuration is updated, the new configuration is delivered to all resources to which the configuration is applied.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the component configuration.</p>
+     * <p>Updates the configuration of a component.</p>
      * 
      * @param request UpdateAgentConfigRequest
      * @param headers map
@@ -5469,10 +5660,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the configuration is updated, the new configuration is delivered to all resources that use it.</p>
+     * <p>After the configuration is updated, the new configuration is delivered to all resources to which the configuration is applied.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the component configuration.</p>
+     * <p>Updates the configuration of a component.</p>
      * 
      * @param request UpdateAgentConfigRequest
      * @return UpdateAgentConfigResponse
@@ -5621,7 +5812,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a push alert policy.</p>
+     * <p>Updates the alert push policy.</p>
      * 
      * @param request UpdateAlertStrategyRequest
      * @param headers map
@@ -5671,7 +5862,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a push alert policy.</p>
+     * <p>Updates the alert push policy.</p>
      * 
      * @param request UpdateAlertStrategyRequest
      * @return UpdateAlertStrategyResponse
@@ -5684,7 +5875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of a cluster component.</p>
+     * <p>Updates the component configuration of a cluster.</p>
      * 
      * @param request UpdateClusterAgentConfigRequest
      * @param headers map
@@ -5726,7 +5917,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the configuration of a cluster component.</p>
+     * <p>Updates the component configuration of a cluster.</p>
      * 
      * @param request UpdateClusterAgentConfigRequest
      * @return UpdateClusterAgentConfigResponse
@@ -5867,7 +6058,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the component configuration of an instance.</p>
+     * <p>Updates the component configurations of an instance.</p>
      * 
      * @param request UpdateInstanceAgentConfigRequest
      * @param headers map
@@ -5909,7 +6100,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates the component configuration of an instance.</p>
+     * <p>Updates the component configurations of an instance.</p>
      * 
      * @param request UpdateInstanceAgentConfigRequest
      * @return UpdateInstanceAgentConfigResponse

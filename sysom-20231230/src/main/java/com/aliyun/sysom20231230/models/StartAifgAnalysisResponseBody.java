@@ -76,7 +76,7 @@ public class StartAifgAnalysisResponseBody extends TeaModel {
 
     public static class StartAifgAnalysisResponseBodyData extends TeaModel {
         /**
-         * <p>The task ID.</p>
+         * <p>The identifier.</p>
          * 
          * <strong>example:</strong>
          * <p>9cd7aee5-d365-4d4e-8236-58a110a4ea09</p>

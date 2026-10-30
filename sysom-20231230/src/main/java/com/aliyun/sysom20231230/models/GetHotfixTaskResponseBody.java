@@ -8,7 +8,7 @@ public class GetHotfixTaskResponseBody extends TeaModel {
      * <p>The status code.</p>
      * <ul>
      * <li>If <code>code</code> is <code>Success</code>, the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization failed. If the authorization fails, check the <code>message</code> field for the detailed error message of the fault.</li>
+     * <li>Other status codes indicate that the authorization failed. If the authorization fails, check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>

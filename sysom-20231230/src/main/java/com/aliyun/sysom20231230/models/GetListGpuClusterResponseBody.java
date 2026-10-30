@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetListGpuClusterResponseBody extends TeaModel {
     /**
-     * <p>The response code. Valid values: Success and Sysom.ACKClusterNotFound.</p>
+     * <p>The code. Valid values: Success and Sysom.ACKClusterNotFound.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>
@@ -14,7 +14,7 @@ public class GetListGpuClusterResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of clusters returned.</p>
+     * <p>The list of clusters.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;cluster1&quot;, &quot;cluster2&quot;]</p>
@@ -23,7 +23,7 @@ public class GetListGpuClusterResponseBody extends TeaModel {
     public Object data;
 
     /**
-     * <p>The error message returned when the code is not Success.</p>
+     * <p>The error message. If the code is not success, the message is the error information.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -41,7 +41,7 @@ public class GetListGpuClusterResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of clusters returned.</p>
+     * <p>The total number of returned entries.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

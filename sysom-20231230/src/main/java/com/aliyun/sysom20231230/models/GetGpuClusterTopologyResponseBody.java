@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGpuClusterTopologyResponseBody extends TeaModel {
     /**
-     * <p>The result code. Valid values: Success, Sysom.ServerError, Sysom.InvalidParameter.</p>
+     * <p>The response code. Valid values: Success, Sysom.ServerError, and Sysom.InvalidParameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Fail/Success</p>
@@ -215,7 +215,7 @@ public class GetGpuClusterTopologyResponseBody extends TeaModel {
         public GetGpuClusterTopologyResponseBodyDataData data;
 
         /**
-         * <p>The number of GPU cards returned.</p>
+         * <p>The total number of GPUs returned.</p>
          * 
          * <strong>example:</strong>
          * <p>36</p>

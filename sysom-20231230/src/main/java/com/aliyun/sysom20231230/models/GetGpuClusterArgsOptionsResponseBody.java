@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetGpuClusterArgsOptionsResponseBody extends TeaModel {
     /**
-     * <p>The response code. Valid values: Success and Sysom.ServerError.</p>
+     * <p>The response code, which is Success or Sysom.ServerError.</p>
      * 
      * <strong>example:</strong>
      * <p>Success  Fail</p>
@@ -41,7 +41,7 @@ public class GetGpuClusterArgsOptionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of returned entries.</p>
+     * <p>The total number of returned items.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

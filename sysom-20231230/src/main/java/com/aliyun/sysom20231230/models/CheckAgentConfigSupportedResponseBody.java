@@ -7,8 +7,8 @@ public class CheckAgentConfigSupportedResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li>If <code>code</code> is <code>Success</code>, the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization failed. If the authorization failed, check the <code>message</code> field for the detailed fault information.</li>
+     * <li>If the value is <code>Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. If the authorization failed, check the <code>message</code> field for the detailed fault message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,8 +26,8 @@ public class CheckAgentConfigSupportedResponseBody extends TeaModel {
     /**
      * <p>The error message.</p>
      * <ul>
-     * <li>If code is Success, this field is empty.</li>
-     * <li>Otherwise, this field contains the error information of the request.</li>
+     * <li>If the value of <code>code</code> is <code>Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the error message of the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -119,7 +119,7 @@ public class CheckAgentConfigSupportedResponseBody extends TeaModel {
         public String instance;
 
         /**
-         * <p>The reason why the instance is not supported for management. This field is not empty when success is false.</p>
+         * <p>The reason why the instance is not supported for management. This field is not empty when the success field is false.</p>
          * 
          * <strong>example:</strong>
          * <p>instance not found in ecs</p>

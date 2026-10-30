@@ -7,8 +7,8 @@ public class UpdateAlertStrategyResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code> indicates that the authorization is successful.</li>
-     * <li>Other status codes indicate that the authorization failed. Check the <code>message</code> field for the detailed fault information.</li>
+     * <li>If <code>code</code> is <code>Success</code>, the authorization is successful.</li>
+     * <li>Other status codes indicate that the authorization failed. If the authorization fails, check the <code>message</code> field for the detailed fault information.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateAlertStrategyResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -37,12 +37,12 @@ public class UpdateAlertStrategyResponseBody extends TeaModel {
     /**
      * <p>The error message.</p>
      * <ul>
-     * <li>If <code>code == Success</code>, this field is empty.</li>
-     * <li>Otherwise, this field contains the error message of the request.</li>
+     * <li>If <code>code</code> is <code>Success</code>, this field is empty.</li>
+     * <li>Otherwise, this field contains the request error message.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Failed to update alert policy</p>
+     * <p>Failed to update the alert policy</p>
      */
     @NameInMap("message")
     public String message;

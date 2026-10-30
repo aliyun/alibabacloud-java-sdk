@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateClusterAgentConfigRequest extends TeaModel {
     /**
-     * <p>The ID of the component whose configuration is to be updated.</p>
+     * <p>The ID of the component whose configuration you want to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class UpdateClusterAgentConfigRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The ID of the component configuration to install on the cluster.</p>
+     * <p>The ID of the component configuration to be installed on the cluster.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

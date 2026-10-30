@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAifgResultRequest extends TeaModel {
     /**
-     * <p>The task ID.</p>
+     * <p>The task identifier.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

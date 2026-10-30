@@ -20,7 +20,7 @@ public class GetAifgUrlResponseBody extends TeaModel {
     public GetAifgUrlResponseBodyData data;
 
     /**
-     * <p>The description of the status code.</p>
+     * <p>The status code description.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -59,7 +59,7 @@ public class GetAifgUrlResponseBody extends TeaModel {
 
     public static class GetAifgUrlResponseBodyData extends TeaModel {
         /**
-         * <p>The URL of the diagnostic details.</p>
+         * <p>The URL for diagnostic details.</p>
          * 
          * <strong>example:</strong>
          * <p>/diagnose/detail/qe3Z34sa</p>

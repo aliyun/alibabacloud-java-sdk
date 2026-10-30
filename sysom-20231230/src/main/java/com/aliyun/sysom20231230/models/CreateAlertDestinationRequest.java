@@ -4,15 +4,36 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class CreateAlertDestinationRequest extends TeaModel {
+    /**
+     * <p>The ID of the IM bot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0ab724ba952448eab4b5ed7ebe1d51ab</p>
+     */
     @NameInMap("app_id")
     public String appId;
 
+    /**
+     * <p>The secret key of the IM bot.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cmxjamd2a2MwbzAweHgqZ2U4TH55RjNOP0RUOy8tVVo</p>
+     */
     @NameInMap("app_secret")
     public String appSecret;
 
+    /**
+     * <p>The ID of the group.</p>
+     */
     @NameInMap("group_id")
     public java.util.List<String> groupId;
 
+    /**
+     * <p>Specifies whether the IM bot is enabled.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("imbot")
     public Boolean imbot;
 
@@ -41,7 +62,7 @@ public class CreateAlertDestinationRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The notification target. Currently, only DingTalk chatbots are supported.</p>
+     * <p>The push target. Currently, only DingTalk bots are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>dingtalk</p>
@@ -138,7 +159,7 @@ public class CreateAlertDestinationRequest extends TeaModel {
         public String phone;
 
         /**
-         * <p>The chatbot secret key.</p>
+         * <p>The secret key of the bot.</p>
          * 
          * <strong>example:</strong>
          * <p>SECxxx</p>
@@ -147,7 +168,7 @@ public class CreateAlertDestinationRequest extends TeaModel {
         public String sec;
 
         /**
-         * <p>The webhook URL of the chatbot.</p>
+         * <p>The webhook URL of the bot.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=xxx">https://oapi.dingtalk.com/robot/send?access_token=xxx</a></p>

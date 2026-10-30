@@ -20,7 +20,7 @@ public class GetAifgResultResponseBody extends TeaModel {
     public GetAifgResultResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The message content.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;Execution succeeded&quot;</p>
@@ -29,7 +29,7 @@ public class GetAifgResultResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The unique request ID.</p>
+     * <p>The unique identifier of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>1234567890</p>
@@ -76,7 +76,7 @@ public class GetAifgResultResponseBody extends TeaModel {
 
     public static class GetAifgResultResponseBodyData extends TeaModel {
         /**
-         * <p>The diagnostic result.</p>
+         * <p>The diagnostic results.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -94,7 +94,7 @@ public class GetAifgResultResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>The status of the root data.</p>
+         * <p>The root data status.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -103,7 +103,7 @@ public class GetAifgResultResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the data was created.</p>
+         * <p>The data creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-01-01T00:00:00Z</p>
@@ -112,7 +112,7 @@ public class GetAifgResultResponseBody extends TeaModel {
         public String submitTime;
 
         /**
-         * <p>The unique task ID.</p>
+         * <p>The unique identifier of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>1234567890</p>

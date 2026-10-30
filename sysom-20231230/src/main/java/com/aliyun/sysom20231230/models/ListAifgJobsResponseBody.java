@@ -20,7 +20,7 @@ public class ListAifgJobsResponseBody extends TeaModel {
     public java.util.List<ListAifgJobsResponseBodyData> data;
 
     /**
-     * <p>The maximum number of records to retrieve in a single request.</p>
+     * <p>The maximum number of records to retrieve at a time.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -29,20 +29,17 @@ public class ListAifgJobsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>Indicates the position read by the current call. An empty value indicates that all data has been read.</p>
+     * <p>Indicates the read position returned by the current call. An empty value indicates that all data has been read.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Hello, World!</p>
+     * <p>Hello, world!</p>
      */
     @NameInMap("message")
     public String message;
 
     /**
-     * <p>The pagination token.</p>
-     * <blockquote>
-     * <p>A non-empty value indicates that more data is available.</p>
-     * </blockquote>
+     * <p>The pagination cursor. A non-empty value indicates that more data is available.</p>
      * 
      * <strong>example:</strong>
      * <p>U+w1wv2R4ZWR5oZLXD0+Dp4dD+2BRJj42DLT6GrZysw=</p>
@@ -60,7 +57,7 @@ public class ListAifgJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries.</p>
+     * <p>The total count.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -185,7 +182,7 @@ public class ListAifgJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The sub-status of the data item.</p>
+         * <p>The sub-status of data item 0.</p>
          * 
          * <strong>example:</strong>
          * <p>processing</p>
@@ -203,7 +200,7 @@ public class ListAifgJobsResponseBody extends TeaModel {
         public String submitTime;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>

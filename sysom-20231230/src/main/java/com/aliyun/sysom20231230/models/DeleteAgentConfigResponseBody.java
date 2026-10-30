@@ -7,8 +7,8 @@ public class DeleteAgentConfigResponseBody extends TeaModel {
     /**
      * <p>The status code.</p>
      * <ul>
-     * <li><code>code == Success</code>: The authorization succeeded.</li>
-     * <li>Other status codes indicate that the authorization failed. If the authorization failed, check the <code>message</code> field for the detailed fault message.</li>
+     * <li><code>code == Success</code>: Authorization succeeded.</li>
+     * <li>Other status codes indicate that authorization failed. If authorization failed, check the <code>message</code> field for detailed error messages.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,7 +87,7 @@ public class DeleteAgentConfigResponseBody extends TeaModel {
          * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
-         * <p>The ID of the currently executing task</p>
+         * <p>The ID of the currently running task</p>
          */
         @NameInMap("taskId")
         public String taskId;

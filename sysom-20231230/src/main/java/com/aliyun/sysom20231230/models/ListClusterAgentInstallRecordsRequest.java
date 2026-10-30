@@ -4,13 +4,19 @@ package com.aliyun.sysom20231230.models;
 import com.aliyun.tea.*;
 
 public class ListClusterAgentInstallRecordsRequest extends TeaModel {
+    /**
+     * <p>The component configuration ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>f0078fbb-4213-11f0-a19b-00163e4ae208</p>
+     */
     @NameInMap("agent_config_id")
     public String agentConfigId;
 
     /**
-     * <p>Filters results by cluster ID.</p>
+     * <p>Filters by cluster ID.</p>
      * <blockquote>
-     * <p>This cluster ID is not the ACK cluster ID. It is the <code>cluster_id</code> field returned by this operation or the <code>id</code> field returned by the ListCluster operation.</p>
+     * <p>This cluster ID is not the ACK cluster ID. It is the <code>cluster_id</code> field in the data returned by this operation, or the <code>id</code> field in the data returned by the ListCluster operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,7 +26,7 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     public String clusterId;
 
     /**
-     * <p>The current page number (starting from 1).</p>
+     * <p>The current page number, starting from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -38,7 +44,7 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Specifies the agent ID to filter the installation list. You can use this parameter together with the plugin_version parameter.</p>
+     * <p>Filters the installation list by the specified agent. You can use this parameter together with the plugin_version parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>74a86327-3170-412c-8e67-da3389ec56a9</p>
@@ -47,7 +53,7 @@ public class ListClusterAgentInstallRecordsRequest extends TeaModel {
     public String pluginId;
 
     /**
-     * <p>Cannot be used alone. Use this parameter together with plugin_id to filter the installation list by a specific agent version.</p>
+     * <p>This parameter cannot be used alone and must be used together with the plugin_id parameter to filter the installation list by the specified agent and version.</p>
      * 
      * <strong>example:</strong>
      * <p>3.4.0-1</p>

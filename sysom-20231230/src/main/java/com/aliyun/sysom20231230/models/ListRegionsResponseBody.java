@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRegionsResponseBody extends TeaModel {
     /**
-     * <p>The request ID, which can be used for end-to-end diagnostics.</p>
+     * <p>The request ID. You can use it for end-to-end diagnostics.</p>
      * 
      * <strong>example:</strong>
      * <p>B149FD9C-ED5C-5765-B3AD-05AA4A4D64D7</p>
@@ -32,7 +32,7 @@ public class ListRegionsResponseBody extends TeaModel {
     public java.util.List<String> data;
 
     /**
-     * <p>The error code description. This value is empty if no error occurs.</p>
+     * <p>The error message. This field is empty if no error occurs.</p>
      * 
      * <strong>example:</strong>
      * <p>SysomOpenAPIAssumeRoleException: EntityNotExist.Role The role not exists: acs:ram::xxxxx:role/aliyunserviceroleforsysom</p>

@@ -14,7 +14,7 @@ public class GetListGpuClusterRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The query time range, in milliseconds, in the format of [start, end]. Example: [13254125000, 52451241000].</p>
+     * <p>The time range to query. Unit: milliseconds. Format: [start,end]. Example: [13254125000, 52451241000].</p>
      * 
      * <strong>example:</strong>
      * <p>[1757820000, 1757823600]</p>

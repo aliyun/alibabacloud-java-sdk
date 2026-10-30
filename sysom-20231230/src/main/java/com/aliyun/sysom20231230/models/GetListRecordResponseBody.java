@@ -14,7 +14,7 @@ public class GetListRecordResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("data")
     public java.util.List<GetListRecordResponseBodyData> data;
@@ -111,7 +111,7 @@ public class GetListRecordResponseBody extends TeaModel {
         public String analysisTime;
 
         /**
-         * <p>The analysis parameters of the AI job analysis.</p>
+         * <p>The parameters for the AI job analysis.</p>
          * 
          * <strong>example:</strong>
          * <p>timeout=2000 ms</p>
@@ -123,7 +123,7 @@ public class GetListRecordResponseBody extends TeaModel {
          * <p>The analysis failure log.</p>
          * 
          * <strong>example:</strong>
-         * <p>Analysis failed for instance i-wz9dej066kii4goqpnze. Failure reason: Not get GPU trace data for \&quot;e59ce870-dbd4-4c44-a814-174ac6ab5bcf\&quot; \&quot;[\&quot;118534\&quot;]\&quot;!</p>
+         * <p>Analysis failed for instance i-wz9dej066kii4goqpnze. Cause: Not get GPU trace data for \&quot;e59ce870-dbd4-4c44-a814-174ac6ab5bcf\&quot; \&quot;[\&quot;118534\&quot;]\&quot;!</p>
          */
         @NameInMap("failedLog")
         public String failedLog;
@@ -132,7 +132,7 @@ public class GetListRecordResponseBody extends TeaModel {
          * <p>The analysis status.</p>
          * 
          * <strong>example:</strong>
-         * <p>Completed/Analysis Failed</p>
+         * <p>Completed/Failed</p>
          */
         @NameInMap("status")
         public String status;
