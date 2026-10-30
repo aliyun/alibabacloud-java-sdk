@@ -5324,12 +5324,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a context service instance.</p>
+     * <p>Queries the information about context service instances.</p>
      * 
      * @param request DescribeContext0InfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5367,12 +5367,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <blockquote>
      * <ul>
-     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge. However, Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
+     * <li>The SQL audit and analysis feature of PolarDB-X 2.0 is free of charge, but Simple Log Service charges fees for storage space, read traffic, number of requests, data transformation, and data shipping. For more information about the SQL audit feature, see <a href="https://help.aliyun.com/document_detail/184619.html">Enable SQL audit and analysis</a>.</li>
      * </ul>
      * </blockquote>
      * 
      * <b>summary</b> : 
-     * <p>Queries the information about a context service instance.</p>
+     * <p>Queries the information about context service instances.</p>
      * 
      * @param request DescribeContext0InfoRequest
      * @return DescribeContext0InfoResponse
@@ -5697,7 +5697,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation retrieves the list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the attributes of an instance.</p>
+     * <p>Retrieves the attributes of an instance.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5740,7 +5740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This operation retrieves the list of custom endpoints configured by the user to facilitate the management and viewing of private connections or VPC endpoint service settings.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the attributes of an instance.</p>
+     * <p>Retrieves the attributes of an instance.</p>
      * 
      * @param request DescribeDBInstanceAttributeRequest
      * @return DescribeDBInstanceAttributeResponse

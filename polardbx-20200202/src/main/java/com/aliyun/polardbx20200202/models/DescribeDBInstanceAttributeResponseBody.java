@@ -60,7 +60,11 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Long port;
 
         /**
-         * <p>The connection type. <strong>VPC</strong> indicates an internal network connection, and <strong>PUBLIC</strong> indicates a public network connection.</p>
+         * <p>The connection type. Valid values:</p>
+         * <ul>
+         * <li><strong>VPC</strong>: internal network connection</li>
+         * <li><strong>PUBLIC</strong>: public network connection</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -197,7 +201,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The name of the zone where the node is deployed.</p>
+         * <p>The zone name of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
@@ -262,7 +266,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList extends TeaModel {
         /**
-         * <p>The name of the member, which is the name of the PolarDB-X instance.</p>
+         * <p>The member name, which is the PolarDB-X instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc</p>
@@ -271,10 +275,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String memberName;
 
         /**
-         * <p>The role of the node. Valid values:</p>
+         * <p>The node role. Valid values:</p>
          * <ul>
-         * <li><strong>master</strong>: The primary node.</li>
-         * <li><strong>standby</strong>: The secondary node.</li>
+         * <li><strong>master</strong>: primary node</li>
+         * <li><strong>standby</strong>: secondary node</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -314,6 +318,48 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+    }
+
+    public static class DescribeDBInstanceAttributeResponseBodyDBInstanceSearchInstance extends TeaModel {
+        /**
+         * <p>The name of the Search engine instance.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pxs-***</p>
+         */
+        @NameInMap("InstanceId")
+        public String instanceId;
+
+        /**
+         * <p>The status of the Search engine.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Running</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        public static DescribeDBInstanceAttributeResponseBodyDBInstanceSearchInstance build(java.util.Map<String, ?> map) throws Exception {
+            DescribeDBInstanceAttributeResponseBodyDBInstanceSearchInstance self = new DescribeDBInstanceAttributeResponseBodyDBInstanceSearchInstance();
+            return TeaModel.build(map, self);
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstanceSearchInstance setInstanceId(String instanceId) {
+            this.instanceId = instanceId;
+            return this;
+        }
+        public String getInstanceId() {
+            return this.instanceId;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstanceSearchInstance setStatus(String status) {
             this.status = status;
             return this;
         }
@@ -367,7 +413,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeDBInstanceAttributeResponseBodyDBInstance extends TeaModel {
         /**
-         * <p>Specifies whether the AI gateway is enabled.</p>
+         * <p>Indicates whether the AI gateway is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -376,7 +422,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String aiGatewayEnabled;
 
         /**
-         * <p>Indicates whether the In-Memory Column Index (IMCI) feature is supported.</p>
+         * <p>Indicates whether the column store index feature is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -387,17 +433,17 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The CN node specifications. Valid values:</p>
          * <ul>
-         * <li><strong>polarx.x4.medium.2e</strong>: 2 cores, 8 GB</li>
-         * <li><strong>polarx.x4.large.2e</strong>: 4 cores, 16 GB</li>
-         * <li><strong>polarx.x8.large.2e</strong>: 4 cores, 32 GB</li>
-         * <li><strong>polarx.x4.xlarge.2e</strong>: 8 cores, 32 GB</li>
-         * <li><strong>polarx.x8.xlarge.2e</strong>: 8 cores, 64 GB</li>
-         * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 cores, 64 GB</li>
-         * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 cores, 128 GB</li>
-         * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 cores, 128 GB</li>
-         * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 cores, 256 GB</li>
-         * <li><strong>polarx.st.8xlarge.2e</strong>: 60 cores, 470 GB</li>
-         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores, 720 GB</li>
+         * <li><strong>polarx.x4.medium.2e</strong>: 2 cores and 8 GB of memory</li>
+         * <li><strong>polarx.x4.large.2e</strong>: 4 cores and 16 GB of memory</li>
+         * <li><strong>polarx.x8.large.2e</strong>: 4 cores and 32 GB of memory</li>
+         * <li><strong>polarx.x4.xlarge.2e</strong>: 8 cores and 32 GB of memory</li>
+         * <li><strong>polarx.x8.xlarge.2e</strong>: 8 cores and 64 GB of memory</li>
+         * <li><strong>polarx.x4.2xlarge.2e</strong>: 16 cores and 64 GB of memory</li>
+         * <li><strong>polarx.x8.2xlarge.2e</strong>: 16 cores and 128 GB of memory</li>
+         * <li><strong>polarx.x4.4xlarge.2e</strong>: 32 cores and 128 GB of memory</li>
+         * <li><strong>polarx.x8.4xlarge.2e</strong>: 32 cores and 256 GB of memory</li>
+         * <li><strong>polarx.st.8xlarge.2e</strong>: 60 cores and 470 GB of memory</li>
+         * <li><strong>polarx.st.12xlarge.2e</strong>: 90 cores and 720 GB of memory</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -425,13 +471,13 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String columnarInstanceName;
 
         /**
-         * <p>The column store read-only instance information.</p>
+         * <p>The information about the column store read-only instances.</p>
          */
         @NameInMap("ColumnarReadDBInstances")
         public java.util.List<String> columnarReadDBInstances;
 
         /**
-         * <p>The commodity type of the instance. The value is fixed as drds_polarxpost_public_cn.</p>
+         * <p>The commodity type of the instance. The value is fixed to drds_polarxpost_public_cn.</p>
          * 
          * <strong>example:</strong>
          * <p>drds_polarxpost_public_cn</p>
@@ -446,7 +492,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceConnAddrs> connAddrs;
 
         /**
-         * <p>The internal network connection string.</p>
+         * <p>The internal network connection information.</p>
          * 
          * <strong>example:</strong>
          * <p>pxc-sprpx766vo****.polarx.singapore.rds.aliyuncs.com</p>
@@ -455,7 +501,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String connectionString;
 
         /**
-         * <p>The processor type. Default value: intel.</p>
+         * <p>The chip type. Default value: intel.</p>
          * 
          * <strong>example:</strong>
          * <p>intel | hygon</p>
@@ -475,8 +521,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><strong>ReadWrite</strong>: Primary instance.</li>
-         * <li><strong>ReadOnly</strong>: Read-only instance.</li>
+         * <li><strong>ReadWrite</strong>: primary instance</li>
+         * <li><strong>ReadOnly</strong>: read-only instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -510,7 +556,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceDBNodes> DBNodes;
 
         /**
-         * <p>The database type. The value is fixed as polarx.</p>
+         * <p>The database type. The value is fixed to polarx.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx</p>
@@ -528,7 +574,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String DBVersion;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The instance description.</p>
          * 
          * <strong>example:</strong>
          * <p>test instance</p>
@@ -552,21 +598,21 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The DN node specifications. Valid values:</p>
          * <ul>
-         * <li><strong>mysql.n2.medium.25</strong>: 2 cores, 4 GB</li>
-         * <li><strong>mysql.n4.medium.25</strong>: 2 cores, 8 GB</li>
-         * <li><strong>mysql.x8.medium.25</strong>: 2 cores, 16 GB</li>
-         * <li><strong>mysql.n2.large.25</strong>: 4 cores, 8 GB</li>
-         * <li><strong>mysql.n4.large.25</strong>: 4 cores, 16 GB</li>
-         * <li><strong>mysql.x8.large.25</strong>: 4 cores, 32 GB</li>
-         * <li><strong>mysql.n2.xlarge.25</strong>: 8 cores, 16 GB</li>
-         * <li><strong>mysql.n4.xlarge.25</strong>: 8 cores, 32 GB</li>
-         * <li><strong>mysql.x8.xlarge.25</strong>: 8 cores, 64 GB</li>
-         * <li><strong>mysql.n4.2xlarge.25</strong>: 16 cores, 64 GB</li>
-         * <li><strong>mysql.x8.2xlarge.25</strong>: 16 cores, 128 GB</li>
-         * <li><strong>mysql.x4.4xlarge.25</strong>: 32 cores, 128 GB</li>
-         * <li><strong>mysql.x8.4xlarge.25</strong>: 32 cores, 256 GB</li>
-         * <li><strong>mysql.st.8xlarge.25</strong>: 60 cores, 470 GB</li>
-         * <li><strong>mysql.st.12xlarge.25</strong>: 90 cores, 720 GB</li>
+         * <li><strong>mysql.n2.medium.25</strong>: 2 cores and 4 GB of memory</li>
+         * <li><strong>mysql.n4.medium.25</strong>: 2 cores and 8 GB of memory</li>
+         * <li><strong>mysql.x8.medium.25</strong>: 2 cores and 16 GB of memory</li>
+         * <li><strong>mysql.n2.large.25</strong>: 4 cores and 8 GB of memory</li>
+         * <li><strong>mysql.n4.large.25</strong>: 4 cores and 16 GB of memory</li>
+         * <li><strong>mysql.x8.large.25</strong>: 4 cores and 32 GB of memory</li>
+         * <li><strong>mysql.n2.xlarge.25</strong>: 8 cores and 16 GB of memory</li>
+         * <li><strong>mysql.n4.xlarge.25</strong>: 8 cores and 32 GB of memory</li>
+         * <li><strong>mysql.x8.xlarge.25</strong>: 8 cores and 64 GB of memory</li>
+         * <li><strong>mysql.n4.2xlarge.25</strong>: 16 cores and 64 GB of memory</li>
+         * <li><strong>mysql.x8.2xlarge.25</strong>: 16 cores and 128 GB of memory</li>
+         * <li><strong>mysql.x4.4xlarge.25</strong>: 32 cores and 128 GB of memory</li>
+         * <li><strong>mysql.x8.4xlarge.25</strong>: 32 cores and 256 GB of memory</li>
+         * <li><strong>mysql.st.8xlarge.25</strong>: 60 cores and 470 GB of memory</li>
+         * <li><strong>mysql.st.12xlarge.25</strong>: 90 cores and 720 GB of memory</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -585,7 +631,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer dnNodeCount;
 
         /**
-         * <p>The disk space of the storage node. Unit: GB.</p>
+         * <p>The disk space size of the storage node, in GB.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -594,7 +640,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String dnStorageSpace;
 
         /**
-         * <p>The database type. The value is fixed as polarx.</p>
+         * <p>The database type. The value is fixed to polarx.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx</p>
@@ -603,7 +649,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The database engine version. Default value: 2.0.</p>
+         * <p>The DPI engine version. Default value: 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>2.0 | 3.0</p>
@@ -623,8 +669,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the instance has expired. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Expired.</li>
-         * <li><strong>false</strong>: Normal.</li>
+         * <li><strong>true</strong>: expired</li>
+         * <li><strong>false</strong>: normal</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -634,7 +680,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String expired;
 
         /**
-         * <p>The GDN instance name.</p>
+         * <p>The name of the GDN instance.</p>
          * 
          * <strong>example:</strong>
          * <p>gdn-zkrkuykqglbizdhm</p>
@@ -649,7 +695,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceGdnMemberList> gdnMemberList;
 
         /**
-         * <p>The role in the global database network (GDN).</p>
+         * <p>The GDN role.</p>
          * 
          * <strong>example:</strong>
          * <p>master | standby</p>
@@ -667,7 +713,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The database engine version of the instance DPI engine. This is an internal parameter.</p>
+         * <p>The instance DPI engine version. This is an internal parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -676,14 +722,14 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Integer kindCode;
 
         /**
-         * <p>The instance version.</p>
+         * <p>The instance versions.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("LTSVersions")
         public java.util.List<String> LTSVersions;
 
         /**
-         * <p>The latest kernel Milvus version supported by the instance.</p>
+         * <p>The latest Milvus version supported by the current instance.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx-kernel_5.4.11-16301083_xcluster-20210805</p>
@@ -694,12 +740,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The lock mode of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Unlock</strong>: Normal.</li>
-         * <li><strong>ManualLock</strong>: Manually locked.</li>
-         * <li><strong>LockByExpiration</strong>: Automatically locked due to expiration.</li>
-         * <li><strong>LockByRestoration</strong>: Automatically locked before a rollback.</li>
-         * <li><strong>LockByDiskQuota</strong>: Automatically locked due to full storage space.</li>
-         * <li><strong>LockReadInstanceByDiskQuota</strong>: Automatically locked due to full storage space of the read-only instance.</li>
+         * <li><strong>Unlock</strong>: normal</li>
+         * <li><strong>ManualLock</strong>: manually locked</li>
+         * <li><strong>LockByExpiration</strong>: automatically locked due to expiration</li>
+         * <li><strong>LockByRestoration</strong>: automatically locked before rollback</li>
+         * <li><strong>LockByDiskQuota</strong>: automatically locked due to full disk space</li>
+         * <li><strong>LockReadInstanceByDiskQuota</strong>: automatically locked due to full disk space of the read-only instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -709,7 +755,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String lockMode;
 
         /**
-         * <p>The end time of the maintenance window for the instance. The time is in UTC. Add 8 hours to obtain the maintenance window displayed in the console.</p>
+         * <p>The end time of the maintenance window. The time is in UTC. Add 8 hours to obtain the maintenance window displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>06:00</p>
@@ -718,7 +764,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String maintainEndTime;
 
         /**
-         * <p>The start time of the maintenance window for the instance. The time is in UTC. Add 8 hours to obtain the maintenance window displayed in the console.</p>
+         * <p>The start time of the maintenance window. The time is in UTC. Add 8 hours to obtain the maintenance window displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>06:00</p>
@@ -727,7 +773,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String maintainStartTime;
 
         /**
-         * <p>The current kernel Milvus version.</p>
+         * <p>The current Milvus version.</p>
          * 
          * <strong>example:</strong>
          * <p>polarx-kernel_5.4.11-16301083_xcluster-20210805</p>
@@ -747,8 +793,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The billing method of the instance. Valid values:</p>
          * <ul>
-         * <li><strong>Postpaid</strong>: Pay-as-you-go.</li>
-         * <li><strong>Prepaid</strong>: Subscription.</li>
+         * <li><strong>Postpaid</strong>: pay-as-you-go</li>
+         * <li><strong>Prepaid</strong>: subscription</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -792,7 +838,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<String> readDBInstances;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -810,10 +856,10 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>Indicates whether the three-role mode is enabled. Valid values:</p>
+         * <p>The status of the three-role mode. Valid values:</p>
          * <ul>
-         * <li><strong>false</strong>: Disabled.</li>
-         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: disabled</li>
+         * <li><strong>true</strong>: enabled</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -823,12 +869,12 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public Boolean rightsSeparationEnabled;
 
         /**
-         * <p>The three-role mode status. Valid values:</p>
+         * <p>The status of the three-role mode. Valid values:</p>
          * <ul>
-         * <li><strong>disabled</strong>: Disabled.</li>
-         * <li><strong>enabled</strong>: Enabled.</li>
-         * <li><strong>processing</strong>: Processing.</li>
-         * <li><strong>unknown</strong>: Unknown. This may be caused by a connection failure to the instance.</li>
+         * <li><strong>disabled</strong>: disabled</li>
+         * <li><strong>enabled</strong>: enabled</li>
+         * <li><strong>processing</strong>: processing</li>
+         * <li><strong>unknown</strong>: unknown, which may be caused by the inability to connect to the instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -836,6 +882,18 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
          */
         @NameInMap("RightsSeparationStatus")
         public String rightsSeparationStatus;
+
+        /**
+         * <p>Indicates whether an associated Search instance that is not deleted exists, including instances that are being created or deleted.</p>
+         */
+        @NameInMap("SearchEnabled")
+        public Boolean searchEnabled;
+
+        /**
+         * <p>The unique Search instance associated with the current primary instance. This parameter is empty if the feature is not enabled.</p>
+         */
+        @NameInMap("SearchInstance")
+        public DescribeDBInstanceAttributeResponseBodyDBInstanceSearchInstance searchInstance;
 
         /**
          * <p>The secondary zone.</p>
@@ -849,8 +907,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The instance edition. Valid values:</p>
          * <ul>
-         * <li><strong>enterprise</strong>: Enterprise Edition.</li>
-         * <li><strong>standard</strong>: Standard Edition.</li>
+         * <li><strong>enterprise</strong>: Enterprise Edition</li>
+         * <li><strong>standard</strong>: Standard Edition</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -860,11 +918,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String series;
 
         /**
-         * <p>The specification category. Valid values:</p>
-         * <ul>
-         * <li>exclusive: Dedicated.</li>
-         * <li>general: General-purpose.</li>
-         * </ul>
+         * <p>exclusive: Exclusive.
+         * general: General.</p>
          * 
          * <strong>example:</strong>
          * <p>exclusive | general</p>
@@ -873,7 +928,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String specCategory;
 
         /**
-         * <p>The instance status.</p>
+         * <p>The instance status. For more information, see the following description.</p>
          * 
          * <strong>example:</strong>
          * <p>Running</p>
@@ -891,7 +946,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The used storage space, in bytes.</p>
+         * <p>The used storage capacity, in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>17042505728</p>
@@ -906,7 +961,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public java.util.List<DescribeDBInstanceAttributeResponseBodyDBInstanceTagSet> tagSet;
 
         /**
-         * <p>The third zone in a Three-zone deployment.</p>
+         * <p>The third zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shenzhen-e</p>
@@ -931,8 +986,8 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li><strong>ReadWrite</strong>: Primary instance.</li>
-         * <li><strong>ReadOnly</strong>: Read-only instance.</li>
+         * <li><strong>ReadWrite</strong>: primary instance</li>
+         * <li><strong>ReadOnly</strong>: read-only instance</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -960,7 +1015,7 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         public String vSwitchId;
 
         /**
-         * <p>The zone where the instance is deployed.</p>
+         * <p>The zone where the instance is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-a</p>
@@ -1347,6 +1402,22 @@ public class DescribeDBInstanceAttributeResponseBody extends TeaModel {
         }
         public String getRightsSeparationStatus() {
             return this.rightsSeparationStatus;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setSearchEnabled(Boolean searchEnabled) {
+            this.searchEnabled = searchEnabled;
+            return this;
+        }
+        public Boolean getSearchEnabled() {
+            return this.searchEnabled;
+        }
+
+        public DescribeDBInstanceAttributeResponseBodyDBInstance setSearchInstance(DescribeDBInstanceAttributeResponseBodyDBInstanceSearchInstance searchInstance) {
+            this.searchInstance = searchInstance;
+            return this;
+        }
+        public DescribeDBInstanceAttributeResponseBodyDBInstanceSearchInstance getSearchInstance() {
+            return this.searchInstance;
         }
 
         public DescribeDBInstanceAttributeResponseBodyDBInstance setSecondaryZone(String secondaryZone) {

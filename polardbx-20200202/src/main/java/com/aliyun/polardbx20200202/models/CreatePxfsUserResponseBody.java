@@ -17,7 +17,7 @@ public class CreatePxfsUserResponseBody extends TeaModel {
     public CreatePxfsUserResponseBodyData data;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>473469C7-AA6F-4DC5-B3DB-A3DC0DE3C83E</p>
@@ -65,7 +65,7 @@ public class CreatePxfsUserResponseBody extends TeaModel {
         public String authAction;
 
         /**
-         * <p>The display name of the authentication principal.</p>
+         * <p>The name of the authentication principal.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx</p>
@@ -83,7 +83,7 @@ public class CreatePxfsUserResponseBody extends TeaModel {
         public String authPrincipalOwnerId;
 
         /**
-         * <p>The authentication principal type.</p>
+         * <p>The description is as above.</p>
          * 
          * <strong>example:</strong>
          * <p>222</p>
@@ -92,7 +92,7 @@ public class CreatePxfsUserResponseBody extends TeaModel {
         public String authPrincipalType;
 
         /**
-         * <p>The encoded diagnostic message.</p>
+         * <p>The diagnostic information.</p>
          * 
          * <strong>example:</strong>
          * <p>AQEAAAAAaKPfwjY0MzMyODRGLUZCQkQtNTA1RS04MUUxLTc5NTkzODk2MUIzMg==</p>
@@ -183,7 +183,7 @@ public class CreatePxfsUserResponseBody extends TeaModel {
 
     public static class CreatePxfsUserResponseBodyData extends TeaModel {
         /**
-         * <p>The identity name.</p>
+         * <p>The name of the identity.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-runtime</p>
@@ -210,7 +210,7 @@ public class CreatePxfsUserResponseBody extends TeaModel {
         public Long posixUid;
 
         /**
-         * <p>The identity role.</p>
+         * <p>The role of the identity.</p>
          * 
          * <strong>example:</strong>
          * <p>MEMBER</p>
@@ -228,7 +228,7 @@ public class CreatePxfsUserResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tenant ID.</p>
+         * <p>The ID of the tenant.</p>
          * 
          * <strong>example:</strong>
          * <p>tenant-001</p>

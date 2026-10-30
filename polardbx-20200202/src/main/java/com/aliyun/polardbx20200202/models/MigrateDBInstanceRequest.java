@@ -15,7 +15,7 @@ public class MigrateDBInstanceRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The zone ID of the primary zone for a multi-zone instance. <strong>This parameter is required if you want to create a multi-zone instance.</strong>.</p>
+     * <p>The zone ID of the primary zone for a multi-zone instance. <strong>This parameter is required if you want to create a multi-zone instance.</strong></p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class MigrateDBInstanceRequest extends TeaModel {
     /**
      * <p>The secondary zone ID.</p>
      * <blockquote>
-     * <p>This parameter cannot be set to the same value as ZoneId.</p>
+     * <p>This parameter cannot be the same as the ZoneId property.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,10 +47,10 @@ public class MigrateDBInstanceRequest extends TeaModel {
     public String secondaryZoneId;
 
     /**
-     * <p>The switchover mode. Valid values:</p>
+     * <p>The switch mode. Valid values:</p>
      * <ul>
-     * <li>0: immediately switches over.</li>
-     * <li>1: switches over within the O&amp;M window.</li>
+     * <li>0: Immediate switchover.</li>
+     * <li>1: Switchover within the O&amp;M window.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +60,7 @@ public class MigrateDBInstanceRequest extends TeaModel {
     public String switchMode;
 
     /**
-     * <p>The zone ID for Three-zone deployment.</p>
+     * <p>The third active zone.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing-h</p>
@@ -71,8 +71,8 @@ public class MigrateDBInstanceRequest extends TeaModel {
     /**
      * <p>The topology type. Valid values:</p>
      * <ul>
-     * <li><strong>3azones</strong>: three-zone deployment.</li>
-     * <li><strong>1azone</strong>: single-zone deployment.</li>
+     * <li><strong>3azones</strong>: Three-zone deployment.</li>
+     * <li><strong>1azone</strong>: Single-zone deployment.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -83,7 +83,7 @@ public class MigrateDBInstanceRequest extends TeaModel {
     public String topologyType;
 
     /**
-     * <p>The ID of the virtual private cloud (VPC) where the access endpoint resides.</p>
+     * <p>The ID of the VPC where the access endpoint resides.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-****</p>
