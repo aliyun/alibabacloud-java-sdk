@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTransitRouterCapacityReservationsRequest extends TeaModel {
     /**
+     * <p>The ID of the Enterprise Edition transit router instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

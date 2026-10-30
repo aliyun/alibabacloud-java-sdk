@@ -15,9 +15,9 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The Alibaba Cloud account ID to which the network instance belongs.</p>
+     * <p>The ID of the Alibaba Cloud account to which the network instance belongs.</p>
      * <blockquote>
-     * <p>This parameter is required if the network instance belongs to a different Alibaba Cloud account.</p>
+     * <p>This parameter is required if the network instance belongs to another Alibaba Cloud account.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
 
     /**
      * <p>The region ID of the network instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -50,8 +50,8 @@ public class CreateCenChildInstanceRouteEntryToCenRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><strong>VPC</strong>: a virtual private cloud (VPC) instance.</li>
-     * <li><strong>VBR</strong>: a virtual border router (VBR) instance.</li>
+     * <li><strong>VPC</strong>: VPC.</li>
+     * <li><strong>VBR</strong>: VBR.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

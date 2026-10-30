@@ -7,9 +7,9 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>The match mode of the AS path list. Valid values:</p>
      * <ul>
-     * <li><p><strong>Include</strong>: fuzzy match. A match is successful if the AS path in the match condition overlaps with the AS path of the route being matched. </p>
+     * <li><p><strong>Include</strong>: fuzzy match. A route meets the match condition if the AS path in the match condition overlaps with the AS path of the route. </p>
      * </li>
-     * <li><p><strong>Complete</strong>: exact match. A match is successful only if the AS path in the match condition is the same as the AS path of the route being matched.</p>
+     * <li><p><strong>Complete</strong>: exact match. A route meets the match condition only if the AS path in the match condition is exactly the same as the AS path of the route.</p>
      * </li>
      * </ul>
      * 
@@ -20,7 +20,7 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public String asPathMatchMode;
 
     /**
-     * <p>The instance ID of the Cloud Enterprise Network (CEN).</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -30,8 +30,8 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public String cenId;
 
     /**
-     * <p>The ID of the region to which the routing policy is applied.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to query region IDs.</p>
+     * <p>The ID of the region where the route map is applied.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,13 +43,13 @@ public class CreateCenRouteMapRequest extends TeaModel {
     /**
      * <p>The match mode of the prefix list. Valid values:</p>
      * <ul>
-     * <li><strong>Include</strong>: fuzzy match. A match is successful if the route prefix in the match condition contains the route prefix of the route being matched.</li>
+     * <li><strong>Include</strong>: fuzzy match. A route meets the match condition if the route prefix in the match condition contains the prefix of the route.</li>
      * </ul>
-     * <p> For example, a policy that defines 10.10.0.0/16 can fuzzy match the route 10.10.1.0/24.</p>
+     * <p> For example, if the match condition is 10.10.0.0/16, a route with the prefix 10.10.1.0/24 meets the condition.</p>
      * <ul>
-     * <li><strong>Complete</strong>: exact match. A match is successful only if the route prefix in the match condition is the same as the route prefix of the route being matched.</li>
+     * <li><strong>Complete</strong>: exact match. A route meets the match condition only if the route prefix in the match condition is exactly the same as the prefix of the route.</li>
      * </ul>
-     * <p> For example, a policy that defines 10.10.0.0/16 can only exact match the route 10.10.0.0/16.</p>
+     * <p> For example, if the match condition is 10.10.0.0/16, only a route with the prefix 10.10.0.0/16 meets the condition.</p>
      * 
      * <strong>example:</strong>
      * <p>Include</p>
@@ -58,13 +58,13 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public String cidrMatchMode;
 
     /**
-     * <p>The match mode of the Community. Valid values:</p>
+     * <p>The match mode of the community. Valid values:</p>
      * <ul>
-     * <li><p><strong>Include</strong>: fuzzy match. A match is successful if the Community in the match condition overlaps with the Community of the route being matched. </p>
+     * <li><p><strong>Include</strong>: fuzzy match. A route meets the match condition if the community in the match condition overlaps with the community of the route. </p>
      * </li>
-     * <li><p><strong>Complete</strong>: exact match. A match is successful only if the Community in the match condition is the same as the Community of the route being matched.</p>
+     * <li><p><strong>Complete</strong>: exact match. A route meets the match condition only if the community in the match condition is exactly the same as the community of the route.</p>
      * </li>
-     * <li><p><strong>Contain</strong>: inclusive match. A match is successful only if the Community of the route being matched contains all the Communities specified in the match condition.</p>
+     * <li><p><strong>Contain</strong>: contain match. A route meets the match condition only if the community of the route contains all communities specified in the match condition.</p>
      * </li>
      * </ul>
      * 
@@ -75,14 +75,14 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public String communityMatchMode;
 
     /**
-     * <p>The action to perform on the Community. Valid values:</p>
+     * <p>The action mode of the community. Valid values:</p>
      * <ul>
-     * <li><p><strong>Additive</strong>: adds a Community to the route.</p>
+     * <li><p><strong>Additive</strong>: adds a community to the route.</p>
      * </li>
-     * <li><p><strong>Replace</strong>: replaces the existing Community of the route.</p>
+     * <li><p><strong>Replace</strong>: replaces the existing community of the route.</p>
      * </li>
      * </ul>
-     * <p>This parameter specifies the action to perform after a route matches the condition.</p>
+     * <p>This parameter specifies the action to be performed after a route meets the match conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>Additive</p>
@@ -91,8 +91,7 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public String communityOperateMode;
 
     /**
-     * <p>The description of the routing policy.</p>
-     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the route map. The description must be 1 to 256 characters in length, and cannot start with http:// or https://. The description can be left empty.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -101,7 +100,7 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The list of destination instance types that the route must match. The following instance types are supported:</p>
+     * <p>The list of destination instance types to be matched. The following instance types are supported:</p>
      * <ul>
      * <li><p><strong>VPC</strong>: VPC instance.</p>
      * </li>
@@ -111,13 +110,13 @@ public class CreateCenRouteMapRequest extends TeaModel {
      * </li>
      * <li><p><strong>VPN</strong>: IPsec connection.</p>
      * <blockquote>
-     * <p>If an IPsec connection or SSL server is bound to a VPN gateway instance and is connected to a transit router instance through the VPC associated with the VPN gateway instance, this parameter does not take effect. This parameter takes effect only when an IPsec connection is directly bound to a transit router instance.</p>
+     * <p>If an IPsec connection or SSL server is associated with a VPN gateway instance and connected to a transit router instance through the VPC associated with the VPN gateway instance, this parameter does not take effect. This parameter takes effect only when an IPsec connection is directly associated with a transit router instance.</p>
      * </blockquote>
      * </li>
      * </ul>
-     * <p>You can specify multiple instance types.</p>
+     * <p>You can enter multiple instance types.</p>
      * <blockquote>
-     * <p>The destination instance type list takes effect only when the routing policy direction is outbound from the regional gateway and the destination instance types are instance types in the local region.</p>
+     * <p>The destination instance type list takes effect only when the application direction of the route map is set to RegionOut and the destination instance types are the types of instances in the local region.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -127,8 +126,8 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<String> destinationChildInstanceTypes;
 
     /**
-     * <p>The prefix list that the route must match.</p>
-     * <p>IP address ranges in the prefix list are in CIDR format. You can specify up to 64 IP address ranges.</p>
+     * <p>The prefix list to be matched.</p>
+     * <p>The CIDR blocks in the prefix list must be in CIDR format. You can enter up to 64 CIDR blocks.</p>
      * <p>Both IPv4 and IPv6 formats are supported.</p>
      * 
      * <strong>example:</strong>
@@ -138,17 +137,17 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<String> destinationCidrBlocks;
 
     /**
-     * <p>The list of destination instance IDs that the route must match. The following types of instance IDs are supported:</p>
+     * <p>The list of destination instance IDs to be matched. You can enter the IDs of the following types of instances:</p>
      * <ul>
-     * <li>Virtual Private Cloud (VPC) instance ID</li>
-     * <li>Virtual Border Router (VBR) instance ID</li>
-     * <li>Cloud Connect Network (CCN) instance ID</li>
-     * <li>Smart Access Gateway instance ID</li>
-     * <li>IPsec connection ID</li>
+     * <li>Virtual Private Cloud (VPC) instance IDs</li>
+     * <li>Virtual Border Router (VBR) instance IDs</li>
+     * <li>Cloud Connect Network (CCN) instance IDs</li>
+     * <li>Smart Access Gateway (SAG) instance IDs</li>
+     * <li>IPsec connection IDs</li>
      * </ul>
-     * <p>You can specify up to 64 instance IDs.</p>
+     * <p>You can enter up to 64 instance IDs.</p>
      * <blockquote>
-     * <p>The destination instance ID list takes effect only when the routing policy direction is outbound from the regional gateway and the destination instance IDs are instance IDs in the local region.</p>
+     * <p>The destination instance ID list takes effect only when the application direction of the route map is set to RegionOut and the destination instance IDs are the IDs of instances in the local region.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -158,11 +157,11 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<String> destinationInstanceIds;
 
     /**
-     * <p>Specifies whether to use the exclude matching mode for the destination instance ID list. Valid values:</p>
+     * <p>Specifies whether to use the exclude match mode for the destination instance ID list. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): no. A match is successful if the destination instance ID of the route is in the <strong>DestinationInstanceIds.N</strong> list.</p>
+     * <li><p><strong>false</strong> (default): no. A route meets the match condition if the destination instance ID of the route is in <strong>DestinationInstanceIds.N</strong>.</p>
      * </li>
-     * <li><p><strong>true</strong>: yes. A match is successful if the destination instance ID of the route is not in the <strong>DestinationInstanceIds.N</strong> list.</p>
+     * <li><p><strong>true</strong>: yes. A route meets the match condition if the destination instance ID of the route is not in <strong>DestinationInstanceIds.N</strong>.</p>
      * </li>
      * </ul>
      * 
@@ -173,15 +172,15 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public Boolean destinationInstanceIdsReverseMatch;
 
     /**
-     * <p>The list of destination region IDs that the route must match. You can specify up to 64 region IDs.</p>
+     * <p>The list of destination region IDs to be matched. You can enter up to 64 region IDs.</p>
      */
     @NameInMap("DestinationRegionIds")
     public java.util.List<String> destinationRegionIds;
 
     /**
-     * <p>The list of destination route table IDs that the route must match. You can specify up to 64 route table IDs.</p>
+     * <p>The list of destination route table IDs to be matched. You can enter up to 64 route table IDs.</p>
      * <blockquote>
-     * <p>The destination route table ID list takes effect only when the routing policy direction is outbound from the regional gateway and the destination route table IDs are route table IDs of network instances in the local region.</p>
+     * <p>The destination route table ID list takes effect only when the application direction of the route map is set to RegionOut and the destination route table IDs are the IDs of route tables of network instances in the local region.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -191,11 +190,11 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<String> destinationRouteTableIds;
 
     /**
-     * <p>The action to perform after all conditions are matched. Valid values:</p>
+     * <p>The action to be performed when a route meets all match conditions. Valid values:</p>
      * <ul>
-     * <li><p><strong>Permit</strong>: permits the matched routes.</p>
+     * <li><p><strong>Permit</strong>: permits the matched route.</p>
      * </li>
-     * <li><p><strong>Deny</strong>: denies the matched routes.</p>
+     * <li><p><strong>Deny</strong>: denies the matched route.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -207,12 +206,12 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public String mapResult;
 
     /**
-     * <p>The IP address type that the route must match. Valid values:</p>
+     * <p>The IP address type of the routes to be matched. Valid values:</p>
      * <ul>
      * <li><strong>IPv4</strong>: matches only IPv4 routes.</li>
      * <li><strong>IPv6</strong>: matches only IPv6 routes.</li>
      * </ul>
-     * <p>This parameter can be left empty, which indicates that all types of routes are matched.</p>
+     * <p>If this parameter is left empty, all types of routes are matched.</p>
      * 
      * <strong>example:</strong>
      * <p>IPv4</p>
@@ -221,10 +220,10 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public String matchAddressType;
 
     /**
-     * <p>The AS path list that the route must match.</p>
-     * <p>You can specify up to 64 AS numbers.</p>
+     * <p>The AS path list to be matched.</p>
+     * <p>You can enter up to 64 AS numbers.</p>
      * <blockquote>
-     * <p>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means that only AS number lists are supported, not sets or sublists.</p>
+     * <p>Only AS SEQUENCE is supported. AS SET, AS CONFED SEQUENCE, and AS CONFED SET are not supported. This means only AS number lists are supported, and sets and sub-lists are not supported.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -234,11 +233,11 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<Long> matchAsns;
 
     /**
-     * <p>The Community set that the route must match.</p>
-     * <p>Each Community is in the n:m format, where the value ranges of n and m are <strong>1</strong> to <strong>65535</strong>. Communities must comply with RFC 1997. Large Communities (RFC 8092) are not supported.</p>
-     * <p>You can specify up to 64 Communities.</p>
+     * <p>The community set to be matched.</p>
+     * <p>Each community must be in the format of n:m, where n and m are integers from <strong>1</strong> to <strong>65535</strong>. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
+     * <p>You can enter up to 64 communities.</p>
      * <blockquote>
-     * <p>Incorrect Community configurations may cause routes to fail to be advertised to on-premises data centers.</p>
+     * <p>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -248,11 +247,11 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<String> matchCommunitySet;
 
     /**
-     * <p>Policy priority of the next associated routing policy.</p>
+     * <p>Policy priority of the next route map to be associated.</p>
      * <ul>
-     * <li>You can set policy priority of the next associated routing policy only when <strong>MapResult</strong> is set to <strong>Permit</strong>. Only routes that are permitted continue to match the next associated routing policy.</li>
-     * <li>The next associated routing policy must have the same region and direction as the current routing policy.</li>
-     * <li>Policy priority of the next associated routing policy must be lower than policy priority of the current routing policy.</li>
+     * <li>You can set this parameter only when <strong>MapResult</strong> is set to <strong>Permit</strong>. Only permitted routes are matched against the next associated route map.</li>
+     * <li>The next route map to be associated must be applied to the same region and in the same direction as the current route map.</li>
+     * <li>Policy priority of the next route map to be associated must be lower than that of the current route map.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -262,11 +261,11 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public Integer nextPriority;
 
     /**
-     * <p>The Community set to be executed.</p>
-     * <p>Each Community is in the n:m format, where the value ranges of n and m are <strong>1</strong> to <strong>65535</strong>. Communities must comply with RFC 1997. Large Communities (RFC 8092) are not supported.</p>
-     * <p>You can specify up to 32 Communities.</p>
+     * <p>The community set to be operated.</p>
+     * <p>Each community must be in the format of n:m, where n and m are integers from <strong>1</strong> to <strong>65535</strong>. Communities must comply with RFC 1997. Large communities (RFC 8092) are not supported.</p>
+     * <p>You can enter up to 32 communities.</p>
      * <blockquote>
-     * <p>Incorrect Community configurations may cause routes to fail to be advertised to on-premises data centers.</p>
+     * <p>Incorrect community configurations may prevent routes from being advertised to the on-premises data center.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -282,9 +281,9 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The modified priority of the route.</p>
+     * <p>The priority of the route to be modified.</p>
      * <p>Valid values: <strong>1</strong> to <strong>100</strong>. The default priority of a route is <strong>50</strong>. A smaller value indicates a higher priority.</p>
-     * <p>This parameter specifies the action to perform after a route matches the condition.</p>
+     * <p>This parameter specifies the action to be performed after a route meets the match conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -293,15 +292,15 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public Integer preference;
 
     /**
-     * <p>The AS path that is prepended when the regional gateway receives or publishes route entries.</p>
-     * <p>The requirements for configuring the prepended AS path vary based on the routing policy direction:</p>
+     * <p>The AS path to be prepended when the regional gateway receives or performs publish route entry.</p>
+     * <p>The requirements for configuring the prepended AS path vary based on the application direction of the policy:</p>
      * <ul>
-     * <li><p>When the direction is inbound to the regional gateway, the match condition must include the source instance ID list and source region, and the source region must be the same as the region to which the routing policy is applied.</p>
+     * <li><p>If the application direction is RegionIn, you must configure the source instance ID list and source region in the match conditions, and the source region must be the same as the region where the policy is applied.</p>
      * </li>
-     * <li><p>When the direction is outbound from the regional gateway, the match condition must include the destination instance ID list.</p>
+     * <li><p>If the application direction is RegionOut, you must configure the destination instance ID list in the match conditions.</p>
      * </li>
      * </ul>
-     * <p>This parameter specifies the action to execute after a route matches the condition. You can specify up to 32 AS numbers.</p>
+     * <p>This parameter specifies the action to be executed after routing meets the match conditions. You can enter up to 32 AS numbers.</p>
      * 
      * <strong>example:</strong>
      * <p>65501</p>
@@ -310,9 +309,9 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<Long> prependAsPath;
 
     /**
-     * <p>Policy priority of the routing policy. Valid values: <strong>1</strong> to <strong>100</strong>. A smaller value indicates a higher priority.</p>
+     * <p>The policy priority of the route map. Valid values: <strong>1</strong> to <strong>100</strong>. A smaller value indicates a higher priority.</p>
      * <blockquote>
-     * <p>Policy priority of routing policies in the same region and with the same direction must be unique. When a routing policy is executed, the system starts matching conditional statements from the routing policy with the smallest priority value. Specify policy priority based on the expected matching order.</p>
+     * <p>The policy priority of each route map applied to the same region in the same direction must be unique. When the policy is executed, the system matches routing against the conditional statements of the policy with the smallest priority value first. Therefore, specify the policy priority based on the expected match order.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -329,16 +328,16 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The list of routing types that the route must match. The following routing types are supported:</p>
+     * <p>The list of route types to be matched. The following route types are supported:</p>
      * <ul>
-     * <li><p><strong>System</strong>: system routes that are automatically generated by the system.</p>
+     * <li><p><strong>System</strong>: system routing, which is automatically generated by the system.</p>
      * </li>
-     * <li><p><strong>Custom</strong>: custom routes that are manually added by users.</p>
+     * <li><p><strong>Custom</strong>: custom routing, which is manually added by a user.</p>
      * </li>
-     * <li><p><strong>BGP</strong>: BGP routes that are propagated through the BGP routing protocol.</p>
+     * <li><p><strong>BGP</strong>: BGP routing, which is propagated through the BGP routable protocol.</p>
      * </li>
      * </ul>
-     * <p>You can specify multiple routing types.</p>
+     * <p>You can enter multiple route types.</p>
      * 
      * <strong>example:</strong>
      * <p>System</p>
@@ -347,22 +346,22 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<String> routeTypes;
 
     /**
-     * <p>The list of source instance types that the route must match. The following instance types are supported:</p>
+     * <p>The list of source instance types to be matched. The following instance types are supported:</p>
      * <ul>
      * <li><p><strong>VPC</strong>: VPC instance.</p>
      * </li>
-     * <li><p><strong>VBR</strong>: virtual border router instance.</p>
+     * <li><p><strong>VBR</strong>: border router instance.</p>
      * </li>
      * <li><p><strong>CCN</strong>: CCN instance.</p>
      * </li>
      * <li><p><strong>VPN</strong>: VPN gateway instance or IPsec connection.</p>
      * <ul>
-     * <li>If an IPsec connection or SSL server is attached to a VPN gateway instance, the VPC associated with the VPN gateway instance must be connected to a transit router instance, and the VPN gateway instance must run the BGP dynamic routing protocol for this parameter to take effect.</li>
-     * <li>If an IPsec connection is directly attached to a transit router instance, this parameter takes effect.</li>
+     * <li>If an IPsec connection or SSL server is attached to a VPN gateway instance, the VPC associated with the VPN gateway instance must be connected to a forward router instance, and the VPN gateway instance must run the BGP dynamic routing routable protocol for this parameter to take effect.</li>
+     * <li>If an IPsec connection is directly attached to a forward router instance, this parameter takes effect.</li>
      * </ul>
      * </li>
      * </ul>
-     * <p>You can specify multiple instance types.</p>
+     * <p>You can enter multiple instance types.</p>
      * 
      * <strong>example:</strong>
      * <p>VPC</p>
@@ -371,15 +370,15 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<String> sourceChildInstanceTypes;
 
     /**
-     * <p>The list of source instance IDs that the route must match. The following types of instance IDs are supported:</p>
+     * <p>The list of source instance IDs to be matched. You can enter the IDs of the following types of instances:</p>
      * <ul>
-     * <li>Virtual Private Cloud (VPC) instance ID</li>
-     * <li>Virtual Border Router (VBR) instance ID</li>
-     * <li>Cloud Connect Network (CCN) instance ID</li>
-     * <li>Smart Access Gateway instance ID</li>
-     * <li>IPsec connection ID</li>
+     * <li>Virtual Private Cloud (VPC) instance IDs</li>
+     * <li>Virtual Border Router (VBR) instance IDs</li>
+     * <li>Cloud Connect Network (CCN) instance IDs</li>
+     * <li>Smart Access Gateway (SAG) instance IDs</li>
+     * <li>IPsec connection IDs</li>
      * </ul>
-     * <p>You can specify up to 64 instance IDs.</p>
+     * <p>You can enter up to 64 instance IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-adeg3544fdf34vf****</p>
@@ -388,11 +387,11 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<String> sourceInstanceIds;
 
     /**
-     * <p>Specifies whether to use the exclude matching mode for the source instance ID list. Valid values:</p>
+     * <p>Specifies whether to use the exclude match mode for the source instance ID list. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): no. A match is successful if the source instance ID of the route is in the <strong>SourceInstanceIds.N</strong> list.</p>
+     * <li><p><strong>false</strong> (default): no. A route meets the match condition if the source instance ID of the route is in <strong>SourceInstanceIds.N</strong>.</p>
      * </li>
-     * <li><p><strong>true</strong>: yes. A match is successful if the source instance ID of the route is not in the <strong>SourceInstanceIds.N</strong> list.</p>
+     * <li><p><strong>true</strong>: yes. A route meets the match condition if the source instance ID of the route is not in <strong>SourceInstanceIds.N</strong>.</p>
      * </li>
      * </ul>
      * 
@@ -403,8 +402,8 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public Boolean sourceInstanceIdsReverseMatch;
 
     /**
-     * <p>The list of source region IDs that the route must match. You can specify up to 64 region IDs.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> to query region IDs.</p>
+     * <p>The list of source region IDs to be matched. You can enter up to 64 region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>
@@ -413,7 +412,7 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<String> sourceRegionIds;
 
     /**
-     * <p>The list of source route table IDs that the route must match. You can specify up to 64 route table IDs.</p>
+     * <p>The list of source route table IDs to be matched. You can enter up to 64 route table IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>vtb-adfr233vf34rvd4****</p>
@@ -422,8 +421,8 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public java.util.List<String> sourceRouteTableIds;
 
     /**
-     * <p>The route table ID of the transit router.</p>
-     * <p>If you do not specify a route table ID, the routing policy is automatically associated with the default route table of the transit router.</p>
+     * <p>The ID of the route table of the transit router.</p>
+     * <p>If you do not specify a route table ID, the route map is automatically associated with the default route table of the transit router.</p>
      * 
      * <strong>example:</strong>
      * <p>vtb-gw8nx3515m1mbd1z1****</p>
@@ -432,15 +431,13 @@ public class CreateCenRouteMapRequest extends TeaModel {
     public String transitRouterRouteTableId;
 
     /**
-     * <p>The direction in which the routing policy is applied. Valid values:</p>
+     * <p>The application direction of the route map. Valid values:</p>
      * <ul>
-     * <li><strong>RegionIn</strong>: the inbound direction of the regional gateway. Routes are transmitted to the CEN regional gateway.</li>
+     * <li><p><strong>RegionIn</strong>: the direction in which routes are transmitted to the regional gateway of the CEN instance. For example, routes are advertised from a network instance in a region to the regional gateway in the same region, or routes are advertised from another region to the regional gateway.</p>
+     * </li>
+     * <li><p><strong>RegionOut</strong>: the direction in which routes are transmitted from the regional gateway of the CEN instance. For example, routes are advertised from the regional gateway to a network instance in the same region, or to a regional gateway in another region.</p>
+     * </li>
      * </ul>
-     * <p> For example, a route is advertised from a network instance in the local region to the local regional gateway, or a route is advertised from another region to the local regional gateway.</p>
-     * <ul>
-     * <li><strong>RegionOut</strong>: the outbound direction of the regional gateway. Routes are transmitted from the CEN regional gateway.</li>
-     * </ul>
-     * <p> For example, a route is advertised from the local regional gateway to a network instance in the local region, or to a regional gateway in another region.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

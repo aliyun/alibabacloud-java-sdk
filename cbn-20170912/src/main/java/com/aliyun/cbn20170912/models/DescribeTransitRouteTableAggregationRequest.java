@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeTransitRouteTableAggregationRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can generate the parameter value on your client to ensure that it is unique across different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeTransitRouteTableAggregationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The number of entries per page for a paged query. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -27,10 +27,10 @@ public class DescribeTransitRouteTableAggregationRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request or if no next query exists.</li>
-     * <li>If a next query exists, set the value to the <strong>NextToken</strong> value returned in the previous API call.</li>
+     * <li>If this is your first query or no next query is to be sent, ignore this parameter.</li>
+     * <li>If a next query is to be sent, set the value to the <strong>NextToken</strong> value returned from the last API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,7 +61,7 @@ public class DescribeTransitRouteTableAggregationRequest extends TeaModel {
     public String transitRouteTableAggregationCidr;
 
     /**
-     * <p>The ID of the Enterprise Edition transit router route table.</p>
+     * <p>The ID of the route table of the Enterprise Edition transit router.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -16,7 +16,7 @@ public class DescribeRouteConflictRequest extends TeaModel {
 
     /**
      * <p>The region ID of the network instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to obtain region IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,9 +38,9 @@ public class DescribeRouteConflictRequest extends TeaModel {
     /**
      * <p>The type of the network instance. Valid values:</p>
      * <ul>
-     * <li><p><strong>VPC</strong>: virtual private cloud.</p>
+     * <li><p><strong>VPC</strong>: VPC.</p>
      * </li>
-     * <li><p><strong>VBR</strong>: virtual border router.</p>
+     * <li><p><strong>VBR</strong>: VBR.</p>
      * </li>
      * <li><p><strong>CCN</strong>: Cloud Connect Network.</p>
      * </li>
@@ -78,7 +78,7 @@ public class DescribeRouteConflictRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page during paging. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
+     * <p>The number of entries to return per page in a paged query. This parameter is used for paging. Default value: <strong>10</strong>. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

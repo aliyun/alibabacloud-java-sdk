@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateCenBandwidthPackageRequest extends TeaModel {
     /**
-     * <p>The bandwidth package instance ID.</p>
+     * <p>The bandwidth plan instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

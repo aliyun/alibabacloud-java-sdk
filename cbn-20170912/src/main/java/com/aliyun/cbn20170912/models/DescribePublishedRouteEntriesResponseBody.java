@@ -14,7 +14,7 @@ public class DescribePublishedRouteEntriesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query.</p>
+     * <p>The number of entries returned per page in a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -16,9 +16,9 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate the parameter value on your client. Make sure that the token is unique among different requests. The client token only supports ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -38,13 +38,13 @@ public class CreateCenChildInstanceRouteEntryToAttachmentRequest extends TeaMode
     public String destinationCidrBlock;
 
     /**
-     * <p>Specifies whether to perform a dry run. The dry run checks parameter validity, user permissions, and instance status. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request, including permission and instance status checks. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): Sends a normal request. If the request passes the check, a route entry is added to the network instance.</li>
-     * <li><strong>true</strong>: Sends a check request. No route entry is added to the network instance. The system checks the required parameters, request format, and other conditions. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request. If the request passes the check, a route entry is added for the network instance.</li>
+     * <li><strong>true</strong>: sends a dry run request. Only the check is performed, and no route entry is added for the network instance. Check items include whether required parameters are specified and the request format. If the check fails, the corresponding error is returned. If the check is passed, the error code <code>DryRunOperation</code> is returned.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is not currently in effect.</p>
+     * <p>This parameter does not take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

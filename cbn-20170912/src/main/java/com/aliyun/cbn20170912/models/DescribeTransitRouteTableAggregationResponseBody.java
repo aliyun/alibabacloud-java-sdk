@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,16 +14,16 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The list of aggregate route information.</p>
+     * <p>The list of aggregate routes.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeTransitRouteTableAggregationResponseBodyData> data;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query is to be sent.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -115,8 +115,8 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The routing type of the aggregation route.</p>
-         * <p>The value is <strong>Static</strong> only, which indicates a static route. After the aggregation route is propagated to a VPC-connected instance, it becomes a custom route entry by default.</p>
+         * <p>The route type of the aggregate route.</p>
+         * <p>Valid value: <strong>Static</strong>, which indicates a static route. After the aggregate route is propagated to a VPC-connected instance, it becomes a custom route entry by default.</p>
          * 
          * <strong>example:</strong>
          * <p>Static</p>
@@ -125,8 +125,8 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         public String routeType;
 
         /**
-         * <p>The propagation scope of the aggregation route.</p>
-         * <p>The value is <strong>VPC</strong> only, which indicates that the aggregation route is propagated to all VPC-connected instances that have established associated forwarding relationships with the current Enterprise Edition transit router route table and have the route synchronization feature enabled.</p>
+         * <p>The propagation scope of the aggregate route.</p>
+         * <p>Valid value: <strong>VPC</strong>, which indicates that the aggregate route is propagated to all VPC-connected instances that are associated with the route table of the current Enterprise Edition transit router and have route synchronization enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC</p>
@@ -135,22 +135,22 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         public String scope;
 
         /**
-         * <p>The propagation scope list of the aggregate route.</p>
+         * <p>The list of propagation scopes for the aggregate route.</p>
          * <blockquote>
-         * <p>You must specify at least one of the propagation scope or the propagation scope list for the aggregate route. We recommend that you use the propagation scope list. Elements in the propagation scope list cannot duplicate the value of the propagation scope.</p>
+         * <p>You must specify at least one of the propagation scope and the propagation scope list. We recommend that you specify the propagation scope list. The elements in the propagation scope list cannot be the same as the value of the propagation scope.</p>
          * </blockquote>
          */
         @NameInMap("ScopeList")
         public java.util.List<String> scopeList;
 
         /**
-         * <p>The propagation status of the aggregation route.</p>
+         * <p>The propagation status of the aggregate route.</p>
          * <ul>
-         * <li><strong>AllConfigured</strong>: The aggregation routing has been propagated to all VPC-connected instances.</li>
-         * <li><strong>Configuring</strong>: The aggregation routing is being propagated.</li>
-         * <li><strong>ConfigFailed</strong>: The aggregation routing failed to be propagated.</li>
-         * <li><strong>PartialConfigured</strong>: The aggregation routing failed to be propagated to some VPC-connected instances.</li>
-         * <li><strong>Deleting</strong>: The aggregation routing is being deleted.</li>
+         * <li><strong>AllConfigured</strong>: The aggregate route is delivered to all VPC-connected instances.</li>
+         * <li><strong>Configuring</strong>: The aggregate route is being delivered.</li>
+         * <li><strong>ConfigFailed</strong>: The aggregate route failed to be delivered.</li>
+         * <li><strong>PartialConfigured</strong>: The aggregate route is not delivered to some VPC-connected instances.</li>
+         * <li><strong>Deleting</strong>: The aggregate route is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -160,7 +160,7 @@ public class DescribeTransitRouteTableAggregationResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the Enterprise Edition transit router route table.</p>
+         * <p>The ID of the route table of the Enterprise Edition transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-6ehgc262hr170qgyc****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ActiveFlowLogResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</p>
@@ -14,10 +14,10 @@ public class ActiveFlowLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * <ul>
-     * <li><strong>true</strong>: successful.</li>
-     * <li><strong>false</strong>: failed.</li>
+     * <li><strong>true</strong>: The request is successful.</li>
+     * <li><strong>false</strong>: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>

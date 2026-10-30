@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     /**
-     * <p>The instance ID of the Cloud Enterprise Network (CEN).</p>
+     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-a7syd349kne38g****</p>
@@ -15,7 +15,7 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-4266****</p>
@@ -26,8 +26,8 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the multicast domain is created.</li>
+     * <li><strong>true</strong>: performs a dry run and does not create the multicast domain. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a normal request and creates the multicast domain if the request passes the check.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The multicast domain feature options.</p>
+     * <p>The feature options for the multicast domain.</p>
      */
     @NameInMap("Options")
     public CreateTransitRouterMulticastDomainRequestOptions options;
@@ -49,8 +49,8 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the transit router instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the transit router.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -72,7 +72,7 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     public java.util.List<CreateTransitRouterMulticastDomainRequestTag> tag;
 
     /**
-     * <p>The instance ID of the transit router.</p>
+     * <p>The ID of the transit router instance, which is used to forward traffic and manage routing.</p>
      * 
      * <strong>example:</strong>
      * <p>tr-p0wr9p28r92d598y6****</p>
@@ -82,7 +82,7 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The description of the multicast domain.</p>
-     * <p>The description can be empty or 1 to 256 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The description can be left empty or be 1 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -92,7 +92,7 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
 
     /**
      * <p>The name of the multicast domain.</p>
-     * <p>The name can be empty or 1 to 128 characters in length, and cannot start with http:// or https://.</p>
+     * <p>The name can be left empty or be 1 to 128 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -211,7 +211,7 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
 
     public static class CreateTransitRouterMulticastDomainRequestOptions extends TeaModel {
         /**
-         * <p>Specifies whether to enable the Internet Group Management Protocol (IGMP) feature for the multicast domain. After this feature is enabled, hosts can dynamically join or leave multicast groups by using the IGMP protocol. Valid values:</p>
+         * <p>Specifies whether to enable the Internet Group Management Protocol (IGMP) feature for the multicast domain. After this feature is enabled, hosts can dynamically join or leave multicast groups by using IGMP. Valid values:</p>
          * <ul>
          * <li><strong>enable</strong>: enables the IGMP feature.</li>
          * <li><strong>disable</strong> (default): disables the IGMP feature.</li>
@@ -230,15 +230,15 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
         public String igmpv2Support;
 
         /**
-         * <p>Specifies whether to enable the strict multicast source control feature. If this feature is disabled, all ECS instances in the associated vSwitch can serve as multicast sources. If this feature is enabled, only ENIs that are statically configured or that have sent IGMP Join messages can serve as multicast sources. Valid values:</p>
+         * <p>Specifies whether to enable the strict multicast source control feature. If this feature is disabled, all Elastic Compute Service (ECS) instances associated with the vSwitch can act as multicast sources. If this feature is enabled, only statically configured elastic network interfaces (ENIs) or ENIs that have sent IGMP Join messages can act as multicast sources. Valid values:</p>
          * <ul>
          * <li><code>enable</code>: enables the strict multicast source control feature.</li>
          * <li><code>disable</code>: disables the strict multicast source control feature.</li>
          * </ul>
          * <blockquote>
          * <ul>
-         * <li>The strict multicast source control feature takes effect only for multicast domains with the IGMP feature enabled.</li>
-         * <li>Currently, only one multicast domain with the strict multicast source control feature disabled can be created under a transit router.</li>
+         * <li>The strict multicast source control feature takes effect only for multicast domains that have the IGMP feature enabled.</li>
+         * <li>You can create only one multicast domain with the strict multicast source control feature disabled under a transit router.</li>
          * </ul>
          * </blockquote>
          * 
@@ -274,7 +274,7 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
     public static class CreateTransitRouterMulticastDomainRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
-         * <p>Once you specify this parameter, it cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key cannot be an empty string. It can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
@@ -285,8 +285,8 @@ public class CreateTransitRouterMulticastDomainRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource.</p>
-         * <p>Once you specify this parameter, it cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
-         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
+         * <p>The tag value cannot be empty. It can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>

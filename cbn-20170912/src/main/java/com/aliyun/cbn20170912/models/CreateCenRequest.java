@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateCenRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate a parameter value on your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,7 +19,7 @@ public class CreateCenRequest extends TeaModel {
 
     /**
      * <p>The description of the CEN instance.</p>
-     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description can be left empty or must be 1 to 256 characters in length. It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testdesc</p>
@@ -29,7 +29,7 @@ public class CreateCenRequest extends TeaModel {
 
     /**
      * <p>The name of the CEN instance.</p>
-     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
+     * <p>The name can be left empty or must be 1 to 128 characters in length. It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>testname</p>
@@ -44,8 +44,11 @@ public class CreateCenRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The level of CIDR block overlapping.</p>
-     * <p>Valid values: <strong>REDUCED</strong> (default): CIDR blocks can overlap but cannot be identical.</p>
+     * <p>Specifies the level of CIDR block overlap.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li><strong>REDUCED</strong> (default): CIDR blocks can overlap but cannot be identical.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>REDUCED</p>
@@ -146,7 +149,7 @@ public class CreateCenRequest extends TeaModel {
     public static class CreateCenRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
-         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key cannot be an empty string. It can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
@@ -157,8 +160,8 @@ public class CreateCenRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource.</p>
-         * <p>The tag value cannot be empty. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
-         * <p>Each tag key has a corresponding tag value. You can specify up to 20 tag values at a time.</p>
+         * <p>The tag value cannot be empty. It can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>tagtest</p>

@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaModel {
     /**
-     * <p>The absolute value of cross-region bandwidth that the current queue can use when bandwidth is allocated by absolute value. Unit: Mbit/s.</p>
-     * <p>Enter a number only. Do not include the unit.</p>
+     * <p>The absolute value of the cross-region bandwidth that can be used by the current queue when bandwidth is allocated by absolute value. Unit: Mbit/s. Enter a number without the unit.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -15,8 +14,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     public Long bandwidth;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can generate the token value on the client side. Ensure that the token is unique across different requests and does not exceed 64 ASCII characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655****</p>
@@ -25,10 +23,10 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without modifying the queue configurations. The system checks the required parameters, request format, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and then modifies the queue configurations after the check succeeds.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the request for required parameters, request format, and service limits, but does not modify the queue configuration. If the request fails the check, an error is returned. If the request passes the check, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): performs a standard request. If the request passes the check, the queue configuration is modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +36,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     public Boolean dryRun;
 
     /**
-     * <p>The DSCP values of traffic packets to be matched by the current queue.</p>
+     * <p>The DSCP values of the traffic packets to be matched by the current queue.</p>
      */
     @NameInMap("Dscps")
     public java.util.List<Integer> dscps;
@@ -50,8 +48,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     public Long ownerId;
 
     /**
-     * <p>The new description of the queue.</p>
-     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The new description of the queue. The description can be empty or 1 to 256 characters in length. It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -60,7 +57,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     public String qosQueueDescription;
 
     /**
-     * <p>The QoS queue ID.</p>
+     * <p>The ID of the queue.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,8 +67,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     public String qosQueueId;
 
     /**
-     * <p>The new name of the queue.</p>
-     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
+     * <p>The new name of the queue. The name can be empty or 1 to 128 characters in length. It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -80,8 +76,7 @@ public class UpdateCenInterRegionTrafficQosQueueAttributeRequest extends TeaMode
     public String qosQueueName;
 
     /**
-     * <p>The percentage of cross-region bandwidth that the current queue can use when bandwidth is allocated by percentage.</p>
-     * <p>Enter a number only. Do not include the percent sign (%).</p>
+     * <p>The percentage of the cross-region bandwidth that can be used by the current queue when bandwidth is allocated by percentage. Enter a number without the percent sign (%).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

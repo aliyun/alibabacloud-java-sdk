@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyTransitRouterCapacityReservationsResponseBody extends TeaModel {
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>004E99FB-E996-5777-888E-BA1D8F215407</p>
      */

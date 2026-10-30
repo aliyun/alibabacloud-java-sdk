@@ -16,9 +16,9 @@ public class CreateTransitRouterRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate the parameter value on your client. Make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class CreateTransitRouterRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to execute a dry run, without performing the actual request. The dry run includes permission verification, instance status verification, and forwarding and routing checks. Valid values:</p>
+     * <p>Specifies whether to perform a dry run on the creation request. The dry run includes permission and instance status checks. Valid values:</p>
      * <ul>
      * <li><strong>false</strong> (default): sends a normal request and creates the Enterprise Edition transit router instance after the request passes the check.</li>
-     * <li><strong>true</strong>: sends a check request, without creating the Enterprise Edition transit router instance. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
+     * <li><strong>true</strong>: sends a dry run request and performs only the check without creating the Enterprise Edition transit router instance. The system checks whether required parameters are specified and whether the request format is valid. If the request fails the check, the system returns an error. If the request passes the check, the system returns the error code <code>DryRunOperation</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class CreateTransitRouterRequest extends TeaModel {
 
     /**
      * <p>The region ID of the Enterprise Edition transit router instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -66,10 +66,10 @@ public class CreateTransitRouterRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the multicast feature for the Enterprise Edition transit router. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): disables the multicast feature.</li>
-     * <li><strong>true</strong>: enables the multicast feature.</li>
+     * <li><strong>false</strong> (default): disables the feature.</li>
+     * <li><strong>true</strong>: enables the feature.</li>
      * </ul>
-     * <p>Only Enterprise Edition transit routers in some regions support the multicast feature. You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the regions that support the multicast feature.</p>
+     * <p>The multicast feature is supported only by Enterprise Edition transit routers in specific regions. You can call the <a href="https://help.aliyun.com/document_detail/261356.html">ListTransitRouterAvailableResource</a> operation to query the regions that support the multicast feature.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -84,7 +84,7 @@ public class CreateTransitRouterRequest extends TeaModel {
     public java.util.List<CreateTransitRouterRequestTag> tag;
 
     /**
-     * <p>The list of transit router CIDR blocks.</p>
+     * <p>The transit router CIDR blocks.</p>
      */
     @NameInMap("TransitRouterCidrList")
     public java.util.List<CreateTransitRouterRequestTransitRouterCidrList> transitRouterCidrList;
@@ -221,7 +221,7 @@ public class CreateTransitRouterRequest extends TeaModel {
     public static class CreateTransitRouterRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
-         * <p>Once specified, the tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key cannot be an empty string. The tag key can be up to 64 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
          * <p>You can specify up to 20 tag keys at a time.</p>
          * 
          * <strong>example:</strong>
@@ -232,8 +232,8 @@ public class CreateTransitRouterRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource.</p>
-         * <p>Once specified, the tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with aliyun or acs:, or contain http:// or https://.</p>
-         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
+         * <p>The tag value cannot be empty. The tag value can be up to 128 characters in length, and cannot start with <code>aliyun</code> or <code>acs:</code>. The tag value cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>Each tag key corresponds to a tag value. You can specify up to 20 tag values at a time.</p>
          * 
          * <strong>example:</strong>
          * <p>TagValue</p>
@@ -295,14 +295,14 @@ public class CreateTransitRouterRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Specifies whether to allow the system to automatically add a route for the transit router CIDR block to the transit router route table.</p>
+         * <p>Specifies whether to allow the system to automatically add a route for the transit router CIDR block to the transit router route table. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong> (default): allows the system.</p>
-         * <p>   If you select true, after you create a VPN connection of the private gateway type and create a route learning relationship for the VPN connection, the system automatically adds the following route entry to the transit router route table that has a route learning relationship with the VPN connection:</p>
-         * <p>  A blackhole route whose destination CIDR block is the transit router CIDR block from which gateway IP addresses are allocated for the IPsec connection.</p>
-         * <p>   The blackhole route is propagated only to the route tables of virtual border router (VBR) instances connected to the transit router.</p>
+         * <li><p><strong>true</strong> (default): allows the system to automatically add the route.</p>
+         * <p>   If you select this value, after you create a VPN connection of the private network gateway type and create a route learning correlation for the VPN connection, the system automatically adds a route entry to the transit router route table that has a route learning correlation with the VPN connection:</p>
+         * <p>  The destination CIDR block of the route is a blackhole route for the transit router CIDR block. The transit router CIDR block refers to the CIDR block to which a gateway IP address has been assigned for the IPsec connection.</p>
+         * <p>   The blackhole route is propagated only to the route table of the Virtual Border Router (VBR) instance under the transit router.</p>
          * </li>
-         * <li><p><strong>false</strong>: does not allow the system.</p>
+         * <li><p><strong>false</strong>: does not allow the system to automatically add the route.</p>
          * </li>
          * </ul>
          * 

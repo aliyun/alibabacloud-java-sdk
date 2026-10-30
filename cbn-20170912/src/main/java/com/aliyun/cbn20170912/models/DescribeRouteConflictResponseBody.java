@@ -14,7 +14,7 @@ public class DescribeRouteConflictResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page during paging.</p>
+     * <p>The number of entries returned per page in a paged query. This parameter is used for paging.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

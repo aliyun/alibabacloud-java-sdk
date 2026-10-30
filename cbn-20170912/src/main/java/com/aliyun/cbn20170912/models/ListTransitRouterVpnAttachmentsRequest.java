@@ -4,34 +4,12 @@ package com.aliyun.cbn20170912.models;
 import com.aliyun.tea.*;
 
 public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
-    /**
-     * <p>The Cloud Enterprise Network (CEN) instance ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cen-rsgxs8ng2awen2****</p>
-     */
     @NameInMap("CenId")
     public String cenId;
 
-    /**
-     * <p>The number of entries per page for a paged query. Default value: <strong>20</strong>.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("MaxResults")
     public Integer maxResults;
 
-    /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
-     * <ul>
-     * <li>You do not need to specify this parameter for the first request or if no next query exists.</li>
-     * <li>If a next query exists, set the value to the NextToken value returned by the previous API call.</li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
-     */
     @NameInMap("NextToken")
     public String nextToken;
 
@@ -41,13 +19,6 @@ public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The region ID of the transit router instance.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/132080.html">DescribeChildInstanceRegions</a> operation to query region IDs.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>cn-hangzhou</p>
-     */
     @NameInMap("RegionId")
     public String regionId;
 
@@ -57,28 +28,12 @@ public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The tag information of the CEN instance.</p>
-     * <p>You can query up to 20 tags at a time.</p>
-     */
     @NameInMap("Tag")
     public java.util.List<ListTransitRouterVpnAttachmentsRequestTag> tag;
 
-    /**
-     * <p>The ID of the VPN connection.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>tr-attach-a6p8voaodog5c0****</p>
-     */
     @NameInMap("TransitRouterAttachmentId")
     public String transitRouterAttachmentId;
 
-    /**
-     * <p>The transit router instance ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>tr-p0wm740vjnbaprv0m****</p>
-     */
     @NameInMap("TransitRouterId")
     public String transitRouterId;
 
@@ -176,25 +131,9 @@ public class ListTransitRouterVpnAttachmentsRequest extends TeaModel {
     }
 
     public static class ListTransitRouterVpnAttachmentsRequestTag extends TeaModel {
-        /**
-         * <p>The tag key of the resource.</p>
-         * <p>The tag key cannot be an empty string. It can be up to 64 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>You can specify up to 20 tag keys at a time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>tagtest</p>
-         */
         @NameInMap("Key")
         public String key;
 
-        /**
-         * <p>The tag value of the resource.</p>
-         * <p>The tag value can be an empty string or up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <p>Each tag key corresponds to one tag value. You can specify up to 20 tag values at a time.</p>
-         * 
-         * <strong>example:</strong>
-         * <p>value_A1</p>
-         */
         @NameInMap("Value")
         public String value;
 

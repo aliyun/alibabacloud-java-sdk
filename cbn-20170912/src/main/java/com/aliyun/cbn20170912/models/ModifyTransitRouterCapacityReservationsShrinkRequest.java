@@ -5,22 +5,38 @@ import com.aliyun.tea.*;
 
 public class ModifyTransitRouterCapacityReservationsShrinkRequest extends TeaModel {
     /**
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
+     * <p>You can generate the token on your client to ensure that the token is unique across different requests. The client token only supports ASCII characters.</p>
+     * <blockquote>
+     * <p>If you do not specify this parameter, the system automatically uses the request ID of the API request as the client token. The request ID may be different for each API request.</p>
+     * </blockquote>
+     * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-001****</p>
      */
     @NameInMap("ClientToken")
     public String clientToken;
 
+    /**
+     * <p>The deployment set information for the capacity reservation.</p>
+     */
     @NameInMap("DeploymentSets")
     public String deploymentSetsShrink;
 
+    /**
+     * <p>The reserved capacity for each zone in the capacity reservation.</p>
+     */
     @NameInMap("MinimumTransitRouterCapacities")
     public String minimumTransitRouterCapacitiesShrink;
 
+    /**
+     * <p>Cancels capacity reservations.</p>
+     */
     @NameInMap("ResetCapacityReservations")
     public String resetCapacityReservationsShrink;
 
     /**
+     * <p>The ID of the transit router instance for forward routing.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

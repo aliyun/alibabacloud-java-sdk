@@ -1,3 +1,14 @@
+2026-10-30 Version: 1.6.0
+- Support API CreateRouteMap.
+- Support API CreateRouteMapRule.
+- Support API DeleteRouteMap.
+- Support API DeleteRouteMapRule.
+- Support API ListRouteMapRules.
+- Support API ListRouteMaps.
+- Support API UpdateRouteMap.
+- Support API UpdateRouteMapRule.
+
+
 2026-10-23 Version: 1.5.0
 - Support API DescribeTransitRouterCapacityReservations.
 - Support API ModifyTransitRouterCapacityReservations.

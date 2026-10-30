@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
     /**
-     * <p>The maximum inter-region bandwidth that the queue can use when bandwidth is allocated by absolute value. Unit: Mbit/s.</p>
+     * <p>The maximum cross-region bandwidth that the queue can use when bandwidth is allocated in absolute value mode. Unit: Mbit/s.</p>
      * <ul>
-     * <li><p>The bandwidth value is calculated as an absolute value. For example, if you enter 20, the queue can use up to 20 Mbit/s of inter-region bandwidth.</p>
+     * <li><p>The bandwidth value is calculated as an absolute value. For example, if you enter 20, the queue can use up to 20 Mbit/s of the cross-region bandwidth.</p>
      * </li>
-     * <li><p>The sum of the bandwidth values of all queues under an inter-region connection cannot exceed the inter-region bandwidth value.</p>
+     * <li><p>The sum of the bandwidth of all queues under a cross-region connection instance cannot exceed the cross-region bandwidth.</p>
      * </li>
      * </ul>
      * 
@@ -21,9 +21,9 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can generate a parameter value on your client to ensure that the value is unique across different requests. The client token only supports ASCII characters.</p>
      * <blockquote>
-     * <p> If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value of each API request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the client token. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,10 +33,10 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, the queue is created.</li>
+     * <li><strong>true</strong>: sends a check request and does not create the queue. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the check, the system returns an error. If the request passes the check, the system returns the <code>DryRunOperation</code> error code.</li>
+     * <li><strong>false</strong> (default): sends a regular request and creates the queue after the request passes the check.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,8 +46,8 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The DSCP values to be matched by the queue.</p>
-     * <p>You can specify up to 20 DSCP values at a time. Separate multiple DSCP values with commas (,).</p>
+     * <p>The Differentiated Services Code Point (DSCP) values to be matched by the queue.</p>
+     * <p>You can enter up to 20 DSCP values at a time. Separate multiple DSCP values with commas (,).</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Dscps")
@@ -61,7 +61,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
 
     /**
      * <p>The description of the queue.</p>
-     * <p>The description can be empty or 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description can be empty or 1 to 256 characters in length. It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -71,7 +71,7 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
 
     /**
      * <p>The name of the queue.</p>
-     * <p>The name can be empty or 1 to 128 characters in length and cannot start with http:// or https://.</p>
+     * <p>The name can be empty or 1 to 128 characters in length. It cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -80,11 +80,11 @@ public class CreateCenInterRegionTrafficQosQueueRequest extends TeaModel {
     public String qosQueueName;
 
     /**
-     * <p>The maximum inter-region bandwidth that the queue can use when bandwidth is allocated by percentage.</p>
+     * <p>The maximum cross-region bandwidth that the queue can use when bandwidth is allocated in percentage mode.</p>
      * <ul>
-     * <li><p>The bandwidth value is calculated as a percentage. For example, if you enter 20, the queue can use up to 20% of the inter-region bandwidth.</p>
+     * <li><p>The bandwidth value is calculated as a percentage. For example, if you enter 20, the queue can use up to 20% of the cross-region bandwidth.</p>
      * </li>
-     * <li><p>The sum of the bandwidth percentages of all queues under an inter-region connection cannot exceed 100%.</p>
+     * <li><p>The sum of the bandwidth percentages of all queues under a cross-region connection instance cannot exceed 100%.</p>
      * </li>
      * </ul>
      * 

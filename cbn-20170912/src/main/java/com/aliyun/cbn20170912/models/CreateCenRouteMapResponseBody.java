@@ -14,7 +14,7 @@ public class CreateCenRouteMapResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the routing policy.</p>
+     * <p>The ID of the route map.</p>
      * 
      * <strong>example:</strong>
      * <p>cenrmap-w4yf7toozfol3q****</p>

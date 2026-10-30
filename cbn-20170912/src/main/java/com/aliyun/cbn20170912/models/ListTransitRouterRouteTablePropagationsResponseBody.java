@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The maximum number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query in a paged query.</p>
+     * <p>The token used to retrieve the next page of results.</p>
      * 
      * <strong>example:</strong>
      * <p>dd20****</p>
@@ -41,7 +41,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
     public Integer totalCount;
 
     /**
-     * <p>The list of route learning relationships.</p>
+     * <p>The route propagations.</p>
      */
     @NameInMap("TransitRouterPropagations")
     public java.util.List<ListTransitRouterRouteTablePropagationsResponseBodyTransitRouterPropagations> transitRouterPropagations;
@@ -102,11 +102,11 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         public String resourceId;
 
         /**
-         * <p>The network instance type. Valid values:</p>
+         * <p>The type of the network instance. Valid values:</p>
          * <ul>
-         * <li><strong>VPC</strong>: virtual private cloud (VPC) instance.</li>
-         * <li><strong>VBR</strong>: virtual border router (VBR) instance.</li>
-         * <li><strong>TR</strong>: transit router instance.</li>
+         * <li><strong>VPC</strong>: VPC.</li>
+         * <li><strong>VBR</strong>: VBR.</li>
+         * <li><strong>TR</strong>: transit router.</li>
          * <li><strong>VPN</strong>: VPN connection.</li>
          * </ul>
          * 
@@ -117,11 +117,11 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         public String resourceType;
 
         /**
-         * <p>The status of the route learning relationship. Valid values:</p>
+         * <p>The status of the route propagation. Valid values:</p>
          * <ul>
-         * <li><strong>Enabling</strong>: being enabled.</li>
-         * <li><strong>Disabling</strong>: being disabled.</li>
-         * <li><strong>Active</strong>: active.</li>
+         * <li><strong>Enabling</strong>: Enabling.</li>
+         * <li><strong>Disabling</strong>: Disabling.</li>
+         * <li><strong>Active</strong>: Active.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -131,7 +131,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         public String status;
 
         /**
-         * <p>The network instance connection ID.</p>
+         * <p>The ID of the network instance connection.</p>
          * 
          * <strong>example:</strong>
          * <p>tr-attach-vx6iwhjr1x1j78****</p>
@@ -140,7 +140,7 @@ public class ListTransitRouterRouteTablePropagationsResponseBody extends TeaMode
         public String transitRouterAttachmentId;
 
         /**
-         * <p>The ID of the Enterprise Edition transit router route table.</p>
+         * <p>The ID of the route table in the Enterprise Edition transit router.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-bp1dudbh2d5na6b50****</p>

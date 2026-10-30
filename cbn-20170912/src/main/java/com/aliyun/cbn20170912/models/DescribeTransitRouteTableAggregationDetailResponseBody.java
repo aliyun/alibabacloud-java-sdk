@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned on each page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -76,7 +76,7 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
 
     public static class DescribeTransitRouteTableAggregationDetailResponseBodyData extends TeaModel {
         /**
-         * <p>The message returned if the configuration of the aggregate route fails.</p>
+         * <p>The message returned when the aggregate route configuration fails.</p>
          * 
          * <strong>example:</strong>
          * <p>desctest</p>
@@ -85,7 +85,7 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
         public String description;
 
         /**
-         * <p>The ID of the VPC instance for which the aggregate route is configured.</p>
+         * <p>The instance ID of the VPC-connected instance to which the aggregation routing is configured.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-6eh7fp9hdqa2wv85t****</p>
@@ -96,16 +96,11 @@ public class DescribeTransitRouteTableAggregationDetailResponseBody extends TeaM
         /**
          * <p>The configuration status of the aggregate route.</p>
          * <ul>
-         * <li><p><strong>Configured</strong>: The aggregate route is advertised to the VPC instance.</p>
-         * </li>
-         * <li><p><strong>Configuring</strong>: The aggregate route is being advertised.</p>
-         * </li>
-         * <li><p><strong>ConfigFailed</strong>: The aggregate route failed to be advertised.</p>
-         * </li>
-         * <li><p><strong>PartialConfigured</strong>: The aggregate route was partially advertised.</p>
-         * </li>
-         * <li><p><strong>Deleting</strong>: The aggregate route is being deleted.</p>
-         * </li>
+         * <li><strong>Configured</strong>: The aggregate route is delivered to the VPC-connected instance.</li>
+         * <li><strong>Configuring</strong>: The aggregate route is being delivered.</li>
+         * <li><strong>ConfigFailed</strong>: The aggregate route fails to be delivered.</li>
+         * <li><strong>PartialConfigured</strong>: The aggregate route is partially delivered.</li>
+         * <li><strong>Deleting</strong>: The aggregate route is being deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
