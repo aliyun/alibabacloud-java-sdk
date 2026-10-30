@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeExcpetionCountRequest extends TeaModel {
     /**
-     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <p>The region ID of the Anti-DDoS Origin instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all region IDs supported by Anti-DDoS Origin.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeExcpetionCountRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
-     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
+     * <p>If you do not specify this parameter, the default resource group is used.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2pz25js****</p>

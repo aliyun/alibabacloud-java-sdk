@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeDdosEventRequest extends TeaModel {
     /**
-     * <p>The end time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time of the DDoS attack events to query. The time is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class DescribeDdosEventRequest extends TeaModel {
     /**
      * <p>The ID of the Anti-DDoS Origin instance to query.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -37,7 +37,7 @@ public class DescribeDdosEventRequest extends TeaModel {
     public String ip;
 
     /**
-     * <p>The page number.</p>
+     * <p>The Settings for the page number of the current page during paging in a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class DescribeDdosEventRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The Settings for the number of DDoS attack events to return on each page during paging in a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,9 +57,9 @@ public class DescribeDdosEventRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the Anti-DDoS Origin instance resides.</p>
+     * <p>The region ID of the Anti-DDoS Origin instance.</p>
      * <blockquote>
-     * <p> You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all region IDs supported by Anti-DDoS Origin.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class DescribeDdosEventRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
-     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
+     * <p>If you do not specify this parameter, the default resource group is used.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2pz25js****</p>
@@ -79,7 +79,7 @@ public class DescribeDdosEventRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The start time of the DDoS attack events to query. This value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the DDoS attack events to query. The time is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

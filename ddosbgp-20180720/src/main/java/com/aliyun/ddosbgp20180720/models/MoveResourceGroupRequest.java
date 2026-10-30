@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MoveResourceGroupRequest extends TeaModel {
     /**
-     * <p>The ID of the resource group to which you want to move the resource.</p>
+     * <p>The ID of the resource group to which you want to move the cloud resource instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The resource ID.</p>
+     * <p>The ID of the cloud resource instance whose resource group you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String resourceId;
 
     /**
-     * <p>The region ID of the resource.</p>
+     * <p>The region to which the resource belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class MoveResourceGroupRequest extends TeaModel {
     public String resourceRegionId;
 
     /**
-     * <p>The resource type. Set the value to <strong>instance</strong>.</p>
+     * <p>The type of the cloud resource whose resource group you want to modify. Valid values: <strong>instance</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

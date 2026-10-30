@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOpEntitiesRequest extends TeaModel {
     /**
-     * <p>The page number.</p>
+     * <p>The paging Settings for the current page number in a paged query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The end time. Operation logs that were generated before this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The end of the time range to query. The value is a UNIX timestamp in milliseconds. Operation logs generated before this time are queried.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,9 +25,9 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The ID of the instance to query.</p>
+     * <p>The ID of the Anti-DDoS Origin instance to query.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all instances.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,23 +37,23 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the operation. Valid values:</p>
+     * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li><strong>3</strong>: Add an IP address to the instance.</li>
-     * <li><strong>4</strong>: Remove an IP address from the instance.</li>
-     * <li><strong>5</strong>: Downgrade the instance.</li>
-     * <li><strong>6</strong>: Deactivate blackhole filtering.</li>
-     * <li><strong>7</strong>: Reset the number of times that you can deactivate blackhole filtering.</li>
-     * <li><strong>8</strong>: Restore the mitigation capability.</li>
-     * <li><strong>9</strong>: Add an asset group.</li>
-     * <li><strong>10</strong>: Remove an asset group.</li>
-     * <li><strong>11</strong>: Enable the metering method of daily 95th percentile for the burstable clean bandwidth feature.</li>
-     * <li><strong>12</strong>: Enable the metering method of monthly 95th percentile for the burstable clean bandwidth feature.</li>
-     * <li><strong>13</strong>: Periodically switch between the metering methods of daily 95th percentile and monthly 95th percentile for the burstable clean bandwidth feature.</li>
-     * <li><strong>14</strong>: Disable the metering method of daily 95th percentile for the burstable clean bandwidth feature.</li>
-     * <li><strong>15</strong>: Disable the metering method of monthly 95th percentile for the burstable clean bandwidth feature.</li>
-     * <li><strong>16</strong>: Disable burstable clean bandwidth due to overdue payments.</li>
-     * <li><strong>17</strong>: Disable burstable clean bandwidth due to instance expiration.</li>
+     * <li><strong>3</strong>: attach an IP address</li>
+     * <li><strong>4</strong>: unbind an IP address</li>
+     * <li><strong>5</strong>: decrease the quota</li>
+     * <li><strong>6</strong>: deactivate blackhole filtering</li>
+     * <li><strong>7</strong>: Reset quota on blackhole filtering deactivation</li>
+     * <li><strong>8</strong>: recover burstable protection</li>
+     * <li><strong>9</strong>: add an Asset group</li>
+     * <li><strong>10</strong>: delete an Asset group</li>
+     * <li><strong>11</strong>: enable daily 95th percentile bandwidth</li>
+     * <li><strong>12</strong>: enable monthly 95th percentile bandwidth</li>
+     * <li><strong>13</strong>: periodically switch between daily and monthly 95th percentile bandwidth patterns</li>
+     * <li><strong>14</strong>: shutdown daily 95th percentile bandwidth</li>
+     * <li><strong>15</strong>: shutdown monthly 95th percentile bandwidth</li>
+     * <li><strong>16</strong>: shutdown burstable clean bandwidth due to overdue payments</li>
+     * <li><strong>17</strong>: shutdown burstable clean bandwidth when they expire</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public Integer opAction;
 
     /**
-     * <p>The sorting method of operation logs. Set the value to <strong>opdate</strong>, which indicates sorting based on the operation time.</p>
+     * <p>The field by which to sort the operation logs. Set the value to <strong>opdate</strong>, which indicates that the operation logs are sorted by operation time.</p>
      * 
      * <strong>example:</strong>
      * <p>opdate</p>
@@ -72,10 +72,10 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The sort order of operation logs. Valid values:</p>
+     * <p>The sort order of the operation logs. Valid values:</p>
      * <ul>
-     * <li><strong>ASC</strong>: the ascending order.</li>
-     * <li><strong>DESC</strong>: the descending order.</li>
+     * <li><strong>ASC</strong>: ascending order</li>
+     * <li><strong>DESC</strong>: descending order</li>
      * </ul>
      * <p>Default value: <strong>DESC</strong>.</p>
      * 
@@ -86,7 +86,7 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public String orderDir;
 
     /**
-     * <p>The number of entries per page. Maximum value: 50.</p>
+     * <p>The paging Settings for the number of Operation logs per page in a paged query. Maximum value: 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -96,9 +96,9 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the instance resides.</p>
+     * <p>The region ID of the Anti-DDoS Origin instance.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query the IDs of all regions supported by Anti-DDoS Origin.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -108,8 +108,8 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the instance belongs in Resource Management.</p>
-     * <p>If you do not specify this parameter, the instance belongs to the default resource group.</p>
+     * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
+     * <p>If you do not specify this parameter, the default resource group is used.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2pz25js****</p>
@@ -118,7 +118,7 @@ public class DescribeOpEntitiesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The start time. Operation logs that were generated after this time are queried.**** The value is a UNIX timestamp. Unit: milliseconds.</p>
+     * <p>The beginning of the time range to query. The value is a UNIX timestamp in milliseconds. Operation logs generated after this time are queried.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

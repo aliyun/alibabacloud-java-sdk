@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeExcpetionCountResponseBody extends TeaModel {
     /**
-     * <p>The number of assets that are in an abnormal state.</p>
+     * <p>The number of abnormal IP addresses (such as those in the Black Hole Activated state) among protected assets that are assigned public IP addresses (such as a cloud server ECS instance, a Server Load Balancer (SLB) instance, and an elastic IP address (EIP)).</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -14,7 +14,7 @@ public class DescribeExcpetionCountResponseBody extends TeaModel {
     public Integer exceptionIpCount;
 
     /**
-     * <p>The number of Anti-DDoS Origin instances that are about to expire.</p>
+     * <p>The number of Anti-DDoS Origin instances that are about to expire (with a remaining validity period of less than 7 days).</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

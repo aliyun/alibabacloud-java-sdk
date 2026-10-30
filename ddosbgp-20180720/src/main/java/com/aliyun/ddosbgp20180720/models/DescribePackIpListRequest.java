@@ -7,7 +7,7 @@ public class DescribePackIpListRequest extends TeaModel {
     /**
      * <p>The ID of the Anti-DDoS Origin instance to query.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> to query the IDs of all Anti-DDoS Origin instances.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118698.html">DescribeInstanceList</a> operation to query the IDs of all Anti-DDoS Origin instances.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -46,7 +46,7 @@ public class DescribePackIpListRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of protected IP addresses to return on each page. The maximum value is 50.</p>
+     * <p>The number of protected IP addresses to return on each page. Maximum value: 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -56,16 +56,12 @@ public class DescribePackIpListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the cloud asset to which the protected IP address belongs. Valid values:</p>
+     * <p>The cloud asset type of the protected IP address to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>ECS</strong>: an Elastic Compute Service (ECS) instance.</p>
-     * </li>
-     * <li><p><strong>SLB</strong>: a Classic Load Balancer (CLB) instance.</p>
-     * </li>
-     * <li><p><strong>EIP</strong>: an Elastic IP Address (EIP) instance. Because Application Load Balancer (ALB) instances use EIPs, query the public IP address of an ALB instance using the EIP.</p>
-     * </li>
-     * <li><p><strong>WAF</strong>: a Web Application Firewall (WAF) instance.</p>
-     * </li>
+     * <li><strong>ECS</strong>: ECS instance.</li>
+     * <li><strong>SLB</strong>: Classic Load Balancer (CLB) instance.</li>
+     * <li><strong>EIP</strong>: elastic IP address (EIP). Because Internet-facing Application Load Balancer (ALB) instances use EIPs, you must query the public IP addresses of ALB instances by using EIPs.</li>
+     * <li><strong>WAF</strong>: Web Application Firewall (WAF) instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,7 +73,7 @@ public class DescribePackIpListRequest extends TeaModel {
     /**
      * <p>The region ID of the Anti-DDoS Origin instance.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> to query the IDs of all regions that Anti-DDoS Origin supports.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/118703.html">DescribeRegions</a> operation to query all region IDs supported by Anti-DDoS Origin.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -88,7 +84,7 @@ public class DescribePackIpListRequest extends TeaModel {
 
     /**
      * <p>The ID of the resource group to which the Anti-DDoS Origin instance belongs in Resource Management.</p>
-     * <p>If you do not set this parameter, the instance belongs to the default resource group.</p>
+     * <p>If you do not specify this parameter, the default resource group is used.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfm2pz25js****</p>
