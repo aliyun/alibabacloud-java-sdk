@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckResourcePermissionResponseBody extends TeaModel {
     /**
-     * <p>Error code. OK indicates a successful request</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code returned by the backend</p>
+     * <p>The HTTP status code returned by the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -32,7 +32,7 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -41,13 +41,13 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Resource permission list</p>
+     * <p>The resource permission list.</p>
      */
     @NameInMap("ResourcePermissionList")
     public java.util.List<CheckResourcePermissionResponseBodyResourcePermissionList> resourcePermissionList;
 
     /**
-     * <p>Indicates whether the request was successful</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
 
     public static class CheckResourcePermissionResponseBodyResourcePermissionList extends TeaModel {
         /**
-         * <p>Indicates whether the user has the permission on the specified resource</p>
+         * <p>Indicates whether the user has the specified resource permissions.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -119,7 +119,7 @@ public class CheckResourcePermissionResponseBody extends TeaModel {
         public Boolean hasPermission;
 
         /**
-         * <p>Resource ID</p>
+         * <p>The resource ID.</p>
          * 
          * <strong>example:</strong>
          * <p>hadoop.300000806.data_distill.behavior_gameinfor_01</p>

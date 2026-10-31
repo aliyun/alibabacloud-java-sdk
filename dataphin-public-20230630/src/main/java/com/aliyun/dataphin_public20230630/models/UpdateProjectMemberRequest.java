@@ -25,6 +25,8 @@ public class UpdateProjectMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -77,8 +79,13 @@ public class UpdateProjectMemberRequest extends TeaModel {
 
     public static class UpdateProjectMemberRequestUpdateCommandUserList extends TeaModel {
         /**
-         * <p>The member role. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</p>
-         * <p>This parameter is required.</p>
+         * <p>The list of role codes for the member. Supports system and custom project roles obtained from ListProjectRoles. Only one role is supported. If this list is not empty, it takes precedence over RoleList. You must specify at least one of RoleList and RoleCodeList.</p>
+         */
+        @NameInMap("RoleCodeList")
+        public java.util.List<String> roleCodeList;
+
+        /**
+         * <p>The member role. Valid values: 1: project administrator. 2: developer. 3: guest. 4: analyst. 5: O&amp;M engineer.</p>
          */
         @NameInMap("RoleList")
         public java.util.List<Integer> roleList;
@@ -96,6 +103,14 @@ public class UpdateProjectMemberRequest extends TeaModel {
         public static UpdateProjectMemberRequestUpdateCommandUserList build(java.util.Map<String, ?> map) throws Exception {
             UpdateProjectMemberRequestUpdateCommandUserList self = new UpdateProjectMemberRequestUpdateCommandUserList();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateProjectMemberRequestUpdateCommandUserList setRoleCodeList(java.util.List<String> roleCodeList) {
+            this.roleCodeList = roleCodeList;
+            return this;
+        }
+        public java.util.List<String> getRoleCodeList() {
+            return this.roleCodeList;
         }
 
         public UpdateProjectMemberRequestUpdateCommandUserList setRoleList(java.util.List<Integer> roleList) {
@@ -128,7 +143,7 @@ public class UpdateProjectMemberRequest extends TeaModel {
         public String env;
 
         /**
-         * <p>The list of user members.</p>
+         * <p>The user members.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("UserList")

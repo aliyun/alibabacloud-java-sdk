@@ -15,6 +15,8 @@ public class UpdateDataSourceConfigRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateDataSourceConfigRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The data source configuration item change.</p>
+     * <p>The changes to the datasource configuration items.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -59,7 +61,7 @@ public class UpdateDataSourceConfigRequest extends TeaModel {
 
     public static class UpdateDataSourceConfigRequestUpdateCommandConfigItemList extends TeaModel {
         /**
-         * <p>The key ID of the configuration item.</p>
+         * <p>The configuration item key ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -110,7 +112,7 @@ public class UpdateDataSourceConfigRequest extends TeaModel {
         public java.util.List<UpdateDataSourceConfigRequestUpdateCommandConfigItemList> configItemList;
 
         /**
-         * <p>The data source ID.</p>
+         * <p>The datasource ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

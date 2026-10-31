@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ResetDataServiceAppSecretRequest extends TeaModel {
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class ResetDataServiceAppSecretRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class ResetDataServiceAppSecretRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Reset Data Service Application Key</p>
+     * <p>The update command to reset the application key of a data service.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -59,7 +61,7 @@ public class ResetDataServiceAppSecretRequest extends TeaModel {
 
     public static class ResetDataServiceAppSecretRequestUpdateCommand extends TeaModel {
         /**
-         * <p>Application ID</p>
+         * <p>The application ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,9 +71,7 @@ public class ResetDataServiceAppSecretRequest extends TeaModel {
         public Integer appId;
 
         /**
-         * <p>The new application key, which must be globally unique and is used when calling APIs.
-         * The length is 8 to 128 English characters, and can contain digits, underscores (_), and hyphens (-).
-         * Customization is supported only when using Alibaba Cloud API Gateway or the built-in gateway. This configuration is ignored when using a dedicated cloud gateway.</p>
+         * <p>The new application key. The key must be globally unique and is used when you call API operations. The key must be 8 to 128 characters in length, and can contain digits, underscores (_), and hyphens (-). You can customize this parameter only when you use Alibaba Cloud API Gateway or the built-in gateway. If you use Apsara Stack Gateway, this parameter is ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>200000001</p>
@@ -80,10 +80,7 @@ public class ResetDataServiceAppSecretRequest extends TeaModel {
         public String appKey;
 
         /**
-         * <p>The new application secret.
-         * If this parameter is left empty, the system automatically generates a new AppSecret value.
-         * The length is 8 to 127 English characters, and can contain digits, underscores (_), and hyphens (-).
-         * Customization is supported only when using Alibaba Cloud API Gateway or the built-in gateway. This configuration is ignored when using a dedicated cloud gateway.</p>
+         * <p>The new application secret. If you leave this parameter empty, the system automatically generates a new AppSecret value. The secret must be 8 to 127 characters in length, and can contain digits, underscores (_), and hyphens (-). You can customize this parameter only when you use Alibaba Cloud API Gateway or the built-in gateway. If you use Apsara Stack Gateway, this parameter is ignored.</p>
          * 
          * <strong>example:</strong>
          * <p>abc123456789</p>

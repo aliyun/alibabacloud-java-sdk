@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListBatchTasksResponseBody extends TeaModel {
     /**
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListBatchTasksResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,22 +23,32 @@ public class ListBatchTasksResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>The paginated result of the task query.</p>
+     */
     @NameInMap("PageResult")
     public ListBatchTasksResponseBodyPageResult pageResult;
 
     /**
+     * <p>The ID of the request.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,13 +107,17 @@ public class ListBatchTasksResponseBody extends TeaModel {
 
     public static class ListBatchTasksResponseBodyPageResultResultData extends TeaModel {
         /**
+         * <p>The description of the task.</p>
+         * 
          * <strong>example:</strong>
-         * <p>订单明细加工任务</p>
+         * <p>Order detail processing task</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
+         * <p>The folder where the task is located.</p>
+         * 
          * <strong>example:</strong>
          * <p>/dwd</p>
          */
@@ -107,6 +125,8 @@ public class ListBatchTasksResponseBody extends TeaModel {
         public String directory;
 
         /**
+         * <p>The ID of the task file. You can use this ID as the input parameter for the GetBatchTaskInfo operation.</p>
+         * 
          * <strong>example:</strong>
          * <p>7090125821589888</p>
          */
@@ -114,6 +134,8 @@ public class ListBatchTasksResponseBody extends TeaModel {
         public Long fileId;
 
         /**
+         * <p>The latest submit status. Valid values: SUBMITTING, SUCCESS, and FAILED.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
          */
@@ -121,6 +143,8 @@ public class ListBatchTasksResponseBody extends TeaModel {
         public String lastSubmitStatus;
 
         /**
+         * <p>The latest submitted version number.</p>
+         * 
          * <strong>example:</strong>
          * <p>3</p>
          */
@@ -128,6 +152,8 @@ public class ListBatchTasksResponseBody extends TeaModel {
         public Integer lastVersion;
 
         /**
+         * <p>The name of the task.</p>
+         * 
          * <strong>example:</strong>
          * <p>dwd_order_detail</p>
          */
@@ -135,6 +161,8 @@ public class ListBatchTasksResponseBody extends TeaModel {
         public String name;
 
         /**
+         * <p>The ID of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>n_123456</p>
          */
@@ -142,16 +170,23 @@ public class ListBatchTasksResponseBody extends TeaModel {
         public String nodeId;
 
         /**
+         * <p>The name of the node.</p>
+         * 
          * <strong>example:</strong>
          * <p>dwd_order_detail</p>
          */
         @NameInMap("NodeName")
         public String nodeName;
 
+        /**
+         * <p>The list of output table names for the node.</p>
+         */
         @NameInMap("NodeOutputNameList")
         public java.util.List<String> nodeOutputNameList;
 
         /**
+         * <p>The type of the node. Valid values: 1 (periodic task) and 3 (manual task).</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -159,6 +194,8 @@ public class ListBatchTasksResponseBody extends TeaModel {
         public Integer nodeType;
 
         /**
+         * <p>The task type code.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -166,26 +203,38 @@ public class ListBatchTasksResponseBody extends TeaModel {
         public Integer operatorType;
 
         /**
+         * <p>The name of the task owner.</p>
+         * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John Doe</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
+         * <p>The ID of the task owner.</p>
+         * 
          * <strong>example:</strong>
          * <p>30001011</p>
          */
         @NameInMap("OwnerUserId")
         public String ownerUserId;
 
+        /**
+         * <p>Indicates whether the task has been published to the production environment.</p>
+         */
         @NameInMap("Published")
         public Boolean published;
 
+        /**
+         * <p>Indicates whether the task has been submitted.</p>
+         */
         @NameInMap("Released")
         public Boolean released;
 
         /**
+         * <p>The status of the task. Valid values: DRAFT, DEVELOP, and SUBMITTED.</p>
+         * 
          * <strong>example:</strong>
          * <p>SUBMITTED</p>
          */
@@ -329,6 +378,8 @@ public class ListBatchTasksResponseBody extends TeaModel {
 
     public static class ListBatchTasksResponseBodyPageResult extends TeaModel {
         /**
+         * <p>The total number of tasks that meet the query conditions, regardless of pagination.</p>
+         * 
          * <strong>example:</strong>
          * <p>10</p>
          */
@@ -336,6 +387,8 @@ public class ListBatchTasksResponseBody extends TeaModel {
         public Integer count;
 
         /**
+         * <p>The current page number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -343,12 +396,17 @@ public class ListBatchTasksResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
+        /**
+         * <p>The list of tasks on the current page.</p>
+         */
         @NameInMap("ResultData")
         public java.util.List<ListBatchTasksResponseBodyPageResultResultData> resultData;
 

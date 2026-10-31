@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpsertQualityTemplateRequest extends TeaModel {
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class UpsertQualityTemplateRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpsertQualityTemplateRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Upsert command.</p>
+     * <p>The upsert command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpsertCommand")
@@ -59,7 +61,7 @@ public class UpsertQualityTemplateRequest extends TeaModel {
 
     public static class UpsertQualityTemplateRequestUpsertCommandFormPropertyList extends TeaModel {
         /**
-         * <p>Component type.</p>
+         * <p>The type of the control.</p>
          * 
          * <strong>example:</strong>
          * <p>expression</p>
@@ -68,7 +70,7 @@ public class UpsertQualityTemplateRequest extends TeaModel {
         public String componentType;
 
         /**
-         * <p>Property name.</p>
+         * <p>The name of the property.</p>
          * 
          * <strong>example:</strong>
          * <p>col</p>
@@ -77,7 +79,7 @@ public class UpsertQualityTemplateRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Property value.</p>
+         * <p>The value of the property.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -118,7 +120,7 @@ public class UpsertQualityTemplateRequest extends TeaModel {
 
     public static class UpsertQualityTemplateRequestUpsertCommand extends TeaModel {
         /**
-         * <p>Template category. Valid values: CONSISTENT: consistency. EFFECTIVE: validity. TIMELINESE: timeliness. ACCURATE: accuracy. UNIQUENESS: uniqueness. COMPLETENESS: completeness. STABILITY: stability. CUSTOM: custom.</p>
+         * <p>The category of the template. Valid values: CONSISTENT (consistency), EFFECTIVE (effectiveness), TIMELINESE (timeliness), ACCURATE (accuracy), UNIQUENESS (uniqueness), COMPLETENESS (completeness), STABILITY (stability), and CUSTOM (custom).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -128,7 +130,7 @@ public class UpsertQualityTemplateRequest extends TeaModel {
         public String catalog;
 
         /**
-         * <p>Template description.</p>
+         * <p>The description of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -137,13 +139,13 @@ public class UpsertQualityTemplateRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>Rule configuration key-value pairs.</p>
+         * <p>The key-value pairs for rule configuration.</p>
          */
         @NameInMap("FormPropertyList")
         public java.util.List<UpsertQualityTemplateRequestUpsertCommandFormPropertyList> formPropertyList;
 
         /**
-         * <p>Template ID. If specified, it indicates an update operation. If not specified, it indicates a creation operation.</p>
+         * <p>The template ID. If this parameter is specified, the template is updated. If this parameter is not specified, a new template is created.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -152,7 +154,7 @@ public class UpsertQualityTemplateRequest extends TeaModel {
         public Long id;
 
         /**
-         * <p>Template name.</p>
+         * <p>The name of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -162,7 +164,7 @@ public class UpsertQualityTemplateRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Template owner ID.</p>
+         * <p>The ID of the template owner.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -172,13 +174,13 @@ public class UpsertQualityTemplateRequest extends TeaModel {
         public String owner;
 
         /**
-         * <p>Supported data source types, such as MySQL, Oracle, Microsoft SQL Server, MaxCompute, and Hive.</p>
+         * <p>The supported data source types, such as MySQL, Oracle, Microsoft SQL Server, MaxCompute, and Hive.</p>
          */
         @NameInMap("SupportDataSourceTypeList")
         public java.util.List<String> supportDataSourceTypeList;
 
         /**
-         * <p>Template type. Valid values: FIELD_NULL_VALUE_VALIDATE: field null value validation. FIELD_EMPTY_STRING_VALIDATE: field empty string validation. FIELD_UNIQUE_VALIDATE: field uniqueness validation. FIELD_GROUP_COUNT_VALIDATE: field unique value count validation. FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: field duplicate value count validation. FUNCTION_TIME_COMPARE: time function comparison. SINGLE_TABLE_TIME_COMPARE: single-table time field comparison. DOUBLE_TABLE_TIME_COMPARE: cross-table time field comparison. FIELD_FORMAT_VALIDATE: field format validation. FIELD_LENGTH_VALIDATE: field length validation. FIELD_VALUE_RANGE_VALIDATE: field value range validation. CODE_TABLE_COMPARE: code table reference comparison. STANDARD_CODE_TABLE_COMPARE: data standard code table reference comparison. SINGLE_TABLE_FIELD_VALUE_COMPARE: single-table field value consistency comparison. SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: single-table field statistical value consistency comparison. SINGLE_TABLE_FIELD_EXP_COMPARE: single-table field business logic consistency comparison. DOUBLE_TABLE_FIELD_VALUE_COMPARE: cross-table field value consistency comparison. DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-table field statistical value consistency comparison. CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-source cross-table field statistical value consistency comparison. DOUBLE_TABLE_FIELD_EXP_COMPARE: cross-table field business logic consistency comparison. TABLE_STABILITY_VALIDATE: table stability validation. TABLE_FLUCTUATION_VALIDATE: table fluctuation validation. FIELD_STABILITY_VALIDATE: field stability validation. FIELD_FLUCTUATION_VALIDATE: field fluctuation validation. CUSTOM_STATISTICAL_VALIDATE: custom statistical metric validation. CUSTOM_DATA_DETAILS_VALIDATE: custom data details validation. DATASOURCE_AVAILABLE_CHECK: data source connectivity check. TABLE_SCHEMA_CHECK: table schema change detection. REAL_TIME_OFFLINE_COMPARE: real-time and offline comparison. REAL_TIME_STATISTICAL_VALIDATE: real-time statistical value monitoring. REAL_TIME_MULTI_CHAIN_COMPARE: real-time multi-chain comparison.</p>
+         * <p>The templatetype. Valid values: FIELD_NULL_VALUE_VALIDATE (field null value check), FIELD_EMPTY_STRING_VALIDATE (field empty character check), FIELD_UNIQUE_VALIDATE (field uniqueness check), FIELD_GROUP_COUNT_VALIDATE (field unique value count check), FIELD_DUPLICATE_VALUE_COUNT_VALIDATE (field duplicate value count check), FUNCTION_TIME_COMPARE (time function comparison), SINGLE_TABLE_TIME_COMPARE (non-partitioned table time field comparison), DOUBLE_TABLE_TIME_COMPARE (two-table time field comparison), FIELD_FORMAT_VALIDATE (field format check), FIELD_LENGTH_VALIDATE (field length check), FIELD_VALUE_RANGE_VALIDATE (field value range check), CODE_TABLE_COMPARE (lookup table reference comparison), STANDARD_CODE_TABLE_COMPARE (data standard lookup table reference comparison), SINGLE_TABLE_FIELD_VALUE_COMPARE (non-partitioned table field value consistency comparison), SINGLE_TABLE_FIELD_STATISTICAL_COMPARE (non-partitioned table field statistical value consistency comparison), SINGLE_TABLE_FIELD_EXP_COMPARE (non-partitioned table field business logic consistency comparison), DOUBLE_TABLE_FIELD_VALUE_COMPARE (two-table field value consistency comparison), DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE (two-table field statistical value consistency comparison), CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE (cross-source two-table field statistical value consistency comparison), DOUBLE_TABLE_FIELD_EXP_COMPARE (two-table field business logic consistency comparison), TABLE_STABILITY_VALIDATE (table stability check), TABLE_FLUCTUATION_VALIDATE (table fluctuation check), FIELD_STABILITY_VALIDATE (field stability check), FIELD_FLUCTUATION_VALIDATE (field fluctuation check), CUSTOM_STATISTICAL_VALIDATE (custom statistical metric check), CUSTOM_DATA_DETAILS_VALIDATE (custom data details check), DATASOURCE_AVAILABLE_CHECK (data source connectivity monitoring), TABLE_SCHEMA_CHECK (table schema change monitoring), REAL_TIME_OFFLINE_COMPARE (real-time and offline comparison), REAL_TIME_STATISTICAL_VALIDATE (real-time statistical value monitoring), and REAL_TIME_MULTI_CHAIN_COMPARE (real-time multi-link comparison).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

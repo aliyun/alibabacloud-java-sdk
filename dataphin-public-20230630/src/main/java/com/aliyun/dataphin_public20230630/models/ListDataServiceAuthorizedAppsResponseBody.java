@@ -32,7 +32,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The paging query result.</p>
+     * <p>The paging query results.</p>
      */
     @NameInMap("PageResult")
     public ListDataServiceAuthorizedAppsResponseBodyPageResult pageResult;
@@ -47,7 +47,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -158,7 +158,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public Integer appId;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -167,7 +167,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The ID of the permission account, which is the applicant ID.</p>
+         * <p>The ID of the authorized account, which is the ID of the applicant.</p>
          * 
          * <strong>example:</strong>
          * <p>30012101</p>
@@ -176,16 +176,16 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String applyUserId;
 
         /**
-         * <p>The permission account, which is the applicant.</p>
+         * <p>The name of the authorized account, which is the name of the applicant.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("ApplyUserName")
         public String applyUserName;
 
         /**
-         * <p>The expiration date in the format of yyyy-MM-dd.</p>
+         * <p>The expiration date. Format: yyyy-MM-dd.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30</p>
@@ -194,7 +194,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String expireDate;
 
         /**
-         * <p>The application ID.</p>
+         * <p>The ID of the authorization request.</p>
          * 
          * <strong>example:</strong>
          * <p>1121</p>
@@ -203,7 +203,7 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>Indicates whether the current user is a project administrator.</p>
+         * <p>Indicates whether the current user is a project manager.</p>
          */
         @NameInMap("IsProjectManager")
         public Boolean isProjectManager;
@@ -227,7 +227,10 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String ownerUserName;
 
         /**
-         * <p>The permission account. Valid values: 0: individual account.</p>
+         * <p>The authorized account type. Valid values:</p>
+         * <ul>
+         * <li>0: Individual account.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -236,7 +239,11 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public Integer privilegeAccount;
 
         /**
-         * <p>The permission type. Valid values: 0: usage permission. 1: development permission.</p>
+         * <p>The permission type. Valid values:</p>
+         * <ul>
+         * <li>0: Usage permissions.</li>
+         * <li>1: Development permissions.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -263,31 +270,39 @@ public class ListDataServiceAuthorizedAppsResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>Indicates whether the user actually has owner permissions on this application. The user may lack permissions because of expiration or other reasons.</p>
+         * <p>Indicates whether the user actually has the owner permissions for the application. The user may not have the permissions due to expiration or other reasons.</p>
          */
         @NameInMap("RealHasOwnerPrivilege")
         public Boolean realHasOwnerPrivilege;
 
         /**
-         * <p>Indicates whether the user actually has permissions.</p>
+         * <p>Indicates whether the user actually has the permissions.</p>
          */
         @NameInMap("RealHasPrivilege")
         public Boolean realHasPrivilege;
 
         /**
-         * <p>The descriptions used for troubleshooting.</p>
+         * <p>The description used for troubleshooting.</p>
          */
         @NameInMap("RemarkForDebugList")
         public java.util.List<ListDataServiceAuthorizedAppsResponseBodyPageResultAuthorizedAppListRemarkForDebugList> remarkForDebugList;
 
         /**
-         * <p>Indicates whether the permissions can be returned or revoked.</p>
+         * <p>Indicates whether the permission can be returned or revoked.</p>
          */
         @NameInMap("Revocable")
         public Boolean revocable;
 
         /**
-         * <p>The detailed status of the revoke button. Valid values: -1: super administrators cannot revoke. -2: owners cannot revoke. -3: project administrators without actual permissions are grayed out. -4: regular users without permissions cannot revoke. 1: project administrators with actual permissions can revoke. 2: regular users with permissions can revoke.</p>
+         * <p>The detailed status of the revocation button. Valid values:</p>
+         * <ul>
+         * <li>-1: Super administrators cannot relinquish the permission.</li>
+         * <li>-2: Owners cannot relinquish the permission.</li>
+         * <li>-3: Project managers without actual permissions (grayed out).</li>
+         * <li>-4: Regular users without permissions cannot relinquish the permission.</li>
+         * <li>1: Project managers with actual permissions can relinquish the permission.</li>
+         * <li>2: Regular users with permissions can relinquish the permission.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>-1</p>

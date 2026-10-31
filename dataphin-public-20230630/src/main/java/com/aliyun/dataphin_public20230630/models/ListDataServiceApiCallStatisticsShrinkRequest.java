@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceApiCallStatisticsShrinkRequest extends TeaModel {
     /**
-     * <p>Search conditions.</p>
+     * <p>The search conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public String listQueryShrink;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +22,8 @@ public class ListDataServiceApiCallStatisticsShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -29,8 +31,14 @@ public class ListDataServiceApiCallStatisticsShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Data service project ID.</p>
-     * <p>This parameter is required.</p>
+     * <p>The data service project ID.</p>
+     * <blockquote>
+     * <p>If this parameter is not specified:</p>
+     * <ul>
+     * <li>Super administrators can query data of all service projects.</li>
+     * <li>Users other than super administrators can query data of service projects where they have the service project administrator or O&amp;M user permissions.</li>
+     * </ul>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>102102</p>

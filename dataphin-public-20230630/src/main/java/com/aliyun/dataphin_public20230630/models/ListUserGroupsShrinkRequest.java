@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupsShrinkRequest extends TeaModel {
     /**
-     * <p>The paged query parameters.</p>
+     * <p>The paging query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
@@ -22,6 +22,8 @@ public class ListUserGroupsShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

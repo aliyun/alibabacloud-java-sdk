@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDevProdProjectRequest extends TeaModel {
     /**
-     * <p>The create command.</p>
+     * <p>The creation command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -22,6 +22,8 @@ public class CreateDevProdProjectRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -145,7 +147,7 @@ public class CreateDevProdProjectRequest extends TeaModel {
         public String devDescription;
 
         /**
-         * <p>The ID of the real-time compute source in the development environment.</p>
+         * <p>The ID of the streaming compute source in the development environment.</p>
          * 
          * <strong>example:</strong>
          * <p>2002</p>
@@ -157,7 +159,7 @@ public class CreateDevProdProjectRequest extends TeaModel {
          * <p>The display name of the project.</p>
          * 
          * <strong>example:</strong>
-         * <p>My project.</p>
+         * <p>My project</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -173,7 +175,7 @@ public class CreateDevProdProjectRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace identifier.</p>
+         * <p>The namespace tag.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -200,7 +202,7 @@ public class CreateDevProdProjectRequest extends TeaModel {
         public String prodDescription;
 
         /**
-         * <p>The ID of the real-time compute source in the production environment.</p>
+         * <p>The ID of the streaming compute source in the production environment.</p>
          * 
          * <strong>example:</strong>
          * <p>2004</p>

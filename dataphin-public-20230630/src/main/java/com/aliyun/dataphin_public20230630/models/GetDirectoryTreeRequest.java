@@ -5,19 +5,19 @@ import com.aliyun.tea.*;
 
 public class GetDirectoryTreeRequest extends TeaModel {
     /**
-     * <p>Directory type.</p>
+     * <p>The directory type. Valid values:</p>
      * <ul>
-     * <li>Ad-hoc Query: tempCode</li>
-     * <li>Code Task: codeManage</li>
-     * <li>Offline Pipeline: offlinePipeline</li>
-     * <li>Pipeline Custom Component: offlinePipelineCustomPlugin</li>
-     * <li>Sync Task: dataX</li>
-     * <li>Real-time Meta Table: streamMeta</li>
-     * <li>Real-time Custom Source: streamCustomDataSource</li>
-     * <li>Real-time Compute Template: streamTemplate</li>
-     * <li>Resource Management: resourceManage</li>
-     * <li>Offline Function: udfResource</li>
-     * <li>Real-time Function: streamFunction</li>
+     * <li>tempCode: Ad hoc query.</li>
+     * <li>codeManage: Code task.</li>
+     * <li>offlinePipeline: Offline pipeline.</li>
+     * <li>offlinePipelineCustomPlugin: Custom pipeline component.</li>
+     * <li>dataX: Synchronization task.</li>
+     * <li>streamMeta: Real-time metadata table.</li>
+     * <li>streamCustomDataSource: Real-time custom source.</li>
+     * <li>streamTemplate: Real-time computing template.</li>
+     * <li>resourceManage: Resource management.</li>
+     * <li>udfResource: Offline function.</li>
+     * <li>streamFunction: Real-time function.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class GetDirectoryTreeRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,6 +38,8 @@ public class GetDirectoryTreeRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operating user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -45,7 +47,7 @@ public class GetDirectoryTreeRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Project ID.</p>
+     * <p>The project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

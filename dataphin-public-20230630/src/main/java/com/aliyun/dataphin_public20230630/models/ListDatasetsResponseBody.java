@@ -32,7 +32,7 @@ public class ListDatasetsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The paged result.</p>
+     * <p>The paginated result.</p>
      */
     @NameInMap("PageResult")
     public ListDatasetsResponseBodyPageResult pageResult;
@@ -47,7 +47,7 @@ public class ListDatasetsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -122,7 +122,7 @@ public class ListDatasetsResponseBody extends TeaModel {
          * <p>The username.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -152,6 +152,8 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList extends TeaModel {
         /**
+         * <p>The date format.</p>
+         * 
          * <strong>example:</strong>
          * <p>yyyyMMdd</p>
          */
@@ -159,6 +161,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String dateFormat;
 
         /**
+         * <p>The default value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -166,36 +170,53 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Descr")
         public String descr;
 
+        /**
+         * <p>Specifies whether the parameter is a URL parameter.</p>
+         */
         @NameInMap("IsUrl")
         public Boolean isUrl;
 
         /**
+         * <p>The mapping column.</p>
+         * 
          * <strong>example:</strong>
          * <p>col02</p>
          */
         @NameInMap("MappingColumn")
         public String mappingColumn;
 
+        /**
+         * <p>Specifies whether the parameter is required.</p>
+         */
         @NameInMap("Must")
         public Boolean must;
 
         /**
+         * <p>The operator.</p>
+         * 
          * <strong>example:</strong>
          * <p>=</p>
          */
         @NameInMap("Operator")
         public String operator;
 
+        /**
+         * <p>Specifies whether the parameter is optional.</p>
+         */
         @NameInMap("Optional")
         public Boolean optional;
 
         /**
+         * <p>The original column name.</p>
+         * 
          * <strong>example:</strong>
          * <p>colx</p>
          */
@@ -203,6 +224,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String originalColumn;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>p1</p>
          */
@@ -210,6 +233,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String paramName;
 
         /**
+         * <p>The parameter type.</p>
+         * 
          * <strong>example:</strong>
          * <p>int</p>
          */
@@ -217,6 +242,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String paramType;
 
         /**
+         * <p>The example value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -224,6 +251,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String sample;
 
         /**
+         * <p>The sequence number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -343,6 +372,8 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList extends TeaModel {
         /**
+         * <p>The date format.</p>
+         * 
          * <strong>example:</strong>
          * <p>yyyyMMdd</p>
          */
@@ -350,16 +381,23 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String dateFormat;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Descr")
         public String descr;
 
+        /**
+         * <p>Specifies whether the parameter is a URL parameter.</p>
+         */
         @NameInMap("IsUrl")
         public Boolean isUrl;
 
         /**
+         * <p>The mapping column.</p>
+         * 
          * <strong>example:</strong>
          * <p>col1</p>
          */
@@ -367,6 +405,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String mappingColumn;
 
         /**
+         * <p>The original column name.</p>
+         * 
          * <strong>example:</strong>
          * <p>colx</p>
          */
@@ -374,6 +414,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String originalColumn;
 
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>p2</p>
          */
@@ -381,6 +423,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String paramName;
 
         /**
+         * <p>The parameter type.</p>
+         * 
          * <strong>example:</strong>
          * <p>int</p>
          */
@@ -388,6 +432,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String paramType;
 
         /**
+         * <p>The example value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -395,6 +441,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String sample;
 
         /**
+         * <p>The sequence number.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -482,6 +530,8 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo extends TeaModel {
         /**
+         * <p>The business ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1012</p>
          */
@@ -489,6 +539,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Long apiNo;
 
         /**
+         * <p>The execution timeout period in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -498,6 +549,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer execTimeout;
 
         /**
+         * <p>The execution mode. Valid values: 1: Synchronous, 2: Asynchronous.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -507,6 +559,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer executeMode;
 
         /**
+         * <p>The data service API group.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -516,6 +569,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer osApiGroup;
 
         /**
+         * <p>The name of the data service API group.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -523,6 +578,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String osApiGroupName;
 
         /**
+         * <p>The data service project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -532,6 +588,8 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer osProject;
 
         /**
+         * <p>The name of the data service project.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -539,6 +597,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String osProjectName;
 
         /**
+         * <p>The protocol type. Valid values: 1: HTTPS, 2: HTTP, 3: HTTP and HTTPS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -548,6 +607,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer protocol;
 
         /**
+         * <p>The request method. Valid values: 1: GET, 2: LIST.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -557,15 +617,20 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer requestMethod;
 
         /**
+         * <p>The list of request parameters.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RequestParamList")
         public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoRequestParamList> requestParamList;
 
+        /**
+         * <p>The list of response parameters.</p>
+         */
         @NameInMap("ResponseParamList")
         public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListApiInfoResponseParamList> responseParamList;
 
         /**
+         * <p>The timeout period in seconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -692,7 +757,7 @@ public class ListDatasetsResponseBody extends TeaModel {
          * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试数据源</p>
+         * <p>Test data source</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
@@ -701,7 +766,7 @@ public class ListDatasetsResponseBody extends TeaModel {
          * <p>The development path (not required for basic projects).</p>
          * 
          * <strong>example:</strong>
-         * <p>HTML正文提取/test423/</p>
+         * <p>HTML content extraction/test423/</p>
          */
         @NameInMap("DevPath")
         public String devPath;
@@ -721,7 +786,7 @@ public class ListDatasetsResponseBody extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>HTML正文提取/test423/</p>
+         * <p>HTML content extraction/test423/</p>
          */
         @NameInMap("ProdPath")
         public String prodPath;
@@ -795,13 +860,13 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String embeddingModel;
 
         /**
-         * <p>The index build parameters.</p>
+         * <p>The index building parameters.</p>
          */
         @NameInMap("IndexParams")
         public java.util.Map<String, ?> indexParams;
 
         /**
-         * <p>The index type. PG supports IVFFlat and HNSW. Milvus supports all index types.</p>
+         * <p>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all index types.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -869,16 +934,16 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigMetadataStorageConfigTableSchemaColumns extends TeaModel {
         /**
-         * <p>The field description.</p>
+         * <p>The column description.</p>
          * 
          * <strong>example:</strong>
-         * <p>主键</p>
+         * <p>Primary key</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The array element subtype. This parameter takes effect only when type is set to ARRAY.</p>
+         * <p>The subtype of the array element. Valid only when type is ARRAY.</p>
          * 
          * <strong>example:</strong>
          * <p>INT64</p>
@@ -887,7 +952,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String elementType;
 
         /**
-         * <p>The maximum array capacity. This parameter takes effect only when type is set to ARRAY. Default value: 4096.</p>
+         * <p>The maximum capacity of the array. Valid only when type is ARRAY. Default value: 4096.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -896,7 +961,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer maxCapacity;
 
         /**
-         * <p>The field name.</p>
+         * <p>The column name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -906,7 +971,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the field is a primary key.</p>
+         * <p>Specifies whether the column is a primary key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -916,7 +981,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Boolean pk;
 
         /**
-         * <p>The field type.</p>
+         * <p>The column type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -926,7 +991,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Indicates whether the field is a URL.</p>
+         * <p>Specifies whether the column is a URL.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1013,7 +1078,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigMetadataStorageConfigTableSchema extends TeaModel {
         /**
-         * <p>The field list.</p>
+         * <p>The list of columns.</p>
          */
         @NameInMap("Columns")
         public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigMetadataStorageConfigTableSchemaColumns> columns;
@@ -1048,16 +1113,16 @@ public class ListDatasetsResponseBody extends TeaModel {
          * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试数据源</p>
+         * <p>Test data source</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
         /**
-         * <p>The development database/schema.</p>
+         * <p>The development database or schema.</p>
          * 
          * <strong>example:</strong>
-         * <p>HTML正文提取/test423/</p>
+         * <p>HTML content extraction/test423/</p>
          */
         @NameInMap("DevSchema")
         public String devSchema;
@@ -1082,11 +1147,11 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String metadataStorageType;
 
         /**
-         * <p>The production database/schema.</p>
+         * <p>The production database or schema.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>HTML正文提取/test423/</p>
+         * <p>HTML content extraction/test423/</p>
          */
         @NameInMap("ProdSchema")
         public String prodSchema;
@@ -1200,13 +1265,13 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String embeddingModel;
 
         /**
-         * <p>The index build parameters.</p>
+         * <p>The index building parameters.</p>
          */
         @NameInMap("IndexParams")
         public java.util.Map<String, ?> indexParams;
 
         /**
-         * <p>The index type. PG supports IVFFlat and HNSW. Milvus supports all index types.</p>
+         * <p>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all index types.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1277,13 +1342,13 @@ public class ListDatasetsResponseBody extends TeaModel {
          * <p><strong>The field description.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>录入时间</p>
+         * <p>Entry time</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p><strong>The array element subtype. This parameter takes effect only when type is set to ARRAY.</strong></p>
+         * <p><strong>The subtype of the array element. Valid only when type is ARRAY.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>INT64</p>
@@ -1292,7 +1357,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String elementType;
 
         /**
-         * <p><strong>The maximum array capacity. This parameter takes effect only when type is set to ARRAY. Default value: 4096.</strong></p>
+         * <p><strong>The maximum capacity of the array. Valid only when type is ARRAY. Default value: 4096.</strong></p>
          * 
          * <strong>example:</strong>
          * <p>35</p>
@@ -1301,7 +1366,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer maxCapacity;
 
         /**
-         * <p><strong>The field name.</strong></p>
+         * <p><strong>The column name.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1311,7 +1376,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the field is a primary key.</p>
+         * <p>Specifies whether the column is a primary key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1321,7 +1386,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Boolean pk;
 
         /**
-         * <p><strong>The field type.</strong></p>
+         * <p><strong>The column type.</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1331,7 +1396,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>Indicates whether the field is a URL.</p>
+         * <p>Specifies whether the column is a URL.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1418,7 +1483,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigRealtimeMetaTableConfigTableSchema extends TeaModel {
         /**
-         * <p>The field list.</p>
+         * <p>The list of columns.</p>
          */
         @NameInMap("Columns")
         public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigRealtimeMetaTableConfigTableSchemaColumns> columns;
@@ -1440,7 +1505,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigRealtimeMetaTableConfig extends TeaModel {
         /**
-         * <p>The meta table data source type (only KAFKA is available in this release).</p>
+         * <p>The data source type of the metatable. Only KAFKA is supported in the current release.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1450,17 +1515,17 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String datasourceType;
 
         /**
-         * <p>The meta table name.</p>
+         * <p>The metatable name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试元表</p>
+         * <p>Test metatable</p>
          */
         @NameInMap("MetaTableName")
         public String metaTableName;
 
         /**
-         * <p>The project ID of the meta table (cross-project access is supported).</p>
+         * <p>The ID of the project to which the metatable belongs. Cross-project access is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1470,7 +1535,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The table schema configuration (reuses <code>MetadataStorageConfigDTO.TableSchemaDTO</code>).</p>
+         * <p>The table schema configuration. This configuration reuses <code>MetadataStorageConfigDTO.TableSchemaDTO</code>.</p>
          */
         @NameInMap("TableSchema")
         public ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigRealtimeMetaTableConfigTableSchema tableSchema;
@@ -1528,7 +1593,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigMetadataStorageConfig metadataStorageConfig;
 
         /**
-         * <p>The real-time meta table configuration (takes effect only when <code>metadataStorageType=REALTIME_META_TABLE</code>).</p>
+         * <p>The real-time metatable configuration. This configuration is valid only when <code>metadataStorageType</code> is <code>REALTIME_META_TABLE</code>.</p>
          */
         @NameInMap("RealtimeMetaTableConfig")
         public ListDatasetsResponseBodyPageResultResultDataVersionListDataVersionConfigRealtimeMetaTableConfig realtimeMetaTableConfig;
@@ -1537,7 +1602,7 @@ public class ListDatasetsResponseBody extends TeaModel {
          * <p>The version description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试数据集版本</p>
+         * <p>Test dataset version</p>
          */
         @NameInMap("VersionDescription")
         public String versionDescription;
@@ -1582,11 +1647,14 @@ public class ListDatasetsResponseBody extends TeaModel {
     }
 
     public static class ListDatasetsResponseBodyPageResultResultDataVersionList extends TeaModel {
+        /**
+         * <p>The API information of the online dataset.</p>
+         */
         @NameInMap("ApiInfo")
         public ListDatasetsResponseBodyPageResultResultDataVersionListApiInfo apiInfo;
 
         /**
-         * <p>The creator ID.</p>
+         * <p>The ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>300001391</p>
@@ -1619,7 +1687,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1749450490000</p>
@@ -1727,7 +1795,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The creator ID.</p>
+         * <p>The ID of the creator.</p>
          * 
          * <strong>example:</strong>
          * <p>300001391</p>
@@ -1736,16 +1804,16 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String creator;
 
         /**
-         * <p>The creator name.</p>
+         * <p>The name of the creator.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("CreatorName")
         public String creatorName;
 
         /**
-         * <p>The data domain ID.</p>
+         * <p>The subject area ID.</p>
          * 
          * <strong>example:</strong>
          * <p>74280</p>
@@ -1754,10 +1822,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String dataCellId;
 
         /**
-         * <p><strong>The data domain name.</strong></p>
+         * <p><strong>The subject area name.</strong></p>
          * 
          * <strong>example:</strong>
-         * <p>离线数据主题域</p>
+         * <p>Offline data subject area</p>
          */
         @NameInMap("DataCellName")
         public String dataCellName;
@@ -1766,13 +1834,13 @@ public class ListDatasetsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试数据集</p>
+         * <p>Test dataset</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The directory (retrieved from the file service by fileId).</p>
+         * <p>The directory, which is obtained from the file service by using the file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -1799,7 +1867,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-18 17:07:54.237771</p>
@@ -1808,7 +1876,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The dataset ID (business primary key).</p>
+         * <p>The dataset ID, which is the business primary key.</p>
          * 
          * <strong>example:</strong>
          * <p>7128268454335680</p>
@@ -1817,7 +1885,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The development owner ID.</p>
+         * <p>The ID of the development owner.</p>
          * 
          * <strong>example:</strong>
          * <p>300001391</p>
@@ -1826,10 +1894,10 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String lockOwner;
 
         /**
-         * <p>The name of the development owner (interface Displayed Fields).</p>
+         * <p>The name of the development owner (interface display field).</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("LockOwnerName")
         public String lockOwnerName;
@@ -1844,7 +1912,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String metadataStorageType;
 
         /**
-         * <p>The dataset name.</p>
+         * <p>The name of the dataset.</p>
          * 
          * <strong>example:</strong>
          * <p>audio_dataset</p>
@@ -1853,13 +1921,13 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The owner list.</p>
+         * <p>The list of owners.</p>
          */
         @NameInMap("OwnerList")
         public java.util.List<ListDatasetsResponseBodyPageResultResultDataOwnerList> ownerList;
 
         /**
-         * <p>The project ID.</p>
+         * <p>The ID of the project to which the dataset belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>7290731813137728</p>
@@ -1868,7 +1936,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The project name.</p>
+         * <p>The name of the project to which the dataset belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>ds_tm</p>
@@ -1877,11 +1945,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The dataset scenarios. Valid values:</p>
-         * <ul>
-         * <li>OFFLINE: offline (default).</li>
-         * <li>REALTIME: real-time.</li>
-         * </ul>
+         * <p>The scenarios of the dataset. Valid values: OFFLINE (offline, default) and REALTIME (real-time).</p>
          * 
          * <strong>example:</strong>
          * <p>OFFLINE</p>
@@ -1917,7 +1981,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The version list.</p>
+         * <p>The list of versions.</p>
          */
         @NameInMap("VersionList")
         public java.util.List<ListDatasetsResponseBodyPageResultResultDataVersionList> versionList;
@@ -2115,7 +2179,7 @@ public class ListDatasetsResponseBody extends TeaModel {
 
     public static class ListDatasetsResponseBodyPageResult extends TeaModel {
         /**
-         * <p>The total count.</p>
+         * <p>The actual total count.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -2124,7 +2188,7 @@ public class ListDatasetsResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The object.</p>
+         * <p>The objects.</p>
          */
         @NameInMap("ResultData")
         public java.util.List<ListDatasetsResponseBodyPageResultResultData> resultData;

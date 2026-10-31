@@ -32,7 +32,7 @@ public class GetKgRelationResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The relationship record details.</p>
+     * <p>The relation record details.</p>
      */
     @NameInMap("RelationInfo")
     public GetKgRelationResponseBodyRelationInfo relationInfo;
@@ -47,7 +47,7 @@ public class GetKgRelationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -116,7 +116,7 @@ public class GetKgRelationResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean), DATE (date), LIST (list), and others.</p>
+         * <p>The property data type. Valid values: STRING (string), INTEGER (integer), FLOAT (floating-point number), BOOLEAN (Boolean), DATE (date), and LIST (list).</p>
          * 
          * <strong>example:</strong>
          * <p>STRING</p>
@@ -166,13 +166,13 @@ public class GetKgRelationResponseBody extends TeaModel {
 
     public static class GetKgRelationResponseBodyRelationInfo extends TeaModel {
         /**
-         * <p>The list of relationship record properties.</p>
+         * <p>The property list of the relation record.</p>
          */
         @NameInMap("PropertyList")
         public java.util.List<GetKgRelationResponseBodyRelationInfoPropertyList> propertyList;
 
         /**
-         * <p>The relationship record ID.</p>
+         * <p>The relation record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>abc-xxx</p>
@@ -181,7 +181,7 @@ public class GetKgRelationResponseBody extends TeaModel {
         public String relationId;
 
         /**
-         * <p>The relationship type code.</p>
+         * <p>The relation type code.</p>
          * 
          * <strong>example:</strong>
          * <p>BELONG_TO</p>

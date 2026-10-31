@@ -14,7 +14,7 @@ public class UpdateQualityRuleSwitchResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The number of records that took effect.</p>
+     * <p>The number of affected records.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class UpdateQualityRuleSwitchResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -50,7 +50,7 @@ public class UpdateQualityRuleSwitchResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

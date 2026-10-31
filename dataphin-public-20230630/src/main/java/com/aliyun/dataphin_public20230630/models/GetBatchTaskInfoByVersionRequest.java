@@ -25,7 +25,7 @@ public class GetBatchTaskInfoByVersionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The operator user ID.</p>
+     * <p>The operator ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -44,7 +44,7 @@ public class GetBatchTaskInfoByVersionRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The version number.</p>
+     * <p>The version ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,6 +15,8 @@ public class UpdateSecurityIdentifyResultStatusRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateSecurityIdentifyResultStatusRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The update instruction.</p>
+     * <p>The update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -59,7 +61,7 @@ public class UpdateSecurityIdentifyResultStatusRequest extends TeaModel {
 
     public static class UpdateSecurityIdentifyResultStatusRequestUpdateCommand extends TeaModel {
         /**
-         * <p>Specifies whether the result is effective.</p>
+         * <p>Specifies whether the result takes effect.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Enable")

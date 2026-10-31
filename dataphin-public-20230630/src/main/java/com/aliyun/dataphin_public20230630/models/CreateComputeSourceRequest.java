@@ -22,7 +22,7 @@ public class CreateComputeSourceRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator.</p>
+     * <p>The ID of the operating user.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -105,7 +105,7 @@ public class CreateComputeSourceRequest extends TeaModel {
 
     public static class CreateComputeSourceRequestCreateCommand extends TeaModel {
         /**
-         * <p>The ID of the associated cluster. This parameter takes effect only when CreateType is not specified or is set to COMPUTE_SOURCE, which creates a compute source that references a cluster. This parameter is mutually exclusive with CreateType=CLUSTER.</p>
+         * <p>The ID of the associated cluster. This parameter takes effect only when CreateType is left empty or set to COMPUTE_SOURCE, which indicates that a compute source referencing a cluster is created. This parameter is mutually exclusive with CreateType set to CLUSTER.</p>
          * 
          * <strong>example:</strong>
          * <p>102311</p>
@@ -121,10 +121,10 @@ public class CreateComputeSourceRequest extends TeaModel {
         public java.util.List<CreateComputeSourceRequestCreateCommandConfigList> configList;
 
         /**
-         * <p>The type of entity to create. Valid values:</p>
+         * <p>The type of the entity to create. Valid values:</p>
          * <ul>
-         * <li>CLUSTER: Creates a cluster. ClusterId cannot be specified.</li>
-         * <li>COMPUTE_SOURCE: Creates a compute source. This is the default value.</li>
+         * <li>CLUSTER: creates a cluster. You cannot specify ClusterId.</li>
+         * <li>COMPUTE_SOURCE: creates a compute source. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -151,6 +151,15 @@ public class CreateComputeSourceRequest extends TeaModel {
          */
         @NameInMap("Name")
         public String name;
+
+        /**
+         * <p>The name of the time zone, such as Asia/Shanghai. If this parameter is not specified during an update, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
+        @NameInMap("TimeZone")
+        public String timeZone;
 
         /**
          * <p>The type of the compute source.</p>
@@ -214,6 +223,14 @@ public class CreateComputeSourceRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateComputeSourceRequestCreateCommand setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
         }
 
         public CreateComputeSourceRequestCreateCommand setType(String type) {

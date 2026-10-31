@@ -22,7 +22,7 @@ public class CreateComputeClusterRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -70,13 +70,13 @@ public class CreateComputeClusterRequest extends TeaModel {
         public String clusterSafetyAuthType;
 
         /**
-         * <p>The list of whitelist user group IDs.</p>
+         * <p>The list of whitelisted user group IDs.</p>
          */
         @NameInMap("UserGroupIds")
         public java.util.List<String> userGroupIds;
 
         /**
-         * <p>The list of whitelist user IDs.</p>
+         * <p>The list of whitelisted user IDs.</p>
          */
         @NameInMap("UserIds")
         public java.util.List<String> userIds;
@@ -114,7 +114,7 @@ public class CreateComputeClusterRequest extends TeaModel {
 
     public static class CreateComputeClusterRequestClusterConfigConfigList extends TeaModel {
         /**
-         * <p>The configuration item.</p>
+         * <p>The configuration key.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class CreateComputeClusterRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the configuration item.</p>
+         * <p>The configuration value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -196,6 +196,15 @@ public class CreateComputeClusterRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>The time zone name, such as Asia/Shanghai. If this parameter is not specified during an update, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
+        @NameInMap("TimeZone")
+        public String timeZone;
+
+        /**
          * <p>The cluster type.</p>
          * <p>This parameter is required.</p>
          * 
@@ -257,6 +266,14 @@ public class CreateComputeClusterRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateComputeClusterRequestClusterConfig setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
         }
 
         public CreateComputeClusterRequestClusterConfig setType(String type) {

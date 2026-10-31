@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAssetMappingRelationsRequest extends TeaModel {
     /**
-     * <p>The query instruction.</p>
+     * <p>The query command.</p>
      */
     @NameInMap("AssetMappingQuery")
     public GetAssetMappingRelationsRequestAssetMappingQuery assetMappingQuery;
@@ -21,6 +21,8 @@ public class GetAssetMappingRelationsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -58,11 +60,7 @@ public class GetAssetMappingRelationsRequest extends TeaModel {
 
     public static class GetAssetMappingRelationsRequestAssetMappingQuery extends TeaModel {
         /**
-         * <p>The object type of the asset. Valid values:</p>
-         * <ul>
-         * <li>COLUMN: field.</li>
-         * <li>INDEX: metric.</li>
-         * </ul>
+         * <p>The asset object type. Valid values: COLUMN (field) and INDEX (metric).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -82,11 +80,7 @@ public class GetAssetMappingRelationsRequest extends TeaModel {
         public String guid;
 
         /**
-         * <p>The type of the mapping relationship. Valid values:</p>
-         * <ul>
-         * <li>VALID: mapped.</li>
-         * <li>INVALID: invalid mapping.</li>
-         * </ul>
+         * <p>The mapping relationship type. Valid values: VALID (mapped) and INVALID (invalid mapping).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

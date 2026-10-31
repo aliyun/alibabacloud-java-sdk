@@ -22,6 +22,8 @@ public class ListTenantMembersRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -69,7 +71,7 @@ public class ListTenantMembersRequest extends TeaModel {
         public Integer page;
 
         /**
-         * <p>The number of entries per page.</p>
+         * <p>The number of records per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -79,25 +81,25 @@ public class ListTenantMembersRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The member roles:</p>
+         * <p>The member roles. Valid values:</p>
          * <ul>
-         * <li>SUPER_ADMIN: Dataphin super administrator</li>
-         * <li>SYSTEM_ADMIN: system administrator</li>
-         * <li>COMMON_USER: Dataphin user</li>
-         * <li>DATA_ADMIN: Dataphin data administrator</li>
-         * <li>EXPORT_ADMIN: export administrator</li>
-         * <li>SECURITY_ADMIN: security administrator</li>
-         * <li>DATASOURCE_MANAGER: data source administrator</li>
-         * <li>QUALITY_MANAGER: asset quality manager</li>
-         * <li>DATA_STANDARD_MANAGER: data standard administrator</li>
-         * <li>LABELS_BUSINESS_PLANNER: tag business planner</li>
-         * <li>BUSINESS_MEMBER: general business user</li>
-         * <li>DATAPRO_OPERATE_SUPER_ADMIN: operations super administrator</li>
-         * <li>DATAPRO_OPERATE_ADMIN: operations administrator</li>
-         * <li>DATAPRO_OPERATE_MEMBER: operations member</li>
-         * <li>DATAPRO_BUSINESS_ANALYST: business analyst</li>
-         * <li>LABELS_BUSINESS_MEMBER: tag business member</li>
-         * <li>DATAPRO_BUSINESS_MEMBER: DATAPRO general business user</li>
+         * <li>SUPER_ADMIN: Dataphin super administrator.</li>
+         * <li>SYSTEM_ADMIN: System administrator.</li>
+         * <li>COMMON_USER: Dataphin user.</li>
+         * <li>DATA_ADMIN: Dataphin data administrator.</li>
+         * <li>EXPORT_ADMIN: Export administrator.</li>
+         * <li>SECURITY_ADMIN: Security administrator.</li>
+         * <li>DATASOURCE_MANAGER: Data source administrator.</li>
+         * <li>QUALITY_MANAGER: Asset quality owner.</li>
+         * <li>DATA_STANDARD_MANAGER: Data standard administrator.</li>
+         * <li>LABELS_BUSINESS_PLANNER: Label business planner.</li>
+         * <li>BUSINESS_MEMBER: Regular business user.</li>
+         * <li>DATAPRO_OPERATE_SUPER_ADMIN: Operations super administrator.</li>
+         * <li>DATAPRO_OPERATE_ADMIN: Operations administrator.</li>
+         * <li>DATAPRO_OPERATE_MEMBER: Operations staff.</li>
+         * <li>DATAPRO_BUSINESS_ANALYST: Business analyst.</li>
+         * <li>LABELS_BUSINESS_MEMBER: Label business staff.</li>
+         * <li>DATAPRO_BUSINESS_MEMBER: Datapro regular business user.</li>
          * </ul>
          */
         @NameInMap("RoleList")
@@ -107,13 +109,13 @@ public class ListTenantMembersRequest extends TeaModel {
          * <p>The search keyword.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("SearchText")
         public String searchText;
 
         /**
-         * <p>The IDs of the user groups to which the member belongs.</p>
+         * <p>The IDs of the user groups to which the members belong.</p>
          */
         @NameInMap("UserGroupIdList")
         public java.util.List<String> userGroupIdList;

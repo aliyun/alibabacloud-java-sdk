@@ -23,7 +23,7 @@ public class SubmitQualityWatchTasksResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class SubmitQualityWatchTasksResponseBody extends TeaModel {
     public SubmitQualityWatchTasksResponseBodySubmitResult submitResult;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class SubmitQualityWatchTasksResponseBody extends TeaModel {
 
     public static class SubmitQualityWatchTasksResponseBodySubmitResult extends TeaModel {
         /**
-         * <p>The list of quality watchtask IDs.</p>
+         * <p>The IDs of the monitoring object check nodes.</p>
          */
         @NameInMap("WatchTaskIdList")
         public java.util.List<Long> watchTaskIdList;

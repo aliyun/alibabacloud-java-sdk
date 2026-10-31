@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteDataSourceShrinkRequest extends TeaModel {
     /**
-     * <p>The request for deleting a data source.</p>
+     * <p>The data source deletion request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteCommand")
@@ -22,6 +22,8 @@ public class DeleteDataSourceShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

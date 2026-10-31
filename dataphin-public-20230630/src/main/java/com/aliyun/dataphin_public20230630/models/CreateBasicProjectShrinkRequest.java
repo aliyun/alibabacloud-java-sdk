@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBasicProjectShrinkRequest extends TeaModel {
     /**
-     * <p>The create command.</p>
+     * <p>The creation command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -22,6 +22,8 @@ public class CreateBasicProjectShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

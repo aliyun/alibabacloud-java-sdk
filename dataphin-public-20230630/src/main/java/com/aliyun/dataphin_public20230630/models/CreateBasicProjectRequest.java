@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateBasicProjectRequest extends TeaModel {
     /**
-     * <p>The create command.</p>
+     * <p>The creation command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -22,6 +22,8 @@ public class CreateBasicProjectRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -145,10 +147,10 @@ public class CreateBasicProjectRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The project display name.</p>
+         * <p>The display name of the project.</p>
          * 
          * <strong>example:</strong>
-         * <p>My project.</p>
+         * <p>My project</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -182,7 +184,7 @@ public class CreateBasicProjectRequest extends TeaModel {
         public Long streamComputeSourceId;
 
         /**
-         * <p>The project type. If this parameter is left empty, the default value GENERAL is used.</p>
+         * <p>The project type. Default value: GENERAL.</p>
          * 
          * <strong>example:</strong>
          * <p>GENERAL</p>

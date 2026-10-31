@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataSourceWithConfigRequest extends TeaModel {
     /**
-     * <p>Paginated query</p>
+     * <p>The paged query parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListDataSourceWithConfigRequestListQuery listQuery;
 
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +22,8 @@ public class ListDataSourceWithConfigRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,7 +61,7 @@ public class ListDataSourceWithConfigRequest extends TeaModel {
 
     public static class ListDataSourceWithConfigRequestListQuery extends TeaModel {
         /**
-         * <p>Data source name</p>
+         * <p>The name of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>vcns-test</p>
@@ -68,13 +70,13 @@ public class ListDataSourceWithConfigRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Data source owner</p>
+         * <p>The owners of the data sources.</p>
          */
         @NameInMap("OwnerList")
         public java.util.List<String> ownerList;
 
         /**
-         * <p>Page number. The value starts from 1.</p>
+         * <p>The page number. The starting page is 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -84,7 +86,7 @@ public class ListDataSourceWithConfigRequest extends TeaModel {
         public Integer page;
 
         /**
-         * <p>Number of records per page</p>
+         * <p>The number of records per page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -94,31 +96,31 @@ public class ListDataSourceWithConfigRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Data source scope. Valid values:</p>
+         * <p>The usage scopes of the data sources. Valid values:</p>
          * <ul>
-         * <li>STREAMING: Real-time</li>
-         * <li>OFFLINE: Offline</li>
-         * <li>DIP_META_SYNC: Meta warehouse initialization</li>
-         * <li>DATA_DISTILL: Data distillation</li>
-         * <li>CUMPUTE_SOURCE_SHADOW: Shadow compute source</li>
-         * <li>LABEL: Label</li>
-         * <li>ALL: Offline + Real-time</li>
+         * <li>STREAMING: Real-time.</li>
+         * <li>OFFLINE: Offline.</li>
+         * <li>DIP_META_SYNC: Metadata warehouse initialization.</li>
+         * <li>DATA_DISTILL: Data distillation.</li>
+         * <li>CUMPUTE_SOURCE_SHADOW: Shadow compute source.</li>
+         * <li>LABEL: Label.</li>
+         * <li>ALL: Offline and real-time.</li>
          * </ul>
          */
         @NameInMap("ScopeList")
         public java.util.List<String> scopeList;
 
         /**
-         * <p>Tag marked when creating the data source</p>
+         * <p>The tag specified during data source creation.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
-         * <p>Data source type</p>
+         * <p>The data source types.</p>
          */
         @NameInMap("TypeList")
         public java.util.List<String> typeList;

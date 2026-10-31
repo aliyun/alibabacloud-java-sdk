@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListBatchTasksRequest extends TeaModel {
     /**
+     * <p>The task query conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BatchTaskQuery")
     public ListBatchTasksRequestBatchTaskQuery batchTaskQuery;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class ListBatchTasksRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -56,10 +60,15 @@ public class ListBatchTasksRequest extends TeaModel {
     }
 
     public static class ListBatchTasksRequestBatchTaskQuery extends TeaModel {
+        /**
+         * <p>Specifies whether to enable conditional scheduling. If not specified, no filtering is applied.</p>
+         */
         @NameInMap("ConditionScheduleEnable")
         public Boolean conditionScheduleEnable;
 
         /**
+         * <p>The start time of the creation time range, in milliseconds. Must be specified together with CreateEndTime.</p>
+         * 
          * <strong>example:</strong>
          * <p>1785930337435</p>
          */
@@ -67,35 +76,56 @@ public class ListBatchTasksRequest extends TeaModel {
         public Long createBeginTime;
 
         /**
+         * <p>The end time of the creation time range, in milliseconds. Must be specified together with CreateBeginTime.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788608737435</p>
          */
         @NameInMap("CreateEndTime")
         public Long createEndTime;
 
+        /**
+         * <p>The list of developer IDs. If multiple IDs are specified, the union is used. If empty or not specified, no filtering is applied.</p>
+         */
         @NameInMap("DevelopOwnerList")
         public java.util.List<String> developOwnerList;
 
+        /**
+         * <p>The list of task directories, such as [&quot;/&quot;]. If empty or not specified, no filtering is applied.</p>
+         */
         @NameInMap("DirectoryList")
         public java.util.List<String> directoryList;
 
+        /**
+         * <p>Specifies whether to include tasks in the subdirectories of the directories specified in DirectoryList. Default value: false.</p>
+         */
         @NameInMap("IncludeSubDirectory")
         public Boolean includeSubDirectory;
 
         /**
+         * <p>The search keyword for fuzzy matching by task name or node ID. If empty or not specified, no filtering is applied.</p>
+         * 
          * <strong>example:</strong>
          * <p>dwd_order</p>
          */
         @NameInMap("Keyword")
         public String keyword;
 
+        /**
+         * <p>The list of recent submit statuses. Valid values: SUBMITTING, SUCCESS, FAILED, and WARNING. If empty or not specified, no filtering is applied.</p>
+         */
         @NameInMap("LastSubmitStatusList")
         public java.util.List<String> lastSubmitStatusList;
 
+        /**
+         * <p>The list of locker IDs. If multiple IDs are specified, the union is used. If empty or not specified, no filtering by locker is applied.</p>
+         */
         @NameInMap("LockUserList")
         public java.util.List<String> lockUserList;
 
         /**
+         * <p>The start time of the last modification time range, in milliseconds. Must be specified together with ModifiedEndTime.</p>
+         * 
          * <strong>example:</strong>
          * <p>1785930337435</p>
          */
@@ -103,22 +133,35 @@ public class ListBatchTasksRequest extends TeaModel {
         public Long modifiedBeginTime;
 
         /**
+         * <p>The end time of the last modification time range, in milliseconds. Must be specified together with ModifiedBeginTime.</p>
+         * 
          * <strong>example:</strong>
          * <p>1788608737435</p>
          */
         @NameInMap("ModifiedEndTime")
         public Long modifiedEndTime;
 
+        /**
+         * <p>The list of scheduling types. Valid values: 0 (Manual), 1 (Normal), 2 (Paused), and 3 (Dry run). If empty or not specified, no filtering is applied.</p>
+         */
         @NameInMap("NodeStatusList")
         public java.util.List<Integer> nodeStatusList;
 
+        /**
+         * <p>The list of O&amp;M owner IDs. If multiple IDs are specified, the union is used. If empty or not specified, no filtering is applied.</p>
+         */
         @NameInMap("OpsOwnerList")
         public java.util.List<String> opsOwnerList;
 
+        /**
+         * <p>The list of output table names for exact matching. If multiple table names are specified, the OR logical operator is used. If empty or not specified, no filtering is applied.</p>
+         */
         @NameInMap("OutputTableNameList")
         public java.util.List<String> outputTableNameList;
 
         /**
+         * <p>The page number. Pages start from 1. Default value: 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -126,6 +169,8 @@ public class ListBatchTasksRequest extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -133,6 +178,7 @@ public class ListBatchTasksRequest extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The project ID. The query scope is limited to this project.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -141,25 +187,42 @@ public class ListBatchTasksRequest extends TeaModel {
         @NameInMap("ProjectId")
         public Long projectId;
 
+        /**
+         * <p>Specifies whether the task is published to the production environment. If not specified, no filtering is applied.</p>
+         */
         @NameInMap("Published")
         public Boolean published;
 
         /**
+         * <p>The ID of the referenced offline code template. If empty or not specified, no filtering is applied.</p>
+         * 
          * <strong>example:</strong>
          * <p>7305621095333696</p>
          */
         @NameInMap("RefCodeTemplateId")
         public String refCodeTemplateId;
 
+        /**
+         * <p>The list of scheduling intervals. Valid values: MINUTELY, HOURLY, DAILY, WEEKLY, and MONTHLY. If empty or not specified, no filtering is applied.</p>
+         */
         @NameInMap("ScheduleIntervalTypeList")
         public java.util.List<String> scheduleIntervalTypeList;
 
+        /**
+         * <p>The list of task statuses. Valid values: 0 (Draft), 1 (Submitting), 2 (Submitted), and 100 (In development). If empty or not specified, no filtering is applied.</p>
+         */
         @NameInMap("TaskStatusList")
         public java.util.List<Integer> taskStatusList;
 
+        /**
+         * <p>The list of task tag names. If empty or not specified, no filtering is applied.</p>
+         */
         @NameInMap("TaskTagList")
         public java.util.List<String> taskTagList;
 
+        /**
+         * <p>The list of task type codes. If empty or not specified, no filtering is applied.</p>
+         */
         @NameInMap("TaskTypeList")
         public java.util.List<Integer> taskTypeList;
 

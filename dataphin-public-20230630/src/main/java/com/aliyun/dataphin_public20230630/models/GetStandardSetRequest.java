@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStandardSetRequest extends TeaModel {
     /**
-     * <p>The standard set ID.</p>
+     * <p>The ID of the standard set.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetStandardSetRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Specifies whether to allow a null value to be returned when the standard set does not exist. If set to false, an exception is thrown. Default value: true.</p>
+     * <p>Specifies whether to return a null value if the standard set does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</p>
      */
     @NameInMap("Nullable")
     public Boolean nullable;
@@ -31,6 +31,8 @@ public class GetStandardSetRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

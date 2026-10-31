@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListSecurityIdentifyResultsRequest extends TeaModel {
     /**
-     * <p>Query conditions.</p>
+     * <p>The search criteria.</p>
      */
     @NameInMap("ListQuery")
     public ListSecurityIdentifyResultsRequestListQuery listQuery;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +21,8 @@ public class ListSecurityIdentifyResultsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -58,13 +60,13 @@ public class ListSecurityIdentifyResultsRequest extends TeaModel {
 
     public static class ListSecurityIdentifyResultsRequestListQuery extends TeaModel {
         /**
-         * <p>Business unit names.</p>
+         * <p>The names of the business units.</p>
          */
         @NameInMap("BizUnitNameList")
         public java.util.List<String> bizUnitNameList;
 
         /**
-         * <p>Data classification ID.</p>
+         * <p>The data classification ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -73,13 +75,13 @@ public class ListSecurityIdentifyResultsRequest extends TeaModel {
         public Long classifyId;
 
         /**
-         * <p>Data source names.</p>
+         * <p>The names of the data sources.</p>
          */
         @NameInMap("DatasourceNameList")
         public java.util.List<String> datasourceNameList;
 
         /**
-         * <p>Environment identifier of the data source, project, or business unit.</p>
+         * <p>The environment identifier of the associated data source, project, or business unit.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -88,13 +90,13 @@ public class ListSecurityIdentifyResultsRequest extends TeaModel {
         public String env;
 
         /**
-         * <p>Whether it is locked.</p>
+         * <p>Specifies whether the item is locked.</p>
          */
         @NameInMap("IsLocked")
         public Boolean isLocked;
 
         /**
-         * <p>Keyword filter. Supports matching by table catalog, table name, table display name, and field name.</p>
+         * <p>The keyword filter. Supports matching by table catalog, table name, Chinese table name, or field name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -103,7 +105,7 @@ public class ListSecurityIdentifyResultsRequest extends TeaModel {
         public String keyword;
 
         /**
-         * <p>Page number. Default value: 1.</p>
+         * <p>The page number. Default value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -112,7 +114,7 @@ public class ListSecurityIdentifyResultsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
-         * <p>Number of records per page. Default value: 20.</p>
+         * <p>The number of records per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -121,13 +123,17 @@ public class ListSecurityIdentifyResultsRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>Project names.</p>
+         * <p>The names of the projects.</p>
          */
         @NameInMap("ProjectNameList")
         public java.util.List<String> projectNameList;
 
         /**
-         * <p>Effective status filter: ENABLE or DISABLE.</p>
+         * <p>The filter for the effective status. Valid values:</p>
+         * <ul>
+         * <li>ENABLE: Enabled.</li>
+         * <li>DISABLE: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>

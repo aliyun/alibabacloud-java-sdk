@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddRegisterLineageShrinkRequest extends TeaModel {
     /**
-     * <p>The command for registering and adding data lineage.</p>
+     * <p>The command to register data lineage.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddRegisterLineageCommand")
@@ -22,6 +22,8 @@ public class AddRegisterLineageShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

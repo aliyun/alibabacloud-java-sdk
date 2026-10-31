@@ -47,7 +47,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
 
     public static class ListOperationRecordResponseBodyOperationLogListResponseResultData extends TeaModel {
         /**
-         * <p>The start time.</p>
+         * <p>The start time in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-15 10:30:00</p>
@@ -125,7 +125,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
         public Integer codeType;
 
         /**
-         * <p>The execution duration, in milliseconds.</p>
+         * <p>The execution duration in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -146,7 +146,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试任务</p>
+         * <p>Test task</p>
          */
         @NameInMap("Name")
         public String name;
@@ -179,13 +179,13 @@ public class ListOperationRecordResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The list of related tables.</p>
+         * <p>The list of associated tables.</p>
          */
         @NameInMap("RelationTables")
         public java.util.List<String> relationTables;
 
         /**
-         * <p>The ID of the executor.</p>
+         * <p>The executor ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30231123</p>
@@ -194,16 +194,16 @@ public class ListOperationRecordResponseBody extends TeaModel {
         public String runner;
 
         /**
-         * <p>The name of the executor.</p>
+         * <p>The runner name.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>John Doe</p>
          */
         @NameInMap("RunnerName")
         public String runnerName;
 
         /**
-         * <p>The task status.</p>
+         * <p>The node status.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -342,7 +342,7 @@ public class ListOperationRecordResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The list of operation logs.</p>
+         * <p>The operation log list.</p>
          */
         @NameInMap("ResultData")
         public java.util.List<ListOperationRecordResponseBodyOperationLogListResponseResultData> resultData;

@@ -14,7 +14,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of asset table columns.</p>
+     * <p>The list of columns in the asset table.</p>
      */
     @NameInMap("ColumnList")
     public java.util.List<GetTableColumnsResponseBodyColumnList> columnList;
@@ -29,7 +29,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The backend exception details.</p>
+     * <p>The details of the backend exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -134,7 +134,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String comment;
 
         /**
-         * <p>The creation time of the field.</p>
+         * <p>The creation time, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -143,7 +143,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The creator of the field.</p>
+         * <p>The creator.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -170,7 +170,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String dataSourceType;
 
         /**
-         * <p>The data type of the field.</p>
+         * <p>The data type.</p>
          * 
          * <strong>example:</strong>
          * <p>varchar</p>
@@ -179,7 +179,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String dataType;
 
         /**
-         * <p>The default value of the field.</p>
+         * <p>The default value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -197,7 +197,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The environment to which the column belongs. Valid values: dev and prod.</p>
+         * <p>The environment to which the field belongs. Valid values: dev and prod.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -233,7 +233,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public Boolean isPrimaryKey;
 
         /**
-         * <p>The last modifier of the field.</p>
+         * <p>The user who last modified the field.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -242,7 +242,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
-         * <p>The abbreviation of the data level.</p>
+         * <p>The abbreviation of the data security level.</p>
          * 
          * <strong>example:</strong>
          * <p>L1</p>
@@ -251,7 +251,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String levelAbbreviation;
 
         /**
-         * <p>The modification time of the field.</p>
+         * <p>The modification time, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -269,13 +269,13 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the field allows null values.</p>
+         * <p>Indicates whether the field can be null.</p>
          */
         @NameInMap("Nullable")
         public Boolean nullable;
 
         /**
-         * <p>The sequence number of the column.</p>
+         * <p>The sequence number.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -293,7 +293,7 @@ public class GetTableColumnsResponseBody extends TeaModel {
         public String tableGuid;
 
         /**
-         * <p>The table name.</p>
+         * <p>The name of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>t_test</p>

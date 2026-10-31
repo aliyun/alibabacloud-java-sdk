@@ -22,6 +22,8 @@ public class OnlineBizEntityRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -69,7 +71,7 @@ public class OnlineBizEntityRequest extends TeaModel {
         public Long bizUnitId;
 
         /**
-         * <p>The remarks for the offline operation.</p>
+         * <p>The offline comment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -89,11 +91,7 @@ public class OnlineBizEntityRequest extends TeaModel {
         public Long id;
 
         /**
-         * <p>The business type. Valid values:</p>
-         * <ul>
-         * <li>BIZ_OBJECT</li>
-         * <li>BIZ_PROCESS.</li>
-         * </ul>
+         * <p>The business type. Valid values: BIZ_OBJECT and BIZ_PROCESS.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

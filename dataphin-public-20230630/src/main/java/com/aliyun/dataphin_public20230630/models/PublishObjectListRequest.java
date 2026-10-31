@@ -15,6 +15,8 @@ public class PublishObjectListRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,11 +61,11 @@ public class PublishObjectListRequest extends TeaModel {
 
     public static class PublishObjectListRequestPublishCommand extends TeaModel {
         /**
-         * <p>The publish comment. The string can be up to 1024 characters in length.</p>
+         * <p>The publish comment. The maximum length is 1,024 characters.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>发布</p>
+         * <p>Publish</p>
          */
         @NameInMap("Comment")
         public String comment;
@@ -79,7 +81,7 @@ public class PublishObjectListRequest extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The list of pending publish record IDs to be published. A maximum of 50 submit IDs can be specified.</p>
+         * <p>The list of submit record IDs for the items to be published. A maximum of 50 submit IDs are supported.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("SubmitIdList")

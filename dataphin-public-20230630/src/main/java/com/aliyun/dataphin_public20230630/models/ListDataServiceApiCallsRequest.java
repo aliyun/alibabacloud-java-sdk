@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceApiCallsRequest extends TeaModel {
     /**
-     * <p>The query conditions.</p>
+     * <p>The search conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
     public ListDataServiceApiCallsRequestListQuery listQuery;
 
     /**
-     * <p>The ID of the tenant.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +22,8 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -77,7 +79,7 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
 
     public static class ListDataServiceApiCallsRequestListQuery extends TeaModel {
         /**
-         * <p>The ID of the API.</p>
+         * <p>The code of the API.</p>
          * 
          * <strong>example:</strong>
          * <p>20122</p>
@@ -97,7 +99,7 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
         /**
          * <p>The application key.</p>
          * <blockquote>
-         * <p>Notice: This parameter is deprecated. Use AppKeyStr instead.</p>
+         * <p>Notice: Deprecated. Use AppKeyStr instead.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -145,7 +147,7 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
         public Integer pageNo;
 
         /**
-         * <p>The number of entries per page. Default value: 20.</p>
+         * <p>The number of records per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -164,7 +166,7 @@ public class ListDataServiceApiCallsRequest extends TeaModel {
         public String startTime;
 
         /**
-         * <p>Indicates whether the call was successful.</p>
+         * <p>Specifies whether the call is successful.</p>
          */
         @NameInMap("Successful")
         public Boolean successful;

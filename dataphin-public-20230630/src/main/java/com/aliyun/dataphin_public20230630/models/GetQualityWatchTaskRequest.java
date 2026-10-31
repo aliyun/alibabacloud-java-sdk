@@ -15,6 +15,8 @@ public class GetQualityWatchTaskRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class GetQualityWatchTaskRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The quality watchtask ID.</p>
+     * <p>The watchtask ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

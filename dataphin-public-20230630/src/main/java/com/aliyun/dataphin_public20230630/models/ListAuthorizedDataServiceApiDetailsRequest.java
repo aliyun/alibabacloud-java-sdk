@@ -25,6 +25,8 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -63,6 +65,9 @@ public class ListAuthorizedDataServiceApiDetailsRequest extends TeaModel {
     public static class ListAuthorizedDataServiceApiDetailsRequestListQuery extends TeaModel {
         /**
          * <p>The application key.</p>
+         * <blockquote>
+         * <p>Notice: Deprecated. Use AppKeyStr.</notice></p>
+         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>200000000</p>

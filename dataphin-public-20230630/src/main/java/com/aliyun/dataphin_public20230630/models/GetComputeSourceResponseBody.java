@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetComputeSourceResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class GetComputeSourceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The error message of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -47,7 +47,7 @@ public class GetComputeSourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetComputeSourceResponseBody extends TeaModel {
 
     public static class GetComputeSourceResponseBodyComputeSourceInfo extends TeaModel {
         /**
-         * <p>Indicates whether a project is associated.</p>
+         * <p>Indicates whether the compute source is bound to a project.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -119,7 +119,7 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public Boolean bindProject;
 
         /**
-         * <p>The ID of the associated project.</p>
+         * <p>The ID of the bound project.</p>
          * 
          * <strong>example:</strong>
          * <p>10101101</p>
@@ -128,7 +128,7 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public Long bindProjectId;
 
         /**
-         * <p>The name of the associated project.</p>
+         * <p>The name of the bound project.</p>
          * 
          * <strong>example:</strong>
          * <p>dp_mctest</p>
@@ -182,7 +182,7 @@ public class GetComputeSourceResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The last modification timestamp.</p>
+         * <p>The update timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1711881607000</p>

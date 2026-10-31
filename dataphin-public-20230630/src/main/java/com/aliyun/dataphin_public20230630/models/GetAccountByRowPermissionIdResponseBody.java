@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message returned if the request failed.</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -47,7 +47,7 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -119,7 +119,7 @@ public class GetAccountByRowPermissionIdResponseBody extends TeaModel {
          * <p>The name of the account bound to the rule.</p>
          * 
          * <strong>example:</strong>
-         * <p>John.</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("AccountName")
         public String accountName;

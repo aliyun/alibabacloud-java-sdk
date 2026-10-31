@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class TransferOwnershipForAllObjectResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class TransferOwnershipForAllObjectResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The transfer record ID.</p>
+     * <p>The ID of the transfer record.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class TransferOwnershipForAllObjectResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

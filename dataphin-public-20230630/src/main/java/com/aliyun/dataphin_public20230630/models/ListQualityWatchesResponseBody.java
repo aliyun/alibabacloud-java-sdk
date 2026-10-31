@@ -23,7 +23,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
 
     public static class ListQualityWatchesResponseBodyPageResultQualityWatchListDataSourceInfo extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -134,11 +134,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String creatorName;
 
         /**
-         * <p>The environment identifier. Valid values:</p>
-         * <ul>
-         * <li>PROD</li>
-         * <li>DEV.</li>
-         * </ul>
+         * <p>The environment identifier. Valid values: PROD and DEV.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -147,7 +143,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String env;
 
         /**
-         * <p>The data source IDs.</p>
+         * <p>The data source ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -156,7 +152,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -174,7 +170,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The owner user ID.</p>
+         * <p>The user ID of the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -183,7 +179,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The owner name.</p>
+         * <p>The name of the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -192,7 +188,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String ownerName;
 
         /**
-         * <p>The data source type, such as MAX_COMPUTE or HADOOP.</p>
+         * <p>The data source type. Valid values: MAX_COMPUTE and HADOOP.</p>
          * 
          * <strong>example:</strong>
          * <p>MAX_COMPUTE</p>
@@ -325,13 +321,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String cellSumLogicTableName;
 
         /**
-         * <p>The metric computation type. Valid values:</p>
-         * <ul>
-         * <li>AUTO</li>
-         * <li>CUSTOM</li>
-         * <li>MOUNT</li>
-         * <li>COMBINE.</li>
-         * </ul>
+         * <p>The metric computation type. Valid values: AUTO, CUSTOM, MOUNT, and COMBINE.</p>
          * 
          * <strong>example:</strong>
          * <p>AUTO</p>
@@ -370,7 +360,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
          * <p>The statistical granularity name.</p>
          * 
          * <strong>example:</strong>
-         * <p>全站汇总表</p>
+         * <p>Site-wide aggregate table</p>
          */
         @NameInMap("GranularityDisplayName")
         public String granularityDisplayName;
@@ -412,7 +402,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The owner user ID.</p>
+         * <p>The user ID of the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -421,7 +411,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The owner name.</p>
+         * <p>The name of the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -448,10 +438,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The metric type. Valid values:</p>
-         * <ul>
-         * <li>INDEX.</li>
-         * </ul>
+         * <p>The metric type. Valid value: INDEX.</p>
          * 
          * <strong>example:</strong>
          * <p>INDEX</p>
@@ -666,11 +653,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The environment identifier. Valid values:</p>
-         * <ul>
-         * <li>DEV</li>
-         * <li>PROD.</li>
-         * </ul>
+         * <p>The environment identifier. Valid values: DEV and PROD.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV</p>
@@ -688,7 +671,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Indicates whether the table is a partitioned table.</p>
+         * <p>Specifies whether the table is a partitioned table.</p>
          */
         @NameInMap("IsPartitionTable")
         public Boolean isPartitionTable;
@@ -703,7 +686,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The owner user ID.</p>
+         * <p>The user ID of the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -712,7 +695,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String owner;
 
         /**
-         * <p>The owner name.</p>
+         * <p>The name of the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -739,15 +722,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The type. Valid values:</p>
-         * <ul>
-         * <li>LOGIC_DIM_TABLE: logical dimension table</li>
-         * <li>LOGIC_FACT_TABLE: logical fact table</li>
-         * <li>LOGIC_SUM_TABLE: logical aggregate table</li>
-         * <li>LOGIC_LABEL_TABLE: logical label table</li>
-         * <li>PHYSICAL_TABLE: physical table</li>
-         * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
-         * </ul>
+         * <p>The type. Valid values: LOGIC_DIM_TABLE (logical dimension table), LOGIC_FACT_TABLE (logical fact table), LOGIC_SUM_TABLE (logical aggregate table), LOGIC_LABEL_TABLE (logical tag table), PHYSICAL_TABLE (physical table), and REALTIME_LOGICAL_TABLE (real-time metatable).</p>
          * 
          * <strong>example:</strong>
          * <p>LOGIC_DIM_TABLE</p>
@@ -884,7 +859,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
 
     public static class ListQualityWatchesResponseBodyPageResultQualityWatchList extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -926,7 +901,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public Long enabledRuleCount;
 
         /**
-         * <p>The monitored object ID.</p>
+         * <p>The monitor ID.</p>
          * 
          * <strong>example:</strong>
          * <p>11</p>
@@ -941,7 +916,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public ListQualityWatchesResponseBodyPageResultQualityWatchListIndexInfo indexInfo;
 
         /**
-         * <p>The record ID of the latest quality watchtask for the monitored object.</p>
+         * <p>The ID of the latest quality watchtask.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -950,7 +925,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public Long latestWatchTaskId;
 
         /**
-         * <p>The record status of the latest quality watchtask for the monitored object.</p>
+         * <p>The status of the latest quality watchtask.</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -968,7 +943,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -977,7 +952,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The monitored object name.</p>
+         * <p>The monitor name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -986,7 +961,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The quality owner user ID.</p>
+         * <p>The user ID of the quality owner.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -995,7 +970,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public String qualityOwner;
 
         /**
-         * <p>The quality owner display name.</p>
+         * <p>The display name of the quality owner.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -1013,11 +988,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public Long ruleCount;
 
         /**
-         * <p>The status. Valid values:</p>
-         * <ul>
-         * <li>ENABLE</li>
-         * <li>DISABLE.</li>
-         * </ul>
+         * <p>The status. Valid values: ENABLE and DISABLE.</p>
          * 
          * <strong>example:</strong>
          * <p>ENABLE</p>
@@ -1032,14 +1003,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
         public ListQualityWatchesResponseBodyPageResultQualityWatchListTableInfo tableInfo;
 
         /**
-         * <p>The monitored object type. Valid values:</p>
-         * <ul>
-         * <li>TABLE: Dataphin table</li>
-         * <li>DATASOURCE_TABLE: full-domain table</li>
-         * <li>DATASOURCE: data source</li>
-         * <li>INDEX: metric</li>
-         * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
-         * </ul>
+         * <p>The monitored object type. Valid values: TABLE (Dataphin table), DATASOURCE_TABLE (global table), DATASOURCE (data source), INDEX (metric), and REALTIME_LOGICAL_TABLE (real-time metatable).</p>
          * 
          * <strong>example:</strong>
          * <p>TABLE</p>
@@ -1200,7 +1164,7 @@ public class ListQualityWatchesResponseBody extends TeaModel {
 
     public static class ListQualityWatchesResponseBodyPageResult extends TeaModel {
         /**
-         * <p>The paged list of quality watchtasks.</p>
+         * <p>The paged quality alert list.</p>
          */
         @NameInMap("QualityWatchList")
         public java.util.List<ListQualityWatchesResponseBodyPageResultQualityWatchList> qualityWatchList;

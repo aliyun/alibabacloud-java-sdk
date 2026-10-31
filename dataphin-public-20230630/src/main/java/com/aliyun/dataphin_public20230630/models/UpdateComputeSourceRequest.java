@@ -15,7 +15,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The operator user ID.</p>
+     * <p>The ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -24,7 +24,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The edit command.</p>
+     * <p>The update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -71,7 +71,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The configuration item value.</p>
+         * <p>The value of the configuration item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
 
     public static class UpdateComputeSourceRequestUpdateCommand extends TeaModel {
         /**
-         * <p>The associated cluster ID. This parameter takes effect only when CreateType is left empty or set to COMPUTE_SOURCE (to create a compute source that references a cluster). This parameter is mutually exclusive with CreateType=CLUSTER.</p>
+         * <p>The ID of the associated cluster. This parameter takes effect only when CreateType is left empty or set to COMPUTE_SOURCE, which means creating a compute source that references a cluster. This parameter is mutually exclusive with CreateType=CLUSTER.</p>
          * 
          * <strong>example:</strong>
          * <p>102311</p>
@@ -114,17 +114,17 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public Long clusterId;
 
         /**
-         * <p>The connection configuration items.</p>
+         * <p>The connection configurations.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ConfigList")
         public java.util.List<UpdateComputeSourceRequestUpdateCommandConfigList> configList;
 
         /**
-         * <p>The creation entity type. Valid values:</p>
+         * <p>The type of the entity to create. Valid values:</p>
          * <ul>
-         * <li>CLUSTER: Creates the entity as a cluster. ClusterId cannot be specified.</li>
-         * <li>COMPUTE_SOURCE: Creates the entity as a compute source. This is the default value.</li>
+         * <li>CLUSTER: creates a cluster. You cannot specify ClusterId.</li>
+         * <li>COMPUTE_SOURCE: creates a compute source. This is the default value.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -144,7 +144,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The compute source ID.</p>
+         * <p>The ID of the compute source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public Long id;
 
         /**
-         * <p>The compute source name.</p>
+         * <p>The name of the compute source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,16 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The compute source type.</p>
+         * <p>The name of the time zone, such as Asia/Shanghai. If you do not specify this parameter when you update the compute source, the original value is retained.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
+        @NameInMap("TimeZone")
+        public String timeZone;
+
+        /**
+         * <p>The type of the compute source.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -174,7 +183,7 @@ public class UpdateComputeSourceRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The compute source type version.</p>
+         * <p>The version of the compute source type.</p>
          * 
          * <strong>example:</strong>
          * <p>CDH6</p>
@@ -233,6 +242,14 @@ public class UpdateComputeSourceRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public UpdateComputeSourceRequestUpdateCommand setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
         }
 
         public UpdateComputeSourceRequestUpdateCommand setType(String type) {

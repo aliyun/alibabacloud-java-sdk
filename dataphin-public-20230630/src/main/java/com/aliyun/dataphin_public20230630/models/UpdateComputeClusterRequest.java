@@ -214,6 +214,15 @@ public class UpdateComputeClusterRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>时区名称，例如 Asia/Shanghai。更新时不传则保留原值。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
+         */
+        @NameInMap("TimeZone")
+        public String timeZone;
+
+        /**
          * <p>The cluster type.</p>
          * <p>This parameter is required.</p>
          * 
@@ -275,6 +284,14 @@ public class UpdateComputeClusterRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public UpdateComputeClusterRequestClusterConfig setTimeZone(String timeZone) {
+            this.timeZone = timeZone;
+            return this;
+        }
+        public String getTimeZone() {
+            return this.timeZone;
         }
 
         public UpdateComputeClusterRequestClusterConfig setType(String type) {

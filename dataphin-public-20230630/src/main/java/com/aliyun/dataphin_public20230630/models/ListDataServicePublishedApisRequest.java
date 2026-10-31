@@ -29,7 +29,6 @@ public class ListDataServicePublishedApisRequest extends TeaModel {
 
     /**
      * <p>Data service project ID.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>102102</p>

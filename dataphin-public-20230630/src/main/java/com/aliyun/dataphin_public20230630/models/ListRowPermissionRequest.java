@@ -15,6 +15,8 @@ public class ListRowPermissionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -62,7 +64,7 @@ public class ListRowPermissionRequest extends TeaModel {
          * <p>The search keyword.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务</p>
+         * <p>Business</p>
          */
         @NameInMap("Keyword")
         public String keyword;

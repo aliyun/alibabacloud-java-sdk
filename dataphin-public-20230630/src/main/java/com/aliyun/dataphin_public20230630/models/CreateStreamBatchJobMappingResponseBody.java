@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result returned when the node is created.</p>
+     * <p>The return result of a successful task creation.</p>
      */
     @NameInMap("Data")
     public CreateStreamBatchJobMappingResponseBodyData data;
@@ -47,7 +47,7 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -125,7 +125,7 @@ public class CreateStreamBatchJobMappingResponseBody extends TeaModel {
         public Long jobId;
 
         /**
-         * <p>The redirect relative path.</p>
+         * <p>The relative path for redirection.</p>
          * 
          * <strong>example:</strong>
          * <p>/dev/streamJob/7083701105376640?env=DEV&amp;projectId=7081229106458752&amp;tenantId=300001420</p>

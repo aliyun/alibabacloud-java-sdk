@@ -15,6 +15,8 @@ public class UpdateDevProdProjectRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -127,7 +129,7 @@ public class UpdateDevProdProjectRequest extends TeaModel {
         public Long bizUnitId;
 
         /**
-         * <p>The ID of the offline compute source in the development environment.</p>
+         * <p>The ID of the offline compute source for the development environment.</p>
          * 
          * <strong>example:</strong>
          * <p>2001</p>
@@ -145,7 +147,7 @@ public class UpdateDevProdProjectRequest extends TeaModel {
         public String devDescription;
 
         /**
-         * <p>The ID of the real-time compute source in the development environment.</p>
+         * <p>The ID of the real-time compute source for the development environment.</p>
          * 
          * <strong>example:</strong>
          * <p>2002</p>
@@ -154,10 +156,10 @@ public class UpdateDevProdProjectRequest extends TeaModel {
         public Long devStreamComputeSourceId;
 
         /**
-         * <p>The display name of the project.</p>
+         * <p>The project display name.</p>
          * 
          * <strong>example:</strong>
-         * <p>My project.</p>
+         * <p>My project</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -182,7 +184,7 @@ public class UpdateDevProdProjectRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The namespace identifier.</p>
+         * <p>The namespace tag.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -191,7 +193,7 @@ public class UpdateDevProdProjectRequest extends TeaModel {
         public String nameSpaceTag;
 
         /**
-         * <p>The ID of the offline compute source in the production environment.</p>
+         * <p>The ID of the offline compute source for the production environment.</p>
          * 
          * <strong>example:</strong>
          * <p>2003</p>
@@ -209,7 +211,7 @@ public class UpdateDevProdProjectRequest extends TeaModel {
         public String prodDescription;
 
         /**
-         * <p>The ID of the real-time compute source in the production environment.</p>
+         * <p>The ID of the real-time compute source for the production environment.</p>
          * 
          * <strong>example:</strong>
          * <p>2004</p>
@@ -218,7 +220,7 @@ public class UpdateDevProdProjectRequest extends TeaModel {
         public Long prodStreamComputeSourceId;
 
         /**
-         * <p>The sandbox whitelist.</p>
+         * <p>The sandbox whitelists.</p>
          */
         @NameInMap("WhiteLists")
         public java.util.List<UpdateDevProdProjectRequestUpdateCommandWhiteLists> whiteLists;

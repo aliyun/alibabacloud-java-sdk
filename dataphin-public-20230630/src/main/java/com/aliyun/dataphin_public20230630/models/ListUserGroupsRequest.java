@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupsRequest extends TeaModel {
     /**
-     * <p>The paged query parameters.</p>
+     * <p>The paging query.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
@@ -22,6 +22,8 @@ public class ListUserGroupsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -74,7 +76,7 @@ public class ListUserGroupsRequest extends TeaModel {
         public java.util.List<String> adminIdList;
 
         /**
-         * <p>Specifies whether to filter user groups that the current user belongs to.</p>
+         * <p>Specifies whether to filter out the user groups to which the current user belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -86,7 +88,7 @@ public class ListUserGroupsRequest extends TeaModel {
          * <p>The keyword for the user group name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Keyword")
         public String keyword;

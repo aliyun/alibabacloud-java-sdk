@@ -29,7 +29,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The backend exception details.</p>
+     * <p>The details of the backend exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -105,12 +105,271 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         return this.success;
     }
 
-    public static class GetBatchTemplateVersionsResponseBodyDataTemplateVersionList extends TeaModel {
+    public static class GetBatchTemplateVersionsResponseBodyDataTemplateVersionListDataSourceConfig extends TeaModel {
         /**
-         * <p>The template submit comment.</p>
+         * <p>The catalog of the data source for the database SQL template.</p>
          * 
          * <strong>example:</strong>
-         * <p>初始化提交</p>
+         * <p>default</p>
+         */
+        @NameInMap("Catalog")
+        public String catalog;
+
+        /**
+         * <p>The ID of the data source for the database SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
+        @NameInMap("DsId")
+        public String dsId;
+
+        /**
+         * <p>The schema of the data source for the database SQL template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("Schema")
+        public String schema;
+
+        /**
+         * <p>The data source type of the database SQL template. Valid values: MYSQL, ORACLE, ADB_FOR_PG, OUSHUDB, PRESTO, POSTGRE_SQL, STARROCKS, CLICKHOUSE, ANALYTICDB, ADB_FOR_MYSQL_V3, GAUSSDB, SELECTDB, DORIS, SQL_SERVER, HOLOGRES, OPENGAUSS, DAMENG, OCEANBASE, TRINO, POLARDB_X2, LINDORM, EMR_SPARK_SERVERLESS, TDSQL_FOR_PG, TDSQL_FOR_MYSQL, GBASE_8A, and TDENGINE.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>MYSQL</p>
+         */
+        @NameInMap("Type")
+        public String type;
+
+        public static GetBatchTemplateVersionsResponseBodyDataTemplateVersionListDataSourceConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetBatchTemplateVersionsResponseBodyDataTemplateVersionListDataSourceConfig self = new GetBatchTemplateVersionsResponseBodyDataTemplateVersionListDataSourceConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListDataSourceConfig setCatalog(String catalog) {
+            this.catalog = catalog;
+            return this;
+        }
+        public String getCatalog() {
+            return this.catalog;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListDataSourceConfig setDsId(String dsId) {
+            this.dsId = dsId;
+            return this;
+        }
+        public String getDsId() {
+            return this.dsId;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListDataSourceConfig setSchema(String schema) {
+            this.schema = schema;
+            return this;
+        }
+        public String getSchema() {
+            return this.schema;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListDataSourceConfig setType(String type) {
+            this.type = type;
+            return this;
+        }
+        public String getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class GetBatchTemplateVersionsResponseBodyDataTemplateVersionListParams extends TeaModel {
+        /**
+         * <p>The parameter description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("Description")
+        public String description;
+
+        /**
+         * <p>Indicates whether encryption is enabled for the parameter.</p>
+         */
+        @NameInMap("EncryptEnabled")
+        public Boolean encryptEnabled;
+
+        /**
+         * <p>The key of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>param1</p>
+         */
+        @NameInMap("Key")
+        public String key;
+
+        /**
+         * <p>The default value of the parameter.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Value")
+        public String value;
+
+        public static GetBatchTemplateVersionsResponseBodyDataTemplateVersionListParams build(java.util.Map<String, ?> map) throws Exception {
+            GetBatchTemplateVersionsResponseBodyDataTemplateVersionListParams self = new GetBatchTemplateVersionsResponseBodyDataTemplateVersionListParams();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListParams setDescription(String description) {
+            this.description = description;
+            return this;
+        }
+        public String getDescription() {
+            return this.description;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListParams setEncryptEnabled(Boolean encryptEnabled) {
+            this.encryptEnabled = encryptEnabled;
+            return this;
+        }
+        public Boolean getEncryptEnabled() {
+            return this.encryptEnabled;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListParams setKey(String key) {
+            this.key = key;
+            return this;
+        }
+        public String getKey() {
+            return this.key;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListParams setValue(String value) {
+            this.value = value;
+            return this;
+        }
+        public String getValue() {
+            return this.value;
+        }
+
+    }
+
+    public static class GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList extends TeaModel {
+        /**
+         * <p>The ID of the Python third-party package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1001</p>
+         */
+        @NameInMap("Id")
+        public Long id;
+
+        /**
+         * <p>The installation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2026-01-01 10:00:00</p>
+         */
+        @NameInMap("InstallTime")
+        public String installTime;
+
+        /**
+         * <p>The name of the Python third-party package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>numpy</p>
+         */
+        @NameInMap("Name")
+        public String name;
+
+        /**
+         * <p>The Python version. Valid values: PYTHON_2_7, PYTHON_3_7, and PYTHON_3_11.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>PYTHON_2_7</p>
+         */
+        @NameInMap("PythonVersion")
+        public String pythonVersion;
+
+        /**
+         * <p>The status of the third-party package. Valid values: INSTALL_SUCCESS (installed), INSTALL_FAILED (installation failed), INSTALLING (installing), UPGRADE_SUCCESS (upgraded), UPGRADE_FAILED (upgrade failed), and UPGRADING (upgrading).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>INSTALL_SUCCESS</p>
+         */
+        @NameInMap("Status")
+        public String status;
+
+        /**
+         * <p>The version of the third-party package.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1.0.1</p>
+         */
+        @NameInMap("Version")
+        public String version;
+
+        public static GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList build(java.util.Map<String, ?> map) throws Exception {
+            GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList self = new GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList setId(Long id) {
+            this.id = id;
+            return this;
+        }
+        public Long getId() {
+            return this.id;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList setInstallTime(String installTime) {
+            this.installTime = installTime;
+            return this;
+        }
+        public String getInstallTime() {
+            return this.installTime;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList setPythonVersion(String pythonVersion) {
+            this.pythonVersion = pythonVersion;
+            return this;
+        }
+        public String getPythonVersion() {
+            return this.pythonVersion;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList setStatus(String status) {
+            this.status = status;
+            return this;
+        }
+        public String getStatus() {
+            return this.status;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList setVersion(String version) {
+            this.version = version;
+            return this;
+        }
+        public String getVersion() {
+            return this.version;
+        }
+
+    }
+
+    public static class GetBatchTemplateVersionsResponseBodyDataTemplateVersionList extends TeaModel {
+        /**
+         * <p>The template submission comment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Initial submission</p>
          */
         @NameInMap("Comment")
         public String comment;
@@ -126,16 +385,40 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String content;
 
         /**
+         * <p>The data source configuration of the database SQL template.</p>
+         */
+        @NameInMap("DataSourceConfig")
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListDataSourceConfig dataSourceConfig;
+
+        /**
          * <p>The template description.</p>
          * 
          * <strong>example:</strong>
-         * <p>用于数据处理的Shell模板</p>
+         * <p>Shell template for data processing</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The version of the compute engine. Currently supported Python versions: Python 2.7 and Python 3.7.</p>
+         * <p>The ID of the resource group in the development environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("DevResourceGroupId")
+        public String devResourceGroupId;
+
+        /**
+         * <p>The name of the resource group in the development environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default resource group for the project</p>
+         */
+        @NameInMap("DevResourceGroupName")
+        public String devResourceGroupName;
+
+        /**
+         * <p>The version of the compute engine. Valid values: Python 2.7 and Python 3.7.</p>
          * 
          * <strong>example:</strong>
          * <p>Python 3.7</p>
@@ -144,7 +427,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String engine;
 
         /**
-         * <p>The template creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The time when the template was created. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01 10:00:00</p>
@@ -153,7 +436,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The template modification time. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The time when the template was updated. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-28 15:30:00</p>
@@ -162,7 +445,7 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The template ID, which is the same as the menu tree node ID.</p>
+         * <p>The ID of the template, which is the same as the menu tree node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1001</p>
@@ -171,16 +454,16 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The last modifier of the template.</p>
+         * <p>The last user who updated the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>李四</p>
+         * <p>Li Si</p>
          */
         @NameInMap("Modifier")
         public String modifier;
 
         /**
-         * <p>The ID of the last modifier of the template.</p>
+         * <p>The ID of the last user who updated the template.</p>
          * 
          * <strong>example:</strong>
          * <p>100002</p>
@@ -189,20 +472,16 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String modifierId;
 
         /**
-         * <p>The template name.</p>
+         * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>数据处理模板</p>
+         * <p>Data processing template</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The template operator type. Valid values:</p>
-         * <ul>
-         * <li>10: Shell.</li>
-         * <li>21: Python.</li>
-         * </ul>
+         * <p>The node type. Valid values: 10 (Shell) and 21 (Python).</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -211,16 +490,16 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public Integer operatorType;
 
         /**
-         * <p>The template owner.</p>
+         * <p>The owner of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("Owner")
         public String owner;
 
         /**
-         * <p>The template owner ID.</p>
+         * <p>The ID of the template owner.</p>
          * 
          * <strong>example:</strong>
          * <p>100001</p>
@@ -229,7 +508,13 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public String ownerId;
 
         /**
-         * <p>The project ID.</p>
+         * <p>The list of template parameters.</p>
+         */
+        @NameInMap("Params")
+        public java.util.List<GetBatchTemplateVersionsResponseBodyDataTemplateVersionListParams> params;
+
+        /**
+         * <p>The ID of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>123456</p>
@@ -238,12 +523,37 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The template status. Valid values:</p>
-         * <ul>
-         * <li>0: draft.</li>
-         * <li>2: submitted.</li>
-         * <li>100: in development.</li>
-         * </ul>
+         * <p>The list of dependent Python third-party packages.</p>
+         */
+        @NameInMap("PythonModuleList")
+        public java.util.List<GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList> pythonModuleList;
+
+        /**
+         * <p>The ID of the resource group in the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
+        /**
+         * <p>The name of the resource group in the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Default resource group for the project</p>
+         */
+        @NameInMap("ResourceGroupName")
+        public String resourceGroupName;
+
+        /**
+         * <p>Indicates whether runtime resources are shared.</p>
+         */
+        @NameInMap("ShareRuntimeResource")
+        public Boolean shareRuntimeResource;
+
+        /**
+         * <p>The status of the template. Valid values: 0 (draft), 2 (submitted), and 100 (in development).</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -281,12 +591,36 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             return this.content;
         }
 
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionList setDataSourceConfig(GetBatchTemplateVersionsResponseBodyDataTemplateVersionListDataSourceConfig dataSourceConfig) {
+            this.dataSourceConfig = dataSourceConfig;
+            return this;
+        }
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionListDataSourceConfig getDataSourceConfig() {
+            return this.dataSourceConfig;
+        }
+
         public GetBatchTemplateVersionsResponseBodyDataTemplateVersionList setDescription(String description) {
             this.description = description;
             return this;
         }
         public String getDescription() {
             return this.description;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionList setDevResourceGroupId(String devResourceGroupId) {
+            this.devResourceGroupId = devResourceGroupId;
+            return this;
+        }
+        public String getDevResourceGroupId() {
+            return this.devResourceGroupId;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionList setDevResourceGroupName(String devResourceGroupName) {
+            this.devResourceGroupName = devResourceGroupName;
+            return this;
+        }
+        public String getDevResourceGroupName() {
+            return this.devResourceGroupName;
         }
 
         public GetBatchTemplateVersionsResponseBodyDataTemplateVersionList setEngine(String engine) {
@@ -369,12 +703,52 @@ public class GetBatchTemplateVersionsResponseBody extends TeaModel {
             return this.ownerId;
         }
 
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionList setParams(java.util.List<GetBatchTemplateVersionsResponseBodyDataTemplateVersionListParams> params) {
+            this.params = params;
+            return this;
+        }
+        public java.util.List<GetBatchTemplateVersionsResponseBodyDataTemplateVersionListParams> getParams() {
+            return this.params;
+        }
+
         public GetBatchTemplateVersionsResponseBodyDataTemplateVersionList setProjectId(Long projectId) {
             this.projectId = projectId;
             return this;
         }
         public Long getProjectId() {
             return this.projectId;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionList setPythonModuleList(java.util.List<GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList> pythonModuleList) {
+            this.pythonModuleList = pythonModuleList;
+            return this;
+        }
+        public java.util.List<GetBatchTemplateVersionsResponseBodyDataTemplateVersionListPythonModuleList> getPythonModuleList() {
+            return this.pythonModuleList;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionList setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionList setResourceGroupName(String resourceGroupName) {
+            this.resourceGroupName = resourceGroupName;
+            return this;
+        }
+        public String getResourceGroupName() {
+            return this.resourceGroupName;
+        }
+
+        public GetBatchTemplateVersionsResponseBodyDataTemplateVersionList setShareRuntimeResource(Boolean shareRuntimeResource) {
+            this.shareRuntimeResource = shareRuntimeResource;
+            return this;
+        }
+        public Boolean getShareRuntimeResource() {
+            return this.shareRuntimeResource;
         }
 
         public GetBatchTemplateVersionsResponseBodyDataTemplateVersionList setStatus(String status) {

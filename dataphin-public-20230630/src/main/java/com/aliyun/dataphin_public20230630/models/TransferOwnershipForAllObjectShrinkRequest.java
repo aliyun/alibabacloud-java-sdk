@@ -15,6 +15,8 @@ public class TransferOwnershipForAllObjectShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The user ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

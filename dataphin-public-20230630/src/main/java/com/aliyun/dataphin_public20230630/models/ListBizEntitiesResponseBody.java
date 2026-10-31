@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListBizEntitiesResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
 
     public static class ListBizEntitiesResponseBodyPageResultBizEntityList extends TeaModel {
         /**
-         * <p>The list of parent business process IDs. This parameter is valid only when the entity type is business process.</p>
+         * <p>The list of IDs of the business processes to which the business entity belongs. This parameter is valid only when the business entity type is business process.</p>
          */
         @NameInMap("BelongToBizEntityIdList")
         public java.util.List<Long> belongToBizEntityIdList;
@@ -122,7 +122,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         public Long bizUnitId;
 
         /**
-         * <p>The list of child business object IDs. This parameter is valid only when the entity type is business object.</p>
+         * <p>The list of child business object IDs. This parameter is valid only when the business entity type is business object.</p>
          */
         @NameInMap("ChildBizEntityIdList")
         public java.util.List<Long> childBizEntityIdList;
@@ -149,7 +149,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
          * <p>The display name of the business entity.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务活动测试</p>
+         * <p>Business process test</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -164,7 +164,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the business entity was last modified.</p>
+         * <p>The time when the business entity was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
@@ -173,7 +173,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Indicates whether the entity is a child business object.</p>
+         * <p>Indicates whether the business entity has child business objects.</p>
          */
         @NameInMap("HasChildBizEntity")
         public Boolean hasChildBizEntity;
@@ -200,13 +200,13 @@ public class ListBizEntitiesResponseBody extends TeaModel {
          * <p>The name of the user who last modified the business entity.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("LastModifierName")
         public String lastModifierName;
 
         /**
-         * <p>Indicates whether the entity is a sublevel of a hierarchy dimension.</p>
+         * <p>Indicates whether the business entity is a sub-level of a hierarchy dimension.</p>
          */
         @NameInMap("LevelSubBizObject")
         public Boolean levelSubBizObject;
@@ -224,9 +224,9 @@ public class ListBizEntitiesResponseBody extends TeaModel {
          * <p>The online status of the business entity. Valid values: </p>
          * <ul>
          * <li>SUBMITTED: not online.</li>
-         * <li>APPROVING: pending approval.</li>
+         * <li>APPROVING: under approval.</li>
          * <li>PUBLISHED: online.</li>
-         * <li>REJECT: failed to go online.</li>
+         * <li>REJECT: rejected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -239,7 +239,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
          * <p>The ID of the business entity owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -254,7 +254,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         public String ownerUserId;
 
         /**
-         * <p>The list of associated central business entity IDs.</p>
+         * <p>The list of IDs of the associated central business entities.</p>
          */
         @NameInMap("RefBizEntityIdList")
         public java.util.List<Long> refBizEntityIdList;
@@ -272,10 +272,10 @@ public class ListBizEntitiesResponseBody extends TeaModel {
          * <p>The status of the business entity. Valid values:</p>
          * <ul>
          * <li>DRAFT: draft or not online.</li>
-         * <li>SUBMITTING: being submitted.</li>
+         * <li>SUBMITTING: submitting.</li>
          * <li>SUBMITTED: submitted.</li>
-         * <li>DEVELOPING: under development.</li>
-         * <li>PUBLISHING: being published.</li>
+         * <li>DEVELOPING: in development.</li>
+         * <li>PUBLISHING: publishing.</li>
          * <li>PUBLISHED: published.</li>
          * </ul>
          * 
@@ -295,7 +295,7 @@ public class ListBizEntitiesResponseBody extends TeaModel {
         public String subType;
 
         /**
-         * <p>The list of subsequent business process IDs. This parameter is valid only when the entity type is business process.</p>
+         * <p>The list of IDs of the subsequent business processes. This parameter is valid only when the business entity type is business process.</p>
          */
         @NameInMap("SuffixBizEntityIdList")
         public java.util.List<Long> suffixBizEntityIdList;

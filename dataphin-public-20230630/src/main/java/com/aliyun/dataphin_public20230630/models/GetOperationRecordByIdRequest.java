@@ -22,6 +22,8 @@ public class GetOperationRecordByIdRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,7 +61,7 @@ public class GetOperationRecordByIdRequest extends TeaModel {
 
     public static class GetOperationRecordByIdRequestDetailCommand extends TeaModel {
         /**
-         * <p>The operation log ID.</p>
+         * <p>The operation record ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

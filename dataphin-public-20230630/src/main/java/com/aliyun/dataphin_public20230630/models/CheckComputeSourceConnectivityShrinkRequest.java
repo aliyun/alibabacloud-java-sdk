@@ -22,6 +22,8 @@ public class CheckComputeSourceConnectivityShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operating user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

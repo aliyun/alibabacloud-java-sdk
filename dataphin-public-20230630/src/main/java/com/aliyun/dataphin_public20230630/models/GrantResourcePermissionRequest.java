@@ -22,6 +22,8 @@ public class GrantResourcePermissionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -84,7 +86,7 @@ public class GrantResourcePermissionRequest extends TeaModel {
 
     public static class GrantResourcePermissionRequestGrantCommand extends TeaModel {
         /**
-         * <p>The expiration timestamp, in milliseconds.</p>
+         * <p>The timestamp for the end of the validity period, in milliseconds.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -101,7 +103,7 @@ public class GrantResourcePermissionRequest extends TeaModel {
         public java.util.List<String> operateList;
 
         /**
-         * <p>The reason for the authorization.</p>
+         * <p>The reason for authorization.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -110,7 +112,7 @@ public class GrantResourcePermissionRequest extends TeaModel {
         public String reason;
 
         /**
-         * <p>The list of resources.</p>
+         * <p>The resources.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ResourceList")
@@ -127,7 +129,7 @@ public class GrantResourcePermissionRequest extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The authorized users pending authorization.</p>
+         * <p>The users pending authorization.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("UserIdList")

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListUserGroupsResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -32,7 +32,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The paged query result.</p>
+     * <p>The paging query result.</p>
      */
     @NameInMap("PageResult")
     public ListUserGroupsResponseBodyPageResult pageResult;
@@ -47,7 +47,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -119,16 +119,16 @@ public class ListUserGroupsResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The username.</p>
+         * <p>The display name of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The user ID.</p>
+         * <p>The ID of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>32313131</p>
@@ -187,13 +187,13 @@ public class ListUserGroupsResponseBody extends TeaModel {
          * <p>The description of the user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx 测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The user group ID.</p>
+         * <p>The ID of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>31313232</p>
@@ -211,10 +211,10 @@ public class ListUserGroupsResponseBody extends TeaModel {
         public String myRole;
 
         /**
-         * <p>The user group name.</p>
+         * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -285,7 +285,7 @@ public class ListUserGroupsResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>The paged list.</p>
+         * <p>The paginated list.</p>
          */
         @NameInMap("UserGroupList")
         public java.util.List<ListUserGroupsResponseBodyPageResultUserGroupList> userGroupList;

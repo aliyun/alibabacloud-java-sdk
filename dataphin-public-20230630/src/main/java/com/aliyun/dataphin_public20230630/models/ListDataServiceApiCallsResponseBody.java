@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceApiCallsResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The backend response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -32,7 +32,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The paginated query result.</p>
+     * <p>The paged query results.</p>
      */
     @NameInMap("PageResult")
     public ListDataServiceApiCallsResponseBodyPageResult pageResult;
@@ -47,7 +47,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
 
     public static class ListDataServiceApiCallsResponseBodyPageResultCallLogList extends TeaModel {
         /**
-         * <p>The ID of the API.</p>
+         * <p>The API ID.</p>
          * 
          * <strong>example:</strong>
          * <p>102112</p>
@@ -127,7 +127,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         /**
          * <p>The application key.</p>
          * <blockquote>
-         * <p>Notice: This parameter is deprecated. Use AppKeyStr instead.</p>
+         * <p>Notice: Deprecated. Use AppKeyStr instead.</notice></p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -174,7 +174,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         public String bizCodeDescription;
 
         /**
-         * <p>The IP address of the request.</p>
+         * <p>The client IP address.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.1</p>
@@ -201,7 +201,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The environment. Valid values: 0 (dev) and 1 (prod).</p>
+         * <p>The environment. Valid values: 0: Development. 1: Production.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -219,7 +219,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         public Integer executeCostTime;
 
         /**
-         * <p>The execution mode. Valid values: 1 (synchronous) and 2 (asynchronous).</p>
+         * <p>The execution mode. Valid values: 1: Synchronous. 2: Asynchronous.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -318,7 +318,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         public Integer responseSize;
 
         /**
-         * <p>The number of returned data records.</p>
+         * <p>The number of returned records.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -336,7 +336,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         public String sql;
 
         /**
-         * <p>The start time of the request. Format: yyyy-MM-dd HH:mm:ss.SSS.</p>
+         * <p>The time when the request is initiated. Format: yyyy-MM-dd HH:mm:ss.SSS.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-01 01:01:01.000</p>
@@ -345,7 +345,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The call status of the job.</p>
+         * <p>The invocation status of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -354,7 +354,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
         public Integer status;
 
         /**
-         * <p>Indicates whether the request was successful.</p>
+         * <p>Indicates whether the request is successful.</p>
          */
         @NameInMap("Successful")
         public Boolean successful;
@@ -593,7 +593,7 @@ public class ListDataServiceApiCallsResponseBody extends TeaModel {
 
     public static class ListDataServiceApiCallsResponseBodyPageResult extends TeaModel {
         /**
-         * <p>The list of API call logs.</p>
+         * <p>The paged list of API calls.</p>
          */
         @NameInMap("CallLogList")
         public java.util.List<ListDataServiceApiCallsResponseBodyPageResultCallLogList> callLogList;

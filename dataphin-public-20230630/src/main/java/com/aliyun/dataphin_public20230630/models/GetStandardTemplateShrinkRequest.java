@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetStandardTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>The filter condition.</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("FilterQuery")
     public String filterQueryShrink;
 
     /**
-     * <p>The standard template ID.</p>
+     * <p>The ID of the standard template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class GetStandardTemplateShrinkRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Specifies whether to allow a null value to be returned when the template does not exist. If set to false, an exception is thrown. Default value: true.</p>
+     * <p>Specifies whether to allow a null value to be returned when the template does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</p>
      */
     @NameInMap("Nullable")
     public Boolean nullable;
@@ -37,6 +37,8 @@ public class GetStandardTemplateShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

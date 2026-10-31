@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAdHocFileRequest extends TeaModel {
     /**
-     * <p>The request for creating an ad hoc query file.</p>
+     * <p>The request to create an ad hoc query file.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -22,6 +22,8 @@ public class CreateAdHocFileRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -69,7 +71,7 @@ public class CreateAdHocFileRequest extends TeaModel {
         public String content;
 
         /**
-         * <p>The directory where the file is located.</p>
+         * <p>The directory of the file.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

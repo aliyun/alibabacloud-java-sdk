@@ -12,7 +12,7 @@ public class ListProjectsRequest extends TeaModel {
     public ListProjectsRequestListQuery listQuery;
 
     /**
-     * <p>The tenant ID.</p>
+     * <p>The operator tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +22,8 @@ public class ListProjectsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -68,7 +70,7 @@ public class ListProjectsRequest extends TeaModel {
         public String env;
 
         /**
-         * <p>The keyword for fuzzy match.</p>
+         * <p>The keyword for fuzzy matching.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

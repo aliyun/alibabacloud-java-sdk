@@ -22,6 +22,8 @@ public class GrantDataServiceApiRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -29,7 +31,7 @@ public class GrantDataServiceApiRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The data service project ID.</p>
+     * <p>The Data Service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -146,7 +148,7 @@ public class GrantDataServiceApiRequest extends TeaModel {
         public Integer appId;
 
         /**
-         * <p>Specifies whether to request development environment permissions for operation-type APIs.</p>
+         * <p>Specifies whether to apply for development environment permissions for operation APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -155,7 +157,7 @@ public class GrantDataServiceApiRequest extends TeaModel {
         public Boolean applyDev;
 
         /**
-         * <p>Specifies whether to request production environment permissions for operation-type APIs.</p>
+         * <p>Specifies whether to apply for production environment permissions for operation APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -164,28 +166,28 @@ public class GrantDataServiceApiRequest extends TeaModel {
         public Boolean applyProd;
 
         /**
-         * <p>The list of authorization permission types. Valid values:</p>
+         * <p>The list of authorized permission types:</p>
          * <ul>
-         * <li>When the grantee is an application, the following permission types are supported. To grant delegation permissions, you must also grant usage permissions.<ul>
-         * <li>USE: usage permission.</li>
+         * <li>When the authorized subject is an application, the following permission types are supported. If you grant the delegation permission, you must also grant the use permission:<ul>
+         * <li>USE: use permission.</li>
          * <li>DELEGATION: delegation permission.</li>
          * </ul>
          * </li>
-         * <li>When the grantee is an individual, only USE (usage) permission is supported.</li>
-         * <li>If this parameter is not specified, the default value is USE (usage) permission.</li>
+         * <li>When the authorized subject is an individual, only the USE permission is supported.</li>
+         * <li>If this parameter is not specified, the default value is USE.</li>
          * </ul>
          */
         @NameInMap("AuthTypes")
         public java.util.List<String> authTypes;
 
         /**
-         * <p>The list of development environment permission fields for query-type APIs. This parameter is required in dev-prod mode. DevFieldList and ProdFieldList cannot both be empty. This parameter is not required for operation-type APIs.</p>
+         * <p>The list of development environment permission fields for query APIs. This parameter is required in dev-prod mode. At least one of DevFieldList and ProdFieldList must be specified. This parameter is not required for operation APIs.</p>
          */
         @NameInMap("DevFieldList")
         public java.util.List<GrantDataServiceApiRequestGrantCommandDevFieldList> devFieldList;
 
         /**
-         * <p>The expiration date in the format of yyyy-MM-dd.</p>
+         * <p>The validity period. Date format: yyyy-MM-dd.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -195,7 +197,7 @@ public class GrantDataServiceApiRequest extends TeaModel {
         public String expireDate;
 
         /**
-         * <p>The authorization object type. Valid values:</p>
+         * <p>The object type of the authorization grantee. Valid values:</p>
          * <ul>
          * <li>APP: application.</li>
          * <li>USER: user.</li>
@@ -208,7 +210,7 @@ public class GrantDataServiceApiRequest extends TeaModel {
         public String granteeType;
 
         /**
-         * <p>The list of production environment permission fields for query-type APIs. This parameter is required in basic mode. This parameter is not required for operation-type APIs.</p>
+         * <p>The list of production environment permission fields for query APIs. This parameter is required in basic mode and is not required for operation APIs.</p>
          */
         @NameInMap("ProdFieldList")
         public java.util.List<GrantDataServiceApiRequestGrantCommandProdFieldList> prodFieldList;

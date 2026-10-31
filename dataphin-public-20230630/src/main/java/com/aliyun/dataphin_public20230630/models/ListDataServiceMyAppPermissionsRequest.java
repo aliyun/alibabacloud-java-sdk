@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDataServiceMyAppPermissionsRequest extends TeaModel {
     /**
-     * <p>The query conditions.</p>
+     * <p>The search conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ListQuery")
@@ -22,6 +22,8 @@ public class ListDataServiceMyAppPermissionsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -29,7 +31,7 @@ public class ListDataServiceMyAppPermissionsRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The ID of the data service project.</p>
+     * <p>The data service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

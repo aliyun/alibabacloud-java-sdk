@@ -7,8 +7,8 @@ public class OperateInstanceRequest extends TeaModel {
     /**
      * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: development environment. </li>
-     * <li>PROD (default): production environment.</li>
+     * <li>DEV: Development environment. </li>
+     * <li>PROD: Production environment. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,6 +28,8 @@ public class OperateInstanceRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -120,20 +122,20 @@ public class OperateInstanceRequest extends TeaModel {
 
     public static class OperateInstanceRequestOperateCommand extends TeaModel {
         /**
-         * <p>The list of instances to operate on.</p>
+         * <p>The O&amp;M instance list.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("InstanceIdList")
         public java.util.List<OperateInstanceRequestOperateCommandInstanceIdList> instanceIdList;
 
         /**
-         * <p>The operation to perform. Valid values:	</p>
+         * <p>The operation. Valid values:	</p>
          * <ul>
-         * <li>RERUN: Reruns the instance.</li>
-         * <li>PAUSE: Pauses the instance.</li>
-         * <li>RESUME: Resumes the instance.</li>
-         * <li>TERMINATE: Stops the instance.</li>
-         * <li>SET_SUCCESS: Sets the instance status to successful.</li>
+         * <li>RERUN: Rerun.</li>
+         * <li>PAUSE: Pause.</li>
+         * <li>RESUME: Resume.</li>
+         * <li>TERMINATE: Stop.</li>
+         * <li>SET_SUCCESS: Set to success.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 

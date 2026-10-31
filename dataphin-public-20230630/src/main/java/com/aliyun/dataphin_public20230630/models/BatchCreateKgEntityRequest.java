@@ -22,7 +22,7 @@ public class BatchCreateKgEntityRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -133,7 +133,7 @@ public class BatchCreateKgEntityRequest extends TeaModel {
         public String entityType;
 
         /**
-         * <p>The list of entity record properties.</p>
+         * <p>The list of properties for the entity record.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("PropertyList")

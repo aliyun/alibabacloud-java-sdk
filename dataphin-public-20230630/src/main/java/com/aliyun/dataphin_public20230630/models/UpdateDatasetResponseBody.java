@@ -23,7 +23,7 @@ public class UpdateDatasetResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The backend exception details.</p>
+     * <p>The details of the backend error.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -41,7 +41,7 @@ public class UpdateDatasetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

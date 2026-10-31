@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteResourceResponseBody extends TeaModel {
     /**
-     * <p>Backend response code.</p>
+     * <p>The backend response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class DeleteResourceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,7 +23,7 @@ public class DeleteResourceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Backend error details.</p>
+     * <p>The backend response error details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -41,7 +41,7 @@ public class DeleteResourceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

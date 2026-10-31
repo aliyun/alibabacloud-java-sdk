@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceAppsByGroupIdResponseBody extends TeaModel {
     /**
-     * <p>The list of application groups.</p>
+     * <p>The list of applications.</p>
      */
     @NameInMap("AppInfoList")
     public java.util.List<GetDataServiceAppsByGroupIdResponseBodyAppInfoList> appInfoList;
@@ -47,7 +47,7 @@ public class GetDataServiceAppsByGroupIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -116,7 +116,7 @@ public class GetDataServiceAppsByGroupIdResponseBody extends TeaModel {
         public Integer id;
 
         /**
-         * <p>The application name.</p>
+         * <p>The name of the application.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

@@ -22,6 +22,8 @@ public class UpdatePipelineByAsyncShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -29,7 +31,7 @@ public class UpdatePipelineByAsyncShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The pipeline node update configuration.</p>
+     * <p>The update configuration for the pipeline task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")

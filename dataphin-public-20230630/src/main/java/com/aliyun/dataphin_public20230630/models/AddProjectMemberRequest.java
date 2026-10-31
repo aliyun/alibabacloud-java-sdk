@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddProjectMemberRequest extends TeaModel {
     /**
-     * <p>The command for adding members.</p>
+     * <p>The command to add members.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddCommand")
@@ -32,7 +32,7 @@ public class AddProjectMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The operator user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>
@@ -79,8 +79,13 @@ public class AddProjectMemberRequest extends TeaModel {
 
     public static class AddProjectMemberRequestAddCommandUserList extends TeaModel {
         /**
-         * <p>The member roles. Valid values: 1: project administrator. 2: developer. 3: visitor. 4: analyst. 5: O&amp;M engineer.</p>
-         * <p>This parameter is required.</p>
+         * <p>The list of role codes for members. System and custom project roles are supported and can be obtained from ListProjectRoles. Only one role is supported. If this parameter is not empty, it takes precedence over RoleList. You must specify at least one of RoleList and RoleCodeList.</p>
+         */
+        @NameInMap("RoleCodeList")
+        public java.util.List<String> roleCodeList;
+
+        /**
+         * <p>The member role. Valid values: 1 (Project administrator), 2 (Developer), 3 (Guest), 4 (Analyst), and 5 (O&amp;M engineer).</p>
          */
         @NameInMap("RoleList")
         public java.util.List<Integer> roleList;
@@ -98,6 +103,14 @@ public class AddProjectMemberRequest extends TeaModel {
         public static AddProjectMemberRequestAddCommandUserList build(java.util.Map<String, ?> map) throws Exception {
             AddProjectMemberRequestAddCommandUserList self = new AddProjectMemberRequestAddCommandUserList();
             return TeaModel.build(map, self);
+        }
+
+        public AddProjectMemberRequestAddCommandUserList setRoleCodeList(java.util.List<String> roleCodeList) {
+            this.roleCodeList = roleCodeList;
+            return this;
+        }
+        public java.util.List<String> getRoleCodeList() {
+            return this.roleCodeList;
         }
 
         public AddProjectMemberRequestAddCommandUserList setRoleList(java.util.List<Integer> roleList) {
@@ -120,7 +133,7 @@ public class AddProjectMemberRequest extends TeaModel {
 
     public static class AddProjectMemberRequestAddCommand extends TeaModel {
         /**
-         * <p>The environment identifier. Valid values: DEV, PROD.</p>
+         * <p>The environment identifier. Valid values: DEV and PROD.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -130,7 +143,7 @@ public class AddProjectMemberRequest extends TeaModel {
         public String env;
 
         /**
-         * <p>The list of user members.</p>
+         * <p>The user members.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("UserList")

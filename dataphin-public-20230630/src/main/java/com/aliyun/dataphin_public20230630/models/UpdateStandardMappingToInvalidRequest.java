@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateStandardMappingToInvalidRequest extends TeaModel {
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class UpdateStandardMappingToInvalidRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateStandardMappingToInvalidRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Update Command</p>
+     * <p>The update instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -59,19 +61,19 @@ public class UpdateStandardMappingToInvalidRequest extends TeaModel {
 
     public static class UpdateStandardMappingToInvalidRequestUpdateCommand extends TeaModel {
         /**
-         * <p>Belonging GUID list, with an upper limit of 1000</p>
+         * <p>The list of parent GUIDs. The maximum number of items is 1,000.</p>
          */
         @NameInMap("BelongGuidList")
         public java.util.List<String> belongGuidList;
 
         /**
-         * <p>GUID list, with an upper limit of 1000</p>
+         * <p>The list of GUIDs. The maximum number of items is 1,000.</p>
          */
         @NameInMap("GuidList")
         public java.util.List<String> guidList;
 
         /**
-         * <p>Standard ID</p>
+         * <p>The standard ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

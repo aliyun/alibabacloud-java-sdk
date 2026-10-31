@@ -32,7 +32,7 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The execution record detail response.</p>
+     * <p>The operation record detail response.</p>
      */
     @NameInMap("OperationRecordDetailResponse")
     public GetOperationRecordDetailResponseBodyOperationRecordDetailResponse operationRecordDetailResponse;
@@ -47,7 +47,7 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -125,7 +125,7 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The result SQL statement.</p>
+         * <p>The result SQL.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT * FROM test_table</p>
@@ -146,7 +146,7 @@ public class GetOperationRecordDetailResponseBody extends TeaModel {
          * <p>The result title.</p>
          * 
          * <strong>example:</strong>
-         * <p>查询结果</p>
+         * <p>Query result</p>
          */
         @NameInMap("Title")
         public String title;

@@ -14,7 +14,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result of batch relationship record creation.</p>
+     * <p>The result of creating relationship records in batches.</p>
      */
     @NameInMap("CreateResult")
     public BatchCreateKgRelationResponseBodyCreateResult createResult;
@@ -47,7 +47,7 @@ public class BatchCreateKgRelationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

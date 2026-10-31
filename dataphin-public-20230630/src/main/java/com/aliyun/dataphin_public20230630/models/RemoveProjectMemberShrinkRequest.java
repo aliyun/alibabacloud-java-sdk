@@ -25,6 +25,8 @@ public class RemoveProjectMemberShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -32,7 +34,7 @@ public class RemoveProjectMemberShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The command to remove a member.</p>
+     * <p>The member removal command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RemoveCommand")

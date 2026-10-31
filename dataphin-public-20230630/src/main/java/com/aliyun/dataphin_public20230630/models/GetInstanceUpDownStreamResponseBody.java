@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceUpDownStreamResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The instance dag data, including the current instance and its upstream and downstream instances.</p>
+     * <p>The DAG of the instance, including the current instance and its upstream and downstream instances.</p>
      */
     @NameInMap("InstanceDagInfo")
     public GetInstanceUpDownStreamResponseBodyInstanceDagInfo instanceDagInfo;
@@ -47,7 +47,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -128,7 +128,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
          * <p>The node name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx_test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -218,7 +218,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
          * <p>The node name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx_test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -235,9 +235,9 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li>DATA_PROCESS: code node.</li>
-         * <li>BBOX_LOGIC_TABLE_NODE: logical table node.</li>
-         * <li>PIPELINE_NODE: pipeline node.</li>
+         * <li>DATA_PROCESS: Code task.</li>
+         * <li>BBOX_LOGIC_TABLE_NODE: Logical table node.</li>
+         * <li>PIPELINE_NODE: Pipeline node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -313,7 +313,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
          * <p>The node name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx_test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -391,7 +391,7 @@ public class GetInstanceUpDownStreamResponseBody extends TeaModel {
         public java.util.List<GetInstanceUpDownStreamResponseBodyInstanceDagInfoDownInstanceList> downInstanceList;
 
         /**
-         * <p>The center instances.</p>
+         * <p>The central instances.</p>
          */
         @NameInMap("StartInstanceList")
         public java.util.List<GetInstanceUpDownStreamResponseBodyInstanceDagInfoStartInstanceList> startInstanceList;

@@ -22,6 +22,8 @@ public class ListBizEntitiesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,25 +61,25 @@ public class ListBizEntitiesRequest extends TeaModel {
 
     public static class ListBizEntitiesRequestListQueryFilterCriteria extends TeaModel {
         /**
-         * <p>The list of business unit IDs.</p>
+         * <p>The IDs of the business units.</p>
          */
         @NameInMap("BizUnitIdList")
         public java.util.List<Long> bizUnitIdList;
 
         /**
-         * <p>The list of business unit IDs.</p>
+         * <p>The IDs of the business units.</p>
          */
         @NameInMap("BizUnitNameList")
         public java.util.List<String> bizUnitNameList;
 
         /**
-         * <p>The list of data domain IDs.</p>
+         * <p>The IDs of the data domains.</p>
          */
         @NameInMap("DataDomainIdList")
         public java.util.List<Long> dataDomainIdList;
 
         /**
-         * <p>The list of data domain IDs.</p>
+         * <p>The IDs of the data domains.</p>
          */
         @NameInMap("DataDomainNameList")
         public java.util.List<String> dataDomainNameList;
@@ -89,19 +91,19 @@ public class ListBizEntitiesRequest extends TeaModel {
         public Boolean hasTableRef;
 
         /**
-         * <p>The list of owner user IDs.</p>
+         * <p>The IDs of the owners.</p>
          */
         @NameInMap("OwnerUserIdList")
         public java.util.List<String> ownerUserIdList;
 
         /**
-         * <p>The list of business entity statuses. For more information, refer to the API operation for querying business entity details.</p>
+         * <p>The status of the business entity. For more information, refer to the &quot;Get business entity details&quot; API operation.</p>
          */
         @NameInMap("StatusList")
         public java.util.List<String> statusList;
 
         /**
-         * <p>The list of business entity subtypes. For more information, refer to the API operation for querying business entity details.</p>
+         * <p>The subtypes of the business entity. For more information, refer to the &quot;Get business entity details&quot; API operation.</p>
          */
         @NameInMap("SubTypeList")
         public java.util.List<String> subTypeList;

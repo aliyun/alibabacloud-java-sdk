@@ -22,6 +22,8 @@ public class ListAddableUsersRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -68,7 +70,7 @@ public class ListAddableUsersRequest extends TeaModel {
         public Integer page;
 
         /**
-         * <p>The number of records per page.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

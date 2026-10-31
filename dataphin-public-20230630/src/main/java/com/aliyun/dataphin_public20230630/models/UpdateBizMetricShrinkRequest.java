@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBizMetricShrinkRequest extends TeaModel {
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class UpdateBizMetricShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateBizMetricShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Update request</p>
+     * <p>The update request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateBizMetricCommand")

@@ -15,6 +15,8 @@ public class TransferOwnershipForAllObjectRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The user ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -78,7 +80,7 @@ public class TransferOwnershipForAllObjectRequest extends TeaModel {
         public String oldOwner;
 
         /**
-         * <p>The remarks.</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>

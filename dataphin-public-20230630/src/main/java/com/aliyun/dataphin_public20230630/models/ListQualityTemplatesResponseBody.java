@@ -23,7 +23,7 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
 
     public static class ListQualityTemplatesResponseBodyPageResultQualityTemplateListFormPropertyList extends TeaModel {
         /**
-         * <p>The control type.</p>
+         * <p>The type of the control.</p>
          * 
          * <strong>example:</strong>
          * <p>expression</p>
@@ -116,7 +116,7 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
         public String componentType;
 
         /**
-         * <p>The property name.</p>
+         * <p>The name of the property.</p>
          * 
          * <strong>example:</strong>
          * <p>col</p>
@@ -125,7 +125,7 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The property value.</p>
+         * <p>The value of the property.</p>
          * 
          * <strong>example:</strong>
          * <p>abc</p>
@@ -168,14 +168,14 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
         /**
          * <p>The template category. Valid values:</p>
          * <ul>
-         * <li>CONSISTENT: consistency</li>
-         * <li>EFFECTIVE: validity</li>
-         * <li>TIMELINESE: timeliness</li>
-         * <li>ACCURATE: accuracy</li>
-         * <li>UNIQUENESS: uniqueness</li>
-         * <li>COMPLETENESS: completeness</li>
-         * <li>STABILITY: stability</li>
-         * <li>CUSTOM: custom.</li>
+         * <li>CONSISTENT: Consistency.</li>
+         * <li>EFFECTIVE: Effectiveness.</li>
+         * <li>TIMELINESE: Timeliness.</li>
+         * <li>ACCURATE: Accuracy.</li>
+         * <li>UNIQUENESS: Uniqueness.</li>
+         * <li>COMPLETENESS: Completeness.</li>
+         * <li>STABILITY: Stability.</li>
+         * <li>CUSTOM: Custom.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,7 +188,7 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
          * <p>The display name of the template category.</p>
          * 
          * <strong>example:</strong>
-         * <p>一致性</p>
+         * <p>Consistency</p>
          */
         @NameInMap("CatalogName")
         public String catalogName;
@@ -221,7 +221,7 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
         public String creatorName;
 
         /**
-         * <p>The template description.</p>
+         * <p>The description of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -230,13 +230,13 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The rule configuration key-value pairs.</p>
+         * <p>The key-value pairs for rule configuration.</p>
          */
         @NameInMap("FormPropertyList")
         public java.util.List<ListQualityTemplatesResponseBodyPageResultQualityTemplateListFormPropertyList> formPropertyList;
 
         /**
-         * <p>The template ID.</p>
+         * <p>The ID of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -251,7 +251,7 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
         public Boolean isSystemTemplate;
 
         /**
-         * <p>The user ID of the last modifier.</p>
+         * <p>The user ID of the last updater.</p>
          * 
          * <strong>example:</strong>
          * <p>30012011</p>
@@ -260,7 +260,7 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The name of the last modifier.</p>
+         * <p>The name of the last updater.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -269,7 +269,7 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
         public String modifierName;
 
         /**
-         * <p>The modification time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -278,7 +278,7 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
         public String modifyTime;
 
         /**
-         * <p>The template name.</p>
+         * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -311,45 +311,45 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
         public Boolean supportAllDataSourceType;
 
         /**
-         * <p>The supported data source types, such as MySQL, Oracle, Microsoft SQL Server, MaxCompute, and Hive.</p>
+         * <p>The specific data source types that are supported, such as MySQL, Oracle, Microsoft SQL Server, MaxCompute, and Hive.</p>
          */
         @NameInMap("SupportDataSourceTypeList")
         public java.util.List<String> supportDataSourceTypeList;
 
         /**
-         * <p>The templatetype. Valid values:</p>
+         * <p>The template type. Valid values:</p>
          * <ul>
-         * <li>FIELD_NULL_VALUE_VALIDATE: field null value check</li>
-         * <li>FIELD_EMPTY_STRING_VALIDATE: field empty character string check</li>
-         * <li>FIELD_UNIQUE_VALIDATE: field uniqueness check</li>
-         * <li>FIELD_GROUP_COUNT_VALIDATE: field unique value count check</li>
-         * <li>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: field duplicate value count check</li>
-         * <li>FUNCTION_TIME_COMPARE: time function comparison</li>
-         * <li>SINGLE_TABLE_TIME_COMPARE: non-partitioned table time field comparison</li>
-         * <li>DOUBLE_TABLE_TIME_COMPARE: two-table time field comparison</li>
-         * <li>FIELD_FORMAT_VALIDATE: field format check</li>
-         * <li>FIELD_LENGTH_VALIDATE: field length check</li>
-         * <li>FIELD_VALUE_RANGE_VALIDATE: field value range check</li>
-         * <li>CODE_TABLE_COMPARE: lookup table reference comparison</li>
-         * <li>STANDARD_CODE_TABLE_COMPARE: data standard lookup table reference comparison</li>
-         * <li>SINGLE_TABLE_FIELD_VALUE_COMPARE: non-partitioned table field value consistency comparison</li>
-         * <li>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: non-partitioned table field statistical value consistency comparison</li>
-         * <li>SINGLE_TABLE_FIELD_EXP_COMPARE: non-partitioned table field business logic consistency comparison</li>
-         * <li>DOUBLE_TABLE_FIELD_VALUE_COMPARE: two-table field value consistency comparison</li>
-         * <li>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: two-table field statistical value consistency comparison</li>
-         * <li>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: cross-source two-table field statistical value consistency comparison</li>
-         * <li>DOUBLE_TABLE_FIELD_EXP_COMPARE: two-table field business logic consistency comparison</li>
-         * <li>TABLE_STABILITY_VALIDATE: table stability check</li>
-         * <li>TABLE_FLUCTUATION_VALIDATE: table fluctuation check</li>
-         * <li>FIELD_STABILITY_VALIDATE: field stability check</li>
-         * <li>FIELD_FLUCTUATION_VALIDATE: field fluctuation check</li>
-         * <li>CUSTOM_STATISTICAL_VALIDATE: custom statistical metric check</li>
-         * <li>CUSTOM_DATA_DETAILS_VALIDATE: custom data details check</li>
-         * <li>DATASOURCE_AVAILABLE_CHECK: data source connectivity monitoring</li>
-         * <li>TABLE_SCHEMA_CHECK: table schema change monitoring</li>
-         * <li>REAL_TIME_OFFLINE_COMPARE: real-time and offline comparison</li>
-         * <li>REAL_TIME_STATISTICAL_VALIDATE: real-time statistical value monitoring</li>
-         * <li>REAL_TIME_MULTI_CHAIN_COMPARE: real-time multi-link comparison.</li>
+         * <li>FIELD_NULL_VALUE_VALIDATE: Field null value check.</li>
+         * <li>FIELD_EMPTY_STRING_VALIDATE: Field empty string check.</li>
+         * <li>FIELD_UNIQUE_VALIDATE: Field uniqueness check.</li>
+         * <li>FIELD_GROUP_COUNT_VALIDATE: Field unique value count check.</li>
+         * <li>FIELD_DUPLICATE_VALUE_COUNT_VALIDATE: Field duplicate value count check.</li>
+         * <li>FUNCTION_TIME_COMPARE: Time function comparison.</li>
+         * <li>SINGLE_TABLE_TIME_COMPARE: Non-partitioned table time field comparison.</li>
+         * <li>DOUBLE_TABLE_TIME_COMPARE: Two-table time field comparison.</li>
+         * <li>FIELD_FORMAT_VALIDATE: Field format check.</li>
+         * <li>FIELD_LENGTH_VALIDATE: Field length check.</li>
+         * <li>FIELD_VALUE_RANGE_VALIDATE: Field value range check.</li>
+         * <li>CODE_TABLE_COMPARE: Lookup table reference comparison.</li>
+         * <li>STANDARD_CODE_TABLE_COMPARE: Data standard lookup table reference comparison.</li>
+         * <li>SINGLE_TABLE_FIELD_VALUE_COMPARE: Non-partitioned table field value consistency comparison.</li>
+         * <li>SINGLE_TABLE_FIELD_STATISTICAL_COMPARE: Non-partitioned table field statistical value consistency comparison.</li>
+         * <li>SINGLE_TABLE_FIELD_EXP_COMPARE: Non-partitioned table field business logic consistency comparison.</li>
+         * <li>DOUBLE_TABLE_FIELD_VALUE_COMPARE: Two-table field value consistency comparison.</li>
+         * <li>DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: Two-table field statistical value consistency comparison.</li>
+         * <li>CROSS_DOUBLE_TABLE_FIELD_STATISTICAL_COMPARE: Cross-source two-table field statistical value consistency comparison.</li>
+         * <li>DOUBLE_TABLE_FIELD_EXP_COMPARE: Two-table field business logic consistency comparison.</li>
+         * <li>TABLE_STABILITY_VALIDATE: Table stability check.</li>
+         * <li>TABLE_FLUCTUATION_VALIDATE: Table fluctuation check.</li>
+         * <li>FIELD_STABILITY_VALIDATE: Field stability check.</li>
+         * <li>FIELD_FLUCTUATION_VALIDATE: Field fluctuation check.</li>
+         * <li>CUSTOM_STATISTICAL_VALIDATE: Custom statistical metric check.</li>
+         * <li>CUSTOM_DATA_DETAILS_VALIDATE: Custom data details check.</li>
+         * <li>DATASOURCE_AVAILABLE_CHECK: Data source connectivity check.</li>
+         * <li>TABLE_SCHEMA_CHECK: Table schema change check.</li>
+         * <li>REAL_TIME_OFFLINE_COMPARE: Real-time and offline comparison.</li>
+         * <li>REAL_TIME_STATISTICAL_VALIDATE: Real-time statistical value check.</li>
+         * <li>REAL_TIME_MULTI_CHAIN_COMPARE: Real-time multi-link comparison.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -359,10 +359,10 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The display name of the templatetype.</p>
+         * <p>The display name of the template type.</p>
          * 
          * <strong>example:</strong>
-         * <p>字段空值校验</p>
+         * <p>Field null value check</p>
          */
         @NameInMap("TypeName")
         public String typeName;
@@ -528,7 +528,7 @@ public class ListQualityTemplatesResponseBody extends TeaModel {
 
     public static class ListQualityTemplatesResponseBodyPageResult extends TeaModel {
         /**
-         * <p>The list of quality templates.</p>
+         * <p>The paged list of quality templates.</p>
          */
         @NameInMap("QualityTemplateList")
         public java.util.List<ListQualityTemplatesResponseBodyPageResultQualityTemplateList> qualityTemplateList;

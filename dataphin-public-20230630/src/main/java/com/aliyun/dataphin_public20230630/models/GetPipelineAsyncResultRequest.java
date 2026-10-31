@@ -32,6 +32,8 @@ public class GetPipelineAsyncResultRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -77,11 +79,7 @@ public class GetPipelineAsyncResultRequest extends TeaModel {
 
     public static class GetPipelineAsyncResultRequestContext extends TeaModel {
         /**
-         * <p>The current operation environment. Valid values:</p>
-         * <ul>
-         * <li>DEV: development environment.</li>
-         * <li>PROD: production environment.</li>
-         * </ul>
+         * <p>The current operation environment. Valid values: DEV: development environment. PROD: production environment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

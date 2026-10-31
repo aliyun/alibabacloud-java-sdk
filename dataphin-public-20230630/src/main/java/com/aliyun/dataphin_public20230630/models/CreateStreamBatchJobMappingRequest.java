@@ -15,6 +15,8 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The stream-batch integrated node information.</p>
+     * <p>The stream-batch integrated task information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamBatchJobMappingCreateCommand")
@@ -72,13 +74,13 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一段任务的描述信息</p>
+         * <p>This is a sample description for the task</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The folder in which the node is generated.</p>
+         * <p>The directory where the task is generated.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +90,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
         public String directory;
 
         /**
-         * <p>The Flink DPI engine version.</p>
+         * <p>The database engine version of the Flink DPI engine.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -148,7 +150,7 @@ public class CreateStreamBatchJobMappingRequest extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The VVP cluster type. Valid values: SESSION and PREJOB. This parameter is specific to VVP. If not applicable, leave this parameter empty or do not pass it.</p>
+         * <p>The VVP cluster type. This parameter is specific to VVP. Valid values: SESSION and PREJOB. If it is not applicable, leave it empty or do not specify it.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

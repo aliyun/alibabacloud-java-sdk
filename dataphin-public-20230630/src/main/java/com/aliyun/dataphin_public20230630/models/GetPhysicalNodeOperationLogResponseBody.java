@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -119,7 +119,7 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         public String context;
 
         /**
-         * <p>The operation time.</p>
+         * <p>The operation time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-05-30 16:47:13</p>
@@ -130,14 +130,14 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         /**
          * <p>The operation type. Valid values:</p>
          * <ul>
-         * <li>TASK_UPDATE_PRIORITY: updates the node priority.</li>
-         * <li>PAUSE_TASK: pauses scheduling.</li>
-         * <li>RESUME_TASK: resumes scheduling.</li>
-         * <li>CREATE_NODE: creates a node.</li>
-         * <li>FORCE_DELETE_NODE: force deletes a node.</li>
-         * <li>UPDATE_NODE: updates a node.</li>
-         * <li>DELETE_NODE: deletes a node.</li>
-         * <li>CHANGE_NODE_OWNER: changes the node owner.</li>
+         * <li>TASK_UPDATE_PRIORITY: modifies the node priority</li>
+         * <li>PAUSE_TASK: pauses scheduling</li>
+         * <li>RESUME_TASK: resumes scheduling</li>
+         * <li>CREATE_NODE: creates a node</li>
+         * <li>FORCE_DELETE_NODE: force deletes a node</li>
+         * <li>UPDATE_NODE: updates a node</li>
+         * <li>DELETE_NODE: deletes a node</li>
+         * <li>CHANGE_NODE_OWNER: changes the node owner</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -147,7 +147,7 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         public String operationType;
 
         /**
-         * <p>The operator ID.</p>
+         * <p>The ID of the operator.</p>
          * 
          * <strong>example:</strong>
          * <p>132222</p>
@@ -156,10 +156,10 @@ public class GetPhysicalNodeOperationLogResponseBody extends TeaModel {
         public String operator;
 
         /**
-         * <p>The operator name.</p>
+         * <p>The name of the operator.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xxTest</p>
          */
         @NameInMap("OperatorName")
         public String operatorName;

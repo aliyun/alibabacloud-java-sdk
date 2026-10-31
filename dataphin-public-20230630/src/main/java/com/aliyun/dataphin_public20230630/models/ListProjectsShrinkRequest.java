@@ -12,7 +12,7 @@ public class ListProjectsShrinkRequest extends TeaModel {
     public String listQueryShrink;
 
     /**
-     * <p>The tenant ID.</p>
+     * <p>The operator tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +22,8 @@ public class ListProjectsShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

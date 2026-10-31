@@ -15,6 +15,8 @@ public class GetKgSchemaPublishResultRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class GetKgSchemaPublishResultRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The version number. If this parameter is left empty, the most recent publish record is returned.</p>
+     * <p>The version ID. If this parameter is left empty, the latest publish record is retrieved.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

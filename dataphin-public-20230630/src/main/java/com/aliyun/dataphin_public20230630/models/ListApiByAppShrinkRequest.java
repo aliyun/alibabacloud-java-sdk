@@ -15,6 +15,8 @@ public class ListApiByAppShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class ListApiByAppShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The paged query parameters.</p>
+     * <p>The paging query parameters.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("PageQuery")

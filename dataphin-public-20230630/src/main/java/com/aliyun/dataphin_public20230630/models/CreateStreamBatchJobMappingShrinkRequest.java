@@ -15,6 +15,8 @@ public class CreateStreamBatchJobMappingShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class CreateStreamBatchJobMappingShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The stream-batch integrated node information.</p>
+     * <p>The stream-batch integrated task information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamBatchJobMappingCreateCommand")

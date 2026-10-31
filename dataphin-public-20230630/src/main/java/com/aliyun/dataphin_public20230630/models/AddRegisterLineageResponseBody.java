@@ -23,7 +23,7 @@ public class AddRegisterLineageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error details returned by the backend.</p>
+     * <p>The backend response exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -41,7 +41,7 @@ public class AddRegisterLineageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

@@ -14,7 +14,7 @@ public class ListBatchTemplatesRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>The paged query conditions.</p>
+     * <p>The paging query conditions.</p>
      */
     @NameInMap("ListQuery")
     public ListBatchTemplatesRequestListQuery listQuery;
@@ -30,6 +30,8 @@ public class ListBatchTemplatesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -93,10 +95,10 @@ public class ListBatchTemplatesRequest extends TeaModel {
 
     public static class ListBatchTemplatesRequestListQuery extends TeaModel {
         /**
-         * <p>The template name keyword.</p>
+         * <p>The keyword in the template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>数据处理模板</p>
+         * <p>Data processing template</p>
          */
         @NameInMap("Keyword")
         public String keyword;
@@ -118,6 +120,15 @@ public class ListBatchTemplatesRequest extends TeaModel {
          */
         @NameInMap("PageSize")
         public Integer pageSize;
+
+        /**
+         * <p>The template ID. The query is based on the template ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
+        @NameInMap("TemplateId")
+        public Long templateId;
 
         public static ListBatchTemplatesRequestListQuery build(java.util.Map<String, ?> map) throws Exception {
             ListBatchTemplatesRequestListQuery self = new ListBatchTemplatesRequestListQuery();
@@ -146,6 +157,14 @@ public class ListBatchTemplatesRequest extends TeaModel {
         }
         public Integer getPageSize() {
             return this.pageSize;
+        }
+
+        public ListBatchTemplatesRequestListQuery setTemplateId(Long templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public Long getTemplateId() {
+            return this.templateId;
         }
 
     }

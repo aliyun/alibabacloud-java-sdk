@@ -22,6 +22,8 @@ public class AddTenantMembersRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -68,7 +70,7 @@ public class AddTenantMembersRequest extends TeaModel {
         public String id;
 
         /**
-         * <p>The list of roles. Valid values:</p>
+         * <p>The role list. Valid values:</p>
          * <ul>
          * <li>SYSTEM_ADMIN</li>
          * <li>DATASOURCE_MANAGER</li>
@@ -77,7 +79,7 @@ public class AddTenantMembersRequest extends TeaModel {
          * <li>EXPORT_ADMIN</li>
          * <li>DATA_STANDARD_MANAGER</li>
          * <li>LABELS_BUSINESS_PLANNER</li>
-         * <li>BUSINESS_MEMBER.</li>
+         * <li>BUSINESS_MEMBER</li>
          * </ul>
          */
         @NameInMap("RoleList")
@@ -108,7 +110,7 @@ public class AddTenantMembersRequest extends TeaModel {
 
     public static class AddTenantMembersRequestAddCommand extends TeaModel {
         /**
-         * <p>The list of members.</p>
+         * <p>The member list.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("UserList")

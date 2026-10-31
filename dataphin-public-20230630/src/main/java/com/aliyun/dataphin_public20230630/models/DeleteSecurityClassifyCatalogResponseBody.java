@@ -47,7 +47,7 @@ public class DeleteSecurityClassifyCatalogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,19 +107,19 @@ public class DeleteSecurityClassifyCatalogResponseBody extends TeaModel {
 
     public static class DeleteSecurityClassifyCatalogResponseBodyData extends TeaModel {
         /**
-         * <p>The list of full paths of child catalogs that were deleted as a result of the cascading deletion.</p>
+         * <p>The list of full paths of the subdirectories that are cascade-deleted.</p>
          */
         @NameInMap("ChildCatalogFullPathList")
         public java.util.List<String> childCatalogFullPathList;
 
         /**
-         * <p>The list of classification IDs that were deleted as a result of the cascading deletion.</p>
+         * <p>The list of IDs of the classifications that are cascade-deleted.</p>
          */
         @NameInMap("ClassifyIdList")
         public java.util.List<Long> classifyIdList;
 
         /**
-         * <p>Indicates whether the deletion was successful.</p>
+         * <p>Indicates whether the deletion is successful.</p>
          */
         @NameInMap("Success")
         public Boolean success;

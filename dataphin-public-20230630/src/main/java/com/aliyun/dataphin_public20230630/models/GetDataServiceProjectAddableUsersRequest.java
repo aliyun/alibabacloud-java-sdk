@@ -15,6 +15,8 @@ public class GetDataServiceProjectAddableUsersRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class GetDataServiceProjectAddableUsersRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The data service project ID.</p>
+     * <p>The Data Service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

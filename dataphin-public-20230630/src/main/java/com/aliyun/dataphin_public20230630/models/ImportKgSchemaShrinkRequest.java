@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ImportKgSchemaShrinkRequest extends TeaModel {
     /**
-     * <p>The command for importing the knowledge graph definition.</p>
+     * <p>The import command for the knowledge graph definition.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class ImportKgSchemaShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The ID of the operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>

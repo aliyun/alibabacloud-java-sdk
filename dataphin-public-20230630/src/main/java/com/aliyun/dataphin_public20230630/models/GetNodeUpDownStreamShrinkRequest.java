@@ -16,8 +16,9 @@ public class GetNodeUpDownStreamShrinkRequest extends TeaModel {
     /**
      * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: development environment. </li>
-     * <li>PROD (default): production environment.</li>
+     * <li>DEV: Development environment.</li>
+     * <li>PROD: Production environment.
+     * Default value: PROD.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,6 +45,8 @@ public class GetNodeUpDownStreamShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

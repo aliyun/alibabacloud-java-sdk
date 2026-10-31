@@ -32,7 +32,7 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The operation log code response.</p>
+     * <p>The operation record code response.</p>
      */
     @NameInMap("OperationLogCodeResponse")
     public GetOperationRecordRunCodeResponseBodyOperationLogCodeResponse operationLogCodeResponse;
@@ -47,7 +47,7 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -128,7 +128,7 @@ public class GetOperationRecordRunCodeResponseBody extends TeaModel {
          * <p>The operator name.</p>
          * 
          * <strong>example:</strong>
-         * <p>SQL查询节点</p>
+         * <p>SQL query node</p>
          */
         @NameInMap("OperatorName")
         public String operatorName;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
     /**
-     * <p>The error code of the request. A value of OK indicates that the request is successful.</p>
+     * <p>The error code. OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The task details.</p>
+     * <p>The node details.</p>
      */
     @NameInMap("TaskInfo")
     public GetBatchTaskInfoByVersionResponseBodyTaskInfo taskInfo;
@@ -198,9 +198,228 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
 
     }
 
+    public static class GetBatchTaskInfoByVersionResponseBodyTaskInfoDatabricksPythonConnectInfo extends TeaModel {
+        /**
+         * <p>The HTTP path in the development environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/sql/1.0/warehouses/dev</p>
+         */
+        @NameInMap("DevHttpPath")
+        public String devHttpPath;
+
+        /**
+         * <p>Specifies whether to enable Databricks Python Connect.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>true</p>
+         */
+        @NameInMap("EnableDatabricksPythonConnect")
+        public Boolean enableDatabricksPythonConnect;
+
+        /**
+         * <p>The HTTP path in the production environment.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/sql/1.0/warehouses/prod</p>
+         */
+        @NameInMap("ProdHttpPath")
+        public String prodHttpPath;
+
+        public static GetBatchTaskInfoByVersionResponseBodyTaskInfoDatabricksPythonConnectInfo build(java.util.Map<String, ?> map) throws Exception {
+            GetBatchTaskInfoByVersionResponseBodyTaskInfoDatabricksPythonConnectInfo self = new GetBatchTaskInfoByVersionResponseBodyTaskInfoDatabricksPythonConnectInfo();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoDatabricksPythonConnectInfo setDevHttpPath(String devHttpPath) {
+            this.devHttpPath = devHttpPath;
+            return this;
+        }
+        public String getDevHttpPath() {
+            return this.devHttpPath;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoDatabricksPythonConnectInfo setEnableDatabricksPythonConnect(Boolean enableDatabricksPythonConnect) {
+            this.enableDatabricksPythonConnect = enableDatabricksPythonConnect;
+            return this;
+        }
+        public Boolean getEnableDatabricksPythonConnect() {
+            return this.enableDatabricksPythonConnect;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoDatabricksPythonConnectInfo setProdHttpPath(String prodHttpPath) {
+            this.prodHttpPath = prodHttpPath;
+            return this;
+        }
+        public String getProdHttpPath() {
+            return this.prodHttpPath;
+        }
+
+    }
+
+    public static class GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteRerunConfig extends TeaModel {
+        /**
+         * <p>The custom retry interval for failed executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("CustomRerunInterval")
+        public String customRerunInterval;
+
+        /**
+         * <p>The custom number of retries for failed executions.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("CustomRerunTimes")
+        public String customRerunTimes;
+
+        /**
+         * <p>Specifies whether to follow the system retry configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("FollowSystem")
+        public Boolean followSystem;
+
+        public static GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteRerunConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteRerunConfig self = new GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteRerunConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteRerunConfig setCustomRerunInterval(String customRerunInterval) {
+            this.customRerunInterval = customRerunInterval;
+            return this;
+        }
+        public String getCustomRerunInterval() {
+            return this.customRerunInterval;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteRerunConfig setCustomRerunTimes(String customRerunTimes) {
+            this.customRerunTimes = customRerunTimes;
+            return this;
+        }
+        public String getCustomRerunTimes() {
+            return this.customRerunTimes;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteRerunConfig setFollowSystem(Boolean followSystem) {
+            this.followSystem = followSystem;
+            return this;
+        }
+        public Boolean getFollowSystem() {
+            return this.followSystem;
+        }
+
+    }
+
+    public static class GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteTimeOutConfig extends TeaModel {
+        /**
+         * <p>The custom timeout period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
+         */
+        @NameInMap("CustomValues")
+        public String customValues;
+
+        /**
+         * <p>Specifies whether to follow the system retry configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("FollowSystem")
+        public Boolean followSystem;
+
+        public static GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteTimeOutConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteTimeOutConfig self = new GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteTimeOutConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteTimeOutConfig setCustomValues(String customValues) {
+            this.customValues = customValues;
+            return this;
+        }
+        public String getCustomValues() {
+            return this.customValues;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteTimeOutConfig setFollowSystem(Boolean followSystem) {
+            this.followSystem = followSystem;
+            return this;
+        }
+        public Boolean getFollowSystem() {
+            return this.followSystem;
+        }
+
+    }
+
+    public static class GetBatchTaskInfoByVersionResponseBodyTaskInfoPaiConfig extends TeaModel {
+        /**
+         * <p>The PAI experiment ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>789012</p>
+         */
+        @NameInMap("ExperimentId")
+        public String experimentId;
+
+        /**
+         * <p>The PAI region.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-shanghai</p>
+         */
+        @NameInMap("Region")
+        public String region;
+
+        /**
+         * <p>The PAI workspace ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>123456</p>
+         */
+        @NameInMap("WorkSpaceId")
+        public String workSpaceId;
+
+        public static GetBatchTaskInfoByVersionResponseBodyTaskInfoPaiConfig build(java.util.Map<String, ?> map) throws Exception {
+            GetBatchTaskInfoByVersionResponseBodyTaskInfoPaiConfig self = new GetBatchTaskInfoByVersionResponseBodyTaskInfoPaiConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoPaiConfig setExperimentId(String experimentId) {
+            this.experimentId = experimentId;
+            return this;
+        }
+        public String getExperimentId() {
+            return this.experimentId;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoPaiConfig setRegion(String region) {
+            this.region = region;
+            return this;
+        }
+        public String getRegion() {
+            return this.region;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoPaiConfig setWorkSpaceId(String workSpaceId) {
+            this.workSpaceId = workSpaceId;
+            return this;
+        }
+        public String getWorkSpaceId() {
+            return this.workSpaceId;
+        }
+
+    }
+
     public static class GetBatchTaskInfoByVersionResponseBodyTaskInfoParamList extends TeaModel {
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The parameter name.</p>
          * 
          * <strong>example:</strong>
          * <p>key</p>
@@ -209,7 +428,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the parameter.</p>
+         * <p>The parameter value.</p>
          * 
          * <strong>example:</strong>
          * <p>Value</p>
@@ -260,7 +479,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The Python version that the third-party package depends on.</p>
+         * <p>The Python version required by the third-party package.</p>
          * 
          * <strong>example:</strong>
          * <p>Python 3.7</p>
@@ -269,7 +488,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String pythonVersion;
 
         /**
-         * <p>The version number of the third-party package.</p>
+         * <p>The version of the third-party package.</p>
          * 
          * <strong>example:</strong>
          * <p>1.3.5</p>
@@ -343,7 +562,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
 
     public static class GetBatchTaskInfoByVersionResponseBodyTaskInfoUpStreamListDependPeriod extends TeaModel {
         /**
-         * <p>The period offset. This parameter is required when PeriodType is set to LAST_N_PERIOD.</p>
+         * <p>The period offset. This parameter is required when the PeriodType parameter is set to LAST_N_PERIOD.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -354,10 +573,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         /**
          * <p>The dependency period type. Valid values:</p>
          * <ul>
-         * <li>CURRENT_PERIOD</li>
-         * <li>LAST_PERIOD</li>
-         * <li>LAST_N_PERIOD</li>
-         * <li>LAST_24_HOUR</li>
+         * <li>CURRENT_PERIOD: Current period.</li>
+         * <li>LAST_PERIOD: Last period.</li>
+         * <li>LAST_N_PERIOD: Last N periods.</li>
+         * <li>LAST_24_HOUR: Last 24 hours.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -399,10 +618,10 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         /**
          * <p>The dependency strategy. Valid values:</p>
          * <ul>
-         * <li>ALL</li>
-         * <li>FIRST</li>
-         * <li>LAST</li>
-         * <li>NEAR</li>
+         * <li>ALL: All.</li>
+         * <li>FIRST: First.</li>
+         * <li>LAST: Last.</li>
+         * <li>NEAR: Nearest.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -412,13 +631,13 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String dependStrategy;
 
         /**
-         * <p>The fields of the dependent logical table.</p>
+         * <p>The dependent logical table fields.</p>
          */
         @NameInMap("FieldList")
         public java.util.List<String> fieldList;
 
         /**
-         * <p>The node type of the upstream dependency. Valid values:</p>
+         * <p>The upstream dependency node type. Valid values:</p>
          * <ul>
          * <li>PHYSICAL: Physical node.</li>
          * <li>LOGICAL: Logical table dependency.</li>
@@ -440,7 +659,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Integer periodDiff;
 
         /**
-         * <p>Indicates whether the upstream node is enabled.</p>
+         * <p>Specifies whether the upstream node is enabled.</p>
          */
         @NameInMap("SourceNodeEnabled")
         public Boolean sourceNodeEnabled;
@@ -476,7 +695,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
          * <p>The upstream username.</p>
          * 
          * <strong>example:</strong>
-         * <p>John Doe</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("SourceNodeUserName")
         public String sourceNodeUserName;
@@ -587,13 +806,40 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
 
     public static class GetBatchTaskInfoByVersionResponseBodyTaskInfo extends TeaModel {
         /**
-         * <p>The code of the task.</p>
+         * <p>The code of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>show tables;</p>
          */
         @NameInMap("Code")
         public String code;
+
+        /**
+         * <p>The ID of the offline code template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>st_123456</p>
+         */
+        @NameInMap("CodeTemplateId")
+        public String codeTemplateId;
+
+        /**
+         * <p>The version of the offline code template.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("CodeTemplateVersion")
+        public Integer codeTemplateVersion;
+
+        /**
+         * <p>The current CPU resource configuration of the node. If queried by version, this is the configuration of the corresponding version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
+        @NameInMap("CpuResource")
+        public String cpuResource;
 
         /**
          * <p>The cron expression for automatic scheduling. You can refer to Linux cron expressions.</p>
@@ -611,7 +857,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public GetBatchTaskInfoByVersionResponseBodyTaskInfoCustomScheduleConfig customScheduleConfig;
 
         /**
-         * <p>The ID of the DAG to which the task belongs.</p>
+         * <p>The ID of the DAG to which the node belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>dag_102121211</p>
@@ -620,7 +866,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String dagId;
 
         /**
-         * <p>The catalog of the data source. This parameter takes effect only for database SQL tasks and data source types that require a catalog, such as Presto.</p>
+         * <p>The catalog of the data source. This parameter applies only to database SQL nodes and data source types that require a catalog, such as Presto.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql_catalog</p>
@@ -629,7 +875,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String dataSourceCatalog;
 
         /**
-         * <p>The ID of the data source for the database SQL task.</p>
+         * <p>The ID of the data source for the database SQL node.</p>
          * 
          * <strong>example:</strong>
          * <p>12131111</p>
@@ -638,13 +884,19 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The schema of the data source. This parameter takes effect only for database SQL tasks and data source types that require a schema, such as Oracle.</p>
+         * <p>The schema of the data source. This parameter applies only to database SQL nodes and data source types that require a schema, such as Oracle.</p>
          * 
          * <strong>example:</strong>
          * <p>erp</p>
          */
         @NameInMap("DataSourceSchema")
         public String dataSourceSchema;
+
+        /**
+         * <p>The Python connection information.</p>
+         */
+        @NameInMap("DatabricksPythonConnectInfo")
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoDatabricksPythonConnectInfo databricksPythonConnectInfo;
 
         /**
          * <p>The IDs of the developers.</p>
@@ -657,6 +909,18 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
          */
         @NameInMap("DevelopOwnerNameList")
         public java.util.List<String> developOwnerNameList;
+
+        /**
+         * <p>The retry configuration for failed executions. This is the current configuration of the node. If queried by version, this is the configuration of the corresponding version.</p>
+         */
+        @NameInMap("ExecuteRerunConfig")
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteRerunConfig executeRerunConfig;
+
+        /**
+         * <p>The execution timeout configuration. This is the current configuration of the node. If queried by version, this is the configuration of the corresponding version.</p>
+         */
+        @NameInMap("ExecuteTimeOutConfig")
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteTimeOutConfig executeTimeOutConfig;
 
         /**
          * <p>The node ID of the task directory tree.</p>
@@ -674,7 +938,16 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Boolean hasDevNode;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The current CPU resource configuration of the node. If queried by version, this is the configuration of the corresponding version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
+        @NameInMap("MemoryResource")
+        public String memoryResource;
+
+        /**
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>Test task 1</p>
@@ -683,13 +956,13 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the task needs to be published.</p>
+         * <p>Specifies whether publishing is required.</p>
          */
         @NameInMap("NeedPublish")
         public Boolean needPublish;
 
         /**
-         * <p>The description of the task.</p>
+         * <p>The task description.</p>
          * 
          * <strong>example:</strong>
          * <p>xx test</p>
@@ -698,7 +971,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String nodeDescription;
 
         /**
-         * <p>The source of the node. This indicates the organization or application that created the node.</p>
+         * <p>The source of the node, which indicates the organization or application that created the node.</p>
          * 
          * <strong>example:</strong>
          * <p>openapi</p>
@@ -707,7 +980,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String nodeFrom;
 
         /**
-         * <p>The ID of the node.</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n_1011_21232132322</p>
@@ -716,7 +989,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The name of the node.</p>
+         * <p>The node name.</p>
          * 
          * <strong>example:</strong>
          * <p>Test task 1</p>
@@ -725,13 +998,13 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The output names of the node.</p>
+         * <p>The list of node output names.</p>
          */
         @NameInMap("NodeOutputNameList")
         public java.util.List<String> nodeOutputNameList;
 
         /**
-         * <p>The status of the node. Valid values: 1 (Normal), 2 (Paused), and 3 (Dry run).</p>
+         * <p>The node status. Valid values: 1: Normal. 2: Paused. 3: Dry run.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -749,13 +1022,13 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String operatorUserId;
 
         /**
-         * <p>The IDs of the O&amp;M owners.</p>
+         * <p>The list of O&amp;M owner IDs.</p>
          */
         @NameInMap("OpsOwnerIdList")
         public java.util.List<String> opsOwnerIdList;
 
         /**
-         * <p>The names of the O&amp;M owners.</p>
+         * <p>The list of O&amp;M owner names.</p>
          */
         @NameInMap("OpsOwnerNameList")
         public java.util.List<String> opsOwnerNameList;
@@ -764,7 +1037,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
          * <p>The name of the node owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>John Doe</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -779,19 +1052,25 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String ownerUserId;
 
         /**
+         * <p>The PAI configuration.</p>
+         */
+        @NameInMap("PaiConfig")
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoPaiConfig paiConfig;
+
+        /**
          * <p>The list of custom parameters for the node.</p>
          */
         @NameInMap("ParamList")
         public java.util.List<GetBatchTaskInfoByVersionResponseBodyTaskInfoParamList> paramList;
 
         /**
-         * <p>Indicates whether the scheduling of the node is paused.</p>
+         * <p>Specifies whether node scheduling is paused.</p>
          */
         @NameInMap("Paused")
         public Boolean paused;
 
         /**
-         * <p>The scheduling priority of the task. Valid values: 1 to 9. A larger value indicates a lower priority.</p>
+         * <p>The task scheduling priority. Valid values: 1 to 9. A larger value indicates a lower priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -800,7 +1079,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The ID of the project.</p>
+         * <p>The project ID.</p>
          * 
          * <strong>example:</strong>
          * <p>131211211</p>
@@ -809,19 +1088,19 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>Indicates whether the node is published.</p>
+         * <p>Specifies whether the task is published.</p>
          */
         @NameInMap("Published")
         public Boolean published;
 
         /**
-         * <p>The list of third-party packages that the Python task depends on.</p>
+         * <p>The list of third-party packages required by the Python task.</p>
          */
         @NameInMap("PythonModuleList")
         public java.util.List<GetBatchTaskInfoByVersionResponseBodyTaskInfoPythonModuleList> pythonModuleList;
 
         /**
-         * <p>The Python version of the Python task, such as Python 3.7.</p>
+         * <p>The Python version for the Python task, such as Python 3.7.</p>
          * 
          * <strong>example:</strong>
          * <p>Python 3.7</p>
@@ -830,7 +1109,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String pythonVersion;
 
         /**
-         * <p>The remark.</p>
+         * <p>The remarks.</p>
          * 
          * <strong>example:</strong>
          * <p>test xx</p>
@@ -839,13 +1118,22 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>Indicates whether the task can be rerun.</p>
+         * <p>Specifies whether the node can be rerun.</p>
          */
         @NameInMap("Rerunable")
         public Boolean rerunable;
 
         /**
-         * <p>The scheduling period. Valid values:</p>
+         * <p>Specifies whether to enable retry on timeout. This reflects the current configuration of the node. When queried by version, it reflects the configuration of the corresponding version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("RetryOnTimeoutEnable")
+        public Boolean retryOnTimeoutEnable;
+
+        /**
+         * <p>The schedule period. Valid values:</p>
          * <ul>
          * <li>YEARLY: Yearly.</li>
          * <li>MONTHLY: Monthly.</li>
@@ -864,8 +1152,8 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         /**
          * <p>The node type. Valid values:</p>
          * <ul>
-         * <li>1: Periodic task.</li>
-         * <li>3: Manual task.</li>
+         * <li>1: Periodic node.</li>
+         * <li>3: Manual node.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -879,6 +1167,47 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
          */
         @NameInMap("SparkClientInfo")
         public GetBatchTaskInfoByVersionResponseBodyTaskInfoSparkClientInfo sparkClientInfo;
+
+        /**
+         * <p>The current CPU resource configuration of the node. If queried by version, this is the configuration of the corresponding version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("SparkDynamicResourceSwitch")
+        public Boolean sparkDynamicResourceSwitch;
+
+        /**
+         * <p>The effective scope of the Spark resource configuration. Valid values:</p>
+         * <ul>
+         * <li>ONLY_PROD: Production environment only.</li>
+         * <li>PROD_AND_DEV: Production and development environments.
+         * This reflects the current configuration of the node. When queried by version, it reflects the configuration of the corresponding version.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLY_PROD</p>
+         */
+        @NameInMap("SparkResourceEffectScope")
+        public String sparkResourceEffectScope;
+
+        /**
+         * <p>The Spark SQL resource configuration. The key is the configuration item name and the value is a string. The configuration is returned as a JSON string, such as {&quot;spark.executor.memory&quot;:&quot;2g&quot;}. This reflects the current configuration of the node. When queried by version, it reflects the configuration of the corresponding version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;spark.executor.memory&quot;:&quot;2g&quot;}</p>
+         */
+        @NameInMap("SparkSqlResourceConfigMap")
+        public String sparkSqlResourceConfigMap;
+
+        /**
+         * <p>The MaxCompute Spark version.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Spark 3.1.1</p>
+         */
+        @NameInMap("SparkVersion")
+        public String sparkVersion;
 
         /**
          * <p>The publish status. Valid values:</p>
@@ -895,7 +1224,7 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The task type. For more information, see the API operation for creating an offline computing task.</p>
+         * <p>The task type. For more information, see the API operation for creating an offline computing node.</p>
          * 
          * <strong>example:</strong>
          * <p>21</p>
@@ -920,6 +1249,30 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         }
         public String getCode() {
             return this.code;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setCodeTemplateId(String codeTemplateId) {
+            this.codeTemplateId = codeTemplateId;
+            return this;
+        }
+        public String getCodeTemplateId() {
+            return this.codeTemplateId;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setCodeTemplateVersion(Integer codeTemplateVersion) {
+            this.codeTemplateVersion = codeTemplateVersion;
+            return this;
+        }
+        public Integer getCodeTemplateVersion() {
+            return this.codeTemplateVersion;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setCpuResource(String cpuResource) {
+            this.cpuResource = cpuResource;
+            return this;
+        }
+        public String getCpuResource() {
+            return this.cpuResource;
         }
 
         public GetBatchTaskInfoByVersionResponseBodyTaskInfo setCronExpression(String cronExpression) {
@@ -970,6 +1323,14 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             return this.dataSourceSchema;
         }
 
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setDatabricksPythonConnectInfo(GetBatchTaskInfoByVersionResponseBodyTaskInfoDatabricksPythonConnectInfo databricksPythonConnectInfo) {
+            this.databricksPythonConnectInfo = databricksPythonConnectInfo;
+            return this;
+        }
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoDatabricksPythonConnectInfo getDatabricksPythonConnectInfo() {
+            return this.databricksPythonConnectInfo;
+        }
+
         public GetBatchTaskInfoByVersionResponseBodyTaskInfo setDevelopOwnerIdList(java.util.List<String> developOwnerIdList) {
             this.developOwnerIdList = developOwnerIdList;
             return this;
@@ -986,6 +1347,22 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             return this.developOwnerNameList;
         }
 
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setExecuteRerunConfig(GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteRerunConfig executeRerunConfig) {
+            this.executeRerunConfig = executeRerunConfig;
+            return this;
+        }
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteRerunConfig getExecuteRerunConfig() {
+            return this.executeRerunConfig;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setExecuteTimeOutConfig(GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteTimeOutConfig executeTimeOutConfig) {
+            this.executeTimeOutConfig = executeTimeOutConfig;
+            return this;
+        }
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoExecuteTimeOutConfig getExecuteTimeOutConfig() {
+            return this.executeTimeOutConfig;
+        }
+
         public GetBatchTaskInfoByVersionResponseBodyTaskInfo setFileId(Long fileId) {
             this.fileId = fileId;
             return this;
@@ -1000,6 +1377,14 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         }
         public Boolean getHasDevNode() {
             return this.hasDevNode;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setMemoryResource(String memoryResource) {
+            this.memoryResource = memoryResource;
+            return this;
+        }
+        public String getMemoryResource() {
+            return this.memoryResource;
         }
 
         public GetBatchTaskInfoByVersionResponseBodyTaskInfo setName(String name) {
@@ -1106,6 +1491,14 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             return this.ownerUserId;
         }
 
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setPaiConfig(GetBatchTaskInfoByVersionResponseBodyTaskInfoPaiConfig paiConfig) {
+            this.paiConfig = paiConfig;
+            return this;
+        }
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfoPaiConfig getPaiConfig() {
+            return this.paiConfig;
+        }
+
         public GetBatchTaskInfoByVersionResponseBodyTaskInfo setParamList(java.util.List<GetBatchTaskInfoByVersionResponseBodyTaskInfoParamList> paramList) {
             this.paramList = paramList;
             return this;
@@ -1178,6 +1571,14 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
             return this.rerunable;
         }
 
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setRetryOnTimeoutEnable(Boolean retryOnTimeoutEnable) {
+            this.retryOnTimeoutEnable = retryOnTimeoutEnable;
+            return this;
+        }
+        public Boolean getRetryOnTimeoutEnable() {
+            return this.retryOnTimeoutEnable;
+        }
+
         public GetBatchTaskInfoByVersionResponseBodyTaskInfo setSchedulePeriod(String schedulePeriod) {
             this.schedulePeriod = schedulePeriod;
             return this;
@@ -1200,6 +1601,38 @@ public class GetBatchTaskInfoByVersionResponseBody extends TeaModel {
         }
         public GetBatchTaskInfoByVersionResponseBodyTaskInfoSparkClientInfo getSparkClientInfo() {
             return this.sparkClientInfo;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setSparkDynamicResourceSwitch(Boolean sparkDynamicResourceSwitch) {
+            this.sparkDynamicResourceSwitch = sparkDynamicResourceSwitch;
+            return this;
+        }
+        public Boolean getSparkDynamicResourceSwitch() {
+            return this.sparkDynamicResourceSwitch;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setSparkResourceEffectScope(String sparkResourceEffectScope) {
+            this.sparkResourceEffectScope = sparkResourceEffectScope;
+            return this;
+        }
+        public String getSparkResourceEffectScope() {
+            return this.sparkResourceEffectScope;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setSparkSqlResourceConfigMap(String sparkSqlResourceConfigMap) {
+            this.sparkSqlResourceConfigMap = sparkSqlResourceConfigMap;
+            return this;
+        }
+        public String getSparkSqlResourceConfigMap() {
+            return this.sparkSqlResourceConfigMap;
+        }
+
+        public GetBatchTaskInfoByVersionResponseBodyTaskInfo setSparkVersion(String sparkVersion) {
+            this.sparkVersion = sparkVersion;
+            return this;
+        }
+        public String getSparkVersion() {
+            return this.sparkVersion;
         }
 
         public GetBatchTaskInfoByVersionResponseBodyTaskInfo setStatus(String status) {

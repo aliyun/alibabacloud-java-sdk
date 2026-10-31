@@ -15,6 +15,8 @@ public class UpdateStandardRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -77,11 +79,7 @@ public class UpdateStandardRequest extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The effective period type. Valid values:</p>
-         * <ul>
-         * <li>FOREVER: permanent.</li>
-         * <li>TIME_PERIOD: time period.</li>
-         * </ul>
+         * <p>The effective period type. Valid values: FOREVER (permanent) and TIME_PERIOD (time period).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -123,7 +121,7 @@ public class UpdateStandardRequest extends TeaModel {
 
     public static class UpdateStandardRequestUpdateCommandStandardGeneralMonitorConfigStandardMonitorConfigListAttributeMonitorConfig extends TeaModel {
         /**
-         * <p>The field to check.</p>
+         * <p>The field to be checked.</p>
          * 
          * <strong>example:</strong>
          * <p>column1</p>
@@ -141,8 +139,8 @@ public class UpdateStandardRequest extends TeaModel {
         /**
          * <p>The monitoring method. Valid values:</p>
          * <ul>
-         * <li>METADATA: metadata monitoring.</li>
-         * <li>QUALITY: data quality monitoring.</li>
+         * <li>METADATA: Metadata monitoring.</li>
+         * <li>QUALITY: Data quality monitoring.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -207,8 +205,8 @@ public class UpdateStandardRequest extends TeaModel {
         /**
          * <p>The template source. Valid values:</p>
          * <ul>
-         * <li>FROM_SYSTEM: system template.</li>
-         * <li>CUSTOMIZED: custom template.</li>
+         * <li>FROM_SYSTEM: System template.</li>
+         * <li>CUSTOMIZED: Custom template.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -261,7 +259,7 @@ public class UpdateStandardRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The configuration item value.</p>
+         * <p>The value of the configuration item.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -325,17 +323,15 @@ public class UpdateStandardRequest extends TeaModel {
         /**
          * <p>The operator. If the validation type is EXPRESSION, valid values:</p>
          * <ul>
-         * <li>EQUAL: equal to.</li>
-         * <li>NOT_EQUAL: not equal to.</li>
-         * <li>LARGER: greater than.</li>
-         * <li>LARGE_OR_EQUAL: greater than or equal to.</li>
-         * <li>SMALLER: less than.</li>
-         * <li>SMALLER_OR_EQUAL: less than or equal to.</li>
-         * </ul>
-         * <p>If the validation type is RELATION, valid values:</p>
-         * <ul>
-         * <li>AND: and.</li>
-         * <li>OR: or.</li>
+         * <li>EQUAL: Equal to.</li>
+         * <li>NOT_EQUAL: Not equal to.</li>
+         * <li>LARGER: Greater than.</li>
+         * <li>LARGE_OR_EQUAL: Greater than or equal to.</li>
+         * <li>SMALLER: Less than.</li>
+         * <li>SMALLER_OR_EQUAL: Less than or equal to.
+         * If the validation type is RELATION, valid values:</li>
+         * <li>AND: And.</li>
+         * <li>OR: Or.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -357,8 +353,8 @@ public class UpdateStandardRequest extends TeaModel {
         /**
          * <p>The rule validation type. Valid values:</p>
          * <ul>
-         * <li>RELATION: relation.</li>
-         * <li>EXPRESSION: expression.</li>
+         * <li>RELATION: Relationship.</li>
+         * <li>EXPRESSION: Expression.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -369,7 +365,7 @@ public class UpdateStandardRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The value to compare against.</p>
+         * <p>The value to be compared.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -442,7 +438,7 @@ public class UpdateStandardRequest extends TeaModel {
 
     public static class UpdateStandardRequestUpdateCommandStandardGeneralMonitorConfigStandardMonitorConfigList extends TeaModel {
         /**
-         * <p>The associated attribute ID.</p>
+         * <p>The ID of the associated attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>112</p>
@@ -451,7 +447,7 @@ public class UpdateStandardRequest extends TeaModel {
         public Long attributeId;
 
         /**
-         * <p>The monitoring configuration for the associated attribute.</p>
+         * <p>The monitoring configuration of the associated attribute.</p>
          */
         @NameInMap("AttributeMonitorConfig")
         public UpdateStandardRequestUpdateCommandStandardGeneralMonitorConfigStandardMonitorConfigListAttributeMonitorConfig attributeMonitorConfig;
@@ -475,7 +471,7 @@ public class UpdateStandardRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The monitoring configuration ID. If left empty, a new monitoring configuration is created. If an existing monitoring configuration ID is specified, the corresponding monitoring configuration is updated.</p>
+         * <p>The monitoring configuration ID. If this parameter is left empty, a new monitoring configuration is created. If an existing monitoring configuration ID is specified, the corresponding monitoring configuration is updated.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -484,10 +480,10 @@ public class UpdateStandardRequest extends TeaModel {
         public Long id;
 
         /**
-         * <p>The method used to add the monitoring configuration. Valid values:</p>
+         * <p>The addition method. Valid values:</p>
          * <ul>
-         * <li>BY_USER: manually added.</li>
-         * <li>BY_SYSTEM_ATTRIBUTE: preset by system attribute.</li>
+         * <li>BY_USER: Manual addition.</li>
+         * <li>BY_SYSTEM_ATTRIBUTE: Preset by system attributes.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -504,7 +500,7 @@ public class UpdateStandardRequest extends TeaModel {
         public UpdateStandardRequestUpdateCommandStandardGeneralMonitorConfigStandardMonitorConfigListQualityRuleTemplate qualityRuleTemplate;
 
         /**
-         * <p>The rule configurations. This parameter is required when the monitoring type is QUALITY.</p>
+         * <p>The rule configuration. This parameter is required when the monitoring type is QUALITY.</p>
          */
         @NameInMap("RuleConfigList")
         public java.util.List<UpdateStandardRequestUpdateCommandStandardGeneralMonitorConfigStandardMonitorConfigListRuleConfigList> ruleConfigList;
@@ -520,10 +516,11 @@ public class UpdateStandardRequest extends TeaModel {
         public String ruleName;
 
         /**
-         * <p>The rule subtype. This parameter is required when the monitoring type is QUALITY. Valid values:</p>
+         * <p>The rule subtype. Valid values:</p>
          * <ul>
-         * <li>BY_ATTRIBUTE: configured based on attributes.</li>
-         * <li>CUSTOMIZED: custom configuration.</li>
+         * <li>BY_ATTRIBUTE: Attribute-based configuration.</li>
+         * <li>CUSTOMIZED: Custom configuration.
+         * This parameter is required when the monitoring type is QUALITY.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -533,7 +530,7 @@ public class UpdateStandardRequest extends TeaModel {
         public String ruleSubType;
 
         /**
-         * <p>The rule validation configurations. This parameter is required when the monitoring type is QUALITY.</p>
+         * <p>The rule validation configuration. This parameter is required when the monitoring type is QUALITY.</p>
          */
         @NameInMap("RuleValidateConfigList")
         public java.util.List<UpdateStandardRequestUpdateCommandStandardGeneralMonitorConfigStandardMonitorConfigListRuleValidateConfigList> ruleValidateConfigList;
@@ -541,8 +538,8 @@ public class UpdateStandardRequest extends TeaModel {
         /**
          * <p>The monitoring type. Valid values:</p>
          * <ul>
-         * <li>METADATA: metadata monitoring.</li>
-         * <li>QUALITY: data quality monitoring.</li>
+         * <li>METADATA: Metadata monitoring.</li>
+         * <li>QUALITY: Data quality monitoring.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -657,7 +654,7 @@ public class UpdateStandardRequest extends TeaModel {
 
     public static class UpdateStandardRequestUpdateCommandStandardGeneralMonitorConfig extends TeaModel {
         /**
-         * <p>The list of standard monitoring configurations.</p>
+         * <p>The standard monitoring configuration list.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("StandardMonitorConfigList")
@@ -748,7 +745,7 @@ public class UpdateStandardRequest extends TeaModel {
 
     public static class UpdateStandardRequestUpdateCommandStandardTemplateReference extends TeaModel {
         /**
-         * <p>The attribute values corresponding to the attributes in the referenced template. If left empty, default values are used.</p>
+         * <p>The attribute values for the attribute list in the referenced template. If this parameter is left empty, the default values are used.</p>
          */
         @NameInMap("AttributeValueList")
         public java.util.List<UpdateStandardRequestUpdateCommandStandardTemplateReferenceAttributeValueList> attributeValueList;
@@ -764,7 +761,7 @@ public class UpdateStandardRequest extends TeaModel {
         public Long id;
 
         /**
-         * <p>The version number of the standard template. The latest version is used by default.</p>
+         * <p>The version number of the standard template. By default, the latest version is used.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -820,13 +817,13 @@ public class UpdateStandardRequest extends TeaModel {
         public UpdateStandardRequestUpdateCommandEffectiveTimeConfig effectiveTimeConfig;
 
         /**
-         * <p>Specifies whether to generate a standard code based on rules. If set to true, the standard code specified in the attribute values is ignored and regenerated.</p>
+         * <p>Specifies whether to generate standard codes based on rules. If this parameter is set to true, invalid standard codes entered in the attribute values are regenerated.</p>
          */
         @NameInMap("NeedGenerateStandardCode")
         public Boolean needGenerateStandardCode;
 
         /**
-         * <p>The owner. If not specified, the current user is used.</p>
+         * <p>The owner. If this parameter is not specified, the current user is used as the owner.</p>
          * 
          * <strong>example:</strong>
          * <p>300000913</p>
@@ -851,7 +848,7 @@ public class UpdateStandardRequest extends TeaModel {
         public Long standardId;
 
         /**
-         * <p>The reference to the standard set that the current standard belongs to.</p>
+         * <p>The reference to the standard set to which the current standard belongs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("StandardSetReference")
@@ -868,7 +865,7 @@ public class UpdateStandardRequest extends TeaModel {
         public String standardStatus;
 
         /**
-         * <p>The standard template to which the standard belongs.</p>
+         * <p>The reference to the standard template to which the standard belongs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("StandardTemplateReference")

@@ -8,9 +8,9 @@ public class GetBatchTemplateVersionsRequest extends TeaModel {
      * <p>The environment. Valid values:</p>
      * <ul>
      * <li>DEV: development environment.</li>
-     * <li>PROD: production environment.</li>
+     * <li>PROD: production environment.
+     * Default value: DEV for dev_prod projects.</li>
      * </ul>
-     * <p>Default value for dev_prod projects: DEV.</p>
      * 
      * <strong>example:</strong>
      * <p>DEV</p>
@@ -29,6 +29,8 @@ public class GetBatchTemplateVersionsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

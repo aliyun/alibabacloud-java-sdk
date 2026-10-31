@@ -7,8 +7,8 @@ public class GetPhysicalNodeRequest extends TeaModel {
     /**
      * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: development environment. </li>
-     * <li>PROD (default): production environment.</li>
+     * <li>DEV: development environment </li>
+     * <li>PROD (default): production environment</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,6 +38,8 @@ public class GetPhysicalNodeRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineNodeRequest extends TeaModel {
     /**
-     * <p>The command to create a pipeline. Both offline and real-time pipelines are supported.</p>
+     * <p>Creates a pipeline, which supports offline and real-time pipelines.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreatePipelineNodeCommand")
@@ -22,6 +22,8 @@ public class CreatePipelineNodeRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -68,7 +70,7 @@ public class CreatePipelineNodeRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The full path of the parent directory of the file. If this parameter is left empty, the root path (/) is used.</p>
+         * <p>The full path of the parent directory of the file. If this parameter is left empty, the root directory \&quot;/\&quot; is used.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -126,7 +128,7 @@ public class CreatePipelineNodeRequest extends TeaModel {
         public CreatePipelineNodeRequestCreatePipelineNodeCommandFileInfo fileInfo;
 
         /**
-         * <p>The node type. Valid values: NORMAL, MANUAL, and REAL_TIME.</p>
+         * <p>The node type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +148,7 @@ public class CreatePipelineNodeRequest extends TeaModel {
         public String pipelineName;
 
         /**
-         * <p>The pipeline type. Valid values: OFFLINE_PIPELINE and REAL_TIME_PIPELINE.</p>
+         * <p>The pipeline type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

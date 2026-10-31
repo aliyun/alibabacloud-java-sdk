@@ -5,12 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListBatchTasksShrinkRequest extends TeaModel {
     /**
+     * <p>The task query conditions.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("BatchTaskQuery")
     public String batchTaskQueryShrink;
 
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -20,6 +22,8 @@ public class ListBatchTasksShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

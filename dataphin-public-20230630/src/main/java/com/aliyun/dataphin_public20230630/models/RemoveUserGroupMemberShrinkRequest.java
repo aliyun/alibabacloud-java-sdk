@@ -15,6 +15,8 @@ public class RemoveUserGroupMemberShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operating user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class RemoveUserGroupMemberShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The command to remove user group members.</p>
+     * <p>The command to remove members from a user group.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RemoveCommand")

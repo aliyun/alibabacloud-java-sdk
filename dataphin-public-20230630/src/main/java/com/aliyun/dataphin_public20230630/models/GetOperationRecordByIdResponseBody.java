@@ -32,7 +32,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The operation log details.</p>
+     * <p>The execution record details.</p>
      */
     @NameInMap("OperationLogDTO")
     public GetOperationRecordByIdResponseBodyOperationLogDTO operationLogDTO;
@@ -47,7 +47,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -116,14 +116,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public String beginTime;
 
         /**
-         * <p>The code type. Valid values:</p>
-         * <ul>
-         * <li>SQL0: SQL</li>
-         * <li>shell1: Shell</li>
-         * <li>Python2: Python</li>
-         * <li>MR3: MR</li>
-         * <li>Spark4: Spark</li>
-         * </ul>
+         * <p>The code type. Valid values: SQL0, shell1, Python2, MR3, and Spark4.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -132,7 +125,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public Integer codeType;
 
         /**
-         * <p>The execution duration, in milliseconds.</p>
+         * <p>The execution duration in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -153,7 +146,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
          * <p>The name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试任务</p>
+         * <p>Test task</p>
          */
         @NameInMap("Name")
         public String name;
@@ -168,7 +161,7 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public String objectType;
 
         /**
-         * <p>The operation log ID.</p>
+         * <p>The operation record ID.</p>
          * 
          * <strong>example:</strong>
          * <p>987654321</p>
@@ -186,13 +179,13 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The list of related tables.</p>
+         * <p>The associated tables.</p>
          */
         @NameInMap("RelationTables")
         public java.util.List<String> relationTables;
 
         /**
-         * <p>The ID of the runner.</p>
+         * <p>The executor ID.</p>
          * 
          * <strong>example:</strong>
          * <p>30231123</p>
@@ -201,21 +194,16 @@ public class GetOperationRecordByIdResponseBody extends TeaModel {
         public String runner;
 
         /**
-         * <p>The name of the runner.</p>
+         * <p>The executor name.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("RunnerName")
         public String runnerName;
 
         /**
-         * <p>The node status. Valid values:</p>
-         * <ul>
-         * <li>4: Running.</li>
-         * <li>5: Succeeded.</li>
-         * <li>6: Failed.</li>
-         * </ul>
+         * <p>The task status. Valid values: 4 (Running), 5 (Successful), and 6 (Failed).</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

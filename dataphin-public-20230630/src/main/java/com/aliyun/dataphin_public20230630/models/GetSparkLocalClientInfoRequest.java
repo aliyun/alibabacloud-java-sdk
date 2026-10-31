@@ -7,8 +7,8 @@ public class GetSparkLocalClientInfoRequest extends TeaModel {
     /**
      * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: development environment.</li>
-     * <li>PROD: production environment.</li>
+     * <li>DEV: Development environment.</li>
+     * <li>PROD: Production environment.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -29,6 +29,8 @@ public class GetSparkLocalClientInfoRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

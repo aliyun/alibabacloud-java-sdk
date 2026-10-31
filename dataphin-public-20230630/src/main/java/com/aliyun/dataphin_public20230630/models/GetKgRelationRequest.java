@@ -15,6 +15,8 @@ public class GetKgRelationRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class GetKgRelationRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The relationship record ID.</p>
+     * <p>The relation record ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,7 +34,7 @@ public class GetKgRelationRequest extends TeaModel {
     public String relationId;
 
     /**
-     * <p>The relationship type code.</p>
+     * <p>The relation type code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

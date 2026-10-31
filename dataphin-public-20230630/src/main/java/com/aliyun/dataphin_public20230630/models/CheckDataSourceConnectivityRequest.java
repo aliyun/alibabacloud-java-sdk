@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckDataSourceConnectivityRequest extends TeaModel {
     /**
-     * <p>The object to check.</p>
+     * <p>The check target.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CheckCommand")
@@ -22,6 +22,8 @@ public class CheckDataSourceConnectivityRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -110,7 +112,7 @@ public class CheckDataSourceConnectivityRequest extends TeaModel {
         public java.util.List<CheckDataSourceConnectivityRequestCheckCommandConfigItemList> configItemList;
 
         /**
-         * <p>The data source type. For supported data source types, see the documentation for creating a data source.</p>
+         * <p>The datasource type. For supported datasources, see Create a datasource.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

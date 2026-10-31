@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddRegisterLineageRequest extends TeaModel {
     /**
-     * <p>The command for registering and adding data lineage.</p>
+     * <p>The command to register data lineage.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddRegisterLineageCommand")
@@ -22,6 +22,8 @@ public class AddRegisterLineageRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,7 +61,7 @@ public class AddRegisterLineageRequest extends TeaModel {
 
     public static class AddRegisterLineageRequestAddRegisterLineageCommandDetailedLineagesSource extends TeaModel {
         /**
-         * <p>The catalog property of the asset. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The catalog of the asset. For tables, the catalog of compute source tables or logical tables is uniformly set to Dataphin. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>dataphin</p>
@@ -68,7 +70,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String catalog;
 
         /**
-         * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV, PROD</p>
@@ -83,7 +85,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public java.util.Map<String, ?> extProperties;
 
         /**
-         * <p>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</p>
+         * <p>The GUID of the asset. This parameter is required when ReferenceType is set to BY_GUID.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.300000001.project1.table1.column1</p>
@@ -92,7 +94,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String guid;
 
         /**
-         * <p>The asset type. Set this parameter based on the actual scenario.</p>
+         * <p>The asset type. Specify this parameter based on the actual scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>COLUMN</p>
@@ -101,7 +103,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String metadataType;
 
         /**
-         * <p>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The name of the asset. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>column1</p>
@@ -110,7 +112,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The GUID of the parent asset. If the current object is a field, parentGuid is the GUID of the table to which the field belongs.</p>
+         * <p>The GUID of the parent asset. If the current object is a field, the parentGuid is the GUID of the table to which the field belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.300000001.project1.table1</p>
@@ -128,7 +130,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String referenceType;
 
         /**
-         * <p>The schema property of the asset. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The schema of the asset. For tables, this is generally a project or a business unit. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>project1, bizUnit1</p>
@@ -217,7 +219,7 @@ public class AddRegisterLineageRequest extends TeaModel {
 
     public static class AddRegisterLineageRequestAddRegisterLineageCommandDetailedLineagesTarget extends TeaModel {
         /**
-         * <p>The catalog property of the asset. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The catalog of the asset. For tables, the catalog of compute source tables or logical tables is uniformly set to Dataphin. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>dataphin</p>
@@ -226,7 +228,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String catalog;
 
         /**
-         * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV, PROD</p>
@@ -241,7 +243,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public java.util.Map<String, ?> extProperties;
 
         /**
-         * <p>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</p>
+         * <p>The GUID of the asset. This parameter is required when ReferenceType is set to BY_GUID.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.300000001.project1.table1.column1</p>
@@ -250,7 +252,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String guid;
 
         /**
-         * <p>The asset type. Set this parameter based on the actual scenario.</p>
+         * <p>The asset type. Specify this parameter based on the actual scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>COLUMN</p>
@@ -259,7 +261,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String metadataType;
 
         /**
-         * <p>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The name of the asset. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>column1</p>
@@ -268,7 +270,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The GUID of the parent asset. If the current object is a field, parentGuid is the GUID of the table to which the field belongs.</p>
+         * <p>The GUID of the parent asset. If the current object is a field, the parentGuid is the GUID of the table to which the field belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.300000001.project1.table1</p>
@@ -286,7 +288,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String referenceType;
 
         /**
-         * <p>The schema property of the asset. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The schema of the asset. For tables, this is generally a project or a business unit. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>project1, bizUnit1</p>
@@ -375,7 +377,7 @@ public class AddRegisterLineageRequest extends TeaModel {
 
     public static class AddRegisterLineageRequestAddRegisterLineageCommandDetailedLineages extends TeaModel {
         /**
-         * <p>Specifies whether this is a direct lineage relationship. Default value: true.</p>
+         * <p>Specifies whether the lineage is direct. Default value: true.</p>
          */
         @NameInMap("IsDirect")
         public Boolean isDirect;
@@ -427,7 +429,7 @@ public class AddRegisterLineageRequest extends TeaModel {
 
     public static class AddRegisterLineageRequestAddRegisterLineageCommandSource extends TeaModel {
         /**
-         * <p>The catalog property of the asset. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The catalog of the asset. For tables, the catalog of compute source tables or logical tables is uniformly set to Dataphin. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>dataphin</p>
@@ -436,7 +438,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String catalog;
 
         /**
-         * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV, PROD</p>
@@ -451,7 +453,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public java.util.Map<String, ?> extProperties;
 
         /**
-         * <p>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</p>
+         * <p>The GUID of the asset. This parameter is required when ReferenceType is set to BY_GUID.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.300000001.project1.table1</p>
@@ -460,7 +462,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String guid;
 
         /**
-         * <p>The asset subtype. Specify this parameter only when metadataType is set to TABLE and referenceType is not set to BY_GUID.</p>
+         * <p>The subtype of the asset. Specify this parameter only when MetadataType is set to TABLE and ReferenceType is not set to BY_GUID.</p>
          * 
          * <strong>example:</strong>
          * <p>PHYSICAL_TABLE, PHYSICAL_VIEW, PHYSICAL_MATERIALIZED_VIEW, DATASOURCE_TABLE, DATASOURCE_VIEW, DATASOURCE_MATERIALIZED_VIEW, DIM_NORMAL, DIM_LEVEL, DIM_ENUM, DIM_VIRTUAL, FACT_EVENT, FACT_PROCESS, FACT_SNAPSHOT, SUM_BIZ_UNIT</p>
@@ -469,7 +471,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String metadataSubType;
 
         /**
-         * <p>The asset type. Set this parameter based on the actual scenario.</p>
+         * <p>The Asset Type. Specify this parameter as needed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -479,7 +481,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String metadataType;
 
         /**
-         * <p>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The name of the asset. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>table1</p>
@@ -488,7 +490,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The asset reference data type. Valid values: BY_GUID and BY_PROPERTY.</p>
+         * <p>The reference data type of the asset. Valid values: BY_GUID and BY_PROPERTY.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -498,7 +500,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String referenceType;
 
         /**
-         * <p>The schema property of the asset. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The schema of the asset. For tables, this is generally a project or a business unit. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>project1, bizUnit1</p>
@@ -587,7 +589,7 @@ public class AddRegisterLineageRequest extends TeaModel {
 
     public static class AddRegisterLineageRequestAddRegisterLineageCommandTarget extends TeaModel {
         /**
-         * <p>The catalog property of the asset. For tables, the catalog of both compute source tables and logical tables is uniformly set to dataphin. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The catalog of the asset. For tables, the catalog of compute source tables or logical tables is uniformly set to Dataphin. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>dataphin</p>
@@ -596,7 +598,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String catalog;
 
         /**
-         * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The environment to which the asset belongs. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>DEV, PROD</p>
@@ -611,7 +613,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public java.util.Map<String, ?> extProperties;
 
         /**
-         * <p>The GUID of the asset. This parameter is required when referenceType is set to BY_GUID.</p>
+         * <p>The GUID of the asset. This parameter is required when ReferenceType is set to BY_GUID.</p>
          * 
          * <strong>example:</strong>
          * <p>odps.300000001.project1.table1</p>
@@ -620,7 +622,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String guid;
 
         /**
-         * <p>The asset subtype. Specify this parameter only when metadataType is set to TABLE and referenceType is not set to BY_GUID.</p>
+         * <p>The subtype of the asset. Specify this parameter only when MetadataType is set to TABLE and ReferenceType is not set to BY_GUID.</p>
          * 
          * <strong>example:</strong>
          * <p>PHYSICAL_TABLE, PHYSICAL_VIEW, PHYSICAL_MATERIALIZED_VIEW, DATASOURCE_TABLE, DATASOURCE_VIEW, DATASOURCE_MATERIALIZED_VIEW, DIM_NORMAL, DIM_LEVEL, DIM_ENUM, DIM_VIRTUAL, FACT_EVENT, FACT_PROCESS, FACT_SNAPSHOT, SUM_BIZ_UNIT</p>
@@ -629,7 +631,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String metadataSubType;
 
         /**
-         * <p>The asset type. Set this parameter based on the actual scenario.</p>
+         * <p>The Asset Type. Specify this parameter as needed.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -639,7 +641,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String metadataType;
 
         /**
-         * <p>The name of the asset. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The name of the asset. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>table1</p>
@@ -648,7 +650,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The asset reference data type. Valid values: BY_GUID and BY_PROPERTY.</p>
+         * <p>The reference data type of the asset. Valid values: BY_GUID and BY_PROPERTY.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -658,7 +660,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public String referenceType;
 
         /**
-         * <p>The schema property of the asset. For tables, this is typically the project or business unit. This property is used to identify the corresponding asset by property when referenceType is set to BY_PROPERTY. If referenceType is set to BY_GUID, this property does not need to be specified.</p>
+         * <p>The schema of the asset. For tables, this is generally a project or a business unit. This property is used to identify the corresponding asset based on properties when ReferenceType is set to BY_PROPERTY. If ReferenceType is set to BY_GUID, this property is not required.</p>
          * 
          * <strong>example:</strong>
          * <p>project1, bizUnit1</p>
@@ -747,13 +749,13 @@ public class AddRegisterLineageRequest extends TeaModel {
 
     public static class AddRegisterLineageRequestAddRegisterLineageCommand extends TeaModel {
         /**
-         * <p>Specifies whether to check the existence of the asset. By default, the existence is not checked.</p>
+         * <p>Specifies whether to check the existence of the asset itself. Default value: false.</p>
          */
         @NameInMap("CheckAssetExist")
         public Boolean checkAssetExist;
 
         /**
-         * <p>The detailed lineage relationships. For tables, these are field-level lineage relationships. If you do not want to add field-level lineage, leave this parameter empty.</p>
+         * <p>The detailed lineages. For tables, the detailed lineages refer to field lineages. Leave this parameter empty if you do not want to add field lineages.</p>
          */
         @NameInMap("DetailedLineages")
         public java.util.List<AddRegisterLineageRequestAddRegisterLineageCommandDetailedLineages> detailedLineages;
@@ -788,7 +790,7 @@ public class AddRegisterLineageRequest extends TeaModel {
         public Long tenantId;
 
         /**
-         * <p>The ID of the current user.</p>
+         * <p>The current user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>300004567</p>

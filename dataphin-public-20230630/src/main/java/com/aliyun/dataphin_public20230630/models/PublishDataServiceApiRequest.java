@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishDataServiceApiRequest extends TeaModel {
     /**
-     * <p>The API ID.</p>
+     * <p>The ID of the API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,8 @@ public class PublishDataServiceApiRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -32,7 +34,7 @@ public class PublishDataServiceApiRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The data service project ID.</p>
+     * <p>The ID of the data service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +44,7 @@ public class PublishDataServiceApiRequest extends TeaModel {
     public Integer projectId;
 
     /**
-     * <p>The API version number.</p>
+     * <p>The API version ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

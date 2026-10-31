@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUsersResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -41,7 +41,7 @@ public class GetUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -119,7 +119,7 @@ public class GetUsersResponseBody extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The DingTalk number.</p>
+         * <p>The DingTalk ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123@dingding</p>
@@ -131,16 +131,16 @@ public class GetUsersResponseBody extends TeaModel {
          * <p>The display name of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The display name of the user without status.</p>
+         * <p>The display name of the user without the status.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("DisplayNameWithoutStatus")
         public String displayNameWithoutStatus;
@@ -155,7 +155,7 @@ public class GetUsersResponseBody extends TeaModel {
         public String enableWhiteIp;
 
         /**
-         * <p>The Lark chatbot.</p>
+         * <p>The Lark bot.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -164,7 +164,7 @@ public class GetUsersResponseBody extends TeaModel {
         public String feiShuRobot;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the user was created.</p>
          * 
          * <strong>example:</strong>
          * <p>1717343597000</p>
@@ -212,7 +212,7 @@ public class GetUsersResponseBody extends TeaModel {
          * <p>The username.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -221,13 +221,13 @@ public class GetUsersResponseBody extends TeaModel {
          * <p>The nickname of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("NickName")
         public String nickName;
 
         /**
-         * <p>The ID of the primary account to which the user belongs.</p>
+         * <p>The ID of the Alibaba Cloud account to which the user belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>231231</p>
@@ -239,13 +239,13 @@ public class GetUsersResponseBody extends TeaModel {
          * <p>The real name of the user.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("RealName")
         public String realName;
 
         /**
-         * <p>The source ID of the user.</p>
+         * <p>The ID of the user source.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:123@xx.com">123@xx.com</a></p>
@@ -254,7 +254,7 @@ public class GetUsersResponseBody extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The source type of the user.</p>
+         * <p>The source of the user.</p>
          * 
          * <strong>example:</strong>
          * <p>ALIYUN</p>
@@ -263,7 +263,7 @@ public class GetUsersResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The WeCom chatbot.</p>
+         * <p>The WeCom bot.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -272,7 +272,7 @@ public class GetUsersResponseBody extends TeaModel {
         public String weChatRobot;
 
         /**
-         * <p>The IP whitelist.</p>
+         * <p>The whitelist.</p>
          * 
          * <strong>example:</strong>
          * <ul>

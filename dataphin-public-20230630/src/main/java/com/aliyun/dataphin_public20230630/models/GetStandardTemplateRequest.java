@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetStandardTemplateRequest extends TeaModel {
     /**
-     * <p>The filter condition.</p>
+     * <p>The filter conditions.</p>
      */
     @NameInMap("FilterQuery")
     public GetStandardTemplateRequestFilterQuery filterQuery;
 
     /**
-     * <p>The standard template ID.</p>
+     * <p>The ID of the standard template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class GetStandardTemplateRequest extends TeaModel {
     public Long id;
 
     /**
-     * <p>Specifies whether to allow a null value to be returned when the template does not exist. If set to false, an exception is thrown. Default value: true.</p>
+     * <p>Specifies whether to allow a null value to be returned when the template does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</p>
      */
     @NameInMap("Nullable")
     public Boolean nullable;
@@ -37,6 +37,8 @@ public class GetStandardTemplateRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -90,7 +92,7 @@ public class GetStandardTemplateRequest extends TeaModel {
 
     public static class GetStandardTemplateRequestFilterQuery extends TeaModel {
         /**
-         * <p>The version number. If this parameter is left empty or set to -1, the latest version is used.</p>
+         * <p>The version number. An empty value or -1 indicates the latest version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

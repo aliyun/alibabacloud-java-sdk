@@ -22,6 +22,8 @@ public class CheckComputeSourceConnectivityRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operating user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -69,7 +71,7 @@ public class CheckComputeSourceConnectivityRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the configuration item.</p>
+         * <p>The configuration item value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

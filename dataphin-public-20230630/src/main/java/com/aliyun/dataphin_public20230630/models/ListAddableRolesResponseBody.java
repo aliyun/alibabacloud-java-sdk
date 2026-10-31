@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAddableRolesResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class ListAddableRolesResponseBody extends TeaModel {
     public java.util.List<ListAddableRolesResponseBodyRoleList> roleList;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -122,7 +122,7 @@ public class ListAddableRolesResponseBody extends TeaModel {
          * <p>The role name.</p>
          * 
          * <strong>example:</strong>
-         * <p>安全管理员</p>
+         * <p>Security Administrator</p>
          */
         @NameInMap("Name")
         public String name;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSecurityClassifyCatalogShrinkRequest extends TeaModel {
     /**
-     * <p>The delete instruction.</p>
+     * <p>The delete command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteCommand")
@@ -22,6 +22,8 @@ public class DeleteSecurityClassifyCatalogShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The user ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

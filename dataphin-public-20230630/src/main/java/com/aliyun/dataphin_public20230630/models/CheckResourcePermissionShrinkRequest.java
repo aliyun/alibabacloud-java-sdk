@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class CheckResourcePermissionShrinkRequest extends TeaModel {
     /**
-     * <p>Check user resource permission</p>
+     * <p>The user resource permission check command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CheckCommand")
     public String checkCommandShrink;
 
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,6 +22,8 @@ public class CheckResourcePermissionShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQualityRulesRequest extends TeaModel {
     /**
-     * <p>The paged query conditions.</p>
+     * <p>The paged query conditions, including paging parameters.</p>
      */
     @NameInMap("ListQuery")
     public ListQualityRulesRequestListQuery listQuery;
@@ -21,6 +21,8 @@ public class ListQualityRulesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -58,23 +60,13 @@ public class ListQualityRulesRequest extends TeaModel {
 
     public static class ListQualityRulesRequestListQuery extends TeaModel {
         /**
-         * <p>The rule type. Valid values:</p>
-         * <ul>
-         * <li>CONSISTENT: consistency.</li>
-         * <li>EFFECTIVE: validity.</li>
-         * <li>TIMELINESE: timeliness.</li>
-         * <li>ACCURATE: accuracy.</li>
-         * <li>UNIQUENESS: uniqueness.</li>
-         * <li>COMPLETENESS: completeness.</li>
-         * <li>STABILITY: stability.</li>
-         * <li>CUSTOM: custom.</li>
-         * </ul>
+         * <p>The rule type. Valid values: CONSISTENT (Consistency), EFFECTIVE (Effectiveness), TIMELINESE (Timeliness), ACCURATE (Accuracy), UNIQUENESS (Uniqueness), COMPLETENESS (Completeness), STABILITY (Stability), and CUSTOM (Custom).</p>
          */
         @NameInMap("CatalogList")
         public java.util.List<String> catalogList;
 
         /**
-         * <p>The search keyword for filtering. Supports searching by rule name and validation object.</p>
+         * <p>The search keyword. Supports searching by rule name and validation object.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -92,7 +84,7 @@ public class ListQualityRulesRequest extends TeaModel {
         public Integer pageNo;
 
         /**
-         * <p>The number of records per page. Default value: 20.</p>
+         * <p>The number of entries per page. Default value: 20.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -101,21 +93,13 @@ public class ListQualityRulesRequest extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The rule strength. Valid values:</p>
-         * <ul>
-         * <li>STRONG: strong.</li>
-         * <li>WEAK: weak.</li>
-         * </ul>
+         * <p>The rule strength. Valid values: STRONG (Strong) and WEAK (Weak).</p>
          */
         @NameInMap("RuleStrengthList")
         public java.util.List<String> ruleStrengthList;
 
         /**
-         * <p>The rule effective status. Valid values:</p>
-         * <ul>
-         * <li>ENABLE: enabled.</li>
-         * <li>DISABLE: disabled.</li>
-         * </ul>
+         * <p>The effective status of the rule. Valid values: ENABLE (Enabled) and DISABLE (Disabled).</p>
          */
         @NameInMap("StatusList")
         public java.util.List<String> statusList;
@@ -127,34 +111,13 @@ public class ListQualityRulesRequest extends TeaModel {
         public java.util.List<Long> templateIdList;
 
         /**
-         * <p>The task status. Valid values:</p>
-         * <ul>
-         * <li>NOT_RUN: not executed.</li>
-         * <li>WAITING: waiting.</li>
-         * <li>RUNNING: executing.</li>
-         * <li>SUCCESS: execution succeeded.</li>
-         * <li>FAILED: execution failed.</li>
-         * <li>CANCEL: canceled.</li>
-         * <li>TIMEOUT: timed out.</li>
-         * <li>OFFLINE: offline.</li>
-         * </ul>
+         * <p>The task status. Valid values: NOT_RUN (Not run), WAITING (Waiting), RUNNING (Running), SUCCESS (Succeeded), FAILED (Failed), CANCEL (Canceled), TIMEOUT (Timed out), and OFFLINE (Offline).</p>
          */
         @NameInMap("TestRunTaskStatusList")
         public java.util.List<String> testRunTaskStatusList;
 
         /**
-         * <p>The trial run validation result. Valid values:</p>
-         * <ul>
-         * <li>NOT_RUN: not executed.</li>
-         * <li>WAITING: waiting for execution.</li>
-         * <li>RUNNING: executing.</li>
-         * <li>PASS: passed.</li>
-         * <li>NOT_PASS: not passed.</li>
-         * <li>FAILED: execution failed.</li>
-         * <li>OFFLINE: offline. The task needs to be restarted.</li>
-         * <li>CANCEL: task canceled.</li>
-         * <li>TIMEOUT: task timed out.</li>
-         * </ul>
+         * <p>The validation result of the rule test run. Valid values: NOT_RUN (Not run), WAITING (Waiting), RUNNING (Running), PASS (Passed), NOT_PASS (Not passed), FAILED (Failed), OFFLINE (Offline, requires restart), CANCEL (Canceled), and TIMEOUT (Timed out).</p>
          */
         @NameInMap("TestRunTaskValidateResultList")
         public java.util.List<String> testRunTaskValidateResultList;

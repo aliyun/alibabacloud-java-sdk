@@ -7,8 +7,8 @@ public class OperateInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: development environment. </li>
-     * <li>PROD (default): production environment.</li>
+     * <li>DEV: Development environment. </li>
+     * <li>PROD: Production environment. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,6 +28,8 @@ public class OperateInstanceShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

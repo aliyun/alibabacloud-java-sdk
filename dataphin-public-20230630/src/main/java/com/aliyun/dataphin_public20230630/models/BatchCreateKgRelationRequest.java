@@ -22,6 +22,8 @@ public class BatchCreateKgRelationRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -121,7 +123,7 @@ public class BatchCreateKgRelationRequest extends TeaModel {
 
     public static class BatchCreateKgRelationRequestCreateCommandRelationList extends TeaModel {
         /**
-         * <p>The list of relationship record properties.</p>
+         * <p>The relationship record property list.</p>
          */
         @NameInMap("PropertyList")
         public java.util.List<BatchCreateKgRelationRequestCreateCommandRelationListPropertyList> propertyList;
@@ -137,7 +139,7 @@ public class BatchCreateKgRelationRequest extends TeaModel {
         public String relationType;
 
         /**
-         * <p>The ID of the source entity record.</p>
+         * <p>The source entity record ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -147,7 +149,7 @@ public class BatchCreateKgRelationRequest extends TeaModel {
         public String sourceEntityId;
 
         /**
-         * <p>The ID of the target entity record.</p>
+         * <p>The target entity record ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -197,7 +199,7 @@ public class BatchCreateKgRelationRequest extends TeaModel {
 
     public static class BatchCreateKgRelationRequestCreateCommand extends TeaModel {
         /**
-         * <p>The list of relationships.</p>
+         * <p>The relationship list.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("RelationList")

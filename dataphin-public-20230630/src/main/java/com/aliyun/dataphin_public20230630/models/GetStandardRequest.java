@@ -15,6 +15,8 @@ public class GetStandardRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,13 +61,13 @@ public class GetStandardRequest extends TeaModel {
 
     public static class GetStandardRequestStandardGetQuery extends TeaModel {
         /**
-         * <p>Specifies whether to return associated standards and associated lookup tables. Default value: false.</p>
+         * <p>Specifies whether to return related standards and lookup tables. Default value: false.</p>
          */
         @NameInMap("NeedRelation")
         public Boolean needRelation;
 
         /**
-         * <p>Specifies whether to return a null value when the standard does not exist. If set to false, an exception is thrown. Default value: true.</p>
+         * <p>Specifies whether to allow a null value to be returned when the standard does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</p>
          */
         @NameInMap("Nullable")
         public Boolean nullable;
@@ -81,12 +83,7 @@ public class GetStandardRequest extends TeaModel {
         public Long standardId;
 
         /**
-         * <p>The stage to which the standard belongs. Valid values:</p>
-         * <ul>
-         * <li>dev: development stage.</li>
-         * <li>prod: production stage.</li>
-         * </ul>
-         * <p>Default value: prod.</p>
+         * <p>The stage to which the standard belongs. Valid values: dev and prod. Default value: prod.</p>
          * 
          * <strong>example:</strong>
          * <p>dev</p>
@@ -95,7 +92,7 @@ public class GetStandardRequest extends TeaModel {
         public String standardStage;
 
         /**
-         * <p>The version number. If left empty, the latest version is used.</p>
+         * <p>The version number. An empty value indicates the latest version.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

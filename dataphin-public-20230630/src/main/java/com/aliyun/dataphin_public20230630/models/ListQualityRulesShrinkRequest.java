@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQualityRulesShrinkRequest extends TeaModel {
     /**
-     * <p>The paged query conditions.</p>
+     * <p>The paged query conditions, including paging parameters.</p>
      */
     @NameInMap("ListQuery")
     public String listQueryShrink;
@@ -21,6 +21,8 @@ public class ListQualityRulesShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

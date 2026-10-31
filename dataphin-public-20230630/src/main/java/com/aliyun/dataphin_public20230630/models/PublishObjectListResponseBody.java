@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class PublishObjectListResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is normal.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class PublishObjectListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class PublishObjectListResponseBody extends TeaModel {
 
     public static class PublishObjectListResponseBodyPublishResult extends TeaModel {
         /**
-         * <p>The list of pending publish record IDs.</p>
+         * <p>The list of submit record IDs.</p>
          */
         @NameInMap("SubmitIdList")
         public java.util.List<Long> submitIdList;

@@ -14,7 +14,7 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The statistical results.</p>
+     * <p>The statistics result.</p>
      */
     @NameInMap("Data")
     public GetStandardStatisticsResponseBodyData data;
@@ -29,7 +29,7 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The exception details returned by the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -116,7 +116,7 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The standard type.</p>
+         * <p>The type of the standard.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -149,7 +149,7 @@ public class GetStandardStatisticsResponseBody extends TeaModel {
 
     public static class GetStandardStatisticsResponseBodyData extends TeaModel {
         /**
-         * <p>The mapping between standard types and the number of standards for each type. If the standard type is empty, the key is EMPTY.</p>
+         * <p>The mapping between each standard type and the number of standards of that type. If the standard type is empty, the key is EMPTY.</p>
          */
         @NameInMap("StandardTypeCountList")
         public java.util.List<GetStandardStatisticsResponseBodyDataStandardTypeCountList> standardTypeCountList;

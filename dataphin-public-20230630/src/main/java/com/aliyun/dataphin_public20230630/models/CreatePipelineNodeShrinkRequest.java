@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineNodeShrinkRequest extends TeaModel {
     /**
-     * <p>The command to create a pipeline. Both offline and real-time pipelines are supported.</p>
+     * <p>Creates a pipeline, which supports offline and real-time pipelines.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreatePipelineNodeCommand")
@@ -22,6 +22,8 @@ public class CreatePipelineNodeShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

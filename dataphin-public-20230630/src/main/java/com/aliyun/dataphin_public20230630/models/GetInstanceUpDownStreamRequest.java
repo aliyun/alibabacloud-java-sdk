@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceUpDownStreamRequest extends TeaModel {
     /**
-     * <p>The number of downstream node levels. Default value: 1.</p>
+     * <p>The depth of downstream nodes. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -16,8 +16,9 @@ public class GetInstanceUpDownStreamRequest extends TeaModel {
     /**
      * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: development environment. </li>
-     * <li>PROD (default): production environment.</li>
+     * <li>DEV: development environment</li>
+     * <li>PROD: production environment
+     * Default value: PROD.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +28,7 @@ public class GetInstanceUpDownStreamRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>The center node.</p>
+     * <p>The central node.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InstanceId")
@@ -44,6 +45,8 @@ public class GetInstanceUpDownStreamRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -61,7 +64,7 @@ public class GetInstanceUpDownStreamRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The number of upstream node levels. Default value: 1.</p>
+     * <p>The depth of upstream nodes. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -132,7 +135,7 @@ public class GetInstanceUpDownStreamRequest extends TeaModel {
 
     public static class GetInstanceUpDownStreamRequestInstanceId extends TeaModel {
         /**
-         * <p>The list of field IDs. This parameter can be specified when the node is a logical table instance ID. If this parameter is not specified, the full table is used by default.</p>
+         * <p>The list of field IDs. You can specify this parameter when the node is a logical table instance ID. If you do not specify this parameter, the entire table is used by default.</p>
          */
         @NameInMap("FieldInstanceIdList")
         public java.util.List<String> fieldInstanceIdList;

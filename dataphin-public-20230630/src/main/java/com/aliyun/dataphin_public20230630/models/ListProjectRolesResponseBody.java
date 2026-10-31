@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListProjectRolesResponseBody extends TeaModel {
     /**
+     * <p>The error code. OK indicates that the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>OK</p>
      */
@@ -12,6 +14,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
     public String code;
 
     /**
+     * <p>The HTTP status code returned by the backend.</p>
+     * 
      * <strong>example:</strong>
      * <p>200</p>
      */
@@ -19,6 +23,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
+     * <p>The error message.</p>
+     * 
      * <strong>example:</strong>
      * <p>successful</p>
      */
@@ -26,16 +32,23 @@ public class ListProjectRolesResponseBody extends TeaModel {
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of roles.</p>
+     */
     @NameInMap("RoleList")
     public java.util.List<ListProjectRolesResponseBodyRoleList> roleList;
 
     /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
      * <strong>example:</strong>
      * <p>true</p>
      */
@@ -97,6 +110,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
 
     public static class ListProjectRolesResponseBodyRoleList extends TeaModel {
         /**
+         * <p>The JSON string of the permission set.</p>
+         * 
          * <strong>example:</strong>
          * <p>{}</p>
          */
@@ -104,6 +119,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String authJson;
 
         /**
+         * <p>The user ID of the creator.</p>
+         * 
          * <strong>example:</strong>
          * <p>30112011</p>
          */
@@ -111,6 +128,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String creator;
 
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-30 17:38:32</p>
          */
@@ -118,6 +137,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
+         * <p>The update time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-01-30 17:38:32</p>
          */
@@ -125,6 +146,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
+         * <p>The user ID of the modifier.</p>
+         * 
          * <strong>example:</strong>
          * <p>30112011</p>
          */
@@ -132,6 +155,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String modifier;
 
         /**
+         * <p>The project type.</p>
+         * 
          * <strong>example:</strong>
          * <p>BASIC</p>
          */
@@ -139,6 +164,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String projectType;
 
         /**
+         * <p>The role description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -146,6 +173,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String roleDesc;
 
         /**
+         * <p>The role key.</p>
+         * 
          * <strong>example:</strong>
          * <p>abc::01121</p>
          */
@@ -153,6 +182,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String roleKey;
 
         /**
+         * <p>The role name.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -160,6 +191,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String roleName;
 
         /**
+         * <p>The role type. Valid values: BUILD_IN (built-in role) and CUSTOM (custom role).</p>
+         * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
          */
@@ -167,6 +200,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String roleType;
 
         /**
+         * <p>The role status. Valid values: ON (enabled), OFF (disabled), and DEL (deleted).</p>
+         * 
          * <strong>example:</strong>
          * <p>ON</p>
          */
@@ -174,6 +209,8 @@ public class ListProjectRolesResponseBody extends TeaModel {
         public String status;
 
         /**
+         * <p>The tenant ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>30110110</p>
          */

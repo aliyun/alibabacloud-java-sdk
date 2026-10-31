@@ -15,6 +15,8 @@ public class GetLatestSubmitDetailRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class GetLatestSubmitDetailRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The pending submit query request.</p>
+     * <p>The pending release query request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SubmitDetailQuery")

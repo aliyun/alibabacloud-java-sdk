@@ -16,8 +16,9 @@ public class GetNodeUpDownStreamRequest extends TeaModel {
     /**
      * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: development environment. </li>
-     * <li>PROD (default): production environment.</li>
+     * <li>DEV: Development environment.</li>
+     * <li>PROD: Production environment.
+     * Default value: PROD.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,6 +45,8 @@ public class GetNodeUpDownStreamRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -131,7 +134,7 @@ public class GetNodeUpDownStreamRequest extends TeaModel {
 
     public static class GetNodeUpDownStreamRequestNodeId extends TeaModel {
         /**
-         * <p>This parameter can be specified when the node ID is a logical table node ID. If this parameter is not specified, the full table is used by default.</p>
+         * <p>The list of field IDs. This parameter is applicable when the node is a logical table node. If you do not specify this parameter, all fields in the table are queried by default.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>

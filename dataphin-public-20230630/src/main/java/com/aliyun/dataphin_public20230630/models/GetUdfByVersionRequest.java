@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUdfByVersionRequest extends TeaModel {
     /**
-     * <p>The ID of the user-defined function.</p>
+     * <p>The custom function ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,8 @@ public class GetUdfByVersionRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

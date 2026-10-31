@@ -29,7 +29,7 @@ public class CreateBizMetricResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error details from the backend.</p>
+     * <p>The details of the backend exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class CreateBizMetricResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class CreateBizMetricResponseBody extends TeaModel {
 
     public static class CreateBizMetricResponseBodyData extends TeaModel {
         /**
-         * <p>The error message.</p>
+         * <p>The exception message.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -119,9 +119,9 @@ public class CreateBizMetricResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the creation was successful. Valid values:</p>
+         * <p>Indicates whether the creation is successful. Valid values:</p>
          * <ul>
-         * <li>true: Succeeded.</li>
+         * <li>true: Successful.</li>
          * <li>false: Failed.</li>
          * </ul>
          * 

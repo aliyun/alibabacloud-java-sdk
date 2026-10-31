@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddProjectMemberShrinkRequest extends TeaModel {
     /**
-     * <p>The command for adding members.</p>
+     * <p>The command to add members.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddCommand")
@@ -32,7 +32,7 @@ public class AddProjectMemberShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The operator user ID.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineNodeResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class CreatePipelineNodeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -119,7 +119,7 @@ public class CreatePipelineNodeResponseBody extends TeaModel {
         public java.util.List<String> errorMessageList;
 
         /**
-         * <p>The ID of the pipeline created.</p>
+         * <p>The ID of the created pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>33749</p>

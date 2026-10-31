@@ -7,8 +7,8 @@ public class ExecuteManualNodeShrinkRequest extends TeaModel {
     /**
      * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: development environment </li>
-     * <li>PROD (default): production environment.</li>
+     * <li>DEV: Development environment. </li>
+     * <li>PROD: Production environment. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ExecuteManualNodeShrinkRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>The request for running a manual task.</p>
+     * <p>The request to run a manual task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ExecuteCommand")
@@ -35,6 +35,8 @@ public class ExecuteManualNodeShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

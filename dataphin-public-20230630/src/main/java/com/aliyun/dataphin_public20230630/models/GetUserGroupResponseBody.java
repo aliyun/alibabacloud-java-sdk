@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetUserGroupResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. OK indicates that the request is normal.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -41,7 +41,7 @@ public class GetUserGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetUserGroupResponseBody extends TeaModel {
 
     public static class GetUserGroupResponseBodyUserGroupInfoAdminList extends TeaModel {
         /**
-         * <p>The account name of the user.</p>
+         * <p>The user account name.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -122,7 +122,7 @@ public class GetUserGroupResponseBody extends TeaModel {
          * <p>The username.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -184,7 +184,7 @@ public class GetUserGroupResponseBody extends TeaModel {
         public java.util.List<GetUserGroupResponseBodyUserGroupInfoAdminList> adminList;
 
         /**
-         * <p>The description of the user group.</p>
+         * <p>The user group description.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -211,10 +211,10 @@ public class GetUserGroupResponseBody extends TeaModel {
         public String myRole;
 
         /**
-         * <p>The name of the user group.</p>
+         * <p>The user group name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Name")
         public String name;

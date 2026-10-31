@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectMembersResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The request error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error message.</p>
+     * <p>The request error message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -47,7 +47,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -119,7 +119,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The last modified timestamp.</p>
+         * <p>The update timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1721720955000</p>
@@ -137,7 +137,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The ID of the user who last modified the record.</p>
+         * <p>The ID of the editor.</p>
          * 
          * <strong>example:</strong>
          * <p>101111</p>
@@ -146,13 +146,19 @@ public class ListProjectMembersResponseBody extends TeaModel {
         public String lastModifier;
 
         /**
-         * <p>The name of the user who last modified the record.</p>
+         * <p>The name of the editor.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试用户</p>
+         * <p>Test User</p>
          */
         @NameInMap("LastModifierName")
         public String lastModifierName;
+
+        /**
+         * <p>The list of role codes bound to the member, including system and custom project roles. This list can be used to add or edit project members.</p>
+         */
+        @NameInMap("RoleCodeList")
+        public java.util.List<String> roleCodeList;
 
         /**
          * <p>The roles.</p>
@@ -173,7 +179,7 @@ public class ListProjectMembersResponseBody extends TeaModel {
          * <p>The username of the member.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试用户</p>
+         * <p>Test User</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -221,6 +227,14 @@ public class ListProjectMembersResponseBody extends TeaModel {
         }
         public String getLastModifierName() {
             return this.lastModifierName;
+        }
+
+        public ListProjectMembersResponseBodyPageResultProjectMemberList setRoleCodeList(java.util.List<String> roleCodeList) {
+            this.roleCodeList = roleCodeList;
+            return this;
+        }
+        public java.util.List<String> getRoleCodeList() {
+            return this.roleCodeList;
         }
 
         public ListProjectMembersResponseBodyPageResultProjectMemberList setRoleIdList(java.util.List<Integer> roleIdList) {

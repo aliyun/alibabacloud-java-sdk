@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ResumePhysicalNodeShrinkRequest extends TeaModel {
     /**
-     * <p>Environment identifier.</p>
+     * <p>The environment identifier. Valid values:</p>
      * <ul>
-     * <li>DEV: Development environment</li>
-     * <li>PROD (default): Production environment</li>
+     * <li>DEV: development environment </li>
+     * <li>PROD: production environment. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class ResumePhysicalNodeShrinkRequest extends TeaModel {
     public String env;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +28,8 @@ public class ResumePhysicalNodeShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -35,7 +37,7 @@ public class ResumePhysicalNodeShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Resume scheduling request.</p>
+     * <p>The request to resume scheduling.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ResumeCommand")

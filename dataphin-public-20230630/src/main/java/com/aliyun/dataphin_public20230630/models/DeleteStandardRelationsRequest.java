@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteStandardRelationsRequest extends TeaModel {
     /**
-     * <p>The delete instruction.</p>
+     * <p>The delete command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DeleteCommand")
@@ -22,6 +22,8 @@ public class DeleteStandardRelationsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -85,7 +87,7 @@ public class DeleteStandardRelationsRequest extends TeaModel {
 
     public static class DeleteStandardRelationsRequestDeleteCommand extends TeaModel {
         /**
-         * <p>The standard association type: RELATIVE.</p>
+         * <p>The standard association type. Valid value: RELATIVE.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

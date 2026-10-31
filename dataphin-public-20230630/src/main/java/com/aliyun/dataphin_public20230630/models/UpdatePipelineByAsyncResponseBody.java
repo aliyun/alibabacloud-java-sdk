@@ -14,7 +14,7 @@ public class UpdatePipelineByAsyncResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The query ID for the asynchronous execution.</p>
+     * <p>The query ID for asynchronous execution.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -32,7 +32,7 @@ public class UpdatePipelineByAsyncResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error details returned by the backend.</p>
+     * <p>The details of the backend exception.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -50,7 +50,7 @@ public class UpdatePipelineByAsyncResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;

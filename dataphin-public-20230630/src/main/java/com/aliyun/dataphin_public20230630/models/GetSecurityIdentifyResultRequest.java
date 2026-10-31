@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetSecurityIdentifyResultRequest extends TeaModel {
     /**
-     * <p>The identification result ID.</p>
+     * <p>The recognition result ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,8 @@ public class GetSecurityIdentifyResultRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

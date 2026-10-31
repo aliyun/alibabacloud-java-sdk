@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateNodeSupplementResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -43,8 +43,8 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
     /**
      * <p>The submit ID.</p>
      * <ul>
-     * <li>List mode: Returns the FlowId.</li>
-     * <li>Batch mode: Returns the JobId. You can call the GetOperationSubmitStatus operation to query the submit status. After the submission succeeds, the FlowId is returned.</li>
+     * <li>Normal mode: The flow ID is returned.</li>
+     * <li>Massive mode: The submitted job ID is returned. You can call GetOperationSubmitStatus to query the submission status. After the submission succeeds, the flow ID is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,7 +54,7 @@ public class CreateNodeSupplementResponseBody extends TeaModel {
     public String submitId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true/false</p>

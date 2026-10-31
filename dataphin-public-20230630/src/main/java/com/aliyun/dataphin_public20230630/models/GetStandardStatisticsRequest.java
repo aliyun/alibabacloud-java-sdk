@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStandardStatisticsRequest extends TeaModel {
     /**
-     * <p>The tenant ID.</p>
+     * <p>The ID of the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class GetStandardStatisticsRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class GetStandardStatisticsRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The statistical query instruction.</p>
+     * <p>The statistics query instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StatisticsQuery")
@@ -59,7 +61,7 @@ public class GetStandardStatisticsRequest extends TeaModel {
 
     public static class GetStandardStatisticsRequestStatisticsQueryCreateTimePeriod extends TeaModel {
         /**
-         * <p>The end time.</p>
+         * <p>The end time, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -68,13 +70,13 @@ public class GetStandardStatisticsRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>Specifies whether to include the end time. Default value: false.</p>
+         * <p>Specifies whether to include the end time. Default: false.</p>
          */
         @NameInMap("IncludeEndTime")
         public Boolean includeEndTime;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time, in the YYYY-MM-DD HH:mm:ss format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-01 00:00:00</p>
@@ -115,13 +117,13 @@ public class GetStandardStatisticsRequest extends TeaModel {
 
     public static class GetStandardStatisticsRequestStatisticsQuery extends TeaModel {
         /**
-         * <p>The creation time period.</p>
+         * <p>The time period during which the standards were created.</p>
          */
         @NameInMap("CreateTimePeriod")
         public GetStandardStatisticsRequestStatisticsQueryCreateTimePeriod createTimePeriod;
 
         /**
-         * <p>The folder to which the standards belong. The search includes all subfolders under this folder.</p>
+         * <p>The directory to query. Standards in this directory and all its subdirectories are included in the statistics.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +133,7 @@ public class GetStandardStatisticsRequest extends TeaModel {
         public String directory;
 
         /**
-         * <p>The stages to which the standards belong.</p>
+         * <p>The list of stages to which the standards belong.</p>
          */
         @NameInMap("StandardStageList")
         public java.util.List<String> standardStageList;

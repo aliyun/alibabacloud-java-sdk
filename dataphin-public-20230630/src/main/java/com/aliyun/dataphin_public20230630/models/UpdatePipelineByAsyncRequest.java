@@ -22,6 +22,8 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -29,7 +31,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The pipeline node update configuration.</p>
+     * <p>The update configuration for the pipeline task.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -76,8 +78,8 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         /**
          * <p>The current operating environment. Valid values:</p>
          * <ul>
-         * <li>DEV: the development environment.</li>
-         * <li>PROD: the production environment.</li>
+         * <li>DEV: development environment.</li>
+         * <li>PROD: production environment.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -88,7 +90,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String env;
 
         /**
-         * <p>The ID of the project to which the integration pipeline node belongs.</p>
+         * <p>The ID of the project to which the integration pipeline task belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,7 +124,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
 
     public static class UpdatePipelineByAsyncRequestUpdateCommandNodeInfo extends TeaModel {
         /**
-         * <p>The folder of the integration pipeline node. Default value: root folder. The folder must exist. If it does not exist, call the relevant API operation to create a folder of the offlinePipeline type.</p>
+         * <p>The directory of the integration pipeline task node. The default value is the root directory. The directory must exist. If it does not exist, call the relevant API to create a directory of the offlinePipeline type.</p>
          * 
          * <strong>example:</strong>
          * <p>/</p>
@@ -131,7 +133,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String directory;
 
         /**
-         * <p>The pipeline file ID. Leave this parameter empty for initial creation. When updating a pipeline node, specify at least one of pipelineId, fileId, or nodeId.</p>
+         * <p>The ID of the pipeline file. Leave this parameter empty when creating a task for the first time. When updating a pipeline task, you must specify at least one of pipelineId, fileId, or nodeId.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -140,7 +142,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>The scheduling node ID of the pipeline node. Leave this parameter empty for initial creation. When updating a pipeline node, specify at least one of pipelineId, fileId, or nodeId.</p>
+         * <p>The ID of the scheduling node for the pipeline task. Leave this parameter empty when creating a task for the first time. When updating a pipeline task, you must specify at least one of pipelineId, fileId, or nodeId.</p>
          * 
          * <strong>example:</strong>
          * <p>n_123</p>
@@ -149,7 +151,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The name of the integration pipeline node.</p>
+         * <p>The name of the integration pipeline task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -159,7 +161,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String nodeName;
 
         /**
-         * <p>The pipeline node ID. Leave this parameter empty for initial creation. When updating a pipeline node, specify at least one of pipelineId, fileId, or nodeId.</p>
+         * <p>The ID of the pipeline task. Leave this parameter empty when creating a task for the first time. When updating a pipeline task, you must specify at least one of pipelineId, fileId, or nodeId.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -216,13 +218,13 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
 
     public static class UpdatePipelineByAsyncRequestUpdateCommandPipelineConfigHops extends TeaModel {
         /**
-         * <p>For conditional distribution components, set this parameter to true when the downstream condition is true, and to false otherwise. This parameter is not applicable to workflow nodes.</p>
+         * <p>Specifies whether to connect to the downstream component when the condition is met for a conditional distribution component. Set to true if the downstream condition is true, and false otherwise. Ignore this parameter for workflow tasks.</p>
          */
         @NameInMap("SendTo")
         public Boolean sendTo;
 
         /**
-         * <p>The input step name, which corresponds to Steps[*].StepName.</p>
+         * <p>The name of the input step, which corresponds to Steps[*].StepName.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -232,7 +234,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String source;
 
         /**
-         * <p>The output step name, which corresponds to Steps[*].StepName.</p>
+         * <p>The name of the output step, which corresponds to Steps[*].StepName.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -276,16 +278,16 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         /**
          * <p>Specifies the data distribution method when the current component has multiple downstream components. Valid values:</p>
          * <ul>
-         * <li>true: the data of the current component is distributed to all downstream components in a round-robin manner. For example, if the current component has 100 records and two downstream components, each downstream component receives 50 records. Default value: true.</li>
-         * <li>false: the full data of the current component is sent to all downstream components. For example, if the current component has 100 records and two downstream components, both downstream components receive 100 records.</li>
+         * <li>true: distributes data to all downstream components in turn. For example, if the current component has 100 data records and two downstream components, each downstream component receives 50 records. This is the default value.</li>
+         * <li>false: sends all data to all downstream components. For example, if the current component has 100 data records and two downstream components, both downstream components receive all 100 records.
+         * Ignore this parameter for workflow tasks.</li>
          * </ul>
-         * <p>This parameter is not applicable to workflow nodes.</p>
          */
         @NameInMap("IsDistribute")
         public Boolean isDistribute;
 
         /**
-         * <p>The plugin ID. Each plugin or operator has a unique identifier. Refer to the stepKey field of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit the component or operator configuration class and implement the corresponding configuration. Each component or operator configuration has the same structure as the configuration created on the Dataphin console.</p>
+         * <p>The plugin ID. Each plugin or operator has a unique identifier. Refer to com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepKey. Developers must inherit the component or operator configuration class to implement the corresponding configuration. The structure of each configuration must be identical to the configuration structure created on the Dataphin page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -295,7 +297,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The specific component configuration in JSON string format. Refer to the toJsonString method of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig (or com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.unstructured.BaseOAUnstructuredNeuronConfig for workflow operators) and its subclasses. Developers should inherit the component or operator configuration class and implement the corresponding configuration. Each component or operator configuration has the same structure as the node configuration created on the Dataphin console.</p>
+         * <p>The specific component or operator configuration in JSON string format. Refer to the toJsonString method of the relevant subclasses of com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig (or com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.unstructured.BaseOAUnstructuredNeuronConfig for workflow operators). Developers must inherit this component or operator configuration class to implement the corresponding configuration. The structure of each component or operator configuration must be identical to the task configuration structure created on the Dataphin page.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -305,7 +307,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String pluginConfig;
 
         /**
-         * <p>The step name. Step names must be unique within the same pipeline node.</p>
+         * <p>The step name. Step names must be unique within the same pipeline task.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -315,14 +317,14 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String stepName;
 
         /**
-         * <p>The component type. Valid values:</p>
+         * <p>The step type. For pipeline tasks, valid values:</p>
          * <ul>
-         * <li>input: an input component.</li>
-         * <li>output: an output component.</li>
-         * <li>transfrom: a transform component.</li>
-         * <li>process: a flow control component.</li>
+         * <li>input: input component.</li>
+         * <li>output: output component.</li>
+         * <li>transfrom: transform component.</li>
+         * <li>process: flow control component.
+         * For workflow tasks, this indicates the operator type, such as image: image or text: text. Refer to com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig#stepType. Developers must inherit the component or operator configuration class to implement the corresponding configuration. The structure of each configuration must be identical to the configuration structure created on the Dataphin page.</li>
          * </ul>
-         * <p>For workflow nodes, this parameter specifies the operator type, such as image for images and text for text. Refer to the stepType field of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.plugin.OABasePluginConfig. Developers should inherit the component or operator configuration class and implement the corresponding configuration. Each component or operator configuration has the same structure as the configuration created on the Dataphin console.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -380,14 +382,14 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
 
     public static class UpdatePipelineByAsyncRequestUpdateCommandPipelineConfig extends TeaModel {
         /**
-         * <p>The DAG (directed acyclic graph) link configurations that describe the connections between all components.</p>
+         * <p>The directed acyclic graph (DAG) hop configurations that describe the connection relationships among all components.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Hops")
         public java.util.List<UpdatePipelineByAsyncRequestUpdateCommandPipelineConfigHops> hops;
 
         /**
-         * <p>The component configurations, including detailed configurations of all components used.</p>
+         * <p>The step configurations, including the detailed configurations of all used components.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Steps")
@@ -418,7 +420,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
 
     public static class UpdatePipelineByAsyncRequestUpdateCommand extends TeaModel {
         /**
-         * <p>The remarks.</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -427,12 +429,12 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String comment;
 
         /**
-         * <p>The integration pipeline configuration mode. Valid values:</p>
+         * <p>The configuration mode of the integration pipeline. Valid values:</p>
          * <ul>
          * <li>PIPELINE: pipeline mode (default).</li>
-         * <li>JSON: script mode.</li>
+         * <li>JSON: script mode.
+         * Ignore this parameter for workflow tasks.</li>
          * </ul>
-         * <p>This parameter is not applicable to workflow nodes.</p>
          * 
          * <strong>example:</strong>
          * <p>PIPELINE</p>
@@ -441,21 +443,21 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The basic information of the integration pipeline node.</p>
+         * <p>The basic information of the integration pipeline task.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("NodeInfo")
         public UpdatePipelineByAsyncRequestUpdateCommandNodeInfo nodeInfo;
 
         /**
-         * <p>The integration pipeline component configuration.</p>
+         * <p>The component configuration for the integration pipeline.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("PipelineConfig")
         public UpdatePipelineByAsyncRequestUpdateCommandPipelineConfig pipelineConfig;
 
         /**
-         * <p>The integration pipeline configuration in JSON string format for script mode. Workflow nodes do not support script mode.</p>
+         * <p>The integration pipeline configuration in JSON string format for script mode. Workflow tasks do not support script mode.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -464,11 +466,12 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String pipelineJson;
 
         /**
-         * <p>The node type. Valid values:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li>0: batch integration (default).</li>
+         * <li>0: offline integration (default).</li>
          * <li>1: real-time integration.</li>
-         * <li>14: workflow node.</li>
+         * <li>14: workflow task.</li>
+         * <li>15: real-time workflow.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -478,7 +481,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public Integer pipelineType;
 
         /**
-         * <p>The scheduling configuration in JSON string format. Refer to the toJsonString method of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig.</p>
+         * <p>The schedule configuration in JSON string format. Refer to the com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAScheduleConfig#toJsonString method in the utility class.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -488,7 +491,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String scheduleConfig;
 
         /**
-         * <p>The channel configuration in JSON string format. Refer to the toJsonString method of the utility class com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting.</p>
+         * <p>The channel settings in JSON string format. Refer to the com.alibaba.dataphin.pipeline.common.facade.openapi.model.OAPipelineSetting#toJsonString method in the utility class.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -497,7 +500,7 @@ public class UpdatePipelineByAsyncRequest extends TeaModel {
         public String settings;
 
         /**
-         * <p>Specifies whether to submit the node. Default value: true.</p>
+         * <p>Specifies whether to submit the task. Default value: true.</p>
          */
         @NameInMap("Submit")
         public Boolean submit;

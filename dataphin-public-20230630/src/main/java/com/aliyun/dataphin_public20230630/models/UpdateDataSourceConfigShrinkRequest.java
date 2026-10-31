@@ -15,6 +15,8 @@ public class UpdateDataSourceConfigShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateDataSourceConfigShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The data source configuration item change.</p>
+     * <p>The changes to the datasource configuration items.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")

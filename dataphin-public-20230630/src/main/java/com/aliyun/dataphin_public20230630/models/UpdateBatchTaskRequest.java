@@ -360,6 +360,107 @@ public class UpdateBatchTaskRequest extends TeaModel {
 
     }
 
+    public static class UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig extends TeaModel {
+        /**
+         * <p>自定义失败重试间隔。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
+         */
+        @NameInMap("CustomRerunInterval")
+        public String customRerunInterval;
+
+        /**
+         * <p>自定义失败重试次数。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("CustomRerunTimes")
+        public String customRerunTimes;
+
+        /**
+         * <p>是否跟随系统配置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("FollowSystem")
+        public Boolean followSystem;
+
+        public static UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig self = new UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig setCustomRerunInterval(String customRerunInterval) {
+            this.customRerunInterval = customRerunInterval;
+            return this;
+        }
+        public String getCustomRerunInterval() {
+            return this.customRerunInterval;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig setCustomRerunTimes(String customRerunTimes) {
+            this.customRerunTimes = customRerunTimes;
+            return this;
+        }
+        public String getCustomRerunTimes() {
+            return this.customRerunTimes;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig setFollowSystem(Boolean followSystem) {
+            this.followSystem = followSystem;
+            return this;
+        }
+        public Boolean getFollowSystem() {
+            return this.followSystem;
+        }
+
+    }
+
+    public static class UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig extends TeaModel {
+        /**
+         * <p>自定义超时时间。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1800</p>
+         */
+        @NameInMap("CustomValues")
+        public String customValues;
+
+        /**
+         * <p>是否跟随系统配置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("FollowSystem")
+        public Boolean followSystem;
+
+        public static UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig build(java.util.Map<String, ?> map) throws Exception {
+            UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig self = new UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig setCustomValues(String customValues) {
+            this.customValues = customValues;
+            return this;
+        }
+        public String getCustomValues() {
+            return this.customValues;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig setFollowSystem(Boolean followSystem) {
+            this.followSystem = followSystem;
+            return this;
+        }
+        public Boolean getFollowSystem() {
+            return this.followSystem;
+        }
+
+    }
+
     public static class UpdateBatchTaskRequestUpdateCommandParamList extends TeaModel {
         /**
          * <p>The parameter name.</p>
@@ -694,6 +795,15 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public java.util.List<UpdateBatchTaskRequestUpdateCommandContextParamList> contextParamList;
 
         /**
+         * <p>不传时保留任务当前配置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0.5</p>
+         */
+        @NameInMap("CpuResource")
+        public String cpuResource;
+
+        /**
          * <p>The cron expression for automatic scheduling. You can refer to Linux cron expressions.</p>
          * 
          * <strong>example:</strong>
@@ -774,6 +884,18 @@ public class UpdateBatchTaskRequest extends TeaModel {
         public String engine;
 
         /**
+         * <p>失败重试配置。不传时保留任务当前配置。传入时整体替换该配置对象。</p>
+         */
+        @NameInMap("ExecuteRerunConfig")
+        public UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig executeRerunConfig;
+
+        /**
+         * <p>执行超时配置。不传时保留任务当前配置。传入时整体替换该配置对象。</p>
+         */
+        @NameInMap("ExecuteTimeOutConfig")
+        public UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig executeTimeOutConfig;
+
+        /**
          * <p>The ID of the task directory tree node.</p>
          * <p>This parameter is required.</p>
          * 
@@ -782,6 +904,15 @@ public class UpdateBatchTaskRequest extends TeaModel {
          */
         @NameInMap("FileId")
         public Long fileId;
+
+        /**
+         * <p>不传时保留任务当前配置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1024</p>
+         */
+        @NameInMap("MemoryResource")
+        public String memoryResource;
 
         /**
          * <p>The name of the offline task.</p>
@@ -877,6 +1008,18 @@ public class UpdateBatchTaskRequest extends TeaModel {
         @NameInMap("ResourceGroupId")
         public String resourceGroupId;
 
+        @NameInMap("ResourceReferenceList")
+        public java.util.List<String> resourceReferenceList;
+
+        /**
+         * <p>超时重试开关。不传时保留任务当前配置。显式传入false时关闭。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("RetryOnTimeoutEnable")
+        public Boolean retryOnTimeoutEnable;
+
         /**
          * <p>The scheduling cycle. Valid values:</p>
          * <ul>
@@ -899,6 +1042,33 @@ public class UpdateBatchTaskRequest extends TeaModel {
          */
         @NameInMap("SparkClientInfo")
         public UpdateBatchTaskRequestUpdateCommandSparkClientInfo sparkClientInfo;
+
+        /**
+         * <p>不传时保留任务当前配置。显式传入false时关闭。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("SparkDynamicResourceSwitch")
+        public Boolean sparkDynamicResourceSwitch;
+
+        /**
+         * <p>ONLY_PROD表示仅生产环境，PROD_AND_DEV表示生产和开发环境。不传时保留任务当前配置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ONLY_PROD</p>
+         */
+        @NameInMap("SparkResourceEffectScope")
+        public String sparkResourceEffectScope;
+
+        /**
+         * <p>Spark SQL资源配置，键为配置项名称，值为字符串。不传时保留任务当前配置；传入空JSON对象{}时清空配置。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;spark.executor.memory&quot;:&quot;2g&quot;}</p>
+         */
+        @NameInMap("SparkSqlResourceConfigMap")
+        public String sparkSqlResourceConfigMap;
 
         /**
          * <p>The list of node tags. This parameter overwrites all existing tags. If you do not specify this parameter, the original tags remain unchanged.</p>
@@ -999,6 +1169,14 @@ public class UpdateBatchTaskRequest extends TeaModel {
             return this.contextParamList;
         }
 
+        public UpdateBatchTaskRequestUpdateCommand setCpuResource(String cpuResource) {
+            this.cpuResource = cpuResource;
+            return this;
+        }
+        public String getCpuResource() {
+            return this.cpuResource;
+        }
+
         public UpdateBatchTaskRequestUpdateCommand setCronExpression(String cronExpression) {
             this.cronExpression = cronExpression;
             return this;
@@ -1071,12 +1249,36 @@ public class UpdateBatchTaskRequest extends TeaModel {
             return this.engine;
         }
 
+        public UpdateBatchTaskRequestUpdateCommand setExecuteRerunConfig(UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig executeRerunConfig) {
+            this.executeRerunConfig = executeRerunConfig;
+            return this;
+        }
+        public UpdateBatchTaskRequestUpdateCommandExecuteRerunConfig getExecuteRerunConfig() {
+            return this.executeRerunConfig;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setExecuteTimeOutConfig(UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig executeTimeOutConfig) {
+            this.executeTimeOutConfig = executeTimeOutConfig;
+            return this;
+        }
+        public UpdateBatchTaskRequestUpdateCommandExecuteTimeOutConfig getExecuteTimeOutConfig() {
+            return this.executeTimeOutConfig;
+        }
+
         public UpdateBatchTaskRequestUpdateCommand setFileId(Long fileId) {
             this.fileId = fileId;
             return this;
         }
         public Long getFileId() {
             return this.fileId;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setMemoryResource(String memoryResource) {
+            this.memoryResource = memoryResource;
+            return this;
+        }
+        public String getMemoryResource() {
+            return this.memoryResource;
         }
 
         public UpdateBatchTaskRequestUpdateCommand setName(String name) {
@@ -1167,6 +1369,22 @@ public class UpdateBatchTaskRequest extends TeaModel {
             return this.resourceGroupId;
         }
 
+        public UpdateBatchTaskRequestUpdateCommand setResourceReferenceList(java.util.List<String> resourceReferenceList) {
+            this.resourceReferenceList = resourceReferenceList;
+            return this;
+        }
+        public java.util.List<String> getResourceReferenceList() {
+            return this.resourceReferenceList;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setRetryOnTimeoutEnable(Boolean retryOnTimeoutEnable) {
+            this.retryOnTimeoutEnable = retryOnTimeoutEnable;
+            return this;
+        }
+        public Boolean getRetryOnTimeoutEnable() {
+            return this.retryOnTimeoutEnable;
+        }
+
         public UpdateBatchTaskRequestUpdateCommand setSchedulePeriod(String schedulePeriod) {
             this.schedulePeriod = schedulePeriod;
             return this;
@@ -1181,6 +1399,30 @@ public class UpdateBatchTaskRequest extends TeaModel {
         }
         public UpdateBatchTaskRequestUpdateCommandSparkClientInfo getSparkClientInfo() {
             return this.sparkClientInfo;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setSparkDynamicResourceSwitch(Boolean sparkDynamicResourceSwitch) {
+            this.sparkDynamicResourceSwitch = sparkDynamicResourceSwitch;
+            return this;
+        }
+        public Boolean getSparkDynamicResourceSwitch() {
+            return this.sparkDynamicResourceSwitch;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setSparkResourceEffectScope(String sparkResourceEffectScope) {
+            this.sparkResourceEffectScope = sparkResourceEffectScope;
+            return this;
+        }
+        public String getSparkResourceEffectScope() {
+            return this.sparkResourceEffectScope;
+        }
+
+        public UpdateBatchTaskRequestUpdateCommand setSparkSqlResourceConfigMap(String sparkSqlResourceConfigMap) {
+            this.sparkSqlResourceConfigMap = sparkSqlResourceConfigMap;
+            return this;
+        }
+        public String getSparkSqlResourceConfigMap() {
+            return this.sparkSqlResourceConfigMap;
         }
 
         public UpdateBatchTaskRequestUpdateCommand setTaskTagList(java.util.List<String> taskTagList) {

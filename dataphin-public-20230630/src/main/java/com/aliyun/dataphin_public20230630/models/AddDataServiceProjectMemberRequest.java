@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddDataServiceProjectMemberRequest extends TeaModel {
     /**
-     * <p>The command to add project members.</p>
+     * <p>The command to add a project member.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("AddCommand")
@@ -22,6 +22,8 @@ public class AddDataServiceProjectMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -29,7 +31,7 @@ public class AddDataServiceProjectMemberRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The data service project ID.</p>
+     * <p>The Data Service project ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +79,7 @@ public class AddDataServiceProjectMemberRequest extends TeaModel {
 
     public static class AddDataServiceProjectMemberRequestAddCommandProjectMemberList extends TeaModel {
         /**
-         * <p>The username of the user.</p>
+         * <p>The user account.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +89,7 @@ public class AddDataServiceProjectMemberRequest extends TeaModel {
         public String accountName;
 
         /**
-         * <p>The nickname of the user.</p>
+         * <p>The nickname.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -97,11 +99,11 @@ public class AddDataServiceProjectMemberRequest extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The role of the user. Valid values:</p>
+         * <p>The user role. Valid values:</p>
          * <ul>
-         * <li>2: development user</li>
-         * <li>3: application member</li>
-         * <li>4: service project administrator</li>
+         * <li>2: Developer.</li>
+         * <li>3: Application member.</li>
+         * <li>4: Service project administrator.</li>
          * <li>5: O&amp;M user.</li>
          * </ul>
          * <p>This parameter is required.</p>

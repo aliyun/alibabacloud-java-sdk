@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetPhysicalInstanceResponseBody extends TeaModel {
     /**
-     * <p>Error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>HTTP status code</p>
+     * <p>The HTTP status code returned by the backend.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -23,13 +23,13 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>Instance details</p>
+     * <p>The instance details.</p>
      */
     @NameInMap("Instance")
     public GetPhysicalInstanceResponseBodyInstance instance;
 
     /**
-     * <p>Error message</p>
+     * <p>The error message.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>
@@ -38,7 +38,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>75DD06F8-1661-5A6E-B0A6-7E23133BDC60</p>
@@ -47,7 +47,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -110,7 +110,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
 
     public static class GetPhysicalInstanceResponseBodyInstanceNodeInfoCreator extends TeaModel {
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2323111</p>
@@ -119,7 +119,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Username</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
@@ -152,7 +152,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
 
     public static class GetPhysicalInstanceResponseBodyInstanceNodeInfoModifier extends TeaModel {
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2323111</p>
@@ -161,7 +161,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Username</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
@@ -194,7 +194,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
 
     public static class GetPhysicalInstanceResponseBodyInstanceNodeInfoOwnerList extends TeaModel {
         /**
-         * <p>User ID</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2323111</p>
@@ -203,7 +203,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Username</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>zhangsan</p>
@@ -236,7 +236,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
 
     public static class GetPhysicalInstanceResponseBodyInstanceNodeInfo extends TeaModel {
         /**
-         * <p>Business unit name</p>
+         * <p>The business unit name.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -245,7 +245,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String bizUnitName;
 
         /**
-         * <p>Creation time</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-02-02 23:53:17</p>
@@ -254,22 +254,22 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Creator</p>
+         * <p>The creator.</p>
          */
         @NameInMap("Creator")
         public GetPhysicalInstanceResponseBodyInstanceNodeInfoCreator creator;
 
         /**
-         * <p>Description</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx 测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>Indicates whether this is a dry run.</p>
+         * <p>Indicates whether a dry run is performed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -278,7 +278,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public Boolean dryRun;
 
         /**
-         * <p>Source system of the node</p>
+         * <p>The source system of the node.</p>
          * 
          * <strong>example:</strong>
          * <p>DATA_PROCESS</p>
@@ -287,7 +287,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String from;
 
         /**
-         * <p>Indicates whether the development environment exists.</p>
+         * <p>Indicates whether a development environment is available.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -296,7 +296,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public Boolean hasDev;
 
         /**
-         * <p>Indicates whether the production environment exists.</p>
+         * <p>Indicates whether a production environment is available.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -305,7 +305,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public Boolean hasProd;
 
         /**
-         * <p>Node ID</p>
+         * <p>The node ID.</p>
          * 
          * <strong>example:</strong>
          * <p>n_3232312</p>
@@ -314,7 +314,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Last modified time</p>
+         * <p>The last modified time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-02-02 23:53:17</p>
@@ -323,28 +323,28 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String lastModifiedTime;
 
         /**
-         * <p>Modifier</p>
+         * <p>The modifier.</p>
          */
         @NameInMap("Modifier")
         public GetPhysicalInstanceResponseBodyInstanceNodeInfoModifier modifier;
 
         /**
-         * <p>Node name</p>
+         * <p>The node name.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Owner list</p>
+         * <p>The owners.</p>
          */
         @NameInMap("OwnerList")
         public java.util.List<GetPhysicalInstanceResponseBodyInstanceNodeInfoOwnerList> ownerList;
 
         /**
-         * <p>Priority</p>
+         * <p>The priority. Valid values:</p>
          * <ul>
          * <li>HIGHEST</li>
          * <li>HIGH</li>
@@ -357,7 +357,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public java.util.List<String> priorityList;
 
         /**
-         * <p>Resource group list</p>
+         * <p>The resource group.</p>
          */
         @NameInMap("ResourceGroupList")
         public java.util.List<String> resourceGroupList;
@@ -372,7 +372,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public Boolean schedulePaused;
 
         /**
-         * <p>Scheduling period</p>
+         * <p>The scheduling cycle. Valid values:</p>
          * <ul>
          * <li>YEARLY</li>
          * <li>MONTHLY</li>
@@ -386,7 +386,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public java.util.List<String> schedulePeriodList;
 
         /**
-         * <p>Sub-business type</p>
+         * <p>The sub-business type. Valid values:</p>
          * <ul>
          * <li>MAX_COMPUTE_SQL</li>
          * <li>HIVE_SQL</li>
@@ -403,15 +403,15 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String subDetailType;
 
         /**
-         * <p>Node type</p>
+         * <p>The node type. Valid values:</p>
          * <ul>
-         * <li>BBOX_LOGIC_TABLE_NODE: Logical table node</li>
-         * <li>BBOX_LOGIC_FIELD_NODE: Logical field node</li>
-         * <li>BBOX_LOGIC_FIELD_GROUP_NODE: Field group node</li>
-         * <li>BBOX_INNER_TEMP_NODE: Logical table temp node</li>
-         * <li>DATA_PROCESS: Code task</li>
-         * <li>STREAM_TASK_NODE: Real-time task</li>
-         * <li>PIPELINE_NODE: Pipeline node</li>
+         * <li>BBOX_LOGIC_TABLE_NODE: logical table node</li>
+         * <li>BBOX_LOGIC_FIELD_NODE: logical field node</li>
+         * <li>BBOX_LOGIC_FIELD_GROUP_NODE: field group node</li>
+         * <li>BBOX_INNER_TEMP_NODE: logical table temporary node</li>
+         * <li>DATA_PROCESS: code task</li>
+         * <li>STREAM_TASK_NODE: real-time task</li>
+         * <li>PIPELINE_NODE: pipeline node</li>
          * <li>FLINK_BATCH: Flink batch task</li>
          * <li>ODM_NODE: ODM node</li>
          * </ul>
@@ -583,7 +583,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
 
     public static class GetPhysicalInstanceResponseBodyInstance extends TeaModel {
         /**
-         * <p>Business date</p>
+         * <p>The business date.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-25</p>
@@ -592,7 +592,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String bizDate;
 
         /**
-         * <p>Scheduled time</p>
+         * <p>The scheduled time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-27 00:30:00</p>
@@ -601,7 +601,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String dueTime;
 
         /**
-         * <p>Execution duration</p>
+         * <p>The execution duration.</p>
          * 
          * <strong>example:</strong>
          * <p>3600s</p>
@@ -610,7 +610,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>End execution time</p>
+         * <p>The end time of the execution.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-27 02:30:00</p>
@@ -619,7 +619,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public Long endExecuteTime;
 
         /**
-         * <p>Extended information</p>
+         * <p>The extended information.</p>
          * 
          * <strong>example:</strong>
          * <p>xx</p>
@@ -628,7 +628,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String extendInfo;
 
         /**
-         * <p>Instance ID</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>t_23231</p>
@@ -637,7 +637,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>Running instance index</p>
+         * <p>The sequence number of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -646,13 +646,13 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public Integer index;
 
         /**
-         * <p>Node details</p>
+         * <p>The node details.</p>
          */
         @NameInMap("NodeInfo")
         public GetPhysicalInstanceResponseBodyInstanceNodeInfo nodeInfo;
 
         /**
-         * <p>Start execution time</p>
+         * <p>The start time of the execution.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-06-27 01:30:00</p>
@@ -661,7 +661,7 @@ public class GetPhysicalInstanceResponseBody extends TeaModel {
         public Long startExecuteTime;
 
         /**
-         * <p>Status list</p>
+         * <p>The status list.</p>
          */
         @NameInMap("StatusList")
         public java.util.List<String> statusList;

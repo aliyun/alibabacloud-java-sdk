@@ -22,6 +22,8 @@ public class ListOperationRecordRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,7 +61,7 @@ public class ListOperationRecordRequest extends TeaModel {
 
     public static class ListOperationRecordRequestListCommand extends TeaModel {
         /**
-         * <p>The end of the start time range. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The end time of the time range. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-31 23:59:59</p>
@@ -68,7 +70,7 @@ public class ListOperationRecordRequest extends TeaModel {
         public String beginTimeEnd;
 
         /**
-         * <p>The beginning of the start time range. Format: yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The start time of the time range. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-01-01 00:00:00</p>
@@ -92,7 +94,7 @@ public class ListOperationRecordRequest extends TeaModel {
         public java.util.List<Integer> codeType;
 
         /**
-         * <p>The list of duration ranges.</p>
+         * <p>The list of durations.</p>
          */
         @NameInMap("Duration")
         public java.util.List<Integer> duration;
@@ -101,7 +103,7 @@ public class ListOperationRecordRequest extends TeaModel {
          * <p>The script name.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试脚本</p>
+         * <p>Test script</p>
          */
         @NameInMap("FileName")
         public String fileName;
@@ -143,7 +145,7 @@ public class ListOperationRecordRequest extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The sort type. Valid values: 0 (start time ascending), 1 (start time descending), 2 (object name).</p>
+         * <p>The sort type. Valid values: 0: Ascending order by start time. 1: Descending order by start time. 2: Object name.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

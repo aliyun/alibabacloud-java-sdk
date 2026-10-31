@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetBelongAssetMappingRequest extends TeaModel {
     /**
-     * <p>Query command.</p>
+     * <p>The query command.</p>
      */
     @NameInMap("AssetMappingQuery")
     public GetBelongAssetMappingRequestAssetMappingQuery assetMappingQuery;
 
     /**
-     * <p>Tenant ID.</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,6 +21,8 @@ public class GetBelongAssetMappingRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -58,7 +60,7 @@ public class GetBelongAssetMappingRequest extends TeaModel {
 
     public static class GetBelongAssetMappingRequestAssetMappingQuery extends TeaModel {
         /**
-         * <p>The GUID of the belonging asset.</p>
+         * <p>The GUID of the owning asset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -68,7 +70,7 @@ public class GetBelongAssetMappingRequest extends TeaModel {
         public String belongGuid;
 
         /**
-         * <p>The mapping relationship type. Valid values: VALID (mapped) and INVALID (invalid mapping).</p>
+         * <p>The type of the mapping relationship. Valid values: VALID (mapped) and INVALID (invalid mapping).</p>
          * 
          * <strong>example:</strong>
          * <p>VALID</p>

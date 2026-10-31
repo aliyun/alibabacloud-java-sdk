@@ -47,7 +47,7 @@ public class PublishKgSchemaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class PublishKgSchemaResponseBody extends TeaModel {
 
     public static class PublishKgSchemaResponseBodyData extends TeaModel {
         /**
-         * <p>The expected latest model version number after the publish operation.</p>
+         * <p>The expected latest model version number after publishing.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

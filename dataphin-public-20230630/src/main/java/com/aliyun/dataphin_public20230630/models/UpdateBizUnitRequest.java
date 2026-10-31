@@ -15,6 +15,8 @@ public class UpdateBizUnitRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user that performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -85,14 +87,14 @@ public class UpdateBizUnitRequest extends TeaModel {
 
     public static class UpdateBizUnitRequestUpdateCommand extends TeaModel {
         /**
-         * <p>The domain architects.</p>
+         * <p>The business unit architects.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("BizUnitAccountList")
         public java.util.List<UpdateBizUnitRequestUpdateCommandBizUnitAccountList> bizUnitAccountList;
 
         /**
-         * <p>The data domain ID.</p>
+         * <p>The business unit ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -111,17 +113,17 @@ public class UpdateBizUnitRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The display name of the data domain.</p>
+         * <p>The display name of the business unit.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The preset icon. For more information, refer to the create data domain operation.</p>
+         * <p>The preset icon. For more information, refer to the Create business unit operation.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -131,7 +133,7 @@ public class UpdateBizUnitRequest extends TeaModel {
         public String icon;
 
         /**
-         * <p>The data domain code.</p>
+         * <p>The business unit code.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -15,6 +15,8 @@ public class UpdateTenantComputeEngineRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,7 +61,7 @@ public class UpdateTenantComputeEngineRequest extends TeaModel {
 
     public static class UpdateTenantComputeEngineRequestUpdateCommand extends TeaModel {
         /**
-         * <p>The list of cluster node endpoints.</p>
+         * <p>The cluster node connection list.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("ClusterUrlList")

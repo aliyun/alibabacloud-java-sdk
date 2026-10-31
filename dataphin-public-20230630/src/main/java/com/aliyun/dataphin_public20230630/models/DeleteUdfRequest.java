@@ -9,13 +9,13 @@ public class DeleteUdfRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>测试</p>
+     * <p>Test</p>
      */
     @NameInMap("Comment")
     public String comment;
 
     /**
-     * <p>The ID of the user-defined function.</p>
+     * <p>The ID of the custom function.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +35,8 @@ public class DeleteUdfRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator user.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

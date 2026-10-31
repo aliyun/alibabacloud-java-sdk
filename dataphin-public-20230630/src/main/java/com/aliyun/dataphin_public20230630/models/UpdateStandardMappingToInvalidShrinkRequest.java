@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateStandardMappingToInvalidShrinkRequest extends TeaModel {
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class UpdateStandardMappingToInvalidShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateStandardMappingToInvalidShrinkRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Update Command</p>
+     * <p>The update instruction.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")

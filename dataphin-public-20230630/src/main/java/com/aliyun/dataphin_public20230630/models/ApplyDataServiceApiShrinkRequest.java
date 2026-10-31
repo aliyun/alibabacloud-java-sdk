@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ApplyDataServiceApiShrinkRequest extends TeaModel {
     /**
-     * <p>The apply command.</p>
+     * <p>The application command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ApplyCommand")
@@ -22,6 +22,8 @@ public class ApplyDataServiceApiShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAdHocTaskResultResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class GetAdHocTaskResultResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetAdHocTaskResultResponseBody extends TeaModel {
 
     public static class GetAdHocTaskResultResponseBodyExecuteResult extends TeaModel {
         /**
-         * <p>The task execution result.</p>
+         * <p>The execution result of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -116,7 +116,7 @@ public class GetAdHocTaskResultResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The ID of the corresponding scheduling task.</p>
+         * <p>The ID of the corresponding scheduled task.</p>
          * 
          * <strong>example:</strong>
          * <p>t_2242892326444990464_20210125_2242892326444990465</p>

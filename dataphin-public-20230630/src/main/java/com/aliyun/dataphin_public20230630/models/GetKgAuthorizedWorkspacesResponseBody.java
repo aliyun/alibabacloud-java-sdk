@@ -47,7 +47,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -119,7 +119,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
          * <p>The name of the workspace role.</p>
          * 
          * <strong>example:</strong>
-         * <p>Storage management</p>
+         * <p>Storage management administrator</p>
          */
         @NameInMap("Name")
         public String name;
@@ -149,7 +149,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
 
     public static class GetKgAuthorizedWorkspacesResponseBodyDataWorkspaceList extends TeaModel {
         /**
-         * <p>The description of the knowledge graph workspace.</p>
+         * <p>The description of the graph workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -158,7 +158,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The creation time of the knowledge graph workspace.</p>
+         * <p>The time when the graph workspace was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-25 12:34:56</p>
@@ -167,7 +167,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The latest publish time of the knowledge graph workspace. This value is empty if the workspace has never been published successfully.</p>
+         * <p>The latest publish time of the graph workspace. This parameter is empty if the workspace has never been successfully published.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-25 12:34:56</p>
@@ -176,7 +176,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
         public String lastPublishTime;
 
         /**
-         * <p>The latest publish version number of the knowledge graph workspace. This value is empty if the workspace has never been published successfully.</p>
+         * <p>The latest publish version of the graph workspace. This parameter is empty if the workspace has never been successfully published.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -185,7 +185,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
         public Integer lastPublishVersion;
 
         /**
-         * <p>The name of the knowledge graph workspace.</p>
+         * <p>The name of the graph workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -194,13 +194,13 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of roles assigned to the specified user in the workspace. This is an empty list if the user is not a member of the workspace.</p>
+         * <p>The list of roles of the specified user in the workspace. This list is empty if the user is not a member of the workspace.</p>
          */
         @NameInMap("RoleList")
         public java.util.List<GetKgAuthorizedWorkspacesResponseBodyDataWorkspaceListRoleList> roleList;
 
         /**
-         * <p>The ID of the knowledge graph workspace.</p>
+         * <p>The ID of the graph workspace.</p>
          * 
          * <strong>example:</strong>
          * <p>abc1011</p>
@@ -273,7 +273,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
 
     public static class GetKgAuthorizedWorkspacesResponseBodyData extends TeaModel {
         /**
-         * <p>The total number of knowledge graph workspaces that the user has permissions on.</p>
+         * <p>The total number of authorized graph workspaces.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -282,7 +282,7 @@ public class GetKgAuthorizedWorkspacesResponseBody extends TeaModel {
         public Integer totalCount;
 
         /**
-         * <p>The list of knowledge graph workspaces that the user has permissions on.</p>
+         * <p>The list of authorized graph workspaces.</p>
          */
         @NameInMap("WorkspaceList")
         public java.util.List<GetKgAuthorizedWorkspacesResponseBodyDataWorkspaceList> workspaceList;

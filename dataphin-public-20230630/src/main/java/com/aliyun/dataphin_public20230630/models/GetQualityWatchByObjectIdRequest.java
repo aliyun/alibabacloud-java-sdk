@@ -15,6 +15,8 @@ public class GetQualityWatchByObjectIdRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class GetQualityWatchByObjectIdRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The object ID, such as a table ID, datasource ID, or metric ID.</p>
+     * <p>The ID of the object, such as the table ID, data source ID, or metric ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,10 +37,10 @@ public class GetQualityWatchByObjectIdRequest extends TeaModel {
      * <p>The monitored object type. Valid values:</p>
      * <ul>
      * <li>TABLE: Dataphin table.</li>
-     * <li>DATASOURCE_TABLE: global table.</li>
-     * <li>DATASOURCE: datasource.</li>
-     * <li>INDEX: metric.</li>
-     * <li>REALTIME_LOGICAL_TABLE: real-time meta table.</li>
+     * <li>DATASOURCE_TABLE: Global table.</li>
+     * <li>DATASOURCE: Data source.</li>
+     * <li>INDEX: Metric.</li>
+     * <li>REALTIME_LOGICAL_TABLE: Real-time metatable.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

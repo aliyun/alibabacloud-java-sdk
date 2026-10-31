@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateBizMetricRequest extends TeaModel {
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class UpdateBizMetricRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateBizMetricRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Update request</p>
+     * <p>The update request.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateBizMetricCommand")
@@ -59,7 +61,7 @@ public class UpdateBizMetricRequest extends TeaModel {
 
     public static class UpdateBizMetricRequestUpdateBizMetricCommandCustomAttribute extends TeaModel {
         /**
-         * <p>Custom attribute code</p>
+         * <p>The code of the custom attribute.</p>
          * 
          * <strong>example:</strong>
          * <p>CustomAttributeCode</p>
@@ -68,7 +70,7 @@ public class UpdateBizMetricRequest extends TeaModel {
         public String code;
 
         /**
-         * <p>List of attribute values. 1. For custom input and single-select dropdown attributes, only the first value in the list is read. 2. For multi-select dropdown attributes, all values in the list are read. 3. For hyperlink attributes, the first value is used as the display text and the second value is used as the link URL.</p>
+         * <p>The attribute values. 1. For custom input and drop-down single-select attributes, only the first attribute value in the list is read. 2. For drop-down multi-select attributes, all attribute values in the list are read. 3. For hyperlink attributes, the first attribute value in the list is read as the display text, and the second attribute value is read as the redirect link.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -98,7 +100,7 @@ public class UpdateBizMetricRequest extends TeaModel {
 
     public static class UpdateBizMetricRequestUpdateBizMetricCommandRelatedBizMetrics extends TeaModel {
         /**
-         * <p>Business metric name</p>
+         * <p>The name of the business metric.</p>
          * 
          * <strong>example:</strong>
          * <p>Metric2</p>
@@ -107,7 +109,12 @@ public class UpdateBizMetricRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Correlation type. Valid values: POSITIVE (positive correlation), NEGATIVE (negative correlation), and OTHER (other)</p>
+         * <p>The relationship type. Valid values:</p>
+         * <ul>
+         * <li>POSITIVE: Positive correlation.</li>
+         * <li>NEGATIVE: Negative correlation.</li>
+         * <li>OTHER: Other.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>POSITIVE</p>
@@ -140,7 +147,12 @@ public class UpdateBizMetricRequest extends TeaModel {
 
     public static class UpdateBizMetricRequestUpdateBizMetricCommandViewScope extends TeaModel {
         /**
-         * <p>Visibility scope type. Valid values: ALL_USERS_CAN_VIEW (visible to all users), PART_USERS_CAN_VIEW (visible to specified users), and PART_USERS_CAN_NOT_VIEW (invisible to specified users)</p>
+         * <p>The visibility scope type. Valid values:</p>
+         * <ul>
+         * <li>ALL_USERS_CAN_VIEW: Visible to all users.</li>
+         * <li>PART_USERS_CAN_VIEW: Visible to specific users.</li>
+         * <li>PART_USERS_CAN_NOT_VIEW: Invisible to specific users.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ALL_USERS_CAN_VIEW</p>
@@ -149,13 +161,13 @@ public class UpdateBizMetricRequest extends TeaModel {
         public String scopeType;
 
         /**
-         * <p>Enter user group names. This parameter is read only when the visibility scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW</p>
+         * <p>The user group names. This parameter is read only when the visibility scope of the asset is set to Visible to specific users or Invisible to specific users.</p>
          */
         @NameInMap("UserGroupNames")
         public java.util.List<String> userGroupNames;
 
         /**
-         * <p>Enter the usernames of individual accounts. This parameter takes effect only when the visibility scope is set to PART_USERS_CAN_VIEW or PART_USERS_CAN_NOT_VIEW</p>
+         * <p>The usernames of individual accounts. This parameter is valid only when the visibility scope of the asset is set to Visible to specific users or Invisible to specific users.</p>
          */
         @NameInMap("UserNames")
         public java.util.List<String> userNames;
@@ -193,13 +205,13 @@ public class UpdateBizMetricRequest extends TeaModel {
 
     public static class UpdateBizMetricRequestUpdateBizMetricCommand extends TeaModel {
         /**
-         * <p>List of associated technical metrics. Enter the full name of the technical metric in the format of &quot;TableFullName.MetricName&quot;, where &quot;TableFullName&quot; equals &quot;AssetSource.TableName&quot;. A technical metric can only be associated with one business metric and cannot be associated repeatedly</p>
+         * <p>The associated technical metrics. Enter the technical metric in the &quot;Full table name.Metric name&quot; format, where the &quot;Full table name&quot; is equal to &quot;Asset source.Table name&quot;. A technical metric can be associated with only one business metric and cannot be repeatedly associated.</p>
          */
         @NameInMap("AssociatedTechMetricFullNames")
         public java.util.List<String> associatedTechMetricFullNames;
 
         /**
-         * <p>Business owner. Enter the username of the owner account</p>
+         * <p>The business owner. Enter the username of the owner\&quot;s account.</p>
          * 
          * <strong>example:</strong>
          * <p>SuperAdmin</p>
@@ -208,19 +220,19 @@ public class UpdateBizMetricRequest extends TeaModel {
         public String bizOwnerName;
 
         /**
-         * <p>List of catalog IDs</p>
+         * <p>The IDs of the parent folders.</p>
          */
         @NameInMap("CatalogIds")
         public java.util.List<Long> catalogIds;
 
         /**
-         * <p>List of custom attributes. Enter the attribute code and attribute values for each</p>
+         * <p>The custom attributes. Enter the attribute code and attribute value separately.</p>
          */
         @NameInMap("CustomAttribute")
         public java.util.List<UpdateBizMetricRequestUpdateBizMetricCommandCustomAttribute> customAttribute;
 
         /**
-         * <p>Description</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>Metric Desc</p>
@@ -229,7 +241,7 @@ public class UpdateBizMetricRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>Display name</p>
+         * <p>The display name.</p>
          * 
          * <strong>example:</strong>
          * <p>Metric1_DisplayName</p>
@@ -238,13 +250,13 @@ public class UpdateBizMetricRequest extends TeaModel {
         public String displayName;
 
         /**
-         * <p>Asset labels</p>
+         * <p>The asset labels.</p>
          */
         @NameInMap("Labels")
         public java.util.List<String> labels;
 
         /**
-         * <p>Metric definition. To reference other business metrics, enclose the metric name in square brackets [ ]</p>
+         * <p>The metric definition. To reference other business metrics, enclose the metric names in half-width square brackets [].</p>
          * 
          * <strong>example:</strong>
          * <p>[Metric2]+[Metric3]</p>
@@ -253,7 +265,7 @@ public class UpdateBizMetricRequest extends TeaModel {
         public String metricDefinition;
 
         /**
-         * <p>This parameter is read only when the metric relationship diagram is enabled. Only a calculation expression composed of metric names selected from related business metrics is supported. Supported operators include +, -, *, /, (), %, and ∑. Each metric name must be enclosed in square brackets [ ]. If no operator is specified between two metrics, the system automatically fills in a placeholder. If no metric relationship expression is configured, the metric relationship diagram switch is automatically disabled</p>
+         * <p>The expression for the metric relationship diagram. This parameter is read only when the metric relationship diagram is enabled. You can only enter a calculation expression composed of metric names selected from the related business metrics. The supported operators are +, -, *, /, (), %, and ∑. Each metric name must be enclosed in half-width square brackets []. If no operator is specified between two metrics, the system automatically adds padding as a placeholder. If the metric relational expression is not configured, a shutdown of the metric relationship diagram switch is automatically triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>[Metric1]+[Metric2]</p>
@@ -262,7 +274,12 @@ public class UpdateBizMetricRequest extends TeaModel {
         public String metricRelationDiagramExpression;
 
         /**
-         * <p>Metric relationship diagram switch. Valid values: true (enabled) and false (disabled). This can be enabled only when at least one related business metric exists. Otherwise, it is automatically disabled</p>
+         * <p>Specifies whether to enable the metric relationship diagram. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.
+         * This switch can be enabled only when at least one related business metric exists. Otherwise, it is automatically disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -271,7 +288,7 @@ public class UpdateBizMetricRequest extends TeaModel {
         public Boolean metricRelationDiagramSwitchOpen;
 
         /**
-         * <p>Enter the name of the business metric to update</p>
+         * <p>The name of the business metric to update.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -281,7 +298,7 @@ public class UpdateBizMetricRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The new name. Enter this when you need to modify the metric name</p>
+         * <p>The new name. Specify this parameter when you need to modify the metric name.</p>
          * 
          * <strong>example:</strong>
          * <p>Metric1_new</p>
@@ -290,7 +307,7 @@ public class UpdateBizMetricRequest extends TeaModel {
         public String newName;
 
         /**
-         * <p>Content of the usage instructions. Only text format is supported</p>
+         * <p>The content of the usage instructions. Only text format is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>content test</p>
@@ -299,7 +316,11 @@ public class UpdateBizMetricRequest extends TeaModel {
         public String operateInstructionContent;
 
         /**
-         * <p>Specifies whether the usage instructions are enabled. Valid values: true (enabled) and false (disabled)</p>
+         * <p>Specifies whether to enable the usage instructions. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -308,13 +329,13 @@ public class UpdateBizMetricRequest extends TeaModel {
         public Boolean operateInstructionEnabled;
 
         /**
-         * <p>List of related business metrics</p>
+         * <p>The related business metrics.</p>
          */
         @NameInMap("RelatedBizMetrics")
         public java.util.List<UpdateBizMetricRequestUpdateBizMetricCommandRelatedBizMetrics> relatedBizMetrics;
 
         /**
-         * <p>Visibility scope</p>
+         * <p>The visibility scope.</p>
          */
         @NameInMap("ViewScope")
         public UpdateBizMetricRequestUpdateBizMetricCommandViewScope viewScope;

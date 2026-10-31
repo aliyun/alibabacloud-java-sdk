@@ -22,7 +22,7 @@ public class CreateComputeSourceShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator.</p>
+     * <p>The ID of the operating user.</p>
      * 
      * <strong>example:</strong>
      * <p>30001011</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAdHocTaskLogResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is normal.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
 
     public static class GetAdHocTaskLogResponseBodyLogInfo extends TeaModel {
         /**
-         * <p>The runtime log content.</p>
+         * <p>The execution log.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -116,19 +116,19 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         public String content;
 
         /**
-         * <p>Indicates whether the next log entry exists.</p>
+         * <p>Indicates whether more log entries exist.</p>
          */
         @NameInMap("HasNext")
         public Boolean hasNext;
 
         /**
-         * <p>Indicates whether the current query produces a result.</p>
+         * <p>Indicates whether the current query will generate results.</p>
          */
         @NameInMap("HasResult")
         public Boolean hasResult;
 
         /**
-         * <p>The start position of the next log entry.</p>
+         * <p>The starting position of the next log entry.</p>
          * 
          * <strong>example:</strong>
          * <p>2021</p>
@@ -155,7 +155,7 @@ public class GetAdHocTaskLogResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The task running status. Example: WAIT_RESOURCE indicates that the task is waiting for resources.</p>
+         * <p>The execution status of the task. Valid values: WAIT_RESOURCE (waiting for resources).</p>
          * 
          * <strong>example:</strong>
          * <p>WAIT_RESOURCE</p>

@@ -15,6 +15,8 @@ public class UpdateDataServiceAppGroupRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The user ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -73,7 +75,7 @@ public class UpdateDataServiceAppGroupRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>默认应用分组</p>
+         * <p>Default application group</p>
          */
         @NameInMap("GroupName")
         public String groupName;

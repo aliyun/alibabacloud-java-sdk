@@ -9,13 +9,13 @@ public class GetStandardWordRootRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>平均值</p>
+     * <p>Average</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
-     * <p>Specifies whether to allow a null value to be returned when the word root does not exist. If set to false, an exception is thrown. Default value: true.</p>
+     * <p>Specifies whether to allow a null value to be returned when the word root does not exist. If this parameter is set to false, an exception is thrown. Default value: true.</p>
      */
     @NameInMap("Nullable")
     public Boolean nullable;
@@ -31,6 +31,8 @@ public class GetStandardWordRootRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

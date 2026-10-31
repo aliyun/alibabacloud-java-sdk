@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitQualityRuleTasksRequest extends TeaModel {
     /**
-     * <p>Tenant ID</p>
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,6 +15,8 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>Submit command</p>
+     * <p>The submit command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SubmitCommand")
@@ -59,7 +61,7 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
 
     public static class SubmitQualityRuleTasksRequestSubmitCommandWatchRuleIdList extends TeaModel {
         /**
-         * <p>Rule ID</p>
+         * <p>The rule ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -69,7 +71,7 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
         public Long ruleId;
 
         /**
-         * <p>Monitoring object ID</p>
+         * <p>The monitored object ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -103,7 +105,7 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
 
     public static class SubmitQualityRuleTasksRequestSubmitCommand extends TeaModel {
         /**
-         * <p>Business date, format: yyyy-MM-dd</p>
+         * <p>The business date. Format: yyyy-MM-dd.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30</p>
@@ -112,14 +114,18 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
         public String bizDate;
 
         /**
-         * <p>Whether it is a test run: true for test run, false for formal run.</p>
+         * <p>Specifies whether to perform a test run. Valid values:</p>
+         * <ul>
+         * <li>true: performs a test run.</li>
+         * <li>false: performs a formal run.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          */
         @NameInMap("IsTestRun")
         public Boolean isTestRun;
 
         /**
-         * <p>Partition expression - custom expression</p>
+         * <p>The custom partition expression.</p>
          * 
          * <strong>example:</strong>
          * <p>ds=${yyyyMMdd}</p>
@@ -128,7 +134,11 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
         public String partitionExpression;
 
         /**
-         * <p>Source of the test run partition expression: SCHEDULE for existing schedule, CUSTOM for custom.</p>
+         * <p>The source of the partition expression for the test run. Valid values:</p>
+         * <ul>
+         * <li>SCHEDULE: existing schedule.</li>
+         * <li>CUSTOM: custom expression.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
@@ -137,7 +147,7 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
         public String partitionExpressionFrom;
 
         /**
-         * <p>Existing schedule ID</p>
+         * <p>The ID of the existing schedule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -146,7 +156,7 @@ public class SubmitQualityRuleTasksRequest extends TeaModel {
         public Long scheduleId;
 
         /**
-         * <p>Monitoring object and rule IDs</p>
+         * <p>The monitored object and rule IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("WatchRuleIdList")

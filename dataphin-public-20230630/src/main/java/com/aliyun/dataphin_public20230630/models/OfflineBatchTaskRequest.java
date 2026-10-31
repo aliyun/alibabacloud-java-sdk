@@ -15,7 +15,7 @@ public class OfflineBatchTaskRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The node ID in the node directory tree.</p>
+     * <p>The node ID in the task directory tree.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,6 +35,8 @@ public class OfflineBatchTaskRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

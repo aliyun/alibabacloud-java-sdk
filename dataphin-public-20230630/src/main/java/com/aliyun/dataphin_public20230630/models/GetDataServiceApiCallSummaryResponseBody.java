@@ -14,7 +14,7 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The aggregate statistics of API calls.</p>
+     * <p>The call summary.</p>
      */
     @NameInMap("Data")
     public GetDataServiceApiCallSummaryResponseBodyData data;
@@ -47,7 +47,7 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -116,7 +116,7 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         public Long callCount;
 
         /**
-         * <p>The number of APIs with call errors.</p>
+         * <p>The number of APIs that have call exceptions.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -125,7 +125,7 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         public Long errorApiCount;
 
         /**
-         * <p>The number of applications affected by errors.</p>
+         * <p>The number of apps affected by exceptions.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -134,7 +134,7 @@ public class GetDataServiceApiCallSummaryResponseBody extends TeaModel {
         public Long errorAppCount;
 
         /**
-         * <p>The number of failed calls.</p>
+         * <p>The number of call exceptions.</p>
          * 
          * <strong>example:</strong>
          * <p>102</p>

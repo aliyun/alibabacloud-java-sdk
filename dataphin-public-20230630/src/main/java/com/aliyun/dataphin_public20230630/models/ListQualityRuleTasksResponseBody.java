@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListQualityRuleTasksResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
+     * <p>The backend response code.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -23,7 +23,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The error details.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -152,7 +152,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of the rule task.</p>
+         * <p>The rule task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -224,7 +224,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public String validateObjectName;
 
         /**
-         * <p>The object type of the validated object.</p>
+         * <p>The validated object type.</p>
          * 
          * <strong>example:</strong>
          * <p>column</p>
@@ -233,7 +233,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public String validateObjectType;
 
         /**
-         * <p>The validation partition.</p>
+         * <p>The validated partition.</p>
          * 
          * <strong>example:</strong>
          * <p>20251011</p>
@@ -242,13 +242,13 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public String validatePartition;
 
         /**
-         * <p>Indicates whether the validation passed.</p>
+         * <p>Indicates whether the validation is successful.</p>
          */
         @NameInMap("ValidateSuccess")
         public Boolean validateSuccess;
 
         /**
-         * <p>The ID of the associated quality watchtask.</p>
+         * <p>The watch ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -257,7 +257,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
         public Long watchId;
 
         /**
-         * <p>The ID of the quality watchtask. This ID is empty for trial-run rule tasks.</p>
+         * <p>The watch task ID. This ID is empty for trial run tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -418,7 +418,7 @@ public class ListQualityRuleTasksResponseBody extends TeaModel {
 
     public static class ListQualityRuleTasksResponseBodyPageResult extends TeaModel {
         /**
-         * <p>The list of quality rule tasks.</p>
+         * <p>The paged quality rule task list.</p>
          */
         @NameInMap("QualityRuleTaskList")
         public java.util.List<ListQualityRuleTasksResponseBodyPageResultQualityRuleTaskList> qualityRuleTaskList;

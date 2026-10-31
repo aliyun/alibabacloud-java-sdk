@@ -11,7 +11,7 @@ public class GetAlertEventResponseBody extends TeaModel {
     public GetAlertEventResponseBodyAlertEventInfo alertEventInfo;
 
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class GetAlertEventResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -119,18 +119,17 @@ public class GetAlertEventResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The source system type. Valid values:</p>
+         * <p>The source system. Valid values:</p>
          * <ul>
          * <li>ALL: all systems</li>
          * <li>DQE: data quality</li>
          * <li>OS: data service</li>
          * <li>STREAM: real-time computing</li>
-         * <li>VDM_BATCH: batch computing</li>
+         * <li>VDM_BATCH: offline computing</li>
          * <li>SOP: O&amp;M platform</li>
          * <li>REAL_TIME_PIPELINE: real-time integration</li>
          * <li>KGB: baseline monitoring</li>
          * </ul>
-         * <p>and more.</p>
          * 
          * <strong>example:</strong>
          * <p>ALL</p>
@@ -139,7 +138,7 @@ public class GetAlertEventResponseBody extends TeaModel {
         public String sourceSystemType;
 
         /**
-         * <p>The alerting object type. Valid values:</p>
+         * <p>The alert object type. Valid values:</p>
          * <ul>
          * <li>OS_API: API operation</li>
          * <li>OS_APPLICATION_SERVICE: service application</li>
@@ -168,7 +167,6 @@ public class GetAlertEventResponseBody extends TeaModel {
          * <li>QD_DECISION_INVOKE: QD decision invocation</li>
          * <li>BASELINE: baseline</li>
          * </ul>
-         * <p>and more.</p>
          * 
          * <strong>example:</strong>
          * <p>VDM_BATCH_PYTHON37</p>
@@ -209,7 +207,7 @@ public class GetAlertEventResponseBody extends TeaModel {
 
     public static class GetAlertEventResponseBodyAlertEventInfoAlertReasonAlertReasonParamList extends TeaModel {
         /**
-         * <p>The name of the alert reason parameter.</p>
+         * <p>The name of the alert cause parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>biz_date</p>
@@ -218,7 +216,7 @@ public class GetAlertEventResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the alert reason parameter.</p>
+         * <p>The value of the alert cause parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-04 00:00:00</p>
@@ -251,7 +249,7 @@ public class GetAlertEventResponseBody extends TeaModel {
 
     public static class GetAlertEventResponseBodyAlertEventInfoAlertReason extends TeaModel {
         /**
-         * <p>The list of alert reason parameters.</p>
+         * <p>The list of alert cause parameters.</p>
          */
         @NameInMap("AlertReasonParamList")
         public java.util.List<GetAlertEventResponseBodyAlertEventInfoAlertReasonAlertReasonParamList> alertReasonParamList;
@@ -266,7 +264,7 @@ public class GetAlertEventResponseBody extends TeaModel {
         public String bizDate;
 
         /**
-         * <p>The type of the alert reason. Valid values:</p>
+         * <p>The type of the alert cause. Valid values:</p>
          * <ul>
          * <li>DQE_COLUMN: field rule exception</li>
          * <li>DQE_DATA_SOURCE: data source rule exception</li>
@@ -277,19 +275,19 @@ public class GetAlertEventResponseBody extends TeaModel {
          * <li>OS_AVG_RESPONSE: average response time exception</li>
          * <li>OS_CALL_TIMES: call count exception</li>
          * <li>OS_ERROR_RATE: error rate exception</li>
-         * <li>OS_OFFLINE: Offline percentage exception</li>
-         * <li>STREAM_BIZ_DELAY: business delay too high</li>
-         * <li>STREAM_DATA_RETENTION: data retention exceeds configuration</li>
-         * <li>STREAM_MORE_THAN_FAILURE: failure frequency exceeds configuration</li>
+         * <li>OS_OFFLINE: offline percentage exception</li>
+         * <li>STREAM_BIZ_DELAY: high business latency</li>
+         * <li>STREAM_DATA_RETENTION: data retention exceeds the configuration</li>
+         * <li>STREAM_MORE_THAN_FAILURE: failure frequency exceeds the configuration</li>
          * <li>STREAM_TPS_OUT_RANGE: TPS out of range</li>
-         * <li>STREAM_CHECKPOINT_FAILURE: checkpoint failures exceed configuration</li>
-         * <li>STREAM_BACKPRESSURE: backpressure duration exceeds configuration</li>
-         * <li>STREAM_JOB_FAILURE: job failure</li>
-         * <li>VDM_BATCH_ERROR: error</li>
-         * <li>VDM_BATCH_FINISH: completed</li>
-         * <li>VDM_BATCH_TIME_OUT: execution timeout</li>
-         * <li>VDM_BATCH_UNDONE: incomplete</li>
-         * <li>VDM_BATCH_LOGIC_DATA_DELAY: data delay</li>
+         * <li>STREAM_CHECKPOINT_FAILURE: checkpoint failures exceed the configuration</li>
+         * <li>STREAM_BACKPRESSURE: backpressure duration exceeds the configuration</li>
+         * <li>STREAM_JOB_FAILURE: job execution failed</li>
+         * <li>VDM_BATCH_ERROR: batch task error</li>
+         * <li>VDM_BATCH_FINISH: batch task completed</li>
+         * <li>VDM_BATCH_TIME_OUT: batch task timed out</li>
+         * <li>VDM_BATCH_UNDONE: batch task unfinished</li>
+         * <li>VDM_BATCH_LOGIC_DATA_DELAY: data latency</li>
          * <li>QD_DECISION_CALL_TIMES: decision call count exception</li>
          * <li>QD_DECISION_MAX_RESPONSE: maximum response time exception</li>
          * <li>QD_DECISION_ERROR_RATE: error rate exception</li>
@@ -301,9 +299,8 @@ public class GetAlertEventResponseBody extends TeaModel {
          * <li>KGB_TASK_ERROR: baseline task error</li>
          * <li>KGB_TASK_SLOW_DOWN: baseline task slowdown</li>
          * <li>KGB_EARLY_WARNING: baseline early warning</li>
-         * <li>KGB_BROKEN_LINE: baseline breach</li>
+         * <li>KGB_BROKEN_LINE: baseline broken</li>
          * </ul>
-         * <p>and more.</p>
          * 
          * <strong>example:</strong>
          * <p>VDM_BATCH_FINISH</p>
@@ -407,11 +404,11 @@ public class GetAlertEventResponseBody extends TeaModel {
         public String onCallTableName;
 
         /**
-         * <p>The type of the alert receiver. Valid values:</p>
+         * <p>The type of the alert recipient. Valid values:</p>
          * <ul>
          * <li>ON_CALL_TABLE: on-call schedule</li>
          * <li>USER_DEFINED: custom user</li>
-         * <li>OWNER: owner.</li>
+         * <li>OWNER: owner</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -484,7 +481,7 @@ public class GetAlertEventResponseBody extends TeaModel {
         public String bizName;
 
         /**
-         * <p>The name of the project.</p>
+         * <p>The name of the associated project.</p>
          * 
          * <strong>example:</strong>
          * <p>project_1</p>
@@ -578,8 +575,8 @@ public class GetAlertEventResponseBody extends TeaModel {
         /**
          * <p>The alert frequency. Valid values:</p>
          * <ul>
-         * <li>ONCE: Instant alert.</li>
-         * <li>PERIOD: Periodic alert. Format: 1HOUR, 1MINUTE, 1SECOND.</li>
+         * <li>ONCE: immediate alert</li>
+         * <li>PERIOD: periodic alert. Format: 1HOUR, 1MINUTE, or 1SECOND</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -595,25 +592,25 @@ public class GetAlertEventResponseBody extends TeaModel {
         public GetAlertEventResponseBodyAlertEventInfoAlertObject alertObject;
 
         /**
-         * <p>The alert reason.</p>
+         * <p>The cause of the alert.</p>
          */
         @NameInMap("AlertReason")
         public GetAlertEventResponseBodyAlertEventInfoAlertReason alertReason;
 
         /**
-         * <p>The list of alert receivers.</p>
+         * <p>The list of alert recipients.</p>
          */
         @NameInMap("AlertReceiverList")
         public java.util.List<GetAlertEventResponseBodyAlertEventInfoAlertReceiverList> alertReceiverList;
 
         /**
-         * <p>The project to which the alert event belongs.</p>
+         * <p>The associated project.</p>
          */
         @NameInMap("BelongProject")
         public GetAlertEventResponseBodyAlertEventInfoBelongProject belongProject;
 
         /**
-         * <p>The expiration time of the do-not-disturb period.</p>
+         * <p>The expiration time of the do not disturb mode.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-05 00:00:00</p>
@@ -622,7 +619,7 @@ public class GetAlertEventResponseBody extends TeaModel {
         public String doNotDisturbEndTime;
 
         /**
-         * <p>The time of the first alert.</p>
+         * <p>The time when the first alert was triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-05 16:19:33</p>
@@ -631,7 +628,7 @@ public class GetAlertEventResponseBody extends TeaModel {
         public String firstAlertTime;
 
         /**
-         * <p>The alert event ID.</p>
+         * <p>The ID of the alert event.</p>
          * 
          * <strong>example:</strong>
          * <p>12345</p>
@@ -640,7 +637,7 @@ public class GetAlertEventResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The time of the latest alert.</p>
+         * <p>The time when the latest alert was triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-11-05 16:19:33</p>
@@ -651,10 +648,10 @@ public class GetAlertEventResponseBody extends TeaModel {
         /**
          * <p>The alert status. Valid values:</p>
          * <ul>
-         * <li>ALERTING: Alerting.</li>
-         * <li>DO_NOT_DISTURB: Do not disturb.</li>
-         * <li>SILENCING: Alerting (cool-down period).</li>
-         * <li>FINISH: Alert completed.</li>
+         * <li>ALERTING: alerting</li>
+         * <li>DO_NOT_DISTURB: do not disturb</li>
+         * <li>SILENCING: alerting (silence period)</li>
+         * <li>FINISH: alert completed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -673,7 +670,7 @@ public class GetAlertEventResponseBody extends TeaModel {
         public Long totalAlertTimes;
 
         /**
-         * <p>The URL configuration.</p>
+         * <p>The URL information.</p>
          */
         @NameInMap("UrlConfig")
         public GetAlertEventResponseBodyAlertEventInfoUrlConfig urlConfig;

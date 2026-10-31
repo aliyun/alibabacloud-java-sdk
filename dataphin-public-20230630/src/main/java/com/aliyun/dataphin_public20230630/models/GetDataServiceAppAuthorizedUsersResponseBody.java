@@ -23,7 +23,7 @@ public class GetDataServiceAppAuthorizedUsersResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The error details of the backend response.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -41,13 +41,13 @@ public class GetDataServiceAppAuthorizedUsersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The list of users.</p>
+     * <p>The user list.</p>
      */
     @NameInMap("UserList")
     public java.util.List<GetDataServiceAppAuthorizedUsersResponseBodyUserList> userList;

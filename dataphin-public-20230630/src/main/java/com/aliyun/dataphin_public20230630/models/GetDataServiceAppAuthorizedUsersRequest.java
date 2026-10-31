@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDataServiceAppAuthorizedUsersRequest extends TeaModel {
     /**
-     * <p>The application ID.</p>
+     * <p>AppId</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,8 @@ public class GetDataServiceAppAuthorizedUsersRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -32,7 +34,7 @@ public class GetDataServiceAppAuthorizedUsersRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The data service project ID.</p>
+     * <p>The ID of the data service project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

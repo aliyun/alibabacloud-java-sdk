@@ -12,7 +12,7 @@ public class OfflinePipelineByAsyncShrinkRequest extends TeaModel {
     public String contextShrink;
 
     /**
-     * <p>The offline pipeline node command.</p>
+     * <p>The command to take the pipeline task offline.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OfflineCommand")
@@ -29,6 +29,8 @@ public class OfflinePipelineByAsyncShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

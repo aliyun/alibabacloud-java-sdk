@@ -1,0 +1,77 @@
+// This file is auto-generated, don't edit it. Thanks.
+package com.aliyun.dataphin_public20230630.models;
+
+import com.aliyun.tea.*;
+
+public class SubmitPipelineAsyncShrinkRequest extends TeaModel {
+    /**
+     * <p>The request context information.</p>
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("Context")
+    public String contextShrink;
+
+    /**
+     * <p>The tenant ID.</p>
+     * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpTenantId")
+    public Long opTenantId;
+
+    /**
+     * <p>The operator user ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>30001011</p>
+     */
+    @NameInMap("OpUserId")
+    public String opUserId;
+
+    /**
+     * <p>The ID used to query the pipeline task.</p>
+     * <p>This parameter is required.</p>
+     */
+    @NameInMap("QueryId")
+    public String queryIdShrink;
+
+    public static SubmitPipelineAsyncShrinkRequest build(java.util.Map<String, ?> map) throws Exception {
+        SubmitPipelineAsyncShrinkRequest self = new SubmitPipelineAsyncShrinkRequest();
+        return TeaModel.build(map, self);
+    }
+
+    public SubmitPipelineAsyncShrinkRequest setContextShrink(String contextShrink) {
+        this.contextShrink = contextShrink;
+        return this;
+    }
+    public String getContextShrink() {
+        return this.contextShrink;
+    }
+
+    public SubmitPipelineAsyncShrinkRequest setOpTenantId(Long opTenantId) {
+        this.opTenantId = opTenantId;
+        return this;
+    }
+    public Long getOpTenantId() {
+        return this.opTenantId;
+    }
+
+    public SubmitPipelineAsyncShrinkRequest setOpUserId(String opUserId) {
+        this.opUserId = opUserId;
+        return this;
+    }
+    public String getOpUserId() {
+        return this.opUserId;
+    }
+
+    public SubmitPipelineAsyncShrinkRequest setQueryIdShrink(String queryIdShrink) {
+        this.queryIdShrink = queryIdShrink;
+        return this;
+    }
+    public String getQueryIdShrink() {
+        return this.queryIdShrink;
+    }
+
+}

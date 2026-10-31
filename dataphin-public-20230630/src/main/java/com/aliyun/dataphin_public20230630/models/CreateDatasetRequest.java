@@ -22,6 +22,8 @@ public class CreateDatasetRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -77,6 +79,8 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestCreateCommandApiInfoRequestParamList extends TeaModel {
         /**
+         * <p>The default value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -84,19 +88,29 @@ public class CreateDatasetRequest extends TeaModel {
         public String defaultValue;
 
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Descr")
         public String descr;
 
+        /**
+         * <p>Specifies whether the parameter is a URL parameter.</p>
+         */
         @NameInMap("IsUrl")
         public Boolean isUrl;
 
+        /**
+         * <p>Specifies whether the parameter is required.</p>
+         */
         @NameInMap("Must")
         public Boolean must;
 
         /**
+         * <p>The name of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>col01</p>
          */
@@ -104,6 +118,8 @@ public class CreateDatasetRequest extends TeaModel {
         public String paramName;
 
         /**
+         * <p>The type of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>int</p>
          */
@@ -111,6 +127,8 @@ public class CreateDatasetRequest extends TeaModel {
         public String paramType;
 
         /**
+         * <p>The sample value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -182,16 +200,23 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestCreateCommandApiInfoResponseParamList extends TeaModel {
         /**
+         * <p>The description.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
         @NameInMap("Descr")
         public String descr;
 
+        /**
+         * <p>Specifies whether the parameter is a URL parameter.</p>
+         */
         @NameInMap("IsUrl")
         public Boolean isUrl;
 
         /**
+         * <p>The name of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>col01</p>
          */
@@ -199,6 +224,8 @@ public class CreateDatasetRequest extends TeaModel {
         public String paramName;
 
         /**
+         * <p>The type of the parameter.</p>
+         * 
          * <strong>example:</strong>
          * <p>int</p>
          */
@@ -206,6 +233,8 @@ public class CreateDatasetRequest extends TeaModel {
         public String paramType;
 
         /**
+         * <p>The sample value.</p>
+         * 
          * <strong>example:</strong>
          * <p>test</p>
          */
@@ -261,6 +290,8 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestCreateCommandApiInfo extends TeaModel {
         /**
+         * <p>The execution timeout period in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -268,6 +299,8 @@ public class CreateDatasetRequest extends TeaModel {
         public Integer execTimeout;
 
         /**
+         * <p>The execution mode. Valid values: 1: Synchronous. 2: Asynchronous.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -275,6 +308,8 @@ public class CreateDatasetRequest extends TeaModel {
         public Integer executeMode;
 
         /**
+         * <p>The data service API group.</p>
+         * 
          * <strong>example:</strong>
          * <p>1011</p>
          */
@@ -282,6 +317,8 @@ public class CreateDatasetRequest extends TeaModel {
         public Integer osApiGroup;
 
         /**
+         * <p>The data service project.</p>
+         * 
          * <strong>example:</strong>
          * <p>1022</p>
          */
@@ -289,6 +326,8 @@ public class CreateDatasetRequest extends TeaModel {
         public Integer osProject;
 
         /**
+         * <p>The protocol type. Valid values: 1: HTTPS. 2: HTTP. 3: HTTP and HTTPS.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -296,19 +335,29 @@ public class CreateDatasetRequest extends TeaModel {
         public Integer protocol;
 
         /**
+         * <p>The request method. Valid values: 1: GET. 2: LIST.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
         @NameInMap("RequestMethod")
         public Integer requestMethod;
 
+        /**
+         * <p>The list of request parameters.</p>
+         */
         @NameInMap("RequestParamList")
         public java.util.List<CreateDatasetRequestCreateCommandApiInfoRequestParamList> requestParamList;
 
+        /**
+         * <p>The list of response parameters.</p>
+         */
         @NameInMap("ResponseParamList")
         public java.util.List<CreateDatasetRequestCreateCommandApiInfoResponseParamList> responseParamList;
 
         /**
+         * <p>The timeout period in seconds.</p>
+         * 
          * <strong>example:</strong>
          * <p>60</p>
          */
@@ -396,7 +445,7 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestCreateCommandVersionConfigFileStorageConfig extends TeaModel {
         /**
-         * <p>The datasource config ID.</p>
+         * <p>The data source ID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -406,19 +455,19 @@ public class CreateDatasetRequest extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The datasource config name.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test datasource</p>
+         * <p>Test data source</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
         /**
-         * <p>The development path. Not required for basic projects.</p>
+         * <p>The development path. This parameter is not required for basic projects.</p>
          * 
          * <strong>example:</strong>
-         * <p>HTML正文提取/test423/</p>
+         * <p>HTML body extraction/test423/</p>
          */
         @NameInMap("DevPath")
         public String devPath;
@@ -438,7 +487,7 @@ public class CreateDatasetRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>HTML正文提取/test423/</p>
+         * <p>HTML body extraction/test423/</p>
          */
         @NameInMap("ProdPath")
         public String prodPath;
@@ -512,7 +561,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String embeddingModel;
 
         /**
-         * <p>The index build parameters. Varies by index type. For example, HNSW requires {M:30, efConstruction:360} and IVF_FLAT requires {nlist:128}.</p>
+         * <p>The index building parameters. Specify different parameters based on the index type. For example, specify {M:30, efConstruction:360} for HNSW and {nlist:128} for IVF_FLAT.</p>
          * 
          * <strong>example:</strong>
          * <p>{M:30, efConstruction:360}</p>
@@ -521,7 +570,7 @@ public class CreateDatasetRequest extends TeaModel {
         public java.util.Map<String, ?> indexParams;
 
         /**
-         * <p>The index type. PG supports IVFFlat and HNSW. Milvus supports all types.</p>
+         * <p>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all index types. Valid values: AUTOINDEX, FLAT, IVF_FLAT, IVF_SQ8, IVF_PQ, IVF_RABITQ, HNSW, HNSW_SQ, HNSW_PQ, HNSW_PRQ, DISKANN, SCANN, AISAQ, and IVFFlat.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -531,7 +580,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String indexType;
 
         /**
-         * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, IP.</p>
+         * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, and IP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -589,7 +638,7 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestCreateCommandVersionConfigMetadataStorageConfigTableSchemaColumns extends TeaModel {
         /**
-         * <p>The field description.</p>
+         * <p>The column description.</p>
          * 
          * <strong>example:</strong>
          * <p>primary key</p>
@@ -598,7 +647,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String comment;
 
         /**
-         * <p>The array element subtype. Valid only when type is ARRAY.</p>
+         * <p>The subtype of the array element. This parameter is valid only when the column type is ARRAY.</p>
          * 
          * <strong>example:</strong>
          * <p>INT64</p>
@@ -607,7 +656,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String elementType;
 
         /**
-         * <p>The maximum array capacity. Valid only when type is ARRAY. Default value: 4096.</p>
+         * <p>The maximum capacity of the array. This parameter is valid only when the column type is ARRAY. Default value: 4096.</p>
          * 
          * <strong>example:</strong>
          * <p>35</p>
@@ -616,7 +665,7 @@ public class CreateDatasetRequest extends TeaModel {
         public Integer maxCapacity;
 
         /**
-         * <p>The field name.</p>
+         * <p>The column name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -626,7 +675,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Specifies whether the field is a primary key.</p>
+         * <p>Specifies whether the column is a primary key.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -635,7 +684,7 @@ public class CreateDatasetRequest extends TeaModel {
         public Boolean pk;
 
         /**
-         * <p>The field type.</p>
+         * <p>The column type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -645,7 +694,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>Specifies whether the field is a URL.</p>
+         * <p>Specifies whether the column is a URL.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -654,7 +703,7 @@ public class CreateDatasetRequest extends TeaModel {
         public Boolean url;
 
         /**
-         * <p>The vector index configuration.</p>
+         * <p>The vector index configuration. This configuration is applied when the column type is FLOAT_VECTOR, FLOAT16_VECTOR, or BFLOAT16_VECTOR to set the dimensions, index type, and similarity metric.</p>
          */
         @NameInMap("VectorIndexConfig")
         public CreateDatasetRequestCreateCommandVersionConfigMetadataStorageConfigTableSchemaColumnsVectorIndexConfig vectorIndexConfig;
@@ -732,7 +781,7 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestCreateCommandVersionConfigMetadataStorageConfigTableSchema extends TeaModel {
         /**
-         * <p>The column list.</p>
+         * <p>The list of columns.</p>
          */
         @NameInMap("Columns")
         public java.util.List<CreateDatasetRequestCreateCommandVersionConfigMetadataStorageConfigTableSchemaColumns> columns;
@@ -754,7 +803,7 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestCreateCommandVersionConfigMetadataStorageConfig extends TeaModel {
         /**
-         * <p>The datasource config ID.</p>
+         * <p>The data source ID. The data source must match the metadata storage type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -764,25 +813,25 @@ public class CreateDatasetRequest extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The datasource config name.</p>
+         * <p>The data source name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test datasource</p>
+         * <p>Test data source</p>
          */
         @NameInMap("DataSourceName")
         public String dataSourceName;
 
         /**
-         * <p>The development database/schema.</p>
+         * <p>The development database or schema.</p>
          * 
          * <strong>example:</strong>
-         * <p>HTML正文提取/test423/</p>
+         * <p>HTML body extraction/test423/</p>
          */
         @NameInMap("DevSchema")
         public String devSchema;
 
         /**
-         * <p>Specifies whether to store metadata in a new table or an existing table.</p>
+         * <p>The metadata storage mode. Valid values: CREATE (new table) and EXISTING (existing table).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -801,17 +850,17 @@ public class CreateDatasetRequest extends TeaModel {
         public String metadataStorageType;
 
         /**
-         * <p>The production database/schema.</p>
+         * <p>The production database or schema.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>HTML正文提取/test423/</p>
+         * <p>HTML body extraction/test423/</p>
          */
         @NameInMap("ProdSchema")
         public String prodSchema;
 
         /**
-         * <p>The table name.</p>
+         * <p>The table name. Only lowercase letters, digits, and underscores (_) are allowed. The name must start with a lowercase letter and can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -919,7 +968,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String embeddingModel;
 
         /**
-         * <p>The index build parameters. Varies by index type. For example, HNSW requires {M:30, efConstruction:360} and IVF_FLAT requires {nlist:128}.</p>
+         * <p>The index building parameters. Specify different parameters based on the index type. For example, specify {M:30, efConstruction:360} for HNSW and {nlist:128} for IVF_FLAT.</p>
          * 
          * <strong>example:</strong>
          * <p>{M:30, efConstruction:360}</p>
@@ -928,7 +977,7 @@ public class CreateDatasetRequest extends TeaModel {
         public java.util.Map<String, ?> indexParams;
 
         /**
-         * <p>The index type. PG supports IVFFlat and HNSW. Milvus supports all types.</p>
+         * <p>The index type. PostgreSQL supports IVFFlat and HNSW. Milvus supports all index types. Valid values: AUTOINDEX, FLAT, IVF_FLAT, IVF_SQ8, IVF_PQ, IVF_RABITQ, HNSW, HNSW_SQ, HNSW_PQ, HNSW_PRQ, DISKANN, SCANN, AISAQ, and IVFFlat.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -938,7 +987,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String indexType;
 
         /**
-         * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, IP.</p>
+         * <p>The similarity type. Default value: COSINE. Valid values: COSINE, L2, and IP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -996,7 +1045,7 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfigTableSchemaColumns extends TeaModel {
         /**
-         * <p>The field description.</p>
+         * <p>The column description.</p>
          * 
          * <strong>example:</strong>
          * <p>happen time</p>
@@ -1005,7 +1054,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String comment;
 
         /**
-         * <p>The array element subtype. Valid only when type is ARRAY.</p>
+         * <p>The subtype of the array element. This parameter is valid only when the column type is ARRAY.</p>
          * 
          * <strong>example:</strong>
          * <p>INT64</p>
@@ -1014,7 +1063,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String elementType;
 
         /**
-         * <p>The maximum array capacity. Valid only when type is ARRAY. Default value: 4096.</p>
+         * <p>The maximum capacity of the array. This parameter is valid only when the column type is ARRAY. Default value: 4096.</p>
          * 
          * <strong>example:</strong>
          * <p>35</p>
@@ -1023,7 +1072,7 @@ public class CreateDatasetRequest extends TeaModel {
         public Integer maxCapacity;
 
         /**
-         * <p>The field name.</p>
+         * <p>The column name.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1033,7 +1082,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>Specifies whether the field is a primary key.</p>
+         * <p>Specifies whether the column is a primary key.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1042,7 +1091,7 @@ public class CreateDatasetRequest extends TeaModel {
         public Boolean pk;
 
         /**
-         * <p>The field type.</p>
+         * <p>The column type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1052,7 +1101,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>Specifies whether the field is a URL.</p>
+         * <p>Specifies whether the column is a URL.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1061,7 +1110,7 @@ public class CreateDatasetRequest extends TeaModel {
         public Boolean url;
 
         /**
-         * <p>The vector index configuration. Configure this parameter when the field type is FLOAT_VECTOR, FLOAT16_VECTOR, or BFLOAT16_VECTOR. Use it to set the dimensions, index type, and similarity metric.</p>
+         * <p>The vector index configuration. Configure this parameter when the field type is FLOAT_VECTOR, FLOAT16_VECTOR, or BFLOAT16_VECTOR to specify the dimensions, index type, and similarity metric.</p>
          */
         @NameInMap("VectorIndexConfig")
         public CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfigTableSchemaColumnsVectorIndexConfig vectorIndexConfig;
@@ -1139,7 +1188,7 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfigTableSchema extends TeaModel {
         /**
-         * <p>The column list.</p>
+         * <p>The list of columns.</p>
          */
         @NameInMap("Columns")
         public java.util.List<CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfigTableSchemaColumns> columns;
@@ -1161,7 +1210,7 @@ public class CreateDatasetRequest extends TeaModel {
 
     public static class CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfig extends TeaModel {
         /**
-         * <p>The meta table datasource config type. Only KAFKA is supported in this release.</p>
+         * <p>The data source type of the meta table. Only KAFKA is supported in the current phase.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1171,7 +1220,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String datasourceType;
 
         /**
-         * <p>The meta table name.</p>
+         * <p>The name of the meta table.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1181,7 +1230,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String metaTableName;
 
         /**
-         * <p>The project ID of the meta table. Cross-project access is supported.</p>
+         * <p>The ID of the project to which the meta table belongs. Cross-project access is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1249,7 +1298,7 @@ public class CreateDatasetRequest extends TeaModel {
         public CreateDatasetRequestCreateCommandVersionConfigMetadataStorageConfig metadataStorageConfig;
 
         /**
-         * <p>The real-time meta table configuration. Takes effect when metadataStorageType is STREAM_TABLE.</p>
+         * <p>The real-time meta table configuration. This configuration takes effect only when the metadata storage type is STREAM_TABLE.</p>
          */
         @NameInMap("RealtimeMetaTableConfig")
         public CreateDatasetRequestCreateCommandVersionConfigRealtimeMetaTableConfig realtimeMetaTableConfig;
@@ -1303,11 +1352,14 @@ public class CreateDatasetRequest extends TeaModel {
     }
 
     public static class CreateDatasetRequestCreateCommand extends TeaModel {
+        /**
+         * <p>The API information for the online dataset.</p>
+         */
         @NameInMap("ApiInfo")
         public CreateDatasetRequestCreateCommandApiInfo apiInfo;
 
         /**
-         * <p>The dataset content type. Valid values: GENERAL, TEXT, AUDIO, VIDEO, IMAGE, TABLE, INDEX.</p>
+         * <p>The content type of the dataset. Valid values: GENERAL, TEXT, AUDIO, VIDEO, IMAGE, TABLE, and INDEX.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1335,7 +1387,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String description;
 
         /**
-         * <p><strong>The folder (retrieved from the file service using fileId).</strong></p>
+         * <p><strong>The directory (obtained from the file service by using the file ID).</strong></p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1354,7 +1406,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String fileId;
 
         /**
-         * <p>The metastore type. Valid values: POSTGRESQL, MYSQL, STREAM_TABLE, MILVUS.</p>
+         * <p>The metastore type.</p>
          * 
          * <strong>example:</strong>
          * <p>POSTGRESQL</p>
@@ -1363,11 +1415,11 @@ public class CreateDatasetRequest extends TeaModel {
         public String metadataStorageType;
 
         /**
-         * <p>The dataset name.</p>
+         * <p>The name of the dataset.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx_test</p>
+         * <p>xx test</p>
          */
         @NameInMap("Name")
         public String name;
@@ -1382,7 +1434,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String owner;
 
         /**
-         * <p>The dataset scenarios. Valid values: OFFLINE (offline, default), REALTIME (real-time).</p>
+         * <p>The Scenarios in which the dataset is used. Valid values: OFFLINE (offline, default) and REALTIME (real-time).</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1392,7 +1444,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String scenario;
 
         /**
-         * <p>The storage type. Valid values: OSS, S3.</p>
+         * <p>The storage type.</p>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -1401,7 +1453,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String storageType;
 
         /**
-         * <p>The dataset type. Valid values: FILE, TABLE, HYBRID.</p>
+         * <p>The type of the dataset. Valid values: FILE, TABLE, and HYBRID.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1411,7 +1463,7 @@ public class CreateDatasetRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The version number. If not specified, the default version V1 is used.</p>
+         * <p>The version number. If you do not specify this parameter, the default version V1 is used.</p>
          * 
          * <strong>example:</strong>
          * <p>V1</p>

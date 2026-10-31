@@ -25,6 +25,8 @@ public class GetBizEntityInfoRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The operator user ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -32,7 +34,7 @@ public class GetBizEntityInfoRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The business entity type. For more information, refer to the create business entity operation.</p>
+     * <p>The business entity type. For more information, see the Create business entity operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

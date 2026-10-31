@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateStandardWordRootRequest extends TeaModel {
     /**
-     * <p>The create instruction.</p>
+     * <p>The creation command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -22,6 +22,8 @@ public class CreateStandardWordRootRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -92,7 +94,7 @@ public class CreateStandardWordRootRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>平均值</p>
+         * <p>Average</p>
          */
         @NameInMap("Name")
         public String name;

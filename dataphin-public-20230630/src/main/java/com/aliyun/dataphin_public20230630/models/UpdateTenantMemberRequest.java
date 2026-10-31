@@ -15,6 +15,8 @@ public class UpdateTenantMemberRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,13 +61,22 @@ public class UpdateTenantMemberRequest extends TeaModel {
 
     public static class UpdateTenantMemberRequestUpdateCommandMemberList extends TeaModel {
         /**
-         * <p>The DingTalk number.</p>
+         * <p>The DingTalk ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123@dingding</p>
          */
         @NameInMap("DingNumber")
         public String dingNumber;
+
+        /**
+         * <p>The display name of the user.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test</p>
+         */
+        @NameInMap("DisplayName")
+        public String displayName;
 
         /**
          * <p>The email address.</p>
@@ -86,7 +97,7 @@ public class UpdateTenantMemberRequest extends TeaModel {
         public String mobilePhone;
 
         /**
-         * <p>The list of roles.</p>
+         * <p>The role list.</p>
          */
         @NameInMap("RoleList")
         public java.util.List<String> roleList;
@@ -111,6 +122,14 @@ public class UpdateTenantMemberRequest extends TeaModel {
         }
         public String getDingNumber() {
             return this.dingNumber;
+        }
+
+        public UpdateTenantMemberRequestUpdateCommandMemberList setDisplayName(String displayName) {
+            this.displayName = displayName;
+            return this;
+        }
+        public String getDisplayName() {
+            return this.displayName;
         }
 
         public UpdateTenantMemberRequestUpdateCommandMemberList setMail(String mail) {
@@ -149,7 +168,7 @@ public class UpdateTenantMemberRequest extends TeaModel {
 
     public static class UpdateTenantMemberRequestUpdateCommand extends TeaModel {
         /**
-         * <p>The list of members.</p>
+         * <p>The member list.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("MemberList")

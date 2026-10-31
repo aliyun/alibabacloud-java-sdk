@@ -12,7 +12,7 @@ public class OfflinePipelineRequest extends TeaModel {
     public OfflinePipelineRequestContext context;
 
     /**
-     * <p>The offline command for the pipeline node.</p>
+     * <p>The command to take the pipeline task offline.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OfflineCommand")
@@ -29,6 +29,8 @@ public class OfflinePipelineRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -74,11 +76,7 @@ public class OfflinePipelineRequest extends TeaModel {
 
     public static class OfflinePipelineRequestContext extends TeaModel {
         /**
-         * <p>The current operating environment. Valid values:</p>
-         * <ul>
-         * <li>DEV: the development environment.</li>
-         * <li>PROD: the production environment.</li>
-         * </ul>
+         * <p>The current operation environment. Valid values: DEV: development environment. PROD: production environment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -88,7 +86,7 @@ public class OfflinePipelineRequest extends TeaModel {
         public String env;
 
         /**
-         * <p>The ID of the project to which the integration pipeline node belongs.</p>
+         * <p>The ID of the project to which the integration pipeline task belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -122,7 +120,7 @@ public class OfflinePipelineRequest extends TeaModel {
 
     public static class OfflinePipelineRequestOfflineCommand extends TeaModel {
         /**
-         * <p>The remarks.</p>
+         * <p>The comment.</p>
          * 
          * <strong>example:</strong>
          * <p>comment</p>
@@ -131,14 +129,14 @@ public class OfflinePipelineRequest extends TeaModel {
         public String comment;
 
         /**
-         * <p>Specifies whether to delete the node.</p>
+         * <p>Specifies whether to delete the task.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Delete")
         public Boolean delete;
 
         /**
-         * <p>The file ID of the integration node. You can specify any one of PipelineId, FileId, or NodeId.</p>
+         * <p>The ID of the integration task file. You can specify pipelineId, fileId, or nodeId.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -147,7 +145,7 @@ public class OfflinePipelineRequest extends TeaModel {
         public Long fileId;
 
         /**
-         * <p>The scheduling node ID of the integration node. You can specify any one of PipelineId, FileId, or NodeId.</p>
+         * <p>The ID of the scheduling node for the integration task. You can specify pipelineId, fileId, or nodeId.</p>
          * 
          * <strong>example:</strong>
          * <p>n_123</p>
@@ -156,7 +154,7 @@ public class OfflinePipelineRequest extends TeaModel {
         public String nodeId;
 
         /**
-         * <p>The primary key of the integration pipeline. You can specify any one of PipelineId, FileId, or NodeId.</p>
+         * <p>The primary key of the integration pipeline. You can specify pipelineId, fileId, or nodeId.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>

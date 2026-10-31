@@ -15,7 +15,7 @@ public class GetKgAuthorizedWorkspacesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
-     * <p>The ID of the operator user.</p>
+     * <p>The ID of the specified operator.</p>
      * 
      * <strong>example:</strong>
      * <p>30012011</p>

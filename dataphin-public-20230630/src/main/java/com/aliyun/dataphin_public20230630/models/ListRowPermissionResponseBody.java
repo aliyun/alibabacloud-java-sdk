@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRowPermissionResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,16 +107,16 @@ public class ListRowPermissionResponseBody extends TeaModel {
 
     public static class ListRowPermissionResponseBodyPageResultDataMappingColumns extends TeaModel {
         /**
-         * <p>The description of the mapping field.</p>
+         * <p>The description of the mapped column.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务ID</p>
+         * <p>Business ID</p>
          */
         @NameInMap("ColumnDesc")
         public String columnDesc;
 
         /**
-         * <p>The name of the mapping field.</p>
+         * <p>The name of the mapped column.</p>
          * 
          * <strong>example:</strong>
          * <p>business_id</p>
@@ -125,7 +125,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
         public String columnName;
 
         /**
-         * <p>The type of the mapping field.</p>
+         * <p>The type of the mapped column.</p>
          * 
          * <strong>example:</strong>
          * <p>string</p>
@@ -166,7 +166,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
 
     public static class ListRowPermissionResponseBodyPageResultDataRulesExpressions extends TeaModel {
         /**
-         * <p>The name of the mapping field.</p>
+         * <p>The name of the mapped column.</p>
          * 
          * <strong>example:</strong>
          * <p>business_id</p>
@@ -175,7 +175,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
         public String mappingColumnName;
 
         /**
-         * <p>The expression operator.</p>
+         * <p>The operator of the expression.</p>
          * 
          * <strong>example:</strong>
          * <p>30008888</p>
@@ -190,7 +190,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
         public java.util.List<?> subConditions;
 
         /**
-         * <p>The expression type.</p>
+         * <p>The type of the expression.</p>
          * 
          * <strong>example:</strong>
          * <p>EXPRESSION</p>
@@ -199,7 +199,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The operation values of the expression.</p>
+         * <p>The values of the expression operands.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -341,7 +341,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
          * <p>The rule name.</p>
          * 
          * <strong>example:</strong>
-         * <p>管控ID 100以内数据</p>
+         * <p>Manage data with IDs less than 100</p>
          */
         @NameInMap("RuleName")
         public String ruleName;
@@ -356,7 +356,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
         public String scopeType;
 
         /**
-         * <p>The rule status.</p>
+         * <p>The status of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -435,7 +435,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
 
     public static class ListRowPermissionResponseBodyPageResultDataTables extends TeaModel {
         /**
-         * <p>The table field.</p>
+         * <p>The column of the table.</p>
          * 
          * <strong>example:</strong>
          * <p>business_id</p>
@@ -444,7 +444,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
         public String columnName;
 
         /**
-         * <p>The name of the mapping field.</p>
+         * <p>The name of the mapped column.</p>
          * 
          * <strong>example:</strong>
          * <p>business_id</p>
@@ -521,7 +521,7 @@ public class ListRowPermissionResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The mapping fields.</p>
+         * <p>The mapped columns.</p>
          */
         @NameInMap("MappingColumns")
         public java.util.List<ListRowPermissionResponseBodyPageResultDataMappingColumns> mappingColumns;
@@ -536,10 +536,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
         public String modifier;
 
         /**
-         * <p>The description of the row-level permission.</p>
+         * <p>The row-level permission description.</p>
          * 
          * <strong>example:</strong>
-         * <p>管控业务数据</p>
+         * <p>Manage business data</p>
          */
         @NameInMap("RowPermissionDesc")
         public String rowPermissionDesc;
@@ -554,10 +554,10 @@ public class ListRowPermissionResponseBody extends TeaModel {
         public Long rowPermissionId;
 
         /**
-         * <p>The name of the row-level permission.</p>
+         * <p>The row-level permission name.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务管控</p>
+         * <p>Business control</p>
          */
         @NameInMap("RowPermissionName")
         public String rowPermissionName;

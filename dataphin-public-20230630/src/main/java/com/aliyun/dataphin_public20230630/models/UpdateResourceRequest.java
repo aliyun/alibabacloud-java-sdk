@@ -15,6 +15,8 @@ public class UpdateResourceRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -22,7 +24,7 @@ public class UpdateResourceRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>The edit command.</p>
+     * <p>The update command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("UpdateCommand")
@@ -59,21 +61,17 @@ public class UpdateResourceRequest extends TeaModel {
 
     public static class UpdateResourceRequestUpdateCommand extends TeaModel {
         /**
-         * <p>The commit remarks.</p>
+         * <p>The submission comment.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx 测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Comment")
         public String comment;
 
         /**
-         * <p>The compute engine type. Valid values:</p>
-         * <ul>
-         * <li>MAX_COMPUTE</li>
-         * <li>HADOOP.</li>
-         * </ul>
+         * <p>The compute engine type. Valid values: MAX_COMPUTE and HADOOP.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -87,7 +85,7 @@ public class UpdateResourceRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>xx 测试</p>
+         * <p>xx test</p>
          */
         @NameInMap("Description")
         public String description;
@@ -123,7 +121,7 @@ public class UpdateResourceRequest extends TeaModel {
         public Long projectId;
 
         /**
-         * <p>The storage address of the resource.</p>
+         * <p>The resource storage address.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

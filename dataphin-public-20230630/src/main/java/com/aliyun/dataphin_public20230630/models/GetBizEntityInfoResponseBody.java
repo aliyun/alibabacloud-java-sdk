@@ -11,7 +11,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
     public GetBizEntityInfoResponseBodyBizEntityInfo bizEntityInfo;
 
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. A value of OK indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -47,7 +47,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
 
     public static class GetBizEntityInfoResponseBodyBizEntityInfoBizObject extends TeaModel {
         /**
-         * <p>The approval flow ID.</p>
+         * <p>The ID of the approval process.</p>
          * 
          * <strong>example:</strong>
          * <p>221323121212</p>
@@ -119,11 +119,11 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
          * <p>The approval status. Valid values:</p>
          * <ul>
          * <li>INIT: Not submitted.</li>
-         * <li>APPROVING: Pending approval.</li>
+         * <li>APPROVING: Under approval.</li>
          * <li>AGREE: Approved.</li>
          * <li>REJECT: Rejected.</li>
-         * <li>FAILED: Validation failed.</li>
-         * <li>REVOKE: Withdrawn.</li>
+         * <li>FAILED: Verification failed.</li>
+         * <li>REVOKE: Voluntarily withdrawn.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,7 +133,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String approvalStatus;
 
         /**
-         * <p>The list of child business objects of the business object.</p>
+         * <p>The child business objects of the business object.</p>
          */
         @NameInMap("ChildBizEntityIdList")
         public java.util.List<Long> childBizEntityIdList;
@@ -157,7 +157,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String displayName;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the business object was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
@@ -166,7 +166,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the business object was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
@@ -175,7 +175,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The business object ID.</p>
+         * <p>The ID of the business object.</p>
          * 
          * <strong>example:</strong>
          * <p>1011</p>
@@ -196,7 +196,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
          * <p>The name of the user who last modified the business object.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("LastModifierName")
         public String lastModifierName;
@@ -211,12 +211,12 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The publish status. Valid values: </p>
+         * <p>The online status. Valid values: </p>
          * <ul>
-         * <li>SUBMITTED: Not published.</li>
-         * <li>APPROVING: Pending approval.</li>
-         * <li>PUBLISHED: Published.</li>
-         * <li>REJECT: Publish failed.</li>
+         * <li>SUBMITTED: Not online.</li>
+         * <li>APPROVING: Under approval.</li>
+         * <li>PUBLISHED: Online.</li>
+         * <li>REJECT: Failed to go online.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -226,16 +226,16 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String onlineStatus;
 
         /**
-         * <p>The owner of the business object.</p>
+         * <p>The ID of the business object owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
-         * <p>The owner of the business object.</p>
+         * <p>The ID of the business object owner.</p>
          * 
          * <strong>example:</strong>
          * <p>30010010</p>
@@ -244,7 +244,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String ownerUserId;
 
         /**
-         * <p>The parent entity that the business object inherits from. Only common business objects support inheritance, and the parent entity must be a published business object.</p>
+         * <p>The ID of the parent entity inherited by the business object. Only common business objects can be configured to inherit entities, and they can only inherit online business objects.</p>
          * 
          * <strong>example:</strong>
          * <p>116306</p>
@@ -253,7 +253,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public Long parentId;
 
         /**
-         * <p>The list of associated published business entity IDs.</p>
+         * <p>The IDs of the associated online business entities.</p>
          */
         @NameInMap("RefBizEntityIdList")
         public java.util.List<Long> refBizEntityIdList;
@@ -279,7 +279,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li>DRAFT: Draft or not published.</li>
+         * <li>DRAFT: Draft or not online.</li>
          * <li>SUBMITTING: Submitting.</li>
          * <li>SUBMITTED: Submitted.</li>
          * <li>DEVELOPING: Developing.</li>
@@ -294,7 +294,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The object type of the business object. For more information, refer to the create business entity operation.</p>
+         * <p>The object type of the business object. For more information, see the Create business entity operation.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -471,7 +471,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
 
     public static class GetBizEntityInfoResponseBodyBizEntityInfoBizProcess extends TeaModel {
         /**
-         * <p>The approval flow ID.</p>
+         * <p>The ID of the approval process.</p>
          * 
          * <strong>example:</strong>
          * <p>221323121212</p>
@@ -497,13 +497,13 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String approvalStatus;
 
         /**
-         * <p>The list of business event activity IDs contained in the business flow activity. This parameter is valid only when the entity is a business flow activity.</p>
+         * <p>The list of business event activity IDs included in the business process activity. This field is valid only when the current entity is a business process activity.</p>
          */
         @NameInMap("BizEventEntityIdList")
         public java.util.List<Long> bizEventEntityIdList;
 
         /**
-         * <p>The description of the business process.</p>
+         * <p>The description of the business activity.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -512,16 +512,16 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The display name of the business process.</p>
+         * <p>The display name of the business activity.</p>
          * 
          * <strong>example:</strong>
-         * <p>业务活动测试</p>
+         * <p>Business activity test</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The time when the business object was created.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
@@ -530,7 +530,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The update time.</p>
+         * <p>The time when the business object was last updated.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-10-10 10:00:00</p>
@@ -539,13 +539,13 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>Indicates whether the business process is depended on by other entities.</p>
+         * <p>Indicates whether the business process activity has dependents.</p>
          */
         @NameInMap("HasDependent")
         public Boolean hasDependent;
 
         /**
-         * <p>The business process ID.</p>
+         * <p>The ID of the business activity.</p>
          * 
          * <strong>example:</strong>
          * <p>1011</p>
@@ -566,13 +566,13 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
          * <p>The name of the user who last modified the business object.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("LastModifierName")
         public String lastModifierName;
 
         /**
-         * <p>The name of the business process.</p>
+         * <p>The name of the business activity.</p>
          * 
          * <strong>example:</strong>
          * <p>create_process_code_name</p>
@@ -581,12 +581,12 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The publish status. Valid values: </p>
+         * <p>The online status. Valid values: </p>
          * <ul>
-         * <li>SUBMITTED: Not published.</li>
-         * <li>APPROVING: Pending approval.</li>
-         * <li>PUBLISHED: Published.</li>
-         * <li>REJECT: Publish failed.</li>
+         * <li>SUBMITTED: Not online.</li>
+         * <li>APPROVING: Under approval.</li>
+         * <li>PUBLISHED: Online.</li>
+         * <li>REJECT: Failed to go online.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -596,16 +596,16 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String onlineStatus;
 
         /**
-         * <p>The owner of the business object.</p>
+         * <p>The ID of the business object owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
 
         /**
-         * <p>The owner of the business object.</p>
+         * <p>The ID of the business object owner.</p>
          * 
          * <strong>example:</strong>
          * <p>30010010</p>
@@ -614,19 +614,19 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String ownerUserId;
 
         /**
-         * <p>The preceding business flow activities of the business flow activity.</p>
+         * <p>The preceding business process activities of the business process activity.</p>
          */
         @NameInMap("PreBizProcessIdList")
         public java.util.List<Long> preBizProcessIdList;
 
         /**
-         * <p>The list of associated published business entity IDs.</p>
+         * <p>The IDs of the associated online business entities.</p>
          */
         @NameInMap("RefBizEntityIdList")
         public java.util.List<Long> refBizEntityIdList;
 
         /**
-         * <p>The number of associated fact tables.</p>
+         * <p>The number of associated logical fact tables.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -637,7 +637,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         /**
          * <p>The status. Valid values:</p>
          * <ul>
-         * <li>DRAFT: Draft or not published.</li>
+         * <li>DRAFT: Draft or not online.</li>
          * <li>SUBMITTING: Submitting.</li>
          * <li>SUBMITTED: Submitted.</li>
          * <li>DEVELOPING: Developing.</li>
@@ -652,7 +652,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the business process. For more information, refer to the create business entity operation.</p>
+         * <p>The type of the business activity. For more information, see the Create business entity operation.</p>
          * 
          * <strong>example:</strong>
          * <p>BIZ_EVENT</p>
@@ -835,13 +835,13 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public GetBizEntityInfoResponseBodyBizEntityInfoBizObject bizObject;
 
         /**
-         * <p>The business process.</p>
+         * <p>The business activity.</p>
          */
         @NameInMap("BizProcess")
         public GetBizEntityInfoResponseBodyBizEntityInfoBizProcess bizProcess;
 
         /**
-         * <p>The ID of the business unit to which the business process belongs.</p>
+         * <p>The ID of the business unit to which the business activity belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>6798087749072704</p>
@@ -850,7 +850,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public Long bizUnitId;
 
         /**
-         * <p>The ID of the data domain to which the business process belongs.</p>
+         * <p>The ID of the data domain to which the business activity belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>20101011</p>
@@ -859,7 +859,7 @@ public class GetBizEntityInfoResponseBody extends TeaModel {
         public Long dataDomainId;
 
         /**
-         * <p>The business entity type. For more information, refer to the create business entity operation.</p>
+         * <p>The business entity type. For more information, see the Create business entity operation.</p>
          * 
          * <strong>example:</strong>
          * <p>BIZ_OBJECT</p>

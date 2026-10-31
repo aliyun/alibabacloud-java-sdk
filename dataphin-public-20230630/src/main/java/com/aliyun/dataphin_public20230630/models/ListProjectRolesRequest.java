@@ -5,6 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListProjectRolesRequest extends TeaModel {
     /**
+     * <p>The tenant ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +15,8 @@ public class ListProjectRolesRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The user ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -21,7 +24,7 @@ public class ListProjectRolesRequest extends TeaModel {
     public String opUserId;
 
     /**
-     * <p>项目类型，BASIC-基础模式项目，DEV-开发环境项目，PROD-生产环境项目，TAG-标签平台项目，可选值：BASIC、DEV、PROD、TAG</p>
+     * <p>The project type. Valid values: BASIC (basic mode project), DEV (development environment project), PROD (production environment project), and TAG (tag platform project).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -15,6 +15,8 @@ public class GetFileStorageCredentialRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the user who performs the operation.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -31,13 +33,7 @@ public class GetFileStorageCredentialRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The purpose of the authorization. Valid values:</p>
-     * <ul>
-     * <li>RESOURCE: creates resource files.</li>
-     * <li>COMPUTE_SOURCE_SETTING: stores compute source configurations.</li>
-     * <li>NONE: no specific purpose.</li>
-     * </ul>
-     * <p>Default value: NONE.</p>
+     * <p>The purpose of the authorization. Valid values: RESOURCE (creating resource files), COMPUTE_SOURCE_SETTING (configuring storage and compute sources), and NONE (no specific purpose). Default value: NONE.</p>
      * 
      * <strong>example:</strong>
      * <p>RESOURCE</p>
@@ -46,7 +42,7 @@ public class GetFileStorageCredentialRequest extends TeaModel {
     public String purpose;
 
     /**
-     * <p>Specifies whether to use an internal endpoint. Default value: false.</p>
+     * <p>Specifies whether to use the internal endpoint. Default value: false.</p>
      */
     @NameInMap("UseVpcEndpoint")
     public Boolean useVpcEndpoint;

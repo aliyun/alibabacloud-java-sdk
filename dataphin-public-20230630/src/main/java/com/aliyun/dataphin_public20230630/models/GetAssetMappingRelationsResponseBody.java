@@ -29,7 +29,7 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
     public java.util.List<GetAssetMappingRelationsResponseBodyMappingRelationList> mappingRelationList;
 
     /**
-     * <p>The error details from the backend response.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,11 +107,7 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
 
     public static class GetAssetMappingRelationsResponseBodyMappingRelationList extends TeaModel {
         /**
-         * <p>The Asset Type. Valid values:</p>
-         * <ul>
-         * <li>COLUMN: field.</li>
-         * <li>INDEX: metric.</li>
-         * </ul>
+         * <p>The asset type. Valid values: COLUMN (field) and INDEX (metric).</p>
          * 
          * <strong>example:</strong>
          * <p>COLUMN</p>
@@ -129,7 +125,7 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
         public String guid;
 
         /**
-         * <p>The update time.</p>
+         * <p>The update time. The format is YYYY-MM-DD HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-30 00:00:00</p>
@@ -174,7 +170,7 @@ public class GetAssetMappingRelationsResponseBody extends TeaModel {
         public String standardName;
 
         /**
-         * <p>The folder in which the standard set resides.</p>
+         * <p>The folder where the standard set is located.</p>
          * 
          * <strong>example:</strong>
          * <p>/dir1</p>

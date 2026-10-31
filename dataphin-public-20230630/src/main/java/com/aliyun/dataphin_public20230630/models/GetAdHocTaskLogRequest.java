@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAdHocTaskLogRequest extends TeaModel {
     /**
-     * <p>The offset for querying logs. Increment the value based on the returned result. Set the initial value to 0.</p>
+     * <p>The offset for log queries. Increment this value based on the returned results. Set the initial value to 0.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,6 +25,8 @@ public class GetAdHocTaskLogRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -42,7 +44,7 @@ public class GetAdHocTaskLogRequest extends TeaModel {
     public Long projectId;
 
     /**
-     * <p>The subtask ID. The value starts from 0.</p>
+     * <p>The subtask ID, starting from 0.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

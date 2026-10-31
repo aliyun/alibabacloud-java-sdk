@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAssetMappingRelationsShrinkRequest extends TeaModel {
     /**
-     * <p>The query instruction.</p>
+     * <p>The query command.</p>
      */
     @NameInMap("AssetMappingQuery")
     public String assetMappingQueryShrink;
@@ -21,6 +21,8 @@ public class GetAssetMappingRelationsShrinkRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */

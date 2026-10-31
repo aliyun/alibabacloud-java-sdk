@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBatchTaskVersionsResponseBody extends TeaModel {
     /**
-     * <p>The error code. A value of OK indicates that the request was successful.</p>
+     * <p>The error code. OK indicates that the request is normal.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -14,7 +14,7 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The request result.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public GetBatchTaskVersionsResponseBodyData data;
@@ -47,7 +47,7 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -107,7 +107,7 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
 
     public static class GetBatchTaskVersionsResponseBodyDataBatchTaskVersionList extends TeaModel {
         /**
-         * <p>The comment for the submission.</p>
+         * <p>The submission comment.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -158,7 +158,7 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         public Boolean published;
 
         /**
-         * <p>The ID of the user who submitted the version.</p>
+         * <p>The ID of the submitter.</p>
          * 
          * <strong>example:</strong>
          * <p>20110110</p>
@@ -167,10 +167,10 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
         public String userId;
 
         /**
-         * <p>The ID of the user who submitted the version.</p>
+         * <p>The ID of the submitter.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("UserName")
         public String userName;
@@ -265,7 +265,7 @@ public class GetBatchTaskVersionsResponseBody extends TeaModel {
 
     public static class GetBatchTaskVersionsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of batch task versions.</p>
+         * <p>The list of batch taskfile versions.</p>
          */
         @NameInMap("BatchTaskVersionList")
         public java.util.List<GetBatchTaskVersionsResponseBodyDataBatchTaskVersionList> batchTaskVersionList;

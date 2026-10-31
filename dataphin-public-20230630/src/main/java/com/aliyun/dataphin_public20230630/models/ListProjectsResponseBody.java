@@ -23,7 +23,7 @@ public class ListProjectsResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The details of the backend exception.</p>
+     * <p>The backend exception details.</p>
      * 
      * <strong>example:</strong>
      * <p>internal error</p>
@@ -47,7 +47,7 @@ public class ListProjectsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -125,7 +125,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Long dataSourceId;
 
         /**
-         * <p>The name of the compute source.</p>
+         * <p>The compute source name.</p>
          * 
          * <strong>example:</strong>
          * <p>ds1</p>
@@ -137,7 +137,7 @@ public class ListProjectsResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("Description")
         public String description;
@@ -146,7 +146,7 @@ public class ListProjectsResponseBody extends TeaModel {
          * <p>The display name of the project.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试</p>
+         * <p>Test</p>
          */
         @NameInMap("DisplayName")
         public String displayName;
@@ -161,7 +161,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public String env;
 
         /**
-         * <p>The time when the project was created, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The creation time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
@@ -170,7 +170,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the project was last modified, in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The update time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-06-10 10:01:01</p>
@@ -218,7 +218,7 @@ public class ListProjectsResponseBody extends TeaModel {
          * <p>The project owner.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("OwnerName")
         public String ownerName;
@@ -233,7 +233,7 @@ public class ListProjectsResponseBody extends TeaModel {
         public Long realtimeDataSourceId;
 
         /**
-         * <p>The name of the real-time compute source.</p>
+         * <p>The real-time compute source name.</p>
          * 
          * <strong>example:</strong>
          * <p>ds2</p>
@@ -387,7 +387,7 @@ public class ListProjectsResponseBody extends TeaModel {
 
     public static class ListProjectsResponseBodyPageResult extends TeaModel {
         /**
-         * <p>The paginated list of projects.</p>
+         * <p>The paginated project list.</p>
          */
         @NameInMap("ProjectList")
         public java.util.List<ListProjectsResponseBodyPageResultProjectList> projectList;

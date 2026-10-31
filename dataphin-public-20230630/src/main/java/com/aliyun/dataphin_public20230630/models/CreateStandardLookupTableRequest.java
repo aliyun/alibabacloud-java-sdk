@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateStandardLookupTableRequest extends TeaModel {
     /**
-     * <p>The create command.</p>
+     * <p>The creation command.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateCommand")
@@ -22,6 +22,8 @@ public class CreateStandardLookupTableRequest extends TeaModel {
     public Long opTenantId;
 
     /**
+     * <p>The ID of the operator.</p>
+     * 
      * <strong>example:</strong>
      * <p>30001011</p>
      */
@@ -59,7 +61,7 @@ public class CreateStandardLookupTableRequest extends TeaModel {
 
     public static class CreateStandardLookupTableRequestCreateCommandDirectoryReference extends TeaModel {
         /**
-         * <p>The directory to which the lookup table belongs.</p>
+         * <p>The parent folder.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -117,7 +119,7 @@ public class CreateStandardLookupTableRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>杭州</p>
+         * <p>Hangzhou</p>
          */
         @NameInMap("Value")
         public String value;
@@ -182,7 +184,7 @@ public class CreateStandardLookupTableRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The directory to which the lookup table belongs.</p>
+         * <p>The parent folder.</p>
          */
         @NameInMap("DirectoryReference")
         public CreateStandardLookupTableRequestCreateCommandDirectoryReference directoryReference;
@@ -198,13 +200,13 @@ public class CreateStandardLookupTableRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>城市码表</p>
+         * <p>City lookup table</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The ID of the lookup table owner. Default value: the user ID of the caller.</p>
+         * <p>The ID of the lookup table owner. Default value: the ID of the caller.</p>
          * 
          * <strong>example:</strong>
          * <p>30012021</p>
