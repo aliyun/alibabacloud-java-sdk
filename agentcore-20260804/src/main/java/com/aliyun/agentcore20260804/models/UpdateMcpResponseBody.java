@@ -26,7 +26,7 @@ public class UpdateMcpResponseBody extends TeaModel {
      * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>The request was processed successfully</p>
+     * <p>The request is processed successfully</p>
      */
     @NameInMap("message")
     public String message;
@@ -41,7 +41,7 @@ public class UpdateMcpResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;

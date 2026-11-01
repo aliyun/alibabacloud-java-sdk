@@ -14,7 +14,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code of the request. The value is 200 if the request is successful.</p>
+     * <p>The HTTP status code of the current request. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public java.util.List<ListCustomAgentsResponseBodyItems> items;
 
     /**
-     * <p>The maximum number of results returned per page for the current query.</p>
+     * <p>The maximum number of items to return per page in this query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The message that describes the result of the request. The value is success if the request is successful.</p>
+     * <p>The processing result message for this request. The value is success if the request succeeds.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,7 +47,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The opaque token used to query the next page. An empty value indicates that no more pages are available. Pass this token as-is in subsequent requests.</p>
+     * <p>The opaque token used to query the next page. An empty value indicates that no more pages are available. Pass this token as is in subsequent requests.</p>
      * 
      * <strong>example:</strong>
      * <p>djE6YWdlbnRjb3JlLmFnZW50Lmxpc3QuY3VzdG9tOjIw</p>
@@ -56,7 +56,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The unique identifier of the request. You can use this ID to locate and troubleshoot issues.</p>
+     * <p>The unique identifier of the request, used to locate and troubleshoot issues.</p>
      * 
      * <strong>example:</strong>
      * <p>550E8400-E29B-41D4-A716-446655440000</p>
@@ -65,7 +65,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was processed successfully. A value of true indicates that the request was successful. A successful creation, update, or deletion response does not mean that the background operation is complete.</p>
+     * <p>Indicates whether the request was processed successfully. A value of true indicates success. A successful creation, update, or deletion does not mean that the background operation is complete.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -158,7 +158,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
     public static class ListCustomAgentsResponseBodyItemsArtifactCode extends TeaModel {
         /**
-         * <p>The startup command for the code package. This parameter is required in code package mode. The working directory is the root directory of the extracted code, which is /code. Example: python main.py. Quotes and escape characters are supported. Environment variables, pipes, and logical operations are not automatically expanded. For complex commands, use a script within the package.</p>
+         * <p>The startup command for the code package. This parameter is required in code package mode. The working directory is the root directory of the extracted code, which is /code. Example: python main.py. Quotes and escapes are supported. Environment variables, pipes, and logical operations are not automatically expanded. For complex commands, use a script within the package.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -238,7 +238,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String instanceId;
 
         /**
-         * <p>The ACR namespace.</p>
+         * <p>The namespace of Container Registry.</p>
          * 
          * <strong>example:</strong>
          * <p>team</p>
@@ -247,7 +247,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The name of the ACR image repository.</p>
+         * <p>The name of the Container Registry image repository.</p>
          * 
          * <strong>example:</strong>
          * <p>app</p>
@@ -478,7 +478,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
     public static class ListCustomAgentsResponseBodyItemsProtocolPaths extends TeaModel {
         /**
-         * <p>The purpose description of the current API path.</p>
+         * <p>The description of the purpose for the current API path.</p>
          * 
          * <strong>example:</strong>
          * <p>AG-UI conversation API</p>
@@ -521,7 +521,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
     public static class ListCustomAgentsResponseBodyItemsProtocol extends TeaModel {
         /**
-         * <p>The request header configuration of the current protocol. The key is the header name and the value is a string.</p>
+         * <p>The request header configuration for the current protocol. The key is the header name and the value is a string.</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
@@ -580,6 +580,24 @@ public class ListCustomAgentsResponseBody extends TeaModel {
 
     public static class ListCustomAgentsResponseBodyItems extends TeaModel {
         /**
+         * <p>The inbound access mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API_KEY</p>
+         */
+        @NameInMap("accessMode")
+        public String accessMode;
+
+        /**
+         * <p>The user access scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
+        @NameInMap("accessScope")
+        public String accessScope;
+
+        /**
          * <p>The unique identifier of the custom agent. You can obtain this ID from the response of the CreateCustomAgent or ListCustomAgents operation.</p>
          * 
          * <strong>example:</strong>
@@ -601,7 +619,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public ListCustomAgentsResponseBodyItemsCodePackageInfo codePackageInfo;
 
         /**
-         * <p>The creation method of the agent. The value is CUSTOM for custom agents.</p>
+         * <p>The creation mode of the agent. The value is CUSTOM for custom agents.</p>
          * 
          * <strong>example:</strong>
          * <p>CUSTOM</p>
@@ -610,7 +628,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String createMode;
 
         /**
-         * <p>The time when the agent was created. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
+         * <p>The time when the agent was created. The time is in ISO 8601 format. A trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-10T06:00:00Z</p>
@@ -619,7 +637,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The deployment method of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED for custom agents.</p>
+         * <p>The deployment mode of the agent. Custom agents are deployed and managed by the platform. The value is MANAGED for custom agents.</p>
          * 
          * <strong>example:</strong>
          * <p>MANAGED</p>
@@ -688,7 +706,7 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the agent was last updated. The time is in ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds may be included.</p>
+         * <p>The time when the agent was last updated. The time follows the ISO 8601 format. The trailing Z indicates the UTC time zone. Fractional seconds are supported.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-10T06:05:00Z</p>
@@ -708,6 +726,22 @@ public class ListCustomAgentsResponseBody extends TeaModel {
         public static ListCustomAgentsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             ListCustomAgentsResponseBodyItems self = new ListCustomAgentsResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public ListCustomAgentsResponseBodyItems setAccessMode(String accessMode) {
+            this.accessMode = accessMode;
+            return this;
+        }
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
+        public ListCustomAgentsResponseBodyItems setAccessScope(String accessScope) {
+            this.accessScope = accessScope;
+            return this;
+        }
+        public String getAccessScope() {
+            return this.accessScope;
         }
 
         public ListCustomAgentsResponseBodyItems setAgentId(String agentId) {

@@ -60,7 +60,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>Specifies whether the mount is read-only. Default value: false. This parameter does not represent a read-only policy for a RAM role.</p>
+         * <p>Specifies whether the mount is read-only. If omitted, the default value is false. This parameter does not represent a read-only policy for a RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -305,7 +305,7 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodyModelQuota extends TeaModel {
         /**
-         * <p>Specifies whether to enable the token quota. Default value: true. If you set this parameter to false, the quota is disabled and existing quota rules are deleted.</p>
+         * <p>Specifies whether to enable the token quota. If not specified, the default value is true. A value of false disables the quota and deletes existing quota rules.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -332,7 +332,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public String periodType;
 
         /**
-         * <p>The maximum number of tokens that can be consumed within a single period. This parameter is required and validated by the backend when the quota is enabled. The value must be greater than 0.</p>
+         * <p>The maximum number of tokens allowed to be consumed in a single period. This parameter is required and validated by the backend when the quota is enabled. The value must be greater than 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -391,7 +391,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public String modelConnectionId;
 
         /**
-         * <p>The upstream model name.</p>
+         * <p>The name of the upstream model.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-max</p>
@@ -438,7 +438,7 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodyNetworkAccessInternet extends TeaModel {
         /**
-         * <p>Specifies whether to allow Internet access.</p>
+         * <p>Specifies whether to allow access to the Internet.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -463,7 +463,7 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodyNetworkAccessVpc extends TeaModel {
         /**
-         * <p>Specifies whether to allow VPC access.</p>
+         * <p>Specifies whether to allow access to the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -542,7 +542,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The relative object prefix in the bucket. If this parameter is not specified, the entire bucket is mounted.</p>
+         * <p>The relative object prefix in the bucket. If not specified, the entire bucket is mounted.</p>
          * 
          * <strong>example:</strong>
          * <p>datasets</p>
@@ -551,7 +551,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>Specifies whether the mount is read-only. Default value: false.</p>
+         * <p>Specifies whether the mount is read-only. If not specified, the default value is false.</p>
          */
         @NameInMap("readOnly")
         public Boolean readOnly;
@@ -682,13 +682,13 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodyRuntimeHpa extends TeaModel {
         /**
-         * <p>Specifies whether auto-scaling is enabled. This parameter is required and validated by the backend when HPA is present.</p>
+         * <p>Specifies whether to enable auto-scaling. This parameter is required and validated by the backend when HPA is specified.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of active sessions per sandbox. This parameter is required and validated by the backend when HPA is present.</p>
+         * <p>The maximum number of active sessions per sandbox. This parameter is required and validated by the backend when HPA is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -697,7 +697,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public Integer maxConcurrentSessionsPerSandbox;
 
         /**
-         * <p>The maximum number of sandboxes. This parameter is required and must not be less than the minimum value when HPA is enabled.</p>
+         * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and must not be less than the minimum value.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -715,7 +715,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public Integer minSandboxCount;
 
         /**
-         * <p>The timeout period in seconds for reclaiming an inactive session. This parameter is required and validated by the backend when HPA is present.</p>
+         * <p>The idle timeout period for a session before it is reclaimed, in seconds. This parameter is required and validated by the backend when HPA is specified.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -867,7 +867,11 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBodySkillsVersionSelector extends TeaModel {
         /**
-         * <p>The version selector type. Valid values: LABEL: selects by label. VERSION: selects by specific version.</p>
+         * <p>The version selector type. Valid values:</p>
+         * <ul>
+         * <li>LABEL: selects by label</li>
+         * <li>VERSION: selects by specific version</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>LABEL</p>
@@ -876,7 +880,7 @@ public class CreateManagedAgentRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The selector value. When the type is LABEL, this is the label name, such as latest. When the type is VERSION, this is the specific version number.</p>
+         * <p>The selector value. When the type is LABEL, this value is the label name, such as latest. When the type is VERSION, this value is the specific version number.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -919,7 +923,11 @@ public class CreateManagedAgentRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The skill source type. Valid values: REFERENCE: references the AI registry. STATIC: statically provided with the package.</p>
+         * <p>The skill source type. Valid values:</p>
+         * <ul>
+         * <li>REFERENCE: references the AI Registry</li>
+         * <li>STATIC: statically provided with the package</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>REFERENCE</p>
@@ -1029,7 +1037,7 @@ public class CreateManagedAgentRequest extends TeaModel {
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>Please review the code</p>
+         * <p>Review the code</p>
          */
         @NameInMap("instruction")
         public String instruction;
@@ -1192,7 +1200,25 @@ public class CreateManagedAgentRequest extends TeaModel {
 
     public static class CreateManagedAgentRequestBody extends TeaModel {
         /**
-         * <p>The AgenticFS mounts. Omitting this parameter or passing an empty array indicates no AgenticFS mounts. Null values are rejected. The total number of AgenticFS and OSS mounts cannot exceed 10.</p>
+         * <p>The inbound access mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API_KEY</p>
+         */
+        @NameInMap("accessMode")
+        public String accessMode;
+
+        /**
+         * <p>The user access scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
+        @NameInMap("accessScope")
+        public String accessScope;
+
+        /**
+         * <p>The list of AgenticFS mounts. If omitted or set to an empty array during creation, no AgenticFS mounts are configured. A null value is rejected. The total number of AgenticFS and OSS mounts cannot exceed 10.</p>
          */
         @NameInMap("agenticFsMounts")
         public java.util.List<CreateManagedAgentRequestBodyAgenticFsMounts> agenticFsMounts;
@@ -1296,6 +1322,22 @@ public class CreateManagedAgentRequest extends TeaModel {
         public static CreateManagedAgentRequestBody build(java.util.Map<String, ?> map) throws Exception {
             CreateManagedAgentRequestBody self = new CreateManagedAgentRequestBody();
             return TeaModel.build(map, self);
+        }
+
+        public CreateManagedAgentRequestBody setAccessMode(String accessMode) {
+            this.accessMode = accessMode;
+            return this;
+        }
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
+        public CreateManagedAgentRequestBody setAccessScope(String accessScope) {
+            this.accessScope = accessScope;
+            return this;
+        }
+        public String getAccessScope() {
+            return this.accessScope;
         }
 
         public CreateManagedAgentRequestBody setAgenticFsMounts(java.util.List<CreateManagedAgentRequestBodyAgenticFsMounts> agenticFsMounts) {

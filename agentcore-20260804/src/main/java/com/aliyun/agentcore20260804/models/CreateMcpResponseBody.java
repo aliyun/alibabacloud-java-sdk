@@ -1896,6 +1896,15 @@ public class CreateMcpResponseBody extends TeaModel {
         public String officialTag;
 
         /**
+         * <p>PUBLIC 表示公开访问；CONTROLLED 表示根据权限规则控制访问。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTROLLED</p>
+         */
+        @NameInMap("permissionMode")
+        public String permissionMode;
+
+        /**
          * <p>The MCP protocol.</p>
          * 
          * <strong>example:</strong>
@@ -2051,6 +2060,14 @@ public class CreateMcpResponseBody extends TeaModel {
         }
         public String getOfficialTag() {
             return this.officialTag;
+        }
+
+        public CreateMcpResponseBodyData setPermissionMode(String permissionMode) {
+            this.permissionMode = permissionMode;
+            return this;
+        }
+        public String getPermissionMode() {
+            return this.permissionMode;
         }
 
         public CreateMcpResponseBodyData setProtocol(String protocol) {

@@ -110,6 +110,24 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
 
     public static class DeleteManagedAgentResponseBodyData extends TeaModel {
         /**
+         * <p>API_KEY 表示使用 API Key；USER 表示使用用户身份。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API_KEY</p>
+         */
+        @NameInMap("accessMode")
+        public String accessMode;
+
+        /**
+         * <p>仅 accessMode 为 USER 时返回：ALL 表示全部用户，SPECIFIED 表示指定用户。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SPECIFIED</p>
+         */
+        @NameInMap("accessScope")
+        public String accessScope;
+
+        /**
          * <p>The managed agent ID.</p>
          * 
          * <strong>example:</strong>
@@ -211,6 +229,22 @@ public class DeleteManagedAgentResponseBody extends TeaModel {
         public static DeleteManagedAgentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DeleteManagedAgentResponseBodyData self = new DeleteManagedAgentResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DeleteManagedAgentResponseBodyData setAccessMode(String accessMode) {
+            this.accessMode = accessMode;
+            return this;
+        }
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
+        public DeleteManagedAgentResponseBodyData setAccessScope(String accessScope) {
+            this.accessScope = accessScope;
+            return this;
+        }
+        public String getAccessScope() {
+            return this.accessScope;
         }
 
         public DeleteManagedAgentResponseBodyData setAgentId(String agentId) {

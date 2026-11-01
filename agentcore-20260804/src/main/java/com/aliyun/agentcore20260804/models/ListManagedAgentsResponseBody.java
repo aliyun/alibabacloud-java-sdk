@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListManagedAgentsResponseBody extends TeaModel {
     /**
-     * <p>The business status code. A value of SUCCESS indicates success.</p>
+     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -14,7 +14,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The HTTP status code. A value of 200 indicates success.</p>
+     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The result message of the request.</p>
+     * <p>The message about the request processing result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -50,7 +50,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The token for the next page. An empty value indicates the last page.</p>
+     * <p>The token for the next page. An empty value indicates that the last page is reached.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-1</p>
@@ -68,7 +68,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -164,7 +164,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
 
     public static class ListManagedAgentsResponseBodyItemsHarnessConfiguration extends TeaModel {
         /**
-         * <p>Binds a Service Account Key of the QoderCLI Connector by Key ID. This parameter can be omitted when only one key exists, but is required when multiple keys exist.</p>
+         * <p>Connector Service Account Key</p>
          * 
          * <strong>example:</strong>
          * <p>key-xxxx</p>
@@ -173,7 +173,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public String connectorServiceAccountKey;
 
         /**
-         * <p>The Connector Key name populated during queries. This value is not used as a binding reference during writes.</p>
+         * <p>Connector Service Account Name</p>
          * 
          * <strong>example:</strong>
          * <p>my-connector-key</p>
@@ -206,13 +206,13 @@ public class ListManagedAgentsResponseBody extends TeaModel {
 
     public static class ListManagedAgentsResponseBodyItemsHarness extends TeaModel {
         /**
-         * <p>The Connector binding configuration for the qodercli framework.</p>
+         * <p>The runtime framework configuration.</p>
          */
         @NameInMap("configuration")
         public ListManagedAgentsResponseBodyItemsHarnessConfiguration configuration;
 
         /**
-         * <p>The runtime framework type. Valid values: qwenpaw and qodercli. The qodercli type binds by configuration.connectorServiceAccountKey, and the name is also populated during queries.</p>
+         * <p>The runtime framework type.</p>
          * 
          * <strong>example:</strong>
          * <p>qodercli</p>
@@ -245,7 +245,25 @@ public class ListManagedAgentsResponseBody extends TeaModel {
 
     public static class ListManagedAgentsResponseBodyItems extends TeaModel {
         /**
-         * <p>The managed agent ID.</p>
+         * <p>API_KEY 表示使用 API Key；USER 表示使用用户身份。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API_KEY</p>
+         */
+        @NameInMap("accessMode")
+        public String accessMode;
+
+        /**
+         * <p>仅 accessMode 为 USER 时返回：ALL 表示全部用户，SPECIFIED 表示指定用户。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
+        @NameInMap("accessScope")
+        public String accessScope;
+
+        /**
+         * <p>The ID of the managed agent.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-1</p>
@@ -284,7 +302,7 @@ public class ListManagedAgentsResponseBody extends TeaModel {
          * <p>The description of the managed agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>An agent for code review</p>
+         * <p>Agent for code review</p>
          */
         @NameInMap("description")
         public String description;
@@ -352,6 +370,22 @@ public class ListManagedAgentsResponseBody extends TeaModel {
         public static ListManagedAgentsResponseBodyItems build(java.util.Map<String, ?> map) throws Exception {
             ListManagedAgentsResponseBodyItems self = new ListManagedAgentsResponseBodyItems();
             return TeaModel.build(map, self);
+        }
+
+        public ListManagedAgentsResponseBodyItems setAccessMode(String accessMode) {
+            this.accessMode = accessMode;
+            return this;
+        }
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
+        public ListManagedAgentsResponseBodyItems setAccessScope(String accessScope) {
+            this.accessScope = accessScope;
+            return this;
+        }
+        public String getAccessScope() {
+            return this.accessScope;
         }
 
         public ListManagedAgentsResponseBodyItems setAgentId(String agentId) {

@@ -14,7 +14,7 @@ public class GetMcpResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("data")
     public GetMcpResponseBodyData data;
@@ -47,7 +47,7 @@ public class GetMcpResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      */
     @NameInMap("success")
     public Boolean success;
@@ -158,7 +158,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The authentication parameter value.</p>
+         * <p>The value of the authentication parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>example-credential</p>
@@ -200,7 +200,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String credential;
 
         /**
-         * <p>The authentication scheme ID.</p>
+         * <p>The ID of the authentication scheme.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-1234567890abcdef</p>
@@ -284,19 +284,19 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataAuth extends TeaModel {
         /**
-         * <p>The API key authentication configuration for code-deployed MCP callers.</p>
+         * <p>The caller API key authentication configuration for code-deployed MCPs.</p>
          */
         @NameInMap("codePackage")
         public GetMcpResponseBodyDataAuthCodePackage codePackage;
 
         /**
-         * <p>The authentication configuration for direct proxy connections.</p>
+         * <p>The authentication configuration for the direct proxy.</p>
          */
         @NameInMap("directProxy")
         public GetMcpResponseBodyDataAuthDirectProxy directProxy;
 
         /**
-         * <p>Indicates whether the configuration is enabled.</p>
+         * <p>Specifies whether the configuration is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -348,7 +348,7 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigAccessControl extends TeaModel {
         /**
-         * <p>The AgentCore Credential referenced when mode is set to CREDENTIAL.</p>
+         * <p>References the AgentCore credential when mode is CREDENTIAL.</p>
          * 
          * <strong>example:</strong>
          * <p>credential-id</p>
@@ -357,13 +357,13 @@ public class GetMcpResponseBody extends TeaModel {
         public String credentialId;
 
         /**
-         * <p>Indicates whether ingress access control is enabled.</p>
+         * <p>Specifies whether entry access control is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>ANONYMOUS indicates anonymous access. CREDENTIAL indicates that AgentCore access credentials are used.</p>
+         * <p>ANONYMOUS indicates anonymous access, and CREDENTIAL indicates the use of AgentCore access credentials.</p>
          * 
          * <strong>example:</strong>
          * <p>CREDENTIAL</p>
@@ -404,13 +404,13 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigAgentIdentityConfiguration extends TeaModel {
         /**
-         * <p>Indicates whether authorization is enabled.</p>
+         * <p>Specifies whether authorization is enabled.</p>
          */
         @NameInMap("authorizationEnabled")
         public Boolean authorizationEnabled;
 
         /**
-         * <p>The credential provider ARN.</p>
+         * <p>The ARN of the credential provider.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:agentidentity:cn-hangzhou:1234567890123456:provider/example</p>
@@ -419,7 +419,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String credentialProviderArn;
 
         /**
-         * <p>The credential provider type.</p>
+         * <p>The type of the credential provider.</p>
          * 
          * <strong>example:</strong>
          * <p>oauth2</p>
@@ -428,7 +428,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String credentialProviderType;
 
         /**
-         * <p>Indicates whether Agent Identity is enabled.</p>
+         * <p>Specifies whether agent identity is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -474,7 +474,7 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigCodeConfiguration extends TeaModel {
         /**
-         * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. Use this token to create or update a code deployment after completing the pre-signed upload.</p>
+         * <p>The temporary code package token returned by GetMcpCodePackageUploadUrl. It is used to create or update a code deployment after a presigned upload is completed.</p>
          * 
          * <strong>example:</strong>
          * <p>upload-token</p>
@@ -483,13 +483,13 @@ public class GetMcpResponseBody extends TeaModel {
         public String codePackageToken;
 
         /**
-         * <p>The full startup command, with arguments passed in order by parameter boundary. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the full subcommand, and the remaining arguments.</p>
+         * <p>The complete startup command, passed sequentially by parameter boundaries. For example, when using supergateway to start a stdio MCP, pass supergateway, --stdio, the complete subcommand, and the remaining parameters.</p>
          */
         @NameInMap("command")
         public java.util.List<String> command;
 
         /**
-         * <p>The runtime of the code package: python3.13, nodejs22, or java17.</p>
+         * <p>The runtime for the code package. Valid values: python3.13, nodejs22, or java17.</p>
          * 
          * <strong>example:</strong>
          * <p>python3.13</p>
@@ -530,7 +530,7 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigContainerConfiguration extends TeaModel {
         /**
-         * <p>The ACR instance ID.</p>
+         * <p>The ID of the ACR instance.</p>
          * 
          * <strong>example:</strong>
          * <p>cri-example</p>
@@ -545,13 +545,13 @@ public class GetMcpResponseBody extends TeaModel {
         public java.util.List<String> command;
 
         /**
-         * <p>The container entrypoint parameters.</p>
+         * <p>The entrypoint parameters of the container.</p>
          */
         @NameInMap("entrypoint")
         public java.util.List<String> entrypoint;
 
         /**
-         * <p>The container image address.</p>
+         * <p>The address of the container image.</p>
          * 
          * <strong>example:</strong>
          * <p>registry.cn-hangzhou.aliyuncs.com/example/mcp:1.0.0</p>
@@ -560,7 +560,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String image;
 
         /**
-         * <p>The image registry type.</p>
+         * <p>The type of the image registry.</p>
          * 
          * <strong>example:</strong>
          * <p>ACR</p>
@@ -569,7 +569,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String imageRegistryType;
 
         /**
-         * <p>The custom container must expose a standard MCP endpoint on its own. The value is SELF_HOSTED.</p>
+         * <p>Custom containers must expose standard MCP by themselves. Valid value: SELF_HOSTED.</p>
          * 
          * <strong>example:</strong>
          * <p>SELF_HOSTED</p>
@@ -578,7 +578,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String mcpRuntimeMode;
 
         /**
-         * <p>The value is fixed to CONTAINER_IMAGE.</p>
+         * <p>The source type of the container. Valid value: CONTAINER_IMAGE.</p>
          * 
          * <strong>example:</strong>
          * <p>CONTAINER_IMAGE</p>
@@ -651,7 +651,7 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigHookConfigurationHooks extends TeaModel {
         /**
-         * <p>The hook API version.</p>
+         * <p>The API version of the hook.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -660,22 +660,22 @@ public class GetMcpResponseBody extends TeaModel {
         public String apiVersion;
 
         /**
-         * <p>The hook description.</p>
+         * <p>The description of the hook.</p>
          * 
          * <strong>example:</strong>
-         * <p>Log MCP tool invocations</p>
+         * <p>Log MCP tool invoke</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>Indicates whether the hook is enabled.</p>
+         * <p>Specifies whether the hook is enabled.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The hook event.</p>
+         * <p>The event of the hook.</p>
          * 
          * <strong>example:</strong>
          * <p>PRE_CALL_TOOL</p>
@@ -684,13 +684,13 @@ public class GetMcpResponseBody extends TeaModel {
         public String event;
 
         /**
-         * <p>The hook request headers.</p>
+         * <p>The request headers of the hook.</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;
 
         /**
-         * <p>The timeout period. Unit: milliseconds.</p>
+         * <p>The timeout period of the hook, in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -699,7 +699,7 @@ public class GetMcpResponseBody extends TeaModel {
         public Integer timeout;
 
         /**
-         * <p>The hook callback URL.</p>
+         * <p>The callback URL of the hook.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/mcp-hook">https://example.com/mcp-hook</a></p>
@@ -772,7 +772,7 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigHookConfiguration extends TeaModel {
         /**
-         * <p>The hooks are executed in array order: PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL.</p>
+         * <p>Executes the PRE_LIST_TOOLS, PRE_CALL_TOOL, POST_LIST_TOOLS, and POST_CALL_TOOL hooks in the order of the array.</p>
          */
         @NameInMap("hooks")
         public java.util.List<GetMcpResponseBodyDataDeploymentConfigHookConfigurationHooks> hooks;
@@ -794,19 +794,19 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigLogConfiguration extends TeaModel {
         /**
-         * <p>Indicates whether instance metrics collection is enabled.</p>
+         * <p>Specifies whether to collect instance metrics.</p>
          */
         @NameInMap("enableInstanceMetrics")
         public Boolean enableInstanceMetrics;
 
         /**
-         * <p>Indicates whether request metrics collection is enabled.</p>
+         * <p>Specifies whether to collect request metrics.</p>
          */
         @NameInMap("enableRequestMetrics")
         public Boolean enableRequestMetrics;
 
         /**
-         * <p>The log segmentation begin rule for Function Compute (FC).</p>
+         * <p>The start rule for splitting FC logs.</p>
          * 
          * <strong>example:</strong>
          * <p>DefaultRegex</p>
@@ -815,7 +815,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String logBeginRule;
 
         /**
-         * <p>The Logstore name.</p>
+         * <p>The name of the Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-logs</p>
@@ -824,7 +824,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The Log Service project name.</p>
+         * <p>The name of the Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>agentcore-mcp-logs</p>
@@ -881,7 +881,7 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigMcpConfiguration extends TeaModel {
         /**
-         * <p>The MCP endpoint path. For example, /mcp or /sse.</p>
+         * <p>The path of the MCP endpoint, such as /mcp or /sse.</p>
          * 
          * <strong>example:</strong>
          * <p>/mcp</p>
@@ -890,7 +890,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String endpointPath;
 
         /**
-         * <p>The value is fixed to 1.</p>
+         * <p>The number of concurrent sessions per instance. Fixed value: 1.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -899,7 +899,7 @@ public class GetMcpResponseBody extends TeaModel {
         public Integer sessionConcurrencyPerInstance;
 
         /**
-         * <p>The session idle timeout period. Unit: seconds. Default value: 1800.</p>
+         * <p>The idle timeout period for a session, in seconds. Default value: 1800.</p>
          * 
          * <strong>example:</strong>
          * <p>1800</p>
@@ -908,7 +908,7 @@ public class GetMcpResponseBody extends TeaModel {
         public Integer sessionIdleTimeoutSeconds;
 
         /**
-         * <p>The maximum session lifetime. Unit: seconds. Default value: 21600.</p>
+         * <p>The maximum lifetime of a session, in seconds. Default value: 21600.</p>
          * 
          * <strong>example:</strong>
          * <p>21600</p>
@@ -957,7 +957,7 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigNasConfigurationMountPoints extends TeaModel {
         /**
-         * <p>Indicates whether TLS is enabled.</p>
+         * <p>Specifies whether TLS is enabled.</p>
          */
         @NameInMap("enableTls")
         public Boolean enableTls;
@@ -972,7 +972,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String mountDir;
 
         /**
-         * <p>The NAS server address.</p>
+         * <p>The address of the NAS service.</p>
          * 
          * <strong>example:</strong>
          * <p>example.cn-hangzhou.nas.aliyuncs.com</p>
@@ -1013,7 +1013,7 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigNasConfiguration extends TeaModel {
         /**
-         * <p>The runtime user group ID.</p>
+         * <p>The ID of the runtime user group.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1028,7 +1028,7 @@ public class GetMcpResponseBody extends TeaModel {
         public java.util.List<GetMcpResponseBodyDataDeploymentConfigNasConfigurationMountPoints> mountPoints;
 
         /**
-         * <p>The runtime user ID.</p>
+         * <p>The ID of the runtime user.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -1093,7 +1093,7 @@ public class GetMcpResponseBody extends TeaModel {
         public java.util.List<String> vSwitchIds;
 
         /**
-         * <p>The virtual private cloud (VPC) ID.</p>
+         * <p>The VPC ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-example</p>
@@ -1178,7 +1178,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String mountDir;
 
         /**
-         * <p>Indicates whether the mount point is read-only.</p>
+         * <p>Specifies whether the mount point is read-only.</p>
          */
         @NameInMap("readOnly")
         public Boolean readOnly;
@@ -1254,7 +1254,7 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigParameterTransformConfiguration extends TeaModel {
         /**
-         * <p>Indicates whether parameter transformation and result enhancement is enabled.</p>
+         * <p>Specifies whether to enable parameter transformation and result enhancement.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -1310,7 +1310,7 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigProxyConfiguration extends TeaModel {
         /**
-         * <p>Indicates whether the MCP proxy is enabled.</p>
+         * <p>Specifies whether to enable the MCP proxy.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
@@ -1332,7 +1332,7 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfigRuntimeConfiguration extends TeaModel {
         /**
-         * <p>The number of vCPUs. Default value: 0.25.</p>
+         * <p>The CPU specifications in cores. Default value: 0.25.</p>
          * 
          * <strong>example:</strong>
          * <p>0.25</p>
@@ -1341,7 +1341,7 @@ public class GetMcpResponseBody extends TeaModel {
         public Double cpu;
 
         /**
-         * <p>The ephemeral disk size. Unit: MB. Valid values: 512 and 10240.</p>
+         * <p>The ephemeral disk size in MB. Valid values: 512 and 10240.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1365,7 +1365,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String executionRoleArn;
 
         /**
-         * <p>The number of concurrent requests per instance. Default value: 200.</p>
+         * <p>The maximum number of concurrent requests per instance. Default value: 200.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -1374,7 +1374,7 @@ public class GetMcpResponseBody extends TeaModel {
         public Integer instanceConcurrency;
 
         /**
-         * <p>The memory size. Unit: MB. Default value: 512.</p>
+         * <p>The memory size in MB. Default value: 512.</p>
          * 
          * <strong>example:</strong>
          * <p>512</p>
@@ -1392,7 +1392,7 @@ public class GetMcpResponseBody extends TeaModel {
         public Integer port;
 
         /**
-         * <p>The function timeout period. Unit: seconds. Default value: 300.</p>
+         * <p>The function timeout period in seconds. Default value: 300.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -1473,19 +1473,19 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataDeploymentConfig extends TeaModel {
         /**
-         * <p>The MCP ingress access control.</p>
+         * <p>The MCP entry access control.</p>
          */
         @NameInMap("accessControl")
         public GetMcpResponseBodyDataDeploymentConfigAccessControl accessControl;
 
         /**
-         * <p>The Agent Identity configuration.</p>
+         * <p>The agent identity configuration.</p>
          */
         @NameInMap("agentIdentityConfiguration")
         public GetMcpResponseBodyDataDeploymentConfigAgentIdentityConfiguration agentIdentityConfiguration;
 
         /**
-         * <p>Code indicates a ZIP code package. Container indicates a custom container.</p>
+         * <p>Code indicates a ZIP code package, and Container indicates a custom container.</p>
          * 
          * <strong>example:</strong>
          * <p>Code</p>
@@ -1536,7 +1536,7 @@ public class GetMcpResponseBody extends TeaModel {
         public GetMcpResponseBodyDataDeploymentConfigNetworkConfiguration networkConfiguration;
 
         /**
-         * <p>The Object Storage Service (OSS) mount configuration.</p>
+         * <p>The OSS mount configuration.</p>
          */
         @NameInMap("ossMountConfiguration")
         public GetMcpResponseBodyDataDeploymentConfigOssMountConfiguration ossMountConfiguration;
@@ -1680,7 +1680,7 @@ public class GetMcpResponseBody extends TeaModel {
 
     public static class GetMcpResponseBodyDataMarketSource extends TeaModel {
         /**
-         * <p>The marketplace template ID for the MCP.</p>
+         * <p>The MCP marketplace template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>market-1</p>
@@ -1741,7 +1741,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String templateInputSchema;
 
         /**
-         * <p>Indicates whether a template version update is available.</p>
+         * <p>Indicates whether an updated template version is available.</p>
          */
         @NameInMap("updateAvailable")
         public Boolean updateAvailable;
@@ -1801,13 +1801,13 @@ public class GetMcpResponseBody extends TeaModel {
         public java.util.List<String> addresses;
 
         /**
-         * <p>The backend authentication configuration. enabled indicates whether authentication is enabled. directProxy specifies the custom authentication header for direct proxy connections. httpToMcp specifies the list of OpenAPI credentials for HTTP_TO_MCP.</p>
+         * <p>The backend authentication configuration. enabled specifies whether it is enabled; directProxy is the custom authentication header for direct proxy; httpToMcp is the list of OpenAPI credentials for HTTP_TO_MCP.</p>
          */
         @NameInMap("auth")
         public GetMcpResponseBodyDataAuth auth;
 
         /**
-         * <p>The MCP creation time in ISO 8601 UTC format.</p>
+         * <p>The creation time of the MCP, in ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-23T00:00:00Z</p>
@@ -1822,7 +1822,7 @@ public class GetMcpResponseBody extends TeaModel {
         public java.util.List<String> customTags;
 
         /**
-         * <p>The deployment configuration for code-deployed MCP.</p>
+         * <p>The deployment configuration for code-deployed MCPs.</p>
          */
         @NameInMap("deploymentConfig")
         public GetMcpResponseBodyDataDeploymentConfig deploymentConfig;
@@ -1831,13 +1831,13 @@ public class GetMcpResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>A sample description that explains the purpose of the resource</p>
+         * <p>A sample description to illustrate the purpose of the resource</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The MCP endpoint that can be called by users or agents. This value is empty before the deployment is complete.</p>
+         * <p>The MCP endpoint that can be called by users or agents. This field is empty before the deployment is complete.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/mcp">https://example.com/mcp</a></p>
@@ -1846,7 +1846,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The Function Compute function name that corresponds to the CODE_PACKAGE MCP. This value is empty before the deployment is complete or for other types.</p>
+         * <p>The name of the Function Compute function corresponding to the CODE_PACKAGE MCP. This field is empty before the deployment is complete or for other types.</p>
          * 
          * <strong>example:</strong>
          * <p>agentcore-mcp-example</p>
@@ -1855,13 +1855,13 @@ public class GetMcpResponseBody extends TeaModel {
         public String functionName;
 
         /**
-         * <p>The marketplace source template for the MCP.</p>
+         * <p>The source marketplace template of the MCP.</p>
          */
         @NameInMap("marketSource")
         public GetMcpResponseBodyDataMarketSource marketSource;
 
         /**
-         * <p>The MCP server configuration, represented as a JSON string.</p>
+         * <p>The MCP server configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;type&quot;:&quot;object&quot;}</p>
@@ -1870,7 +1870,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String mcpServerConfig;
 
         /**
-         * <p>The MCP server ID.</p>
+         * <p>The MCP service ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mcp-1234567890abcdef</p>
@@ -1888,13 +1888,22 @@ public class GetMcpResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The official tag managed by the server.</p>
+         * <p>The official usage tag, which is managed by the server.</p>
          * 
          * <strong>example:</strong>
          * <p>KNOWLEDGE_BASE</p>
          */
         @NameInMap("officialTag")
         public String officialTag;
+
+        /**
+         * <p>The access permission mode. A value of PUBLIC indicates public access. A value of CONTROLLED indicates that access is controlled based on permission rules.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTROLLED</p>
+         */
+        @NameInMap("permissionMode")
+        public String permissionMode;
 
         /**
          * <p>The MCP protocol.</p>
@@ -1915,7 +1924,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The reason for the current status.</p>
+         * <p>The reason for the status.</p>
          * 
          * <strong>example:</strong>
          * <p>Resource processing completed</p>
@@ -1933,7 +1942,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String swaggerConfig;
 
         /**
-         * <p>The template schema of the usage-bound MCP version. Not returned for regular MCPs.</p>
+         * <p>The template schema for the version bound to the usage MCP. This field is not returned for regular MCPs.</p>
          */
         @NameInMap("template")
         public GetMcpResponseBodyDataTemplate template;
@@ -1948,7 +1957,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The last updated time of the MCP in ISO 8601 UTC format.</p>
+         * <p>The time when the MCP was last updated, in ISO 8601 UTC format.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-08-23T01:00:00Z</p>
@@ -1966,7 +1975,7 @@ public class GetMcpResponseBody extends TeaModel {
         public String url;
 
         /**
-         * <p>Indicates whether the MCP is still bound by the official template usage constraints.</p>
+         * <p>Indicates whether the MCP is still subject to the usage constraints of the official template.</p>
          */
         @NameInMap("usageActive")
         public Boolean usageActive;
@@ -2078,6 +2087,14 @@ public class GetMcpResponseBody extends TeaModel {
         }
         public String getOfficialTag() {
             return this.officialTag;
+        }
+
+        public GetMcpResponseBodyData setPermissionMode(String permissionMode) {
+            this.permissionMode = permissionMode;
+            return this;
+        }
+        public String getPermissionMode() {
+            return this.permissionMode;
         }
 
         public GetMcpResponseBodyData setProtocol(String protocol) {

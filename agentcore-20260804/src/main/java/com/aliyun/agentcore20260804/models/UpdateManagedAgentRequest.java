@@ -42,7 +42,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyAgenticFsMounts extends TeaModel {
         /**
-         * <p>The subdirectory under /mnt/agenticfs/ in the container. This parameter is required and validated by the backend for each mount item. Mount targets must not be duplicated or overlap in parent-child relationships.</p>
+         * <p>The subdirectory under /mnt/agenticfs/ in the container. This field is required for each mount item and validated by the backend. Mount targets must not overlap or have parent-child overrides.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/agenticfs/data</p>
@@ -51,7 +51,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String mountPath;
 
         /**
-         * <p>The existing non-empty relative directory under the access point. This parameter is required and validated by the backend for each mount item. Root directories, absolute paths, and parent directory segments are not allowed.</p>
+         * <p>The existing non-empty relative directory under the access point. This field is required for each mount item and validated by the backend. Root directories, absolute paths, and parent directory segments are not allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>workspace/data</p>
@@ -60,7 +60,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String path;
 
         /**
-         * <p>Specifies whether to mount the file system in read-only mode. If omitted, the default value is false. This parameter does not represent a read-only policy for a RAM role.</p>
+         * <p>Specifies whether to mount the file system in read-only mode. If omitted, the default value is false. This does not apply the read-only policy of the RAM role.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -69,7 +69,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public Boolean readOnly;
 
         /**
-         * <p>The domain name of the access point. This parameter is required and validated by the backend for each mount item. Do not include the protocol, port, or path. Use the DomainName value from the NAS ListAccessPoints response.</p>
+         * <p>The domain name of the access point. This field is required for each mount item and validated by the backend. Do not include the protocol, port, or path. Use the DomainName value from the NAS ListAccessPoints response.</p>
          * 
          * <strong>example:</strong>
          * <p>ap-0123456789abcdef0.0123456789-vlm36.cn-hangzhou.nas.aliyuncs.com</p>
@@ -305,7 +305,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyModelQuota extends TeaModel {
         /**
-         * <p>Specifies whether to enable the token quota. If not specified, the default value is true. If set to false, the quota is disabled and existing quota rules are deleted.</p>
+         * <p>Specifies whether to enable the token quota. If not specified, the default value is true. A value of false disables the quota and deletes existing quota rules.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -314,7 +314,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The quota limit type. This parameter is required and validated by the backend when the quota is enabled. Valid value: token.</p>
+         * <p>The quota limit type. This field is required and validated by the backend when the quota is enabled. Fixed value: token.</p>
          * 
          * <strong>example:</strong>
          * <p>token</p>
@@ -323,7 +323,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String limitType;
 
         /**
-         * <p>The statistical period for the quota. This parameter is required and validated by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</p>
+         * <p>The statistical period for the quota. This field is required and validated by the backend when the quota is enabled. Valid values: day (daily) and month (monthly).</p>
          * 
          * <strong>example:</strong>
          * <p>day</p>
@@ -332,7 +332,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String periodType;
 
         /**
-         * <p>The maximum number of tokens allowed to be consumed within a single period. This parameter is required and validated by the backend when the quota is enabled. The value must be greater than 0.</p>
+         * <p>The maximum number of tokens allowed to be consumed within a single period. This field is required and validated by the backend when the quota is enabled. The value must be greater than 0.</p>
          * 
          * <strong>example:</strong>
          * <p>1000000</p>
@@ -400,7 +400,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String modelName;
 
         /**
-         * <p>The model token quota configuration. If this parameter is not passed, no quota is configured.</p>
+         * <p>The model token quota configuration. If not specified, no quota is configured.</p>
          */
         @NameInMap("quota")
         public UpdateManagedAgentRequestBodyModelQuota quota;
@@ -438,7 +438,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyNetworkAccessInternet extends TeaModel {
         /**
-         * <p>Specifies whether to allow access to the Internet.</p>
+         * <p>Specifies whether to allow Internet access.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -463,7 +463,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyNetworkAccessVpc extends TeaModel {
         /**
-         * <p>Specifies whether to allow access to the VPC.</p>
+         * <p>Specifies whether to allow VPC access.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -524,7 +524,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyOssMounts extends TeaModel {
         /**
-         * <p>The name of the OSS bucket. This parameter is required and validated by the backend for each mount item.</p>
+         * <p>The name of the OSS bucket. This field is required for each mount item and validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>bucket-001</p>
@@ -533,7 +533,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String bucketName;
 
         /**
-         * <p>The absolute mount path in the container. This parameter is required and validated by the backend for each mount item.</p>
+         * <p>The absolute mount path in the container. This field is required for each mount item and validated by the backend.</p>
          * 
          * <strong>example:</strong>
          * <p>/mnt/oss/datasets</p>
@@ -682,13 +682,13 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodyRuntimeHpa extends TeaModel {
         /**
-         * <p>Specifies whether auto-scaling is enabled. This parameter is required and validated by the backend when HPA is configured.</p>
+         * <p>Specifies whether to enable auto scaling. This parameter is required and validated by the backend when HPA is present.</p>
          */
         @NameInMap("enabled")
         public Boolean enabled;
 
         /**
-         * <p>The maximum number of active sessions per sandbox. This parameter is required and validated by the backend when HPA is configured.</p>
+         * <p>The maximum number of active sessions per sandbox. This parameter is required and validated by the backend when HPA is present.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -697,7 +697,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public Integer maxConcurrentSessionsPerSandbox;
 
         /**
-         * <p>The maximum number of sandboxes. This parameter is required when HPA is enabled and must not be less than the minimum value.</p>
+         * <p>The maximum number of sandboxes. This parameter is required and must be greater than or equal to the minimum value when HPA is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -715,7 +715,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public Integer minSandboxCount;
 
         /**
-         * <p>The time in seconds before an inactive session is reclaimed. This parameter is required and validated by the backend when HPA is configured.</p>
+         * <p>The idle timeout in seconds before an inactive session is reclaimed. This parameter is required and validated by the backend when HPA is present.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>
@@ -822,7 +822,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public UpdateManagedAgentRequestBodyRuntimeCompute compute;
 
         /**
-         * <p>The sandbox auto-scaling and session configuration.</p>
+         * <p>The sandbox auto scaling and session configuration.</p>
          */
         @NameInMap("hpa")
         public UpdateManagedAgentRequestBodyRuntimeHpa hpa;
@@ -867,7 +867,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBodySkillsVersionSelector extends TeaModel {
         /**
-         * <p>The version selector type. Valid values: LABEL (selects by tag) and VERSION (selects by specific version).</p>
+         * <p>The type of the version selector. Valid values: LABEL (by tag) and VERSION (by specific version).</p>
          * 
          * <strong>example:</strong>
          * <p>LABEL</p>
@@ -876,7 +876,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The value of the selector. When the type is LABEL, this is the tag name, such as latest. When the type is VERSION, this is the specific version number.</p>
+         * <p>The value of the selector. If the type is LABEL, this value is the tag name, such as latest. If the type is VERSION, this value is the specific version number.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -919,7 +919,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The skill source type. Valid values: REFERENCE (references the AI Registry) and STATIC (statically provided with the package).</p>
+         * <p>The source type of the skill. Valid values: REFERENCE (references the AI registry) and STATIC (provided statically within the package).</p>
          * 
          * <strong>example:</strong>
          * <p>REFERENCE</p>
@@ -1192,7 +1192,25 @@ public class UpdateManagedAgentRequest extends TeaModel {
 
     public static class UpdateManagedAgentRequestBody extends TeaModel {
         /**
-         * <p>The AgenticFS mounts. If omitted during an update, the existing mounts are retained. If an empty array is passed, the mounts are cleared. If a non-empty array is passed, the mounts are fully replaced. Null values are rejected. The total number of AgenticFS and OSS mounts cannot exceed 10.</p>
+         * <p>省略时保持不变；API_KEY 会清空 accessScope，USER 必须设置访问范围。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API_KEY</p>
+         */
+        @NameInMap("accessMode")
+        public String accessMode;
+
+        /**
+         * <p>省略时保持不变；仅 accessMode 为 USER 时使用。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
+        @NameInMap("accessScope")
+        public String accessScope;
+
+        /**
+         * <p>If omitted, the existing mounts are retained. An empty array clears the mounts. A non-empty array replaces all existing mounts. Null is rejected. The total number of AgenticFS and OSS mounts cannot exceed 10.</p>
          */
         @NameInMap("agenticFsMounts")
         public java.util.List<UpdateManagedAgentRequestBodyAgenticFsMounts> agenticFsMounts;
@@ -1219,7 +1237,7 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public UpdateManagedAgentRequestBodyHarness harness;
 
         /**
-         * <p>The agent instructions used to guide the behavior of the agent.</p>
+         * <p>The agent instruction, which is used to guide the behavior of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>You are a code review assistant</p>
@@ -1293,6 +1311,22 @@ public class UpdateManagedAgentRequest extends TeaModel {
         public static UpdateManagedAgentRequestBody build(java.util.Map<String, ?> map) throws Exception {
             UpdateManagedAgentRequestBody self = new UpdateManagedAgentRequestBody();
             return TeaModel.build(map, self);
+        }
+
+        public UpdateManagedAgentRequestBody setAccessMode(String accessMode) {
+            this.accessMode = accessMode;
+            return this;
+        }
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
+        public UpdateManagedAgentRequestBody setAccessScope(String accessScope) {
+            this.accessScope = accessScope;
+            return this;
+        }
+        public String getAccessScope() {
+            return this.accessScope;
         }
 
         public UpdateManagedAgentRequestBody setAgenticFsMounts(java.util.List<UpdateManagedAgentRequestBodyAgenticFsMounts> agenticFsMounts) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateCustomAgentShrinkRequest extends TeaModel {
     /**
-     * <p>The JSON configuration of the custom agent. You must specify name, artifact, roleArn, and runtime.</p>
+     * <p>The JSON configuration of the custom agent. You must specify the name, artifact, roleArn, and runtime parameters.</p>
      */
     @NameInMap("body")
     public String bodyShrink;

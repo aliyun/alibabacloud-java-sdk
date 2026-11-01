@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteExternalAgentResponseBody extends TeaModel {
     /**
-     * <p>The business status code. The value is SUCCESS if the request is successful.</p>
+     * <p>The business status code. The value is SUCCESS when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>SUCCESS</p>
@@ -20,7 +20,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
     public DeleteExternalAgentResponseBodyData data;
 
     /**
-     * <p>The HTTP status code. The value is 200 if the request is successful.</p>
+     * <p>The HTTP status code. The value is 200 when the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -29,7 +29,7 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The message about the request processing result.</p>
+     * <p>The request processing result message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -106,6 +106,24 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
     }
 
     public static class DeleteExternalAgentResponseBodyData extends TeaModel {
+        /**
+         * <p>The inbound access mode.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>API_KEY</p>
+         */
+        @NameInMap("accessMode")
+        public String accessMode;
+
+        /**
+         * <p>The user access scope.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>ALL</p>
+         */
+        @NameInMap("accessScope")
+        public String accessScope;
+
         /**
          * <p>The external agent ID.</p>
          * 
@@ -208,6 +226,22 @@ public class DeleteExternalAgentResponseBody extends TeaModel {
         public static DeleteExternalAgentResponseBodyData build(java.util.Map<String, ?> map) throws Exception {
             DeleteExternalAgentResponseBodyData self = new DeleteExternalAgentResponseBodyData();
             return TeaModel.build(map, self);
+        }
+
+        public DeleteExternalAgentResponseBodyData setAccessMode(String accessMode) {
+            this.accessMode = accessMode;
+            return this;
+        }
+        public String getAccessMode() {
+            return this.accessMode;
+        }
+
+        public DeleteExternalAgentResponseBodyData setAccessScope(String accessScope) {
+            this.accessScope = accessScope;
+            return this;
+        }
+        public String getAccessScope() {
+            return this.accessScope;
         }
 
         public DeleteExternalAgentResponseBodyData setAgentId(String agentId) {

@@ -1683,6 +1683,15 @@ public class CreateMcpRequest extends TeaModel {
         public String name;
 
         /**
+         * <p>PUBLIC 表示公开访问；CONTROLLED 表示根据权限规则控制访问。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CONTROLLED</p>
+         */
+        @NameInMap("permissionMode")
+        public String permissionMode;
+
+        /**
          * <p>The MCP protocol.</p>
          * 
          * <strong>example:</strong>
@@ -1761,6 +1770,14 @@ public class CreateMcpRequest extends TeaModel {
         }
         public String getName() {
             return this.name;
+        }
+
+        public CreateMcpRequestBody setPermissionMode(String permissionMode) {
+            this.permissionMode = permissionMode;
+            return this;
+        }
+        public String getPermissionMode() {
+            return this.permissionMode;
         }
 
         public CreateMcpRequestBody setProtocol(String protocol) {
