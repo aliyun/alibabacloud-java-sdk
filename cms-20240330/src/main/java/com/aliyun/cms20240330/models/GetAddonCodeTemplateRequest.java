@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAddonCodeTemplateRequest extends TeaModel {
     /**
-     * <p>The language. Valid values: zh (Chinese) and en (English). Default value: zh.</p>
+     * <p>The locale. Default value: zh. Valid values: zh, en.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +14,7 @@ public class GetAddonCodeTemplateRequest extends TeaModel {
     public String aliyunLang;
 
     /**
-     * <p>The type of environment. Valid values: CS (Container Service) and ECS.</p>
+     * <p>The environment type. Valid values: CS (container) and ECS.</p>
      * 
      * <strong>example:</strong>
      * <p>Client</p>
@@ -23,7 +23,7 @@ public class GetAddonCodeTemplateRequest extends TeaModel {
     public String environmentType;
 
     /**
-     * <p>The version of the component.</p>
+     * <p>The component version.</p>
      * 
      * <strong>example:</strong>
      * <p>0.1.0</p>

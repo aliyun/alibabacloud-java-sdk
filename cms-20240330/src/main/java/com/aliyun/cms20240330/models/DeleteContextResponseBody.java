@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteContextResponseBody extends TeaModel {
     /**
-     * <p>The unique identifier of the deleted context.</p>
+     * <p>The ID of the generated record or event.</p>
      * 
      * <strong>example:</strong>
      * <p>897294a7-67a4-4f60-976c-e136edc5f97e</p>
@@ -23,7 +23,7 @@ public class DeleteContextResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The deletion status. For example, deleted.</p>
+     * <p>The deletion status, such as deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>deleted</p>

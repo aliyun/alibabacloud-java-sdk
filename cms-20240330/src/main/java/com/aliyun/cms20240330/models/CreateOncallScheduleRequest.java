@@ -29,7 +29,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
     public java.util.List<CreateOncallScheduleRequestRotations> rotations;
 
     /**
-     * <p>The ID of the chatbot for shift reminders.</p>
+     * <p>The ID of the shift reminder chatbot.</p>
      * 
      * <strong>example:</strong>
      * <p>testRobotId</p>
@@ -44,7 +44,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
     public java.util.List<CreateOncallScheduleRequestSubstitudes> substitudes;
 
     /**
-     * <p>The name of the workspace.</p>
+     * <p>The workspace name.</p>
      * 
      * <strong>example:</strong>
      * <p>default-cms-5884500827389836-cn-hangzhou</p>
@@ -107,7 +107,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
 
     public static class CreateOncallScheduleRequestRotations extends TeaModel {
         /**
-         * <p>The days of the week when the rotation is active.</p>
+         * <p>The days of the week when the rotation takes effect.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("activeDays")
@@ -151,7 +151,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public String rotationStartTime;
 
         /**
-         * <p>The length of the shift interval. Use this parameter in conjunction with shiftRecurrenceFrequency. For example, set this parameter to 3 to rotate to the next on-call contact every 3 days.</p>
+         * <p>The length of the shift recurrence cycle. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call person every 3 days.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -160,7 +160,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public Integer shiftLength;
 
         /**
-         * <p>The unit of the shift interval. Use this parameter in conjunction with shiftRecurrenceFrequency. For example, set this parameter to week to rotate to the next on-call contact every week.</p>
+         * <p>The unit of the shift recurrence cycle. Used in conjunction with shiftRecurrenceFrequency. For example, rotate to the next on-call person every week.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public String startDate;
 
         /**
-         * <p>The name of the time zone. The time zone must follow the <strong>IANA Time Zone Database</strong> standard, such as <code>Asia/Shanghai</code>.</p>
+         * <p>The time zone name. Uses the <strong>IANA Time Zone Database</strong> standard. Example: <code>Asia/Shanghai</code>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -270,7 +270,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
 
     public static class CreateOncallScheduleRequestSubstitudes extends TeaModel {
         /**
-         * <p>The ID of the substitute contact.</p>
+         * <p>The contact ID of the substitute.</p>
          * 
          * <strong>example:</strong>
          * <p>testId</p>
@@ -288,7 +288,7 @@ public class CreateOncallScheduleRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The ID of the replaced contact.</p>
+         * <p>The contact ID of the replaced contact.</p>
          * 
          * <strong>example:</strong>
          * <p>testId</p>

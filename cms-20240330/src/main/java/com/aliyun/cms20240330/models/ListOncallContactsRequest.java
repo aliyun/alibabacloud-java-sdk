@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListOncallContactsRequest extends TeaModel {
     /**
-     * <p>The timestamp of the on-call shift to query. Unit: milliseconds.</p>
+     * <p>The timestamp for which to query the on-call personnel. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1730183838000</p>

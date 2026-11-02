@@ -14,7 +14,7 @@ public class UpdateContactRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The IM user ID mappings. Multiple instant messaging tools are supported.</p>
+     * <p>The mapping of IM user IDs. Multiple instant messaging tools are supported.</p>
      */
     @NameInMap("imUserIds")
     public java.util.Map<String, String> imUserIds;
@@ -38,13 +38,22 @@ public class UpdateContactRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The mobile phone number of the contact. Only mobile phone numbers in the Chinese mainland are supported.</p>
+     * <p>The mobile phone number of the contact. Currently, only Chinese mobile phone numbers are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>150123456789</p>
      */
     @NameInMap("phone")
     public String phone;
+
+    /**
+     * <p>号码国家码，可带前导 +，如 86、+86。传入后 phone 必须是纯数字，服务端按 <phoneCode>-<phone> 拼号发送，因此 phone 内不能再带 +、00 或区号。不传时按手机号码原样发送。</p>
+     * 
+     * <strong>example:</strong>
+     * <p>+86</p>
+     */
+    @NameInMap("phoneCode")
+    public String phoneCode;
 
     public static UpdateContactRequest build(java.util.Map<String, ?> map) throws Exception {
         UpdateContactRequest self = new UpdateContactRequest();
@@ -89,6 +98,14 @@ public class UpdateContactRequest extends TeaModel {
     }
     public String getPhone() {
         return this.phone;
+    }
+
+    public UpdateContactRequest setPhoneCode(String phoneCode) {
+        this.phoneCode = phoneCode;
+        return this;
+    }
+    public String getPhoneCode() {
+        return this.phoneCode;
     }
 
 }

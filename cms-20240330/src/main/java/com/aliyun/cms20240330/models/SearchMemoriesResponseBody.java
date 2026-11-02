@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchMemoriesResponseBody extends TeaModel {
     /**
-     * <p>The relations.</p>
+     * <p>The relationships.</p>
      */
     @NameInMap("relations")
     public java.util.List<SearchMemoriesResponseBodyRelations> relations;
@@ -20,7 +20,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned results.</p>
+     * <p>The return values.</p>
      */
     @NameInMap("results")
     public java.util.List<SearchMemoriesResponseBodyResults> results;
@@ -65,7 +65,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String destination;
 
         /**
-         * <p>The relations.</p>
+         * <p>The relationships.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -142,7 +142,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>The memory hash value.</p>
+         * <p>The hash value of the memory.</p>
          * 
          * <strong>example:</strong>
          * <p>d791bf27236c5532056a13279baad3517042bb8d5b1bdb02e7871fa632debffe</p>
@@ -160,7 +160,7 @@ public class SearchMemoriesResponseBody extends TeaModel {
         public String id;
 
         /**
-         * <p>The memory content.</p>
+         * <p>The memory.</p>
          * 
          * <strong>example:</strong>
          * <p>My name is Zhang San and I live in Hangzhou.</p>

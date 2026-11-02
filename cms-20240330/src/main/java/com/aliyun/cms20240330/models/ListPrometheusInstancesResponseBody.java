@@ -96,12 +96,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
 
     public static class ListPrometheusInstancesResponseBodyPrometheusInstances extends TeaModel {
         /**
-         * <p>The access type. Valid values:</p>
-         * <ul>
-         * <li>readWrite</li>
-         * <li>readOnly</li>
-         * <li>httpReadOnly</li>
-         * </ul>
+         * <p>The access type. Valid values: readWrite, readOnly, and httpReadOnly.</p>
          * 
          * <strong>example:</strong>
          * <p>readWrite</p>
@@ -110,7 +105,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String accessType;
 
         /**
-         * <p>The instance creation time in UTC+0, in the format of yyyy-MM-ddTHH:mmZ.</p>
+         * <p>The time when the instance was created. The time is displayed in UTC+0 in the yyyy-MM-ddTHH:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-08-10T02:07:53Z</p>
@@ -128,12 +123,12 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The payment type. Valid values:</p>
+         * <p>The billing method. Valid values:</p>
          * <ul>
-         * <li>POSTPAY: Pay-as-you-go by metric volume.</li>
-         * <li>POSTPAY_GB: Pay-as-you-go by write volume.</li>
-         * <li>PREPAY: Subscription.</li>
-         * <li>FREE: Free.</li>
+         * <li>POSTPAY: pay-as-you-go based on the number of metrics.</li>
+         * <li>POSTPAY_GB: pay-as-you-go based on the amount of written data.</li>
+         * <li>PREPAY: subscription.</li>
+         * <li>FREE: free.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -197,7 +192,7 @@ public class ListPrometheusInstancesResponseBody extends TeaModel {
         public String resourceType;
 
         /**
-         * <p>The backend data storage status.</p>
+         * <p>The status of the backend data storage.</p>
          * 
          * <strong>example:</strong>
          * <p>Pending2Running</p>

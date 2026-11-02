@@ -11,7 +11,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
     public java.util.List<ListUserNotifyHistoriesResponseBodyHistoryList> historyList;
 
     /**
-     * <p>The maximum number of entries returned by this request.</p>
+     * <p>The maximum number of records returned for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -38,7 +38,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of notification history entries that meet the query conditions.</p>
+     * <p>The total number of notification history records that meet the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>128</p>
@@ -93,7 +93,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
 
     public static class ListUserNotifyHistoriesResponseBodyHistoryList extends TeaModel {
         /**
-         * <p>The notification channel. The valid values are the same as those of the <code>channel</code> request parameter.</p>
+         * <p>The notification channel. The valid values are the same as those of the channel request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>DING</p>
@@ -140,8 +140,8 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the notification record has no actual delivery channel. Valid values:</p>
          * <ul>
-         * <li>true: The notification record has no actual delivery channel, and the notifyResult is NO_CHANNEL.</li>
-         * <li>false: The notification record has an actual delivery channel.</li>
+         * <li>true: No channel. The notifyResult is NO_CHANNEL.</li>
+         * <li>false: Has an actual delivery channel.</li>
          * </ul>
          */
         @NameInMap("noChannel")
@@ -166,7 +166,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         public String notifyStrategyName;
 
         /**
-         * <p>The recipient address, such as a phone number, email address, or webhook URL, depending on the notification channel.</p>
+         * <p>The recipient address, such as a phone number, email address, or webhook address, depending on the notification channel.</p>
          * 
          * <strong>example:</strong>
          * <p>13800138000</p>
@@ -175,7 +175,7 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         public String receiver;
 
         /**
-         * <p>The notification delivery result details. This is the raw response content returned by the channel, such as the API response from a DingTalk or Lark bot.</p>
+         * <p>The notification delivery result details. This is the original response content returned by the channel, such as the API response from a DingTalk or Lark bot.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;errcode&quot;:0,&quot;errmsg&quot;:&quot;ok&quot;}</p>
@@ -204,9 +204,9 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         /**
          * <p>The notification delivery type. Valid values:</p>
          * <ul>
-         * <li>SUBSCRIBE: subscription notifications</li>
-         * <li>DIRECT: direct event notifications</li>
-         * <li>ITSM: ticket or action notifications</li>
+         * <li>SUBSCRIBE: Subscription notification.</li>
+         * <li>DIRECT: Direct event notification.</li>
+         * <li>ITSM: Ticket or action notification.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,10 +218,10 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         /**
          * <p>The alert severity. Valid values:</p>
          * <ul>
-         * <li>CRITICAL: critical</li>
-         * <li>ERROR: error</li>
-         * <li>WARNING: warning</li>
-         * <li>INFO: information</li>
+         * <li>CRITICAL: Critical.</li>
+         * <li>ERROR: Error.</li>
+         * <li>WARNING: Warning.</li>
+         * <li>INFO: Info.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -233,15 +233,15 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         /**
          * <p>The incident status. Valid values:</p>
          * <ul>
-         * <li>TRIGGERED: triggered</li>
-         * <li>RESOLVED: resolved</li>
-         * <li>ACK: acknowledged</li>
-         * <li>ESCALATED: escalated</li>
-         * <li>MANUAL_RESOLVED: manually resolved</li>
-         * <li>TIMEOUT: automatically resolved due to timeout</li>
-         * <li>RETRIGGERED: retriggered</li>
-         * <li>PARTIAL_RESOLVED: partially resolved</li>
-         * <li>INVALID: invalid</li>
+         * <li>TRIGGERED: Triggered.</li>
+         * <li>RESOLVED: Resolved.</li>
+         * <li>ACK: Acknowledged.</li>
+         * <li>ESCALATED: Escalated.</li>
+         * <li>MANUAL_RESOLVED: Manually resolved.</li>
+         * <li>TIMEOUT: Automatically resolved due to timeout.</li>
+         * <li>RETRIGGERED: Retriggered.</li>
+         * <li>PARTIAL_RESOLVED: Partially resolved.</li>
+         * <li>INVALID: Invalid.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,15 +271,15 @@ public class ListUserNotifyHistoriesResponseBody extends TeaModel {
         /**
          * <p>Indicates whether the notification was delivered successfully. Valid values:</p>
          * <ul>
-         * <li>true: The notification was delivered successfully.</li>
-         * <li>false: The notification delivery failed.</li>
+         * <li>true: Delivered successfully.</li>
+         * <li>false: Delivery failed.</li>
          * </ul>
          */
         @NameInMap("success")
         public Boolean success;
 
         /**
-         * <p>The time when the notification record was generated. The value is a UNIX timestamp in seconds.</p>
+         * <p>The time of the notification record. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1729400000</p>

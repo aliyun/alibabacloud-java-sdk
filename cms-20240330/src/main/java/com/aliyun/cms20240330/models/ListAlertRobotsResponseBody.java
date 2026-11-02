@@ -32,7 +32,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The chatbot IDs.</p>
+     * <p>The robot IDs.</p>
      */
     @NameInMap("robots")
     public java.util.List<ListAlertRobotsResponseBodyRobots> robots;
@@ -93,7 +93,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
 
     public static class ListAlertRobotsResponseBodyRobots extends TeaModel {
         /**
-         * <p>The name of the digital employee.</p>
+         * <p>The digital employee name.</p>
          * 
          * <strong>example:</strong>
          * <p>apsara-ops</p>
@@ -111,7 +111,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String lang;
 
         /**
-         * <p>The name of the chatbot.</p>
+         * <p>The robot name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -120,7 +120,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The unique ID of the chatbot.</p>
+         * <p>The unique ID of the robot.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -129,7 +129,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String robotId;
 
         /**
-         * <p>The signature key of the chatbot.</p>
+         * <p>The signing key of the robot.</p>
          * 
          * <strong>example:</strong>
          * <p>abc123</p>
@@ -138,7 +138,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String robotSignKey;
 
         /**
-         * <p>The chatbot types.</p>
+         * <p>The robot types.</p>
          * 
          * <strong>example:</strong>
          * <p>DING</p>
@@ -147,7 +147,7 @@ public class ListAlertRobotsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The webhook URL of the chatbot.</p>
+         * <p>The webhook URL of the robot.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>*******</p>

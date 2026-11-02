@@ -29,11 +29,7 @@ public class PreviewNotifyTemplateResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request is successful.</li>
-     * <li>false: The request fails.</li>
-     * </ul>
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
      */
     @NameInMap("success")
     public Boolean success;

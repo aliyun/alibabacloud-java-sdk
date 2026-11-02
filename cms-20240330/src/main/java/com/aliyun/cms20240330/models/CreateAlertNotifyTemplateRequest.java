@@ -6,7 +6,6 @@ import com.aliyun.tea.*;
 public class CreateAlertNotifyTemplateRequest extends TeaModel {
     /**
      * <p>The ID of the notification template.</p>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>

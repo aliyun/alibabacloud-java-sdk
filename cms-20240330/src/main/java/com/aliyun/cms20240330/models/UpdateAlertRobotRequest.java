@@ -23,7 +23,7 @@ public class UpdateAlertRobotRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The name of the robot.</p>
+     * <p>The name of the chatbot.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -32,7 +32,7 @@ public class UpdateAlertRobotRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The signature key of the robot.</p>
+     * <p>The signing key of the chatbot.</p>
      * 
      * <strong>example:</strong>
      * <p>abc123</p>
@@ -41,7 +41,7 @@ public class UpdateAlertRobotRequest extends TeaModel {
     public String robotSignKey;
 
     /**
-     * <p>The type of the robot.</p>
+     * <p>The type of the chatbot.</p>
      * 
      * <strong>example:</strong>
      * <p>DING</p>
@@ -50,7 +50,7 @@ public class UpdateAlertRobotRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The webhook URL of the robot.</p>
+     * <p>The webhook URL of the chatbot.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://oapi.dingtalk.com/robot/send?access_token=">https://oapi.dingtalk.com/robot/send?access_token=</a>**************</p>

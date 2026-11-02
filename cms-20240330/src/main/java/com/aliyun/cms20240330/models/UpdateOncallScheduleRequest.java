@@ -20,7 +20,7 @@ public class UpdateOncallScheduleRequest extends TeaModel {
     public java.util.List<UpdateOncallScheduleRequestRotations> rotations;
 
     /**
-     * <p>The ID of the shift reminder chatbot.</p>
+     * <p>The ID of the chatbot for shift reminders.</p>
      * 
      * <strong>example:</strong>
      * <p>testId</p>
@@ -80,7 +80,7 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public java.util.List<Integer> activeDays;
 
         /**
-         * <p>The IDs of the contacts.</p>
+         * <p>The contact IDs.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("contacts")
@@ -117,7 +117,7 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public String rotationStartTime;
 
         /**
-         * <p>The length of the shift cycle. Used in conjunction with shiftRecurrenceFrequency, such as switching to the next on-call person every 3 days.</p>
+         * <p>The length of the shift cycle. Used in conjunction with shiftRecurrenceFrequency. For example, a value of 3 indicates that the on-call contact rotates every 3 days.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -126,7 +126,7 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public Integer shiftLength;
 
         /**
-         * <p>The unit of the shift cycle. Used in conjunction with shiftRecurrenceFrequency, such as switching to the next on-call person every week.</p>
+         * <p>The unit of the shift cycle. Used in conjunction with shiftLength. For example, a value of week indicates that the on-call contact rotates every week.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -146,7 +146,7 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public String startDate;
 
         /**
-         * <p>The time zone name. Uses the IANA Time Zone Database standard, such as Asia/Shanghai.</p>
+         * <p>The name of the time zone. The IANA Time Zone Database standard is used. Example: Asia/Shanghai.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class UpdateOncallScheduleRequest extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The contact ID of the replaced person.</p>
+         * <p>The contact ID of the replaced contact.</p>
          * 
          * <strong>example:</strong>
          * <p>testId</p>

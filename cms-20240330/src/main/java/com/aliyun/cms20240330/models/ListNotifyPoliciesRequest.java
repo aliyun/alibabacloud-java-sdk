@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListNotifyPoliciesRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of records to return for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class ListNotifyPoliciesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The policy name used for fuzzy filtering.</p>
+     * <p>The fuzzy filter for the policy name.</p>
      * 
      * <strong>example:</strong>
      * <p>prod-alert</p>
@@ -23,7 +23,7 @@ public class ListNotifyPoliciesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token. Leave this parameter empty for the first page. For subsequent pages, set this parameter to the nextToken value returned in the previous response.</p>
+     * <p>The pagination token. Leave empty for the first page. For subsequent pages, pass the nextToken returned from the previous page.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJjdXJzb3IiOjEwfQ==</p>
@@ -32,7 +32,7 @@ public class ListNotifyPoliciesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The field used for sorting. Valid values: createTime, updateTime, and name.</p>
+     * <p>The field to sort by. Valid values include createTime, updateTime, and name.</p>
      * 
      * <strong>example:</strong>
      * <p>createTime</p>
@@ -41,11 +41,7 @@ public class ListNotifyPoliciesRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>Specifies whether to sort results in descending order. Valid values:</p>
-     * <ul>
-     * <li>true: descending order.</li>
-     * <li>false: ascending order.</li>
-     * </ul>
+     * <p>Specifies whether to sort in descending order. Set to true for descending order, or false for ascending order.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -54,7 +50,7 @@ public class ListNotifyPoliciesRequest extends TeaModel {
     public String orderDesc;
 
     /**
-     * <p>The workspace ID. This parameter is used to isolate notify policy resources across different business spaces.</p>
+     * <p>The workspace ID, used to isolate notification policy resources for different business workspaces.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

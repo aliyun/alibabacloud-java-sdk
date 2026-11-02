@@ -41,7 +41,7 @@ public class CreateAlertRobotRequest extends TeaModel {
     public String robotId;
 
     /**
-     * <p>The signature key of the robot.</p>
+     * <p>The signing key of the robot.</p>
      * 
      * <strong>example:</strong>
      * <p>abc123</p>

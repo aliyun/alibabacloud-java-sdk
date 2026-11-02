@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAlertHistoriesResponseBody extends TeaModel {
     /**
-     * <p>The list of alert histories that match the query conditions.</p>
+     * <p>The list of alert history records that match the query conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;alertHistoryId&quot;:&quot;ah_123456&quot;,&quot;alertRuleId&quot;:&quot;rule_789&quot;,&quot;status&quot;:&quot;ALARM&quot;,&quot;startTime&quot;:1704067200000}]</p>
@@ -130,7 +130,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
 
     public static class ListAlertHistoriesResponseBodyData extends TeaModel {
         /**
-         * <p>The unique identifier of the alert history.</p>
+         * <p>The unique identifier of the alert history record.</p>
          * 
          * <strong>example:</strong>
          * <p>u1oe4i7c197uucfmvscum4u797</p>
@@ -139,7 +139,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public String alertHistoryId;
 
         /**
-         * <p>The unique identifier of the alert rule that generated the alert history.</p>
+         * <p>The unique identifier of the alert rule that generated the alert history record.</p>
          * 
          * <strong>example:</strong>
          * <p>51d0da46-bb65-4a14-8d65-de73f41e495f</p>
@@ -148,7 +148,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public String alertRuleId;
 
         /**
-         * <p>The snapshot of the annotations of the alert rule. The annotations are stored as key-value pairs and copied from the rule when the alert is triggered.</p>
+         * <p>The snapshot of the annotations of the alert rule, stored as key-value pairs and copied from the rule when the alert is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;_cms_alert_explore_url&quot;:&quot;<a href="https://sls.console.aliyun.com/...%22%7D">https://sls.console.aliyun.com/...&quot;}</a></p>
@@ -166,7 +166,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public String bizSource;
 
         /**
-         * <p>The cumulative number of alerts (alert events) during the alert duration.</p>
+         * <p>The cumulative number of alert events during the alert duration.</p>
          * 
          * <strong>example:</strong>
          * <p>200</p>
@@ -175,7 +175,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public Long count;
 
         /**
-         * <p>The end time (recovery time) of the alert. This field has a value only when the alert history enters the OK state. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The end time of the alert, which is the recovery time. This field has a value only when the alert history enters the OK state. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1740535517000</p>
@@ -202,7 +202,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public Long gmtModified;
 
         /**
-         * <p>The detailed information of the alert object. The information is stored as key-value pairs.</p>
+         * <p>The detailed information of the alert object, stored as key-value pairs.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;datasourceInfo&quot;:{&quot;type&quot;:&quot;SLS_MULTI_DS&quot;}}</p>
@@ -211,7 +211,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public java.util.Map<String, String> instanceDetail;
 
         /**
-         * <p>The unique key (instanceKey) used to identify the alert object instance.</p>
+         * <p>The unique key value (instanceKey) that identifies the alert object instance.</p>
          * 
          * <strong>example:</strong>
          * <p>entity/apm/apm.service/6dc9e46fda6d012537b48c3250ff806b</p>
@@ -220,7 +220,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public String instanceKey;
 
         /**
-         * <p>The snapshot of the labels of the alert rule. The labels are stored as key-value pairs and copied from the rule when the alert is triggered.</p>
+         * <p>The snapshot of the labels of the alert rule, stored as key-value pairs and copied from the rule when the alert is triggered.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;_cms_rule_id&quot;:&quot;42c0f464-a3b0-4c4b-b426-6242289244f8&quot;,&quot;tenant_id&quot;:&quot;mygt&quot;}</p>
@@ -256,7 +256,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>Indicates whether the observed object is in the global scope. The value is copied from the rule when the alert history is created.</p>
+         * <p>Indicates whether the observed object is in the global scope. This value is copied from the rule when the alert history record is created.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -265,7 +265,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public Boolean observeResourceGlobalScope;
 
         /**
-         * <p>The serialized string of the observed object list. The value is copied from the rule when the alert history is created.</p>
+         * <p>The serialized string of the observed object list. This value is copied from the rule when the alert history record is created.</p>
          * 
          * <strong>example:</strong>
          * <p>[{&quot;resourceId&quot;:&quot;i-bp1234567890abcdef&quot;,&quot;resourceType&quot;:&quot;ACS::ECS::Instance&quot;}]</p>
@@ -274,7 +274,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public String observeResourceList;
 
         /**
-         * <p>The type of the observed object, such as PROMETHEUS, APM, RUM, or cms_basic. The value is copied from the rule when the alert history is created.</p>
+         * <p>The type of the observed object, such as PROMETHEUS, APM, RUM, or cms_basic. This value is copied from the rule when the alert history record is created.</p>
          * 
          * <strong>example:</strong>
          * <p>PROMETHEUS</p>
@@ -283,7 +283,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public String observeResourceType;
 
         /**
-         * <p>The ID of the region to which the alert history belongs.</p>
+         * <p>The ID of the region to which the alert history record belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -301,7 +301,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public String ruleDisplayName;
 
         /**
-         * <p>The notification sending configuration information corresponding to the alert history.</p>
+         * <p>The notification sending configuration information corresponding to the alert history record.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;notification&quot;:{&quot;contacts&quot;:[&quot;ops-team&quot;],&quot;silenceTime&quot;:3600}}</p>
@@ -310,7 +310,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public AlertRuleSend send;
 
         /**
-         * <p>The start time of the alert history. The value is a UNIX timestamp in milliseconds.</p>
+         * <p>The start time of the alert history record. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1751508233000</p>
@@ -328,7 +328,7 @@ public class ListAlertHistoriesResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The identifier of the workspace to which the alert history belongs.</p>
+         * <p>The identifier of the workspace to which the alert history record belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>default-cms-<userId>-cn-hangzhou</p>

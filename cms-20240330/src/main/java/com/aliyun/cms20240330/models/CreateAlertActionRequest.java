@@ -48,7 +48,7 @@ public class CreateAlertActionRequest extends TeaModel {
     public CreateAlertActionRequestFcParam fcParam;
 
     /**
-     * <p>The Simple Message Queue (formerly MNS) (MSMQ) parameters.</p>
+     * <p>The Simple Message Queue (formerly MNS) parameters.</p>
      */
     @NameInMap("mnsParam")
     public CreateAlertActionRequestMnsParam mnsParam;
@@ -66,7 +66,7 @@ public class CreateAlertActionRequest extends TeaModel {
     public CreateAlertActionRequestSlsParam slsParam;
 
     /**
-     * <p>The type of the alert action integration.</p>
+     * <p>The alert action integration type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -194,7 +194,7 @@ public class CreateAlertActionRequest extends TeaModel {
         public String eventBusName;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-heyuan</p>
@@ -429,7 +429,7 @@ public class CreateAlertActionRequest extends TeaModel {
 
     public static class CreateAlertActionRequestMnsParam extends TeaModel {
         /**
-         * <p>The resource type of Simple Message Queue (formerly MNS) (MSMQ).</p>
+         * <p>The Simple Message Queue (formerly MNS) resource type.</p>
          * 
          * <strong>example:</strong>
          * <p>queue</p>
@@ -438,7 +438,7 @@ public class CreateAlertActionRequest extends TeaModel {
         public String mnsType;
 
         /**
-         * <p>The name of the resource.</p>
+         * <p>The resource name.</p>
          * <ul>
          * <li>If the resource type is queue, the resource name is the queue name.</li>
          * <li>If the resource type is topic, the resource name is the topic name.</li>
@@ -492,7 +492,7 @@ public class CreateAlertActionRequest extends TeaModel {
 
     public static class CreateAlertActionRequestPagerDutyParam extends TeaModel {
         /**
-         * <p>The integration key of PagerDuty.</p>
+         * <p>The integration key for PagerDuty.</p>
          * 
          * <strong>example:</strong>
          * <p>fds3wr54rvcxfr4543t6435</p>
@@ -501,7 +501,7 @@ public class CreateAlertActionRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The integration webhook URL of PagerDuty. Both V1 and V2 are supported.</p>
+         * <p>The integration webhook for PagerDuty. Both V1 and V2 are supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -534,7 +534,7 @@ public class CreateAlertActionRequest extends TeaModel {
 
     public static class CreateAlertActionRequestSlsParam extends TeaModel {
         /**
-         * <p>The name of the Logstore in Simple Log Service.</p>
+         * <p>The name of the Simple Log Service Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>testLogstore。</p>
@@ -543,7 +543,7 @@ public class CreateAlertActionRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the project in Simple Log Service.</p>
+         * <p>The name of the Simple Log Service project.</p>
          * 
          * <strong>example:</strong>
          * <p>testProject</p>
@@ -602,7 +602,7 @@ public class CreateAlertActionRequest extends TeaModel {
         public String contentType;
 
         /**
-         * <p>The request header information.</p>
+         * <p>The request headers.</p>
          */
         @NameInMap("headers")
         public java.util.Map<String, String> headers;

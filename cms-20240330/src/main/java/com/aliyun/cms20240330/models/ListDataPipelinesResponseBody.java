@@ -14,7 +14,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The next page token.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJvZmZzZXQiOjIwfQ==</p>
@@ -23,7 +23,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The data pipeline list.</p>
+     * <p>The list of data pipelines.</p>
      */
     @NameInMap("pipelines")
     public java.util.List<ListDataPipelinesResponseBodyPipelines> pipelines;
@@ -177,7 +177,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
 
     public static class ListDataPipelinesResponseBodyPipelinesOutputsProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The retained prefix length.</p>
+         * <p>The length of the prefix to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -186,7 +186,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The retained suffix length.</p>
+         * <p>The length of the suffix to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -540,7 +540,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
 
     public static class ListDataPipelinesResponseBodyPipelinesOutputsProcessorsConfigSelector extends TeaModel {
         /**
-         * <p>The service name list.</p>
+         * <p>The list of service names.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -590,13 +590,13 @@ public class ListDataPipelinesResponseBody extends TeaModel {
 
     public static class ListDataPipelinesResponseBodyPipelinesOutputsProcessorsConfig extends TeaModel {
         /**
-         * <p>The application list.</p>
+         * <p>The list of applications.</p>
          */
         @NameInMap("applications")
         public java.util.List<String> applications;
 
         /**
-         * <p>The field assignment list.</p>
+         * <p>The list of field assignments.</p>
          */
         @NameInMap("assignments")
         public java.util.List<ListDataPipelinesResponseBodyPipelinesOutputsProcessorsConfigAssignments> assignments;
@@ -611,7 +611,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>The field list.</p>
+         * <p>The list of fields.</p>
          */
         @NameInMap("fields")
         public java.util.List<String> fields;
@@ -623,13 +623,13 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public java.util.Map<String, ?> parameters;
 
         /**
-         * <p>The field projection list.</p>
+         * <p>The list of field projections.</p>
          */
         @NameInMap("projections")
         public java.util.List<ListDataPipelinesResponseBodyPipelinesOutputsProcessorsConfigProjections> projections;
 
         /**
-         * <p>The data masking rule list.</p>
+         * <p>The list of data masking rules.</p>
          */
         @NameInMap("rules")
         public java.util.List<ListDataPipelinesResponseBodyPipelinesOutputsProcessorsConfigRules> rules;
@@ -766,7 +766,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public ListDataPipelinesResponseBodyPipelinesOutputsProcessorsConfig config;
 
         /**
-         * <p>The processor name.</p>
+         * <p>The name of the processor.</p>
          * 
          * <strong>example:</strong>
          * <p>drop-health-check</p>
@@ -775,7 +775,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The processor type.</p>
+         * <p>The type of the processor.</p>
          * 
          * <strong>example:</strong>
          * <p>filter</p>
@@ -939,7 +939,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
 
     public static class ListDataPipelinesResponseBodyPipelinesProcessorsConfigRules extends TeaModel {
         /**
-         * <p>The retained prefix length.</p>
+         * <p>The length of the prefix to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -948,7 +948,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public Integer keepPrefix;
 
         /**
-         * <p>The retained suffix length.</p>
+         * <p>The length of the suffix to retain.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1302,7 +1302,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
 
     public static class ListDataPipelinesResponseBodyPipelinesProcessorsConfigSelector extends TeaModel {
         /**
-         * <p>The service name list.</p>
+         * <p>The list of service names.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;checkout-*&quot;,&quot;order-service&quot;]</p>
@@ -1352,13 +1352,13 @@ public class ListDataPipelinesResponseBody extends TeaModel {
 
     public static class ListDataPipelinesResponseBodyPipelinesProcessorsConfig extends TeaModel {
         /**
-         * <p>The application list.</p>
+         * <p>The list of applications.</p>
          */
         @NameInMap("applications")
         public java.util.List<String> applications;
 
         /**
-         * <p>The field assignment list.</p>
+         * <p>The list of field assignments.</p>
          */
         @NameInMap("assignments")
         public java.util.List<ListDataPipelinesResponseBodyPipelinesProcessorsConfigAssignments> assignments;
@@ -1373,7 +1373,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public String expression;
 
         /**
-         * <p>The field list.</p>
+         * <p>The list of fields.</p>
          */
         @NameInMap("fields")
         public java.util.List<String> fields;
@@ -1385,13 +1385,13 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public java.util.Map<String, ?> parameters;
 
         /**
-         * <p>The field projection list.</p>
+         * <p>The list of field projections.</p>
          */
         @NameInMap("projections")
         public java.util.List<ListDataPipelinesResponseBodyPipelinesProcessorsConfigProjections> projections;
 
         /**
-         * <p>The data masking rule list.</p>
+         * <p>The list of data masking rules.</p>
          */
         @NameInMap("rules")
         public java.util.List<ListDataPipelinesResponseBodyPipelinesProcessorsConfigRules> rules;
@@ -1528,7 +1528,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public ListDataPipelinesResponseBodyPipelinesProcessorsConfig config;
 
         /**
-         * <p>The processor name.</p>
+         * <p>The name of the processor.</p>
          * 
          * <strong>example:</strong>
          * <p>drop-health-check</p>
@@ -1537,7 +1537,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The processor type.</p>
+         * <p>The type of the processor.</p>
          * 
          * <strong>example:</strong>
          * <p>filter</p>
@@ -1719,7 +1719,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public String runMode;
 
         /**
-         * <p>The start position.</p>
+         * <p>The read start point.</p>
          * 
          * <strong>example:</strong>
          * <p>latest</p>
@@ -1772,7 +1772,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public ListDataPipelinesResponseBodyPipelinesSourceConfig config;
 
         /**
-         * <p>The type of the source.</p>
+         * <p>The type of the data source.</p>
          * 
          * <strong>example:</strong>
          * <p>traces-default</p>
@@ -1805,7 +1805,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
 
     public static class ListDataPipelinesResponseBodyPipelines extends TeaModel {
         /**
-         * <p>The creation time in UTC format that follows the ISO 8601 standard, such as 2026-08-10T05:00:00Z.</p>
+         * <p>The creation time in ISO 8601 format in UTC, such as 2026-08-10T05:00:00Z.</p>
          * <p>This parameter is required.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
@@ -1816,7 +1816,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The pipeline description.</p>
+         * <p>The description of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>Export selected trace services to the target workspace.</p>
@@ -1825,7 +1825,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The pipeline type.</p>
+         * <p>The type of the pipeline.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1842,7 +1842,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public java.util.List<ListDataPipelinesResponseBodyPipelinesOutputs> outputs;
 
         /**
-         * <p>The pipeline name.</p>
+         * <p>The name of the pipeline.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1859,7 +1859,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public java.util.List<ListDataPipelinesResponseBodyPipelinesProcessors> processors;
 
         /**
-         * <p>The signal type.</p>
+         * <p>The type of the signal.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1902,7 +1902,7 @@ public class ListDataPipelinesResponseBody extends TeaModel {
         public String statusMessage;
 
         /**
-         * <p>The update time in UTC and ISO 8601 format, such as 2026-08-10T05:10:00Z.</p>
+         * <p>The update time in ISO 8601 format in UTC, such as 2026-08-10T05:10:00Z.</p>
          * <p>This parameter is required.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 

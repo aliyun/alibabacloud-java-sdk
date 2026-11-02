@@ -305,7 +305,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The service name of Function Compute.</p>
+         * <p>The service name in Function Compute.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -409,7 +409,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
 
     public static class ListAlertActionsResponseBodyAlertActionsPagerDutyParam extends TeaModel {
         /**
-         * <p>The integration key for PagerDuty.</p>
+         * <p>The integration key of PagerDuty.</p>
          * 
          * <strong>example:</strong>
          * <p>fsfer4543t5t65g4t4</p>
@@ -418,7 +418,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The integration webhook URL for PagerDuty. Both V1 and V2 are supported.</p>
+         * <p>The integration webhook URL of PagerDuty. Both V1 and V2 are supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -534,7 +534,7 @@ public class ListAlertActionsResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>The alert callback URL.</p>
+         * <p>The URL of the alert callback.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.test.com">http://www.test.com</a></p>

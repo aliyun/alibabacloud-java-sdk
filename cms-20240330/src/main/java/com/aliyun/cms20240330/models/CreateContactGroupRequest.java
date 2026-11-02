@@ -14,7 +14,7 @@ public class CreateContactGroupRequest extends TeaModel {
     public String contactGroupId;
 
     /**
-     * <p>The IDs of the contacts.</p>
+     * <p>The contact IDs.</p>
      */
     @NameInMap("contacts")
     public java.util.List<String> contacts;

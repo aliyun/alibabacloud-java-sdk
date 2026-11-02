@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDeliveryTasksShrinkRequest extends TeaModel {
     /**
-     * <p>Specifies the keywords used to perform a fuzzy search by task name or task ID.</p>
+     * <p>The keywords used to perform a fuzzy search by task name or task ID.</p>
      * 
      * <strong>example:</strong>
      * <p>test-task</p>
@@ -23,7 +23,7 @@ public class ListDeliveryTasksShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Leave this parameter empty for the first request. For subsequent requests, pass the nextToken value returned in the previous response.</p>
+     * <p>The pagination token. Do not specify this parameter for the first request. For subsequent requests, specify the nextToken value returned from the previous request.</p>
      * 
      * <strong>example:</strong>
      * <p>sjC5rekx93Ew7K7VcmI3wkBZBYQ-GphB2ilQu3zJCGxoZuicwyJznfo2riTjr-lq</p>

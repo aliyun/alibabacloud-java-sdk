@@ -1,3 +1,13 @@
+2026-11-02 Version: 10.9.1
+- Update API CreateContact: add request parameters body.phoneCode.
+- Update API DeleteAlertActions: add response parameters Body.deletedCount.
+- Update API DeleteAlertNotifyTemplates: add response parameters Body.deletedCount.
+- Update API DeleteContactGroups: add response parameters Body.deletedCount.
+- Update API DeleteContacts: add response parameters Body.deletedCount.
+- Update API DeleteOncallSchedules: add response parameters Body.deletedCount.
+- Update API UpdateContact: add request parameters body.phoneCode.
+
+
 2026-10-28 Version: 10.9.0
 - Support API ListAlertHistories.
 

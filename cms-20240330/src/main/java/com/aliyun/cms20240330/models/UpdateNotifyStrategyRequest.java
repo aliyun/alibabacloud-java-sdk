@@ -11,7 +11,7 @@ public class UpdateNotifyStrategyRequest extends TeaModel {
     public NotifyStrategyForModify body;
 
     /**
-     * <p>The workspace name.</p>
+     * <p>The name of the workspace.</p>
      * 
      * <strong>example:</strong>
      * <p>workspace-test</p>

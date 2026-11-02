@@ -14,7 +14,7 @@ public class ListDataPipelinesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The next page token.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJvZmZzZXQiOjEwfQ==</p>

@@ -23,7 +23,7 @@ public class ListPipelinesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The name of the pipeline.</p>
+     * <p>The pipeline name.</p>
      * 
      * <strong>example:</strong>
      * <p>pipeline-name-1</p>

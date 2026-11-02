@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAlertActionRequest extends TeaModel {
     /**
-     * <p>The name of the alert action integration.</p>
+     * <p>The name of the action integration.</p>
      * 
      * <strong>example:</strong>
      * <p>testName</p>
@@ -14,7 +14,7 @@ public class UpdateAlertActionRequest extends TeaModel {
     public String alertActionName;
 
     /**
-     * <p>The event bus.</p>
+     * <p>The event bus parameters.</p>
      */
     @NameInMap("ebParam")
     public UpdateAlertActionRequestEbParam ebParam;
@@ -56,7 +56,7 @@ public class UpdateAlertActionRequest extends TeaModel {
     public UpdateAlertActionRequestSlsParam slsParam;
 
     /**
-     * <p>The type of the alert action integration.</p>
+     * <p>The type of the action integration.</p>
      * 
      * <strong>example:</strong>
      * <p>FC</p>
@@ -482,7 +482,7 @@ public class UpdateAlertActionRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The integration webhook of PagerDuty. V1 and V2 are supported.</p>
+         * <p>The integration webhook URL of PagerDuty. V1 and V2 are supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -515,7 +515,7 @@ public class UpdateAlertActionRequest extends TeaModel {
 
     public static class UpdateAlertActionRequestSlsParam extends TeaModel {
         /**
-         * <p>The name of the Simple Log Service Logstore.</p>
+         * <p>The name of the Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>testLogstore</p>
@@ -524,7 +524,7 @@ public class UpdateAlertActionRequest extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the Simple Log Service project.</p>
+         * <p>The name of the project.</p>
          * 
          * <strong>example:</strong>
          * <p>testProject</p>
@@ -598,7 +598,7 @@ public class UpdateAlertActionRequest extends TeaModel {
         public String method;
 
         /**
-         * <p>The alert callback URL.</p>
+         * <p>The URL of the alert callback.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.test.com">http://www.test.com</a></p>

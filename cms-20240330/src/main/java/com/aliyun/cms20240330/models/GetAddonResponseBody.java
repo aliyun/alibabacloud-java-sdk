@@ -193,7 +193,7 @@ public class GetAddonResponseBody extends TeaModel {
 
     public static class GetAddonResponseBodyDataEnvironmentsPoliciesMetricCheckRule extends TeaModel {
         /**
-         * <p>The data check rule after installation.</p>
+         * <p>The data check rule executed after installation.</p>
          */
         @NameInMap("promQL")
         public java.util.List<String> promQL;
@@ -291,7 +291,7 @@ public class GetAddonResponseBody extends TeaModel {
 
     public static class GetAddonResponseBodyDataEnvironmentsPolicies extends TeaModel {
         /**
-         * <p>The enabled status of the default alert rule policy.</p>
+         * <p>The enabling status of the default policy for alert rules.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -300,7 +300,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String alertDefaultStatus;
 
         /**
-         * <p>Indicates whether the add-on is installed by default.</p>
+         * <p>Specifies whether the add-on is installed by default.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -309,7 +309,7 @@ public class GetAddonResponseBody extends TeaModel {
         public Boolean defaultInstall;
 
         /**
-         * <p>Indicates whether a service account is assigned to communicate with the Console API.</p>
+         * <p>Specifies whether a service account is assigned for communication with the console API.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -324,7 +324,7 @@ public class GetAddonResponseBody extends TeaModel {
         public GetAddonResponseBodyDataEnvironmentsPoliciesMetricCheckRule metricCheckRule;
 
         /**
-         * <p>Indicates whether a pod restart is triggered immediately after the add-on is installed during integration.</p>
+         * <p>Specifies whether to initiate a pod restart guide immediately after the add-on installation is completed during integration.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -339,7 +339,7 @@ public class GetAddonResponseBody extends TeaModel {
         public java.util.List<GetAddonResponseBodyDataEnvironmentsPoliciesProtocols> protocols;
 
         /**
-         * <p>The name of the target add-on for redirection.</p>
+         * <p>The name of the target add-on to redirect to.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-default</p>
@@ -418,7 +418,7 @@ public class GetAddonResponseBody extends TeaModel {
         public java.util.List<GetAddonResponseBodyDataEnvironmentsCommonSchemaRefs> commonSchemaRefs;
 
         /**
-         * <p>The additional dependencies.</p>
+         * <p>The additional dependency files.</p>
          */
         @NameInMap("dependencies")
         public GetAddonResponseBodyDataEnvironmentsDependencies dependencies;
@@ -433,7 +433,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>Indicates whether the environment is enabled.</p>
+         * <p>Specifies whether the environment is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -547,7 +547,7 @@ public class GetAddonResponseBody extends TeaModel {
 
     public static class GetAddonResponseBodyData extends TeaModel {
         /**
-         * <p>The alias of the integrated component.</p>
+         * <p>The alias of the component.</p>
          * 
          * <strong>example:</strong>
          * <p>resume_vector_alias</p>
@@ -556,7 +556,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String alias;
 
         /**
-         * <p>The list of categories for the integrated component.</p>
+         * <p>The list of category directories for the component.</p>
          */
         @NameInMap("categories")
         public java.util.List<String> categories;
@@ -625,7 +625,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>Indicates whether the add-on can be installed only once.</p>
+         * <p>Specifies whether the add-on can be installed only once.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -634,7 +634,7 @@ public class GetAddonResponseBody extends TeaModel {
         public Boolean once;
 
         /**
-         * <p>The scenario of the component.</p>
+         * <p>The component scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>middleware</p>
@@ -643,7 +643,7 @@ public class GetAddonResponseBody extends TeaModel {
         public String scene;
 
         /**
-         * <p>The version of the component.</p>
+         * <p>The component version.</p>
          * 
          * <strong>example:</strong>
          * <ul>

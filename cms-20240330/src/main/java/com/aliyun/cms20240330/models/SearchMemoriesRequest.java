@@ -14,7 +14,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public String agentId;
 
     /**
-     * <p>The app key of the project assigned by the merchant.</p>
+     * <p>The AppKey of the project assigned to the merchant.</p>
      * 
      * <strong>example:</strong>
      * <p>mm_480d961a1b5e4efe84603f4cbc0f</p>
@@ -38,7 +38,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>Specifies whether to enable reranking.</p>
+     * <p>The reranking option.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -65,7 +65,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public String runId;
 
     /**
-     * <p>The search type.</p>
+     * <p>The query type.</p>
      * 
      * <strong>example:</strong>
      * <p>experience</p>
@@ -83,7 +83,7 @@ public class SearchMemoriesRequest extends TeaModel {
     public Double threshold;
 
     /**
-     * <p>The top-K entries to return in the results.</p>
+     * <p>The top-K entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

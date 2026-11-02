@@ -14,7 +14,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public String alertHistoryId;
 
     /**
-     * <p>Filters the history records by a specific alert rule. Specify the unique identifier (ruleUuid) of the alert rule.</p>
+     * <p>Filters the history records of a specified alert rule. Specify the unique identifier (ruleUuid) of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>mig_prom_v2_11308451</p>
@@ -23,7 +23,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public String alertRuleId;
 
     /**
-     * <p>The business source of the alert history. For example, <code>managed_service_for_prometheus</code> indicates the managed type of the Prometheus integration center. The default value is empty. Leave this parameter empty if you are unsure about the value.</p>
+     * <p>Specifies the business source of the alert history. For example, managed_service_for_prometheus indicates the managed type of the Prometheus integration center. Default value: empty. Leave this parameter empty if you are unsure how to specify it.</p>
      * 
      * <strong>example:</strong>
      * <p>managed_service_for_prometheus</p>
@@ -32,7 +32,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public String bizSource;
 
     /**
-     * <p>The namespace of CloudMonitor. Examples: acs_rds_dashboard and acs_ecs_dashboard.</p>
+     * <p>The namespace of CloudMonitor, such as acs_rds_dashboard and acs_ecs_dashboard.</p>
      * 
      * <strong>example:</strong>
      * <p>acs_rds_dashboard</p>
@@ -50,7 +50,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public String cmsProductCategory;
 
     /**
-     * <p>The keyword used for fuzzy matching and filtering based on the display name of the alert rule.</p>
+     * <p>Filters the records by performing fuzzy matching on the keywords in the display name of the alert rule.</p>
      * 
      * <strong>example:</strong>
      * <p>keyword</p>
@@ -59,7 +59,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public String displayNameKeyWord;
 
     /**
-     * <p>The unique key (instanceKey) used to identify the alert object instance.</p>
+     * <p>The unique key value (instanceKey) that identifies the alert object instance.</p>
      * 
      * <strong>example:</strong>
      * <p>entity/apm/apm.service/6dc9e46fda6d012537b48c3250ff806b</p>
@@ -74,7 +74,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public String labelFilterShrink;
 
     /**
-     * <p>The level of the most recent alert during the alert duration. Valid values: CRITICAL, WARN, and INFO.</p>
+     * <p>The level of the most recent alert during the alert duration. Valid values: CRITICAL (critical), WARN (warning), and INFO (info).</p>
      * 
      * <strong>example:</strong>
      * <p>CRITICAL</p>
@@ -83,7 +83,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public String latestLevel;
 
     /**
-     * <p>The highest alert level reached during the alert duration. Valid values: CRITICAL, WARN, and INFO.</p>
+     * <p>The highest alert level reached during the alert duration. Valid values: CRITICAL (critical), WARN (warning), and INFO (info).</p>
      * 
      * <strong>example:</strong>
      * <p>CRITICAL</p>
@@ -92,7 +92,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public String maxLevel;
 
     /**
-     * <p>The maximum number of results to return on each page. This parameter is not supported. Use pageSize and pageNumber for pagination.</p>
+     * <p>The maximum number of results returned per page in a paged query. This parameter is not supported. Use pageSize and pageNumber for paged queries.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -101,7 +101,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The migration status of the alert history.</p>
+     * <p>The migration status value of the alert history.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -110,7 +110,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public Integer migrationStatus;
 
     /**
-     * <p>The pagination token used for the next query. This parameter is not supported. Use pageSize and pageNumber for pagination.</p>
+     * <p>The paging token for querying the next page. This parameter is not supported. Use pageSize and pageNumber for a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
@@ -119,13 +119,13 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>Filters alert rules that contain specific notification recipients. Only rules that contain at least one of the notification recipients specified in notifyTargets are returned in the result list.</p>
+     * <p>Filters alert rules that contain specified notification recipients. Only rules that contain any notification recipient specified in notifyTargets are returned in the result list.</p>
      */
     @NameInMap("notificationFilter")
     public String notificationFilterShrink;
 
     /**
-     * <p>The relation type of the observed object. Examples: GROUP, INSTANCE, and TAG.</p>
+     * <p>The relation type of the observed object, such as GROUP, INSTANCE, and TAG.</p>
      * 
      * <strong>example:</strong>
      * <p>INSTANCE</p>
@@ -161,7 +161,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public String observeResourceInstanceId;
 
     /**
-     * <p>The type of the observed object. Examples: PROMETHEUS, APM, RUM, and cms_basic.</p>
+     * <p>The type of the observed object, such as PROMETHEUS, APM, RUM, and cms_basic.</p>
      * 
      * <strong>example:</strong>
      * <p>PROMETHEUS</p>
@@ -170,7 +170,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public String observeResourceType;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number for a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -179,7 +179,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of alert history records to return on each page. Default value: 10.</p>
+     * <p>The number of alert history records returned per page in a paged query. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -188,7 +188,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The key used for data partitioning. Typically, you do not need to specify this parameter.</p>
+     * <p>The key value used for data partitioning. Typically, you do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -197,7 +197,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public String partitionKey;
 
     /**
-     * <p>The start timestamp of the time range for the alert start time. The value is a UNIX timestamp in milliseconds. If not specified, the default value is the time 30 days ago.</p>
+     * <p>The start timestamp of the time range for the alert start time. The value is a UNIX timestamp in milliseconds. If not specified, the default value is 30 days ago.</p>
      * 
      * <strong>example:</strong>
      * <p>1739866071668</p>
@@ -215,7 +215,7 @@ public class ListAlertHistoriesShrinkRequest extends TeaModel {
     public Long startTimeTo;
 
     /**
-     * <p>The current status of the alert history. Valid values: OK and ALARM.</p>
+     * <p>The current status of the alert history. Valid values: OK (recovered) and ALARM (alerting).</p>
      * 
      * <strong>example:</strong>
      * <p>ALARM</p>

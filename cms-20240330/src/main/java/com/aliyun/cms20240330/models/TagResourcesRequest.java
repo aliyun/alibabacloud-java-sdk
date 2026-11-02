@@ -22,8 +22,8 @@ public class TagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The labels.</p>
-     * <p>You can attach up to 20 labels.</p>
+     * <p>The tags.</p>
+     * <p>You can attach up to 20 tags.</p>
      */
     @NameInMap("tag")
     public java.util.List<Tag> tag;

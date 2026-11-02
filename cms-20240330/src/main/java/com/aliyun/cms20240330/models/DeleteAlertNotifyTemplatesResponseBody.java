@@ -5,6 +5,13 @@ import com.aliyun.tea.*;
 
 public class DeleteAlertNotifyTemplatesResponseBody extends TeaModel {
     /**
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("deletedCount")
+    public Integer deletedCount;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +23,14 @@ public class DeleteAlertNotifyTemplatesResponseBody extends TeaModel {
     public static DeleteAlertNotifyTemplatesResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteAlertNotifyTemplatesResponseBody self = new DeleteAlertNotifyTemplatesResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteAlertNotifyTemplatesResponseBody setDeletedCount(Integer deletedCount) {
+        this.deletedCount = deletedCount;
+        return this;
+    }
+    public Integer getDeletedCount() {
+        return this.deletedCount;
     }
 
     public DeleteAlertNotifyTemplatesResponseBody setRequestId(String requestId) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListContactsResponseBody extends TeaModel {
     /**
-     * <p>The list of contacts.</p>
+     * <p>The list of alert contacts.</p>
      */
     @NameInMap("contacts")
     public java.util.List<ListContactsResponseBodyContacts> contacts;
@@ -93,7 +93,7 @@ public class ListContactsResponseBody extends TeaModel {
 
     public static class ListContactsResponseBodyContacts extends TeaModel {
         /**
-         * <p>The ID of the on-duty contact.</p>
+         * <p>The ID of the alert contact.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -102,7 +102,7 @@ public class ListContactsResponseBody extends TeaModel {
         public String contactId;
 
         /**
-         * <p>The email address of the contact.</p>
+         * <p>The email address of the alert contact.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="mailto:test@aliyun.com">test@aliyun.com</a></p>
@@ -111,7 +111,7 @@ public class ListContactsResponseBody extends TeaModel {
         public String email;
 
         /**
-         * <p>Indicates whether the email address is activated.</p>
+         * <p>Indicates whether the email address is verified.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -120,13 +120,13 @@ public class ListContactsResponseBody extends TeaModel {
         public Boolean emailVerify;
 
         /**
-         * <p>The contact groups to which the contact belongs.</p>
+         * <p>The alert contact groups to which the alert contact belongs.</p>
          */
         @NameInMap("groupList")
         public java.util.List<String> groupList;
 
         /**
-         * <p>The IM user ID mapping. Multiple instant messaging tools are supported.</p>
+         * <p>The mapping of IM user IDs. Multiple instant messaging tools are supported.</p>
          */
         @NameInMap("imUserIds")
         public java.util.Map<String, String> imUserIds;
@@ -141,7 +141,7 @@ public class ListContactsResponseBody extends TeaModel {
         public String lang;
 
         /**
-         * <p>The name of the contact.</p>
+         * <p>The name of the alert contact.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -150,7 +150,7 @@ public class ListContactsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The mobile phone number of the contact.</p>
+         * <p>The mobile phone number of the alert contact.</p>
          * 
          * <strong>example:</strong>
          * <p>130123456789</p>
@@ -159,7 +159,7 @@ public class ListContactsResponseBody extends TeaModel {
         public String phone;
 
         /**
-         * <p>Indicates whether the mobile phone number of the contact is activated.</p>
+         * <p>Indicates whether the mobile phone number is verified.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

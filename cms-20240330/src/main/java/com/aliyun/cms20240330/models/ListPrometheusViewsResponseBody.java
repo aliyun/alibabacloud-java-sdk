@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusViewsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of records to return.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -17,7 +17,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The pagination token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>2-ba4d-4b9f-aa24-dcb067a30f1c</p>
@@ -107,8 +107,8 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         /**
          * <p>The instance type. Valid values:</p>
          * <ul>
-         * <li>prom-view: new version of the aggregate view</li>
-         * <li>global-view: legacy version of the aggregate view</li>
+         * <li>prom-view: New version aggregate view.</li>
+         * <li>global-view: Legacy version aggregate view.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String instanceType;
 
         /**
-         * <p>The billing method. The value is fixed to FREE.</p>
+         * <p>The billing method. Currently, the value is fixed to FREE.</p>
          * 
          * <strong>example:</strong>
          * <p>FREE</p>
@@ -199,7 +199,7 @@ public class ListPrometheusViewsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the user.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123xxx</p>

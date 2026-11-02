@@ -5,7 +5,25 @@ import com.aliyun.tea.*;
 
 public class TriggerConditions extends TeaModel {
     /**
-     * <p>The expression type. Fixed as SIMPLE (used for MetricSet multi-threshold triggers).</p>
+     * <p>The minimum deviation or absolute deviation dead zone for dynamic baselines, which takes effect only for baseline operators. No alert is triggered if the absolute difference between the current value and the boundary is less than the absDeviation value. The unit is the same as the metric unit. The value must be greater than or equal to 0. A value of 0 indicates no limit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0.0</p>
+     */
+    @NameInMap("absDeviation")
+    public Double absDeviation;
+
+    /**
+     * <p>The baseline period, which takes effect only for baseline operators. Valid values: AUTO for automatic identification, DAILY for daily, WEEKLY for weekly, and NONE for no period. If you set this parameter to WEEKLY, the backend automatically extends the historical training window to at least 14 days.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>AUTO</p>
+     */
+    @NameInMap("baselinePeriod")
+    public String baselinePeriod;
+
+    /**
+     * <p>The expression type. The value is fixed as SIMPLE, which is used for MetricSet multi-threshold triggers.</p>
      * 
      * <strong>example:</strong>
      * <p>SIMPLE</p>
@@ -14,7 +32,7 @@ public class TriggerConditions extends TeaModel {
     public String expressionType;
 
     /**
-     * <p>The upper bound of the range. Required when operator is IN_RANGE or OUT_OF_RANGE. Must be greater than or equal to min.</p>
+     * <p>The upper bound of the range. This parameter is required when the operator is IN_RANGE or OUT_OF_RANGE, and the value must be greater than or equal to the min value.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -23,7 +41,7 @@ public class TriggerConditions extends TeaModel {
     public Double max;
 
     /**
-     * <p>The lower bound of the range. Required when operator is IN_RANGE or OUT_OF_RANGE.</p>
+     * <p>The lower bound of the range. This parameter is required when the operator is IN_RANGE or OUT_OF_RANGE.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -41,7 +59,7 @@ public class TriggerConditions extends TeaModel {
     public String operator;
 
     /**
-     * <p>The referenced query name, corresponding to QueryConfigUnified.queries[].name.</p>
+     * <p>The referenced query name, which corresponds to QueryConfigUnified.queries[].name.</p>
      * 
      * <strong>example:</strong>
      * <p>cpuQuery</p>
@@ -50,7 +68,16 @@ public class TriggerConditions extends TeaModel {
     public String queryName;
 
     /**
-     * <p>The comparison threshold. Used when operator is GT, GE, LT, LE, EQ, or NE. For IN_RANGE or OUT_OF_RANGE, use min and max instead. Not required for PRESENT or NOT_PRESENT.</p>
+     * <p>The dynamic baseline sensitivity, which takes effect only when the operator is ABOVE_UPPER, BELOW_LOWER, or OUT_OF_BAND. Valid values: HIGH for the narrowest and most sensitive band, MEDIUM for medium sensitivity, and LOW for the widest and least sensitive band. You can configure different sensitivities for multiple subconditions.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>MEDIUM</p>
+     */
+    @NameInMap("sensitivity")
+    public String sensitivity;
+
+    /**
+     * <p>The comparison threshold. This parameter is used when the operator is GT, GE, LT, LE, EQ, or NE. For IN_RANGE or OUT_OF_RANGE, use the min and max parameters. For PRESENT or NOT_PRESENT, leave this parameter empty.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -61,6 +88,22 @@ public class TriggerConditions extends TeaModel {
     public static TriggerConditions build(java.util.Map<String, ?> map) throws Exception {
         TriggerConditions self = new TriggerConditions();
         return TeaModel.build(map, self);
+    }
+
+    public TriggerConditions setAbsDeviation(Double absDeviation) {
+        this.absDeviation = absDeviation;
+        return this;
+    }
+    public Double getAbsDeviation() {
+        return this.absDeviation;
+    }
+
+    public TriggerConditions setBaselinePeriod(String baselinePeriod) {
+        this.baselinePeriod = baselinePeriod;
+        return this;
+    }
+    public String getBaselinePeriod() {
+        return this.baselinePeriod;
     }
 
     public TriggerConditions setExpressionType(String expressionType) {
@@ -101,6 +144,14 @@ public class TriggerConditions extends TeaModel {
     }
     public String getQueryName() {
         return this.queryName;
+    }
+
+    public TriggerConditions setSensitivity(String sensitivity) {
+        this.sensitivity = sensitivity;
+        return this;
+    }
+    public String getSensitivity() {
+        return this.sensitivity;
     }
 
     public TriggerConditions setThreshold(Double threshold) {

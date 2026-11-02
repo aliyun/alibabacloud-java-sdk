@@ -14,7 +14,7 @@ public class CreateIntegrationPolicyResponseBody extends TeaModel {
     public Boolean created;
 
     /**
-     * <p>The uploaded policy.</p>
+     * <p>The policy.</p>
      */
     @NameInMap("policy")
     public CreateIntegrationPolicyResponseBodyPolicy policy;

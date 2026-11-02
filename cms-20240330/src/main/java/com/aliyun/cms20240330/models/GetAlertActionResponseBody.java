@@ -42,7 +42,7 @@ public class GetAlertActionResponseBody extends TeaModel {
 
     public static class GetAlertActionResponseBodyAlertActionsEbParam extends TeaModel {
         /**
-         * <p>The event source.</p>
+         * <p>The event provider.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -306,8 +306,8 @@ public class GetAlertActionResponseBody extends TeaModel {
         /**
          * <p>The name of the resource.</p>
          * <ul>
-         * <li>If the resource type is queue, the resource name is the name of the queue.</li>
-         * <li>If the resource type is topic, the resource name is the name of the topic.</li>
+         * <li>If the resource type is queue, the resource name is the queue name.</li>
+         * <li>If the resource type is topic, the resource name is the topic name.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -367,7 +367,7 @@ public class GetAlertActionResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The integration webhook URL for PagerDuty. V1 and V2 are supported.</p>
+         * <p>The PagerDuty integration webhook. Both V1 and V2 are supported.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://events.pagerduty.com/v2/enqueue">https://events.pagerduty.com/v2/enqueue</a></p>
@@ -483,7 +483,7 @@ public class GetAlertActionResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>The URL for the alert callback.</p>
+         * <p>The alert callback URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.test.com">http://www.test.com</a></p>

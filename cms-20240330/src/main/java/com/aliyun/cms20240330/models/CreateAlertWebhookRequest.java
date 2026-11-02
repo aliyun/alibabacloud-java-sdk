@@ -18,7 +18,7 @@ public class CreateAlertWebhookRequest extends TeaModel {
     public String contentType;
 
     /**
-     * <p>The collection of HTTP request headers.</p>
+     * <p>The HTTP request headers.</p>
      */
     @NameInMap("headers")
     public java.util.Map<String, String> headers;

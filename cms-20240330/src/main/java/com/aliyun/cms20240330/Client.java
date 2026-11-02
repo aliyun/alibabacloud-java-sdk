@@ -70,7 +70,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Activates the contact channel.</p>
+     * <p>Activates a contact channel.</p>
      * 
      * @param request ActiveContactChannelRequest
      * @param headers map
@@ -108,7 +108,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Activates the contact channel.</p>
+     * <p>Activates a contact channel.</p>
      * 
      * @param request ActiveContactChannelRequest
      * @return ActiveContactChannelResponse
@@ -960,6 +960,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("phone", request.phone);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneCode)) {
+            body.put("phoneCode", request.phoneCode);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.workspace)) {
             body.put("workspace", request.workspace);
         }
@@ -1418,7 +1422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation creates an event integration.</p>
+     * <p>Creates an event integration.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an access center policy.</p>
@@ -1479,7 +1483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation creates an event integration.</p>
+     * <p>Creates an event integration.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates an access center policy.</p>
@@ -1495,7 +1499,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally. When you create a policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</p>
+     * <p>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally.
+     * When you create a silence policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a silence policy.</p>
@@ -1533,7 +1538,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally. When you create a policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, the validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</p>
+     * <p>Creates a silence policy in a specified workspace. A silence policy filters events by using filterSetting. When the policy is enabled and the current time hits the configured effective period, the hit events do not trigger subscribe notifications, direct notifications, or global subscribe notifications, but the events are still stored normally.
+     * When you create a silence policy, maintainWindowName and filterSetting are required, and filterSetting must contain at least one condition. You can leave the effective period unconfigured, in which case the policy does not hit any events. If you configure effective, you must also configure at least one of startTime, endTime, or effectTimeRange. Otherwise, validation failed. If the policy name already exists in the same workspace, InvalidParameterValue is returned. After the policy is created, the silence policy ID is returned.</p>
      * 
      * <b>summary</b> : 
      * <p>Creates a silence policy.</p>
@@ -1749,7 +1755,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a pipeline.</p>
+     * <p>Creates a pipeline.</p>
      * 
      * @param request CreatePipelineRequest
      * @param headers map
@@ -1803,7 +1809,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Create a pipeline.</p>
+     * <p>Creates a pipeline.</p>
      * 
      * @param request CreatePipelineRequest
      * @return CreatePipelineResponse
@@ -1816,7 +1822,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Managed Service for Prometheus instance.</p>
+     * <p>Creates a Prometheus monitoring instance.</p>
      * 
      * @param request CreatePrometheusInstanceRequest
      * @param headers map
@@ -1898,7 +1904,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a Managed Service for Prometheus instance.</p>
+     * <p>Creates a Prometheus monitoring instance.</p>
      * 
      * @param request CreatePrometheusInstanceRequest
      * @return CreatePrometheusInstanceResponse
@@ -2136,7 +2142,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates application observability and prepares the prerequisite resources required for integration.</p>
+     * <p>Creates application observability and completes prerequisite resource preparations for integration.</p>
      * 
      * @param request CreateServiceObservabilityRequest
      * @param headers map
@@ -2164,7 +2170,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates application observability and prepares the prerequisite resources required for integration.</p>
+     * <p>Creates application observability and completes prerequisite resource preparations for integration.</p>
      * 
      * @param request CreateServiceObservabilityRequest
      * @return CreateServiceObservabilityResponse
@@ -2177,7 +2183,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a service-linked entry for associating configurations with the application monitoring service, such as log association.</p>
+     * <p>Creates a service association entry to configure associations for the application monitoring service, such as log associations.</p>
      * 
      * @param request CreateServiceRecordRequest
      * @param headers map
@@ -2215,7 +2221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a service-linked entry for associating configurations with the application monitoring service, such as log association.</p>
+     * <p>Creates a service association entry to configure associations for the application monitoring service, such as log associations.</p>
      * 
      * @param request CreateServiceRecordRequest
      * @return CreateServiceRecordResponse
@@ -2232,10 +2238,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * Common use cases:</p>
      * <ul>
      * <li>heapdump: Triggers a JVM heap dump.</li>
-     * <li>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</li>
-     * <li>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</li>
-     * <li>LiveDebug Code Replace: Performs hot code replacement.
-     * After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</li>
+     * <li>LiveDebug Probe: Dynamically instruments target methods (logs, snapshots, metrics, spans, etc.).</li>
+     * <li>LiveDebug Command: One-time proactive inspection (OGNL, decompilation, thread or memory information, etc.).</li>
+     * <li>LiveDebug Code Replace: Hot code replacement.
+     * After the task is created, a taskId is returned. You can subsequently manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronized to ConfigServer.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2285,10 +2291,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * Common use cases:</p>
      * <ul>
      * <li>heapdump: Triggers a JVM heap dump.</li>
-     * <li>LiveDebug Probe: Dynamically instruments a target method (log, snapshot, metric, span, etc.).</li>
-     * <li>LiveDebug Command: Performs a one-time active inspection (OGNL, decompilation, thread/memory information, etc.).</li>
-     * <li>LiveDebug Code Replace: Performs hot code replacement.
-     * After successful creation, a taskId is returned. You can manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronously delivered to ConfigServer.</li>
+     * <li>LiveDebug Probe: Dynamically instruments target methods (logs, snapshots, metrics, spans, etc.).</li>
+     * <li>LiveDebug Command: One-time proactive inspection (OGNL, decompilation, thread or memory information, etc.).</li>
+     * <li>LiveDebug Code Replace: Hot code replacement.
+     * After the task is created, a taskId is returned. You can subsequently manage the task by using GetServiceTask, ListServiceTask, or DeleteServiceTask. After a LiveDebug task is created, the configuration is synchronized to ConfigServer.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -2353,7 +2359,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</p>
+     * <p>Creates a ticket for password-free access. You can use the ticket to construct a password-free URL to share console pages with other users or embed them into third-party systems.</p>
      * 
      * @param request CreateTicketRequest
      * @param headers map
@@ -2391,7 +2397,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Generates a ticket for passwordless access if you need to share console pages with others without requiring logon or embed them in third-party systems. After generating the ticket by calling CreateTicket, you can construct a passwordless access link.</p>
+     * <p>Creates a ticket for password-free access. You can use the ticket to construct a password-free URL to share console pages with other users or embed them into third-party systems.</p>
      * 
      * @param request CreateTicketRequest
      * @return CreateTicketResponse
@@ -2553,7 +2559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an alert action integration.</p>
+     * <p>Deletes alert action integrations.</p>
      * 
      * @param tmpReq DeleteAlertActionsRequest
      * @param headers map
@@ -2593,7 +2599,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an alert action integration.</p>
+     * <p>Deletes alert action integrations.</p>
      * 
      * @param request DeleteAlertActionsRequest
      * @return DeleteAlertActionsResponse
@@ -2847,7 +2853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes contact groups.</p>
+     * <p>Deletes a contact group.</p>
      * 
      * @param tmpReq DeleteContactGroupsRequest
      * @param headers map
@@ -2887,7 +2893,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes contact groups.</p>
+     * <p>Deletes a contact group.</p>
      * 
      * @param request DeleteContactGroupsRequest
      * @return DeleteContactGroupsResponse
@@ -3215,7 +3221,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a delivery task.</p>
+     * <p>Deletes a data delivery task.</p>
      * 
      * @param request DeleteDeliveryTaskRequest
      * @param headers map
@@ -3243,7 +3249,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a delivery task.</p>
+     * <p>Deletes a data delivery task.</p>
      * 
      * @param request DeleteDeliveryTaskRequest
      * @return DeleteDeliveryTaskResponse
@@ -3789,7 +3795,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a Prometheus virtual instance by its ID.</p>
+     * <p>Deletes a Prometheus virtual instance by virtual instance ID.</p>
      * 
      * @param request DeletePrometheusVirtualInstanceRequest
      * @param headers map
@@ -3817,7 +3823,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a Prometheus virtual instance by its ID.</p>
+     * <p>Deletes a Prometheus virtual instance by virtual instance ID.</p>
      * 
      * @param request DeletePrometheusVirtualInstanceRequest
      * @return DeletePrometheusVirtualInstanceResponse
@@ -4621,7 +4627,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Activates a subscription.</p>
+     * <p>Starts a subscription.</p>
      * 
      * @param request EnableSubscriptionRequest
      * @param headers map
@@ -4655,7 +4661,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Activates a subscription.</p>
+     * <p>Starts a subscription.</p>
      * 
      * @param request EnableSubscriptionRequest
      * @return EnableSubscriptionResponse
@@ -4776,10 +4782,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to modify version <code>1</code> of alert template <code>123456</code>. In this example, the alert level is set to <code>Critical</code>, the statistical method is set to <code>Average</code>, the comparison operator for the alert threshold is set to <code>GreaterThanOrEqualToThreshold</code>, the alert threshold is set to <code>90</code>, and the number of retries is set to <code>3</code>. The response indicates that the alert template was successfully modified.</p>
+     * <p>This topic provides an example of modifying alert template <code>123456</code> of version <code>1</code>. The alert level is changed to <code>Critical</code>, the statistical method to <code>Average</code>, the threshold comparison operator to <code>GreaterThanOrEqualToThreshold</code>, the threshold to <code>90</code>, and the number of retries to <code>3</code>. The response indicates that the alert template was modified successfully.</p>
      * 
      * <b>summary</b> : 
-     * <p>Details of an add-on schema.</p>
+     * <p>Retrieves the schema details of an add-on.</p>
      * 
      * @param request GetAddonCodeTemplateRequest
      * @param headers map
@@ -4821,10 +4827,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of how to modify version <code>1</code> of alert template <code>123456</code>. In this example, the alert level is set to <code>Critical</code>, the statistical method is set to <code>Average</code>, the comparison operator for the alert threshold is set to <code>GreaterThanOrEqualToThreshold</code>, the alert threshold is set to <code>90</code>, and the number of retries is set to <code>3</code>. The response indicates that the alert template was successfully modified.</p>
+     * <p>This topic provides an example of modifying alert template <code>123456</code> of version <code>1</code>. The alert level is changed to <code>Critical</code>, the statistical method to <code>Average</code>, the threshold comparison operator to <code>GreaterThanOrEqualToThreshold</code>, the threshold to <code>90</code>, and the number of retries to <code>3</code>. The response indicates that the alert template was modified successfully.</p>
      * 
      * <b>summary</b> : 
-     * <p>Details of an add-on schema.</p>
+     * <p>Retrieves the schema details of an add-on.</p>
      * 
      * @param request GetAddonCodeTemplateRequest
      * @return GetAddonCodeTemplateResponse
@@ -4837,7 +4843,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details and accessed state of an add-on release.</p>
+     * <p>Queries the details of an add-on release to check the accessed state.</p>
      * 
      * @param request GetAddonReleaseRequest
      * @param headers map
@@ -4865,7 +4871,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details and accessed state of an add-on release.</p>
+     * <p>Queries the details of an add-on release to check the accessed state.</p>
      * 
      * @param request GetAddonReleaseRequest
      * @return GetAddonReleaseResponse
@@ -4943,7 +4949,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an aggregation task group.</p>
+     * <p>Queries the details of an aggregation task group.</p>
      * 
      * @param request GetAggTaskGroupRequest
      * @param headers map
@@ -4971,7 +4977,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries an aggregation task group.</p>
+     * <p>Queries the details of an aggregation task group.</p>
      * 
      * @param request GetAggTaskGroupRequest
      * @return GetAggTaskGroupResponse
@@ -6120,7 +6126,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the user settings for Prometheus.</p>
+     * <p>Queries the Prometheus user settings.</p>
      * 
      * @param request GetPrometheusUserSettingRequest
      * @param headers map
@@ -6154,7 +6160,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the user settings for Prometheus.</p>
+     * <p>Queries the Prometheus user settings.</p>
      * 
      * @param request GetPrometheusUserSettingRequest
      * @return GetPrometheusUserSettingResponse
@@ -6359,11 +6365,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a single service task based on the taskId.
-     * The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</p>
+     * <p>Queries the details of a single service task based on the task ID. The response content varies based on the task type. For heapdump, the heap dump task information is returned. For LiveDebug, the task records and fields such as taskConfig (extraInfo) are returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a single ServiceTask under a specified application.</p>
+     * <p>Queries the details of a single service task for a specified application.</p>
      * 
      * @param request GetServiceTaskRequest
      * @param headers map
@@ -6397,11 +6402,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the details of a single service task based on the taskId.
-     * The response content varies depending on the type: heapdump returns heap dump task information; LiveDebug returns task records and fields such as taskConfig (extraInfo).</p>
+     * <p>Queries the details of a single service task based on the task ID. The response content varies based on the task type. For heapdump, the heap dump task information is returned. For LiveDebug, the task records and fields such as taskConfig (extraInfo) are returned.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the details of a single ServiceTask under a specified application.</p>
+     * <p>Queries the details of a single service task for a specified application.</p>
      * 
      * @param request GetServiceTaskRequest
      * @return GetServiceTaskResponse
@@ -6649,10 +6653,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of add-on configurations.</p>
+     * <p>Queries the list of integration configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists add-on releases.</p>
+     * <p>Lists the releases of an add-on.</p>
      * 
      * @param request ListAddonReleasesRequest
      * @param headers map
@@ -6698,10 +6702,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of add-on configurations.</p>
+     * <p>Queries the list of integration configurations.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists add-on releases.</p>
+     * <p>Lists the releases of an add-on.</p>
      * 
      * @param request ListAddonReleasesRequest
      * @return ListAddonReleasesResponse
@@ -6933,10 +6937,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</p>
+     * <p>Uses paging to retrieve the list of alert history records for the CloudMonitor 2.0 monitoring service. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries CloudMonitor 2.0 alert history records.</p>
+     * <p>Queries the list of alert history records for the CloudMonitor 2.0 monitoring service by using paging.</p>
      * 
      * @param tmpReq ListAlertHistoriesRequest
      * @param headers map
@@ -7080,10 +7084,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries CloudMonitor 2.0 alert history records. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</p>
+     * <p>Uses paging to retrieve the list of alert history records for the CloudMonitor 2.0 monitoring service. You can filter the records by multiple dimensions such as alert rule, alert status, alert level, alert object, workspace, time range, label, notification recipient, observed object type, and data source type. You can also use the structured filter parameter to implement more flexible combined queries.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries CloudMonitor 2.0 alert history records.</p>
+     * <p>Queries the list of alert history records for the CloudMonitor 2.0 monitoring service by using paging.</p>
      * 
      * @param request ListAlertHistoriesRequest
      * @return ListAlertHistoriesResponse
@@ -7169,10 +7173,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of alert chatbots under the current account. Alert chatbots serve as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by chatbot ID, name, type, and workspace.</p>
+     * <p>Queries the alert robots under the current account. Alert robots act as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by robot ID, name, type, and workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries chatbots.</p>
+     * <p>Queries robots.</p>
      * 
      * @param tmpReq ListAlertRobotsRequest
      * @param headers map
@@ -7236,10 +7240,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of alert chatbots under the current account. Alert chatbots serve as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by chatbot ID, name, type, and workspace.</p>
+     * <p>Queries the alert robots under the current account. Alert robots act as webhook endpoints for alert notifications and support types such as DingTalk, DingTalk Cool App, Lark, Slack, and WeChat. You can filter the results by robot ID, name, type, and workspace.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries chatbots.</p>
+     * <p>Queries robots.</p>
      * 
      * @param request ListAlertRobotsRequest
      * @return ListAlertRobotsResponse
@@ -7454,7 +7458,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries contacts.</p>
+     * <p>Queries alert contacts.</p>
      * 
      * @param tmpReq ListContactsRequest
      * @param headers map
@@ -7529,7 +7533,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries contacts.</p>
+     * <p>Queries alert contacts.</p>
      * 
      * @param request ListContactsRequest
      * @return ListContactsResponse
@@ -7652,10 +7656,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries data pipelines in a specified workspace by using paging.</p>
+     * <p>Performs a paged query of data streams in a specified workspace. Supports paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries data pipelines.</p>
+     * <p>Queries a list of data pipelines.</p>
      * 
      * @param request ListDataPipelinesRequest
      * @param headers map
@@ -7693,10 +7697,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries data pipelines in a specified workspace by using paging.</p>
+     * <p>Performs a paged query of data streams in a specified workspace. Supports paging.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries data pipelines.</p>
+     * <p>Queries a list of data pipelines.</p>
      * 
      * @param request ListDataPipelinesRequest
      * @return ListDataPipelinesResponse
@@ -7764,7 +7768,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of data delivery tasks.</p>
+     * <p>Queries the list of data delivery tasks.</p>
      * 
      * @param tmpReq ListDeliveryTasksRequest
      * @param headers map
@@ -7820,7 +7824,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of data delivery tasks.</p>
+     * <p>Queries the list of data delivery tasks.</p>
      * 
      * @param request ListDeliveryTasksRequest
      * @return ListDeliveryTasksResponse
@@ -8046,7 +8050,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the custom service discovery rules of a Provisioning policy.</p>
+     * <p>Retrieves the custom service discovery rules for an integration center policy.</p>
      * 
      * @param request ListIntegrationPolicyCustomScrapeJobRulesRequest
      * @param headers map
@@ -8092,7 +8096,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the custom service discovery rules of a Provisioning policy.</p>
+     * <p>Retrieves the custom service discovery rules for an integration center policy.</p>
      * 
      * @param request ListIntegrationPolicyCustomScrapeJobRulesRequest
      * @return ListIntegrationPolicyCustomScrapeJobRulesResponse
@@ -8290,11 +8294,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When a policy is active, alert notifications are not sent for alerts that occur in the application group.
-     * This topic provides an example of creating a policy named <code>PauseNotify</code>. This policy pauses alert notifications for application group <code>7301****</code> from <code>1622949300000</code> to <code>1623208500000</code> (from <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code> UTC+8).</p>
+     * <p>During the effective period of the policy, no notifications are sent for alerts triggered in the application group.</p>
+     * <p>This topic provides an example of creating a policy named <code>PauseNotify</code> to pause alert notifications for the application group <code>7301****</code>. Alerts for this application group are paused from <code>1622949300000</code> to <code>1623208500000</code> (UTC+8 <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code>).</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the storage requirements for an Integration Center policy.</p>
+     * <p>Retrieves the storage requirements of an Integration Center policy.</p>
      * 
      * @param request ListIntegrationPolicyStorageRequirementsRequest
      * @param headers map
@@ -8336,11 +8340,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When a policy is active, alert notifications are not sent for alerts that occur in the application group.
-     * This topic provides an example of creating a policy named <code>PauseNotify</code>. This policy pauses alert notifications for application group <code>7301****</code> from <code>1622949300000</code> to <code>1623208500000</code> (from <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code> UTC+8).</p>
+     * <p>During the effective period of the policy, no notifications are sent for alerts triggered in the application group.</p>
+     * <p>This topic provides an example of creating a policy named <code>PauseNotify</code> to pause alert notifications for the application group <code>7301****</code>. Alerts for this application group are paused from <code>1622949300000</code> to <code>1623208500000</code> (UTC+8 <code>2021-06-06 11:15:00</code> to <code>2021-06-09 11:15:00</code>).</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists the storage requirements for an Integration Center policy.</p>
+     * <p>Retrieves the storage requirements of an Integration Center policy.</p>
      * 
      * @param request ListIntegrationPolicyStorageRequirementsRequest
      * @return ListIntegrationPolicyStorageRequirementsResponse
@@ -8491,10 +8495,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of notify policies in a specified workspace with paging. You can filter results by name using fuzzy match. The response contains a list of NotifyPolicySummary lightweight views.</p>
+     * <p>Queries the list of notification policies in a specified workspace by using paging. Supports fuzzy filtering by name. Returns a list of NotifyPolicySummary lightweight views.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists notify policies.</p>
+     * <p>Lists notification policies.</p>
      * 
      * @param request ListNotifyPoliciesRequest
      * @param headers map
@@ -8548,10 +8552,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the list of notify policies in a specified workspace with paging. You can filter results by name using fuzzy match. The response contains a list of NotifyPolicySummary lightweight views.</p>
+     * <p>Queries the list of notification policies in a specified workspace by using paging. Supports fuzzy filtering by name. Returns a list of NotifyPolicySummary lightweight views.</p>
      * 
      * <b>summary</b> : 
-     * <p>Lists notify policies.</p>
+     * <p>Lists notification policies.</p>
      * 
      * @param request ListNotifyPoliciesRequest
      * @return ListNotifyPoliciesResponse
@@ -8567,7 +8571,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the on-call contacts at a specified time.</p>
+     * <p>Queries the on-call personnel at a specified time.</p>
      * 
      * @param request ListOncallContactsRequest
      * @param headers map
@@ -8604,7 +8608,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>This topic provides an example of creating an alert contact group named <code>ECS_Group</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the on-call contacts at a specified time.</p>
+     * <p>Queries the on-call personnel at a specified time.</p>
      * 
      * @param request ListOncallContactsRequest
      * @return ListOncallContactsResponse
@@ -8617,7 +8621,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries on-call schedules.</p>
+     * <p>Queries the on-call schedules.</p>
      * 
      * @param tmpReq ListOncallSchedulesRequest
      * @param headers map
@@ -8673,7 +8677,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries on-call schedules.</p>
+     * <p>Queries the on-call schedules.</p>
      * 
      * @param request ListOncallSchedulesRequest
      * @return ListOncallSchedulesResponse
@@ -8798,10 +8802,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves a list of Managed Service for Prometheus instances.</p>
+     * <p>Retrieves a list of Prometheus instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of Managed Service for Prometheus instances.</p>
+     * <p>Retrieves a list of Prometheus instances.</p>
      * 
      * @param tmpReq ListPrometheusInstancesRequest
      * @param headers map
@@ -8877,10 +8881,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves a list of Managed Service for Prometheus instances.</p>
+     * <p>Retrieves a list of Prometheus instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of Managed Service for Prometheus instances.</p>
+     * <p>Retrieves a list of Prometheus instances.</p>
      * 
      * @param request ListPrometheusInstancesRequest
      * @return ListPrometheusInstancesResponse
@@ -8893,10 +8897,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a list of Prometheus view instances.</p>
+     * <p>Retrieves a list of Prometheus view instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of Prometheus view instances.</p>
+     * <p>Retrieves a list of Prometheus view instances.</p>
      * 
      * @param tmpReq ListPrometheusViewsRequest
      * @param headers map
@@ -8972,10 +8976,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries a list of Prometheus view instances.</p>
+     * <p>Retrieves a list of Prometheus view instances.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries a list of Prometheus view instances.</p>
+     * <p>Retrieves a list of Prometheus view instances.</p>
      * 
      * @param request ListPrometheusViewsRequest
      * @return ListPrometheusViewsResponse
@@ -9426,7 +9430,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alert notification delivery history in a specified workspace by using paging, and supports filtering by conditions such as notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</p>
+     * <p>Performs a paging query on the alert notification delivery history in a specified workspace. Supports filtering by notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</p>
      * 
      * @param request ListUserNotifyHistoriesRequest
      * @param headers map
@@ -9552,7 +9556,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the alert notification delivery history in a specified workspace by using paging, and supports filtering by conditions such as notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</p>
+     * <p>Performs a paging query on the alert notification delivery history in a specified workspace. Supports filtering by notification channel, alert severity, subscription, alert rule, recipient, delivery result, and time range.</p>
      * 
      * @param request ListUserNotifyHistoriesRequest
      * @return ListUserNotifyHistoriesResponse
@@ -9831,10 +9835,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</p>
+     * <p>Renders template content in Go template syntax with the provided context data and returns the rendering results for each template. It supports previewing multiple templates, such as title and content, simultaneously to enable real-time preview in frontend template editors.</p>
      * 
      * <b>summary</b> : 
-     * <p>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</p>
+     * <p>Renders template content in Go template syntax with the provided context data and returns the rendering results for each template. It supports previewing multiple templates, such as title and content, simultaneously to enable real-time preview in frontend template editors.</p>
      * 
      * @param request PreviewNotifyTemplateRequest
      * @param headers map
@@ -9872,10 +9876,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</p>
+     * <p>Renders template content in Go template syntax with the provided context data and returns the rendering results for each template. It supports previewing multiple templates, such as title and content, simultaneously to enable real-time preview in frontend template editors.</p>
      * 
      * <b>summary</b> : 
-     * <p>Renders templates written in Go template syntax by using the provided context data and returns the rendering results. This operation supports the simultaneous preview of multiple templates, such as title and content, to enable real-time preview in frontend template editors.</p>
+     * <p>Renders template content in Go template syntax with the provided context data and returns the rendering results for each template. It supports previewing multiple templates, such as title and content, simultaneously to enable real-time preview in frontend template editors.</p>
      * 
      * @param request PreviewNotifyTemplateRequest
      * @return PreviewNotifyTemplateResponse
@@ -9951,7 +9955,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of querying the list of alert templates. The response shows that the list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example of querying the alert template list. The response shows that the list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries alert rules.</p>
@@ -10012,7 +10016,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example of querying the list of alert templates. The response shows that the list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
+     * <p>This topic provides an example of querying the alert template list. The response shows that the list contains two alert templates: <code>ECS_Template1</code> and <code>ECS_Template2</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries alert rules.</p>
@@ -10142,9 +10146,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <code>acs_ecs_dashboard</code> instance <code>i-uf6j91r34rnwawoo****</code>. The alert contact group of the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the retry count for the Critical level is <code>3</code>.</p>
+     * <p>This topic provides an example of setting a threshold alert rule for the <code>cpu_total</code> metric of the <code>i-uf6j91r34rnwawoo****</code> instance in the <code>acs_ecs_dashboard</code> namespace of Elastic Compute Service. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the number of alert retries for the Critical level is <code>3</code>.</p>
      * <blockquote>
-     * <p>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</p>
+     * <p>On August 15, 2024, Statistics validation was added. The statistical value can only be the Statistics corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">cloud service monitoring metrics</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -10222,9 +10226,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a threshold alert rule for the cpu_total metric of the Elastic Computing Service <code>acs_ecs_dashboard</code> instance <code>i-uf6j91r34rnwawoo****</code>. The alert contact group of the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the retry count for the Critical level is <code>3</code>.</p>
+     * <p>This topic provides an example of setting a threshold alert rule for the <code>cpu_total</code> metric of the <code>i-uf6j91r34rnwawoo****</code> instance in the <code>acs_ecs_dashboard</code> namespace of Elastic Compute Service. The alert contact group for the alert rule is <code>ECS_Group</code>, the alert rule name is <code>test123</code>, the alert rule ID is <code>a151cd6023eacee2f0978e03863cc1697c89508****</code>, the statistical method for the Critical level is <code>Average</code>, the comparison operator for the Critical level is <code>GreaterThanOrEqualToThreshold</code>, the threshold for the Critical level is <code>90</code>, and the number of alert retries for the Critical level is <code>3</code>.</p>
      * <blockquote>
-     * <p>2024-08-15: Statistics validation is added. Only the Statistics value that corresponds to the metric can be specified. For information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">Cloud service monitoring metrics</a>.</p>
+     * <p>On August 15, 2024, Statistics validation was added. The statistical value can only be the Statistics corresponding to the metric. For more information about how to obtain the value of this parameter, see <a href="https://www.alibabacloud.com/help/en/cms/support/appendix-1-metrics">cloud service monitoring metrics</a>.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -10241,7 +10245,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Attaches labels to resources.</p>
+     * <p>Attaches tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @param headers map
@@ -10283,7 +10287,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Attaches labels to resources.</p>
+     * <p>Attaches tags to resources.</p>
      * 
      * @param request TagResourcesRequest
      * @return TagResourcesResponse
@@ -10712,7 +10716,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an alert robot.</p>
+     * <p>Updates a chatbot.</p>
      * 
      * @param request UpdateAlertRobotRequest
      * @param headers map
@@ -10766,7 +10770,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates an alert robot.</p>
+     * <p>Updates a chatbot.</p>
      * 
      * @param request UpdateAlertRobotRequest
      * @return UpdateAlertRobotResponse
@@ -10935,6 +10939,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("phone", request.phone);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.phoneCode)) {
+            body.put("phoneCode", request.phoneCode);
+        }
+
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
             new TeaPair("headers", headers),
             new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
@@ -11019,7 +11027,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a context.</p>
+     * <p>Updates the context.</p>
      * 
      * @param request UpdateContextRequest
      * @param headers map
@@ -11069,7 +11077,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Updates a context.</p>
+     * <p>Updates the context.</p>
      * 
      * @param request UpdateContextRequest
      * @return UpdateContextResponse
@@ -12245,7 +12253,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upserts a common Umodel schema reference.</p>
+     * <p>Updates the referenced public Umodel schema.</p>
      * 
      * @param request UpsertUmodelCommonSchemaRefRequest
      * @param headers map
@@ -12283,7 +12291,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Upserts a common Umodel schema reference.</p>
+     * <p>Updates the referenced public Umodel schema.</p>
      * 
      * @param request UpsertUmodelCommonSchemaRefRequest
      * @return UpsertUmodelCommonSchemaRefResponse
@@ -12349,10 +12357,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</p>
+     * <p>Views the on-call calendar and returns the on-call schedule for a specified on-call schedule within a specified date range. The response is grouped by shift name, where each key is a shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the on-call calendar of a specified on-call schedule within a given date range, and returns the contacts and start and end times of each on-call shift grouped by shift name.</p>
+     * <p>Queries the on-call calendar of a specified on-call schedule within a specified date range and returns the contacts and start and end times of each on-call shift grouped by shift name.</p>
      * 
      * @param request ViewOncallScheduleRequest
      * @param headers map
@@ -12390,10 +12398,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves the on-call calendar. Returns the on-call arrangements of a specified on-call schedule within the queried date range. The response is grouped by shift name, where the key is the shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</p>
+     * <p>Views the on-call calendar and returns the on-call schedule for a specified on-call schedule within a specified date range. The response is grouped by shift name, where each key is a shift name and the value is a list of on-call shifts. Each shift includes the on-call contact and the start and end times.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the on-call calendar of a specified on-call schedule within a given date range, and returns the contacts and start and end times of each on-call shift grouped by shift name.</p>
+     * <p>Queries the on-call calendar of a specified on-call schedule within a specified date range and returns the contacts and start and end times of each on-call shift grouped by shift name.</p>
      * 
      * @param request ViewOncallScheduleRequest
      * @return ViewOncallScheduleResponse

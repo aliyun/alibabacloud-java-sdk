@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDeliveryTasksResponseBody extends TeaModel {
     /**
-     * <p>The list of delivery tasks.</p>
+     * <p>The list of data delivery tasks.</p>
      */
     @NameInMap("deliveryTasks")
     public java.util.List<ListDeliveryTasksResponseBodyDeliveryTasks> deliveryTasks;
 
     /**
-     * <p>The maximum number of results returned. Maximum value: 100.</p>
+     * <p>The maximum number of results to return. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -29,7 +29,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7D7DF334-B2F2-5453-AD51-A27B337E3191</p>
@@ -196,7 +196,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
 
     public static class ListDeliveryTasksResponseBodyDeliveryTasks extends TeaModel {
         /**
-         * <p>The creation time. The time is displayed in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format and is displayed in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The ID of the data source, which is the ID of the Prometheus instance.</p>
+         * <p>The data source ID, which is the Prometheus instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-5f2b4c7e66342s</p>
@@ -227,13 +227,13 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public ListDeliveryTasksResponseBodyDeliveryTasksExtraInfo extraInfo;
 
         /**
-         * <p>The metric filtering conditions, used in conjunction with labelFiltersType. The key is the metric label name, and the value is the matching value.</p>
+         * <p>The metric filter conditions, used in conjunction with labelFiltersType. The key is the metric label name, and the value is the matched value.</p>
          */
         @NameInMap("labelFilters")
         public java.util.Map<String, String> labelFilters;
 
         /**
-         * <p>The metric filtering mode.</p>
+         * <p>The metric filter mode.</p>
          * 
          * <strong>example:</strong>
          * <p>Allow</p>
@@ -251,7 +251,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The list of delivery sinks. You can configure multiple sinks.</p>
+         * <p>The list of delivery sinks. Multiple sinks are supported.</p>
          */
         @NameInMap("sinkList")
         public java.util.List<ListDeliveryTasksResponseBodyDeliveryTasksSinkList> sinkList;
@@ -272,7 +272,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public java.util.List<ListDeliveryTasksResponseBodyDeliveryTasksTags> tags;
 
         /**
-         * <p>The description of the task.</p>
+         * <p>The task description.</p>
          * 
          * <strong>example:</strong>
          * <p>my delivery task</p>
@@ -281,7 +281,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public String taskDescription;
 
         /**
-         * <p>The ID of the task.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p>db21f8a126d96953</p>
@@ -290,7 +290,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The name of the task.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-task</p>
@@ -299,7 +299,7 @@ public class ListDeliveryTasksResponseBody extends TeaModel {
         public String taskName;
 
         /**
-         * <p>The update time. The time is displayed in the ISO 8601 standard format (YYYY-MM-DDThh:mm:ssZ) in UTC.</p>
+         * <p>The update time. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format and is displayed in UTC.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
          * 
          * <strong>example:</strong>

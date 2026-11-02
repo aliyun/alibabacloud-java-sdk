@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListServicesRequest extends TeaModel {
     /**
-     * <p>The maximum number of entries to return in this request.</p>
+     * <p>The maximum number of records to return for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListServicesRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-aekxxzuad5zzzz</p>
@@ -32,7 +32,7 @@ public class ListServicesRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The application service name.</p>
+     * <p>The service name.</p>
      * 
      * <strong>example:</strong>
      * <p>app-demo</p>
@@ -41,7 +41,7 @@ public class ListServicesRequest extends TeaModel {
     public String serviceName;
 
     /**
-     * <p>The service type.</p>
+     * <p>The type of the service.</p>
      * 
      * <strong>example:</strong>
      * <p>TRACE</p>
@@ -50,7 +50,7 @@ public class ListServicesRequest extends TeaModel {
     public String serviceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The array of tags.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -113,7 +113,7 @@ public class ListServicesRequest extends TeaModel {
 
     public static class ListServicesRequestTags extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The key of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>evn</p>
@@ -122,7 +122,7 @@ public class ListServicesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The value of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>prod</p>

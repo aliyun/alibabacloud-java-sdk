@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MergeRobot extends TeaModel {
     /**
-     * <p>The time when the bot was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
@@ -20,7 +20,7 @@ public class MergeRobot extends TeaModel {
     public MergeRobotExtend extend;
 
     /**
-     * <p>The time when the bot was last modified.</p>
+     * <p>The last modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-03-11T08:21:58.789Z</p>
@@ -50,7 +50,7 @@ public class MergeRobot extends TeaModel {
      * <p>The name of the bot.</p>
      * 
      * <strong>example:</strong>
-     * <p>运维告警机器人</p>
+     * <p>O&amp;M Alert Bot</p>
      */
     @NameInMap("name")
     public String name;
@@ -170,7 +170,7 @@ public class MergeRobot extends TeaModel {
         public String cardTemplate;
 
         /**
-         * <p>Specifies whether to enable the daily on-duty report.</p>
+         * <p>Specifies whether the daily on-call report is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -179,7 +179,7 @@ public class MergeRobot extends TeaModel {
         public Boolean dailyNoc;
 
         /**
-         * <p>The time for the daily on-duty report.</p>
+         * <p>The time for the daily on-call report.</p>
          * 
          * <strong>example:</strong>
          * <p>09:00</p>
@@ -188,7 +188,7 @@ public class MergeRobot extends TeaModel {
         public String dailyNocTime;
 
         /**
-         * <p>The signature key for DingTalk.</p>
+         * <p>The DingTalk signing key.</p>
          * 
          * <strong>example:</strong>
          * <p>abc123</p>
@@ -197,7 +197,7 @@ public class MergeRobot extends TeaModel {
         public String dingSignKey;
 
         /**
-         * <p>Specifies whether to enable outbound requests.</p>
+         * <p>Specifies whether outgoing requests are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>

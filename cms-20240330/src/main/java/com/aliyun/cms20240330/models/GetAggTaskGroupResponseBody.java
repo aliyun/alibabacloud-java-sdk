@@ -20,7 +20,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -120,7 +120,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
         public String aggTaskGroupConfig;
 
         /**
-         * <p>The summary of the aggregation task group configuration.</p>
+         * <p>The hash of the aggregation task group configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>a54136xxx</p>
@@ -174,7 +174,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The UNIX timestamp in seconds that corresponds to the start time of the scheduling. This parameter is not yet in effect.</p>
+         * <p>The UNIX timestamp in seconds for the scheduling start time. This parameter is not yet in effect.</p>
          * 
          * <strong>example:</strong>
          * <p>1757409495</p>
@@ -183,7 +183,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
         public Long fromTime;
 
         /**
-         * <p>The maximum number of retries to execute the aggregation task.</p>
+         * <p>The maximum number of retries for executing the aggregation task.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -192,7 +192,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
         public Integer maxRetries;
 
         /**
-         * <p>The maximum runtime of the aggregation task, in seconds.</p>
+         * <p>The maximum retry time to execute the aggregation task.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -201,7 +201,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
         public Integer maxRunTimeInSeconds;
 
         /**
-         * <p>The dry run configuration.</p>
+         * <p>The precheck configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;policy&quot;:&quot;skip&quot;,&quot;prometheusId&quot;:&quot;rw-xx&quot;,&quot;query&quot;:&quot;noPrecheck&quot;,&quot;threshold&quot;:0.5,&quot;timeout&quot;:15,&quot;type&quot;:&quot;none&quot;}</p>
@@ -237,7 +237,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
         public String scheduleTimeExpr;
 
         /**
-         * <p>The ID of the source Prometheus instance for the aggregation task group.</p>
+         * <p>The source Prometheus instance ID for the aggregation task group.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-xxx</p>
@@ -261,7 +261,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
         public java.util.List<GetAggTaskGroupResponseBodyAggTaskGroupTags> tags;
 
         /**
-         * <p>The ID of the target Prometheus instance for the aggregation task group.</p>
+         * <p>The target Prometheus instance ID for the aggregation task group.</p>
          * 
          * <strong>example:</strong>
          * <p>rw-xxx</p>
@@ -270,7 +270,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
         public String targetPrometheusId;
 
         /**
-         * <p>The UNIX timestamp in seconds that corresponds to the end time of the scheduling.</p>
+         * <p>The UNIX timestamp in seconds for the scheduling end time.</p>
          * 
          * <strong>example:</strong>
          * <p>1757409495</p>
@@ -279,7 +279,7 @@ public class GetAggTaskGroupResponseBody extends TeaModel {
         public Long toTime;
 
         /**
-         * <p>The time when the aggregation task group was updated. This is a timestamp.</p>
+         * <p>The update time of the aggregation task group. The value is a UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1757409499000</p>

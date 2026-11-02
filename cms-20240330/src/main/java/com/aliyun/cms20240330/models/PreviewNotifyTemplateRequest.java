@@ -5,16 +5,16 @@ import com.aliyun.tea.*;
 
 public class PreviewNotifyTemplateRequest extends TeaModel {
     /**
-     * <p>The rendering context data in key-value pair format. This data source is used to populate Go template placeholders in the templates, such as {{.incident.title}}.</p>
+     * <p>The rendering context data in key-value pair format. It serves as the data source to populate Go template placeholders, such as {{.incident.title}}, in the templates.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;incident&quot;:{&quot;title&quot;:&quot;High CPU utilization&quot;,&quot;severity&quot;:&quot;P1&quot;}}</p>
+     * <p>{&quot;incident&quot;:{&quot;title&quot;:&quot;High CPU usage&quot;,&quot;severity&quot;:&quot;P1&quot;}}</p>
      */
     @NameInMap("data")
     public Object data;
 
     /**
-     * <p>The list of templates to be rendered. Each item includes a template identifier and the template content.</p>
+     * <p>The list of templates to be rendered. Each item contains a template identifier and the template content.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class PreviewNotifyTemplateRequest extends TeaModel {
 
     public static class PreviewNotifyTemplateRequestTemplates extends TeaModel {
         /**
-         * <p>The template identifier. This identifier is defined by the frontend and returned as-is. Use semantic names such as title or content.</p>
+         * <p>The template identifier. It is customized by the frontend and returned as-is. Use semantic names such as title or content.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPrometheusViewsRequest extends TeaModel {
     /**
-     * <p>Filters the results by region ID. Currently, only a single region ID is supported.</p>
+     * <p>The region IDs used for filtering. Currently, only a single region ID is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-zhangjiakou,cn-beijing</p>
@@ -15,7 +15,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public String filterRegionIds;
 
     /**
-     * <p>The maximum number of records to return.</p>
+     * <p>The maximum number of entries to return.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -27,7 +27,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The query token.</p>
+     * <p>The pagination token.</p>
      * 
      * <strong>example:</strong>
      * <p>44ANBjKZmQeKnaB1fXRq06w7sFYK3MUcCALMD9qQbmEiE</p>
@@ -81,7 +81,7 @@ public class ListPrometheusViewsRequest extends TeaModel {
     public java.util.List<ListPrometheusViewsRequestTag> tag;
 
     /**
-     * <p>The instance version.</p>
+     * <p>The instance version. Valid values: V1 and V2.</p>
      * 
      * <strong>example:</strong>
      * <p>V2</p>

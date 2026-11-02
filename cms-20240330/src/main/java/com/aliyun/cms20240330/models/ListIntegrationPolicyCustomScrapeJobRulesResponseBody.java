@@ -103,7 +103,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String metricsPath;
 
         /**
-         * <p>The invocation method.</p>
+         * <p>The scheme.</p>
          * 
          * <strong>example:</strong>
          * <p>http</p>
@@ -200,7 +200,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
 
     public static class ListIntegrationPolicyCustomScrapeJobRulesResponseBodyCustomScrapeJobRules extends TeaModel {
         /**
-         * <p>The addon name.</p>
+         * <p>The add-on name.</p>
          * 
          * <strong>example:</strong>
          * <p>cloud-ecs</p>
@@ -209,7 +209,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String addonName;
 
         /**
-         * <p>The addon release name.</p>
+         * <p>The add-on release name.</p>
          * 
          * <strong>example:</strong>
          * <p>release-12345678</p>
@@ -218,7 +218,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String addonReleaseName;
 
         /**
-         * <p>The addon version.</p>
+         * <p>The add-on version.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.1</p>
@@ -227,7 +227,7 @@ public class ListIntegrationPolicyCustomScrapeJobRulesResponseBody extends TeaMo
         public String addonVersion;
 
         /**
-         * <p>The configuration YAML.</p>
+         * <p>The YAML configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>scrape_cofnigs:</p>

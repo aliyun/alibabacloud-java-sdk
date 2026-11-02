@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePrometheusInstanceResponseBody extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The ID of the instance.</p>
      * 
      * <strong>example:</strong>
      * <p>rw-abc123</p>

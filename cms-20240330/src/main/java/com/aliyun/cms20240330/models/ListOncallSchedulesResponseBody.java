@@ -11,7 +11,7 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
     public java.util.List<ListOncallSchedulesResponseBodyOncallSchedules> oncallSchedules;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>8FDE2569-626B-5176-9844-28877A*****</p>
@@ -59,7 +59,7 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
 
     public static class ListOncallSchedulesResponseBodyOncallSchedulesRotations extends TeaModel {
         /**
-         * <p>The days of the week when the rotation is active.</p>
+         * <p>The days of the week when the rotation takes effect.</p>
          */
         @NameInMap("activeDays")
         public java.util.List<Integer> activeDays;
@@ -98,7 +98,7 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public String rotationStartTime;
 
         /**
-         * <p>The length of the shift interval. Used in conjunction with shiftRecurrenceFrequency. For example, a value of 3 indicates that the on-call personnel rotates every 3 days.</p>
+         * <p>The length of the shift cycle. This parameter is used together with shiftRecurrenceFrequency. For example, a value of 3 indicates that the on-call personnel changes every 3 days.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -107,7 +107,7 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public Integer shiftLength;
 
         /**
-         * <p>The unit of the shift interval. Used in conjunction with shiftLength. For example, a value of Week indicates that the on-call personnel rotates every week.</p>
+         * <p>The unit of the shift cycle. This parameter is used together with shiftLength. For example, a value of Week indicates that the on-call personnel changes every week.</p>
          * 
          * <strong>example:</strong>
          * <p>WEEKLY</p>
@@ -314,7 +314,7 @@ public class ListOncallSchedulesResponseBody extends TeaModel {
         public java.util.List<ListOncallSchedulesResponseBodyOncallSchedulesRotations> rotations;
 
         /**
-         * <p>The ID of the chatbot that sends shift reminders.</p>
+         * <p>The ID of the robot that sends shift change reminders.</p>
          * 
          * <strong>example:</strong>
          * <p>testId</p>

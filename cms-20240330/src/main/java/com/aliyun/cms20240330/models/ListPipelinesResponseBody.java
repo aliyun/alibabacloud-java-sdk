@@ -95,7 +95,7 @@ public class ListPipelinesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the pipeline.</p>
+         * <p>The pipeline name.</p>
          * 
          * <strong>example:</strong>
          * <p>pipeline-name-1</p>

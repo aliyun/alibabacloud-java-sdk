@@ -5,6 +5,15 @@ import com.aliyun.tea.*;
 
 public class DeleteContactsResponseBody extends TeaModel {
     /**
+     * <p>The actual number of deleted records.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0</p>
+     */
+    @NameInMap("deletedCount")
+    public Integer deletedCount;
+
+    /**
      * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
@@ -16,6 +25,14 @@ public class DeleteContactsResponseBody extends TeaModel {
     public static DeleteContactsResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DeleteContactsResponseBody self = new DeleteContactsResponseBody();
         return TeaModel.build(map, self);
+    }
+
+    public DeleteContactsResponseBody setDeletedCount(Integer deletedCount) {
+        this.deletedCount = deletedCount;
+        return this;
+    }
+    public Integer getDeletedCount() {
+        return this.deletedCount;
     }
 
     public DeleteContactsResponseBody setRequestId(String requestId) {
