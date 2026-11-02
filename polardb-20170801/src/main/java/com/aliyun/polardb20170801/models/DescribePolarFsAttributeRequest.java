@@ -7,7 +7,7 @@ public class DescribePolarFsAttributeRequest extends TeaModel {
     /**
      * <p>The cluster ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including cluster IDs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98094.html">DescribeDBClusters</a> operation to query the details of all clusters under your account, including the cluster ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,10 +27,10 @@ public class DescribePolarFsAttributeRequest extends TeaModel {
     public String polarFsInstanceId;
 
     /**
-     * <p>Specifies whether to query Fuse mount information. Valid values:</p>
+     * <p>Specifies whether to query FUSE mount information. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: Yes.</li>
-     * <li><strong>false</strong>: No. This is the default value.</li>
+     * <li><strong>false</strong>: No. Default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -15,7 +15,7 @@ public class DescribeModelApisRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The IDs of the model APIs.</p>
+     * <p>The model API IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>mi-xxx,mi-xxxx</p>

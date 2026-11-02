@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RetrievalKnowledgeBaseRequest extends TeaModel {
     /**
-     * <p>The unique identifier of the knowledge base. You can specify multiple knowledge base IDs separated by commas. A maximum of 50 knowledge bases are supported.</p>
+     * <p>The unique identifier of the knowledge base. You can specify up to 50 knowledge base IDs separated by commas.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class RetrievalKnowledgeBaseRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Specifies whether to enable reranking. Default value: true.</p>
+     * <p>Specifies whether reranking is enabled. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

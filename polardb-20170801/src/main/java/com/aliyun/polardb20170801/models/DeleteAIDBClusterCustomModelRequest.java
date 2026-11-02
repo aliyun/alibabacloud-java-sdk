@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteAIDBClusterCustomModelRequest extends TeaModel {
     /**
-     * <p>The custom model registration key to delete.</p>
+     * <p>The key of the custom model registration to delete.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

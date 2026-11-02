@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RegisterAIDBClusterCustomModelShrinkRequest extends TeaModel {
     /**
-     * <p>The container startup environment variables. Variable names cannot be empty or contain whitespace. Variable values can be empty strings.</p>
+     * <p>The startup environment variables of the container. The variable name cannot be empty or contain whitespace, and the variable value can be an empty string.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;HF_HOME&quot;:&quot;/cache/hf&quot;,&quot;EMPTY_VALUE&quot;:&quot;&quot;}</p>
@@ -24,7 +24,7 @@ public class RegisterAIDBClusterCustomModelShrinkRequest extends TeaModel {
     public String customOssBucketName;
 
     /**
-     * <p>The model path in the OSS bucket.</p>
+     * <p>The path of the model in the OSS bucket.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class RegisterAIDBClusterCustomModelShrinkRequest extends TeaModel {
     public String customOssBucketPath;
 
     /**
-     * <p>The GPU instance type used for model deployment. Required when configuring deployment parameters.</p>
+     * <p>The GPU instance type used for model deployment. This parameter is required when configuring deployment parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>polardb.gpu.gn8is.4xlarge</p>
@@ -70,7 +70,7 @@ public class RegisterAIDBClusterCustomModelShrinkRequest extends TeaModel {
     public String imageName;
 
     /**
-     * <p>The inference engine. Required when configuring deployment parameters. Valid values: vllm and sglang.</p>
+     * <p>The inference engine. This parameter is required when configuring deployment parameters. Valid values: vllm and sglang.</p>
      * 
      * <strong>example:</strong>
      * <p>vllm</p>
@@ -79,7 +79,7 @@ public class RegisterAIDBClusterCustomModelShrinkRequest extends TeaModel {
     public String inferenceEngine;
 
     /**
-     * <p>The custom model registration key and model directory name.</p>
+     * <p>The registration key and directory name of the custom model.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class RegisterAIDBClusterCustomModelShrinkRequest extends TeaModel {
     public String modelName;
 
     /**
-     * <p>The model startup parameters. Parameter keys must start with --.</p>
+     * <p>The startup parameters of the model. The parameter key must start with --.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;--max-model-len&quot;:&quot;32768&quot;}</p>
@@ -108,7 +108,7 @@ public class RegisterAIDBClusterCustomModelShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The password or temporary token for the customer image repository. Required when ImageName is specified.</p>
+     * <p>The password or temporary token for the customer\&quot;s image repository. This parameter is required when ImageName is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>temporary-token</p>
@@ -117,7 +117,7 @@ public class RegisterAIDBClusterCustomModelShrinkRequest extends TeaModel {
     public String registryPassword;
 
     /**
-     * <p>The username for the customer image repository. Required when ImageName is specified.</p>
+     * <p>The username for the customer\&quot;s image repository. This parameter is required when ImageName is specified.</p>
      * 
      * <strong>example:</strong>
      * <p>temporary-user</p>

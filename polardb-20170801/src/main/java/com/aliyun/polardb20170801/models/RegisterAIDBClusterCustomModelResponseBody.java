@@ -23,7 +23,7 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
     public String displayModelName;
 
     /**
-     * <p>The image import status. The initial value is Importing after an image is registered.</p>
+     * <p>The import status of the image. The initial value is Importing after the image is registered.</p>
      * 
      * <strong>example:</strong>
      * <p>Importing</p>
@@ -32,7 +32,7 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
     public String imageImportStatus;
 
     /**
-     * <p>The model registration ID.</p>
+     * <p>The registration ID of the model.</p>
      * 
      * <strong>example:</strong>
      * <p>123456</p>
@@ -41,7 +41,7 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
     public Long modelId;
 
     /**
-     * <p>The custom model registration key.</p>
+     * <p>The registration key of the custom model.</p>
      * 
      * <strong>example:</strong>
      * <p>Qwen3-32B</p>
@@ -50,7 +50,7 @@ public class RegisterAIDBClusterCustomModelResponseBody extends TeaModel {
     public String modelName;
 
     /**
-     * <p>The model type.</p>
+     * <p>The type of the model.</p>
      * 
      * <strong>example:</strong>
      * <p>custom</p>

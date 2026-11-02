@@ -169,13 +169,13 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
 
     public static class RetrievalKnowledgeBaseResponseBodyResults extends TeaModel {
         /**
-         * <p>The list of captions for the figures or tables associated with the chunk.</p>
+         * <p>The list of figure or table captions associated with the chunk.</p>
          */
         @NameInMap("Captions")
         public java.util.List<String> captions;
 
         /**
-         * <p>The list of structured element references in the source document associated with the chunk. You can use these references to precisely locate the original elements.</p>
+         * <p>The list of structured element references from the source document associated with the chunk. This can be used to precisely locate the original elements.</p>
          */
         @NameInMap("DocItems")
         public java.util.List<String> docItems;
@@ -209,6 +209,15 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
          */
         @NameInMap("ImageResources")
         public java.util.List<RetrievalKnowledgeBaseResponseBodyResultsImageResources> imageResources;
+
+        /**
+         * <p>The ID of the knowledge base to which the retrieved chunk belongs. This is used to distinguish the source of results when searching multiple knowledge bases.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pkb-xxxxxxxx</p>
+         */
+        @NameInMap("KnowledgeBaseId")
+        public String knowledgeBaseId;
 
         /**
          * <p>The metadata.</p>
@@ -312,6 +321,14 @@ public class RetrievalKnowledgeBaseResponseBody extends TeaModel {
         }
         public java.util.List<RetrievalKnowledgeBaseResponseBodyResultsImageResources> getImageResources() {
             return this.imageResources;
+        }
+
+        public RetrievalKnowledgeBaseResponseBodyResults setKnowledgeBaseId(String knowledgeBaseId) {
+            this.knowledgeBaseId = knowledgeBaseId;
+            return this;
+        }
+        public String getKnowledgeBaseId() {
+            return this.knowledgeBaseId;
         }
 
         public RetrievalKnowledgeBaseResponseBodyResults setMetadata(String metadata) {

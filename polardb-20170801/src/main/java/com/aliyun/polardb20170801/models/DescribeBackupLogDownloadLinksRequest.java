@@ -23,7 +23,7 @@ public class DescribeBackupLogDownloadLinksRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The validity period of the download links in hours. Valid values: 1 to 596523.</p>
+     * <p>The validity period of the download URL in hours. Valid values: 1 to 596523.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>

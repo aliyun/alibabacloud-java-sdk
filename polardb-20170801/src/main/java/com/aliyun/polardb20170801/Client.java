@@ -7008,6 +7008,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RegionId", request.regionId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.storageSpace)) {
             query.put("StorageSpace", request.storageSpace);
         }
@@ -9991,7 +9995,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified model service.</p>
+     * <p>Deletes a model service.</p>
      * 
      * @param request DeleteModelServiceRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10031,7 +10035,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a specified model service.</p>
+     * <p>Deletes a model service.</p>
      * 
      * @param request DeleteModelServiceRequest
      * @return DeleteModelServiceResponse
@@ -13655,7 +13659,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the download links for redo log backups.</p>
+     * <p>Queries the download URLs of redo log backups.</p>
      * 
      * @param request DescribeBackupLogDownloadLinksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13695,7 +13699,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the download links for redo log backups.</p>
+     * <p>Queries the download URLs of redo log backups.</p>
      * 
      * @param request DescribeBackupLogDownloadLinksRequest
      * @return DescribeBackupLogDownloadLinksResponse
@@ -19871,7 +19875,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List model services</p>
+     * <p>Queries the model service list.</p>
      * 
      * @param request DescribeModelServicesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19935,7 +19939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>List model services</p>
+     * <p>Queries the model service list.</p>
      * 
      * @param request DescribeModelServicesRequest
      * @return DescribeModelServicesResponse
@@ -21129,7 +21133,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries PolarFS information.</p>
+     * <p>Queries the PolarFS information.</p>
      * 
      * @param request DescribePolarFsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -21170,6 +21174,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("RelativeDbClusterId", request.relativeDbClusterId);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceGroupId)) {
+            query.put("ResourceGroupId", request.resourceGroupId);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
             query.put("Tag", request.tag);
         }
@@ -21193,7 +21201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries PolarFS information.</p>
+     * <p>Queries the PolarFS information.</p>
      * 
      * @param request DescribePolarFsRequest
      * @return DescribePolarFsResponse

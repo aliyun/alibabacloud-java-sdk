@@ -15,7 +15,7 @@ public class DeleteModelApiRequest extends TeaModel {
     public String gwClusterId;
 
     /**
-     * <p>The model API ID.</p>
+     * <p>The ID of the model API.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

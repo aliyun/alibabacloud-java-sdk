@@ -1,3 +1,11 @@
+2026-11-02 Version: 9.1.2
+- Update API CreatePolarFs: add request parameters ResourceGroupId.
+- Update API DescribePolarFs: add request parameters ResourceGroupId.
+- Update API DescribePolarFs: add response parameters Body.Items.$.ResourceGroupId.
+- Update API DescribePolarFsAttribute: add response parameters Body.ResourceGroupId.
+- Update API RetrievalKnowledgeBase: add response parameters Body.Results.$.KnowledgeBaseId.
+
+
 2026-10-26 Version: 9.1.1
 - Update API CreateApplication: add request parameters KnowledgeApplicationSpec.PolarAIEmbedderInstanceId.
 - Update API CreateApplication: add request parameters KnowledgeApplicationSpec.PolarAILlmInstanceId.

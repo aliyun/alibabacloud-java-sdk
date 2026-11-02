@@ -42,7 +42,7 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
 
     public static class DescribeBackupLogDownloadLinksResponseBodyBackupLogDownloadLinkItem extends TeaModel {
         /**
-         * <p>The ID of the redo log backup.</p>
+         * <p>The ID of the physical backup log.</p>
          * 
          * <strong>example:</strong>
          * <p>78167430</p>
@@ -51,13 +51,13 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
         public String backupLogId;
 
         /**
-         * <p>The public download link for the redo log backup.</p>
+         * <p>The public download URL of the physical backup log.</p>
          */
         @NameInMap("DownloadLink")
         public String downloadLink;
 
         /**
-         * <p>The error code for the individual record. Empty if the request is successful.</p>
+         * <p>The error code for a single item. This parameter is empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>BackupLogNotFound</p>
@@ -66,13 +66,13 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The internal network download link for the redo log backup.</p>
+         * <p>The internal network download URL of the physical backup log.</p>
          */
         @NameInMap("IntranetDownloadLink")
         public String intranetDownloadLink;
 
         /**
-         * <p>The expiration time of the download link in UTC.</p>
+         * <p>The expiration time of the download URL. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-10-23T03:00:00Z</p>
@@ -81,7 +81,7 @@ public class DescribeBackupLogDownloadLinksResponseBody extends TeaModel {
         public String linkExpiredTime;
 
         /**
-         * <p>The error message for the individual record. Empty if the request is successful.</p>
+         * <p>The error message for a single item. This parameter is empty if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified archived log file does not exist or has been cleaned up.</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAgenticDBBranchRestoreWindowResponseBody extends TeaModel {
     /**
-     * <p>The ID of the source branch.</p>
+     * <p>The source branch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>br-1a2b3c4d5e6f</p>
@@ -41,7 +41,7 @@ public class DescribeAgenticDBBranchRestoreWindowResponseBody extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The time when the query was completed, in UTC RFC3339 format. This does not represent the latest restorable time.</p>
+     * <p>The time when this query was completed, in UTC RFC3339 format. This does not represent the latest restorable time.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-10-16T07:32:00Z</p>

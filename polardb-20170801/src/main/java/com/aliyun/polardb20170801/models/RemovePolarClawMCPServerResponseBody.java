@@ -32,7 +32,7 @@ public class RemovePolarClawMCPServerResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the operation is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

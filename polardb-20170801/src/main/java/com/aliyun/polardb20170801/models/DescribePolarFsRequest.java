@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePolarFsRequest extends TeaModel {
     /**
-     * <p>The instance ID of the PolarDB instance on which the application depends.</p>
+     * <p>The PolarDB instance ID that the application depends on.</p>
      * 
      * <strong>example:</strong>
      * <p>pc-2ze8u21s03******</p>
@@ -14,7 +14,7 @@ public class DescribePolarFsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The page number. The value must be an integer greater than 0 and not exceeding the maximum value of Integer.</p>
+     * <p>The page number. The value must be a positive integer that does not exceed the maximum integer value.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,7 +49,7 @@ public class DescribePolarFsRequest extends TeaModel {
     public String polarFsInstanceDescription;
 
     /**
-     * <p>The list of PolarFS instance IDs, separated by commas (,).</p>
+     * <p>The PolarFS instance IDs. Separate multiple instance IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>pfs-ins1*******</p>
@@ -84,6 +84,15 @@ public class DescribePolarFsRequest extends TeaModel {
      */
     @NameInMap("RelativeDbClusterId")
     public String relativeDbClusterId;
+
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-xxx</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     /**
      * <p>The tags.</p>
@@ -158,6 +167,14 @@ public class DescribePolarFsRequest extends TeaModel {
     }
     public String getRelativeDbClusterId() {
         return this.relativeDbClusterId;
+    }
+
+    public DescribePolarFsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public DescribePolarFsRequest setTag(java.util.List<DescribePolarFsRequestTag> tag) {

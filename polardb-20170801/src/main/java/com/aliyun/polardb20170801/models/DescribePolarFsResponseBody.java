@@ -17,7 +17,7 @@ public class DescribePolarFsResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of records on the current page.</p>
+     * <p>The number of entries on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>13</p>
@@ -35,7 +35,7 @@ public class DescribePolarFsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>16</p>
@@ -312,6 +312,13 @@ public class DescribePolarFsResponseBody extends TeaModel {
         @NameInMap("RelativeDbClusterId")
         public String relativeDbClusterId;
 
+        /**
+         * <strong>example:</strong>
+         * <p>rg-xxx</p>
+         */
+        @NameInMap("ResourceGroupId")
+        public String resourceGroupId;
+
         @NameInMap("SecurityGroupId")
         public String securityGroupId;
 
@@ -480,6 +487,14 @@ public class DescribePolarFsResponseBody extends TeaModel {
         }
         public String getRelativeDbClusterId() {
             return this.relativeDbClusterId;
+        }
+
+        public DescribePolarFsResponseBodyItemsPolarFsPaths setResourceGroupId(String resourceGroupId) {
+            this.resourceGroupId = resourceGroupId;
+            return this;
+        }
+        public String getResourceGroupId() {
+            return this.resourceGroupId;
         }
 
         public DescribePolarFsResponseBodyItemsPolarFsPaths setSecurityGroupId(String securityGroupId) {

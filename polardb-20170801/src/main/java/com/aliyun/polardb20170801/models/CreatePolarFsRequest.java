@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePolarFsRequest extends TeaModel {
     /**
-     * <p>The acceleration storage space for the Basic Edition with acceleration enabled. Unit: GB.</p>
+     * <p>The acceleration space for the Basic Edition. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>500</p>
@@ -14,10 +14,10 @@ public class CreatePolarFsRequest extends TeaModel {
     public Long accelerateStorageSize;
 
     /**
-     * <p>The acceleration mode. Valid values:</p>
+     * <p>Specifies whether to enable acceleration. Valid values:</p>
      * <ul>
      * <li><strong>ONLY</strong>: enables acceleration only.</li>
-     * <li><strong>ON</strong>: enables cold data storage and acceleration.</li>
+     * <li><strong>ON</strong>: enables cold data and acceleration.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +40,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public String accelerateType;
 
     /**
-     * <p>The list of authorized account IDs for the Cold Storage Edition instance, separated by commas (,).</p>
+     * <p>The list of authorized accounts for the cold storage instance. Separate multiple accounts with commas (<code>,</code>).</p>
      * 
      * <strong>example:</strong>
      * <p>128***********，198***********</p>
@@ -51,8 +51,8 @@ public class CreatePolarFsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Auto-renewal is enabled.</li>
-     * <li><strong>false</strong>: Auto-renewal is disabled.</li>
+     * <li><strong>true</strong>: enables auto-renewal.</li>
+     * <li><strong>false</strong>: disables auto-renewal.</li>
      * </ul>
      * <p>Default value: <strong>false</strong>.</p>
      * <blockquote>
@@ -68,8 +68,8 @@ public class CreatePolarFsRequest extends TeaModel {
     /**
      * <p>Specifies whether to automatically use coupons. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Coupons are automatically used (default).</li>
-     * <li><strong>false</strong>: Coupons are not used.</li>
+     * <li><strong>true</strong>: uses coupons (default).</li>
+     * <li><strong>false</strong>: does not use coupons.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,8 +82,8 @@ public class CreatePolarFsRequest extends TeaModel {
      * <p>The edition. Valid values:</p>
      * <ul>
      * <li><strong>basic</strong>: Basic Edition (default).</li>
-     * <li><strong>cold</strong>: Cold Storage Edition.</li>
-     * <li><strong>high_performance</strong>: High-performance Edition.</li>
+     * <li><strong>cold</strong>: cold storage edition.</li>
+     * <li><strong>high_performance</strong>: high-performance edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,9 +117,9 @@ public class CreatePolarFsRequest extends TeaModel {
     public String customBucketPath;
 
     /**
-     * <p>The bucket and path information.</p>
+     * <p>The bucket and corresponding path information.</p>
      * <blockquote>
-     * <p>This parameter is required for the transparent acceleration scenario.</p>
+     * <p>This parameter is required for transparent acceleration.</p>
      * </blockquote>
      */
     @NameInMap("CustomBucketPathList")
@@ -153,7 +153,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public String DBClusterId;
 
     /**
-     * <p>The database engine. Valid values:</p>
+     * <p>The database ecosystem. Valid values:</p>
      * <ul>
      * <li><strong>MySQL</strong></li>
      * <li><strong>PostgreSQL</strong></li>
@@ -179,10 +179,10 @@ public class CreatePolarFsRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The unit of the subscription duration. This parameter is required if PayType is set to <strong>Prepaid</strong>. Specifies whether the subscription cluster uses a yearly or monthly billing cycle. Valid values: </p>
+     * <p>If <strong>PayType</strong> is set to <strong>Prepaid</strong>, you must pass parameter. Specifies the upfront cluster as yearly or monthly. Valid values: </p>
      * <ul>
-     * <li><strong>Year</strong>: The subscription duration is measured in years.</li>
-     * <li><strong>Month</strong>: The subscription duration is measured in months.</li>
+     * <li><strong>Year</strong>: yearly. When you select subscription, the unit is year.</li>
+     * <li><strong>Month</strong>: monthly. When you select subscription, the unit is month.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -192,7 +192,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public String period;
 
     /**
-     * <p>The coupon code. If this parameter is not specified, the default coupon is used.</p>
+     * <p>The coupon code. If not specified, the default coupon is used.</p>
      * 
      * <strong>example:</strong>
      * <p>727xxxxxx934</p>
@@ -203,7 +203,7 @@ public class CreatePolarFsRequest extends TeaModel {
     /**
      * <p>The region ID.</p>
      * <blockquote>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/98041.html">DescribeRegions</a> operation to query region IDs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -212,6 +212,15 @@ public class CreatePolarFsRequest extends TeaModel {
      */
     @NameInMap("RegionId")
     public String regionId;
+
+    /**
+     * <p>The resource group ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rg-xxx</p>
+     */
+    @NameInMap("ResourceGroupId")
+    public String resourceGroupId;
 
     /**
      * <p>The storage space. Unit: GB.</p>
@@ -223,19 +232,19 @@ public class CreatePolarFsRequest extends TeaModel {
     public Long storageSpace;
 
     /**
-     * <p>Valid values for the high-performance storage type:</p>
+     * <p>The storage type. Valid values for high-performance clusters:</p>
      * <ul>
      * <li><strong>ESSDPL0</strong></li>
      * <li><strong>ESSDPL1</strong></li>
      * </ul>
-     * <p>Valid values for the Basic Edition storage type:</p>
+     * <p>Valid values for Basic Edition clusters:</p>
      * <ul>
-     * <li><strong>city_redundancy (zone-redundant)</strong></li>
+     * <li><strong>city_redundancy</strong> (zone redundancy)</li>
      * </ul>
-     * <p>Valid values for the Cold Storage Edition storage type:</p>
+     * <p>Valid values for cold storage clusters:</p>
      * <ul>
-     * <li><strong>city_redundancy (zone-redundant)</strong></li>
-     * <li><strong>local_redundancy (locally redundant)</strong></li>
+     * <li><strong>city_redundancy</strong> (zone redundancy)</li>
+     * <li><strong>local_redundancy</strong> (local redundancy)</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -245,10 +254,10 @@ public class CreatePolarFsRequest extends TeaModel {
     public String storageType;
 
     /**
-     * <p>The subscription duration. This parameter is required when PayType is set to <strong>Prepaid</strong>.</p>
+     * <p>The subscription duration. This parameter is required when <strong>PayType</strong> is set to <strong>Prepaid</strong>.</p>
      * <ul>
-     * <li>If <strong>Period</strong> is set to <strong>Month</strong>, valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-9]</code>.</li>
-     * <li>If <strong>Period</strong> is set to <strong>Year</strong>, valid values of <strong>UsedTime</strong> are integers in the range of <code>[1-3]</code>.</li>
+     * <li>When <strong>Period</strong> is set to <strong>Month</strong>, the value of <strong>UsedTime</strong> is an integer ranging from <code>1</code> to <code>9</code>.</li>
+     * <li>When <strong>Period</strong> is set to <strong>Year</strong>, the value of <strong>UsedTime</strong> is an integer ranging from <code>1</code> to <code>3</code>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -258,7 +267,7 @@ public class CreatePolarFsRequest extends TeaModel {
     public String usedTime;
 
     /**
-     * <p>The virtual private cloud (VPC) ID.</p>
+     * <p>The VPC ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-*******************</p>
@@ -431,6 +440,14 @@ public class CreatePolarFsRequest extends TeaModel {
     }
     public String getRegionId() {
         return this.regionId;
+    }
+
+    public CreatePolarFsRequest setResourceGroupId(String resourceGroupId) {
+        this.resourceGroupId = resourceGroupId;
+        return this;
+    }
+    public String getResourceGroupId() {
+        return this.resourceGroupId;
     }
 
     public CreatePolarFsRequest setStorageSpace(Long storageSpace) {

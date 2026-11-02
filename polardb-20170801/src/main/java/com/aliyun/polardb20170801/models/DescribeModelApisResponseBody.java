@@ -143,7 +143,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String gmtCreated;
 
         /**
-         * <p>The IDs of the model APIs.</p>
+         * <p>The model API IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>mi-xxxx</p>
@@ -185,7 +185,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of input points.</p>
+         * <p>The number of input tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -194,7 +194,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String recordInput;
 
         /**
-         * <p>The number of output points.</p>
+         * <p>The number of output tokens.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -203,7 +203,7 @@ public class DescribeModelApisResponseBody extends TeaModel {
         public String recordOutput;
 
         /**
-         * <p>The list of routing rules, formatted as a JSON array string.</p>
+         * <p>The list of routing rules, which is a JSON array string.</p>
          * 
          * <strong>example:</strong>
          * <p>[

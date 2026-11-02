@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeGatewayAttributeResponseBody extends TeaModel {
     /**
-     * <p>The instance type code.</p>
+     * <p>The specification code.</p>
      * 
      * <strong>example:</strong>
      * <p>polar.app.g2.medium</p>
@@ -14,8 +14,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public String classCode;
 
     /**
-     * <p>The creation time.</p>
-     * <p>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The creation time. The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2020-02-24T11:57:54Z</p>
@@ -48,9 +47,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public java.util.List<DescribeGatewayAttributeResponseBodyEndpoints> endpoints;
 
     /**
-     * <p>The expiration time.</p>
-     * <p>This parameter is empty when the billing method is Postpaid.</p>
-     * <p>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The expiration time. This parameter is empty when the billing method is pay-as-you-go. The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2027-04-22T16:00:00Z</p>
@@ -101,8 +98,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public String latestVersion;
 
     /**
-     * <p>The last modification time.</p>
-     * <p>The time is displayed in ISO 8601 format in UTC (YYYY-MM-DDTHH:mm:ssZ).</p>
+     * <p>The last modification time. The time is in ISO 8601 format and the UTC time zone (YYYY-MM-DDTHH:mm:ssZ).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-10-07T02:19:55Z</p>
@@ -151,7 +147,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public String runningVersion;
 
     /**
-     * <p>The application-level IP whitelist.</p>
+     * <p>The application-level whitelist.</p>
      */
     @NameInMap("SecurityIPArrays")
     public java.util.List<DescribeGatewayAttributeResponseBodySecurityIPArrays> securityIPArrays;
@@ -159,8 +155,8 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     /**
      * <p>The application status. Valid values:</p>
      * <ul>
-     * <li>CREATE: creating</li>
-     * <li>ACTIVATION: running</li>
+     * <li>CREATE: Creating.</li>
+     * <li>ACTIVATION: Running.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -170,7 +166,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the vSwitch.</p>
+     * <p>The vSwitch ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-*********************</p>
@@ -373,10 +369,10 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         public String gwClusterId;
 
         /**
-         * <p>The network type of the endpoint. Valid values:</p>
+         * <p>The endpoint type. Valid values:</p>
          * <ul>
-         * <li>Private: VPC</li>
-         * <li>Public: Internet</li>
+         * <li>Private: VPC address.</li>
+         * <li>Public: Internet address.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -477,7 +473,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
 
     public static class DescribeGatewayAttributeResponseBodySecurityIPArrays extends TeaModel {
         /**
-         * <p>The name of the IP whitelist. Default value: <code>default</code>.</p>
+         * <p>The name of the IP address whitelist. Default value: <code>default</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -486,7 +482,7 @@ public class DescribeGatewayAttributeResponseBody extends TeaModel {
         public String securityIPArrayName;
 
         /**
-         * <p>The tag of the IP whitelist.</p>
+         * <p>The tag of the IP address whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>mytag</p>

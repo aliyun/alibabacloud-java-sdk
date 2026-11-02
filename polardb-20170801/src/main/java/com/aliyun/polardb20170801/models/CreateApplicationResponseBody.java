@@ -29,7 +29,7 @@ public class CreateApplicationResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the generated order.</p>
+     * <p>The generated order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2148126708*****</p>
