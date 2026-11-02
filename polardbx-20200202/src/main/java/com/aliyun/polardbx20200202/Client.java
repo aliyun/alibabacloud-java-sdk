@@ -9646,6 +9646,60 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>Queries the list of PXFS tenants under a specified PolarDB-X instance and returns the tenant quota, throttling, and usage information.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of PXFS tenants.</p>
+     * 
+     * @param request ListPxfsTenantsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListPxfsTenantsResponse
+     */
+    public ListPxfsTenantsResponse listPxfsTenantsWithOptions(ListPxfsTenantsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListPxfsTenants"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListPxfsTenantsResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Queries the list of PXFS tenants under a specified PolarDB-X instance and returns the tenant quota, throttling, and usage information.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Queries the list of PXFS tenants.</p>
+     * 
+     * @param request ListPxfsTenantsRequest
+     * @return ListPxfsTenantsResponse
+     */
+    public ListPxfsTenantsResponse listPxfsTenants(ListPxfsTenantsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listPxfsTenantsWithOptions(request, runtime);
+    }
+
+    /**
      * <b>summary</b> : 
      * <p>Retrieves a list of labels.</p>
      * 
@@ -11307,6 +11361,80 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ModifyPxfsSecurityIpsResponse modifyPxfsSecurityIps(ModifyPxfsSecurityIpsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.modifyPxfsSecurityIpsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Adjusts the capacity quota, file count quota, request rate limit, and write bandwidth limit for a specified PXFS tenant. Parameters that are not passed remain unchanged.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adjusts the quotas for a PXFS tenant.</p>
+     * 
+     * @param request ModifyPxfsTenantQuotaRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ModifyPxfsTenantQuotaResponse
+     */
+    public ModifyPxfsTenantQuotaResponse modifyPxfsTenantQuotaWithOptions(ModifyPxfsTenantQuotaRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.DBInstanceName)) {
+            query.put("DBInstanceName", request.DBInstanceName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaBytes)) {
+            query.put("QuotaBytes", request.quotaBytes);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.quotaFiles)) {
+            query.put("QuotaFiles", request.quotaFiles);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rateLimitRps)) {
+            query.put("RateLimitRps", request.rateLimitRps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rateLimitWbps)) {
+            query.put("RateLimitWbps", request.rateLimitWbps);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionId)) {
+            query.put("RegionId", request.regionId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            query.put("TenantId", request.tenantId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ModifyPxfsTenantQuota"),
+            new TeaPair("version", "2020-02-02"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ModifyPxfsTenantQuotaResponse());
+    }
+
+    /**
+     * <b>description</b> :
+     * <p>Adjusts the capacity quota, file count quota, request rate limit, and write bandwidth limit for a specified PXFS tenant. Parameters that are not passed remain unchanged.</p>
+     * 
+     * <b>summary</b> : 
+     * <p>Adjusts the quotas for a PXFS tenant.</p>
+     * 
+     * @param request ModifyPxfsTenantQuotaRequest
+     * @return ModifyPxfsTenantQuotaResponse
+     */
+    public ModifyPxfsTenantQuotaResponse modifyPxfsTenantQuota(ModifyPxfsTenantQuotaRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.modifyPxfsTenantQuotaWithOptions(request, runtime);
     }
 
     /**

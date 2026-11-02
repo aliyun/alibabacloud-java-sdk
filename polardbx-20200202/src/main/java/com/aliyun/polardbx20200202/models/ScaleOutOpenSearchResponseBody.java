@@ -104,7 +104,7 @@ public class ScaleOutOpenSearchResponseBody extends TeaModel {
         public String encodedDiagnosticMessage;
 
         /**
-         * <p>The type of the permission denial.</p>
+         * <p>The type of the denied permission.</p>
          * 
          * <strong>example:</strong>
          * <p>ImplicitDeny</p>

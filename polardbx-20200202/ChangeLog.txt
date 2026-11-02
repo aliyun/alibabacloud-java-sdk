@@ -1,3 +1,8 @@
+2026-11-02 Version: 4.15.0
+- Support API ListPxfsTenants.
+- Support API ModifyPxfsTenantQuota.
+
+
 2026-10-30 Version: 4.14.2
 - Update API DescribeDBInstanceAttribute: add response parameters Body.DBInstance.SearchEnabled.
 - Update API DescribeDBInstanceAttribute: add response parameters Body.DBInstance.SearchInstance.
