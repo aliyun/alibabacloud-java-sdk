@@ -7,17 +7,17 @@ public class DescribeAclsRequest extends TeaModel {
     /**
      * <p>The operation type. Valid values:</p>
      * <ul>
-     * <li><p><strong>Write</strong></p>
+     * <li><p><strong>Write</strong>: Writes.</p>
      * </li>
-     * <li><p><strong>Read</strong></p>
+     * <li><p><strong>Read</strong>: Reads.</p>
      * </li>
-     * <li><p><strong>Describe</strong>: reads a transactional ID.</p>
+     * <li><p><strong>Describe</strong>: Reads a TransactionalId.</p>
      * </li>
-     * <li><p><strong>IdempotentWrite</strong>: performs an idempotent write to a cluster. This value is not supported by Serverless instances. For Serverless instances, use IDEMPOTENT_WRITE.</p>
+     * <li><p><strong>IdempotentWrite</strong>: Idempotently writes to a cluster. This parameter is not supported for Serverless instances. For Serverless instances, use IDEMPOTENT_WRITE.</p>
      * </li>
-     * <li><p><strong>IDEMPOTENT_WRITE</strong>: performs an idempotent write to a cluster. This value is available only for Serverless instances.</p>
+     * <li><p><strong>IDEMPOTENT_WRITE</strong>: Idempotently writes to a cluster. This parameter is available only for Serverless instances.</p>
      * </li>
-     * <li><p><strong>DESCRIBE_CONFIGS</strong>: queries configurations. This value is available only for Serverless instances.</p>
+     * <li><p><strong>DESCRIBE_CONFIGS</strong>: Queries configurations. This parameter is available only for Serverless instances.</p>
      * </li>
      * </ul>
      * 
@@ -28,15 +28,13 @@ public class DescribeAclsRequest extends TeaModel {
     public String aclOperationType;
 
     /**
-     * <p>The authorization method. Valid values:</p>
+     * <p>The permission type. Valid values:</p>
      * <ul>
-     * <li><p>DENY</p>
-     * </li>
-     * <li><p>ALLOW</p>
-     * </li>
+     * <li>DENY: Denies access.</li>
+     * <li>ALLOW: Allows access.</li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is available only for Serverless instances.</p>
+     * <p>This parameter is supported only for Serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -46,16 +44,16 @@ public class DescribeAclsRequest extends TeaModel {
     public String aclPermissionType;
 
     /**
-     * <p>The name of the resource.</p>
+     * <p>The resource name.</p>
      * <ul>
-     * <li><p>The name can be a topic name or a group name.</p>
+     * <li><p>The name of a topic or group.</p>
      * </li>
-     * <li><p>You can use an asterisk (\*) to represent all topic names or group names.</p>
+     * <li><p>You can use an asterisk (*) to represent the names of all topics or groups.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>You can use an asterisk (\*) only after you grant permissions to all resources.</li>
+     * <li>You can use an asterisk (*) to query authorized resources only after permissions are granted to all resources.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -69,9 +67,9 @@ public class DescribeAclsRequest extends TeaModel {
     /**
      * <p>The match mode. Valid values:</p>
      * <ul>
-     * <li><p>LITERAL: an exact match</p>
+     * <li><p>LITERAL: exact match</p>
      * </li>
-     * <li><p>PREFIXED: a prefix match</p>
+     * <li><p>PREFIXED: prefix match</p>
      * </li>
      * </ul>
      * 
@@ -82,7 +80,7 @@ public class DescribeAclsRequest extends TeaModel {
     public String aclResourcePatternType;
 
     /**
-     * <p>The type of the resource. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
      * <li><p><strong>Topic</strong></p>
      * </li>
@@ -105,10 +103,8 @@ public class DescribeAclsRequest extends TeaModel {
      * <p>The source IP address.</p>
      * <blockquote>
      * <ul>
-     * <li><p>You can set this parameter to a specific IP address or an asterisk (\<em>). An asterisk (\</em>) indicates all IP addresses. CIDR blocks are not supported.</p>
-     * </li>
-     * <li><p>This parameter is available only for Serverless instances.</p>
-     * </li>
+     * <li>Only specific IP addresses or * (all IP addresses allowed) are supported. CIDR blocks are not supported.</li>
+     * <li>This parameter is supported only for Serverless instances.</li>
      * </ul>
      * </blockquote>
      * 
@@ -121,7 +117,7 @@ public class DescribeAclsRequest extends TeaModel {
     public String host;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -131,7 +127,7 @@ public class DescribeAclsRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -143,11 +139,11 @@ public class DescribeAclsRequest extends TeaModel {
     /**
      * <p>The username.</p>
      * <ul>
-     * <li>An asterisk (\*) can be used to represent all users.</li>
+     * <li>You can use an asterisk (*) to represent all users.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>A query with an asterisk (\*) returns authorizations only if authorization has been granted to all users.</li>
+     * <li>You can use an asterisk (*) to query authorized users only after permissions are granted to all users.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>

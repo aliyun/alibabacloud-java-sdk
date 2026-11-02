@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKafkaClientIpResponseBody extends TeaModel {
     /**
-     * <p>Return code. A value of 200 indicates success.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -20,7 +20,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
     public GetKafkaClientIpResponseBodyData data;
 
     /**
-     * <p>The prompt message for the result.</p>
+     * <p>The message returned in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -29,7 +29,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>E57A8862-DF68-4055-8E55-B80CB4****</p>
@@ -38,7 +38,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -191,9 +191,9 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
 
     public static class GetKafkaClientIpResponseBodyData extends TeaModel {
         /**
-         * <p>If this value is true, it indicates that the minor version is not the latest version.</p>
+         * <p>Indicates whether the minor version is not the latest version. A value of true indicates that the minor version is not the latest.</p>
          * <blockquote>
-         * <p>If your server minor version is not the latest version, the sampling logs may not be accurate enough, resulting in less precise IP information statistics. Therefore, it is recommended that you upgrade the server minor version as soon as possible.</p>
+         * <p>If the minor version of your server is not the latest, the sampled logs may not be accurate enough, which ultimately leads to inaccurate collected IP information. Therefore, upgrade the minor version of your server as soon as possible.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         public GetKafkaClientIpResponseBodyDataData data;
 
         /**
-         * <p>End time</p>
+         * <p>The end time of the query result. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1716343502000</p>
@@ -215,9 +215,9 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         public Long endDate;
 
         /**
-         * <p>The time range for querying client IPs.</p>
+         * <p>The time range for querying client IP addresses.</p>
          * <blockquote>
-         * <p>This range is 1 hour. If the start time and end time you enter exceed 1 hour, only data within 1 hour will be queried.</p>
+         * <p>The time range is 1 hour. If the specified start time and end time span more than 1 hour, only the data within 1 hour is queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -227,7 +227,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         public Integer searchTimeRange;
 
         /**
-         * <p>Start time.</p>
+         * <p>The start time of the query result. The value is a UNIX timestamp in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1716343501000</p>
@@ -236,10 +236,7 @@ public class GetKafkaClientIpResponseBody extends TeaModel {
         public Long startDate;
 
         /**
-         * <p>The date range for querying client IPs.</p>
-         * <blockquote>
-         * <p>This range is 7 days. If the start time and end time you enter exceed 7 days, only data within 7 days will be queried.</p>
-         * </blockquote>
+         * <p>The maximum time range for querying client IP addresses, in days. The current limit is 7 days. If the interval between the start time and the end time exceeds 7 days, only the data within 7 days is returned.</p>
          * 
          * <strong>example:</strong>
          * <p>7</p>

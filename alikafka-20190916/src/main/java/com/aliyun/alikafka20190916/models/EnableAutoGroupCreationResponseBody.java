@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class EnableAutoGroupCreationResponseBody extends TeaModel {
     /**
-     * <p>The response code.</p>
-     * <p>A value of <strong>200</strong> indicates success.</p>
+     * <p>The return code.</p>
+     * <p>A value of <strong>200</strong> indicates that the call is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

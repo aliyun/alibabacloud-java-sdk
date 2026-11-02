@@ -14,7 +14,7 @@ public class CreateSaslUserResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>

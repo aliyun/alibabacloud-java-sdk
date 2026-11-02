@@ -32,11 +32,11 @@ public class ConvertPostPayOrderRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The billing type. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: subscription.</p>
+     * <li><p><strong>0</strong>: subscription</p>
      * </li>
-     * <li><p><strong>4</strong>: Confluent series subscription.</p>
+     * <li><p><strong>4</strong>: subscription for Confluent Edition</p>
      * </li>
      * </ul>
      * 

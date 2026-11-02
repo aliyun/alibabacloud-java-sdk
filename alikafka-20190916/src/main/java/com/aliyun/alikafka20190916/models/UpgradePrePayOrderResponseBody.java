@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradePrePayOrderResponseBody extends TeaModel {
     /**
-     * <p>A return code of 200 indicates that the request succeeded.</p>
+     * <p>The response code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -41,7 +41,7 @@ public class UpgradePrePayOrderResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request succeeded.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

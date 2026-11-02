@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateAclResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. A value of 200 indicates success.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

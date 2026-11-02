@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSaslUserResponseBody extends TeaModel {
     /**
-     * <p>Status code. A value of 200 indicates success.</p>
+     * <p>The HTTP status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteSaslUserResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Response message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success</p>
@@ -23,7 +23,7 @@ public class DeleteSaslUserResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>3CB89F5C-CD97-4C1D-BC7C-FEDEC2F4****</p>

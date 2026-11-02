@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceListRequest extends TeaModel {
     /**
-     * <p>A list of instance IDs.</p>
+     * <p>The list of instance IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>alikafka_post-cn-mp91gnw0p***</p>
@@ -14,11 +14,7 @@ public class GetInstanceListRequest extends TeaModel {
     public java.util.List<String> instanceId;
 
     /**
-     * <p>The order ID. You can find the order ID on the &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list?pageIndex=1%5C&pageSize=20">Orders</a> page in the Billing Management console.
-     * &lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list?pageIndex=1%5C&pageSize=20%5C&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa">Orders</a> page in the Billing Management console.</p>
-     * <blockquote>
-     * <p>Notice: You cannot use an order ID to query Serverless instances.</p>
-     * </blockquote>
+     * <p>The order ID. You can obtain the order ID from &lt;props=&quot;china&quot;&gt;<a href="https://usercenter2.aliyun.com/order/list?pageIndex=1&pageSize=20">Orders</a>&lt;props=&quot;intl&quot;&gt;<a href="https://usercenter2-intl.aliyun.com/order/list?pageIndex=1&pageSize=20&spm=5176.12818093.top-nav.ditem-ord.36f016d0OQFmJa">Order Management</a> in Alibaba Cloud Expenses and Costs.&gt;Notice: Serverless instances do not support querying by order ID.</p>
      * 
      * <strong>example:</strong>
      * <p>6072673****</p>
@@ -27,7 +23,7 @@ public class GetInstanceListRequest extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The ID of the region where the instance is located.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +33,7 @@ public class GetInstanceListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group. You can view the resource group ID in the Resource Group console.</p>
+     * <p>The resource group ID. You can query the ID in the Resource Management console.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ac***********7q</p>
@@ -46,14 +42,11 @@ public class GetInstanceListRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The instance series. You can use this parameter to filter instances. Valid values:</p>
+     * <p>The instance edition identity. You can filter instances of different editions based on the edition number. Valid values:</p>
      * <ul>
-     * <li><p>v2</p>
-     * </li>
-     * <li><p>v3</p>
-     * </li>
-     * <li><p>confluent</p>
-     * </li>
+     * <li>v2</li>
+     * <li>v3</li>
+     * <li>confluent</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +56,7 @@ public class GetInstanceListRequest extends TeaModel {
     public String series;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<GetInstanceListRequestTag> tag;
@@ -123,11 +116,11 @@ public class GetInstanceListRequest extends TeaModel {
 
     public static class GetInstanceListRequestTag extends TeaModel {
         /**
-         * <p>The tag key.</p>
+         * <p>The tag key of the resource.</p>
          * <ul>
-         * <li><p>If you do not specify this parameter, all tag keys are matched.</p>
+         * <li><p>If this parameter is left empty, all tag keys are matched.</p>
          * </li>
-         * <li><p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <li><p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * </li>
          * </ul>
          * 
@@ -138,11 +131,11 @@ public class GetInstanceListRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value.</p>
+         * <p>The tag value of the resource.</p>
          * <ul>
-         * <li><p>If you do not specify the <code>Key</code> parameter, you do not need to specify this parameter. If you leave this parameter empty, all tag values are matched.</p>
+         * <li><p>If the tag key is empty, this parameter must be empty. If this parameter is left empty, all tag values are matched.</p>
          * </li>
-         * <li><p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <li><p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * </li>
          * </ul>
          * 

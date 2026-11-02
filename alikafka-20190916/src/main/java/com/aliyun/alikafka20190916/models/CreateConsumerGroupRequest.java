@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateConsumerGroupRequest extends TeaModel {
     /**
-     * <p>The consumer group name.</p>
+     * <p>The name of the consumer group.</p>
      * <ul>
      * <li>Reserved instances:
-     * Can contain letters, digits, underscores (_), hyphens (-), and periods (.). The value must be 3 to 64 characters in length.</li>
+     * The name can contain uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). It must be 3 to 64 characters in length.</li>
      * <li>Serverless instances:
-     * Can contain only letters, digits, and special characters &quot;@._*$#^!&amp;-&quot;. The value must be 1 to 249 characters in length.</li>
+     * The name can contain only letters, digits, and the special characters @._*$#^!&amp;-. It must be 1 to 249 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -41,7 +41,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The description.</p>
+     * <p>The remark.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -50,7 +50,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
     public String remark;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreateConsumerGroupRequestTag> tag;
@@ -108,7 +108,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
          * </li>
          * <li><p>The tag key cannot be empty.</p>
          * </li>
-         * <li><p>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <li><p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -126,7 +126,7 @@ public class CreateConsumerGroupRequest extends TeaModel {
          * </li>
          * <li><p>The tag value can be empty.</p>
          * </li>
-         * <li><p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <li><p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * </li>
          * </ul>
          * 

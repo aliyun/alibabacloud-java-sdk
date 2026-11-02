@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpgradePrePayOrderRequest extends TeaModel {
     /**
-     * <p>Configurations for the Confluent components.</p>
+     * <p>The Confluent component configurations.</p>
      */
     @NameInMap("ConfluentConfig")
     public UpgradePrePayOrderRequestConfluentConfig confluentConfig;
@@ -13,13 +13,13 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     /**
      * <p>The disk capacity.</p>
      * <ul>
-     * <li><p>The specified disk capacity must be greater than or equal to the current disk capacity of the instance.</p>
+     * <li><p>The disk capacity that you specify must be greater than or equal to the current disk capacity of the instance.</p>
      * </li>
-     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required for subscription instances but not for Confluent-series instances.</p>
+     * <p>If you upgrade a Confluent instance, you do not need to specify this parameter. This parameter is required for subscription instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -29,19 +29,17 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     public Integer diskSize;
 
     /**
-     * <p>The maximum Internet traffic bandwidth.</p>
+     * <p>The public network traffic.</p>
      * <ul>
-     * <li><p>The specified Internet traffic bandwidth must be greater than or equal to the current Internet traffic bandwidth of the instance.</p>
+     * <li><p>The public network traffic that you specify must be greater than or equal to the current public network traffic of the instance.</p>
      * </li>
-     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li><p>If <strong>EipModel</strong> is set to <strong>true</strong>, <strong>EipMax</strong> must be greater than 0.</p>
-     * </li>
-     * <li><p>If <strong>EipModel</strong> is set to <strong>false</strong>, <strong>EipMax</strong> must be set to <strong>0</strong>.</p>
-     * </li>
+     * <li>If <strong>EipModel</strong> is set to <strong>true</strong>, the value of <strong>EipMax</strong> must be greater than 0.</li>
+     * <li>If <strong>EipModel</strong> is set to <strong>false</strong>, the value of <strong>EipMax</strong> must be <strong>0</strong>.</li>
      * </ul>
      * </blockquote>
      * 
@@ -52,15 +50,15 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     public Integer eipMax;
 
     /**
-     * <p>Specifies whether to enable Internet access. Valid values:</p>
+     * <p>Specifies whether public network access is required. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: enables Internet access.</p>
+     * <li><p>true: Public network access is required.</p>
      * </li>
-     * <li><p><code>false</code>: disables Internet access.</p>
+     * <li><p>false: Public network access is not required.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required for subscription instances but not for Confluent-series instances.</p>
+     * <p>If you upgrade a Confluent instance, you do not need to specify this parameter. This parameter is required for subscription instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,7 +68,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     public Boolean eipModel;
 
     /**
-     * <p>The ID of the instance.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -80,13 +78,13 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The traffic peak (not recommended).</p>
+     * <p>The peak traffic (not recommended).</p>
      * <ul>
-     * <li><p>The specified traffic peak must be greater than or equal to the current traffic peak of the instance.</p>
+     * <li><p>The peak traffic that you specify must be greater than or equal to the current peak traffic of the instance.</p>
      * </li>
-     * <li><p>You must specify either this parameter or <code>IoMaxSpec</code>. If you specify both, <code>IoMaxSpec</code> takes precedence. We recommend that you specify only <code>IoMaxSpec</code>.</p>
+     * <li><p>You must specify one of peak traffic and traffic specification. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</p>
      * </li>
-     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * </li>
      * </ul>
      * 
@@ -99,15 +97,15 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     /**
      * <p>The traffic specification (recommended).</p>
      * <ul>
-     * <li><p>The specified traffic specification must be greater than or equal to the current traffic specification of the instance.</p>
+     * <li><p>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</p>
      * </li>
-     * <li><p>You must specify either this parameter or <code>IoMax</code>. If you specify both, this parameter takes precedence. We recommend that you specify only this parameter.</p>
+     * <li><p>You must specify one of peak traffic and traffic specification. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</p>
      * </li>
-     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required for subscription instances but not for Confluent-series instances.</p>
+     * <p>If you upgrade a Confluent instance, you do not need to specify this parameter. This parameter is required for subscription instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -117,11 +115,11 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     public String ioMaxSpec;
 
     /**
-     * <p>The billing method. Valid values:</p>
+     * <p>The billing type. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: subscription</p>
+     * <li><p><strong>0</strong>: subscription.</p>
      * </li>
-     * <li><p><strong>4</strong>: subscription for Confluent instances</p>
+     * <li><p><strong>4</strong>: Confluent series subscription.</p>
      * </li>
      * </ul>
      * 
@@ -134,15 +132,15 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     /**
      * <p>The number of partitions (recommended).</p>
      * <ul>
-     * <li><p>You must specify either this parameter or <code>TopicQuota</code>. We recommend that you specify only this parameter.</p>
+     * <li><p>You must specify one of the number of partitions and the topic specification. Specify only the number of partitions.</p>
      * </li>
-     * <li><p>If you specify both <code>PartitionNum</code> and <code>TopicQuota</code>, the system checks if their values are equivalent under the previous topic pricing model. A mismatch causes the request to fail. If they match, the system uses <code>PartitionNum</code> to process the purchase.</p>
+     * <li><p>If you specify both the number of partitions and the topic specification, the system validates whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</p>
      * </li>
-     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required for subscription instances but not for Confluent-series instances.</p>
+     * <p>If you upgrade a Confluent instance, you do not need to specify this parameter. This parameter is required for subscription instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -152,7 +150,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     public Integer partitionNum;
 
     /**
-     * <p>The ID of the region where the instance is located.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -165,21 +163,21 @@ public class UpgradePrePayOrderRequest extends TeaModel {
      * <p>The specification type.</p>
      * <p>Valid values for ApsaraMQ for Kafka instances:</p>
      * <ul>
-     * <li><p><strong>normal</strong>: Standard Edition (high write)</p>
+     * <li><p><strong>normal</strong>: Standard Edition (shared throughput)</p>
      * </li>
-     * <li><p><strong>professional</strong>: Professional Edition (high write)</p>
+     * <li><p><strong>professional</strong>: Professional Edition (shared throughput)</p>
      * </li>
-     * <li><p><strong>professionalForHighRead</strong>: Professional Edition (high read)</p>
+     * <li><p><strong>professionalForHighRead</strong>: Professional Edition (shared read)</p>
      * </li>
      * </ul>
      * <p>Valid values for Confluent instances:</p>
      * <ul>
-     * <li><p><strong>professional</strong>: Professional Edition</p>
+     * <li><p><strong>professional</strong>: Professional Edition.</p>
      * </li>
-     * <li><p><strong>enterprise</strong>: Enterprise Edition</p>
+     * <li><p><strong>enterprise</strong>: Enterprise Edition.</p>
      * </li>
      * </ul>
-     * <p>You cannot downgrade an instance from Professional Edition to Standard Edition. For more information about these specification types, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <p>Downgrading an instance from Professional Edition to Standard Edition is not supported. For more information about the specification types, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>professional</p>
@@ -190,13 +188,13 @@ public class UpgradePrePayOrderRequest extends TeaModel {
     /**
      * <p>The number of topics (not recommended).</p>
      * <ul>
-     * <li><p>You must specify either this parameter or <code>PartitionNum</code>. We recommend that you specify only <code>PartitionNum</code>.</p>
+     * <li><p>You must specify one of the number of partitions and the topic specification. Specify only the number of partitions.</p>
      * </li>
-     * <li><p>If you specify both <code>TopicQuota</code> and <code>PartitionNum</code>, the system checks if their values are equivalent under the previous topic pricing model. A mismatch causes the request to fail. If they match, the system uses <code>PartitionNum</code> to process the purchase.</p>
+     * <li><p>If you specify both the number of partitions and the topic specification, the system validates whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</p>
      * </li>
-     * <li><p>The default value of this parameter varies based on the traffic specification. You are charged additional fees if the specified value exceeds the default value.</p>
+     * <li><p>The default value varies based on the traffic specification. Additional fees are charged if the value exceeds the default value.</p>
      * </li>
-     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * </li>
      * </ul>
      * 
@@ -390,7 +388,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer connectReplica;
 
         /**
-         * <p>The number of CPU cores for the Control Center component.</p>
+         * <p>The number of CPU cores for the ControlCenter component.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -399,7 +397,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer controlCenterCU;
 
         /**
-         * <p>The number of replicas for the Control Center component.</p>
+         * <p>The number of replicas for the ControlCenter component.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -408,7 +406,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer controlCenterReplica;
 
         /**
-         * <p>The disk capacity of the Control Center component, in GB.</p>
+         * <p>The disk capacity of the ControlCenter component. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -417,7 +415,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer controlCenterStorage;
 
         /**
-         * <p>The number of CPU cores for the Kafka broker.</p>
+         * <p>The number of CPU cores for the Kafka Broker.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -426,7 +424,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer kafkaCU;
 
         /**
-         * <p>The number of replicas for the Kafka broker.</p>
+         * <p>The number of replicas for the Kafka Broker.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -435,7 +433,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer kafkaReplica;
 
         /**
-         * <p>The number of CPU cores for the Kafka REST Proxy component.</p>
+         * <p>The number of CPU cores for the KafkaRestProxy component.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -444,7 +442,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer kafkaRestProxyCU;
 
         /**
-         * <p>The number of replicas for the Kafka REST Proxy component.</p>
+         * <p>The number of replicas for the KafkaRestProxy component.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -453,7 +451,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer kafkaRestProxyReplica;
 
         /**
-         * <p>The disk capacity of the Kafka broker, in GB.</p>
+         * <p>The disk capacity of the Kafka Broker. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>800</p>
@@ -471,7 +469,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer kraftControllerStorage;
 
         /**
-         * <p>The number of CPU cores for the ksqlDB component.</p>
+         * <p>The number of CPU cores for the KsqlDB component.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -483,7 +481,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public java.util.List<UpgradePrePayOrderRequestConfluentConfigKsqlList> ksqlList;
 
         /**
-         * <p>The number of replicas for the ksqlDB component.</p>
+         * <p>The number of replicas for the KsqlDB component.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -492,7 +490,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer ksqlReplica;
 
         /**
-         * <p>The disk capacity of the ksqlDB component, in GB.</p>
+         * <p>The disk capacity of the KsqlDB component. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -501,7 +499,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer ksqlStorage;
 
         /**
-         * <p>The number of CPU cores for the Schema Registry component.</p>
+         * <p>The number of CPU cores for the SchemaRegistry component.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -510,7 +508,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer schemaRegistryCU;
 
         /**
-         * <p>The number of replicas for the Schema Registry component.</p>
+         * <p>The number of replicas for the SchemaRegistry component.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -537,7 +535,7 @@ public class UpgradePrePayOrderRequest extends TeaModel {
         public Integer zooKeeperReplica;
 
         /**
-         * <p>The disk capacity of the ZooKeeper component, in GB.</p>
+         * <p>The disk capacity of the ZooKeeper component. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

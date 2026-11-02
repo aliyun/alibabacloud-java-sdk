@@ -15,15 +15,15 @@ public class CreateSaslUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The encryption mechanism. Valid values:</p>
+     * <p>The encryption method. Valid values:</p>
      * <ul>
-     * <li><p>SCRAM-SHA-512 (selected by default)</p>
+     * <li><p>SCRAM-SHA-512 (default)</p>
      * </li>
      * <li><p>SCRAM-SHA-256</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is supported only for Serverless instances.</p>
+     * <p>This parameter is supported only for serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,11 +55,11 @@ public class CreateSaslUserRequest extends TeaModel {
     /**
      * <p>The type. Valid values:</p>
      * <ul>
-     * <li><p>plain: a simple username and password verification mechanism. ApsaraMQ for Kafka has optimized the PLAIN mechanism to support dynamically adding SASL users without restarting the instance.</p>
+     * <li><p>plain: A simple username and password authentication mechanism. MSMQ for Apache Kafka optimizes the PLAIN mechanism and supports the dynamic increase of SASL users without restarting the instance.</p>
      * </li>
-     * <li><p>scram: a username and password verification mechanism that provides higher security than PLAIN. ApsaraMQ for Kafka uses SCRAM-SHA-256.</p>
+     * <li><p>scram: A username and password authentication mechanism that provides higher security than PLAIN. MSMQ for Apache Kafka uses SCRAM-SHA-256.</p>
      * </li>
-     * <li><p>LDAP: applicable only to adding users for Confluent instances.</p>
+     * <li><p>LDAP: Applicable only to new users of Confluent instances.</p>
      * </li>
      * </ul>
      * <p>Default value: plain.</p>

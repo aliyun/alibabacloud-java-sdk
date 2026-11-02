@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePostPayOrderResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates success.</p>
+     * <p>The return code. A return code of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class CreatePostPayOrderResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>

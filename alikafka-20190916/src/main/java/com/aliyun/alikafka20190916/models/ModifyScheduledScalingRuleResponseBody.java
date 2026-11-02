@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyScheduledScalingRuleResponseBody extends TeaModel {
     /**
-     * <p>The return code.</p>
-     * <p>A value of <strong>200</strong> indicates success.</p>
+     * <p>The return code. A value of <strong>200</strong> indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -15,7 +14,7 @@ public class ModifyScheduledScalingRuleResponseBody extends TeaModel {
     public Long code;
 
     /**
-     * <p>The prompt message of the return result.</p>
+     * <p>The message returned.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>

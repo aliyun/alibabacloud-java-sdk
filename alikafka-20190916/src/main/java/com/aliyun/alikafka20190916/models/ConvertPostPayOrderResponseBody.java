@@ -23,7 +23,7 @@ public class ConvertPostPayOrderResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The order ID.</p>
+     * <p>The ID of the order.</p>
      * 
      * <strong>example:</strong>
      * <p>20497346575****</p>
@@ -32,7 +32,7 @@ public class ConvertPostPayOrderResponseBody extends TeaModel {
     public String orderId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>06084011-E093-46F3-A51F-4B19A8AD****</p>

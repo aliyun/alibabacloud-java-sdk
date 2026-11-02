@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTagResourcesRequest extends TeaModel {
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -24,7 +24,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource to be tagged. Resource ID rules:</p>
+     * <p>The ID of the tagged resource. Resource ID rules:</p>
      * <ul>
      * <li><p>Instance: instanceId</p>
      * </li>
@@ -33,9 +33,9 @@ public class ListTagResourcesRequest extends TeaModel {
      * <li><p>Group: Kafka_alikafka_instanceId_consumerGroup</p>
      * </li>
      * </ul>
-     * <p>For example: If the instance ID is alikafka_post-cn-v0h1fgs2xxxx, the Topic name is test-topic, and the Group name is test-consumer-group, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group respectively.</p>
+     * <p>For example, if the instance ID is alikafka_post-cn-v0h1fgs2xxxx, the topic name is test-topic, and the group name is test-consumer-group, the resource IDs are alikafka_post-cn-v0h1fgs2xxxx, Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-topic, and Kafka_alikafka_post-cn-v0h1fgs2xxxx_test-consumer-group.  </p>
      * <blockquote>
-     * <p>Either the <strong>ResourceId</strong> or <strong>Tag</strong> parameter must be configured to query the tag list bound to resources. Otherwise, the API call fails.</p>
+     * <p>You must specify either the <strong>ResourceId</strong> or <strong>Tag</strong> parameter to query the tags bound to resources. Otherwise, the API call fails.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,13 +45,13 @@ public class ListTagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. Enumeration type. Valid values:</p>
+     * <p>The resource type. Valid values:</p>
      * <ul>
-     * <li><p><strong>INSTANCE</strong>: instance.</p>
+     * <li><p><strong>INSTANCE</strong>: instance</p>
      * </li>
-     * <li><p><strong>TOPIC</strong>: topic.</p>
+     * <li><p><strong>TOPIC</strong>: topic</p>
      * </li>
-     * <li><p><strong>CONSUMERGROUP</strong>: consumer group.</p>
+     * <li><p><strong>CONSUMERGROUP</strong>: consumer group</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -63,7 +63,7 @@ public class ListTagResourcesRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<ListTagResourcesRequestTag> tag;
@@ -117,9 +117,9 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The tag key of the resource.</p>
          * <ul>
-         * <li><p>If this parameter is empty, all tag keys are matched.</p>
+         * <li><p>If this parameter is left empty, all tag keys are matched.</p>
          * </li>
-         * <li><p>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</p>
+         * <li><p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * </li>
          * </ul>
          * 
@@ -132,9 +132,9 @@ public class ListTagResourcesRequest extends TeaModel {
         /**
          * <p>The tag value of the resource.</p>
          * <ul>
-         * <li><p>If the tag key is empty, this parameter must be empty. If this parameter is empty, all tag values are matched.</p>
+         * <li><p>If the tag key is empty, this parameter must also be empty. If this parameter is empty, all tag values are matched.</p>
          * </li>
-         * <li><p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http\:// or https\://.</p>
+         * <li><p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * </li>
          * </ul>
          * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePrePayInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>The Confluent component configurations.</p>
+     * <p>The configurations of Confluent components.</p>
      * <blockquote>
      * <p>This parameter is required when you create a Confluent instance.</p>
      * </blockquote>
@@ -22,7 +22,7 @@ public class CreatePrePayInstanceShrinkRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>When you create a Confluent instance, you cannot select the deployment type. Only the value 5 is allowed. After the purchase, you can configure whether to enable public access for each component.</p>
+     * <p>If you create a Confluent instance, you cannot select the deployment type. You can only set this parameter to 5. After the purchase, you can configure whether to expose each component to the Internet.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,9 +33,9 @@ public class CreatePrePayInstanceShrinkRequest extends TeaModel {
 
     /**
      * <p>The disk capacity. Unit: GB.</p>
-     * <p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
-     * <p>This parameter is not required when you create a Confluent instance.</p>
+     * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -47,13 +47,13 @@ public class CreatePrePayInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The disk type. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: ultra cloud disk</p>
+     * <li><p><strong>0</strong>: Ultra disk</p>
      * </li>
      * <li><p><strong>1</strong>: SSD</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is not required when you create a Confluent instance.</p>
+     * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,15 +76,15 @@ public class CreatePrePayInstanceShrinkRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The Internet traffic.</p>
+     * <p>The Internet traffic bandwidth.</p>
      * <ul>
-     * <li><p>This parameter is required if <strong>DeployType</strong> is set to <strong>4</strong>.</p>
+     * <li><p>If <strong>DeployType</strong> is set to <strong>4</strong>, this parameter is required.</p>
      * </li>
-     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/72142.html">Pay-as-you-go billing method</a>.</p>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/72142.html">pay-as-you-go billing method</a>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is not required when you create a Confluent instance.</p>
+     * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -96,8 +96,8 @@ public class CreatePrePayInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The traffic specification.</p>
      * <ul>
-     * <li>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.<blockquote>
-     * <p>This parameter is not required when you create a Confluent instance.</p>
+     * <li>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.<blockquote>
+     * <p>If you create a Confluent instance, you do not need to specify this parameter.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -109,11 +109,11 @@ public class CreatePrePayInstanceShrinkRequest extends TeaModel {
     public String ioMaxSpec;
 
     /**
-     * <p>The billing type. Valid values:</p>
+     * <p>The billing method. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: subscription</p>
+     * <li><p><strong>0</strong>: Subscription</p>
      * </li>
-     * <li><p><strong>4</strong>: Confluent subscription</p>
+     * <li><p><strong>4</strong>: Subscription for Confluent instances</p>
      * </li>
      * </ul>
      * 
@@ -126,8 +126,8 @@ public class CreatePrePayInstanceShrinkRequest extends TeaModel {
     /**
      * <p>The number of partitions to purchase.</p>
      * <ul>
-     * <li>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.<blockquote>
-     * <p>This parameter is not required when you create a Confluent instance.</p>
+     * <li>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.<blockquote>
+     * <p>If the instance is a Confluent instance, you do not need to specify this parameter.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -150,7 +150,7 @@ public class CreatePrePayInstanceShrinkRequest extends TeaModel {
 
     /**
      * <p>The resource group ID.</p>
-     * <p>If you do not specify this parameter, the instance is placed in the default resource group. You can view the resource group ID in the Resource Management console.</p>
+     * <p>If you do not specify this parameter, the instance is added to the default resource group. You can view the resource group ID in the Resource Management console.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ac***********7q</p>
@@ -159,14 +159,14 @@ public class CreatePrePayInstanceShrinkRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The edition type.</p>
+     * <p>The edition.</p>
      * <p>Valid values for ApsaraMQ for Kafka instances:</p>
      * <ul>
-     * <li><p><strong>normal</strong>: Standard Edition (shared throughput for writes)</p>
+     * <li><p><strong>normal</strong>: Standard Edition (High Write)</p>
      * </li>
-     * <li><p><strong>professional</strong>: Professional Edition (shared throughput for writes)</p>
+     * <li><p><strong>professional</strong>: Professional Edition (High Write)</p>
      * </li>
-     * <li><p><strong>professionalForHighRead</strong>: Professional Edition (shared throughput for reads)</p>
+     * <li><p><strong>professionalForHighRead</strong>: Professional Edition (High Read)</p>
      * </li>
      * </ul>
      * <p>Valid values for Confluent instances:</p>
@@ -185,7 +185,7 @@ public class CreatePrePayInstanceShrinkRequest extends TeaModel {
     public String specType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tag")
     public java.util.List<CreatePrePayInstanceShrinkRequestTag> tag;
@@ -307,7 +307,7 @@ public class CreatePrePayInstanceShrinkRequest extends TeaModel {
          * </li>
          * <li><p>If this parameter is left empty, all tag keys are matched.</p>
          * </li>
-         * <li><p>The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <li><p>The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -323,9 +323,9 @@ public class CreatePrePayInstanceShrinkRequest extends TeaModel {
          * <ul>
          * <li><p>N ranges from 1 to 20.</p>
          * </li>
-         * <li><p>This parameter can be left empty.</p>
+         * <li><p>The tag value can be empty.</p>
          * </li>
-         * <li><p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <li><p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * </li>
          * </ul>
          * 

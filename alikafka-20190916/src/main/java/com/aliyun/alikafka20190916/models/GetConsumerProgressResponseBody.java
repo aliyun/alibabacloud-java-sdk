@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConsumerProgressResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 indicates that the request is successful.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -372,13 +372,11 @@ public class GetConsumerProgressResponseBody extends TeaModel {
 
     public static class GetConsumerProgressResponseBodyConsumerProgress extends TeaModel {
         /**
-         * <p>The latest time when a message was stored. This time is calculated based on the consumer offsets of all topics in the consumer group.</p>
+         * <p>The maximum storage time of the message data corresponding to all consumer offsets of the consumer group.</p>
          * <blockquote>
          * <ul>
-         * <li><p>This parameter is not supported for topics on Serverless instances or topics that use local storage on provisioned instances. In these cases, -1 is returned.</p>
-         * </li>
-         * <li><p>For topics that use cloud storage on provisioned instances, this parameter returns the message creation timestamp. This happens only after you submit the consumer offset for a consumer group that was created in the console or by an API call. If the message has no creation timestamp, -1 is returned.</p>
-         * </li>
+         * <li>This parameter is not supported for all topic types in serverless instances or for topics of the local storage type in reserved instances. The value is uniformly returned as -1.</li>
+         * <li>For topics of the cloud storage type in reserved instances, the creation timestamp of the corresponding message is returned only after a consumer group created through the console or API operations submits a consumer offset. If the corresponding message does not have a creation timestamp, -1 is returned.</li>
          * </ul>
          * </blockquote>
          * 
@@ -395,7 +393,7 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         public GetConsumerProgressResponseBodyConsumerProgressTopicList topicList;
 
         /**
-         * <p>The total number of unconsumed messages in all topics. This value is the message accumulation.</p>
+         * <p>The total number of unconsumed messages for all topics, which is the message accumulation.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -404,20 +402,14 @@ public class GetConsumerProgressResponseBody extends TeaModel {
         public Long totalDiff;
 
         /**
-         * <p>The status of the consumer group:</p>
+         * <p>The consumption status of the consumer group. Valid values:</p>
          * <ul>
-         * <li><p>UNKNOWN</p>
-         * </li>
-         * <li><p>PREPARING_REBALANCE</p>
-         * </li>
-         * <li><p>COMPLETING_REBALANCE</p>
-         * </li>
-         * <li><p>STABLE</p>
-         * </li>
-         * <li><p>DEAD</p>
-         * </li>
-         * <li><p>EMPTY</p>
-         * </li>
+         * <li>UNKNOWN</li>
+         * <li>PREPARING_REBALANCE</li>
+         * <li>COMPLETING_REBALANCE</li>
+         * <li>STABLE</li>
+         * <li>DEAD</li>
+         * <li>EMPTY</li>
          * </ul>
          * 
          * <strong>example:</strong>

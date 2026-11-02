@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableAutoTopicCreationRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,11 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Currently only these three request parameters are supported:</p>
+     * <p>Only the following three values are supported:</p>
      * <ul>
-     * <li><p>enable: Enable automatic topic creation.</p>
-     * </li>
-     * <li><p>disable: Disable automatic topic creation.</p>
-     * </li>
-     * <li><p>updatePartition: Modify the number of partitions for automatic creation.</p>
-     * </li>
+     * <li>enable: Enables automatic automatic creation.</li>
+     * <li>disable: Disables automatic automatic creation.</li>
+     * <li>updatePartition: Modifies the number of automatically created partitions.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,9 +29,9 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
     public String operate;
 
     /**
-     * <p>Adjust the default number of partitions for automatically created topics.</p>
+     * <p>The default number of partitions for automatically created topics.</p>
      * <blockquote>
-     * <p>This value is passed only when the Operate value is updatePartition, or when UpdatePartition is true.</p>
+     * <p> Specify this parameter only when Operate is set to updatePartition or UpdatePartition is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +41,7 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
     public Long partitionNum;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -54,9 +51,9 @@ public class EnableAutoTopicCreationRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Modify the number of partitions for automatic creation.</p>
+     * <p>Specifies whether to modify the number of partitions for automatic creation.</p>
      * <blockquote>
-     * <p>If this parameter is set to true, the Operate parameter must be updatePartition or left empty.</p>
+     * <p> If this parameter is set to true, the Operate parameter must be set to updatePartition or left empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

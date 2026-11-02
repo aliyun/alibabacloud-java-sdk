@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePrePayInstanceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. A value of 200 indicates success.</p>
+     * <p>The HTTP status code. A status code of 200 indicates that the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -38,7 +38,7 @@ public class CreatePrePayInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

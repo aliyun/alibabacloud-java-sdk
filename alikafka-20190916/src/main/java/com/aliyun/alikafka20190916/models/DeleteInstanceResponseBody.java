@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteInstanceResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates success.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DeleteInstanceResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The return message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>

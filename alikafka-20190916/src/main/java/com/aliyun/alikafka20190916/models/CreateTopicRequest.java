@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTopicRequest extends TeaModel {
     /**
-     * <p>The cleanup policy configured when the storage engine of the topic is set to local storage. Valid values:</p>
+     * <p>The cleanup policy that is configured when the storage engine of the topic is set to local storage. Valid values:</p>
      * <ul>
      * <li>false: delete cleanup policy.</li>
      * <li>true: compact cleanup policy.</li>
@@ -20,22 +20,22 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The supplementary configuration.</p>
      * <ul>
-     * <li><p>Must be in JSON format.</p>
+     * <li><p>The value must be in JSON format.</p>
      * </li>
      * <li><p>This parameter takes effect only when <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
      * </li>
      * <li><p>Supported configurations for reserved instances:</p>
      * <ul>
-     * <li><strong>retention.ms</strong> (message retention period): ranges from 3600000 to 31536000000 milliseconds.</li>
-     * <li><strong>max.message.bytes</strong> (maximum message size): ranges from 1048576 to 10485760 bytes. </li>
-     * <li><strong>message.timestamp.type</strong>: specifies the type of message timestamp. CreateTime indicates the timestamp specified by the producer when sending a message. If not specified, it is the message creation time on the client. LogAppendTime indicates the time when the message is written to disk on the server. Valid values: CreateTime or LogAppendTime. Default value: CreateTime. We recommend LogAppendTime.</li>
+     * <li><strong>retention.ms</strong>: the message retention period. Valid values: 3600000 to 31536000000. Unit: milliseconds.</li>
+     * <li><strong>max.message.bytes</strong>: the maximum message size. Valid values: 1048576 to 10485760. Unit: bytes.</li>
+     * <li><strong>message.timestamp.type</strong>: the type of the message timestamp. CreateTime indicates the timestamp specified by the producer when sending a message. If not specified, the value is the creation time of the message on the client. LogAppendTime indicates the time when the message is written to disk on the server. Valid values: CreateTime or LogAppendTime. Default value: Createtime. We recommend that you use ApendTime.</li>
      * </ul>
      * </li>
      * <li><p>Supported configurations for Serverless instances:</p>
      * <ul>
-     * <li><strong>retention.hours</strong> (message retention period): value type is String. Valid values: 24 to 8760.</li>
-     * <li><strong>max.message.bytes</strong> (maximum message size): value type is String. Valid values: 1048576 to 10485760.</li>
-     * <li><strong>message.timestamp.type</strong> (type of message timestamp): CreateTime indicates the timestamp specified by the producer when sending a message. If not specified, it is the message creation time on the client. LogAppendTime indicates the time when the message is written to disk on the server. Valid values: CreateTime or LogAppendTime. Default value: CreateTime. We recommend LogAppendTime.</li>
+     * <li><strong>retention.hours</strong>: the message retention period. The value type is String. Valid values: 24 to 8760.</li>
+     * <li><strong>max.message.bytes</strong>: the maximum message size. The value type is String. Valid values: 1048576 to 10485760.</li>
+     * <li><strong>message.timestamp.type</strong>: the type of the message timestamp. CreateTime indicates the timestamp specified by the producer when sending a message. If not specified, the value is the creation time of the message on the client. LogAppendTime indicates the time when the message is written to disk on the server. Valid values: CreateTime or LogAppendTime. Default value: Createtime. We recommend that you use ApendTime.</li>
      * </ul>
      * </li>
      * </ul>
@@ -79,7 +79,7 @@ public class CreateTopicRequest extends TeaModel {
      * </li>
      * <li><p>The value must be less than the number of topic replicas.</p>
      * </li>
-     * <li><p>The number of in-sync replicas ranges from 1 to 3.</p>
+     * <li><p>Valid values: 1 to 3.</p>
      * </li>
      * </ul>
      * 
@@ -95,9 +95,9 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The number of partitions for the topic.</p>
      * <ul>
-     * <li><p>The number of partitions ranges from 1 to 360.</p>
+     * <li><p>Valid values: 1 to 360.</p>
      * </li>
-     * <li><p>The console provides different configuration suggestions based on the instance edition. Configure the number of partitions based on the console suggestions to reduce the risk of data skew.</p>
+     * <li><p>The console provides different configuration suggestions based on the instance edition. Configure the number of partitions based on the console suggestions to reduce data skew risks.</p>
      * </li>
      * </ul>
      * <p>Default value:</p>
@@ -127,9 +127,9 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The description of the topic.</p>
      * <ul>
-     * <li><p>Can contain only letters, digits, underscores (_), and hyphens (-).</p>
+     * <li><p>The description can contain only letters, digits, underscores (_), and hyphens (-).</p>
      * </li>
-     * <li><p>Must be 3 to 64 characters in length.</p>
+     * <li><p>The description must be 3 to 64 characters in length.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -145,11 +145,11 @@ public class CreateTopicRequest extends TeaModel {
      * <ul>
      * <li><p>This parameter takes effect only when <strong>LocalTopic</strong> is set to <strong>true</strong>.</p>
      * </li>
-     * <li><p>The number of replicas ranges from 1 to 3.</p>
+     * <li><p>Valid values: 1 to 3.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If the number of replicas is set to <strong>1</strong>, data loss may occur. Set this parameter with caution.</p>
+     * <p>If the number of replicas is set to <strong>1</strong>, data loss may occur. Proceed with caution.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -170,10 +170,8 @@ public class CreateTopicRequest extends TeaModel {
     /**
      * <p>The name of the topic.</p>
      * <ul>
-     * <li>Reserved instances:
-     * Supports uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 3 to 64 characters in length.</li>
-     * <li>Serverless instances:
-     * Supports uppercase and lowercase letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 1 to 249 characters in length.</li>
+     * <li>Reserved instances: The name can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 3 to 64 characters in length.</li>
+     * <li>Serverless instances: The name can contain letters, digits, underscores (_), hyphens (-), and periods (.). The name must be 1 to 249 characters in length.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -284,7 +282,7 @@ public class CreateTopicRequest extends TeaModel {
          * </li>
          * <li><p>If this parameter is left empty, all tag keys are matched.</p>
          * </li>
-         * <li><p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
+         * <li><p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -302,7 +300,7 @@ public class CreateTopicRequest extends TeaModel {
          * </li>
          * <li><p>This parameter can be left empty.</p>
          * </li>
-         * <li><p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:, or contain http:// or https://.</p>
+         * <li><p>The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
          * </li>
          * </ul>
          * 

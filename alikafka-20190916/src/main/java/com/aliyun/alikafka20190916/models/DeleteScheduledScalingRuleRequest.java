@@ -27,7 +27,7 @@ public class DeleteScheduledScalingRuleRequest extends TeaModel {
     /**
      * <p>The policy name.</p>
      * <blockquote>
-     * <p>Only policies that are disabled or one-time policies that have been executed can be deleted.</p>
+     * <p>Only disabled policies or completed one-time policies can be deleted.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

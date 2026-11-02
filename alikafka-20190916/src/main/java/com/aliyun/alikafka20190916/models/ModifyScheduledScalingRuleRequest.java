@@ -5,15 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyScheduledScalingRuleRequest extends TeaModel {
     /**
-     * <p>Enable or disable the scheduled task policy. Valid values:</p>
+     * <p>Specifies whether to enable or disable the scheduled task policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enable.</p>
-     * </li>
-     * <li><p><strong>false</strong>: Disable.</p>
-     * </li>
+     * <li><strong>true</strong>: enables the policy.</li>
+     * <li><strong>false</strong>: disables the policy.</li>
      * </ul>
      * <blockquote>
-     * <p>For a one-time scheduling policy type, the start execution time must be more than 30 minutes later than the current time for the policy to be enabled.</p>
+     * <p>For a one-time scheduled policy, the start time must be at least 30 minutes later than the current time to enable the policy.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

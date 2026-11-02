@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRebalanceInfoResponseBody extends TeaModel {
     /**
-     * <p>The return code. A return code of 200 indicates that the request was successful.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>

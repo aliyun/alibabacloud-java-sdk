@@ -7,13 +7,13 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     /**
      * <p>The disk capacity. Unit: GB.</p>
      * <ul>
-     * <li><p>The disk capacity that you specify must be greater than or equal to the current disk capacity of the instance.</p>
+     * <li><p>The specified disk capacity must be greater than or equal to the current disk capacity of the instance.</p>
      * </li>
-     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If the instance is a serverless instance, you do not need to specify this parameter. This parameter is required for pay-as-you-go instances.</p>
+     * <p>If the instance is a serverless instance, you do not need to specify this parameter. You must specify this parameter for a pay-as-you-go instance.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -23,15 +23,15 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     public Integer diskSize;
 
     /**
-     * <p>The public network traffic.</p>
+     * <p>The Internet traffic.</p>
      * <ul>
-     * <li>The public network traffic that you specify must be greater than or equal to the current public network traffic of the instance.</li>
-     * <li>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
+     * <li>The specified Internet traffic must be greater than or equal to the current Internet traffic of the instance.</li>
+     * <li>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If <strong>EipModel</strong> is set to <strong>true</strong>, the value of <strong>EipMax</strong> must be greater than 0.</li>
-     * <li>If <strong>EipModel</strong> is set to <strong>false</strong>, the value of <strong>EipMax</strong> must be <strong>0</strong>.</li>
+     * <li>If <strong>EipModel</strong> is set to <strong>true</strong>, <strong>EipMax</strong> must be greater than 0.</li>
+     * <li>If <strong>EipModel</strong> is set to <strong>false</strong>, <strong>EipMax</strong> must be set to <strong>0</strong>.</li>
      * <li>If the instance is a serverless instance, you do not need to specify this parameter.</li>
      * </ul>
      * </blockquote>
@@ -43,13 +43,13 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     public Integer eipMax;
 
     /**
-     * <p>Specifies whether the instance requires Internet access. Valid values:</p>
+     * <p>Specifies whether to enable Internet access. Valid values:</p>
      * <ul>
-     * <li><p>true: Internet access is required.</p>
+     * <li><p>true: enables Internet access.</p>
      * </li>
-     * <li><p>false: Internet access is not required.</p>
+     * <li><p>false: disables Internet access.</p>
      * <blockquote>
-     * <p>This parameter is optional for pay-as-you-go instances. This parameter is required for serverless instances.</p>
+     * <p>You can specify this parameter for a pay-as-you-go instance. You must specify this parameter for a serverless instance.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -71,13 +71,13 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The peak traffic (not recommended).</p>
+     * <p>The peak traffic. We do not recommend that you specify this parameter.</p>
      * <ul>
-     * <li><p>The peak traffic that you specify must be greater than or equal to the current peak traffic of the instance.</p>
+     * <li><p>The specified peak traffic must be greater than or equal to the current peak traffic of the instance.</p>
      * </li>
-     * <li><p>You must specify either the traffic specification or the peak traffic. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</p>
+     * <li><p>You must specify either the peak traffic or the traffic specification. If both are specified, the traffic specification takes precedence. We recommend that you specify only the traffic specification.</p>
      * </li>
-     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
      * <p>If the instance is a serverless instance, you do not need to specify this parameter.</p>
      * </blockquote>
@@ -91,15 +91,15 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     public Integer ioMax;
 
     /**
-     * <p>The traffic specification (recommended).</p>
+     * <p>The traffic specification. We recommend that you specify this parameter.</p>
      * <ul>
-     * <li><p>The traffic specification that you specify must be greater than or equal to the current traffic specification of the instance.</p>
+     * <li><p>The specified traffic specification must be greater than or equal to the current traffic specification of the instance.</p>
      * </li>
-     * <li><p>You must specify either the traffic specification or the peak traffic. If you specify both, the traffic specification takes precedence. Specify only the traffic specification.</p>
+     * <li><p>You must specify either the peak traffic or the traffic specification. If both are specified, the traffic specification takes precedence. We recommend that you specify only the traffic specification.</p>
      * </li>
-     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
-     * <p>If the instance is a serverless instance, you do not need to specify this parameter. This parameter is required for pay-as-you-go instances.</p>
+     * <p>If the instance is a serverless instance, you do not need to specify this parameter. You must specify this parameter for a pay-as-you-go instance.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -111,15 +111,15 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     public String ioMaxSpec;
 
     /**
-     * <p>The number of partitions (recommended).</p>
+     * <p>The number of partitions. We recommend that you specify this parameter.</p>
      * <ul>
-     * <li><p>You must specify either the number of partitions or the topic specification. Specify only the number of partitions.</p>
+     * <li><p>You must specify either the number of partitions or the topic specification. We recommend that you specify only the number of partitions.</p>
      * </li>
-     * <li><p>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</p>
+     * <li><p>If both the number of partitions and the topic specification are specified, the system verifies whether they are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</p>
      * </li>
-     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
-     * <p>If the instance is a serverless instance, you do not need to specify this parameter. This parameter is required for pay-as-you-go instances.</p>
+     * <p>If the instance is a serverless instance, you do not need to specify this parameter. You must specify this parameter for a pay-as-you-go instance.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -141,20 +141,20 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The settings of the serverless instance. This parameter is required when you upgrade a serverless instance.</p>
+     * <p>The settings for the serverless instance. This parameter is required when you change the specifications of a serverless instance.</p>
      */
     @NameInMap("ServerlessConfig")
     public String serverlessConfigShrink;
 
     /**
      * <p>The specification type.</p>
-     * <p>If the PaidType of the instance is 1 (pay-as-you-go), valid values:</p>
+     * <p>Valid values when the PaidType parameter of the instance is set to 1 (pay-as-you-go):</p>
      * <ul>
-     * <li>normal: Standard Edition (shared throughput)</li>
-     * <li>professional: Professional Edition (shared throughput)</li>
-     * <li>professionalForHighRead: Professional Edition (shared throughput for high read)</li>
+     * <li>normal: Standard Edition (High Write)</li>
+     * <li>professional: Professional Edition (High Write)</li>
+     * <li>professionalForHighRead: Professional Edition (High Read)</li>
      * </ul>
-     * <p>If the PaidType of the instance is 3 (reserved specification pay-as-you-go + serverless elastic scaling pay-as-you-go), valid values:</p>
+     * <p>Valid values when the PaidType parameter of the instance is set to 3 (pay-as-you-go for reserved specifications + pay-as-you-go for serverless elastic scaling):</p>
      * <ul>
      * <li>normal: Serverless Standard Edition</li>
      * </ul>
@@ -167,15 +167,15 @@ public class UpgradePostPayOrderShrinkRequest extends TeaModel {
     public String specType;
 
     /**
-     * <p>The number of topics (not recommended).</p>
+     * <p>The number of topics. We do not recommend that you specify this parameter.</p>
      * <ul>
-     * <li><p>You must specify either the number of partitions or the topic specification. Specify only the number of partitions.</p>
+     * <li><p>You must specify either the number of partitions or the topic specification. We recommend that you specify only the number of partitions.</p>
      * </li>
-     * <li><p>If you specify both the number of partitions and the topic specification, the system verifies whether the number of partitions and the topic specification are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</p>
+     * <li><p>If both the number of partitions and the topic specification are specified, the system verifies whether they are equivalent based on the legacy topic sales model. If they are not equivalent, the request fails. If they are equivalent, the purchase is made based on the number of partitions.</p>
      * </li>
-     * <li><p>The default value varies based on the traffic specification. Additional fees are charged if the value exceeds the default value.</p>
+     * <li><p>The default value varies based on the traffic specification. If the number of topics exceeds the default value, you are charged extra fees.</p>
      * </li>
-     * <li><p>For the value range, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
+     * <li><p>For the valid values, see <a href="https://help.aliyun.com/document_detail/84737.html">Billing</a>.</p>
      * <blockquote>
      * <p>If the instance is a serverless instance, you do not need to specify this parameter.</p>
      * </blockquote>

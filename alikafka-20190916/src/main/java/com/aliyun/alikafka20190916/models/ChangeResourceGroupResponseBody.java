@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ChangeResourceGroupResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 indicates success.</p>
+     * <p>The status code. 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success</p>
@@ -23,7 +23,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The new resource group ID. You can view available resource groups in the Resource Group console.</p>
+     * <p>The ID of the new resource group. You can view available resource groups in the Resource Management console.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ac***********7q</p>
@@ -41,7 +41,7 @@ public class ChangeResourceGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the request was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     /**
-     * <p>The duration (unit: minutes) of a single scheduled elastic scaling task.</p>
+     * <p>The duration of a scheduled elastic scaling task. Unit: minutes.</p>
      * <blockquote>
-     * <p>The value must be at least 15 minutes.</p>
+     * <p>The value must be at least 15.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,10 +18,10 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public Integer durationMinutes;
 
     /**
-     * <p>Specifies whether to enable or disable the scheduled policy. Valid values:</p>
+     * <p>Specifies whether to enable or disable the scheduled task policy. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Enabled.</li>
-     * <li><strong>false</strong>: Disabled.</li>
+     * <li><strong>true</strong>: enables the policy.</li>
+     * <li><strong>false</strong>: disables the policy.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,10 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The time when the scheduled policy starts to take effect.</p>
-     * <p>If the schedule type is single execution, the start time must be at least 30 minutes later than the current time.</p>
+     * <p>The start time of the scheduled policy.</p>
+     * <p>If the schedule type is set to one-time execution, the start time must be at least 30 minutes later than the current time.</p>
      * <blockquote>
-     * <p>Notice: To prevent the server from continuously performing scale-up and scale-down tasks, the interval between different scheduled tasks must be at least 60 minutes.</p>
+     * <p>Notice: To prevent the server from continuously executing scale-up and scale-down tasks, the interval between different scheduled tasks must be at least 60 minutes.</notice></p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -66,8 +66,8 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
 
     /**
      * <p>The repeat type. This parameter is required when ScheduleType is set to repeat. Valid values:
-     *       <li> Daily: timed scheduling every day.
-     *       <li> Weekly: timed scheduling every week.</p>
+     *       <li> Daily: Daily timed scheduling.
+     *       <li> Weekly: Weekly timed scheduling.</p>
      * 
      * <strong>example:</strong>
      * <p>Weekly</p>
@@ -76,9 +76,9 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public String repeatType;
 
     /**
-     * <p>The reserved production specification for scheduled elastic scaling (unit: MB/s).</p>
+     * <p>The reserved production specification for scheduled elastic scaling. Unit: MB/s.</p>
      * <blockquote>
-     * <p>At least one of ReservedPubFlow and ReservedSubFlow must be higher than the current specification.</p>
+     * <p>At least one of the ReservedPubFlow and ReservedSubFlow parameters must be greater than the current specification.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -89,9 +89,9 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public Integer reservedPubFlow;
 
     /**
-     * <p>The reserved consumption specification for scheduled elastic scaling (unit: MB/s).</p>
+     * <p>The reserved consumption specification for scheduled elastic scaling. Unit: MB/s.</p>
      * <blockquote>
-     * <p>At least one of ReservedSubFlow and ReservedPubFlow must be higher than the current specification.</p>
+     * <p>At least one of the ReservedSubFlow and ReservedPubFlow parameters must be greater than the current specification.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -117,9 +117,9 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     /**
      * <p>The schedule type. Valid values:</p>
      * <ul>
-     * <li><p>at: scheduled once only.</p>
+     * <li><p>at: The policy is executed only once.</p>
      * </li>
-     * <li><p>repeat: scheduled repeatedly.</p>
+     * <li><p>repeat: The policy is executed repeatedly.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -131,7 +131,7 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public String scheduleType;
 
     /**
-     * <p>The time zone (Coordinated Universal Time).</p>
+     * <p>The time zone in Coordinated Universal Time (UTC).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class CreateScheduledScalingRuleShrinkRequest extends TeaModel {
     public String timeZone;
 
     /**
-     * <p>The days of the week. Multiple days are supported for repeated execution.</p>
+     * <p>The days of the week. Multiple days can be selected for repeated execution.</p>
      */
     @NameInMap("WeeklyTypes")
     public String weeklyTypesShrink;

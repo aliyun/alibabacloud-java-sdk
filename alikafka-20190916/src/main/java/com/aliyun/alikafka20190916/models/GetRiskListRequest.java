@@ -34,7 +34,7 @@ public class GetRiskListRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The start index for paging.</p>
+     * <p>The start index for pagination.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

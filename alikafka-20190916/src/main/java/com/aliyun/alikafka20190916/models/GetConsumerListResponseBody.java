@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConsumerListResponseBody extends TeaModel {
     /**
-     * <p>The return code. A value of 200 indicates that the call is successful.</p>
+     * <p>The response code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -17,7 +17,7 @@ public class GetConsumerListResponseBody extends TeaModel {
     public GetConsumerListResponseBodyConsumerList consumerList;
 
     /**
-     * <p>The page number of the returned page. The minimum value is 1.</p>
+     * <p>The page number of the returned results. Minimum value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -26,7 +26,7 @@ public class GetConsumerListResponseBody extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -35,7 +35,7 @@ public class GetConsumerListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The number of entries returned per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSaslUsersResponseBody extends TeaModel {
     /**
-     * <p>Status code. A value of 200 indicates success.</p>
+     * <p>The status code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success.</p>
@@ -23,7 +23,7 @@ public class DescribeSaslUsersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>9E3B3592-5994-4F65-A61E-E62A77A****</p>

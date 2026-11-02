@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetKafkaClientIpRequest extends TeaModel {
     /**
-     * <p>End time.</p>
+     * <p>The end time of the query range. The value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,9 @@ public class GetKafkaClientIpRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>Consumer group ID.</p>
+     * <p>The consumer group ID.</p>
      * <blockquote>
-     * <p>This parameter is required when Type is set to byGroup.</p>
+     * <p>This parameter is required if Type is set to byGroup.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class GetKafkaClientIpRequest extends TeaModel {
     public String group;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class GetKafkaClientIpRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Start time.</p>
+     * <p>The start time of the query range. The value is a UNIX timestamp in milliseconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,10 +57,10 @@ public class GetKafkaClientIpRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>Topic name.</p>
+     * <p>The topic name.</p>
      * <blockquote>
      * <ul>
-     * <li>This parameter is required when Type is set to byTopic.</li>
+     * <li>This parameter is required if Type is set to byTopic.</li>
      * </ul>
      * </blockquote>
      * 
@@ -71,14 +71,11 @@ public class GetKafkaClientIpRequest extends TeaModel {
     public String topic;
 
     /**
-     * <p>The type of client IP query. You can choose from three methods.</p>
+     * <p>The type of client IP address to query. Valid values:</p>
      * <ul>
-     * <li><p>byInstance: Query client IPs for the instance within the specified time range.</p>
-     * </li>
-     * <li><p>byTopic: Query client IPs for the topic within the specified time range.</p>
-     * </li>
-     * <li><p>byGroup: Query client IPs for the group within the specified time range.</p>
-     * </li>
+     * <li>byInstance: Queries the client IP addresses within a specified time range for the instance. </li>
+     * <li>byTopic: Queries the client IP addresses within a specified time range for the topic.</li>
+     * <li>byGroup: Queries the client IP addresses within a specified time range for the group.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

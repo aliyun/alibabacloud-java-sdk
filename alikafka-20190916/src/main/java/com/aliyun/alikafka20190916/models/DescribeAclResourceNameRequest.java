@@ -5,7 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeAclResourceNameRequest extends TeaModel {
     /**
-     * <p>The matching mode. Valid values:</p>
+     * <p>The matching pattern. Valid values:</p>
+     * <ul>
+     * <li><p>LITERAL: Exact match.</p>
+     * </li>
+     * <li><p>PREFIXED: Prefix match.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +21,17 @@ public class DescribeAclResourceNameRequest extends TeaModel {
     public String aclResourcePatternType;
 
     /**
-     * <p>The resource type.</p>
+     * <p>The resource type. Valid values:</p>
+     * <ul>
+     * <li><p><strong>Topic</strong>: Message topic.</p>
+     * </li>
+     * <li><p><strong>Group</strong>: Consumer group.</p>
+     * </li>
+     * <li><p><strong>Cluster</strong>: Instance.</p>
+     * </li>
+     * <li><p><strong>TransactionalId</strong>: Transaction ID.</p>
+     * </li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

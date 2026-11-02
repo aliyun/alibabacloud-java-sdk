@@ -15,13 +15,11 @@ public class GetConsumerProgressRequest extends TeaModel {
     public String consumerId;
 
     /**
-     * <p>Specifies whether to hide the \<code>LastTimestamp\\</code> parameter. The default value is false. Set this parameter to true for better performance.</p>
+     * <p>Specifies whether to hide LastTimestamp. Default value: false. Set this parameter to true.</p>
      * <blockquote>
      * <ul>
-     * <li><p>If you set this parameter to true, -1 is returned for the \<code>LastTimestamp\\</code> parameter. Otherwise, a specific value is returned. This parameter is supported only for topics of cloud storage on provisioned instances.</p>
-     * </li>
-     * <li><p>This operation processes a large amount of data and consumes a high degree of performance. Set this parameter to true to reduce the processing time.</p>
-     * </li>
+     * <li>If you set this parameter to true, LastTimestamp in the response is returned as -1. Otherwise, the actual value is returned. This is supported only for topics of the cloud storage type in reserved instances.</li>
+     * <li>This operation processes a large amount of data and is resource-intensive. Set this parameter to true to reduce processing time.</li>
      * </ul>
      * </blockquote>
      * 

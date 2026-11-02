@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSaslUserRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DeleteSaslUserRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Encryption method. Valid values:</p>
+     * <p>The encryption mechanism. Valid values:</p>
      * <ul>
      * <li><p>SCRAM-SHA-512 (selected by default)</p>
      * </li>
@@ -23,7 +23,7 @@ public class DeleteSaslUserRequest extends TeaModel {
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is only supported for Serverless instances.</p>
+     * <p>This parameter is supported only for Serverless instances.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class DeleteSaslUserRequest extends TeaModel {
     public String mechanism;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,13 +43,13 @@ public class DeleteSaslUserRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Type. Valid values:</p>
+     * <p>The type. Valid values:</p>
      * <ul>
-     * <li><p><strong>plain</strong>: A simple username and password verification mechanism. MSMQ optimizes the PLAIN mechanism to support adding SASL users dynamically without restarting the instance.</p>
+     * <li><p><strong>plain</strong>: a simple username and password verification mechanism. ApsaraMQ for Kafka has an optimization for the PLAIN mechanism to allow you to dynamically increase SASL users without restarting the instance.</p>
      * </li>
-     * <li><p><strong>scram</strong>: A username and password verification mechanism with higher security than PLAIN. MSMQ uses SCRAM-SHA-256.</p>
+     * <li><p><strong>scram</strong>: a username and password verification mechanism that provides higher security than PLAIN. ApsaraMQ for Kafka uses SCRAM-SHA-256.</p>
      * </li>
-     * <li><p><strong>LDAP</strong>: Only applicable for deleting Confluent instance users.</p>
+     * <li><p><strong>LDAP</strong>: applicable only to the delete operation for Confluent instance users.</p>
      * </li>
      * </ul>
      * <p>Default value: <strong>plain</strong>.</p>
@@ -61,7 +61,7 @@ public class DeleteSaslUserRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>Username.</p>
+     * <p>The username.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

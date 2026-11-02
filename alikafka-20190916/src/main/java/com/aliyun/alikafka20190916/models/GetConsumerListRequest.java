@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetConsumerListRequest extends TeaModel {
     /**
-     * <p>The ID of the consumer group. If you do not specify this parameter, information about all consumer groups is returned.</p>
+     * <p>The ID of the consumer group. If you do not specify this parameter, all consumer groups are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>kafka-test</p>
@@ -14,7 +14,7 @@ public class GetConsumerListRequest extends TeaModel {
     public String consumerId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -33,7 +33,7 @@ public class GetConsumerListRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of consumer groups to return on each page.</p>
+     * <p>The number of consumer groups to display per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

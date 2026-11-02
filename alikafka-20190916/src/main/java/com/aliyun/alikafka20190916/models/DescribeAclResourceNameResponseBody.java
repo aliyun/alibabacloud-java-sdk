@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAclResourceNameResponseBody extends TeaModel {
     /**
-     * <p>The response code. A value of 200 indicates success.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -35,7 +35,11 @@ public class DescribeAclResourceNameResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <ul>
+     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>false</strong>: The call fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

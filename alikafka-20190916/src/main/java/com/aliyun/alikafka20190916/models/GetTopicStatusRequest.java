@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTopicStatusRequest extends TeaModel {
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetTopicStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Region ID.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -24,7 +24,7 @@ public class GetTopicStatusRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Topic name.</p>
+     * <p>The topic name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

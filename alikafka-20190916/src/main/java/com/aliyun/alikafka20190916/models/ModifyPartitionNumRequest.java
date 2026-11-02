@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ModifyPartitionNumRequest extends TeaModel {
     /**
-     * <p>Number of partitions to add.</p>
+     * <p>The number of partitions to add.</p>
      * <ul>
-     * <li><p>Must be greater than 0.</p>
+     * <li><p>The value must be greater than 0.</p>
      * </li>
-     * <li><p>It is recommended that the number of partitions is a multiple of 6 to reduce the risk of data skew.</p>
+     * <li><p>Set the value to a multiple of 6 to reduce the risk of data skew.</p>
      * </li>
-     * <li><p>The total number of partitions is limited to 1-360.</p>
+     * <li><p>The total number of partitions must be between 1 and 360.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -23,7 +23,7 @@ public class ModifyPartitionNumRequest extends TeaModel {
     public Integer addPartitionNum;
 
     /**
-     * <p>Instance ID.</p>
+     * <p>The instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ModifyPartitionNumRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Region ID of the instance.</p>
+     * <p>The region ID of the instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class ModifyPartitionNumRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>Topic name.</p>
+     * <p>The topic name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

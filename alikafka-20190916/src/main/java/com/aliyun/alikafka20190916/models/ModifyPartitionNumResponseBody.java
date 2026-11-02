@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyPartitionNumResponseBody extends TeaModel {
     /**
-     * <p>Return code. A value of 200 indicates success.</p>
+     * <p>The return code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class ModifyPartitionNumResponseBody extends TeaModel {
     public Integer code;
 
     /**
-     * <p>Return message.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>operation success</p>
@@ -23,7 +23,7 @@ public class ModifyPartitionNumResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>B7A39AE5-0B36-4442-A304-E088526****</p>

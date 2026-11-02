@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetInstanceListResponseBody extends TeaModel {
     /**
-     * <p>The status code. A value of 200 indicates that the request is successful.</p>
+     * <p>The response code. A value of 200 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -35,7 +35,7 @@ public class GetInstanceListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates if the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -522,6 +522,9 @@ public class GetInstanceListResponseBody extends TeaModel {
         @NameInMap("Current2OpenSourceVersion")
         public String current2OpenSourceVersion;
 
+        @NameInMap("MinorVersion")
+        public String minorVersion;
+
         public static GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo build(java.util.Map<String, ?> map) throws Exception {
             GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo self = new GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo();
             return TeaModel.build(map, self);
@@ -533,6 +536,14 @@ public class GetInstanceListResponseBody extends TeaModel {
         }
         public String getCurrent2OpenSourceVersion() {
             return this.current2OpenSourceVersion;
+        }
+
+        public GetInstanceListResponseBodyInstanceListInstanceVOUpgradeServiceDetailInfo setMinorVersion(String minorVersion) {
+            this.minorVersion = minorVersion;
+            return this;
+        }
+        public String getMinorVersion() {
+            return this.minorVersion;
         }
 
     }

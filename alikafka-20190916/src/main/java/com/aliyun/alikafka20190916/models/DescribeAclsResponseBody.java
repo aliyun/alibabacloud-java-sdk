@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAclsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. A value of 200 indicates that the request was successful.</p>
+     * <p>The status code. A 200 status code indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -26,7 +26,7 @@ public class DescribeAclsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>46496E38-881E-4719-A2F3-F3DA6AE****</p>
@@ -35,7 +35,7 @@ public class DescribeAclsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the call was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
