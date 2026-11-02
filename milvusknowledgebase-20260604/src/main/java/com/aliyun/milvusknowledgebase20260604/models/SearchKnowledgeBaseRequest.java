@@ -20,10 +20,28 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
     public Boolean enableKnowledgeGraph;
 
     /**
-     * <p>The image retrieval input.</p>
+     * <p>Optional. This parameter is returned conditionally and can be passed only when includeWiki is set to true. Omit this parameter for the first evidence page. For subsequent pages, pass the evidenceNextToken from the previous page as is. The candidate pool, subject, parameters, and page size are fixed and expire after 5 minutes without renewal. If the token expires, a 409 error is returned and no automatic re-search is performed. The pageNumber parameter only controls the legacy results. Constraints: {&quot;minLength&quot;:1,&quot;maxLength&quot;:4096}.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-opaque-next-token</p>
+     */
+    @NameInMap("evidencePageToken")
+    public String evidencePageToken;
+
+    /**
+     * <p>The image search input.</p>
      */
     @NameInMap("image")
     public SearchKnowledgeBaseRequestImage image;
+
+    /**
+     * <p>Optional. This parameter is returned conditionally and is added for compatibility. Default value: false. If set to true, the unified evidenceResults are additionally returned, and Wiki content is not disguised as original text. Constraints: {&quot;default&quot;:false}.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("includeWiki")
+    public Boolean includeWiki;
 
     /**
      * <p>The page number.</p>
@@ -35,7 +53,7 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -44,7 +62,7 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The retrieval query.</p>
+     * <p>The search query.</p>
      * 
      * <strong>example:</strong>
      * <p>What is the tax amount on the invoice?</p>
@@ -53,7 +71,7 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
     public String query;
 
     /**
-     * <p>The reranking model ID.</p>
+     * <p>The ID of the rerank model.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -62,7 +80,7 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
     public Long rerankModelId;
 
     /**
-     * <p>The name of a reranking model that the tenant has activated. If both rerankModelName and rerankModelId are specified, this parameter takes precedence.</p>
+     * <p>The name of the rerank model activated for the tenant. If both rerankModelId and this parameter are specified, this parameter takes precedence.</p>
      * 
      * <strong>example:</strong>
      * <p>qwen3-rerank</p>
@@ -83,7 +101,7 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
     public SearchKnowledgeBaseRequestTagFilter tagFilter;
 
     /**
-     * <p>The knowledge base version.</p>
+     * <p>The version of the knowledge base.</p>
      * 
      * <strong>example:</strong>
      * <p>v1</p>
@@ -112,12 +130,28 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
         return this.enableKnowledgeGraph;
     }
 
+    public SearchKnowledgeBaseRequest setEvidencePageToken(String evidencePageToken) {
+        this.evidencePageToken = evidencePageToken;
+        return this;
+    }
+    public String getEvidencePageToken() {
+        return this.evidencePageToken;
+    }
+
     public SearchKnowledgeBaseRequest setImage(SearchKnowledgeBaseRequestImage image) {
         this.image = image;
         return this;
     }
     public SearchKnowledgeBaseRequestImage getImage() {
         return this.image;
+    }
+
+    public SearchKnowledgeBaseRequest setIncludeWiki(Boolean includeWiki) {
+        this.includeWiki = includeWiki;
+        return this;
+    }
+    public Boolean getIncludeWiki() {
+        return this.includeWiki;
     }
 
     public SearchKnowledgeBaseRequest setPageNumber(Integer pageNumber) {
@@ -204,7 +238,7 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
         public String objectKey;
 
         /**
-         * <p>The image URL.</p>
+         * <p>The URL of the image.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example.com/invoice.png">https://example.com/invoice.png</a></p>
@@ -245,7 +279,7 @@ public class SearchKnowledgeBaseRequest extends TeaModel {
 
     public static class SearchKnowledgeBaseRequestRetrievalConfig extends TeaModel {
         /**
-         * <p>The number of candidate recall results.</p>
+         * <p>The number of recalled candidates.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

@@ -168,10 +168,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves documents from a specified knowledge base by question or image. Use DRAFT, LATEST_PUBLISHED, or vN display names for the version. Pass tag filter conditions using the actual backend operators.</p>
+     * <p>Searches a specified knowledge base by using a query or an image. For the version, use the display name DRAFT, LATEST_PUBLISHED, or vN. Pass tag filter conditions based on the actual operators used by the backend.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves documents from a knowledge base.</p>
+     * <p>Searches a knowledge base.</p>
      * 
      * @param request SearchKnowledgeBaseRequest
      * @param headers map
@@ -189,8 +189,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
             body.put("enableKnowledgeGraph", request.enableKnowledgeGraph);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.evidencePageToken)) {
+            body.put("evidencePageToken", request.evidencePageToken);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.image)) {
             body.put("image", request.image);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.includeWiki)) {
+            body.put("includeWiki", request.includeWiki);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -245,10 +253,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Retrieves documents from a specified knowledge base by question or image. Use DRAFT, LATEST_PUBLISHED, or vN display names for the version. Pass tag filter conditions using the actual backend operators.</p>
+     * <p>Searches a specified knowledge base by using a query or an image. For the version, use the display name DRAFT, LATEST_PUBLISHED, or vN. Pass tag filter conditions based on the actual operators used by the backend.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves documents from a knowledge base.</p>
+     * <p>Searches a knowledge base.</p>
      * 
      * @param request SearchKnowledgeBaseRequest
      * @return SearchKnowledgeBaseResponse
