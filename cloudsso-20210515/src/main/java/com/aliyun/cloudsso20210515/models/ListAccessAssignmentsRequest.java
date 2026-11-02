@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAccessAssignmentsRequest extends TeaModel {
     /**
-     * <p>The ID of the access configuration. The ID can be used to filter access permissions.</p>
+     * <p>The ID of the access configuration. This parameter is used as a filter condition for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>ac-00jhtfl8thteu6uj****</p>
@@ -14,7 +14,7 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     public String accessConfigurationId;
 
     /**
-     * <p>The directory ID.</p>
+     * <p>The ID of the directory.</p>
      * 
      * <strong>example:</strong>
      * <p>d-00fc2p61****</p>
@@ -23,7 +23,7 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * <p>Valid values: 1 to 20.</p>
      * <p>Default value: 10.</p>
      * 
@@ -34,8 +34,8 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If this is your first time to call this operation, you do not need to specify the <code>NextToken</code> parameter.</p>
-     * <p>When you call this operation for the first time, if the total number of entries to return exceeds the value of <code>MaxResults</code>, the entries are truncated. Only the entries that match the value of <code>MaxResults</code> are returned, and the excess entries are not returned. In this case, the value of the response parameter <code>IsTruncated</code> is <code>true</code>, and <code>NextToken</code> is returned. In the next call, you can use the value of <code>NextToken</code> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <code>IsTruncated</code> becomes <code>false</code>. This way, all entries are returned.</p>
+     * <p>The token for the next page of query results. You do not need to specify <code>NextToken</code> when you call this operation for the first time.</p>
+     * <p>When you call this operation for the first time, if the total number of returned entries exceeds the value of <code>MaxResults</code>, the returned entries are truncated. Only the number of entries specified by <code>MaxResults</code> is returned, the <code>IsTruncated</code> parameter is set to <code>true</code>, and a <code>NextToken</code> value is returned. You can use the returned <code>NextToken</code> value to call this operation again to query the truncated entries while keeping other request parameters unchanged. You can repeat this process until <code>IsTruncated</code> is set to <code>false</code>, which indicates that all entries are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
@@ -44,6 +44,8 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     public String nextToken;
 
     /**
+     * <p>The ID of the Alibaba Cloud account to which the authorization target belongs.</p>
+     * 
      * <strong>example:</strong>
      * <p>114240524784****</p>
      */
@@ -51,15 +53,13 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     public String originTargetId;
 
     /**
-     * <p>The ID of the CloudSSO identity. The ID can be used to filter access permissions.</p>
+     * <p>The ID of the CloudSSO identity, which is used as a filter condition for the query. Details:</p>
      * <ul>
-     * <li><p>If you set <code>PrincipalType</code> to User, set <code>PrincipalId</code> to the ID of the CloudSSO user.</p>
-     * </li>
-     * <li><p>If you set <code>PrincipalType</code> to Group, set <code>PrincipalId</code> to the ID of the CloudSSO group.</p>
-     * </li>
+     * <li>If <code>PrincipalType</code> is set to User, <code>PrincipalId</code> is the ID of the CloudSSO user.</li>
+     * <li>If <code>PrincipalType</code> is set to Group, <code>PrincipalId</code> is the ID of the CloudSSO group.</li>
      * </ul>
      * <blockquote>
-     * <p>You can use the type to filter access permissions only if you specify both PrincipalId and <code>PrincipalType</code>.\<code>\\</code></p>
+     * <p>You must specify both <code>PrincipalId</code> and <code>PrincipalType</code> for the filter condition to take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -69,15 +69,13 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     public String principalId;
 
     /**
-     * <p>The type of the CloudSSO identity. The type can be used to filter access permissions. Valid values:</p>
+     * <p>The type of the CloudSSO identity, which is used as a filter condition for the query. Valid values:</p>
      * <ul>
-     * <li><p>User</p>
-     * </li>
-     * <li><p>Group</p>
-     * </li>
+     * <li>User: user.</li>
+     * <li>Group: group.</li>
      * </ul>
      * <blockquote>
-     * <p>You can use the type to filter access permissions only if you specify both PrincipalId and <code>PrincipalType</code>.\<code>\\</code></p>
+     * <p>You must specify both <code>PrincipalId</code> and <code>PrincipalType</code> for the filter condition to take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -87,9 +85,9 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     public String principalType;
 
     /**
-     * <p>The ID of the task object. The ID can be used to filter access permissions.</p>
+     * <p>The ID of the task target, which is used as a filter condition for the query.</p>
      * <blockquote>
-     * <p>You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
+     * <p>You must specify both <code>TargetId</code> and <code>TargetType</code> for the filter condition to take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -99,10 +97,13 @@ public class ListAccessAssignmentsRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>The type of the task object. The type can be used to filter access permissions.</p>
-     * <p>Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
+     * <p>The type of the task target, which is used as a filter condition for the query.</p>
+     * <p>Valid values:</p>
+     * <ul>
+     * <li>RD-Account: The task target is an account in a resource directory.</li>
+     * </ul>
      * <blockquote>
-     * <p>You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
+     * <p>You must specify both <code>TargetId</code> and <code>TargetType</code> for the filter condition to take effect.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

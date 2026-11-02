@@ -5,18 +5,16 @@ import com.aliyun.tea.*;
 
 public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
     /**
-     * <p>The accounts for which the access configuration is provisioned.</p>
+     * <p>The list of access configuration provisionings.</p>
      */
     @NameInMap("AccessConfigurationProvisionings")
     public java.util.List<ListAccessConfigurationProvisioningsResponseBodyAccessConfigurationProvisionings> accessConfigurationProvisionings;
 
     /**
-     * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+     * <p>Indicates whether the returned results are truncated. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The results are truncated.</li>
+     * <li>false: The results are not truncated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,7 +24,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The maximum number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,9 +33,9 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token used to return the next page of query results.</p>
      * <blockquote>
-     * <p>This parameter is returned only when the value of <code>IsTruncated</code> is <code>true</code>.</p>
+     * <p>This parameter is returned only when IsTruncated is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -56,7 +54,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that meet the filter conditions specified in the request parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -119,7 +117,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
 
     public static class ListAccessConfigurationProvisioningsResponseBodyAccessConfigurationProvisionings extends TeaModel {
         /**
-         * <p>The ID of the access configuration.</p>
+         * <p>The access configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ac-00ccule7tadaijxc****</p>
@@ -137,7 +135,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         public String accessConfigurationName;
 
         /**
-         * <p>The first time when the access configuration was provisioned.</p>
+         * <p>The time when the first provisioning succeeded. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-07-26T08:54:14Z</p>
@@ -146,6 +144,8 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         public String createTime;
 
         /**
+         * <p>The Alibaba Cloud account ID of the provisioning target.</p>
+         * 
          * <strong>example:</strong>
          * <p>114240524784****</p>
          */
@@ -153,13 +153,13 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         public String originTargetId;
 
         /**
-         * <p>The name of the custom policy that is created for an account in the resource directory.</p>
+         * <p>The Policy Name of the custom policy created in the account in a resource directory.</p>
          */
         @NameInMap("RAMPolicyNames")
         public java.util.List<String> RAMPolicyNames;
 
         /**
-         * <p>The name of the RAM role that is created for an account in the resource directory.</p>
+         * <p>The name of the RAM role created in the account in a resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunReservedSSO-VPC-Admin</p>
@@ -168,7 +168,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         public String RAMRoleName;
 
         /**
-         * <p>The name of the Security Assertion Markup Language (SAML) identity provider (IdP) that is created within an account in the resource directory.</p>
+         * <p>The name of the SAML IdP created in the account in a resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>AliyunReservedSSO-d-00fc2p61****</p>
@@ -177,14 +177,11 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         public String SAMLProviderName;
 
         /**
-         * <p>The status of the access configuration. Valid values:</p>
+         * <p>The provisioning status. Valid values:</p>
          * <ul>
-         * <li><p>Provisioned: The access configuration is provisioned.</p>
-         * </li>
-         * <li><p>ReprovisionRequired: The access configuration needs to be re-provisioned.</p>
-         * </li>
-         * <li><p>DeprovisionFailed: The access configuration failed to be provisioned.</p>
-         * </li>
+         * <li>Provisioned: The provisioning succeeded.</li>
+         * <li>ReprovisionRequired: Reprovisioning is required.</li>
+         * <li>DeprovisionFailed: The provisioning failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -194,8 +191,8 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the task object.</p>
-         * <p>If the value of TargetType is <code>RD-Account</code>, the value of this parameter is the UID of an account in the resource directory.</p>
+         * <p>The target ID.</p>
+         * <p>If the target type is RD-Account, this parameter indicates the UID of the account in a resource directory.</p>
          * 
          * <strong>example:</strong>
          * <p>101522521960****</p>
@@ -204,7 +201,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         public String targetId;
 
         /**
-         * <p>The name of the task object.</p>
+         * <p>The name of the target.</p>
          * 
          * <strong>example:</strong>
          * <p>SharedServices_5009****</p>
@@ -213,20 +210,23 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         public String targetName;
 
         /**
-         * <p>The path ID of the task object in the resource directory.</p>
+         * <p>The path ID of the target in the resource directory.</p>
          */
         @NameInMap("TargetPath")
         public String targetPath;
 
         /**
-         * <p>The path name of the task object in the resource directory.</p>
+         * <p>The path name of the target in the resource directory.</p>
          */
         @NameInMap("TargetPathName")
         public String targetPathName;
 
         /**
-         * <p>The type of the task object.</p>
-         * <p>Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
+         * <p>The target type.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RD-Account: The target is an account in a resource directory.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RD-Account</p>
@@ -235,7 +235,7 @@ public class ListAccessConfigurationProvisioningsResponseBody extends TeaModel {
         public String targetType;
 
         /**
-         * <p>The last time when the access configuration was provisioned.</p>
+         * <p>The time when the latest provisioning succeeded. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-07-26T08:54:18Z</p>

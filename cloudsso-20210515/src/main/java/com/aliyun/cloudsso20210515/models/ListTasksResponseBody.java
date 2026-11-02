@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListTasksResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the queried entries are truncated. Valid values:</p>
+     * <p>Indicates whether the returned results are truncated. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The returned results are truncated.</li>
+     * <li>false: The returned results are not truncated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ListTasksResponseBody extends TeaModel {
     public Boolean isTruncated;
 
     /**
-     * <p>The maximum number of entries returned per page.</p>
+     * <p>The maximum number of entries returned on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,9 +27,9 @@ public class ListTasksResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The returned value of NextToken is a pagination token, which can be used in the next request to retrieve a new page of results.</p>
+     * <p>The token used to return the next page of the query results.</p>
      * <blockquote>
-     * <p>This parameter is returned only when the value of <code>IsTruncated</code> is <code>true</code>.</p>
+     * <p>This parameter is returned only if IsTruncated is set to true.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -41,7 +39,7 @@ public class ListTasksResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C0DA2DFC-EB18-59EF-BD82-C30862EBA3A3</p>
@@ -50,13 +48,13 @@ public class ListTasksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The tasks.</p>
+     * <p>The list of tasks.</p>
      */
     @NameInMap("Tasks")
     public java.util.List<ListTasksResponseBodyTasks> tasks;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that meet the conditional request parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -137,7 +135,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String accessConfigurationName;
 
         /**
-         * <p>The end time of the task.</p>
+         * <p>The end time of the task. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-09T05:50:50Z</p>
@@ -146,9 +144,9 @@ public class ListTasksResponseBody extends TeaModel {
         public String endTime;
 
         /**
-         * <p>The cause of the task failure.</p>
+         * <p>The reason why the task failed.</p>
          * <blockquote>
-         * <p>This parameter is returned only when the value of <code>Status</code> is <code>Failed</code>.</p>
+         * <p>This parameter is returned only if Status is set to Failed.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -158,6 +156,8 @@ public class ListTasksResponseBody extends TeaModel {
         public String failureReason;
 
         /**
+         * <p>The ID of the Alibaba Cloud account to which the authorization target belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>114240524784****</p>
          */
@@ -185,10 +185,8 @@ public class ListTasksResponseBody extends TeaModel {
         /**
          * <p>The type of the CloudSSO identity. Valid values:</p>
          * <ul>
-         * <li><p>User</p>
-         * </li>
-         * <li><p>Group</p>
-         * </li>
+         * <li>User: The CloudSSO user.</li>
+         * <li>Group: The CloudSSO group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -198,7 +196,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String principalType;
 
         /**
-         * <p>The start time of the task.</p>
+         * <p>The start time of the task. The time is displayed in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-09T05:50:50Z</p>
@@ -207,14 +205,11 @@ public class ListTasksResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li><p>InProgress: The task is running.</p>
-         * </li>
-         * <li><p>Success: The task is successful.</p>
-         * </li>
-         * <li><p>Failed: The task failed.</p>
-         * </li>
+         * <li>InProgress: The task is running.</li>
+         * <li>Success: The task succeeded.</li>
+         * <li>Failed: The task failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -224,7 +219,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the task object.</p>
+         * <p>The ID of the task target.</p>
          * 
          * <strong>example:</strong>
          * <p>114240524784****</p>
@@ -233,7 +228,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String targetId;
 
         /**
-         * <p>The name of the task object.</p>
+         * <p>The name of the task target.</p>
          * 
          * <strong>example:</strong>
          * <p>dev-test</p>
@@ -242,20 +237,23 @@ public class ListTasksResponseBody extends TeaModel {
         public String targetName;
 
         /**
-         * <p>The path ID of the task object in the resource directory.</p>
+         * <p>The path ID of the task target in the resource directory.</p>
          */
         @NameInMap("TargetPath")
         public String targetPath;
 
         /**
-         * <p>The path name of the task object in the resource directory.</p>
+         * <p>The path name of the task target in the resource directory.</p>
          */
         @NameInMap("TargetPathName")
         public String targetPathName;
 
         /**
-         * <p>The type of the task object.</p>
-         * <p>The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+         * <p>The type of the task target.</p>
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>RD-Account: The task target is an account in a resource directory.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RD-Account</p>
@@ -264,7 +262,7 @@ public class ListTasksResponseBody extends TeaModel {
         public String targetType;
 
         /**
-         * <p>The ID of the job.</p>
+         * <p>The ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>t-sh5k4gesm6twlrqb****</p>
@@ -273,16 +271,12 @@ public class ListTasksResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The task type. Valid values:</p>
+         * <p>The type of the node. Valid values:</p>
          * <ul>
-         * <li><p>ProvisionAccessConfiguration: An access configuration is provisioned.</p>
-         * </li>
-         * <li><p>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</p>
-         * </li>
-         * <li><p>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</p>
-         * </li>
-         * <li><p>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</p>
-         * </li>
+         * <li>ProvisionAccessConfiguration: Access configuration deployment.</li>
+         * <li>DeprovisionAccessConfiguration: Removes access configuration provisioning.</li>
+         * <li>CreateAccessAssignment: Grants authorization to an account in a resource directory.</li>
+         * <li>DeleteAccessAssignment: Removes authorization from an account in a resource directory.</li>
          * </ul>
          * 
          * <strong>example:</strong>

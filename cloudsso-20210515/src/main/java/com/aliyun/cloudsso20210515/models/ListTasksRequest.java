@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTasksRequest extends TeaModel {
     /**
-     * <p>The ID of the access configuration. The ID can be used to filter access permissions.</p>
+     * <p>The ID of the access configuration. This parameter is used as a filter condition for the query.</p>
      * 
      * <strong>example:</strong>
      * <p>ac-00jhtfl8thteu6uj****</p>
@@ -24,10 +24,10 @@ public class ListTasksRequest extends TeaModel {
 
     /**
      * <p>The filter condition.</p>
-     * <p>The condition is not case-sensitive. The condition must be in the StartTime ge YYYY-MM-DDTHH:mm:SSZ format. You must set YYYY-MM-DDTHH:mm:SSZ to a value that is no more than 7 days from the current time. ge indicates Greater Than or Equals.</p>
-     * <p>For example, if you set the Filter parameter to StartTime ge 2021-03-15T01:12:23Z, the operation queries the tasks from 2021-03-15T01:12:23 GMT.</p>
+     * <p>Format: <Attribute> <Operator> <Value>. The format is not case-sensitive. <Attribute> only supports StartTime. <Operator> only supports ge (greater than or equal to). <Value> must be in the YYYY-MM-DDTHH:mm:ssZ format and can only be a time within the last 7 days.</p>
+     * <p>Example: Filter = &quot;StartTime ge 2021-03-15T01:12:23Z&quot;. This example queries the list of tasks starting from 2021-03-15T01:12:23Z.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the operation queries the tasks within the previous 24 hours by default.</p>
+     * <p>If you do not specify this parameter, the list of tasks created within the last 24 hours is returned by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -37,7 +37,7 @@ public class ListTasksRequest extends TeaModel {
     public String filter;
 
     /**
-     * <p>The maximum number of entries per page.</p>
+     * <p>The maximum number of entries to return on each page.</p>
      * <p>Valid values: 1 to 20.</p>
      * <p>Default value: 10.</p>
      * 
@@ -48,8 +48,8 @@ public class ListTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If this is your first time to call this operation, you do not need to specify the <code>NextToken</code> parameter.</p>
-     * <p>When you call this operation for the first time, if the total number of entries to return exceeds the value of <code>MaxResults</code>, the entries are truncated. Only the entries that match the value of <code>MaxResults</code> are returned, and the excess entries are not returned. In this case, the value of the response parameter <code>IsTruncated</code> is <code>true</code>, and <code>NextToken</code> is returned. In the next call, you can use the value of <code>NextToken</code> and maintain the settings of the other request parameters to query the excess entries. You can repeat the call until the value of <code>IsTruncated</code> becomes <code>false</code>. This way, all entries are returned.</p>
+     * <p>The token used to return the next page of the query results. You do not need to specify NextToken when you call this operation for the first time.</p>
+     * <p>When you call this operation for the first time, if the total number of returned entries exceeds the value of MaxResults, the returned data is truncated. Only the number of entries specified by MaxResults is returned, the IsTruncated response parameter is set to true, and a NextToken value is returned. You can use the returned NextToken value to call this operation again while keeping other request parameters unchanged to query the truncated data. You can repeat this process until IsTruncated is set to false, which indicates that all data is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>K1c3o9K7pFxoTtxH1Nm7MMLb7zrDGvftYBQBPDVv7AD3a8yhRb3Mk8L9ivmN6bFSjfkZNTAg3h4****</p>
@@ -58,15 +58,13 @@ public class ListTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the CloudSSO identity. The ID can be used to filter access permissions.</p>
+     * <p>The ID of the CloudSSO identity. This parameter is used as a filter condition for the query. Details:</p>
      * <ul>
-     * <li><p>If you set <code>PrincipalType</code> to <code>User</code>, set <code>PrincipalId</code> to the ID of the CloudSSO user.</p>
-     * </li>
-     * <li><p>If you set <code>PrincipalType</code> to <code>Group</code>, set <code>PrincipalId</code> to the ID of the CloudSSO group.</p>
-     * </li>
+     * <li>If PrincipalType is set to User, PrincipalId is the ID of the CloudSSO user.</li>
+     * <li>If PrincipalType is set to Group, PrincipalId is the ID of the CloudSSO group.</li>
      * </ul>
      * <blockquote>
-     * <p>You can use the type to filter access permissions only if you specify both <code>PrincipalId</code> and <code>PrincipalType</code>.</p>
+     * <p>PrincipalId and PrincipalType must be specified at the same time to serve as a valid filter condition.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,15 +74,13 @@ public class ListTasksRequest extends TeaModel {
     public String principalId;
 
     /**
-     * <p>The type of the CloudSSO identity. The type can be used to filter access permissions. Valid values:</p>
+     * <p>The type of the CloudSSO identity. This parameter is used as a filter condition for the query. Valid values:</p>
      * <ul>
-     * <li><p>User</p>
-     * </li>
-     * <li><p>Group</p>
-     * </li>
+     * <li>User: The CloudSSO user.</li>
+     * <li>Group: The CloudSSO group.</li>
      * </ul>
      * <blockquote>
-     * <p>You can use the type to filter access permissions only if you specify both <code>PrincipalId</code> and <code>PrincipalType</code>.</p>
+     * <p>PrincipalId and PrincipalType must be specified at the same time to serve as a valid filter condition.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -94,14 +90,11 @@ public class ListTasksRequest extends TeaModel {
     public String principalType;
 
     /**
-     * <p>The ID of the task. The ID can be used to filter tasks. Valid values:</p>
+     * <p>The status of the task. This parameter is used as a filter condition for the query. Valid values:</p>
      * <ul>
-     * <li><p>InProgress: The task is running.</p>
-     * </li>
-     * <li><p>Success: The task is successful.</p>
-     * </li>
-     * <li><p>Failed: The task failed.</p>
-     * </li>
+     * <li>InProgress: The task is running.</li>
+     * <li>Success: The task succeeded.</li>
+     * <li>Failed: The task failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -111,9 +104,9 @@ public class ListTasksRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The ID of the task object. The ID can be used to filter access permissions.</p>
+     * <p>The ID of the task target. This parameter is used as a filter condition for the query.</p>
      * <blockquote>
-     * <p>You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
+     * <p>TargetId and TargetType must be specified at the same time to serve as a valid filter condition.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -123,10 +116,12 @@ public class ListTasksRequest extends TeaModel {
     public String targetId;
 
     /**
-     * <p>The type of the task object. The type can be used to filter access permissions.</p>
-     * <p>Set the value to RD-Account, which specifies the accounts in the resource directory.</p>
+     * <p>The type of the task target. This parameter is used as a filter condition for the query. Valid values:</p>
+     * <ul>
+     * <li>RD-Account: The task target is an account in a resource directory.</li>
+     * </ul>
      * <blockquote>
-     * <p>You can use the type to filter access permissions only if you specify both <code>TargetId</code> and <code>TargetType</code>.</p>
+     * <p>TargetId and TargetType must be specified at the same time to serve as a valid filter condition.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -136,16 +131,12 @@ public class ListTasksRequest extends TeaModel {
     public String targetType;
 
     /**
-     * <p>The type of the task. The type can be used to filter tasks. Valid values:</p>
+     * <p>The type of the node. This parameter is used as a filter condition for the query. Valid values:</p>
      * <ul>
-     * <li><p>ProvisionAccessConfiguration: An access configuration is provisioned.</p>
-     * </li>
-     * <li><p>DeprovisionAccessConfiguration: An access configuration is de-provisioned.</p>
-     * </li>
-     * <li><p>CreateAccessAssignment: Access permissions on an account in the resource directory are assigned.</p>
-     * </li>
-     * <li><p>DeleteAccessAssignment: Access permissions on an account in the resource directory are removed.</p>
-     * </li>
+     * <li>ProvisionAccessConfiguration: Access configuration deployment.</li>
+     * <li>DeprovisionAccessConfiguration: Removes access configuration provisioning.</li>
+     * <li>CreateAccessAssignment: Grants authorization to an account in a resource directory.</li>
+     * <li>DeleteAccessAssignment: Removes authorization from an account in a resource directory.</li>
      * </ul>
      * 
      * <strong>example:</strong>

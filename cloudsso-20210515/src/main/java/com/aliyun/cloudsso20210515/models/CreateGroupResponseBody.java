@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGroupResponseBody extends TeaModel {
     /**
-     * <p>The information about the group.</p>
+     * <p>The user group information.</p>
      */
     @NameInMap("Group")
     public CreateGroupResponseBodyGroup group;
@@ -42,7 +42,7 @@ public class CreateGroupResponseBody extends TeaModel {
 
     public static class CreateGroupResponseBodyGroup extends TeaModel {
         /**
-         * <p>The time when the group was created.</p>
+         * <p>The time when the user group was created. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-01T02:38:27Z</p>
@@ -51,7 +51,7 @@ public class CreateGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the group.</p>
+         * <p>The description of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>This is a group.</p>
@@ -60,7 +60,7 @@ public class CreateGroupResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the group.</p>
+         * <p>The ID of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>g-00jqzghi2n3o5hkh****</p>
@@ -69,7 +69,7 @@ public class CreateGroupResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The name of the group.</p>
+         * <p>The name of the user group.</p>
          * 
          * <strong>example:</strong>
          * <p>TestGroup</p>
@@ -78,7 +78,10 @@ public class CreateGroupResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The type of the group. The value is fixed as Manual, which indicates that the group is manually created.</p>
+         * <p>The type of the user group. Valid values:</p>
+         * <ul>
+         * <li>Manual: The user group is manually created.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Manual</p>
@@ -87,7 +90,7 @@ public class CreateGroupResponseBody extends TeaModel {
         public String provisionType;
 
         /**
-         * <p>The time when the information about the group was modified.</p>
+         * <p>The time when the user group was updated. The time is in UTC and follows the RFC 3339 standard in the YYYY-MM-DDTHH:mm:ssZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-11-01T02:38:27Z</p>

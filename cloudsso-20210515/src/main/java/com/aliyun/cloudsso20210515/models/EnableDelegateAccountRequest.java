@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class EnableDelegateAccountRequest extends TeaModel {
     /**
-     * <p>The ID of the delegated administrator account of CloudSSO.</p>
+     * <p>The ID of the CloudSSO delegated administrator account.</p>
      * 
      * <strong>example:</strong>
      * <p>180658567986****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ClearExternalSAMLIdentityProviderRequest extends TeaModel {
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-00fc2p61****</p>

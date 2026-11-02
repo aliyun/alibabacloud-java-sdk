@@ -29,10 +29,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>You can add up to two SAML signing certificates.
-     * This topic provides an example on how to add a SAML signing certificate to the directory <code>d-00fc2p61****</code>.</p>
+     * This topic provides an example of adding a new SAML signing certificate to the <code>d-00fc2p61****</code> directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a Security Assertion Markup Language (SAML) signing certificate.</p>
+     * <p>Adds a SAML signing certificate.</p>
      * 
      * @param request AddExternalSAMLIdPCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -69,10 +69,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <p>You can add up to two SAML signing certificates.
-     * This topic provides an example on how to add a SAML signing certificate to the directory <code>d-00fc2p61****</code>.</p>
+     * This topic provides an example of adding a new SAML signing certificate to the <code>d-00fc2p61****</code> directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a Security Assertion Markup Language (SAML) signing certificate.</p>
+     * <p>Adds a SAML signing certificate.</p>
      * 
      * @param request AddExternalSAMLIdPCertificateRequest
      * @return AddExternalSAMLIdPCertificateResponse
@@ -84,10 +84,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to add the system policy <code>AliyunECSFullAccess</code> to the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
+     * <p>This topic provides an example of adding a system policy named <code>AliyunECSFullAccess</code> to the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a policy to an access configuration.</p>
+     * <p>Adds an access policy to an access configuration.</p>
      * 
      * @param request AddPermissionPolicyToAccessConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -135,10 +135,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to add the system policy <code>AliyunECSFullAccess</code> to the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
+     * <p>This topic provides an example of adding a system policy named <code>AliyunECSFullAccess</code> to the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds a policy to an access configuration.</p>
+     * <p>Adds an access policy to an access configuration.</p>
      * 
      * @param request AddPermissionPolicyToAccessConfigurationRequest
      * @return AddPermissionPolicyToAccessConfigurationResponse
@@ -150,8 +150,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
-     * This topic provides an example on how to add the user <code>u-00q8wbq42wiltcrk****</code> to the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
+     * <p>After SCIM synchronization is enabled, you cannot add users to SCIM-synchronized groups.
+     * This topic provides an example of adding the user <code>u-00q8wbq42wiltcrk****</code> to the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds a user to a group.</p>
@@ -194,8 +194,8 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot add a user to a group that is synchronized by using SCIM.
-     * This topic provides an example on how to add the user <code>u-00q8wbq42wiltcrk****</code> to the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
+     * <p>After SCIM synchronization is enabled, you cannot add users to SCIM-synchronized groups.
+     * This topic provides an example of adding the user <code>u-00q8wbq42wiltcrk****</code> to the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Adds a user to a group.</p>
@@ -210,11 +210,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If single sign-on (SSO) logon is disabled, you can clear the configurations of a SAML IdP. If SSO logon is enabled, you cannot clear the configurations.
-     * This topic provides an example on how to clear the configurations of the SAML IdP within the directory <code>d-00fc2p61****</code>.</p>
+     * <p>You can clear the SAML IdP information only when SSO logon is disabled. Otherwise, you cannot perform this operation.
+     * This topic provides an example of clearing the configuration of the SAML IdP for the <code>d-00fc2p61****</code> directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>Clears the configurations of a Security Assertion Markup Language (SAML) identity provider (IdP).</p>
+     * <p>Clears the configuration of the SAML IdP.</p>
      * 
      * @param request ClearExternalSAMLIdentityProviderRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -246,11 +246,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If single sign-on (SSO) logon is disabled, you can clear the configurations of a SAML IdP. If SSO logon is enabled, you cannot clear the configurations.
-     * This topic provides an example on how to clear the configurations of the SAML IdP within the directory <code>d-00fc2p61****</code>.</p>
+     * <p>You can clear the SAML IdP information only when SSO logon is disabled. Otherwise, you cannot perform this operation.
+     * This topic provides an example of clearing the configuration of the SAML IdP for the <code>d-00fc2p61****</code> directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>Clears the configurations of a Security Assertion Markup Language (SAML) identity provider (IdP).</p>
+     * <p>Clears the configuration of the SAML IdP.</p>
      * 
      * @param request ClearExternalSAMLIdentityProviderRequest
      * @return ClearExternalSAMLIdentityProviderResponse
@@ -262,12 +262,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <code>TaskId</code> response parameter.
-     * For more information about how to assign permissions on an account in your resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Overview of multi-account authorization</a>.
-     * This topic provides an example on how to assign access permissions on the account <code>114240524784****</code> in your resource directory to the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> by using the access configuration <code>ac-00jhtfl8thteu6uj****</code>. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.</p>
+     * <p>This API operation is asynchronous. You can use the TaskId returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the task execution status.
+     * For more information about granting access to an account in a resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Multi-account authorization overview</a>.
+     * This topic provides an example on how to assign the access configuration <code>ac-00jhtfl8thteu6uj****</code> to the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> for the account <code>114240524784****</code> in a resource directory. This allows the CloudSSO user to access authorized resources in the account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Assigns access permissions on an account in your resource directory to a user or a group by using an access configuration.</p>
+     * <p>Configures the settings for the users or groups allowed to access an account in a resource directory, and the corresponding access permissions (access configurations).</p>
      * 
      * @param request CreateAccessAssignmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -323,12 +323,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <code>TaskId</code> response parameter.
-     * For more information about how to assign permissions on an account in your resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Overview of multi-account authorization</a>.
-     * This topic provides an example on how to assign access permissions on the account <code>114240524784****</code> in your resource directory to the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> by using the access configuration <code>ac-00jhtfl8thteu6uj****</code>. After the call is successful, the CloudSSO user can access resources within the account in the resource directory.</p>
+     * <p>This API operation is asynchronous. You can use the TaskId returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the task execution status.
+     * For more information about granting access to an account in a resource directory, see <a href="https://help.aliyun.com/document_detail/266726.html">Multi-account authorization overview</a>.
+     * This topic provides an example on how to assign the access configuration <code>ac-00jhtfl8thteu6uj****</code> to the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> for the account <code>114240524784****</code> in a resource directory. This allows the CloudSSO user to access authorized resources in the account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Assigns access permissions on an account in your resource directory to a user or a group by using an access configuration.</p>
+     * <p>Configures the settings for the users or groups allowed to access an account in a resource directory, and the corresponding access permissions (access configurations).</p>
      * 
      * @param request CreateAccessAssignmentRequest
      * @return CreateAccessAssignmentResponse
@@ -412,14 +412,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Operation description</h3>
-     * <p>A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
-     * To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
+     * <h3>Usage notes</h3>
+     * <p>A directory is an instance in CloudSSO. You must create a directory before you use CloudSSO. All CloudSSO resources must be maintained in the directory.
+     * You must select a region for the CloudSSO directory. Alibaba Cloud ensures that all CloudSSO-related data is stored only in this region. This is independent of where you deploy cloud resources such as ECS and ApsaraDB RDS. You can log on to and access cloud resources in any region from anywhere in the world. You can select a region based on your security and compliance requirements and the geographic location of your target users. If you do not have special security and compliance requirements, select the region closest to your target users to improve access speed. Currently, you can create directories in the following four regions: China (Shanghai), China (Hong Kong), US (Silicon Valley), and Germany (Frankfurt).
      * This topic provides an example on how to create a directory named <code>example</code> in the China (Shanghai) region.</p>
-     * <h3><a href="#"></a>Limits</h3>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>You can create only one directory for a management account.</li>
-     * <li>If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.</li>
+     * <li>A management account can create only one directory.</li>
+     * <li>To change the region of the directory, you must delete the existing directory and create a new one in another region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -455,14 +455,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Operation description</h3>
-     * <p>A directory is a CloudSSO instance. Before you can use CloudSSO, you must create a directory. The directory is used to manage all CloudSSO resources.
-     * To create a directory, you must select a region. Alibaba Cloud stores data in the directory only in the region that you select. However, you can deploy Alibaba Cloud resources including Elastic Compute Service (ECS) instances and ApsaraDB RDS instances in other regions. You can also use your cloud account for logons and access the Alibaba Cloud resources in other regions. You can select a region to create a directory based on your security compliance requirements and the geographic location of specific users. If you do not have strict security compliance requirements, we recommend that you select a region that is the closest to the geographical location of the specific users. This way, access to cloud resources is accelerated. You can create the CloudSSO directory in the China (Shanghai), China (Hong Kong), US (Silicon Valley), or Germany (Frankfurt) region.
+     * <h3>Usage notes</h3>
+     * <p>A directory is an instance in CloudSSO. You must create a directory before you use CloudSSO. All CloudSSO resources must be maintained in the directory.
+     * You must select a region for the CloudSSO directory. Alibaba Cloud ensures that all CloudSSO-related data is stored only in this region. This is independent of where you deploy cloud resources such as ECS and ApsaraDB RDS. You can log on to and access cloud resources in any region from anywhere in the world. You can select a region based on your security and compliance requirements and the geographic location of your target users. If you do not have special security and compliance requirements, select the region closest to your target users to improve access speed. Currently, you can create directories in the following four regions: China (Shanghai), China (Hong Kong), US (Silicon Valley), and Germany (Frankfurt).
      * This topic provides an example on how to create a directory named <code>example</code> in the China (Shanghai) region.</p>
-     * <h3><a href="#"></a>Limits</h3>
+     * <h3>Limits</h3>
      * <ul>
-     * <li>You can create only one directory for a management account.</li>
-     * <li>If you want to change the region of a directory, you must delete the directory and then create a directory in a different region.</li>
+     * <li>A management account can create only one directory.</li>
+     * <li>To change the region of the directory, you must delete the existing directory and create a new one in another region.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -478,10 +478,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a group named <code>TestGroup</code>.</p>
+     * <p>This topic provides an example of creating a user group named <code>TestGroup</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a group.</p>
+     * <p>Creates a user group.</p>
      * 
      * @param request CreateGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -521,10 +521,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to create a group named <code>TestGroup</code>.</p>
+     * <p>This topic provides an example of creating a user group named <code>TestGroup</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a group.</p>
+     * <p>Creates a user group.</p>
      * 
      * @param request CreateGroupRequest
      * @return CreateGroupResponse
@@ -536,11 +536,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
-     * This topic provides an example on how to create a SCIM credential within the directory <code>d-00fc2p61****</code>.</p>
+     * <p>A SCIM credential is required for SCIM synchronization. You can create up to two SCIM credentials.
+     * This topic provides an example on how to create a SCIM credential in the directory <code>d-00fc2p61****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a System for Cross-domain Identity Management (SCIM) credential.</p>
+     * <p>Creates a SCIM credential.</p>
      * 
      * @param request CreateSCIMServerCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -572,11 +572,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>SCIM credentials are required for SCIM synchronization. You can create up to two SCIM credentials.
-     * This topic provides an example on how to create a SCIM credential within the directory <code>d-00fc2p61****</code>.</p>
+     * <p>A SCIM credential is required for SCIM synchronization. You can create up to two SCIM credentials.
+     * This topic provides an example on how to create a SCIM credential in the directory <code>d-00fc2p61****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a System for Cross-domain Identity Management (SCIM) credential.</p>
+     * <p>Creates a SCIM credential.</p>
      * 
      * @param request CreateSCIMServerCredentialRequest
      * @return CreateSCIMServerCredentialResponse
@@ -664,10 +664,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create a RAM user provisioning for a member in your resource directory to create a RAM user that has the same username as a CloudSSO user. This way, the CloudSSO user can access the resources of the member as the RAM user.</p>
+     * <p>You can create a Resource Access Management (RAM) user synchronization to synchronously create a Resource Access Management (RAM) user that has the same name as a CloudSSO user in a destination account in a resource directory. You can then use the Resource Access Management (RAM) user to access resources in the account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Resource Access Management (RAM) user provisioning.</p>
+     * <p>Invokes CreateUserProvisioning to create a Resource Access Management (RAM) user synchronization.</p>
      * 
      * @param request CreateUserProvisioningRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -727,10 +727,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can create a RAM user provisioning for a member in your resource directory to create a RAM user that has the same username as a CloudSSO user. This way, the CloudSSO user can access the resources of the member as the RAM user.</p>
+     * <p>You can create a Resource Access Management (RAM) user synchronization to synchronously create a Resource Access Management (RAM) user that has the same name as a CloudSSO user in a destination account in a resource directory. You can then use the Resource Access Management (RAM) user to access resources in the account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a Resource Access Management (RAM) user provisioning.</p>
+     * <p>Invokes CreateUserProvisioning to create a Resource Access Management (RAM) user synchronization.</p>
      * 
      * @param request CreateUserProvisioningRequest
      * @return CreateUserProvisioningResponse
@@ -742,11 +742,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <code>TaskId</code> response parameter.
-     * This topic provides an example on how to remove the access permissions on the account <code>114240524784****</code> in the resource directory from the CloudSSO user <code>u-00q8wbq42wiltcrk****</code>. The access permissions are assigned by using the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
+     * <p>This API operation is asynchronous. You can use the <code>TaskId</code> returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the task execution status.
+     * This topic provides an example of removing the authorization for the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> to use the access configuration <code>ac-00jhtfl8thteu6uj****</code> on the account in a resource directory <code>114240524784****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes the access permissions on an account in a resource directory.</p>
+     * <p>Removes the authorization from an account in a resource directory.</p>
      * 
      * @param request DeleteAccessAssignmentRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -806,11 +806,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, an asynchronous task is created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <code>TaskId</code> response parameter.
-     * This topic provides an example on how to remove the access permissions on the account <code>114240524784****</code> in the resource directory from the CloudSSO user <code>u-00q8wbq42wiltcrk****</code>. The access permissions are assigned by using the access configuration <code>ac-00jhtfl8thteu6uj****</code>.</p>
+     * <p>This API operation is asynchronous. You can use the <code>TaskId</code> returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> to query the task execution status.
+     * This topic provides an example of removing the authorization for the CloudSSO user <code>u-00q8wbq42wiltcrk****</code> to use the access configuration <code>ac-00jhtfl8thteu6uj****</code> on the account in a resource directory <code>114240524784****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Removes the access permissions on an account in a resource directory.</p>
+     * <p>Removes the authorization from an account in a resource directory.</p>
      * 
      * @param request DeleteAccessAssignmentRequest
      * @return DeleteAccessAssignmentResponse
@@ -822,10 +822,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</p>
-     * <h3><a href="#"></a>Operation description</h3>
-     * <p>This topic provides an example on how to delete the access configuration whose ID is <code>ac-001j9mcm3k7335bc****</code>.</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you delete an access configuration, you must deprovision the access configuration from the members of the resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example on how to delete an access configuration whose ID is <code>ac-001j9mcm3k7335bc****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an access configuration.</p>
@@ -868,10 +868,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>The access configuration that you want to delete is de-provisioned from the accounts in your resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</p>
-     * <h3><a href="#"></a>Operation description</h3>
-     * <p>This topic provides an example on how to delete the access configuration whose ID is <code>ac-001j9mcm3k7335bc****</code>.</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you delete an access configuration, you must deprovision the access configuration from the members of the resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338352.html">DeprovisionAccessConfiguration</a>.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example on how to delete an access configuration whose ID is <code>ac-001j9mcm3k7335bc****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes an access configuration.</p>
@@ -886,18 +886,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>No resources are contained in the directory that you want to delete.</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you delete a directory, make sure that the directory does not contain any resources. Specifically:</p>
      * <ul>
-     * <li>Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
-     * <li>Users are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</li>
-     * <li>Groups are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</li>
-     * <li>Access configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</li>
-     * <li>System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</li>
-     * <li>Single sign-on (SSO) logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</li>
+     * <li>Remove all authorizations for users and groups on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
+     * <li>Delete users. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</li>
+     * <li>Delete groups. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</li>
+     * <li>Delete access configurations. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</li>
+     * <li>Delete SCIM credentials. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</li>
+     * <li>Delete single sign-on configurations. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</li>
      * </ul>
-     * <h3><a href="#"></a>Operation description</h3>
-     * <p>This topic provides an example on how to delete a directory whose ID is <code>d-00fc2p61****</code>.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example on how to delete a directory with the ID <code>d-00fc2p61****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a directory.</p>
@@ -932,18 +932,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>No resources are contained in the directory that you want to delete.</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you delete a directory, make sure that the directory does not contain any resources. Specifically:</p>
      * <ul>
-     * <li>Access permissions on the accounts in your resource directory are removed from all users and groups. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
-     * <li>Users are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</li>
-     * <li>Groups are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</li>
-     * <li>Access configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</li>
-     * <li>System for Cross-domain Identity Management (SCIM) credentials are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</li>
-     * <li>Single sign-on (SSO) logon configurations are deleted. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</li>
+     * <li>Remove all authorizations for users and groups on an account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
+     * <li>Delete users. For more information, see <a href="https://help.aliyun.com/document_detail/341671.html">DeleteUser</a>.</li>
+     * <li>Delete groups. For more information, see <a href="https://help.aliyun.com/document_detail/341821.html">DeleteGroup</a>.</li>
+     * <li>Delete access configurations. For more information, see <a href="https://help.aliyun.com/document_detail/336907.html">DeleteAccessConfiguration</a>.</li>
+     * <li>Delete SCIM credentials. For more information, see <a href="https://help.aliyun.com/document_detail/341842.html">DeleteSCIMServerCredential</a>.</li>
+     * <li>Delete single sign-on configurations. For more information, see <a href="https://help.aliyun.com/document_detail/341573.html">ClearExternalSAMLIdentityProvider</a>.</li>
      * </ul>
-     * <h3><a href="#"></a>Operation description</h3>
-     * <p>This topic provides an example on how to delete a directory whose ID is <code>d-00fc2p61****</code>.</p>
+     * <h3>Usage notes</h3>
+     * <p>This topic provides an example on how to delete a directory with the ID <code>d-00fc2p61****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a directory.</p>
@@ -958,18 +958,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you delete a user group, make sure that the user group is not associated with the following resources. Otherwise, the deletion failed.</p>
      * <ul>
-     * <li>Users: You must remove users from the group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
-     * <li>Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
+     * <li>Users: You must remove users from the user group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
+     * <li>Authorization: You must remove the authorization of the user group on the account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
      * </ul>
-     * <h3><a href="#"></a>Operation description</h3>
-     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.
-     * This topic provides an example on how to delete the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
+     * <h3>Usage notes</h3>
+     * <p>If SCIM synchronization is enabled, you cannot delete user groups that are synchronized by using SCIM.
+     * This topic provides an example on how to delete the user group <code>g-00jqzghi2n3o5hkh****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a group.</p>
+     * <p>Deletes a specified group.</p>
      * 
      * @param request DeleteGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1005,18 +1005,18 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>The group that you want to delete is not associated with the following resources. If the group is associated with the resources, the deletion fails.</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you delete a user group, make sure that the user group is not associated with the following resources. Otherwise, the deletion failed.</p>
      * <ul>
-     * <li>Users: You must remove users from the group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
-     * <li>Access permissions: You must remove the access permissions on the accounts in your resource directory from the group. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
+     * <li>Users: You must remove users from the user group. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
+     * <li>Authorization: You must remove the authorization of the user group on the account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
      * </ul>
-     * <h3><a href="#"></a>Operation description</h3>
-     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a group that is synchronized by using SCIM.
-     * This topic provides an example on how to delete the group <code>g-00jqzghi2n3o5hkh****</code>.</p>
+     * <h3>Usage notes</h3>
+     * <p>If SCIM synchronization is enabled, you cannot delete user groups that are synchronized by using SCIM.
+     * This topic provides an example on how to delete the user group <code>g-00jqzghi2n3o5hkh****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a group.</p>
+     * <p>Deletes a specified group.</p>
      * 
      * @param request DeleteGroupRequest
      * @return DeleteGroupResponse
@@ -1090,11 +1090,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After a SCIM credential is deleted, the synchronization task that uses the SCIM credential fails.
-     * This topic provides an example on how to delete the SCIM credential whose ID is <code>scimcred-004whl0kvfwcypbi****</code>.</p>
+     * <p>After a SCIM credential is deleted, synchronization tasks that use the SCIM credential will fail.
+     * This topic provides an example of deleting a SCIM credential whose ID is <code>scimcred-004whl0kvfwcypbi****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a System for Cross-domain Identity Management (SCIM) credential.</p>
+     * <p>Deletes a SCIM credential.</p>
      * 
      * @param request DeleteSCIMServerCredentialRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1130,11 +1130,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After a SCIM credential is deleted, the synchronization task that uses the SCIM credential fails.
-     * This topic provides an example on how to delete the SCIM credential whose ID is <code>scimcred-004whl0kvfwcypbi****</code>.</p>
+     * <p>After a SCIM credential is deleted, synchronization tasks that use the SCIM credential will fail.
+     * This topic provides an example of deleting a SCIM credential whose ID is <code>scimcred-004whl0kvfwcypbi****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a System for Cross-domain Identity Management (SCIM) credential.</p>
+     * <p>Deletes a SCIM credential.</p>
      * 
      * @param request DeleteSCIMServerCredentialRequest
      * @return DeleteSCIMServerCredentialResponse
@@ -1146,16 +1146,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Before you delete a user, make sure that the user is not associated with the following resources. Otherwise, the deletion fails.</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you delete a user, ensure that the user is not associated with the following resources. Otherwise, the deletion will result in a failed state:</p>
      * <ul>
-     * <li>Multi-factor authentication (MFA) devices: You must delete the MFA devices bound to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</li>
-     * <li>Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
+     * <li>MFA devices: You must delete the MFA device attached to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</li>
+     * <li>Authorization: You must remove the authorization of the user on the account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
      * <li>Groups: You must remove the user from groups. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
      * </ul>
-     * <h3><a href="#"></a>Precautions</h3>
-     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.
-     * This topic provides an example on how to delete the user whose ID is <code>u-00q8wbq42wiltcrk****</code>.</p>
+     * <h3>Usage notes</h3>
+     * <p>You cannot delete a SCIM-synchronized user when SCIM synchronization is enabled.
+     * This topic provides an example of deleting a user whose ID is <code>u-00q8wbq42wiltcrk****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a user.</p>
@@ -1194,16 +1194,16 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <h3><a href="#"></a>Prerequisites</h3>
-     * <p>Before you delete a user, make sure that the user is not associated with the following resources. Otherwise, the deletion fails.</p>
+     * <h3>Before you begin</h3>
+     * <p>Before you delete a user, ensure that the user is not associated with the following resources. Otherwise, the deletion will result in a failed state:</p>
      * <ul>
-     * <li>Multi-factor authentication (MFA) devices: You must delete the MFA devices bound to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</li>
-     * <li>Access permissions: You must remove the access permissions on the accounts in your resource directory from the user. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
+     * <li>MFA devices: You must delete the MFA device attached to the user. For more information, see <a href="https://help.aliyun.com/document_detail/341675.html">DeleteMFADeviceForUser</a>.</li>
+     * <li>Authorization: You must remove the authorization of the user on the account in a resource directory. For more information, see <a href="https://help.aliyun.com/document_detail/338350.html">DeleteAccessAssignment</a>.</li>
      * <li>Groups: You must remove the user from groups. For more information, see <a href="https://help.aliyun.com/document_detail/335116.html">RemoveUserFromGroup</a>.</li>
      * </ul>
-     * <h3><a href="#"></a>Precautions</h3>
-     * <p>If System for Cross-domain Identity Management (SCIM) synchronization is enabled, you cannot delete a user that is synchronized by using SCIM.
-     * This topic provides an example on how to delete the user whose ID is <code>u-00q8wbq42wiltcrk****</code>.</p>
+     * <h3>Usage notes</h3>
+     * <p>You cannot delete a SCIM-synchronized user when SCIM synchronization is enabled.
+     * This topic provides an example of deleting a user whose ID is <code>u-00q8wbq42wiltcrk****</code>.</p>
      * 
      * <b>summary</b> : 
      * <p>Deletes a user.</p>
@@ -1218,7 +1218,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a Resource Access Management (RAM) user provisioning.</p>
+     * <p>Invokes DeleteUserProvisioning to delete a Resource Access Management (RAM) user synchronization.</p>
      * 
      * @param request DeleteUserProvisioningRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1258,7 +1258,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a Resource Access Management (RAM) user provisioning.</p>
+     * <p>Invokes DeleteUserProvisioning to delete a Resource Access Management (RAM) user synchronization.</p>
      * 
      * @param request DeleteUserProvisioningRequest
      * @return DeleteUserProvisioningResponse
@@ -1270,7 +1270,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a Resource Access Management (RAM) user provisioning event.</p>
+     * <p>Invokes DeleteUserProvisioningEvent to delete a Resource Access Management (RAM) user synchronization event that failed to execute.</p>
      * 
      * @param request DeleteUserProvisioningEventRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1310,7 +1310,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a Resource Access Management (RAM) user provisioning event.</p>
+     * <p>Invokes DeleteUserProvisioningEvent to delete a Resource Access Management (RAM) user synchronization event that failed to execute.</p>
      * 
      * @param request DeleteUserProvisioningEventRequest
      * @return DeleteUserProvisioningEventResponse
@@ -1322,11 +1322,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <code>TaskId</code> response parameter.
-     * This topic provides an example on how to de-provision the access configuration <code>ac-00jhtfl8thteu6uj****</code> from the account <code>114240524784****</code> in your resource directory.</p>
+     * <p>This API operation is asynchronous. You can use the <code>TaskId</code> returned in the response parameters to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and query the task execution status.
+     * This topic provides an example of deprovisioning the access configuration <code>ac-00jhtfl8thteu6uj****</code> from the account in a resource directory <code>114240524784****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>De-provisions an access configuration from an account in your resource directory.</p>
+     * <p>Deprovisions an access configuration from an account in a resource directory.</p>
      * 
      * @param request DeprovisionAccessConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1374,11 +1374,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <code>TaskId</code> response parameter.
-     * This topic provides an example on how to de-provision the access configuration <code>ac-00jhtfl8thteu6uj****</code> from the account <code>114240524784****</code> in your resource directory.</p>
+     * <p>This API operation is asynchronous. You can use the <code>TaskId</code> returned in the response parameters to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and query the task execution status.
+     * This topic provides an example of deprovisioning the access configuration <code>ac-00jhtfl8thteu6uj****</code> from the account in a resource directory <code>114240524784****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>De-provisions an access configuration from an account in your resource directory.</p>
+     * <p>Deprovisions an access configuration from an account in a resource directory.</p>
      * 
      * @param request DeprovisionAccessConfigurationRequest
      * @return DeprovisionAccessConfigurationResponse
@@ -1473,11 +1473,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use the management account of a resource directory to specify a member of the resource directory as the delegated administrator account of CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
-     * After the delegated administrator account of CloudSSO is specified, you can call this operation to enable the delegated administrator account of CloudSSO to manage CloudSSO resources.</p>
+     * <p>The management account of a resource directory can set a member of the resource directory as a CloudSSO delegated administrator account. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
+     * After the configuration is complete, you can call this operation to enable the CloudSSO delegated administrator account to manage CloudSSO.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables the delegated administrator account of CloudSSO.</p>
+     * <p>Enables a CloudSSO delegated administrator account.</p>
      * 
      * @param request EnableDelegateAccountRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1509,11 +1509,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>You can use the management account of a resource directory to specify a member of the resource directory as the delegated administrator account of CloudSSO. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
-     * After the delegated administrator account of CloudSSO is specified, you can call this operation to enable the delegated administrator account of CloudSSO to manage CloudSSO resources.</p>
+     * <p>The management account of a resource directory can set a member of the resource directory as a CloudSSO delegated administrator account. For more information, see <a href="https://help.aliyun.com/document_detail/208117.html">Add a delegated administrator account</a>.
+     * After the configuration is complete, you can call this operation to enable the CloudSSO delegated administrator account to manage CloudSSO.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables the delegated administrator account of CloudSSO.</p>
+     * <p>Enables a CloudSSO delegated administrator account.</p>
      * 
      * @param request EnableDelegateAccountRequest
      * @return EnableDelegateAccountResponse
@@ -1670,10 +1670,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query information about the directory whose ID is <code>d-00fc2p61****</code>.</p>
+     * <p>This topic provides an example of querying the details of a directory whose ID is <code>d-00fc2p61****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about a directory.</p>
+     * <p>Queries the details of a directory.</p>
      * 
      * @param request GetDirectoryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1705,10 +1705,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query information about the directory whose ID is <code>d-00fc2p61****</code>.</p>
+     * <p>This topic provides an example of querying the details of a directory whose ID is <code>d-00fc2p61****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about a directory.</p>
+     * <p>Queries the details of a directory.</p>
      * 
      * @param request GetDirectoryRequest
      * @return GetDirectoryResponse
@@ -2255,10 +2255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the information about the task whose ID is <code>t-shfqw1u1edszvxw5****</code>.</p>
+     * <p>This topic provides an example of querying the details of a task whose ID is <code>t-shfqw1u1edszvxw5****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about an asynchronous task.</p>
+     * <p>Queries the details of an asynchronous task.</p>
      * 
      * @param request GetTaskRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2294,10 +2294,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the information about the task whose ID is <code>t-shfqw1u1edszvxw5****</code>.</p>
+     * <p>This topic provides an example of querying the details of a task whose ID is <code>t-shfqw1u1edszvxw5****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries information about an asynchronous task.</p>
+     * <p>Queries the details of an asynchronous task.</p>
      * 
      * @param request GetTaskRequest
      * @return GetTaskResponse
@@ -2757,10 +2757,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the assigned access permissions on the account <code>114240524784****</code> in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.</p>
+     * <p>This topic provides an example of querying the access assignments on the account in a resource directory <code>114240524784****</code>. The response shows that one access assignment record exists on the account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the access permissions that are assigned.</p>
+     * <p>Queries access assignments.</p>
      * 
      * @param request ListAccessAssignmentsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2824,10 +2824,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the assigned access permissions on the account <code>114240524784****</code> in your resource directory. The returned result shows that access permissions on the account in your resource directory is assigned to one user.</p>
+     * <p>This topic provides an example of querying the access assignments on the account in a resource directory <code>114240524784****</code>. The response shows that one access assignment record exists on the account.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the access permissions that are assigned.</p>
+     * <p>Queries access assignments.</p>
      * 
      * @param request ListAccessAssignmentsRequest
      * @return ListAccessAssignmentsResponse
@@ -2839,10 +2839,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the accounts for which the access permission <code>ac-00ccule7tadaijxc****</code> is provisioned. The returned result shows that the access configuration is provisioned for two accounts in your resource directory.</p>
+     * <p>This topic provides an example of querying the deployment list of the access configuration <code>ac-00ccule7tadaijxc****</code>. The response shows that the access configuration is deployed in two accounts, each being an account in a resource directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the access configurations that are provisioned.</p>
+     * <p>Queries access configuration provisionings.</p>
      * 
      * @param request ListAccessConfigurationProvisioningsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2902,10 +2902,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to query the accounts for which the access permission <code>ac-00ccule7tadaijxc****</code> is provisioned. The returned result shows that the access configuration is provisioned for two accounts in your resource directory.</p>
+     * <p>This topic provides an example of querying the deployment list of the access configuration <code>ac-00ccule7tadaijxc****</code>. The response shows that the access configuration is deployed in two accounts, each being an account in a resource directory.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the access configurations that are provisioned.</p>
+     * <p>Queries access configuration provisionings.</p>
      * 
      * @param request ListAccessConfigurationProvisioningsRequest
      * @return ListAccessConfigurationProvisioningsResponse
@@ -3427,12 +3427,71 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Queries the relationships between resources and tags.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListTagResourcesResponse
+     */
+    public ListTagResourcesResponse listTagResourcesWithOptions(ListTagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.nextToken)) {
+            query.put("NextToken", request.nextToken);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListTagResources"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListTagResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the relationships between resources and tags.</p>
+     * 
+     * @param request ListTagResourcesRequest
+     * @return ListTagResourcesResponse
+     */
+    public ListTagResourcesResponse listTagResources(ListTagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listTagResourcesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
-     * <p>By default, this operation queries the tasks within the previous 24 hours. This operation allows you to query the tasks within a maximum of 7 days. You can specify the start time of the query by using <code>Filter</code>.
-     * This topic provides an example on how to query the tasks within the previous 24 hours.</p>
+     * <p>By default, this operation queries the list of tasks created within the last 24 hours. You can query tasks created within the last 7 days at most. You can use the Filter parameter to specify the start time of the query. This topic provides an example on how to query the list of tasks created within the last 24 hours.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries asynchronous tasks.</p>
+     * <p>Queries a list of asynchronous tasks.</p>
      * 
      * @param request ListTasksRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3504,11 +3563,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>By default, this operation queries the tasks within the previous 24 hours. This operation allows you to query the tasks within a maximum of 7 days. You can specify the start time of the query by using <code>Filter</code>.
-     * This topic provides an example on how to query the tasks within the previous 24 hours.</p>
+     * <p>By default, this operation queries the list of tasks created within the last 24 hours. You can query tasks created within the last 7 days at most. You can use the Filter parameter to specify the start time of the query. This topic provides an example on how to query the list of tasks created within the last 24 hours.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries asynchronous tasks.</p>
+     * <p>Queries a list of asynchronous tasks.</p>
      * 
      * @param request ListTasksRequest
      * @return ListTasksResponse
@@ -3712,11 +3770,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <code>TaskId</code> response parameter.
-     * This topic provides an example on how to provision the access configuration <code>ac-00jhtfl8thteu6uj****</code> for the account <code>114240524784****</code> in your resource directory.</p>
+     * <p>This API operation is asynchronous. You can use the <code>TaskId</code> returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and query the task execution status.
+     * This topic provides an example of provisioning the access configuration <code>ac-00jhtfl8thteu6uj****</code> to the account in a resource directory <code>114240524784****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Provisions an access configuration for an account in your resource directory.</p>
+     * <p>Invokes ProvisionAccessConfiguration to perform access configuration provisioning and deployment for an account in a resource directory.</p>
      * 
      * @param request ProvisionAccessConfigurationRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3764,11 +3822,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>When you call this operation, an asynchronous task is automatically created. You can call the <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> operation to query the progress of the task based on the value of the <code>TaskId</code> response parameter.
-     * This topic provides an example on how to provision the access configuration <code>ac-00jhtfl8thteu6uj****</code> for the account <code>114240524784****</code> in your resource directory.</p>
+     * <p>This API operation is asynchronous. You can use the <code>TaskId</code> returned in the response to call <a href="https://help.aliyun.com/document_detail/340670.html">GetTask</a> and query the task execution status.
+     * This topic provides an example of provisioning the access configuration <code>ac-00jhtfl8thteu6uj****</code> to the account in a resource directory <code>114240524784****</code>.</p>
      * 
      * <b>summary</b> : 
-     * <p>Provisions an access configuration for an account in your resource directory.</p>
+     * <p>Invokes ProvisionAccessConfiguration to perform access configuration provisioning and deployment for an account in a resource directory.</p>
      * 
      * @param request ProvisionAccessConfigurationRequest
      * @return ProvisionAccessConfigurationResponse
@@ -3958,10 +4016,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</p>
+     * <p>A CloudSSO administrator can reset the password of a user when the user forgets the password, the password expires, or the password poses a security risk.</p>
      * <blockquote>
-     * <p>After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
-     * This topic provides an example on how to reset the password of the user <code>u-00q8wbq42wiltcrk****</code>. The new password is automatically generated by the system.</p>
+     * <p>You cannot reset user passwords after single sign-on (SSO) is enabled.
+     * This topic provides an example of resetting the password of the user u-00q8wbq42wiltcrk**** by using a system-generated password.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -4013,10 +4071,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>If a user forgets the password, the password expires, or the password poses security risks, a CloudSSO administrator can reset the password for the user.</p>
+     * <p>A CloudSSO administrator can reset the password of a user when the user forgets the password, the password expires, or the password poses a security risk.</p>
      * <blockquote>
-     * <p>After you enable single sign-on (SSO) logon, the password of a user cannot be reset.
-     * This topic provides an example on how to reset the password of the user <code>u-00q8wbq42wiltcrk****</code>. The new password is automatically generated by the system.</p>
+     * <p>You cannot reset user passwords after single sign-on (SSO) is enabled.
+     * This topic provides an example of resetting the password of the user u-00q8wbq42wiltcrk**** by using a system-generated password.</p>
      * </blockquote>
      * 
      * <b>summary</b> : 
@@ -4425,6 +4483,122 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>Tags resources.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return TagResourcesResponse
+     */
+    public TagResourcesResponse tagResourcesWithOptions(TagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tag)) {
+            query.put("Tag", request.tag);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "TagResources"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new TagResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Tags resources.</p>
+     * 
+     * @param request TagResourcesRequest
+     * @return TagResourcesResponse
+     */
+    public TagResourcesResponse tagResources(TagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.tagResourcesWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Untags resources.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UntagResourcesResponse
+     */
+    public UntagResourcesResponse untagResourcesWithOptions(UntagResourcesRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.all)) {
+            query.put("All", request.all);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.directoryId)) {
+            query.put("DirectoryId", request.directoryId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
+            query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceType)) {
+            query.put("ResourceType", request.resourceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tagKey)) {
+            query.put("TagKey", request.tagKey);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UntagResources"),
+            new TeaPair("version", "2021-05-15"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UntagResourcesResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Untags resources.</p>
+     * 
+     * @param request UntagResourcesRequest
+     * @return UntagResourcesResponse
+     */
+    public UntagResourcesResponse untagResources(UntagResourcesRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.untagResourcesWithOptions(request, runtime);
+    }
+
+    /**
      * <b>description</b> :
      * <p>You can modify the <code>Description</code>, <code>SessionDuration</code>, and <code>RelayState</code> parameters for an access configuration.
      * This topic provides an example on how to change the initial web page in the access configuration <code>ac-00jhtfl8thteu6uj****</code> to <code>https://cloudsso.console.aliyun.com</code>.</p>
@@ -4806,10 +4980,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to disable the SCIM credential whose ID is <code>scimcred-004whl0kvfwcypbi****</code>. After the SCIM credential is disabled, the synchronization task that uses the SCIM credential fails. You can call this operation again to enable the SCIM credential.</p>
+     * <p>This topic provides an example of disabling the SCIM credential whose ID is <code>scimcred-004whl0kvfwcypbi****</code>. After the credential is disabled, synchronization tasks that use this SCIM credential will fail. You can call this operation again to enable the SCIM credential.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables a System for Cross-domain Identity Management (SCIM) credential.</p>
+     * <p>Enables or disables a SCIM credential.</p>
      * 
      * @param request UpdateSCIMServerCredentialStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4849,10 +5023,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This topic provides an example on how to disable the SCIM credential whose ID is <code>scimcred-004whl0kvfwcypbi****</code>. After the SCIM credential is disabled, the synchronization task that uses the SCIM credential fails. You can call this operation again to enable the SCIM credential.</p>
+     * <p>This topic provides an example of disabling the SCIM credential whose ID is <code>scimcred-004whl0kvfwcypbi****</code>. After the credential is disabled, synchronization tasks that use this SCIM credential will fail. You can call this operation again to enable the SCIM credential.</p>
      * 
      * <b>summary</b> : 
-     * <p>Enables or disables a System for Cross-domain Identity Management (SCIM) credential.</p>
+     * <p>Enables or disables a SCIM credential.</p>
      * 
      * @param request UpdateSCIMServerCredentialStatusRequest
      * @return UpdateSCIMServerCredentialStatusResponse

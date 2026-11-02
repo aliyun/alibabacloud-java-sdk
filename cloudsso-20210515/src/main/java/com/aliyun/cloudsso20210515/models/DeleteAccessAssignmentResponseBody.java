@@ -42,7 +42,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
 
     public static class DeleteAccessAssignmentResponseBodyTask extends TeaModel {
         /**
-         * <p>The ID of the access configuration.</p>
+         * <p>The access configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ac-00jhtfl8thteu6uj****</p>
@@ -51,7 +51,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String accessConfigurationId;
 
         /**
-         * <p>The name of the access configuration.</p>
+         * <p>The access configuration name.</p>
          * 
          * <strong>example:</strong>
          * <p>ECS-Admin</p>
@@ -60,6 +60,8 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String accessConfigurationName;
 
         /**
+         * <p>The Alibaba Cloud account ID of the authorization target.</p>
+         * 
          * <strong>example:</strong>
          * <p>114240524784****</p>
          */
@@ -67,7 +69,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String originTargetId;
 
         /**
-         * <p>The ID of the CloudSSO identity.</p>
+         * <p>The CloudSSO identity ID.</p>
          * 
          * <strong>example:</strong>
          * <p>u-00q8wbq42wiltcrk****</p>
@@ -76,7 +78,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String principalId;
 
         /**
-         * <p>The name of the CloudSSO identity.</p>
+         * <p>The CloudSSO identity name.</p>
          * 
          * <strong>example:</strong>
          * <p>Alice</p>
@@ -85,12 +87,10 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String principalName;
 
         /**
-         * <p>The type of the CloudSSO identity. Valid values:</p>
+         * <p>The CloudSSO identity type. Valid values:</p>
          * <ul>
-         * <li><p>User</p>
-         * </li>
-         * <li><p>Group</p>
-         * </li>
+         * <li>User: user</li>
+         * <li>Group: group</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -102,12 +102,9 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         /**
          * <p>The task status. Valid values:</p>
          * <ul>
-         * <li><p>InProgress: The task is running.</p>
-         * </li>
-         * <li><p>Success: The task is successful.</p>
-         * </li>
-         * <li><p>Failed: The task failed.</p>
-         * </li>
+         * <li>InProgress: The task is in progress.</li>
+         * <li>Success: The task is successful.</li>
+         * <li>Failed: The task failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,7 +114,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the task object.</p>
+         * <p>The target ID of the task.</p>
          * 
          * <strong>example:</strong>
          * <p>114240524784****</p>
@@ -126,7 +123,7 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String targetId;
 
         /**
-         * <p>The name of the task object.</p>
+         * <p>The name of the task target.</p>
          * 
          * <strong>example:</strong>
          * <p>dev-test</p>
@@ -135,19 +132,22 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String targetName;
 
         /**
-         * <p>The path ID of the task object in the resource directory.</p>
+         * <p>The path ID of the task target in the resource directory.</p>
          */
         @NameInMap("TargetPath")
         public String targetPath;
 
         /**
-         * <p>The path name of the task object in the resource directory.</p>
+         * <p>The path name of the task target in the resource directory.</p>
          */
         @NameInMap("TargetPathName")
         public String targetPathName;
 
         /**
-         * <p>The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+         * <p>The target type of the task. Valid values:</p>
+         * <ul>
+         * <li>RD-Account: The task target is an account in a resource directory.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RD-Account</p>
@@ -165,7 +165,10 @@ public class DeleteAccessAssignmentResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The task type. The value is fixed as DeleteAccessAssignment, which indicates that access permissions on an account in your resource directory are removed.</p>
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li>DeleteAccessAssignment: The task removes an authorization from an account in a resource directory.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>DeleteAccessAssignment</p>

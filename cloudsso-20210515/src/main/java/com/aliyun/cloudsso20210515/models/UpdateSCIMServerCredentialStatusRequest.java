@@ -14,7 +14,7 @@ public class UpdateSCIMServerCredentialStatusRequest extends TeaModel {
     public String credentialId;
 
     /**
-     * <p>The ID of the directory.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-00fc2p61****</p>
@@ -23,12 +23,10 @@ public class UpdateSCIMServerCredentialStatusRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The new status of the SCIM credential. Valid values:</p>
+     * <p>The status of the SCIM credential. Valid values:</p>
      * <ul>
-     * <li><p>Enabled: The SCIM credential is enabled.</p>
-     * </li>
-     * <li><p>Disabled: The SCIM credential is disabled.</p>
-     * </li>
+     * <li>Enabled: Enabled.</li>
+     * <li>Disabled: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>

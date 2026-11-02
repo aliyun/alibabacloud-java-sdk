@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteUserProvisioningEventRequest extends TeaModel {
     /**
-     * <p>The ID of the resource directory.</p>
+     * <p>The directory ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d-003qew84****</p>
@@ -14,8 +14,8 @@ public class DeleteUserProvisioningEventRequest extends TeaModel {
     public String directoryId;
 
     /**
-     * <p>The ID of the RAM user provisioning event.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/2636305.html">ListUserProvisioningEvents</a> operation to query the value of <code>EventId</code>.</p>
+     * <p>The ID of the Resource Access Management (RAM) user synchronization event.</p>
+     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/2636305.html">ListUserProvisioningEvents</a> to retrieve the <code>EventId</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>upe-wjKyNDmZvyZOiRcJ****</p>
@@ -24,7 +24,7 @@ public class DeleteUserProvisioningEventRequest extends TeaModel {
     public String eventId;
 
     /**
-     * <p>The ID of the RAM user provisioning.</p>
+     * <p>The ID of the Resource Access Management (RAM) user synchronization.</p>
      * 
      * <strong>example:</strong>
      * <p>up-002axzhapcbz6e63****</p>

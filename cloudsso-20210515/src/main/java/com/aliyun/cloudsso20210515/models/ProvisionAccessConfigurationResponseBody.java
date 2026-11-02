@@ -42,7 +42,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
 
     public static class ProvisionAccessConfigurationResponseBodyTasks extends TeaModel {
         /**
-         * <p>The ID of the access configuration.</p>
+         * <p>The access configuration ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ac-00jhtfl8thteu6uj****</p>
@@ -60,6 +60,8 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         public String accessConfigurationName;
 
         /**
+         * <p>The ID of the Alibaba Cloud account to which the deployment target belongs.</p>
+         * 
          * <strong>example:</strong>
          * <p>114240524784****</p>
          */
@@ -67,14 +69,11 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         public String originTargetId;
 
         /**
-         * <p>The task status. Valid values:</p>
+         * <p>The status of the task. Valid values:</p>
          * <ul>
-         * <li><p>InProgress: The task is running.</p>
-         * </li>
-         * <li><p>Success: The task is successful.</p>
-         * </li>
-         * <li><p>Failed: The task failed.</p>
-         * </li>
+         * <li>InProgress: The task is in progress.</li>
+         * <li>Success: The task succeeded.</li>
+         * <li>Failed: The task failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -84,7 +83,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the task object.</p>
+         * <p>The ID of the deployment target.</p>
          * 
          * <strong>example:</strong>
          * <p>114240524784****</p>
@@ -93,7 +92,7 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         public String targetId;
 
         /**
-         * <p>The name of the task object.</p>
+         * <p>The name of the task target.</p>
          * 
          * <strong>example:</strong>
          * <p>dev-test</p>
@@ -102,19 +101,22 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         public String targetName;
 
         /**
-         * <p>The path ID of the task object in the resource directory.</p>
+         * <p>The path ID of the task target in the resource directory.</p>
          */
         @NameInMap("TargetPath")
         public String targetPath;
 
         /**
-         * <p>The path name of the task object in the resource directory.</p>
+         * <p>The path name of the task target in the resource directory.</p>
          */
         @NameInMap("TargetPathName")
         public String targetPathName;
 
         /**
-         * <p>The type of the task object. The value is fixed as RD-Account, which indicates the accounts in the resource directory.</p>
+         * <p>The target type of the task. Valid values:</p>
+         * <ul>
+         * <li>RD-Account: The task target is an account in a resource directory.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>RD-Account</p>
@@ -132,7 +134,10 @@ public class ProvisionAccessConfigurationResponseBody extends TeaModel {
         public String taskId;
 
         /**
-         * <p>The task type. The value is fixed as ProvisionAccessConfiguration, which indicates that an access configuration is provisioned.</p>
+         * <p>The task type. Valid values:</p>
+         * <ul>
+         * <li>ProvisionAccessConfiguration: The task provisions an access configuration.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>ProvisionAccessConfiguration</p>
