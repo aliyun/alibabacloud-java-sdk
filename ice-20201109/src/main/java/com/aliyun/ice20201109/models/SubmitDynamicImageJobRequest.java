@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class SubmitDynamicImageJobRequest extends TeaModel {
     /**
-     * <p>The job input.</p>
+     * <p>The task input.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public SubmitDynamicImageJobRequestInput input;
 
     /**
-     * <p>The job name.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>SampleJob</p>
@@ -21,7 +21,7 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The job output.</p>
+     * <p>The task output.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
@@ -41,7 +41,7 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
     public SubmitDynamicImageJobRequestTemplateConfig templateConfig;
 
     /**
-     * <p>The user-defined data.</p>
+     * <p>The custom user data.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;SampleKey&quot;: &quot;SampleValue&quot;}</p>
@@ -104,23 +104,23 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
 
     public static class SubmitDynamicImageJobRequestInput extends TeaModel {
         /**
-         * <p>The input media resource.</p>
+         * <p>The input media.</p>
          * <ul>
-         * <li><p>If <code>Type</code> is set to <code>OSS</code>, specify the OSS URL of the input file.</p>
+         * <li><p>If Type is set to OSS, specify an OSS URL.</p>
          * </li>
-         * <li><p>If <code>Type</code> is set to <code>Media</code>, specify the media asset ID.</p>
+         * <li><p>If Type is set to Media, specify a media asset ID.</p>
          * </li>
          * </ul>
-         * <p>An OSS URL must be in one of the following formats:</p>
+         * <p>OSS URL format:</p>
          * <ol>
-         * <li><p><code>oss://bucket/object</code></p>
+         * <li><p>oss://bucket/object</p>
          * </li>
-         * <li><p><code>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</code></p>
+         * <li><p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</p>
          * </li>
          * </ol>
-         * <p>In these formats, <code>bucket</code> is the name of an OSS bucket in the same region as the current project, and <code>object</code> is the file path.</p>
+         * <p>In the URL, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
          * <blockquote>
-         * <p>The specified OSS bucket must be registered in IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a>.</p>
+         * <p>Before you use the OSS bucket in the URL, add it to IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -131,11 +131,11 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the job input. Valid values:</p>
+         * <p>The input type. Valid values:</p>
          * <ul>
-         * <li><p><code>OSS</code>: An Object Storage Service (OSS) file URL.</p>
+         * <li><p>OSS: an OSS file URL.</p>
          * </li>
-         * <li><p><code>Media</code>: A media asset ID.</p>
+         * <li><p>Media: a media asset ID.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -171,16 +171,15 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
 
     public static class SubmitDynamicImageJobRequestOutput extends TeaModel {
         /**
-         * <p>The destination OSS URL for the output file. This parameter is required when <code>Type</code> is set to <code>OSS</code>. The URL must be in one of the following formats:</p>
+         * <p>The output media. Both OSS URLs and media asset IDs are supported.
+         * OSS URL format:</p>
          * <ul>
-         * <li><p><code>oss://bucket/object</code></p>
-         * </li>
-         * <li><p><code>http(s)://bucket.oss-[regionId].aliyuncs.com/object</code></p>
-         * </li>
+         * <li>oss://bucket/object</li>
+         * <li>http(s)://bucket.oss-[regionId].aliyuncs.com/object</li>
          * </ul>
-         * <p>In these formats, <code>bucket</code> is the name of an OSS bucket in the same region as the current project, and <code>object</code> is the file path.</p>
+         * <p>In the URL, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
          * <blockquote>
-         * <p>The specified OSS bucket must be registered in IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a>.</p>
+         * <p>Before you use the OSS bucket in the URL, add it to IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a>.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -191,11 +190,11 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the job output. Valid values:</p>
+         * <p>The output type. Valid values:</p>
          * <ul>
-         * <li><p><code>OSS</code>: The output is an OSS file.</p>
+         * <li><p>OSS: an OSS file URL.</p>
          * </li>
-         * <li><p><code>Media</code>: The output is a new media asset.</p>
+         * <li><p>Media: a media asset ID.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -240,7 +239,7 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The priority of the job. Valid range: [1, 10]. A higher value indicates a higher priority. Default value: 6.</p>
+         * <p>The priority. Valid values: 1 to 10. Default value: 6. A larger value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -273,12 +272,10 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
 
     public static class SubmitDynamicImageJobRequestTemplateConfigOverwriteParamsTimeSpan extends TeaModel {
         /**
-         * <p>The duration of the video segment to be processed.</p>
+         * <p>The duration.</p>
          * <ul>
-         * <li><p>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</p>
-         * </li>
-         * <li><p>Valid range: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</p>
-         * </li>
+         * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+         * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -288,12 +285,10 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
         public String duration;
 
         /**
-         * <p>The end time of the video segment to be processed. If this parameter is set, the <code>Duration</code> parameter is ignored.</p>
+         * <p>The tail trimming duration, which specifies the length of time to trim from the end. When this parameter is set, the Duration parameter becomes invalid.</p>
          * <ul>
-         * <li><p>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</p>
-         * </li>
-         * <li><p>Valid range: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</p>
-         * </li>
+         * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+         * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -303,12 +298,10 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
         public String end;
 
         /**
-         * <p>The start time of the video segment to be processed.</p>
+         * <p>The start time.  </p>
          * <ul>
-         * <li><p>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</p>
-         * </li>
-         * <li><p>Valid range: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</p>
-         * </li>
+         * <li>Format: <code>hh:mm:ss[.SSS]</code> or <code>sssss[.SSS]</code>.</li>
+         * <li>Valid values: <code>[00:00:00.000,23:59:59.999]</code> or <code>[0.000,86399.999]</code>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -352,10 +345,8 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
         /**
          * <p>The animated image format. Valid values:</p>
          * <ul>
-         * <li><p><code>gif</code></p>
-         * </li>
-         * <li><p><code>webp</code></p>
-         * </li>
+         * <li>gif</li>
+         * <li>webp</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -365,7 +356,7 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
         public String format;
 
         /**
-         * <p>The frame rate. Valid range: [1, 60].</p>
+         * <p>The frame rate. Valid values: 1 to 60.</p>
          * 
          * <strong>example:</strong>
          * <p>15</p>
@@ -374,7 +365,7 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
         public Integer fps;
 
         /**
-         * <p>The height of the output animated image. Valid range: [128, 4096].</p>
+         * <p>The height of the output animated image. Valid values: 128 to 4096.</p>
          * 
          * <strong>example:</strong>
          * <p>720</p>
@@ -383,16 +374,14 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
         public Integer height;
 
         /**
-         * <p>Specifies whether to enable adaptive orientation based on the long and short edges of the video. Valid values:</p>
+         * <p>Specifies whether to enable auto-rotation (long-short side mode). Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: Enables adaptive orientation.</p>
-         * </li>
-         * <li><p><strong>false</strong>: Disables adaptive orientation.</p>
-         * </li>
+         * <li><strong>true</strong>: Enables auto-rotation.</li>
+         * <li><strong>false</strong>: Disables auto-rotation.</li>
          * </ul>
          * <p>Default value: <strong>true</strong>.</p>
          * <blockquote>
-         * <p>When enabled, this mode sets the output width to the source video\&quot;s long edge and the output height to its short edge. For a portrait video, its height is treated as the long edge and its width as the short edge.</p>
+         * <p>The width of the transcoding output corresponds to the long side of the input source (the height for portrait videos), and the height corresponds to the short side of the input source (the width for portrait videos).</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -404,9 +393,9 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
         /**
          * <p>The scan mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>interlaced</strong>: Interlaced scanning.</p>
+         * <li><p><strong>interlaced</strong>: interlaced scan.</p>
          * </li>
-         * <li><p><strong>progressive</strong>: Progressive scanning. This is the default value.</p>
+         * <li><p><strong>progressive</strong>: progressive scan. This is the default value.</p>
          * </li>
          * </ul>
          * 
@@ -417,13 +406,13 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
         public String scanMode;
 
         /**
-         * <p>Specifies the time range of the video to process for the animated image.</p>
+         * <p>The timeline parameters.</p>
          */
         @NameInMap("TimeSpan")
         public SubmitDynamicImageJobRequestTemplateConfigOverwriteParamsTimeSpan timeSpan;
 
         /**
-         * <p>The width of the output animated image. Valid range: [128, 4096].</p>
+         * <p>The width of the output animated image. Valid values: 128 to 4096.</p>
          * 
          * <strong>example:</strong>
          * <p>1024</p>
@@ -496,7 +485,7 @@ public class SubmitDynamicImageJobRequest extends TeaModel {
 
     public static class SubmitDynamicImageJobRequestTemplateConfig extends TeaModel {
         /**
-         * <p>The overwrite parameters.</p>
+         * <p>The override parameters.</p>
          */
         @NameInMap("OverwriteParams")
         public SubmitDynamicImageJobRequestTemplateConfigOverwriteParams overwriteParams;

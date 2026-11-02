@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSnapshotJobsRequest extends TeaModel {
     /**
-     * <p>The end of the time range during which the jobs to be queried were created.</p>
+     * <p>The end time for filtering jobs by creation time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-14T00:00:00Z</p>
@@ -23,7 +23,7 @@ public class ListSnapshotJobsRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The mark for the next page during continuous paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -32,20 +32,11 @@ public class ListSnapshotJobsRequest extends TeaModel {
     public String nextPageToken;
 
     /**
-     * <p>The order that you use to sort the query results.</p>
+     * <p>The sort order. Valid values:</p>
      * <ol>
-     * <li><p>CreateTimeDesc</p>
-     * </li>
-     * <li><p>CreateTimeAsc</p>
-     * </li>
+     * <li>CreateTimeAsc</li>
+     * <li>CreateTimeDesc</li>
      * </ol>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>CreateTimeDesc: sorts the jobs by creation time in descending order</p>
-     * </li>
-     * <li><p>CreateTimeAsc: sorts the jobs by creation time in ascending order.</p>
-     * </li>
-     * </ul>
      * 
      * <strong>example:</strong>
      * <p>CreateTimeDesc</p>
@@ -54,7 +45,7 @@ public class ListSnapshotJobsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The number of entries per page. Default value: 20. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. Default value: 20. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -63,7 +54,7 @@ public class ListSnapshotJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The beginning of the time range during which the jobs to be queried were created.</p>
+     * <p>The start time for filtering jobs by creation time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-12T00:00:00Z</p>
@@ -72,16 +63,7 @@ public class ListSnapshotJobsRequest extends TeaModel {
     public String startOfCreateTime;
 
     /**
-     * <p>The state of the job.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Init: The job is submitted.</p>
-     * </li>
-     * <li><p>Success: The job is successful.</p>
-     * </li>
-     * <li><p>Fail: The job failed.</p>
-     * </li>
-     * </ul>
+     * <p>The job status.</p>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

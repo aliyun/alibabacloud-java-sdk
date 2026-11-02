@@ -5,35 +5,25 @@ import com.aliyun.tea.*;
 
 public class UpdateAvatarTrainingJobRequest extends TeaModel {
     /**
-     * <ul>
-     * <li><p>The description of the digital human.</p>
-     * </li>
-     * <li><p>The description can be up to 1,000 characters in length.</p>
-     * </li>
-     * </ul>
+     * <p>The description of the digital human. The description can be up to 1,000 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>This is a digital human used for a specific scenario.</p>
+     * <p>This is a digital human, intended for use in a certain scenario.</p>
      */
     @NameInMap("AvatarDescription")
     public String avatarDescription;
 
     /**
-     * <ul>
-     * <li><p>The name of the digital human.</p>
-     * </li>
-     * <li><p>The name can be up to seven characters in length.</p>
-     * </li>
-     * </ul>
+     * <p>The name of the digital human. The name can be up to 7 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>Decimal</p>
+     * <p>The name of the digital human.</p>
      */
     @NameInMap("AvatarName")
     public String avatarName;
 
     /**
-     * <p>The ID of the digital human training job.</p>
+     * <p>The ID of the digital human training task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,12 +33,7 @@ public class UpdateAvatarTrainingJobRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <ul>
-     * <li><p>The media asset ID of the portrait image.</p>
-     * </li>
-     * <li><p>The value must be 32 characters in length.</p>
-     * </li>
-     * </ul>
+     * <p>The media asset ID of the profile picture. The ID must be 32 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
@@ -57,17 +42,12 @@ public class UpdateAvatarTrainingJobRequest extends TeaModel {
     public String portrait;
 
     /**
+     * <p>The URL of the thumbnail.</p>
      * <ul>
-     * <li><p>The thumbnail URL.</p>
-     * </li>
-     * <li><p>After the digital human is trained, the thumbnail is uploaded to this URL.</p>
-     * </li>
-     * <li><p>The URL must be a valid public Object Storage Service (OSS) URL.</p>
-     * </li>
-     * <li><p>The URL can be up to 512 characters in length.</p>
-     * </li>
-     * <li><p>The URL cannot be updated after the digital human is trained.</p>
-     * </li>
+     * <li>The thumbnail is uploaded to this URL after the training succeeds.</li>
+     * <li>The URL must be a valid public Object Storage Service (OSS) URL within your account.</li>
+     * <li>The URL can be up to 512 characters in length.</li>
+     * <li>The URL cannot be updated after the training succeeds.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -77,14 +57,9 @@ public class UpdateAvatarTrainingJobRequest extends TeaModel {
     public String thumbnail;
 
     /**
-     * <ul>
-     * <li><p>Indicates whether the input video supports alpha channels.</p>
-     * </li>
-     * <li><p>You can modify this parameter only if the job is in the Init or Fail state.</p>
-     * <p>\<em>\</em></p>
-     * <p><strong>Note</strong>: Make sure that the current settings are consistent with those of the submitted training video. Otherwise, the digital human may malfunction.</p>
-     * </li>
-     * </ul>
+     * <p>Specifies whether the uploaded video supports a transparent channel.</p>
+     * <p>You can modify this parameter only for tasks in the Initialized or Training Failed state.
+     * <notice>Make sure that this setting matches the properties of the submitted training video. Otherwise, the synthesized digital human may behave abnormally.</notice></p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -93,17 +68,12 @@ public class UpdateAvatarTrainingJobRequest extends TeaModel {
     public Boolean transparent;
 
     /**
+     * <p>The media asset ID of the training video.</p>
      * <ul>
-     * <li><p>The ID of the video used for training.</p>
-     * </li>
-     * <li><p>The value must be 32 characters in length.</p>
-     * </li>
-     * <li><p>Supported formats: MP4, MOV, and WebM.</p>
-     * </li>
-     * <li><p>The duration of the video must be 5 to 15 minutes.</p>
-     * </li>
-     * <li><p>The resolution of the video must be 1920×1080 or 1080×1920.</p>
-     * </li>
+     * <li>The ID must be 32 characters in length.</li>
+     * <li>The MP4, MOV, and WebM formats are supported.</li>
+     * <li>The video duration must be between 5 and 15 minutes.</li>
+     * <li>The video resolution must be 1920 × 1080 or 1080 × 1920.</li>
      * </ul>
      * 
      * <strong>example:</strong>

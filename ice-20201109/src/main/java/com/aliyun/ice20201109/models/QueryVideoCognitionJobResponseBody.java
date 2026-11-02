@@ -5,21 +5,21 @@ import com.aliyun.tea.*;
 
 public class QueryVideoCognitionJobResponseBody extends TeaModel {
     /**
-     * <p>The input file.</p>
+     * <p>The input media asset information of the task.</p>
      */
     @NameInMap("Input")
     public QueryVideoCognitionJobResponseBodyInput input;
 
     /**
-     * <p>The job status. Valid values:</p>
+     * <p>The status of the task. Valid values:</p>
      * <ul>
-     * <li><p><strong>Success</strong>: The job succeeded.</p>
+     * <li><p><strong>Success</strong>: The task is processed successfully.</p>
      * </li>
-     * <li><p><strong>Fail</strong>: The job failed.</p>
+     * <li><p><strong>Fail</strong>: The task fails to be processed.</p>
      * </li>
-     * <li><p><strong>Processing</strong>: The job is in progress.</p>
+     * <li><p><strong>Processing</strong>: The task is being processed.</p>
      * </li>
-     * <li><p><strong>Submitted</strong>: The job has been submitted and is awaiting processing.</p>
+     * <li><p><strong>Submitted</strong>: The task is submitted and waiting to be processed.</p>
      * </li>
      * </ul>
      * 
@@ -30,13 +30,16 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
     public String jobStatus;
 
     /**
-     * <p>The request parameters.</p>
+     * <p>The extended parameters.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;directOssAccess&quot;:true}</p>
      */
     @NameInMap("Params")
     public String params;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -48,13 +51,16 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
     public QueryVideoCognitionJobResponseBodyResults results;
 
     /**
-     * <p>The template ID.</p>
+     * <p>The ID of the smart tagging template.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>S00000101-100040</p>
      */
     @NameInMap("TemplateId")
     public String templateId;
 
     /**
-     * <p>The user data.</p>
+     * <p>The custom user information.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;userId&quot;:&quot;123432412831&quot;}</p>
@@ -126,12 +132,18 @@ public class QueryVideoCognitionJobResponseBody extends TeaModel {
     public static class QueryVideoCognitionJobResponseBodyInput extends TeaModel {
         /**
          * <p>The URL of the input file.</p>
+         * 
+         * <strong>example:</strong>
+         * <p><a href="https://example-bucket.oss-cn-hangzhou.aliyuncs.com/test/video.mp4">https://example-bucket.oss-cn-hangzhou.aliyuncs.com/test/video.mp4</a></p>
          */
         @NameInMap("Media")
         public String media;
 
         /**
-         * <p>The type of the input file. Valid value: OSS.</p>
+         * <p>The type of the input file. Valid values: OSS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>OSS</p>
          */
         @NameInMap("Type")
         public String type;

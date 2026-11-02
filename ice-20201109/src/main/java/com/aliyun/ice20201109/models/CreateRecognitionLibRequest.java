@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateRecognitionLibRequest extends TeaModel {
     /**
-     * <p>The type of recognition algorithm. Valid values:</p>
+     * <p>The recognition type. Valid values:</p>
      * <ul>
-     * <li><p>landmark</p>
+     * <li><p>landmark: custom landmark</p>
      * </li>
-     * <li><p>object</p>
+     * <li><p>object: custom object</p>
      * </li>
-     * <li><p>logo</p>
+     * <li><p>logo: custom logo</p>
      * </li>
-     * <li><p>face</p>
+     * <li><p>face: custom face</p>
      * </li>
-     * <li><p>label</p>
+     * <li><p>label: custom label</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -27,20 +27,20 @@ public class CreateRecognitionLibRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The description of the recognition library. Max length: 128 bytes.</p>
+     * <p>The description of the recognition library. The description can be up to 128 bytes in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>For storing product recognition samples</p>
+     * <p>Used to store commodity identification samples</p>
      */
     @NameInMap("LibDescription")
     public String libDescription;
 
     /**
-     * <p>The name of the recognition library. Max length: 64 bytes.</p>
+     * <p>The name of the recognition library. The name can be up to 64 bytes in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Landmark test library</p>
+     * <p>landmark test suite</p>
      */
     @NameInMap("LibName")
     public String libName;

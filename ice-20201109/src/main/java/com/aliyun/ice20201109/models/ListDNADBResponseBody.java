@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListDNADBResponseBody extends TeaModel {
     /**
-     * <p>The queried media fingerprint libraries.</p>
+     * <p>The list of media fingerprint libraries.</p>
      */
     @NameInMap("DBList")
     public java.util.List<ListDNADBResponseBodyDBList> DBList;
@@ -62,14 +62,10 @@ public class ListDNADBResponseBody extends TeaModel {
         /**
          * <p>The model of the media fingerprint library. Valid values:</p>
          * <ul>
-         * <li><p><strong>Video</strong></p>
-         * </li>
-         * <li><p><strong>Audio</strong></p>
-         * </li>
-         * <li><p><strong>Image</strong></p>
-         * </li>
-         * <li><p><strong>Text</strong> (supported only in the China (Shanghai) region)</p>
-         * </li>
+         * <li><strong>Video</strong>: Video.</li>
+         * <li><strong>Audio</strong>: Audio.</li>
+         * <li><strong>Image</strong>: Image.</li>
+         * <li><strong>Text</strong>: Text. Only supported in the China (Shanghai) region.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -88,14 +84,11 @@ public class ListDNADBResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The state of the media fingerprint library. Default value: <strong>offline</strong>. \<em>\</em>\*\*Valid values:</p>
+         * <p>The status of the media fingerprint library. Default value: <strong>offline</strong>. <strong>active</strong> indicates that the library is available. Valid values:</p>
          * <ul>
-         * <li><p><strong>offline</strong>: The media fingerprint library is offline.</p>
-         * </li>
-         * <li><p><strong>active</strong>: The media fingerprint library is online.</p>
-         * </li>
-         * <li><p><strong>deleted</strong>: The media fingerprint library is deleted.</p>
-         * </li>
+         * <li><strong>offline</strong>: Offline.</li>
+         * <li><strong>active</strong>: Online.</li>
+         * <li><strong>deleted</strong>: Deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>

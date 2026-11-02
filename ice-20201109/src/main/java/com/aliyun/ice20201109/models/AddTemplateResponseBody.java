@@ -42,16 +42,16 @@ public class AddTemplateResponseBody extends TeaModel {
 
     public static class AddTemplateResponseBodyTemplate extends TeaModel {
         /**
-         * <p>See the Timeline template Config documentation.</p>
+         * <p>The configuration of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>See the Config documentation</p>
+         * <p>See Config documentation</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
-         * <p>The template cover URL.</p>
+         * <p>The URL of the template cover.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
@@ -60,7 +60,7 @@ public class AddTemplateResponseBody extends TeaModel {
         public String coverUrl;
 
         /**
-         * <p>The template creation source.</p>
+         * <p>The source from which the template was created.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAPI</p>
@@ -69,7 +69,7 @@ public class AddTemplateResponseBody extends TeaModel {
         public String createSource;
 
         /**
-         * <p>The template modification source.</p>
+         * <p>The source from which the template was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAPI</p>
@@ -78,10 +78,10 @@ public class AddTemplateResponseBody extends TeaModel {
         public String modifiedSource;
 
         /**
-         * <p>The template name.</p>
+         * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>Template name</p>
+         * <p>TemplateName</p>
          */
         @NameInMap("Name")
         public String name;
@@ -96,7 +96,7 @@ public class AddTemplateResponseBody extends TeaModel {
         public String previewMedia;
 
         /**
-         * <p>The template status.</p>
+         * <p>The status of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -105,7 +105,7 @@ public class AddTemplateResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The template ID.</p>
+         * <p>The ID of the template.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>01bf24bf41c78b2754cb3187</strong></strong></p>

@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendLiveSnapshotJobCommandRequest extends TeaModel {
     /**
-     * <p>The operation instruction. Valid values:</p>
-     * <ul>
-     * <li>start: starts the task.</li>
-     * <li>stop: stops the task.</li>
-     * <li>restart: restarts the task.</li>
-     * </ul>
+     * <p>The operation command.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

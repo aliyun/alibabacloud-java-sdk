@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     /**
-     * <p>The idempotency key that is used to ensure the idempotence of the request.</p>
+     * <p>The client token that is used to ensure request idempotency.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The job input group. A single input creates a transcoding job. Multiple inputs create an audio and video stream merging job.</p>
+     * <p>The input group of the job. A single input indicates a transcoding job. Multiple inputs indicate an audio and video stream merging job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,7 @@ public class SubmitTranscodeJobShrinkRequest extends TeaModel {
     public String scheduleConfigShrink;
 
     /**
-     * <p>Custom settings in JSON format. The value can be up to 512 bytes in length. <a href="https://help.aliyun.com/document_detail/451631.html">Custom callback URL configuration</a> is supported.</p>
+     * <p>The custom settings in JSON format. The maximum length is 512 bytes. <a href="https://help.aliyun.com/document_detail/451631.html">Custom callback URL configuration</a> is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>user-data</p>

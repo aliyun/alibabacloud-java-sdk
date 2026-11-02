@@ -14,7 +14,7 @@ public class SubmitAIAgentVideoAuditTaskResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>**********-586A-AC29-742247******</p>

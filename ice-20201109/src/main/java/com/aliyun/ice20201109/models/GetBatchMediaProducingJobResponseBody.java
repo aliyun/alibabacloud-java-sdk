@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetBatchMediaProducingJobResponseBody extends TeaModel {
     /**
-     * <p>The information about the quick video production job.</p>
+     * <p>The batch intelligent one-click video production task information.</p>
      */
     @NameInMap("EditingBatchJob")
     public GetBatchMediaProducingJobResponseBodyEditingBatchJob editingBatchJob;
@@ -42,7 +42,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
 
     public static class GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList extends TeaModel {
         /**
-         * <p>The duration of the output video, in seconds (s).</p>
+         * <p>The duration of the produced video. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>24.5</p>
@@ -51,7 +51,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public Float duration;
 
         /**
-         * <p>The error code that is returned if the subjob failed. This parameter is not returned if the subjob is successful.</p>
+         * <p>The error code returned when the subtask fails. This parameter is not returned if the subtask is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidMaterial.NotFound</p>
@@ -60,7 +60,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message that is returned if the subjob failed. This parameter is not returned if the subjob is successful.</p>
+         * <p>The error message returned when the subtask fails. This parameter is not returned if the subtask is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified clips id not found:[&quot;<strong><strong>30d0b5e871eebb2ff7f6c75a</strong></strong>&quot;]</p>
@@ -69,7 +69,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The subjob ID.</p>
+         * <p>The subtask ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>8e81933d44e3ae69e2f81485</strong></strong></p>
@@ -78,7 +78,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The ID of the output media asset.</p>
+         * <p>The ID of the produced media asset.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>1470b11171ee9d19e7e6c66a</strong></strong></p>
@@ -87,7 +87,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The URL of the output file.</p>
+         * <p>The URL of the output video file.</p>
          * 
          * <strong>example:</strong>
          * <p>http:/xxx.oss-cn-shanghai.aliyuncs.com/xxx_0.mp4</p>
@@ -96,7 +96,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String mediaURL;
 
         /**
-         * <p>The ID of the online editing project.</p>
+         * <p>The ID of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>7cc47fe04eaa81bd853acb6a</strong></strong></p>
@@ -105,11 +105,17 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String projectId;
 
         /**
-         * <p>The subjob state. Valid values:</p>
-         * <p>Init: The subjob is initialized.</p>
-         * <p>Processing: The subjob is in progress.</p>
-         * <p>Success: The subjob is successful.</p>
-         * <p>Failed: The subjob failed.</p>
+         * <p>The subtask status. Valid values:</p>
+         * <ul>
+         * <li><p>Init: initialized</p>
+         * </li>
+         * <li><p>Processing: processing</p>
+         * </li>
+         * <li><p>Success: successful</p>
+         * </li>
+         * <li><p>Failed: failed</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -190,8 +196,8 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
 
     public static class GetBatchMediaProducingJobResponseBodyEditingBatchJob extends TeaModel {
         /**
-         * <p>The time when the job was complete.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the task was completed. The time is displayed in UTC.</p>
+         * <p>Format: &quot;YYYY-MM-DD\&quot;T\&quot;hh:mm:ss\&quot;Z\&quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-13T08:57:07Z</p>
@@ -200,7 +206,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String completeTime;
 
         /**
-         * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the task was created. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-13T08:47:07Z</p>
@@ -209,7 +215,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The editing configurations. For more information, see <a href="~~2692547#1be9bba03b7qu~~">EditingConfig</a>.</p>
+         * <p>The editing-related configuration. For more information about the structure, see <a href="~~2692547#1be9bba03b7qu~~">EditingConfig</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -228,9 +234,13 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String editingConfig;
 
         /**
-         * <p>The extended information. This parameter contains the following fields:</p>
-         * <p>ErrorCode: the error code of the main job.</p>
-         * <p>ErrorMessage: the error message of the main job.</p>
+         * <p>The extended information. Field details:</p>
+         * <ul>
+         * <li><p>ErrorCode: the error code of the main task</p>
+         * </li>
+         * <li><p>ErrorMessage: the error message of the main task</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -242,12 +252,10 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String extend;
 
         /**
-         * <p>Additional input.</p>
+         * <p>The additional input.</p>
          * <ul>
-         * <li><p>When JobType is Smart_Mix_Timeline_Organize or Screen_Media_Highlights_Timeline_Organize, the additional input is the material selection result.</p>
-         * </li>
-         * <li><p>When JobType is Scene_Batch_Editing, the additional input is a list of video editing project IDs.</p>
-         * </li>
+         * <li>If JobType is set to Smart_Mix_Timeline_Organize or Screen_Media_Highlights_Timeline_Organize, the additional input is the media selection result.</li>
+         * <li>If JobType is set to Scene_Batch_Editing, the additional input is the list of editing project IDs.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,47 +265,47 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String extendInput;
 
         /**
-         * <p>Additional outputs.</p>
+         * <p>The additional output.</p>
          * <ul>
-         * <li>When JobType is Smart_Mix_Media_Select or Screen_Media_Highlights_Media_Select, material selection results are additionally returned.</li>
+         * <li>If JobType is set to Smart_Mix_Media_Select or Screen_Media_Highlights_Media_Select, the media selection result is additionally returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
          * <p>{
-         * &quot;textMatchMediaOutputList&quot;: [{
-         * &quot;textMatchMediaSentenceOutputList&quot;: [{
-         * &quot;duration&quot;: 3.366667,
-         * &quot;matchClipList&quot;: [{
-         * &quot;clipId&quot;: &quot;null-2&quot;,
-         * &quot;endTime&quot;: 11.16,
-         * &quot;mediaId&quot;: &quot;<strong><strong>a0900f5071efbf1ce7e6c66a</strong></strong>&quot;,
-         * &quot;score&quot;: -0.253,
-         * &quot;startTime&quot;: 8.04
-         * }],
-         * &quot;text&quot;: &quot;A new Freshippo store just opened at the nearby mall.&quot;,
-         * &quot;textId&quot;: &quot;0&quot;
-         * },
-         * {
-         * &quot;duration&quot;: 1.566667,
-         * &quot;matchClipList&quot;: [{
-         * &quot;clipId&quot;: &quot;null-1&quot;,
-         * &quot;endTime&quot;: 1.54,
-         * &quot;mediaId&quot;: &quot;<strong><strong>a0900f5071efbf1ce7e6c66a</strong></strong>&quot;,
-         * &quot;score&quot;: -0.2326,
-         * &quot;startTime&quot;: 0
-         * }],
-         * &quot;text&quot;: &quot;today Yesfirst day of opening&quot;,
-         * &quot;textId&quot;: &quot;0&quot;
-         * }
-         * ]
-         * }]
+         *     &quot;textMatchMediaOutputList&quot;: [{
+         *         &quot;textMatchMediaSentenceOutputList&quot;: [{
+         *                 &quot;duration&quot;: 3.366667,
+         *                 &quot;matchClipList&quot;: [{
+         *                     &quot;clipId&quot;: &quot;null-2&quot;,
+         *                     &quot;endTime&quot;: 11.16,
+         *                     &quot;mediaId&quot;: &quot;<strong><strong>a0900f5071efbf1ce7e6c66a</strong></strong>&quot;,
+         *                     &quot;score&quot;: -0.253,
+         *                     &quot;startTime&quot;: 8.04
+         *                 }],
+         *                 &quot;text&quot;: &quot;A new box of fresh horses has been opened in the nearby shopping mall.&quot;,
+         *                 &quot;textId&quot;: &quot;0&quot;
+         *             },
+         *             {
+         *                 &quot;duration&quot;: 1.566667,
+         *                 &quot;matchClipList&quot;: [{
+         *                     &quot;clipId&quot;: &quot;null-1&quot;,
+         *                     &quot;endTime&quot;: 1.54,
+         *                     &quot;mediaId&quot;: &quot;<strong><strong>a0900f5071efbf1ce7e6c66a</strong></strong>&quot;,
+         *                     &quot;score&quot;: -0.2326,
+         *                     &quot;startTime&quot;: 0
+         *                 }],
+         *                 &quot;text&quot;: &quot;Today is the first day of opening&quot;,
+         *                 &quot;textId&quot;: &quot;0&quot;
+         *             }
+         *         ]
+         *     }]
          * }</p>
          */
         @NameInMap("ExtendOutput")
         public String extendOutput;
 
         /**
-         * <p>The input configurations. For more information, see <a href="~~2692547#2faed1559549n~~">InputConfig</a>.</p>
+         * <p>The user synthesis output configuration. For more information about the structure, see <a href="~~2692547#2faed1559549n~~">InputConfig</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -313,18 +321,18 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
          *         &quot;<strong><strong>4549d886810b46c30f6e</strong></strong>&quot; ]
          *   }],
          *   &quot;TitleArray&quot;: [
-         *       &quot;回龙观盒马鲜生开业啦&quot;,
-         *       &quot;盒马鲜生开业啦&quot; ],
+         *       &quot;Huilongguan Box Ma Xiansheng Opened&quot;,
+         *       &quot;Box of Ma Xiansheng has opened&quot; ],
          *   &quot;SpeechTextArray&quot;: [
-         *       &quot;附近的商场新开了一家盒马鲜生，今天是第一天开业&quot;
-         *       &quot;商场里的人不少，零食、酒水都比较便宜大家也快来看看呀&quot; ]
+         *       &quot;A new box of fresh horses has been opened in a nearby shopping mall. Today is the first day of opening.&quot;
+         *       &quot;There are a lot of people in the shopping mall. Snacks and drinks are relatively cheap. Come and have a look.&quot; ]
          * }</p>
          */
         @NameInMap("InputConfig")
         public String inputConfig;
 
         /**
-         * <p>The job ID.</p>
+         * <p>The task ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>b6b2750d4308892ac3330238</strong></strong></p>
@@ -333,26 +341,17 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>Task Type:</p>
+         * <p>The task type. Valid values:</p>
          * <ul>
-         * <li><p>Script (Script-based automated video editing)</p>
-         * </li>
-         * <li><p>Smart_Mix (Intelligent text-to-media matching for video editing)</p>
-         * </li>
-         * <li><p>Sports_Highlights (Sporting event highlights compilation)</p>
-         * </li>
-         * <li><p>Screen_Media_Highlights (High-energy multi-media mashup editing)</p>
-         * </li>
-         * <li><p>Smart_Mix_Media_Select (Intelligent matching – Material selection)</p>
-         * </li>
-         * <li><p>Smart_Mix_Timeline_Organize (Intelligent matching – Timeline orchestration)</p>
-         * </li>
-         * <li><p>Screen_Media_Highlights_Media_Select (High-energy mashup – Material selection)</p>
-         * </li>
-         * <li><p>Screen_Media_Highlights_Timeline_Organize (High-energy mashup – Timeline orchestration)</p>
-         * </li>
-         * <li><p>Scene_Batch_Editing (Batch synthesis across multiple timelines)</p>
-         * </li>
+         * <li>Script: scripted automatic video production</li>
+         * <li>Smart_Mix: intelligent image and text matching video production</li>
+         * <li>Sports_Highlights: sports event highlights video production</li>
+         * <li>Screen_Media_Highlights: high-energy mashup video production</li>
+         * <li>Smart_Mix_Media_Select: intelligent matching - media selection</li>
+         * <li>Smart_Mix_Timeline_Organize: intelligent matching - timeline arrangement</li>
+         * <li>Screen_Media_Highlights_Media_Select: high-energy mashup - media selection</li>
+         * <li>Screen_Media_Highlights_Timeline_Organize: high-energy mashup - timeline arrangement</li>
+         * <li>Scene_Batch_Editing: multi-timeline batch synthesis</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -362,8 +361,8 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String jobType;
 
         /**
-         * <p>The time when the job was last modified.</p>
-         * <p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the task was modified. The time is displayed in UTC.</p>
+         * <p>Format: &quot;YYYY-MM-DD\&quot;T\&quot;hh:mm:ss\&quot;Z\&quot;&quot;.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-13T08:57:07Z</p>
@@ -372,7 +371,7 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The output configurations. For more information, see <a href="~~2692547#447b928fcbuoa~~">OutputConfig</a>.</p>
+         * <p>The output configuration. For more information about the structure, see <a href="~~2692547#447b928fcbuoa~~">OutputConfig</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{
@@ -388,10 +387,15 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String outputConfig;
 
         /**
-         * <p>The job state. Valid values:</p>
-         * <p>Init: The job is initialized.</p>
-         * <p>Processing: The job is in progress.</p>
-         * <p>Finished: The job is complete.</p>
+         * <p>The task status. Valid values:</p>
+         * <ul>
+         * <li><p>Init: initialized</p>
+         * </li>
+         * <li><p>Processing: processing</p>
+         * </li>
+         * <li><p>Finished: finished</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>
@@ -400,13 +404,13 @@ public class GetBatchMediaProducingJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The quick video production subjobs.</p>
+         * <p>The list of one-click video production subtasks.</p>
          */
         @NameInMap("SubJobList")
         public java.util.List<GetBatchMediaProducingJobResponseBodyEditingBatchJobSubJobList> subJobList;
 
         /**
-         * <p>The user-defined data, including the business and callback configurations. For more information, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData</a>.</p>
+         * <p>The user business and callback configurations. For more information about the structure, see <a href="~~357745#section-urj-v3f-0s1~~">UserData</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>

@@ -42,11 +42,11 @@ public class ListPackageJobsResponseBody extends TeaModel {
 
     public static class ListPackageJobsResponseBodyPackageJobListPackageJobsInputsInput extends TeaModel {
         /**
-         * <p>The media object.</p>
+         * <p>The media value:</p>
          * <ul>
-         * <li><p>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</p>
+         * <li><p>If type is set to OSS, this parameter specifies a URL that supports the OSS protocol and HTTP protocol.</p>
          * </li>
-         * <li><p>If Type is set to Media, set this parameter to the ID of a media asset.</p>
+         * <li><p>If type is set to Media, this parameter specifies a media asset ID.</p>
          * </li>
          * </ul>
          * 
@@ -57,12 +57,10 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the media object. Valid values:</p>
+         * <p>The media object type. Valid values:</p>
          * <ul>
-         * <li><p>OSS: an Object Storage Service (OSS) object.</p>
-         * </li>
-         * <li><p>Media: a media asset.</p>
-         * </li>
+         * <li>OSS: an OSS file.</li>
+         * <li>Media: a media asset ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -96,7 +94,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
 
     public static class ListPackageJobsResponseBodyPackageJobListPackageJobsInputs extends TeaModel {
         /**
-         * <p>The information about the input stream file.</p>
+         * <p>The packaging stream file information.</p>
          */
         @NameInMap("Input")
         public ListPackageJobsResponseBodyPackageJobListPackageJobsInputsInput input;
@@ -118,12 +116,10 @@ public class ListPackageJobsResponseBody extends TeaModel {
 
     public static class ListPackageJobsResponseBodyPackageJobListPackageJobsOutput extends TeaModel {
         /**
-         * <p>The media object.</p>
+         * <p>The media value:</p>
          * <ul>
-         * <li><p>If Type is set to OSS, the URL of an OSS object is returned. Both the OSS and HTTP protocols are supported.</p>
-         * </li>
-         * <li><p>If Type is set to Media, set this parameter to the ID of a media asset.</p>
-         * </li>
+         * <li>If type is set to OSS, this parameter specifies a URL that supports the OSS protocol and HTTP protocol.</li>
+         * <li>If type is set to Media, this parameter specifies a media asset ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -133,12 +129,10 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the media object. Valid values:</p>
+         * <p>The media object type. Valid values:</p>
          * <ul>
-         * <li><p>OSS: an OSS object.</p>
-         * </li>
-         * <li><p>Media: a media asset.</p>
-         * </li>
+         * <li>OSS: an OSS file.</li>
+         * <li>Media: a media asset ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -172,7 +166,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
 
     public static class ListPackageJobsResponseBodyPackageJobListPackageJobs extends TeaModel {
         /**
-         * <p>The error code returned if the job fails.</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter</p>
@@ -181,7 +175,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The time when the job was created. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the job was created. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-07T14:00:32Z</p>
@@ -190,7 +184,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the job was complete. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the job was completed. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-07T15:00:32Z</p>
@@ -199,7 +193,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The input of the job.</p>
+         * <p>The job inputs.</p>
          */
         @NameInMap("Inputs")
         public java.util.List<ListPackageJobsResponseBodyPackageJobListPackageJobsInputs> inputs;
@@ -214,7 +208,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The error message that is returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>Resource content bad.</p>
@@ -223,7 +217,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The time when the job was last modified. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the job was last modified. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-07T15:00:32Z</p>
@@ -232,7 +226,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The job name.</p>
          * 
          * <strong>example:</strong>
          * <p>job-name</p>
@@ -241,13 +235,13 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The output of the job.</p>
+         * <p>The job output.</p>
          */
         @NameInMap("Output")
         public ListPackageJobsResponseBodyPackageJobListPackageJobsOutput output;
 
         /**
-         * <p>The ID of the ApsaraVideo Media Processing (MPS) queue that is used to run the job.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5b40833e4c3e4d4e95a866abb9a4****</p>
@@ -256,7 +250,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority. Default value: 6.</p>
+         * <p>The job priority. A larger value indicates a higher priority. Valid values: 1 to 10. Default value: 6.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -265,7 +259,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The state of the job.</p>
+         * <p>The job status.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -274,7 +268,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the job was submitted. The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
+         * <p>The time when the job was submitted. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-07T14:00:32Z</p>
@@ -283,14 +277,11 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String submitTime;
 
         /**
-         * <p>The source of the job. Valid values:</p>
+         * <p>The job source. Valid values: </p>
          * <ul>
-         * <li><p>API</p>
-         * </li>
-         * <li><p>WorkFlow</p>
-         * </li>
-         * <li><p>Console</p>
-         * </li>
+         * <li>API: API.</li>
+         * <li>WorkFlow: Workflow.</li>
+         * <li>Console: Console.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -300,7 +291,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
         public String triggerSource;
 
         /**
-         * <p>The user-defined data.</p>
+         * <p>The custom user data.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;param&quot;: &quot;value&quot;}</p>
@@ -437,7 +428,7 @@ public class ListPackageJobsResponseBody extends TeaModel {
 
     public static class ListPackageJobsResponseBodyPackageJobList extends TeaModel {
         /**
-         * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. The token of the next page is returned after you call this operation for the first time.</p>
+         * <p>The pagination token for the next page. Leave this parameter empty for the first request. The token is returned after the first query.</p>
          * 
          * <strong>example:</strong>
          * <p>019daf5780f74831b0e1a767c9f1****</p>

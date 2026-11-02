@@ -14,7 +14,7 @@ public class CloseStreamToSearchLibResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the media asset.</p>
+     * <p>The media asset ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
@@ -23,7 +23,7 @@ public class CloseStreamToSearchLibResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -32,12 +32,10 @@ public class CloseStreamToSearchLibResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <p>Indicates whether the call is successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The call is successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryTraceExtractJobResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public QueryTraceExtractJobResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -20,7 +20,7 @@ public class QueryTraceExtractJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p><em><strong><strong>ACB-44F2-5F2D-88D7-1283E70</strong></strong></em></p>
@@ -76,10 +76,10 @@ public class QueryTraceExtractJobResponseBody extends TeaModel {
 
     public static class QueryTraceExtractJobResponseBodyData extends TeaModel {
         /**
-         * <p>The trace watermark information.</p>
+         * <p>The tracing watermark information.</p>
          * 
          * <strong>example:</strong>
-         * <p>测试溯源水印</p>
+         * <p>Trace extract test</p>
          */
         @NameInMap("Trace")
         public String trace;

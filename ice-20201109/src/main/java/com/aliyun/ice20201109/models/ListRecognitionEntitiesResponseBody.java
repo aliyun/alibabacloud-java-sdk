@@ -26,7 +26,7 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p><strong>Request ID</strong></p>
+     * <p><strong>The request ID.</strong></p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -35,7 +35,7 @@ public class ListRecognitionEntitiesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>

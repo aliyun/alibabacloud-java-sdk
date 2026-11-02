@@ -4,51 +4,15 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class QueryMediaCensorJobListRequest extends TeaModel {
-    /**
-     * <p>The end of the time range to query.</p>
-     * <ul>
-     * <li><p>Specify the time in the ISO 8601 standard. The time must be in UTC.</p>
-     * </li>
-     * <li><p>Format: yyyy-MM-ddTHH:mm:ssZ.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>2022-02-14T02:16:07Z</p>
-     */
     @NameInMap("EndOfJobCreatedTimeRange")
     public String endOfJobCreatedTimeRange;
 
-    /**
-     * <p>The IDs of the content moderation jobs. You can obtain the ID of a content moderation job from the response parameters of the SubmitMediaCensorJob operation. Separate multiple IDs with commas (,).</p>
-     * 
-     * <strong>example:</strong>
-     * <p>fa9c34be3bcf42919ac4d1775239****,78dc866518b843259669df58ed30****</p>
-     */
     @NameInMap("JobIds")
     public String jobIds;
 
-    /**
-     * <p>The number of entries per page.</p>
-     * <ul>
-     * <li><p>Default value: <strong>30</strong>.</p>
-     * </li>
-     * <li><p>Valid values: <strong>1 to 300</strong>.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>20</p>
-     */
     @NameInMap("MaximumPageSize")
     public Long maximumPageSize;
 
-    /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>79aff3eee82242e092899db5****</p>
-     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
@@ -58,12 +22,6 @@ public class QueryMediaCensorJobListRequest extends TeaModel {
     @NameInMap("OwnerId")
     public Long ownerId;
 
-    /**
-     * <p>The ID of the ApsaraVideo Media Processing (MPS) queue to which the jobs were submitted.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>c5b30b7c0d0e4a0abde1d5f9e751****</p>
-     */
     @NameInMap("PipelineId")
     public String pipelineId;
 
@@ -73,39 +31,9 @@ public class QueryMediaCensorJobListRequest extends TeaModel {
     @NameInMap("ResourceOwnerId")
     public Long resourceOwnerId;
 
-    /**
-     * <p>The beginning of the time range to query.</p>
-     * <ul>
-     * <li><p>Specify the time in the ISO 8601 standard. The time must be in UTC.</p>
-     * </li>
-     * <li><p>Format: yyyy-MM-ddTHH:mm:ssZ.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>2021-12-22T03:48:05Z</p>
-     */
     @NameInMap("StartOfJobCreatedTimeRange")
     public String startOfJobCreatedTimeRange;
 
-    /**
-     * <p>The state of the jobs that you want to query. Valid values:</p>
-     * <ul>
-     * <li><p><strong>All</strong>: all jobs.</p>
-     * </li>
-     * <li><p><strong>Queuing</strong>: the jobs that are waiting in the queue.</p>
-     * </li>
-     * <li><p><strong>Analysing</strong>: the jobs that are in progress.</p>
-     * </li>
-     * <li><p><strong>Fail</strong>: failed jobs.</p>
-     * </li>
-     * <li><p><strong>Success</strong>: successful jobs.</p>
-     * </li>
-     * </ul>
-     * 
-     * <strong>example:</strong>
-     * <p>All</p>
-     */
     @NameInMap("State")
     public String state;
 

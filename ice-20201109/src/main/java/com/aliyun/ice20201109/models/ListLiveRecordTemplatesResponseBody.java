@@ -14,7 +14,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of templates per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The sort order. By default, templates are sorted by creation time in descending order.</p>
+     * <p>The sorting parameter. By default, templates are sorted in descending order of creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -47,7 +47,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The total number of templates.</p>
+     * <p>The total number of records.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -110,7 +110,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
 
     public static class ListLiveRecordTemplatesResponseBodyRecordTemplateListRecordFormatList extends TeaModel {
         /**
-         * <p>The duration of the recording cycle, in seconds.</p>
+         * <p>The cycle recording duration. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>21600</p>
@@ -119,7 +119,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         public Integer cycleDuration;
 
         /**
-         * <p>The recording file format.</p>
+         * <p>The format.</p>
          * 
          * <strong>example:</strong>
          * <p>m3u8</p>
@@ -128,7 +128,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         public String format;
 
         /**
-         * <p>The object prefix for the recording file stored in Object Storage Service (OSS).</p>
+         * <p>The name of the recording file stored in OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>record/{JobId}/{Sequence}<em>{EscapedStartTime}</em>{EscapedEndTime}</p>
@@ -137,7 +137,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         public String ossObjectPrefix;
 
         /**
-         * <p>The duration of each slice, in seconds.</p>
+         * <p>The duration of a single slice. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -146,7 +146,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         public Integer sliceDuration;
 
         /**
-         * <p>The object prefix for the Transport Stream (TS) slice.</p>
+         * <p>The name of the TS slice.</p>
          * 
          * <strong>example:</strong>
          * <p>record/{JobId}/{UnixTimestamp}_{Sequence}</p>
@@ -203,7 +203,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
 
     public static class ListLiveRecordTemplatesResponseBodyRecordTemplateList extends TeaModel {
         /**
-         * <p>The time the template was created.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -213,7 +213,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time the template was last modified.</p>
+         * <p>The last modified time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -247,7 +247,7 @@ public class ListLiveRecordTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The template type.</p>
+         * <p>The templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>

@@ -42,12 +42,10 @@ public class GetTemplateResponseBody extends TeaModel {
 
     public static class GetTemplateResponseBodyTemplate extends TeaModel {
         /**
-         * <p>The clip parameters for submitting a video production job. You can replace mediaId and text with real values to submit a job. References:</p>
+         * <p>The ClipsParam parameter template for submitting a synthesis task. You can replace mediaId and text with actual parameters to submit the synthesis task. For usage methods, refer to:</p>
          * <ul>
-         * <li><p><a href="https://help.aliyun.com/document_detail/445399.html">Create and use a regular template</a></p>
-         * </li>
-         * <li><p><a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a></p>
-         * </li>
+         * <li><a href="https://help.aliyun.com/document_detail/445399.html">Create and use standard templates</a></li>
+         * <li><a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a></li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -57,22 +55,21 @@ public class GetTemplateResponseBody extends TeaModel {
         public String clipsParam;
 
         /**
-         * <p>The template configurations.</p>
+         * <p>The template configuration.</p>
          * <ul>
-         * <li><p>For more information about the configurations of a regular template, see <a href="https://help.aliyun.com/document_detail/456193.html">Config object of a regular template</a>.</p>
-         * </li>
-         * <li><p>For more information about the configurations of an advanced template, see <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</p>
-         * </li>
+         * <li>For standard template configuration, refer to <a href="https://help.aliyun.com/document_detail/456193.html">Timeline template configuration details</a>.</li>
+         * <li>For advanced template configuration, refer to <a href="https://help.aliyun.com/document_detail/445389.html">Create advanced templates</a>.</li>
+         * <li>For one-click video production template configuration, refer to <a href="https://help.aliyun.com/document_detail/2878274.html">One-click video production template configuration parameter description</a>.</li>
          * </ul>
          * 
          * <strong>example:</strong>
-         * <p>See Timeline template configuration details.</p>
+         * <p>Refer to Timeline template configuration details</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
-         * <p>The thumbnail URL.</p>
+         * <p>The cover URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
@@ -81,14 +78,11 @@ public class GetTemplateResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The source from which the template was created. Valid values:</p>
+         * <p>The creation source. Valid values:</p>
          * <ul>
-         * <li><p>AliyunConsole</p>
-         * </li>
-         * <li><p>OpenAPI</p>
-         * </li>
-         * <li><p>WebSDK</p>
-         * </li>
+         * <li>AliyunConsole    </li>
+         * <li>OpenAPI</li>
+         * <li>WebSDK</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -98,7 +92,7 @@ public class GetTemplateResponseBody extends TeaModel {
         public String createSource;
 
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The creation time. The time is in the ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
@@ -107,14 +101,11 @@ public class GetTemplateResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The source from which the template was modified. Valid values:</p>
+         * <p>The modification source. Valid values:</p>
          * <ul>
-         * <li><p>AliyunConsole</p>
-         * </li>
-         * <li><p>OpenAPI</p>
-         * </li>
-         * <li><p>WebSDK</p>
-         * </li>
+         * <li>AliyunConsole    </li>
+         * <li>OpenAPI</li>
+         * <li>WebSDK</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,7 +115,7 @@ public class GetTemplateResponseBody extends TeaModel {
         public String modifiedSource;
 
         /**
-         * <p>The time when the template was last modified.</p>
+         * <p>The modification time. The time is in the ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
@@ -151,16 +142,12 @@ public class GetTemplateResponseBody extends TeaModel {
         public String previewMedia;
 
         /**
-         * <p>The state of the preview media asset. Valid values:</p>
+         * <p>The preview media asset status. Valid values:</p>
          * <ul>
-         * <li><p>Init: the initial state, which indicates that the source file is not ready.</p>
-         * </li>
-         * <li><p>Preparing: The source file is being prepared. For example, the file is being uploaded or edited.</p>
-         * </li>
-         * <li><p>PrepareFail: The source file failed to be prepared. For example, the information about the source file failed to be obtained.</p>
-         * </li>
-         * <li><p>Normal: The source file is ready.</p>
-         * </li>
+         * <li>Init (initial status: the source file is not ready)</li>
+         * <li>Preparing (the source file is being prepared, such as being uploaded or undergoing editing and synthesis)</li>
+         * <li>PrepareFail (the source file preparation failed, such as a failure to obtain the source file information)</li>
+         * <li>Normal (normal: the source file is ready)</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -170,7 +157,7 @@ public class GetTemplateResponseBody extends TeaModel {
         public String previewMediaStatus;
 
         /**
-         * <p>The IDs of the materials associated with the template for use by the regular template editor.</p>
+         * <p>The media assets associated with the template. Used by the standard template editor.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;video&quot;:[&quot;<strong><strong><strong>c04f1d4a06996144cc1a</strong></strong></strong>&quot;],&quot;audio&quot;:[&quot;<strong><strong><strong>c04f1d4a06996144cc1a</strong></strong></strong>&quot;],&quot;image&quot;:[&quot;<strong><strong><strong>c04f1d4a06996144cc1a</strong></strong></strong>&quot;]}</p>
@@ -179,20 +166,14 @@ public class GetTemplateResponseBody extends TeaModel {
         public String relatedMediaids;
 
         /**
-         * <p>The template state. Valid values:</p>
+         * <p>The template status. Valid values:</p>
          * <ul>
-         * <li><p>Available</p>
-         * </li>
-         * <li><p>Created</p>
-         * </li>
-         * <li><p>Uploading</p>
-         * </li>
-         * <li><p>Processing</p>
-         * </li>
-         * <li><p>UploadFailed</p>
-         * </li>
-         * <li><p>ProcessFailed</p>
-         * </li>
+         * <li>Available</li>
+         * <li>Created</li>
+         * <li>Uploading</li>
+         * <li>Processing</li>
+         * <li>UploadFailed</li>
+         * <li>ProcessFailed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -211,12 +192,11 @@ public class GetTemplateResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The template type. Valid values:</p>
+         * <p>The templatetype. Valid values:</p>
          * <ul>
-         * <li><p>Timeline</p>
-         * </li>
-         * <li><p>VETemplate</p>
-         * </li>
+         * <li>Timeline: standard template</li>
+         * <li>VETemplate: advanced template</li>
+         * <li>BatchEditing: one-click video production template</li>
          * </ul>
          * 
          * <strong>example:</strong>

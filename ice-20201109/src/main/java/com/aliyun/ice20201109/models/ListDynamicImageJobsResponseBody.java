@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListDynamicImageJobsResponseBody extends TeaModel {
     /**
-     * <p>The list of jobs.</p>
+     * <p>The list of tasks.</p>
      */
     @NameInMap("Jobs")
     public java.util.List<ListDynamicImageJobsResponseBodyJobs> jobs;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results.</p>
+     * <p>The pagination token for the next page.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
@@ -59,13 +59,12 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
 
     public static class ListDynamicImageJobsResponseBodyJobsInput extends TeaModel {
         /**
-         * <p>The input file. The file can be an OSS object or a media asset. The URL of an OSS object can be in one of the following formats:</p>
-         * <ol>
-         * <li><p>OSS://bucket/object</p>
-         * </li>
-         * <li><p>http(s)://bucket.oss-[regionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
-         * </li>
-         * </ol>
+         * <p>The input media. OSS URLs and media asset IDs are supported. OSS URL formats:</p>
+         * <ul>
+         * <li>OSS://bucket/object</li>
+         * <li>http(s)://bucket.oss-[regionId].aliyuncs.com/object
+         * In the URLs, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket/object</p>
@@ -74,16 +73,10 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the input file. Valid values:</p>
-         * <ol>
-         * <li><p>OSS: an Object Storage Service (OSS) object.</p>
-         * </li>
-         * <li><p>Media: a media asset.</p>
-         * </li>
-         * </ol>
+         * <p>The input type. Valid values:</p>
          * <ul>
-         * <li></li>
-         * <li></li>
+         * <li>OSS: the OSS file URL.</li>
+         * <li>Media: the media asset ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -117,13 +110,12 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
 
     public static class ListDynamicImageJobsResponseBodyJobsOutput extends TeaModel {
         /**
-         * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
-         * <ol>
-         * <li><p>OSS://bucket/object</p>
-         * </li>
-         * <li><p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
-         * </li>
-         * </ol>
+         * <p>The output media. If Type is set to OSS, enter an OSS URL. If Type is set to Media, enter a media asset ID. OSS URL formats:</p>
+         * <ul>
+         * <li>OSS://bucket/object</li>
+         * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object
+         * In the URLs, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
@@ -132,16 +124,10 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the output file. Valid values:</p>
-         * <ol>
-         * <li><p>OSS: an OSS object.</p>
-         * </li>
-         * <li><p>Media: a media asset.</p>
-         * </li>
-         * </ol>
+         * <p>The output type. Valid values:</p>
          * <ul>
-         * <li></li>
-         * <li></li>
+         * <li>OSS: the OSS file URL.</li>
+         * <li>Media: the media asset ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -175,7 +161,7 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
 
     public static class ListDynamicImageJobsResponseBodyJobs extends TeaModel {
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The creation time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
@@ -184,7 +170,7 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the job was complete.</p>
+         * <p>The task completion time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:30:54Z</p>
@@ -193,13 +179,13 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The input of the job.</p>
+         * <p>The task input.</p>
          */
         @NameInMap("Input")
         public ListDynamicImageJobsResponseBodyJobsInput input;
 
         /**
-         * <p>The job ID.</p>
+         * <p>The animated image task ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
@@ -208,7 +194,7 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The time when the job was last modified.</p>
+         * <p>The last modification time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:30:54Z</p>
@@ -217,7 +203,7 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The task name.</p>
          * 
          * <strong>example:</strong>
          * <p>SampleJob</p>
@@ -226,13 +212,13 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The output of the job.</p>
+         * <p>The task output.</p>
          */
         @NameInMap("Output")
         public ListDynamicImageJobsResponseBodyJobsOutput output;
 
         /**
-         * <p>The ID of the MPS queue to which the job was submitted.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
@@ -241,13 +227,13 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The state of the job.</p>
+         * <p>The task status.</p>
          * <ul>
-         * <li><p><strong>Success</strong>: The job is successful.</p>
+         * <li><p><strong>Success</strong>: Succeeded.</p>
          * </li>
-         * <li><p><strong>Fail</strong>: The job failed.</p>
+         * <li><p><strong>Fail</strong>: Failed.</p>
          * </li>
-         * <li><p><strong>Init</strong>: The job is submitted.</p>
+         * <li><p><strong>Init</strong>: Submitted.</p>
          * </li>
          * </ul>
          * 
@@ -258,7 +244,7 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the job was submitted.</p>
+         * <p>The task submission time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
@@ -277,15 +263,6 @@ public class ListDynamicImageJobsResponseBody extends TeaModel {
 
         /**
          * <p>The request trigger source.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Console</p>
-         * </li>
-         * <li><p>Workflow</p>
-         * </li>
-         * <li><p>API</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>API</p>

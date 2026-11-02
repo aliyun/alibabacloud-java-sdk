@@ -5,18 +5,21 @@ import com.aliyun.tea.*;
 
 public class ListChannelAlertsRequest extends TeaModel {
     /**
-     * <p>The alert type.</p>
+     * <p>The alert type. Valid values:</p>
+     * <ul>
+     * <li>Scheduling Error: An error occurred while building the schedule.</li>
+     * <li>PlayBack Warning: An exception occurred when pulling the address while adding a source.</li>
+     * <li>info: Information.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Scheduling Error: An error occurred when building the schedule.
-     * PlayBack Warning: Address pull exception when adding source.
-     * info: Information.</p>
+     * <p>Scheduling Error</p>
      */
     @NameInMap("Category")
     public String category;
 
     /**
-     * <p>The end of the time range to query.</p>
+     * <p>The end time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-11-21T16:10:45Z</p>
@@ -25,7 +28,7 @@ public class ListChannelAlertsRequest extends TeaModel {
     public String gmtEnd;
 
     /**
-     * <p>The beginning of the time range to query.</p>
+     * <p>The start time.</p>
      * 
      * <strong>example:</strong>
      * <p>2024-11-21T16:10:45Z</p>
@@ -34,7 +37,7 @@ public class ListChannelAlertsRequest extends TeaModel {
     public String gmtStart;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +46,7 @@ public class ListChannelAlertsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -62,7 +65,7 @@ public class ListChannelAlertsRequest extends TeaModel {
     public String resourceArn;
 
     /**
-     * <p>The sorting order by modification time. Valid values: asc and desc.</p>
+     * <p>Sorts the results by modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>

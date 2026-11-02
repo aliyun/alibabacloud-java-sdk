@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCustomTemplateResponseBody extends TeaModel {
     /**
-     * <p>The template details.</p>
+     * <p>The template information.</p>
      */
     @NameInMap("CustomTemplate")
     public GetCustomTemplateResponseBodyCustomTemplate customTemplate;
@@ -43,6 +43,9 @@ public class GetCustomTemplateResponseBody extends TeaModel {
     public static class GetCustomTemplateResponseBodyCustomTemplateFrontendHintTranscodeTemplateHint extends TeaModel {
         /**
          * <p>The bitrate control type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CFR</p>
          */
         @NameInMap("BitrateControlType")
         public String bitrateControlType;
@@ -64,7 +67,7 @@ public class GetCustomTemplateResponseBody extends TeaModel {
 
     public static class GetCustomTemplateResponseBodyCustomTemplateFrontendHint extends TeaModel {
         /**
-         * <p>Hint for transcoding templates.</p>
+         * <p>The hint information for the transcoding template.</p>
          */
         @NameInMap("TranscodeTemplateHint")
         public GetCustomTemplateResponseBodyCustomTemplateFrontendHintTranscodeTemplateHint transcodeTemplateHint;
@@ -86,7 +89,7 @@ public class GetCustomTemplateResponseBody extends TeaModel {
 
     public static class GetCustomTemplateResponseBodyCustomTemplate extends TeaModel {
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The time when the template was created. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-01T10:00:00Z</p>
@@ -95,13 +98,13 @@ public class GetCustomTemplateResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Reserved for frontend display.</p>
+         * <p>The reserved information for frontend display.</p>
          */
         @NameInMap("FrontendHint")
         public GetCustomTemplateResponseBodyCustomTemplateFrontendHint frontendHint;
 
         /**
-         * <p>Indicates whether the template is a default template.</p>
+         * <p>Indicates whether the template is the default template.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -110,7 +113,7 @@ public class GetCustomTemplateResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The time when the template was last modified.</p>
+         * <p>The time when the template was modified. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-01T11:00:00Z</p>
@@ -119,7 +122,7 @@ public class GetCustomTemplateResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The status of the template.</p>
+         * <p>The template status.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -128,7 +131,7 @@ public class GetCustomTemplateResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The ID of the template subtype.</p>
+         * <p>The template subtype ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -137,7 +140,7 @@ public class GetCustomTemplateResponseBody extends TeaModel {
         public Integer subtype;
 
         /**
-         * <p>The name of the template subtype.</p>
+         * <p>The template subtype name.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -146,7 +149,7 @@ public class GetCustomTemplateResponseBody extends TeaModel {
         public String subtypeName;
 
         /**
-         * <p>The template configuration, in a JSON string.</p>
+         * <p>The template configurations.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Type&quot;:&quot;Normal&quot;,&quot;FrameType&quot;:&quot;normal&quot;,&quot;Time&quot;:0,&quot;Count&quot;:10}</p>
@@ -167,13 +170,13 @@ public class GetCustomTemplateResponseBody extends TeaModel {
          * <p>The template name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test screenshot template</p>
+         * <p>Test snapshot template</p>
          */
         @NameInMap("TemplateName")
         public String templateName;
 
         /**
-         * <p>The ID of the template type.</p>
+         * <p>The templatetype ID.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -182,7 +185,7 @@ public class GetCustomTemplateResponseBody extends TeaModel {
         public Integer type;
 
         /**
-         * <p>The name of the template type.</p>
+         * <p>The templatetype name.</p>
          * 
          * <strong>example:</strong>
          * <p>SnapshotTemplate</p>

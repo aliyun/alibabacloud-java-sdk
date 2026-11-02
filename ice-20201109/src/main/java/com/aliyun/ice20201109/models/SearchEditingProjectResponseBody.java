@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchEditingProjectResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of entries returned on a single page. The value is set to the maximum number of entries returned on each page except for the last page.</p>
-     * <p>Examples:</p>
-     * <p>Valid example: 10,10,5. Invalid example: 10,5,10.</p>
+     * <p>The maximum number of records returned by the current request. The number of records on each page before the last page is the value of MaxResults. Examples: Valid example: 10, 10, 5. Invalid example: 10, 5, 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -16,7 +14,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists.</p>
+     * <p>The token that indicates the position where the current call stops reading. An empty value indicates that all data has been read.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -25,7 +23,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The queried online editing projects.</p>
+     * <p>The cloud editing project list.</p>
      */
     @NameInMap("ProjectList")
     public java.util.List<SearchEditingProjectResponseBodyProjectList> projectList;
@@ -40,7 +38,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Optional. The total number of entries returned. By default, this parameter is not returned.</p>
+     * <p>The total number of data entries that meet the request conditions. This parameter is optional and is not returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>110</p>
@@ -95,7 +93,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
 
     public static class SearchEditingProjectResponseBodyProjectList extends TeaModel {
         /**
-         * <p>The business configuration of the project. This parameter can be ignored for general editing projects.</p>
+         * <p>The business configuration of the project. You can ignore this parameter for general editing projects.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;OutputMediaConfig&quot; : { &quot;StorageLocation&quot;: &quot;test-bucket.oss-cn-shanghai.aliyuncs.com&quot;, &quot;Path&quot;: &quot;test-path&quot; }, &quot;OutputMediaTarget&quot;: &quot;oss-object&quot;, &quot;ReservationTime&quot;: &quot;2021-06-21T08:05:00Z&quot; }</p>
@@ -104,20 +102,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String businessConfig;
 
         /**
-         * <p>The business status of the project. This parameter can be ignored for general editing projects. Valid values:</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>BroadCasting:</p>
-         * </li>
-         * <li><p>ReservationCanceled</p>
-         * </li>
-         * <li><p>LiveFinished</p>
-         * </li>
-         * <li><p>LoadingFailed</p>
-         * </li>
-         * <li><p>Reserving</p>
-         * </li>
-         * </ul>
+         * <p>The business status of the project. You can ignore this parameter for general editing projects.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserving</p>
@@ -126,7 +111,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String businessStatus;
 
         /**
-         * <p>The thumbnail URL of the online editing project.</p>
+         * <p>The cover of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example-cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example-cover.jpg</a></p>
@@ -135,18 +120,11 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The method for editing the online editing project.</p>
-         * <p>-OpenAPI</p>
-         * <p>-AliyunConsole</p>
-         * <p>-WebSDK</p>
-         * <p>Valid values:</p>
+         * <p>The editing method of the cloud editing project. Valid values:</p>
          * <ul>
-         * <li><p>AliyunConsole: The project is created in the Alibaba Cloud console.</p>
-         * </li>
-         * <li><p>WebSDK: The project is created by using the SDK for Web.</p>
-         * </li>
-         * <li><p>OpenAPI: The project is created by calling API operations.</p>
-         * </li>
+         * <li>OpenAPI</li>
+         * <li>AliyunConsole</li>
+         * <li>WebSDK</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -156,7 +134,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String createSource;
 
         /**
-         * <p>The time when the online editing project was created.</p>
+         * <p>The creation time of the cloud editing project. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -165,7 +143,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The description of the online editing project.</p>
+         * <p>The description of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p>sample description</p>
@@ -174,7 +152,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The total length of the online editing project. Unit: seconds.</p>
+         * <p>The total duration of the cloud editing project. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30.100000</p>
@@ -183,7 +161,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>The error code returned if the production of the online editing project failed.</p>
+         * <p>The error code returned when the production of the cloud editing project fails.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter</p>
@@ -192,7 +170,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String errorCode;
 
         /**
-         * <p>The error message returned if the production of the online editing project failed.</p>
+         * <p>The error message returned when the production of the cloud editing project fails.</p>
          * 
          * <strong>example:</strong>
          * <p>&quot;EventTime&quot;:&quot;2021-08-12T10:04:15Z&quot;,&quot;ErrorCode&quot;:&quot;InvalidParameter&quot;,&quot;ErrorMessage&quot;:&quot;The specified parameter \&quot;LiveStreamConfig\&quot; is not valid. specified parameter example is not valid.</p>
@@ -201,7 +179,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String errorMessage;
 
         /**
-         * <p>The method used when the online editing project was last modified.</p>
+         * <p>The source of the last modification.</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -210,7 +188,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String modifiedSource;
 
         /**
-         * <p>The time when the online editing project was last modified.</p>
+         * <p>The last modification time of the cloud editing project. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -219,7 +197,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The ID of the online editing project.</p>
+         * <p>The ID of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
@@ -229,13 +207,6 @@ public class SearchEditingProjectResponseBody extends TeaModel {
 
         /**
          * <p>The type of the editing project.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>LiveEditingProject: a live stream editing project.</p>
-         * </li>
-         * <li><p>EditingProject: a regular editing project.</p>
-         * </li>
-         * </ul>
          * 
          * <strong>example:</strong>
          * <p>EditingProject</p>
@@ -244,24 +215,13 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String projectType;
 
         /**
-         * <p>The status of the online editing project. Valid values:</p>
-         * <p>-Draft</p>
-         * <p>-Editing</p>
-         * <p>-Producing</p>
-         * <p>-Produced</p>
-         * <p>-ProduceFailed</p>
-         * <p>Valid values:</p>
+         * <p>The list of all cloud editing project statuses. Valid values:</p>
          * <ul>
-         * <li><p>Draft</p>
-         * </li>
-         * <li><p>Produced</p>
-         * </li>
-         * <li><p>Editing</p>
-         * </li>
-         * <li><p>Producing</p>
-         * </li>
-         * <li><p>ProduceFailed</p>
-         * </li>
+         * <li>Draft</li>
+         * <li>Editing</li>
+         * <li>Producing</li>
+         * <li>Produced</li>
+         * <li>ProduceFailed</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -271,7 +231,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the template.</p>
+         * <p>The templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>Timeline</p>
@@ -280,7 +240,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String templateType;
 
         /**
-         * <p>The timeline of the online editing project.</p>
+         * <p>The timeline of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;},{&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;}]}]}</p>
@@ -289,7 +249,7 @@ public class SearchEditingProjectResponseBody extends TeaModel {
         public String timeline;
 
         /**
-         * <p>The title of the online editing project.</p>
+         * <p>The title of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p>title</p>

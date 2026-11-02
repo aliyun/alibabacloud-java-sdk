@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoTranslationJobResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public SubmitVideoTranslationJobResponseBodyData data;
@@ -20,13 +20,10 @@ public class SubmitVideoTranslationJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
-     * <p>Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true: The request was successful.</p>
-     * </li>
-     * <li><p>false: The request failed.</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +63,7 @@ public class SubmitVideoTranslationJobResponseBody extends TeaModel {
 
     public static class SubmitVideoTranslationJobResponseBodyData extends TeaModel {
         /**
-         * <p>The video translation job ID.</p>
+         * <p>The ID of the video translation task.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>

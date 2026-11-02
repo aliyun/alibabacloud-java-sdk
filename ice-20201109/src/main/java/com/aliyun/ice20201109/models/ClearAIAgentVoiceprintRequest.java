@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ClearAIAgentVoiceprintRequest extends TeaModel {
     /**
-     * <p>The registration mode. The default is <code>Explicit</code>.</p>
+     * <p>The voiceprint registration mode. Default value: Explicit.</p>
      * 
      * <strong>example:</strong>
      * <p>Explicit</p>
@@ -14,7 +14,7 @@ public class ClearAIAgentVoiceprintRequest extends TeaModel {
     public String registrationMode;
 
     /**
-     * <p>The unique identifier of the voiceprint to clear.</p>
+     * <p>The identity identifier used to uniquely identify a voiceprint.</p>
      * 
      * <strong>example:</strong>
      * <p>vp_1699123456_8527</p>

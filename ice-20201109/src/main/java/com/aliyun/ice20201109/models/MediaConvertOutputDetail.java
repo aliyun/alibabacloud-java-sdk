@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class MediaConvertOutputDetail extends TeaModel {
     /**
-     * <p>The error code for a failed task.</p>
+     * <p>The error code for a transcoding failure.</p>
      * 
      * <strong>example:</strong>
      * <p>InvalidParameter.ResourceContentBad</p>
@@ -14,7 +14,7 @@ public class MediaConvertOutputDetail extends TeaModel {
     public String code;
 
     /**
-     * <p>The time the output task was created, in UTC format (<em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z)</p>
+     * <p>The time when the output was created. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-07T06:06:58Z</p>
@@ -23,7 +23,7 @@ public class MediaConvertOutputDetail extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The time the output task finished, in UTC format (<em>yyyy-MM-dd</em>T<em>HH:mm:ss</em>Z)</p>
+     * <p>The time when the output was completed. The time is displayed in the <i>yyyy-MM-dd</i>T<i>HH:mm:ss</i>Z format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2024-12-07T13:01:07Z</p>
@@ -32,7 +32,7 @@ public class MediaConvertOutputDetail extends TeaModel {
     public String finishTime;
 
     /**
-     * <p>The reason for a task failure.</p>
+     * <p>The detailed cause of the transcoding failure.</p>
      * 
      * <strong>example:</strong>
      * <p>The resource operated InputFile is bad</p>
@@ -41,7 +41,7 @@ public class MediaConvertOutputDetail extends TeaModel {
     public String message;
 
     /**
-     * <p>The name of the output.</p>
+     * <p>The name of the transcoding output.</p>
      * 
      * <strong>example:</strong>
      * <p>720P-mp4</p>
@@ -50,7 +50,7 @@ public class MediaConvertOutputDetail extends TeaModel {
     public String name;
 
     /**
-     * <p>The detailed output results.</p>
+     * <p>The details of the output result.</p>
      */
     @NameInMap("Result")
     public MediaConvertOutputDetailResult result;
@@ -58,11 +58,11 @@ public class MediaConvertOutputDetail extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>Init: Initializing the task.</li>
-     * <li>Scheduled: The task is scheduled for processing.</li>
-     * <li>Success: The task is completed.</li>
-     * <li>Failed: The task failed.</li>
-     * <li>Skipped: The task was skipped.</li>
+     * <li>Init: Initialized.</li>
+     * <li>Scheduled: Scheduled.</li>
+     * <li>Success: Succeeded.</li>
+     * <li>Failed: Failed.</li>
+     * <li>Skipped: Skipped.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,7 +72,7 @@ public class MediaConvertOutputDetail extends TeaModel {
     public String status;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The ID of the transcoding output task.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>4215e042b3966ca5441e</strong></strong></strong></p>
@@ -151,10 +151,10 @@ public class MediaConvertOutputDetail extends TeaModel {
 
     public static class MediaConvertOutputDetailResultOutputFile extends TeaModel {
         /**
-         * <p>The value depends on the Type field:</p>
+         * <p>The media value.</p>
          * <ul>
-         * <li>If Type is set to OSS, the value is the URL of the output file. The following formats are supported: oss://... and https://...</li>
-         * <li>If Type is set to Media, the value is the ID of the media asset.</li>
+         * <li>When Type is set to OSS, the URL supports the OSS and HTTP protocols.</li>
+         * <li>When Type is set to Media, the value is the media asset ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -164,10 +164,10 @@ public class MediaConvertOutputDetail extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the output file. Valid values:</p>
+         * <p>The media object type. Valid values:</p>
          * <ul>
-         * <li>OSS: an Object Storage Service (OSS) object.</li>
-         * <li>Media: a media asset.</li>
+         * <li>OSS: OSS file.</li>
+         * <li>Media: Media asset ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -177,7 +177,7 @@ public class MediaConvertOutputDetail extends TeaModel {
         public String type;
 
         /**
-         * <p>If Type is set to Media, this field provides the actual storage URL of the media asset.</p>
+         * <p>The actual file URL when Type is set to Media.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket/path/to/video.mp4</p>
@@ -224,7 +224,7 @@ public class MediaConvertOutputDetail extends TeaModel {
         public MediaConvertOutputDetailFileMeta outFileMeta;
 
         /**
-         * <p>Details about the generated output file.</p>
+         * <p>The details of the output file.</p>
          */
         @NameInMap("OutputFile")
         public MediaConvertOutputDetailResultOutputFile outputFile;

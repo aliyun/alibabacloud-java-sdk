@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitDNAJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the DNA job. Save this ID for subsequent API calls.</p>
+     * <p>The ID of the video DNA job. Save this ID for subsequent calls to other related operations.</p>
      * 
      * <strong>example:</strong>
      * <p>88c6ca184c0e47098a5b665e2****</p>
@@ -14,7 +14,7 @@ public class SubmitDNAJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>25818875-5F78-4A13-BEF6-D7393642CA58</p>

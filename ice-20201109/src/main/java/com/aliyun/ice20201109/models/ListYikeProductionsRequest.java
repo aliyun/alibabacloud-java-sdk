@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListYikeProductionsRequest extends TeaModel {
     /**
-     * <p>The maximum number of results to return.</p>
+     * <p>The maximum number of results.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListYikeProductionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>Token</p>
@@ -32,7 +32,7 @@ public class ListYikeProductionsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

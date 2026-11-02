@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListVodPackagingConfigurationsResponseBody extends TeaModel {
     /**
-     * <p>The packaging configurations.</p>
+     * <p>The list of packaging configurations.</p>
      */
     @NameInMap("PackagingConfigurations")
     public java.util.List<VodPackagingConfiguration> packagingConfigurations;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number for paging. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListVodPackagingConfigurationsResponseBody extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries to return on each page for paging. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListVodPackagingConfigurationsResponseBody extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -38,12 +38,10 @@ public class ListVodPackagingConfigurationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The sorting order of the packaging configurations based on the time when they were created. Valid values:</p>
+     * <p>The sort order. Default value: desc. Valid values:</p>
      * <ul>
-     * <li><p>desc: descending order.</p>
-     * </li>
-     * <li><p>asc: ascending order.</p>
-     * </li>
+     * <li>desc: Sorts the list in descending order of creation time.</li>
+     * <li>asc: Sorts the list in ascending order of creation time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +51,7 @@ public class ListVodPackagingConfigurationsResponseBody extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>

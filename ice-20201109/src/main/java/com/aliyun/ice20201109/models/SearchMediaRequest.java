@@ -5,7 +5,12 @@ import com.aliyun.tea.*;
 
 public class SearchMediaRequest extends TeaModel {
     /**
-     * <p>The custom filter. This is a JSON string. Supported fields include integer field intField1 and string fields strField1 and strField2. Each field supports only one matching type. Filters on different fields are combined with an AND relationship.</p>
+     * <p>The custom filters. The value is a JSON string. Supported fields include the integer field intField1 and the string fields strField1 and strField2. You can select at most one match type for the same field. Filters for different fields use the AND logical operator.</p>
+     * <ul>
+     * <li>Exact match, such as {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}.</li>
+     * <li>Multi-value match, such as {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}.</li>
+     * <li>Range match, such as {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>{&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13},&quot;strField2&quot;:[&quot;cd&quot;,&quot;de&quot;],&quot;strField1&quot;:&quot;abc&quot;}</p>
@@ -23,10 +28,10 @@ public class SearchMediaRequest extends TeaModel {
     public String entityId;
 
     /**
-     * <p>The filter condition. &lt;props=&quot;china&quot;&gt;For syntax rules, see <a href="https://help.aliyun.com/document_detail/2584256.html">Media asset search protocol</a>.</p>
+     * <p>The filter conditions. &lt;props=&quot;china&quot;&gt;For syntax rules, see <a href="https://help.aliyun.com/document_detail/2584256.html">Media asset search protocol</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>Title = \&quot;China\&quot; and utcCreate = [\&quot;1693367158561\&quot;,\&quot;1693367158562\&quot;]</p>
+     * <p>title = \&quot;China\&quot; and utcCreate = [\&quot;1693367158561\&quot;,\&quot;1693367158562\&quot;]</p>
      */
     @NameInMap("Match")
     public String match;
@@ -41,7 +46,7 @@ public class SearchMediaRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -50,7 +55,7 @@ public class SearchMediaRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The pagination token. This is a 32-character field. You do not need to set this parameter for the first search request. When the search request matches data, the server returns this parameter value to record the current position of the search data. Record the returned parameter value and set this parameter in the next search request according to the following requirements or suggestions: This parameter must be set when you need to traverse all data that matches the search conditions. When the PageNo parameter value exceeds 200, set this parameter to optimize search performance. You can only page forward, and the maximum paging distance is 1000 media assets.</p>
+     * <p>The scroll token, which is a 32-character string. You do not need to specify this parameter when you initiate a search request for the first time. If the search request returns data, the server returns this parameter value to record the position of the current search data. Record the returned value and specify it in subsequent searches based on the following requirements or suggestions: This parameter is required to traverse all data that matches the search conditions. If the value of the PageNo parameter exceeds 200, specify this parameter to optimize search performance. You can only scroll forward, and the maximum scroll distance is 1,000 media assets.</p>
      * 
      * <strong>example:</strong>
      * <p>F8C4F642184DBDA5D93907A70AAE****</p>
@@ -68,7 +73,7 @@ public class SearchMediaRequest extends TeaModel {
     public String searchLibName;
 
     /**
-     * <p>The sort fields and sort orders, separated by commas (,).</p>
+     * <p>The sort fields and sort orders. Separate multiple values with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>utcCreate:Desc</p>

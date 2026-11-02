@@ -14,7 +14,7 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of items per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -110,7 +110,7 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
 
     public static class ListLiveSnapshotTemplatesResponseBodyTemplateList extends TeaModel {
         /**
-         * <p>The time when the template was created. The time format is UTC.</p>
+         * <p>The creation time. The time is displayed in ISO 8601 format in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-20T02:48:58Z</p>
@@ -137,7 +137,7 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The snapshot interval in seconds.</p>
+         * <p>The snapshot interval, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -146,7 +146,7 @@ public class ListLiveSnapshotTemplatesResponseBody extends TeaModel {
         public Integer timeInterval;
 
         /**
-         * <p>The type of the template.</p>
+         * <p>The templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>

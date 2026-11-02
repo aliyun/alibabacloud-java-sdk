@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChannelsResponseBody extends TeaModel {
     /**
-     * <p>The channels.</p>
+     * <p>The channel list.</p>
      */
     @NameInMap("ChannelList")
     public java.util.List<ChannelAssemblyChannel> channelList;
@@ -29,7 +29,7 @@ public class ListChannelsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p><strong>Request ID</strong></p>
+     * <p><strong>The request ID.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
@@ -38,7 +38,7 @@ public class ListChannelsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of channels returned.</p>
+     * <p>The total number of channels.</p>
      * 
      * <strong>example:</strong>
      * <p>180</p>

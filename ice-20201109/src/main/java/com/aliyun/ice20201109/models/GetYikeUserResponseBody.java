@@ -42,7 +42,7 @@ public class GetYikeUserResponseBody extends TeaModel {
 
     public static class GetYikeUserResponseBodyUserInfo extends TeaModel {
         /**
-         * <p>The user\&quot;s nickname.</p>
+         * <p>The nickname.</p>
          * 
          * <strong>example:</strong>
          * <p>nick</p>
@@ -51,7 +51,7 @@ public class GetYikeUserResponseBody extends TeaModel {
         public String nickname;
 
         /**
-         * <p>The user name.</p>
+         * <p>The username.</p>
          * 
          * <strong>example:</strong>
          * <p>name</p>
@@ -60,7 +60,7 @@ public class GetYikeUserResponseBody extends TeaModel {
         public String userName;
 
         /**
-         * <p>The ID of the workspace.</p>
+         * <p>The workspace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>spaceId</p>

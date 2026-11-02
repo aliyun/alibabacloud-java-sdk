@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitDNAJobShrinkRequest extends TeaModel {
     /**
-     * <p>The DNA configuration in JSON format. If specified, these settings override the corresponding template parameters.</p>
+     * <p>The DNA configuration, which is a JSON object.
+     * If you specify this parameter, it overwrites the template parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;:&quot;video&quot;}</p>
@@ -14,7 +15,7 @@ public class SubmitDNAJobShrinkRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The DNA library ID. To create a DNA library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB</a>.</p>
+     * <p>The ID of the DNA library. To create a DNA library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB - Create a DNA library</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +38,7 @@ public class SubmitDNAJobShrinkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The pipeline ID.</p>
+     * <p>The ID of the pipeline.</p>
      * 
      * <strong>example:</strong>
      * <p>5246b8d12a62433ab77845074039****</p>
@@ -46,7 +47,7 @@ public class SubmitDNAJobShrinkRequest extends TeaModel {
     public String pipelineId;
 
     /**
-     * <p>The unique primary key for the video. You are responsible for ensuring its uniqueness.</p>
+     * <p>The unique primary key of the video. You must ensure its uniqueness.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +63,7 @@ public class SubmitDNAJobShrinkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The template ID.</p>
+     * <p>The ID of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>S00000101-100060</p>
@@ -71,7 +72,7 @@ public class SubmitDNAJobShrinkRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The user-defined data. The maximum length is 128 bytes.</p>
+     * <p>The custom user data. The maximum length is 128 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>userData</p>

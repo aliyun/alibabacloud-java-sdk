@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryTraceM3u8JobListResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public java.util.List<QueryTraceM3u8JobListResponseBodyData> data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -20,7 +20,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -76,7 +76,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
 
     public static class QueryTraceM3u8JobListResponseBodyDataOutput extends TeaModel {
         /**
-         * <p>The specific output information.</p>
+         * <p>The output file information.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://bucket/object</p>
@@ -85,12 +85,10 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the output file. Valid values:</p>
+         * <p>The media object type. Valid values: </p>
          * <ul>
-         * <li><p>OSS: an OSS object.</p>
-         * </li>
-         * <li><p>Media: a media asset.</p>
-         * </li>
+         * <li>OSS: OSS file.</li>
+         * <li>Media: media asset ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -124,7 +122,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
 
     public static class QueryTraceM3u8JobListResponseBodyData extends TeaModel {
         /**
-         * <p>The creation time of the job.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>1627357322</p>
@@ -133,7 +131,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public Long gmtCreate;
 
         /**
-         * <p>The last modification time of the job.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>1627357322</p>
@@ -151,13 +149,13 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The output video.</p>
+         * <p>The output of the watermarked video.</p>
          */
         @NameInMap("Output")
         public QueryTraceM3u8JobListResponseBodyDataOutput output;
 
         /**
-         * <p>The current status of the job.</p>
+         * <p>The status.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -175,7 +173,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public String trace;
 
         /**
-         * <p>The media ID for the trace watermark.</p>
+         * <p>The tracing media ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>437bd2b105d07b12a9a82</strong></strong></p>
@@ -184,7 +182,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public String traceMediaId;
 
         /**
-         * <p>The user-defined data.</p>
+         * <p>The user data.</p>
          * 
          * <strong>example:</strong>
          * <p>112</p>
@@ -193,7 +191,7 @@ public class QueryTraceM3u8JobListResponseBody extends TeaModel {
         public String userData;
 
         /**
-         * <p>The ID of the user who initiated the job.</p>
+         * <p>The user ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1346693276****</p>

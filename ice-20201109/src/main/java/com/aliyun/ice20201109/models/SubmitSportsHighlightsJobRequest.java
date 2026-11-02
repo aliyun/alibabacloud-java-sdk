@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitSportsHighlightsJobRequest extends TeaModel {
     /**
-     * <p>A client-generated token to ensure request idempotency.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitSportsHighlightsJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The input configuration. For more information, see <a href="~~2843158#5cbc796a9cuu8~~">input configuration parameters</a>.</p>
+     * <p>The input configuration. For more information, see <a href="~~2843158#5cbc796a9cuu8~~">InputConfig parameter description</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -32,7 +32,7 @@ public class SubmitSportsHighlightsJobRequest extends TeaModel {
      *   &quot;TransferNameRegister&quot;: [
      *     {
      *       &quot;OriginalName&quot;: &quot;IND&quot;,
-     *       &quot;TransferName&quot;: &quot;印第安纳步行者&quot;
+     *       &quot;TransferName&quot;: &quot;Indiana Pacers&quot;
      *     }
      *   ]
      * }</p>
@@ -41,7 +41,7 @@ public class SubmitSportsHighlightsJobRequest extends TeaModel {
     public String inputConfig;
 
     /**
-     * <p>The output configuration. For more information, see <a href="~~2843158#b7dad99fe5q0r~~">output configuration parameters</a>.</p>
+     * <p>The output configuration. For more information, see <a href="~~2843158#b7dad99fe5q0r~~">OutputConfig parameter description</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -55,7 +55,7 @@ public class SubmitSportsHighlightsJobRequest extends TeaModel {
     public String outputConfig;
 
     /**
-     * <p>The user data, containing business and callback configurations. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/357745.html">user data configuration</a>.</p>
+     * <p>The user business configuration and callback configuration. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData configuration</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
     /**
-     * <p>Array of returned Data.</p>
+     * <p>The returned data array.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListAIAgentPhoneNumberResponseBodyData> data;
 
     /**
-     * <p>Page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>Number of records returned per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>******<strong><strong><strong>16-412C-B127-</strong></strong></strong></p>
@@ -38,7 +38,7 @@ public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Total number of phone numbers found in the query.</p>
+     * <p>The total number of phone numbers returned.</p>
      * 
      * <strong>example:</strong>
      * <p>186</p>
@@ -93,7 +93,7 @@ public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
 
     public static class ListAIAgentPhoneNumberResponseBodyData extends TeaModel {
         /**
-         * <p>Phone number.</p>
+         * <p>The phone number.</p>
          * 
          * <strong>example:</strong>
          * <p>132*****683</p>
@@ -102,15 +102,15 @@ public class ListAIAgentPhoneNumberResponseBody extends TeaModel {
         public String phoneNumber;
 
         /**
-         * <p>Phone number status.</p>
+         * <p>The phone number status. Valid values:</p>
          * <ul>
-         * <li><p>1: &quot;Activation in progress&quot;.</p>
+         * <li><p>1: Activation in progress.</p>
          * </li>
-         * <li><p>2: &quot;Normal&quot;.</p>
+         * <li><p>2: Normal.</p>
          * </li>
-         * <li><p>3: &quot;Deactivation in progress&quot;.</p>
+         * <li><p>3: Unregistering.</p>
          * </li>
-         * <li><p>4: &quot;Deactivated&quot;.</p>
+         * <li><p>4: Unregistered.</p>
          * </li>
          * </ul>
          * 

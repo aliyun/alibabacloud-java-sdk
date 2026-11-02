@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaInfoJobShrinkRequest extends TeaModel {
     /**
-     * <p>The input for the job.</p>
+     * <p>The task input.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class SubmitMediaInfoJobShrinkRequest extends TeaModel {
     public String inputShrink;
 
     /**
-     * <p>The job name.</p>
+     * <p>The task name.</p>
      * 
      * <strong>example:</strong>
      * <p>job-name</p>
@@ -24,7 +24,7 @@ public class SubmitMediaInfoJobShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The scheduling settings.</p>
+     * <p>The scheduling parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>user-data</p>
@@ -33,7 +33,7 @@ public class SubmitMediaInfoJobShrinkRequest extends TeaModel {
     public String scheduleConfigShrink;
 
     /**
-     * <p>The custom user data.</p>
+     * <p>The user data.</p>
      * 
      * <strong>example:</strong>
      * <p>user-data</p>

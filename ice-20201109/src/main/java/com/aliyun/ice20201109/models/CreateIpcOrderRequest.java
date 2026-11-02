@@ -7,16 +7,11 @@ public class CreateIpcOrderRequest extends TeaModel {
     /**
      * <p>The capability. Valid values:</p>
      * <ul>
-     * <li><p>understand: Image understanding. Supports the analysis of 300 images per day.</p>
-     * </li>
-     * <li><p>understand-reid: Image understanding with person re-identification (ReID). Supports the analysis of 300 images per day.</p>
-     * </li>
-     * <li><p>search: Search. Supports 75 searches per day.</p>
-     * </li>
-     * <li><p>understand-search: Image understanding and search. Supports the analysis of 300 images and 75 searches per day.</p>
-     * </li>
-     * <li><p>understand-reid-search: Image understanding with ReID and search. Supports the analysis of 300 images and 75 searches per day.</p>
-     * </li>
+     * <li>understand: Image understanding. Supports 300 image understanding tasks per day.</li>
+     * <li>understand-reid: Image understanding with ReID. Supports 300 image understanding tasks per day.</li>
+     * <li>search: Search. Supports 75 searches per day.</li>
+     * <li>understand-search: Image understanding and search. Supports 300 image understanding tasks and 75 searches per day.</li>
+     * <li>understand-reid-search: Image understanding with ReID and search. Supports 300 image understanding tasks and 75 searches per day.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,12 +32,9 @@ public class CreateIpcOrderRequest extends TeaModel {
     /**
      * <p>The subscription period. Valid values:</p>
      * <ul>
-     * <li><p>month: A monthly subscription, calculated as 30 days.</p>
-     * </li>
-     * <li><p>quarter: A quarterly subscription, calculated as 90 days.</p>
-     * </li>
-     * <li><p>year: An annual subscription, calculated as 365 days.</p>
-     * </li>
+     * <li>month: Monthly subscription, calculated as 30 days.</li>
+     * <li>quarter: Quarterly subscription, calculated as 90 days.</li>
+     * <li>year: Annual subscription, calculated as 365 days.</li>
      * </ul>
      * 
      * <strong>example:</strong>

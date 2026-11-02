@@ -14,7 +14,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
     public String callbackUrl;
 
     /**
-     * <p>The time when the file was created.</p>
+     * <p>The creation time. The time is in ISO 8601 format and in UTC (ending with Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2022-02-02T22:22:22Z</p>
@@ -32,16 +32,16 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The name of the job.</p>
+     * <p>The job name.</p>
      * 
      * <strong>example:</strong>
-     * <p>Screenshot task 1</p>
+     * <p>Snapshot job 1</p>
      */
     @NameInMap("JobName")
     public String jobName;
 
     /**
-     * <p>The time when the file was last modified.</p>
+     * <p>The last modified time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-02-02T22:22:22Z</p>
@@ -50,7 +50,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
     public String lastModified;
 
     /**
-     * <p>The naming format of the snapshot captured in overwrite mode.</p>
+     * <p>The overwrite snapshot format.</p>
      * 
      * <strong>example:</strong>
      * <p>snapshot/{JobId}.jpg</p>
@@ -68,7 +68,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The naming format of the snapshot captured in time series mode.</p>
+     * <p>The sequence snapshot format.</p>
      * 
      * <strong>example:</strong>
      * <p>snapshot/{JobId}/{UnixTimestamp}.jpg</p>
@@ -83,16 +83,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
     public GetLiveSnapshotJobResponseBodySnapshotOutput snapshotOutput;
 
     /**
-     * <p>The state of the job.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>init: The job is not started.</p>
-     * </li>
-     * <li><p>paused: The job is paused.</p>
-     * </li>
-     * <li><p>started: The job is in progress.</p>
-     * </li>
-     * </ul>
+     * <p>The job status.</p>
      * 
      * <strong>example:</strong>
      * <p>started</p>
@@ -116,7 +107,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The name of the template.</p>
+     * <p>The template name.</p>
      * 
      * <strong>example:</strong>
      * <p>Template 1</p>
@@ -125,7 +116,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
     public String templateName;
 
     /**
-     * <p>The interval between two adjacent snapshots.</p>
+     * <p>The snapshot interval. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -252,7 +243,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
 
     public static class GetLiveSnapshotJobResponseBodySnapshotOutput extends TeaModel {
         /**
-         * <p>The bucket of the output endpoint. If the storage type is set to oss, the OSS bucket is returned.</p>
+         * <p>The bucket of the output endpoint. The OSS bucket is returned when the type is oss.</p>
          * 
          * <strong>example:</strong>
          * <p>testbucket</p>
@@ -261,7 +252,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The output endpoint. If the storage type is set to oss, the Object Storage Service (OSS) domain name is returned.</p>
+         * <p>The output endpoint. The OSS domain name is returned when the type is oss.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-shanghai.aliyuncs.com</p>
@@ -270,7 +261,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The storage type. The value can only be oss.</p>
+         * <p>The storage type. Currently, only OSS is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -311,7 +302,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
 
     public static class GetLiveSnapshotJobResponseBodyStreamInput extends TeaModel {
         /**
-         * <p>The type of the input stream. The value can only be rtmp.</p>
+         * <p>The input type. Currently, only RTMP is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp</p>
@@ -320,7 +311,7 @@ public class GetLiveSnapshotJobResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The URL of the input stream.</p>
+         * <p>The input URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://<a href="http://www.aliyun.com/stream">www.aliyun.com/stream</a></p>

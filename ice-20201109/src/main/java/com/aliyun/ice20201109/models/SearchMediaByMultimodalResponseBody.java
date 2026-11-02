@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByMultimodalResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,13 +14,13 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The media assets that contain the specified content.</p>
+     * <p>The collection of media assets that meet the search criteria.</p>
      */
     @NameInMap("MediaList")
     public java.util.List<SearchMediaByMultimodalResponseBodyMediaList> mediaList;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>
@@ -29,7 +29,11 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true false</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The operation is successful.</li>
+     * <li>false: The operation fails.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -38,7 +42,7 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The total number of data records that meet the specified filter condition.</p>
+     * <p>The total number of media assets that meet the search criteria.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -152,13 +156,13 @@ public class SearchMediaByMultimodalResponseBody extends TeaModel {
 
     public static class SearchMediaByMultimodalResponseBodyMediaList extends TeaModel {
         /**
-         * <p>The information about the clip.</p>
+         * <p>The clip information.</p>
          */
         @NameInMap("ClipInfo")
         public java.util.List<SearchMediaByMultimodalResponseBodyMediaListClipInfo> clipInfo;
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>a18936e0e28771edb59ae6f6f47a****</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateProgramRequest extends TeaModel {
     /**
-     * <p>The information about ad breaks.</p>
+     * <p>The ad break information.</p>
      * 
      * <strong>example:</strong>
      * <p>[{&quot;MessageType&quot;:&quot;SPLICE_INSERT&quot;,&quot;OffsetMillis&quot;:1000,&quot;SourceLocationName&quot;:&quot;MySourceLocation&quot;,&quot;SourceName&quot;:&quot;MyAdSource&quot;,&quot;SpliceInsertSettings&quot;:{&quot;AvailNumber&quot;:0,&quot;AvailExpected&quot;:0,&quot;SpliceEventID&quot;:1,&quot;UniqueProgramID&quot;:0}}]</p>
@@ -14,7 +14,7 @@ public class UpdateProgramRequest extends TeaModel {
     public String adBreaks;
 
     /**
-     * <p>The name of the channel.</p>
+     * <p>The channel name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class UpdateProgramRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>Extracts a clip from the source.</p>
+     * <p>The clip range information.</p>
      * 
      * <strong>example:</strong>
      * <p>{StartOffsetMillis: 213123, EndOffsetMillis: 213134}</p>
@@ -33,7 +33,7 @@ public class UpdateProgramRequest extends TeaModel {
     public String clipRange;
 
     /**
-     * <p>The name of the program.</p>
+     * <p>The program name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class UpdateProgramRequest extends TeaModel {
     public String programName;
 
     /**
-     * <p>The name of the source location.</p>
+     * <p>The source location name.</p>
      * 
      * <strong>example:</strong>
      * <p>MySourceLcation</p>
@@ -52,7 +52,7 @@ public class UpdateProgramRequest extends TeaModel {
     public String sourceLocationName;
 
     /**
-     * <p>The name of the source.</p>
+     * <p>The source name.</p>
      * 
      * <strong>example:</strong>
      * <p>MySource</p>
@@ -61,7 +61,7 @@ public class UpdateProgramRequest extends TeaModel {
     public String sourceName;
 
     /**
-     * <p>The source type of the program. Valid values: vodSource and liveSource.</p>
+     * <p>The source type of the program.</p>
      * 
      * <strong>example:</strong>
      * <p>vodSource</p>
@@ -70,7 +70,7 @@ public class UpdateProgramRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The program transition method.</p>
+     * <p>The program transition information.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Type&quot;: &quot;RELATIVE&quot;, &quot;RelativePosition&quot;: &quot;AFTER_PROGRAM&quot;, &quot;RelativeProgram&quot;: &quot;program2&quot;}</p>

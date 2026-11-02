@@ -14,7 +14,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String appId;
 
     /**
-     * <p>The input parameters for running the AI application. The value is a string obtained after JSON serialize.</p>
+     * <p>The input parameters for running the AI application, serialized as a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;LoadImage.1.TargetImage\&quot;:\&quot;MediaId1\&quot;}</p>
@@ -23,7 +23,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String appParams;
 
     /**
-     * <p>The time when the task ended. The time is in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</p>
+     * <p>The end time of the task, in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-02-06T18:53:18.809+08:00</p>
@@ -32,7 +32,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String executionFinishTime;
 
     /**
-     * <p>The time when the task started. The time is in the yyyy-mm-ddTHH:mm:ssZ format (UTC).</p>
+     * <p>The start time of the task, in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
      * 
      * <strong>example:</strong>
      * <p>2026-02-06T18:53:34.001+08:00</p>
@@ -50,7 +50,7 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     public String folderId;
 
     /**
-     * <p>The task ID.</p>
+     * <p>The job ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
@@ -85,11 +85,11 @@ public class GetYikeAIAppJobResponseBody extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li>Created: The task is created.</li>
-     * <li>Queuing: The task is queuing.</li>
+     * <li>Created: The task is newly created.</li>
+     * <li>Queuing: The task is in the queue.</li>
      * <li>Executing: The task is being executed.</li>
-     * <li>Finished: The task is completed.</li>
-     * <li>Failed: The task failed.</li>
+     * <li>Finished: The task execution is complete.</li>
+     * <li>Failed: The task execution failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

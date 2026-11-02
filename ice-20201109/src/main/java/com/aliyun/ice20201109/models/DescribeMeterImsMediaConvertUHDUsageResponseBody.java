@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
     /**
-     * <p>The usage statistics of IMS on UHD transcoding of MPS.</p>
+     * <p>The metering data for MPS UHD transcoding in IMS.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeMeterImsMediaConvertUHDUsageResponseBodyData> data;
@@ -42,7 +42,7 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
 
     public static class DescribeMeterImsMediaConvertUHDUsageResponseBodyData extends TeaModel {
         /**
-         * <p>The usage duration, in minutes.</p>
+         * <p>The duration. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>308028</p>
@@ -51,7 +51,7 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>The transcoding specifications.</p>
+         * <p>The transcoding specification.</p>
          * 
          * <strong>example:</strong>
          * <p>SuperResolution.Standard.1080P</p>
@@ -60,7 +60,7 @@ public class DescribeMeterImsMediaConvertUHDUsageResponseBody extends TeaModel {
         public String specification;
 
         /**
-         * <p>The beginning time of usage. The value is a 10-digit timestamp.</p>
+         * <p>The start timestamp of the time period, which is a 10-digit UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1656950400</p>

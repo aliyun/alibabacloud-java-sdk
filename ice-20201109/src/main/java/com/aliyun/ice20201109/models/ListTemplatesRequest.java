@@ -5,16 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTemplatesRequest extends TeaModel {
     /**
-     * <p>The source from which the template was created.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>AliyunConsole</p>
-     * </li>
-     * <li><p>WebSDK</p>
-     * </li>
-     * <li><p>OpenAPI</p>
-     * </li>
-     * </ul>
+     * <p>The creation source.</p>
      * 
      * <strong>example:</strong>
      * <p>OpenAPI</p>
@@ -23,7 +14,7 @@ public class ListTemplatesRequest extends TeaModel {
     public String createSource;
 
     /**
-     * <p>The search keyword. You can use the template ID or title as the keyword to search for templates.</p>
+     * <p>The search keyword. You can search by template ID and title.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -46,14 +37,7 @@ public class ListTemplatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The sorting parameter. By default, the query results are sorted by creation time in descending order.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>CreationTime:Asc: sorted by creation time in ascending order.</p>
-     * </li>
-     * <li><p>CreationTime:Desc: sorted by creation time in descending order.</p>
-     * </li>
-     * </ul>
+     * <p>The sort parameter. By default, templates are sorted in descending order of creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>CreationTime:Desc</p>
@@ -62,22 +46,7 @@ public class ListTemplatesRequest extends TeaModel {
     public String sortType;
 
     /**
-     * <p>The template state.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>UploadFailed: Failed to upload the video.</p>
-     * </li>
-     * <li><p>ProcessFailed: Failed to process the advanced template.</p>
-     * </li>
-     * <li><p>Available: The template is available.</p>
-     * </li>
-     * <li><p>Uploading: The video is being uploaded.</p>
-     * </li>
-     * <li><p>Created: The template is created but not ready for use.</p>
-     * </li>
-     * <li><p>Processing: The advanced template is being processed.</p>
-     * </li>
-     * </ul>
+     * <p>The template status.</p>
      * 
      * <strong>example:</strong>
      * <p>Available</p>
@@ -86,14 +55,7 @@ public class ListTemplatesRequest extends TeaModel {
     public String status;
 
     /**
-     * <p>The template type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Timeline</p>
-     * </li>
-     * <li><p>VETemplate</p>
-     * </li>
-     * </ul>
+     * <p>The templatetype.</p>
      * 
      * <strong>example:</strong>
      * <p>Timeline</p>

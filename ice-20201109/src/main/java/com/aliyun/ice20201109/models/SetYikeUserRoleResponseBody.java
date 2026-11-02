@@ -14,12 +14,10 @@ public class SetYikeUserRoleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation succeeded.</p>
+     * <p>Indicates whether the user role is set successfully. Valid values:</p>
      * <ul>
-     * <li><p>true: Success</p>
-     * </li>
-     * <li><p>false: Failure</p>
-     * </li>
+     * <li>true: Success.</li>
+     * <li>false: Failure.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class QueryVideoCognitionJobRequest extends TeaModel {
     /**
-     * <p>A container for parameters that determine which algorithm results to include in the response.</p>
+     * <p>Specifies whether to include the complete algorithm results in the query results.</p>
      */
     @NameInMap("IncludeResults")
     public QueryVideoCognitionJobRequestIncludeResults includeResults;
 
     /**
-     * <p>The ID of the intelligent tagging job. You can obtain this ID from the response of the <a href="https://help.aliyun.com/document_detail/478786.html">SubmitIntelligentTaggingJob</a> operation.</p>
+     * <p>The ID of the intelligent tagging job to query. You can obtain the ID from the response parameters of the <a href="https://help.aliyun.com/document_detail/478786.html">Submit a smart tagging job</a> operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class QueryVideoCognitionJobRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>Additional request parameters, specified as a JSON string.</p>
+     * <p>The additional request parameters, represented as a JSON string.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -60,7 +60,7 @@ public class QueryVideoCognitionJobRequest extends TeaModel {
 
     public static class QueryVideoCognitionJobRequestIncludeResults extends TeaModel {
         /**
-         * <p>Specifies whether to return the ASR results.</p>
+         * <p>Specifies whether to display the automatic speech recognition (ASR) results.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -69,7 +69,7 @@ public class QueryVideoCognitionJobRequest extends TeaModel {
         public Boolean needAsr;
 
         /**
-         * <p>Specifies whether to return the OCR results.</p>
+         * <p>Specifies whether to display the optical character recognition (OCR) results.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -78,7 +78,7 @@ public class QueryVideoCognitionJobRequest extends TeaModel {
         public Boolean needOcr;
 
         /**
-         * <p>Specifies whether to return a link to the raw operator results.</p>
+         * <p>Specifies whether to display the links to the original results of the operators.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>

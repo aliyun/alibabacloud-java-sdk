@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLivePackageOriginEndpointsRequest extends TeaModel {
     /**
-     * <p>The channel name.</p>
+     * <p>The name of the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListLivePackageOriginEndpointsRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>The channel group name.</p>
+     * <p>The name of the channel group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +52,12 @@ public class ListLivePackageOriginEndpointsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The sort order by creation time. Valid values: asc and desc (default).</p>
+     * <p>The sorting order by creation time. Valid values:</p>
+     * <ul>
+     * <li>asc: Ascending order.</li>
+     * <li>desc: Descending order.
+     * Default value: desc.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>desc</p>

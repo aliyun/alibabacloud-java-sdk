@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMediaMarksResponseBody extends TeaModel {
     /**
-     * <p>The ID of the media asset.</p>
+     * <p>The media asset ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong></p>
@@ -14,7 +14,7 @@ public class ListMediaMarksResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The marks of the media asset, in the JSONArray format.</p>
+     * <p>The list of mark information. The string content is in JSONArray format.</p>
      * 
      * <strong>example:</strong>
      * <p>[

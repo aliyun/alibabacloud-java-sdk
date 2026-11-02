@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopAIWorkflowTaskResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -14,7 +14,7 @@ public class StopAIWorkflowTaskResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the workflow task.</p>
+     * <p>The ID of the intelligent workflow task.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong><strong>-266c-4bb8-b20c-6faa</strong></strong></strong></strong></p>

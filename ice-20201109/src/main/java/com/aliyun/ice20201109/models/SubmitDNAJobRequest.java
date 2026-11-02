@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class SubmitDNAJobRequest extends TeaModel {
     /**
-     * <p>The DNA configuration in JSON format. If specified, these settings override the corresponding template parameters.</p>
+     * <p>The DNA configuration, which is a JSON object.
+     * If you specify this parameter, it overwrites the template parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;SaveType&quot;: &quot;save&quot;,&quot;MediaType&quot;:&quot;video&quot;}</p>
@@ -14,7 +15,7 @@ public class SubmitDNAJobRequest extends TeaModel {
     public String config;
 
     /**
-     * <p>The DNA library ID. To create a DNA library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB</a>.</p>
+     * <p>The ID of the DNA library. To create a DNA library, see <a href="https://help.aliyun.com/document_detail/479275.html">CreateDNADB - Create a DNA library</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -37,7 +38,7 @@ public class SubmitDNAJobRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The pipeline ID.</p>
+     * <p>The ID of the pipeline.</p>
      * 
      * <strong>example:</strong>
      * <p>5246b8d12a62433ab77845074039****</p>
@@ -46,7 +47,7 @@ public class SubmitDNAJobRequest extends TeaModel {
     public String pipelineId;
 
     /**
-     * <p>The unique primary key for the video. You are responsible for ensuring its uniqueness.</p>
+     * <p>The unique primary key of the video. You must ensure its uniqueness.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +63,7 @@ public class SubmitDNAJobRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The template ID.</p>
+     * <p>The ID of the template.</p>
      * 
      * <strong>example:</strong>
      * <p>S00000101-100060</p>
@@ -71,7 +72,7 @@ public class SubmitDNAJobRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The user-defined data. The maximum length is 128 bytes.</p>
+     * <p>The custom user data. The maximum length is 128 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>userData</p>
@@ -174,10 +175,15 @@ public class SubmitDNAJobRequest extends TeaModel {
 
     public static class SubmitDNAJobRequestInput extends TeaModel {
         /**
-         * <p>The media ID or OSS file url of the input file.</p>
-         * <p>1\. <code>oss://bucket/object</code></p>
-         * <p>2\. <code>http(s)://bucket.oss-[regionId].aliyuncs.com/object</code></p>
-         * <p>In these formats, <code>bucket</code> is the name of an OSS bucket in the same region as your project, and <code>object</code> is the file path.</p>
+         * <p>The information about the input file. OSS URLs and media asset IDs are supported.
+         * OSS URL formats:</p>
+         * <ul>
+         * <li><p>oss://bucket/object</p>
+         * </li>
+         * <li><p>http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
+         * </li>
+         * </ul>
+         * <p>In the URLs, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -188,12 +194,10 @@ public class SubmitDNAJobRequest extends TeaModel {
 
         /**
          * <p>The type of the input file. Valid values:</p>
-         * <ol>
-         * <li><p><code>OSS</code>: The input is an OSS file url.</p>
-         * </li>
-         * <li><p><code>Media</code>: The input is a media ID.</p>
-         * </li>
-         * </ol>
+         * <ul>
+         * <li>OSS: the URL of an OSS file.</li>
+         * <li>Media: the ID of a media asset.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

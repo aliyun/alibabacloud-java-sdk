@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class AddMediaConnectFlowInputResponseBody extends TeaModel {
     /**
-     * <p>Response body</p>
+     * <p>The response body.</p>
      */
     @NameInMap("Content")
     public AddMediaConnectFlowInputResponseBodyContent content;
 
     /**
-     * <p>API call description</p>
+     * <p>The description of the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -20,7 +20,7 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>11357BE8-4C54-58EA-890A-5AB646EDE4B2</p>
@@ -29,7 +29,7 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Error code. A value of 0 indicates success.</p>
+     * <p>The returned error code. A value of 0 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -75,11 +75,17 @@ public class AddMediaConnectFlowInputResponseBody extends TeaModel {
     }
 
     public static class AddMediaConnectFlowInputResponseBodyContent extends TeaModel {
+        /**
+         * <p>The internal stream pushing IP address. This parameter is valid only when you connect to the cloud through an Express Connect circuit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("InnerInputUrl")
         public String innerInputUrl;
 
         /**
-         * <p>Input URL</p>
+         * <p>The input URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://1.2.3.4:1935/live/AliTestInput_8666ec062190f00e263012666319a5be</p>

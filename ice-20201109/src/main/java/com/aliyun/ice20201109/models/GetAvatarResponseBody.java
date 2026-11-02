@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAvatarResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public GetAvatarResponseBodyData data;
@@ -20,12 +20,10 @@ public class GetAvatarResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The call was successful.</li>
+     * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +72,7 @@ public class GetAvatarResponseBody extends TeaModel {
         public String avatarDescription;
 
         /**
-         * <p>The ID of the digital human.</p>
+         * <p>The digital human ID.</p>
          * 
          * <strong>example:</strong>
          * <p>Avatar-XXXX</p>
@@ -101,7 +99,7 @@ public class GetAvatarResponseBody extends TeaModel {
         public String avatarType;
 
         /**
-         * <p>The height of the digital human image in pixels.</p>
+         * <p>The height of the digital human image, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>1920</p>
@@ -128,7 +126,7 @@ public class GetAvatarResponseBody extends TeaModel {
         public String thumbnail;
 
         /**
-         * <p>Indicates whether the digital human supports alpha channels.</p>
+         * <p>Indicates whether the digital human supports the alpha channel.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -137,7 +135,7 @@ public class GetAvatarResponseBody extends TeaModel {
         public Boolean transparent;
 
         /**
-         * <p>The width of the digital human image in pixels.</p>
+         * <p>The width of the digital human image, in pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>1080</p>
@@ -226,7 +224,7 @@ public class GetAvatarResponseBody extends TeaModel {
 
     public static class GetAvatarResponseBodyData extends TeaModel {
         /**
-         * <p>The information about the digital human.</p>
+         * <p>The digital human.</p>
          */
         @NameInMap("Avatar")
         public GetAvatarResponseBodyDataAvatar avatar;

@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateLiveRecordTemplateShrinkRequest extends TeaModel {
     /**
-     * <p>The template name.</p>
+     * <p>The name of the template.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-record-template</p>
      */
     @NameInMap("Name")
     public String name;

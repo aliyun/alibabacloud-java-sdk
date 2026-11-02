@@ -24,21 +24,21 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
     public String notifyUrl;
 
     /**
-     * <p>The recording storage address.</p>
+     * <p>The storage URL for the recording.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RecordOutput")
     public SubmitLiveRecordJobRequestRecordOutput recordOutput;
 
     /**
-     * <p>The live stream address.</p>
+     * <p>The live stream URL.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamInput")
     public SubmitLiveRecordJobRequestStreamInput streamInput;
 
     /**
-     * <p>The recording template ID.</p>
+     * <p>The ID of the recording template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The storage service endpoint.</p>
+         * <p>The endpoint of the storage service.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-hangzhou.aliyuncs.com</p>
@@ -112,7 +112,7 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The type of the storage address.</p>
+         * <p>The type of the storage URL.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
 
     public static class SubmitLiveRecordJobRequestStreamInput extends TeaModel {
         /**
-         * <p>The type of the live stream address. Currently, only rtmp is supported.</p>
+         * <p>The type of the live stream URL. Valid value: rtmp.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class SubmitLiveRecordJobRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The live stream address.</p>
+         * <p>The live stream URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://example.com/live/stream1</p>

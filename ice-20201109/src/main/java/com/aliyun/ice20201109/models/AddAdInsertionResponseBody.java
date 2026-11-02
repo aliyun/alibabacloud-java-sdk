@@ -11,7 +11,7 @@ public class AddAdInsertionResponseBody extends TeaModel {
     public AddAdInsertionResponseBodyConfig config;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
@@ -51,7 +51,7 @@ public class AddAdInsertionResponseBody extends TeaModel {
         public String adSegmentUrlPrefix;
 
         /**
-         * <p>The CDN prefix for content segments.</p>
+         * <p>The CDN prefix for video content segments.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://cdn.com/">http://cdn.com/</a></p>
@@ -84,13 +84,13 @@ public class AddAdInsertionResponseBody extends TeaModel {
 
     public static class AddAdInsertionResponseBodyConfigManifestEndpointConfig extends TeaModel {
         /**
-         * <p>DASH manifest playback endpoint prefix</p>
+         * <p>The DASH manifest endpoint prefix.</p>
          */
         @NameInMap("DashPrefix")
         public String dashPrefix;
 
         /**
-         * <p>The prefix of the playback endpoint for HLS manifests.</p>
+         * <p>The HLS manifest endpoint prefix.</p>
          */
         @NameInMap("HlsPrefix")
         public String hlsPrefix;
@@ -120,7 +120,7 @@ public class AddAdInsertionResponseBody extends TeaModel {
 
     public static class AddAdInsertionResponseBodyConfig extends TeaModel {
         /**
-         * <p>Indicates whether ad marker passthrough is enabled.</p>
+         * <p>Indicates whether ad markers are passed through.</p>
          * 
          * <strong>example:</strong>
          * <p>ON</p>
@@ -129,7 +129,7 @@ public class AddAdInsertionResponseBody extends TeaModel {
         public String adMarkerPassthrough;
 
         /**
-         * <p>The request URL of ADS.</p>
+         * <p>The URL of the ad decision server.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://ads.com/ad1?param1=%5Bpalyer_params.p1%5D">http://ads.com/ad1?param1=[palyer_params.p1]</a></p>
@@ -138,13 +138,13 @@ public class AddAdInsertionResponseBody extends TeaModel {
         public String adsUrl;
 
         /**
-         * <p>The CDN configurations.</p>
+         * <p>The CDN configuration.</p>
          */
         @NameInMap("CdnConfig")
         public AddAdInsertionResponseBodyConfigCdnConfig cdnConfig;
 
         /**
-         * <p>The player parameter variables and aliases.</p>
+         * <p>The dynamic configuration aliases.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;player_params.p1&quot;: { &quot;1&quot;: &quot;abc&quot; } }</p>
@@ -153,7 +153,7 @@ public class AddAdInsertionResponseBody extends TeaModel {
         public String configAliases;
 
         /**
-         * <p>The URL prefix for the source content.</p>
+         * <p>The prefix of the content URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://source.com/">https://source.com/</a></p>
@@ -162,7 +162,7 @@ public class AddAdInsertionResponseBody extends TeaModel {
         public String contentUrlPrefix;
 
         /**
-         * <p>The time when the configuration was created.</p>
+         * <p>The time when the configuration was created. The time follows the ISO 8601 standard and is in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-13T08:26:09Z</p>
@@ -180,7 +180,7 @@ public class AddAdInsertionResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>The playback endpoint configuration.</p>
+         * <p>The manifest endpoint configuration.</p>
          */
         @NameInMap("ManifestEndpointConfig")
         public AddAdInsertionResponseBodyConfigManifestEndpointConfig manifestEndpointConfig;

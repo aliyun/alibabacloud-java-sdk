@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class MediaConvertVolume extends TeaModel {
     /**
-     * <p>The output volume.</p>
+     * <p>The target volume.</p>
      * <ul>
-     * <li>This parameter takes effect only if Method is set to dynamic.</li>
+     * <li>This parameter takes effect only when Method is set to dynamic.</li>
      * <li>Unit: dB.</li>
-     * <li>Valid values: [-70,-5].</li>
+     * <li>Value range: -70 to -5.</li>
      * <li>Default value: -6.</li>
      * </ul>
      * 
@@ -20,12 +20,12 @@ public class MediaConvertVolume extends TeaModel {
     public Integer integratedLoudnessTarget;
 
     /**
-     * <p>The amount of gain to apply, relative to the input audio.</p>
+     * <p>The volume increase relative to the input audio.</p>
      * <ul>
-     * <li>This parameter takes effect only if Method is set to linear.</li>
+     * <li>This parameter takes effect only when Method is set to linear.</li>
      * <li>Unit: dB.</li>
-     * <li>Valid values: less than or equal to 20.</li>
-     * <li>Default value: -20.</li>
+     * <li>Value range: up to 20 dB.</li>
+     * <li>Default value: -20 dB.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,11 +35,11 @@ public class MediaConvertVolume extends TeaModel {
     public Integer level;
 
     /**
-     * <p>The target loudness range.</p>
+     * <p>The fluctuation range relative to the target volume.</p>
      * <ul>
-     * <li>This parameter takes effect only if Method is set to dynamic.</li>
+     * <li>This parameter takes effect only when Method is set to dynamic.</li>
      * <li>Unit: dB.</li>
-     * <li>Valid values: [1,20].</li>
+     * <li>Value range: 1 to 20.</li>
      * <li>Default value: 8.</li>
      * </ul>
      * 
@@ -50,34 +50,26 @@ public class MediaConvertVolume extends TeaModel {
     public Integer loudnessRangeTarget;
 
     /**
-     * <p>The volume adjustment method. Valid values:</p>
+     * <p>The volume adjustment method.</p>
      * <ul>
-     * <li>auto</li>
-     * <li>dynamic</li>
-     * <li>linear</li>
+     * <li>auto: Automatic adjustment.</li>
+     * <li>dynamic: Dynamic adjustment.</li>
+     * <li>linear: Linear adjustment.</li>
      * <li>Default value: dynamic.</li>
-     * </ul>
-     * <!---->
-     * 
-     * <ul>
-     * <li></li>
-     * <li></li>
-     * <li></li>
-     * <li></li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>linear</p>
+     * <p>dynamic</p>
      */
     @NameInMap("Method")
     public String method;
 
     /**
-     * <p>The maximum volume.</p>
+     * <p>The peak volume.</p>
      * <ul>
-     * <li>This parameter takes effect only if Method is set to dynamic.</li>
+     * <li>This parameter takes effect only when Method is set to dynamic.</li>
      * <li>Unit: dB.</li>
-     * <li>Valid values: [-9,0].</li>
+     * <li>Value range: -9 to 0.</li>
      * <li>Default value: -1.</li>
      * </ul>
      * 

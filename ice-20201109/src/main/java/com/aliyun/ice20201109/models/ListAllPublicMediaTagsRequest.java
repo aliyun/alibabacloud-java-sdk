@@ -14,8 +14,10 @@ public class ListAllPublicMediaTagsRequest extends TeaModel {
     public String businessType;
 
     /**
-     * <p>The entity ID, which is used to distinguish between media assets of different types in the public domain.</p>
-     * <p>Set this parameter to Copyright_Music, which indicates music in the public domain.</p>
+     * <p>The entity ID, used to distinguish different types of public copyright media assets. Valid values:</p>
+     * <ul>
+     * <li>Copyright_Music: public copyright music.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Copyright_Music</p>

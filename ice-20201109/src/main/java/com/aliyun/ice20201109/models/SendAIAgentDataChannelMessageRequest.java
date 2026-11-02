@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class SendAIAgentDataChannelMessageRequest extends TeaModel {
     /**
-     * <p>The ID of the AI agent in the conversation.</p>
+     * <p>The instance ID of the agent that is currently in a call.</p>
+     * <blockquote>
+     * <p>InstanceId is the unique ID returned after the agent instance is successfully started. For more information about the API operations used to start an agent, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +18,7 @@ public class SendAIAgentDataChannelMessageRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The DataChannel message you want to send. You must specify a JSON string. The value can be up to 8,192 characters in length.</p>
+     * <p>The DataChannel message to send. The value must be a JSON string with a maximum length of 8,192 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

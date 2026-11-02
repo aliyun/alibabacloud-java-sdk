@@ -42,7 +42,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
     public static class GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults extends TeaModel {
         /**
-         * <p>The specific data of the analysis result, represented as a JSON character string. The data structures for different Type values are described in <a href="~~478787#api-detail-40~~">Result parameter description</a>.</p>
+         * <p>The specific data of the analysis result, represented as a JSON string. For more information about the data structures of different types, see <a href="~~478787#api-detail-40~~">Result parameter description</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;autoChapters&quot;: [...]}</p>
@@ -51,7 +51,14 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String data;
 
         /**
-         * <p>The tag recognition type. Valid values:</p>
+         * <p>The tagging recognition type. Valid values:</p>
+         * <ul>
+         * <li>NLP: NLP processing result.</li>
+         * <li>TextLabel: Text tag.</li>
+         * <li>VideoLabel: Video tag.</li>
+         * <li>ASR: Raw speech recognition result.</li>
+         * <li>OCR: Raw text recognition result.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>NLP</p>
@@ -84,7 +91,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
     public static class GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob extends TeaModel {
         /**
-         * <p>The AI job ID.</p>
+         * <p>The ID of the AI task.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>483915d4f2cd8ac20b48fb04</strong></strong></p>
@@ -102,13 +109,18 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String resultUrl;
 
         /**
-         * <p>The list of tag recognition results.</p>
+         * <p>The list of tagging recognition results.</p>
          */
         @NameInMap("Results")
         public java.util.List<GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJobResults> results;
 
         /**
          * <p>The AI analysis status. Valid values:</p>
+         * <ul>
+         * <li>Analyzing: Analyzing.</li>
+         * <li>AnalyzeSuccess: Analysis succeeded.</li>
+         * <li>AnalyzeFailed: Analysis failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Analyzing</p>
@@ -158,6 +170,15 @@ public class GetMediaInfoResponseBody extends TeaModel {
     public static class GetMediaInfoResponseBodyMediaInfoAiRoughData extends TeaModel {
         /**
          * <p>The AI category. Valid values:</p>
+         * <ul>
+         * <li>Life</li>
+         * <li>Appearance</li>
+         * <li>Cute pets</li>
+         * <li>News</li>
+         * <li>Advertisements</li>
+         * <li>Environment and resources</li>
+         * <li>Automobiles</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Life</p>
@@ -166,7 +187,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String aiCategory;
 
         /**
-         * <p>The AI job ID.</p>
+         * <p>The ID of the AI task.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>483915d4f2cd8ac20b48fb04</strong></strong></p>
@@ -175,7 +196,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String aiJobId;
 
         /**
-         * <p>The raw result of AI analysis.</p>
+         * <p>The raw AI analysis result.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://sample-bucket.cn-shanghai.aliyuncs.com/result.json">https://sample-bucket.cn-shanghai.aliyuncs.com/result.json</a></p>
@@ -184,7 +205,10 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String result;
 
         /**
-         * <p>The storage type. Specifies whether to store the results in the search library after intelligent analysis is complete. Valid values:</p>
+         * <p>The storage type. Specifies whether to save the data to the search library after intelligent analysis is completed. Valid values:</p>
+         * <ul>
+         * <li>TEXT: Text library.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>TEXT</p>
@@ -193,13 +217,24 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String saveType;
 
         /**
-         * <p>The smart tagging job.</p>
+         * <p>The tagging task.</p>
          */
         @NameInMap("StandardSmartTagJob")
         public GetMediaInfoResponseBodyMediaInfoAiRoughDataStandardSmartTagJob standardSmartTagJob;
 
         /**
          * <p>The AI analysis status. Valid values:</p>
+         * <ul>
+         * <li>Analyzing: Analyzing.</li>
+         * <li>AnalyzeSuccess: Analysis succeeded.</li>
+         * <li>AnalyzeFailed: Analysis failed.</li>
+         * <li>Saving: Saving. </li>
+         * <li>SaveSuccess: Save succeeded.</li>
+         * <li>SaveFailed: Save failed. </li>
+         * <li>Deleting: Deleting.</li>
+         * <li>DeleteSuccess: Deletion succeeded.</li>
+         * <li>DeleteFailed: Deletion failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Analyzing</p>
@@ -282,7 +317,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String channelLayout;
 
         /**
-         * <p>The number of audio channels.</p>
+         * <p>The number of channels.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -327,7 +362,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String codecTagString;
 
         /**
-         * <p>The codec time base.</p>
+         * <p>The time base of the codec.</p>
          * 
          * <strong>example:</strong>
          * <p>1/24000</p>
@@ -408,7 +443,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String sampleRate;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0.000000</p>
@@ -417,7 +452,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The time base.</p>
+         * <p>The timebase.</p>
          * 
          * <strong>example:</strong>
          * <p>1/44100</p>
@@ -587,7 +622,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The creation time of the file.</p>
+         * <p>The time when the file was created. The time is in UTC and follows the ISO 8601 standard, ending with Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:08Z</p>
@@ -614,7 +649,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file size, in bytes.</p>
+         * <p>The file size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>30611502</p>
@@ -668,7 +703,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String height;
 
         /**
-         * <p>The modification time of the file.</p>
+         * <p>The time when the file was modified. The time is in UTC and follows the ISO 8601 standard, ending with Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
@@ -843,7 +878,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String codecTagString;
 
         /**
-         * <p>The codec time base.</p>
+         * <p>The time base of the codec.</p>
          * 
          * <strong>example:</strong>
          * <p>29.97</p>
@@ -861,7 +896,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String duration;
 
         /**
-         * <p>The subtitle stream index.</p>
+         * <p>The index of the subtitle stream.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -879,7 +914,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String lang;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -888,7 +923,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The time base.</p>
+         * <p>The timebase.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -1039,7 +1074,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String codecTagString;
 
         /**
-         * <p>The codec time base.</p>
+         * <p>The time base of the codec.</p>
          * 
          * <strong>example:</strong>
          * <p>1/48</p>
@@ -1048,7 +1083,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String codecTimeBase;
 
         /**
-         * <p>The display aspect ratio (DAR).</p>
+         * <p>The display aspect ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>0:1</p>
@@ -1093,7 +1128,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String height;
 
         /**
-         * <p>The video stream index.</p>
+         * <p>The index of the video stream.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1156,7 +1191,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String profile;
 
         /**
-         * <p>The rotation angle.</p>
+         * <p>The rotation.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1165,7 +1200,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String rotate;
 
         /**
-         * <p>The sample aspect ratio (SAR).</p>
+         * <p>The sample aspect ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>0:1</p>
@@ -1174,7 +1209,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String sar;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0.081706</p>
@@ -1183,7 +1218,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The time base.</p>
+         * <p>The timebase.</p>
          * 
          * <strong>example:</strong>
          * <p>1/12288</p>
@@ -1401,13 +1436,13 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
     public static class GetMediaInfoResponseBodyMediaInfoFileInfoList extends TeaModel {
         /**
-         * <p>The audio stream information. A media asset may have multiple audio streams.</p>
+         * <p>The audio stream information. A media asset may contain multiple audio streams.</p>
          */
         @NameInMap("AudioStreamInfoList")
         public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoListAudioStreamInfoList> audioStreamInfoList;
 
         /**
-         * <p>The basic file information, including duration and size.</p>
+         * <p>The basic file information, including the duration and size.</p>
          */
         @NameInMap("FileBasicInfo")
         public GetMediaInfoResponseBodyMediaInfoFileInfoListFileBasicInfo fileBasicInfo;
@@ -1519,7 +1554,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The creation time of the media asset.</p>
+         * <p>The time when the media asset was created. The time is in UTC and follows the ISO 8601 standard, ending with Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:08Z</p>
@@ -1528,7 +1563,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The deletion time of the media asset.</p>
+         * <p>The time when the media asset was deleted. The time is in UTC and follows the ISO 8601 standard, ending with Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:15Z</p>
@@ -1537,7 +1572,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String deletedTime;
 
         /**
-         * <p>The content description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>Description</p>
@@ -1546,7 +1581,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The address of the queried media asset in the corresponding system.</p>
+         * <p>The URL of the queried media asset in the corresponding system.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
@@ -1582,7 +1617,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String mediaType;
 
         /**
-         * <p>The modification time of the media asset.</p>
+         * <p>The time when the media asset was modified. The time is in UTC and follows the ISO 8601 standard, ending with Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
@@ -1591,7 +1626,7 @@ public class GetMediaInfoResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The ID must be 6 to 64 characters in length and is unique at the user level.</p>
+         * <p>The custom ID. The ID must be 6 to 64 characters in length and can contain only lowercase letters, uppercase letters, digits, hyphens, and underscores. The ID must be unique within the user dimension.</p>
          * 
          * <strong>example:</strong>
          * <p>123-1234</p>
@@ -1851,13 +1886,13 @@ public class GetMediaInfoResponseBody extends TeaModel {
 
     public static class GetMediaInfoResponseBodyMediaInfo extends TeaModel {
         /**
-         * <p>The AI analysis raw data.</p>
+         * <p>The raw data of the AI analysis.</p>
          */
         @NameInMap("AiRoughData")
         public GetMediaInfoResponseBodyMediaInfoAiRoughData aiRoughData;
 
         /**
-         * <p>The list of FileInfo objects.</p>
+         * <p>The list of file information.</p>
          */
         @NameInMap("FileInfoList")
         public java.util.List<GetMediaInfoResponseBodyMediaInfoFileInfoList> fileInfoList;

@@ -14,7 +14,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about the snapshot job.</p>
+     * <p>The snapshot job information.</p>
      */
     @NameInMap("SnapshotJob")
     public GetSnapshotJobResponseBodySnapshotJob snapshotJob;
@@ -42,7 +42,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
 
     public static class GetSnapshotJobResponseBodySnapshotJobInputOssFile extends TeaModel {
         /**
-         * <p>The OSS bucket.</p>
+         * <p>OSS Bucket</p>
          * 
          * <strong>example:</strong>
          * <p>test-bucket</p>
@@ -51,7 +51,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The OSS location.</p>
+         * <p>OSS Location</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-shanghai</p>
@@ -60,7 +60,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The OSS object.</p>
+         * <p>OSS Object</p>
          * 
          * <strong>example:</strong>
          * <p>object.mp4</p>
@@ -101,13 +101,13 @@ public class GetSnapshotJobResponseBody extends TeaModel {
 
     public static class GetSnapshotJobResponseBodySnapshotJobInput extends TeaModel {
         /**
-         * <p>The input file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
-         * <ol>
-         * <li><p>oss\://bucket/object</p>
-         * </li>
-         * <li><p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS.</p>
-         * </li>
-         * </ol>
+         * <p>The input media. If Type is set to OSS, enter the OSS object URL. If Type is set to Media, enter the media asset ID.
+         * The OSS object URL must be in one of the following formats:</p>
+         * <ul>
+         * <li>oss://bucket/object</li>
+         * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object
+         * In the URLs, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>oss://test-bucket/object.mp4</p>
@@ -116,19 +116,17 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The three key elements of OSS.</p>
+         * <p>The OSS triplet.</p>
          */
         @NameInMap("OssFile")
         public GetSnapshotJobResponseBodySnapshotJobInputOssFile ossFile;
 
         /**
-         * <p>The type of the input file. Valid values:</p>
-         * <ol>
-         * <li><p>OSS: an Object Storage Service (OSS) object.</p>
-         * </li>
-         * <li><p>Media: a media asset.</p>
-         * </li>
-         * </ol>
+         * <p>The input type. Valid values:</p>
+         * <ul>
+         * <li>OSS: the URL of an OSS object.</li>
+         * <li>Media: the media asset ID.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -169,7 +167,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
 
     public static class GetSnapshotJobResponseBodySnapshotJobOutputOssFile extends TeaModel {
         /**
-         * <p>The OSS bucket.</p>
+         * <p>OSS Bucket</p>
          * 
          * <strong>example:</strong>
          * <p>test-bucket</p>
@@ -178,7 +176,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The OSS location.</p>
+         * <p>OSS Location</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-shanghai</p>
@@ -187,7 +185,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String location;
 
         /**
-         * <p>The OSS object.</p>
+         * <p>OSS Object</p>
          * 
          * <strong>example:</strong>
          * <p>output-{Count}.jpg</p>
@@ -228,14 +226,21 @@ public class GetSnapshotJobResponseBody extends TeaModel {
 
     public static class GetSnapshotJobResponseBodySnapshotJobOutput extends TeaModel {
         /**
-         * <p>The output file. If Type is set to OSS, the URL of an OSS object is returned. If Type is set to Media, the ID of a media asset is returned. The URL of an OSS object can be in one of the following formats:</p>
-         * <ol>
-         * <li><p>oss\://bucket/object</p>
+         * <p>The output media. If Type is set to OSS, enter the OSS object URL. If Type is set to Media, enter the media asset ID.
+         * The OSS object URL must be in one of the following formats:</p>
+         * <ul>
+         * <li>oss://bucket/object</li>
+         * <li>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</li>
+         * </ul>
+         * <p>In the URLs, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
+         * <ul>
+         * <li><p>When capturing multiple static snapshots, the object must contain the &quot;{Count}&quot; placeholder.</p>
          * </li>
-         * <li><p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</p>
+         * <li><p>When capturing sprite snapshots, the object must contain the &quot;{TileCount}&quot; placeholder.</p>
          * </li>
-         * </ol>
-         * <p>In the URL, bucket specifies an OSS bucket that resides in the same region as the job, and object specifies the object URL in OSS. If multiple static snapshots were captured, the object must contain the &quot;{Count}&quot; placeholder. In the case of a sprite, the object must contain the &quot;{TileCount}&quot; placeholder. The suffix of the WebVTT snapshot objects must be &quot;.vtt&quot;.</p>
+         * <li><p>For WebVTT snapshots, the object extension must be &quot;.vtt&quot;.</p>
+         * </li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p><a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/output-%7BCount%7D.jpg">http://test-bucket.oss-cn-shanghai.aliyuncs.com/output-{Count}.jpg</a></p>
@@ -244,19 +249,17 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The three key elements of OSS.</p>
+         * <p>The OSS triplet.</p>
          */
         @NameInMap("OssFile")
         public GetSnapshotJobResponseBodySnapshotJobOutputOssFile ossFile;
 
         /**
-         * <p>The type of the output file. Valid values:</p>
-         * <ol>
-         * <li><p>OSS: an OSS object.</p>
-         * </li>
-         * <li><p>Media: a media asset.</p>
-         * </li>
-         * </ol>
+         * <p>The output type. Valid values:</p>
+         * <ul>
+         * <li>OSS: the URL of an OSS object.</li>
+         * <li>Media: the media asset ID.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -297,7 +300,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
 
     public static class GetSnapshotJobResponseBodySnapshotJob extends TeaModel {
         /**
-         * <p>Indicates whether the snapshots were captured in asynchronous mode. Default value: true.</p>
+         * <p>Specifies whether to capture snapshots asynchronously. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -306,7 +309,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public Boolean async;
 
         /**
-         * <p>Error codes</p>
+         * <p>The error code.</p>
          * 
          * <strong>example:</strong>
          * <p>ResourceNotFound</p>
@@ -324,7 +327,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public Integer count;
 
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
@@ -333,7 +336,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the job was complete.</p>
+         * <p>The time when the job was completed. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:30:54Z</p>
@@ -342,7 +345,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The input of the job.</p>
+         * <p>The job input.</p>
          */
         @NameInMap("Input")
         public GetSnapshotJobResponseBodySnapshotJobInput input;
@@ -357,7 +360,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The error message that is returned.</p>
+         * <p>The error message.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified resource for &quot;Pipeline&quot; could not be found.</p>
@@ -366,7 +369,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The time when the job was last modified.</p>
+         * <p>The last modification time. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:30:54Z</p>
@@ -375,22 +378,22 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The name of the job.</p>
+         * <p>The job name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test task</p>
+         * <p>Test job</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The output of the job.</p>
+         * <p>The job output.</p>
          */
         @NameInMap("Output")
         public GetSnapshotJobResponseBodySnapshotJobOutput output;
 
         /**
-         * <p>The ID of the MPS queue to which the job was submitted.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>
@@ -399,16 +402,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The state of the job.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Init: The job is submitted.</p>
-         * </li>
-         * <li><p>Success: The job is successful.</p>
-         * </li>
-         * <li><p>Fail: The job failed.</p>
-         * </li>
-         * </ul>
+         * <p>The job status.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -417,7 +411,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The time when the job was submitted.</p>
+         * <p>The time when the job was submitted. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
@@ -444,16 +438,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The request trigger source.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Console</p>
-         * </li>
-         * <li><p>Workflow</p>
-         * </li>
-         * <li><p>API</p>
-         * </li>
-         * </ul>
+         * <p>The trigger source of the request.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>
@@ -462,16 +447,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String triggerSource;
 
         /**
-         * <p>Snapshot types</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>WebVtt</p>
-         * </li>
-         * <li><p>Sprite</p>
-         * </li>
-         * <li><p>Normal</p>
-         * </li>
-         * </ul>
+         * <p>The snapshot type.</p>
          * 
          * <strong>example:</strong>
          * <p>Sprite</p>
@@ -480,7 +456,7 @@ public class GetSnapshotJobResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The user-defined parameters.</p>
+         * <p>The custom user data.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;test parameter&quot;: &quot;test value&quot;}</p>

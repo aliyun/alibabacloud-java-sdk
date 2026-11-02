@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitIProductionJobResponseBody extends TeaModel {
     /**
-     * <p>The intelligent production job ID.</p>
+     * <p>The ID of the intelligent production job.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>

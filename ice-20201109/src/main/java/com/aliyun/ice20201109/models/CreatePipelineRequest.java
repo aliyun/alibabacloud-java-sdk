@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePipelineRequest extends TeaModel {
     /**
-     * <p>The pipeline name.</p>
+     * <p>The name of the pipeline.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreatePipelineRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The priority, ranging from 1 to 10. Default value: 6. A larger value indicates a higher priority.</p>
+     * <p>The priority of the pipeline. Valid values: 1 to 10. Default value: 6. A larger value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>6</p>
@@ -24,14 +24,11 @@ public class CreatePipelineRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The pipeline type. Valid values:</p>
+     * <p>The type of the pipeline. Valid values:</p>
      * <ul>
-     * <li><p>Standard: standard pipeline.</p>
-     * </li>
-     * <li><p>Boost: double-speed transcoding pipeline.</p>
-     * </li>
-     * <li><p>NarrowBandHDV2: Narrowband HD 2.0 pipeline.</p>
-     * </li>
+     * <li>Standard: standard pipeline</li>
+     * <li>Boost: accelerated transcoding pipeline</li>
+     * <li>NarrowBandHDV2: Narrowband HD 2.0 pipeline</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

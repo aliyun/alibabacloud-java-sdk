@@ -14,7 +14,7 @@ public class AddStreamTagToSearchLibResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the media asset.</p>
+     * <p>The media asset ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -32,12 +32,10 @@ public class AddStreamTagToSearchLibResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Default value: true. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

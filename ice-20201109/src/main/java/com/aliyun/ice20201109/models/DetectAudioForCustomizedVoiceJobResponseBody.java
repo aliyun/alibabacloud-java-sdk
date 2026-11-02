@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public DetectAudioForCustomizedVoiceJobResponseBodyData data;
@@ -20,7 +20,11 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true false</p>
+     * <p>Indicates whether the operation was successful. Valid values:</p>
+     * <ul>
+     * <li>true: The operation was successful.</li>
+     * <li>false: The operation failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -59,12 +63,10 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
 
     public static class DetectAudioForCustomizedVoiceJobResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether the audio file passes the check. Valid values:</p>
+         * <p>Indicates whether the audio passed the check. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true: The audio passed the check.</li>
+         * <li>false: The audio failed the check.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -74,10 +76,10 @@ public class DetectAudioForCustomizedVoiceJobResponseBody extends TeaModel {
         public Boolean pass;
 
         /**
-         * <p>The reason returned if the audio file failed to pass the check.</p>
+         * <p>The specific reason why the audio failed the check.</p>
          * 
          * <strong>example:</strong>
-         * <p>发音错误，请准确读出文案中的内容</p>
+         * <p>Pronunciation error, please read the contents of the copy accurately</p>
          */
         @NameInMap("Reason")
         public String reason;

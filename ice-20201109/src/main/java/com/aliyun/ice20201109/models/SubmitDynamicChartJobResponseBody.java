@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitDynamicChartJobResponseBody extends TeaModel {
     /**
-     * <p>The Job ID.</p>
+     * <p>The task ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitDynamicChartJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>

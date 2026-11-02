@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     /**
-     * <p>The input for the snapshot job.</p>
+     * <p>The snapshot input.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
-     * <p>The name of the snapshot job.</p>
+     * <p>The name of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>SampleJob</p>
@@ -21,7 +21,7 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The output destination for the snapshot job.</p>
+     * <p>The snapshot output.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
@@ -41,7 +41,7 @@ public class SubmitSnapshotJobShrinkRequest extends TeaModel {
     public String templateConfigShrink;
 
     /**
-     * <p>Custom user data, passed as a JSON-formatted string.</p>
+     * <p>The custom user data.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;test parameter&quot;: &quot;test value&quot;}</p>

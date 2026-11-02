@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetMediaConnectFlowInputRequest extends TeaModel {
     /**
-     * <p>The ID of the Flow instance.</p>
+     * <p>The flow instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -14,6 +14,12 @@ public class GetMediaConnectFlowInputRequest extends TeaModel {
     @NameInMap("FlowId")
     public String flowId;
 
+    /**
+     * <p>Specifies whether to return the internal IP address for stream ingestion. This parameter is valid only when cloud access is established over an Express Connect circuit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>on</p>
+     */
     @NameInMap("WithInternalVip")
     public String withInternalVip;
 

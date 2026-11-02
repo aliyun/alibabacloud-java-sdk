@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSourceLocationRequest extends TeaModel {
     /**
-     * <p>Specifies whether to use delete markers.</p>
+     * <p>The soft delete flag.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

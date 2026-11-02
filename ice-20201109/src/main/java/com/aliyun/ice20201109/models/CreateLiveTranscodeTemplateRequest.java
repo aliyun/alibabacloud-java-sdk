@@ -17,7 +17,7 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
     /**
      * <p>The template configuration.</p>
      * <blockquote>
-     * <p>The pass parameter requirements vary based on the templatetype (Type). When Type is set to normal, at least one of the width and height parameters must be specified, and the frame rate and bitrate parameters are required. For other template types, specify the parameters based on your requirements.</p>
+     * <p>The parameter requirements vary based on the template type (Type). If the Type parameter is set to normal, you must specify at least one of the width and height parameters, and the frame rate and bitrate parameters are required. For other template types, specify parameters as needed.</p>
      * </blockquote>
      */
     @NameInMap("TemplateConfig")
@@ -26,10 +26,10 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
     /**
      * <p>The template type. Valid values:</p>
      * <ul>
-     * <li>normal: standard.</li>
-     * <li>narrow-band: narrowband HD.</li>
-     * <li>audio-only: audio only.</li>
-     * <li>origin: original quality.</li>
+     * <li>normal: Normal template.</li>
+     * <li>narrow-band: Narrowband HD template.</li>
+     * <li>audio-only: Audio-only template.</li>
+     * <li>origin: Original quality template.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -81,9 +81,9 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
         /**
          * <p>The number of audio channels. Valid values:</p>
          * <ul>
-         * <li><p>1: mono.</p>
+         * <li><p>1: Mono.</p>
          * </li>
-         * <li><p>2: stereo.</p>
+         * <li><p>2: Stereo.</p>
          * </li>
          * </ul>
          * 
@@ -94,7 +94,7 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
         public String channels;
 
         /**
-         * <p>The audio encoding format. Valid values:</p>
+         * <p>The audio codec. Valid values:</p>
          * <ul>
          * <li>AAC</li>
          * <li>MP3</li>
@@ -107,7 +107,7 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
         public String codec;
 
         /**
-         * <p>The audio encoding preset. When Codec is set to AAC, valid values:</p>
+         * <p>The audio encoding profile. If the Codec parameter is set to AAC, valid values:</p>
          * <ul>
          * <li>aac_low</li>
          * <li>aac_he</li>
@@ -122,9 +122,9 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
         public String profile;
 
         /**
-         * <p>The audio sample rate. Valid values: 22050 to 96000.</p>
+         * <p>The audio sampling rate. Valid values: 22050 to 96000.</p>
          * <blockquote>
-         * <p>Notice: If AudioProfile is set to aac_ld, the sample rate must not exceed 44100.</p>
+         * <p>Notice: If the AudioProfile parameter is set to aac_ld, the sampling rate cannot exceed 44100.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -191,7 +191,7 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The encoding type. Valid values:</p>
+         * <p>The video codec. Valid values:</p>
          * <ul>
          * <li>H.264</li>
          * <li>H.265</li>
@@ -213,7 +213,7 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
         public String fps;
 
         /**
-         * <p>The video GOP (Group of Pictures). Unit: frames. Valid values: 1 to 3000.</p>
+         * <p>The group of pictures (GOP) size of the video. Unit: frames. Valid values: 1 to 3000.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -232,7 +232,7 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
          * </li>
          * </ul>
          * <blockquote>
-         * <p>Notice: For H.265 narrowband HD templates, the resolution must not exceed 1280 × 720.</p>
+         * <p>Notice: The resolution of an H.265 Narrowband HD template cannot exceed 1280×720.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -242,13 +242,13 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
         public String height;
 
         /**
-         * <p>The encoding profile. A set of specific encoding features supported by the video. A higher value generally produces better image quality but consumes more encoding and decoding resources. Valid values:</p>
+         * <p>The encoding profile. A set of specific encoding features supported by the video. Generally, a larger value indicates better video quality but higher resource consumption for encoding and decoding. Valid values:</p>
          * <ul>
-         * <li><p>1: baseline (suitable for mobile devices).</p>
+         * <li><p>1: Baseline profile, suitable for mobile devices.</p>
          * </li>
-         * <li><p>2: main (suitable for standard resolution devices).</p>
+         * <li><p>2: Main profile, suitable for standard-resolution devices.</p>
          * </li>
-         * <li><p>3: high (suitable for high resolution devices).</p>
+         * <li><p>3: High profile, suitable for high-resolution devices.</p>
          * </li>
          * </ul>
          * 
@@ -269,7 +269,7 @@ public class CreateLiveTranscodeTemplateRequest extends TeaModel {
          * </li>
          * </ul>
          * <blockquote>
-         * <p>Notice: For H.265 narrowband HD templates, the resolution must not exceed 1280 × 720.</p>
+         * <p>Notice: The resolution of an H.265 Narrowband HD template cannot exceed 1280×720.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

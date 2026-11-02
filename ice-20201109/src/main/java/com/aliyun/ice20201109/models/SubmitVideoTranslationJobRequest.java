@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoTranslationJobRequest extends TeaModel {
     /**
-     * <p>A client-generated token that ensures the idempotence of the request.</p>
+     * <p>Ensures the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>Test ClientToken</p>
@@ -14,16 +14,16 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The job description.</p>
+     * <p>The task description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test description</p>
+     * <p>Test Description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>Configuration parameters for the video translation job, specified as a JSON string.</p>
+     * <p>The configuration parameters for the video translation task. Must be in JSON format.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;SourceLanguage&quot;:&quot;zh&quot;,&quot;TargetLanguage&quot;:&quot;en&quot;,&quot;DetextArea&quot;:&quot;Auto&quot;}</p>
@@ -32,12 +32,10 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String editingConfig;
 
     /**
-     * <p>The input parameters for the video translation job.</p>
+     * <p>The input parameters for the video translation task.</p>
      * <ul>
-     * <li><p>The input can be a video or a subtitle file.</p>
-     * </li>
-     * <li><p>The value must be a JSON string.</p>
-     * </li>
+     * <li>Supports videos and subtitle files as input.</li>
+     * <li>Must be in JSON format.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +45,7 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String inputConfig;
 
     /**
-     * <p>Output parameters for the video translation job. The output can be a video or a subtitle file.</p>
+     * <p>The output parameters for the video translation task. Supports video and subtitle file types as output.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;MediaURL&quot;: &quot;<a href="https://your-bucket.oss-cn-shanghai.aliyuncs.com/your-object.mp4%22%7D">https://your-bucket.oss-cn-shanghai.aliyuncs.com/your-object.mp4&quot;}</a></p>
@@ -59,7 +57,7 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String signature;
 
     /**
-     * <p>The system automatically populates this parameter. You do not need to set it.</p>
+     * <p>Automatically populated. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Auto-complete, no need to write</p>
@@ -71,7 +69,7 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String signatureNonce;
 
     /**
-     * <p>The system automatically populates this parameter. You do not need to set it.</p>
+     * <p>Automatically populated. You do not need to specify this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Auto-complete, no need to write</p>
@@ -83,18 +81,18 @@ public class SubmitVideoTranslationJobRequest extends TeaModel {
     public String signatureVersion;
 
     /**
-     * <p>The job title.</p>
+     * <p>The task title.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test title</p>
+     * <p>Test Title</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
-     * <p>User data for the job, provided as a JSON string. The string can be up to 512 bytes long.</p>
+     * <p>The custom information in JSON format. The maximum length is 512 bytes.</p>
      * <ul>
-     * <li>Use this parameter to <a href="https://help.aliyun.com/document_detail/451631.html">configure a custom callback URL</a>.</li>
+     * <li><a href="https://help.aliyun.com/document_detail/451631.html">Supports custom callback URL configuration</a></li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,8 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteMediaInfosRequest extends TeaModel {
     /**
-     * <p>Specifies whether to delete the physical file of the media asset.</p>
-     * <p>If the media asset is stored in your own OSS bucket, you must authorize the service role AliyunICEDefaultRole in advance. For more information&lt;props=&quot;china&quot;&gt;, see <a href="https://help.aliyun.com/zh/ims/user-guide/record?spm=a2c4g.11186623.0.i8#0737d9c437bmn">Authorize IMS to delete recording files in OSS</a>.</p>
+     * <p>Specifies whether to delete the physical files of the media assets. If the storage address of a media asset is a user-owned OSS bucket, you must authorize the AliyunICEDefaultRole service role in advance&lt;props=&quot;china&quot;&gt;. For more information, see <a href="https://www.alibabacloud.com/help/en/ims/user-guide/record#0737d9c437bmn">Delete recorded files (OSS authorization management)</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -15,27 +14,16 @@ public class DeleteMediaInfosRequest extends TeaModel {
     public Boolean deletePhysicalFiles;
 
     /**
-     * <p>The URL of the media asset that you want to delete. The file corresponding to the URL must be registered with IMS. Separate multiple URLs with commas (,). The following two formats are supported:</p>
-     * <ol>
-     * <li><p>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?</p>
-     * </li>
-     * <li><p>OSS://example-bucket/example.mp4?<br>
-     * In this format, it is considered by default that the region of the OSS bucket in which the media asset resides is the same as the region in which IMS is activated.</p>
-     * </li>
-     * </ol>
+     * <p>The URLs of the media assets to be deleted in the corresponding system. The files corresponding to the URLs must be registered in IMS first. Separate multiple URLs with commas (,). Two formats are supported: 1. http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4? 2. OSS://example-bucket/example.mp4? In the second format, the default OSS region is the same as the service registration area.</p>
      * 
      * <strong>example:</strong>
-     * <p>Http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4? or oss://example-bucket/example.mp4?</p>
+     * <p>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4?</p>
      */
     @NameInMap("InputURLs")
     public String inputURLs;
 
     /**
-     * <p>The ID of the media asset that you want to delete from Intelligent Media Services (IMS).</p>
-     * <ul>
-     * <li>Separate multiple IDs with commas (,).</li>
-     * </ul>
-     * <p>If you leave MediaIds empty, you must specify InputURLs.</p>
+     * <p>The IMS media asset IDs. Separate multiple IDs with commas (,). If the MediaIds parameter is empty, the InputURLs parameter must not be empty.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong>,<strong><strong>15d4a4b0448391508f2cb486</strong></strong></p>

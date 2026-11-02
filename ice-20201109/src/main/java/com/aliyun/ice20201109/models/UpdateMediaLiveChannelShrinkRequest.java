@@ -11,7 +11,7 @@ public class UpdateMediaLiveChannelShrinkRequest extends TeaModel {
     public String audioSettingsShrink;
 
     /**
-     * <p>The ID of the channel.</p>
+     * <p>The channel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,14 +21,14 @@ public class UpdateMediaLiveChannelShrinkRequest extends TeaModel {
     public String channelId;
 
     /**
-     * <p>The inputs associated with the channel.</p>
+     * <p>The input attachment settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InputAttachments")
     public String inputAttachmentsShrink;
 
     /**
-     * <p>The name of the channel. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
+     * <p>The channel name. The name can contain letters, digits, hyphens (-), and underscores (_). The name can be up to 64 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class UpdateMediaLiveChannelShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The output groups.</p>
+     * <p>The output group configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OutputGroups")

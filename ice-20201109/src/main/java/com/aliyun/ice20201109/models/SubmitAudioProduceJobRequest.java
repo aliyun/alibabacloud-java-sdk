@@ -7,12 +7,12 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     /**
      * <p>The task description:</p>
      * <ul>
-     * <li>Maximum length: 1024 bytes.</li>
+     * <li>The length cannot exceed 1,024 bytes.</li>
      * <li>UTF-8 encoding.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Task description, max 1024 bytes, UTF-8 encoded</p>
+     * <p>taskDescription</p>
      */
     @NameInMap("Description")
     public String description;
@@ -20,23 +20,23 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     /**
      * <p>The audio production configuration:</p>
      * <ul>
-     * <li>voice: the <a href="https://help.aliyun.com/document_detail/449563.html">voice type</a>.</li>
-     * <li>customizedVoice: the VoiceId for voice cloning.</li>
-     * <li>format: the output file format. Valid values: PCM, WAV, and MP3.</li>
-     * <li>volume: the volume. Valid values: 0 to 100. Default value: 50.</li>
-     * <li>speech_rate: the speech rate. Valid values: -500 to 500. Default value: 0.<ul>
-     * <li>[-500, 0, 500] corresponds to the speed multiplier range of [0.5, 1.0, 2.0].</li>
+     * <li>voice: The <a href="https://help.aliyun.com/document_detail/449563.html">voice type</a>.</li>
+     * <li>customizedVoice: The VoiceId for voice cloning.</li>
+     * <li>format: The output file format. Valid values: PCM, WAV, and MP3.</li>
+     * <li>volume: The volume. Valid values: 0 to 100. Default value: 50.</li>
+     * <li>speech_rate: The speech rate. Valid values: -500 to 500. Default value: 0.<ul>
+     * <li>[-500, 0, 500] corresponds to the speech rate multiplier range of [0.5, 1.0, 2.0].</li>
      * <li>The calculation method is as follows:<ul>
-     * <li>0.8x speed: (1-1/0.8)/0.002 = -125</li>
-     * <li>1.2x speed: (1-1/1.2)/0.001 = 166</li>
-     * <li>For speeds less than 1x, use the 0.002 coefficient.</li>
-     * <li>For speeds greater than 1x, use the 0.001 coefficient.</li>
+     * <li>0.8x speed: (1 - 1/0.8) / 0.002 = -125</li>
+     * <li>1.2x speed: (1 - 1/1.2) / 0.001 = 166</li>
+     * <li>For speeds less than 1x, the 0.002 coefficient is used.</li>
+     * <li>For speeds greater than 1x, the 0.001 coefficient is used.</li>
      * </ul>
      * </li>
      * </ul>
      * </li>
-     * <li>pitch_rate: the pitch. Valid values: -500 to 500. Default value: 0.
-     * <notice>If both voice and customizedVoice are specified, customizedVoice takes precedence.</li>
+     * <li>pitch_rate: The pitch. Valid values: -500 to 500. Default value: 0.
+     * <notice>If both voice and customizedVoice are specified, customizedVoice takes precedence.</notice></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -47,24 +47,27 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     public String editingConfig;
 
     /**
-     * <p>The text content. A maximum of 10,000 Chinese characters is supported. <a href="https://help.aliyun.com/document_detail/2672807.html">SSML markup language</a> is supported.</p>
+     * <p>The text content. A maximum of 10,000 Chinese characters are supported. <a href="https://help.aliyun.com/document_detail/2672807.html">Speech Synthesis Markup Language (SSML)</a> is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Audio production task</p>
+     * <p>test</p>
      */
     @NameInMap("InputConfig")
     public String inputConfig;
 
     /**
-     * <p>The audio output configuration.</p>
+     * <p>The audio output configuration. For example, to store the output speech at <a href="http://my_bucket.oss-cn-shanghai.aliyuncs.com/target_audio.mp3">http://my_bucket.oss-cn-shanghai.aliyuncs.com/target_audio.mp3</a>, the parameter settings are as follows:
+     * {
+     *       &quot;bucket&quot;: &quot;my_bucket&quot;,
+     *       &quot;object&quot;: &quot;target_audio&quot;
+     * }</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>For example, to store the output audio at <a href="http://my_bucket.oss-cn-shanghai.aliyuncs.com/target_audio.mp3">http://my_bucket.oss-cn-shanghai.aliyuncs.com/target_audio.mp3</a>, configure this parameter as:
-     * {
-     *       &quot;bucket&quot;: &quot;my_bucket&quot;,
-     *       &quot;object&quot;: &quot;target_audio&quot;
+     * <p>{
+     *       &quot;bucket&quot;: &quot;my_bucket&quot;,
+     *       &quot;object&quot;: &quot;target_audio&quot;
      * }</p>
      */
     @NameInMap("OutputConfig")
@@ -82,21 +85,21 @@ public class SubmitAudioProduceJobRequest extends TeaModel {
     /**
      * <p>The task title. If not provided, a default title is automatically generated based on the date.</p>
      * <ul>
-     * <li>Maximum length: 128 bytes.</li>
+     * <li>The length cannot exceed 128 bytes.</li>
      * <li>UTF-8 encoding.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>China Regional Daily News</p>
+     * <p>taskTitle</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
-     * <p>The custom settings in JSON format. Maximum length: 512 bytes. <a href="https://help.aliyun.com/document_detail/451631.html">Custom callback URL configuration</a> is supported.</p>
+     * <p>The custom settings in JSON format. The maximum length is 512 bytes. <a href="https://help.aliyun.com/document_detail/451631.html">Custom callback URL configuration</a> is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
+     * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
      */
     @NameInMap("UserData")
     public String userData;

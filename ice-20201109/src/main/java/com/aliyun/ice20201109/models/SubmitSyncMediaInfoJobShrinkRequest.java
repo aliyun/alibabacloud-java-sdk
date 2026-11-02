@@ -12,7 +12,7 @@ public class SubmitSyncMediaInfoJobShrinkRequest extends TeaModel {
     public String inputShrink;
 
     /**
-     * <p>The job name.</p>
+     * <p>The name of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>job-name</p>

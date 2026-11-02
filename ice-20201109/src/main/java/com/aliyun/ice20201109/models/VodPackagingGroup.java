@@ -4,21 +4,42 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class VodPackagingGroup extends TeaModel {
+    /**
+     * <p>The approximate number of packaging assets in the packaging group.</p>
+     */
     @NameInMap("ApproximateAssetCount")
     public Long approximateAssetCount;
 
+    /**
+     * <p>The number of packaging configurations in the packaging group.</p>
+     */
     @NameInMap("ConfigurationCount")
     public Long configurationCount;
 
+    /**
+     * <p>The creation time of the packaging group.</p>
+     */
     @NameInMap("CreateTime")
     public String createTime;
 
+    /**
+     * <p>The description of the packaging group.</p>
+     */
     @NameInMap("Description")
     public String description;
 
+    /**
+     * <p>The playback domain name of the packaging group. All VOD packaging assets in the same packaging group share the same domain name.</p>
+     */
     @NameInMap("DomainName")
     public String domainName;
 
+    /**
+     * <p>The name of the packaging group. The name must be unique per user, up to 128 characters in length, and match the format [A-Za-z0-9_-]+.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>example-group</p>
+     */
     @NameInMap("GroupName")
     public String groupName;
 

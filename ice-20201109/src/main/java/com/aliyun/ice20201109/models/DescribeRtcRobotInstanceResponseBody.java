@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
     /**
-     * <p>The authentication token for the RTC Channel.</p>
+     * <p>The authentication token for joining the RTC channel.</p>
      * 
      * <strong>example:</strong>
      * <hr>
@@ -23,7 +23,7 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
     public String channelId;
 
     /**
-     * <p>The advanced configurations of the AI agent.</p>
+     * <p>The advanced configuration of the AI agent.</p>
      */
     @NameInMap("Config")
     public DescribeRtcRobotInstanceResponseBodyConfig config;
@@ -38,11 +38,11 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the instance. Valid values:</p>
+     * <p>The instance status. Valid values:</p>
      * <ul>
-     * <li><p><code>Executing</code>: The instance is running.</p>
+     * <li><p>Executing: Running.</p>
      * </li>
-     * <li><p><code>Finished</code>: The instance has stopped.</p>
+     * <li><p>Finished: Finished.</p>
      * </li>
      * </ul>
      * 
@@ -53,7 +53,7 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The custom user data.</p>
+     * <p>The custom user information.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -133,7 +133,7 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
 
     public static class DescribeRtcRobotInstanceResponseBodyConfig extends TeaModel {
         /**
-         * <p>Specifies whether to allow voice interruption.</p>
+         * <p>Specifies whether voice interruption is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -142,7 +142,7 @@ public class DescribeRtcRobotInstanceResponseBody extends TeaModel {
         public Boolean enableVoiceInterrupt;
 
         /**
-         * <p>The welcome message.</p>
+         * <p>The greeting message.</p>
          * 
          * <strong>example:</strong>
          * <p>Hello</p>

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListHotwordLibrariesResponseBody extends TeaModel {
     /**
-     * <p>The hotword libraries.</p>
+     * <p>The list of hotword libraries.</p>
      */
     @NameInMap("HotwordLibraryList")
     public java.util.List<ListHotwordLibrariesResponseBodyHotwordLibraryList> hotwordLibraryList;
 
     /**
-     * <p>The maximum number of hotword libraries that can be returned.</p>
+     * <p>The maximum number of hotword library information records returned.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -20,7 +20,7 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>A pagination token that can be used in the next request to retrieve a new page of results. If it is empty, all results are returned.</p>
+     * <p>The position to which the current call has read. An empty value indicates that all data has been read.</p>
      * 
      * <strong>example:</strong>
      * <p>CBB6BC61D08</p>
@@ -29,7 +29,7 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>9262E3DA-07FA-4862-FCBB6BC61D08</strong></strong>*</p>
@@ -93,7 +93,7 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
 
     public static class ListHotwordLibrariesResponseBodyHotwordLibraryList extends TeaModel {
         /**
-         * <p>The time when the hotword library was created.</p>
+         * <p>The creation time. The time is in ISO 8601 format and uses UTC time (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -102,10 +102,10 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The description of the hotword library. It can be up to 200 characters in length.</p>
+         * <p>The description. The maximum length is 200 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>Lexicon containing celebrity names</p>
+         * <p>Hotword library for celebrities</p>
          */
         @NameInMap("Description")
         public String description;
@@ -120,7 +120,7 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
         public String hotwordLibraryId;
 
         /**
-         * <p>The time when the hotword library was last modified.</p>
+         * <p>The modification time. The time is in ISO 8601 format and uses UTC time (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2017-01-11T12:00:00Z</p>
@@ -138,14 +138,12 @@ public class ListHotwordLibrariesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The usage scenario of the hotword library. Valid values:</p>
+         * <p>The scenarios of the hotword library. Valid values:</p>
          * <ul>
-         * <li><p>ASR: Automatic Speech Recognition</p>
-         * </li>
-         * <li><p>StructuredMediaAssets: structured media analysis</p>
-         * </li>
-         * <li><p>VideoTranslation: Video translation This field cannot be modified after the hotword library is created.</p>
-         * </li>
+         * <li>ASR: ASR intelligent text recognition.</li>
+         * <li>StructuredMediaAssets: Structured media assets.</li>
+         * <li>VideoTranslation: Video translation.
+         * Once a hotword library is created, this field cannot be modified.</li>
          * </ul>
          * 
          * <strong>example:</strong>

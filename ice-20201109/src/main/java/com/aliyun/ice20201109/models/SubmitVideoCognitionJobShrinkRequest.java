@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class SubmitVideoCognitionJobShrinkRequest extends TeaModel {
     /**
-     * <p>The input media object.</p>
+     * <p>The input media structure.</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
-     * <p>A JSON string containing additional parameters for operators such as natural language processing, shot detection, custom tagging, and action recognition.</p>
+     * <p>The additional request parameters, represented as a JSON string. This parameter supports additional parameters for operators such as natural language processing, shot detection, custom tagging, and action recognition.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -31,14 +31,11 @@ public class SubmitVideoCognitionJobShrinkRequest extends TeaModel {
     @NameInMap("Params")
     public String params;
 
-    /**
-     * <p>The template configuration.</p>
-     */
     @NameInMap("TemplateConfig")
     public String templateConfig;
 
     /**
-     * <p>The ID of the template that specifies the analysis algorithms to use. For more information about managing templates, see <a href="https://help.aliyun.com/zh/ims/developer-reference/api-ice-2020-11-09-createcustomtemplate?spm=a2c4g.11186623.help-menu-193643.d_5_0_3_3_0_0.17b66afamjKySv">Create Custom Template</a> and <a href="https://help.aliyun.com/zh/ims/user-guide/smart-tagging-template?spm=a2c4g.11186623.0.i15">AI-powered tagging template</a>.</p>
+     * <p>The template ID used to specify the analysis algorithm. For template-related operations, refer to <a href="https://www.alibabacloud.com/help/en/ims/developer-reference/api-ice-2020-11-09-createcustomtemplate">Create a custom template</a> and <a href="https://www.alibabacloud.com/help/en/ims/user-guide/smart-tagging-template">Smart tagging template</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>39f8e0bc00***************</p>
@@ -47,7 +44,7 @@ public class SubmitVideoCognitionJobShrinkRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The title of the video. The title can contain Chinese characters, English letters, digits, and hyphens (-). The title cannot start with a special character and must not exceed 256 bytes in length.</p>
+     * <p>The video title. The title supports Chinese characters, English letters, digits, and hyphens (-). It cannot start with a special character and cannot exceed 256 bytes in length.</p>
      * 
      * <strong>example:</strong>
      * <p>example-title-****</p>
@@ -56,7 +53,7 @@ public class SubmitVideoCognitionJobShrinkRequest extends TeaModel {
     public String title;
 
     /**
-     * <p>The user-defined data. The service returns this data unmodified in the callback notification. This parameter cannot exceed 1,024 bytes.</p>
+     * <p>The user-defined data. The data is returned as-is when the result is retrieved. The length cannot exceed 1,024 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;:1}</p>

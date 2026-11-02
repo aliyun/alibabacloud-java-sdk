@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIAgentPhoneNumberRequest extends TeaModel {
     /**
-     * <p>Phone number. Specify Number to directly query the corresponding phone number.</p>
+     * <p>The phone number. Specify this parameter to directly query the corresponding number.</p>
      * 
      * <strong>example:</strong>
      * <p>139xxxxxxxxx</p>
@@ -14,7 +14,7 @@ public class ListAIAgentPhoneNumberRequest extends TeaModel {
     public String number;
 
     /**
-     * <p>Page number. Default Value is 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListAIAgentPhoneNumberRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>Page size, indicating the number of records displayed per page. Default Value is 50, with a maximum value of 100.</p>
+     * <p>The number of entries per page. Default value: 50. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -32,15 +32,15 @@ public class ListAIAgentPhoneNumberRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Status of the target phone number to query.</p>
+     * <p>The status of the target phone number. Valid values:</p>
      * <ul>
-     * <li><p>1: &quot;Activation in progress&quot;.</p>
+     * <li><p>1: Activation in progress.</p>
      * </li>
-     * <li><p>2: &quot;Normal&quot;.</p>
+     * <li><p>2: Normal.</p>
      * </li>
-     * <li><p>3: &quot;Deactivation in progress&quot;.</p>
+     * <li><p>3: Unregistering.</p>
      * </li>
-     * <li><p>4: &quot;Deactivated&quot;.</p>
+     * <li><p>4: Unregistered.</p>
      * </li>
      * </ul>
      * 

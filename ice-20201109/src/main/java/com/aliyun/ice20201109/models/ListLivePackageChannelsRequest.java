@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLivePackageChannelsRequest extends TeaModel {
     /**
-     * <p>The channel group name.</p>
+     * <p>The name of the channel group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,14 +42,7 @@ public class ListLivePackageChannelsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The sort order by creation time. Default value: desc.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>asc</p>
-     * </li>
-     * <li><p>desc</p>
-     * </li>
-     * </ul>
+     * <p>The sorting order by creation time. Default value: desc (descending order).</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>

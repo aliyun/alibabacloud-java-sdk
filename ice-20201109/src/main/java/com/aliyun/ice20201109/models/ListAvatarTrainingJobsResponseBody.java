@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAvatarTrainingJobsResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public ListAvatarTrainingJobsResponseBodyData data;
@@ -20,12 +20,10 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: successful</li>
+     * <li>false: failed</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +66,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
          * <p>The description of the digital human.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is a digital human used for a specific scenario.</p>
+         * <p>This is a digital human, intended for use in a certain scenario.</p>
          */
         @NameInMap("AvatarDescription")
         public String avatarDescription;
@@ -86,7 +84,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
          * <p>The name of the digital human.</p>
          * 
          * <strong>example:</strong>
-         * <p>Decimal</p>
+         * <p>The name of the digital human.</p>
          */
         @NameInMap("AvatarName")
         public String avatarName;
@@ -101,12 +99,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
         public String avatarType;
 
         /**
-         * <ul>
-         * <li><p>The time when the job was created.</p>
-         * </li>
-         * <li><p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * </li>
-         * </ul>
+         * <p>The time when the task was created, in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-23T13:33:40Z</p>
@@ -115,12 +108,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <ul>
-         * <li><p>The time when the first training was initiated.</p>
-         * </li>
-         * <li><p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * </li>
-         * </ul>
+         * <p>The time when the training was first initiated, in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-23T13:33:40Z</p>
@@ -129,7 +117,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
         public String firstTrainingTime;
 
         /**
-         * <p>The ID of the digital human training job.</p>
+         * <p>The ID of the digital human training task.</p>
          * 
          * <strong>example:</strong>
          * <p><em><strong><strong>aded114489ea02e0addf93</strong></strong></em></p>
@@ -138,12 +126,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <ul>
-         * <li><p>The time when the last training was initiated.</p>
-         * </li>
-         * <li><p>The time follows the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time is displayed in UTC.</p>
-         * </li>
-         * </ul>
+         * <p>The time of the most recent training, in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-23T13:33:40Z</p>
@@ -155,13 +138,13 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
          * <p>The status description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Training succeeded</p>
+         * <p>Training successful</p>
          */
         @NameInMap("Message")
         public String message;
 
         /**
-         * <p>The media asset ID of the portrait image.</p>
+         * <p>The media asset ID of the profile picture.</p>
          * 
          * <strong>example:</strong>
          * <p><em><strong><strong>aded114489ea02e0addf93</strong></strong></em></p>
@@ -170,7 +153,7 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
         public String portrait;
 
         /**
-         * <p>The state of the digital human training job.</p>
+         * <p>The status of the digital human training task.</p>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -275,13 +258,13 @@ public class ListAvatarTrainingJobsResponseBody extends TeaModel {
 
     public static class ListAvatarTrainingJobsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of digital human training jobs.</p>
+         * <p>The list of digital human training tasks.</p>
          */
         @NameInMap("AvatarTrainingJobList")
         public java.util.List<ListAvatarTrainingJobsResponseBodyDataAvatarTrainingJobList> avatarTrainingJobList;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

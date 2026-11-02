@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateAIAgentCallResponseBody extends TeaModel {
     /**
-     * <p>The name of the agent in the Alibaba Real-time Communication (ARTC) channel.</p>
+     * <p>The name of the agent in the ARTC channel.</p>
      * 
      * <strong>example:</strong>
      * <p>877ae632caae49b1afc81c2e8194ffb4</p>
@@ -14,7 +14,7 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
     public String AIAgentUserId;
 
     /**
-     * <p>The user ID of the avatar in the channel.</p>
+     * <p>The user ID of the digital human joining the session.</p>
      * 
      * <strong>example:</strong>
      * <p>avatar_39f8e0bc005e4f309379701645f4****</p>
@@ -23,7 +23,7 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
     public String avatarUserId;
 
     /**
-     * <p>The ID of the ARTC channel.</p>
+     * <p>The ARTC channel ID.</p>
      * 
      * <strong>example:</strong>
      * <p>70f22d5784194938a7e387052f2b3208</p>
@@ -32,7 +32,7 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
     public String channelId;
 
     /**
-     * <p>The ID of the generated agent instance.</p>
+     * <p>The instance ID of the generated agent.</p>
      * 
      * <strong>example:</strong>
      * <p>39f8e0bc005e4f309379701645f4****</p>
@@ -50,7 +50,7 @@ public class GenerateAIAgentCallResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The client-side ARTC token.</p>
+     * <p>The ARTC token for the client.</p>
      * 
      * <strong>example:</strong>
      * <p>eyJhcHBpZCI6ICIxMjM0MTIzNxxxxx</p>

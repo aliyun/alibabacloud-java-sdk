@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class SubmitSnapshotJobRequest extends TeaModel {
     /**
-     * <p>The input for the snapshot job.</p>
+     * <p>The snapshot input.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public SubmitSnapshotJobRequestInput input;
 
     /**
-     * <p>The name of the snapshot job.</p>
+     * <p>The name of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>SampleJob</p>
@@ -21,7 +21,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The output destination for the snapshot job.</p>
+     * <p>The snapshot output.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
@@ -41,7 +41,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
     public SubmitSnapshotJobRequestTemplateConfig templateConfig;
 
     /**
-     * <p>Custom user data, passed as a JSON-formatted string.</p>
+     * <p>The custom user data.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;test parameter&quot;: &quot;test value&quot;}</p>
@@ -104,23 +104,23 @@ public class SubmitSnapshotJobRequest extends TeaModel {
 
     public static class SubmitSnapshotJobRequestInput extends TeaModel {
         /**
-         * <p>The input media asset.</p>
+         * <p>The input media.</p>
          * <ul>
-         * <li><p>If <code>Type</code> is <code>OSS</code>, specify the OSS URL of the input file.</p>
+         * <li><p>If Type is set to OSS, enter the OSS URL.</p>
          * </li>
-         * <li><p>If <code>Type</code> is <code>Media</code>, specify the ID of the media asset.</p>
+         * <li><p>If Type is set to Media, enter the media asset ID.</p>
          * </li>
          * </ul>
-         * <p>The OSS URL must be in one of the following formats:</p>
+         * <p>The OSS URL must follow these rules:</p>
          * <ol>
-         * <li><p><code>oss://bucket/object</code></p>
+         * <li><p>oss://bucket/object</p>
          * </li>
-         * <li><p><code>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</code>
-         * <br>In these formats, <code>bucket</code> is the name of an OSS bucket located in the same region as the current project, and <code>object</code> is the file path.<br></p>
+         * <li><p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object
+         * In the URLs, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
          * </li>
          * </ol>
          * <blockquote>
-         * <p>The OSS bucket specified in the URL must be added to IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a> before use.</p>
+         * <p>The OSS bucket in the URL must be added to the IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a> before it can be used.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -131,11 +131,11 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the input. Valid values:</p>
+         * <p>The input type. Valid values:</p>
          * <ul>
-         * <li><p><code>OSS</code>: an OSS file URL.</p>
+         * <li><p>OSS: the URL of an OSS object.</p>
          * </li>
-         * <li><p><code>Media</code>: a media asset ID.</p>
+         * <li><p>Media: the ID of a media asset.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -171,31 +171,31 @@ public class SubmitSnapshotJobRequest extends TeaModel {
 
     public static class SubmitSnapshotJobRequestOutput extends TeaModel {
         /**
-         * <p>The output media asset.</p>
+         * <p>The output media.</p>
          * <ul>
-         * <li><p>If <code>Type</code> is <code>OSS</code>, specify the OSS URL for the output file.</p>
+         * <li><p>If Type is set to OSS, enter the OSS URL.</p>
          * </li>
-         * <li><p>If <code>Type</code> is <code>Media</code>, specify the ID of the output media asset.</p>
+         * <li><p>If Type is set to Media, enter the media asset ID.</p>
          * </li>
          * </ul>
-         * <p>The OSS URL must be in one of the following formats:</p>
+         * <p>The OSS URL must follow these rules:</p>
          * <ol>
-         * <li><p><code>oss://bucket/object</code></p>
+         * <li><p>oss://bucket/object</p>
          * </li>
-         * <li><p><code>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</code></p>
+         * <li><p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</p>
          * </li>
          * </ol>
-         * <p>In these formats, <code>bucket</code> is the name of an OSS bucket located in the same region as the current project, and <code>object</code> is the file path.</p>
+         * <p>In the URLs, bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
          * <ul>
-         * <li><p>When capturing multiple static snapshots, the <code>object</code> must contain the <code>{Count}</code> placeholder.</p>
+         * <li><p>When capturing multiple static snapshots, the object must contain the &quot;{Count}&quot; placeholder.</p>
          * </li>
-         * <li><p>When capturing a sprite, the <code>object</code> must contain the <code>{TileCount}</code> placeholder.</p>
+         * <li><p>When capturing a sprite snapshot, the object must contain the &quot;{TileCount}&quot; placeholder.</p>
          * </li>
-         * <li><p>For WebVTT snapshots, the filename in the <code>object</code> path must end with <code>.vtt</code>.</p>
+         * <li><p>For WebVTT snapshots, the object suffix must be &quot;.vtt&quot;.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>The OSS bucket specified in the URL must be added to IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a> before use.</p>
+         * <p>The OSS bucket in the URL must be added to the IMS <a href="https://help.aliyun.com/document_detail/609918.html">storage management</a> before it can be used.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -206,11 +206,11 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the output. Valid values:</p>
+         * <p>The input type. Valid values:</p>
          * <ul>
-         * <li><p><code>OSS</code>: an OSS file URL.</p>
+         * <li><p>OSS: the URL of an OSS object.</p>
          * </li>
-         * <li><p><code>Media</code>: a media asset ID.</p>
+         * <li><p>Media: the ID of a media asset.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -246,7 +246,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
 
     public static class SubmitSnapshotJobRequestScheduleConfig extends TeaModel {
         /**
-         * <p>The pipeline ID.</p>
+         * <p>The ID of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
@@ -271,7 +271,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
 
     public static class SubmitSnapshotJobRequestTemplateConfigOverwriteParamsSpriteSnapshotConfig extends TeaModel {
         /**
-         * <p>The height of each tile. Default: the height of the output snapshot.</p>
+         * <p>The height of a single image. Default value: the height of the snapshot output resolution.</p>
          * 
          * <strong>example:</strong>
          * <p>480</p>
@@ -280,7 +280,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public Integer cellHeight;
 
         /**
-         * <p>The width of each tile. Default: the width of the output snapshot.</p>
+         * <p>The width of a single image. Default value: the width of the snapshot output resolution.</p>
          * 
          * <strong>example:</strong>
          * <p>720</p>
@@ -298,7 +298,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public String color;
 
         /**
-         * <p>The number of columns in the sprite grid.</p>
+         * <p>The number of columns for image stitching.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -307,7 +307,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public Integer columns;
 
         /**
-         * <p>The number of rows in the sprite grid.</p>
+         * <p>The number of rows for image stitching.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -316,7 +316,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public Integer lines;
 
         /**
-         * <p>The margin around the sprite, in pixels. Default value: 0.</p>
+         * <p>The margin width. Default value: 0. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -325,7 +325,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public Integer margin;
 
         /**
-         * <p>The padding between tiles, in pixels. Default value: 0.</p>
+         * <p>The spacing between images. Default value: 0. Unit: pixels.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -398,7 +398,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
 
     public static class SubmitSnapshotJobRequestTemplateConfigOverwriteParams extends TeaModel {
         /**
-         * <p>The threshold for detecting and filtering black content in the first frame. This applies only to multi-frame snapshots.</p>
+         * <p>The threshold for filtering black screen images in the first frame of multi-frame snapshots.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -407,7 +407,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public Integer blackLevel;
 
         /**
-         * <p>The number of snapshots to capture.</p>
+         * <p>The number of snapshots.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -425,7 +425,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public String frameType;
 
         /**
-         * <p>The output image height.</p>
+         * <p>The height of the output image.</p>
          * 
          * <strong>example:</strong>
          * <p>480</p>
@@ -434,7 +434,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public Integer height;
 
         /**
-         * <p>The interval between snapshots.</p>
+         * <p>The snapshot interval. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -443,7 +443,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public Long interval;
 
         /**
-         * <p>Specifies whether to stitch snapshots into a single sprite. This applies only to WebVTT snapshots.</p>
+         * <p>The WebVTT snapshot configuration. Specifies whether to stitch the output.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -452,7 +452,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public Boolean isSptFrag;
 
         /**
-         * <p>The threshold for determining whether a pixel is black.</p>
+         * <p>The threshold for determining whether a pixel is a black pixel.</p>
          * 
          * <strong>example:</strong>
          * <p>70</p>
@@ -461,13 +461,13 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public Integer pixelBlackThreshold;
 
         /**
-         * <p>The sprite configuration.</p>
+         * <p>The sprite snapshot configuration.</p>
          */
         @NameInMap("SpriteSnapshotConfig")
         public SubmitSnapshotJobRequestTemplateConfigOverwriteParamsSpriteSnapshotConfig spriteSnapshotConfig;
 
         /**
-         * <p>The start time for capturing snapshots.</p>
+         * <p>The start time of the snapshot. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -485,7 +485,7 @@ public class SubmitSnapshotJobRequest extends TeaModel {
         public String type;
 
         /**
-         * <p>The output image width.</p>
+         * <p>The width of the output image.</p>
          * 
          * <strong>example:</strong>
          * <p>720</p>
@@ -590,13 +590,13 @@ public class SubmitSnapshotJobRequest extends TeaModel {
 
     public static class SubmitSnapshotJobRequestTemplateConfig extends TeaModel {
         /**
-         * <p>Parameters used to override settings in the specified template.</p>
+         * <p>The override parameters.</p>
          */
         @NameInMap("OverwriteParams")
         public SubmitSnapshotJobRequestTemplateConfigOverwriteParams overwriteParams;
 
         /**
-         * <p>The snapshot template ID.</p>
+         * <p>The ID of the template.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

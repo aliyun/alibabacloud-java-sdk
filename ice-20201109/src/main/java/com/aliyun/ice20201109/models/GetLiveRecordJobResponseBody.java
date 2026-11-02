@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetLiveRecordJobResponseBody extends TeaModel {
     /**
-     * <p>The details of the recording job.</p>
+     * <p>The recording job.</p>
      */
     @NameInMap("RecordJob")
     public GetLiveRecordJobResponseBodyRecordJob recordJob;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>B57A046C-CE33-5FBB-B57A-D2B89ACF6907</p>
@@ -51,7 +51,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         public String bucket;
 
         /**
-         * <p>The endpoint of the storage service.</p>
+         * <p>The storage service endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-shanghai.aliyuncs.com</p>
@@ -60,14 +60,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         public String endpoint;
 
         /**
-         * <p>The type of the storage address.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>vod</p>
-         * </li>
-         * <li><p>oss</p>
-         * </li>
-         * </ul>
+         * <p>The storage URL type.</p>
          * 
          * <strong>example:</strong>
          * <p>oss</p>
@@ -108,7 +101,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
 
     public static class GetLiveRecordJobResponseBodyRecordJobStreamInput extends TeaModel {
         /**
-         * <p>The type of the live stream. The value can only be rtmp.</p>
+         * <p>The live stream type. Currently, only RTMP is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp</p>
@@ -117,7 +110,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The URL of the live stream.</p>
+         * <p>The live stream URL.</p>
          * 
          * <strong>example:</strong>
          * <p>rtmp://example.com/app/stream</p>
@@ -150,7 +143,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
 
     public static class GetLiveRecordJobResponseBodyRecordJob extends TeaModel {
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The creation time. The time is in the ISO 8601 format and in UTC (ending with Z).</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -172,7 +165,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
          * <p>The name of the recording job.</p>
          * 
          * <strong>example:</strong>
-         * <p>Live event recording task 1</p>
+         * <p>Live Event Recording Task 1</p>
          */
         @NameInMap("Name")
         public String name;
@@ -187,22 +180,13 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         public String notifyUrl;
 
         /**
-         * <p>The storage address of the recording.</p>
+         * <p>The recording storage URL.</p>
          */
         @NameInMap("RecordOutput")
         public GetLiveRecordJobResponseBodyRecordJobRecordOutput recordOutput;
 
         /**
-         * <p>The state of the recording job.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>paused: The job is paused.</p>
-         * </li>
-         * <li><p>initial: The job is not started.</p>
-         * </li>
-         * <li><p>started: The job is in progress.</p>
-         * </li>
-         * </ul>
+         * <p>The status of the recording job.</p>
          * 
          * <strong>example:</strong>
          * <p>paused</p>
@@ -211,7 +195,7 @@ public class GetLiveRecordJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The URL of the live stream.</p>
+         * <p>The live stream URL.</p>
          */
         @NameInMap("StreamInput")
         public GetLiveRecordJobResponseBodyRecordJobStreamInput streamInput;

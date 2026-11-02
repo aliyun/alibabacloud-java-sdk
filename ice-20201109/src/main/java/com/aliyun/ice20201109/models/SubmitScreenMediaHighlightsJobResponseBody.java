@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitScreenMediaHighlightsJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the highlight compilation job.</p>
+     * <p>The ID of the high-energy video compilation task.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitScreenMediaHighlightsJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>A unique ID for the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>36-3C1E-4417-BDB2-1E034F</strong></strong></p>

@@ -6,19 +6,19 @@ import com.aliyun.tea.*;
 public class AddTemplateRequest extends TeaModel {
     /**
      * <ul>
-     * <li>The standard template Config is an encapsulation based on the cloud editing Timeline. Custom template Config provides more flexibility. If you have special requirements, familiarize yourself with the Config structure and customize the template. For details, see <a href="https://help.aliyun.com/document_detail/456193.html">Standard template Config details</a>.</li>
-     * <li>For more template Config examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Common standard template Config examples</a>.</li>
-     * <li>For one-click video production template Config configurations, see <a href="https://help.aliyun.com/document_detail/2878274.html">One-click video production template configuration parameter description</a>.</li>
+     * <li>The Config parameter for standard templates is an encapsulation based on the cloud editing timeline. Custom template configurations are more flexible. If you have special requirements, familiarize yourself with the Config structure and customize the template. For more information, see <a href="https://help.aliyun.com/document_detail/456193.html">Config details for standard templates</a>.</li>
+     * <li>For more Config examples, see <a href="https://help.aliyun.com/document_detail/451634.html">Common Config examples for standard templates</a>.</li>
+     * <li>For the Config settings of one-click video generation templates, see <a href="https://help.aliyun.com/document_detail/2878274.html">Metric description for one-click video generation template configuration</a>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>See the Timeline template Config documentation</p>
+     * <p>See Config documentation</p>
      */
     @NameInMap("Config")
     public String config;
 
     /**
-     * <p>The template cover URL.</p>
+     * <p>The URL of the template cover.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
@@ -27,10 +27,10 @@ public class AddTemplateRequest extends TeaModel {
     public String coverUrl;
 
     /**
-     * <p>The custom template name.</p>
+     * <p>The name of the template.</p>
      * 
      * <strong>example:</strong>
-     * <p>Template name</p>
+     * <p>TemplateName</p>
      */
     @NameInMap("Name")
     public String name;
@@ -45,7 +45,7 @@ public class AddTemplateRequest extends TeaModel {
     public String previewMedia;
 
     /**
-     * <p>The media assets associated with the template, used by the standard template editor.</p>
+     * <p>The media assets associated with the template. This parameter is used by the standard template editor.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;video&quot;:[&quot;1805a0c6ca544fb395a06ca683619655&quot;]}</p>
@@ -54,11 +54,11 @@ public class AddTemplateRequest extends TeaModel {
     public String relatedMediaids;
 
     /**
-     * <p>The template creation source. Valid values:</p>
+     * <p>The source from which the template is created. Valid values:</p>
      * <ul>
-     * <li>OpenAPI: created by using OpenAPI.</li>
-     * <li>AliyunConsole: created by using the Alibaba Cloud Management Console.</li>
-     * <li>WebSDK: created by using WebSDK.</li>
+     * <li>OpenAPI: Created by calling an API operation.</li>
+     * <li>AliyunConsole: Created in the Alibaba Cloud Management Console.</li>
+     * <li>WebSDK: Created by using WebSDK.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,12 +70,12 @@ public class AddTemplateRequest extends TeaModel {
     /**
      * <p>The template status. Valid values:</p>
      * <ul>
-     * <li>Available: normal.</li>
-     * <li>Created: created but not yet available.</li>
-     * <li>Uploading: uploading.</li>
-     * <li>Processing: advanced template is being analyzed.</li>
-     * <li>UploadFailed: upload failed.</li>
-     * <li>ProcessFailed: advanced template analysis failed.</li>
+     * <li>Available: Normal.</li>
+     * <li>Created: Created but unavailable.</li>
+     * <li>Uploading: Uploading.</li>
+     * <li>Processing: Analyzing the advanced template.</li>
+     * <li>UploadFailed: Upload failed.</li>
+     * <li>ProcessFailed: Advanced template analysis failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -87,9 +87,9 @@ public class AddTemplateRequest extends TeaModel {
     /**
      * <p>The templatetype. Valid values:  </p>
      * <ul>
-     * <li>Timeline (standard template): a template created based on the Timeline of a video clip node (multiple materials on multiple tracks are concatenated in sequence). This templatetype can be used to implement effects such as image-to-video conversion, photo albums, intros and outros, and default watermarks.</li>
-     * <li>VETemplate (advanced template): a template created based on Adobe After Effects (AE) effects. This templatetype can be used to implement advanced media effects with complex animations.</li>
-     * <li>BatchEditing (one-click video production template): supports configurations for sticker watermarks, background music, background images, narration subtitle styles, title subtitle styles, and output resolution parameters. These configurations are automatically applied when you commit a one-click video production node.</li>
+     * <li>Timeline: standard template. It is created based on the timeline of a video clip project, where multiple materials are spliced across multiple layers. It supports effects such as text-to-video, photo albums, intros and outros, and default watermarks.</li>
+     * <li>VETemplate: advanced template. It is created based on Adobe After Effects (AE) effects to achieve advanced media effects with complex motion graphics.</li>
+     * <li>BatchEditing: one-click video generation template. It supports parameters such as sticker watermarks, background music, background images, voiceover subtitle styles, title subtitle styles, and output resolution. These parameters are automatically applied when a one-click video generation node is committed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

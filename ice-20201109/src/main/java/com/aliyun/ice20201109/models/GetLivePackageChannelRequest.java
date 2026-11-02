@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLivePackageChannelRequest extends TeaModel {
     /**
-     * <p>The channel name.</p>
+     * <p>The name of the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetLivePackageChannelRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>The channel group name.</p>
+     * <p>The name of the channel group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

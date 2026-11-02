@@ -5,59 +5,53 @@ import com.aliyun.tea.*;
 
 public class SubmitTextGenerateJobRequest extends TeaModel {
     /**
-     * <p>The job description, with a maximum length of 1,024 bytes (UTF-8 encoded).</p>
+     * <p>The description of the task. The description can be up to 1,024 bytes in length and must be encoded in UTF-8.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test description</p>
+     * <p>Test Description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The generation configuration, in JSON format.</p>
-     * <p>If <code>Type</code> is set to <code>Title</code> or <code>MarketingCopy</code>, specify the following fields:</p>
+     * <p>The generation configuration. When Type is set to Title or MarketingCopy, you must specify the following fields:</p>
      * <ul>
-     * <li><p><code>keywords</code>: The keywords used to generate the title or marketing copy. This parameter is required.</p>
-     * </li>
-     * <li><p><code>textLength</code>: The target length of the generated text, in characters. Valid values: 5 to 1,000. The actual length of the output is less than or equal to this value. This parameter is required.</p>
-     * </li>
-     * <li><p><code>targetCount</code>: The number of copy variations to generate. Valid values: 1 to 1,000. This parameter is required.</p>
-     * </li>
+     * <li>keywords: the keywords used to generate the title or marketing copy. Required.</li>
+     * <li>textLength: the word count of the generated copy. Valid values: 5 to 1000. The actual word count of the generated copy may be slightly less than or equal to this value, but will not exceed it. Required.</li>
+     * <li>targetCount: the number of copies to generate. Valid values: 1 to 1000. Required.</li>
      * </ul>
-     * <p>If <code>Type</code> is set to <code>StoryboardScript</code>, specify the following field:</p>
+     * <p>When Type is set to StoryboardScript, you must specify the following field:</p>
      * <ul>
-     * <li><code>originText</code>: The original text used to generate the storyboard script. This parameter is required.</li>
+     * <li>originText: the original copy used to generate the storyboard script. Required.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;keywords&quot;:&quot;New cake shop, animal cream&quot;,&quot;textLength&quot;:100,&quot;targetCount&quot;:3}
-     * or
-     * {&quot;originText&quot;: &quot;A new cake shop just opened on the street, selling cream cakes, fruit cakes, bread, muffins, etc. A coffee shop opened across from the cake shop, with a steady stream of customers.&quot;}</p>
+     * <p>{&quot;keywords&quot;:&quot;New store cake,Animal cream&quot;,&quot;textLength&quot;:100,&quot;targetCount&quot;:3} or {&quot;originText&quot;: &quot;A new cake shop has opened on the street,Selling cream cakes,Fruit cake,Bread,Muffins, etc..A coffee shop has opened across from the cake shop,An endless stream of customers.&quot;}</p>
      */
     @NameInMap("GenerateConfig")
     public String generateConfig;
 
     /**
-     * <p>The job title.</p>
-     * <p>\- The maximum length is 128 bytes.</p>
-     * <p>\- UTF-8 encoding is required.</p>
+     * <p>The title of the task.</p>
+     * <ul>
+     * <li><p>The length cannot exceed 128 bytes.</p>
+     * </li>
+     * <li><p>The title must be encoded in UTF-8.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
-     * <p>Test title</p>
+     * <p>Test Title</p>
      */
     @NameInMap("Title")
     public String title;
 
     /**
-     * <p>The job type.</p>
-     * <p><strong>Valid values:</strong></p>
+     * <p>The type of the task. Valid values:</p>
      * <ul>
-     * <li><p><code>MarketingCopy</code>: Generates marketing copy.</p>
-     * </li>
-     * <li><p><code>Title</code>: Generates a short video title.</p>
-     * </li>
-     * <li><p><code>StoryboardScript</code>: Generates a storyboard script from text.</p>
-     * </li>
+     * <li>MarketingCopy: marketing copy</li>
+     * <li>Title: short video title</li>
+     * <li>StoryboardScript: storyboard script generated from copy</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,10 +61,10 @@ public class SubmitTextGenerateJobRequest extends TeaModel {
     public String type;
 
     /**
-     * <p>The custom settings in JSON format. The maximum length is 512 bytes. You can use this parameter to specify a <a href="https://help.aliyun.com/document_detail/451631.html">custom callback address</a>.</p>
+     * <p>The custom settings in JSON format. The length cannot exceed 512 bytes. <a href="https://help.aliyun.com/document_detail/451631.html">Custom callback URL configuration</a> is supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
+     * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
      */
     @NameInMap("UserData")
     public String userData;

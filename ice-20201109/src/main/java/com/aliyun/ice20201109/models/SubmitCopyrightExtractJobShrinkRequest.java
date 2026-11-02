@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class SubmitCopyrightExtractJobShrinkRequest extends TeaModel {
     /**
-     * <p>The video file for watermark extraction.</p>
+     * <p>The video file from which the watermark is to be extracted.</p>
      * <blockquote>
      * <ul>
-     * <li>The region of the Object Storage Service (OSS) file or media asset must match the region of the current Intelligent Media Service (IMS) instance.</li>
+     * <li>The region of the OSS file or media asset must be the same as the region of the current IMS instance.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -17,14 +17,12 @@ public class SubmitCopyrightExtractJobShrinkRequest extends TeaModel {
     public String inputShrink;
 
     /**
-     * <p>The watermark job parameters, specified as a JSON string.</p>
+     * <p>The watermark job parameters in JSON string format. The following parameters are supported:</p>
      * <ul>
-     * <li><p>algoType: The algorithm type. Default value: v1. The extraction algorithm type must match the algorithm type used for embedding the watermark.</p>
+     * <li><p>algoType: the algorithm type. Default value: v1. The extraction algorithm type must be the same as the algorithm type used for embedding.</p>
      * <ul>
-     * <li><p>v1: The copyright extraction algorithm for long-form videos.</p>
-     * </li>
-     * <li><p>v2: The copyright extraction algorithm for short-form videos.</p>
-     * </li>
+     * <li>v1: the copyright extraction API operation for long videos.</li>
+     * <li>v2: the copyright extraction API operation for short videos.</li>
      * </ul>
      * </li>
      * </ul>
@@ -36,7 +34,7 @@ public class SubmitCopyrightExtractJobShrinkRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>The user-defined data. The maximum length is 1,024 bytes.</p>
+     * <p>The custom user data. The maximum length is 1,024 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>

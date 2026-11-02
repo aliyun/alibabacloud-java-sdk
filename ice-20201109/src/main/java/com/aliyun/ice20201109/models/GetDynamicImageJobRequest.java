@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetDynamicImageJobRequest extends TeaModel {
     /**
-     * <p>The job ID.</p>
+     * <p>The ID of the dynamic image task.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>d80e4e4044975745c14b</strong></strong></p>

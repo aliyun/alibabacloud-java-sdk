@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveRecordTemplatesRequest extends TeaModel {
     /**
-     * <p>The keyword to search for templates by ID or name. Fuzzy matching is supported for template names.</p>
+     * <p>The search keyword. You can search by template ID or name. Fuzzy match is supported for names.</p>
      * 
      * <strong>example:</strong>
      * <p>test template</p>
@@ -23,7 +23,7 @@ public class ListLiveRecordTemplatesRequest extends TeaModel {
     public Long pageNo;
 
     /**
-     * <p>The number of entries to return on each page. Value range: 1–100. Default value: 10.</p>
+     * <p>The page size. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class ListLiveRecordTemplatesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The sort order. The default sort is descending by creation time.</p>
+     * <p>The sorting parameter. By default, templates are sorted in descending order of creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -41,13 +41,13 @@ public class ListLiveRecordTemplatesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The template IDs to retrieve.</p>
+     * <p>The list of recording template IDs.</p>
      */
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;
 
     /**
-     * <p>The template type.</p>
+     * <p>The templatetype.</p>
      * 
      * <strong>example:</strong>
      * <p>custom</p>

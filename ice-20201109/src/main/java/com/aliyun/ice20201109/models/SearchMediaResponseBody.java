@@ -14,7 +14,7 @@ public class SearchMediaResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The collection of media assets that meet the specified criteria.</p>
+     * <p>The collection of media assets that meet the requirements.</p>
      */
     @NameInMap("MediaInfoList")
     public java.util.List<SearchMediaResponseBodyMediaInfoList> mediaInfoList;
@@ -47,7 +47,7 @@ public class SearchMediaResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The total number of media assets that meet the specified conditions.</p>
+     * <p>The total number of media assets that meet the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>163</p>
@@ -223,7 +223,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public Double score;
 
         /**
-         * <p>The vector table sequence ID.</p>
+         * <p>The sequence ID of the vector table.</p>
          * 
          * <strong>example:</strong>
          * <p>85010D1</p>
@@ -247,7 +247,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfoOccurrencesTracks> tracks;
 
         /**
-         * <p>The segment ID.</p>
+         * <p>The clip ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FE19530C7A422197535FE74F5DB****</p>
@@ -347,7 +347,7 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>The category.</p>
          * 
          * <strong>example:</strong>
-         * <p>Vehicle</p>
+         * <p>Means of transportation</p>
          */
         @NameInMap("Category")
         public String category;
@@ -383,7 +383,7 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>The label type.</p>
          * 
          * <strong>example:</strong>
-         * <p>Object</p>
+         * <p>object</p>
          */
         @NameInMap("LabelType")
         public String labelType;
@@ -468,7 +468,7 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListAiDataAsrInfo extends TeaModel {
         /**
-         * <p>The segment ID.</p>
+         * <p>The clip ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FE19530C7A422197535FE74F5DB****</p>
@@ -480,7 +480,7 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>The text content.</p>
          * 
          * <strong>example:</strong>
-         * <p>I am Pipi.</p>
+         * <p>I am Pippi.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -561,7 +561,7 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListAiDataOcrInfo extends TeaModel {
         /**
-         * <p>The segment ID.</p>
+         * <p>The clip ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5FE19530C7A422197535FE74F5DB****</p>
@@ -573,7 +573,7 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>The text content.</p>
          * 
          * <strong>example:</strong>
-         * <p>I am Pipi</p>
+         * <p>I am Pippi.</p>
          */
         @NameInMap("Content")
         public String content;
@@ -660,7 +660,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAiLabelInfo> aiLabelInfo;
 
         /**
-         * <p>The list of speech recognition information.</p>
+         * <p>The list of speech information.</p>
          */
         @NameInMap("AsrInfo")
         public java.util.List<SearchMediaResponseBodyMediaInfoListAiDataAsrInfo> asrInfo;
@@ -704,7 +704,7 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListAiRoughData extends TeaModel {
         /**
-         * <p>The AI category.</p>
+         * <p>The TV series.</p>
          * 
          * <strong>example:</strong>
          * <p>Video AI classification</p>
@@ -806,7 +806,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-30T02:02:17Z</p>
@@ -896,7 +896,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String imagesInput;
 
         /**
-         * <p>The last modified time.</p>
+         * <p>The last modification time. The time follows the ISO 8601 standard and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-12-10T12:19Z</p>
@@ -1043,7 +1043,7 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoListFileInfoList extends TeaModel {
         /**
-         * <p>The basic file information, including duration and size.</p>
+         * <p>The basic file information, including the duration and size.</p>
          */
         @NameInMap("FileBasicInfo")
         public SearchMediaResponseBodyMediaInfoListFileInfoListFileBasicInfo fileBasicInfo;
@@ -1066,6 +1066,11 @@ public class SearchMediaResponseBody extends TeaModel {
     public static class SearchMediaResponseBodyMediaInfoListIndexStatusList extends TeaModel {
         /**
          * <p>The index status. Valid values:</p>
+         * <ul>
+         * <li>Running: running</li>
+         * <li>Fail: failed</li>
+         * <li>Success: successful</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Success</p>
@@ -1075,6 +1080,11 @@ public class SearchMediaResponseBody extends TeaModel {
 
         /**
          * <p>The index type. Valid values:</p>
+         * <ul>
+         * <li>mm: large model</li>
+         * <li>face: face</li>
+         * <li>aiLabel: intelligent label</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>mm</p>
@@ -1137,7 +1147,7 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>The category name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Subcategory 1</p>
+         * <p>Subcategory1</p>
          */
         @NameInMap("CateName")
         public String cateName;
@@ -1161,7 +1171,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The time when the media asset was created.</p>
+         * <p>The creation time of the media asset. The time follows the ISO 8601 standard and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-01T19:48Z</p>
@@ -1170,7 +1180,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the media asset was deleted.</p>
+         * <p>The deletion time of the media asset. The time follows the ISO 8601 standard and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-01T19:48Z</p>
@@ -1182,13 +1192,13 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>The content description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Transcoded this video</p>
+         * <p>This video has been transcoded</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The address of the media asset to be registered in the corresponding system.</p>
+         * <p>The URL of the media asset to be registered in the corresponding system.</p>
          * 
          * <strong>example:</strong>
          * <p>oss://clipres/longvideo/material/voice/prod/20220418/07d7c799f6054dc3bbef250854cf8498165024814****</p>
@@ -1224,7 +1234,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String mediaType;
 
         /**
-         * <p>The time when the media asset was last modified.</p>
+         * <p>The modification time of the media asset. The time follows the ISO 8601 standard and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-01T19:48Z</p>
@@ -1242,7 +1252,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String namespace;
 
         /**
-         * <p>The custom ID. Only lowercase letters, uppercase letters, digits, hyphens, and underscores are supported. The length must be 6 to 64 characters. The ID is unique at the user level.</p>
+         * <p>The custom ID. It must be 6 to 64 characters in length and can contain only lowercase letters, uppercase letters, digits, hyphens, and underscores. It must be unique per user.</p>
          * 
          * <strong>example:</strong>
          * <p>123-123</p>
@@ -1335,7 +1345,7 @@ public class SearchMediaResponseBody extends TeaModel {
          * <p>The visual description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Soccer goal</p>
+         * <p>Football goal</p>
          */
         @NameInMap("VisionDescription")
         public String visionDescription;
@@ -1557,7 +1567,7 @@ public class SearchMediaResponseBody extends TeaModel {
 
     public static class SearchMediaResponseBodyMediaInfoList extends TeaModel {
         /**
-         * <p>The AI details.</p>
+         * <p>The detailed AI information.</p>
          */
         @NameInMap("AiData")
         public SearchMediaResponseBodyMediaInfoListAiData aiData;
@@ -1578,7 +1588,7 @@ public class SearchMediaResponseBody extends TeaModel {
         public String customFields;
 
         /**
-         * <p>FileInfos。</p>
+         * <p>The file information list.</p>
          */
         @NameInMap("FileInfoList")
         public java.util.List<SearchMediaResponseBodyMediaInfoListFileInfoList> fileInfoList;

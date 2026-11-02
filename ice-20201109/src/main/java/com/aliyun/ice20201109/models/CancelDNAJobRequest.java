@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CancelDNAJobRequest extends TeaModel {
     /**
-     * <p>The ID of the media fingerprint analysis job that you want to cancel.</p>
+     * <p>The ID of the DNA job to cancel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

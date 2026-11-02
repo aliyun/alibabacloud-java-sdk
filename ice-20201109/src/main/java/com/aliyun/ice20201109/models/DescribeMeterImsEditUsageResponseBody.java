@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
     /**
-     * <p>The usage statistics of IMS on VOD editing.</p>
+     * <p>The usage data of IMS VOD video editing.</p>
      */
     @NameInMap("Data")
     public java.util.List<DescribeMeterImsEditUsageResponseBodyData> data;
@@ -42,7 +42,7 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
 
     public static class DescribeMeterImsEditUsageResponseBodyData extends TeaModel {
         /**
-         * <p>The usage duration, in minutes.</p>
+         * <p>The duration. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>1.23</p>
@@ -51,7 +51,7 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
         public Long duration;
 
         /**
-         * <p>The video profile.</p>
+         * <p>The specification.</p>
          * 
          * <strong>example:</strong>
          * <p>1080P</p>
@@ -60,7 +60,7 @@ public class DescribeMeterImsEditUsageResponseBody extends TeaModel {
         public String profile;
 
         /**
-         * <p>The beginning time of usage. The value is a 10-digit timestamp.</p>
+         * <p>The start timestamp of the time period. The value is a 10-digit UNIX timestamp.</p>
          * 
          * <strong>example:</strong>
          * <p>1656950400</p>

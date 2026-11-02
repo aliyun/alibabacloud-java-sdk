@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitScreenMediaHighlightsJobRequest extends TeaModel {
     /**
-     * <p>Specifies the editing configuration. For more information, see <a href="~~2863940#9b05519d46e0x~~">EditingConfig Parameter Description</a>.</p>
+     * <p>The editing configuration. For more information, see <a href="~~2863940#9b05519d46e0x~~">EditingConfig parameter description</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -22,7 +22,7 @@ public class SubmitScreenMediaHighlightsJobRequest extends TeaModel {
     public String editingConfig;
 
     /**
-     * <p>Specifies the input configuration. For more information, see <a href="~~2863940#dda38bf6ec2pk~~">InputConfig Parameter Description</a>.</p>
+     * <p>The input configuration. For more information, see <a href="~~2863940#dda38bf6ec2pk~~">InputConfig parameter description</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -36,7 +36,7 @@ public class SubmitScreenMediaHighlightsJobRequest extends TeaModel {
     public String inputConfig;
 
     /**
-     * <p>Specifies the output configuration. For more information, see <a href="~~2863940#4111a373d0xbz~~">OutputConfig Parameter Description</a>.</p>
+     * <p>The output configuration. For more information, see <a href="~~2863940#4111a373d0xbz~~">OutputConfig parameter description</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -50,10 +50,10 @@ public class SubmitScreenMediaHighlightsJobRequest extends TeaModel {
     public String outputConfig;
 
     /**
-     * <p>Specifies the user data and callback configuration. For details about the structure, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData Configuration</a>.</p>
+     * <p>The user business configuration and callback configuration. For the specific structure definition, see <a href="https://help.aliyun.com/document_detail/357745.html">UserData configuration</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;<a href="https://xx.xx.xxx%22%7D">https://xx.xx.xxx&quot;}</a> or {&quot;NotifyAddress&quot;:&quot;ice-callback-demo&quot;}</p>
+     * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22%7D">http://xx.xx.xxx&quot;}</a></p>
      */
     @NameInMap("UserData")
     public String userData;

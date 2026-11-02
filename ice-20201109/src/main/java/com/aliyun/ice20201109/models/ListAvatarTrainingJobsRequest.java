@@ -5,12 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAvatarTrainingJobsRequest extends TeaModel {
     /**
-     * <ul>
-     * <li><p>The page number.</p>
-     * </li>
-     * <li><p>Default value: 1.</p>
-     * </li>
-     * </ul>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -19,13 +14,10 @@ public class ListAvatarTrainingJobsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
+     * <p>The number of entries per page.</p>
      * <ul>
-     * <li><p>The number of entries per page.</p>
-     * </li>
-     * <li><p>Default value: 10.</p>
-     * </li>
-     * <li><p>Valid values: 1 to 100.</p>
-     * </li>
+     * <li>Default value: 10</li>
+     * <li>Maximum value: 100</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,10 +27,17 @@ public class ListAvatarTrainingJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><p>The job state.</p>
+     * <li><p>Init: initialized or draft</p>
      * </li>
-     * <li><p>Valid values: Init, Queuing, Training, Success, and Fail.</p>
+     * <li><p>Queuing: queuing</p>
+     * </li>
+     * <li><p>Training: training</p>
+     * </li>
+     * <li><p>Success: training succeeded</p>
+     * </li>
+     * <li><p>Fail: training failed</p>
      * </li>
      * </ul>
      * 

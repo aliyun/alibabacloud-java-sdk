@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListWorkflowTasksRequest extends TeaModel {
     /**
-     * <p>The end of the time range for filtering tasks by their creation time. Supports querying data from the last 90 days only.</p>
+     * <p>The end time for the task creation time filter. Only the last 90 days are supported. Specify the time in ISO 8601 format in UTC (ending with Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-15T00:00:00Z</p>
@@ -14,7 +14,7 @@ public class ListWorkflowTasksRequest extends TeaModel {
     public String endOfCreateTime;
 
     /**
-     * <p>A keyword for fuzzy matching against the TaskInput, such as a file name or Media ID. Max length: 32 characters.</p>
+     * <p>The file name or media asset ID. This parameter supports fuzzy match for TaskInput and has a maximum length of 32 characters.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>7aa4cc4459ada8ef35f7</strong></strong></strong>
@@ -25,7 +25,7 @@ public class ListWorkflowTasksRequest extends TeaModel {
     public String keyText;
 
     /**
-     * <p>The maximum number of media workflow instances to return. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The maximum number of media workflow task instances to return. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -34,7 +34,7 @@ public class ListWorkflowTasksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request.</p>
+     * <p>The token for the next page in a continuous paging query. This parameter is not returned for the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>****<strong><strong><strong><strong><strong>VRpbWUQARgBIpcBCgkA1bUtaAAAAAAKiQEDhAAAADFTMzg2NTY2NjU2MzM3NjU2NjYyMzkzMTYyMzI2MjYzNjY2</strong></strong></strong></strong></strong></p>
@@ -43,7 +43,7 @@ public class ListWorkflowTasksRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The start of the time range for filtering tasks by their creation time. Supports querying data from the last 90 days only.</p>
+     * <p>The start time for the task creation time filter. Only the last 90 days are supported. Specify the time in ISO 8601 format in UTC (ending with Z).</p>
      * 
      * <strong>example:</strong>
      * <p>2025-07-12T00:00:00Z</p>
@@ -52,7 +52,7 @@ public class ListWorkflowTasksRequest extends TeaModel {
     public String startOfCreateTime;
 
     /**
-     * <p>The ID of the workflow template.<a href="https://ims.console.aliyun.com/settings/workflow/list"></a></p>
+     * <p>The ID of the workflow template. You can view the template ID in the <a href="https://ims.console.aliyun.com/settings/workflow/list">Intelligent Media Services console</a> by choosing Configuration Management &gt; Workflow Templates.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b4fb044839815d4f2cd8</strong></strong></strong></p>

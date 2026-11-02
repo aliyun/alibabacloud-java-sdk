@@ -11,7 +11,7 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
     public java.util.List<ListLiveSnapshotFilesResponseBodyFileList> fileList;
 
     /**
-     * <p>The start time of the next page. If no value is returned, the pagination ends.</p>
+     * <p>The start time of the next page. If this parameter is not returned, all pages have been returned. The time is in UTC and follows the ISO 8601 standard, ending with Z.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-02-02T22:22:22Z</p>
@@ -20,7 +20,7 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
     public String nextStartTime;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -59,7 +59,7 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
 
     public static class ListLiveSnapshotFilesResponseBodyFileList extends TeaModel {
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The creation time. The time is in UTC and follows the ISO 8601 standard, ending with Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-02-02T22:22:22Z</p>
@@ -68,7 +68,7 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The creation timestamp that is used as an input parameter for a delete API operation.</p>
+         * <p>The creation timestamp, which is used as a parameter in the delete operation.</p>
          * 
          * <strong>example:</strong>
          * <p>1619503516000</p>
@@ -77,7 +77,7 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>Specifies whether to overlay snapshots.</p>
+         * <p>Indicates whether the snapshot is overwritten.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -95,7 +95,7 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
         public String ossBucket;
 
         /**
-         * <p>The Object Storage Service (OSS) domain name.</p>
+         * <p>The OSS endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-cn-shanghai.aliyuncs.com</p>
@@ -104,7 +104,7 @@ public class ListLiveSnapshotFilesResponseBody extends TeaModel {
         public String ossEndpoint;
 
         /**
-         * <p>The location in which the OSS object is stored.</p>
+         * <p>The path of the OSS object.</p>
          */
         @NameInMap("OssObject")
         public String ossObject;

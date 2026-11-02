@@ -5,23 +5,23 @@ import com.aliyun.tea.*;
 
 public class CreateHotwordLibraryRequest extends TeaModel {
     /**
-     * <p>The description of the hotword library. It can be up to 200 characters in length.</p>
+     * <p>The description of the hotword library. The maximum length is 200 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>Lexicon containing celebrity names</p>
+     * <p>A lexicon of celebrity names</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The hotword list. You can add up to 300 hotword entries to a single library.</p>
+     * <p>The list of hotwords. The maximum number of hotwords is 300.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Hotwords")
     public java.util.List<Hotword> hotwords;
 
     /**
-     * <p>The name of the hotword library. It can be up to 100 characters in length.</p>
+     * <p>The name of the hotword library. The maximum length is 100 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,10 +31,15 @@ public class CreateHotwordLibraryRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The usage scenario of the hotword library. Valid values:</p>
-     * <p>· ASR: Automatic Speech Recognition</p>
-     * <p>· StructuredMediaAssets: structured media analysis</p>
-     * <p>· VideoTranslation: Video translation.</p>
+     * <p>The scenarios of the hotword library. Valid values:</p>
+     * <ul>
+     * <li><p>ASR: ASR intelligent text recognition.</p>
+     * </li>
+     * <li><p>StructuredMediaAssets: structured media assets.</p>
+     * </li>
+     * <li><p>VideoTranslation: video translation.</p>
+     * </li>
+     * </ul>
      * <p>This field cannot be modified after the hotword library is created.</p>
      * <p>This parameter is required.</p>
      * 

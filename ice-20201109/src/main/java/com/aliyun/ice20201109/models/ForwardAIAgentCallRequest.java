@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ForwardAIAgentCallRequest extends TeaModel {
     /**
-     * <p>The target phone number for call transfer.</p>
+     * <p>The destination phone number to which the call is transferred.</p>
      * 
      * <strong>example:</strong>
      * <p>13**********</p>
@@ -14,17 +14,10 @@ public class ForwardAIAgentCallRequest extends TeaModel {
     public String calledNumber;
 
     /**
-     * <p>The caller phone number for the transferred call. Optional.</p>
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>By default, the CallerNumber is the agent\&quot;s phone number after the call starts:
-     * 1\. For inbound lines, the agent number is the agent’s seat number.
-     * 2\. For outbound lines, the agent number is the original caller number.</p>
-     * <blockquote>
-     * <p>Warning: </p>
-     * </blockquote>
-     * <p>Alibaba Cloud lines do not support this parameter.</p>
+     * <p>The caller phone number for the transferred call. This parameter is optional.</p>
+     * <notice>
+     * By default, CallerNumber is the phone number of the agent after the call is started: 1. For inbound lines, the agent number is the agent seat number. 2. For outbound lines, the agent number is the caller number.</notice>
+     * <warning>Alibaba Cloud lines do not support this parameter.</warning>
      * 
      * <strong>example:</strong>
      * <p>13**********</p>
@@ -33,7 +26,7 @@ public class ForwardAIAgentCallRequest extends TeaModel {
     public String callerNumber;
 
     /**
-     * <p>Abnormal prompt text played when the transfer fails. Default is empty.</p>
+     * <p>The error prompt text to play when the transfer fails. Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>We’re sorry, we’re unable to transfer your call at the moment. Please try again later.</p>
@@ -42,7 +35,7 @@ public class ForwardAIAgentCallRequest extends TeaModel {
     public String errorPrompt;
 
     /**
-     * <p>Current call instance ID, used only in inbound call transfer scenarios.</p>
+     * <p>The current call instance ID. This parameter is used only in inbound call transfer scenarios.</p>
      * 
      * <strong>example:</strong>
      * <p>call_instance_202******</p>
@@ -51,7 +44,7 @@ public class ForwardAIAgentCallRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>Prompt message played before initiating the transfer. If empty, the system skips the prompt and plays the ringing tone directly. Default is empty.</p>
+     * <p>The prompt text to play before the transfer begins. If this parameter is left empty, the prompt is skipped and the ringtone is played directly. Default value: empty.</p>
      * 
      * <strong>example:</strong>
      * <p>Please hold while I transfer your call.</p>

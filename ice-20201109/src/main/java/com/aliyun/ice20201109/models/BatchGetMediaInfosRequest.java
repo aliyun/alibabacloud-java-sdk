@@ -5,9 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchGetMediaInfosRequest extends TeaModel {
     /**
-     * <p>The additional information about the media asset to return in the batch query. By default, only BasicInfo is returned. The additional information includes:</p>
-     * <p>\-FileInfo</p>
-     * <p>\-DynamicMetaData</p>
+     * <p>The additional information about the media assets to query. By default, only BasicInfo is returned. Additional file information includes:</p>
+     * <ul>
+     * <li><p>FileInfo</p>
+     * </li>
+     * <li><p>DynamicMetaData</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>FileInfo,DynamicMetaData</p>
@@ -16,7 +20,7 @@ public class BatchGetMediaInfosRequest extends TeaModel {
     public String additionType;
 
     /**
-     * <p>The authentication expiration time. Unit: seconds.</p>
+     * <p>The authentication expiration time, in seconds.</p>
      * <ul>
      * <li>Minimum value: <strong>1</strong>.</li>
      * <li>Maximum value: 86400.</li>

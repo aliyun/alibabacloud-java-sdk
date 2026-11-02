@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitSegmentationJobRequest extends TeaModel {
     /**
-     * <p>A client token to ensure request idempotence.</p>
+     * <p>The client token that is used to ensure the idempotence of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -18,19 +18,15 @@ public class SubmitSegmentationJobRequest extends TeaModel {
      * 
      * <strong>example:</strong>
      * <p>{
-     * &quot;Type&quot;: &quot;OSS&quot;,
-     * &quot;Media&quot;: &quot;<a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a>&quot;
-     * }
-     * or {
-     * &quot;Type&quot;: &quot;Media&quot;,
-     * &quot;Media&quot;: &quot;ce49a020e****1ef81c1e6f6d5686302&quot;
+     *     &quot;Type&quot;: &quot;OSS&quot;,
+     *     &quot;Media&quot;: &quot;<a href="http://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4">http://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4</a>&quot;
      * }</p>
      */
     @NameInMap("InputConfig")
     public String inputConfig;
 
     /**
-     * <p>The job parameters. For more information, see <a href="~~2874121#a60357f2d5iix~~">JobParams</a>.</p>
+     * <p>The task parameters. For more information, see <a href="~~2874121#a60357f2d5iix~~">JobParams</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>{
@@ -64,7 +60,7 @@ public class SubmitSegmentationJobRequest extends TeaModel {
     public String outputConfig;
 
     /**
-     * <p>Custom user data in JSON format, with a maximum length of 512 bytes.</p>
+     * <p>The user data. Custom settings in JSON format. The maximum length is 512 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;: &quot;22&quot;}</p>

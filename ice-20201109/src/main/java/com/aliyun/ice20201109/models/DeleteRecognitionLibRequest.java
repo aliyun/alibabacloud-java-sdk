@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class DeleteRecognitionLibRequest extends TeaModel {
     /**
-     * <p>The type of recognition algorithm. Valid values:</p>
+     * <p>The recognition type. Valid values:</p>
      * <ul>
-     * <li><p>landmark</p>
+     * <li><p>landmark: custom landmark</p>
      * </li>
-     * <li><p>object</p>
+     * <li><p>object: custom object</p>
      * </li>
-     * <li><p>logo</p>
+     * <li><p>logo: custom logo</p>
      * </li>
-     * <li><p>face</p>
+     * <li><p>face: custom face</p>
      * </li>
-     * <li><p>label</p>
+     * <li><p>label: custom label</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

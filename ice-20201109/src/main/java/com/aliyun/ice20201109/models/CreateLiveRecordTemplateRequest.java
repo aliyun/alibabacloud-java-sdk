@@ -5,8 +5,11 @@ import com.aliyun.tea.*;
 
 public class CreateLiveRecordTemplateRequest extends TeaModel {
     /**
-     * <p>The template name.</p>
+     * <p>The name of the template.</p>
      * <p>This parameter is required.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>test-record-template</p>
      */
     @NameInMap("Name")
     public String name;
@@ -41,14 +44,14 @@ public class CreateLiveRecordTemplateRequest extends TeaModel {
 
     public static class CreateLiveRecordTemplateRequestRecordFormat extends TeaModel {
         /**
-         * <p>The cycle recording duration. Unit: seconds. If this parameter is not specified, the default value is 6 hours.</p>
+         * <p>The duration of a recording cycle. Unit: seconds. If you do not specify this parameter, the default value is 6 hours.</p>
          * <blockquote>
          * <ul>
          * <li>If a live stream is interrupted during a recording cycle but resumes within 3 minutes, the recording continues in the same recording file.</li>
          * </ul>
          * </blockquote>
          * <ul>
-         * <li>A live stream must be interrupted for more than 3 minutes before the last recording file is generated. If you need to modify the default 3-minute interruption time, submit a ticket.</li>
+         * <li>A live stream must be interrupted for more than 3 minutes before the last recording file is generated. If you need to change the default 3-minute interruption threshold, submit a ticket.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -60,7 +63,7 @@ public class CreateLiveRecordTemplateRequest extends TeaModel {
         /**
          * <p>The format.</p>
          * <blockquote>
-         * <p>If you select the m3u8 format, you must also set the request parameters SliceOssObjectPrefix and SliceDuration.</p>
+         * <p>If you select the m3u8 format, you must also set the SliceOssObjectPrefix and SliceDuration request parameters.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -73,9 +76,9 @@ public class CreateLiveRecordTemplateRequest extends TeaModel {
         /**
          * <p>The name of the recording file stored in OSS.</p>
          * <ul>
-         * <li><p>The file name must be less than 256 bytes and supports variable matching, including {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime}.</p>
+         * <li><p>The file name must be less than 256 bytes in size and supports variable matching. Supported variables include {JobId}, {Sequence}, {StartTime}, {EndTime}, {EscapedStartTime}, and {EscapedEndTime}.</p>
          * </li>
-         * <li><p>The parameter value must contain {StartTime} or {EscapedStartTime} and {EndTime} or {EscapedEndTime}.</p>
+         * <li><p>The parameter value must contain {StartTime} or {EscapedStartTime}, and {EndTime} or {EscapedEndTime}.</p>
          * </li>
          * </ul>
          * 
@@ -88,9 +91,9 @@ public class CreateLiveRecordTemplateRequest extends TeaModel {
         /**
          * <p>The duration of a single slice. Unit: seconds.</p>
          * <blockquote>
-         * <p>This parameter takes effect only when Format is set to m3u8.</p>
+         * <p>This parameter is valid only when Format is set to m3u8.</p>
          * </blockquote>
-         * <p>If this parameter is not specified, the default value is 30 seconds. Valid values: 5 to 30.</p>
+         * <p>If you do not specify this parameter, the default value is 30 seconds. Valid values: 5 to 30.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -101,10 +104,10 @@ public class CreateLiveRecordTemplateRequest extends TeaModel {
         /**
          * <p>The name of the TS slice.</p>
          * <blockquote>
-         * <p>This parameter is required only when Format is set to m3u8.</p>
+         * <p>You need to configure this parameter only when Format is set to m3u8.</p>
          * </blockquote>
          * <ul>
-         * <li>The default slice duration is 30 seconds. The name must be less than 256 bytes and supports variable matching, including {JobId}, {UnixTimestamp}, and {Sequence}.</li>
+         * <li>By default, a slice is generated every 30 seconds. The name must be less than 256 bytes in size and supports variable matching. Supported variables include {JobId}, {UnixTimestamp}, and {Sequence}.</li>
          * <li>The parameter value must contain the {UnixTimestamp} and {Sequence} variables.</li>
          * </ul>
          * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveTranscodeJobShrinkRequest extends TeaModel {
     /**
-     * <p>The name of the transcoding job.</p>
+     * <p>The name of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,12 +15,10 @@ public class SubmitLiveTranscodeJobShrinkRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The start mode of the transcoding job.</p>
+     * <p>The start mode. Valid values:</p>
      * <ul>
-     * <li><p>0: The transcoding job immediately starts.</p>
-     * </li>
-     * <li><p>1: The transcoding job starts at the scheduled time.</p>
-     * </li>
+     * <li>0: Starts the task immediately.</li>
+     * <li>1: Starts the task at a scheduled time.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,14 +29,14 @@ public class SubmitLiveTranscodeJobShrinkRequest extends TeaModel {
     public Integer startMode;
 
     /**
-     * <p>The information about the input stream.</p>
+     * <p>The stream input information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamInput")
     public String streamInputShrink;
 
     /**
-     * <p>The template ID.</p>
+     * <p>The ID of the template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,13 +46,14 @@ public class SubmitLiveTranscodeJobShrinkRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The configuration of a timed transcoding job. This parameter is required if you set StartMode to 1.</p>
+     * <p>The configuration of the scheduled task.
+     * This parameter is required when StartMode is set to 1.</p>
      */
     @NameInMap("TimedConfig")
     public String timedConfigShrink;
 
     /**
-     * <p>The information about the transcoding output.</p>
+     * <p>The transcoding output information.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("TranscodeOutput")

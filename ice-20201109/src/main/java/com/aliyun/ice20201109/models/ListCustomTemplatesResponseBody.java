@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListCustomTemplatesResponseBody extends TeaModel {
     /**
-     * <p>An array of custom template objects.</p>
+     * <p>The list of templates.</p>
      */
     @NameInMap("CustomTemplateList")
     public java.util.List<ListCustomTemplatesResponseBodyCustomTemplateList> customTemplateList;
 
     /**
-     * <p>The unique identifier for the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -58,6 +58,12 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListCustomTemplatesResponseBodyCustomTemplateListFrontendHintTranscodeTemplateHint extends TeaModel {
+        /**
+         * <p>The bitrate control type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CRF</p>
+         */
         @NameInMap("BitrateControlType")
         public String bitrateControlType;
 
@@ -77,6 +83,9 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
     }
 
     public static class ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint extends TeaModel {
+        /**
+         * <p>The hint information for the transcode template.</p>
+         */
         @NameInMap("TranscodeTemplateHint")
         public ListCustomTemplatesResponseBodyCustomTemplateListFrontendHintTranscodeTemplateHint transcodeTemplateHint;
 
@@ -97,7 +106,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
 
     public static class ListCustomTemplatesResponseBodyCustomTemplateList extends TeaModel {
         /**
-         * <p>The time when the template was created, in UTC and formatted as YYYY-MM-DDTHH:mm:ssZ.</p>
+         * <p>The time when the template was created. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
@@ -105,11 +114,14 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The reserved information for frontend display.</p>
+         */
         @NameInMap("FrontendHint")
         public ListCustomTemplatesResponseBodyCustomTemplateListFrontendHint frontendHint;
 
         /**
-         * <p>Whether the template is a default template.</p>
+         * <p>Indicates whether the template is the default template.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -118,7 +130,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The time when the template was last modified, in UTC and formatted as YYYY-MM-DDTHH:mm:ssZ.</p>
+         * <p>The time when the template was modified. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
@@ -154,7 +166,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public String subtypeName;
 
         /**
-         * <p>The template configuration, as a JSON string.</p>
+         * <p>The template parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Container&quot;:{&quot;Format&quot;:&quot;mp3&quot;},&quot;Audio&quot;:{&quot;Codec&quot;:&quot;mp3&quot;,&quot;Bitrate&quot;:&quot;64&quot;,&quot;Samplerate&quot;:&quot;22050&quot;,&quot;Channels&quot;:&quot;2&quot;}}</p>
@@ -181,7 +193,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The template type ID.</p>
+         * <p>The templatetype ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -190,7 +202,7 @@ public class ListCustomTemplatesResponseBody extends TeaModel {
         public Integer type;
 
         /**
-         * <p>The template type name.</p>
+         * <p>The templatetype name.</p>
          * 
          * <strong>example:</strong>
          * <p>TranscodeTemplate</p>

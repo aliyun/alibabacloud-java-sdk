@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMediaLiveChannelsRequest extends TeaModel {
     /**
-     * <p>The keyword of the query. You can perform a fuzzy search on channel ID or name.</p>
+     * <p>The keyword for the query. Fuzzy match is supported for channel IDs and names.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -14,12 +14,11 @@ public class ListMediaLiveChannelsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value:</p>
+     * <p>The number of rows per page for paging in a paged query. Maximum value: 100.
+     * Default value:</p>
      * <ul>
-     * <li><p>If you do not specify this parameter or if you set a value smaller than 10, the default value is 10.</p>
-     * </li>
-     * <li><p>If you set a value greater than 100, the default value is 100.</p>
-     * </li>
+     * <li>If the Settings are not specified or the specified value is less than 10, the default value is 10.</li>
+     * <li>If the specified value in the Settings is greater than 100, the default value is 100.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +28,7 @@ public class ListMediaLiveChannelsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The query token. Set the value to the NextToken value returned by the previous API call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -38,7 +37,8 @@ public class ListMediaLiveChannelsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The number of entries to be skipped in the query. If the number of entries you attempt to skip exceeds the number of entries that meet the condition, an empty list is returned.</p>
+     * <p>The number of entries to skip for a paged query.
+     * If the number of skipped entries exceeds the total number of matched entries, an empty list is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -47,7 +47,11 @@ public class ListMediaLiveChannelsRequest extends TeaModel {
     public Integer skip;
 
     /**
-     * <p>The sorting order of the channels by creation time. Default value: asc. Valid values: desc and asc. asc indicates the ascending order, and desc indicates the descending order.</p>
+     * <p>Specifies the collation for sorting channels by creation time. Default value: asc. Valid values:</p>
+     * <ul>
+     * <li>desc: Descending order.</li>
+     * <li>asc: Ascending order.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -56,7 +60,7 @@ public class ListMediaLiveChannelsRequest extends TeaModel {
     public String sortOrder;
 
     /**
-     * <p>The state of channels you want to query. You can separate multiple states with commas (,) in a JSON array.</p>
+     * <p>The channel states to query. You can specify multiple states in a JSON array, separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;IDLE&quot;,&quot;RUNNING&quot;]</p>

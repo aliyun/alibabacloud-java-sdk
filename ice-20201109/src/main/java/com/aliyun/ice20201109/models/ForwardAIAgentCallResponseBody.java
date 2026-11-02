@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ForwardAIAgentCallResponseBody extends TeaModel {
     /**
-     * <p>Request ID</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>550e8400********55440000</p>

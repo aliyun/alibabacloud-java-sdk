@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByHybridResponseBody extends TeaModel {
     /**
-     * <p>The status code returned.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,7 +14,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The media assets that match the search query.</p>
+     * <p>The collection of matched media assets.</p>
      */
     @NameInMap("MediaList")
     public java.util.List<SearchMediaByHybridResponseBodyMediaList> mediaList;
@@ -29,7 +29,11 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values: true and false.</p>
+     * <p>Indicates whether the operation is successful. Valid values:</p>
+     * <ul>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -38,7 +42,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The total number of media assets that match the search criteria.</p>
+     * <p>The total number of media assets that meet the search conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>30</p>
@@ -93,7 +97,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
 
     public static class SearchMediaByHybridResponseBodyMediaListClipInfo extends TeaModel {
         /**
-         * <p>The start time of the relevant clip.</p>
+         * <p>The start time of the clip.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -102,7 +106,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         public Double from;
 
         /**
-         * <p>The relevance score of the clip for the query.</p>
+         * <p>The score.</p>
          * 
          * <strong>example:</strong>
          * <p>0.99</p>
@@ -111,7 +115,7 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
         public Double score;
 
         /**
-         * <p>The end time of the relevant clip.</p>
+         * <p>The end time of the clip.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -152,13 +156,13 @@ public class SearchMediaByHybridResponseBody extends TeaModel {
 
     public static class SearchMediaByHybridResponseBodyMediaList extends TeaModel {
         /**
-         * <p>The information about the relevant clips.</p>
+         * <p>The clip information.</p>
          */
         @NameInMap("ClipInfo")
         public java.util.List<SearchMediaByHybridResponseBodyMediaListClipInfo> clipInfo;
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>a18936e0e28771edb59ae6f6f47a****</p>

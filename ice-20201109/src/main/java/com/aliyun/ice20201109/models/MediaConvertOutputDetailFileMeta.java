@@ -11,7 +11,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
     public java.util.List<MediaConvertOutputDetailFileMetaAudioStreamInfoList> audioStreamInfoList;
 
     /**
-     * <p>The basic information of the media file.</p>
+     * <p>The basic file information.</p>
      */
     @NameInMap("FileBasicInfo")
     public MediaConvertOutputDetailFileMetaFileBasicInfo fileBasicInfo;
@@ -62,7 +62,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The layout of the audio channels.</p>
+         * <p>The channel layout.</p>
          * 
          * <strong>example:</strong>
          * <p>stereo</p>
@@ -71,7 +71,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String channelLayout;
 
         /**
-         * <p>The number of audio channels.</p>
+         * <p>The number of channels.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -80,7 +80,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String channels;
 
         /**
-         * <p>The full name of the codec.</p>
+         * <p>The codec long name.</p>
          * 
          * <strong>example:</strong>
          * <p>AAC (Advanced Audio Coding)</p>
@@ -89,7 +89,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String codecLongName;
 
         /**
-         * <p>The short name of the codec.</p>
+         * <p>The codec name.</p>
          * 
          * <strong>example:</strong>
          * <p>aac</p>
@@ -98,7 +98,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String codecName;
 
         /**
-         * <p>The tag of the codec.</p>
+         * <p>The codec tag.</p>
          * 
          * <strong>example:</strong>
          * <p>0x000f</p>
@@ -107,7 +107,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String codecTag;
 
         /**
-         * <p>The tag of the codec.</p>
+         * <p>The codec tag string.</p>
          * 
          * <strong>example:</strong>
          * <p>[15][0][0][0]</p>
@@ -116,7 +116,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String codecTagString;
 
         /**
-         * <p>The time base used by the codec.</p>
+         * <p>The codec time base.</p>
          * 
          * <strong>example:</strong>
          * <p>1/44100</p>
@@ -125,7 +125,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String codecTimeBase;
 
         /**
-         * <p>The duration of the stream. Unit: seconds.</p>
+         * <p>The duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>403.039989</p>
@@ -134,7 +134,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String duration;
 
         /**
-         * <p>The index of this stream within the file.</p>
+         * <p>The stream index.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -143,7 +143,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String index;
 
         /**
-         * <p>The language code for the stream.</p>
+         * <p>The language.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -152,7 +152,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String lang;
 
         /**
-         * <p>The audio sample format.</p>
+         * <p>The sample format.</p>
          * 
          * <strong>example:</strong>
          * <p>fltp</p>
@@ -161,7 +161,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String sampleFmt;
 
         /**
-         * <p>The sample rate. Unit: Hz.</p>
+         * <p>The sample rate in Hz.</p>
          * 
          * <strong>example:</strong>
          * <p>44100</p>
@@ -170,7 +170,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String sampleRate;
 
         /**
-         * <p>The start time of the stream. Unit: seconds.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1.473556</p>
@@ -179,7 +179,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The time base of the stream\&quot;s presentation timestamps.</p>
+         * <p>The time base.</p>
          * 
          * <strong>example:</strong>
          * <p>1/90000</p>
@@ -325,7 +325,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String bitrate;
 
         /**
-         * <p>The total duration of the media file. Unit: seconds.</p>
+         * <p>The video duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>403.039999</p>
@@ -334,7 +334,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String duration;
 
         /**
-         * <p>The name of the file.</p>
+         * <p>The file name.</p>
          * 
          * <strong>example:</strong>
          * <p>file.m3u8</p>
@@ -343,7 +343,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String fileName;
 
         /**
-         * <p>The file size. Unit: bytes.</p>
+         * <p>The file size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>31737</p>
@@ -352,7 +352,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String fileSize;
 
         /**
-         * <p>The status of the file.</p>
+         * <p>The file status.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -361,7 +361,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String fileStatus;
 
         /**
-         * <p>Indicates if this is the source or a transcoded output. Valid values: source_file and transcode_file.</p>
+         * <p>The file type. Valid values: source_file, transcode_file.</p>
          * 
          * <strong>example:</strong>
          * <p>source_file</p>
@@ -370,7 +370,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String fileType;
 
         /**
-         * <p>The URL of the file.</p>
+         * <p>The file URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8">http://bucket.oss-cn-shanghai.aliyuncs.com/path/to/file.m3u8</a></p>
@@ -379,7 +379,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String fileUrl;
 
         /**
-         * <p>The container format name.</p>
+         * <p>The video format name.</p>
          * 
          * <strong>example:</strong>
          * <p>hls,applehttp</p>
@@ -388,7 +388,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String formatName;
 
         /**
-         * <p>The height of the video, in pixels.</p>
+         * <p>The height.</p>
          * 
          * <strong>example:</strong>
          * <p>478</p>
@@ -397,7 +397,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String height;
 
         /**
-         * <p>The ID of the media asset.</p>
+         * <p>The media asset ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9066406c306771f0bfa35107e0c90102</p>
@@ -406,7 +406,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The storage region of the file.</p>
+         * <p>The region where the file is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -415,7 +415,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String region;
 
         /**
-         * <p>The width of the video, in pixels.</p>
+         * <p>The width.</p>
          * 
          * <strong>example:</strong>
          * <p>848</p>
@@ -546,7 +546,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String bitRate;
 
         /**
-         * <p>The full name of the codec.</p>
+         * <p>The codec long name.</p>
          * 
          * <strong>example:</strong>
          * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
@@ -555,7 +555,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String codecLongName;
 
         /**
-         * <p>The short name of the codec.</p>
+         * <p>The codec name.</p>
          * 
          * <strong>example:</strong>
          * <p>h264</p>
@@ -564,7 +564,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String codecName;
 
         /**
-         * <p>The tag of the codec.</p>
+         * <p>The codec tag.</p>
          * 
          * <strong>example:</strong>
          * <p>0x001b</p>
@@ -573,7 +573,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String codecTag;
 
         /**
-         * <p>The tag of the codec.</p>
+         * <p>The codec tag string.</p>
          * 
          * <strong>example:</strong>
          * <p>[27][0][0][0]</p>
@@ -582,7 +582,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String codecTagString;
 
         /**
-         * <p>The time base used by the codec.</p>
+         * <p>The codec time base.</p>
          * 
          * <strong>example:</strong>
          * <p>1/50</p>
@@ -600,7 +600,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String dar;
 
         /**
-         * <p>The duration of the stream. Unit: seconds.</p>
+         * <p>The duration in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>403.039989</p>
@@ -618,10 +618,10 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String fps;
 
         /**
-         * <p>Indicates whether the video stream contains B-frames. Valid value:</p>
+         * <p>Specifies whether B-frames are included. Valid values:</p>
          * <ul>
-         * <li>0: None.</li>
-         * <li>1: One B-frame.</li>
+         * <li>0: No B-frames. </li>
+         * <li>1: One B-frame. </li>
          * <li>2: Multiple consecutive B-frames.</li>
          * </ul>
          * 
@@ -632,7 +632,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String hasBFrames;
 
         /**
-         * <p>The height of the video stream, in pixels.</p>
+         * <p>The height.</p>
          * 
          * <strong>example:</strong>
          * <p>478</p>
@@ -641,7 +641,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String height;
 
         /**
-         * <p>The index of this stream within the file.</p>
+         * <p>The stream index.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -650,7 +650,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String index;
 
         /**
-         * <p>The language code for the stream.</p>
+         * <p>The language.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -659,7 +659,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String lang;
 
         /**
-         * <p>The codec level.</p>
+         * <p>The encoding level.</p>
          * 
          * <strong>example:</strong>
          * <p>31</p>
@@ -686,7 +686,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String pixFmt;
 
         /**
-         * <p>The codec profile.</p>
+         * <p>The encoder profile.</p>
          * 
          * <strong>example:</strong>
          * <p>High</p>
@@ -695,7 +695,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String profile;
 
         /**
-         * <p>The rotation angle applied to the video. Valid values: 0, 90, 180, and 270. Default value: 0.</p>
+         * <p>The video rotation angle. Valid values: 0, 90, 180, and 270. Default value: 0.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -713,7 +713,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String sar;
 
         /**
-         * <p>The start time of the stream.</p>
+         * <p>The start time.</p>
          * 
          * <strong>example:</strong>
          * <p>1.473556</p>
@@ -722,7 +722,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The time base of the stream\&quot;s presentation timestamps.</p>
+         * <p>The time base.</p>
          * 
          * <strong>example:</strong>
          * <p>1/90000</p>
@@ -731,7 +731,7 @@ public class MediaConvertOutputDetailFileMeta extends TeaModel {
         public String timeBase;
 
         /**
-         * <p>The width of the video stream, in pixels.</p>
+         * <p>The width.</p>
          * 
          * <strong>example:</strong>
          * <p>848</p>

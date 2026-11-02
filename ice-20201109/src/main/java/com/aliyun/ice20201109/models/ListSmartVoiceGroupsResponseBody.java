@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListSmartVoiceGroupsResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>627B30EB-1D0A-5C6D-8467-431626E0FA10</p>
@@ -14,7 +14,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>An array of voice groups.</p>
+     * <p>The result set of voice groups.</p>
      */
     @NameInMap("VoiceGroups")
     public java.util.List<ListSmartVoiceGroupsResponseBodyVoiceGroups> voiceGroups;
@@ -45,7 +45,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
          * <p>The description of the voice.</p>
          * 
          * <strong>example:</strong>
-         * <p>甜美女声</p>
+         * <p>Female Voice</p>
          */
         @NameInMap("Desc")
         public String desc;
@@ -54,22 +54,22 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
          * <p>The name of the voice.</p>
          * 
          * <strong>example:</strong>
-         * <p>Zhi Tian</p>
+         * <p>zhitian</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>Notes for the voice.</p>
+         * <p>The remarks for the voice.</p>
          * 
          * <strong>example:</strong>
-         * <p>中文及中英文混合场景</p>
+         * <p>Chinese and English mixed</p>
          */
         @NameInMap("Remark")
         public String remark;
 
         /**
-         * <p>The sample rates supported by the voice.</p>
+         * <p>The sample rates supported by the current voice.</p>
          * 
          * <strong>example:</strong>
          * <p>48000</p>
@@ -78,16 +78,16 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         public String supportSampleRate;
 
         /**
-         * <p>The tag for the voice category.</p>
+         * <p>The voice type tag.</p>
          * 
          * <strong>example:</strong>
-         * <p>General scenario</p>
+         * <p>General</p>
          */
         @NameInMap("Tag")
         public String tag;
 
         /**
-         * <p>The voice ID.</p>
+         * <p>The ID of the voice.</p>
          * 
          * <strong>example:</strong>
          * <p>zhitian</p>
@@ -95,6 +95,12 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         @NameInMap("Voice")
         public String voice;
 
+        /**
+         * <p>The speech service source of the voice.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>CosyVoice</p>
+         */
         @NameInMap("VoiceSource")
         public String voiceSource;
 
@@ -108,7 +114,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         public String voiceType;
 
         /**
-         * <p>The URL of the sample audio.</p>
+         * <p>The URL of the sample audio for the voice.</p>
          * 
          * <strong>example:</strong>
          * <p>https://***.com/zhitian.mp3</p>
@@ -206,7 +212,7 @@ public class ListSmartVoiceGroupsResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The voice list.</p>
+         * <p>The list of voices.</p>
          */
         @NameInMap("VoiceList")
         public java.util.List<ListSmartVoiceGroupsResponseBodyVoiceGroupsVoiceList> voiceList;

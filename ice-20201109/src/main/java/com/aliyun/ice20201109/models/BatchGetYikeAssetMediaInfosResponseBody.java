@@ -11,7 +11,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
     public java.util.List<String> ignoredList;
 
     /**
-     * <p>The collection of media assets that meet the requirements.</p>
+     * <p>The collection of media assets that meet the specified criteria.</p>
      */
     @NameInMap("MediaInfos")
     public java.util.List<BatchGetYikeAssetMediaInfosResponseBodyMediaInfos> mediaInfos;
@@ -56,7 +56,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
 
     public static class BatchGetYikeAssetMediaInfosResponseBodyMediaInfosBizData extends TeaModel {
         /**
-         * <p>The audit label.</p>
+         * <p>The moderation label.</p>
          * 
          * <strong>example:</strong>
          * <p>Label</p>
@@ -65,7 +65,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String auditBlockedLabel;
 
         /**
-         * <p>The audit status.</p>
+         * <p>The moderation status.</p>
          * 
          * <strong>example:</strong>
          * <p>pass</p>
@@ -74,7 +74,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String auditStatus;
 
         /**
-         * <p>The ID of the creation task.</p>
+         * <p>The ID of the creation job.</p>
          * 
          * <strong>example:</strong>
          * <p>ID</p>
@@ -92,7 +92,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String folderId;
 
         /**
-         * <p>Indicates whether the media asset is marked as a favorite.</p>
+         * <p>Specifies whether the media asset is favorited.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -101,7 +101,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String isFavorite;
 
         /**
-         * <p>Indicates whether the media asset is logically deleted.</p>
+         * <p>Indicates whether the item is logically deleted.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -463,7 +463,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
 
     public static class BatchGetYikeAssetMediaInfosResponseBodyMediaInfosFileInfoList extends TeaModel {
         /**
-         * <p>The basic file information, including duration and size.</p>
+         * <p>The basic file information, including the duration and size.</p>
          */
         @NameInMap("FileBasicInfo")
         public BatchGetYikeAssetMediaInfosResponseBodyMediaInfosFileInfoListFileBasicInfo fileBasicInfo;
@@ -539,7 +539,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String deletedTime;
 
         /**
-         * <p>The content description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>sample_description</p>
@@ -548,7 +548,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The address of the media asset to be registered in the corresponding system.</p>
+         * <p>The URL of the media asset to be registered in the corresponding system.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">https://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
@@ -584,7 +584,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public String mediaType;
 
         /**
-         * <p>The time when the media asset was last modified.</p>
+         * <p>The time when the media asset was modified.</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-08T16:52:04Z</p>
@@ -828,7 +828,7 @@ public class BatchGetYikeAssetMediaInfosResponseBody extends TeaModel {
         public java.util.List<BatchGetYikeAssetMediaInfosResponseBodyMediaInfosFileInfoList> fileInfoList;
 
         /**
-         * <p>The basic information about the media asset.</p>
+         * <p>The basic information of the media asset.</p>
          */
         @NameInMap("MediaBasicInfo")
         public BatchGetYikeAssetMediaInfosResponseBodyMediaInfosMediaBasicInfo mediaBasicInfo;

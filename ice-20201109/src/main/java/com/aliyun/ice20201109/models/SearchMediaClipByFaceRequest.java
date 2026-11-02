@@ -14,7 +14,7 @@ public class SearchMediaClipByFaceRequest extends TeaModel {
     public String entityId;
 
     /**
-     * <p>The value must be the same as the FaceSearchToken value in the <a href="https://help.aliyun.com/document_detail/612893.html">coarse search operation</a>. This parameter is used to determine paginated results under the same search condition.</p>
+     * <p>The face search token. Keep this value consistent with the FaceSearchToken value in the <a href="https://help.aliyun.com/document_detail/612893.html">rough search operation</a>. This parameter is used to determine whether the paginated results are returned under the same search conditions.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,7 +34,7 @@ public class SearchMediaClipByFaceRequest extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +43,7 @@ public class SearchMediaClipByFaceRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,16 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListPipelinesRequest extends TeaModel {
     /**
-     * <p>The type of the MPS queue.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Boost: MPS queue with transcoding speed boosted.</p>
-     * </li>
-     * <li><p>Standard: standard MPS queue.</p>
-     * </li>
-     * <li><p>NarrowBandHDV2: MPS queue that supports Narrowband HD 2.0.</p>
-     * </li>
-     * </ul>
+     * <p>The pipeline type.</p>
      * 
      * <strong>example:</strong>
      * <p>Standard</p>

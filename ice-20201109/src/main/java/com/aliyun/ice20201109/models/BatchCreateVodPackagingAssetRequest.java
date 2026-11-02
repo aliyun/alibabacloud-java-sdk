@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchCreateVodPackagingAssetRequest extends TeaModel {
     /**
-     * <p>The assets that you want to ingest.</p>
+     * <p>The list of VOD packaging asset configurations.</p>
      */
     @NameInMap("Assets")
     public java.util.List<BatchCreateVodPackagingAssetRequestAssets> assets;
 
     /**
-     * <p>The name of the packaging group.</p>
+     * <p>The name of the VOD packaging group.</p>
      * 
      * <strong>example:</strong>
      * <p>vod_hls</p>
@@ -42,7 +42,7 @@ public class BatchCreateVodPackagingAssetRequest extends TeaModel {
 
     public static class BatchCreateVodPackagingAssetRequestAssetsInput extends TeaModel {
         /**
-         * <p>The URL of the media file. You can only specify a M3U8 file stored in Object Storage Service (OSS).</p>
+         * <p>The input media asset. Only Object Storage Service (OSS) paths are supported, such as OSS://test-bucket/video/202208/test.m3u8. Only inputs with the .m3u8 extension are supported.</p>
          */
         @NameInMap("Media")
         public String media;
@@ -81,7 +81,7 @@ public class BatchCreateVodPackagingAssetRequest extends TeaModel {
 
     public static class BatchCreateVodPackagingAssetRequestAssets extends TeaModel {
         /**
-         * <p>The name of the asset. The name must be unique and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+         * <p>The name of the asset. It must be unique per user and can be up to 128 characters in length. The value must match the regular expression [A-Za-z0-9_-]+.</p>
          * 
          * <strong>example:</strong>
          * <p>30min_movie</p>
@@ -90,7 +90,7 @@ public class BatchCreateVodPackagingAssetRequest extends TeaModel {
         public String assetName;
 
         /**
-         * <p>The content ID in the digital rights management (DRM) system. The maximum length is 256 characters. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+         * <p>The content ID in the digital rights management (DRM) system. It can be up to 256 characters in length and must match the regular expression [A-Za-z0-9_-]+.</p>
          * 
          * <strong>example:</strong>
          * <p>movie</p>
@@ -99,7 +99,7 @@ public class BatchCreateVodPackagingAssetRequest extends TeaModel {
         public String contentId;
 
         /**
-         * <p>The asset input configurations.</p>
+         * <p>The asset input configuration.</p>
          */
         @NameInMap("Input")
         public BatchCreateVodPackagingAssetRequestAssetsInput input;

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopMediaLiveChannelRequest extends TeaModel {
     /**
-     * <p>The ID of the channel.</p>
+     * <p>The channel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

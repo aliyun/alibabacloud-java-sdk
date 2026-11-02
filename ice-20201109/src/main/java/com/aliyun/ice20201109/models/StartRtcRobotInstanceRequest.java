@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartRtcRobotInstanceRequest extends TeaModel {
     /**
-     * <p>The authentication token required to join the RTC call. You must generate this token using your RTC AppKey.</p>
+     * <p>The RTC join token. You must generate this token by using the RTC AppKey.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
     public String authToken;
 
     /**
-     * <p>The RTC channel\&quot;s unique identifier.</p>
+     * <p>The RTC channel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,13 +25,13 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
     public String channelId;
 
     /**
-     * <p>Specifies advanced call configurations that override the agent\&quot;s default configurations. If you omit this parameter, the agent uses its default configurations.</p>
+     * <p>The advanced call configuration. If specified, this configuration overwrites the default configurations that were set when the AI agent was created. If not specified, the default configurations are used.</p>
      */
     @NameInMap("Config")
     public StartRtcRobotInstanceRequestConfig config;
 
     /**
-     * <p>The AI agent\&quot;s unique identifier.</p>
+     * <p>The AI agent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
     public String robotId;
 
     /**
-     * <p>User-defined information.</p>
+     * <p>The custom user information.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -50,7 +50,7 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The AI agent\&quot;s unique identifier within the channel.</p>
+     * <p>The ID of the AI agent in the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,7 +117,7 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
         public Integer asrMaxSilence;
 
         /**
-         * <p>Specifies whether to allow voice interrupt.</p>
+         * <p>Specifies whether voice interruption is allowed.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -126,10 +126,10 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
         public Boolean enableVoiceInterrupt;
 
         /**
-         * <p>The greeting the AI agent speaks when a user joins the call.</p>
+         * <p>The greeting message that the AI agent proactively speaks after the user joins the call.</p>
          * 
          * <strong>example:</strong>
-         * <p>你好，有什么可以帮助的吗？</p>
+         * <p>Hello, how can I help you?</p>
          */
         @NameInMap("Greeting")
         public String greeting;
@@ -144,7 +144,7 @@ public class StartRtcRobotInstanceRequest extends TeaModel {
         public Integer userOnlineTimeout;
 
         /**
-         * <p>The voice\&quot;s unique identifier.</p>
+         * <p>The voice ID.</p>
          * 
          * <strong>example:</strong>
          * <p>zhixiaoxia</p>

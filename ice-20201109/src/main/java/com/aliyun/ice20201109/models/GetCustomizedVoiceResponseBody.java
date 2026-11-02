@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetCustomizedVoiceResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public GetCustomizedVoiceResponseBodyData data;
@@ -20,12 +20,10 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +63,7 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
 
     public static class GetCustomizedVoiceResponseBodyDataCustomizedVoice extends TeaModel {
         /**
-         * <p>The media asset ID of the sample audio file.</p>
+         * <p>The ID of the sample audio media asset.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>42d3c312402982be65975f5b</strong></strong></p>
@@ -76,9 +74,9 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
         /**
          * <p>The gender. Valid values:</p>
          * <ul>
-         * <li><p>female</p>
+         * <li><p>female: Female.</p>
          * </li>
-         * <li><p>male</p>
+         * <li><p>male: Male.</p>
          * </li>
          * </ul>
          * 
@@ -89,15 +87,11 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
         public String gender;
 
         /**
-         * <p>The demonstration scenario.</p>
-         * <p>Valid values:</p>
+         * <p>The demonstration scenario. Valid values:</p>
          * <ul>
-         * <li><p><strong>story</strong></p>
-         * </li>
-         * <li><p><strong>interaction</strong></p>
-         * </li>
-         * <li><p><strong>navigation</strong></p>
-         * </li>
+         * <li><strong>story</strong>: Story.</li>
+         * <li><strong>interaction</strong>: Interaction.</li>
+         * <li><strong>navigation</strong>: Navigation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -110,7 +104,7 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
          * <p>The voice description.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个个性化人声</p>
+         * <p>It\&quot;s a personalized vocal</p>
          */
         @NameInMap("VoiceDesc")
         public String voiceDesc;
@@ -128,7 +122,7 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
          * <p>The voice name.</p>
          * 
          * <strong>example:</strong>
-         * <p>Basic</p>
+         * <p>The voice name.</p>
          */
         @NameInMap("VoiceName")
         public String voiceName;
@@ -190,7 +184,7 @@ public class GetCustomizedVoiceResponseBody extends TeaModel {
 
     public static class GetCustomizedVoiceResponseBodyData extends TeaModel {
         /**
-         * <p>The personalized human voice.</p>
+         * <p>The customized voice.</p>
          */
         @NameInMap("CustomizedVoice")
         public GetCustomizedVoiceResponseBodyDataCustomizedVoice customizedVoice;

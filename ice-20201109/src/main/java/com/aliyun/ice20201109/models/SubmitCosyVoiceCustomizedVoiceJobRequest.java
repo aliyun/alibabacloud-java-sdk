@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitCosyVoiceCustomizedVoiceJobRequest extends TeaModel {
     /**
-     * <p>The media asset ID of the training audio material. Currently, only one audio material can be used for training.</p>
+     * <p>The media asset ID of the audio material for training. Currently, only one audio material is supported for training.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>571c704445f9a0ee011406c2</strong></strong></p>
@@ -14,10 +14,10 @@ public class SubmitCosyVoiceCustomizedVoiceJobRequest extends TeaModel {
     public String audios;
 
     /**
-     * <p>The sample audio output address.  </p>
+     * <p>The sample audio output URL.  </p>
      * <ul>
-     * <li>If you specify this parameter, a sample audio file is generated at the specified OSS address after training succeeds.  <blockquote>
-     * <p>Notice: The address must be a valid public OSS address under your account.</p>
+     * <li>If you specify this parameter, a sample audio file is generated at the specified OSS URL after the training job succeeds.  <blockquote>
+     * <p>Notice: The URL must be a valid public OSS URL under your account.</notice></p>
      * </blockquote>
      * </li>
      * </ul>
@@ -31,8 +31,8 @@ public class SubmitCosyVoiceCustomizedVoiceJobRequest extends TeaModel {
     /**
      * <p>The gender. Valid values:</p>
      * <ul>
-     * <li>female</li>
-     * <li>male</li>
+     * <li>female: Female.</li>
+     * <li>male: Male.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,10 +57,10 @@ public class SubmitCosyVoiceCustomizedVoiceJobRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>The voice name. The name can be up to 32 characters in length.</p>
+     * <p>The name of the voice. The name cannot exceed 32 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>小专</p>
+     * <p>voice name</p>
      */
     @NameInMap("VoiceName")
     public String voiceName;

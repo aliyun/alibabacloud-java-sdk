@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAdInsertionRequest extends TeaModel {
     /**
-     * <p>The name of the ad insertion configuration that you want to query.</p>
+     * <p>The name of the configuration for exact match.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

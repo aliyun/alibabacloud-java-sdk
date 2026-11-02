@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAvatarTrainingJobResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public UpdateAvatarTrainingJobResponseBodyData data;
@@ -20,12 +20,10 @@ public class UpdateAvatarTrainingJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +63,7 @@ public class UpdateAvatarTrainingJobResponseBody extends TeaModel {
 
     public static class UpdateAvatarTrainingJobResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the digital human training job.</p>
+         * <p>The ID of the digital human training task.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>d718e2ff4f018ccf419a7b71</strong></strong></p>

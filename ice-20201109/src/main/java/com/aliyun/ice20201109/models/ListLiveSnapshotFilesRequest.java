@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ListLiveSnapshotFilesRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The end time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
      * <ul>
-     * <li>The maximum time range that can be specified is one day.</li>
+     * <li>The time interval between the end time and the start time cannot exceed one day.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -28,7 +28,7 @@ public class ListLiveSnapshotFilesRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The number of results to return each time. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Valid values: 1 to 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -37,14 +37,7 @@ public class ListLiveSnapshotFilesRequest extends TeaModel {
     public Integer limit;
 
     /**
-     * <p>The sorting order. Default value: asc.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>asc: sorts the query results by creation time in ascending order.</p>
-     * </li>
-     * <li><p>desc: sorts the query results by creation time in descending order.</p>
-     * </li>
-     * </ul>
+     * <p>The sort order. Default value: asc.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -53,7 +46,7 @@ public class ListLiveSnapshotFilesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The beginning of the time range to query. Specify the time in the ISO 8601 standard in the yyyy-MM-ddTHH:mm:ssZ format. The time must be in UTC.</p>
+     * <p>The start time in UTC. The format is yyyy-MM-ddTHH:mm:ssZ.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryCopyrightExtractJobRequest extends TeaModel {
     /**
-     * <p>The job ID. You can obtain the value of this parameter from the response of the SubmitCopyrightExtractJob operation.</p>
+     * <p>The job ID. You can obtain it from the response parameters returned when you submit a copyright watermark extraction job.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

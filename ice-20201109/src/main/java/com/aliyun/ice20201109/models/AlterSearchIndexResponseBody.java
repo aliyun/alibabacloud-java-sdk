@@ -25,8 +25,8 @@ public class AlterSearchIndexResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li>true: successful.</li>
-     * <li>false: failed.</li>
+     * <li>true: The call was successful.</li>
+     * <li>false: The call failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

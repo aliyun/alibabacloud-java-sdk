@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListRecognitionLibsRequest extends TeaModel {
     /**
-     * <p>The type of recognition algorithm. Valid values:</p>
+     * <p>The recognition type. Valid values:</p>
      * <ul>
-     * <li><p>landmark</p>
+     * <li><p>landmark: custom landmark</p>
      * </li>
-     * <li><p>object</p>
+     * <li><p>object: custom object</p>
      * </li>
-     * <li><p>logo</p>
+     * <li><p>logo: custom logo</p>
      * </li>
-     * <li><p>face</p>
+     * <li><p>face: custom face</p>
      * </li>
-     * <li><p>label</p>
+     * <li><p>label: custom label</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -27,7 +27,7 @@ public class ListRecognitionLibsRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>Library ID. If provided, the query returns only this specific library. A list of IDs separated by commas (&quot;,&quot;) is also supported.</p>
+     * <p>The ID of the library. If you specify this parameter, the system queries the specified library. You can specify multiple IDs separated by commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>lib1,lib2,lib3</p>
@@ -52,7 +52,7 @@ public class ListRecognitionLibsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 50.</p>
+     * <p>The number of entries per page. The maximum number of entries per page is 50.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

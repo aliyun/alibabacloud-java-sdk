@@ -14,8 +14,7 @@ public class DeleteMediaMarksRequest extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The mark IDs. Multiple IDs are separated by commas.</p>
-     * <p>If MediaMarkIds is empty, all mark information of the media asset is deleted by default.</p>
+     * <p>The mark IDs. Multiple values are supported and separated by commas. If MediaMarkIds is empty, all mark information of the media asset is deleted by default.</p>
      * 
      * <strong>example:</strong>
      * <p>mark-f82d<em><strong><strong>4994b0915948ef7e16,mark-3d56d</strong></strong></em>4c8fa9ae2a1f9e5d2d60</p>

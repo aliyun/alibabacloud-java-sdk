@@ -14,7 +14,7 @@ public class ListCustomizedVoiceJobsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,15 +23,13 @@ public class ListCustomizedVoiceJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The type of the human voice cloning job. Valid values:</p>
+     * <p>The type (edition) of the voice cloning task. Valid values:</p>
      * <ul>
-     * <li><p>Basic</p>
-     * </li>
-     * <li><p>Standard</p>
-     * </li>
+     * <li>Basic: Basic Edition.</li>
+     * <li>Standard: Standard Edition.</li>
      * </ul>
      * <blockquote>
-     * <p>: If you do not specify this parameter, the default value Basic is used.</p>
+     * <p>Notice: If you do not specify this parameter, Basic Edition tasks are queried by default.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

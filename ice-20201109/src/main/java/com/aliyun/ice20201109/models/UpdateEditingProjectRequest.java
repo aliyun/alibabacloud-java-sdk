@@ -18,10 +18,10 @@ public class UpdateEditingProjectRequest extends TeaModel {
     public String businessStatus;
 
     /**
-     * <p>The material parameters for the template in JSON format. If TemplateId is specified, ClipsParam must also be specified.&lt;props=&quot;china&quot;&gt;For more information about the format, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use a common template</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use an advanced template</a>.</p>
+     * <p>The material parameters for the template in JSON format. If TemplateId is specified, ClipsParam must also be specified. &lt;props=&quot;china&quot;&gt;For more information about the format, see <a href="https://help.aliyun.com/document_detail/328557.html">Create and use standard templates</a> and <a href="https://help.aliyun.com/document_detail/291418.html">Create and use advanced templates</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>See the template user guide.</p>
+     * <p>See the template documentation</p>
      */
     @NameInMap("ClipsParam")
     public String clipsParam;
@@ -55,7 +55,7 @@ public class UpdateEditingProjectRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The template ID, which is used to quickly build a timeline with minimal effort.&gt;Notice: Exactly one of ProjectId, Timeline, and TemplateId must be specified. If TemplateId is specified, ClipsParam must also be specified.</p>
+     * <p>The template ID, which is used to quickly and easily build a timeline. <notice>Only one of ProjectId, Timeline, and TemplateId can be specified. If TemplateId is specified, ClipsParam must also be specified.</notice></p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
@@ -65,6 +65,9 @@ public class UpdateEditingProjectRequest extends TeaModel {
 
     /**
      * <p>The timeline of the cloud editing project in JSON format.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;MediaId&quot;:&quot;0123456789abcdef0123456789abcdef&quot;}]}]}</p>
      */
     @NameInMap("Timeline")
     public String timeline;

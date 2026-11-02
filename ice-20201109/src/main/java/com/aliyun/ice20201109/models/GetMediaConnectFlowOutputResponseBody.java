@@ -11,7 +11,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
     public GetMediaConnectFlowOutputResponseBodyContent content;
 
     /**
-     * <p>The call description.</p>
+     * <p>The description of the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -20,7 +20,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0DB23DCE-0D69-598B-AA7C-7268D55E2F89</p>
@@ -29,7 +29,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned error code. A value of 0 indicates the call is successful.</p>
+     * <p>The returned error code. A value of 0 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -76,7 +76,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
 
     public static class GetMediaConnectFlowOutputResponseBodyContent extends TeaModel {
         /**
-         * <p>The IP address whitelist in CIDR format. CIDR blocks are separated with commas (,).</p>
+         * <p>The IP address whitelist in CIDR format. Multiple CIDR blocks are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>10.211.0.0/17</p>
@@ -85,7 +85,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         public String cidrs;
 
         /**
-         * <p>The time when the flow was created.</p>
+         * <p>The time when the flow was created. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-18T01:29:24Z</p>
@@ -94,7 +94,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Indicates whether the output is disabled. Valid values: yes or no.</p>
+         * <p>Indicates whether the output is disabled. Valid values: yes and no.</p>
          * 
          * <strong>example:</strong>
          * <p>no</p>
@@ -103,7 +103,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         public String forbid;
 
         /**
-         * <p>The output name.</p>
+         * <p>The name of the output.</p>
          * 
          * <strong>example:</strong>
          * <p>AliTestInput</p>
@@ -112,20 +112,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         public String outputName;
 
         /**
-         * <p>The output type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>RTMP-PUSH</p>
-         * </li>
-         * <li><p>SRT-Caller</p>
-         * </li>
-         * <li><p>RTMP-PULL</p>
-         * </li>
-         * <li><p>SRT-Listener</p>
-         * </li>
-         * <li><p>Flow</p>
-         * </li>
-         * </ul>
+         * <p>The output protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>SRT-PULL</p>
@@ -143,7 +130,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         public String outputUrl;
 
         /**
-         * <p>The ID of the destination flow. This parameter is returned when the output type is Flow.</p>
+         * <p>The instance ID of the peer flow. This parameter is required when the output type is Flow.</p>
          * 
          * <strong>example:</strong>
          * <p>805fbdd0-575e-4146-b35d-ec7f63937b20</p>
@@ -152,7 +139,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         public String pairFlowId;
 
         /**
-         * <p>The source name of the destination flow. This parameter is returned when the output type is Flow.</p>
+         * <p>The input name of the peer flow. This parameter is required when the output type is Flow.</p>
          * 
          * <strong>example:</strong>
          * <p>AliTestInput</p>
@@ -161,7 +148,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         public String pairInputName;
 
         /**
-         * <p>The maximum number of viewers.</p>
+         * <p>The maximum number of players.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -170,7 +157,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         public Integer playerLimit;
 
         /**
-         * <p>The latency for the SRT stream. Unit: milliseconds. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</p>
+         * <p>The SRT latency in milliseconds. This parameter is required only when the input type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -179,7 +166,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         public Integer srtLatency;
 
         /**
-         * <p>The SRT key. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</p>
+         * <p>The SRT encryption passphrase. This parameter is required only when the input type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>FICUBPX4Q77DYHRF</p>
@@ -188,18 +175,7 @@ public class GetMediaConnectFlowOutputResponseBody extends TeaModel {
         public String srtPassphrase;
 
         /**
-         * <p>The encryption key length. This parameter is returned when the source type is SRT-Listener or SRT-Caller.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>0</p>
-         * </li>
-         * <li><p>16</p>
-         * </li>
-         * <li><p>24</p>
-         * </li>
-         * <li><p>32</p>
-         * </li>
-         * </ul>
+         * <p>The SRT encryption key length. This parameter is required only when the input type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>

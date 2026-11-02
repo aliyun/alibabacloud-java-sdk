@@ -5,14 +5,14 @@ import com.aliyun.tea.*;
 
 public class DeleteLiveSnapshotFilesRequest extends TeaModel {
     /**
-     * <p>The list of creation timestamps. A maximum of 200 entries can be deleted at a time.</p>
+     * <p>The list of creation timestamps. You can delete up to 200 files at a time.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CreateTimestampList")
     public java.util.List<Long> createTimestampList;
 
     /**
-     * <p>Specifies whether to delete the original files. Default value: false.</p>
+     * <p>Specifies whether to delete the original file. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

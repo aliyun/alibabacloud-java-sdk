@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaAiAnalysisJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the media asset.</p>
+     * <p>The media asset ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitMediaAiAnalysisJobResponseBody extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>63E8B7C7-4812-46AD-0FA56029AC86</strong></strong></p>

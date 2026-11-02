@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
     /**
-     * <p>The name of the packaging group.</p>
+     * <p>The name of the VOD packaging group.</p>
      * 
      * <strong>example:</strong>
      * <p>vod_hls</p>
@@ -14,7 +14,7 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>
@@ -23,7 +23,7 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The results of asset ingestion.</p>
+     * <p>The list of creation results.</p>
      */
     @NameInMap("ResultList")
     public java.util.List<BatchCreateVodPackagingAssetResponseBodyResultList> resultList;
@@ -59,13 +59,13 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
 
     public static class BatchCreateVodPackagingAssetResponseBodyResultList extends TeaModel {
         /**
-         * <p>The information about the ingested asset.</p>
+         * <p>The information about the successfully created asset.</p>
          */
         @NameInMap("Asset")
         public VodPackagingAsset asset;
 
         /**
-         * <p>The error code for failed ingestion.</p>
+         * <p>The error code for the creation failure.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter.PackagingAssetAlreadyExists</p>
@@ -74,7 +74,7 @@ public class BatchCreateVodPackagingAssetResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The error message for failed ingestion.</p>
+         * <p>The detailed information about the creation failure.</p>
          * 
          * <strong>example:</strong>
          * <p>The specified packagingAsset &quot;inputMovie&quot; already exists</p>

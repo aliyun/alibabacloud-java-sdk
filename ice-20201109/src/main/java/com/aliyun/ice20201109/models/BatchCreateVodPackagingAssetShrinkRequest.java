@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchCreateVodPackagingAssetShrinkRequest extends TeaModel {
     /**
-     * <p>The assets that you want to ingest.</p>
+     * <p>The list of VOD packaging asset configurations.</p>
      */
     @NameInMap("Assets")
     public String assetsShrink;
 
     /**
-     * <p>The name of the packaging group.</p>
+     * <p>The name of the VOD packaging group.</p>
      * 
      * <strong>example:</strong>
      * <p>vod_hls</p>

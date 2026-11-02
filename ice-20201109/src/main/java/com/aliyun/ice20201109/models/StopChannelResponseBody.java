@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StopChannelResponseBody extends TeaModel {
     /**
-     * <p><strong>Request ID</strong></p>
+     * <p><strong>The request ID.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
@@ -14,12 +14,10 @@ public class StopChannelResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Specifies whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

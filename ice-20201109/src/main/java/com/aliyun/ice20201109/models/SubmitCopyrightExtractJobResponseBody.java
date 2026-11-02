@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitCopyrightExtractJobResponseBody extends TeaModel {
     /**
-     * <p>The returned data.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public SubmitCopyrightExtractJobResponseBodyData data;
@@ -20,7 +20,7 @@ public class SubmitCopyrightExtractJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>

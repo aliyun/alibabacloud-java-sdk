@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeAIAgentInstanceResponseBody extends TeaModel {
     /**
-     * <p>Information about the AI agent instance.</p>
+     * <p>The agent instance information.</p>
      */
     @NameInMap("Instance")
     public DescribeAIAgentInstanceResponseBodyInstance instance;
@@ -42,13 +42,13 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
 
     public static class DescribeAIAgentInstanceResponseBodyInstance extends TeaModel {
         /**
-         * <p>The configuration of the AI agent.</p>
+         * <p>The agent template configuration.</p>
          */
         @NameInMap("AgentConfig")
         public AIAgentConfig agentConfig;
 
         /**
-         * <p>Information about the call.</p>
+         * <p>The PSTN call details. This field may be empty if the call has not ended.</p>
          */
         @NameInMap("CallInfo")
         public AIAgentCallInfo callInfo;
@@ -72,7 +72,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The modification time (UTC).</p>
+         * <p>The update time (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2025-07-18T06:40:12.000+00:00</p>
@@ -81,7 +81,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         public String gmtModified;
 
         /**
-         * <p>The runtime configuration of the AI agent.</p>
+         * <p>The runtime configuration of the agent.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;VoiceChat&quot;:{&quot;AgentUserId&quot;:&quot;voice_agent_001&quot;,&quot;ChannelId&quot;:&quot;voice_channel_001&quot;,&quot;AuthToken&quot;:&quot;your_voice_chat_auth_token&quot;}}</p>
@@ -90,7 +90,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         public AIAgentRuntimeConfig runtimeConfig;
 
         /**
-         * <p>The session ID for the conversation. This parameter is empty by default.</p>
+         * <p>The unique identifier of the conversation. Default value: none.</p>
          * 
          * <strong>example:</strong>
          * <p>955535**************</p>
@@ -99,7 +99,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         public String sessionId;
 
         /**
-         * <p>The status of the AI agent instance, such as <code>Finished</code> or <code>Executing</code>.</p>
+         * <p>The status of the agent instance, such as Finished or Executing.</p>
          * 
          * <strong>example:</strong>
          * <p>Finished</p>
@@ -108,7 +108,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The AI agent template configuration.</p>
+         * <p>The agent template configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;VoiceChat&quot;: {&quot;AppId&quot;: &quot;your_voice_chat_app_id&quot;}}</p>
@@ -118,7 +118,7 @@ public class DescribeAIAgentInstanceResponseBody extends TeaModel {
         public AIAgentTemplateConfig templateConfig;
 
         /**
-         * <p>The user data.</p>
+         * <p>The user-defined data.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</p>

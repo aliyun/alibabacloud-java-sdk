@@ -5,17 +5,17 @@ import com.aliyun.tea.*;
 
 public class CreateRecognitionEntityRequest extends TeaModel {
     /**
-     * <p>The type of recognition algorithm. Valid values:</p>
+     * <p>The recognition type. Valid values:</p>
      * <ul>
-     * <li><p>landmark</p>
+     * <li><p>landmark: custom landmark</p>
      * </li>
-     * <li><p>object</p>
+     * <li><p>object: custom object</p>
      * </li>
-     * <li><p>logo</p>
+     * <li><p>logo: custom logo</p>
      * </li>
-     * <li><p>face</p>
+     * <li><p>face: custom face</p>
      * </li>
-     * <li><p>label</p>
+     * <li><p>label: custom label</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -27,26 +27,26 @@ public class CreateRecognitionEntityRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The extra information about the custom entity, provided as a JSON string. Max length: 256 bytes.</p>
+     * <p>The additional information about the custom recognition entity. The value is a JSON string and can be up to 256 bytes in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;description&quot;: &quot;Book classification&quot;}</p>
+     * <p>{&quot;description&quot;: &quot;book classification&quot;}</p>
      */
     @NameInMap("EntityInfo")
     public String entityInfo;
 
     /**
-     * <p>The name of the custom entity. Max length: 64 bytes.</p>
+     * <p>The name of the custom recognition entity. The name can be up to 64 bytes in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Custom library entity name</p>
+     * <p>RecognitionEntity name</p>
      */
     @NameInMap("EntityName")
     public String entityName;
 
     /**
-     * <p>The ID of the recognition library.</p>
+     * <p>The ID of the recognition library. You can call the <a href="https://help.aliyun.com/document_detail/2926699.html">ListRecognitionLibs</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

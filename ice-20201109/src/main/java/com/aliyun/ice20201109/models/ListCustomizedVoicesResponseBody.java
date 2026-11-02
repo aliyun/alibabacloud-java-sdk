@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomizedVoicesResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public ListCustomizedVoicesResponseBodyData data;
@@ -20,12 +20,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +63,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
 
     public static class ListCustomizedVoicesResponseBodyDataCustomizedVoiceList extends TeaModel {
         /**
-         * <p>The media asset ID of the sample audio file.</p>
+         * <p>The media asset ID of the demo audio.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>4d5e829d498aaf966b119348</strong></strong></p>
@@ -76,10 +74,8 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         /**
          * <p>The gender. Valid values:</p>
          * <ul>
-         * <li><p>female</p>
-         * </li>
-         * <li><p>male</p>
-         * </li>
+         * <li>female: Female.</li>
+         * <li>male: Male.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -91,12 +87,9 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         /**
          * <p>The scenario. Valid values:</p>
          * <ul>
-         * <li><p>story</p>
-         * </li>
-         * <li><p>interaction</p>
-         * </li>
-         * <li><p>navigation</p>
-         * </li>
+         * <li>story: Story.</li>
+         * <li>interaction: Interaction.</li>
+         * <li>navigation: Navigation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,15 +99,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         public String scenario;
 
         /**
+         * <p>The voice type. Valid values:</p>
          * <ul>
-         * <li><p>The voice type. Valid values:</p>
-         * <ul>
-         * <li><p>Basic</p>
-         * </li>
-         * <li><p>Standard</p>
-         * </li>
-         * </ul>
-         * </li>
+         * <li>Basic: Basic edition.</li>
+         * <li>Standard: Standard edition.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +115,7 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
          * <p>The voice description.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个个性化人声小专</p>
+         * <p>This is a personalized vocal small special</p>
          */
         @NameInMap("VoiceDesc")
         public String voiceDesc;
@@ -142,10 +130,10 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
         public String voiceId;
 
         /**
-         * <p>The voice name.</p>
+         * <p>The voice name, which is typically in Chinese.</p>
          * 
          * <strong>example:</strong>
-         * <p>小专</p>
+         * <p>The voice name.</p>
          */
         @NameInMap("VoiceName")
         public String voiceName;
@@ -215,13 +203,13 @@ public class ListCustomizedVoicesResponseBody extends TeaModel {
 
     public static class ListCustomizedVoicesResponseBodyData extends TeaModel {
         /**
-         * <p>The queried personalized human voices.</p>
+         * <p>The list of personalized voices.</p>
          */
         @NameInMap("CustomizedVoiceList")
         public java.util.List<ListCustomizedVoicesResponseBodyDataCustomizedVoiceList> customizedVoiceList;
 
         /**
-         * <p>The total number of entries returned.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>41</p>

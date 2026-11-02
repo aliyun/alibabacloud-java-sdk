@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitLiveTranscodeJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the transcoding job.</p>
+     * <p>The ID of the transcoding task.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitLiveTranscodeJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>

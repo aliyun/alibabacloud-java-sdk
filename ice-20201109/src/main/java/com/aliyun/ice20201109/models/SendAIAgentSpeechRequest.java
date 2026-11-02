@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SendAIAgentSpeechRequest extends TeaModel {
     /**
-     * <p>Specifies whether the broadcast can interrupt the ongoing speech. Default value: true</p>
+     * <p>Specifies whether this proactive broadcast can interrupt the current voice playback. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -14,9 +14,9 @@ public class SendAIAgentSpeechRequest extends TeaModel {
     public Boolean enableInterrupt;
 
     /**
-     * <p>Agent instance ID.</p>
+     * <p>The instance ID of the agent.</p>
      * <blockquote>
-     * <p>The InstanceId is the unique ID returned after successfully starting an agent instance. For details about starting an agent instance, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
+     * <p>InstanceId is the unique ID returned after an agent instance is successfully started. For the operations used to start an agent instance, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -27,21 +27,21 @@ public class SendAIAgentSpeechRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The text content to be played back. The supported input format varies based on the Type parameter. The length cannot exceed 1024 characters.</p>
+     * <p>The text content to be broadcast. Different input types are supported based on the Type parameter. The length cannot exceed 1,024 characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>Hello, welcome to our service.</p>
+     * <p>Hello, welcome to use our service</p>
      */
     @NameInMap("Text")
     public String text;
 
     /**
-     * <p>Input type. Valid values:</p>
+     * <p>The input type. Valid values:</p>
      * <ul>
-     * <li><p>Text: Input is plain text.</p>
+     * <li><p>Text: text input.</p>
      * </li>
-     * <li><p>AudioUrl: Input is an audio URL.</p>
+     * <li><p>AudioUrl: audio URL input.</p>
      * </li>
      * </ul>
      * <p>Default value: Text.</p>

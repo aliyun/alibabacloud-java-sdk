@@ -14,13 +14,13 @@ public class ListTemplatesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The queried templates.</p>
+     * <p>The list of templates.</p>
      */
     @NameInMap("Templates")
     public java.util.List<ListTemplatesResponseBodyTemplates> templates;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that meet the request conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,7 +59,7 @@ public class ListTemplatesResponseBody extends TeaModel {
 
     public static class ListTemplatesResponseBodyTemplates extends TeaModel {
         /**
-         * <p>The clip parameters.</p>
+         * <p>The editing parameters.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;Media1&quot;:&quot;mediaId&quot;,&quot;Text1&quot;:&quot;text&quot;}</p>
@@ -68,16 +68,16 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String clipsParam;
 
         /**
-         * <p>The template configurations.</p>
+         * <p>The template configuration.</p>
          * 
          * <strong>example:</strong>
-         * <p>See Timeline template configuration details.</p>
+         * <p>Refer to Timeline template configuration details</p>
          */
         @NameInMap("Config")
         public String config;
 
         /**
-         * <p>The thumbnail URL.</p>
+         * <p>The cover URL.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg">http://example-bucket.oss-cn-shanghai.aliyuncs.com/cover.jpg</a></p>
@@ -86,16 +86,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The source from which the template was created.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>AliyunConsole</p>
-         * </li>
-         * <li><p>WebSDK</p>
-         * </li>
-         * <li><p>OpenAPI</p>
-         * </li>
-         * </ul>
+         * <p>The creation source.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAPI</p>
@@ -104,7 +95,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String createSource;
 
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The creation time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
@@ -113,16 +104,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The source from which the template was modified.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>AliyunConsole</p>
-         * </li>
-         * <li><p>WebSDK</p>
-         * </li>
-         * <li><p>OpenAPI</p>
-         * </li>
-         * </ul>
+         * <p>The modification source.</p>
          * 
          * <strong>example:</strong>
          * <p>OpenAPI</p>
@@ -131,7 +113,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String modifiedSource;
 
         /**
-         * <p>The time when the template was last modified.</p>
+         * <p>The modification time. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2020-12-26T04:11:10Z</p>
@@ -149,7 +131,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The preview media asset.</p>
+         * <p>The preview media.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -158,18 +140,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String previewMedia;
 
         /**
-         * <p>The state of the preview media asset.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>PrepareFail</p>
-         * </li>
-         * <li><p>Init</p>
-         * </li>
-         * <li><p>Normal</p>
-         * </li>
-         * <li><p>Preparing</p>
-         * </li>
-         * </ul>
+         * <p>The preview media status.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -178,22 +149,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String previewMediaStatus;
 
         /**
-         * <p>The template state.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>UploadFailed: Failed to upload the video.</p>
-         * </li>
-         * <li><p>ProcessFailed: Failed to process the advanced template.</p>
-         * </li>
-         * <li><p>Available: The template is available.</p>
-         * </li>
-         * <li><p>Uploading: The video is being uploaded.</p>
-         * </li>
-         * <li><p>Created: The template is created but not ready for use.</p>
-         * </li>
-         * <li><p>Processing: The advanced template is being processed.</p>
-         * </li>
-         * </ul>
+         * <p>The template status.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -211,14 +167,7 @@ public class ListTemplatesResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The template type.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>Timeline: regular template.</p>
-         * </li>
-         * <li><p>VETemplate: advanced template.</p>
-         * </li>
-         * </ul>
+         * <p>The templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>Timeline</p>

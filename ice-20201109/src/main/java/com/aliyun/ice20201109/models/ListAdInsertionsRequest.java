@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAdInsertionsRequest extends TeaModel {
     /**
-     * <p>The configuration name. Fuzzy match is supported.</p>
+     * <p>The keyword used to query ad insertion configurations by name. Fuzzy match is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>ad</p>
@@ -14,7 +14,7 @@ public class ListAdInsertionsRequest extends TeaModel {
     public String keyword;
 
     /**
-     * <p>The maximum number of entries to retrieve in a subsequent request. If this parameter is used, the pagination parameters become invalid. Default value: 10.</p>
+     * <p>The maximum number of entries to return for the next page of results. When this parameter is specified, pagination parameters are ignored. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class ListAdInsertionsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token that is used in the next request to retrieve a new page of results. If this parameter is used, the pagination parameters become invalid.</p>
+     * <p>The token used to retrieve the next page of results. When this parameter is specified, pagination parameters are ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>*<em><strong><strong>8EqYpQbZ6Eh7+Zz8DxVYoQ</strong></strong></em></p>
@@ -50,7 +50,7 @@ public class ListAdInsertionsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The sorting order of the configurations by creation time. asc: ascending. desc: descending.</p>
+     * <p>The sort order. Valid values: asc (ascending order by creation time) and desc (descending order by creation time).</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>

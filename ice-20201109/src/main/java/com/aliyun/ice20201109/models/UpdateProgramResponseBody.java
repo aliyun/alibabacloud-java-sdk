@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateProgramResponseBody extends TeaModel {
     /**
-     * <p>The information about the program.</p>
+     * <p>The program information.</p>
      */
     @NameInMap("Program")
     public ChannelAssemblyProgram program;
 
     /**
-     * <p><strong>Request ID</strong></p>
+     * <p><strong>The request ID.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>

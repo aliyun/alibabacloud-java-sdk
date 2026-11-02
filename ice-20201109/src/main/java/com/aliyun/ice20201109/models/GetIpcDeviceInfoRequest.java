@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class GetIpcDeviceInfoRequest extends TeaModel {
     /**
-     * <p>Capability. Default value is understand. Valid values:</p>
+     * <p>The capability. Default value: understand. Valid values:</p>
      * <ul>
-     * <li><p>understand: understanding</p>
-     * </li>
-     * <li><p>understand-reid: understanding with reid</p>
-     * </li>
-     * <li><p>search: search</p>
-     * </li>
+     * <li>understand: Understanding.</li>
+     * <li>understand-reid: Understanding with ReID.</li>
+     * <li>search: Search.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +19,7 @@ public class GetIpcDeviceInfoRequest extends TeaModel {
     public String capability;
 
     /**
-     * <p>Device ID.</p>
+     * <p>The device ID.</p>
      * 
      * <strong>example:</strong>
      * <p>d123</p>
@@ -31,7 +28,7 @@ public class GetIpcDeviceInfoRequest extends TeaModel {
     public String deviceId;
 
     /**
-     * <p>End Time. UTC time in the format yyyy-MM-ddTHH:mm:ssZ. The difference between EndTime and StartTime must not exceed 180 days.</p>
+     * <p>The end time in UTC. Format: yyyy-MM-ddTHH:mm:ssZ. The interval between the end time and the start time cannot exceed 180 days.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-02-11T12:00:00Z</p>
@@ -40,7 +37,7 @@ public class GetIpcDeviceInfoRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Page number for paging. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -49,7 +46,7 @@ public class GetIpcDeviceInfoRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>Page size, which specifies the number of entries displayed per page. Default value is 10. Maximum value is 50.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -58,7 +55,7 @@ public class GetIpcDeviceInfoRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Start Time. UTC time in the format yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The start time in UTC. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2017-01-11T12:00:00Z</p>

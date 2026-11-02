@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveSnapshotTemplatesRequest extends TeaModel {
     /**
-     * <p>The page number. The value must be greater than or equal to 1. Default value: 1.</p>
+     * <p>The page number. Valid values: [1, n). Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class ListLiveSnapshotTemplatesRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of items per page. Valid values: [1, 100]. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,9 +23,9 @@ public class ListLiveSnapshotTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The search keyword. You can perform a fuzzy search by template ID or template name.</p>
+     * <p>The search keyword. You can search by template ID or name. Fuzzy match is supported for template names.</p>
      * <ul>
-     * <li>Maximum length: 128 characters.</li>
+     * <li>The maximum length is 128 characters.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class ListLiveSnapshotTemplatesRequest extends TeaModel {
     public String searchKeyWord;
 
     /**
-     * <p>The sorting method. By default, results are sorted by creation time in descending order.</p>
+     * <p>The sort order. By default, the results are sorted by CreateTime in descending order.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -44,19 +44,17 @@ public class ListLiveSnapshotTemplatesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The template IDs.</p>
+     * <p>The template IDs used for the query.</p>
      * <ul>
-     * <li><p>This parameter does not take effect if <code>SearchKeyWord</code> is specified.</p>
-     * </li>
-     * <li><p>You can specify a maximum of 200 template IDs.</p>
-     * </li>
+     * <li>If SearchKeyWord is specified, this parameter does not take effect.</li>
+     * <li>The maximum array length is 200.</li>
      * </ul>
      */
     @NameInMap("TemplateIds")
     public java.util.List<String> templateIds;
 
     /**
-     * <p>The type of the template. By default, templates of all types are queried.</p>
+     * <p>The templatetype. By default, all types are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>custom</p>

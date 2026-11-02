@@ -8,12 +8,12 @@ public class GetMediaInfoRequest extends TeaModel {
     public Long authTimeout;
 
     /**
-     * <p>The address of the media asset in the corresponding system. Before use, the media asset must be registered in the IMS content library and bound to an IMS mediaId.</p>
+     * <p>The URL of the media asset to be queried in the corresponding system. The media asset must be registered in the IMS content library and attached to an IMS media ID before use.</p>
      * <ul>
-     * <li>OSS address. Two formats are supported:</li>
+     * <li>OSS addresses. Two formats are supported:</li>
      * </ul>
-     * <p>http(s)://example-bucket.oss-ap-southeast-1.aliyuncs.com/example.mp4 or</p>
-     * <p>oss://example-bucket/example.mp4. This format assumes the OSS region is the same as the service access region by default.</p>
+     * <p>http(s)://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4 or</p>
+     * <p>oss://example-bucket/example.mp4. In this format, the default OSS region is the same as the service registration area.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.mp4</a></p>
@@ -22,7 +22,7 @@ public class GetMediaInfoRequest extends TeaModel {
     public String inputURL;
 
     /**
-     * <p>The IMS media asset ID. If this parameter is empty, InputURL is required.</p>
+     * <p>The IMS media asset ID. If this parameter is empty, InputURL must be specified.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -31,7 +31,13 @@ public class GetMediaInfoRequest extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The type of the media file address in the response:</p>
+     * <p>The type of the media asset file URL in the response. Valid values:</p>
+     * <ul>
+     * <li><p>oss: Returns the OSS URL. This is the default value.</p>
+     * </li>
+     * <li><p>cdn: Returns the CDN URL. A CDN URL is returned only when the media asset is imported from ApsaraVideo VOD and an accelerated domain name is configured in ApsaraVideo VOD.</p>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>cdn</p>
@@ -40,11 +46,13 @@ public class GetMediaInfoRequest extends TeaModel {
     public String outputType;
 
     /**
-     * <p>Specifies whether to return detailed information for the corresponding media asset fields. The following fields are supported:
-     * AiRoughData.StandardSmartTagJob: Specifies whether to return detailed tagging results if the media asset has been submitted for tag analysis.</p>
+     * <p>Specifies whether to return detailed information for the corresponding media asset fields. Supported fields:</p>
+     * <p>AiRoughData.StandardSmartTagJob: Specifies whether to return detailed tagging results if the media asset has been submitted for tag analysis. Valid values:</p>
      * <ul>
-     * <li>Default value: false. The task result is returned as a URL.</li>
-     * <li>true: The task result is returned as text.</li>
+     * <li><p>false: The task result is returned as a URL. This is the default value.</p>
+     * </li>
+     * <li><p>true: The task result is returned as text.</p>
+     * </li>
      * </ul>
      * 
      * <strong>example:</strong>

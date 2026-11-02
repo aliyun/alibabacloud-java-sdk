@@ -11,7 +11,7 @@ public class GetChannelResponseBody extends TeaModel {
     public ChannelAssemblyChannel channel;
 
     /**
-     * <p><strong>Request ID</strong></p>
+     * <p><strong>The request ID.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>

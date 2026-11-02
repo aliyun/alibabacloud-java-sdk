@@ -11,7 +11,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
     public java.util.List<ListMediaInfoJobsResponseBodyJobs> jobs;
 
     /**
-     * <p>The token used to retrieve the next page. Leave this parameter empty for the first request. The token for the next page is returned after the first query.</p>
+     * <p>The next page token. Leave this parameter empty for the first request. The next page token is returned after the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>019daf5780f74831b0e1a767c9f1c178</p>
@@ -59,10 +59,10 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
 
     public static class ListMediaInfoJobsResponseBodyJobsInput extends TeaModel {
         /**
-         * <p>The media value:</p>
+         * <p>The media value.</p>
          * <ul>
-         * <li>If type is set to OSS, the value is a URL that supports the OSS protocol and HTTP protocol.</li>
-         * <li>If type is set to Media, the value is a media asset ID.</li>
+         * <li>If the type is OSS, the value is a URL that supports the OSS and HTTP protocols.</li>
+         * <li>If the type is Media, the value is a media asset ID.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -72,7 +72,11 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String media;
 
         /**
-         * <p>The media object type.</p>
+         * <p>The media object type. Valid values:</p>
+         * <ul>
+         * <li>OSS: OSS file.</li>
+         * <li>Media: media asset ID.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>OSS</p>
@@ -123,7 +127,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String channelLayout;
 
         /**
-         * <p>The number of audio channels.</p>
+         * <p>The number of channels.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -132,7 +136,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String channels;
 
         /**
-         * <p>The codec format name.</p>
+         * <p>The full codec name.</p>
          * 
          * <strong>example:</strong>
          * <p>AAC (Advanced Audio Coding)</p>
@@ -177,7 +181,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String codecTimeBase;
 
         /**
-         * <p>The duration. Unit: seconds.</p>
+         * <p>The duration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>403.039989</p>
@@ -222,7 +226,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String sampleRate;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1.473556</p>
@@ -414,6 +418,10 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
 
         /**
          * <p>The file type. Valid values:</p>
+         * <ul>
+         * <li>source_file: source file.</li>
+         * <li>transcode_file: transcoded file.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>source_file</p>
@@ -458,7 +466,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String mediaId;
 
         /**
-         * <p>The region where the file is stored.</p>
+         * <p>The region where the file is located.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -598,7 +606,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String bitRate;
 
         /**
-         * <p>The codec format name.</p>
+         * <p>The full codec name.</p>
          * 
          * <strong>example:</strong>
          * <p>H.264 / AVC / MPEG-4 AVC / MPEG-4 part 10</p>
@@ -643,7 +651,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String codecTimeBase;
 
         /**
-         * <p>The display aspect ratio (DAR).</p>
+         * <p>The display aspect ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>16:9</p>
@@ -652,7 +660,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String dar;
 
         /**
-         * <p>The duration. Unit: seconds.</p>
+         * <p>The duration, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>403.039989</p>
@@ -670,11 +678,11 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String fps;
 
         /**
-         * <p>Indicates whether B-frames exist. Valid values:</p>
+         * <p>Indicates whether B-frames are present. Valid values:</p>
          * <ul>
-         * <li>0: no B-frames.</li>
-         * <li>1: one B-frame.</li>
-         * <li>2: multiple consecutive B-frames.</li>
+         * <li>0: No B-frames.</li>
+         * <li>1: One B-frame.</li>
+         * <li>2: Multiple consecutive B-frames.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -748,6 +756,10 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
 
         /**
          * <p>The video rotation angle.</p>
+         * <ul>
+         * <li>Valid values: 0, 90, 180, and 270.</li>
+         * <li>Default value: 0.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -756,7 +768,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String rotate;
 
         /**
-         * <p>The sample aspect ratio (SAR).</p>
+         * <p>The sample aspect ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>478:477</p>
@@ -765,7 +777,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String sar;
 
         /**
-         * <p>The start time.</p>
+         * <p>The start time, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1.473556</p>
@@ -1076,7 +1088,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
 
     public static class ListMediaInfoJobsResponseBodyJobs extends TeaModel {
         /**
-         * <p>Indicates whether the job is processed asynchronously.</p>
+         * <p>Specifies whether the job is processed asynchronously.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1085,7 +1097,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public Boolean async;
 
         /**
-         * <p>The job completion time. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The job completion time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-12T08:49:41Z</p>
@@ -1139,7 +1151,12 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public ListMediaInfoJobsResponseBodyJobsScheduleConfig scheduleConfig;
 
         /**
-         * <p>The task status.</p>
+         * <p>The job status. Valid values:</p>
+         * <ul>
+         * <li>Init: Submitted.</li>
+         * <li>Success: Succeeded.</li>
+         * <li>Fail: Failed.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Init</p>
@@ -1154,7 +1171,7 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public java.util.Map<String, ?> submitResultJson;
 
         /**
-         * <p>The job submission time. The time is in the yyyy-MM-ddTHH:mm:ssZ format.</p>
+         * <p>The job submission time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-01-12T08:49:41Z</p>
@@ -1163,7 +1180,12 @@ public class ListMediaInfoJobsResponseBody extends TeaModel {
         public String submitTime;
 
         /**
-         * <p>The job source.</p>
+         * <p>The job source. Valid values:</p>
+         * <ul>
+         * <li>API: API.</li>
+         * <li>WorkFlow: workflow.</li>
+         * <li>Console: console.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>API</p>

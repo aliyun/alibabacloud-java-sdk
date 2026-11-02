@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveTranscodeJobsResponseBody extends TeaModel {
     /**
-     * <p>The list of transcoding tasks.</p>
+     * <p>The list of transcoding jobs.</p>
      */
     @NameInMap("JobList")
     public java.util.List<ListLiveTranscodeJobsResponseBodyJobList> jobList;
@@ -165,7 +165,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
 
     public static class ListLiveTranscodeJobsResponseBodyJobList extends TeaModel {
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-20T02:48:58Z</p>
@@ -174,7 +174,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The task ID.</p>
+         * <p>The job ID.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>a046-263c-3560-978a-fb287782</strong></strong></p>
@@ -183,7 +183,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The name of the transcoding task.</p>
+         * <p>The name of the transcoding job.</p>
          * 
          * <strong>example:</strong>
          * <p>mytask</p>
@@ -207,7 +207,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public Integer startMode;
 
         /**
-         * <p>The task status.</p>
+         * <p>The job status.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -222,7 +222,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public ListLiveTranscodeJobsResponseBodyJobListStreamInput streamInput;
 
         /**
-         * <p>The template ID corresponding to the transcoding task.</p>
+         * <p>The ID of the template corresponding to the transcoding job.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>a046-263c-3560-978a-fb287666</strong></strong></p>
@@ -231,7 +231,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The template name.</p>
+         * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>Template 1</p>
@@ -240,7 +240,7 @@ public class ListLiveTranscodeJobsResponseBody extends TeaModel {
         public String templateName;
 
         /**
-         * <p>The type of the transcoding template corresponding to the transcoding task.</p>
+         * <p>The type of the transcoding template corresponding to the transcoding job.</p>
          * 
          * <strong>example:</strong>
          * <p>normal</p>

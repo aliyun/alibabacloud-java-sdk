@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class SubmitIProductionJobRequest extends TeaModel {
     /**
-     * <p>The name of the algorithm function to use. Valid values:</p>
+     * <p>The name of the algorithm feature to be used. Valid values:</p>
      * <ul>
      * <li><strong>Cover</strong>: intelligent cover</li>
      * <li><strong>VideoClip</strong>: video synopsis</li>
-     * <li><strong>VideoDelogo</strong>: video logo removal</li>
+     * <li><strong>VideoDelogo</strong>: video icon removal</li>
      * <li><strong>VideoDetext</strong>: video subtitle removal</li>
-     * <li><strong>CaptionExtraction</strong>: caption extraction</li>
+     * <li><strong>CaptionExtraction</strong>: subtitle fetch</li>
      * <li><strong>VideoGreenScreenMatting</strong>: image matting</li>
      * <li><strong>FaceBeauty</strong>: video face beautification</li>
-     * <li><strong>VideoH2V</strong>: intelligent landscape-to-portrait</li>
+     * <li><strong>VideoH2V</strong>: video landscape-to-portrait conversion</li>
      * <li><strong>MusicSegmentDetect</strong>: chorus detection</li>
      * <li><strong>AudioBeatDetection</strong>: beat detection</li>
      * <li><strong>AudioQualityAssessment</strong>: audio quality assessment</li>
-     * <li><strong>SpeechDenoise</strong>: speech denoising</li>
+     * <li><strong>SpeechDenoise</strong>: speech noise reduction</li>
      * <li><strong>AudioMixing</strong>: audio mixing</li>
      * <li><strong>MusicDemix</strong>: vocal and accompaniment separation</li>
      * </ul>
@@ -31,15 +31,15 @@ public class SubmitIProductionJobRequest extends TeaModel {
     public String functionName;
 
     /**
-     * <p>The input media. Object Storage Service (OSS) paths and media asset IDs are supported.</p>
-     * <p>Different algorithm functions have different input file requirements. For more information, see the supplementary description below.</p>
+     * <p>The input media. OSS paths and media asset IDs are supported.</p>
+     * <p>The file requirements for the input media vary based on the algorithm feature. For more information, see the supplementary instructions below.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public SubmitIProductionJobRequestInput input;
 
     /**
-     * <p>The algorithm job parameters. This is a JSON object. The parameters vary depending on the algorithm. For more information, see the supplementary description.</p>
+     * <p>The algorithm job parameters. The value is a JSON object. The parameters vary based on the algorithm. For more information, see the supplementary instructions.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Model&quot;:&quot;gif&quot;}</p>
@@ -48,30 +48,33 @@ public class SubmitIProductionJobRequest extends TeaModel {
     public String jobParams;
 
     /**
-     * <p>The algorithm model ID. If this parameter is left empty, the default model for the corresponding function is used. In most cases, leave this parameter empty to use the default model.</p>
-     * <p>The following algorithm functions have non-default models available:</p>
+     * <p>The algorithm model ID. If this parameter is left empty, the default model for the corresponding feature is used. You can leave this parameter empty and use the default model.</p>
+     * <p>The following algorithm features support non-default models:</p>
      * <ul>
      * <li>VideoDetext<ul>
-     * <li>ModelId = algo-video-detext-new: a subtitle removal algorithm with better results but slower speed and higher cost than the default algorithm.</li>
+     * <li>ModelId = algo-video-detext-new: a subtitle removal algorithm that delivers better results but runs slower and costs more than the default algorithm.</li>
      * </ul>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>algo-video-detext-new</p>
      */
     @NameInMap("ModelId")
     public String modelId;
 
     /**
-     * <p>The job name. The name can be up to 100 characters in length.</p>
+     * <p>The name of the job. The name can be up to 100 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>Test task</p>
+     * <p>Test job</p>
      */
     @NameInMap("Name")
     public String name;
 
     /**
      * <p>The output media. OSS paths and media asset IDs are supported.</p>
-     * <p>Different algorithm functions produce different output files. For more information, see the supplementary description below.</p>
+     * <p>The output files for the Output parameter vary based on the algorithm feature. For more information, see the supplementary instructions below.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Output")
@@ -93,7 +96,7 @@ public class SubmitIProductionJobRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The custom user data, which is returned as-is when you retrieve the result. The value can be up to 256 characters in length.</p>
+     * <p>The custom user data. The data is returned as is when the result is obtained. The value can be up to 256 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;test&quot;:1}</p>
@@ -180,12 +183,12 @@ public class SubmitIProductionJobRequest extends TeaModel {
 
     public static class SubmitIProductionJobRequestInput extends TeaModel {
         /**
-         * <p>The input media. OSS paths and media asset IDs are supported.
-         * OSS path rules (use either format):</p>
+         * <p>The input media. Both OSS URLs and media asset IDs are supported.
+         * OSS URL formats (select one of the following formats):</p>
          * <ol>
          * <li>oss://bucket/object</li>
          * <li>http(s)://bucket.oss-[regionId].aliyuncs.com/object
-         * where bucket is the name of an OSS bucket in the same region as the current project, and object is the file path.</li>
+         * In the URLs, bucket is the name of the OSS bucket in the same region as the current project, and object is the file path.</li>
          * </ol>
          * <p>This parameter is required.</p>
          * 
@@ -198,9 +201,9 @@ public class SubmitIProductionJobRequest extends TeaModel {
         /**
          * <p>The media type. Valid values:</p>
          * <ul>
-         * <li><p>OSS: an OSS path</p>
+         * <li><p>OSS: OSS path</p>
          * </li>
-         * <li><p>Media: a media asset ID</p>
+         * <li><p>Media: media asset ID</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -236,7 +239,7 @@ public class SubmitIProductionJobRequest extends TeaModel {
 
     public static class SubmitIProductionJobRequestOutput extends TeaModel {
         /**
-         * <p>The business type to which the media asset belongs.</p>
+         * <p>The business to which the media asset belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>IMS</p>
@@ -254,7 +257,7 @@ public class SubmitIProductionJobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The OSS path of the output file when Type is set to Media. The bucket must be registered in IMS or VOD.</p>
+         * <p>The OSS URL of the output file. This parameter is required when Type is set to Media. The bucket must be registered in IMS or VOD.</p>
          * 
          * <strong>example:</strong>
          * <p>http(s)://bucket.oss-[RegionId].aliyuncs.com/object</p>
@@ -265,9 +268,9 @@ public class SubmitIProductionJobRequest extends TeaModel {
         /**
          * <p>The media type. Valid values:</p>
          * <ul>
-         * <li><p>OSS: an OSS path</p>
+         * <li><p>OSS: OSS path</p>
          * </li>
-         * <li><p>Media: a media asset ID</p>
+         * <li><p>Media: media asset ID</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -328,7 +331,7 @@ public class SubmitIProductionJobRequest extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The priority. Valid values: 1 to 10. A smaller value indicates a higher priority.</p>
+         * <p>The priority of the job. Valid values: 1 to 10. A smaller value indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>

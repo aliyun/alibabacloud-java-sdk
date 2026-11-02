@@ -14,7 +14,7 @@ public class ListRecognitionSamplesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

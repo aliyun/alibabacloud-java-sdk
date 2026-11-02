@@ -42,7 +42,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
 
     public static class GetLiveRecordTemplateResponseBodyRecordTemplateRecordFormatList extends TeaModel {
         /**
-         * <p>The duration of the recording cycle. Unit: seconds. If you do not specify this parameter, the default value 6 hours is used.</p>
+         * <p>The cycle recording duration. Unit: seconds. If this parameter is not specified, the default value is 6 hours.</p>
          * 
          * <strong>example:</strong>
          * <p>7200</p>
@@ -51,7 +51,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public Integer cycleDuration;
 
         /**
-         * <p>The output file format.</p>
+         * <p>The format.</p>
          * 
          * <strong>example:</strong>
          * <p>m3u8</p>
@@ -60,7 +60,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public String format;
 
         /**
-         * <p>The name of the recording file that is stored in Object Storage Service (OSS).</p>
+         * <p>The name of the recording file stored in OSS.</p>
          * 
          * <strong>example:</strong>
          * <p>record/{JobId}/{Sequence}{EscapedStartTime}{EscapedEndTime}</p>
@@ -69,7 +69,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public String ossObjectPrefix;
 
         /**
-         * <p>The duration of a single segment. Unit: seconds.</p>
+         * <p>The duration of a single slice. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>30</p>
@@ -78,7 +78,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public Integer sliceDuration;
 
         /**
-         * <p>The name of the TS segment.</p>
+         * <p>The name of the TS slice.</p>
          * 
          * <strong>example:</strong>
          * <p>record/{JobId}/{UnixTimestamp}_{Sequence}</p>
@@ -135,7 +135,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
 
     public static class GetLiveRecordTemplateResponseBodyRecordTemplate extends TeaModel {
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard in UTC and ends with Z.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -145,7 +145,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the template was last modified.</p>
+         * <p>The last modified time.</p>
          * <p>Use the UTC time format: yyyy-MM-ddTHH:mmZ</p>
          * 
          * <strong>example:</strong>
@@ -179,14 +179,7 @@ public class GetLiveRecordTemplateResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The type of the template.</p>
-         * <p>Valid values:</p>
-         * <ul>
-         * <li><p>system</p>
-         * </li>
-         * <li><p>custom</p>
-         * </li>
-         * </ul>
+         * <p>The templatetype.</p>
          * 
          * <strong>example:</strong>
          * <p>custom</p>

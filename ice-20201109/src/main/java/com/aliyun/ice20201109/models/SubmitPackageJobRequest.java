@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitPackageJobRequest extends TeaModel {
     /**
-     * <p>The input of the job.</p>
+     * <p>The inputs for the job.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Inputs")
@@ -28,13 +28,13 @@ public class SubmitPackageJobRequest extends TeaModel {
     public SubmitPackageJobRequestOutput output;
 
     /**
-     * <p>The scheduling settings.</p>
+     * <p>The scheduling configuration.</p>
      */
     @NameInMap("ScheduleConfig")
     public SubmitPackageJobRequestScheduleConfig scheduleConfig;
 
     /**
-     * <p>The user-defined data.</p>
+     * <p>The custom user data.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;param&quot;: &quot;value&quot;}</p>
@@ -89,11 +89,11 @@ public class SubmitPackageJobRequest extends TeaModel {
 
     public static class SubmitPackageJobRequestInputsInput extends TeaModel {
         /**
-         * <p>The media object.</p>
+         * <p>The media value:</p>
          * <ul>
-         * <li><p>If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported.</p>
+         * <li><p>If the type is OSS, the input source is a URL that supports the OSS and HTTP protocols.</p>
          * </li>
-         * <li><p>If Type is set to Media, set this parameter to the ID of a media asset.</p>
+         * <li><p>If the type is Media, the input source is a media asset ID.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -105,12 +105,10 @@ public class SubmitPackageJobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the media object. Valid values:</p>
+         * <p>The media object type. Valid values:</p>
          * <ul>
-         * <li><p>OSS: an Object Storage Service (OSS) object.</p>
-         * </li>
-         * <li><p>Media: a media asset.</p>
-         * </li>
+         * <li>OSS: OSS file.</li>
+         * <li>Media: media asset ID.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -145,7 +143,7 @@ public class SubmitPackageJobRequest extends TeaModel {
 
     public static class SubmitPackageJobRequestInputs extends TeaModel {
         /**
-         * <p>The information about the input stream file.</p>
+         * <p>The packaging playback stream file information.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Input")
@@ -168,7 +166,13 @@ public class SubmitPackageJobRequest extends TeaModel {
 
     public static class SubmitPackageJobRequestOutput extends TeaModel {
         /**
-         * <p>The media object. If Type is set to OSS, set this parameter to the URL of an OSS object. Both the OSS and HTTP protocols are supported. If Type is set to Media, set this parameter to the ID of a media asset.</p>
+         * <p>The media value:</p>
+         * <ul>
+         * <li><p>If the type is OSS, the media is a URL that supports the OSS and HTTP protocols.</p>
+         * </li>
+         * <li><p>If the type is Media, the media is a media asset ID.</p>
+         * </li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -178,12 +182,10 @@ public class SubmitPackageJobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the media object. Valid values:</p>
+         * <p>The media object type. Valid values:</p>
          * <ul>
-         * <li><p>OSS: an OSS object.</p>
-         * </li>
-         * <li><p>Media: a media asset.</p>
-         * </li>
+         * <li>OSS: OSS file.</li>
+         * <li>Media: media asset ID.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -218,7 +220,7 @@ public class SubmitPackageJobRequest extends TeaModel {
 
     public static class SubmitPackageJobRequestScheduleConfig extends TeaModel {
         /**
-         * <p>The ID of the MPS queue to which the job was submitted.</p>
+         * <p>The pipeline ID.</p>
          * 
          * <strong>example:</strong>
          * <p>e37ebee5d98b4781897f6086e89f9c56</p>
@@ -227,7 +229,7 @@ public class SubmitPackageJobRequest extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The priority of the job. Valid values: 1 to 10. The greater the value, the higher the priority.</p>
+         * <p>The job priority. A larger value indicates a higher priority. Valid values: 1 to 10.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

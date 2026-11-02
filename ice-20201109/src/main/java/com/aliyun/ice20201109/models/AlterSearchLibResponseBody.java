@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AlterSearchLibResponseBody extends TeaModel {
     /**
-     * <p>The status code.</p>
+     * <p>The return code.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -32,12 +32,10 @@ public class AlterSearchLibResponseBody extends TeaModel {
     public String searchLibName;
 
     /**
-     * <p>Indicates whether the call was successful.</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The call failed.</p>
-     * </li>
+     * <li>true: Successful.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

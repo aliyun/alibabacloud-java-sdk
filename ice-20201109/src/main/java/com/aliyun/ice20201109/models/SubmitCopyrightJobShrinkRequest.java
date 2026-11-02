@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitCopyrightJobShrinkRequest extends TeaModel {
     /**
-     * <p>A description of the watermark job.</p>
+     * <p>The description of the watermark information.</p>
      * 
      * <strong>example:</strong>
      * <p>Task description</p>
@@ -14,22 +14,19 @@ public class SubmitCopyrightJobShrinkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The input video file to be watermarked.</p>
+     * <p>The video file to which the watermark is to be added.</p>
      * <blockquote>
      * <ul>
-     * <li>The OSS object or media asset must be in the same region as the service call.</li>
+     * <li>The region of the OSS file or media asset must be the same as the region of the current IMS.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{&quot;Bucket&quot;:&quot;example-bucket&quot;,&quot;Location&quot;:&quot;oss-cn-shanghai&quot;,&quot;Object&quot;:&quot;example.mp4&quot;}</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
-     * <p>The watermark level, which specifies the embedding channel. Valid values are 0, 1, and 2, which correspond to the U, UV, and YUV channels, respectively.</p>
+     * <p>The watermark level, which indicates the embedding channel. Valid values: 0 (0u), 1 (1uv), and 2 (2yuv).</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -38,7 +35,7 @@ public class SubmitCopyrightJobShrinkRequest extends TeaModel {
     public Long level;
 
     /**
-     * <p>The watermark content to embed.</p>
+     * <p>The watermark information to be added.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,29 +45,23 @@ public class SubmitCopyrightJobShrinkRequest extends TeaModel {
     public String message;
 
     /**
-     * <p>The location of the output file.</p>
+     * <p>The URL of the output file.</p>
      * <blockquote>
      * <ul>
-     * <li>The OSS bucket must be in the same region as the service call.</li>
+     * <li>The region of OSS must be the same as the region of the current IMS.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>{&quot;Bucket&quot;:&quot;example-bucket&quot;,&quot;Location&quot;:&quot;oss-cn-shanghai&quot;,&quot;Object&quot;:&quot;example_result.mp4&quot;}</p>
      */
     @NameInMap("Output")
     public String outputShrink;
 
     /**
-     * <p>The parameters for the watermark job, specified as a JSON string. The following parameter is supported:</p>
+     * <p>The parameters of the watermark job, in the JSON string format. The following parameters are supported:</p>
      * <ul>
-     * <li><p><code>algoType</code>: The algorithm type. Defaults to <code>v1</code>.</p>
-     * <ul>
-     * <li><p><code>v1</code>: For videos 3 minutes or longer.</p>
-     * </li>
-     * <li><p><code>v2</code>: For short videos.</p>
-     * </li>
+     * <li>algoType: the algorithm type. Default value: v1.<ul>
+     * <li>v1: long video copyright watermark, which supports only videos longer than 3 minutes.</li>
+     * <li>v2: short video copyright watermark.</li>
      * </ul>
      * </li>
      * </ul>
@@ -82,7 +73,7 @@ public class SubmitCopyrightJobShrinkRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>The start time of the watermark in seconds. Defaults to 0.</p>
+     * <p>The start time of the watermark, in seconds. If you do not specify this parameter, the default value is 0.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -91,7 +82,7 @@ public class SubmitCopyrightJobShrinkRequest extends TeaModel {
     public Long startTime;
 
     /**
-     * <p>The end time of the watermark in seconds. If unspecified, the watermark is applied until the video ends.</p>
+     * <p>The end time of the watermark, in seconds. If you do not specify this parameter, the default value is the duration of the video.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -100,7 +91,7 @@ public class SubmitCopyrightJobShrinkRequest extends TeaModel {
     public Long totalTime;
 
     /**
-     * <p>The user data. The value can be up to 1,024 bytes in length.</p>
+     * <p>The user-defined data, with a maximum length of 1,024 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>

@@ -11,7 +11,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
     public java.util.List<UpdateMediaLiveChannelRequestAudioSettings> audioSettings;
 
     /**
-     * <p>The ID of the channel.</p>
+     * <p>The channel ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,14 +21,14 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
     public String channelId;
 
     /**
-     * <p>The inputs associated with the channel.</p>
+     * <p>The input attachment settings.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("InputAttachments")
     public java.util.List<UpdateMediaLiveChannelRequestInputAttachments> inputAttachments;
 
     /**
-     * <p>The name of the channel. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
+     * <p>The channel name. The name can contain letters, digits, hyphens (-), and underscores (_). The name can be up to 64 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The output groups.</p>
+     * <p>The output group configuration.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("OutputGroups")
@@ -114,7 +114,9 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public Integer bitrate;
 
         /**
-         * <p>The audio codec profile. When AudioCodec is set to aac, AAC-LOW and AAC-MAIN are supported. When AudioCodec is set to libfdk_aac, AAC-LOW, AAC-HE, and AAC-HEV2 are supported.</p>
+         * <p>The audio codec profile.
+         * When the codec is aac, valid values are AAC-LOW and AAC-MAIN.
+         * When the codec is libfdk_aac, valid values are AAC-LOW, AAC-HE, and AAC-HEV2.</p>
          * 
          * <strong>example:</strong>
          * <p>AAC-LOW</p>
@@ -164,7 +166,8 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestAudioSettings extends TeaModel {
         /**
-         * <p>The audio codec. If it is not specified, the source specification is used. Valid values: aac and libfdk_aac.</p>
+         * <p>The audio codec type. If this parameter is left empty, the value is copy, which means the source codec is used.
+         * Valid values: aac and libfdk_aac.</p>
          * 
          * <strong>example:</strong>
          * <p>libfdk_aac</p>
@@ -173,13 +176,13 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String audioCodec;
 
         /**
-         * <p>The audio encoding settings.</p>
+         * <p>The audio codec settings.</p>
          */
         @NameInMap("AudioCodecSetting")
         public UpdateMediaLiveChannelRequestAudioSettingsAudioCodecSetting audioCodecSetting;
 
         /**
-         * <p>The name of the audio selector.</p>
+         * <p>The audio selector name.</p>
          * 
          * <strong>example:</strong>
          * <p>a1</p>
@@ -188,7 +191,8 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String audioSelectorName;
 
         /**
-         * <p>Enter a three-letter ISO 639-2 language code. If the audio track selected by the audio selector has a language code, the language code specified in the audio selector is used. If the selected audio track does not have a language code, or if the audio selector cannot find a track that matches its criteria, this language code is used.</p>
+         * <p>The ISO 639-2 language code. The code is 3 characters in length.
+         * If the output corresponding to the audio track selected by the selector has a language code, the language code of the selector takes precedence. If the audio track selected by the selector does not have a language code or no audio track matches the selector, this language code is used.</p>
          * 
          * <strong>example:</strong>
          * <p>eng</p>
@@ -197,18 +201,14 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String languageCode;
 
         /**
-         * <p>The tag that identifies the language of the RTMP input. It can be referenced by the output. The maximum length is 32 characters. Supported characters:</p>
+         * <p>The language name. This parameter is valid only for RTMP inputs and specifies the Name tag used by the output.
+         * The value can be up to 32 characters in length and supports the following character types:</p>
          * <ul>
-         * <li><p>Unicode letters</p>
-         * </li>
-         * <li><p>Digits (0-9)</p>
-         * </li>
-         * <li><p>Underscore (_)</p>
-         * </li>
-         * <li><p>Hyphen (-)</p>
-         * </li>
-         * <li><p>Space (a space cannot be at the beginning or end)</p>
-         * </li>
+         * <li>Unicode letters of various languages: including Latin letters (such as English and French), Chinese, Arabic, and letters of other languages.</li>
+         * <li>Digits: 0 to 9. </li>
+         * <li>Underscores (_) </li>
+         * <li>Hyphens (-)</li>
+         * <li>Spaces: spaces can appear in the middle of the value, but not at the beginning or end.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -218,7 +218,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String languageName;
 
         /**
-         * <p>The name of the audio settings. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
+         * <p>The audio setting name. The name can contain letters, digits, hyphens (-), and underscores (_). The name can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -284,7 +284,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestInputAttachmentsAudioSelectorsAudioLanguageSelection extends TeaModel {
         /**
-         * <p>Enter a three-letter ISO 639-2 language code from within an audio source.</p>
+         * <p>The ISO 639-2 language code. The code is 3 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -310,7 +310,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestInputAttachmentsAudioSelectorsAudioPidSelection extends TeaModel {
         /**
-         * <p>Enter a specific PID from within a source.</p>
+         * <p>The PID of the input source stream.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -336,7 +336,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestInputAttachmentsAudioSelectorsAudioTrackSelection extends TeaModel {
         /**
-         * <p>Specify one or more audio tracks from within a source using Track ID.</p>
+         * <p>The track ID of the input source stream. The value starts from 1.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -362,25 +362,25 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestInputAttachmentsAudioSelectors extends TeaModel {
         /**
-         * <p>The audio language selection.</p>
+         * <p>The language selector.</p>
          */
         @NameInMap("AudioLanguageSelection")
         public UpdateMediaLiveChannelRequestInputAttachmentsAudioSelectorsAudioLanguageSelection audioLanguageSelection;
 
         /**
-         * <p>The audio PID selection.</p>
+         * <p>The PID selector.</p>
          */
         @NameInMap("AudioPidSelection")
         public UpdateMediaLiveChannelRequestInputAttachmentsAudioSelectorsAudioPidSelection audioPidSelection;
 
         /**
-         * <p>The audio track selection.</p>
+         * <p>The track selector.</p>
          */
         @NameInMap("AudioTrackSelection")
         public java.util.List<UpdateMediaLiveChannelRequestInputAttachmentsAudioSelectorsAudioTrackSelection> audioTrackSelection;
 
         /**
-         * <p>The name of the audio selector. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
+         * <p>The audio selector name. The name can contain letters, digits, hyphens (-), and underscores (_). The name can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -430,13 +430,13 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestInputAttachments extends TeaModel {
         /**
-         * <p>The audio selectors.</p>
+         * <p>The audio selector list.</p>
          */
         @NameInMap("AudioSelectors")
         public java.util.List<UpdateMediaLiveChannelRequestInputAttachmentsAudioSelectors> audioSelectors;
 
         /**
-         * <p>The ID of the associated input.</p>
+         * <p>The ID of the attached input.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -446,18 +446,14 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String inputId;
 
         /**
-         * <p>The tag that identifies the language of the RTMP input. It can be referenced by the output. The maximum length is 32 characters. Supported characters:</p>
+         * <p>The language name. This parameter is valid only for RTMP inputs and specifies the Name tag used by the output.
+         * The value can be up to 32 characters in length and supports the following character types:</p>
          * <ul>
-         * <li><p>Unicode letters</p>
-         * </li>
-         * <li><p>Digits (0-9)</p>
-         * </li>
-         * <li><p>Underscore (_)</p>
-         * </li>
-         * <li><p>Hyphen (-)</p>
-         * </li>
-         * <li><p>Space (a space cannot be at the beginning or end)</p>
-         * </li>
+         * <li>Unicode letters of various languages: including Latin letters (such as English and French), Chinese, Arabic, and letters of other languages.</li>
+         * <li>Digits: 0 to 9. </li>
+         * <li>Underscores (_) </li>
+         * <li>Hyphens (-)</li>
+         * <li>Spaces: spaces can appear in the middle of the value, but not at the beginning or end.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -499,7 +495,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestOutputGroupsMediaPackageGroupSetting extends TeaModel {
         /**
-         * <p>ChannelName in MediaPackage.</p>
+         * <p>The ChannelName of the referenced MediaPackage.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -509,7 +505,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String channelName;
 
         /**
-         * <p>GroupName in MediaPackage.</p>
+         * <p>The GroupName of the referenced MediaPackage.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -543,7 +539,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestOutputGroupsOutputsMediaPackageOutputSetting extends TeaModel {
         /**
-         * <p>The manifest audio group ID. To associate several audio tracks into one group, assign the same audio group ID. Viewers can select a track as needed. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 40 characters in length.</p>
+         * <p>The manifest audio group ID settings. By specifying AudioGroupId, you can group multiple audio tracks into the same group to facilitate track selection during playback. The ID can contain letters, digits, hyphens (-), and underscores (_). The ID can be up to 40 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>audiogroup</p>
@@ -552,7 +548,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String audioGroupId;
 
         /**
-         * <p>The manifest name modifier. The child manifests include this modifier in their M3U8 file names. Letters, digits, hyphens (-), and underscores (_) are supported. The maximum length is 40 characters.</p>
+         * <p>The manifest suffix, which is generally used for naming child m3u8 files. The suffix can contain letters, digits, hyphens (-), and underscores (_). The suffix can be up to 40 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>480p</p>
@@ -585,13 +581,13 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestOutputGroupsOutputs extends TeaModel {
         /**
-         * <p>The referenced AudioSettings.</p>
+         * <p>The list of referenced audio setting names.</p>
          */
         @NameInMap("AudioSettingNames")
         public java.util.List<String> audioSettingNames;
 
         /**
-         * <p>The settings of the output delivered to MediaPackage.</p>
+         * <p>The output settings when the output group type is MediaPackage.</p>
          */
         @NameInMap("MediaPackageOutputSetting")
         public UpdateMediaLiveChannelRequestOutputGroupsOutputsMediaPackageOutputSetting mediaPackageOutputSetting;
@@ -599,12 +595,9 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         /**
          * <p>The media type of the output. Valid values:</p>
          * <ul>
-         * <li><p>0: Audio and Video</p>
-         * </li>
-         * <li><p>1: Audio If you set the value to 1, you cannot reference VideoSettings.</p>
-         * </li>
-         * <li><p>2: Video. If you set the value to 2, you cannot reference AudioSettings.</p>
-         * </li>
+         * <li>0: audio and video.</li>
+         * <li>1: audio only. If this value is set, you cannot reference video settings.</li>
+         * <li>2: video only. If this value is set, you cannot reference audio settings.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -614,7 +607,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public Integer mediaType;
 
         /**
-         * <p>The name of the output. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
+         * <p>The output name. The name can contain letters, digits, hyphens (-), and underscores (_). The name can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -624,7 +617,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The name of the referenced VideoSettings.</p>
+         * <p>The name of the referenced video setting.</p>
          * 
          * <strong>example:</strong>
          * <p>myVideo1</p>
@@ -681,13 +674,13 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestOutputGroups extends TeaModel {
         /**
-         * <p>The MediaPackage destination.</p>
+         * <p>The output group settings when the output group type is MediaPackage.</p>
          */
         @NameInMap("MediaPackageGroupSetting")
         public UpdateMediaLiveChannelRequestOutputGroupsMediaPackageGroupSetting mediaPackageGroupSetting;
 
         /**
-         * <p>The name of the output group. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
+         * <p>The output group name. The name can contain letters, digits, hyphens (-), and underscores (_). The name can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -697,14 +690,14 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The outputs in the output group.</p>
+         * <p>The output list settings.</p>
          * <p>This parameter is required.</p>
          */
         @NameInMap("Outputs")
         public java.util.List<UpdateMediaLiveChannelRequestOutputGroupsOutputs> outputs;
 
         /**
-         * <p>The output group type. Only MediaPackage is supported.</p>
+         * <p>The output group type. Currently, only MediaPackage is supported.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -754,7 +747,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSettingCodecDetail extends TeaModel {
         /**
-         * <p>The video encoding level. It is not supported yet.</p>
+         * <p>The video encoding level. This parameter is not supported.</p>
          * 
          * <strong>example:</strong>
          * <p>H264_LEVEL_AUTO</p>
@@ -763,7 +756,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String level;
 
         /**
-         * <p>The H.264 profile. Valid values: BASELINE, HIGH, and MAIN. Default value: MAIN. The parameter takes effect only when the codec is H.264.</p>
+         * <p>The H.264 encoding profile. Valid values: BASELINE, HIGH, and MAIN. Default value: MAIN. This parameter takes effect only when the H.264 encoder is used.</p>
          * 
          * <strong>example:</strong>
          * <p>MAIN</p>
@@ -796,7 +789,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSettingFramerate extends TeaModel {
         /**
-         * <p>The frame rate mode. Valid values: SPECIFIED (fixed frame rate) and FROM_SOURCE (use source specification).</p>
+         * <p>The frame rate setting mode. Valid values: SPECIFIED (fixed frame rate) and FROM_SOURCE (same as the source video).</p>
          * 
          * <strong>example:</strong>
          * <p>SPECIFIED</p>
@@ -805,7 +798,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String framerateControl;
 
         /**
-         * <p>The denominator of the fixed frame rate. The parameter is required when FramerateControl is set to SPECIFIED. Valid values: 1 to 60. The numerator must be divisible by the denominator.</p>
+         * <p>The denominator of the fixed frame rate. This parameter is required when the frame rate setting mode is set to SPECIFIED. Valid values: 1 to 60. The value must be divisible by the numerator.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -814,7 +807,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public Integer framerateDenominator;
 
         /**
-         * <p>The numerator of the fixed frame rate. The parameter is required when FramerateControl is set to SPECIFIED. Valid values: 1 to 60. The numerator must be divisible by the denominator.</p>
+         * <p>The numerator of the fixed frame rate. This parameter is required when the frame rate setting mode is set to SPECIFIED. Valid values: 1 to 60. The denominator must be divisible by the numerator.</p>
          * 
          * <strong>example:</strong>
          * <p>25</p>
@@ -855,7 +848,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSettingGop extends TeaModel {
         /**
-         * <p>The number of B frames. Valid values: 1 to 3.</p>
+         * <p>The number of B-frames. Valid values: 1 to 3.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -864,7 +857,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public Integer bframesNum;
 
         /**
-         * <p>The GOP size. When GopSizeUnits is set to SECONDS, the value range is from 1 to 20. When GopSizeUnits is set to FRAMES, the value range is from 1 to 3000.</p>
+         * <p>The size of the video GOP. If the length unit is SECONDS, valid values are 1 to 20. If the length unit is FRAMES, valid values are 1 to 3000.</p>
          * 
          * <strong>example:</strong>
          * <p>90</p>
@@ -873,7 +866,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public Integer gopSize;
 
         /**
-         * <p>The GOP size unit. Valid values: FRAMES and SECONDS.</p>
+         * <p>The unit of the video GOP length. Valid values: FRAMES (frames) and SECONDS (seconds).</p>
          * 
          * <strong>example:</strong>
          * <p>FRAMES</p>
@@ -914,7 +907,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSettingRate extends TeaModel {
         /**
-         * <p>The video bitrate. Unit: bit/s. If you set it to 0 or leave it empty, the source specification is used. Valid values: 50000 to 6000000. The value must be divisible by 1000.</p>
+         * <p>The video bitrate. Unit: bit/s. If you do not specify this parameter or set it to 0, the bitrate of the source video is used. Valid values: 50000 to 6000000. The value must be a multiple of 1000.</p>
          * 
          * <strong>example:</strong>
          * <p>2500000</p>
@@ -923,7 +916,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public Integer bitrate;
 
         /**
-         * <p>The video buffer size. Unit: bit/s. Valid values: 100000 to 6000000. The value must be divisible by 1000.</p>
+         * <p>The buffer size for video encoding. Unit: bit/s. Valid values: 100000 to 6000000. The value must be a multiple of 1000.</p>
          * 
          * <strong>example:</strong>
          * <p>6000000</p>
@@ -932,7 +925,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public Integer bufferSize;
 
         /**
-         * <p>The maximum bitrate. Unit: bit/s. Valid values: 100000 to 6000000. The value must be divisible by 1000.</p>
+         * <p>The maximum bitrate for video encoding. Unit: bit/s. Valid values: 100000 to 6000000. The value must be a multiple of 1000.</p>
          * 
          * <strong>example:</strong>
          * <p>6000000</p>
@@ -941,7 +934,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public Integer maxBitrate;
 
         /**
-         * <p>The bitrate control mode. Valid values: CBR, ABR, and VBR.</p>
+         * <p>The rate control mode for video encoding. Valid values: CBR, ABR, and VBR.</p>
          * 
          * <strong>example:</strong>
          * <p>ABR</p>
@@ -990,25 +983,25 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSetting extends TeaModel {
         /**
-         * <p>The video encoding settings.</p>
+         * <p>The video codec detail settings.</p>
          */
         @NameInMap("CodecDetail")
         public UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSettingCodecDetail codecDetail;
 
         /**
-         * <p>The frame rate. If it is not specified, the source specification is used.</p>
+         * <p>The video frame rate settings. If you do not specify this parameter, the frame rate settings of the source video are used.</p>
          */
         @NameInMap("Framerate")
         public UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSettingFramerate framerate;
 
         /**
-         * <p>The GOP setting. If it is not specified, the source specification is used.</p>
+         * <p>The video group of pictures (GOP) settings. If you do not specify this parameter, the GOP settings of the source video are used.</p>
          */
         @NameInMap("Gop")
         public UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSettingGop gop;
 
         /**
-         * <p>The video encoding rate. If it is not specified, the source specification is used.</p>
+         * <p>The video encoding rate settings. If you do not specify this parameter, the rate settings of the source video are used.</p>
          */
         @NameInMap("Rate")
         public UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSettingRate rate;
@@ -1054,13 +1047,11 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
 
     public static class UpdateMediaLiveChannelRequestVideoSettings extends TeaModel {
         /**
-         * <p>The height of the output. If you set it to 0 or leave it empty, the height automatically adapts to the specified width to maintain the original aspect ratio.</p>
-         * <p>Valid values:</p>
+         * <p>The height of the video resolution. If you do not specify this parameter or set it to 0, the height is automatically scaled based on the width.
+         * Valid values:</p>
          * <ul>
-         * <li><p>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</p>
-         * </li>
-         * <li><p>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</p>
-         * </li>
+         * <li>For standard transcoding: max(Width, Height) &lt; 3840 and min(Width, Height) &lt; 2160.</li>
+         * <li>For Narrowband HD transcoding: max(Width, Height) &lt; 1920 and min(Width, Height) &lt; 1080.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1070,7 +1061,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public Integer height;
 
         /**
-         * <p>The name of the video settings. Letters, digits, hyphens (-), and underscores (_) are supported. It can be up to 64 characters in length.</p>
+         * <p>The name of the video setting. The name can contain letters, digits, hyphens (-), and underscores (_). It can be up to 64 characters in length.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -1089,7 +1080,7 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String videoCodec;
 
         /**
-         * <p>The video encoding settings.</p>
+         * <p>The video codec settings.</p>
          */
         @NameInMap("VideoCodecSetting")
         public UpdateMediaLiveChannelRequestVideoSettingsVideoCodecSetting videoCodecSetting;
@@ -1097,12 +1088,10 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         /**
          * <p>The video transcoding method. Valid values:</p>
          * <ul>
-         * <li><p>NORMAL: regular transcoding</p>
-         * </li>
-         * <li><p>NBHD: Narrowband HD™ transcoding</p>
-         * </li>
+         * <li>NORMAL: standard transcoding.</li>
+         * <li>NBHD: Narrowband HD transcoding.
+         * Default value: NORMAL.</li>
          * </ul>
-         * <p>If not specified, regular transcoding is used by default.</p>
          * 
          * <strong>example:</strong>
          * <p>NORMAL</p>
@@ -1111,13 +1100,11 @@ public class UpdateMediaLiveChannelRequest extends TeaModel {
         public String videoCodecType;
 
         /**
-         * <p>The width of the output. If you set it to 0 or leave it empty, the width automatically adapts to the specified height to maintain the original aspect ratio.</p>
-         * <p>Valid values:</p>
+         * <p>The width of the video resolution. If you do not specify this parameter or set it to 0, the width is automatically scaled based on the height.
+         * Valid values:</p>
          * <ul>
-         * <li><p>For regular transcoding, the larger dimension cannot exceed 3840 px, and the smaller one cannot exceed 2160 px.</p>
-         * </li>
-         * <li><p>For Narrowband HD™ transcoding, the larger dimension cannot exceed 1920 px, and the smaller one cannot exceed 1080 px.</p>
-         * </li>
+         * <li>For standard transcoding: max(Width, Height) &lt; 3840 and min(Width, Height) &lt; 2160.</li>
+         * <li>For Narrowband HD transcoding: max(Width, Height) &lt; 1920 and min(Width, Height) &lt; 1080.</li>
          * </ul>
          * 
          * <strong>example:</strong>

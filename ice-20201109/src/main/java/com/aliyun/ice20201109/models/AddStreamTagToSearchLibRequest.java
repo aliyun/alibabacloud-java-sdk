@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddStreamTagToSearchLibRequest extends TeaModel {
     /**
-     * <p>The ID of the media asset.</p>
+     * <p>The media asset ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>b48fb04483915d4f2cd8</strong></strong></strong></p>
@@ -14,7 +14,7 @@ public class AddStreamTagToSearchLibRequest extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The message body.</p>
+     * <p>The message body for media asset information.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;startTime&quot;:1657684600793,&quot;endTime&quot;:1657684600793,&quot;userData&quot;:&quot;{}&quot;}</p>

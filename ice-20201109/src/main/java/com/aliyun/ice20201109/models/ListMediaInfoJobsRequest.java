@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListMediaInfoJobsRequest extends TeaModel {
     /**
-     * <p>The end time for filtering by task creation time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The end time of the job creation time filter. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-15T00:00:00Z</p>
@@ -14,7 +14,7 @@ public class ListMediaInfoJobsRequest extends TeaModel {
     public String endOfCreateTime;
 
     /**
-     * <p>Filters by jobId.</p>
+     * <p>The job ID used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>7b38a5d86f1e47838927b6e7ccb1****</p>
@@ -23,7 +23,7 @@ public class ListMediaInfoJobsRequest extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The token for the next page in consecutive paging query requests. This parameter is not required for the first page.</p>
+     * <p>The mark for the next page during consecutive paging. This parameter is not required for the first paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>ab4802364a2e49208c99efab82df****</p>
@@ -34,8 +34,8 @@ public class ListMediaInfoJobsRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li>CreateTimeDesc: sorts by creation time in descending order.</li>
-     * <li>CreateTimeAsc: sorts by creation time in ascending order.</li>
+     * <li>CreateTimeDesc: Sorts by creation time in descending order.</li>
+     * <li>CreateTimeAsc: Sorts by creation time in ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListMediaInfoJobsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page size. Default value: 10.</p>
+     * <p>The number of entries per page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -54,7 +54,7 @@ public class ListMediaInfoJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The start time for filtering by task creation time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
+     * <p>The start time of the job creation time filter. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-01T00:00:00Z</p>
@@ -63,7 +63,12 @@ public class ListMediaInfoJobsRequest extends TeaModel {
     public String startOfCreateTime;
 
     /**
-     * <p>The task status.</p>
+     * <p>The job status. Valid values:</p>
+     * <ul>
+     * <li>Init: Submitted.</li>
+     * <li>Success: Succeeded.</li>
+     * <li>Fail: Failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>Success</p>

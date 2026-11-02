@@ -14,9 +14,9 @@ public class SubmitTraceM3u8JobRequest extends TeaModel {
     public String keyUri;
 
     /**
-     * <p>The OSS destination for the output M3U8 file.</p>
+     * <p>The OSS output address of the m3u8 file.</p>
      * <blockquote>
-     * <p>The OSS bucket must be in the same region as your MPS service.</p>
+     * <p>The region of the OSS bucket must be the same as the region of the current MPS.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      */
@@ -24,13 +24,13 @@ public class SubmitTraceM3u8JobRequest extends TeaModel {
     public SubmitTraceM3u8JobRequestOutput output;
 
     /**
-     * <p>A JSON string that contains parameters for the watermarking job. The following parameter is supported:</p>
+     * <p>The watermark job parameters. The value is a JSON string. The following parameters are supported:</p>
      * <ul>
-     * <li><p><code>m3u8Type</code>: The algorithm type. The default value is <code>v1</code>.</p>
+     * <li><p>m3u8Type: the algorithm type. Default value: v1.</p>
      * <ul>
-     * <li><p><code>v1</code>: Generates an M3U8 file that uses an absolute path. The file can be played directly. The signature is valid for 24 hours. After expiration, you must submit a new job to get a new M3U8 file.</p>
+     * <li><p>v1: generates an m3u8 file with an absolute path, which can be played directly. The signature authentication is valid for 24 hours. After the authentication expires, you must resubmit the job to obtain the m3u8 file.</p>
      * </li>
-     * <li><p><code>v2</code>: Generates an M3U8 file that uses a relative path. This file must be stored in the same directory as the TS files.</p>
+     * <li><p>v2: generates an m3u8 file with a relative path, which must be placed in the same directory as the TS files.</p>
      * </li>
      * </ul>
      * </li>
@@ -43,16 +43,16 @@ public class SubmitTraceM3u8JobRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>The watermark content to embed.</p>
+     * <p>The tracing watermark information.</p>
      * 
      * <strong>example:</strong>
-     * <p>Trace watermark test</p>
+     * <p>Traceability Watermark Test</p>
      */
     @NameInMap("Trace")
     public String trace;
 
     /**
-     * <p>The media ID of the processed A/B stream for video watermarking for tracing. This ID is returned in the response when you submit the A/B stream job.</p>
+     * <p>The media ID of the processed tracing watermark AB stream. You can obtain this ID from the response parameters of the operation that submits a video tracing watermark AB stream job.</p>
      * 
      * <strong>example:</strong>
      * <p>437bd2b516ffda105d07b12a9a82****</p>
@@ -107,9 +107,14 @@ public class SubmitTraceM3u8JobRequest extends TeaModel {
 
     public static class SubmitTraceM3u8JobRequestOutput extends TeaModel {
         /**
-         * <p>The output file path. Only OSS paths are supported. You can use one of the following formats:</p>
-         * <p>1\. <code>oss://bucket/object</code></p>
-         * <p>2\. <code>http(s)://bucket.oss-[regionId].aliyuncs.com/object</code>. In these formats, <code>bucket</code> specifies the name of an OSS bucket in the same region as your project, and <code>object</code> specifies the file path.</p>
+         * <p>The output file information. OSS addresses are supported. The OSS address rules are as follows:</p>
+         * <ol>
+         * <li><p>oss://bucket/object</p>
+         * </li>
+         * <li><p>http(s)://bucket.oss-[regionId].aliyuncs.com/object
+         * where bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
+         * </li>
+         * </ol>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -119,9 +124,9 @@ public class SubmitTraceM3u8JobRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the output destination. Valid values:</p>
+         * <p>The output file type. Valid values:</p>
          * <ol>
-         * <li><code>OSS</code>: an OSS file location.</li>
+         * <li>OSS: OSS file address.</li>
          * </ol>
          * <p>This parameter is required.</p>
          * 

@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetVodPackagingConfigurationResponseBody extends TeaModel {
     /**
-     * <p>The information about the packaging configuration.</p>
+     * <p>The details of the VOD packaging configuration.</p>
      */
     @NameInMap("PackagingConfiguration")
     public VodPackagingConfiguration packagingConfiguration;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
     /**
-     * <p>The LivePackageOriginEndpoint object.</p>
+     * <p>The LivePackageOriginEndpoint type.</p>
      */
     @NameInMap("LivePackageOriginEndpoint")
     public CreateLivePackageOriginEndpointResponseBodyLivePackageOriginEndpoint livePackageOriginEndpoint;
@@ -60,7 +60,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String channelName;
 
         /**
-         * <p>The time when the endpoint was created.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -72,7 +72,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
          * <p>The description of the endpoint.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is an origin endpoint.</p>
+         * <p>This is an origin endpoint</p>
          */
         @NameInMap("Description")
         public String description;
@@ -114,7 +114,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String ipBlacklist;
 
         /**
-         * <p>The IP whitelist.</p>
+         * <p>The IP address whitelist.</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24,10.0.0.1/24</p>
@@ -123,7 +123,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String ipWhitelist;
 
         /**
-         * <p>The time when the endpoint was last modified.</p>
+         * <p>The last modified time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -138,7 +138,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public LivePackagingConfig livePackagingConfig;
 
         /**
-         * <p>The manifest name.</p>
+         * <p>The name of the manifest.</p>
          * 
          * <strong>example:</strong>
          * <p>manifest</p>
@@ -156,7 +156,7 @@ public class CreateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of days for time-shifting. Maximum value: 30.</p>
+         * <p>The time-shift duration in days. Maximum value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

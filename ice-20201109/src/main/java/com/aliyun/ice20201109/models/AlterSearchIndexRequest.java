@@ -7,7 +7,7 @@ public class AlterSearchIndexRequest extends TeaModel {
     /**
      * <p>The index configuration.</p>
      * <blockquote>
-     * <p>Notice:  You must specify either IndexStatus or IndexConfig.</p>
+     * <p>Notice:  You must specify either the IndexStatus or IndexConfig parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -19,11 +19,11 @@ public class AlterSearchIndexRequest extends TeaModel {
     /**
      * <p>The index status. Default value: Active. Valid values:</p>
      * <ul>
-     * <li>Active: activated.</li>
-     * <li>Deactive: deactivated.</li>
+     * <li>Active: Activated.</li>
+     * <li>Deactive: Deactivated.</li>
      * </ul>
      * <blockquote>
-     * <p>Notice:  You must specify either IndexStatus or IndexConfig.</p>
+     * <p>Notice:  You must specify either the IndexStatus or IndexConfig parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -35,9 +35,9 @@ public class AlterSearchIndexRequest extends TeaModel {
     /**
      * <p>The index type. Valid values:</p>
      * <ul>
-     * <li>mm: large model.</li>
-     * <li>face: face.</li>
-     * <li>aiLabel: intelligent tag.</li>
+     * <li>mm: Large model.</li>
+     * <li>face: Face.</li>
+     * <li>aiLabel: Intelligent tag.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -48,10 +48,10 @@ public class AlterSearchIndexRequest extends TeaModel {
     public String indexType;
 
     /**
-     * <p>The search library name.</p>
+     * <p>The name of the search library.</p>
      * <ul>
-     * <li>If no search library name is specified, the search index is created in the default IMS search library. Default value: ims-default-search-lib.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/2584455.html">QuerySearchLib</a> operation to query existing search library information.</li>
+     * <li>If you do not specify the search library name, the search index is created in the default search library of IMS. Default value: ims-default-search-lib.</li>
+     * <li>You can also call the <a href="https://help.aliyun.com/document_detail/2584455.html">QuerySearchLib</a> operation to query existing search library information.</li>
      * </ul>
      * 
      * <strong>example:</strong>

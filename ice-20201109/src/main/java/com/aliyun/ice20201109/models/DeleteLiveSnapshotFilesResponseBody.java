@@ -11,7 +11,7 @@ public class DeleteLiveSnapshotFilesResponseBody extends TeaModel {
     public java.util.List<DeleteLiveSnapshotFilesResponseBodyDeleteFileResultList> deleteFileResultList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>

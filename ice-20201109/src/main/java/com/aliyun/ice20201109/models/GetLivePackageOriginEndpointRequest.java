@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLivePackageOriginEndpointRequest extends TeaModel {
     /**
-     * <p>The channel name.</p>
+     * <p>The name of the channel.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class GetLivePackageOriginEndpointRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>The endpoint name.</p>
+     * <p>The name of the endpoint.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +25,7 @@ public class GetLivePackageOriginEndpointRequest extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>The channel group name.</p>
+     * <p>The name of the channel group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -11,7 +11,7 @@ public class GetProjectExportJobResponseBody extends TeaModel {
     public GetProjectExportJobResponseBodyProjectExportJob projectExportJob;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>2876-6263-4B75-8F2C-CD0F7FCF</strong></strong></p>
@@ -41,9 +41,15 @@ public class GetProjectExportJobResponseBody extends TeaModel {
     }
 
     public static class GetProjectExportJobResponseBodyProjectExportJobExportResultSrtList extends TeaModel {
+        /**
+         * <p>The URL of the subtitle file.</p>
+         */
         @NameInMap("SrtUrl")
         public String srtUrl;
 
+        /**
+         * <p>The language tag of the subtitle.</p>
+         */
         @NameInMap("Tag")
         public String tag;
 
@@ -71,11 +77,14 @@ public class GetProjectExportJobResponseBody extends TeaModel {
     }
 
     public static class GetProjectExportJobResponseBodyProjectExportJobExportResult extends TeaModel {
+        /**
+         * <p>The URL of the exported audio file.</p>
+         */
         @NameInMap("AudioUrl")
         public String audioUrl;
 
         /**
-         * <p>The file URL of the exported project, which is typically an authenticated OSS URL. This field is returned when the export type is AdobePremierePro.</p>
+         * <p>The file URL of the exported project, which is typically an OSS URL with authentication. This field is returned when the export type is AdobePremierePro.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example_prefix/exported_project_1e8c39a502c3436c84f88290cd713bf3.zip?Expires=1750331685&">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example_prefix/exported_project_1e8c39a502c3436c84f88290cd713bf3.zip?Expires=1750331685&amp;</a>....</p>
@@ -83,11 +92,14 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         @NameInMap("ProjectUrl")
         public String projectUrl;
 
+        /**
+         * <p>The list of exported subtitle files.</p>
+         */
         @NameInMap("SrtList")
         public java.util.List<GetProjectExportJobResponseBodyProjectExportJobExportResultSrtList> srtList;
 
         /**
-         * <p>The online editing timeline. This field is returned when the export type is BaseTimeline. For more information about the structure, see <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configuration</a>.</p>
+         * <p>The cloud editing timeline. This field is returned when the export type is BaseTimeline. For the specific structure definition, see <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configuration</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;VideoTracks&quot;:[{&quot;VideoTrackClips&quot;:[{&quot;Type&quot;:&quot;Video&quot;,&quot;MediaId&quot;:&quot;<strong><strong>4d7cf14dc7b83b0e801c</strong></strong>&quot;,&quot;MediaURL&quot;:&quot;<a href="https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4%22,%22TimelineIn%22:0.0,%22TimelineOut%22:5.0,%22In%22:0.0,%22Out%22:5.0,%22Speed%22:1.0,%22Duration%22:5.0,%22VirginDuration%22:13.334,%22Height%22:1.0,%22Width%22:1.0,%22X%22:0.0,%22Y%22:0.0%7D%5D%7D%5D%7D">https://test-bucket.oss-cn-shanghai.aliyuncs.com/test.mp4&quot;,&quot;TimelineIn&quot;:0.0,&quot;TimelineOut&quot;:5.0,&quot;In&quot;:0.0,&quot;Out&quot;:5.0,&quot;Speed&quot;:1.0,&quot;Duration&quot;:5.0,&quot;VirginDuration&quot;:13.334,&quot;Height&quot;:1.0,&quot;Width&quot;:1.0,&quot;X&quot;:0.0,&quot;Y&quot;:0.0}]}]}</a></p>
@@ -138,7 +150,7 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         /**
          * <p>The error code of the project export task.</p>
          * <blockquote>
-         * <p>Notice: Check this field when the task fails.</p>
+         * <p>Notice: Pay attention to this field when the task fails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -154,9 +166,9 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         public GetProjectExportJobResponseBodyProjectExportJobExportResult exportResult;
 
         /**
-         * <p>The type of the project export. Valid values:</p>
+         * <p>The export type of the project. Valid values:</p>
          * <ul>
-         * <li><strong>BaseTimeline</strong>: timeline.</li>
+         * <li><strong>BaseTimeline</strong>: Timeline.</li>
          * <li><strong>AdobePremierePro</strong>: Adobe Premiere Pro project.</li>
          * </ul>
          * 
@@ -178,7 +190,7 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         /**
          * <p>The error message of the project export task.</p>
          * <blockquote>
-         * <p>Notice: Check this field when the task fails.</p>
+         * <p>Notice: Pay attention to this field when the task fails.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -188,7 +200,7 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The ID of the online editing project.</p>
+         * <p>The ID of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>fddd7748b58bf1d47e95</strong></strong></p>
@@ -199,10 +211,10 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         /**
          * <p>The status of the project export task. Valid values:</p>
          * <ul>
-         * <li><strong>Init</strong>: initial state.</li>
-         * <li><strong>Processing</strong>: processing.</li>
-         * <li><strong>Success</strong>: succeeded.</li>
-         * <li><strong>Failed</strong>: failed.</li>
+         * <li><strong>Init</strong>: Initial state.</li>
+         * <li><strong>Processing</strong>: Processing.</li>
+         * <li><strong>Success</strong>: Succeeded.</li>
+         * <li><strong>Failed</strong>: Failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -212,7 +224,7 @@ public class GetProjectExportJobResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The custom settings in JSON format.</p>
+         * <p>The custom user settings in JSON format.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;NotifyAddress&quot;:&quot;<a href="http://xx.xx.xxx%22,%22Key%22:%22Valuexxx%22%7D">http://xx.xx.xxx&quot;,&quot;Key&quot;:&quot;Valuexxx&quot;}</a></p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetEditingProjectRequest extends TeaModel {
     /**
-     * <p>The ID of the online editing project.</p>
+     * <p>The ID of the cloud editing project.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,9 +15,11 @@ public class GetEditingProjectRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The ID of the request source. Valid values:</p>
-     * <p>\- OpenAPI (default): Timeline conversion is not performed.</p>
-     * <p>\- WebSDK: If you specify this value, the project timeline is automatically converted into the frontend style, and the materials in the timeline are associated with the project to enable preview by using frontend web SDKs.</p>
+     * <p>The identifier of the request source. Valid values:</p>
+     * <ul>
+     * <li>OpenAPI: Default. No timeline conversion is performed.</li>
+     * <li>WebSDK: If this field is passed, the project timeline is automatically converted to the frontend style, and the associated media assets in the timeline are bound to the project for preview in the frontend WebSDK.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>WebSDK</p>

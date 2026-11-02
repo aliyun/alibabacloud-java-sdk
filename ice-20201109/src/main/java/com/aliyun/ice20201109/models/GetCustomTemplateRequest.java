@@ -14,7 +14,7 @@ public class GetCustomTemplateRequest extends TeaModel {
     public Integer subtype;
 
     /**
-     * <p>The ID of the custom template.</p>
+     * <p>The template ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
@@ -23,7 +23,7 @@ public class GetCustomTemplateRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The ID of the template type. This parameter is required if you omit <code>TemplateId</code> to get a default template.</p>
+     * <p>The templatetype ID used when querying the default template. This parameter is required when TemplateId is empty.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

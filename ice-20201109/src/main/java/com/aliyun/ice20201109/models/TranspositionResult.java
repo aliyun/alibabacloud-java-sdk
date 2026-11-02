@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class TranspositionResult extends TeaModel {
     /**
      * <ul>
-     * <li>The target language of the translation.</li>
-     * <li>This field is only used in translation-related scenarios.</li>
+     * <li>The target language for translation transposition. For more information, see the list of target languages for video translation.</li>
+     * <li>This field is only used in video translation scenarios.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,12 +18,12 @@ public class TranspositionResult extends TeaModel {
 
     /**
      * <ul>
-     * <li>The translated text corresponding to the matched hotwords. Maximum length: 100 characters.</li>
-     * <li>This field is only used in translation-related scenarios.</li>
+     * <li>The text after translation transposition, which is the expected output text after the matched hot word is translated. The maximum length is 100 characters.</li>
+     * <li>This field is only used in scenarios related to the translation feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>你好</p>
+     * <p>hello</p>
      */
     @NameInMap("TranslatedText")
     public String translatedText;

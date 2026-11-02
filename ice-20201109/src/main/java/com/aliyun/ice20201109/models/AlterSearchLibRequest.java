@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AlterSearchLibRequest extends TeaModel {
     /**
-     * <p>The configuration of the search library, in JSON string format. The fields include the following:</p>
+     * <p>The search library configuration in JSON string format. It includes the following fields:</p>
      * <ul>
-     * <li>faceGroupIds: The IDs of custom face recognition libraries. You can create these libraries by calling the CreateRecognitionLib operation. You can specify up to three library IDs, separated by commas (,).</li>
+     * <li>faceGroupIds: the IDs of self-registered face libraries created by calling CreateRecognitionLib. A maximum of three self-registered face libraries are supported, concatenated by commas (,).</li>
      * </ul>
      * 
      * <strong>example:</strong>

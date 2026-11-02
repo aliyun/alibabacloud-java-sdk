@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitSegmentationJobResponseBody extends TeaModel {
     /**
-     * <p>The ID of the segmentation job.</p>
+     * <p>The ID of the video splitting task.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>cdb3e74639973036bc84</strong></strong></p>
@@ -14,7 +14,7 @@ public class SubmitSegmentationJobResponseBody extends TeaModel {
     public String jobId;
 
     /**
-     * <p>The unique ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>3B-0E1A-586A-AC29-742247</strong></strong></strong></p>

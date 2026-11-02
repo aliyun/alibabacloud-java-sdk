@@ -7,24 +7,12 @@ public class QueryMediaCensorJobListResponseBody extends TeaModel {
     @NameInMap("MediaCensorJobList")
     public QueryMediaCensorJobListResponseBodyMediaCensorJobList mediaCensorJobList;
 
-    /**
-     * <p>A pagination token. It can be used in the next request to retrieve a new page of results. The value is 32-character UUID. If the returned query results cannot be displayed within one page, this parameter is returned. The value of this parameter is updated for each query.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>9b1a42bc6e8d46e6a1383b7e7f01****</p>
-     */
     @NameInMap("NextPageToken")
     public String nextPageToken;
 
     @NameInMap("NonExistIds")
     public QueryMediaCensorJobListResponseBodyNonExistIds nonExistIds;
 
-    /**
-     * <p>The request ID.</p>
-     * 
-     * <strong>example:</strong>
-     * <p>D1D5C080-8E2F-5030-8AB4-13092F17631B</p>
-     */
     @NameInMap("RequestId")
     public String requestId;
 

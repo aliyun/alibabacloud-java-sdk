@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class ListAlertsResponseBody extends TeaModel {
     /**
-     * <p>The alerts.</p>
+     * <p>The alert list.</p>
      */
     @NameInMap("Alerts")
     public java.util.List<ListAlertsResponseBodyAlerts> alerts;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class ListAlertsResponseBody extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Valid values: 1 to 100.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,7 +29,7 @@ public class ListAlertsResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p><strong>Request ID</strong></p>
+     * <p><strong>The request ID.</strong></p>
      * 
      * <strong>example:</strong>
      * <p>xxx-xxxx-xxxxx-xxxx</p>
@@ -38,7 +38,7 @@ public class ListAlertsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries that meet the conditions.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -93,12 +93,15 @@ public class ListAlertsResponseBody extends TeaModel {
 
     public static class ListAlertsResponseBodyAlerts extends TeaModel {
         /**
-         * <p>The alert type.</p>
+         * <p>The category. Valid values:</p>
+         * <ul>
+         * <li>Scheduling Error: An error occurred while building the schedule.</li>
+         * <li>PlayBack Warning: An exception occurred while pulling the address when adding a source.</li>
+         * <li>info: Information.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Scheduling Error: An error occurred when building the schedule.
-         * PlayBack Warning: Address pull exception when adding source.
-         * info: Information.</p>
+         * <p>Scheduling Error</p>
          */
         @NameInMap("Category")
         public String category;
@@ -113,7 +116,7 @@ public class ListAlertsResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The time when the alert was received in UTC.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-16T10:03Z</p>
@@ -122,7 +125,7 @@ public class ListAlertsResponseBody extends TeaModel {
         public String gmtCreate;
 
         /**
-         * <p>The time when the alert was modified in UTC.</p>
+         * <p>The modification time.</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-16T10:03Z</p>
@@ -140,7 +143,7 @@ public class ListAlertsResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The ARN of the related resource.</p>
+         * <p>The ARNs of related resources.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ims:mediaweaver:<regionId>:<userId>:vodSource/mySourceLocation/MySource</p>
@@ -149,7 +152,7 @@ public class ListAlertsResponseBody extends TeaModel {
         public String relatedResourceArns;
 
         /**
-         * <p>The ARN of the resource.</p>
+         * <p>The resource ARN.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:ims:mediaweaver:<regionId>:<userId>:vodSource/mySourceLocation/MySource</p>

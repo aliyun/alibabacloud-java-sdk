@@ -42,13 +42,13 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
 
     public static class GetMediaConvertJobResponseBodyJobConfig extends TeaModel {
         /**
-         * <p>The job inputs.</p>
+         * <p>The list of inputs for the media transcoding job.</p>
          */
         @NameInMap("Inputs")
         public java.util.List<MediaConvertInput> inputs;
 
         /**
-         * <p>The job name.</p>
+         * <p>The name of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>job-1-20241205-102045</p>
@@ -57,13 +57,13 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         public String jobName;
 
         /**
-         * <p>The job output group configurations.</p>
+         * <p>The list of output group configurations for the media transcoding job.</p>
          */
         @NameInMap("OutputGroups")
         public java.util.List<MediaConvertOutputGroup> outputGroups;
 
         /**
-         * <p>The job output configurations.</p>
+         * <p>The list of output configurations for the media transcoding job.</p>
          */
         @NameInMap("Outputs")
         public java.util.List<MediaConvertOutput> outputs;
@@ -109,7 +109,7 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
 
     public static class GetMediaConvertJobResponseBodyJob extends TeaModel {
         /**
-         * <p>The idempotency parameter for the job creation request.</p>
+         * <p>The idempotency parameter for the media transcoding job creation request.</p>
          * 
          * <strong>example:</strong>
          * <p>780018cb-55ba-466d-8acc-946c0c319a0e</p>
@@ -118,7 +118,7 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         public String clientToken;
 
         /**
-         * <p>The error code if the job fails.</p>
+         * <p>The media transcoding failure code.</p>
          * 
          * <strong>example:</strong>
          * <p>InvalidParameter.ResourceContentBad</p>
@@ -127,13 +127,13 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         public String code;
 
         /**
-         * <p>The job configuration.</p>
+         * <p>The configuration of the media transcoding job.</p>
          */
         @NameInMap("Config")
         public GetMediaConvertJobResponseBodyJobConfig config;
 
         /**
-         * <p>The time when the job was created, in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The creation time of the job, in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-07T13:01:07Z</p>
@@ -142,7 +142,7 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the job finished, in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
+         * <p>The completion time of the job, in the yyyy-MM-ddTHH:mm:ssZ format (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-12-07T13:01:07Z</p>
@@ -151,7 +151,7 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         public String finishTime;
 
         /**
-         * <p>The job ID. This is a 32-character string.</p>
+         * <p>The ID of the media transcoding job, which is a 32-character string.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>4579b5e748b99a27f6d6</strong></strong></strong></p>
@@ -160,7 +160,7 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The error message detailing the failure.</p>
+         * <p>The detailed information about the media transcoding failure.</p>
          * 
          * <strong>example:</strong>
          * <p>The resource operated InputFile is bad</p>
@@ -169,19 +169,19 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The execution results of the outputs specified in the job configuration.</p>
+         * <p>The list of media transcoding output result details, which correspond to the execution results of the transcoding output list in the transcoding configuration.</p>
          */
         @NameInMap("OutputDetails")
         public java.util.List<MediaConvertOutputDetail> outputDetails;
 
         /**
-         * <p>The execution results of the output groups specified in the job configuration.</p>
+         * <p>The list of media transcoding output group results, which correspond to the execution results of the transcoding output group list in the transcoding configuration.</p>
          */
         @NameInMap("OutputGroupDetails")
         public java.util.List<MediaConvertOutputGroupDetail> outputGroupDetails;
 
         /**
-         * <p>The completion percentage.</p>
+         * <p>The completion percentage of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -199,7 +199,7 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The ID of the job creation request.</p>
+         * <p>The request ID for creating the media transcoding job.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -208,18 +208,13 @@ public class GetMediaConvertJobResponseBody extends TeaModel {
         public String requestId;
 
         /**
-         * <p>The job state. Valid values:</p>
+         * <p>The status of the media transcoding job. Valid values:</p>
          * <ul>
-         * <li><p>Inited: The job is initialized.</p>
-         * </li>
-         * <li><p>Running: The job is in progress.</p>
-         * </li>
-         * <li><p>Complete: The job finished successfully.</p>
-         * </li>
-         * <li><p>Error: The job failed.</p>
-         * </li>
-         * <li><p>Cancelled: The job was cancelled.</p>
-         * </li>
+         * <li>Inited: Initialized.</li>
+         * <li>Running: Running.</li>
+         * <li>Complete: Transcoding completed.</li>
+         * <li>Error: Transcoding error.</li>
+         * <li>Cancelled: Canceled.</li>
          * </ul>
          * 
          * <strong>example:</strong>

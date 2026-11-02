@@ -42,7 +42,7 @@ public class CreateEditingProjectResponseBody extends TeaModel {
 
     public static class CreateEditingProjectResponseBodyProject extends TeaModel {
         /**
-         * <p>The business configuration of the project. This parameter can be ignored for standard editing projects.</p>
+         * <p>The business configuration of the project. You can ignore this parameter for standard editing projects.</p>
          * 
          * <strong>example:</strong>
          * <p>{ &quot;OutputMediaConfig&quot; :    { &quot;StorageLocation&quot;: &quot;test-bucket.oss-cn-shanghai.aliyuncs.com&quot;, &quot;Path&quot;: &quot;test-path&quot;   }, &quot;OutputMediaTarget&quot;: &quot;oss-object&quot;, &quot;ReservationTime&quot;: &quot;2021-06-21T08:05:00Z&quot; }</p>
@@ -51,13 +51,18 @@ public class CreateEditingProjectResponseBody extends TeaModel {
         public String businessConfig;
 
         /**
-         * <p>The business status of the project. This parameter can be ignored for standard editing projects.</p>
+         * <p>The business status of the project. You can ignore this parameter for standard editing projects.</p>
          * <ul>
-         * <li>Reserving: The live stream is being reserved.</li>
-         * <li>ReservationCanceled: The reservation is canceled. </li>
-         * <li>BroadCasting: The live stream is broadcasting.</li>
-         * <li>LoadingFailed: Loading failed.</li>
-         * <li>LiveFinished: The live stream has ended.</li>
+         * <li><p>Reserving</p>
+         * </li>
+         * <li><p>ReservationCanceled </p>
+         * </li>
+         * <li><p>BroadCasting</p>
+         * </li>
+         * <li><p>LoadingFailed</p>
+         * </li>
+         * <li><p>LiveFinished</p>
+         * </li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -67,16 +72,16 @@ public class CreateEditingProjectResponseBody extends TeaModel {
         public String businessStatus;
 
         /**
-         * <p>The template material parameters.</p>
+         * <p>The material parameters for the template.</p>
          * 
          * <strong>example:</strong>
-         * <p>See the template user guide.</p>
+         * <p>See the template documentation</p>
          */
         @NameInMap("ClipsParam")
         public String clipsParam;
 
         /**
-         * <p>The cover URL of the cloud editing project.</p>
+         * <p>The cover of the cloud editing project.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=">http://example-bucket.oss-cn-shanghai.aliyuncs.com/example.png?Expires=</a><ExpireTime>&amp;OSSAccessKeyId=<OSSAccessKeyId>&amp;Signature=<Signature>&amp;security-token=<SecurityToken></p>
@@ -85,7 +90,7 @@ public class CreateEditingProjectResponseBody extends TeaModel {
         public String coverURL;
 
         /**
-         * <p>The creation source of the cloud editing project.</p>
+         * <p>The method used to create the cloud editing project.</p>
          * <ul>
          * <li><p>OpenAPI</p>
          * </li>
@@ -106,7 +111,7 @@ public class CreateEditingProjectResponseBody extends TeaModel {
         public String createSource;
 
         /**
-         * <p>The creation time of the cloud editing project.</p>
+         * <p>The time when the cloud editing project was created. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-08T16:52:07Z</p>
@@ -133,7 +138,7 @@ public class CreateEditingProjectResponseBody extends TeaModel {
         public Float duration;
 
         /**
-         * <p>The modification source of the cloud editing project.</p>
+         * <p>The method used to modify the cloud editing project.</p>
          * <ul>
          * <li>OpenAPI</li>
          * <li>AliyunConsole</li>
@@ -149,7 +154,7 @@ public class CreateEditingProjectResponseBody extends TeaModel {
         public String modifiedSource;
 
         /**
-         * <p>The modification time of the cloud editing project.</p>
+         * <p>The time when the cloud editing project was modified. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2021-01-08T16:52:07Z</p>
@@ -171,7 +176,7 @@ public class CreateEditingProjectResponseBody extends TeaModel {
          * <ul>
          * <li><p>EditingProject: standard editing project.</p>
          * </li>
-         * <li><p>LiveEditingProject: live editing project.</p>
+         * <li><p>LiveEditingProject: live streaming editing project.</p>
          * </li>
          * </ul>
          * 
@@ -183,7 +188,7 @@ public class CreateEditingProjectResponseBody extends TeaModel {
 
         /**
          * <p>The status of the cloud editing project.</p>
-         * <p>Valid values:</p>
+         * <p>All cloud editing project statuses:</p>
          * <ul>
          * <li><p>1: Draft.</p>
          * </li>
@@ -206,7 +211,7 @@ public class CreateEditingProjectResponseBody extends TeaModel {
         public Long status;
 
         /**
-         * <p>The status name of the cloud editing project, corresponding to the status name in the status list.</p>
+         * <p>The name of the cloud editing status, which corresponds to the status name in the status list.</p>
          * 
          * <strong>example:</strong>
          * <p>Editing</p>

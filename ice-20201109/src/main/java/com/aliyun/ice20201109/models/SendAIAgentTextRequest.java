@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class SendAIAgentTextRequest extends TeaModel {
     /**
-     * <p>The ID of the AI agent instance.</p>
+     * <p>The agent instance ID.</p>
      * <blockquote>
-     * <p>InstanceId is a unique identifier that is returned when the AI agent is started. To start an AI agent, call <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance </a>or <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
+     * <p>InstanceId is the unique ID returned after the agent instance is started successfully. To start an agent instance, refer to <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> or <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class SendAIAgentTextRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The input to the LLM.</p>
+     * <p>The text passed to the LLM.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

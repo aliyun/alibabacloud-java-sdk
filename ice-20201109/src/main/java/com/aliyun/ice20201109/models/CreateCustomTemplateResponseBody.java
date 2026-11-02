@@ -11,7 +11,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
     public CreateCustomTemplateResponseBodyCustomTemplate customTemplate;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>11-DB8D-4A9A-875B-275798</strong></strong></strong></p>
@@ -42,7 +42,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
 
     public static class CreateCustomTemplateResponseBodyCustomTemplate extends TeaModel {
         /**
-         * <p>The time when the template was created.</p>
+         * <p>The time when the template was created. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-19T02:04:31Z</p>
@@ -51,7 +51,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>Indicates whether the template is a default template.</p>
+         * <p>Indicates whether the template is the default template.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -60,7 +60,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
         public Boolean isDefault;
 
         /**
-         * <p>The time when the template was last modified.</p>
+         * <p>The time when the template was modified. The time follows the ISO 8601 standard in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-04-19T02:04:31Z</p>
@@ -69,7 +69,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The template status.</p>
+         * <p>The status of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -78,7 +78,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The template subtype name.</p>
+         * <p>The name of the template subtype.</p>
          * 
          * <strong>example:</strong>
          * <p>Remux</p>
@@ -96,7 +96,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
         public String templateConfig;
 
         /**
-         * <p>The template ID.</p>
+         * <p>The ID of the template.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -105,7 +105,7 @@ public class CreateCustomTemplateResponseBody extends TeaModel {
         public String templateId;
 
         /**
-         * <p>The template name.</p>
+         * <p>The name of the template.</p>
          * 
          * <strong>example:</strong>
          * <p>test-template</p>

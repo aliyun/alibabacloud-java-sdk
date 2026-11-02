@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByAILabelRequest extends TeaModel {
     /**
-     * <p>Custom filters. A JSON string. The following backing fields are supported: intField1 (integer type), strField1 and strField2 (string type). For the same field, only one matching method can be specified. Filters on different fields are combined with a logical AND relationship.</p>
+     * <p>The custom filters. The value is a JSON string. Supported fields include the integer field intField1 and the string fields strField1 and strField2. You can select at most one match type for the same field. Filters for different fields use the AND logical operator.</p>
      * <ul>
-     * <li><p>Exact match, for example: {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}</p>
-     * </li>
-     * <li><p>Multi-value match, for example: {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}</p>
-     * </li>
-     * <li><p>Range match, for example: {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}</p>
-     * </li>
+     * <li>Exact match, such as {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}.</li>
+     * <li>Multi-value match, such as {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}.</li>
+     * <li>Range match, such as {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,12 +19,10 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     public String customFilters;
 
     /**
-     * <p>Matching pattern. The default value is fuzzy for Fuzzy Matching. Valid values:</p>
+     * <p>The matching mode. Default value: fuzzy. Valid values:</p>
      * <ul>
-     * <li><p>fuzzy: Fuzzy Matching</p>
-     * </li>
-     * <li><p>precise: Precise matching. This pattern applies only to newly added media assets.</p>
-     * </li>
+     * <li>fuzzy: fuzzy match.</li>
+     * <li>precise: exact match. This mode takes effect only for newly added media assets.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,7 +32,7 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     public String matchingMode;
 
     /**
-     * <p>The ID of the media asset. This parameter is required if you want to query media asset clips.</p>
+     * <p>The media asset ID. This parameter is required for precise search.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
@@ -46,14 +41,11 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The type of the media assets. Valid values:</p>
+     * <p>The media asset type. Valid values:</p>
      * <ul>
-     * <li><p>image</p>
-     * </li>
-     * <li><p>video</p>
-     * </li>
-     * <li><p>audio</p>
-     * </li>
+     * <li>image: images</li>
+     * <li>video: videos</li>
+     * <li>audio: audio</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,16 +55,12 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     public String mediaType;
 
     /**
-     * <p>The type of query. Valid values:</p>
+     * <p>The multimodal search type. Default value: FullSearch. Valid values:</p>
      * <ul>
-     * <li><p>PersonName: queries media assets based on character names.</p>
-     * </li>
-     * <li><p>Ocr: queries media assets based on subtitles.</p>
-     * </li>
-     * <li><p>AiCategory: queries media assets based on AI categories.</p>
-     * </li>
-     * <li><p>FullSearch (default): queries all media assets.</p>
-     * </li>
+     * <li>PersonName: person name search</li>
+     * <li>Ocr: subtitle search</li>
+     * <li>AiCategory: AI categorization search</li>
+     * <li>FullSearch: full text search</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,7 +70,7 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     public String multimodalSearchType;
 
     /**
-     * <p>Namespace.</p>
+     * <p>The namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>name-1</p>
@@ -91,7 +79,7 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -100,7 +88,7 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 50.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -118,12 +106,10 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     public String searchLibName;
 
     /**
-     * <p>The sorting method of the results. Valid values:</p>
+     * <p>The sorting of query results. Valid values:</p>
      * <ul>
-     * <li><p>CreationTime:Desc (default): sorts results in reverse chronological order.</p>
-     * </li>
-     * <li><p>CreationTime:Asc: sorts results in chronological order.</p>
-     * </li>
+     * <li>CreationTime:Desc (default): sorts by creation time in descending order.</li>
+     * <li>CreationTime:Asc: sorts by creation time in ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -133,12 +119,10 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>Specifies whether to query media asset clips. Valid values:</p>
+     * <p>Specifies whether to perform a precise search. Valid values:</p>
      * <ul>
-     * <li><p>true</p>
-     * </li>
-     * <li><p>false</p>
-     * </li>
+     * <li>true: performs a precise search.</li>
+     * <li>false: performs a coarse search.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -148,18 +132,18 @@ public class SearchMediaByAILabelRequest extends TeaModel {
     public Boolean specificSearch;
 
     /**
-     * <p>The content that you want to query.</p>
+     * <p>The search content.</p>
      * 
      * <strong>example:</strong>
-     * <p>Kite</p>
+     * <p>kite</p>
      */
     @NameInMap("Text")
     public String text;
 
     /**
-     * <p>Creation time, in milliseconds UNIX timestamp. Use gte for greater than or equal to, and lte for less than or equal to.</p>
+     * <p>The creation time, in milliseconds. gte indicates greater than or equal to, and lte indicates less than or equal to.</p>
      * <ul>
-     * <li>Example range: {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</li>
+     * <li>Range match, such as {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}.</li>
      * </ul>
      * 
      * <strong>example:</strong>

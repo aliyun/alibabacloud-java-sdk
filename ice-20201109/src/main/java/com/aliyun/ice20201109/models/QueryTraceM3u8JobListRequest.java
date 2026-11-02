@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class QueryTraceM3u8JobListRequest extends TeaModel {
     /**
-     * <p>The end of the creation time range for the query, in UNIX timestamp format.</p>
+     * <p>The end time for creation, in UNIX timestamp format.</p>
      * 
      * <strong>example:</strong>
      * <p>1627357325</p>
@@ -14,7 +14,7 @@ public class QueryTraceM3u8JobListRequest extends TeaModel {
     public Long createTimeEnd;
 
     /**
-     * <p>The start of the creation time range for the query, in UNIX timestamp format.</p>
+     * <p>The start time for creation, in UNIX timestamp format.</p>
      * 
      * <strong>example:</strong>
      * <p>1627357322</p>
@@ -23,7 +23,7 @@ public class QueryTraceM3u8JobListRequest extends TeaModel {
     public Long createTimeStart;
 
     /**
-     * <p>The job ID. You can obtain the value of this parameter from the response of the SubmitTraceM3u8Job operation.</p>
+     * <p>The job ID. You can obtain it from the response parameters returned when you submit a video tracing watermark m3u8 job.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -41,7 +41,7 @@ public class QueryTraceM3u8JobListRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

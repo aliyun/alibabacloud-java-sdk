@@ -5,25 +5,21 @@ import com.aliyun.tea.*;
 
 public class CreateDNADBRequest extends TeaModel {
     /**
-     * <p>The description of the DNA database.</p>
+     * <p>The description of the DNA library.</p>
      * 
      * <strong>example:</strong>
-     * <p>这是一个视频DNA库。</p>
+     * <p>This is a video DNA library.</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The DNA database model. Valid values:</p>
+     * <p>The model of the DNA library. Valid values:</p>
      * <ul>
-     * <li><p><strong>Video</strong>: For video content.</p>
-     * </li>
-     * <li><p><strong>Audio</strong>: For audio content.</p>
-     * </li>
-     * <li><p><strong>Image</strong>: For image content. (Deprecated)</p>
-     * </li>
-     * <li><p><strong>Text</strong>: For text content. Supported only in the China (Shanghai) region. (Deprecated)</p>
-     * </li>
+     * <li><strong>Video</strong>: Video.</li>
+     * <li><strong>Audio</strong>: Audio.</li>
+     * <li><strong>Image</strong>: <strong>[Deprecated]</strong> Image.</li>
+     * <li><strong>Text</strong>: <strong>[Deprecated]</strong> Text. Supported only in the China (Shanghai) region.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +29,7 @@ public class CreateDNADBRequest extends TeaModel {
     public String model;
 
     /**
-     * <p>The name of the DNA database.</p>
+     * <p>The name of the DNA library.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

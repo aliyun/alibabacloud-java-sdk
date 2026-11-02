@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddYikeUserCreditResponseBody extends TeaModel {
     /**
-     * <p>The error code returned if the operation fails. The following value is supported:</p>
+     * <p>The error code. This parameter is returned when the increase fails. Valid values:</p>
      * <ul>
-     * <li>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA: The credit balance of the main account is insufficient.</li>
+     * <li>NOT_ENOUGH_ALLOCATE_CREDIT_QUOTA: The credit balance of the Alibaba Cloud account is insufficient.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,12 +26,10 @@ public class AddYikeUserCreditResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the operation was successful.</p>
+     * <p>Indicates whether the credits are increased successfully. Valid values:</p>
      * <ul>
-     * <li><p>true: The operation was successful.</p>
-     * </li>
-     * <li><p>false: The operation failed.</p>
-     * </li>
+     * <li>true: Succeeded.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

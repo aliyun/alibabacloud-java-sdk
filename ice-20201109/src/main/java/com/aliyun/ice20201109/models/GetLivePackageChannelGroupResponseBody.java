@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLivePackageChannelGroupResponseBody extends TeaModel {
     /**
-     * <p>Details of the channel group.</p>
+     * <p>The live packaging channel group.</p>
      */
     @NameInMap("LivePackageChannelGroup")
     public GetLivePackageChannelGroupResponseBodyLivePackageChannelGroup livePackageChannelGroup;
@@ -42,7 +42,7 @@ public class GetLivePackageChannelGroupResponseBody extends TeaModel {
 
     public static class GetLivePackageChannelGroupResponseBodyLivePackageChannelGroup extends TeaModel {
         /**
-         * <p>The time when the channel group was created. It is in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC.</p>
+         * <p>The creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -51,7 +51,7 @@ public class GetLivePackageChannelGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The channel group description.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>Updated description of the channel group.</p>
@@ -60,7 +60,7 @@ public class GetLivePackageChannelGroupResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The channel group name.</p>
+         * <p>The name of the channel group.</p>
          * 
          * <strong>example:</strong>
          * <p>channel-group-1</p>
@@ -69,7 +69,7 @@ public class GetLivePackageChannelGroupResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The time when the channel group was last modified. It is in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC.</p>
+         * <p>The creation time. Format: yyyy-MM-ddTHH:mm:ssZ (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -78,7 +78,7 @@ public class GetLivePackageChannelGroupResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>The origin domain.</p>
+         * <p>The origin domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>

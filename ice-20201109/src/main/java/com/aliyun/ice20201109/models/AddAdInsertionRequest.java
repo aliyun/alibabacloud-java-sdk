@@ -5,14 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddAdInsertionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable ad marker passthrough. Default value: OFF.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>OFF: Disable.</p>
-     * </li>
-     * <li><p>ON: Enable.</p>
-     * </li>
-     * </ul>
+     * <p>Specifies whether to pass through ad markers. Default value: OFF.</p>
      * 
      * <strong>example:</strong>
      * <p>ON</p>
@@ -21,7 +14,7 @@ public class AddAdInsertionRequest extends TeaModel {
     public String adMarkerPassthrough;
 
     /**
-     * <p>The request URL of the ad decision server (ADS). HTTP and HTTPS are supported. The maximum length is 2,048 characters.</p>
+     * <p>The URL of the ad decision server. The URL supports the HTTP and HTTPS protocols. It can be up to 2,048 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,7 +24,7 @@ public class AddAdInsertionRequest extends TeaModel {
     public String adsUrl;
 
     /**
-     * <p>The CDN prefix for ad segments. HTTP and HTTPS are supported. The maximum length is 512 characters.</p>
+     * <p>The CDN prefix for ad segments. The URL supports the HTTP and HTTPS protocols. It can be up to 512 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://cdn.com/">http://cdn.com/</a></p>
@@ -40,7 +33,7 @@ public class AddAdInsertionRequest extends TeaModel {
     public String cdnAdSegmentUrlPrefix;
 
     /**
-     * <p>The CDN prefix for content segments. HTTP and HTTPS are supported. The maximum length is 512 characters.</p>
+     * <p>The CDN prefix for video content segments. The URL supports the HTTP and HTTPS protocols. It can be up to 512 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://cdn.com/">http://cdn.com/</a></p>
@@ -49,7 +42,7 @@ public class AddAdInsertionRequest extends TeaModel {
     public String cdnContentSegmentUrlPrefix;
 
     /**
-     * <p>The idempotency key that is used to avoid repeated submission. The value can be up to 200 characters in length.</p>
+     * <p>The client token that is used to ensure idempotence. The token must be unique for each request to prevent duplicate submissions. It can be up to 200 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>0311a423d11a5f7dee713535</strong></strong></p>
@@ -58,7 +51,12 @@ public class AddAdInsertionRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>A JSON string that specifies the player parameter variables and aliases. You can add up to 20 player_params.{name} entries. The name field can be up to 150 characters in length. Each player parameter can include up to 50 key-value pairs. A key can be up to 150 characters long, and a value can be up to 500 characters. Example: { &quot;player_params.{name}&quot;: { &quot;{key}&quot;: &quot;{value}&quot; } }</p>
+     * <p>The dynamic configuration aliases. The value is a JSON string. You can add up to 20 player_params.{name} entries. The name part can be up to 150 characters in length. Under each player_params.xxx, you can add up to 50 key-value pairs. The key can be up to 150 characters in length, and the value can be up to 500 characters in length. Example:
+     * {
+     *   &quot;player_params.{name}&quot;: {
+     *     &quot;{key}&quot;: &quot;{value}&quot;
+     *   }
+     * }</p>
      * 
      * <strong>example:</strong>
      * <p>{ &quot;player_params.p1&quot;: { &quot;1&quot;: &quot;abc&quot; } }</p>
@@ -67,7 +65,7 @@ public class AddAdInsertionRequest extends TeaModel {
     public String configAliases;
 
     /**
-     * <p>The URL prefix for the source content. HTTP and HTTPS are supported. The maximum length is 512 characters.</p>
+     * <p>The prefix of the content URL. The URL supports the HTTP and HTTPS protocols. It can be up to 512 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -77,7 +75,7 @@ public class AddAdInsertionRequest extends TeaModel {
     public String contentUrlPrefix;
 
     /**
-     * <p>The name of the configuration. The name must be unique and can be up to 128 characters in length. Letters, digits, underscores (_), and hyphens (-) are supported.</p>
+     * <p>The name of the configuration. The name must be unique within the same account. It can be up to 128 characters in length and must match the regular expression [A-Za-z0-9_-]+.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,7 +85,7 @@ public class AddAdInsertionRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>Specifies the maximum duration of underfilled time allowed in an ad break. Unit: seconds. Default value: 8 seconds.</p>
+     * <p>The personalization threshold. Unit: seconds. Default value: 8.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -96,7 +94,7 @@ public class AddAdInsertionRequest extends TeaModel {
     public Integer personalizationThreshold;
 
     /**
-     * <p>The HTTP or HTTPS URL of the slate ad. Only MP4 format is supported. The maximum length is 2,048 characters.</p>
+     * <p>The URL of the slate ad. The URL supports the HTTP and HTTPS protocols and only MP4 files (.mp4). It can be up to 2,048 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://storage.com/slate1.mp4">http://storage.com/slate1.mp4</a></p>

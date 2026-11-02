@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateAIAgentInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>The AI agent configuration to update. This configuration is merged with the existing configuration of the instance. For more information, see the AIAgentConfig definition. The following parameters in AIAgentConfig can be updated:</p>
+     * <p>The agent configuration to be updated. This configuration is merged with the configuration used when the instance was started. For more information, see the AIAgentConfig definition. The following parameters in AIAgentTemplateConfig can be updated:</p>
      * <ul>
      * <li><p>VoiceId</p>
      * </li>
@@ -27,9 +27,9 @@ public class UpdateAIAgentInstanceShrinkRequest extends TeaModel {
     public String agentConfigShrink;
 
     /**
-     * <p>The ID of the AI agent instance.</p>
+     * <p>The agent instance ID.</p>
      * <blockquote>
-     * <p>This unique ID is returned after the AI agent instance starts successfully. For more information about starting an agent, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
+     * <p>The InstanceId is the unique ID returned after the agent instance is successfully started. For more information about the API operations used to start an agent, see <a href="https://help.aliyun.com/document_detail/2846201.html">StartAIAgentInstance</a> and <a href="https://help.aliyun.com/document_detail/2846209.html">GenerateAIAgentCall</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -41,24 +41,24 @@ public class UpdateAIAgentInstanceShrinkRequest extends TeaModel {
 
     /**
      * <blockquote>
-     * <p>The AI agent template configuration. This parameter is deprecated. Use the AgentConfig parameter instead.</p>
+     * <p>The agent template configuration. <strong>[Deprecated]</strong> Use the AgentConfig parameter instead.</p>
      * </blockquote>
-     * <p>The AI agent configuration to update. This configuration is merged with the existing configuration of the instance. For more information, see the <a href="https://help.aliyun.com/document_detail/2846193.html">AIAgentTemplateConfig</a> definition.
+     * <p>The agent configuration to be updated. This configuration is merged with the configuration used when the instance was started. For more information, see the <a href="https://help.aliyun.com/document_detail/2846193.html">AIAgentTemplateConfig</a> definition.
      * The following parameters in AIAgentTemplateConfig can be updated:</p>
      * <ul>
-     * <li><p>VoiceId (Voice ID)</p>
+     * <li><p>VoiceId (voice ID)</p>
      * </li>
-     * <li><p>EnableVoiceInterrupt (Enable voice interruption)</p>
+     * <li><p>EnableVoiceInterrupt (enable voice interruption)</p>
      * </li>
-     * <li><p>Greeting (Greeting)</p>
+     * <li><p>Greeting (greeting)</p>
      * </li>
-     * <li><p>Volume (Volume)</p>
+     * <li><p>Volume (volume)</p>
      * </li>
-     * <li><p>EnablePushToTalk (Enable push-to-talk)</p>
+     * <li><p>EnablePushToTalk (enable push-to-talk)</p>
      * </li>
-     * <li><p>UseVoiceprint (Use voiceprint)</p>
+     * <li><p>UseVoiceprint (use voiceprint)</p>
      * </li>
-     * <li><p>AsrMaxSilence (ASR maximum silence duration)</p>
+     * <li><p>AsrMaxSilence (maximum ASR silence duration)</p>
      * </li>
      * </ul>
      */
@@ -67,7 +67,7 @@ public class UpdateAIAgentInstanceShrinkRequest extends TeaModel {
     public String templateConfigShrink;
 
     /**
-     * <p>Custom user data.</p>
+     * <p>The custom user data.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;VoiceId&quot;:&quot;xiaoxia&quot;}</p>

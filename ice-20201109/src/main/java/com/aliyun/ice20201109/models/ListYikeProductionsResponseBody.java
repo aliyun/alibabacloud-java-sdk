@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListYikeProductionsResponseBody extends TeaModel {
     /**
-     * <p>The maximum number of results to return.</p>
+     * <p>The maximum number of results.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListYikeProductionsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token for the next page.</p>
+     * <p>The next token.</p>
      * 
      * <strong>example:</strong>
      * <p>Token</p>
@@ -23,7 +23,7 @@ public class ListYikeProductionsResponseBody extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The project list.</p>
+     * <p>The list of projects.</p>
      */
     @NameInMap("ProductionList")
     public java.util.List<ListYikeProductionsResponseBodyProductionList> productionList;
@@ -94,7 +94,7 @@ public class ListYikeProductionsResponseBody extends TeaModel {
         public String coverUrl;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard and is in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-07T02:21:36Z</p>

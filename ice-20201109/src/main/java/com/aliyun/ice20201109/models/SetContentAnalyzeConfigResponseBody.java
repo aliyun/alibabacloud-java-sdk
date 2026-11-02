@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SetContentAnalyzeConfigResponseBody extends TeaModel {
     /**
-     * <p>The Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>953CFD27-4A2C-54AD-857F-B79EF3A338E0</p>
@@ -14,12 +14,10 @@ public class SetContentAnalyzeConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the configuration succeeded. Valid values:</p>
+     * <p>Indicates whether the configuration is set successfully. Valid values:</p>
      * <ul>
-     * <li><p>true: Success</p>
-     * </li>
-     * <li><p>false: Failed</p>
-     * </li>
+     * <li>true: Succeeded.</li>
+     * <li>false: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

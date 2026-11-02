@@ -42,7 +42,7 @@ public class CreatePipelineResponseBody extends TeaModel {
 
     public static class CreatePipelineResponseBodyPipeline extends TeaModel {
         /**
-         * <p>The time when the pipeline was created.</p>
+         * <p>The time when the pipeline was created. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
@@ -51,7 +51,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The time when the pipeline was last modified.</p>
+         * <p>The time when the pipeline was last modified. The time is in ISO 8601 format and uses UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2022-07-12T16:17:54Z</p>
@@ -60,7 +60,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The pipeline name.</p>
+         * <p>The name of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>test-pipeline</p>
@@ -69,7 +69,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The pipeline ID.</p>
+         * <p>The ID of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p><strong><strong>20b48fb04483915d4f2cd8ac</strong></strong></p>
@@ -78,7 +78,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         public String pipelineId;
 
         /**
-         * <p>The pipeline priority.</p>
+         * <p>The priority of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>6</p>
@@ -87,7 +87,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The pipeline type.</p>
+         * <p>The type of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -96,7 +96,7 @@ public class CreatePipelineResponseBody extends TeaModel {
         public String speed;
 
         /**
-         * <p>The pipeline status.</p>
+         * <p>The status of the pipeline.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

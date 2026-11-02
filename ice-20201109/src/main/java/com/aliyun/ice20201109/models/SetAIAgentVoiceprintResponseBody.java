@@ -14,7 +14,7 @@ public class SetAIAgentVoiceprintResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the registered voiceprint.</p>
+     * <p>The voiceprint ID registered by the user.</p>
      * 
      * <strong>example:</strong>
      * <p>vp_1699123456_8527</p>

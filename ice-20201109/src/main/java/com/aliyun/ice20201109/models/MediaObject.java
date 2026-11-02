@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class MediaObject extends TeaModel {
     /**
-     * <p>The identifier for the media file.</p>
+     * <p>The file media asset.</p>
      * <ul>
-     * <li>If Type is set to OSS, the value is the URL of the media file. The following formats are supported: oss://... and https://...</li>
-     * <li>If Type is set to Media, the value is the ID of the media asset.</li>
+     * <li>If Type is OSS, Media is a URL and supports the OSS and HTTP protocols.     </li>
+     * <li>If Type is Media, Media is a media asset ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class MediaObject extends TeaModel {
     public String media;
 
     /**
-     * <p>The type of media source. Valid values:</p>
+     * <p>The input type. Valid values:</p>
      * <ul>
-     * <li>OSS: an OSS object.</li>
-     * <li>Media: a media asset.</li>
-     * <li>ExternalURL: a publicly accessible external URL. This is not available for public use.</li>
+     * <li>OSS: Alibaba Cloud OSS file </li>
+     * <li>Media: Media asset</li>
+     * <li>ExternalURL: External URL, not currently publicly supported</li>
      * </ul>
      * 
      * <strong>example:</strong>

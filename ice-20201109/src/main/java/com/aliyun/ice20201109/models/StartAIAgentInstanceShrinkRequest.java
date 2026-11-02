@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class StartAIAgentInstanceShrinkRequest extends TeaModel {
     /**
-     * <p>The agent ID configured in the <a href="https://ims.console.aliyun.com/ai/robot/list">IMS console</a>.</p>
+     * <p>The ID of the agent configured in the <a href="https://ims.console.aliyun.com/ai/robot/list">IMS console</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,29 +15,29 @@ public class StartAIAgentInstanceShrinkRequest extends TeaModel {
     public String AIAgentId;
 
     /**
-     * <p>The agent template configuration. Values you provide merge with the template configuration set in the console. If you omit this parameter, the agent uses its default configuration from the console.</p>
+     * <p>The agent template configuration. The specified configuration is merged and updated with the agent template configuration in the console. If this parameter is not specified, the default configurations of the agent in the console are used.</p>
      * <blockquote>
-     * <p>This field is compatible with TemplateConfig. Fields in AgentConfig take precedence. If TemplateConfig contains fields not defined in AgentConfig, those fields are used. Use AgentConfig instead of TemplateConfig.</p>
+     * <p>Compatible with TemplateConfig rules: Fields in AgentConfig take precedence. If TemplateConfig contains fields that are not specified in AgentConfig, the fields in TemplateConfig are used. Use AgentConfig instead of TemplateConfig.</p>
      * </blockquote>
      */
     @NameInMap("AgentConfig")
     public String agentConfigShrink;
 
     /**
-     * <p>The chat history synchronization configuration.</p>
+     * <p>The configuration for synchronizing chat history.</p>
      */
     @NameInMap("ChatSyncConfig")
     public String chatSyncConfigShrink;
 
     /**
-     * <p>The configuration required for the agent at runtime.</p>
+     * <p>The configuration required for the agent runtime.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RuntimeConfig")
     public String runtimeConfigShrink;
 
     /**
-     * <p>A unique identifier for the chat session. This parameter is optional.</p>
+     * <p>The unique identifier of the conversation. Default value: none.</p>
      * 
      * <strong>example:</strong>
      * <p>f213fbc005e4f309379701645f4****</p>
@@ -46,9 +46,9 @@ public class StartAIAgentInstanceShrinkRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The agent template configuration. Values you provide merge with the template configuration set in the console. If you omit this parameter, the agent uses its default configuration from the console.</p>
+     * <p>The agent template configuration. The specified configuration is merged and updated with the agent template configuration in the console. If this parameter is not specified, the default configurations of the agent in the console are used.</p>
      * <blockquote>
-     * <p>The agent template configuration. This field is deprecated. See the AgentConfig field.</p>
+     * <p>Agent template configuration. <strong>[Deprecated]</strong> For more information, see the AgentConfig field.</p>
      * </blockquote>
      */
     @NameInMap("TemplateConfig")
@@ -56,7 +56,7 @@ public class StartAIAgentInstanceShrinkRequest extends TeaModel {
     public String templateConfigShrink;
 
     /**
-     * <p>User-defined data.</p>
+     * <p>The user-defined information.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</p>

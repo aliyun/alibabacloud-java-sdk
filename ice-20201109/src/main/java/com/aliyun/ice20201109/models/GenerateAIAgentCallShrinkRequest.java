@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GenerateAIAgentCallShrinkRequest extends TeaModel {
     /**
-     * <p>The AI agent ID.</p>
+     * <p>The agent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,22 +15,22 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
     public String AIAgentId;
 
     /**
-     * <p>The agent template configuration. The configuration you provide merges with the agent template configuration in the console. If you omit this parameter, the agent uses the default configuration from the console.</p>
+     * <p>The agent template configurations. The specified configurations are merged and updated with the agent template configurations in the console. If you do not specify this parameter, the default configurations of the agent in the console are used.</p>
      * <blockquote>
-     * <p>Compatibility with <code>TemplateConfig</code>: Fields in <code>AgentConfig</code> take precedence. If a field is specified in <code>TemplateConfig</code> but not in <code>AgentConfig</code>, the system uses the value from <code>TemplateConfig</code>. We recommend using <code>AgentConfig</code> instead of <code>TemplateConfig</code>.</p>
+     * <p>Compatibility rules for TemplateConfig: Fields in AgentConfig take precedence. If TemplateConfig contains fields that are not specified in AgentConfig, the fields in TemplateConfig are used. We recommend that you use AgentConfig instead of TemplateConfig.</p>
      * </blockquote>
      */
     @NameInMap("AgentConfig")
     public String agentConfigShrink;
 
     /**
-     * <p>The chat synchronization configuration.</p>
+     * <p>The configurations for synchronizing chat records.</p>
      */
     @NameInMap("ChatSyncConfig")
     public String chatSyncConfigShrink;
 
     /**
-     * <p>Optional. The expiration time of the token in seconds. Default value: 3600. Value range: 0 to 604800.</p>
+     * <p>Optional. The expiration time of the token, in seconds. Default value: 3600. Valid values: 0 to 604800.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -39,7 +39,7 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
     public Long expire;
 
     /**
-     * <p>A unique identifier for the session. If not provided, a new session is created.</p>
+     * <p>The unique identifier of the conversation. Default value: none.</p>
      * 
      * <strong>example:</strong>
      * <p>fw1gr0bc005e4f309379701645f4****</p>
@@ -49,13 +49,13 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
 
     /**
      * <ul>
-     * <li><p>This configuration merges with the agent template configuration in the console.</p>
+     * <li><p>The specified configurations are merged and updated with the agent template configurations in the console.</p>
      * </li>
-     * <li><p>If you omit this parameter, the agent uses the default configuration from the console.</p>
+     * <li><p>If you do not specify this parameter, the default configurations of the agent in the console are used.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>The agent template configuration. This parameter is deprecated. Use the AgentConfig parameter instead.</p>
+     * <p>Agent template configurations. <strong>[Deprecated]</strong> For more information, see the AgentConfig parameter.</p>
      * </blockquote>
      */
     @NameInMap("TemplateConfig")
@@ -63,7 +63,7 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
     public String templateConfigShrink;
 
     /**
-     * <p>User data.</p>
+     * <p>The custom user information.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Email&quot;:&quot;<a href="mailto:johndoe@example.com">johndoe@example.com</a>&quot;,&quot;Preferences&quot;:{&quot;Language&quot;:&quot;en&quot;}}</p>
@@ -72,7 +72,7 @@ public class GenerateAIAgentCallShrinkRequest extends TeaModel {
     public String userData;
 
     /**
-     * <p>The username in the channel. If you do not specify a username, one is automatically generated. The username can be up to 64 characters in length.</p>
+     * <p>The username in the conversation channel. If you do not specify this parameter, the system automatically generates a username. The username can be up to 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>877ae632caae49b1afc81c2e8194ffb4</p>

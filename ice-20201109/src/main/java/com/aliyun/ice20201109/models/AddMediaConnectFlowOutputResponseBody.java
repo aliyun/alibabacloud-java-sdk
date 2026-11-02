@@ -11,7 +11,7 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
     public AddMediaConnectFlowOutputResponseBodyContent content;
 
     /**
-     * <p>The call description.</p>
+     * <p>The description of the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>ok</p>
@@ -29,7 +29,7 @@ public class AddMediaConnectFlowOutputResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned error code. A value of 0 indicates that the call is successful.</p>
+     * <p>The returned error code. A value of 0 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

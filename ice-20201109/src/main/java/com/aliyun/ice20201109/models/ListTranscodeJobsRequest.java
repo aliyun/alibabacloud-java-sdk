@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTranscodeJobsRequest extends TeaModel {
     /**
-     * <p>The end of the time range to filter jobs by their creation time. The time must be in UTC and formatted as <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+     * <p>The end time for filtering jobs by creation time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-15T00:00:00Z</p>
@@ -14,7 +14,7 @@ public class ListTranscodeJobsRequest extends TeaModel {
     public String endOfCreateTime;
 
     /**
-     * <p>The token for the next page of results. Not required for the first page.</p>
+     * <p>The mark for the next page during continuous paging in a paged query. This parameter is not required for the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>ab4802364a2e49208c99efab82df****</p>
@@ -25,10 +25,8 @@ public class ListTranscodeJobsRequest extends TeaModel {
     /**
      * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p><code>CreateTimeDesc</code>: Sorts by creation time in descending order.</p>
-     * </li>
-     * <li><p><code>CreateTimeAsc</code>: Sorts by creation time in ascending order.</p>
-     * </li>
+     * <li>CreateTimeDesc: Sorts by creation time in descending order.</li>
+     * <li>CreateTimeAsc: Sorts by creation time in ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +36,7 @@ public class ListTranscodeJobsRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The number of entries per page. Valid values: 1-100. Default: 20.</p>
+     * <p>The number of entries per page. Valid values: 0 to 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -47,7 +45,7 @@ public class ListTranscodeJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Filters by job ID.</p>
+     * <p>The ID of the parent job used to filter results.</p>
      * 
      * <strong>example:</strong>
      * <p>7b38a5d86f1e47838927b6e7ccb1****</p>
@@ -56,7 +54,7 @@ public class ListTranscodeJobsRequest extends TeaModel {
     public String parentJobId;
 
     /**
-     * <p>The start of the time range to filter jobs by their creation time. The time must be in UTC and formatted as <code>yyyy-MM-ddTHH:mm:ssZ</code>.</p>
+     * <p>The start time for filtering jobs by creation time. Format: yyyy-MM-ddTHH:mm:ssZ.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-07-01T00:00:00Z</p>
@@ -65,14 +63,11 @@ public class ListTranscodeJobsRequest extends TeaModel {
     public String startOfCreateTime;
 
     /**
-     * <p>The job status. Valid values:</p>
+     * <p>The job status. Valid values: </p>
      * <ul>
-     * <li><p><code>Init</code>: Submitted.</p>
-     * </li>
-     * <li><p><code>Success</code>: Succeeded.</p>
-     * </li>
-     * <li><p><code>Fail</code>: Failed.</p>
-     * </li>
+     * <li>Init: Submitted.</li>
+     * <li>Success: Succeeded.</li>
+     * <li>Fail: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>

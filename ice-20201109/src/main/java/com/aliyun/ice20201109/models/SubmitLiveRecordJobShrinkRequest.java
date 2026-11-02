@@ -24,21 +24,21 @@ public class SubmitLiveRecordJobShrinkRequest extends TeaModel {
     public String notifyUrl;
 
     /**
-     * <p>The recording storage address.</p>
+     * <p>The storage URL for the recording.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("RecordOutput")
     public String recordOutputShrink;
 
     /**
-     * <p>The live stream address.</p>
+     * <p>The live stream URL.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("StreamInput")
     public String streamInputShrink;
 
     /**
-     * <p>The recording template ID.</p>
+     * <p>The ID of the recording template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

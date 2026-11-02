@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class GetMediaConnectAvailableRegionResponseBody extends TeaModel {
     /**
-     * <p>The rsponse body.</p>
+     * <p>The response body.</p>
      */
     @NameInMap("Content")
     public GetMediaConnectAvailableRegionResponseBodyContent content;
 
     /**
-     * <p>The call description.</p>
+     * <p>The description of the API call.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -20,7 +20,7 @@ public class GetMediaConnectAvailableRegionResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>41CB9D4C-4650-5723-BA89-D6824F706ACB</p>
@@ -29,7 +29,7 @@ public class GetMediaConnectAvailableRegionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The returned error code. A value of 0 indicates the call is successful.</p>
+     * <p>The returned error code. A value of 0 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -76,7 +76,7 @@ public class GetMediaConnectAvailableRegionResponseBody extends TeaModel {
 
     public static class GetMediaConnectAvailableRegionResponseBodyContent extends TeaModel {
         /**
-         * <p>The default region. You can ignore the parameter.</p>
+         * <p>The default region information. You can ignore this field.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -85,7 +85,7 @@ public class GetMediaConnectAvailableRegionResponseBody extends TeaModel {
         public String defaultRegion;
 
         /**
-         * <p>The supported regions.</p>
+         * <p>The region list information.</p>
          */
         @NameInMap("RegionList")
         public java.util.List<String> regionList;

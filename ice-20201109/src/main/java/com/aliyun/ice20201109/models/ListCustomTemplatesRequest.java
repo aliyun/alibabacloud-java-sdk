@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListCustomTemplatesRequest extends TeaModel {
     /**
-     * <p>The name of the template.</p>
+     * <p>The template name.</p>
      * 
      * <strong>example:</strong>
      * <p>test-template</p>
@@ -14,12 +14,10 @@ public class ListCustomTemplatesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The sort order of the results. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p><code>CreationTime:Desc</code>: Sorts the results by Creation Time in descending order.</p>
-     * </li>
-     * <li><p><code>CreationTime:Asc</code>: Sorts the results by Creation Time in ascending order.</p>
-     * </li>
+     * <li>CreateTimeDesc: Sorts by creation time in descending order.</li>
+     * <li>CreateTimeAsc: Sorts by creation time in ascending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class ListCustomTemplatesRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The page number of the results to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,48 +45,31 @@ public class ListCustomTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The subtype of the template. This parameter applies only when <code>Type</code> is set to 1, 2, 7, or 9.</p>
+     * <p>The template subtype ID. Valid values:</p>
      * <ul>
-     * <li><p>Transcoding Template subtypes:</p>
-     * <ul>
-     * <li><p>1: Normal (<code>Normal</code>)</p>
-     * </li>
-     * <li><p>2: Audio-only (<code>AudioTranscode</code>)</p>
-     * </li>
-     * <li><p>3: Remuxing (<code>Remux</code>)</p>
-     * </li>
-     * <li><p>4: Narrowband HD 1.0 (<code>NarrowBandV1</code>)</p>
-     * </li>
-     * <li><p>5: Narrowband HD 2.0 (<code>NarrowBandV2</code>)</p>
-     * </li>
+     * <li>Subtypes for transcode templates:<ul>
+     * <li>1: Normal transcode template (Normal).</li>
+     * <li>2: Audio transcode template (AudioTranscode).</li>
+     * <li>3: Remux (Remux).</li>
+     * <li>4: Narrowband HD 1.0 (NarrowBandV1).</li>
+     * <li>5: Narrowband HD 2.0 (NarrowBandV2).</li>
      * </ul>
      * </li>
-     * <li><p>Screenshot Template subtypes:</p>
-     * <ul>
-     * <li><p>1: Normal (<code>Normal</code>)</p>
-     * </li>
-     * <li><p>2: Sprite Image (<code>Sprite</code>)</p>
-     * </li>
-     * <li><p>3: WebVTT (<code>WebVtt</code>)</p>
-     * </li>
+     * <li>Subtypes for snapshot templates:<ul>
+     * <li>1: Normal snapshot or static snapshot (Normal).</li>
+     * <li>2: Sprite snapshot (Sprite).</li>
+     * <li>3: WebVTT snapshot (WebVtt).</li>
      * </ul>
      * </li>
-     * <li><p>AI Content Moderation subtypes:</p>
-     * <ul>
-     * <li><p>1: Video moderation (<code>Video</code>)</p>
-     * </li>
-     * <li><p>2: Audio moderation (<code>Audio</code>)</p>
-     * </li>
-     * <li><p>3: Image moderation (<code>Image</code>)</p>
-     * </li>
+     * <li>Subtypes for AI content moderation templates:<ul>
+     * <li>1: Video moderation (Video).</li>
+     * <li>2: Audio moderation (Audio).</li>
+     * <li>3: Image moderation (Image).</li>
      * </ul>
      * </li>
-     * <li><p>AI-powered Object Removal subtypes:</p>
-     * <ul>
-     * <li><p>1: Logo Removal (<code>VideoDelogo</code>)</p>
-     * </li>
-     * <li><p>2: Text Removal (<code>VideoDetext</code>)</p>
-     * </li>
+     * <li>Subtypes for AI intelligent erasure templates:<ul>
+     * <li>1: Logo erasure (VideoDelogo).</li>
+     * <li>2: Subtitle erasure (VideoDetext).</li>
      * </ul>
      * </li>
      * </ul>
@@ -100,7 +81,7 @@ public class ListCustomTemplatesRequest extends TeaModel {
     public String subtype;
 
     /**
-     * <p>The ID of the template.</p>
+     * <p>The template ID.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>96e8864746a0b6f3</strong></strong></p>
@@ -109,26 +90,17 @@ public class ListCustomTemplatesRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The type of the template. Valid values:</p>
+     * <p>The templatetype. Separate multiple values with commas. Valid values:</p>
      * <ul>
-     * <li><p>1: Transcoding Template</p>
-     * </li>
-     * <li><p>2: Screenshot Template</p>
-     * </li>
-     * <li><p>3: Animated GIF Template</p>
-     * </li>
-     * <li><p>4: Image Watermark Template</p>
-     * </li>
-     * <li><p>5: Text Watermark Template</p>
-     * </li>
-     * <li><p>6: Subtitle Template</p>
-     * </li>
-     * <li><p>7: AI Content Moderation</p>
-     * </li>
-     * <li><p>8: AI-powered Smart Cover</p>
-     * </li>
-     * <li><p>9: AI-powered Object Removal</p>
-     * </li>
+     * <li>1: Transcode template.</li>
+     * <li>2: Snapshot template.</li>
+     * <li>3: Animated image template.</li>
+     * <li>4: Image watermark template.</li>
+     * <li>5: Text watermark template.</li>
+     * <li>6: Subtitle template.</li>
+     * <li>7: AI content moderation.</li>
+     * <li>8: AI intelligent cover.</li>
+     * <li>9: AI intelligent erasure.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

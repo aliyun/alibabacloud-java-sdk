@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIAgentVoiceprintsRequest extends TeaModel {
     /**
-     * <p>The page number to return. Must be 1 or greater.</p>
+     * <p>The page number. Minimum value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class ListAIAgentVoiceprintsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The registration mode for the voiceprint. The default value is <code>Explicit</code>.</p>
+     * <p>The voiceprint registration mode. Default value: Explicit.</p>
      * 
      * <strong>example:</strong>
      * <p>Explicit</p>
@@ -32,7 +32,7 @@ public class ListAIAgentVoiceprintsRequest extends TeaModel {
     public String registrationMode;
 
     /**
-     * <p>The unique voiceprint ID. If specified, this operation returns the details of a single voiceprint. If omitted, it returns a paginated list of all voiceprints under your account.</p>
+     * <p>The unique ID for voiceprint recognition. This parameter is optional. If you do not specify this parameter, all voiceprint IDs under the account are listed. If you specify this parameter, only the specified voiceprint ID is displayed.</p>
      * 
      * <strong>example:</strong>
      * <p>vp_1699123456_8527</p>

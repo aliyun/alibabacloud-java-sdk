@@ -17,7 +17,7 @@ public class CreateLiveTranscodeTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The template configuration.</p>
      * <blockquote>
-     * <p>The pass parameter requirements vary based on the templatetype (Type). When Type is set to normal, at least one of the width and height parameters must be specified, and the frame rate and bitrate parameters are required. For other template types, specify the parameters based on your requirements.</p>
+     * <p>The parameter requirements vary based on the template type (Type). If the Type parameter is set to normal, you must specify at least one of the width and height parameters, and the frame rate and bitrate parameters are required. For other template types, specify parameters as needed.</p>
      * </blockquote>
      */
     @NameInMap("TemplateConfig")
@@ -26,10 +26,10 @@ public class CreateLiveTranscodeTemplateShrinkRequest extends TeaModel {
     /**
      * <p>The template type. Valid values:</p>
      * <ul>
-     * <li>normal: standard.</li>
-     * <li>narrow-band: narrowband HD.</li>
-     * <li>audio-only: audio only.</li>
-     * <li>origin: original quality.</li>
+     * <li>normal: Normal template.</li>
+     * <li>narrow-band: Narrowband HD template.</li>
+     * <li>audio-only: Audio-only template.</li>
+     * <li>origin: Original quality template.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetStorageListResponseBody extends TeaModel {
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong><strong>73-8B78-5D86-A50C-49B96C</strong></strong></strong></p>
@@ -14,7 +14,7 @@ public class GetStorageListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The storage configurations.</p>
+     * <p>The list of storage configurations.</p>
      */
     @NameInMap("StorageInfoList")
     public java.util.List<GetStorageListResponseBodyStorageInfoList> storageInfoList;
@@ -51,7 +51,7 @@ public class GetStorageListResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The time when the configuration was created.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard and is in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-06T01:55:07Z</p>
@@ -60,7 +60,7 @@ public class GetStorageListResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>Indicates whether it is the default storage location.</p>
+         * <p>Indicates whether the storage is the default storage.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -69,7 +69,7 @@ public class GetStorageListResponseBody extends TeaModel {
         public Boolean defaultStorage;
 
         /**
-         * <p>Indicates whether temporary files created during editing processes are stored in this location.</p>
+         * <p>Indicates whether the storage is the default storage for editing.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -78,7 +78,7 @@ public class GetStorageListResponseBody extends TeaModel {
         public Boolean editingTempFileStorage;
 
         /**
-         * <p>The time when the configuration was last modified.</p>
+         * <p>The last modification time. The time follows the ISO 8601 standard and is in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-06-06T03:07:07Z</p>
@@ -87,7 +87,7 @@ public class GetStorageListResponseBody extends TeaModel {
         public String modifiedTime;
 
         /**
-         * <p>The file path.</p>
+         * <p>The OSS path.</p>
          * 
          * <strong>example:</strong>
          * <p>your-path/</p>
@@ -105,7 +105,7 @@ public class GetStorageListResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The bucket.</p>
+         * <p>The OSS storage.</p>
          * 
          * <strong>example:</strong>
          * <p>your-bucket</p>

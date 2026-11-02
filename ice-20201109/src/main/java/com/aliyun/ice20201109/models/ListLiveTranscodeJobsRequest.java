@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListLiveTranscodeJobsRequest extends TeaModel {
     /**
-     * <p>The search keyword. You can search by task ID or name. Name supports fuzzy match.</p>
+     * <p>The search keyword. You can search by job ID or name. Fuzzy match is supported for job names.</p>
      * 
      * <strong>example:</strong>
      * <p>24ecbb5c-4f98-4194-9400-f17102e27fc5</p>
@@ -32,10 +32,10 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sort order. Sorts by CreateTime. Default value: desc.</p>
+     * <p>The sort order based on CreateTime. Default value: desc. Valid values:</p>
      * <ul>
-     * <li>asc: ascending order</li>
-     * <li>desc: descending order</li>
+     * <li>asc: Ascending order.</li>
+     * <li>desc: Descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,10 +45,10 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The start mode.</p>
+     * <p>The start mode. Valid values:</p>
      * <ul>
-     * <li>0: start immediately</li>
-     * <li>1: scheduled start</li>
+     * <li>0: Starts immediately.</li>
+     * <li>1: Starts at a scheduled time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -58,14 +58,11 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public Integer startMode;
 
     /**
-     * <p>The task status.</p>
+     * <p>The job status. Valid values:</p>
      * <ul>
-     * <li><p>0: not started</p>
-     * </li>
-     * <li><p>1: running</p>
-     * </li>
-     * <li><p>2: stopped</p>
-     * </li>
+     * <li>0: Not started.</li>
+     * <li>1: Running.</li>
+     * <li>2: Stopped.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,12 +72,12 @@ public class ListLiveTranscodeJobsRequest extends TeaModel {
     public Integer status;
 
     /**
-     * <p>The template type corresponding to the transcoding task.</p>
+     * <p>The template type corresponding to the transcoding job. Valid values:</p>
      * <ul>
-     * <li>normal: standard</li>
-     * <li>narrow-band: narrow bandwidth high definition</li>
-     * <li>audio-only: audio only</li>
-     * <li>origin: original quality</li>
+     * <li>normal: Standard template.</li>
+     * <li>narrow-band: Narrowband HD template.</li>
+     * <li>audio-only: Audio-only template.</li>
+     * <li>origin: Original quality template.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,14 +5,11 @@ import com.aliyun.tea.*;
 
 public class SearchMediaByHybridRequest extends TeaModel {
     /**
-     * <p>Custom filters. A JSON string. Supported backing fields include integer field intField1 and string fields strField1 and strField2. Only one matching condition can be applied per field, and filters across different fields are combined with a logical AND relationship.</p>
+     * <p>The custom filters. A JSON string. Supports the integer field intField1 and the string fields strField1 and strField2. You can select at most one match type for the same field. Filters for different fields use the AND logical operator.</p>
      * <ul>
-     * <li><p>Exact match example: {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}</p>
-     * </li>
-     * <li><p>Multi-value example: {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}</p>
-     * </li>
-     * <li><p>Range example: {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}</p>
-     * </li>
+     * <li>Exact match, such as {&quot;intField1&quot;:12,&quot;strField1&quot;:&quot;abc&quot;}.</li>
+     * <li>Multi-value match, such as {&quot;intField1&quot;:[12,13],&quot;strField1&quot;:[&quot;abc&quot;,&quot;cd&quot;]}.</li>
+     * <li>Range match, such as {&quot;intField1&quot;:{&quot;gte&quot;:12,&quot;lte&quot;:13}}.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -22,7 +19,7 @@ public class SearchMediaByHybridRequest extends TeaModel {
     public String customFilters;
 
     /**
-     * <p>The ID of the media asset. If provided, the details of the media asset are returned.</p>
+     * <p>The media asset ID. If specified, detailed hit information of the media asset is returned.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>c469e944b5a856828dc2</strong></strong></p>
@@ -31,13 +28,7 @@ public class SearchMediaByHybridRequest extends TeaModel {
     public String mediaId;
 
     /**
-     * <p>The type of media assets. Valid values:</p>
-     * <ul>
-     * <li><p>image</p>
-     * </li>
-     * <li><p>video</p>
-     * </li>
-     * </ul>
+     * <p>The media asset type.</p>
      * 
      * <strong>example:</strong>
      * <p>video</p>
@@ -55,7 +46,11 @@ public class SearchMediaByHybridRequest extends TeaModel {
     public String namespace;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
+     * <ul>
+     * <li>image: Images.</li>
+     * <li>video: Videos.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -64,7 +59,7 @@ public class SearchMediaByHybridRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 50. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -73,7 +68,7 @@ public class SearchMediaByHybridRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the search library</p>
+     * <p>The search library.</p>
      * 
      * <strong>example:</strong>
      * <p>test-1</p>
@@ -82,18 +77,18 @@ public class SearchMediaByHybridRequest extends TeaModel {
     public String searchLibName;
 
     /**
-     * <p>The natural language search query.</p>
+     * <p>The search content.</p>
      * 
      * <strong>example:</strong>
-     * <p>Two pandas are fighting.</p>
+     * <p>Two pandas are fighting</p>
      */
     @NameInMap("Text")
     public String text;
 
     /**
-     * <p>Creation time, in milliseconds UNIX timestamp. gte means greater than or equal to, and lte means less than or equal to.</p>
+     * <p>The creation time. A millisecond timestamp. gte indicates greater than or equal to, and lte indicates less than or equal to.</p>
      * <ul>
-     * <li>Range example: {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}</li>
+     * <li>Range match, such as {&quot;gte&quot;:1761205662998,&quot;lte&quot;:1771205662998}.</li>
      * </ul>
      * 
      * <strong>example:</strong>

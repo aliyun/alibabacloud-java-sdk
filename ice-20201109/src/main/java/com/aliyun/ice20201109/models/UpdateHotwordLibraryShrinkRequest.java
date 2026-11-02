@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateHotwordLibraryShrinkRequest extends TeaModel {
     /**
-     * <p>The description of the hotword library. It can be up to 200 characters in length.</p>
+     * <p>The description of the hotword library. Maximum length: 200 characters.</p>
      * 
      * <strong>example:</strong>
-     * <p>Lexicon containing celebrity names</p>
+     * <p>Store the thesaurus of celebrities</p>
      */
     @NameInMap("Description")
     public String description;
@@ -24,16 +24,16 @@ public class UpdateHotwordLibraryShrinkRequest extends TeaModel {
     public String hotwordLibraryId;
 
     /**
-     * <p>The hotword list. You can add up to 300 hotword entries to a single library.</p>
+     * <p>The list of hotwords. Maximum length: 300 items.</p>
      * 
      * <strong>example:</strong>
-     * <p>Lexicon containing celebrity names</p>
+     * <p>Hotword library for celebrities</p>
      */
     @NameInMap("Hotwords")
     public String hotwordsShrink;
 
     /**
-     * <p>The name of the hotword library. It can be up to 100 characters in length.</p>
+     * <p>The name of the hotword library. Maximum length: 100 characters.</p>
      * 
      * <strong>example:</strong>
      * <p>my_hotwords</p>

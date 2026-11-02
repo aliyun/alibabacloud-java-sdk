@@ -105,7 +105,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
          * <p>The keyword information.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test keyword</p>
+         * <p>测试关键词</p>
          */
         @NameInMap("Keyword")
         public String keyword;
@@ -189,7 +189,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
          * <p>The job description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test description</p>
+         * <p>测试描述</p>
          */
         @NameInMap("Description")
         public String description;
@@ -275,7 +275,7 @@ public class ListSmartJobsResponseBody extends TeaModel {
          * <p>The job title.</p>
          * 
          * <strong>example:</strong>
-         * <p>Test title</p>
+         * <p>测试标题</p>
          */
         @NameInMap("Title")
         public String title;

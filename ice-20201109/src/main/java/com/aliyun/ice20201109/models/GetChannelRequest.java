@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetChannelRequest extends TeaModel {
     /**
-     * <p>The name of the channel.</p>
+     * <p>The channel name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

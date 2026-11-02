@@ -5,15 +5,17 @@ import com.aliyun.tea.*;
 
 public class ListRecognitionSamplesRequest extends TeaModel {
     /**
-     * <p>The type of recognition algorithm. Valid values:</p>
+     * <p>The recognition type. Valid values:</p>
      * <ul>
-     * <li><p>landmark</p>
+     * <li><p>landmark: custom landmark</p>
      * </li>
-     * <li><p>object</p>
+     * <li><p>object: custom object</p>
      * </li>
-     * <li><p>logo</p>
+     * <li><p>logo: custom logo</p>
      * </li>
-     * <li><p>face</p>
+     * <li><p>face: custom face</p>
+     * </li>
+     * <li><p>label: custom label</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -25,7 +27,7 @@ public class ListRecognitionSamplesRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The entity ID. If you set this parameter to ANY, the system queries by EntityName.</p>
+     * <p>The entity ID. If you set this parameter to ANY, the system queries the entity name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,7 +46,7 @@ public class ListRecognitionSamplesRequest extends TeaModel {
     public String entityName;
 
     /**
-     * <p>The library ID. If you specify this parameter, the system performs an exact match. You can specify multiple library IDs. Separate them with commas (,).</p>
+     * <p>The library ID. If you specify this parameter, the system queries the specified library. You can specify multiple IDs and separate them with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -70,7 +72,7 @@ public class ListRecognitionSamplesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

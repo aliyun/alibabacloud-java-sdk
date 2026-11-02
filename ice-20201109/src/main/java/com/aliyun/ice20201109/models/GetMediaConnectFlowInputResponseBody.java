@@ -11,7 +11,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
     public GetMediaConnectFlowInputResponseBodyContent content;
 
     /**
-     * <p>The description of the API call.</p>
+     * <p>The API call description.</p>
      * 
      * <strong>example:</strong>
      * <p>OK</p>
@@ -29,7 +29,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The error code returned. A value of 0 indicates success.</p>
+     * <p>The returned error code. A value of 0 indicates success.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>
@@ -77,63 +77,96 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
     public static class GetMediaConnectFlowInputResponseBodyContent extends TeaModel {
         /**
          * <p>The IP address whitelist for the backup input.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10.211.0.0/17</p>
          */
         @NameInMap("BackupCidrs")
         public String backupCidrs;
 
         /**
          * <p>The time when the backup input was created.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2024-07-18T01:29:24Z</p>
          */
         @NameInMap("BackupCreateTime")
         public String backupCreateTime;
 
+        /**
+         * <p>The internal IP address for backup stream ingestion. This field is valid only when cloud access is established over an Express Connect circuit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("BackupInnerInputUrl")
         public String backupInnerInputUrl;
 
         /**
-         * <p>The name of the backup input.</p>
+         * <p>The backup input name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>AliTestInput-sub</p>
          */
         @NameInMap("BackupInputName")
         public String backupInputName;
 
         /**
-         * <p>The status of the backup input. It indicates whether the backup stream is being pushed.</p>
+         * <p>The backup input status, which indicates whether the backup stream is being ingested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("BackupInputStatus")
         public String backupInputStatus;
 
         /**
-         * <p>The URL of the backup input.</p>
+         * <p>The backup input URL.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rtmp://1.2.3.4:1935/live/AliTestInput_8666ec062190f00e263012666319a5be_backup</p>
          */
         @NameInMap("BackupInputUrl")
         public String backupInputUrl;
 
         /**
-         * <p>The bitrate of the backup input.</p>
+         * <p>The maximum bitrate for the backup input.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2000000</p>
          */
         @NameInMap("BackupMaxBitrate")
         public Integer backupMaxBitrate;
 
         /**
          * <p>The SRT latency for the backup input.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>120</p>
          */
         @NameInMap("BackupSrtLatency")
         public Integer backupSrtLatency;
 
         /**
-         * <p>The SRT encryption key for the backup input.</p>
+         * <p>The SRT encryption passphrase for the backup input.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>FICUBPX4Q77DYHRF</p>
          */
         @NameInMap("BackupSrtPassphrase")
         public String backupSrtPassphrase;
 
         /**
          * <p>The SRT encryption key length for the backup input.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>32</p>
          */
         @NameInMap("BackupSrtPbkeyLen")
         public Integer backupSrtPbkeyLen;
 
         /**
-         * <p>The IP address whitelist in CIDR format. Separate multiple IP address segments with commas.</p>
+         * <p>The IP address whitelist in CIDR format. Multiple CIDR blocks are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>10.211.0.0/17</p>
@@ -142,7 +175,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String cidrs;
 
         /**
-         * <p>The time when the input was created.</p>
+         * <p>The time when the input was created. The time is displayed in ISO 8601 format in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2024-07-18T01:29:24Z</p>
@@ -150,6 +183,12 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The internal IP address for stream ingestion. This field is valid only when cloud access is established over an Express Connect circuit.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>&quot;&quot;</p>
+         */
         @NameInMap("InnerInputUrl")
         public String innerInputUrl;
 
@@ -163,7 +202,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String inputName;
 
         /**
-         * <p>The input type.</p>
+         * <p>The input protocol.</p>
          * 
          * <strong>example:</strong>
          * <p>RTMP-PUSH</p>
@@ -172,7 +211,10 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String inputProtocol;
 
         /**
-         * <p>The input status. It indicates whether the primary stream is being pushed.</p>
+         * <p>The input status, which indicates whether the primary stream is being ingested.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>online</p>
          */
         @NameInMap("InputStatus")
         public String inputStatus;
@@ -187,7 +229,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String inputUrl;
 
         /**
-         * <p>The input bitrate, in bps.</p>
+         * <p>The maximum input bitrate, in bps.</p>
          * 
          * <strong>example:</strong>
          * <p>2000000</p>
@@ -196,7 +238,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public Integer maxBitrate;
 
         /**
-         * <p>The ID of the peer Flow instance. This parameter is required only if the output type is Flow.</p>
+         * <p>The peer flow instance ID. This field is required when the output type is Flow.</p>
          * 
          * <strong>example:</strong>
          * <p>05c3adf4-aa0e-421d-a991-48ceae3e642e</p>
@@ -205,7 +247,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String pairFlowId;
 
         /**
-         * <p>The output name of the peer Flow. This parameter is required only when the input type is Flow.</p>
+         * <p>The output name of the peer flow. This field is required only when the input type is Flow.</p>
          * 
          * <strong>example:</strong>
          * <p>AliTestOutput</p>
@@ -214,7 +256,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String pairOutputName;
 
         /**
-         * <p>The SRT latency in milliseconds (ms). This parameter is required only when the input type is SRT-Listener or SRT-Caller.</p>
+         * <p>The SRT latency, in milliseconds. This field is required only when the input type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -223,7 +265,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public Integer srtLatency;
 
         /**
-         * <p>The SRT encryption key. This parameter is required only when the input type is SRT-Listener or SRT-Caller.</p>
+         * <p>The SRT encryption passphrase. This field is required only when the input type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>FICUBPX4Q77DYHRF</p>
@@ -232,7 +274,7 @@ public class GetMediaConnectFlowInputResponseBody extends TeaModel {
         public String srtPassphrase;
 
         /**
-         * <p>The SRT encryption key length. This parameter is required only when the input type is SRT-Listener or SRT-Caller.</p>
+         * <p>The SRT encryption key length. This field is required only when the input type is SRT-Listener or SRT-Caller.</p>
          * 
          * <strong>example:</strong>
          * <p>32</p>

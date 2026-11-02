@@ -5,9 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetAvatarRequest extends TeaModel {
     /**
-     * <ul>
-     * <li>The ID of the digital human.</li>
-     * </ul>
+     * <p>The digital human ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

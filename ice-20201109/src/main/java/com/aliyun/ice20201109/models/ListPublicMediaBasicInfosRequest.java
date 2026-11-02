@@ -7,11 +7,11 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     /**
      * <p>The business type of the media asset. Valid values:</p>
      * <ul>
-     * <li><p>sticker</p>
+     * <li><p>sticker: sticker</p>
      * </li>
-     * <li><p>bgm</p>
+     * <li><p>bgm: background music</p>
      * </li>
-     * <li><p>bgi</p>
+     * <li><p>bgi: background image</p>
      * </li>
      * </ul>
      * 
@@ -22,7 +22,7 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     public String businessType;
 
     /**
-     * <p>Specifies whether to return the basic information of the media asset.</p>
+     * <p>Specifies whether to include basic file information in the response.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -31,7 +31,7 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     public Boolean includeFileBasicInfo;
 
     /**
-     * <p>The maximum number of entries to return.</p>
+     * <p>The maximum number of entries to return for a single request.</p>
      * <p>Maximum value: 100. Default value: 10.</p>
      * 
      * <strong>example:</strong>
@@ -41,52 +41,32 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The media tag. All media assets that contain the specified media tag are returned. Valid values:</p>
+     * <p>The media asset tag. The system matches media assets based on this mediaTagId and returns all media assets that contain this tag. Valid values:</p>
      * <ul>
-     * <li><p>Sticker tags:</p>
-     * <ul>
-     * <li><p>sticker-atmosphere</p>
-     * </li>
-     * <li><p>sticker-bubble</p>
-     * </li>
-     * <li><p>sticker-cute</p>
-     * </li>
-     * <li><p>sticker-daily</p>
-     * </li>
-     * <li><p>sticker-expression</p>
-     * </li>
-     * <li><p>sticker-gif</p>
-     * </li>
+     * <li>sticker: stickers<ul>
+     * <li>sticker-atmosphere: atmosphere</li>
+     * <li>sticker-bubble: bubble</li>
+     * <li>sticker-cute: cute</li>
+     * <li>sticker-daily: daily</li>
+     * <li>sticker-expression: expression</li>
+     * <li>sticker-gif: GIF</li>
      * </ul>
      * </li>
-     * <li><p>Background music (BGM) tags:</p>
-     * <ul>
-     * <li><p>bgm-romantic</p>
-     * </li>
-     * <li><p>bgm-cuisine</p>
-     * </li>
-     * <li><p>bgm-chinese-style</p>
-     * </li>
-     * <li><p>bgm-upbeat</p>
-     * </li>
-     * <li><p>bgm-dynamic</p>
-     * </li>
-     * <li><p>bgm-relaxing</p>
-     * </li>
-     * <li><p>bgm-quirky</p>
-     * </li>
-     * <li><p>bgm-beauty</p>
-     * </li>
+     * <li>bgm: background music<ul>
+     * <li>bgm-romantic: romantic</li>
+     * <li>bgm-cuisine: cuisine</li>
+     * <li>bgm-chinese-style: Chinese style</li>
+     * <li>bgm-upbeat: upbeat</li>
+     * <li>bgm-dynamic: dynamic</li>
+     * <li>bgm-relaxing: relaxing</li>
+     * <li>bgm-quirky: quirky</li>
+     * <li>bgm-beauty: fashion and beauty</li>
      * </ul>
      * </li>
-     * <li><p>Background image (BGI) tags:</p>
-     * <ul>
-     * <li><p>bgi-grad</p>
-     * </li>
-     * <li><p>bgi-solid</p>
-     * </li>
-     * <li><p>bgi-pic</p>
-     * </li>
+     * <li>bgi: background images<ul>
+     * <li>bgi-grad: gradient background</li>
+     * <li>bgi-solid: solid color background</li>
+     * <li>bgi-pic: image background</li>
      * </ul>
      * </li>
      * </ul>
@@ -98,7 +78,7 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     public String mediaTagId;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. You do not need to specify this parameter for the first request. You must specify the token that is obtained from the previous query as the value of NextToken.</p>
+     * <p>The token that indicates the position from which the next query starts. An empty value indicates that all data has been read.</p>
      * 
      * <strong>example:</strong>
      * <p>pSa1SQ0wCe5pzVrQ6mWZEw==</p>
@@ -107,7 +87,7 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number. Default value: 1</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -116,7 +96,7 @@ public class ListPublicMediaBasicInfosRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
+     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

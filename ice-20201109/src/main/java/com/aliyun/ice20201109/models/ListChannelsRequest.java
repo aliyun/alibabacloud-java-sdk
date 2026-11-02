@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListChannelsRequest extends TeaModel {
     /**
-     * <p>The name of the channel.</p>
+     * <p>The channel name.</p>
      * 
      * <strong>example:</strong>
      * <p>MyChannel</p>
@@ -14,7 +14,7 @@ public class ListChannelsRequest extends TeaModel {
     public String channelName;
 
     /**
-     * <p>The tier of the channel. Valid values: basic and standard.</p>
+     * <p>The channel tier.</p>
      * 
      * <strong>example:</strong>
      * <p>basic</p>
@@ -23,7 +23,7 @@ public class ListChannelsRequest extends TeaModel {
     public String channelTier;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The current page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class ListChannelsRequest extends TeaModel {
     public Integer pageNo;
 
     /**
-     * <p>The number of entries per page. Valid values: 1 to 100. Default value: 10.</p>
+     * <p>The number of entries per page. Default value: 10. Maximum value: 100.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -41,7 +41,7 @@ public class ListChannelsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The playback mode. Valid values: loop and linear.</p>
+     * <p>The playback mode.</p>
      * 
      * <strong>example:</strong>
      * <p>loop</p>
@@ -50,7 +50,7 @@ public class ListChannelsRequest extends TeaModel {
     public String playbackMode;
 
     /**
-     * <p>The sorting order by creation time. Valid values: asc and desc.</p>
+     * <p>Sorts the results by creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>asc</p>
@@ -59,7 +59,7 @@ public class ListChannelsRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The sorting order by modification time. Valid values: asc and desc.</p>
+     * <p>Sorts the results by modification time.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -68,7 +68,7 @@ public class ListChannelsRequest extends TeaModel {
     public String sortByModifiedTime;
 
     /**
-     * <p>The channel status. A value of 0 specifies stopped. A value of 1 specifies started.</p>
+     * <p>The channel state. Valid values: 0: Stopped. 1: Started.</p>
      * 
      * <strong>example:</strong>
      * <p>0</p>

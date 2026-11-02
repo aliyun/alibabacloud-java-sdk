@@ -14,7 +14,7 @@ public class AddMediaConnectFlowOutputRequest extends TeaModel {
     public String cidrs;
 
     /**
-     * <p>The flow ID.</p>
+     * <p>The flow instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class AddMediaConnectFlowOutputRequest extends TeaModel {
     public String flowId;
 
     /**
-     * <p>The output name.</p>
+     * <p>The name of the output.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,20 +34,7 @@ public class AddMediaConnectFlowOutputRequest extends TeaModel {
     public String outputName;
 
     /**
-     * <p>The output type.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>RTMP-PUSH</p>
-     * </li>
-     * <li><p>SRT-Caller</p>
-     * </li>
-     * <li><p>RTMP-PULL</p>
-     * </li>
-     * <li><p>SRT-Listener</p>
-     * </li>
-     * <li><p>Flow</p>
-     * </li>
-     * </ul>
+     * <p>The output protocol.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +44,7 @@ public class AddMediaConnectFlowOutputRequest extends TeaModel {
     public String outputProtocol;
 
     /**
-     * <p>The output URL. This parameter is required when OutputProtocol is set to RTMP-PUSH or SRT-Caller.</p>
+     * <p>The output URL. This parameter is required when the output type is RTMP-PUSH or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>rtmp://push.test.alivecdn.com/live/alitest</p>
@@ -66,7 +53,7 @@ public class AddMediaConnectFlowOutputRequest extends TeaModel {
     public String outputToUrl;
 
     /**
-     * <p>The ID of the destination flow. This parameter is required when OutputProtocol is set to Flow.</p>
+     * <p>The peer flow instance ID. This parameter is required when the output type is Flow.</p>
      * 
      * <strong>example:</strong>
      * <p>8666ec062190f00e263012666319a5be</p>
@@ -75,7 +62,7 @@ public class AddMediaConnectFlowOutputRequest extends TeaModel {
     public String pairFlowId;
 
     /**
-     * <p>The source name of the destination flow. This parameter is required when OutputProtocol is set to Flow.</p>
+     * <p>The input name of the peer flow. This parameter is required when the output type is Flow.</p>
      * 
      * <strong>example:</strong>
      * <p>AliTestInput</p>
@@ -84,7 +71,7 @@ public class AddMediaConnectFlowOutputRequest extends TeaModel {
     public String pairInputName;
 
     /**
-     * <p>The maximum number of viewers.</p>
+     * <p>The maximum number of concurrent players.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -93,7 +80,7 @@ public class AddMediaConnectFlowOutputRequest extends TeaModel {
     public Integer playerLimit;
 
     /**
-     * <p>The latency for the SRT stream. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
+     * <p>The SRT latency. This parameter is required only when the output type is SRT-Listener or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -102,7 +89,7 @@ public class AddMediaConnectFlowOutputRequest extends TeaModel {
     public Integer srtLatency;
 
     /**
-     * <p>The SRT key. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
+     * <p>The SRT encryption passphrase. This parameter is required only when the output type is SRT-Listener or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>BETTERG08S01</p>
@@ -111,7 +98,7 @@ public class AddMediaConnectFlowOutputRequest extends TeaModel {
     public String srtPassphrase;
 
     /**
-     * <p>The encryption key length. This parameter is required when the source type is SRT-Listener or SRT-Caller.</p>
+     * <p>The SRT encryption key length. This parameter is required only when the output type is SRT-Listener or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>

@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListLiveTranscodeTemplatesRequest extends TeaModel {
     /**
-     * <p>The category of the template. Valid values:</p>
+     * <p>The template category. Valid values:</p>
      * <ul>
-     * <li><p>system</p>
-     * </li>
-     * <li><p>customized</p>
-     * </li>
+     * <li>system: system template.</li>
+     * <li>customized: custom template.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class ListLiveTranscodeTemplatesRequest extends TeaModel {
     public String category;
 
     /**
-     * <p>The search keyword. You can use the template ID or name as the keyword to search for templates. If you search for templates by name, fuzzy match is supported.</p>
+     * <p>The search keyword. You can search by template ID or name. Name supports fuzzy match.</p>
      * 
      * <strong>example:</strong>
      * <p>my_template</p>
@@ -29,7 +27,7 @@ public class ListLiveTranscodeTemplatesRequest extends TeaModel {
     public String keyWord;
 
     /**
-     * <p>The page number of the page to return. Default value: 1.</p>
+     * <p>The page number. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -47,12 +45,10 @@ public class ListLiveTranscodeTemplatesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The sorting order. By default, the query results are sorted by creation time in descending order. Valid values:</p>
+     * <p>The sorting order. Sorts by CreateTime. Default value: desc. Valid values:</p>
      * <ul>
-     * <li><p>asc</p>
-     * </li>
-     * <li><p>desc</p>
-     * </li>
+     * <li>asc: ascending order.</li>
+     * <li>desc: descending order.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,16 +58,12 @@ public class ListLiveTranscodeTemplatesRequest extends TeaModel {
     public String sortBy;
 
     /**
-     * <p>The type of the template. Valid values:</p>
+     * <p>The template type. Valid values:</p>
      * <ul>
-     * <li><p>normal</p>
-     * </li>
-     * <li><p>narrow-band</p>
-     * </li>
-     * <li><p>audio-only</p>
-     * </li>
-     * <li><p>origin</p>
-     * </li>
+     * <li>normal: standard.</li>
+     * <li>narrow-band: narrowband HD.</li>
+     * <li>audio-only: audio only.</li>
+     * <li>origin: original quality.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -83,10 +75,8 @@ public class ListLiveTranscodeTemplatesRequest extends TeaModel {
     /**
      * <p>The video codec. Valid values:</p>
      * <ul>
-     * <li><p>H.264</p>
-     * </li>
-     * <li><p>H.265</p>
-     * </li>
+     * <li>H.264</li>
+     * <li>H.265</li>
      * </ul>
      * 
      * <strong>example:</strong>

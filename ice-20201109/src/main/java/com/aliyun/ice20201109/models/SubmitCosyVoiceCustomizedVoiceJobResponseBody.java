@@ -20,10 +20,10 @@ public class SubmitCosyVoiceCustomizedVoiceJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li>true: The request was successful.</li>
-     * <li>false: The request failed.</li>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class SubmitCosyVoiceCustomizedVoiceJobResponseBody extends TeaModel {
 
     public static class SubmitCosyVoiceCustomizedVoiceJobResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the voice cloning task.</p>
+         * <p>The ID of the voice cloning job.</p>
          * 
          * <strong>example:</strong>
          * <p>bfb786c639894f4d80648792021****</p>
@@ -72,7 +72,7 @@ public class SubmitCosyVoiceCustomizedVoiceJobResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The voice ID.</p>
+         * <p>The ID of the voice.</p>
          * 
          * <strong>example:</strong>
          * <p>Voice-l*****</p>

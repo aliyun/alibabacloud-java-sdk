@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class SubmitMediaProducingJobRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>Ensures the idempotence of the request. You can generate a parameter value from your client to ensure that the parameter value is unique across different requests. ClientToken only supports ASCII characters and cannot exceed 64 characters.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>12e8864746a0a398</strong></strong></p>
@@ -14,27 +14,27 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The material parameters corresponding to the template, in JSON format. When TemplateId is not empty, ClipsParam cannot be empty. For the specific format, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use a standard template</a> and <a href="https://help.aliyun.com/document_detail/445389.html">Create and use an advanced template</a>.</p>
+     * <p>The material parameters corresponding to the template, in JSON format. When TemplateId is not empty, ClipsParam cannot be empty. For the specific format, see <a href="https://help.aliyun.com/document_detail/445399.html">Create and use common templates</a> and <a href="https://help.aliyun.com/document_detail/445389.html">Create and use advanced templates</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>See the template user guide.</p>
+     * <p>See the template usage documentation</p>
      */
     @NameInMap("ClipsParam")
     public String clipsParam;
 
     /**
-     * <p>The editing and compositing configuration. For more information, see <a href="~~357745#section-8a4-pb2-hkv~~">EditingProduceConfig parameter details</a>.</p>
+     * <p>The editing and producing parameters. For configuration details, see <a href="~~357745#section-8a4-pb2-hkv~~">EditingProduceConfig parameter details</a>.</p>
      * <blockquote>
      * <p>If no cover image is configured in EditingProduceConfig, the first frame of the video is used as the cover by default.</p>
      * </blockquote>
      * <ul>
-     * <li><p>AutoRegisterInputVodMedia: specifies whether to automatically register VOD media assets in your timeline to IMS. Default value: true.</p>
+     * <li><p>AutoRegisterInputVodMedia: specifies whether to automatically register the VOD media assets in your timeline to IMS. Default value: true.</p>
      * </li>
-     * <li><p>OutputWebmTransparentChannel: specifies whether to output video with a transparent channel. Default value: false.</p>
+     * <li><p>OutputWebmTransparentChannel: specifies whether to output the video with a transparent channel. Default value: false.</p>
      * </li>
-     * <li><p>CoverConfig: custom cover image parameters.</p>
+     * <li><p>CoverConfig: the custom cover image parameters.</p>
      * </li>
-     * <li><p>......</p>
+     * <li><p>...</p>
      * </li>
      * </ul>
      * 
@@ -60,10 +60,10 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     public String mediaMetadata;
 
     /**
-     * <p>The target configuration of the output media, in JSON format. You can set the OSS URL or the storage location in a VOD bucket for the output media.</p>
+     * <p>The target configuration of the output product, in JSON format. You can set the URL of the output product in OSS or the storage location in the VOD bucket.</p>
      * <ul>
-     * <li>When outputting to OSS, the MediaURL of the output target is required.</li>
-     * <li>When outputting to VOD, the StorageLocation and FileName parameters are required.</li>
+     * <li>When the output is to OSS, the MediaURL parameter of the output target is required.</li>
+     * <li>When the output is to VOD, the StorageLocation and FileName parameters are required.</li>
      * </ul>
      * <p><a href="~~357745#title-4j6-ve7-g31~~">OutputMediaConfig parameter examples</a>.</p>
      * <p>This parameter is required.</p>
@@ -75,13 +75,13 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     public String outputMediaConfig;
 
     /**
-     * <p>The target type of the output media. Valid values:</p>
+     * <p>The target type of the output product. Valid values:</p>
      * <ul>
-     * <li><p>oss-object: an OSS object in your Alibaba Cloud OSS bucket.</p>
+     * <li><p>oss-object: an OSS object in an Alibaba Cloud OSS bucket.</p>
      * </li>
-     * <li><p>vod-media: a media asset in ApsaraVideo VOD.</p>
+     * <li><p>vod-media: a media asset in Alibaba Cloud VOD.</p>
      * </li>
-     * <li><p>S3: output using the S3 protocol.</p>
+     * <li><p>S3: output based on the S3 protocol.</p>
      * </li>
      * </ul>
      * 
@@ -92,9 +92,9 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     public String outputMediaTarget;
 
     /**
-     * <p>The editing project ID. You can call the <a href="https://help.aliyun.com/document_detail/441137.html">CreateEditingProject</a> operation to create an editing project and obtain the ProjectId to submit an editing task.</p>
+     * <p>The ID of the editing project. You can call the <a href="https://help.aliyun.com/document_detail/441137.html">CreateEditingProject</a> operation to create an editing project and obtain the ProjectId parameter to submit an editing task.</p>
      * <blockquote>
-     * <p>Notice: You must specify one of the following three parameters: ProjectId, Timeline, or TemplateId. Leave the other two parameters empty.</p>
+     * <p>Notice: You must specify one of the ProjectId, Timeline, and TemplateId parameters, and leave the other two parameters empty.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -104,22 +104,22 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     public String projectId;
 
     /**
-     * <p>The metadata of the editing project, in JSON format. For the specific structure definition, see <a href="~~357745#title-yvp-81k-wff~~">ProjectMetadata</a>.</p>
+     * <p>The metadata information of the editing project, in JSON format. For the specific structure definition, see <a href="~~357745#title-yvp-81k-wff~~">ProjectMetadata</a>.</p>
      * 
      * <strong>example:</strong>
-     * <p>{&quot;Description&quot;:&quot;Video editing description&quot;,&quot;Title&quot;:&quot;Editing title test&quot;}</p>
+     * <p>{&quot;Description&quot;:&quot;Edited video description&quot;,&quot;Title&quot;:&quot;Editing title test&quot;}</p>
      */
     @NameInMap("ProjectMetadata")
     public String projectMetadata;
 
     /**
-     * <p>The source of the editing and compositing request. Valid values:</p>
+     * <p>The source of the editing and producing request. Valid values:</p>
      * <ul>
-     * <li><p>OpenAPI: a direct API request.</p>
+     * <li><p>OpenAPI: direct API requests.</p>
      * </li>
-     * <li><p>AliyunConsole: a request from the Alibaba Cloud Management Console.</p>
+     * <li><p>AliyunConsole: requests from the Alibaba Cloud Management Console.</p>
      * </li>
-     * <li><p>WebSDK: a request from a frontend page integrated with WebSDK.</p>
+     * <li><p>WebSDK: requests from frontend pages integrated with WebSDK.</p>
      * </li>
      * </ul>
      * 
@@ -130,15 +130,15 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The template ID, which is used to quickly build a timeline with minimal effort. Video clip editing based on both standard templates and advanced templates is supported.</p>
+     * <p>The ID of the template. This parameter is used to quickly build a timeline with a low threshold. Video editing based on common templates and advanced templates is supported.</p>
      * <ul>
-     * <li><p>When you commit a media producing job by using a template ID, you must provide the ClipsParam parameter to flexibly adjust or replace materials in the template.</p>
+     * <li><p>When you use a template ID to submit a media editing and producing job, you must provide the ClipsParam parameter to flexibly adjust or replace materials in the template.</p>
      * </li>
-     * <li><p>You can invoke <a href="https://help.aliyun.com/document_detail/441164.html">GetTemplate</a> to obtain template information.</p>
+     * <li><p>You can invoke the <a href="https://help.aliyun.com/document_detail/441164.html">GetTemplate</a> operation to obtain template information.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>Notice: You must specify one of the following three parameters: ProjectId, Timeline, or TemplateId. Leave the other two parameters empty.</p>
+     * <p>Notice: You must specify one of the ProjectId, Timeline, and TemplateId parameters, and leave the other two parameters empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -148,13 +148,13 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     public String templateId;
 
     /**
-     * <p>The timeline of the cloud editing task. When you need to arrange materials and design effects based on your video creative ideas, you can manually construct the Timeline parameter.</p>
+     * <p>The timeline of the cloud editing task. When you need to arrange materials and design special effects based on video ideas, you can manually construct the Timeline parameter.</p>
      * <ul>
-     * <li>A timeline mainly contains three types of objects: tracks, materials, and effects. For more information, see <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configuration</a>.</li>
-     * <li>For more timeline configuration examples, see <a href="https://help.aliyun.com/document_detail/2766669.html">Best Practices</a>.</li>
+     * <li>A timeline mainly includes three types of objects: tracks, materials, and effects. For more information, see <a href="https://help.aliyun.com/document_detail/198823.html">Timeline configurations</a>.</li>
+     * <li>For more timeline configuration examples, see <a href="https://help.aliyun.com/document_detail/2766669.html">Best practices</a>.</li>
      * </ul>
      * <blockquote>
-     * <p>Notice: You must specify one of the following three parameters: ProjectId, Timeline, or TemplateId. Leave the other two parameters empty.</p>
+     * <p>Notice: You must specify one of the ProjectId, Timeline, and TemplateId parameters, and leave the other two parameters empty.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -164,10 +164,10 @@ public class SubmitMediaProducingJobRequest extends TeaModel {
     public String timeline;
 
     /**
-     * <p>Custom settings, in JSON format, with a maximum length of 512 bytes. Supports <a href="https://help.aliyun.com/document_detail/451631.html">task completion callback configuration</a>. The fields include:</p>
+     * <p>The custom settings, in JSON format. The maximum length is 512 bytes. <a href="https://help.aliyun.com/document_detail/451631.html">Task completion callback configurations</a> are supported. Parameters:</p>
      * <ul>
      * <li>NotifyAddress: the callback URL for task completion.</li>
-     * <li>RegisterMediaNotifyAddress: the callback URL for media asset analysis completion.</li>
+     * <li>RegisterMediaNotifyAddress: the callback URL for the completion of produced media asset analysis.</li>
      * </ul>
      * 
      * <strong>example:</strong>

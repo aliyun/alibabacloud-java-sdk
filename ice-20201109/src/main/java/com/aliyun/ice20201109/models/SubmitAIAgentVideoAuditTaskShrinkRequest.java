@@ -15,7 +15,7 @@ public class SubmitAIAgentVideoAuditTaskShrinkRequest extends TeaModel {
     public String AIAgentId;
 
     /**
-     * <p>The interval, in milliseconds, at which to submit captured frames to the AI agent. Valid values: 0 to 5000. Default value: 3000. If it is set to 0, all captured frames are sent to the model in a single batch request. Otherwise, frames are sent sequentially with the specified interval between each request.</p>
+     * <p>The moderation interval, in milliseconds. Valid values: 0 to 5000. Default value: 3000. If you set this parameter to 0, all captured frame data specified in CapturePolicies is sent to the large model in the corresponding agent at a time. If you set this parameter to a non-zero value, such as 3000, all captured frame data is sent to the large model in sequence at an interval of 3,000 milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>3000</p>
@@ -24,7 +24,7 @@ public class SubmitAIAgentVideoAuditTaskShrinkRequest extends TeaModel {
     public Integer auditInterval;
 
     /**
-     * <p>Callback configurations.</p>
+     * <p>The callback configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Url&quot;:&quot;<a href="https://yourcallback%22,%22Token%22:%22yourtoken%22%7D">https://yourcallback&quot;,&quot;Token&quot;:&quot;yourtoken&quot;}</a></p>
@@ -33,21 +33,21 @@ public class SubmitAIAgentVideoAuditTaskShrinkRequest extends TeaModel {
     public String callbackConfigShrink;
 
     /**
-     * <p>An array of frame-capturing policies. Each policy defines a set of frames to be analyzed and will generate a separate result from the model.</p>
+     * <p>The array of moderation policies. Each policy generates a model result.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CapturePolicies")
     public String capturePoliciesShrink;
 
     /**
-     * <p>The details of the input file.</p>
+     * <p>The input file.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public String inputShrink;
 
     /**
-     * <p>The user-defined data.</p>
+     * <p>The custom user data.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Custom&quot;:&quot;hello&quot;}</p>

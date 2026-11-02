@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIAgentInstanceRequest extends TeaModel {
     /**
-     * <p>The agent ID.</p>
+     * <p>The ID of the agent.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListAIAgentInstanceRequest extends TeaModel {
     public String AIAgentId;
 
     /**
-     * <p>The end time of the query in ISO 8601 format. No default value.</p>
+     * <p>The end time of the query in ISO 8601 format. Default value: none.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-01-02T00:00:00Z</p>
@@ -24,7 +24,7 @@ public class ListAIAgentInstanceRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The page number. Default value: 1. Valid values: 1 to 100.</p>
+     * <p>The current page number. Default value: 1. Valid values: 1 to 100.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -42,7 +42,7 @@ public class ListAIAgentInstanceRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The start time of the query in ISO 8601 format. No default value.</p>
+     * <p>The start time of the query in ISO 8601 format. Default value: none.</p>
      * 
      * <strong>example:</strong>
      * <p>2023-01-01T00:00:00Z</p>

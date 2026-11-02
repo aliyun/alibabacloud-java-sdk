@@ -5,22 +5,22 @@ import com.aliyun.tea.*;
 
 public class QueryCopyrightExtractJobResponseBody extends TeaModel {
     /**
-     * <p>The data returned.</p>
+     * <p>The response data.</p>
      */
     @NameInMap("Data")
     public QueryCopyrightExtractJobResponseBodyData data;
 
     /**
-     * <p>The message returned.</p>
+     * <p>The response message.</p>
      * 
      * <strong>example:</strong>
-     * <p>Copyright watermark test</p>
+     * <p>ok</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p><em><strong><strong>ACB-44F2-5F2D-88D7-1283E70</strong></strong></em></p>
@@ -79,7 +79,7 @@ public class QueryCopyrightExtractJobResponseBody extends TeaModel {
          * <p>The copyright watermark information.</p>
          * 
          * <strong>example:</strong>
-         * <p>版权水印测试</p>
+         * <p>Copyright extract test</p>
          */
         @NameInMap("Message")
         public String message;

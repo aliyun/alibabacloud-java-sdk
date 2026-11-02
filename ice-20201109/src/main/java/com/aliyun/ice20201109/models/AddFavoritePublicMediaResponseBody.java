@@ -4,6 +4,9 @@ package com.aliyun.ice20201109.models;
 import com.aliyun.tea.*;
 
 public class AddFavoritePublicMediaResponseBody extends TeaModel {
+    /**
+     * <p>The list of media asset IDs that were not successfully added to the favorites.</p>
+     */
     @NameInMap("IgnoredList")
     public java.util.List<String> ignoredList;
 

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class SubmitCopyrightExtractJobRequest extends TeaModel {
     /**
-     * <p>The video file for watermark extraction.</p>
+     * <p>The video file from which the watermark is to be extracted.</p>
      * <blockquote>
      * <ul>
-     * <li>The region of the Object Storage Service (OSS) file or media asset must match the region of the current Intelligent Media Service (IMS) instance.</li>
+     * <li>The region of the OSS file or media asset must be the same as the region of the current IMS instance.</li>
      * </ul>
      * </blockquote>
      * <p>This parameter is required.</p>
@@ -17,14 +17,12 @@ public class SubmitCopyrightExtractJobRequest extends TeaModel {
     public SubmitCopyrightExtractJobRequestInput input;
 
     /**
-     * <p>The watermark job parameters, specified as a JSON string.</p>
+     * <p>The watermark job parameters in JSON string format. The following parameters are supported:</p>
      * <ul>
-     * <li><p>algoType: The algorithm type. Default value: v1. The extraction algorithm type must match the algorithm type used for embedding the watermark.</p>
+     * <li><p>algoType: the algorithm type. Default value: v1. The extraction algorithm type must be the same as the algorithm type used for embedding.</p>
      * <ul>
-     * <li><p>v1: The copyright extraction algorithm for long-form videos.</p>
-     * </li>
-     * <li><p>v2: The copyright extraction algorithm for short-form videos.</p>
-     * </li>
+     * <li>v1: the copyright extraction API operation for long videos.</li>
+     * <li>v2: the copyright extraction API operation for short videos.</li>
      * </ul>
      * </li>
      * </ul>
@@ -36,7 +34,7 @@ public class SubmitCopyrightExtractJobRequest extends TeaModel {
     public String params;
 
     /**
-     * <p>The user-defined data. The maximum length is 1,024 bytes.</p>
+     * <p>The custom user data. The maximum length is 1,024 bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>123</p>
@@ -75,11 +73,15 @@ public class SubmitCopyrightExtractJobRequest extends TeaModel {
 
     public static class SubmitCopyrightExtractJobRequestInput extends TeaModel {
         /**
-         * <p>Specifies the URL of an Object Storage Service (OSS) object or the ID of a media asset.
-         * OSS URLs can be in the following formats:</p>
-         * <p>1\. oss\://bucket/object</p>
-         * <p>2\. http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
-         * <p>In these formats, <code>bucket</code> is the name of a bucket in the same region as your IMS instance, and <code>object</code> is the file path.</p>
+         * <p>The information about the input file. Both OSS URLs and media asset IDs are supported.
+         * The OSS URL must be in one of the following formats:</p>
+         * <ol>
+         * <li><p>oss://bucket/object</p>
+         * </li>
+         * <li><p>http(s)://bucket.oss-[regionId].aliyuncs.com/object</p>
+         * </li>
+         * </ol>
+         * <p>where bucket is the name of the OSS bucket that resides in the same region as the current project, and object is the file path.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -90,12 +92,10 @@ public class SubmitCopyrightExtractJobRequest extends TeaModel {
 
         /**
          * <p>The type of the input file. Valid values:</p>
-         * <ol>
-         * <li><p>OSS: The URL of a file in Object Storage Service (OSS).</p>
-         * </li>
-         * <li><p>Media: The ID of a media asset.</p>
-         * </li>
-         * </ol>
+         * <ul>
+         * <li>OSS: the URL of an OSS file.</li>
+         * <li>Media: the ID of a media asset.</li>
+         * </ul>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

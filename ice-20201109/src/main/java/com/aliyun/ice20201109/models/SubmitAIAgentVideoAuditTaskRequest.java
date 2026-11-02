@@ -15,7 +15,7 @@ public class SubmitAIAgentVideoAuditTaskRequest extends TeaModel {
     public String AIAgentId;
 
     /**
-     * <p>The interval, in milliseconds, at which to submit captured frames to the AI agent. Valid values: 0 to 5000. Default value: 3000. If it is set to 0, all captured frames are sent to the model in a single batch request. Otherwise, frames are sent sequentially with the specified interval between each request.</p>
+     * <p>The moderation interval, in milliseconds. Valid values: 0 to 5000. Default value: 3000. If you set this parameter to 0, all captured frame data specified in CapturePolicies is sent to the large model in the corresponding agent at a time. If you set this parameter to a non-zero value, such as 3000, all captured frame data is sent to the large model in sequence at an interval of 3,000 milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>3000</p>
@@ -24,7 +24,7 @@ public class SubmitAIAgentVideoAuditTaskRequest extends TeaModel {
     public Integer auditInterval;
 
     /**
-     * <p>Callback configurations.</p>
+     * <p>The callback configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Url&quot;:&quot;<a href="https://yourcallback%22,%22Token%22:%22yourtoken%22%7D">https://yourcallback&quot;,&quot;Token&quot;:&quot;yourtoken&quot;}</a></p>
@@ -33,21 +33,21 @@ public class SubmitAIAgentVideoAuditTaskRequest extends TeaModel {
     public SubmitAIAgentVideoAuditTaskRequestCallbackConfig callbackConfig;
 
     /**
-     * <p>An array of frame-capturing policies. Each policy defines a set of frames to be analyzed and will generate a separate result from the model.</p>
+     * <p>The array of moderation policies. Each policy generates a model result.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("CapturePolicies")
     public java.util.List<SubmitAIAgentVideoAuditTaskRequestCapturePolicies> capturePolicies;
 
     /**
-     * <p>The details of the input file.</p>
+     * <p>The input file.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("Input")
     public SubmitAIAgentVideoAuditTaskRequestInput input;
 
     /**
-     * <p>The user-defined data.</p>
+     * <p>The custom user data.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;Custom&quot;:&quot;hello&quot;}</p>
@@ -110,7 +110,7 @@ public class SubmitAIAgentVideoAuditTaskRequest extends TeaModel {
 
     public static class SubmitAIAgentVideoAuditTaskRequestCallbackConfig extends TeaModel {
         /**
-         * <p>The authentication token for callback.</p>
+         * <p>The authentication token for the callback.</p>
          * 
          * <strong>example:</strong>
          * <p>Bearer Token</p>
@@ -119,7 +119,7 @@ public class SubmitAIAgentVideoAuditTaskRequest extends TeaModel {
         public String token;
 
         /**
-         * <p>The URL for receiving callback notifications.</p>
+         * <p>The URL where you want to receive callback notifications.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://yourcallback">https://yourcallback</a></p>
@@ -152,7 +152,7 @@ public class SubmitAIAgentVideoAuditTaskRequest extends TeaModel {
 
     public static class SubmitAIAgentVideoAuditTaskRequestCapturePolicies extends TeaModel {
         /**
-         * <p>The duration over which to capture the specified number of frames. Unit: seconds.</p>
+         * <p>The duration of a single frame capture, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -170,16 +170,16 @@ public class SubmitAIAgentVideoAuditTaskRequest extends TeaModel {
         public Integer frameCount;
 
         /**
-         * <p>The text prompt to send to the MLLM along with the captured frames.</p>
+         * <p>The text parameter used when you call the multimodal large model.</p>
          * 
          * <strong>example:</strong>
-         * <p>请分析视频中的场景</p>
+         * <p>Please analyze the scene in the video</p>
          */
         @NameInMap("Prompt")
         public String prompt;
 
         /**
-         * <p>The timestamp in the video at which to start capturing frames. Unit: seconds.</p>
+         * <p>The time when frame capture is triggered, in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -228,8 +228,9 @@ public class SubmitAIAgentVideoAuditTaskRequest extends TeaModel {
 
     public static class SubmitAIAgentVideoAuditTaskRequestInput extends TeaModel {
         /**
-         * <p>The OSS URL of the input file. Format:</p>
+         * <p>The information about the input file. OSS URLs are supported. The URL format is as follows:</p>
          * <p>http(s)://{BucketName}.{Endpoint}/{ObjectName}</p>
+         * <p>Only OSS buckets in the same region as the service are supported. For example, the API service in the China (Shanghai) region supports only OSS buckets in the China (Shanghai) region.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://my-bucket.oss-cn-shanghai.aliyuncs.com/object-id.mp4">http://my-bucket.oss-cn-shanghai.aliyuncs.com/object-id.mp4</a></p>
@@ -238,9 +239,9 @@ public class SubmitAIAgentVideoAuditTaskRequest extends TeaModel {
         public String media;
 
         /**
-         * <p>The type of the input file. Valid values:</p>
+         * <p>The input type. Valid values:</p>
          * <ul>
-         * <li>OSS: an OSS object.</li>
+         * <li>OSS: the URL of an OSS file.</li>
          * </ul>
          * 
          * <strong>example:</strong>

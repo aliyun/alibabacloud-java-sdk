@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMeterImsMediaConvertUHDUsageRequest extends TeaModel {
     /**
-     * <p>The end of the time range to query. The value is a 10-digit timestamp.</p>
+     * <p>The end timestamp, which is a 10-digit UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,11 @@ public class DescribeMeterImsMediaConvertUHDUsageRequest extends TeaModel {
     public Long endTs;
 
     /**
-     * <p>The time granularity of the query. Valid values: 3600 (hour) and 86400 (day).</p>
+     * <p>The time granularity of the query. Valid values:</p>
+     * <ul>
+     * <li>3600: hourly</li>
+     * <li>86400: daily</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,7 +29,7 @@ public class DescribeMeterImsMediaConvertUHDUsageRequest extends TeaModel {
     public String interval;
 
     /**
-     * <p>This parameter does not take effect. By default, the usage data of all regions is returned.</p>
+     * <p>This parameter does not take effect. By default, the usage data for all regions is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -34,7 +38,7 @@ public class DescribeMeterImsMediaConvertUHDUsageRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The beginning of the time range to query. The value is a 10-digit timestamp.</p>
+     * <p>The start timestamp, which is a 10-digit UNIX timestamp.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

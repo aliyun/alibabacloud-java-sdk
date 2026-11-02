@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAIAgentDialoguesRequest extends TeaModel {
     /**
-     * <p>The end Unix timestamp (inclusive), in milliseconds.</p>
+     * <p>The end UNIX timestamp in milliseconds. The value is inclusive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The sort order. Valid values: <code>ASC</code> (ascending) and <code>DESC</code> (descending). Default value: <code>DESC</code>.</p>
+     * <p>The sort order. Valid values: ASC for ascending order and DESC for descending order. Default value: DESC.</p>
      * 
      * <strong>example:</strong>
      * <p>DESC</p>
@@ -33,7 +33,7 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of items per page. Maximum value: 100. Default value: 20.</p>
+     * <p>The page size. Maximum value: 100. Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -42,7 +42,7 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The number of most recent dialogue rounds to return. This value must be a positive integer. This parameter is mutually exclusive with pagination parameters; if specified, it overrides them.</p>
+     * <p>The limit on dialogue rounds. Specifies the number of most recent dialogue rounds to return. The value must be a positive integer. This parameter is mutually exclusive with pagination parameters. If this parameter is specified, pagination parameters are ignored.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -61,7 +61,7 @@ public class ListAIAgentDialoguesRequest extends TeaModel {
     public String sessionId;
 
     /**
-     * <p>The start Unix timestamp (inclusive), in milliseconds.</p>
+     * <p>The start UNIX timestamp in milliseconds. The value is inclusive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

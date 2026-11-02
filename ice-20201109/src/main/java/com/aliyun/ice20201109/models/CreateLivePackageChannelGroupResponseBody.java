@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateLivePackageChannelGroupResponseBody extends TeaModel {
     /**
-     * <p>The information about the channel group.</p>
+     * <p>The channel group.</p>
      */
     @NameInMap("LivePackageChannelGroup")
     public CreateLivePackageChannelGroupResponseBodyLivePackageChannelGroup livePackageChannelGroup;
@@ -42,7 +42,7 @@ public class CreateLivePackageChannelGroupResponseBody extends TeaModel {
 
     public static class CreateLivePackageChannelGroupResponseBodyLivePackageChannelGroup extends TeaModel {
         /**
-         * <p>The time when the channel group was created. It is in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC.</p>
+         * <p>The time when the channel group was created. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -51,16 +51,16 @@ public class CreateLivePackageChannelGroupResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The channel group description.</p>
+         * <p>The description of the channel group.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is an example description.</p>
+         * <p>This is a sample description</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The channel group name.</p>
+         * <p>The name of the channel group.</p>
          * 
          * <strong>example:</strong>
          * <p>example-group</p>
@@ -69,7 +69,7 @@ public class CreateLivePackageChannelGroupResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The time when the channel group was last modified. It is in the yyyy-MM-ddTHH:mm:ssZ format and displayed in UTC.</p>
+         * <p>The time when the channel group was created. Format: yyyy-MM-ddTHH:mm:ssZ (UTC time).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -78,7 +78,7 @@ public class CreateLivePackageChannelGroupResponseBody extends TeaModel {
         public String lastModified;
 
         /**
-         * <p>The origin domain.</p>
+         * <p>The origin domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>example.com</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
     /**
-     * <p>The origin endpoint information.</p>
+     * <p>The origin endpoint type.</p>
      */
     @NameInMap("LivePackageOriginEndpoint")
     public UpdateLivePackageOriginEndpointResponseBodyLivePackageOriginEndpoint livePackageOriginEndpoint;
@@ -60,7 +60,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String channelName;
 
         /**
-         * <p>The time when the endpoint was created.</p>
+         * <p>The creation time. The time is displayed in ISO 8601 format in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -72,7 +72,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
          * <p>The description of the endpoint.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is an origin endpoint.</p>
+         * <p>This is an origin endpoint</p>
          */
         @NameInMap("Description")
         public String description;
@@ -105,7 +105,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The IP blacklist. Subnet masks are supported. Separate multiple IP addresses with commas (,).</p>
+         * <p>The IP blacklist. CIDR blocks are supported. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>10.21.222.1/32,192.168.100.0/24</p>
@@ -114,7 +114,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String ipBlacklist;
 
         /**
-         * <p>The IP whitelist. Subnet masks are supported. Multiple IP addresses are separated with commas (,).</p>
+         * <p>The IP whitelist. CIDR blocks are supported. Separate multiple IP addresses or CIDR blocks with commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>192.168.1.0/24,10.0.0.1/24</p>
@@ -123,7 +123,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String ipWhitelist;
 
         /**
-         * <p>The time when the endpoint was last modified.</p>
+         * <p>The last modified time.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -138,7 +138,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public LivePackagingConfig livePackagingConfig;
 
         /**
-         * <p>The playlist name. Default value: manifest.</p>
+         * <p>The name of the playlist. Default value: manifest.</p>
          * 
          * <strong>example:</strong>
          * <p>manifest</p>
@@ -147,7 +147,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String manifestName;
 
         /**
-         * <p>The protocol. Currently, only HLS is supported.</p>
+         * <p>The protocol. Only HTTP Live Streaming (HLS) is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>HLS</p>
@@ -156,7 +156,7 @@ public class UpdateLivePackageOriginEndpointResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The number of time-shifting days. Maximum value: 30.</p>
+         * <p>The number of time-shift days. Maximum value: 30.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>

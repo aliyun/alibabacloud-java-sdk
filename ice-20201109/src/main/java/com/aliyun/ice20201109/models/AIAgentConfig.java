@@ -5,31 +5,31 @@ import com.aliyun.tea.*;
 
 public class AIAgentConfig extends TeaModel {
     /**
-     * <p>Configuration for ambient sound during the call.</p>
+     * <p>The call ambient sound configuration.</p>
      */
     @NameInMap("AmbientSoundConfig")
     public AIAgentConfigAmbientSoundConfig ambientSoundConfig;
 
     /**
-     * <p>Configuration for automatic speech recognition (ASR).</p>
+     * <p>The speech recognition configuration.</p>
      */
     @NameInMap("AsrConfig")
     public AIAgentConfigAsrConfig asrConfig;
 
     /**
-     * <p>Configuration for the agent\&quot;s automatic speech, including prompts for LLM latency and long periods of user silence.</p>
+     * <p>The automatic speech configuration module for the agent, which includes prompts for LLM response delays and inquiries during prolonged user silence.</p>
      */
     @NameInMap("AutoSpeechConfig")
     public AIAgentConfigAutoSpeechConfig autoSpeechConfig;
 
     /**
-     * <p>Configuration for the avatar. This takes effect only if the workflow includes an avatar node.</p>
+     * <p>The digital human configuration. This configuration takes effect only when the workflow includes a digital human node.</p>
      */
     @NameInMap("AvatarConfig")
     public AIAgentConfigAvatarConfig avatarConfig;
 
     /**
-     * <p>The URL of the avatar to display during voice calls. If omitted, no avatar is displayed.</p>
+     * <p>The URL of the agent avatar for voice calls. Default value: none.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://example.com/a.jpg">http://example.com/a.jpg</a></p>
@@ -38,7 +38,7 @@ public class AIAgentConfig extends TeaModel {
     public String avatarUrl;
 
     /**
-     * <p>The type of the avatar URL. By default, this parameter is not set.</p>
+     * <p>The URL type of the agent avatar. Default value: none.</p>
      * 
      * <strong>example:</strong>
      * <p>USER</p>
@@ -47,23 +47,20 @@ public class AIAgentConfig extends TeaModel {
     public String avatarUrlType;
 
     /**
-     * <blockquote>
-     * <p>Notice: </p>
-     * </blockquote>
-     * <p>已废弃，请使用 BackChannelingConfigs</p>
+     * <p><strong>[Deprecated]</strong> Use BackChannelingConfigs instead.</p>
      */
     @NameInMap("BackChannelingConfig")
     @Deprecated
     public java.util.List<AIAgentConfigBackChannelingConfig> backChannelingConfig;
 
     /**
-     * <p>Configuration for back-channeling. When enabled, the system plays short, responsive phrases at specific trigger points.</p>
+     * <p>The backchanneling feature configuration module. After this feature is enabled, the system randomly broadcasts short backchanneling phrases at specific trigger stages.</p>
      */
     @NameInMap("BackChannelingConfigs")
     public java.util.List<AIAgentConfigBackChannelingConfigs> backChannelingConfigs;
 
     /**
-     * <p>Specifies whether to enable intelligent segmentation. When enabled, short user utterances are merged into a single sentence. Default: <code>true</code>.</p>
+     * <p>Specifies whether to enable intelligent segmentation. After intelligent segmentation is enabled, segmented speech from the user is intelligently merged into a single sentence. Default value: true.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -72,7 +69,7 @@ public class AIAgentConfig extends TeaModel {
     public Boolean enableIntelligentSegment;
 
     /**
-     * <p>Specifies whether to enable push-to-talk mode. Default: <code>false</code>.</p>
+     * <p>Specifies whether to enable the push-to-talk mode. Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -81,7 +78,7 @@ public class AIAgentConfig extends TeaModel {
     public Boolean enablePushToTalk;
 
     /**
-     * <p>Parameters for experimental features. Contact support for assistance.</p>
+     * <p>The experimental feature parameters. Contact technical support if you have any requirements.</p>
      * 
      * <strong>example:</strong>
      * <p>&quot;&quot;</p>
@@ -90,8 +87,8 @@ public class AIAgentConfig extends TeaModel {
     public String experimentalConfig;
 
     /**
-     * <p>Specifies whether to enable graceful shutdown. Default: <code>false</code>.</p>
-     * <p>If enabled, the AI agent completes its current utterance before disconnecting when the task is stopped. The agent will not speak for more than 10 seconds.</p>
+     * <p>Specifies whether to enable graceful shutdown. Default value: false.
+     * Graceful shutdown: When the agent is stopped, it finishes broadcasting the current speech before shutting down. The maximum broadcast duration is 10 seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -100,28 +97,28 @@ public class AIAgentConfig extends TeaModel {
     public Boolean gracefulShutdown;
 
     /**
-     * <p>The welcome message the AI agent plays when joining the session. Changes apply to subsequent sessions. If omitted, no welcome message is played.</p>
+     * <p>The greeting. Modifications take effect the next time the user joins the call. Default value: none.</p>
      * 
      * <strong>example:</strong>
-     * <p>你好</p>
+     * <p>hello</p>
      */
     @NameInMap("Greeting")
     public String greeting;
 
     /**
-     * <p>Configuration for the speech interruption policy.</p>
+     * <p>The speech interruption policy configuration.</p>
      */
     @NameInMap("InterruptConfig")
     public AIAgentConfigInterruptConfig interruptConfig;
 
     /**
-     * <p>Configuration for the large language model (LLM).</p>
+     * <p>The large language model (LLM) configuration.</p>
      */
     @NameInMap("LlmConfig")
     public AIAgentConfigLlmConfig llmConfig;
 
     /**
-     * <p>The maximum idle duration in seconds before the AI agent disconnects. If the agent receives no user interaction within this period, it ends the task. Default: 600.</p>
+     * <p>The maximum wait time without interaction with the agent. If this time is exceeded, the agent goes offline. Unit: seconds. Default value: 600.</p>
      * 
      * <strong>example:</strong>
      * <p>600</p>
@@ -130,19 +127,28 @@ public class AIAgentConfig extends TeaModel {
     public Integer maxIdleTime;
 
     /**
-     * <p>Configuration for text-to-speech (TTS).</p>
+     * <p>The configuration for Real-Time Communication (RTC) call transfer. When you call ForwardAIAgentCall to transfer an RTC call (CallMode=0) to a regular phone, use this configuration to specify the line and the caller number.
+     * Transfer is available only if CallerNumber is configured. If it is not configured, a 400 error is returned when you call the transfer API operation.
+     * This configuration is read only once when the instance starts. Modifications during a call do not take effect.
+     * This configuration does not apply to inbound and outbound call transfers. Use InboundCallConfig and OutboundCallConfig instead.</p>
+     */
+    @NameInMap("TransferCallConfig")
+    public AIAgentConfigTransferCallConfig transferCallConfig;
+
+    /**
+     * <p>The speech synthesis configuration.</p>
      */
     @NameInMap("TtsConfig")
     public AIAgentConfigTtsConfig ttsConfig;
 
     /**
-     * <p>Configuration for conversational turn detection.</p>
+     * <p>The turn detection configuration.</p>
      */
     @NameInMap("TurnDetectionConfig")
     public AIAgentConfigTurnDetectionConfig turnDetectionConfig;
 
     /**
-     * <p>The duration in seconds the AI agent waits before terminating the task after a user leaves the session. Default: 5.</p>
+     * <p>The timeout period for the agent to close the task after the user leaves the meeting. Unit: seconds. Default value: 5.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -151,7 +157,7 @@ public class AIAgentConfig extends TeaModel {
     public Integer userOfflineTimeout;
 
     /**
-     * <p>The duration in seconds the AI agent waits for a user to join. If the user does not join within this time, the agent terminates the task. Default: 60.</p>
+     * <p>The timeout period for the agent to close the task if the user does not join the meeting. Unit: seconds. Default value: 60.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -160,32 +166,27 @@ public class AIAgentConfig extends TeaModel {
     public Integer userOnlineTimeout;
 
     /**
-     * <p>Configuration for video content recognition. This enables the system to send callbacks to the client about events detected in the video stream.</p>
+     * <p>The configuration for the video content recognition feature. This feature supports calling back the content recognized by the algorithm in the video to the client.</p>
      */
     @NameInMap("VcrConfig")
     public AIAgentConfigVcrConfig vcrConfig;
 
     /**
-     * <p>Configuration for voiceprint recognition.</p>
+     * <p>The voiceprint configuration.</p>
      */
     @NameInMap("VoiceprintConfig")
     public AIAgentConfigVoiceprintConfig voiceprintConfig;
 
     /**
-     * <p>The speaking volume of the AI agent.</p>
+     * <p>The volume of the agent\&quot;s voice.</p>
      * <ul>
-     * <li><p>If not set, the adaptive volume mode recommended by Alibaba Cloud is used by default.</p>
-     * </li>
-     * <li><p>If set, the value must be in the range of 0 to 400. The final output volume is calculated as: <code>(Workflow volume) * (volume / 100)</code>. For example:</p>
-     * </li>
+     * <li>If you do not specify this parameter, the adaptive volume mode recommended by Alibaba Cloud is used by default.</li>
+     * <li>If you specify this parameter, the valid values range from 0 to 400. Output volume = Voice output volume in the workflow × volume / 100. Examples:</li>
      * </ul>
      * <ol>
-     * <li><p>If <code>volume</code> is 0, the output volume is 0.</p>
-     * </li>
-     * <li><p>If <code>volume</code> is 100, the output volume is the same as the original volume.</p>
-     * </li>
-     * <li><p>If <code>volume</code> is 200, the output volume is twice the original volume.</p>
-     * </li>
+     * <li>If volume is set to 0, the output volume is 0.</li>
+     * <li>If volume is set to 100, the output volume is the original volume.</li>
+     * <li>If volume is set to 200, the output volume is twice the original volume.</li>
      * </ol>
      * 
      * <strong>example:</strong>
@@ -195,16 +196,16 @@ public class AIAgentConfig extends TeaModel {
     public Long volume;
 
     /**
-     * <p>A user-provided command that the AI agent responds to immediately after the call starts.</p>
+     * <p>The user\&quot;s instruction before the call starts. The agent responds to this sentence immediately after the call starts.</p>
      * 
      * <strong>example:</strong>
-     * <p>今天天气怎么样？</p>
+     * <p>How’s the weather today?</p>
      */
     @NameInMap("WakeUpQuery")
     public String wakeUpQuery;
 
     /**
-     * <p>A JSON string containing parameters to override the default workflow configuration.</p>
+     * <p>The workflow override parameters. Default value: none.</p>
      * 
      * <strong>example:</strong>
      * <p>{}</p>
@@ -346,6 +347,14 @@ public class AIAgentConfig extends TeaModel {
         return this.maxIdleTime;
     }
 
+    public AIAgentConfig setTransferCallConfig(AIAgentConfigTransferCallConfig transferCallConfig) {
+        this.transferCallConfig = transferCallConfig;
+        return this;
+    }
+    public AIAgentConfigTransferCallConfig getTransferCallConfig() {
+        return this.transferCallConfig;
+    }
+
     public AIAgentConfig setTtsConfig(AIAgentConfigTtsConfig ttsConfig) {
         this.ttsConfig = ttsConfig;
         return this;
@@ -420,7 +429,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigAmbientSoundConfig extends TeaModel {
         /**
-         * <p>The ID of the ambient sound resource. You can obtain this ID from the advanced settings of the agent configuration in the console.</p>
+         * <p>The ID of the call ambient sound. You can obtain the ID from the advanced settings of the agent configuration in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>f67901c595834************</p>
@@ -429,7 +438,7 @@ public class AIAgentConfig extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The volume of the ambient sound. Range: 0–100. A value of 0 disables the sound.</p>
+         * <p>The volume of the call background sound. Valid values: 0 to 100. A value of 0 indicates that the background sound is disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -462,24 +471,28 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigAsrConfig extends TeaModel {
         /**
-         * <p>A list of hotwords to improve ASR accuracy. You can specify a maximum of 128 hotwords.</p>
+         * <p>The ASR context enhancement.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;role&quot;:&quot;user&quot;,&quot;content&quot;:[{&quot;type&quot;:&quot;input_text&quot;,&quot;text&quot;:&quot;Alibaba Cloud, Qwen, Qwen-Audio&quot;}]},{&quot;role&quot;:&quot;assistant&quot;,&quot;content&quot;:[{&quot;type&quot;:&quot;text&quot;,&quot;text&quot;:&quot;Okay, I will incorporate these terms into our conversation.&quot;}]}]</p>
+         */
+        @NameInMap("AsrContext")
+        public String asrContext;
+
+        /**
+         * <p>The ASR hotword list. The list supports a maximum of 128 hotwords.</p>
          */
         @NameInMap("AsrHotWords")
         public java.util.List<String> asrHotWords;
 
         /**
-         * <p>The language for ASR. Valid values:</p>
+         * <p>The ASR language ID. Valid values:</p>
          * <ul>
-         * <li><p><code>zh_mandarin</code>: Chinese (Mandarin)</p>
-         * </li>
-         * <li><p><code>en</code>: English</p>
-         * </li>
-         * <li><p><code>zh_en</code>: Chinese-English mixed</p>
-         * </li>
-         * <li><p><code>es</code>: Spanish</p>
-         * </li>
-         * <li><p><code>jp</code>: Japanese</p>
-         * </li>
+         * <li>zh_mandarin: Chinese.</li>
+         * <li>en: English.</li>
+         * <li>zh_en: Mixed Chinese and English.</li>
+         * <li>es: Spanish.</li>
+         * <li>jp: Japanese.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -489,7 +502,7 @@ public class AIAgentConfig extends TeaModel {
         public String asrLanguageId;
 
         /**
-         * <p>The maximum duration of silence in milliseconds before the ASR engine finalizes an utterance. A pause longer than this value signals a sentence break. Range: 200–1200. Default: 400.</p>
+         * <p>The threshold for speech segmentation detection. If the silence duration exceeds this threshold, the speech is considered segmented. Valid values: 200 to 1200. Unit: milliseconds. Default value: 400.</p>
          * 
          * <strong>example:</strong>
          * <p>400</p>
@@ -498,7 +511,16 @@ public class AIAgentConfig extends TeaModel {
         public Integer asrMaxSilence;
 
         /**
-         * <p>Passthrough parameters for proprietary ASR integrations.</p>
+         * <p>The instance-level real-time hotwords and their weights for ASR.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;Qwen&quot;:4,&quot;Qwen-Audio&quot;:5,&quot;Alibaba Cloud Speech Lab&quot;:50}</p>
+         */
+        @NameInMap("AsrVocabulary")
+        public String asrVocabulary;
+
+        /**
+         * <p>The pass-through parameters for custom ASR integration.</p>
          * 
          * <strong>example:</strong>
          * <p>mode=fast&amp;sample=16000&amp;format=wav</p>
@@ -507,7 +529,7 @@ public class AIAgentConfig extends TeaModel {
         public String customParams;
 
         /**
-         * <p>The minimum duration in milliseconds of continuous user speech required to trigger an interruption. This controls interruption sensitivity. A value of 0 disables this feature. Range: 200–2000. A common range is 200–500 ms, which typically corresponds to 1 to 4 Chinese characters. If omitted, this feature is disabled.</p>
+         * <p>The minimum duration threshold for voice activity detection (VAD), which is used to control the sensitivity of interruptions. A value of 0 indicates that this feature is disabled. Valid values: 200 to 2000. Unit: milliseconds. Common values range from 200 to 500, which correspond to 1 to 4 words. Default value: null. If this parameter is left empty, this feature does not take effect.</p>
          * 
          * <strong>example:</strong>
          * <p>300</p>
@@ -516,14 +538,11 @@ public class AIAgentConfig extends TeaModel {
         public Integer vadDuration;
 
         /**
-         * <p>The Voice Activity Detection (VAD) threshold for interruptions. Range: 0–11. Default: 11.</p>
+         * <p>The interruption threshold parameter. Valid values: 0 to 11. Default value: 11.</p>
          * <ul>
-         * <li><p><code>0</code>: Disables VAD.</p>
-         * </li>
-         * <li><p><code>1</code>–<code>10</code>: Sets the interruption sensitivity. A higher value makes the agent harder to interrupt.</p>
-         * </li>
-         * <li><p><code>11</code>: An enhanced mode with lower audio distortion and stronger noise resistance.</p>
-         * </li>
+         * <li>0: Disables the VAD feature.</li>
+         * <li>1 to 10: A larger value indicates that it is more difficult to trigger an interruption.</li>
+         * <li>11: Significantly different from previous values. It causes less damage to the pre-processed conversation audio and provides stronger anti-interference capability.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -535,6 +554,14 @@ public class AIAgentConfig extends TeaModel {
         public static AIAgentConfigAsrConfig build(java.util.Map<String, ?> map) throws Exception {
             AIAgentConfigAsrConfig self = new AIAgentConfigAsrConfig();
             return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigAsrConfig setAsrContext(String asrContext) {
+            this.asrContext = asrContext;
+            return this;
+        }
+        public String getAsrContext() {
+            return this.asrContext;
         }
 
         public AIAgentConfigAsrConfig setAsrHotWords(java.util.List<String> asrHotWords) {
@@ -559,6 +586,14 @@ public class AIAgentConfig extends TeaModel {
         }
         public Integer getAsrMaxSilence() {
             return this.asrMaxSilence;
+        }
+
+        public AIAgentConfigAsrConfig setAsrVocabulary(String asrVocabulary) {
+            this.asrVocabulary = asrVocabulary;
+            return this;
+        }
+        public String getAsrVocabulary() {
+            return this.asrVocabulary;
         }
 
         public AIAgentConfigAsrConfig setCustomParams(String customParams) {
@@ -589,7 +624,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigAutoSpeechConfigLlmPendingMessages extends TeaModel {
         /**
-         * <p>The probability of this message being selected. Range: 0–1, corresponding to 0%–100%.</p>
+         * <p>The selection probability of the prompt. Valid values: 0 to 1, which correspond to 0% to 100%.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -598,10 +633,10 @@ public class AIAgentConfig extends TeaModel {
         public Double probability;
 
         /**
-         * <p>The text of the prompt message, up to 100 characters.</p>
+         * <p>The text of the inquiry prompt. Maximum length: 100 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>稍等一下</p>
+         * <p>Just a moment</p>
          */
         @NameInMap("Text")
         public String text;
@@ -631,19 +666,26 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigAutoSpeechConfigLlmPending extends TeaModel {
         /**
-         * <p>A collection of prompt messages. A maximum of 10 messages are supported, each up to 100 characters. The sum of all probabilities must be 100%.</p>
+         * <p>The collection of inquiry prompts. A maximum of 10 prompts are supported. Each prompt can be up to 100 characters in length. The sum of probabilities must be 100%.</p>
          */
         @NameInMap("Messages")
         public java.util.List<AIAgentConfigAutoSpeechConfigLlmPendingMessages> messages;
 
         /**
-         * <p>The mode for handling LLM latency prompts. <code>random</code>: Plays a random message from the list. <code>sequence</code>: Plays messages in order. This is a required field.</p>
+         * <p>The mode for selecting the soothing prompt from LlmPending.Messages to broadcast while waiting for the agent to reply. Valid values:</p>
+         * <ul>
+         * <li>ai_select: The AI selects the most appropriate prompt from Messages based on the current conversation. This mode does not check whether the sum of Probability values is 1, but WaitTime cannot be less than 800 milliseconds. This is the default value.</li>
+         * <li>probability: A prompt is randomly selected based on the Probability weight of each prompt. The sum of all Probability values must be exactly 1.0.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>ai_select</p>
          */
         @NameInMap("Mode")
         public String mode;
 
         /**
-         * <p>The wait time threshold for LLM responses. If the threshold is exceeded, a prompt is played. This is a required field. Unit: ms. Range: 500–10000. Set this value based on the actual performance of your LLM.</p>
+         * <p>The threshold for the waiting time for a response from the large language model (LLM). If the waiting time exceeds this threshold, a broadcast prompt is triggered. This parameter is required. Valid values: 500 to 10000. Unit: milliseconds. Set this parameter based on the actual usage of the LLM.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -684,7 +726,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigAutoSpeechConfigUserIdleMessages extends TeaModel {
         /**
-         * <p>The probability of this message being selected. Range: 0–1, corresponding to 0%–100%.</p>
+         * <p>The selection probability of the prompt. Valid values: 0 to 1, which correspond to 0% to 100%.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -693,10 +735,10 @@ public class AIAgentConfig extends TeaModel {
         public Double probability;
 
         /**
-         * <p>The text of the prompt message, up to 100 characters.</p>
+         * <p>The text of the inquiry prompt. Maximum length: 100 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>您还在吗？</p>
+         * <p>Are you still there?</p>
          */
         @NameInMap("Text")
         public String text;
@@ -726,16 +768,16 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigAutoSpeechConfigUserIdle extends TeaModel {
         /**
-         * <p>A farewell message played before hanging up due to user inactivity.</p>
+         * <p>The hang-up closing remark. It is broadcast before the call is hung up after a prolonged period of user unresponsiveness. Maximum length: 200 characters.</p>
          * 
          * <strong>example:</strong>
-         * <p>我挂了，再见</p>
+         * <p>I\&quot;m hanging up, bye</p>
          */
         @NameInMap("HangupEndWord")
         public String hangupEndWord;
 
         /**
-         * <p>The maximum number of times the prompt can be repeated. Range: 0–10. This is a required field. If the limit is exceeded, the call is terminated.</p>
+         * <p>The maximum number of inquiries. Valid values: 0 to 10. This parameter is required. If the number of inquiries exceeds this value, no more inquiries are triggered and the call is directly closed.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -744,13 +786,13 @@ public class AIAgentConfig extends TeaModel {
         public Integer maxRepeats;
 
         /**
-         * <p>A collection of prompt messages. A maximum of 10 messages are supported, each up to 100 characters. The sum of all probabilities must be 100%.</p>
+         * <p>The collection of inquiry prompts. A maximum of 10 prompts are supported. Each prompt can be up to 100 characters in length. The sum of probabilities must be 100%.</p>
          */
         @NameInMap("Messages")
         public java.util.List<AIAgentConfigAutoSpeechConfigUserIdleMessages> messages;
 
         /**
-         * <p>The silence duration threshold in milliseconds. If the user is silent for longer than this period, a prompt is triggered. Range: 5000–600000. This is a required field.</p>
+         * <p>The silence duration threshold. This parameter is required. If the silence duration exceeds this threshold, an inquiry is triggered. Valid values: 5000 to 600000. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>5000</p>
@@ -799,13 +841,13 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigAutoSpeechConfig extends TeaModel {
         /**
-         * <p>Configuration for prompts to play during LLM response latency.</p>
+         * <p>The broadcast configuration for LLM response delays.</p>
          */
         @NameInMap("LlmPending")
         public AIAgentConfigAutoSpeechConfigLlmPending llmPending;
 
         /**
-         * <p>Configuration for prompts to play when the user is silent for an extended period.</p>
+         * <p>The broadcast configuration for inquiries during prolonged user silence.</p>
          */
         @NameInMap("UserIdle")
         public AIAgentConfigAutoSpeechConfigUserIdle userIdle;
@@ -835,13 +877,37 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigAvatarConfig extends TeaModel {
         /**
-         * <p>The model ID of the avatar.</p>
+         * <p>The model ID of the digital human.</p>
          * 
          * <strong>example:</strong>
          * <p>5257</p>
          */
         @NameInMap("AvatarId")
         public String avatarId;
+
+        /**
+         * <p>The resolution of the digital human video stream. The value must be in strictly lowercase letters and must be specified together with AvatarId. Valid values:</p>
+         * <ul>
+         * <li>360p</li>
+         * <li>480p</li>
+         * <li>720p</li>
+         * <li>1080p</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1080p</p>
+         */
+        @NameInMap("Resolution")
+        public String resolution;
+
+        /**
+         * <p>The ID of the digital human template, which specifies the template used when the digital human is started. The template is provided by the digital human service provider, and the provider also verifies whether the specified value is valid.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tpl-9527</p>
+         */
+        @NameInMap("TemplateId")
+        public String templateId;
 
         public static AIAgentConfigAvatarConfig build(java.util.Map<String, ?> map) throws Exception {
             AIAgentConfigAvatarConfig self = new AIAgentConfigAvatarConfig();
@@ -856,11 +922,27 @@ public class AIAgentConfig extends TeaModel {
             return this.avatarId;
         }
 
+        public AIAgentConfigAvatarConfig setResolution(String resolution) {
+            this.resolution = resolution;
+            return this;
+        }
+        public String getResolution() {
+            return this.resolution;
+        }
+
+        public AIAgentConfigAvatarConfig setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
     }
 
     public static class AIAgentConfigBackChannelingConfigWords extends TeaModel {
         /**
-         * <p>本短语的触发概率，范围 0.0–1.0，必填。</p>
+         * <p>The trigger probability of the phrase. Valid values: 0.0 to 1.0. This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0.3</p>
@@ -869,10 +951,10 @@ public class AIAgentConfig extends TeaModel {
         public Double probability;
 
         /**
-         * <p>短语文本，长度 ≤ 20 字符，支持多语言。必填。</p>
+         * <p>The text of the phrase. Maximum length: 20 characters. Multiple languages are supported. This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>嗯嗯</p>
+         * <p>ok</p>
          */
         @NameInMap("Text")
         public String text;
@@ -902,7 +984,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigBackChannelingConfig extends TeaModel {
         /**
-         * <p>是否启用附和功能。必填，取值 true/false。</p>
+         * <p>Specifies whether to enable the backchanneling feature. This parameter is required. Valid values: true and false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -911,7 +993,7 @@ public class AIAgentConfig extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>功能触发概率。范围 0.0–1.0。必填。</p>
+         * <p>The trigger probability of the feature. Valid values: 0.0 to 1.0. This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -920,9 +1002,9 @@ public class AIAgentConfig extends TeaModel {
         public Double probability;
 
         /**
-         * <p>附和触发的时机。可选值：</p>
+         * <p>The trigger stage for backchanneling. Valid values:</p>
          * <ul>
-         * <li>pause_detected（检测到说话短暂停顿）</li>
+         * <li>pause_detected: A short pause in speech is detected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -932,7 +1014,7 @@ public class AIAgentConfig extends TeaModel {
         public String triggerStage;
 
         /**
-         * <p>附和短语集合。最大 10 条，每条短语长度 ≤ 20 字符，概率总和为 1.0。</p>
+         * <p>The collection of backchanneling phrases. A maximum of 10 phrases are supported. Each phrase can be up to 20 characters in length. The sum of probabilities must be 1.0.</p>
          */
         @NameInMap("Words")
         public java.util.List<AIAgentConfigBackChannelingConfigWords> words;
@@ -978,7 +1060,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigBackChannelingConfigsWords extends TeaModel {
         /**
-         * <p>本短语的触发概率，范围 0.0–1.0，必填。</p>
+         * <p>The trigger probability of the phrase. Valid values: 0.0 to 1.0. This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0.3</p>
@@ -987,10 +1069,10 @@ public class AIAgentConfig extends TeaModel {
         public Double probability;
 
         /**
-         * <p>短语文本，长度 ≤ 20 字符，支持多语言。必填。</p>
+         * <p>The text of the phrase. Maximum length: 20 characters. Multiple languages are supported. This parameter is required.</p>
          * 
          * <strong>example:</strong>
-         * <p>嗯嗯</p>
+         * <p>ok</p>
          */
         @NameInMap("Text")
         public String text;
@@ -1020,7 +1102,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigBackChannelingConfigs extends TeaModel {
         /**
-         * <p>Specifies whether to enable this back-channeling rule. This is a required field.</p>
+         * <p>Specifies whether to enable the backchanneling feature. This parameter is required. Valid values: true and false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1029,7 +1111,7 @@ public class AIAgentConfig extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The trigger probability. Range: 0.0–1.0. This is a required field.</p>
+         * <p>The trigger probability of the feature. Valid values: 0.0 to 1.0. This parameter is required.</p>
          * 
          * <strong>example:</strong>
          * <p>0.5</p>
@@ -1038,9 +1120,9 @@ public class AIAgentConfig extends TeaModel {
         public Double probability;
 
         /**
-         * <p>The trigger for the back-channeling. Valid value:</p>
+         * <p>The trigger stage for backchanneling. Valid values:</p>
          * <ul>
-         * <li><code>pause_detected</code>: Triggered when a short pause in speech is detected.</li>
+         * <li>pause_detected: A short pause in speech is detected.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1050,7 +1132,7 @@ public class AIAgentConfig extends TeaModel {
         public String triggerStage;
 
         /**
-         * <p>A collection of acknowledgment phrases. You can specify a maximum of 10 phrases. Each phrase must be 20 characters or less, and the sum of their probabilities must be 1.0.</p>
+         * <p>The collection of backchanneling phrases. A maximum of 10 phrases are supported. Each phrase can be up to 20 characters in length. The sum of probabilities must be 1.0.</p>
          */
         @NameInMap("Words")
         public java.util.List<AIAgentConfigBackChannelingConfigsWords> words;
@@ -1096,7 +1178,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigInterruptConfig extends TeaModel {
         /**
-         * <p>Specifies whether to enable speech interruption. Default: <code>true</code>.</p>
+         * <p>Specifies whether to support speech interruption. Default value: true.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1105,16 +1187,14 @@ public class AIAgentConfig extends TeaModel {
         public Boolean enableVoiceInterrupt;
 
         /**
-         * <p>A list of specific words or phrases that trigger an interruption.</p>
+         * <p>The list of specific words or phrases that trigger conversation interruption.</p>
          */
         @NameInMap("InterruptWords")
         public java.util.List<String> interruptWords;
 
         /**
-         * <p>Specifies whether to include the interrupt words in the text sent to the LLM. Default: <code>false</code> (words are discarded).</p>
-         * <blockquote>
-         * <p>For example, if &quot;hold on&quot; is an interrupt word and the user says &quot;hold on, what is the weather like today?&quot;, setting this to <code>false</code> results in only &quot;what is the weather like today?&quot; being sent to the LLM.</p>
-         * </blockquote>
+         * <p>Specifies whether to retain interrupt words when sending messages to the LLM. By default, interrupt words are discarded.
+         * For example, if the interrupt word is &quot;wait&quot;, the message &quot;wait how is the weather today&quot; is changed to &quot;how is the weather today&quot; after the interrupt word is discarded.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1123,14 +1203,12 @@ public class AIAgentConfig extends TeaModel {
         public Boolean keepInterruptWordsForLLM;
 
         /**
-         * <p>Specifies how to handle user speech that occurs during a non-interruptible section of the agent\&quot;s utterance.</p>
+         * <p>The ASR processing policy in No Interrupting mode. Valid values:</p>
          * <ul>
-         * <li><p><code>cache</code>: Caches the user\&quot;s speech and processes it in the next conversational turn.</p>
-         * </li>
-         * <li><p><code>discard</code>: Discards the user\&quot;s speech.</p>
-         * </li>
+         * <li>cache: Caches the ASR text. After the current turn ends, the cached ASR text is processed together in the next turn.</li>
+         * <li>discard: Directly discards the ASR text.
+         * Default value: cache.</li>
          * </ul>
-         * <p>Default: <code>cache</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>cache</p>
@@ -1179,7 +1257,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigLlmConfigFunctionMap extends TeaModel {
         /**
-         * <p>The name of a built-in function provided by the AI agent system. Currently, only <code>hangup</code> is supported.</p>
+         * <p>The name of the built-in feature provided by the Alibaba Cloud agent system. Currently, only hangup is supported.</p>
          * 
          * <strong>example:</strong>
          * <p>hangup</p>
@@ -1188,7 +1266,7 @@ public class AIAgentConfig extends TeaModel {
         public String function;
 
         /**
-         * <p>The name of the custom LLM function that maps to the agent\&quot;s built-in function. For details on the custom LLM protocol, see <a href="https://help.aliyun.com/document_detail/2839094.html">LLM Standard Interface</a>.</p>
+         * <p>The name of the LLM function that corresponds to the feature. This name is customized by the user and is used to call the corresponding feature in the LLM. For more information about the user-defined LLM protocol, see <a href="https://help.aliyun.com/document_detail/2839094.html">Standard LLM API</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>hangup</p>
@@ -1221,29 +1299,23 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigLlmConfigLlmHistory extends TeaModel {
         /**
-         * <p>The text content of the message from this role.</p>
+         * <p>The actual text of the conversation content, which records the specific expression or response of the role in the conversation.</p>
          * 
          * <strong>example:</strong>
-         * <p>你好</p>
+         * <p>hello</p>
          */
         @NameInMap("Content")
         public String content;
 
         /**
-         * <p>The role of the participant in the conversation. Valid values:</p>
+         * <p>The role of the conversation participant. Valid values:</p>
          * <ul>
-         * <li><p><code>user</code></p>
-         * </li>
-         * <li><p><code>assistant</code></p>
-         * </li>
-         * <li><p><code>system</code></p>
-         * </li>
-         * <li><p><code>function</code></p>
-         * </li>
-         * <li><p><code>plugin</code></p>
-         * </li>
-         * <li><p><code>tool</code></p>
-         * </li>
+         * <li>user: User.</li>
+         * <li>assistant: Assistant.</li>
+         * <li>system: System.</li>
+         * <li>function: Function.</li>
+         * <li>plugin: Plugin.</li>
+         * <li>tool: Tool.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1277,30 +1349,27 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigLlmConfig extends TeaModel {
         /**
-         * <p>Parameters for Alibaba Cloud Model Studio, provided as a JSON string. For the parameter format, see
-         * <a href="https://help.aliyun.com/document_detail/2858132.html">Alibaba Cloud Model Studio Parameters</a></p>
+         * <p>The parameters for Alibaba Cloud Model Studio. The value must be a JSON string. For more information about the parameter format, see <a href="https://help.aliyun.com/document_detail/2858132.html">Alibaba Cloud Model Studio parameters</a>.</p>
          * 
          * <strong>example:</strong>
-         * <p>&quot;{\&quot;biz_params\&quot;:{\&quot;user_defined_params\&quot;:{\&quot;your_plugin_id\&quot;:{\&quot;article_index\&quot;:2}}},\&quot;memory_id\&quot;:\&quot;your_memory_id\&quot;,\&quot;image_list\&quot;:[\&quot;<a href="https://your_image_url%5C%5C%22%5D,%5C%5C%22rag_options%5C%5C%22:%7B%5C%5C%22pipeline_ids%5C%5C%22:%5B%5C%5C%22your_id%5C%5C%22%5D,%5C%5C%22file_ids%5C%5C%22:%5B%5C%5C%22%E6%96%87%E6%A1%A3ID1%5C%5C%22,%5C%5C%22%E6%96%87%E6%A1%A3ID2%5C%5C%22%5D,%5C%5C%22metadata_filter%5C%5C%22:%7B%5C%5C%22name%5C%5C%22:%5C%5C%22%E5%BC%A0%E4%B8%89%5C%5C%22%7D,%5C%5C%22structured_filter%5C%5C%22:%7B%5C%5C%22key1%5C%5C%22:%5C%5C%22value1%5C%5C%22,%5C%5C%22key2%5C%5C%22:%5C%5C%22value2%5C%5C%22%7D,%5C%5C%22tags%5C%5C%22:%5B%5C%5C%22%E6%A0%87%E7%AD%BE1%5C%5C%22,%5C%5C%22%E6%A0%87%E7%AD%BE2%5C%5C%22%5D%7D%7D">https://your_image_url\\&quot;],\\&quot;rag_options\\&quot;:{\\&quot;pipeline_ids\\&quot;:[\\&quot;your_id\\&quot;],\\&quot;file_ids\\&quot;:[\\&quot;文档ID1\\&quot;,\\&quot;文档ID2\\&quot;],\\&quot;metadata_filter\\&quot;:{\\&quot;name\\&quot;:\\&quot;张三\\&quot;},\\&quot;structured_filter\\&quot;:{\\&quot;key1\\&quot;:\\&quot;value1\\&quot;,\\&quot;key2\\&quot;:\\&quot;value2\\&quot;},\\&quot;tags\\&quot;:[\\&quot;标签1\\&quot;,\\&quot;标签2\\&quot;]}}</a>&quot;</p>
+         * <p>&quot;{\&quot;biz_params\&quot;:{\&quot;user_defined_params\&quot;:{\&quot;your_plugin_id\&quot;:{\&quot;article_index\&quot;:2}}},\&quot;memory_id\&quot;:\&quot;your_memory_id\&quot;,\&quot;image_list\&quot;:[\&quot;<a href="https://your_image_url%5C%5C%22%5D,%5C%5C%22rag_options%5C%5C%22:%7B%5C%5C%22pipeline_ids%5C%5C%22:%5B%5C%5C%22your_id%5C%5C%22%5D,%5C%5C%22file_ids%5C%5C%22:%5B%5C%5C%22DocumentID1%5C%5C%22,%5C%5C%22DocumentID2%5C%5C%22%5D,%5C%5C%22metadata_filter%5C%5C%22:%7B%5C%5C%22name%5C%5C%22:%5C%5C%22ZhangSan%5C%5C%22%7D,%5C%5C%22structured_filter%5C%5C%22:%7B%5C%5C%22key1%5C%5C%22:%5C%5C%22value1%5C%5C%22,%5C%5C%22key2%5C%5C%22:%5C%5C%22value2%5C%5C%22%7D,%5C%5C%22tags%5C%5C%22:%5B%5C%5C%22Tag1%5C%5C%22,%5C%5C%22Tag2%5C%5C%22%5D%7D%7D">https://your_image_url\\&quot;],\\&quot;rag_options\\&quot;:{\\&quot;pipeline_ids\\&quot;:[\\&quot;your_id\\&quot;],\\&quot;file_ids\\&quot;:[\\&quot;DocumentID1\\&quot;,\\&quot;DocumentID2\\&quot;],\\&quot;metadata_filter\\&quot;:{\\&quot;name\\&quot;:\\&quot;ZhangSan\\&quot;},\\&quot;structured_filter\\&quot;:{\\&quot;key1\\&quot;:\\&quot;value1\\&quot;,\\&quot;key2\\&quot;:\\&quot;value2\\&quot;},\\&quot;tags\\&quot;:[\\&quot;Tag1\\&quot;,\\&quot;Tag2\\&quot;]}}</a>&quot;</p>
          */
         @NameInMap("BailianAppParams")
         public String bailianAppParams;
 
         /**
-         * <p>Maps built-in agent functions to custom LLM functions. Currently, this only supports function calling for custom, OpenAI-compatible LLMs.</p>
+         * <p>The function mapping list, which is used to map agent capabilities to LLM functions. Currently, only function calling with user-defined LLMs that use the OpenAI protocol is supported.</p>
          */
         @NameInMap("FunctionMap")
         public java.util.List<AIAgentConfigLlmConfigFunctionMap> functionMap;
 
         /**
-         * <p>Specifies whether the LLM message history is synchronized with the content played by the TTS. Default: <code>false</code>. When enabled, the saved LLM messages match the content actually played by the TTS.</p>
-         * <blockquote>
-         * <p>When a user interrupts the agent, the <code>&lt;ims_agent_interrupted&gt;</code> tag is inserted into the message history at the point of interruption. This affects the next message sent to the LLM. For example:</p>
-         * </blockquote>
+         * <p>Specifies whether to keep the LLM message history consistent with the text-to-speech (TTS) playback content. Default value: false. After this feature is enabled, the saved LLM messages are kept consistent with the TTS playback content.
+         * When the user interrupts the agent in the LLM message history, the <code>&lt;ims_agent_interrupted&gt;</code> tag is inserted at the interruption position in the next message sent to the LLM. Example:</p>
          * <pre><code>[
          *   {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Tell me a story.&quot;},
-         *   {&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: &quot;Okay, I can tell you a story about the Three Kingdoms. Would you&lt;ims_agent_interrupted&gt; like that?&quot;},
-         *   {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Tell me a different one.&quot;}
+         *   {&quot;role&quot;: &quot;assistant&quot;, &quot;content&quot;: &quot;Okay, let me tell you a story about Romance of the Three Kingdoms. Do&lt;ims_agent_interrupted&gt; you want to listen?&quot;},
+         *   {&quot;role&quot;: &quot;user&quot;, &quot;content&quot;: &quot;Tell me another one.&quot;}
          * ]
          * </code></pre>
          * 
@@ -1311,7 +1380,7 @@ public class AIAgentConfig extends TeaModel {
         public Boolean historySyncWithTTS;
 
         /**
-         * <p>When set to <code>true</code>, the agent sends the entire LLM response in a single message after it is fully generated, rather than streaming it. This setting does not affect the streaming of subtitles.</p>
+         * <p>Specifies whether to send the complete LLM result to the client after the LLM generates the complete response. This switch does not affect the streaming generation of subtitles.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1320,13 +1389,13 @@ public class AIAgentConfig extends TeaModel {
         public Boolean llmCompleteReply;
 
         /**
-         * <p>The conversation history context for the LLM/MLLM.</p>
+         * <p>The historical conversation context of the LLM or multimodal LLM.</p>
          */
         @NameInMap("LlmHistory")
         public java.util.List<AIAgentConfigLlmConfigLlmHistory> llmHistory;
 
         /**
-         * <p>The maximum number of recent conversational turns to include in the LLM/MLLM context. Default: 10.</p>
+         * <p>The maximum number of retained turns for the historical conversation context of the LLM or multimodal LLM. Default value: 10.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -1335,16 +1404,16 @@ public class AIAgentConfig extends TeaModel {
         public Integer llmHistoryLimit;
 
         /**
-         * <p>The system prompt for the LLM after the call starts.</p>
+         * <p>The system prompt for the LLM after the call is started.</p>
          * 
          * <strong>example:</strong>
-         * <p>你是一位友好且乐于助人的助手，专注于为用户提供准确的信息和建议。</p>
+         * <p>You are the 1 friendly and helpful assistant, focused on providing accurate information and advice to users.</p>
          */
         @NameInMap("LlmSystemPrompt")
         public String llmSystemPrompt;
 
         /**
-         * <p>Additional query parameters for an OpenAI-compatible LLM. Parameters must be provided as a URL query string (e.g., <code>key1=value1&amp;key2=value2</code>). All values must be strings.</p>
+         * <p>The extra query parameters for the OpenAI-compatible LLM. Parameters must be in the key=value format. Multiple parameters are connected by an ampersand (&amp;). All values must be of the string type.</p>
          * 
          * <strong>example:</strong>
          * <p>api-version=2024-02-01&amp;api-key=sk-xxx</p>
@@ -1353,7 +1422,7 @@ public class AIAgentConfig extends TeaModel {
         public String openAIExtraQuery;
 
         /**
-         * <p>The maximum delay in milliseconds before buffered text is sent to the TTS engine, even if <code>OutputMinLength</code> is not met. Range: 1000–10000. A value of <code>0</code> or omitting this parameter disables the delay limit. Default: Not set.</p>
+         * <p>The maximum delay time for text output in milliseconds. If this time is exceeded, the cached text is forcibly output. Valid values: 1000 to 10000. A value of 0 or empty indicates no limit. Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>2000</p>
@@ -1362,7 +1431,7 @@ public class AIAgentConfig extends TeaModel {
         public Integer outputMaxDelay;
 
         /**
-         * <p>The minimum number of characters in a text chunk before it is sent to the TTS engine. Shorter chunks are buffered. Range: 0–100. A value of <code>0</code> or omitting this parameter disables buffering. Default: Not set.</p>
+         * <p>The minimum length of text output in characters. Text shorter than this length is cached and concatenated. Valid values: 0 to 100. A value of 0 or empty indicates no limit. Default value: empty.</p>
          * 
          * <strong>example:</strong>
          * <p>5</p>
@@ -1457,21 +1526,121 @@ public class AIAgentConfig extends TeaModel {
 
     }
 
-    public static class AIAgentConfigTtsConfigPronunciationRules extends TeaModel {
+    public static class AIAgentConfigTransferCallConfig extends TeaModel {
         /**
-         * <p>The replacement pronunciation. It must be 1 to 9 Chinese characters long and cannot contain spaces.</p>
+         * <p>The default transfer number. This is a backup number. You must still explicitly pass the called number when you initiate a transfer call.</p>
          * 
          * <strong>example:</strong>
-         * <p>幺幺零</p>
+         * <p>0571xxxxxxx</p>
+         */
+        @NameInMap("CalledNumber")
+        public String calledNumber;
+
+        /**
+         * <p>The caller number used for transfer calls. Configuring this field enables the RTC transfer capability. If this field is not configured, the behavior remains unchanged.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0571xxxxxxx</p>
+         */
+        @NameInMap("CallerNumber")
+        public String callerNumber;
+
+        /**
+         * <p>Specifies whether to perform real-time speech recognition for both parties (the RTC user and the transferred phone party) after the transfer is connected. When enabled, the recognition results are pushed to the client as subtitles through the RTC message channel and written to the call record. Valid values:</p>
+         * <ul>
+         * <li>true: Enabled. This is the default value.</li>
+         * <li>false: Disabled. Subtitles and call records are not generated during the transfer.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
+         */
+        @NameInMap("ForwardTranscriptionEnabled")
+        public Boolean forwardTranscriptionEnabled;
+
+        /**
+         * <p>The custom SIP outbound gateway address. This parameter is required only when Type is set to 1.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sip.example.com:5060</p>
+         */
+        @NameInMap("SipDomain")
+        public String sipDomain;
+
+        /**
+         * <p>Valid values:</p>
+         * <ul>
+         * <li>0: Alibaba Cloud communication line. This is the default value.</li>
+         * <li>1: Custom SIP line.</li>
+         * </ul>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("Type")
+        public Integer type;
+
+        public static AIAgentConfigTransferCallConfig build(java.util.Map<String, ?> map) throws Exception {
+            AIAgentConfigTransferCallConfig self = new AIAgentConfigTransferCallConfig();
+            return TeaModel.build(map, self);
+        }
+
+        public AIAgentConfigTransferCallConfig setCalledNumber(String calledNumber) {
+            this.calledNumber = calledNumber;
+            return this;
+        }
+        public String getCalledNumber() {
+            return this.calledNumber;
+        }
+
+        public AIAgentConfigTransferCallConfig setCallerNumber(String callerNumber) {
+            this.callerNumber = callerNumber;
+            return this;
+        }
+        public String getCallerNumber() {
+            return this.callerNumber;
+        }
+
+        public AIAgentConfigTransferCallConfig setForwardTranscriptionEnabled(Boolean forwardTranscriptionEnabled) {
+            this.forwardTranscriptionEnabled = forwardTranscriptionEnabled;
+            return this;
+        }
+        public Boolean getForwardTranscriptionEnabled() {
+            return this.forwardTranscriptionEnabled;
+        }
+
+        public AIAgentConfigTransferCallConfig setSipDomain(String sipDomain) {
+            this.sipDomain = sipDomain;
+            return this;
+        }
+        public String getSipDomain() {
+            return this.sipDomain;
+        }
+
+        public AIAgentConfigTransferCallConfig setType(Integer type) {
+            this.type = type;
+            return this;
+        }
+        public Integer getType() {
+            return this.type;
+        }
+
+    }
+
+    public static class AIAgentConfigTtsConfigPronunciationRules extends TeaModel {
+        /**
+         * <p>The target pronunciation. The length must be less than 10 characters. It must consist of Chinese characters and cannot contain spaces.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>110</p>
          */
         @NameInMap("Pronunciation")
         public String pronunciation;
 
         /**
-         * <p>The type of pronunciation rule.
-         * Valid value:</p>
+         * <p>The specific pronunciation rule type. Valid values:</p>
          * <ul>
-         * <li><code>replacement</code>: Replaces the specified <code>Word</code> with the <code>Pronunciation</code>.</li>
+         * <li>replacement: A rule that directly replaces Word with Pronunciation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1481,10 +1650,10 @@ public class AIAgentConfig extends TeaModel {
         public String type;
 
         /**
-         * <p>The word to be replaced. It must be 1 to 9 Chinese characters long and cannot contain spaces.</p>
+         * <p>The word to be replaced. The length must be less than 10 characters. It must consist of Chinese characters and cannot contain spaces.</p>
          * 
          * <strong>example:</strong>
-         * <p>一一零</p>
+         * <p>110</p>
          */
         @NameInMap("Word")
         public String word;
@@ -1522,22 +1691,15 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigTtsConfig extends TeaModel {
         /**
-         * <p>This parameter applies only to the Minimax provider. Supported emotions include:</p>
+         * <p>The emotion of the voice. Currently, only MiniMax is supported. MiniMax supports the following seven emotions:</p>
          * <ul>
-         * <li><p><code>happy</code></p>
-         * </li>
-         * <li><p><code>sad</code></p>
-         * </li>
-         * <li><p><code>angry</code></p>
-         * </li>
-         * <li><p><code>fearful</code></p>
-         * </li>
-         * <li><p><code>disgusted</code></p>
-         * </li>
-         * <li><p><code>surprised</code></p>
-         * </li>
-         * <li><p><code>calm</code></p>
-         * </li>
+         * <li>happy: Happy</li>
+         * <li>sad: Sad</li>
+         * <li>angry: Angry</li>
+         * <li>fearful: Fearful</li>
+         * <li>disgusted: Disgusted</li>
+         * <li>surprised: Surprised</li>
+         * <li>calm: Calm</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1547,67 +1709,55 @@ public class AIAgentConfig extends TeaModel {
         public String emotion;
 
         /**
-         * <p>This parameter is for the minimax provider only. It enhances recognition for specific low-resource languages and dialects. If the language is unknown, set this to <code>auto</code> for automatic detection. By default, this parameter is not set. Supported values include:</p>
+         * <p>The TTS pronunciation correction and text replacement configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;pronunciation&quot;:[{&quot;weather&quot;:&quot;tian1 qi4&quot;}],&quot;replace&quot;:[{&quot;today&quot;:&quot;golden day&quot;}]}</p>
+         */
+        @NameInMap("HotFix")
+        public String hotFix;
+
+        /**
+         * <p>The natural language instruction control for TTS.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Please use a gentle and friendly female voice, and broadcast at a slightly slower speed</p>
+         */
+        @NameInMap("Instruction")
+        public String instruction;
+
+        /**
+         * <p>The language ID. Currently, only MiniMax is supported. Default value: empty. This parameter enhances the recognition capability for specified minority languages and dialects. Setting this parameter improves the voice performance in the specified minority language or dialect scenarios. If the minority language type is not specified, you can set this parameter to auto, and the model automatically determines the language type. Valid values:</p>
          * <details>
-         * 
-         * <summary>
-         * 
-         * <p>Supported languages</p>
-         * </summary>
+         * <summary>Supported languages</summary>
          * 
          * <ul>
-         * <li><p>Chinese</p>
-         * </li>
-         * <li><p>Chinese,Yue: Cantonese</p>
-         * </li>
-         * <li><p>English</p>
-         * </li>
-         * <li><p>Arabic</p>
-         * </li>
-         * <li><p>Russian</p>
-         * </li>
-         * <li><p>Spanish</p>
-         * </li>
-         * <li><p>French</p>
-         * </li>
-         * <li><p>Portuguese</p>
-         * </li>
-         * <li><p>German</p>
-         * </li>
-         * <li><p>Turkish</p>
-         * </li>
-         * <li><p>Dutch</p>
-         * </li>
-         * <li><p>Ukrainian</p>
-         * </li>
-         * <li><p>Vietnamese</p>
-         * </li>
-         * <li><p>Indonesian</p>
-         * </li>
-         * <li><p>Japanese</p>
-         * </li>
-         * <li><p>Italian</p>
-         * </li>
-         * <li><p>Korean</p>
-         * </li>
-         * <li><p>Thai</p>
-         * </li>
-         * <li><p>Polish</p>
-         * </li>
-         * <li><p>Romanian</p>
-         * </li>
-         * <li><p>Greek</p>
-         * </li>
-         * <li><p>Czech</p>
-         * </li>
-         * <li><p>Finnish</p>
-         * </li>
-         * <li><p>Hindi</p>
-         * </li>
-         * <li><p>auto</p>
-         * </li>
+         * <li>Chinese: Chinese</li>
+         * <li>Chinese,Yue: Cantonese</li>
+         * <li>English: English</li>
+         * <li>Arabic: Arabic</li>
+         * <li>Russian: Russian</li>
+         * <li>Spanish: Spanish</li>
+         * <li>French: French</li>
+         * <li>Portuguese: Portuguese</li>
+         * <li>German: German</li>
+         * <li>Turkish: Turkish</li>
+         * <li>Dutch: Dutch</li>
+         * <li>Ukrainian: Ukrainian</li>
+         * <li>Vietnamese: Vietnamese</li>
+         * <li>Indonesian: Indonesian</li>
+         * <li>Japanese: Japanese</li>
+         * <li>Italian: Italian</li>
+         * <li>Korean: Korean</li>
+         * <li>Thai: Thai</li>
+         * <li>Polish: Polish</li>
+         * <li>Romanian: Romanian</li>
+         * <li>Greek: Greek</li>
+         * <li>Czech: Czech</li>
+         * <li>Finnish: Finnish</li>
+         * <li>Hindi: Hindi</li>
+         * <li>auto: Automatic detection</details></li>
          * </ul>
-         * </details>
          * 
          * <strong>example:</strong>
          * <p>Chinese</p>
@@ -1616,8 +1766,8 @@ public class AIAgentConfig extends TeaModel {
         public String languageId;
 
         /**
-         * <p>This parameter applies only to the Minimax provider. Valid values:
-         * <code>speech-01-turbo</code>, <code>speech-02-turbo</code></p>
+         * <p>The model ID. Currently, only MiniMax is supported. Valid values:
+         * speech-01-turbo and speech-02-turbo.</p>
          * 
          * <strong>example:</strong>
          * <p>speech-01-turbo</p>
@@ -1626,13 +1776,15 @@ public class AIAgentConfig extends TeaModel {
         public String modelId;
 
         /**
-         * <p>A list of TTS pronunciation rules, executed in order. You can specify a maximum of 20 rules.</p>
+         * <p>The TTS pronunciation rules. The array length cannot exceed 20. The rules are executed in sequence.</p>
          */
         @NameInMap("PronunciationRules")
         public java.util.List<AIAgentConfigTtsConfigPronunciationRules> pronunciationRules;
 
         /**
-         * <p>The speech rate, where a value of 1.0 is normal speed. The supported range can vary by provider. For CosyVoice, the range is 0.5 to 2.0 (default: 1.0). For Minimax, the range is 0.5 to 2.0 (default: 1.0).</p>
+         * <p>The speech rate. This parameter is supported on all platforms.
+         * For CosyVoice, the default value is 1.0, and the valid values range from 0.5 to 2.0.
+         * For MiniMax, the default value is 1.0, and the valid values range from 0.5 to 2.0.</p>
          * 
          * <strong>example:</strong>
          * <p>1.0</p>
@@ -1641,7 +1793,7 @@ public class AIAgentConfig extends TeaModel {
         public Double speechRate;
 
         /**
-         * <p>The ID of the preset TTS voice. Changes apply to the next utterance. If omitted, the voice from the AI agent template is used. The ID can be a maximum of 64 characters. For available voices, see <a href="https://help.aliyun.com/document_detail/449563.html">Intelligent Voice Samples</a>.</p>
+         * <p>The voice ID. Modifications take effect in the next sentence. If you do not specify this parameter, the voice ID configured in the agent template is used. This parameter takes effect only for preset TTS. The input length cannot exceed 64 characters. For valid values, refer to <a href="https://help.aliyun.com/document_detail/449563.html">Intelligent speech effect examples</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>longcheng_v2</p>
@@ -1650,7 +1802,7 @@ public class AIAgentConfig extends TeaModel {
         public String voiceId;
 
         /**
-         * <p>A list of available voices.</p>
+         * <p>The list of available voices.</p>
          */
         @NameInMap("VoiceIdList")
         public java.util.List<String> voiceIdList;
@@ -1666,6 +1818,22 @@ public class AIAgentConfig extends TeaModel {
         }
         public String getEmotion() {
             return this.emotion;
+        }
+
+        public AIAgentConfigTtsConfig setHotFix(String hotFix) {
+            this.hotFix = hotFix;
+            return this;
+        }
+        public String getHotFix() {
+            return this.hotFix;
+        }
+
+        public AIAgentConfigTtsConfig setInstruction(String instruction) {
+            this.instruction = instruction;
+            return this;
+        }
+        public String getInstruction() {
+            return this.instruction;
         }
 
         public AIAgentConfigTtsConfig setLanguageId(String languageId) {
@@ -1720,16 +1888,13 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigTurnDetectionConfig extends TeaModel {
         /**
-         * <p>Controls the agent\&quot;s response speed after detecting a user pause. This parameter applies only in <code>Semantic</code> mode. A higher setting results in a faster response but increases the risk of interrupting the user:</p>
+         * <p>The eagerness level. This parameter takes effect only in Semantic mode. It controls how quickly the AI starts to respond after detecting a pause:</p>
          * <ul>
-         * <li><p><code>Low</code>: Waits patiently with a maximum wait time of 6 seconds, reducing the risk of interruption.</p>
-         * </li>
-         * <li><p><code>Medium</code>: A balanced wait time (up to 4 seconds), suitable for most scenarios.</p>
-         * </li>
-         * <li><p><code>High</code>: Responds quickly (up to 2 seconds), which improves speed but may increase the risk of incorrect turn-taking.</p>
-         * </li>
+         * <li>Low: Patient waiting. The maximum wait time is 6 seconds, which reduces the risk of being interrupted.</li>
+         * <li>Medium: Balanced waiting. The maximum wait time is 4 seconds, which is suitable for most scenarios.</li>
+         * <li>High: Fast response. The maximum wait time is 2 seconds, which improves speed but may increase the risk of false cut-offs.
+         * Default value: empty.</li>
          * </ul>
-         * <p>This field is empty by default.</p>
          * 
          * <strong>example:</strong>
          * <p>High</p>
@@ -1738,12 +1903,10 @@ public class AIAgentConfig extends TeaModel {
         public String eagerness;
 
         /**
-         * <p>The conversational turn detection mode.</p>
+         * <p>The turn detection mode. Valid values:</p>
          * <ul>
-         * <li><p><code>Normal</code> (Default): The agent relies on pauses to detect the end of a user\&quot;s turn.</p>
-         * </li>
-         * <li><p><code>Semantic</code>: The agent uses AI to analyze conversational context to determine if the user has finished speaking.</p>
-         * </li>
+         * <li>Normal: Normal mode. AI is not used to determine semantics. This is the default value.</li>
+         * <li>Semantic: Semantic mode. AI is used to determine whether the user has finished speaking based on the context semantics.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1753,16 +1916,14 @@ public class AIAgentConfig extends TeaModel {
         public String mode;
 
         /**
-         * <p>The pause detection time in AI mode, in milliseconds. Default: -1.</p>
+         * <p>The pause determination time in AI mode. Unit: milliseconds. Default value: -1. Valid values:</p>
          * <ul>
-         * <li><p>-1: The AI automatically determines a suitable wait time.</p>
-         * </li>
-         * <li><p>0–10000: A custom wait time. A range of 0–1500 ms is recommended.</p>
+         * <li>-1: The AI automatically determines the appropriate wait time.</li>
+         * <li>0 to 10000: A custom wait time. We recommend that you set this value to 0 to 1500 milliseconds.<blockquote>
+         * <p>This parameter is invalid in Normal mode.</p>
+         * </blockquote>
          * </li>
          * </ul>
-         * <blockquote>
-         * <p>This parameter has no effect in <code>Normal</code> mode.</p>
-         * </blockquote>
          * 
          * <strong>example:</strong>
          * <p>-1</p>
@@ -1771,7 +1932,7 @@ public class AIAgentConfig extends TeaModel {
         public Integer semanticWaitDuration;
 
         /**
-         * <p>A list of keywords used to determine the end of a user\&quot;s conversational turn.</p>
+         * <p>The list of keywords used to determine the end of a user turn.</p>
          */
         @NameInMap("TurnEndWords")
         public java.util.List<String> turnEndWords;
@@ -1817,7 +1978,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigVcrConfigEquipment extends TeaModel {
         /**
-         * <p>Specifies whether to enable device identification. Default: <code>false</code>.</p>
+         * <p>Specifies whether to enable the disabled equipment check. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1842,7 +2003,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigVcrConfigHeadMotion extends TeaModel {
         /**
-         * <p>Specifies whether to enable head motion detection. Default: <code>false</code>.</p>
+         * <p>Specifies whether to enable the head motion recognition check. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1867,7 +2028,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigVcrConfigInvalidFrameMotion extends TeaModel {
         /**
-         * <p>The duration in milliseconds that an invalid frame must persist before a notification is sent. If not specified, the setting from the console is used. Range: 200–5000.</p>
+         * <p>The delay for the invalid frame check notification. After this parameter is set, the notification is triggered after a static frame lasts for a specified period of time. Unit: milliseconds. Default value: empty. If this parameter is empty, the configuration in the console is used during the call. Valid values: 200 to 5000.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -1876,7 +2037,7 @@ public class AIAgentConfig extends TeaModel {
         public Integer callbackDelay;
 
         /**
-         * <p>Specifies whether to enable invalid frame detection.</p>
+         * <p>Specifies whether to enable the invalid frame check.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1909,7 +2070,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigVcrConfigLookAway extends TeaModel {
         /**
-         * <p>Specifies whether to enable look-away detection. Default: <code>false</code>.</p>
+         * <p>Specifies whether to enable the look-away recognition configuration. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -1934,7 +2095,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigVcrConfigPeopleCount extends TeaModel {
         /**
-         * <p>Specifies whether to enable people counting. Default: <code>false</code>.</p>
+         * <p>The switch for the people counting feature. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1959,7 +2120,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigVcrConfigStillFrameMotion extends TeaModel {
         /**
-         * <p>The duration in milliseconds that a frame must remain still before a notification is sent. If not specified, the setting from the console is used. Range: 200–5000.</p>
+         * <p>The delay for the still frame check notification. After this parameter is set, the notification is triggered after a still frame lasts for a specified period of time. Unit: milliseconds. Default value: empty. If this parameter is empty, the configuration in the console is used during the call. Valid values: 200 to 5000.</p>
          * 
          * <strong>example:</strong>
          * <p>3000</p>
@@ -1968,7 +2129,7 @@ public class AIAgentConfig extends TeaModel {
         public Integer callbackDelay;
 
         /**
-         * <p>Specifies whether to enable still frame detection. Default: <code>false</code>.</p>
+         * <p>Specifies whether to enable the still frame check. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -2001,37 +2162,37 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigVcrConfig extends TeaModel {
         /**
-         * <p>Configuration for device identification.</p>
+         * <p>The equipment recognition configuration.</p>
          */
         @NameInMap("Equipment")
         public AIAgentConfigVcrConfigEquipment equipment;
 
         /**
-         * <p>Configuration for head motion detection.</p>
+         * <p>The head motion recognition configuration.</p>
          */
         @NameInMap("HeadMotion")
         public AIAgentConfigVcrConfigHeadMotion headMotion;
 
         /**
-         * <p>Configuration for invalid frame detection.</p>
+         * <p>The parameter settings for the invalid frame check.</p>
          */
         @NameInMap("InvalidFrameMotion")
         public AIAgentConfigVcrConfigInvalidFrameMotion invalidFrameMotion;
 
         /**
-         * <p>Configuration for look-away detection.</p>
+         * <p>The look-away recognition configuration.</p>
          */
         @NameInMap("LookAway")
         public AIAgentConfigVcrConfigLookAway lookAway;
 
         /**
-         * <p>Configuration for the people counting feature.</p>
+         * <p>The configuration for the people counting feature.</p>
          */
         @NameInMap("PeopleCount")
         public AIAgentConfigVcrConfigPeopleCount peopleCount;
 
         /**
-         * <p>Configuration for still frame detection.</p>
+         * <p>The configuration for the still frame detection.</p>
          */
         @NameInMap("StillFrameMotion")
         public AIAgentConfigVcrConfigStillFrameMotion stillFrameMotion;
@@ -2093,7 +2254,7 @@ public class AIAgentConfig extends TeaModel {
 
     public static class AIAgentConfigVoiceprintConfig extends TeaModel {
         /**
-         * <p>The voiceprint registration mode. Default: <code>Explicit</code>.</p>
+         * <p>The voiceprint registration mode. Default value: Explicit.</p>
          * <table>
          * <thead>
          * <tr>
@@ -2102,12 +2263,12 @@ public class AIAgentConfig extends TeaModel {
          * </tr>
          * </thead>
          * <tbody><tr>
-         * <td><code>Explicit</code></td>
-         * <td>In <code>Explicit</code> mode, the user must register their voiceprint in advance by using the voiceprint registration API.</td>
+         * <td>Explicit</td>
+         * <td>Explicit registration mode. Users must upload audio through the voiceprint registration API operation in advance to complete the registration.</td>
          * </tr>
          * <tr>
-         * <td><code>Implicit</code></td>
-         * <td>In <code>Implicit</code> mode, the system automatically collects user speech during the conversation to register a voiceprint.</td>
+         * <td>Implicit</td>
+         * <td>Implicit registration mode. The system automatically collects the user\&quot;s voice and generates voiceprint features during the conversation.</td>
          * </tr>
          * </tbody></table>
          * 
@@ -2118,7 +2279,7 @@ public class AIAgentConfig extends TeaModel {
         public String registrationMode;
 
         /**
-         * <p>Specifies whether to enable voiceprint recognition. Default: <code>false</code>. If set to <code>true</code>, you must also provide a valid <code>VoiceprintId</code>.</p>
+         * <p>Specifies whether to use voiceprint recognition. Default value: false. When voiceprint recognition is enabled, a valid voiceprint ID must be passed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -2127,7 +2288,7 @@ public class AIAgentConfig extends TeaModel {
         public Boolean useVoiceprint;
 
         /**
-         * <p>The unique identifier for the voiceprint. This is not set by default. The ID must correspond to a voiceprint registered using the voiceprint registration API. For more information, see <a href="https://help.aliyun.com/document_detail/2964738.html">Register a voiceprint</a>.</p>
+         * <p>The unique identity ID for voiceprint recognition. Default value: empty. The passed voiceprint ID must be registered through the voiceprint registration API operation. For more information about the API operation, refer to <a href="https://help.aliyun.com/document_detail/2964738.html">Register human voiceprint</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>zhixiaoxia</p>

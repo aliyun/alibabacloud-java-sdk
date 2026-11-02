@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
     /**
-     * <p>The origin endpoint type.</p>
+     * <p>The type of the origin endpoint.</p>
      */
     @NameInMap("LivePackageOriginEndpoint")
     public GetLivePackageOriginEndpointResponseBodyLivePackageOriginEndpoint livePackageOriginEndpoint;
@@ -51,7 +51,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String authorizationCode;
 
         /**
-         * <p>The channel name.</p>
+         * <p>The name of the channel.</p>
          * 
          * <strong>example:</strong>
          * <p>channel-1</p>
@@ -60,7 +60,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String channelName;
 
         /**
-         * <p>The creation time.</p>
+         * <p>The creation time. The time follows the ISO 8601 standard and is displayed in UTC (ending with Z).</p>
          * 
          * <strong>example:</strong>
          * <p>2023-04-01T12:00:00Z</p>
@@ -69,16 +69,16 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String createTime;
 
         /**
-         * <p>The endpoint description.</p>
+         * <p>The description of the endpoint.</p>
          * 
          * <strong>example:</strong>
-         * <p>This is an origin endpoint.</p>
+         * <p>This is an origin endpoint</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The endpoint name.</p>
+         * <p>The name of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>endpoint-1</p>
@@ -87,7 +87,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String endpointName;
 
         /**
-         * <p>The endpoint URL.</p>
+         * <p>The URL of the endpoint.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest">https://xxx.packagepull-abcxxx.ap-southeast-1.aliyuncsiceintl.com/v1/group01/1/ch01/manifest</a></p>
@@ -96,7 +96,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public String endpointUrl;
 
         /**
-         * <p>The channel group name.</p>
+         * <p>The name of the channel group.</p>
          * 
          * <strong>example:</strong>
          * <p>channel-group-1</p>
@@ -138,7 +138,7 @@ public class GetLivePackageOriginEndpointResponseBody extends TeaModel {
         public LivePackagingConfig livePackagingConfig;
 
         /**
-         * <p>The manifest name.</p>
+         * <p>The name of the manifest.</p>
          * 
          * <strong>example:</strong>
          * <p>manifest</p>

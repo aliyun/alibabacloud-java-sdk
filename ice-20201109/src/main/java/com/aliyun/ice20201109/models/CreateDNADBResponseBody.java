@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDNADBResponseBody extends TeaModel {
     /**
-     * <p>The details of the DNA database.</p>
+     * <p>The details of the DNA library.</p>
      */
     @NameInMap("DBInfo")
     public CreateDNADBResponseBodyDBInfo DBInfo;
@@ -42,7 +42,7 @@ public class CreateDNADBResponseBody extends TeaModel {
 
     public static class CreateDNADBResponseBodyDBInfo extends TeaModel {
         /**
-         * <p>The DNA database ID. Save this ID for use in subsequent API calls.</p>
+         * <p>The ID of the DNA library. Save this ID for subsequent calls to related operations.</p>
          * 
          * <strong>example:</strong>
          * <p>88c6ca184c0e47098a5b665e2a12****</p>
@@ -51,16 +51,16 @@ public class CreateDNADBResponseBody extends TeaModel {
         public String DBId;
 
         /**
-         * <p>The description of the DNA database.</p>
+         * <p>The description of the DNA library.</p>
          * 
          * <strong>example:</strong>
-         * <p>这是一个视频DNA库。</p>
+         * <p>This is a video DNA library.</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The DNA database model.</p>
+         * <p>The model of the DNA library.</p>
          * 
          * <strong>example:</strong>
          * <p>Video</p>
@@ -69,7 +69,7 @@ public class CreateDNADBResponseBody extends TeaModel {
         public String model;
 
         /**
-         * <p>The name of the DNA database.</p>
+         * <p>The name of the DNA library.</p>
          * 
          * <strong>example:</strong>
          * <p>example name</p>
@@ -78,7 +78,7 @@ public class CreateDNADBResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>After you create the database, its status is <code>offline</code> by default. The status automatically changes to <code>active</code> after the backend completes processing.</p>
+         * <p>The status of the DNA library. After the library is created, the default status is offline. The status automatically transforms to active after spooling is complete.</p>
          * 
          * <strong>example:</strong>
          * <p>offline</p>

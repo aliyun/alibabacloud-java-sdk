@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddMediaConnectFlowInputRequest extends TeaModel {
     /**
-     * <p>IP address whitelist in CIDR notation. Separate multiple CIDR blocks with commas.</p>
+     * <p>The IP address whitelist in CIDR format. Separate multiple CIDR blocks with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>19.168.1.1/32,18.168.1.1/16</p>
@@ -14,7 +14,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String cidrs;
 
     /**
-     * <p>Flow instance ID</p>
+     * <p>The flow instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String flowId;
 
     /**
-     * <p>Input URL. Required only when the input type is RTMP-PULL or SRT-Listener.</p>
+     * <p>The input URL. This parameter is required only when the input type is RTMP-PULL or SRT-Listener.</p>
      * 
      * <strong>example:</strong>
      * <p>rtmp://pull.test.alivecdn.com/live/alitest</p>
@@ -33,7 +33,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String inputFromUrl;
 
     /**
-     * <p>Input name</p>
+     * <p>The name of the input.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String inputName;
 
     /**
-     * <p>Input type</p>
+     * <p>The input type.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String inputProtocol;
 
     /**
-     * <p>Maximum bitrate in bits per second (bps)</p>
+     * <p>The input bitrate, in bit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>2000000</p>
@@ -62,7 +62,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public Integer maxBitrate;
 
     /**
-     * <p>Upstream Flow ID. Required only when the input type is Flow.</p>
+     * <p>The ID of the peer flow. This parameter is required only when the input type is Flow.</p>
      * 
      * <strong>example:</strong>
      * <p>805fbdd0-575e-4146-b35d-ec7f63937b20</p>
@@ -71,7 +71,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String pairFlowId;
 
     /**
-     * <p>Upstream Flow output name. Required only when the input type is Flow.</p>
+     * <p>The output name of the peer flow. This parameter is required only when the input type is Flow.</p>
      * 
      * <strong>example:</strong>
      * <p>AliTestOutput</p>
@@ -80,7 +80,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String pairOutputName;
 
     /**
-     * <p>SRT latency in milliseconds. Required only when the input type is SRT-Listener or SRT-Caller.</p>
+     * <p>The SRT latency. This parameter is required only when the input type is SRT-Listener or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -89,7 +89,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public Integer srtLatency;
 
     /**
-     * <p>SRT encryption key. Required only when the input type is SRT-Listener or SRT-Caller.</p>
+     * <p>The SRT encryption passphrase. This parameter is required only when the input type is SRT-Listener or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>BETTERG08S01</p>
@@ -98,7 +98,7 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     public String srtPassphrase;
 
     /**
-     * <p>SRT encryption key length in bytes. Required only when the input type is SRT-Listener or SRT-Caller.</p>
+     * <p>The SRT encryption key length. This parameter is required only when the input type is SRT-Listener or SRT-Caller.</p>
      * 
      * <strong>example:</strong>
      * <p>32</p>
@@ -106,6 +106,12 @@ public class AddMediaConnectFlowInputRequest extends TeaModel {
     @NameInMap("SrtPbkeyLen")
     public String srtPbkeyLen;
 
+    /**
+     * <p>Specifies whether to return the internal stream pushing IP address. This parameter is valid only when you connect to the cloud through an Express Connect circuit.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>off</p>
+     */
     @NameInMap("WithInternalVip")
     public String withInternalVip;
 
