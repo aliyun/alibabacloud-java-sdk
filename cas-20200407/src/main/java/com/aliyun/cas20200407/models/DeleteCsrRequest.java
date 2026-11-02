@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteCsrRequest extends TeaModel {
     /**
-     * <p>The ID of the CSR.</p>
+     * <p>The CSR ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

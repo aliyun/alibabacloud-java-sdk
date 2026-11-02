@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class UntagResourcesRequest extends TeaModel {
     /**
-     * <p>Specifies whether to remove all tags. This parameter is valid only when TagKey.N is empty. Valid values:</p>
+     * <p>Specifies whether to remove all tags. This parameter takes effect only when TagKey.N is empty. Valid values:</p>
      * <ul>
      * <li>true</li>
-     * <li>false</li>
+     * <li>false
+     * Default value: false.</li>
      * </ul>
-     * <p>Default value: false.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -36,7 +36,7 @@ public class UntagResourcesRequest extends TeaModel {
     public java.util.List<String> resourceId;
 
     /**
-     * <p>The resource type. The value is fixed as <strong>instance</strong>.</p>
+     * <p>The resource type. Set the value to <strong>instance</strong>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

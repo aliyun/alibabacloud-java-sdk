@@ -18,6 +18,13 @@ public class UpdateInstanceRequest extends TeaModel {
     public String autoReissue;
 
     /**
+     * <strong>example:</strong>
+     * <p>enable</p>
+     */
+    @NameInMap("AutoRenewalStatus")
+    public String autoRenewalStatus;
+
+    /**
      * <p>The name of the instance. When a certificate is issued, this name is used as the default name of the certificate.</p>
      * 
      * <strong>example:</strong>
@@ -172,6 +179,14 @@ public class UpdateInstanceRequest extends TeaModel {
     }
     public String getAutoReissue() {
         return this.autoReissue;
+    }
+
+    public UpdateInstanceRequest setAutoRenewalStatus(String autoRenewalStatus) {
+        this.autoRenewalStatus = autoRenewalStatus;
+        return this;
+    }
+    public String getAutoRenewalStatus() {
+        return this.autoRenewalStatus;
     }
 
     public UpdateInstanceRequest setCertificateName(String certificateName) {

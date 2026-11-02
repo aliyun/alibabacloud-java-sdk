@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateCertificateRequestRequest extends TeaModel {
     /**
-     * <p>The domain name that you want to bind to the certificate. You can specify only one domain name.</p>
+     * <p>The domain name to bind to the certificate. You can specify only one domain name.</p>
      * <blockquote>
-     * <p>The domain name must match the certificate specifications that you specify for the <strong>ProductCode</strong> parameter. If you apply for a single-domain certificate, you must specify a single domain name for this parameter. If you apply for a wildcard certificate, you must specify a wildcard domain name such as <code>*.aliyundoc.com</code> for this parameter.</p>
+     * <p>The domain name must match the specification of the certificate to apply for, which is specified by the <strong>ProductCode</strong> parameter. When you apply for a single-domain certificate, you must specify a single domain name. When you apply for a wildcard certificate, you must specify a wildcard domain name, such as <code>*.aliyundoc.com</code>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class CreateCertificateRequestRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The contact email address of the applicant.</p>
+     * <p>The email address of the contact for the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateCertificateRequestRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The phone number of the applicant.</p>
+     * <p>The mobile phone number of the contact for the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,21 +38,21 @@ public class CreateCertificateRequestRequest extends TeaModel {
     public String phone;
 
     /**
-     * <p>The specifications of the certificate. Valid values:</p>
+     * <p>The specification of the certificate to apply for. Valid values:</p>
      * <ul>
-     * <li><p><strong>digicert-free-1-free</strong> (default): DigiCert single-domain DV certificate, which is free and valid for 3 months.</p>
+     * <li><p><strong>digicert-free-1-free</strong> (default): a free 3-month DV certificate for individual testing. Available only on the Alibaba Cloud China site.</p>
      * </li>
-     * <li><p><strong>symantec-free-1-free</strong>: DigiCert single-domain DV certificate, which is free and valid for 1 year. This value is available only on the China site (aliyun.com).</p>
+     * <li><p><strong>symantec-free-1-free</strong>: a 12-month DV certificate for individual testing (Pro). Available only on the Alibaba Cloud China site.</p>
      * </li>
-     * <li><p><strong>symantec-dv-1-starter</strong>: DigiCert wildcard DV certificate.</p>
+     * <li><p><strong>symantec-dv-1-starter</strong>: a DigiCert DV wildcard certificate.</p>
      * </li>
-     * <li><p><strong>geotrust-dv-1-starter</strong>: GeoTrust single-domain DV certificate.</p>
+     * <li><p><strong>geotrust-dv-1-starter</strong>: a GeoTrust DV single-domain certificate.</p>
      * </li>
-     * <li><p><strong>geotrust-dv-w-starter</strong>: GeoTrust wildcard DV certificate.</p>
+     * <li><p><strong>geotrust-dv-w-starter</strong>: a GeoTrust DV wildcard certificate.</p>
      * </li>
-     * <li><p><strong>globalsign-dv-1-personal</strong>: GlobalSign single-domain DV certificate.</p>
+     * <li><p><strong>globalsign-dv-1-personal</strong>: a GlobalSign DV single-domain certificate.</p>
      * </li>
-     * <li><p><strong>globalsign-dv-w-advanced</strong>: GlobalSign wildcard DV certificate.</p>
+     * <li><p><strong>globalsign-dv-w-advanced</strong>: a GlobalSign DV wildcard certificate.</p>
      * </li>
      * </ul>
      * 
@@ -63,13 +63,13 @@ public class CreateCertificateRequestRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateCertificateRequestRequestTags> tags;
 
     /**
-     * <p>The name of the applicant.</p>
+     * <p>The name of the contact for the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,14 +79,14 @@ public class CreateCertificateRequestRequest extends TeaModel {
     public String username;
 
     /**
-     * <p>The method to verify the ownership of a domain name. Valid values:</p>
+     * <p>The verification method for domain name ownership. Valid values:</p>
      * <ul>
-     * <li><p><strong>DNS</strong>: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.</p>
+     * <li><p><strong>DNS</strong>: DNS verification. You can verify the ownership of the domain name by adding a TXT DNS record for the domain name on the DNS management platform. You must have the management permissions on DNS resolution to complete the verification.</p>
      * </li>
-     * <li><p><strong>FILE</strong>: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.</p>
+     * <li><p><strong>FILE</strong>: file verification. You can verify the ownership of the domain name by creating a specified file on the domain name server. You must have the administrator permissions on the domain name server to complete the verification.</p>
      * </li>
      * </ul>
-     * <p>For more information about the verification methods, see <a href="https://help.aliyun.com/document_detail/48016.html">Verify the ownership of a domain name</a>.</p>
+     * <p>For more information about the two verification methods, see <a href="https://help.aliyun.com/document_detail/48016.html">How do I configure domain name authorization verification?</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -158,11 +158,7 @@ public class CreateCertificateRequestRequest extends TeaModel {
 
     public static class CreateCertificateRequestRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. You cannot specify empty strings as tag keys.</p>
-         * <p>The key can be up to 64 characters in length and can contain letters, digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
-         * <blockquote>
-         * <p>You must specify at least one of <strong>Tag.N</strong> (<strong>Tag.N.Key</strong> and <strong>Tag.N.Value</strong>).</p>
-         * </blockquote>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:rm:rgId</p>
@@ -171,8 +167,7 @@ public class CreateCertificateRequestRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value cannot exceed 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). The key must start with a letter but cannot start with <code>aliyun</code> or <code>acs:</code>. The key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>

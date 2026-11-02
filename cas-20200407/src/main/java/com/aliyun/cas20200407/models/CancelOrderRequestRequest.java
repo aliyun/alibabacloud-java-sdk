@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CancelOrderRequestRequest extends TeaModel {
     /**
-     * <p>The ID of the certificate order to cancel.</p>
+     * <p>The order ID.</p>
      * <blockquote>
-     * <p>Obtain this ID by calling <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a>.</p>
+     * <p>You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

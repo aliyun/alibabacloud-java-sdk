@@ -7,12 +7,9 @@ public class DecryptRequest extends TeaModel {
     /**
      * <p>The encryption algorithm. Valid values:</p>
      * <ul>
-     * <li><p><strong>RSAES_OAEP_SHA_1</strong></p>
-     * </li>
-     * <li><p><strong>RSAES_OAEP_SHA_256</strong></p>
-     * </li>
-     * <li><p><strong>SM2PKE</strong></p>
-     * </li>
+     * <li><strong>RSAES_OAEP_SHA_1</strong></li>
+     * <li><strong>RSAES_OAEP_SHA_256</strong></li>
+     * <li><strong>SM2PKE</strong></li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -23,12 +20,10 @@ public class DecryptRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The unique identifier of the certificate. Call <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> to obtain this parameter.</p>
+     * <p>The unique identifier of the certificate. You can obtain this parameter by calling the <a href="https://help.aliyun.com/document_detail/455806.html">ListCert</a> operation.</p>
      * <ul>
-     * <li><p>The identifier of an SSL certificate is typically in the format {Certificate ID}-cn-hangzhou.</p>
-     * </li>
-     * <li><p>For a private certificate authority (PCA) certificate, this is the value of the Identifier field of the private certificate.</p>
-     * </li>
+     * <li>The identifier of an SSL certificate is typically in the {Certificate ID}-cn-hangzhou format.</li>
+     * <li>The identifier of a PCA certificate is the Identifier field of the corresponding private certificate.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +33,7 @@ public class DecryptRequest extends TeaModel {
     public String certIdentifier;
 
     /**
-     * <p>The Base64-encoded data to decrypt.</p>
+     * <p>The data to be decrypted. The data is Base64-encoded.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +43,7 @@ public class DecryptRequest extends TeaModel {
     public String ciphertextBlob;
 
     /**
-     * <p>A custom identifier that serves as a unique key.</p>
+     * <p>The custom user identifier, which is a unique key.</p>
      * 
      * <strong>example:</strong>
      * <p><strong><strong>6bb538d538c70c01f81jh2</strong></strong></p>
@@ -59,10 +54,8 @@ public class DecryptRequest extends TeaModel {
     /**
      * <p>The message type. Valid values:</p>
      * <ul>
-     * <li><p>RAW: The response returns the plaintext in UTF-8 encoding.</p>
-     * </li>
-     * <li><p>Base64 (default): The response returns the Base64-encoded plaintext.</p>
-     * </li>
+     * <li>RAW: The plaintext result encoded in UTF-8 is returned.</li>
+     * <li>Base64: The Base64-encoded result is returned. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -72,9 +65,9 @@ public class DecryptRequest extends TeaModel {
     public String messageType;
 
     /**
-     * <p>The ID of the repository.</p>
+     * <p>The repository ID.</p>
      * <blockquote>
-     * <p>Call <a href="https://help.aliyun.com/document_detail/455805.html">ListCertWarehouse</a> to obtain this ID.</p>
+     * <p>You can obtain this ID by calling the <a href="https://help.aliyun.com/document_detail/455805.html">ListCertWarehouse</a> operation.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

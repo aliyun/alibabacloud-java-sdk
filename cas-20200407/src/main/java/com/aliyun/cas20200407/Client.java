@@ -81,10 +81,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The single-user QPS limit for this API is 100 queries per second (QPS). Calls that exceed this limit are throttled, which can affect your business operations. Call this API at a reasonable rate to avoid throttling.</p>
+     * <p>The queries per second (QPS) limit for a single user is 100. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds an AccessKey for authorization.</p>
+     * <p>Adds an authorized access key.</p>
      * 
      * @param request AddCloudAccessRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -124,10 +124,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The single-user QPS limit for this API is 100 queries per second (QPS). Calls that exceed this limit are throttled, which can affect your business operations. Call this API at a reasonable rate to avoid throttling.</p>
+     * <p>The queries per second (QPS) limit for a single user is 100. If the limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Adds an AccessKey for authorization.</p>
+     * <p>Adds an authorized access key.</p>
      * 
      * @param request AddCloudAccessRequest
      * @return AddCloudAccessResponse
@@ -183,13 +183,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After a CA certificate is created, it is in the normal issuance state by default. You can call this operation to change the status of a CA certificate from normal issuance to revoked. In the normal issuance state, the CA certificate can be used to issue certificates. In the revoked state, the CA certificate cannot be used to issue certificates, and the certificates that have been issued by the CA certificate also become invalid accordingly.
-     * Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a sub CA certificate.</p>
-     * <h2>QPS limit</h2>
-     * <p>The QPS limit per user for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation properly.</p>
+     * <p>By default, a CA certificate is in the normal issuance state after it is created. You can call this operation to change the status of the CA certificate from normal issuance to revoked. In the normal issuance state, the CA certificate can be used to issue certificates. In the revoked state, the CA certificate cannot be used to issue certificates, and the certificates issued by the CA certificate also become invalid.
+     * Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and call <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the notification status in batches</p>
+     * <p>Updates notification statuses in batches.</p>
      * 
      * @param request BatchUpdateNoticeStatusRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -237,13 +237,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After a CA certificate is created, it is in the normal issuance state by default. You can call this operation to change the status of a CA certificate from normal issuance to revoked. In the normal issuance state, the CA certificate can be used to issue certificates. In the revoked state, the CA certificate cannot be used to issue certificates, and the certificates that have been issued by the CA certificate also become invalid accordingly.
-     * Before you call this operation, you must have called <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and called <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a sub CA certificate.</p>
-     * <h2>QPS limit</h2>
-     * <p>The QPS limit per user for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Call this operation properly.</p>
+     * <p>By default, a CA certificate is in the normal issuance state after it is created. You can call this operation to change the status of the CA certificate from normal issuance to revoked. In the normal issuance state, the CA certificate can be used to issue certificates. In the revoked state, the CA certificate cannot be used to issue certificates, and the certificates issued by the CA certificate also become invalid.
+     * Before you call this operation, you must call <a href="https://help.aliyun.com/document_detail/465962.html">CreateRootCACertificate</a> to create a root CA certificate and call <a href="https://help.aliyun.com/document_detail/465959.html">CreateSubCACertificate</a> to create a subordinate CA certificate.</p>
+     * <h2>QPS limits</h2>
+     * <p>The QPS limit per user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Updates the notification status in batches</p>
+     * <p>Updates notification statuses in batches.</p>
      * 
      * @param request BatchUpdateNoticeStatusRequest
      * @return BatchUpdateNoticeStatusResponse
@@ -255,10 +255,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API has a limit of 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled. This can affect your business. Call the API at a reasonable rate.</p>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Revokes an issued certificate or cancels a pending certificate order and restores the quota.</p>
+     * <p>Revokes the issued certificate for an issued order, or cancels a pending order and refunds the quota.</p>
      * 
      * @param request CancelCertificateForPackageRequestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -290,10 +290,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API has a limit of 10 queries per second (QPS) for each user. If you exceed this limit, API calls are throttled. This can affect your business. Call the API at a reasonable rate.</p>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Revokes an issued certificate or cancels a pending certificate order and restores the quota.</p>
+     * <p>Revokes the issued certificate for an issued order, or cancels a pending order and refunds the quota.</p>
      * 
      * @param request CancelCertificateForPackageRequestRequest
      * @return CancelCertificateForPackageRequestResponse
@@ -305,10 +305,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is limited to 100 queries per second (QPS) for each user. API calls that exceed this limit are throttled. Because this can impact your business, you should call this API at a reasonable rate.</p>
+     * <p>The QPS limit for a single user is 100 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels a certificate application order that is pending domain verification or under review.</p>
+     * <p>Withdraws a certificate application order that is pending verification or under review.</p>
      * 
      * @param request CancelOrderRequestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -340,10 +340,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is limited to 100 queries per second (QPS) for each user. API calls that exceed this limit are throttled. Because this can impact your business, you should call this API at a reasonable rate.</p>
+     * <p>The QPS limit for a single user is 100 calls per second. If this limit is exceeded, API calls are throttled, which may affect your services. Call this API operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Cancels a certificate application order that is pending domain verification or under review.</p>
+     * <p>Withdraws a certificate application order that is pending verification or under review.</p>
      * 
      * @param request CancelOrderRequestRequest
      * @return CancelOrderRequestResponse
@@ -354,8 +354,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Revokes a certificate application.</p>
+     * <p>Withdraws a certificate application.</p>
      * 
      * @param request CancelPendingCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -386,8 +389,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * 
      * <b>summary</b> : 
-     * <p>Revokes a certificate application.</p>
+     * <p>Withdraws a certificate application.</p>
      * 
      * @param request CancelPendingCertificateRequest
      * @return CancelPendingCertificateResponse
@@ -400,13 +406,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see <a href="https://help.aliyun.com/document_detail/28542.html">Purchase a certificate resource plan</a>. You can call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribePackageState</a> operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.</li>
-     * <li>After you call this operation to submit a certificate application and the certificate is issued, the certificate quota provided by the resource plan that you purchased is consumed. When you call this operation, you can use the <strong>ProductCode</strong> parameter to specify the specifications of the certificate that you want to apply for.</li>
-     * <li>After you call this operation to submit a certificate application, you also need to call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribeCertificateState</a> operation to obtain the information that is required for domain name ownership verification and manually complete the verification. Then, your certificate application is reviewed by the certificate authority (CA). If you use the Domain Name System (DNS) verification method, you must complete the verification on your DNS service provider system. If you use the file verification method, you must complete the verification on the DNS server.</li>
+     * <li>Before you initiate the request, make sure that you have purchased a certificate resource plan of the corresponding specifications. For more information about how to purchase a certificate resource plan, see <a href="https://help.aliyun.com/document_detail/28542.html">Purchase a certificate resource plan</a>. You can call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribePackageState</a> operation to query the usage overview of the certificate resource plan of the specified specifications, including the total number of purchased certificate resource plans of the specifications, the number of submitted certificate applications, and the number of successfully issued certificates.</li>
+     * <li>After you call this operation to submit a certificate application and the certificate is successfully issued, the quota of the purchased certificate resource plan of the corresponding specifications is consumed. When you initiate the request, you can use the <strong>ProductCode</strong> parameter to specify the specifications of the certificate for which you want to apply.</li>
+     * <li>After you call this operation to submit a certificate application, you must call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribeCertificateState</a> operation to obtain the information required to complete domain name verification. Then, you must manually complete the verification on the DNS management platform of the domain name (DNS verification) or the domain name server (file verification). After the verification is complete, the certificate application order enters the review process of the certificate authority (CA).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a certificate application by using a purchased certificate package quota.</p>
+     * <p>Submits a certificate application.</p>
      * 
      * @param request CreateCertificateForPackageRequestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -471,13 +477,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see <a href="https://help.aliyun.com/document_detail/28542.html">Purchase a certificate resource plan</a>. You can call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribePackageState</a> operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.</li>
-     * <li>After you call this operation to submit a certificate application and the certificate is issued, the certificate quota provided by the resource plan that you purchased is consumed. When you call this operation, you can use the <strong>ProductCode</strong> parameter to specify the specifications of the certificate that you want to apply for.</li>
-     * <li>After you call this operation to submit a certificate application, you also need to call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribeCertificateState</a> operation to obtain the information that is required for domain name ownership verification and manually complete the verification. Then, your certificate application is reviewed by the certificate authority (CA). If you use the Domain Name System (DNS) verification method, you must complete the verification on your DNS service provider system. If you use the file verification method, you must complete the verification on the DNS server.</li>
+     * <li>Before you initiate the request, make sure that you have purchased a certificate resource plan of the corresponding specifications. For more information about how to purchase a certificate resource plan, see <a href="https://help.aliyun.com/document_detail/28542.html">Purchase a certificate resource plan</a>. You can call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribePackageState</a> operation to query the usage overview of the certificate resource plan of the specified specifications, including the total number of purchased certificate resource plans of the specifications, the number of submitted certificate applications, and the number of successfully issued certificates.</li>
+     * <li>After you call this operation to submit a certificate application and the certificate is successfully issued, the quota of the purchased certificate resource plan of the corresponding specifications is consumed. When you initiate the request, you can use the <strong>ProductCode</strong> parameter to specify the specifications of the certificate for which you want to apply.</li>
+     * <li>After you call this operation to submit a certificate application, you must call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribeCertificateState</a> operation to obtain the information required to complete domain name verification. Then, you must manually complete the verification on the DNS management platform of the domain name (DNS verification) or the domain name server (file verification). After the verification is complete, the certificate application order enters the review process of the certificate authority (CA).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Submits a certificate application by using a purchased certificate package quota.</p>
+     * <p>Submits a certificate application.</p>
      * 
      * @param request CreateCertificateForPackageRequestRequest
      * @return CreateCertificateForPackageRequestResponse
@@ -490,14 +496,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to apply for only DV certificates. If you want to apply for an organization validated (OV) or extended validation (EV) certificate, we recommend that you call the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a> operation. This operation allows you to apply for certificates of all specifications and specify the method to generate a certificate signing request (CSR) file.</li>
-     * <li>Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see <a href="https://help.aliyun.com/document_detail/28542.html">Purchase a certificate resource plan</a>. You can call the <a href="https://help.aliyun.com/document_detail/455803.html">DescribePackageState</a> operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.</li>
-     * <li>When you call this operation, you can use the <strong>ProductCode</strong> parameter to specify the specifications of the certificate.</li>
-     * <li>After you call this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for your application and consumes the certificate quota in the certificate resource plans of the specified specifications that you purchased. After you call this operation, you also need to call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribeCertificateState</a> operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. Then, the certificate authority (CA) will review your certificate application.</li>
+     * <li>This operation is only used to apply for DV certificates. To apply for OV or EV certificates, we recommend that you use the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a> operation to submit a certificate application. This operation is active and can be used to apply for certificates of all specifications, and allows you to select the CSR generation method.</li>
+     * <li>Before you invoke this operation, make sure that you have purchased a certificate resource plan of the corresponding specification. For more information about how to purchase a certificate resource plan, see <a href="https://help.aliyun.com/document_detail/28542.html">Purchase a certificate resource plan</a>. You can invoke the <a href="https://help.aliyun.com/document_detail/455803.html">DescribePackageState</a> operation to query the usage overview of a certificate resource plan of a specified specification, including the total number of purchased certificate resource plans of the specification, the number of submitted certificate applications, and the number of successfully issued certificates.</li>
+     * <li>When you invoke this operation, you can use the <strong>ProductCode</strong> parameter to specify the specification of the certificate to apply for.</li>
+     * <li>After you invoke this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for you and consumes a certificate from the purchased certificate resource plan of the corresponding specification. After you invoke this operation, you must invoke the <a href="https://help.aliyun.com/document_detail/455800.html">DescribeCertificateState</a> operation to obtain the information required to authenticate the domain name. Then, you must manually authenticate the domain name on the DNS management platform of the domain name (to authenticate via DNS) or the domain name server (to authenticate via file). After you authenticate the domain name, the certificate application order enters the review process of the CA.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Purchases, applies for, and issues a domain validated (DV) certificate by using extended certificate services.</p>
+     * <p>Completes the purchase, application, and issuance process for a DV certificate.</p>
      * 
      * @param request CreateCertificateRequestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -554,14 +560,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can call this operation to apply for only DV certificates. If you want to apply for an organization validated (OV) or extended validation (EV) certificate, we recommend that you call the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a> operation. This operation allows you to apply for certificates of all specifications and specify the method to generate a certificate signing request (CSR) file.</li>
-     * <li>Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see <a href="https://help.aliyun.com/document_detail/28542.html">Purchase a certificate resource plan</a>. You can call the <a href="https://help.aliyun.com/document_detail/455803.html">DescribePackageState</a> operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.</li>
-     * <li>When you call this operation, you can use the <strong>ProductCode</strong> parameter to specify the specifications of the certificate.</li>
-     * <li>After you call this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for your application and consumes the certificate quota in the certificate resource plans of the specified specifications that you purchased. After you call this operation, you also need to call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribeCertificateState</a> operation to obtain the information that is required to complete domain name verification, and manually complete the verification. If you use the DNS verification method, you must complete the verification on the management platform of the domain name. If you use the file verification method, you must complete the verification on your DNS server. Then, the certificate authority (CA) will review your certificate application.</li>
+     * <li>This operation is only used to apply for DV certificates. To apply for OV or EV certificates, we recommend that you use the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a> operation to submit a certificate application. This operation is active and can be used to apply for certificates of all specifications, and allows you to select the CSR generation method.</li>
+     * <li>Before you invoke this operation, make sure that you have purchased a certificate resource plan of the corresponding specification. For more information about how to purchase a certificate resource plan, see <a href="https://help.aliyun.com/document_detail/28542.html">Purchase a certificate resource plan</a>. You can invoke the <a href="https://help.aliyun.com/document_detail/455803.html">DescribePackageState</a> operation to query the usage overview of a certificate resource plan of a specified specification, including the total number of purchased certificate resource plans of the specification, the number of submitted certificate applications, and the number of successfully issued certificates.</li>
+     * <li>When you invoke this operation, you can use the <strong>ProductCode</strong> parameter to specify the specification of the certificate to apply for.</li>
+     * <li>After you invoke this operation to submit a certificate application, Certificate Management Service automatically creates a CSR file for you and consumes a certificate from the purchased certificate resource plan of the corresponding specification. After you invoke this operation, you must invoke the <a href="https://help.aliyun.com/document_detail/455800.html">DescribeCertificateState</a> operation to obtain the information required to authenticate the domain name. Then, you must manually authenticate the domain name on the DNS management platform of the domain name (to authenticate via DNS) or the domain name server (to authenticate via file). After you authenticate the domain name, the certificate application order enters the review process of the CA.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Purchases, applies for, and issues a domain validated (DV) certificate by using extended certificate services.</p>
+     * <p>Completes the purchase, application, and issuance process for a DV certificate.</p>
      * 
      * @param request CreateCertificateRequestRequest
      * @return CreateCertificateRequestResponse
@@ -574,14 +580,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can use this operation to apply for only a domain validated (DV) certificate. You cannot use this operation to apply for an organization validated (OV) certificate. We recommend that you use the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a> operation to apply for a certificate. You can use the CreateCertificateForPackageRequest operation to apply for certificates of all types and specify the CSR generation method.</li>
-     * <li>Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see <a href="https://help.aliyun.com/document_detail/28542.html">Purchase a certificate resource plan</a>. You can call the <a href="https://help.aliyun.com/document_detail/455803.html">DescribePackageState</a> operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.</li>
-     * <li>When you call this operation, you can use the <strong>ProductCode</strong> parameter to specify the specifications of the certificate that you want to apply for.</li>
-     * <li>After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribeCertificateState</a> operation to obtain the information that is required for domain name ownership verification and manually complete the verification. Then, your certificate application is reviewed by the certificate authority (CA). If you use the Domain Name System (DNS) verification method, you must complete the verification on your DNS service provider system. If you use the file verification method, you must complete the verification on the DNS server.</li>
+     * <li>This operation applies only to DV certificates and does not support Organization Validation (OV) certificates. Use the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a> operation to submit a certificate application. This operation supports applications for all certificate specifications and allows you to select the CSR generation method.</li>
+     * <li>Before you initiate a request, make sure that you have purchased a certificate resource plan of the corresponding specification. For more information about how to purchase a certificate resource plan, see <a href="https://help.aliyun.com/document_detail/28542.html">Purchase a certificate resource plan</a>. You can call the <a href="https://help.aliyun.com/document_detail/455803.html">DescribePackageState</a> operation to query the usage overview of a certificate resource plan of a specified specification, including the total number of purchased certificate resource plans of the specification, the number of submitted certificate applications, and the number of successfully issued certificates.</li>
+     * <li>When you initiate a request, you can use the <strong>ProductCode</strong> parameter to specify the certificate specification for which you want to apply.</li>
+     * <li>After you call this operation to submit a certificate application, the quota of the purchased certificate resource plan of the corresponding specification is consumed. After you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribeCertificateState</a> operation to obtain the information required to complete domain name validation. Then, you must manually complete the validation on the DNS management platform of the domain name (DNS validation) or the domain name server (file validation). After the validation is complete, your certificate application order enters the review process of the certificate authority (CA).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Purchases, applies for, and issues a domain validated (DV) certificate by using a custom certificate signing request (CSR) file.</p>
+     * <p>Purchases, applies for, and issues a Domain Validation (DV) certificate with a custom certificate signing request (CSR) file. The certificate extension service allows you to purchase and apply for a DV certificate in a single step.</p>
      * 
      * @param request CreateCertificateWithCsrRequestRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -638,14 +644,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>You can use this operation to apply for only a domain validated (DV) certificate. You cannot use this operation to apply for an organization validated (OV) certificate. We recommend that you use the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a> operation to apply for a certificate. You can use the CreateCertificateForPackageRequest operation to apply for certificates of all types and specify the CSR generation method.</li>
-     * <li>Before you call this operation, make sure that you have purchased a certificate resource plan of the required specifications. For more information about how to purchase a certificate resource plan, see <a href="https://help.aliyun.com/document_detail/28542.html">Purchase a certificate resource plan</a>. You can call the <a href="https://help.aliyun.com/document_detail/455803.html">DescribePackageState</a> operation to query the usage of a certificate resource plan of specified specifications, including the total number of certificate resource plans that you purchase, the number of certificate applications that you submit, and the number of certificates that are issued.</li>
-     * <li>When you call this operation, you can use the <strong>ProductCode</strong> parameter to specify the specifications of the certificate that you want to apply for.</li>
-     * <li>After you call this operation to submit a certificate application, the certificate quota of the required specifications that you purchased is consumed. After you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribeCertificateState</a> operation to obtain the information that is required for domain name ownership verification and manually complete the verification. Then, your certificate application is reviewed by the certificate authority (CA). If you use the Domain Name System (DNS) verification method, you must complete the verification on your DNS service provider system. If you use the file verification method, you must complete the verification on the DNS server.</li>
+     * <li>This operation applies only to DV certificates and does not support Organization Validation (OV) certificates. Use the <a href="https://help.aliyun.com/document_detail/455296.html">CreateCertificateForPackageRequest</a> operation to submit a certificate application. This operation supports applications for all certificate specifications and allows you to select the CSR generation method.</li>
+     * <li>Before you initiate a request, make sure that you have purchased a certificate resource plan of the corresponding specification. For more information about how to purchase a certificate resource plan, see <a href="https://help.aliyun.com/document_detail/28542.html">Purchase a certificate resource plan</a>. You can call the <a href="https://help.aliyun.com/document_detail/455803.html">DescribePackageState</a> operation to query the usage overview of a certificate resource plan of a specified specification, including the total number of purchased certificate resource plans of the specification, the number of submitted certificate applications, and the number of successfully issued certificates.</li>
+     * <li>When you initiate a request, you can use the <strong>ProductCode</strong> parameter to specify the certificate specification for which you want to apply.</li>
+     * <li>After you call this operation to submit a certificate application, the quota of the purchased certificate resource plan of the corresponding specification is consumed. After you call this operation, you must call the <a href="https://help.aliyun.com/document_detail/455800.html">DescribeCertificateState</a> operation to obtain the information required to complete domain name validation. Then, you must manually complete the validation on the DNS management platform of the domain name (DNS validation) or the domain name server (file validation). After the validation is complete, your certificate application order enters the review process of the certificate authority (CA).</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Purchases, applies for, and issues a domain validated (DV) certificate by using a custom certificate signing request (CSR) file.</p>
+     * <p>Purchases, applies for, and issues a Domain Validation (DV) certificate with a custom certificate signing request (CSR) file. The certificate extension service allows you to purchase and apply for a DV certificate in a single step.</p>
      * 
      * @param request CreateCertificateWithCsrRequestRequest
      * @return CreateCertificateWithCsrRequestResponse
@@ -805,7 +811,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a certificate signing request (CSR) that contains information about an SSL certificate to apply for, such as the domain names and the certificate holder. You must provide a CSR when you submit a certificate application to a certificate authority (CA).</p>
+     * <p>Creates a certificate signing request (CSR). A CSR is a certificate request file that contains your SSL certificate information, such as the domain names bound to the certificate, and the name and geographic location of the certificate holder. You must provide a CSR when you submit a certificate application to a certificate authority (CA). After the CA approves your application, it uses its root CA private key to sign the CSR and generates the SSL certificate public key, which is the SSL certificate issued to you. The private key of the SSL certificate is the private key generated when you create the CSR.</p>
      * 
      * @param request CreateCsrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -873,7 +879,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a certificate signing request (CSR) that contains information about an SSL certificate to apply for, such as the domain names and the certificate holder. You must provide a CSR when you submit a certificate application to a certificate authority (CA).</p>
+     * <p>Creates a certificate signing request (CSR). A CSR is a certificate request file that contains your SSL certificate information, such as the domain names bound to the certificate, and the name and geographic location of the certificate holder. You must provide a CSR when you submit a certificate application to a certificate authority (CA). After the CA approves your application, it uses its root CA private key to sign the CSR and generates the SSL certificate public key, which is the SSL certificate issued to you. The private key of the SSL certificate is the private key generated when you create the CSR.</p>
      * 
      * @param request CreateCsrRequest
      * @return CreateCsrResponse
@@ -885,10 +891,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the task creation is completed, the task will be in the editing state. You need to call the UpdateDeploymentJobStatus interface to change the status to the pending state, otherwise the task will not be executed.</p>
+     * <p>After a task is created, it is in the editing state. You must call the UpdateDeploymentJobStatus operation to change the state to pending execution. Otherwise, the task will not be executed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a certificate deployment task to deploy an SSL certificate to one or more Alibaba Cloud services immediately or at a scheduled time.</p>
+     * <p>Creates certificate deployment tasks to deploy issued SSL certificates to Alibaba Cloud or third-party cloud services. You can run the tasks immediately or at a specified time to provide trusted identity authentication and secure data transmission for your websites.</p>
      * 
      * @param request CreateDeploymentJobRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -940,10 +946,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After the task creation is completed, the task will be in the editing state. You need to call the UpdateDeploymentJobStatus interface to change the status to the pending state, otherwise the task will not be executed.</p>
+     * <p>After a task is created, it is in the editing state. You must call the UpdateDeploymentJobStatus operation to change the state to pending execution. Otherwise, the task will not be executed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Creates a certificate deployment task to deploy an SSL certificate to one or more Alibaba Cloud services immediately or at a scheduled time.</p>
+     * <p>Creates certificate deployment tasks to deploy issued SSL certificates to Alibaba Cloud or third-party cloud services. You can run the tasks immediately or at a specified time to provide trusted identity authentication and secure data transmission for your websites.</p>
      * 
      * @param request CreateDeploymentJobRequest
      * @return CreateDeploymentJobResponse
@@ -1003,10 +1009,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is limited to 10 QPS per user. Exceeding this limit triggers throttling, which can affect your business. Call this API at a reasonable rate to avoid disruption.</p>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Issues a single client certificate from the general user certificate repository.</p>
+     * <p>Applies for the issuance of a single client certificate in a general user certificate repository.</p>
      * 
      * @param request CreateWHClientCertificateRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1102,10 +1108,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This API is limited to 10 QPS per user. Exceeding this limit triggers throttling, which can affect your business. Call this API at a reasonable rate to avoid disruption.</p>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation as needed.</p>
      * 
      * <b>summary</b> : 
-     * <p>Issues a single client certificate from the general user certificate repository.</p>
+     * <p>Applies for the issuance of a single client certificate in a general user certificate repository.</p>
      * 
      * @param request CreateWHClientCertificateRequest
      * @return CreateWHClientCertificateResponse
@@ -1179,10 +1185,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The queries per second (QPS) limit for this API operation is 10 per user. If you exceed the limit, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</p>
+     * <p>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Decrypts data that was encrypted by using a certificate in a certificate application repository.</p>
+     * <p>Decrypts a certificate in a certificate repository.</p>
      * 
      * @param request DecryptRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1234,10 +1240,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The queries per second (QPS) limit for this API operation is 10 per user. If you exceed the limit, API calls are throttled, which may affect your business. Call this operation at a reasonable rate.</p>
+     * <p>The queries per second (QPS) limit per user for this API operation is 10. If the limit is exceeded, API calls are throttled, which may affect your services. Make API calls at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Decrypts data that was encrypted by using a certificate in a certificate application repository.</p>
+     * <p>Decrypts a certificate in a certificate repository.</p>
      * 
      * @param request DecryptRequest
      * @return DecryptResponse
@@ -1445,7 +1451,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a certificate signing request (CSR).</p>
+     * <p>Deletes a certificate signing request (CSR) that is no longer needed.</p>
      * 
      * @param request DeleteCsrRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1477,7 +1483,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a certificate signing request (CSR).</p>
+     * <p>Deletes a certificate signing request (CSR) that is no longer needed.</p>
      * 
      * @param request DeleteCsrRequest
      * @return DeleteCsrResponse
@@ -2371,6 +2377,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口用于查询联系人详情。</p>
+     * <h2>QPS限制</h2>
+     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * 
      * <b>summary</b> : 
      * <p>Retrieves a contact.</p>
      * 
@@ -2403,6 +2414,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口用于查询联系人详情。</p>
+     * <h2>QPS限制</h2>
+     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * 
      * <b>summary</b> : 
      * <p>Retrieves a contact.</p>
      * 
@@ -2670,8 +2686,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the submission result of a certificate application.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the processing result and status of a submitted certificate application.</p>
+     * <p>Queries the submission result of a certificate application.</p>
      * 
      * @param request GetTaskAttributeRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2706,8 +2727,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>This operation queries the submission result of a certificate application.</p>
+     * <h2>QPS limit</h2>
+     * <p>The QPS limit for a single user is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your services. Call this operation at a reasonable frequency.</p>
+     * 
      * <b>summary</b> : 
-     * <p>Queries the processing result and status of a submitted certificate application.</p>
+     * <p>Queries the submission result of a certificate application.</p>
      * 
      * @param request GetTaskAttributeRequest
      * @return GetTaskAttributeResponse
@@ -3515,13 +3541,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status information of Private Certificate Authority (PCA) instances that you purchased through the SSL Certificate console by specifying the IDs of the private CA instances. For example, you can query the status of a CA instance, the number of digital certificates included, and the number of digital certificates issued.
-     * Before invoking this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
+     * <p>Queries the status information of private CA instances that you purchased from the SSL Certificate Service console by using the ID of the private CA instance. The information includes the status of the CA instance, the number of certificates contained, and the number of issued certificates.
+     * Before you invoke this operation, you must purchase a private CA from the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">digital certificate management service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Invoke this operation as needed.</p>
+     * <p>The QPS limit per user is 10 invocations per second. If the limit is exceeded, API invocations are throttled, which may affect your business. Invoke this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of instances.</p>
+     * <p>Queries the list of instances.</p>
      * 
      * @param request ListInstancesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3597,13 +3623,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status information of Private Certificate Authority (PCA) instances that you purchased through the SSL Certificate console by specifying the IDs of the private CA instances. For example, you can query the status of a CA instance, the number of digital certificates included, and the number of digital certificates issued.
-     * Before invoking this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
+     * <p>Queries the status information of private CA instances that you purchased from the SSL Certificate Service console by using the ID of the private CA instance. The information includes the status of the CA instance, the number of certificates contained, and the number of issued certificates.
+     * Before you invoke this operation, you must purchase a private CA from the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">digital certificate management service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API invoke is throttled, which may affect your business. Invoke this operation as needed.</p>
+     * <p>The QPS limit per user is 10 invocations per second. If the limit is exceeded, API invocations are throttled, which may affect your business. Invoke this operation at a reasonable frequency.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves a list of instances.</p>
+     * <p>Queries the list of instances.</p>
      * 
      * @param request ListInstancesRequest
      * @return ListInstancesResponse
@@ -3695,13 +3721,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the status information of a private Certificate Authority (CA) instance that you purchased through the SSL Certificate console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of digital certificates included, and the number of digital certificates issued.
-     * Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
+     * <p>Queries the status information of a private CA instance that you purchased in the SSL Certificate Service console by using the ID of the private CA instance. The status information includes the status of the CA instance, the number of certificates contained, and the number of issued certificates.
+     * Before you invoke this operation, you must purchase a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Digital Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation appropriately.</p>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke API operations at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the tags associated with a resource.</p>
+     * <p>Queries the tags associated with a resource.</p>
      * 
      * @param request ListTagResourcesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3753,13 +3779,13 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>This operation queries the status information of a private Certificate Authority (CA) instance that you purchased through the SSL Certificate console by using the ID of the private CA instance. For example, you can query the status of the CA instance, the number of digital certificates included, and the number of digital certificates issued.
-     * Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
+     * <p>Queries the status information of a private CA instance that you purchased in the SSL Certificate Service console by using the ID of the private CA instance. The status information includes the status of the CA instance, the number of certificates contained, and the number of issued certificates.
+     * Before you invoke this operation, you must purchase a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Digital Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
      * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, API calls are throttled, which may affect your business. Invoke this operation appropriately.</p>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API invocations are throttled, which may affect your services. Invoke API operations at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
-     * <p>Retrieves the tags associated with a resource.</p>
+     * <p>Queries the tags associated with a resource.</p>
      * 
      * @param request ListTagResourcesRequest
      * @return ListTagResourcesResponse
@@ -4102,6 +4128,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口用于对实例7天内退款。需先通过控制台购买订阅实例再调用 ListInstances 获取 InstanceId。</p>
+     * <h2>QPS限制</h2>
+     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * 
      * <b>summary</b> : 
      * <p>Refunds an instance within 7 days.</p>
      * 
@@ -4134,6 +4165,11 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>description</b> :
+     * <p>本接口用于对实例7天内退款。需先通过控制台购买订阅实例再调用 ListInstances 获取 InstanceId。</p>
+     * <h2>QPS限制</h2>
+     * <p>本接口的单用户QPS限制为10次/秒。超过限制，API调用将会被限流，这可能影响您的业务，请合理调用。</p>
+     * 
      * <b>summary</b> : 
      * <p>Refunds an instance within 7 days.</p>
      * 
@@ -4509,10 +4545,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status information of a private Certificate Authority (CA) instance that you purchased through the SSL Certificate console by using the ID of the private CA instance. The status information includes the CA instance status, the number of digital certificates included, and the number of digital certificates issued.
-     * Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation as needed.</p>
+     * <p>This operation queries the status information of a private CA instance that you purchased in the SSL Certificate Service console by using the ID of the private CA instance. The status information includes the status of the CA instance, the number of certificates included, and the number of issued certificates.
+     * Before you invoke this operation, you must purchase a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">digital certificate management service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API requests are throttled, which may affect your services. Invoke the API at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
      * <p>Removes tags.</p>
@@ -4563,10 +4599,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Queries the status information of a private Certificate Authority (CA) instance that you purchased through the SSL Certificate console by using the ID of the private CA instance. The status information includes the CA instance status, the number of digital certificates included, and the number of digital certificates issued.
-     * Before you invoke this operation, you must have purchased a private CA through the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
-     * <h2>QPS limit</h2>
-     * <p>The single-user QPS limit for this operation is 10 calls per second. If the limit is exceeded, the API call is throttled, which may affect your business. Invoke this operation as needed.</p>
+     * <p>This operation queries the status information of a private CA instance that you purchased in the SSL Certificate Service console by using the ID of the private CA instance. The status information includes the status of the CA instance, the number of certificates included, and the number of issued certificates.
+     * Before you invoke this operation, you must purchase a private CA in the <a href="https://yundun.console.aliyun.com/?p=cas#/pca/rootlist">digital certificate management service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/208553.html">Purchase a private CA</a>.</p>
+     * <h2>QPS limits</h2>
+     * <p>The queries per second (QPS) limit for a single user is 10. If the limit is exceeded, API requests are throttled, which may affect your services. Invoke the API at a reasonable rate.</p>
      * 
      * <b>summary</b> : 
      * <p>Removes tags.</p>
@@ -4908,6 +4944,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
         java.util.Map<String, Object> query = new java.util.HashMap<>();
         if (!com.aliyun.teautil.Common.isUnset(request.autoReissue)) {
             query.put("AutoReissue", request.autoReissue);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoRenewalStatus)) {
+            query.put("AutoRenewalStatus", request.autoRenewalStatus);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.certificateName)) {

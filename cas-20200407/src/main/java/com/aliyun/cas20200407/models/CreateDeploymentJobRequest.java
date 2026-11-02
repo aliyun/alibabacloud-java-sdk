@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDeploymentJobRequest extends TeaModel {
     /**
-     * <p>The ID of the certificate. Separate multiple certificate IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a> operation to obtain the IDs of certificates from the <strong>CertificateId</strong> parameter.</p>
+     * <p>The certificate IDs. Separate multiple IDs with commas (,). The ID is the <strong>CertificateId</strong> returned by <a href="https://help.aliyun.com/document_detail/455804.html">ListUserCertificateOrder</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class CreateDeploymentJobRequest extends TeaModel {
     public String certIds;
 
     /**
-     * <p>The ID of the contact. Separate multiple contact IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/2712221.html">ListContact</a> operation to obtain the IDs of contacts from the <strong>ContactId</strong> parameter.</p>
+     * <p>The contact IDs. Separate multiple IDs with commas (,). The ID is the primary key <strong>Id</strong> returned by <a href="https://help.aliyun.com/document_detail/2712221.html">ListContact</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -25,14 +25,7 @@ public class CreateDeploymentJobRequest extends TeaModel {
     public String contactIds;
 
     /**
-     * <p>The type of the deployment task.</p>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>cloud: multi-cloud deployment task.</p>
-     * </li>
-     * <li><p>user: cloud service deployment task. This type of task does not support cloud servers.</p>
-     * </li>
-     * </ul>
+     * <p>The type of the task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,7 +45,8 @@ public class CreateDeploymentJobRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The ID of the cloud resource. Separate multiple resource IDs with commas (,). You can call the <a href="https://help.aliyun.com/document_detail/2712230.html">ListCloudResources</a> operation to obtain the IDs of cloud resources from the <strong>Id</strong> parameter.</p>
+     * <p>The IDs of the cloud service resources. Separate multiple IDs with commas (,). The ID is the primary key <strong>Id</strong> returned by <a href="https://help.aliyun.com/document_detail/2712230.html">ListCloudResources</a>.</p>
+     * <p><a href="https://help.aliyun.com/document_detail/2712230.html">ListCloudResources</a> returns the existing cloud infrastructure resources (such as SLB, ALB, CDN, WAF, and DCDN instances) under your account. Certificate Management Service does not provide operations to create these resources. You must create the resources by using the API operations (such as CreateLoadBalancer) or the console of the corresponding cloud service before you can query them by calling <a href="https://help.aliyun.com/document_detail/2712230.html">ListCloudResources</a> and use them in this operation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +56,7 @@ public class CreateDeploymentJobRequest extends TeaModel {
     public String resourceIds;
 
     /**
-     * <p>The time when the task starts. The value is a UNIX timestamp. If you do not specify this parameter, the system immediately starts the task after the task is in the pending state.</p>
+     * <p>The time when the task is scheduled to start. The value is a UNIX timestamp. If you do not specify this parameter, the deployment is immediately executed when the task enters the pending execution state.</p>
      * 
      * <strong>example:</strong>
      * <p>1706613560008</p>

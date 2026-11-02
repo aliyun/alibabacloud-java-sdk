@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateCertificateWithCsrRequestRequest extends TeaModel {
     /**
-     * <p>The content of the CSR file.<br> The key algorithm in the CSR file must be Rivest-Shamir-Adleman (RSA) or elliptic-curve cryptography (ECC), and the key length of the RSA algorithm must be greater than or equal to 2,048 characters. For more information about how to create a CSR file, see <a href="https://help.aliyun.com/document_detail/42218.html">How do I create a CSR file?</a><br> A CSR file contains the information about your server and company. When you apply for a certificate, you must submit the CSR file to the CA. The CA signs the CSR file by using the private key of the root certificate and generates a public key file to issue your certificate.<br><br></p>
+     * <p>The content of the existing CSR file.<br>The key type of the CSR file must be RSA or ECC. If the RSA algorithm is used, the key length must be greater than or equal to 2048 bits. For more information about how to create a CSR file, see <a href="https://help.aliyun.com/document_detail/42218.html">How to create a CSR file</a>.  &lt;props=&quot;china&quot;&gt;You can also create a CSR in the <a href="https://yundunnext.console.aliyun.com/?&p=cas">Certificate Management Service console</a>. For more information, see <a href="https://help.aliyun.com/document_detail/313297.html">Create a CSR</a>.<br>A CSR is digital certificate signing request file that contains your server and company information. When you apply for digital certificate, you must submit the CSR file to the CA for review. After the CA signs the CSR file with the private key of the root certificate, digital certificate public key file (the SSL certificate issued to you) is generated.</p>
      * <blockquote>
-     * <p>The <strong>CN</strong> field in the CSR file specifies the domain name that is bound to the certificate.</p>
+     * <p>The <strong>CN</strong> field in the CSR specifies the domain name bound to the certificate.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -18,7 +18,7 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
     public String csr;
 
     /**
-     * <p>The contact email address of the applicant.</p>
+     * <p>The email address of the contact for the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
     public String email;
 
     /**
-     * <p>The phone number of the applicant.</p>
+     * <p>The mobile phone number of the contact for the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,21 +38,21 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
     public String phone;
 
     /**
-     * <p>The specifications of the certificate that you want to apply for. Valid values:</p>
+     * <p>The certificate specification for which you want to apply. Valid values:</p>
      * <ul>
-     * <li><p><strong>digicert-free-1-free</strong> (default): DigiCert single-domain DV certificate in a three-month free trial, available only on the China site (aliyun.com).</p>
+     * <li><p><strong>digicert-free-1-free</strong> (default): a 3-month free DV certificate for individual testing. Available only on the China site.</p>
      * </li>
-     * <li><p><strong>symantec-free-1-free</strong>: DigiCert single-domain DV certificate in a one-year free trial, available only on the China site (aliyun.com).</p>
+     * <li><p><strong>symantec-free-1-free</strong>: a 12-month pro DV certificate for individual testing. Available only on the China site.</p>
      * </li>
-     * <li><p><strong>symantec-dv-1-starter</strong>: DigiCert wildcard DV certificate.</p>
+     * <li><p><strong>symantec-dv-1-starter</strong>: a DigiCert DV wildcard certificate.</p>
      * </li>
-     * <li><p><strong>geotrust-dv-1-starter</strong>: GeoTrust single-domain DV certificate.</p>
+     * <li><p><strong>geotrust-dv-1-starter</strong>: a GeoTrust DV single-domain certificate.</p>
      * </li>
-     * <li><p><strong>geotrust-dv-w-starter</strong>: GeoTrust wildcard DV certificate.</p>
+     * <li><p><strong>geotrust-dv-w-starter</strong>: a GeoTrust DV wildcard certificate.</p>
      * </li>
-     * <li><p><strong>globalsign-dv-1-personal</strong>: GlobalSign single-domain DV certificate.</p>
+     * <li><p><strong>globalsign-dv-1-personal</strong>: a GlobalSign DV single-domain certificate.</p>
      * </li>
-     * <li><p><strong>globalsign-dv-w-advanced</strong>: GlobalSign wildcard DV certificate.</p>
+     * <li><p><strong>globalsign-dv-w-advanced</strong>: a GlobalSign DV wildcard certificate.</p>
      * </li>
      * </ul>
      * 
@@ -63,13 +63,13 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
     public String productCode;
 
     /**
-     * <p>A list of tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<CreateCertificateWithCsrRequestRequestTags> tags;
 
     /**
-     * <p>The name of the applicant.</p>
+     * <p>The name of the contact for the application.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,14 +79,12 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
     public String username;
 
     /**
-     * <p>The method to verify the ownership of a domain name. Valid values:</p>
+     * <p>The validation method for domain name ownership. Valid values:</p>
      * <ul>
-     * <li><p><strong>DNS</strong>: DNS verification. If you use this method, you must add a TXT record to the DNS records of the domain name in the management platform of the domain name. You must have operation permissions on domain name resolution to verify the ownership of the domain name.</p>
-     * </li>
-     * <li><p><strong>FILE</strong>: file verification. If you use this method, you must create a specified file on the DNS server. You must have administrative rights on the DNS server to verify the ownership of the domain name.</p>
-     * </li>
+     * <li><strong>DNS</strong>: DNS validation. You can validate the ownership of the domain name by adding a TXT DNS record for the domain name on the DNS management platform. You must have the management permissions on DNS resolution to complete the validation.</li>
+     * <li><strong>FILE</strong>: file validation. You can validate the ownership of the domain name by creating a specified file on the domain name server. You must have the administrator permissions on the domain name server to complete the validation.</li>
      * </ul>
-     * <p>For more information about the verification methods, see <a href="https://help.aliyun.com/document_detail/48016.html">Verify the ownership of a domain name</a>.</p>
+     * <p>For more information about the two validation methods, see <a href="https://help.aliyun.com/document_detail/48016.html">How do I configure domain name ownership validation?</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -158,7 +156,7 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
 
     public static class CreateCertificateWithCsrRequestRequestTags extends TeaModel {
         /**
-         * <p>The tag key. Valid values of N: 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with <code>acs:</code> or <code>aliyun</code>. The tag key cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>database</p>
@@ -167,7 +165,7 @@ public class CreateCertificateWithCsrRequestRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The value of the tag.</p>
+         * <p>The tag value.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

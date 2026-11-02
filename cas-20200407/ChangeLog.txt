@@ -1,3 +1,9 @@
+2026-11-02 Version: 3.7.5
+- Update API GetInstanceDetail: add response parameters Body.AutoRenewalStatus.
+- Update API ListInstances: add response parameters Body.InstanceList.$.AutoRenewalStatus.
+- Update API UpdateInstance: add request parameters AutoRenewalStatus.
+
+
 2026-10-19 Version: 3.7.4
 - Update API ListDeploymentJob: add request parameters CertId.
 - Update API ListDeploymentJob: add request parameters InstanceId.

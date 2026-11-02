@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class CreateWHClientCertificateRequest extends TeaModel {
     /**
-     * <p>The expiration time of the client certificate, specified as a Unix timestamp in seconds.</p>
+     * <p>The expiration time of the client certificate. The value is a UNIX timestamp. Unit: seconds.</p>
      * <blockquote>
-     * <p>The <code>BeforeTime</code> and <code>AfterTime</code> parameters must be specified together or not at all.</p>
+     * <p>The BeforeTime and AfterTime parameters must be both empty or both specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -17,24 +17,17 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public Long afterTime;
 
     /**
-     * <p>The key algorithm for the client certificate. The format is <code>&lt;encryption_algorithm&gt;_&lt;key_length&gt;</code>. Valid values:</p>
+     * <p>The key algorithm of the client certificate. The key algorithm is in the <code>&lt;Encryption algorithm&gt;_&lt;Key length&gt;</code> format. Valid values:</p>
      * <ul>
-     * <li><p><strong>RSA_1024</strong>: The corresponding signature algorithm is Sha256WithRSA.</p>
-     * </li>
-     * <li><p><strong>RSA_2048</strong>: The corresponding signature algorithm is Sha256WithRSA.</p>
-     * </li>
-     * <li><p><strong>RSA_4096</strong>: The corresponding signature algorithm is Sha256WithRSA.</p>
-     * </li>
-     * <li><p><strong>ECC_256</strong>: The corresponding signature algorithm is Sha256WithECDSA.</p>
-     * </li>
-     * <li><p><strong>ECC_384</strong>: The corresponding signature algorithm is Sha256WithECDSA.</p>
-     * </li>
-     * <li><p><strong>ECC_512</strong>: The corresponding signature algorithm is Sha256WithECDSA.</p>
-     * </li>
-     * <li><p><strong>SM2_256</strong>: The corresponding signature algorithm is SM3WithSM2.</p>
-     * </li>
+     * <li><strong>RSA_1024</strong>: The signature algorithm is Sha256WithRSA.</li>
+     * <li><strong>RSA_2048</strong>: The signature algorithm is Sha256WithRSA.</li>
+     * <li><strong>RSA_4096</strong>: The signature algorithm is Sha256WithRSA.</li>
+     * <li><strong>ECC_256</strong>: The signature algorithm is Sha256WithECDSA.</li>
+     * <li><strong>ECC_384</strong>: The signature algorithm is Sha256WithECDSA.</li>
+     * <li><strong>ECC_512</strong>: The signature algorithm is Sha256WithECDSA.</li>
+     * <li><strong>SM2_256</strong>: The signature algorithm is SM3WithSM2.</li>
      * </ul>
-     * <p>The encryption algorithm of the client certificate must match that of the issuing subordinate CA certificate, but the key lengths can differ. For example, if the key algorithm of the subordinate CA certificate is RSA_2048, the key algorithm for the client certificate must be one of RSA_1024, RSA_2048, or RSA_4096.</p>
+     * <p>The encryption algorithm of the client certificate must be the same as that of the subordinate CA certificate, but the key length can be different. For example, if the key algorithm of the subordinate CA certificate is RSA_2048, the key algorithm of the client certificate must be RSA_1024, RSA_2048, or RSA_4096.</p>
      * 
      * <strong>example:</strong>
      * <p>RSA_2048</p>
@@ -43,9 +36,9 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public String algorithm;
 
     /**
-     * <p>The issuance time of the client certificate, as a Unix timestamp in seconds. If omitted, this defaults to the time of the API call.</p>
+     * <p>The issuance time of the client certificate. The value is a UNIX timestamp. Default value: the time when you call this operation. Unit: seconds.</p>
      * <blockquote>
-     * <p>The <code>BeforeTime</code> and <code>AfterTime</code> parameters must be specified together or not at all.</p>
+     * <p>The BeforeTime and AfterTime parameters must be both empty or both specified.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,7 +48,7 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public Long beforeTime;
 
     /**
-     * <p>The common name of the client certificate. Supports Chinese, English, and other characters.</p>
+     * <p>The common name of the client certificate. Chinese and English characters are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>aliyun</p>
@@ -64,7 +57,7 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public String commonName;
 
     /**
-     * <p>The country where the organization is located.</p>
+     * <p>The country where the company or organization of the user who purchases the certificate is located.</p>
      * 
      * <strong>example:</strong>
      * <p>CN</p>
@@ -73,7 +66,7 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public String country;
 
     /**
-     * <p>The content of the certificate signing request (CSR). You can generate a CSR with tools like OpenSSL or Keytool.</p>
+     * <p>The content of the certificate signing request (CSR). You can use OpenSSL or Keytool to generate a CSR.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE REQUEST----- ...... -----END CERTIFICATE REQUEST-----</p>
@@ -82,16 +75,14 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public String csr;
 
     /**
-     * <p>The validity period of the client certificate, in days.</p>
-     * <p>You cannot leave the <code>Days</code>, <code>BeforeTime</code>, and <code>AfterTime</code> parameters all empty. The <code>BeforeTime</code> and <code>AfterTime</code> parameters must be specified together or not at all.</p>
+     * <p>The validity period of the client certificate. Unit: days.</p>
+     * <p>The Days, BeforeTime, and AfterTime parameters cannot be left empty at the same time. The BeforeTime and AfterTime parameters must be both empty or both specified. The configuration rules are as follows:</p>
      * <ul>
-     * <li><p>If you specify the <code>Days</code> parameter, specifying <code>BeforeTime</code> and <code>AfterTime</code> is optional.</p>
-     * </li>
-     * <li><p>If you do not specify the <code>Days</code> parameter, you must specify both <code>BeforeTime</code> and <code>AfterTime</code>.</p>
-     * </li>
+     * <li>If you specify the Days parameter, you can choose to specify or not specify the BeforeTime and AfterTime parameters.</li>
+     * <li>If you do not specify the Days parameter, you must specify the BeforeTime and AfterTime parameters.</li>
      * </ul>
      * <blockquote>
-     * <p>If you specify <code>Days</code>, <code>BeforeTime</code>, and <code>AfterTime</code> simultaneously, the <code>Days</code> parameter takes precedence in determining the validity period.</p>
+     * <p>If you specify the Days, BeforeTime, and AfterTime parameters at the same time, the validity period of the client certificate is subject to the value of the Days parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -101,14 +92,11 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public Long days;
 
     /**
-     * <p>Specifies which certificate content to return in the response.</p>
+     * <p>Specifies whether to immediately return the digital certificate. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Does not return the certificate (default).</p>
-     * </li>
-     * <li><p><strong>1</strong>: Returns the certificate.</p>
-     * </li>
-     * <li><p><strong>2</strong>: Returns the certificate and its certificate chain.</p>
-     * </li>
+     * <li><strong>0</strong>: No. This is the default value.</li>
+     * <li><strong>1</strong>: Yes, return the certificate.</li>
+     * <li><strong>2</strong>: Yes, return the certificate and its certificate chain.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -118,7 +106,7 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public Long immediately;
 
     /**
-     * <p>The city where the organization is located. Chinese, English, and other characters are supported.</p>
+     * <p>The name of the city where the organization is located. Chinese and English characters are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Hangzhou</p>
@@ -127,7 +115,7 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public String locality;
 
     /**
-     * <p>The validity period of the certificate, in months.</p>
+     * <p>The certificate validity period. Unit: months.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
@@ -136,16 +124,16 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public Long months;
 
     /**
-     * <p>The organization name associated with the root CA certificate, typically your company or enterprise name. Supports Chinese, English, and other characters.</p>
+     * <p>The name of the organization associated with the root CA certificate. The organization corresponds to your enterprise or institution. Chinese and English characters are supported.</p>
      * 
      * <strong>example:</strong>
-     * <p>阿里巴巴网络技术有限公司</p>
+     * <p>Alibaba Network Technology Co., Ltd</p>
      */
     @NameInMap("Organization")
     public String organization;
 
     /**
-     * <p>The name of the department or business unit within the organization.</p>
+     * <p>The name of the company or organization to which the certificate belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>IT</p>
@@ -154,7 +142,7 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public String organizationUnit;
 
     /**
-     * <p>The unique identifier of the issuing subordinate CA certificate.</p>
+     * <p>The unique identifier of the subordinate CA certificate that issues the client certificate.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -164,16 +152,12 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public String parentIdentifier;
 
     /**
-     * <p>The type of the subject alternative name (SAN) for the client certificate. Valid values:</p>
+     * <p>The Subject Alternative Name (SAN) type supported by the client certificate. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: email address.</p>
-     * </li>
-     * <li><p><strong>2</strong>: domain name.</p>
-     * </li>
-     * <li><p><strong>6</strong>: Uniform Resource Identifier (URI).</p>
-     * </li>
-     * <li><p><strong>7</strong>: IP address.</p>
-     * </li>
+     * <li><strong>1</strong>: Email address.</li>
+     * <li><strong>2</strong>: Domain name.</li>
+     * <li><strong>6</strong>: Uniform Resource Identifier (URI).</li>
+     * <li><strong>7</strong>: IP address.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -183,7 +167,7 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public Long sanType;
 
     /**
-     * <p>The value of the SAN extension. To specify multiple values, separate them with commas (,).</p>
+     * <p>The specific SAN of the client certificate. You can specify multiple SANs. Separate multiple SANs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -192,7 +176,7 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public String sanValue;
 
     /**
-     * <p>The province, municipality, or autonomous region where the organization is located. Chinese, English, and other characters are supported.</p>
+     * <p>The name of the province, municipality, or autonomous region where the organization is located. Chinese and English characters are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Zhejiang</p>
@@ -201,7 +185,7 @@ public class CreateWHClientCertificateRequest extends TeaModel {
     public String state;
 
     /**
-     * <p>The validity period of the certificate, in years.</p>
+     * <p>The certificate validity period. Unit: years.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

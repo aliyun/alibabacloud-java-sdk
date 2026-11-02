@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AddCloudAccessRequest extends TeaModel {
     /**
-     * <p>The cloud service provider. This API supports multiple providers as detailed in the SecretKey parameter description. For example, to add credentials for Tencent Cloud, set this parameter to <strong>Tencent</strong>.</p>
+     * <p>The cloud service provider. Currently, only Tencent Cloud (<strong>Tencent</strong>) is supported.</p>
      * 
      * <strong>example:</strong>
      * <p>Tencent</p>
@@ -14,7 +14,7 @@ public class AddCloudAccessRequest extends TeaModel {
     public String cloudName;
 
     /**
-     * <p>The Secret ID for accessing the cloud resource set.</p>
+     * <p>The secret ID for cloud resource access.</p>
      * 
      * <strong>example:</strong>
      * <p>xcxx</p>
@@ -23,28 +23,24 @@ public class AddCloudAccessRequest extends TeaModel {
     public String secretId;
 
     /**
-     * <p>The secret corresponding to the AccessKey. The value is determined by the <code>AkType</code> parameter as follows:</p>
-     * <p>1\. If <code>AkType</code> is set to <code>primary</code>:</p>
+     * <p>The secret of the access key. Valid values:</p>
+     * <ol>
+     * <li>If AkType is set to primary:</li>
+     * </ol>
      * <ul>
-     * <li><p><strong>Tencent</strong>: The SecretAccessKey of the primary account.</p>
-     * </li>
-     * <li><p><strong>HUAWEI CLOUD</strong>: The SecretAccessKey of the primary account.</p>
-     * </li>
-     * <li><p><strong>Azure</strong>: The ClientSecret.</p>
-     * </li>
-     * <li><p><strong>AWS</strong>: The SecretAccessKey of the primary account.</p>
-     * </li>
+     * <li><strong>Tencent</strong>: the SecretAccessKey of the primary account.</li>
+     * <li><strong>HUAWEICLOUD</strong>: the SecretAccessKey of the primary account.</li>
+     * <li><strong>Azure</strong>: the ClientSecret.</li>
+     * <li><strong>AWS</strong>: the SecretAccessKey of the primary account.</li>
      * </ul>
-     * <p>2\. If <code>AkType</code> is set to <code>sub</code>:</p>
+     * <ol start="2">
+     * <li>If AkType is set to sub:</li>
+     * </ol>
      * <ul>
-     * <li><p><strong>Tencent</strong>: The SecretAccessKey of the sub-account.</p>
-     * </li>
-     * <li><p><strong>HUAWEI CLOUD</strong>: The SecretAccessKey of the sub-account.</p>
-     * </li>
-     * <li><p><strong>Azure</strong>: The ClientSecret.</p>
-     * </li>
-     * <li><p><strong>AWS</strong>: The SecretAccessKey of the sub-account.</p>
-     * </li>
+     * <li><strong>Tencent</strong>: the SecretAccessKey of the sub-account.</li>
+     * <li><strong>HUAWEICLOUD</strong>: the SecretAccessKey of the sub-account.</li>
+     * <li><strong>Azure</strong>: the ClientSecret.</li>
+     * <li><strong>AWS</strong>: the SecretAccessKey of the sub-account.</li>
      * </ul>
      * 
      * <strong>example:</strong>

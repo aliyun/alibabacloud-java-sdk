@@ -31,6 +31,13 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     public Integer autoReissueFlag;
 
     /**
+     * <strong>example:</strong>
+     * <p>enable</p>
+     */
+    @NameInMap("AutoRenewalStatus")
+    public String autoRenewalStatus;
+
+    /**
      * <p>The average waiting time for issuing a certificate of this specification, in seconds.</p>
      * 
      * <strong>example:</strong>
@@ -508,6 +515,14 @@ public class GetInstanceDetailResponseBody extends TeaModel {
     }
     public Integer getAutoReissueFlag() {
         return this.autoReissueFlag;
+    }
+
+    public GetInstanceDetailResponseBody setAutoRenewalStatus(String autoRenewalStatus) {
+        this.autoRenewalStatus = autoRenewalStatus;
+        return this;
+    }
+    public String getAutoRenewalStatus() {
+        return this.autoRenewalStatus;
     }
 
     public GetInstanceDetailResponseBody setAverageWaitingTime(String averageWaitingTime) {

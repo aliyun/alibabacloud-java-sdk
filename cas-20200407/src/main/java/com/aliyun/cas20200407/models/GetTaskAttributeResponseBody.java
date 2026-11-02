@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetTaskAttributeResponseBody extends TeaModel {
     /**
-     * <p>The unique ID of the request. Alibaba Cloud generates this ID for each request. Use this ID to troubleshoot issues.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CBF1E9B7-D6A0-4E9E-AD3E-2B47E6C2837D</p>
@@ -14,7 +14,7 @@ public class GetTaskAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The error message.</p>
+     * <p>The failure message.</p>
      * 
      * <strong>example:</strong>
      * <p>error</p>
@@ -23,14 +23,11 @@ public class GetTaskAttributeResponseBody extends TeaModel {
     public String taskMessage;
 
     /**
-     * <p>The result of the task.</p>
+     * <p>The task result. Valid values:</p>
      * <ul>
-     * <li><p>success: The submission is successful.</p>
-     * </li>
-     * <li><p>processing: The submission is in progress.</p>
-     * </li>
-     * <li><p>failed: The submission failed.</p>
-     * </li>
+     * <li>success: The submission succeeded.</li>
+     * <li>processing: The submission is in progress.</li>
+     * <li>failed: The submission failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
