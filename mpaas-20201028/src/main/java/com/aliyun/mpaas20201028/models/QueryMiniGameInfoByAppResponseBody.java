@@ -75,6 +75,135 @@ public class QueryMiniGameInfoByAppResponseBody extends TeaModel {
         return this.success;
     }
 
+    public static class QueryMiniGameInfoByAppResponseBodyContentUserProfileData extends TeaModel {
+        @NameInMap("ActiveRegionCodes")
+        public String activeRegionCodes;
+
+        @NameInMap("ActiveRegions")
+        public String activeRegions;
+
+        @NameInMap("AgeSegment")
+        public String ageSegment;
+
+        @NameInMap("AndroidActiveModels")
+        public String androidActiveModels;
+
+        @NameInMap("AndroidRatio")
+        public Integer androidRatio;
+
+        @NameInMap("FemaleRatio")
+        public Integer femaleRatio;
+
+        @NameInMap("HarmonyRatio")
+        public Integer harmonyRatio;
+
+        @NameInMap("IosActiveModels")
+        public String iosActiveModels;
+
+        @NameInMap("IosRatio")
+        public Integer iosRatio;
+
+        @NameInMap("MaleRatio")
+        public Integer maleRatio;
+
+        @NameInMap("ProfileRemark")
+        public String profileRemark;
+
+        public static QueryMiniGameInfoByAppResponseBodyContentUserProfileData build(java.util.Map<String, ?> map) throws Exception {
+            QueryMiniGameInfoByAppResponseBodyContentUserProfileData self = new QueryMiniGameInfoByAppResponseBodyContentUserProfileData();
+            return TeaModel.build(map, self);
+        }
+
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData setActiveRegionCodes(String activeRegionCodes) {
+            this.activeRegionCodes = activeRegionCodes;
+            return this;
+        }
+        public String getActiveRegionCodes() {
+            return this.activeRegionCodes;
+        }
+
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData setActiveRegions(String activeRegions) {
+            this.activeRegions = activeRegions;
+            return this;
+        }
+        public String getActiveRegions() {
+            return this.activeRegions;
+        }
+
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData setAgeSegment(String ageSegment) {
+            this.ageSegment = ageSegment;
+            return this;
+        }
+        public String getAgeSegment() {
+            return this.ageSegment;
+        }
+
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData setAndroidActiveModels(String androidActiveModels) {
+            this.androidActiveModels = androidActiveModels;
+            return this;
+        }
+        public String getAndroidActiveModels() {
+            return this.androidActiveModels;
+        }
+
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData setAndroidRatio(Integer androidRatio) {
+            this.androidRatio = androidRatio;
+            return this;
+        }
+        public Integer getAndroidRatio() {
+            return this.androidRatio;
+        }
+
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData setFemaleRatio(Integer femaleRatio) {
+            this.femaleRatio = femaleRatio;
+            return this;
+        }
+        public Integer getFemaleRatio() {
+            return this.femaleRatio;
+        }
+
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData setHarmonyRatio(Integer harmonyRatio) {
+            this.harmonyRatio = harmonyRatio;
+            return this;
+        }
+        public Integer getHarmonyRatio() {
+            return this.harmonyRatio;
+        }
+
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData setIosActiveModels(String iosActiveModels) {
+            this.iosActiveModels = iosActiveModels;
+            return this;
+        }
+        public String getIosActiveModels() {
+            return this.iosActiveModels;
+        }
+
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData setIosRatio(Integer iosRatio) {
+            this.iosRatio = iosRatio;
+            return this;
+        }
+        public Integer getIosRatio() {
+            return this.iosRatio;
+        }
+
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData setMaleRatio(Integer maleRatio) {
+            this.maleRatio = maleRatio;
+            return this;
+        }
+        public Integer getMaleRatio() {
+            return this.maleRatio;
+        }
+
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData setProfileRemark(String profileRemark) {
+            this.profileRemark = profileRemark;
+            return this;
+        }
+        public String getProfileRemark() {
+            return this.profileRemark;
+        }
+
+    }
+
     public static class QueryMiniGameInfoByAppResponseBodyContent extends TeaModel {
         @NameInMap("GameEngine")
         public String gameEngine;
@@ -114,6 +243,9 @@ public class QueryMiniGameInfoByAppResponseBody extends TeaModel {
 
         @NameInMap("Slogan")
         public String slogan;
+
+        @NameInMap("UserProfileData")
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData userProfileData;
 
         @NameInMap("Version")
         public String version;
@@ -225,6 +357,14 @@ public class QueryMiniGameInfoByAppResponseBody extends TeaModel {
         }
         public String getSlogan() {
             return this.slogan;
+        }
+
+        public QueryMiniGameInfoByAppResponseBodyContent setUserProfileData(QueryMiniGameInfoByAppResponseBodyContentUserProfileData userProfileData) {
+            this.userProfileData = userProfileData;
+            return this;
+        }
+        public QueryMiniGameInfoByAppResponseBodyContentUserProfileData getUserProfileData() {
+            return this.userProfileData;
         }
 
         public QueryMiniGameInfoByAppResponseBodyContent setVersion(String version) {

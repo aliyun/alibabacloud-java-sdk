@@ -542,6 +542,318 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>创建网关 API</p>
+     * 
+     * @param tmpReq CreateGatewayApiRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateGatewayApiResponse
+     */
+    public CreateGatewayApiResponse createGatewayApiWithOptions(CreateGatewayApiRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateGatewayApiShrinkRequest request = new CreateGatewayApiShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cacheRule)) {
+            request.cacheRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cacheRule, "CacheRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.defaultLimitRule)) {
+            request.defaultLimitRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.defaultLimitRule, "DefaultLimitRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.headerRules)) {
+            request.headerRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.headerRules, "HeaderRules", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.limitRule)) {
+            request.limitRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.limitRule, "LimitRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.migrateRule)) {
+            request.migrateRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.migrateRule, "MigrateRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.mockRule)) {
+            request.mockRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.mockRule, "MockRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.requestParams)) {
+            request.requestParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.requestParams, "RequestParams", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rpcParameterTypes)) {
+            request.rpcParameterTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rpcParameterTypes, "RpcParameterTypes", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiName)) {
+            body.put("ApiName", request.apiName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiStatus)) {
+            body.put("ApiStatus", request.apiStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiType)) {
+            body.put("ApiType", request.apiType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authRuleName)) {
+            body.put("AuthRuleName", request.authRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cacheRuleShrink)) {
+            body.put("CacheRule", request.cacheRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.charset)) {
+            body.put("Charset", request.charset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentType)) {
+            body.put("ContentType", request.contentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultLimitRuleShrink)) {
+            body.put("DefaultLimitRule", request.defaultLimitRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.headerRulesShrink)) {
+            body.put("HeaderRules", request.headerRulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interfaceType)) {
+            body.put("InterfaceType", request.interfaceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limitRuleShrink)) {
+            body.put("LimitRule", request.limitRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.method)) {
+            body.put("Method", request.method);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.methodName)) {
+            body.put("MethodName", request.methodName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.migrateRuleShrink)) {
+            body.put("MigrateRule", request.migrateRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mockRuleShrink)) {
+            body.put("MockRule", request.mockRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needEncrypt)) {
+            body.put("NeedEncrypt", request.needEncrypt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needJsonp)) {
+            body.put("NeedJsonp", request.needJsonp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needSign)) {
+            body.put("NeedSign", request.needSign);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationType)) {
+            body.put("OperationType", request.operationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            body.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestBodyModel)) {
+            body.put("RequestBodyModel", request.requestBodyModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestParamsShrink)) {
+            body.put("RequestParams", request.requestParamsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseBodyModel)) {
+            body.put("ResponseBodyModel", request.responseBodyModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rpcParameterTypesShrink)) {
+            body.put("RpcParameterTypes", request.rpcParameterTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serialization)) {
+            body.put("Serialization", request.serialization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            body.put("Timeout", request.timeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGatewayApi"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGatewayApiResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建网关 API</p>
+     * 
+     * @param request CreateGatewayApiRequest
+     * @return CreateGatewayApiResponse
+     */
+    public CreateGatewayApiResponse createGatewayApi(CreateGatewayApiRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createGatewayApiWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建网关 API 分组</p>
+     * 
+     * @param tmpReq CreateGatewayApiGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return CreateGatewayApiGroupResponse
+     */
+    public CreateGatewayApiGroupResponse createGatewayApiGroupWithOptions(CreateGatewayApiGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        CreateGatewayApiGroupShrinkRequest request = new CreateGatewayApiGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.centers)) {
+            request.centersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.centers, "Centers", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.centersShrink)) {
+            body.put("Centers", request.centersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            body.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableMTLS)) {
+            body.put("EnableMTLS", request.enableMTLS);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            body.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
+            body.put("Host", request.host);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpsModel)) {
+            body.put("HttpsModel", request.httpsModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instancePort)) {
+            body.put("InstancePort", request.instancePort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionMode)) {
+            body.put("RegionMode", request.regionMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            body.put("Timeout", request.timeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upstreamType)) {
+            body.put("UpstreamType", request.upstreamType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            body.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcModel)) {
+            body.put("VpcModel", request.vpcModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "CreateGatewayApiGroup"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new CreateGatewayApiGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>创建网关 API 分组</p>
+     * 
+     * @param request CreateGatewayApiGroupRequest
+     * @return CreateGatewayApiGroupResponse
+     */
+    public CreateGatewayApiGroupResponse createGatewayApiGroup(CreateGatewayApiGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.createGatewayApiGroupWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>创建短链</p>
      * 
      * @param request CreateLinkRequest
@@ -2579,6 +2891,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>删除网关 API</p>
+     * 
+     * @param request DeleteGatewayApiRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteGatewayApiResponse
+     */
+    public DeleteGatewayApiResponse deleteGatewayApiWithOptions(DeleteGatewayApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
+            body.put("ApiId", request.apiId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteGatewayApi"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGatewayApiResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除网关 API</p>
+     * 
+     * @param request DeleteGatewayApiRequest
+     * @return DeleteGatewayApiResponse
+     */
+    public DeleteGatewayApiResponse deleteGatewayApi(DeleteGatewayApiRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteGatewayApiWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除网关 API 分组</p>
+     * 
+     * @param request DeleteGatewayApiGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DeleteGatewayApiGroupResponse
+     */
+    public DeleteGatewayApiGroupResponse deleteGatewayApiGroupWithOptions(DeleteGatewayApiGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DeleteGatewayApiGroup"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DeleteGatewayApiGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>删除网关 API 分组</p>
+     * 
+     * @param request DeleteGatewayApiGroupRequest
+     * @return DeleteGatewayApiGroupResponse
+     */
+    public DeleteGatewayApiGroupResponse deleteGatewayApiGroup(DeleteGatewayApiGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.deleteGatewayApiGroupWithOptions(request, runtime);
+    }
+
+    /**
      * @param request DeleteMcdpAimRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return DeleteMcdpAimResponse
@@ -3203,6 +3627,68 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>导出网关 API</p>
+     * 
+     * @param tmpReq ExportGatewayApisRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ExportGatewayApisResponse
+     */
+    public ExportGatewayApisResponse exportGatewayApisWithOptions(ExportGatewayApisRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        ExportGatewayApisShrinkRequest request = new ExportGatewayApisShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.apiIds)) {
+            request.apiIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.apiIds, "ApiIds", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiIdsShrink)) {
+            body.put("ApiIds", request.apiIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ExportGatewayApis"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ExportGatewayApisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导出网关 API</p>
+     * 
+     * @param request ExportGatewayApisRequest
+     * @return ExportGatewayApisResponse
+     */
+    public ExportGatewayApisResponse exportGatewayApis(ExportGatewayApisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.exportGatewayApisWithOptions(request, runtime);
+    }
+
+    /**
      * @param request ExportMappCenterAppConfigRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return ExportMappCenterAppConfigResponse
@@ -3448,6 +3934,118 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public GetGameReviewByStatusResponse getGameReviewByStatus(GetGameReviewByStatusRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.getGameReviewByStatusWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询网关 API 详情</p>
+     * 
+     * @param request GetGatewayApiRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGatewayApiResponse
+     */
+    public GetGatewayApiResponse getGatewayApiWithOptions(GetGatewayApiRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
+            body.put("ApiId", request.apiId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGatewayApi"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGatewayApiResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询网关 API 详情</p>
+     * 
+     * @param request GetGatewayApiRequest
+     * @return GetGatewayApiResponse
+     */
+    public GetGatewayApiResponse getGatewayApi(GetGatewayApiRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getGatewayApiWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询网关 API 分组详情</p>
+     * 
+     * @param request GetGatewayApiGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return GetGatewayApiGroupResponse
+     */
+    public GetGatewayApiGroupResponse getGatewayApiGroupWithOptions(GetGatewayApiGroupRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "GetGatewayApiGroup"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new GetGatewayApiGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询网关 API 分组详情</p>
+     * 
+     * @param request GetGatewayApiGroupRequest
+     * @return GetGatewayApiGroupResponse
+     */
+    public GetGatewayApiGroupResponse getGatewayApiGroup(GetGatewayApiGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.getGatewayApiGroupWithOptions(request, runtime);
     }
 
     /**
@@ -4012,6 +4610,66 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
+     * <p>导入网关 API</p>
+     * 
+     * @param request ImportGatewayApisRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ImportGatewayApisResponse
+     */
+    public ImportGatewayApisResponse importGatewayApisWithOptions(ImportGatewayApisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.fileUrl)) {
+            body.put("FileUrl", request.fileUrl);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.importMode)) {
+            body.put("ImportMode", request.importMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ImportGatewayApis"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ImportGatewayApisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>导入网关 API</p>
+     * 
+     * @param request ImportGatewayApisRequest
+     * @return ImportGatewayApisResponse
+     */
+    public ImportGatewayApisResponse importGatewayApis(ImportGatewayApisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.importGatewayApisWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
      * <p>查询报表</p>
      * 
      * @param request ListAnalysisCoreIndexRequest
@@ -4115,6 +4773,154 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public ListCubecardAppsResponse listCubecardApps(ListCubecardAppsRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.listCubecardAppsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询网关 API 分组列表</p>
+     * 
+     * @param request ListGatewayApiGroupsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListGatewayApiGroupsResponse
+     */
+    public ListGatewayApiGroupsResponse listGatewayApiGroupsWithOptions(ListGatewayApiGroupsRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upstreamType)) {
+            body.put("UpstreamType", request.upstreamType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListGatewayApiGroups"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListGatewayApiGroupsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询网关 API 分组列表</p>
+     * 
+     * @param request ListGatewayApiGroupsRequest
+     * @return ListGatewayApiGroupsResponse
+     */
+    public ListGatewayApiGroupsResponse listGatewayApiGroups(ListGatewayApiGroupsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listGatewayApiGroupsWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询网关 API 列表</p>
+     * 
+     * @param request ListGatewayApisRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return ListGatewayApisResponse
+     */
+    public ListGatewayApisResponse listGatewayApisWithOptions(ListGatewayApisRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiStatus)) {
+            body.put("ApiStatus", request.apiStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiType)) {
+            body.put("ApiType", request.apiType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.keyword)) {
+            body.put("Keyword", request.keyword);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            body.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            body.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sysName)) {
+            body.put("SysName", request.sysName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "ListGatewayApis"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new ListGatewayApisResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询网关 API 列表</p>
+     * 
+     * @param request ListGatewayApisRequest
+     * @return ListGatewayApisResponse
+     */
+    public ListGatewayApisResponse listGatewayApis(ListGatewayApisRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.listGatewayApisWithOptions(request, runtime);
     }
 
     /**
@@ -7032,6 +7838,62 @@ public class Client extends com.aliyun.teaopenapi.Client {
     }
 
     /**
+     * <b>summary</b> : 
+     * <p>查询小游戏已审核通过的资质信息</p>
+     * 
+     * @param request QueryMiniGameQualificationByAppRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return QueryMiniGameQualificationByAppResponse
+     */
+    public QueryMiniGameQualificationByAppResponse queryMiniGameQualificationByAppWithOptions(QueryMiniGameQualificationByAppRequest request, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(request);
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.miniProgramCode)) {
+            body.put("MiniProgramCode", request.miniProgramCode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "QueryMiniGameQualificationByApp"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new QueryMiniGameQualificationByAppResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>查询小游戏已审核通过的资质信息</p>
+     * 
+     * @param request QueryMiniGameQualificationByAppRequest
+     * @return QueryMiniGameQualificationByAppResponse
+     */
+    public QueryMiniGameQualificationByAppResponse queryMiniGameQualificationByApp(QueryMiniGameQualificationByAppRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.queryMiniGameQualificationByAppWithOptions(request, runtime);
+    }
+
+    /**
      * @param request QueryMpsSchedulerListRequest
      * @param runtime runtime options for this request RuntimeOptions
      * @return QueryMpsSchedulerListResponse
@@ -7963,6 +8825,326 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public StartUserAppAsyncEnhanceInMsaResponse startUserAppAsyncEnhanceInMsa(StartUserAppAsyncEnhanceInMsaRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.startUserAppAsyncEnhanceInMsaWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新网关 API</p>
+     * 
+     * @param tmpReq UpdateGatewayApiRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateGatewayApiResponse
+     */
+    public UpdateGatewayApiResponse updateGatewayApiWithOptions(UpdateGatewayApiRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateGatewayApiShrinkRequest request = new UpdateGatewayApiShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.cacheRule)) {
+            request.cacheRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.cacheRule, "CacheRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.defaultLimitRule)) {
+            request.defaultLimitRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.defaultLimitRule, "DefaultLimitRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.headerRules)) {
+            request.headerRulesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.headerRules, "HeaderRules", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.limitRule)) {
+            request.limitRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.limitRule, "LimitRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.migrateRule)) {
+            request.migrateRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.migrateRule, "MigrateRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.mockRule)) {
+            request.mockRuleShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.mockRule, "MockRule", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.requestParams)) {
+            request.requestParamsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.requestParams, "RequestParams", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.rpcParameterTypes)) {
+            request.rpcParameterTypesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.rpcParameterTypes, "RpcParameterTypes", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.apiId)) {
+            body.put("ApiId", request.apiId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiName)) {
+            body.put("ApiName", request.apiName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiStatus)) {
+            body.put("ApiStatus", request.apiStatus);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.apiType)) {
+            body.put("ApiType", request.apiType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.authRuleName)) {
+            body.put("AuthRuleName", request.authRuleName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.cacheRuleShrink)) {
+            body.put("CacheRule", request.cacheRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.charset)) {
+            body.put("Charset", request.charset);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.contentType)) {
+            body.put("ContentType", request.contentType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.defaultLimitRuleShrink)) {
+            body.put("DefaultLimitRule", request.defaultLimitRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.headerRulesShrink)) {
+            body.put("HeaderRules", request.headerRulesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.interfaceType)) {
+            body.put("InterfaceType", request.interfaceType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.limitRuleShrink)) {
+            body.put("LimitRule", request.limitRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.method)) {
+            body.put("Method", request.method);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.methodName)) {
+            body.put("MethodName", request.methodName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.migrateRuleShrink)) {
+            body.put("MigrateRule", request.migrateRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mockRuleShrink)) {
+            body.put("MockRule", request.mockRuleShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needEncrypt)) {
+            body.put("NeedEncrypt", request.needEncrypt);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needJsonp)) {
+            body.put("NeedJsonp", request.needJsonp);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.needSign)) {
+            body.put("NeedSign", request.needSign);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.operationType)) {
+            body.put("OperationType", request.operationType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.path)) {
+            body.put("Path", request.path);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestBodyModel)) {
+            body.put("RequestBodyModel", request.requestBodyModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.requestParamsShrink)) {
+            body.put("RequestParams", request.requestParamsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.responseBodyModel)) {
+            body.put("ResponseBodyModel", request.responseBodyModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.rpcParameterTypesShrink)) {
+            body.put("RpcParameterTypes", request.rpcParameterTypesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.serialization)) {
+            body.put("Serialization", request.serialization);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            body.put("Timeout", request.timeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGatewayApi"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGatewayApiResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新网关 API</p>
+     * 
+     * @param request UpdateGatewayApiRequest
+     * @return UpdateGatewayApiResponse
+     */
+    public UpdateGatewayApiResponse updateGatewayApi(UpdateGatewayApiRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateGatewayApiWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新网关 API 分组</p>
+     * 
+     * @param tmpReq UpdateGatewayApiGroupRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return UpdateGatewayApiGroupResponse
+     */
+    public UpdateGatewayApiGroupResponse updateGatewayApiGroupWithOptions(UpdateGatewayApiGroupRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        UpdateGatewayApiGroupShrinkRequest request = new UpdateGatewayApiGroupShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.centers)) {
+            request.centersShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.centers, "Centers", "json");
+        }
+
+        java.util.Map<String, Object> body = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.appId)) {
+            body.put("AppId", request.appId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.centersShrink)) {
+            body.put("Centers", request.centersShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.description)) {
+            body.put("Description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.domainName)) {
+            body.put("DomainName", request.domainName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.enableMTLS)) {
+            body.put("EnableMTLS", request.enableMTLS);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupId)) {
+            body.put("GroupId", request.groupId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.groupName)) {
+            body.put("GroupName", request.groupName);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.host)) {
+            body.put("Host", request.host);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.httpsModel)) {
+            body.put("HttpsModel", request.httpsModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instanceId)) {
+            body.put("InstanceId", request.instanceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.instancePort)) {
+            body.put("InstancePort", request.instancePort);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionMode)) {
+            body.put("RegionMode", request.regionMode);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.tenantId)) {
+            body.put("TenantId", request.tenantId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.timeout)) {
+            body.put("Timeout", request.timeout);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.upstreamType)) {
+            body.put("UpstreamType", request.upstreamType);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcId)) {
+            body.put("VpcId", request.vpcId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.vpcModel)) {
+            body.put("VpcModel", request.vpcModel);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.workspaceId)) {
+            body.put("WorkspaceId", request.workspaceId);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("body", com.aliyun.openapiutil.Client.parseToMap(body))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "UpdateGatewayApiGroup"),
+            new TeaPair("version", "2020-10-28"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new UpdateGatewayApiGroupResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>更新网关 API 分组</p>
+     * 
+     * @param request UpdateGatewayApiGroupRequest
+     * @return UpdateGatewayApiGroupResponse
+     */
+    public UpdateGatewayApiGroupResponse updateGatewayApiGroup(UpdateGatewayApiGroupRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.updateGatewayApiGroupWithOptions(request, runtime);
     }
 
     /**
