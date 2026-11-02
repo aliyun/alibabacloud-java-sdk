@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopySDGResponseBody extends TeaModel {
     /**
-     * <p>The returned Data object.</p>
+     * <p>The Data object.</p>
      */
     @NameInMap("Data")
     public CopySDGResponseBodyData data;
@@ -93,13 +93,13 @@ public class CopySDGResponseBody extends TeaModel {
         public Long failedCount;
 
         /**
-         * <p>The list of failed edge zone details.</p>
+         * <p>The list of details about failed edge zones.</p>
          */
         @NameInMap("FailedItems")
         public java.util.List<CopySDGResponseBodyDataResultFailedItems> failedItems;
 
         /**
-         * <p>The number of successful operations.</p>
+         * <p>The number of successful edge zones.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -140,7 +140,7 @@ public class CopySDGResponseBody extends TeaModel {
 
     public static class CopySDGResponseBodyData extends TeaModel {
         /**
-         * <p>The response message. The value success indicates a successful request.</p>
+         * <p>The response message. The value is success if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -149,16 +149,16 @@ public class CopySDGResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The execution result of the synchronous request.</p>
+         * <p>The execution result of the synchronization request.</p>
          */
         @NameInMap("Result")
         public CopySDGResponseBodyDataResult result;
 
         /**
-         * <p>Indicates whether all requests were successful. Valid values:</p>
+         * <p>Indicates whether all requests are successful. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: All requests were successful.</li>
-         * <li><strong>false</strong>: Some tasks failed.</li>
+         * <li><strong>true</strong>: All requests are successful.</li>
+         * <li><strong>false</strong>: One or more tasks failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

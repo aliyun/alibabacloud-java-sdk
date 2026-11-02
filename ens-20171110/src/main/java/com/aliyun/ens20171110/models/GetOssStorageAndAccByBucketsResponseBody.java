@@ -42,7 +42,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
 
     public static class GetOssStorageAndAccByBucketsResponseBodyBucketList extends TeaModel {
         /**
-         * <p>The number of access requests.</p>
+         * <p>The number of accesses.</p>
          * 
          * <strong>example:</strong>
          * <p>1000</p>
@@ -51,7 +51,7 @@ public class GetOssStorageAndAccByBucketsResponseBody extends TeaModel {
         public Long acc;
 
         /**
-         * <p>The OSS bucket name.</p>
+         * <p>The name of the bucket.</p>
          * 
          * <strong>example:</strong>
          * <p>my-bucket</p>

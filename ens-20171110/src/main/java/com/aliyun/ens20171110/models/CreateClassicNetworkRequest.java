@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateClassicNetworkRequest extends TeaModel {
     /**
-     * <p>The CIDR block of the network. You can use the following CIDR blocks or their subsets as the CIDR block of the network:</p>
+     * <p>The CIDR block of the network. You can use one of the following CIDR blocks or their subsets as the CIDR block of the network:</p>
      * <ul>
      * <li>10.0.0.0/8 (default).</li>
      * <li>172.16.0.0/12.</li>
@@ -22,7 +22,7 @@ public class CreateClassicNetworkRequest extends TeaModel {
     /**
      * <p>The description of the network. The description must meet the following rules:</p>
      * <ul>
-     * <li>It must be 2 to 256 characters in length. It must start with a letter or a Chinese character, and cannot start with http:// or https://.</li>
+     * <li>The description must be 2 to 256 characters in length. It must start with a letter or a Chinese character, and cannot start with http:// or https://.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class CreateClassicNetworkRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The edge zone ID of ENS.</p>
+     * <p>The ID of the Edge Node Service (ENS) edge node.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -44,9 +44,9 @@ public class CreateClassicNetworkRequest extends TeaModel {
     /**
      * <p>The name of the network. The name must meet the following rules:</p>
      * <ul>
-     * <li>It must be 2 to 128 characters in length, and can contain English and Chinese characters.</li>
-     * <li>It must start with an uppercase or lowercase letter or a Chinese character, and cannot start with http:// or https://.</li>
-     * <li>It can contain digits, colons (:), underscores (_), and hyphens (-).</li>
+     * <li>The name must be 2 to 128 characters in length.</li>
+     * <li>The name must start with an uppercase or lowercase letter or a Chinese character, and cannot start with http:// or https://.</li>
+     * <li>The name can contain digits, colons (:), underscores (_), and hyphens (-).</li>
      * </ul>
      * 
      * <strong>example:</strong>

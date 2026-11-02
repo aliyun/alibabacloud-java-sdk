@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteSDGResponseBody extends TeaModel {
     /**
-     * <p>The returned Data object.</p>
+     * <p>The Data object.</p>
      */
     @NameInMap("Data")
     public DeleteSDGResponseBodyData data;
@@ -42,7 +42,7 @@ public class DeleteSDGResponseBody extends TeaModel {
 
     public static class DeleteSDGResponseBodyDataResultFailedItemsItem extends TeaModel {
         /**
-         * <p>The specific ID.</p>
+         * <p>The SDG ID.</p>
          * 
          * <strong>example:</strong>
          * <p>sdg-dfet5vvvgy</p>
@@ -76,7 +76,7 @@ public class DeleteSDGResponseBody extends TeaModel {
         public String errMessage;
 
         /**
-         * <p>The specific information.</p>
+         * <p>The detailed information.</p>
          */
         @NameInMap("Item")
         public DeleteSDGResponseBodyDataResultFailedItemsItem item;
@@ -106,7 +106,7 @@ public class DeleteSDGResponseBody extends TeaModel {
 
     public static class DeleteSDGResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The number of failures.</p>
+         * <p>The number of failed tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -115,13 +115,13 @@ public class DeleteSDGResponseBody extends TeaModel {
         public Long failedCount;
 
         /**
-         * <p>The details of failed tasks.</p>
+         * <p>The details of the failed tasks.</p>
          */
         @NameInMap("FailedItems")
         public java.util.List<DeleteSDGResponseBodyDataResultFailedItems> failedItems;
 
         /**
-         * <p>The number of successes.</p>
+         * <p>The number of successful tasks.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -162,7 +162,7 @@ public class DeleteSDGResponseBody extends TeaModel {
 
     public static class DeleteSDGResponseBodyData extends TeaModel {
         /**
-         * <p>The response message. A value of success indicates a successful request.</p>
+         * <p>The response message. The value is success if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -177,9 +177,9 @@ public class DeleteSDGResponseBody extends TeaModel {
         public DeleteSDGResponseBodyDataResult result;
 
         /**
-         * <p>Indicates whether all requests succeeded. Valid values:</p>
+         * <p>Indicates whether all requests are successful. Valid values:</p>
          * <ul>
-         * <li>true: All succeeded.</li>
+         * <li>true: All requests are successful.</li>
          * <li>false: Some tasks failed.</li>
          * </ul>
          * 

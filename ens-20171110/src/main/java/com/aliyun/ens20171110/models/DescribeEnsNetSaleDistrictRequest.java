@@ -7,9 +7,9 @@ public class DescribeEnsNetSaleDistrictRequest extends TeaModel {
     /**
      * <p>The region code.</p>
      * <ul>
-     * <li><p>If you do not specify this parameter, only nodes under the area level that is specified by NetLevelCode are queried.</p>
+     * <li><p>If this parameter is empty, only the nodes under the specified network level (NetLevelCode) are queried.</p>
      * </li>
-     * <li><p>If you specify this parameter, only child nodes in the area that is specified by NetDistrictCode are queried.</p>
+     * <li><p>If this parameter is not empty, only the child nodes under the specified region code (NetDistrictCode) are queried.</p>
      * </li>
      * </ul>
      * 
@@ -22,11 +22,11 @@ public class DescribeEnsNetSaleDistrictRequest extends TeaModel {
     /**
      * <p>The network level. Valid values:</p>
      * <ul>
-     * <li><p><strong>Big</strong>: area</p>
+     * <li><p><strong>Big</strong>: Major region.</p>
      * </li>
-     * <li><p><strong>Middle</strong>: province</p>
+     * <li><p><strong>Middle</strong>: Province.</p>
      * </li>
-     * <li><p><strong>Small</strong>: city</p>
+     * <li><p><strong>Small</strong>: City.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

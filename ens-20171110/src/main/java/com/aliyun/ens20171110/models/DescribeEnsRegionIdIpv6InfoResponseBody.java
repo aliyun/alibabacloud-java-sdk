@@ -14,7 +14,7 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>IPv6 support information.</p>
+     * <p>The IPv6 support information.</p>
      */
     @NameInMap("SupportIpv6Info")
     public DescribeEnsRegionIdIpv6InfoResponseBodySupportIpv6Info supportIpv6Info;
@@ -42,7 +42,7 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
 
     public static class DescribeEnsRegionIdIpv6InfoResponseBodySupportIpv6Info extends TeaModel {
         /**
-         * <p>The ID of the node.</p>
+         * <p>The ID of the edge zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-chengdu-****-4</p>
@@ -51,12 +51,10 @@ public class DescribeEnsRegionIdIpv6InfoResponseBody extends TeaModel {
         public String ensRegionId;
 
         /**
-         * <p>Specifies whether IPv6 is supported. Valid values:</p>
+         * <p>Indicates whether IPv6 is supported. Valid values:</p>
          * <ul>
-         * <li><p>true</p>
-         * </li>
-         * <li><p>false</p>
-         * </li>
+         * <li>true: Supported.</li>
+         * <li>false: Not supported.</li>
          * </ul>
          * 
          * <strong>example:</strong>

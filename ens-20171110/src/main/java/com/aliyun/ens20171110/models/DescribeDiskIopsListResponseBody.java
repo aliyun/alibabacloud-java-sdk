@@ -42,7 +42,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
 
     public static class DescribeDiskIopsListResponseBodyDiskIopsList extends TeaModel {
         /**
-         * <p>The business time in the format of yyyy-MM-dd HH:mm:ss.</p>
+         * <p>The business time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-12-14 00:00:00</p>
@@ -60,7 +60,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
         public String diskId;
 
         /**
-         * <p>The read throughput (in bytes).</p>
+         * <p>The read throughput. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>10054</p>
@@ -69,7 +69,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
         public Long readBytes;
 
         /**
-         * <p>The read latency (in microseconds).</p>
+         * <p>The read latency. Unit: microseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>15646532</p>
@@ -87,7 +87,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
         public Long readOps;
 
         /**
-         * <p>The edge zone ID.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou-3</p>
@@ -96,7 +96,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The write throughput (in bytes).</p>
+         * <p>The write throughput. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -105,7 +105,7 @@ public class DescribeDiskIopsListResponseBody extends TeaModel {
         public Long writeBytes;
 
         /**
-         * <p>The write latency (in microseconds).</p>
+         * <p>The write latency. Unit: microseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>

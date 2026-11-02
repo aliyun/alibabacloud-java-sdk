@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the instance that you want to renew.</p>
-     * <p>Only subscription instances whose InstanceResourceType is EnsInstance are supported. Pay-as-you-go instances cannot be renewed.</p>
+     * <p>The instance ID for renewal.</p>
+     * <p>Only upfront instances whose InstanceResourceType is set to EnsInstance are supported. Pay-as-you-go instances cannot be renewed.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -16,7 +16,7 @@ public class RenewInstanceRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The subscription renewal duration.</p>
+     * <p>The renewal period of the subscription instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DetachInstanceSDGResponseBody extends TeaModel {
     /**
-     * <p>The returned data object.</p>
+     * <p>The Data object.</p>
      */
     @NameInMap("Data")
     public DetachInstanceSDGResponseBodyData data;
@@ -51,7 +51,7 @@ public class DetachInstanceSDGResponseBody extends TeaModel {
         public String errMessage;
 
         /**
-         * <p>The ID of the instance.</p>
+         * <p>The instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>aic-xxxxx-0</p>
@@ -84,7 +84,7 @@ public class DetachInstanceSDGResponseBody extends TeaModel {
 
     public static class DetachInstanceSDGResponseBodyDataResult extends TeaModel {
         /**
-         * <p>The number of failed tasks.</p>
+         * <p>The number of failures.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -93,13 +93,13 @@ public class DetachInstanceSDGResponseBody extends TeaModel {
         public Long failedCount;
 
         /**
-         * <p>Details about failed tasks.</p>
+         * <p>The list of failure details.</p>
          */
         @NameInMap("FailedItems")
         public java.util.List<DetachInstanceSDGResponseBodyDataResultFailedItems> failedItems;
 
         /**
-         * <p>The number of successful tasks.</p>
+         * <p>The number of successes.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -140,7 +140,7 @@ public class DetachInstanceSDGResponseBody extends TeaModel {
 
     public static class DetachInstanceSDGResponseBodyData extends TeaModel {
         /**
-         * <p>The response message. Success is returned for a successful request.</p>
+         * <p>The response message. The value is success if the request is successful.</p>
          * 
          * <strong>example:</strong>
          * <p>success</p>
@@ -149,18 +149,16 @@ public class DetachInstanceSDGResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The execution result of the synchronization request.</p>
+         * <p>The execution result of the synchronous request.</p>
          */
         @NameInMap("Result")
         public DetachInstanceSDGResponseBodyDataResult result;
 
         /**
-         * <p>Indicates whether all tasks are successful. Valid values:</p>
+         * <p>Specifies whether all requests are successful. Valid values:</p>
          * <ul>
-         * <li><p>true: All tasks are successful.</p>
-         * </li>
-         * <li><p>false: Failed tasks exist.</p>
-         * </li>
+         * <li>true: All requests are successful.</li>
+         * <li>false: Some tasks failed.</li>
          * </ul>
          * 
          * <strong>example:</strong>

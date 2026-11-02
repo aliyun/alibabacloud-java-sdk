@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
     /**
-     * <p>The TCP/UDP monitoring data of the ELB instance.</p>
+     * <p>The array of Layer 4 monitoring data for the load balancer.</p>
      */
     @NameInMap("LoadBalancerMonitorListenData")
     public java.util.List<DescribeLoadBalancerListenMonitorResponseBodyLoadBalancerMonitorListenData> loadBalancerMonitorListenData;
@@ -78,7 +78,7 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String dropConns;
 
         /**
-         * <p>The ID of the node to which the ELB instance belongs.</p>
+         * <p>The ID of the edge zone.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-dongguan-9</p>
@@ -132,7 +132,7 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String inPkts;
 
         /**
-         * <p>The number of unavailable servers that are attached to the monitored ELB instance.</p>
+         * <p>The number of unavailable backend servers associated with the listener.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -141,7 +141,7 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String inValidRsNum;
 
         /**
-         * <p>The ID of the ELB instance.</p>
+         * <p>The load balancing instance.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-5q73cv04zeyh43lh74lp4****</p>
@@ -195,7 +195,7 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String proto;
 
         /**
-         * <p>The VIP port of the ELB instance.</p>
+         * <p>The VIP port of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -204,7 +204,7 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String VPort;
 
         /**
-         * <p>The number of available servers that are attached to the monitored ELB instance.</p>
+         * <p>The number of available backend servers associated with the listener.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -213,7 +213,7 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String validRsNum;
 
         /**
-         * <p>The virtual IP address (VIP) of the instance.</p>
+         * <p>The VIP of the instance.</p>
          * 
          * <strong>example:</strong>
          * <p>10.8.****</p>
@@ -222,7 +222,7 @@ public class DescribeLoadBalancerListenMonitorResponseBody extends TeaModel {
         public String vip;
 
         /**
-         * <p>The ID of the tunnel.</p>
+         * <p>The tunnel ID.</p>
          * 
          * <strong>example:</strong>
          * <p>53284</p>

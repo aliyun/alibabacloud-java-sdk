@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeEnsRegionIdIpv6InfoRequest extends TeaModel {
     /**
-     * <p>The ID of the node. You can specify only one node ID in a call.</p>
+     * <p>The ID of the edge zone. Only a single ID is supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

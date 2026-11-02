@@ -453,9 +453,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The maximum number of secondary CIDR blocks that you can add to a network is as follows:</p>
+     * <p>The maximum number of secondary CIDR blocks that can be added to a network is as follows:</p>
      * <ul>
-     * <li>A network supports up to five secondary IPv4 CIDR blocks.</li>
+     * <li>You can add up to 5 secondary IPv4 CIDR blocks to a network.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -503,9 +503,9 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The maximum number of secondary CIDR blocks that you can add to a network is as follows:</p>
+     * <p>The maximum number of secondary CIDR blocks that can be added to a network is as follows:</p>
      * <ul>
-     * <li>A network supports up to five secondary IPv4 CIDR blocks.</li>
+     * <li>You can add up to 5 secondary IPv4 CIDR blocks to a network.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -1289,7 +1289,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies an SDG across edge zones by calling CopySDG.</p>
+     * <p>Copies an SDG across edge zones.</p>
      * 
      * @param tmpReq CopySDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1323,7 +1323,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies an SDG across edge zones by calling CopySDG.</p>
+     * <p>Copies an SDG across edge zones.</p>
      * 
      * @param request CopySDGRequest
      * @return CopySDGResponse
@@ -1565,7 +1565,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a classic VPC.</p>
+     * <p>Creates a classic virtual private cloud (VPC).</p>
      * 
      * @param request CreateClassicNetworkRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1609,7 +1609,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a classic VPC.</p>
+     * <p>Creates a classic virtual private cloud (VPC).</p>
      * 
      * @param request CreateClassicNetworkRequest
      * @return CreateClassicNetworkResponse
@@ -4933,10 +4933,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a NAS file system. Before deleting the file system, call DeleteMountTarget to delete all mount targets of the file system. After DeleteMountTarget succeeds, there is an eventual consistency window. Poll DescribeFileSystems to confirm that MountTargets is empty before calling this API operation.</p>
+     * <p>Deletes a NAS file system. Before deletion, you must call DeleteMountTarget to delete all mount targets of the file system. After a successful DeleteMountTarget call, an eventual consistency window exists. Poll DescribeFileSystems to confirm that MountTargets is empty before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls DeleteFileSystem to delete a NAS service.</p>
+     * <p>Deletes a NAS file system.</p>
      * 
      * @param request DeleteFileSystemRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4964,10 +4964,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Deletes a NAS file system. Before deleting the file system, call DeleteMountTarget to delete all mount targets of the file system. After DeleteMountTarget succeeds, there is an eventual consistency window. Poll DescribeFileSystems to confirm that MountTargets is empty before calling this API operation.</p>
+     * <p>Deletes a NAS file system. Before deletion, you must call DeleteMountTarget to delete all mount targets of the file system. After a successful DeleteMountTarget call, an eventual consistency window exists. Poll DescribeFileSystems to confirm that MountTargets is empty before you call this operation.</p>
      * 
      * <b>summary</b> : 
-     * <p>Calls DeleteFileSystem to delete a NAS service.</p>
+     * <p>Deletes a NAS file system.</p>
      * 
      * @param request DeleteFileSystemRequest
      * @return DeleteFileSystemResponse
@@ -5241,10 +5241,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you delete a mount target, the mount target cannot be restored. Proceed with caution.</p>
+     * <p>A deleted mount target cannot be recovered. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a mount target.</p>
+     * <p>Deletes an existing mount target.</p>
      * 
      * @param request DeleteMountTargetRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5284,10 +5284,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>After you delete a mount target, the mount target cannot be restored. Proceed with caution.</p>
+     * <p>A deleted mount target cannot be recovered. Proceed with caution.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes a mount target.</p>
+     * <p>Deletes an existing mount target.</p>
      * 
      * @param request DeleteMountTargetRequest
      * @return DeleteMountTargetResponse
@@ -5435,7 +5435,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a network access control list (ACL) rule.</p>
+     * <p>Invokes the DeleteNetworkAclEntry operation to delete network ACL rules.</p>
      * 
      * @param request DeleteNetworkAclEntryRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5467,7 +5467,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes a network access control list (ACL) rule.</p>
+     * <p>Invokes the DeleteNetworkAclEntry operation to delete network ACL rules.</p>
      * 
      * @param request DeleteNetworkAclEntryRequest
      * @return DeleteNetworkAclEntryResponse
@@ -5479,7 +5479,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an elastic network interface (ENI).</p>
+     * <p>Deletes one or more elastic network interface controllers (NICs).</p>
      * 
      * @param tmpReq DeleteNetworkInterfacesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5517,7 +5517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deletes an elastic network interface (ENI).</p>
+     * <p>Deletes one or more elastic network interface controllers (NICs).</p>
      * 
      * @param request DeleteNetworkInterfacesRequest
      * @return DeleteNetworkInterfacesResponse
@@ -5624,7 +5624,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If all SDGs associated with the original cloud disk are deleted, the original cloud disk is automatically cleaned up.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an SDG by calling DeleteSDG.</p>
+     * <p>Deletes an SDG.</p>
      * 
      * @param tmpReq DeleteSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -5665,7 +5665,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <p>If all SDGs associated with the original cloud disk are deleted, the original cloud disk is automatically cleaned up.</p>
      * 
      * <b>summary</b> : 
-     * <p>Deletes an SDG by calling DeleteSDG.</p>
+     * <p>Deletes an SDG.</p>
      * 
      * @param request DeleteSDGRequest
      * @return DeleteSDGResponse
@@ -7853,7 +7853,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about ISPs and number of ISPs in an area.</p>
+     * <p>Queries the supported regions and ISPs and their quantities.</p>
      * 
      * @param request DescribeEnsNetSaleDistrictRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7889,7 +7889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the information about ISPs and number of ISPs in an area.</p>
+     * <p>Queries the supported regions and ISPs and their quantities.</p>
      * 
      * @param request DescribeEnsNetSaleDistrictRequest
      * @return DescribeEnsNetSaleDistrictResponse
@@ -7901,7 +7901,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether a node supports IPv6.</p>
+     * <p>Queries whether an edge zone supports IPv6.</p>
      * 
      * @param request DescribeEnsRegionIdIpv6InfoRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -7933,7 +7933,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries whether a node supports IPv6.</p>
+     * <p>Queries whether an edge zone supports IPv6.</p>
      * 
      * @param request DescribeEnsRegionIdIpv6InfoRequest
      * @return DescribeEnsRegionIdIpv6InfoResponse
@@ -10051,12 +10051,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries monitoring data of an edge load balancer (ELB) instance.</p>
+     * <p>Queries Layer 4 listener-level monitoring data for a load balancer.</p>
      * 
      * @param request DescribeLoadBalancerListenMonitorRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10085,12 +10085,12 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>up to 100 times per second per account.</li>
-     * <li>up to 10 times per second per user.</li>
+     * <li>API call rate: 100 calls per second.</li>
+     * <li>Call rate per user: 10 calls per second.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries monitoring data of an edge load balancer (ELB) instance.</p>
+     * <p>Queries Layer 4 listener-level monitoring data for a load balancer.</p>
      * 
      * @param request DescribeLoadBalancerListenMonitorRequest
      * @return DescribeLoadBalancerListenMonitorResponse
@@ -10422,7 +10422,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries mount target information.</p>
+     * <p>Queries the details of mount targets.</p>
      * 
      * @param request DescribeMountTargetsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10470,7 +10470,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries mount target information.</p>
+     * <p>Queries the details of mount targets.</p>
      * 
      * @param request DescribeMountTargetsRequest
      * @return DescribeMountTargetsResponse
@@ -11740,7 +11740,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the real-time status of the instance devices or containers that are being scheduled and occupied by the specified UUID.</p>
+     * <p>Queries the real-time status of instance devices or containers that are being scheduled for the specified UUID.</p>
      * 
      * @param request DescribeServcieScheduleRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11780,7 +11780,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the real-time status of the instance devices or containers that are being scheduled and occupied by the specified UUID.</p>
+     * <p>Queries the real-time status of instance devices or containers that are being scheduled for the specified UUID.</p>
      * 
      * @param request DescribeServcieScheduleRequest
      * @return DescribeServcieScheduleResponse
@@ -11892,6 +11892,96 @@ public class Client extends com.aliyun.teaopenapi.Client {
     public DescribeServerLoadBalancerMonitorResponse describeServerLoadBalancerMonitor(DescribeServerLoadBalancerMonitorRequest request) throws Exception {
         com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
         return this.describeServerLoadBalancerMonitorWithOptions(request, runtime);
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the billing records of shared disks that use SDG.</p>
+     * 
+     * @param tmpReq DescribeSharedDiskRecordsRequest
+     * @param runtime runtime options for this request RuntimeOptions
+     * @return DescribeSharedDiskRecordsResponse
+     */
+    public DescribeSharedDiskRecordsResponse describeSharedDiskRecordsWithOptions(DescribeSharedDiskRecordsRequest tmpReq, com.aliyun.teautil.models.RuntimeOptions runtime) throws Exception {
+        com.aliyun.teautil.Common.validateModel(tmpReq);
+        DescribeSharedDiskRecordsShrinkRequest request = new DescribeSharedDiskRecordsShrinkRequest();
+        com.aliyun.openapiutil.Client.convert(tmpReq, request);
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.diskIds)) {
+            request.diskIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.diskIds, "DiskIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.namespaces)) {
+            request.namespacesShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.namespaces, "Namespaces", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.regionIds)) {
+            request.regionIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.regionIds, "RegionIds", "json");
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(tmpReq.sdgIds)) {
+            request.sdgIdsShrink = com.aliyun.openapiutil.Client.arrayToStringWithSpecifiedStyle(tmpReq.sdgIds, "SdgIds", "json");
+        }
+
+        java.util.Map<String, Object> query = new java.util.HashMap<>();
+        if (!com.aliyun.teautil.Common.isUnset(request.diskIdsShrink)) {
+            query.put("DiskIds", request.diskIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.endTime)) {
+            query.put("EndTime", request.endTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.namespacesShrink)) {
+            query.put("Namespaces", request.namespacesShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
+            query.put("PageNumber", request.pageNumber);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.pageSize)) {
+            query.put("PageSize", request.pageSize);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.regionIdsShrink)) {
+            query.put("RegionIds", request.regionIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.sdgIdsShrink)) {
+            query.put("SdgIds", request.sdgIdsShrink);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.startTime)) {
+            query.put("StartTime", request.startTime);
+        }
+
+        com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
+            new TeaPair("query", com.aliyun.openapiutil.Client.query(query))
+        ));
+        com.aliyun.teaopenapi.models.Params params = com.aliyun.teaopenapi.models.Params.build(TeaConverter.buildMap(
+            new TeaPair("action", "DescribeSharedDiskRecords"),
+            new TeaPair("version", "2017-11-10"),
+            new TeaPair("protocol", "HTTPS"),
+            new TeaPair("pathname", "/"),
+            new TeaPair("method", "POST"),
+            new TeaPair("authType", "AK"),
+            new TeaPair("style", "RPC"),
+            new TeaPair("reqBodyType", "formData"),
+            new TeaPair("bodyType", "json")
+        ));
+        return TeaModel.toModel(this.callApi(params, req, runtime), new DescribeSharedDiskRecordsResponse());
+    }
+
+    /**
+     * <b>summary</b> : 
+     * <p>Queries the billing records of shared disks that use SDG.</p>
+     * 
+     * @param request DescribeSharedDiskRecordsRequest
+     * @return DescribeSharedDiskRecordsResponse
+     */
+    public DescribeSharedDiskRecordsResponse describeSharedDiskRecords(DescribeSharedDiskRecordsRequest request) throws Exception {
+        com.aliyun.teautil.models.RuntimeOptions runtime = new com.aliyun.teautil.models.RuntimeOptions();
+        return this.describeSharedDiskRecordsWithOptions(request, runtime);
     }
 
     /**
@@ -12416,7 +12506,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches a shared data group (SDG).</p>
+     * <p>Unmounts the SDG.</p>
      * 
      * @param tmpReq DetachInstanceSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -12458,7 +12548,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Detaches a shared data group (SDG).</p>
+     * <p>Unmounts the SDG.</p>
      * 
      * @param request DetachInstanceSDGRequest
      * @return DetachInstanceSDGResponse
@@ -13226,7 +13316,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage usage of the previous billing cycle and the cumulative number of calls for the current month by bucket.</p>
+     * <p>Queries the storage usage in the previous billing cycle and the cumulative number of calls for the current month.</p>
      * 
      * @param request GetOssStorageAndAccByBucketsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13254,7 +13344,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the storage usage of the previous billing cycle and the cumulative number of calls for the current month by bucket.</p>
+     * <p>Queries the storage usage in the previous billing cycle and the cumulative number of calls for the current month.</p>
      * 
      * @param request GetOssStorageAndAccByBucketsRequest
      * @return GetOssStorageAndAccByBucketsResponse
@@ -13266,10 +13356,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The query and aggregation granularity of bandwidth and storage usage cannot exceed one day. Data aggregation is to collect the maximum values of usage data within a period of time.</p>
+     * <p>The aggregation granularity for bandwidth and storage usage queries cannot exceed one day. Aggregate data is processed by taking the maximum value of the data points within a specified time period.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the storage and bandwidth usage within a specific time range.</p>
+     * <p>Queries the calculated storage and bandwidth usage for a specified time period.</p>
      * 
      * @param request GetOssUsageDataRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -13297,10 +13387,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>The query and aggregation granularity of bandwidth and storage usage cannot exceed one day. Data aggregation is to collect the maximum values of usage data within a period of time.</p>
+     * <p>The aggregation granularity for bandwidth and storage usage queries cannot exceed one day. Aggregate data is processed by taking the maximum value of the data points within a specified time period.</p>
      * 
      * <b>summary</b> : 
-     * <p>Queries the storage and bandwidth usage within a specific time range.</p>
+     * <p>Queries the calculated storage and bandwidth usage for a specified time period.</p>
      * 
      * @param request GetOssUsageDataRequest
      * @return GetOssUsageDataResponse
@@ -15807,7 +15897,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys an SDG that is already attached to an instance to the corresponding AIC.</p>
+     * <p>Deploys the attached SDG to the corresponding AIC.</p>
      * 
      * @param tmpReq MountInstanceSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -15849,7 +15939,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Deploys an SDG that is already attached to an instance to the corresponding AIC.</p>
+     * <p>Deploys the attached SDG to the corresponding AIC.</p>
      * 
      * @param request MountInstanceSDGRequest
      * @return MountInstanceSDGResponse
@@ -18093,10 +18183,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Saves a Shared Data Group (SDG). SDGs in the failed status cannot be saved. Before calling this operation, call DescribeSDGs to query the current status.</p>
+     * <p>Saves an SDG. You cannot save an SDG that is in the failed state. Before calling this operation, call DescribeSDGs to check the current status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Saves the cloud disk of a specified device as a Shared Data Group (SDG).</p>
+     * <p>Saves the cloud disk of a specified device as an SDG.</p>
      * 
      * @param request SaveSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -18124,10 +18214,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Saves a Shared Data Group (SDG). SDGs in the failed status cannot be saved. Before calling this operation, call DescribeSDGs to query the current status.</p>
+     * <p>Saves an SDG. You cannot save an SDG that is in the failed state. Before calling this operation, call DescribeSDGs to check the current status.</p>
      * 
      * <b>summary</b> : 
-     * <p>Saves the cloud disk of a specified device as a Shared Data Group (SDG).</p>
+     * <p>Saves the cloud disk of a specified device as an SDG.</p>
      * 
      * @param request SaveSDGRequest
      * @return SaveSDGResponse
@@ -19737,7 +19827,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls UnloadRegionSDG to delete preloaded data.</p>
+     * <p>Deletes preloaded data.</p>
      * 
      * @param tmpReq UnloadRegionSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19787,7 +19877,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Calls UnloadRegionSDG to delete preloaded data.</p>
+     * <p>Deletes preloaded data.</p>
      * 
      * @param request UnloadRegionSDGRequest
      * @return UnloadRegionSDGResponse
@@ -19799,7 +19889,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unmounts a shared data group (SDG) from instances.</p>
+     * <p>Unmounts an SDG from the corresponding instance and restores it to the attached state.</p>
      * 
      * @param tmpReq UnmountInstanceSDGRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19841,7 +19931,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Unmounts a shared data group (SDG) from instances.</p>
+     * <p>Unmounts an SDG from the corresponding instance and restores it to the attached state.</p>
      * 
      * @param request UnmountInstanceSDGRequest
      * @return UnmountInstanceSDGResponse

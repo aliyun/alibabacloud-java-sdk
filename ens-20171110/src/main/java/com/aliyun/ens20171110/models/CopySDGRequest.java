@@ -12,7 +12,7 @@ public class CopySDGRequest extends TeaModel {
     public java.util.List<String> destinationRegionIds;
 
     /**
-     * <p>The ID of the SDG to copy.</p>
+     * <p>The ID of the SDG to be copied.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

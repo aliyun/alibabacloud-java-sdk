@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnloadRegionSDGShrinkRequest extends TeaModel {
     /**
-     * <p>The list of destination edge zones.</p>
+     * <p>The list of destination nodes.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("DestinationRegionIds")
@@ -18,7 +18,7 @@ public class UnloadRegionSDGShrinkRequest extends TeaModel {
     public String namespacesShrink;
 
     /**
-     * <p>The ID of the SDG from which to delete preloaded data.</p>
+     * <p>The ID of the SDG for which preloaded data is deleted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

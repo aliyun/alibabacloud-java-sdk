@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class RenewInstanceResponseBody extends TeaModel {
     /**
-     * <p>The common parameter. Each request has a unique ID that can be used for troubleshooting and locating issues.</p>
+     * <p>The request ID. This is a common parameter. The ID of each request is unique and can be used to troubleshoot and locate issues.</p>
      * 
      * <strong>example:</strong>
      * <p>86A6D421-A0C7-4C01-8648-47377CA6A2CE</p>
