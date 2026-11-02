@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateGatewayRequest extends TeaModel {
     /**
-     * <p>The billing method. This parameter is required for the Serverless edition and must be set to POSTPAY.</p>
+     * <p>The billing method. This parameter is required for Serverless instances and must be set to POSTPAY.</p>
      * 
      * <strong>example:</strong>
      * <p>POSTPAY</p>
@@ -16,13 +16,13 @@ public class CreateGatewayRequest extends TeaModel {
     /**
      * <p>The gateway instance edition. Valid values:</p>
      * <ul>
-     * <li><p>Professional: standard instance.</p>
+     * <li><p>Professional: Standard instance.</p>
      * </li>
      * <li><p>Serverless: Serverless instance.</p>
      * </li>
-     * <li><p>MultiTenantServerless: multi-tenant Serverless instance.</p>
+     * <li><p>MultiTenantServerless: Multi-tenant Serverless instance.</p>
      * </li>
-     * <li><p>Unknown: unknown.</p>
+     * <li><p>Unknown: Unknown.</p>
      * </li>
      * </ul>
      * 
@@ -33,7 +33,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String gatewayEdition;
 
     /**
-     * <p>The running mode for AI multi-tenant V2. Default value: ENTERPRISE. This parameter can be specified only when gatewayType is set to AI and gatewayEdition is set to MultiTenantServerless.</p>
+     * <p>The operation mode for AI multi-tenant V2. The default value is ENTERPRISE. This parameter is only allowed for AI and MultiTenantServerless gateways.</p>
      * 
      * <strong>example:</strong>
      * <p>ENTERPRISE</p>
@@ -42,7 +42,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String gatewayMode;
 
     /**
-     * <p>The gateway type. This parameter must be explicitly set to AI for AI Serverless or multi-tenant editions.</p>
+     * <p>The gateway type. This parameter must be explicitly set to AI for AI Serverless or multi-tenant gateways.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>
@@ -51,13 +51,13 @@ public class CreateGatewayRequest extends TeaModel {
     public String gatewayType;
 
     /**
-     * <p>The gateway log configuration.</p>
+     * <p>The log configuration for the gateway.</p>
      */
     @NameInMap("logConfig")
     public CreateGatewayRequestLogConfig logConfig;
 
     /**
-     * <p>The gateway name. This parameter is required for all editions.</p>
+     * <p>The name of the gateway. This parameter is required for all gateway types.</p>
      * 
      * <strong>example:</strong>
      * <p>test-ceshi</p>
@@ -66,13 +66,13 @@ public class CreateGatewayRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The network access configuration. This parameter is required. If this parameter is not specified, the service returns an InvalidParameter.IsEmpty (400) error.</p>
+     * <p>The network access configuration. This parameter is actually required. If it is not provided, the service returns InvalidParameter.IsEmpty (400).</p>
      */
     @NameInMap("networkAccessConfig")
     public CreateGatewayRequestNetworkAccessConfig networkAccessConfig;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-ahr5uil8raz0rq3b</p>
@@ -81,7 +81,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The node specifications. This parameter is required for the Serverless edition.</p>
+     * <p>The node specifications. This parameter is required for Serverless instances.</p>
      * 
      * <strong>example:</strong>
      * <p>apigw.dev.x1</p>
@@ -96,7 +96,7 @@ public class CreateGatewayRequest extends TeaModel {
     public java.util.List<CreateGatewayRequestTag> tag;
 
     /**
-     * <p>The virtual private cloud (VPC) ID. This parameter is required for all editions.</p>
+     * <p>The ID of the virtual private cloud (VPC). This parameter is required for all gateway types.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-zm0x16tomfiat1mk9f6rs</p>
@@ -105,7 +105,7 @@ public class CreateGatewayRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The zone configuration. This parameter is required for all editions.</p>
+     * <p>The zone configuration. This parameter is required for all gateway types.</p>
      */
     @NameInMap("zoneConfig")
     public CreateGatewayRequestZoneConfig zoneConfig;
@@ -213,7 +213,7 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestLogConfigSls extends TeaModel {
         /**
-         * <p>Specifies whether to enable SLS log collection.</p>
+         * <p>Specifies whether to enable SLS.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -238,7 +238,7 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestLogConfig extends TeaModel {
         /**
-         * <p>The Simple Log Service (SLS) configuration that controls gateway log collection.</p>
+         * <p>The Simple Log Service (SLS) configuration used to control gateway log collection.</p>
          */
         @NameInMap("sls")
         public CreateGatewayRequestLogConfigSls sls;
@@ -260,6 +260,15 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestNetworkAccessConfig extends TeaModel {
         /**
+         * <p>The ID of the endpoint security group. This parameter is required when a multi-tenant API gateway or multi-tenant AI gateway Enterprise Edition uses private network or dual-entry access, and must be a non-managed security group in your VPC. Do not specify this parameter for public network requests.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sg-bp1example123456789</p>
+         */
+        @NameInMap("endpointSecurityGroupId")
+        public String endpointSecurityGroupId;
+
+        /**
          * <p>The network access type.</p>
          * 
          * <strong>example:</strong>
@@ -271,6 +280,14 @@ public class CreateGatewayRequest extends TeaModel {
         public static CreateGatewayRequestNetworkAccessConfig build(java.util.Map<String, ?> map) throws Exception {
             CreateGatewayRequestNetworkAccessConfig self = new CreateGatewayRequestNetworkAccessConfig();
             return TeaModel.build(map, self);
+        }
+
+        public CreateGatewayRequestNetworkAccessConfig setEndpointSecurityGroupId(String endpointSecurityGroupId) {
+            this.endpointSecurityGroupId = endpointSecurityGroupId;
+            return this;
+        }
+        public String getEndpointSecurityGroupId() {
+            return this.endpointSecurityGroupId;
         }
 
         public CreateGatewayRequestNetworkAccessConfig setType(String type) {
@@ -327,7 +344,7 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestZoneConfigZones extends TeaModel {
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-xx</p>
@@ -369,7 +386,7 @@ public class CreateGatewayRequest extends TeaModel {
 
     public static class CreateGatewayRequestZoneConfig extends TeaModel {
         /**
-         * <p>The zone selection option.</p>
+         * <p>The zone option.</p>
          * 
          * <strong>example:</strong>
          * <p>Manual</p>
@@ -378,7 +395,7 @@ public class CreateGatewayRequest extends TeaModel {
         public String selectOption;
 
         /**
-         * <p>The vSwitch ID.</p>
+         * <p>The ID of the vSwitch.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-xxx</p>

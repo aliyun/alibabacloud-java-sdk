@@ -76,7 +76,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
 
     public static class ListPluginAttachmentsResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The plug-in mount resource type. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
+         * <p>The type of the plugin mount resource. Valid values: GatewayRoute, Gateway, GatewayDomain, HttpApi, and Operation.</p>
          * 
          * <strong>example:</strong>
          * <p>GatewayRoute</p>
@@ -85,7 +85,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public String attachResourceType;
 
         /**
-         * <p>Indicates whether the plug-in is enabled.</p>
+         * <p>Indicates whether the plugin is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -106,7 +106,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public ParentResourceInfo parentResourceInfo;
 
         /**
-         * <p>The plug-in mount ID.</p>
+         * <p>The plugin mount ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pa-d0j9t5em1hkncrlo51mg</p>
@@ -115,13 +115,13 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public String pluginAttachmentId;
 
         /**
-         * <p>The plug-in class information.</p>
+         * <p>The plugin type information.</p>
          */
         @NameInMap("pluginClassInfo")
         public PluginClassInfo pluginClassInfo;
 
         /**
-         * <p>The Base64-encoded content of the original plug-in configuration.</p>
+         * <p>The Base64-encoded content of the original plugin configuration.</p>
          * 
          * <strong>example:</strong>
          * <p>bGltaXRfYnlfaGVhZGVyOiB4LWFwaS1rZXkKbGltaXRfa2V5czoKLSBrZXk6IGV4YW1wbGUta2V5LWEKICBxdWVyeV9wZXJfc2Vjb25kOiAxMAotIGtleTogZXhhbXBsZS1rZXktYgogIHF1ZXJ5X3Blcl9zZWNvbmQ6IDEK</p>
@@ -130,7 +130,7 @@ public class ListPluginAttachmentsResponseBody extends TeaModel {
         public String pluginConfig;
 
         /**
-         * <p>The plug-in ID.</p>
+         * <p>The plugin ID.</p>
          * 
          * <strong>example:</strong>
          * <p>pl-cvu6r4um1hko3b3ti0a0</p>

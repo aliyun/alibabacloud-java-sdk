@@ -8,13 +8,13 @@ public class UpdateProductCategoryRequest extends TeaModel {
      * <p>The description of the product category. The description can be up to 500 characters in length.</p>
      * 
      * <strong>example:</strong>
-     * <p>Product category that includes AI-related capabilities</p>
+     * <p>Product category for AI-related capabilities</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The icon of the product category. The icon consists of two fields: icon type (type) and icon information (value).</p>
+     * <p>The icon of the product category, which consists of the icon type (type) and icon information (value) fields.</p>
      */
     @NameInMap("icon")
     public HiMarketIcon icon;

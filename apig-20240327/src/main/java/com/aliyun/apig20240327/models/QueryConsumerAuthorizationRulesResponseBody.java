@@ -112,7 +112,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The API information.</p>
+         * <p>The API information details.</p>
          */
         @NameInMap("apiInfo")
         public HttpApiApiInfo apiInfo;
@@ -151,7 +151,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The consumer information.</p>
+         * <p>The consumer information details.</p>
          */
         @NameInMap("consumerInfo")
         public ConsumerInfo consumerInfo;
@@ -166,7 +166,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>The deployment status of the API in the current environment.</p>
+         * <p>The publish status of the API in the current environment.</p>
          * 
          * <strong>example:</strong>
          * <p>{}</p>
@@ -232,7 +232,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The resource information.</p>
+         * <p>The resource information details.</p>
          */
         @NameInMap("resourceInfo")
         public QueryConsumerAuthorizationRulesResponseBodyDataItemsResourceInfo resourceInfo;
@@ -408,7 +408,7 @@ public class QueryConsumerAuthorizationRulesResponseBody extends TeaModel {
 
     public static class QueryConsumerAuthorizationRulesResponseBodyData extends TeaModel {
         /**
-         * <p>The list of consumer authorization rules.</p>
+         * <p>The list of consumer rules.</p>
          */
         @NameInMap("items")
         public java.util.List<QueryConsumerAuthorizationRulesResponseBodyDataItems> items;

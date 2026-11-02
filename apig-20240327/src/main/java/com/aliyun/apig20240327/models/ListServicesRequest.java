@@ -14,7 +14,7 @@ public class ListServicesRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The service name for exact match query.</p>
+     * <p>The service name for exact match.</p>
      * 
      * <strong>example:</strong>
      * <p>user-service</p>
@@ -41,7 +41,7 @@ public class ListServicesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxxe5rc6cvla</p>
@@ -52,11 +52,11 @@ public class ListServicesRequest extends TeaModel {
     /**
      * <p>The source type of the service. Valid values:</p>
      * <ul>
-     * <li>MSE_NACOS: The service originates from MSE Nacos.</li>
-     * <li>K8S: The service originates from a Kubernetes cluster in Container Service.</li>
-     * <li>FC3: The service originates from Function Compute.</li>
-     * <li>VIP: The service originates from a fixed address.</li>
-     * <li>DNS: The service originates from a domain name.</li>
+     * <li>MSE_NACOS: Services from MSE Nacos.</li>
+     * <li>K8S: Services from Kubernetes clusters in Container Service.</li>
+     * <li>FC3: Services from Function Compute.</li>
+     * <li>VIP: Services from fixed addresses.</li>
+     * <li>DNS: Services from domain names.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +69,7 @@ public class ListServicesRequest extends TeaModel {
      * <p>The list of service source types.</p>
      * 
      * <strong>example:</strong>
-     * <p>[&quot;K8S&quot;, &quot;FC3&quot;]</p>
+     * <p>K8S, FC3</p>
      */
     @NameInMap("sourceTypes")
     public String sourceTypes;

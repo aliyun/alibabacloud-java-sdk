@@ -14,7 +14,7 @@ public class ListHttpApisResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The API list.</p>
+     * <p>The list of APIs.</p>
      */
     @NameInMap("data")
     public ListHttpApisResponseBodyData data;
@@ -100,7 +100,7 @@ public class ListHttpApisResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries.</p>
+         * <p>The total count.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

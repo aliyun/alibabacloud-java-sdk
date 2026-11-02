@@ -76,7 +76,7 @@ public class ListPublishableProductsResponseBody extends TeaModel {
 
     public static class ListPublishableProductsResponseBodyDataContent extends TeaModel {
         /**
-         * <p>The description of the API product. This corresponds to the Description property of the Product resource.</p>
+         * <p>The description of the API product, which is the Description property of the Product resource.</p>
          * 
          * <strong>example:</strong>
          * <p>An API product that provides weather query capabilities</p>
@@ -85,7 +85,7 @@ public class ListPublishableProductsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the API product. This corresponds to the Name property of the Product resource.</p>
+         * <p>The name of the API product, which is the Name property of the Product resource.</p>
          * 
          * <strong>example:</strong>
          * <p>weather-query-api</p>
@@ -94,7 +94,7 @@ public class ListPublishableProductsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the API product. This is the primary ID of the Product resource. You can use this ID in the PublishProduct operation at /himarket/v1/products/{productId}/publications to publish the product to the portal. You can also use it to locate the product in operations such as GetProduct and ListProductPublications.</p>
+         * <p>The ID of the API product, which is the primary ID of the Product resource. You can use this ID in the PublishProduct operation at /himarket/v1/products/{productId}/publications to publish the product to the portal. You can also use it to locate the product in operations such as GetProduct and ListProductPublications.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>
@@ -135,7 +135,7 @@ public class ListPublishableProductsResponseBody extends TeaModel {
 
     public static class ListPublishableProductsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of API products that can be published to the portal. Each element in the list is named productInfo and contains the information about an API product.</p>
+         * <p>The list of API products that can be published to the portal. The list element is named productInfo, and each element contains the information about an API product.</p>
          */
         @NameInMap("content")
         public java.util.List<ListPublishableProductsResponseBodyDataContent> content;

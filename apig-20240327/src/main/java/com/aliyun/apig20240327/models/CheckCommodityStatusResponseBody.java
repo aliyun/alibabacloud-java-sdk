@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CheckCommodityStatusResponseBody extends TeaModel {
     /**
-     * <p>The commodity status list. Each item contains the commodity code and indicates whether the commodity capability is enabled for the current account.</p>
+     * <p>The list of commodity statuses. Each item contains the commodity code and indicates whether the commodity capability is enabled for the current account.</p>
      */
     @NameInMap("commodities")
     public java.util.List<CheckCommodityStatusResponseBodyCommodities> commodities;

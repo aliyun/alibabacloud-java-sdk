@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateGatewayQuotaRuleRequest extends TeaModel {
     /**
-     * <p>The list of consumer subject IDs to bind.</p>
+     * <p>The list of IDs of the subjects (consumption subjects) to be bound.</p>
      * 
      * <strong>example:</strong>
      * <p>cs-001,cs-002</p>
@@ -14,9 +14,9 @@ public class UpdateGatewayQuotaRuleRequest extends TeaModel {
     public java.util.List<String> addIds;
 
     /**
-     * <p>The conflict snapshot hash, used to prevent concurrent dirty overwrites when confirming an overwrite. Obtain this value from the response of a dry run request with dryRun set to true.</p>
-     * <p>This parameter is not required in the following cases: no conflict exists, the request is a dry run with dryRun set to true, or overwrite is set to false (no overwrite confirmation).</p>
-     * <p>When dryRun is set to false and overwrite is set to true, if this parameter is not provided or the value has expired and no longer matches, the backend returns accepted=false with a new conflict preview. Perform a new dry run to confirm the updated conflicts.</p>
+     * <p>The conflict snapshot hash, which is used to prevent concurrent dirty overwrites when you confirm an overwrite. You can obtain this value by first performing a dry run with dryRun=true and extracting it from the response.</p>
+     * <p>You do not need to specify this parameter in the following scenarios: no conflicts exist; you are only performing a dry run with dryRun=true; or overwrite=false, which means you do not confirm the overwrite.</p>
+     * <p>If dryRun=false and overwrite=true but this parameter is not specified or has expired and does not match, the backend returns accepted=false along with a new conflict preview. In this case, you must perform a dry run again to confirm the new conflicts.</p>
      * 
      * <strong>example:</strong>
      * <p>f8f44dc6cf369a017d56b7197eb4fb5ac4bbb6b09a92b9b41999541f50xxxxxx</p>
@@ -35,7 +35,7 @@ public class UpdateGatewayQuotaRuleRequest extends TeaModel {
     public java.util.List<String> consumerGroupIds;
 
     /**
-     * <p>Specifies whether to perform only a dry run without persisting or applying the configuration. A dry run checks whether conflicting rules exist on the bound consumer subjects. The same consumer subject cannot have two calendar-period quotas with the same period. For example, a consumer subject that already has a daily calendar quota cannot be assigned another daily calendar quota rule.</p>
+     * <p>Specifies whether to perform a dry run only without saving data to the database or delivering actual configurations. This is used to check whether conflicting rules exist on the bound consumption subjects. A single consumption subject cannot be configured with two natural period quotas of the same period. For example, a consumption subject that already has a natural daily quota cannot be added with another natural daily quota rule.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -44,13 +44,13 @@ public class UpdateGatewayQuotaRuleRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to allow overwriting when a conflict exists. If overwriting is allowed, conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</p>
+     * <p>Specifies whether to allow overwriting when conflicts exist. Note that if you choose to allow overwriting, the conflicting subjects (consumers or consumer groups) are unbound from the old rule and bound to the new rule.</p>
      */
     @NameInMap("overwrite")
     public Boolean overwrite;
 
     /**
-     * <p>The updated total available quota per period.</p>
+     * <p>The updated total available quota.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -59,7 +59,7 @@ public class UpdateGatewayQuotaRuleRequest extends TeaModel {
     public Long quotaLimit;
 
     /**
-     * <p>The list of consumer subject IDs to unbind.</p>
+     * <p>The list of IDs of the subjects (consumption subjects) to be unbound.</p>
      * 
      * <strong>example:</strong>
      * <p>cs003,cs-004</p>

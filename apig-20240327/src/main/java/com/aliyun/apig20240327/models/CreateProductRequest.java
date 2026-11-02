@@ -29,7 +29,7 @@ public class CreateProductRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The content of the documentation for the API product.</p>
+     * <p>The documentation content of the API product.</p>
      * 
      * <strong>example:</strong>
      * <p>The invocation methods, parameters, and billing instructions for this product</p>
@@ -38,7 +38,7 @@ public class CreateProductRequest extends TeaModel {
     public String document;
 
     /**
-     * <p>The capability configuration of the product, which is currently used to describe the invocation capabilities of model-based products (modelFeature).</p>
+     * <p>The product capability configuration, which is currently used to describe the invocation capabilities of model products (modelFeature).</p>
      */
     @NameInMap("feature")
     public HiMarketProductFeature feature;
@@ -59,7 +59,7 @@ public class CreateProductRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The type of the API product. The set of valid values is not declared in the API definition. Refer to the types displayed in the console.</p>
+     * <p>The type of the API product. The valid values are not declared in the API definition. Refer to the types displayed in the console.</p>
      * 
      * <strong>example:</strong>
      * <p>API</p>

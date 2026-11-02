@@ -85,7 +85,7 @@ public class GetApiPathFieldTemplateResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The set of fields defined by the field template, grouped by mapping key. Each group contains a set of template field items.</p>
+         * <p>The set of fields defined by the field template, grouped by mapping key, where each group contains a set of template field items.</p>
          */
         @NameInMap("fieldPaths")
         public java.util.Map<String, java.util.List<DataFieldPathsValue>> fieldPaths;

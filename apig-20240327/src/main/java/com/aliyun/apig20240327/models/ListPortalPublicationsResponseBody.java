@@ -76,7 +76,7 @@ public class ListPortalPublicationsResponseBody extends TeaModel {
 
     public static class ListPortalPublicationsResponseBodyDataContent extends TeaModel {
         /**
-         * <p>The creation time in ISO 8601 (RFC 3339) format in the UTC time zone, such as 2026-05-15T10:00:00Z.</p>
+         * <p>The creation time. The time is formatted in ISO 8601 (RFC 3339) and in the UTC time zone, such as 2026-05-15T10:00:00Z.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-05-15T10:00:00Z</p>
@@ -88,13 +88,13 @@ public class ListPortalPublicationsResponseBody extends TeaModel {
          * <p>The description of the API product.</p>
          * 
          * <strong>example:</strong>
-         * <p>API product for model services available to internal developers</p>
+         * <p>An API product for model services that is open to internal developers</p>
          */
         @NameInMap("description")
         public String description;
 
         /**
-         * <p>The API product ID. This is the primary ID of the Product resource, which identifies the API product associated with this publication record.</p>
+         * <p>The API product ID. It is the primary ID of the API product resource Product and identifies the API product corresponding to this publication record.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>
@@ -103,7 +103,7 @@ public class ListPortalPublicationsResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>The API product name. This is the Name property of the Product resource.</p>
+         * <p>The API product name. It is the Name property of the API product resource Product.</p>
          * 
          * <strong>example:</strong>
          * <p>model-service</p>
@@ -112,7 +112,7 @@ public class ListPortalPublicationsResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>The API product type. The valid values are not defined in the API specification. Refer to the types displayed in the console.</p>
+         * <p>The API product type. The valid values are not declared in the API definition. Refer to the types displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP_API</p>
@@ -121,7 +121,7 @@ public class ListPortalPublicationsResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The publication record ID of the API product. This ID is returned when the PublishProduct operation publishes the API product to the portal. You can use it in the /himarket/v1/products/{productId}/publications/{publicationId} path to locate the publication record for the UnpublishProduct operation.</p>
+         * <p>The publication record ID of the API product. It is returned when PublishProduct publishes the API product to the portal. You can use this ID in the /himarket/v1/products/{productId}/publications/{publicationId} path to locate the publication record for UnpublishProduct.</p>
          * 
          * <strong>example:</strong>
          * <p>publication-xxxxxxxx</p>
@@ -186,7 +186,7 @@ public class ListPortalPublicationsResponseBody extends TeaModel {
 
     public static class ListPortalPublicationsResponseBodyData extends TeaModel {
         /**
-         * <p>The list of published API products on the portal. The list elements are named portalConfig, and each element represents an API product publication record.</p>
+         * <p>The list of published API products on the portal. The list element is named portalConfig, and each element represents an API product publication record.</p>
          */
         @NameInMap("content")
         public java.util.List<ListPortalPublicationsResponseBodyDataContent> content;
@@ -210,7 +210,7 @@ public class ListPortalPublicationsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of items.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

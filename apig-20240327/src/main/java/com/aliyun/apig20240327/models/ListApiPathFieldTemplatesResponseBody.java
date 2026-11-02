@@ -76,7 +76,7 @@ public class ListApiPathFieldTemplatesResponseBody extends TeaModel {
 
     public static class ListApiPathFieldTemplatesResponseBodyDataItems extends TeaModel {
         /**
-         * <p>The request path corresponding to the field template.</p>
+         * <p>The API request path corresponding to the field template.</p>
          * 
          * <strong>example:</strong>
          * <p>/v1/chat/completions</p>
@@ -94,7 +94,7 @@ public class ListApiPathFieldTemplatesResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The ID of the field template.</p>
+         * <p>The field template ID.</p>
          * 
          * <strong>example:</strong>
          * <p>atpl-ec5df7baf496bfac</p>
@@ -159,7 +159,7 @@ public class ListApiPathFieldTemplatesResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
-         * <p>The total number of records.</p>
+         * <p>The total number of entries.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>

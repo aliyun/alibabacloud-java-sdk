@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HttpApiApiInfoDeployCntMapValue extends TeaModel {
     /**
-     * <p>The number of published API operations.</p>
+     * <p>The number of deployed API operations.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -14,7 +14,7 @@ public class HttpApiApiInfoDeployCntMapValue extends TeaModel {
     public Long deployedCnt;
 
     /**
-     * <p>The total number of API operations.</p>
+     * <p>The total number of operations.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

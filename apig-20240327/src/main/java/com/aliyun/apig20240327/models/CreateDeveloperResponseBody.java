@@ -76,7 +76,7 @@ public class CreateDeveloperResponseBody extends TeaModel {
 
     public static class CreateDeveloperResponseBodyData extends TeaModel {
         /**
-         * <p>The developer ID. You can use this ID to locate the developer in API operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</p>
+         * <p>The developer ID. You can use this ID to locate the developer in operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</p>
          * 
          * <strong>example:</strong>
          * <p>dev-xxxxxxxx</p>

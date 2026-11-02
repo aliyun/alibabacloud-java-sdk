@@ -76,7 +76,7 @@ public class CreateProductCategoryResponseBody extends TeaModel {
 
     public static class CreateProductCategoryResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the newly created product category. It can be used as the categoryId path parameter in GetProductCategory, UpdateProductCategory, and DeleteProductCategory, or as an element in the category ID array for SetProductCategories.</p>
+         * <p>The ID of the newly created product category. It can be used as the categoryId path parameter for GetProductCategory, UpdateProductCategory, and DeleteProductCategory, or as an element in the category ID array for SetProductCategories.</p>
          * 
          * <strong>example:</strong>
          * <p>category-xxxxxxxx</p>

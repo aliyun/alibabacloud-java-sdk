@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AiSecurityGuardConfig extends TeaModel {
     /**
-     * <p>The response buffer size in KB. Default value: 1000. Valid values: 1 to 1500.</p>
+     * <p>The size of the response buffer in KB. Default value: 1000. Valid values: 1 to 1500.</p>
      * 
      * <strong>example:</strong>
      * <p>1000</p>
@@ -14,7 +14,7 @@ public class AiSecurityGuardConfig extends TeaModel {
     public Integer bufferLimit;
 
     /**
-     * <p>Specifies whether to check request content.</p>
+     * <p>Specifies whether to check the request content.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class AiSecurityGuardConfig extends TeaModel {
     public Boolean checkRequest;
 
     /**
-     * <p>Specifies whether to check request images.</p>
+     * <p>Specifies whether to check the request images.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -32,7 +32,7 @@ public class AiSecurityGuardConfig extends TeaModel {
     public Boolean checkRequestImage;
 
     /**
-     * <p>Specifies whether to check response content.</p>
+     * <p>Specifies whether to check the response content.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,7 +41,7 @@ public class AiSecurityGuardConfig extends TeaModel {
     public Boolean checkResponse;
 
     /**
-     * <p>Specifies whether to check response images.</p>
+     * <p>Specifies whether to check the response images.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -50,25 +50,52 @@ public class AiSecurityGuardConfig extends TeaModel {
     public Boolean checkResponseImage;
 
     /**
-     * <p>The consumer-level request detection service configurations.</p>
+     * <p>The bindings between consumers and security guardrail configurations. An empty array explicitly clears the pending configurations.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("consumerConfigBindings")
+    public java.util.List<AiSecurityGuardConfigConsumerConfigBindings> consumerConfigBindings;
+
+    /**
+     * <p>The consumer-level request check service configuration.</p>
      */
     @NameInMap("consumerRequestCheckService")
     public java.util.List<AiSecurityGuardConfigConsumerRequestCheckService> consumerRequestCheckService;
 
     /**
-     * <p>The consumer-level response detection service configurations.</p>
+     * <p>The consumer-level response check service configuration.</p>
      */
     @NameInMap("consumerResponseCheckService")
     public java.util.List<AiSecurityGuardConfigConsumerResponseCheckService> consumerResponseCheckService;
 
     /**
-     * <p>The consumer-level risk level configurations.</p>
+     * <p>The consumer-level risk level configuration.</p>
      */
     @NameInMap("consumerRiskLevel")
     public java.util.List<AiSecurityGuardConfigConsumerRiskLevel> consumerRiskLevel;
 
     /**
-     * <p>The plugin running status.</p>
+     * <p>Specifies whether the entire security guardrail policy is populated by default for this query. Returns true only for synthesized policies. For existing policies, returns false or is not returned. This is a read-only field. It is ignored upon submission, is not saved, and does not affect the start or stop status.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("defaultGenerated")
+    public Boolean defaultGenerated;
+
+    /**
+     * <p>Specifies whether to use the long-term solution. If omitted or set to null, the original value is retained during an update.</p>
+     * 
+     * <strong>if can be null:</strong>
+     * <p>true</p>
+     */
+    @NameInMap("longTermEnabled")
+    public Boolean longTermEnabled;
+
+    /**
+     * <p>The running status of the plug-in.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -77,7 +104,7 @@ public class AiSecurityGuardConfig extends TeaModel {
     public AiPluginStatus pluginStatus;
 
     /**
-     * <p>The ServiceCode of the request text detection service. The default value is injected by the system.</p>
+     * <p>The ServiceCode of the request text check service. The system injects the default value.</p>
      * 
      * <strong>example:</strong>
      * <p>query_security_check</p>
@@ -86,7 +113,7 @@ public class AiSecurityGuardConfig extends TeaModel {
     public String requestCheckService;
 
     /**
-     * <p>The ServiceCode of the request image detection service. The default value is injected by the system.</p>
+     * <p>The ServiceCode of the request image check service. The system injects the default value.</p>
      * 
      * <strong>example:</strong>
      * <p>img_query_guard</p>
@@ -95,7 +122,7 @@ public class AiSecurityGuardConfig extends TeaModel {
     public String requestImageCheckService;
 
     /**
-     * <p>The ServiceCode of the response text detection service. The default value is injected by the system.</p>
+     * <p>The ServiceCode of the response text check service. The system injects the default value.</p>
      * 
      * <strong>example:</strong>
      * <p>response_security_check</p>
@@ -104,7 +131,7 @@ public class AiSecurityGuardConfig extends TeaModel {
     public String responseCheckService;
 
     /**
-     * <p>The ServiceCode of the response image detection service. The default value is injected by the system.</p>
+     * <p>The ServiceCode of the response image check service. The system injects the default value.</p>
      * 
      * <strong>example:</strong>
      * <p>img_response_guard</p>
@@ -122,13 +149,13 @@ public class AiSecurityGuardConfig extends TeaModel {
     public String riskAlertLevel;
 
     /**
-     * <p>The list of risk dimension configurations. The values are injected by the system and generated by normalizing ConsumerRiskLevel.</p>
+     * <p>The list of risk dimension configurations. The system injects this list, which is generated by normalizing ConsumerRiskLevel.</p>
      */
     @NameInMap("riskConfig")
     public java.util.List<AiSecurityGuardConfigRiskConfig> riskConfig;
 
     /**
-     * <p>The security guardrail service address (green-cip endpoint). Use the VPC internal network address when the gateway and the security guardrail are in the same region.</p>
+     * <p>The address of the security guardrail service, which is the green-cip endpoint. If the gateway and the security guardrail are in the same region, use the VPC internal network address.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="https://green-cip-vpc.cn-shanghai.aliyuncs.com">https://green-cip-vpc.cn-shanghai.aliyuncs.com</a></p>
@@ -181,6 +208,14 @@ public class AiSecurityGuardConfig extends TeaModel {
         return this.checkResponseImage;
     }
 
+    public AiSecurityGuardConfig setConsumerConfigBindings(java.util.List<AiSecurityGuardConfigConsumerConfigBindings> consumerConfigBindings) {
+        this.consumerConfigBindings = consumerConfigBindings;
+        return this;
+    }
+    public java.util.List<AiSecurityGuardConfigConsumerConfigBindings> getConsumerConfigBindings() {
+        return this.consumerConfigBindings;
+    }
+
     public AiSecurityGuardConfig setConsumerRequestCheckService(java.util.List<AiSecurityGuardConfigConsumerRequestCheckService> consumerRequestCheckService) {
         this.consumerRequestCheckService = consumerRequestCheckService;
         return this;
@@ -203,6 +238,22 @@ public class AiSecurityGuardConfig extends TeaModel {
     }
     public java.util.List<AiSecurityGuardConfigConsumerRiskLevel> getConsumerRiskLevel() {
         return this.consumerRiskLevel;
+    }
+
+    public AiSecurityGuardConfig setDefaultGenerated(Boolean defaultGenerated) {
+        this.defaultGenerated = defaultGenerated;
+        return this;
+    }
+    public Boolean getDefaultGenerated() {
+        return this.defaultGenerated;
+    }
+
+    public AiSecurityGuardConfig setLongTermEnabled(Boolean longTermEnabled) {
+        this.longTermEnabled = longTermEnabled;
+        return this;
+    }
+    public Boolean getLongTermEnabled() {
+        return this.longTermEnabled;
     }
 
     public AiSecurityGuardConfig setPluginStatus(AiPluginStatus pluginStatus) {
@@ -269,9 +320,68 @@ public class AiSecurityGuardConfig extends TeaModel {
         return this.serviceAddress;
     }
 
+    public static class AiSecurityGuardConfigConsumerConfigBindings extends TeaModel {
+        /**
+         * <p>The match type for consumer names. Valid values: exact (exact match), prefix (prefix match), regexp (regular expression match), and all (matches any consumer). Rules of the all type must be placed at the end of the binding list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>exact</p>
+         */
+        @NameInMap("matchType")
+        public String matchType;
+
+        /**
+         * <p>The match condition for the consumer name. If matchType is exact, enter the full consumer name. If matchType is prefix, enter the name prefix. If matchType is regexp, enter a regular expression. The value cannot be empty for these three types. If matchType is all, the value must be an empty string.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>example-consumer</p>
+         */
+        @NameInMap("name")
+        public String name;
+
+        /**
+         * <p>The ID of the bound security guardrail configuration. This parameter cannot be empty. You can query the ID by calling the ListAiSecurityGuardConfigs operation and use the returned templateId.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>apig_0123456789abcdef</p>
+         */
+        @NameInMap("templateId")
+        public String templateId;
+
+        public static AiSecurityGuardConfigConsumerConfigBindings build(java.util.Map<String, ?> map) throws Exception {
+            AiSecurityGuardConfigConsumerConfigBindings self = new AiSecurityGuardConfigConsumerConfigBindings();
+            return TeaModel.build(map, self);
+        }
+
+        public AiSecurityGuardConfigConsumerConfigBindings setMatchType(String matchType) {
+            this.matchType = matchType;
+            return this;
+        }
+        public String getMatchType() {
+            return this.matchType;
+        }
+
+        public AiSecurityGuardConfigConsumerConfigBindings setName(String name) {
+            this.name = name;
+            return this;
+        }
+        public String getName() {
+            return this.name;
+        }
+
+        public AiSecurityGuardConfigConsumerConfigBindings setTemplateId(String templateId) {
+            this.templateId = templateId;
+            return this;
+        }
+        public String getTemplateId() {
+            return this.templateId;
+        }
+
+    }
+
     public static class AiSecurityGuardConfigConsumerRequestCheckService extends TeaModel {
         /**
-         * <p>The consumer matching method.</p>
+         * <p>The consumer match type.</p>
          * 
          * <strong>example:</strong>
          * <p>exact</p>
@@ -298,7 +408,7 @@ public class AiSecurityGuardConfig extends TeaModel {
         public String name;
 
         /**
-         * <p>The detection service.</p>
+         * <p>The check service.</p>
          * 
          * <strong>example:</strong>
          * <p>query_security_check</p>
@@ -307,7 +417,7 @@ public class AiSecurityGuardConfig extends TeaModel {
         public String requestCheckService;
 
         /**
-         * <p>The image detection service.</p>
+         * <p>The image check service.</p>
          * 
          * <strong>example:</strong>
          * <p>img_query_guard</p>
@@ -364,7 +474,7 @@ public class AiSecurityGuardConfig extends TeaModel {
 
     public static class AiSecurityGuardConfigConsumerResponseCheckService extends TeaModel {
         /**
-         * <p>The consumer matching method.</p>
+         * <p>The consumer match type.</p>
          * 
          * <strong>example:</strong>
          * <p>exact</p>
@@ -391,7 +501,7 @@ public class AiSecurityGuardConfig extends TeaModel {
         public String name;
 
         /**
-         * <p>The detection service.</p>
+         * <p>The check service.</p>
          * 
          * <strong>example:</strong>
          * <p>query_security_check</p>
@@ -400,7 +510,7 @@ public class AiSecurityGuardConfig extends TeaModel {
         public String responseCheckService;
 
         /**
-         * <p>The image detection service.</p>
+         * <p>The image check service.</p>
          * 
          * <strong>example:</strong>
          * <p>img_query_guard</p>
@@ -466,7 +576,7 @@ public class AiSecurityGuardConfig extends TeaModel {
         public String level;
 
         /**
-         * <p>The consumer matching method.</p>
+         * <p>The consumer match type.</p>
          * 
          * <strong>example:</strong>
          * <p>exact</p>
@@ -533,7 +643,7 @@ public class AiSecurityGuardConfig extends TeaModel {
 
     public static class AiSecurityGuardConfigRiskConfigConsumerRules extends TeaModel {
         /**
-         * <p>The matching method.</p>
+         * <p>The match type.</p>
          * 
          * <strong>example:</strong>
          * <p>Exact</p>
@@ -542,7 +652,7 @@ public class AiSecurityGuardConfig extends TeaModel {
         public String matchType;
 
         /**
-         * <p>The consumer matching pattern value.</p>
+         * <p>The consumer match pattern value.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-a</p>
@@ -575,7 +685,7 @@ public class AiSecurityGuardConfig extends TeaModel {
 
     public static class AiSecurityGuardConfigRiskConfig extends TeaModel {
         /**
-         * <p>The consumer-level matching rules.</p>
+         * <p>The consumer-level match rules.</p>
          */
         @NameInMap("consumerRules")
         public AiSecurityGuardConfigRiskConfigConsumerRules consumerRules;

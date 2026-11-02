@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateServiceRequest extends TeaModel {
     /**
-     * <p>The gateway ID.</p>
+     * <p>The ID of the gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-cq7l5s5lhtg***</p>
@@ -14,7 +14,7 @@ public class CreateServiceRequest extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-xxx</p>
@@ -23,7 +23,7 @@ public class CreateServiceRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The list of service configurations. At least one service configuration is required.</p>
+     * <p>The list of service configurations. At least one service configuration must be included.</p>
      */
     @NameInMap("serviceConfigs")
     public java.util.List<CreateServiceRequestServiceConfigs> serviceConfigs;
@@ -31,14 +31,14 @@ public class CreateServiceRequest extends TeaModel {
     /**
      * <p>The service source. Valid values:</p>
      * <ul>
-     * <li>MSE_NACOS: a service in MSE Nacos.</li>
+     * <li>MSE_NACOS: a service in Microservices Engine (MSE) Nacos.</li>
      * <li>K8S: a service in a Kubernetes cluster of Container Service.</li>
      * <li>VIP: a fixed address service.</li>
      * <li>DNS: a DNS domain name service.</li>
      * <li>FC3: a service in Function Compute.</li>
-     * <li>SAE_K8S_SERVICE: an SAE Kubernetes service.</li>
+     * <li>SAE_K8S_SERVICE: a Serverless App Engine (SAE) Kubernetes service.</li>
      * <li>AI: an AI service.</li>
-     * <li>AGENT: an Agent service.</li>
+     * <li>AGENT: an agent service.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -103,7 +103,7 @@ public class CreateServiceRequest extends TeaModel {
 
     public static class CreateServiceRequestServiceConfigsValidationOptions extends TeaModel {
         /**
-         * <p>Specifies whether to skip AI chat completion verification.</p>
+         * <p>Specifies whether to skip the AI chat completion validation.</p>
          */
         @NameInMap("skipVerifyAIChatCompletion")
         public Boolean skipVerifyAIChatCompletion;
@@ -131,7 +131,7 @@ public class CreateServiceRequest extends TeaModel {
         public java.util.List<String> addresses;
 
         /**
-         * <p>The Agent service configuration. This parameter is required when sourceType is set to AGENT.</p>
+         * <p>The agent service configuration. This parameter is required when sourceType is set to AGENT.</p>
          */
         @NameInMap("agentServiceConfig")
         public AgentServiceConfig agentServiceConfig;
@@ -149,7 +149,7 @@ public class CreateServiceRequest extends TeaModel {
         public java.util.List<String> dnsServers;
 
         /**
-         * <p>The service expression type that identifies the special type or mode of the service.</p>
+         * <p>The service expression type, which identifies the special type or mode of the service.</p>
          * 
          * <strong>example:</strong>
          * <p>Standard</p>
@@ -158,7 +158,7 @@ public class CreateServiceRequest extends TeaModel {
         public String expressType;
 
         /**
-         * <p>The service group name. This parameter is required when sourceType is set to MSE_NACOS.</p>
+         * <p>The name of the service group. This parameter is required when sourceType is set to MSE_NACOS.</p>
          * 
          * <strong>example:</strong>
          * <p>DEFAULT_GROUP</p>
@@ -167,7 +167,7 @@ public class CreateServiceRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The model provider ID. This parameter is applicable only to AI services.</p>
+         * <p>The ID of the model provider. This parameter is applicable only to AI services.</p>
          * 
          * <strong>example:</strong>
          * <p>mp-xxx****</p>
@@ -176,7 +176,7 @@ public class CreateServiceRequest extends TeaModel {
         public String modelProviderId;
 
         /**
-         * <p>The service name. This parameter is required when sourceType is set to FC3.</p>
+         * <p>The name of the service. This parameter is required for FC3.</p>
          * 
          * <strong>example:</strong>
          * <p>user-service</p>
@@ -187,8 +187,8 @@ public class CreateServiceRequest extends TeaModel {
         /**
          * <p>The namespace of the service.</p>
          * <ul>
-         * <li>If sourceType is set to K8S, this parameter specifies the namespace of the Kubernetes service.</li>
-         * <li>If sourceType is set to MSE_NACOS, this parameter specifies the namespace in Nacos.</li>
+         * <li>When sourceType is set to K8S, this parameter specifies the namespace where the Kubernetes service resides.</li>
+         * <li>When sourceType is set to MSE_NACOS, this parameter specifies the namespace in Nacos.</li>
          * </ul>
          * <p>This parameter is required when sourceType is set to K8S or MSE_NACOS.</p>
          * 
@@ -208,7 +208,7 @@ public class CreateServiceRequest extends TeaModel {
         public String qualifier;
 
         /**
-         * <p>The service source ID. This parameter is required in multi-Nacos instance scenarios.</p>
+         * <p>The ID of the service source. This parameter is required in scenarios with multiple Nacos instances.</p>
          * 
          * <strong>example:</strong>
          * <p>nacos-instance-001</p>
@@ -217,7 +217,7 @@ public class CreateServiceRequest extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The validation options for service verification configuration.</p>
+         * <p>The validation options, which include configuration options related to service validation.</p>
          */
         @NameInMap("validationOptions")
         public CreateServiceRequestServiceConfigsValidationOptions validationOptions;

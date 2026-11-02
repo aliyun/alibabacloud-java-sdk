@@ -38,7 +38,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The cursor for the next page. An empty value indicates that the last page is reached.</p>
+     * <p>The pagination token for the next page. An empty value indicates that the last page is reached.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxxxxxxx</p>
@@ -110,7 +110,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
 
     public static class ListHiMarketConsumerSubscriptionsResponseBodyDataContent extends TeaModel {
         /**
-         * <p>The ID of the consumer to which the subscription belongs. This is the same identifier as the consumerId path parameter of this API operation.</p>
+         * <p>The ID of the consumer to which the subscription belongs. This is the same as the consumerId path parameter of this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxxxxxxxxxxx</p>
@@ -128,7 +128,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
         public String consumerName;
 
         /**
-         * <p>The ID of the subscribed API product, which is the primary ID of the API product resource.</p>
+         * <p>The ID of the subscribed API product. This is the primary ID of the API product resource.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>
@@ -146,7 +146,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>The type of the subscribed API product. This response parameter does not declare enums. The related ListProductSubscriptions API operation declares the following valid values for the parameter with the same name: REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</p>
+         * <p>The type of the subscribed API product. No enum is specified for this response parameter. However, the related ListProductSubscriptions operation specifies the following valid values for the parameter with the same name: REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</p>
          * 
          * <strong>example:</strong>
          * <p>MCP_SERVER</p>
@@ -155,7 +155,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The subscription status. Valid values: PENDING and APPROVED. This set of valid values is declared in the enums of the status request parameter in this API operation, and this response parameter does not declare enums.</p>
+         * <p>The subscription status. Valid values: PENDING and APPROVED. These valid values are declared in the enum of the status request parameter, and no enum is specified for this response parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>APPROVED</p>
@@ -164,7 +164,7 @@ public class ListHiMarketConsumerSubscriptionsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The subscription ID. You can use this ID to unsubscribe from the product by calling UnsubscribeHiMarketProduct or approve the subscription by calling ApproveProductSubscription. Both operations locate the subscription by using the /himarket/v1/consumers/{consumerId}/subscriptions/{subscriptionId} path.</p>
+         * <p>The subscription ID. You can use this ID to cancel the subscription by calling UnsubscribeHiMarketProduct or approve the subscription by calling ApproveProductSubscription. Both operations locate the subscription by using the /himarket/v1/consumers/{consumerId}/subscriptions/{subscriptionId} path.</p>
          * 
          * <strong>example:</strong>
          * <p>sub-xxxxxxxx</p>

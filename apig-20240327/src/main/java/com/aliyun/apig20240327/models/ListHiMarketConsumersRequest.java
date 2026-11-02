@@ -32,7 +32,7 @@ public class ListHiMarketConsumersRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token. To retrieve the next page, pass the nextToken value returned in the previous response. Do not specify this parameter for the first query.</p>
+     * <p>The pagination token. Pass the nextToken value returned in the previous response to retrieve the next page. Do not pass this parameter for the first query.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxxxxxxx</p>

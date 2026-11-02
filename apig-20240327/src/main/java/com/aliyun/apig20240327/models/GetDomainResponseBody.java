@@ -29,7 +29,7 @@ public class GetDomainResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used to trace the API call chain.</p>
+     * <p>The request ID used to trace the API call chain.</p>
      * 
      * <strong>example:</strong>
      * <p>3ACFC7A7-45A9-58CF-B2D5-765B60254695</p>
@@ -115,7 +115,7 @@ public class GetDomainResponseBody extends TeaModel {
 
     public static class GetDomainResponseBodyData extends TeaModel {
         /**
-         * <p>The encryption algorithm name.</p>
+         * <p>The name of the encryption algorithm.</p>
          * 
          * <strong>example:</strong>
          * <p>RSA</p>
@@ -200,7 +200,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String clientCACert;
 
         /**
-         * <p>The source from which the domain name was created.</p>
+         * <p>The creation source.</p>
          * 
          * <strong>example:</strong>
          * <p>Console</p>
@@ -218,7 +218,7 @@ public class GetDomainResponseBody extends TeaModel {
         public Long createTimestamp;
 
         /**
-         * <p>Indicates whether this is the default domain name.</p>
+         * <p>Indicates whether the domain name is the default domain name.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -245,7 +245,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String domainScope;
 
         /**
-         * <p>Specifies whether to enable forced HTTPS redirect when the HTTPS protocol type is configured.</p>
+         * <p>The Settings for the HTTPS Protocol Type and whether forced HTTPS redirection is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -254,7 +254,7 @@ public class GetDomainResponseBody extends TeaModel {
         public Boolean forceHttps;
 
         /**
-         * <p>The HTTP/2 setting.</p>
+         * <p>The HTTP/2 settings.</p>
          * 
          * <strong>example:</strong>
          * <p>Open</p>
@@ -272,7 +272,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String issuer;
 
         /**
-         * <p>Indicates whether mutual TLS (mTLS) authentication is enabled.</p>
+         * <p>Indicates whether mTLS mutual authentication is enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -290,7 +290,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The certificate expiration time.</p>
+         * <p>The expiration time of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -299,7 +299,7 @@ public class GetDomainResponseBody extends TeaModel {
         public Long notAfterTimstamp;
 
         /**
-         * <p>The certificate effective period.</p>
+         * <p>The effective period of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>1719386834548</p>
@@ -308,10 +308,10 @@ public class GetDomainResponseBody extends TeaModel {
         public Long notBeforeTimestamp;
 
         /**
-         * <p>The protocol type supported by the domain name.</p>
+         * <p>The protocol types supported by the domain name.</p>
          * <ul>
-         * <li>HTTP: Only the HTTP protocol is supported.</li>
-         * <li>HTTPS: Only the HTTPS protocol is supported.</li>
+         * <li>HTTP: Supports only the HTTP protocol.</li>
+         * <li>HTTPS: Supports only the HTTPS protocol.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -330,7 +330,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>All domain names bound to the certificate.</p>
+         * <p>All the domain names bound to the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>aliyun.com</p>
@@ -351,7 +351,7 @@ public class GetDomainResponseBody extends TeaModel {
         public TlsCipherSuitesConfig tlsCipherSuitesConfig;
 
         /**
-         * <p>The maximum TLS protocol version. TLS 1.3 is the maximum supported version.</p>
+         * <p>The maximum TLS protocol version. The maximum supported version is TLS 1.3.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS 1.3</p>
@@ -360,7 +360,7 @@ public class GetDomainResponseBody extends TeaModel {
         public String tlsMax;
 
         /**
-         * <p>The minimum TLS protocol version. TLS 1.0 is the minimum supported version.</p>
+         * <p>The minimum TLS protocol version. The minimum supported version is TLS 1.0.</p>
          * 
          * <strong>example:</strong>
          * <p>TLS 1.0</p>

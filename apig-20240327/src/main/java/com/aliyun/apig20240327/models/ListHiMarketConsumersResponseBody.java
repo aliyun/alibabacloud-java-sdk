@@ -38,7 +38,7 @@ public class ListHiMarketConsumersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next page. An empty value indicates that the last page has been reached.</p>
+     * <p>The pagination token for the next page. An empty value indicates that the last page is reached.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxxxxxxx</p>
@@ -110,7 +110,7 @@ public class ListHiMarketConsumersResponseBody extends TeaModel {
 
     public static class ListHiMarketConsumersResponseBodyDataContent extends TeaModel {
         /**
-         * <p>The consumer ID. You can use this ID to locate the consumer in operations such as GetHiMarketConsumer, DeleteHiMarketConsumer, GetHiMarketConsumerCredential, and ListHiMarketConsumerSubscriptions.</p>
+         * <p>The consumer ID. You can use this ID to locate the consumer in API operations such as GetHiMarketConsumer, DeleteHiMarketConsumer, GetHiMarketConsumerCredential, and ListHiMarketConsumerSubscriptions.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxxxxxxxxxxx</p>
@@ -119,7 +119,7 @@ public class ListHiMarketConsumersResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The description of the consumer.</p>
+         * <p>The consumer description.</p>
          * 
          * <strong>example:</strong>
          * <p>Test consumer</p>
@@ -134,7 +134,7 @@ public class ListHiMarketConsumersResponseBody extends TeaModel {
         public Boolean isPrimary;
 
         /**
-         * <p>The name of the consumer.</p>
+         * <p>The consumer name.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-1</p>
@@ -183,7 +183,7 @@ public class ListHiMarketConsumersResponseBody extends TeaModel {
 
     public static class ListHiMarketConsumersResponseBodyData extends TeaModel {
         /**
-         * <p>The list of consumers. Each element represents a HiMarket consumer.</p>
+         * <p>The list of consumers. The list element is named consumer, and each element represents a HiMarket consumer.</p>
          */
         @NameInMap("content")
         public java.util.List<ListHiMarketConsumersResponseBodyDataContent> content;

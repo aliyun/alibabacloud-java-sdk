@@ -85,7 +85,7 @@ public class ListProductSubscriptionsResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The name of the consumer to which the subscription belongs. This corresponds to the keyword search for the consumerName request parameter.</p>
+         * <p>The name of the consumer to which the subscription belongs. This corresponds to the keyword search of the consumerName request parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-1</p>
@@ -94,7 +94,7 @@ public class ListProductSubscriptionsResponseBody extends TeaModel {
         public String consumerName;
 
         /**
-         * <p>The ID of the subscribed API product. This is the primary ID of the API product resource and is the same as the productId path parameter in this operation.</p>
+         * <p>The ID of the subscribed API product, which is the primary ID of the API product resource. This is the same identifier as the productId path parameter of this operation.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>
@@ -103,7 +103,7 @@ public class ListProductSubscriptionsResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>The name of the subscribed API product. This is the Name property of the API product resource.</p>
+         * <p>The name of the subscribed API product, which is the Name property of the API product resource.</p>
          * 
          * <strong>example:</strong>
          * <p>model-service</p>
@@ -112,7 +112,7 @@ public class ListProductSubscriptionsResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>The type of the subscribed API product. Valid values: REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</p>
+         * <p>The product type of the subscribed API. Valid values: REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</p>
          * 
          * <strong>example:</strong>
          * <p>MCP_SERVER</p>
@@ -121,7 +121,7 @@ public class ListProductSubscriptionsResponseBody extends TeaModel {
         public String productType;
 
         /**
-         * <p>The subscription status. Valid values: PENDING and APPROVED. (These values are defined in the enumeration for the status request parameter. This response parameter is not annotated with @enums.)</p>
+         * <p>The subscription status. Valid values: PENDING and APPROVED. The valid values are declared in the enum of the status request parameter in this topic. This response parameter does not have the @enums annotation.</p>
          * 
          * <strong>example:</strong>
          * <p>APPROVED</p>

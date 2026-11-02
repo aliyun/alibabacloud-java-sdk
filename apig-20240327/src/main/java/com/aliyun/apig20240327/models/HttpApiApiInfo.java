@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class HttpApiApiInfo extends TeaModel {
     /**
-     * <p>The list of Agent protocols.</p>
+     * <p>The list of agent protocols.</p>
      */
     @NameInMap("agentProtocols")
     public java.util.List<String> agentProtocols;
@@ -32,7 +32,7 @@ public class HttpApiApiInfo extends TeaModel {
     public String basePath;
 
     /**
-     * <p>The API operation publish status.</p>
+     * <p>The deployment status of the API operation.</p>
      */
     @NameInMap("deployCntMap")
     public java.util.Map<String, HttpApiApiInfoDeployCntMapValue> deployCntMap;
@@ -53,7 +53,7 @@ public class HttpApiApiInfo extends TeaModel {
     public String description;
 
     /**
-     * <p>Indicates whether authentication is enabled.</p>
+     * <p>Specifies whether authentication is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -77,7 +77,7 @@ public class HttpApiApiInfo extends TeaModel {
     public String gatewayId;
 
     /**
-     * <p>HTTP API ID。</p>
+     * <p>The HTTP API ID.</p>
      * 
      * <strong>example:</strong>
      * <p>api-xxx</p>
@@ -134,7 +134,7 @@ public class HttpApiApiInfo extends TeaModel {
     public String type;
 
     /**
-     * <p>The API version control information.</p>
+     * <p>The API versioning information.</p>
      */
     @NameInMap("versionInfo")
     public HttpApiVersionInfo versionInfo;
@@ -290,7 +290,7 @@ public class HttpApiApiInfo extends TeaModel {
 
     public static class HttpApiApiInfoEnvironmentsGatewayInfo extends TeaModel {
         /**
-         * <p>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</p>
+         * <p>The edition of the gateway instance. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</p>
          * 
          * <strong>example:</strong>
          * <p>MultiTenantServerless</p>
@@ -575,7 +575,7 @@ public class HttpApiApiInfo extends TeaModel {
         public String alias;
 
         /**
-         * <p>The publish scenario.</p>
+         * <p>The deployment scenario.</p>
          * 
          * <strong>example:</strong>
          * <p>SingleService</p>
@@ -593,13 +593,13 @@ public class HttpApiApiInfo extends TeaModel {
         public String backendType;
 
         /**
-         * <p>The custom domain information published by the user.</p>
+         * <p>The information about the custom domain names published by the user.</p>
          */
         @NameInMap("customDomains")
         public java.util.List<HttpApiDomainInfo> customDomains;
 
         /**
-         * <p>The publish status of the API in the current environment.</p>
+         * <p>The deployment status of the API in the current environment.</p>
          * 
          * <strong>example:</strong>
          * <p>Deployed</p>
@@ -617,7 +617,7 @@ public class HttpApiApiInfo extends TeaModel {
         public String environmentId;
 
         /**
-         * <p>The gateway instance information for the current environment.</p>
+         * <p>The information about the gateway instance to which the current environment belongs.</p>
          */
         @NameInMap("gatewayInfo")
         public HttpApiApiInfoEnvironmentsGatewayInfo gatewayInfo;
@@ -788,7 +788,7 @@ public class HttpApiApiInfo extends TeaModel {
         public HttpApiApiInfoIngressInfoEnvironmentInfo environmentInfo;
 
         /**
-         * <p>The Ingress Class to listen on.</p>
+         * <p>The Ingress class being listened to.</p>
          * 
          * <strong>example:</strong>
          * <p>mse</p>
@@ -803,7 +803,7 @@ public class HttpApiApiInfo extends TeaModel {
         public HttpApiApiInfoIngressInfoK8sClusterInfo k8sClusterInfo;
 
         /**
-         * <p>Specifies whether to update the address in the Ingress Status.</p>
+         * <p>Specifies whether to override the IP address in the Ingress status.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -821,7 +821,7 @@ public class HttpApiApiInfo extends TeaModel {
         public String sourceId;
 
         /**
-         * <p>The namespace to listen on.</p>
+         * <p>The watched namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetApiPathFieldTemplateRequest extends TeaModel {
     /**
-     * <p>The gateway type.</p>
+     * <p>The API request path used to query the corresponding field template.</p>
      * 
      * <strong>example:</strong>
      * <p>/v1/chat/completions</p>

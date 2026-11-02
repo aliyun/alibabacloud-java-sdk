@@ -47,7 +47,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
     public UpdateHttpApiRouteRequestMcpRouteConfig mcpRouteConfig;
 
     /**
-     * <p>The route-level policy configurations.</p>
+     * <p>The route-level policy configuration.</p>
      */
     @NameInMap("policyConfigs")
     public java.util.List<HttpApiPolicyConfigs> policyConfigs;
@@ -124,7 +124,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public String groupName;
 
         /**
-         * <p>The HTTP-to-Dubbo protocol conversion configuration. Only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
+         * <p>The HTTP-to-Dubbo protocol conversion configuration. This is only supported for SingleService MSE_NACOS DUBBO backends of HTTP APIs.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;dubboServiceName&quot;:&quot;com.alibaba.nacos.example.dubbo.service.DemoService&quot;,&quot;dubboServiceVersion&quot;:&quot;1.0.0&quot;,&quot;dubboServiceGroup&quot;:&quot;DEV&quot;,&quot;methodMapList&quot;:[{&quot;dubboMethodName&quot;:&quot;sayName&quot;,&quot;httpMethod&quot;:&quot;ALL_GET&quot;,&quot;methodPath&quot;:&quot;/dubbo/sayName&quot;,&quot;passThroughAllHeaders&quot;:&quot;PASS_ALL&quot;}]}</p>
@@ -133,7 +133,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public HttpDubboTranscoder httpDubboTranscoder;
 
         /**
-         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewrite semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not specified for the AiAutoRouter scenario, the default model of the AI service is used.</p>
+         * <p>The target model name. This field is shared by multiple existing model backend scenarios. The specific routing or model rewriting semantics are determined by backendConfig.scene. This field is required for the SemanticRouter scenario. If this field is not configured for the AiAutoRouter scenario, the default model of the AI service is used.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen-plus</p>
@@ -182,7 +182,7 @@ public class UpdateHttpApiRouteRequest extends TeaModel {
         public String serviceId;
 
         /**
-         * <p>The service source type. Use MSE_NACOS for HTTP-to-Dubbo conversion scenarios.</p>
+         * <p>The service source type. MSE_NACOS is used in HTTP-to-Dubbo conversion scenarios.</p>
          * 
          * <strong>example:</strong>
          * <p>MSE_NACOS</p>

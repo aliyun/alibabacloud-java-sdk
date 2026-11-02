@@ -25,13 +25,13 @@ public class GetGatewayQuotaRuleRequest extends TeaModel {
     public String consumerPageSize;
 
     /**
-     * <p>Specifies whether to return the API consumer list.</p>
+     * <p>Specifies whether to output the consumer list.</p>
      */
     @NameInMap("withConsumers")
     public Boolean withConsumers;
 
     /**
-     * <p>Specifies whether to return the general subject list. This parameter applies to both API consumer and API consumer group rules.</p>
+     * <p>Specifies whether to output the general subject list. This parameter takes effect for both consumer and consumer group rules.</p>
      */
     @NameInMap("withSubjects")
     public Boolean withSubjects;

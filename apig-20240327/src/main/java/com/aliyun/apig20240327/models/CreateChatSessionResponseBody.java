@@ -76,7 +76,7 @@ public class CreateChatSessionResponseBody extends TeaModel {
 
     public static class CreateChatSessionResponseBodyData extends TeaModel {
         /**
-         * <p>The chat session ID. You can use this ID to locate the session in API operations such as UpdateChatSession and DeleteChatSession.</p>
+         * <p>The ID of the chat session. You can use this ID to locate the session in operations such as UpdateChatSession and DeleteChatSession.</p>
          * 
          * <strong>example:</strong>
          * <p>ses-xxxxxxxx</p>

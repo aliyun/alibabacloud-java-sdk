@@ -20,7 +20,7 @@ public class ListDevelopersResponseBody extends TeaModel {
     public ListDevelopersResponseBodyData data;
 
     /**
-     * <p>The maximum number of entries on the current page.</p>
+     * <p>The maximum number of entries returned on the current page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListDevelopersResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The cursor for the next page. An empty value indicates that the last page has been reached.</p>
+     * <p>The pagination token for the next page. An empty value indicates that you have reached the last page.</p>
      * 
      * <strong>example:</strong>
      * <p>token-xxxxxxxx</p>
@@ -110,7 +110,7 @@ public class ListDevelopersResponseBody extends TeaModel {
 
     public static class ListDevelopersResponseBodyDataContent extends TeaModel {
         /**
-         * <p>The developer ID. You can use this ID to locate the developer in API operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</p>
+         * <p>The ID of the developer. You can use this ID to identify the developer in operations such as SetHiMarketDeveloperStatus and DeleteHiMarketDeveloper.</p>
          * 
          * <strong>example:</strong>
          * <p>dev-xxxxxxxx</p>
@@ -119,7 +119,7 @@ public class ListDevelopersResponseBody extends TeaModel {
         public String developerId;
 
         /**
-         * <p>The ID of the portal to which the developer belongs. You can use this ID to locate the portal in API operations such as GetPortal, UpdatePortal, and DeletePortal.</p>
+         * <p>The ID of the portal to which the developer belongs. You can use this ID to identify the portal in operations such as GetPortal, UpdatePortal, and DeletePortal.</p>
          * 
          * <strong>example:</strong>
          * <p>portal-xxxxxxxx</p>
@@ -128,7 +128,7 @@ public class ListDevelopersResponseBody extends TeaModel {
         public String portalId;
 
         /**
-         * <p>The status of the developer. Valid values: PENDING, APPROVED, and REJECTED.</p>
+         * <p>The developer status. Valid values: PENDING, APPROVED, and REJECTED.</p>
          * 
          * <strong>example:</strong>
          * <p>APPROVED</p>

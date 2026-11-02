@@ -76,7 +76,7 @@ public class SubscribeProductResponseBody extends TeaModel {
 
     public static class SubscribeProductResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the consumer to which the subscription belongs. This is the same identifier as the consumerId path parameter in the request and refers to the same consumer as the consumerName field returned at the same level.</p>
+         * <p>The ID of the consumer to which the subscription belongs. This is the same identifier as the consumerId path parameter in the request and refers to the same consumer as the consumerName returned at the same level.</p>
          * 
          * <strong>example:</strong>
          * <p>cs-xxxxxxxxxxxx</p>
@@ -85,7 +85,7 @@ public class SubscribeProductResponseBody extends TeaModel {
         public String consumerId;
 
         /**
-         * <p>The name of the consumer to which the subscription belongs. This refers to the same consumer as the consumerId field returned at the same level.</p>
+         * <p>The name of the consumer to which the subscription belongs. This refers to the same consumer as the consumerId returned at the same level.</p>
          * 
          * <strong>example:</strong>
          * <p>consumer-1</p>
@@ -112,7 +112,7 @@ public class SubscribeProductResponseBody extends TeaModel {
         public String productName;
 
         /**
-         * <p>The type of the subscribed API product. The valid values are not declared in this operation definition. The response parameter with the same name in the related ListProductSubscriptions operation includes the following valid values: REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</p>
+         * <p>The type of the subscribed API product. The valid values are not declared in this operation definition. The response parameter with the same name in the related ListProductSubscriptions operation has the following valid values: REST_API, HTTP_API, MCP_SERVER, AGENT_API, and MODEL_API.</p>
          * 
          * <strong>example:</strong>
          * <p>MCP_SERVER</p>

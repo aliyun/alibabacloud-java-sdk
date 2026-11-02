@@ -15,25 +15,25 @@ public class AgentServiceConfig extends TeaModel {
     public String address;
 
     /**
-     * <p>The custom configuration. This parameter is required when provider is set to custom.</p>
+     * <p>The custom configuration. Specify this parameter when provider is set to custom.</p>
      */
     @NameInMap("customConfig")
     public AgentServiceConfigCustomConfig customConfig;
 
     /**
-     * <p>The DashScope service configuration. This parameter is required when provider is set to qwen. The appCredentials parameter cannot be empty, and each entry must have non-empty appId and apiKey values.</p>
+     * <p>The DashScope service configuration. Specify this parameter when provider is set to qwen. The appCredentials parameter cannot be empty, and both appId and apiKey must be specified for each item.</p>
      */
     @NameInMap("dashScopeConfig")
     public AgentServiceConfigDashScopeConfig dashScopeConfig;
 
     /**
-     * <p>The Dify service configuration. This parameter is required when provider is set to dify. The botType and apiKey parameters cannot be empty.</p>
+     * <p>The Dify service configuration. Specify this parameter when provider is set to dify. Both botType and apiKey must be specified.</p>
      */
     @NameInMap("difyConfig")
     public AgentServiceConfigDifyConfig difyConfig;
 
     /**
-     * <p>Specifies whether to enable health check.</p>
+     * <p>Specifies whether to enable the health check.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -65,6 +65,15 @@ public class AgentServiceConfig extends TeaModel {
      */
     @NameInMap("provider")
     public String provider;
+
+    /**
+     * <p>Supported only for custom agents. The value api-key indicates a managed API key, and downstream-auth indicates passing through the complete client Authorization header. If this parameter is omitted or left empty during creation, the historical rule applies. If this parameter is omitted or left empty during an update, the existing mode is retained. When passing through the authorization, you can omit customConfig, and you cannot submit a non-empty key.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>api-key</p>
+     */
+    @NameInMap("upstreamAuthMode")
+    public String upstreamAuthMode;
 
     public static AgentServiceConfig build(java.util.Map<String, ?> map) throws Exception {
         AgentServiceConfig self = new AgentServiceConfig();
@@ -133,6 +142,14 @@ public class AgentServiceConfig extends TeaModel {
     }
     public String getProvider() {
         return this.provider;
+    }
+
+    public AgentServiceConfig setUpstreamAuthMode(String upstreamAuthMode) {
+        this.upstreamAuthMode = upstreamAuthMode;
+        return this;
+    }
+    public String getUpstreamAuthMode() {
+        return this.upstreamAuthMode;
     }
 
     public static class AgentServiceConfigCustomConfig extends TeaModel {

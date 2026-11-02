@@ -76,7 +76,7 @@ public class LoginDeveloperResponseBody extends TeaModel {
 
     public static class LoginDeveloperResponseBodyData extends TeaModel {
         /**
-         * <p>The access token returned for the current developer logon. This field is marked as sensitive in the API definition.</p>
+         * <p>The access token returned for the developer logon. This field is marked as sensitive in the API definition.</p>
          * 
          * <strong>example:</strong>
          * <p>access-token-xxxxxxxx</p>
@@ -85,7 +85,7 @@ public class LoginDeveloperResponseBody extends TeaModel {
         public String accessToken;
 
         /**
-         * <p>The int64 numeric field associated with the access token. The unit and exact meaning are not declared in the API definition.</p>
+         * <p>The int64 numeric value associated with the access token. The unit and exact meaning are not specified in the API definition.</p>
          * 
          * <strong>example:</strong>
          * <p>3600</p>

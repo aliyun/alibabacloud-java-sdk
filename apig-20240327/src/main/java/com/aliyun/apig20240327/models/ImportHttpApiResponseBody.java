@@ -79,13 +79,13 @@ public class ImportHttpApiResponseBody extends TeaModel {
          * <p>The error message.</p>
          * 
          * <strong>example:</strong>
-         * <p>The data structure definition is invalid</p>
+         * <p>The data structure definition is incorrect</p>
          */
         @NameInMap("errorMessage")
         public String errorMessage;
 
         /**
-         * <p>The data structure name.</p>
+         * <p>The name of the data structure.</p>
          * 
          * <strong>example:</strong>
          * <p>orderDTO</p>
@@ -221,8 +221,8 @@ public class ImportHttpApiResponseBody extends TeaModel {
         /**
          * <p>The action to be performed after the dry run. Valid values:</p>
          * <ul>
-         * <li>Create: create.</li>
-         * <li>Update: update.</li>
+         * <li>Create: Create.</li>
+         * <li>Update: Update.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -232,7 +232,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The data structure name.</p>
+         * <p>The name of the data structure.</p>
          * 
          * <strong>example:</strong>
          * <p>userDTO</p>
@@ -267,8 +267,8 @@ public class ImportHttpApiResponseBody extends TeaModel {
         /**
          * <p>The action to be performed after the dry run. Valid values:</p>
          * <ul>
-         * <li>Create: create.</li>
-         * <li>Update: update.</li>
+         * <li>Create: Create.</li>
+         * <li>Update: Update.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -287,7 +287,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
         public String method;
 
         /**
-         * <p>The operation name.</p>
+         * <p>The name of the operation.</p>
          * 
          * <strong>example:</strong>
          * <p>CreateUser</p>
@@ -345,7 +345,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes extends TeaModel {
         /**
-         * <p>The action type.</p>
+         * <p>The operation type.</p>
          * 
          * <strong>example:</strong>
          * <p>Create</p>
@@ -387,13 +387,13 @@ public class ImportHttpApiResponseBody extends TeaModel {
 
     public static class ImportHttpApiResponseBodyDataDryRunInfo extends TeaModel {
         /**
-         * <p>The error messages. If the error messages are not empty, the API cannot be imported.</p>
+         * <p>The error messages. If the error messages are not empty, the API cannot be imported successfully.</p>
          */
         @NameInMap("errorMessages")
         public java.util.List<String> errorMessages;
 
         /**
-         * <p>The information about the existing API. If this field is not empty, the import action will update this API.</p>
+         * <p>The existing API information. If this field is not empty, the import operation updates the API.</p>
          */
         @NameInMap("existHttpApiInfo")
         public HttpApiApiInfo existHttpApiInfo;
@@ -411,7 +411,7 @@ public class ImportHttpApiResponseBody extends TeaModel {
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureOperations> failureOperations;
 
         /**
-         * <p>The list of routes that failed.</p>
+         * <p>The list of failed routes.</p>
          */
         @NameInMap("failureRoutes")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoFailureRoutes> failureRoutes;
@@ -438,13 +438,13 @@ public class ImportHttpApiResponseBody extends TeaModel {
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessOperations> successOperations;
 
         /**
-         * <p>The list of routes that were imported.</p>
+         * <p>The list of successfully imported routes.</p>
          */
         @NameInMap("successRoutes")
         public java.util.List<ImportHttpApiResponseBodyDataDryRunInfoSuccessRoutes> successRoutes;
 
         /**
-         * <p>The warning messages. If the warning messages are not empty, some operations or data structures may fail to be imported.</p>
+         * <p>The warning messages. If the warning messages are not empty, some operations or data APIs may fail to be imported.</p>
          */
         @NameInMap("warningMessages")
         public java.util.List<String> warningMessages;

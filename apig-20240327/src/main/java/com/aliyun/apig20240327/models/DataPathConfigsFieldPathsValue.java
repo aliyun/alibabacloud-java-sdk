@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataPathConfigsFieldPathsValue extends TeaModel {
     /**
-     * <p>The identity key of the field, which is unique within the same request path, such as input_token.</p>
+     * <p>The identifier key of the field, which is unique within the same request path, such as input_token.</p>
      * 
      * <strong>example:</strong>
      * <p>input_token</p>
@@ -23,7 +23,7 @@ public class DataPathConfigsFieldPathsValue extends TeaModel {
     public String jsonPath;
 
     /**
-     * <p>The value extraction rule for the field.</p>
+     * <p>The value extraction rule of the field.</p>
      * 
      * <strong>example:</strong>
      * <p>first</p>
@@ -113,7 +113,7 @@ public class DataPathConfigsFieldPathsValue extends TeaModel {
     public Boolean jsonPathRewriteAllowed;
 
     /**
-     * <p>Indicates whether the field configuration is derived from a field template.</p>
+     * <p>Indicates whether the field configuration is from a field template.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

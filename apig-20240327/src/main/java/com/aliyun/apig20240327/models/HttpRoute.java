@@ -11,7 +11,7 @@ public class HttpRoute extends TeaModel {
     public Backend backend;
 
     /**
-     * <p>Indicates whether the route is a system built-in route.</p>
+     * <p>Indicates whether the route is a built-in system route.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -41,13 +41,13 @@ public class HttpRoute extends TeaModel {
      * <p>The route description.</p>
      * 
      * <strong>example:</strong>
-     * <p>Pre-release route for the product center</p>
+     * <p>商品中心预发路由</p>
      */
     @NameInMap("description")
     public String description;
 
     /**
-     * <p>The list of domain name information.</p>
+     * <p>The domain name information list.</p>
      */
     @NameInMap("domainInfos")
     public java.util.List<HttpRouteDomainInfos> domainInfos;
@@ -71,7 +71,7 @@ public class HttpRoute extends TeaModel {
     public HttpRouteMatch match;
 
     /**
-     * <p>The MCP server information.</p>
+     * <p>The MCP service information.</p>
      */
     @NameInMap("mcpServerInfo")
     public HttpRouteMcpServerInfo mcpServerInfo;
@@ -86,7 +86,7 @@ public class HttpRoute extends TeaModel {
     public String name;
 
     /**
-     * <p>The HttpApi route ID.</p>
+     * <p>The HTTP API route ID.</p>
      * 
      * <strong>example:</strong>
      * <p>hr-crf5l7tlhtgp91t***</p>
@@ -273,7 +273,7 @@ public class HttpRoute extends TeaModel {
 
     public static class HttpRouteEnvironmentInfoGatewayInfo extends TeaModel {
         /**
-         * <p>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, Unknown.</p>
+         * <p>The gateway instance edition. Valid values: Professional, Serverless, MultiTenantServerless, and Unknown.</p>
          * 
          * <strong>example:</strong>
          * <p>MultiTenantServerless</p>
@@ -411,7 +411,7 @@ public class HttpRoute extends TeaModel {
          * <p>The environment name alias.</p>
          * 
          * <strong>example:</strong>
-         * <p>Pre-release environment for the product center</p>
+         * <p>商品中心预发环境</p>
          */
         @NameInMap("alias")
         public String alias;
@@ -441,7 +441,7 @@ public class HttpRoute extends TeaModel {
         public String name;
 
         /**
-         * <p>The list of default subdomain names for the environment.</p>
+         * <p>The list of default subdomains of the environment.</p>
          */
         @NameInMap("subDomains")
         public java.util.List<HttpRouteEnvironmentInfoSubDomains> subDomains;
@@ -573,7 +573,7 @@ public class HttpRoute extends TeaModel {
         public String importNamespace;
 
         /**
-         * <p>The MCP route information.</p>
+         * <p>The MCP routing information.</p>
          */
         @NameInMap("mcpRouteConfig")
         public HttpRouteMcpServerInfoMcpRouteConfig mcpRouteConfig;

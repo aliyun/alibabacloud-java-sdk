@@ -20,7 +20,7 @@ public class ListProductsResponseBody extends TeaModel {
     public ListProductsResponseBodyData data;
 
     /**
-     * <p>The maximum number of entries returned in this request.</p>
+     * <p>The maximum number of entries returned for this request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +38,7 @@ public class ListProductsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The cursor token for the next page.</p>
+     * <p>The pagination token for querying the next page.</p>
      * 
      * <strong>example:</strong>
      * <p>next-token-xxxxxxxx</p>
@@ -110,13 +110,13 @@ public class ListProductsResponseBody extends TeaModel {
 
     public static class ListProductsResponseBodyDataContent extends TeaModel {
         /**
-         * <p>The agent-related configurations of the API product. The agentAPIConfig member includes agentProtocols (the list of protocols supported by the agent) and routes (the list of routes).</p>
+         * <p>The agent-related configurations of the API product. The agentAPIConfig member includes agentProtocols (the list of protocols supported by the agent) and routes (the route list).</p>
          */
         @NameInMap("agentConfig")
         public HiMarketAgentConfig agentConfig;
 
         /**
-         * <p>Specifies whether subscription requests for the API product are automatically approved. This is the AutoApprove property of the API product resource.</p>
+         * <p>Specifies whether to automatically approve subscription requests for the API product, which is the AutoApprove property of the API product resource Product.</p>
          */
         @NameInMap("autoApprove")
         public Boolean autoApprove;
@@ -128,7 +128,7 @@ public class ListProductsResponseBody extends TeaModel {
         public java.util.List<HiMarketProductCategory> categories;
 
         /**
-         * <p>The description of the API product, which is the Description property of the API product resource.</p>
+         * <p>The description of the API product, which is the Description property of the API product resource Product.</p>
          * 
          * <strong>example:</strong>
          * <p>An API product that provides weather query capabilities</p>
@@ -137,7 +137,7 @@ public class ListProductsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The documentation of the API product, which is the Document property of the API product resource.</p>
+         * <p>The documentation of the API product, which is the Document property of the API product resource Product.</p>
          * 
          * <strong>example:</strong>
          * <p>The invocation methods, parameters, and billing instructions for this product</p>
@@ -146,13 +146,13 @@ public class ListProductsResponseBody extends TeaModel {
         public String document;
 
         /**
-         * <p>The capability configurations of the API product. Currently, it includes only the modelFeature (model capabilities) member, which contains model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal.</p>
+         * <p>The capability configurations of the API product. Currently, it only includes the modelFeature (model capabilities) member, which contains model, maxTokens, temperature, streaming, webSearch, enableThinking, and enableMultiModal.</p>
          */
         @NameInMap("feature")
         public HiMarketProductFeature feature;
 
         /**
-         * <p>The icon of the API product, which is the Icon property of the API product resource. It consists of two fields: type (the icon type) and value (the icon information).</p>
+         * <p>The icon of the API product, which is the Icon property of the API product resource Product. It consists of two fields: type (the icon type) and value (the icon information).</p>
          */
         @NameInMap("icon")
         public HiMarketIcon icon;
@@ -164,13 +164,13 @@ public class ListProductsResponseBody extends TeaModel {
         public HiMarketMcpConfig mcpConfig;
 
         /**
-         * <p>The model API-related configurations of the API product. The modelAPIConfig member includes modelCategory (the AI model category), aiProtocols (the list of AI API protocols), and routes (the list of routes).</p>
+         * <p>The model API-related configurations of the API product. The modelAPIConfig member includes modelCategory (the AI model category), aiProtocols (the list of AI API protocols), and routes (the route list).</p>
          */
         @NameInMap("modelConfig")
         public HiMarketModelConfig modelConfig;
 
         /**
-         * <p>The name of the API product, which is the Name property of the API product resource.</p>
+         * <p>The name of the API product, which is the Name property of the API product resource Product.</p>
          * 
          * <strong>example:</strong>
          * <p>weather-query-api</p>
@@ -179,7 +179,7 @@ public class ListProductsResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the API product, which is the primary ID of the API product resource. You can use it to locate the product in operations such as GetProduct, UpdateProduct, DeleteProduct, PublishProduct, SetProductCategories, and ListProductPublications.</p>
+         * <p>The ID of the API product, which is the primary ID of the API product resource Product. It can be used to locate the product in operations such as GetProduct, UpdateProduct, DeleteProduct, PublishProduct, SetProductCategories, and ListProductPublications.</p>
          * 
          * <strong>example:</strong>
          * <p>product-xxxxxxxx</p>
@@ -188,7 +188,7 @@ public class ListProductsResponseBody extends TeaModel {
         public String productId;
 
         /**
-         * <p>The status of the API product, which is the Status property of the API product resource. Valid values: Pending, Ready, and Published.</p>
+         * <p>The status of the API product, which is the Status property of the API product resource Product. Valid values: Pending, Ready, and Published.</p>
          * 
          * <strong>example:</strong>
          * <p>Published</p>
@@ -197,7 +197,7 @@ public class ListProductsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The type of the API product, which is the Type property of the API product resource. The valid values are not declared in the API definition. Refer to the types displayed in the console.</p>
+         * <p>The type of the API product, which is the Type property of the API product resource Product. The valid values are not declared in the API definition. Refer to the types displayed in the console.</p>
          * 
          * <strong>example:</strong>
          * <p>API</p>

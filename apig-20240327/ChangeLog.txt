@@ -1,3 +1,23 @@
+2026-11-02 Version: 12.7.0
+- Support API ListPrivateLinkSecurityGroups.
+- Support API RevealServiceCredential.
+- Update API AddGatewayQuotaRule: add response parameters Body.data.conflictPreview.items.$.periodType.
+- Update API CreateGateway: add request parameters body.networkAccessConfig.endpointSecurityGroupId.
+- Update API GetGateway: add response parameters Body.data.elasticEnabled.
+- Update API GetGateway: add response parameters Body.data.networkAccessConfig.
+- Update API GetGateway: add response parameters Body.data.privateLink.
+- Update API GetGateway: add response parameters Body.data.subDomainInfos.
+- Update API GetGatewayQuotaRule: add response parameters Body.data.currentCycleResetAt.
+- Update API GetGatewayQuotaRule: add response parameters Body.data.periodMultiplier.
+- Update API ListGatewayQuotaRules: add response parameters Body.data.items.$.periodMultiplier.
+- Update API ListGateways: add response parameters Body.data.items.$.elasticEnabled.
+- Update API ListGateways: add response parameters Body.data.items.$.networkAccessConfig.
+- Update API ListGateways: add response parameters Body.data.items.$.privateLink.
+- Update API UpdateGatewayQuotaRule: add response parameters Body.data.conflictPreview.items.$.periodType.
+- Update API UpdateService: add request parameters body.apiKeyReferencesToAdd.
+- Update API UpdateService: add request parameters body.apiKeysToAdd.
+
+
 2026-10-13 Version: 12.6.0
 - Support API CreatePortal.
 - Support API CreateProduct.

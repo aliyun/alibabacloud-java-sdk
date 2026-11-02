@@ -23,7 +23,7 @@ public class DeleteDomainResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID, which is used to trace the API call chain.</p>
+     * <p>The request ID used to trace API calls.</p>
      * 
      * <strong>example:</strong>
      * <p>A60EE5CA-1294-532A-9775-8D2FD1C6EFBF</p>

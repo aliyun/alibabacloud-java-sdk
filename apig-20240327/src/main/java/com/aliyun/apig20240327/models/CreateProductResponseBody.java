@@ -76,7 +76,7 @@ public class CreateProductResponseBody extends TeaModel {
 
     public static class CreateProductResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the newly created API product, which can be used to locate the product in API operations such as GetProduct, UpdateProduct, PublishProduct, and GetProductRef.</p>
+         * <p>The ID of the newly created API product, which can be used to locate the product in operations such as GetProduct, UpdateProduct, PublishProduct, and GetProductRef.</p>
          * 
          * <strong>example:</strong>
          * <p>p-xxxxxxxx</p>

@@ -113,6 +113,15 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
 
     public static class ListGatewayQuotaRulesResponseBodyDataItems extends TeaModel {
         /**
+         * <p>The number of days in a custom period. This parameter is returned only when windowAlignment is set to epoch. Valid values: 1 to 106751. This parameter is not returned for natural periods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
+         */
+        @NameInMap("periodMultiplier")
+        public Long periodMultiplier;
+
+        /**
          * <p>The period type.</p>
          * 
          * <strong>example:</strong>
@@ -167,7 +176,7 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public String ruleStatus;
 
         /**
-         * <p>The time zone for the natural period, in UTC+x format.</p>
+         * <p>The time zone corresponding to the natural period, in UTC+x format.</p>
          * 
          * <strong>example:</strong>
          * <p>GMT+8</p>
@@ -187,6 +196,14 @@ public class ListGatewayQuotaRulesResponseBody extends TeaModel {
         public static ListGatewayQuotaRulesResponseBodyDataItems build(java.util.Map<String, ?> map) throws Exception {
             ListGatewayQuotaRulesResponseBodyDataItems self = new ListGatewayQuotaRulesResponseBodyDataItems();
             return TeaModel.build(map, self);
+        }
+
+        public ListGatewayQuotaRulesResponseBodyDataItems setPeriodMultiplier(Long periodMultiplier) {
+            this.periodMultiplier = periodMultiplier;
+            return this;
+        }
+        public Long getPeriodMultiplier() {
+            return this.periodMultiplier;
         }
 
         public ListGatewayQuotaRulesResponseBodyDataItems setPeriodType(String periodType) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListHttpApiOperationsResponseBody extends TeaModel {
     /**
-     * <p>The response status code.</p>
+     * <p>The HTTP status code.</p>
      * 
      * <strong>example:</strong>
      * <p>Ok</p>
@@ -91,7 +91,7 @@ public class ListHttpApiOperationsResponseBody extends TeaModel {
         public Integer pageNumber;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
