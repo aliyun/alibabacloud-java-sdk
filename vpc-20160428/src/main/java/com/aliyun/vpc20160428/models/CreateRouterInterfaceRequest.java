@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The ID of the access point to which the VBR belongs. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36062.html">DescribeAccessPoints</a> operation to query the access point ID of the Express Connect circuit.  </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36062.html">DescribeAccessPoints</a> operation to query the IDs of access points for Express Connect circuits.  </p>
      * <blockquote>
-     * <p>This parameter is required in Express Connect circuit scenarios.</p>
+     * <p>This parameter is required when you connect to an Express Connect circuit.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,9 +20,9 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable automatic payment. Valid values: </p>
      * <ul>
-     * <li><p><strong>false</strong> (default): Automatic payment is disabled. After an order is generated, go to the Order Center to complete the payment.   </p>
+     * <li><p><strong>false</strong> (default): disables automatic payment. You must complete the payment in the User Center after the order is generated.   </p>
      * </li>
-     * <li><p><strong>true</strong>: Automatic payment is enabled. The order is automatically paid.</p>
+     * <li><p><strong>true</strong>: enables automatic payment. The system automatically pays the order.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -38,8 +38,8 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable auto-renewal. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): Auto-renewal is disabled.</li>
-     * <li><strong>true</strong>: Auto-renewal is enabled.</li>
+     * <li><strong>false</strong> (default): no.</li>
+     * <li><strong>true</strong>: yes.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -50,9 +50,9 @@ public class CreateRouterInterfaceRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. </p>
-     * <p>The client generates the value of this parameter. Ensure that the value is unique among different requests. </p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. </p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
 
     /**
      * <p>The description of the router interface.  </p>
-     * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>abcabc</p>
@@ -72,7 +72,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether the router interface on the VBR is created in fast link mode. Fast link mode allows the router interfaces on the VBR and VPC to be automatically connected after they are created. Valid values:</p>
+     * <p>Specifies whether the router interface is an uplink router interface of a VBR created in fast connection mode. Fast connection mode allows the router interfaces at the VBR and VPC ends to be automatically connected after they are created. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: yes.</li>
      * <li><strong>false</strong> (default): no.</li>
@@ -80,9 +80,11 @@ public class CreateRouterInterfaceRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>This parameter takes effect only when <strong>RouterType</strong> is set to <strong>VBR</strong> and <strong>OppositeRouterType</strong> is set to <strong>VRouter</strong>.</li>
-     * <li>When <strong>FastLinkMode</strong> is set to <strong>true</strong>, <strong>Role</strong> must be set to <strong>InitiatingSide</strong>, and <strong>AccessPointId</strong>, <strong>OppositeRouterType</strong>, <strong>OppositeRouterId</strong>, and <strong>OppositeInterfaceOwnerId</strong> are required.</li>
      * </ul>
      * </blockquote>
+     * <ul>
+     * <li>When <strong>FastLinkMode</strong> is set to <strong>true</strong>, <strong>Role</strong> must be set to <strong>InitiatingSide</strong>, and <strong>AccessPointId</strong>, <strong>OppositeRouterType</strong>, <strong>OppsiteRouterId</strong>, and <strong>OppositeInterfaceOwnerId</strong> are required.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -91,9 +93,9 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     public Boolean fastLinkMode;
 
     /**
-     * <p>The source IP address for health checks. The IP address must be an unused IP address in the local VPC. </p>
+     * <p>The source IP address for health checks. It must be an unused IP address in the local VPC. </p>
      * <blockquote>
-     * <p>You can specify this parameter in Express Connect circuit scenarios.</p>
+     * <p>You can specify this parameter when you connect to an Express Connect circuit.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -131,7 +133,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
 
     /**
      * <p>The name of the router interface.  </p>
-     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
+     * <p>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>abc</p>
@@ -142,7 +144,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The ID of the access point to which the peer belongs.</p>
      * <blockquote>
-     * <p>This parameter is required when the peer router interface is on a VBR. This parameter cannot be modified after the router interface is created.</p>
+     * <p>This parameter is required when the peer router interface belongs to a VBR. It cannot be modified after the router interface is created.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -212,9 +214,9 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     /**
      * <p>The subscription duration. Valid values: </p>
      * <ul>
-     * <li><p>If you select monthly billing, the valid values are <strong>1</strong> to <strong>9</strong>.</p>
+     * <li><p>If you select monthly subscription, valid values are <strong>1</strong> to <strong>9</strong>.</p>
      * </li>
-     * <li><p>If you select yearly billing, the valid values are <strong>1</strong> to <strong>3</strong>.</p>
+     * <li><p>If you select yearly subscription, valid values are <strong>1</strong> to <strong>3</strong>.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -228,11 +230,11 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The billing cycle of the subscription. Valid values:</p>
+     * <p>The billing cycle of the subscription. Valid values: </p>
      * <ul>
-     * <li><p><strong>Month</strong> (default): monthly billing.</p>
+     * <li><p><strong>Month</strong> (default): monthly subscription.</p>
      * </li>
-     * <li><p><strong>Year</strong>: yearly billing.</p>
+     * <li><p><strong>Year</strong>: yearly subscription.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -247,7 +249,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
 
     /**
      * <p>The region ID of the router interface.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -257,7 +259,7 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * <p>For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</p>
      * 
      * <strong>example:</strong>
@@ -315,35 +317,35 @@ public class CreateRouterInterfaceRequest extends TeaModel {
     public String routerType;
 
     /**
-     * <p>The specification of the router interface. The available specifications and corresponding bandwidth values are as follows: </p>
+     * <p>The specification of the router interface. Valid values and their corresponding bandwidths: </p>
      * <ul>
-     * <li><p><strong>Mini.2</strong>: 2 Mbps   </p>
+     * <li><p><strong>Mini.2</strong>: 2 Mbit/s   </p>
      * </li>
-     * <li><p><strong>Mini.5</strong>: 5 Mbps   </p>
+     * <li><p><strong>Mini.5</strong>: 5 Mbit/s   </p>
      * </li>
-     * <li><p><strong>Small.1</strong>: 10 Mbps   </p>
+     * <li><p><strong>Small.1</strong>: 10 Mbit/s   </p>
      * </li>
-     * <li><p><strong>Small.2</strong>: 20 Mbps   </p>
+     * <li><p><strong>Small.2</strong>: 20 Mbit/s   </p>
      * </li>
-     * <li><p><strong>Small.5</strong>: 50 Mbps   </p>
+     * <li><p><strong>Small.5</strong>: 50 Mbit/s   </p>
      * </li>
-     * <li><p><strong>Middle.1</strong>: 100 Mbps   </p>
+     * <li><p><strong>Middle.1</strong>: 100 Mbit/s   </p>
      * </li>
-     * <li><p><strong>Middle.2</strong>: 200 Mbps   </p>
+     * <li><p><strong>Middle.2</strong>: 200 Mbit/s   </p>
      * </li>
-     * <li><p><strong>Middle.5</strong>: 500 Mbps   </p>
+     * <li><p><strong>Middle.5</strong>: 500 Mbit/s   </p>
      * </li>
-     * <li><p><strong>Large.1</strong>: 1000 Mbps   </p>
+     * <li><p><strong>Large.1</strong>: 1000 Mbit/s   </p>
      * </li>
-     * <li><p><strong>Large.2</strong>: 2000 Mbps   </p>
+     * <li><p><strong>Large.2</strong>: 2000 Mbit/s   </p>
      * </li>
-     * <li><p><strong>Large.5</strong>: 5000 Mbps   </p>
+     * <li><p><strong>Large.5</strong>: 5000 Mbit/s   </p>
      * </li>
-     * <li><p><strong>Xlarge.1</strong>: 10000 Mbps</p>
+     * <li><p><strong>Xlarge.1</strong>: 10000 Mbit/s</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>When <strong>Role</strong> is set to <strong>AcceptingSide</strong> (accepter), set <strong>Spec</strong> to <strong>Negative</strong>. No specification is required when you create an accepter router interface.</p>
+     * <p>When <strong>Role</strong> is set to <strong>AcceptingSide</strong> (accepter), set <strong>Spec</strong> to <strong>Negative</strong>. This means that specifications are not required when you create an accepter router interface.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -598,8 +600,8 @@ public class CreateRouterInterfaceRequest extends TeaModel {
 
     public static class CreateRouterInterfaceRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the resource. You must specify at least 1 and can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You must specify at least one tag key and can specify up to 20 tag keys. This value cannot be an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -608,8 +610,8 @@ public class CreateRouterInterfaceRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. This value can be an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

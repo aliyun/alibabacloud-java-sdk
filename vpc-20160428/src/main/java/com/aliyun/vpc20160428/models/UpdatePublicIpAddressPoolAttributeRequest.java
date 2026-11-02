@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class UpdatePublicIpAddressPoolAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can generate the value from your client to ensure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The description of the IP address pool.</p>
+     * <p>The description of the address pool.</p>
      * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without modifying the IP address pool attributes. The system checks the required parameters, request format, and service limits. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and then sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: prechecks the request without modifying the attributes of the address pool. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The name of the IP address pool.</p>
+     * <p>The name of the address pool.</p>
      * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class UpdatePublicIpAddressPoolAttributeRequest extends TeaModel {
     public String publicIpAddressPoolId;
 
     /**
-     * <p>The region ID of the IP address pool to modify.</p>
+     * <p>The region ID of the public IP address pool that you want to update.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

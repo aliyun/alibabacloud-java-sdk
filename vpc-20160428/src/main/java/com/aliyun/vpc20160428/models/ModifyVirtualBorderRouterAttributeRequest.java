@@ -5,18 +5,18 @@ import com.aliyun.tea.*;
 
 public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     /**
-     * <p>The list of Express Connect circuits associated with the VBR, which contains the following parameters:</p>
+     * <p>The list of Express Connect circuits associated with the VBR. The list includes the following parameters:</p>
      * <ul>
-     * <li><strong>VlanId</strong>: The VLAN ID of the VBR instance.</li>
-     * <li><strong>CircuitCode</strong>: The circuit encoding provided by the carrier for the Express Connect circuit.</li>
-     * <li><strong>LocalGatewayIp</strong>: The Alibaba Cloud-side IP address of the VBR instance.</li>
-     * <li><strong>PeerGatewayIp</strong>: The client-side IP address of the VBR instance.</li>
-     * <li><strong>PeeringSubnetMask</strong>: The subnet mask for the Alibaba Cloud-side and client-side IP addresses of the VBR instance.</li>
-     * <li><strong>LocalIpv6GatewayIp</strong>: The Alibaba Cloud-side IPv6 address of the VBR instance.</li>
-     * <li><strong>PeerIpv6GatewayIp</strong>: The client-side IPv6 address of the VBR instance.</li>
-     * <li><strong>PeeringIpv6SubnetMask</strong>: The subnet mask for the Alibaba Cloud-side and client-side IPv6 addresses of the VBR instance.</li>
-     * <li><strong>ipv6Enable</strong>: Enables IPv6.</li>
-     * <li><strong>PhysicalConnectionId</strong>: The Express Connect circuit instance ID.</li>
+     * <li><strong>VlanId</strong>: the VLAN ID of the VBR instance.</li>
+     * <li><strong>CircuitCode</strong>: the circuit encoding provided by the carrier for the Express Connect circuit.</li>
+     * <li><strong>LocalGatewayIp</strong>: the IP address of the VBR on the Alibaba Cloud side.</li>
+     * <li><strong>PeerGatewayIp</strong>: the IP address of the VBR on the customer side.</li>
+     * <li><strong>PeeringSubnetMask</strong>: the subnet mask of the IP addresses of the VBR on the Alibaba Cloud side and the customer side.</li>
+     * <li><strong>LocalIpv6GatewayIp</strong>: the IPv6 address of the VBR on the Alibaba Cloud side.</li>
+     * <li><strong>PeerIpv6GatewayIp</strong>: the IPv6 address of the VBR on the customer side.</li>
+     * <li><strong>PeeringIpv6SubnetMask</strong>: the subnet mask of the IPv6 addresses of the VBR on the Alibaba Cloud side and the customer side.</li>
+     * <li><strong>ipv6Enable</strong>: specifies whether to enable IPv6.</li>
+     * <li><strong>PhysicalConnectionId</strong>: the instance ID of the Express Connect circuit.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -61,9 +61,9 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
 
     /**
      * <p>The description of the VBR.</p>
-     * <p>The description must be 2 to 256 characters in length and must start with a letter or Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -83,8 +83,8 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The detection multiplier, which specifies the maximum number of consecutive packet losses allowed by the receiver from the sender. This parameter is used to detect whether the link is normal.</p>
-     * <p>Valid values: <strong>3 to 10</strong>.</p>
+     * <p>The detection time multiplier, which is the maximum number of consecutive packet losses allowed by the receiver to detect whether the link is normal.</p>
+     * <p>Valid values: <strong>3</strong> to <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>3</p>
@@ -93,11 +93,11 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public Long detectMultiplier;
 
     /**
-     * <p>Specifies whether to enable IPv6. Valid values:</p>
+     * <p>Specifies whether to enable IPv6.</p>
      * <ul>
-     * <li><p><strong>true</strong>: Enabled.</p>
+     * <li><p><strong>true</strong>: enables IPv6.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): Disabled.</p>
+     * <li><p><strong>false</strong> (default): disables IPv6.</p>
      * </li>
      * </ul>
      * 
@@ -108,8 +108,8 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public Boolean enableIpv6;
 
     /**
-     * <p>The Alibaba Cloud-side IP address of the VBR instance.</p>
-     * <p>This property can be specified or modified only by the VBR owner.</p>
+     * <p>The IP address of the VBR on the Alibaba Cloud side.</p>
+     * <p>Only the owner of the VBR can specify or modify this property.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -118,7 +118,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public String localGatewayIp;
 
     /**
-     * <p>The Alibaba Cloud-side IPv6 address of the VBR instance.</p>
+     * <p>The IPv6 address of the VBR on the Alibaba Cloud side.</p>
      * 
      * <strong>example:</strong>
      * <p>2001:XXXX:3c4d:0015:0000:0000:0000:1a2b</p>
@@ -127,7 +127,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public String localIpv6GatewayIp;
 
     /**
-     * <p>The receive interval of BFD packets. Valid values: <strong>200 to 1000</strong>. Unit: ms.</p>
+     * <p>The interval at which BFD packets are received. Valid values: <strong>200</strong> to <strong>1000</strong>. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -136,7 +136,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public Long minRxInterval;
 
     /**
-     * <p>The alert interval for sending Bidirectional Forwarding Detection (BFD) packets. Valid values: <strong>200 to 1000</strong>. Unit: ms.</p>
+     * <p>The send interval for Bidirectional Forwarding Detection (BFD) packets. Valid values: <strong>200</strong> to <strong>1000</strong>. Unit: milliseconds.</p>
      * 
      * <strong>example:</strong>
      * <p>300</p>
@@ -145,8 +145,8 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public Long minTxInterval;
 
     /**
-     * <p>The MTU value supported by the VBR. Valid values: 1500 and 8500.
-     * This value can be set only when the VBR is attached to an Express Connect Router (ECR). This value also affects all other VBRs and VPCs within the same ECR.</p>
+     * <p>The maximum transmission unit (MTU) value supported by the VBR. Valid values: 1500 and 8500.
+     * You can set this value only when the VBR is associated with an Express Connect Router (ECR). This value also affects all other VBRs and VPCs within the same ECR.</p>
      * 
      * <strong>example:</strong>
      * <p>1500</p>
@@ -156,7 +156,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
 
     /**
      * <p>The name of the VBR.</p>
-     * <p>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>VBR</p>
@@ -171,8 +171,8 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The client-side IP address of the VBR instance.</p>
-     * <p>This property can be specified or modified only by the VBR owner.</p>
+     * <p>The IP address of the VBR on the customer side.</p>
+     * <p>Only the owner of the VBR can specify or modify this property.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.X</p>
@@ -181,11 +181,11 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public String peerGatewayIp;
 
     /**
-     * <p>The client-side IPv6 address of the VBR instance.</p>
+     * <p>The IPv6 address of the VBR on the customer side.</p>
      * <ul>
-     * <li><p>This property can be specified or modified only by the VBR owner.</p>
+     * <li><p>Only the owner of the VBR can specify or modify this property.</p>
      * </li>
-     * <li><p>This parameter is required when the Express Connect circuit owner creates a VBR instance. It is not required when creating a VBR instance for another account.</p>
+     * <li><p>This parameter is required when you create a VBR for the owner of the Express Connect circuit. This parameter is not required when you create a VBR for another account.</p>
      * </li>
      * </ul>
      * 
@@ -196,7 +196,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public String peerIpv6GatewayIp;
 
     /**
-     * <p>The subnet mask for the Alibaba Cloud-side and client-side IPv6 addresses of the VBR instance.</p>
+     * <p>The subnet mask of the IPv6 addresses of the VBR on the Alibaba Cloud side and the customer side.</p>
      * <p>The two IPv6 addresses must be in the same subnet.</p>
      * 
      * <strong>example:</strong>
@@ -206,7 +206,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public String peeringIpv6SubnetMask;
 
     /**
-     * <p>The subnet mask for the Alibaba Cloud-side and client-side IP addresses of the VBR instance. This property can be specified or modified only by the VBR owner.</p>
+     * <p>The subnet mask of the IP addresses of the VBR on the Alibaba Cloud side and the customer side. Only the owner of the VBR can specify or modify this property.</p>
      * <p>The two IP addresses must be in the same subnet.</p>
      * 
      * <strong>example:</strong>
@@ -217,7 +217,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VBR.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -233,11 +233,11 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>Specifies whether to allow inter-IDC service access. Valid values:</p>
+     * <p>Specifies whether to allow service access between data centers.</p>
      * <ul>
-     * <li><p>true: Allowed.</p>
+     * <li><p>true: allows service access between data centers.</p>
      * </li>
-     * <li><p>false (default): Not allowed.</p>
+     * <li><p>false (default): does not allow service access between data centers.</p>
      * </li>
      * </ul>
      * 
@@ -248,7 +248,7 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public Boolean sitelinkEnable;
 
     /**
-     * <p>The VBR instance ID.</p>
+     * <p>The instance ID of the VBR.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -258,9 +258,9 @@ public class ModifyVirtualBorderRouterAttributeRequest extends TeaModel {
     public String vbrId;
 
     /**
-     * <p>The VLAN ID of the VBR. Valid values: <strong>0 to 2999</strong>. </p>
+     * <p>The VLAN ID of the VBR. Valid values: <strong>0</strong> to <strong>2999</strong>. </p>
      * <blockquote>
-     * <p>Only the owner of the Express Connect circuit can specify this parameter. The VLAN IDs of two VBRs on the same Express Connect circuit must be different.</p>
+     * <p>Only the owner of the Express Connect circuit can specify this parameter. The VLAN IDs of two VBRs under the same Express Connect circuit must be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

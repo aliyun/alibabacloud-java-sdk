@@ -6,10 +6,10 @@ import com.aliyun.tea.*;
 public class CreateBgpPeerRequest extends TeaModel {
     /**
      * <p>The BFD hop count. Valid values: <strong>1</strong> to <strong>255</strong>.</p>
-     * <p>This parameter is required when BFD is enabled.
-     * Enter the BFD hop count, which specifies the maximum number of devices that data passes through from the source to the destination. You can configure different hop counts based on the actual physical link factors.</p>
+     * <p>This parameter is required when you enable the BFD feature.
+     * Specify the BFD hop count, which is the maximum number of devices that data passes through when it is transmitted from the source to the destination. You can configure different hop counts based on the actual physical link conditions.</p>
      * <blockquote>
-     * <p>If you use BFD in a multi-cloud environment or a direct fiber connection topology with no bridging devices in between, change the default BFD hop count from <strong>255</strong> to <strong>1</strong>.</p>
+     * <p>If you use BFD in a multi-cloud environment or a direct fiber connection network without any bridging devices in between, you must change the default BFD hop count from <strong>255</strong> to <strong>1</strong>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,9 +30,9 @@ public class CreateBgpPeerRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>The client generates the value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,11 +42,11 @@ public class CreateBgpPeerRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to enable Bidirectional Forwarding Detection (BFD). Valid values:</p>
+     * <p>Specifies whether to enable the Bidirectional Forwarding Detection (BFD) feature. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enables BFD.</p>
+     * <li><p><strong>true</strong>: enables the BFD feature.</p>
      * </li>
-     * <li><p><strong>false</strong>: does not enable BFD.</p>
+     * <li><p><strong>false</strong>: disables the BFD feature.</p>
      * </li>
      * </ul>
      * 
@@ -60,7 +60,7 @@ public class CreateBgpPeerRequest extends TeaModel {
      * <p>The IP version. Valid values:</p>
      * <ul>
      * <li><strong>IPv4</strong> (default): IPv4.</li>
-     * <li><strong>IPv6</strong>: IPv6. IPv6 is supported only when the Virtual Border Router (VBR) on which the BGP group is created has the enable IPv6 feature turned on.</li>
+     * <li><strong>IPv6</strong>: IPv6. IPv6 is supported only when the enable IPv6 feature is enabled for the VBR associated with the BGP group.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -86,7 +86,7 @@ public class CreateBgpPeerRequest extends TeaModel {
 
     /**
      * <p>The region ID of the BGP group.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

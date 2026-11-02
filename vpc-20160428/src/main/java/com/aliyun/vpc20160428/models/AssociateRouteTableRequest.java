@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class AssociateRouteTableRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
@@ -24,8 +24,8 @@ public class AssociateRouteTableRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the VPC to which the route table that you want to associate with a vSwitch belongs.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
+     * <p>The region ID of the VPC to which the route table to be associated with the vSwitch belongs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class AssociateRouteTableRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the route table that you want to associate with a vSwitch.</p>
+     * <p>The ID of the route table to be associated with the vSwitch.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class AssociateRouteTableRequest extends TeaModel {
     public String routeTableId;
 
     /**
-     * <p>The ID of the vSwitch with which you want to associate the route table.</p>
+     * <p>The ID of the vSwitch to be associated with the route table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

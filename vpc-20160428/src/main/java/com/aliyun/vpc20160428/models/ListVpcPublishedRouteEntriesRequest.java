@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVpcPublishedRouteEntriesRequest extends TeaModel {
     /**
-     * <p>The destination CIDR block of the route entry. IPv4 and IPv6 CIDR blocks are supported.</p>
+     * <p>The destination CIDR block of the route. Both IPv4 and IPv6 CIDR blocks are supported.</p>
      * 
      * <strong>example:</strong>
      * <p>47.100.XX.XX/16</p>
@@ -14,7 +14,7 @@ public class ListVpcPublishedRouteEntriesRequest extends TeaModel {
     public String destinationCidrBlock;
 
     /**
-     * <p>The number of entries per page in a paged query. Valid values: <strong>1</strong> to <strong>500</strong>. Default value: <strong>50</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>500</strong>. Default value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -23,10 +23,10 @@ public class ListVpcPublishedRouteEntriesRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The token used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-     * <li>If <strong>NextToken</strong> has a value, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no more results are available.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value is the token used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +67,7 @@ public class ListVpcPublishedRouteEntriesRequest extends TeaModel {
     public String routeTableId;
 
     /**
-     * <p>The instance ID of the route publish target.</p>
+     * <p>The instance ID of the route publication target.</p>
      * 
      * <strong>example:</strong>
      * <p>ecr-dhw2xsds5****</p>
@@ -76,7 +76,7 @@ public class ListVpcPublishedRouteEntriesRequest extends TeaModel {
     public String targetInstanceId;
 
     /**
-     * <p>The type of the route publish target.</p>
+     * <p>The type of the route publication target.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

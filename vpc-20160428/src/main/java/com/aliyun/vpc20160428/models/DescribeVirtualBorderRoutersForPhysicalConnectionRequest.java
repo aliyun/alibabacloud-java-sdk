@@ -14,7 +14,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     public Long ownerId;
 
     /**
-     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,7 +23,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page during paging in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -42,7 +42,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
     public String physicalConnectionId;
 
     /**
-     * <p>The region where the Express Connect circuit resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The region where the Express Connect circuit is located. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -128,21 +128,21 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
 
     public static class DescribeVirtualBorderRoutersForPhysicalConnectionRequestFilter extends TeaModel {
         /**
-         * <p>The filter condition. You can specify up to 5 filter conditions. The following filter conditions are supported:</p>
+         * <p>The filter condition. You can specify up to five filter conditions. Supported filter conditions:</p>
          * <ul>
-         * <li><p><strong>PhysicalConnectionId</strong>: instance ID of the Express Connect circuit instance.</p>
+         * <li><p><strong>PhysicalConnectionId</strong>: instance ID of the Express Connect circuit.</p>
          * </li>
-         * <li><p><strong>VbrId</strong>: instance ID of the Virtual Border Router instance.</p>
+         * <li><p><strong>VbrId</strong>: instance ID of the VBR.</p>
          * </li>
-         * <li><p><strong>Status</strong>: the status of the Virtual Border Router.</p>
+         * <li><p><strong>Status</strong>: the status of the VBR.</p>
          * </li>
-         * <li><p><strong>Name</strong>: the name of the Virtual Border Router.</p>
+         * <li><p><strong>Name</strong>: the name of the VBR.</p>
          * </li>
          * <li><p><strong>AccessPointId</strong>: instance ID of the access point.</p>
          * </li>
          * <li><p><strong>eccId</strong>: instance ID of the Express Cloud Connect instance.</p>
          * </li>
-         * <li><p><strong>type</strong>: the type of the Virtual Border Router.</p>
+         * <li><p><strong>type</strong>: the type of the VBR.</p>
          * </li>
          * </ul>
          * 
@@ -153,7 +153,7 @@ public class DescribeVirtualBorderRoutersForPhysicalConnectionRequest extends Te
         public String key;
 
         /**
-         * <p>The filter values based on the specified Key. You can specify multiple filter values for a single Key. The relationship between multiple filter values is OR, which means that a match with any one of the filter values is considered a match for the filter condition.</p>
+         * <p>The filter value corresponding to the filter condition. You can specify multiple filter values for a single filter condition. The filter values are evaluated by using the OR logical operator. If a resource matches one of the filter values, it matches the filter condition.</p>
          * 
          * <strong>example:</strong>
          * <p>Active</p>

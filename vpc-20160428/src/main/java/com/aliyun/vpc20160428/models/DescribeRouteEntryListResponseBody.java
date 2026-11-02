@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeRouteEntryListResponseBody extends TeaModel {
     /**
-     * <p>The pagination token. Valid values:</p>
+     * <p>The pagination token that is used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
-     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query is required.</li>
+     * <li>If <strong>NextToken</strong> returns a value, the value indicates the token used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,6 +28,13 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
 
     @NameInMap("RouteEntrys")
     public DescribeRouteEntryListResponseBodyRouteEntrys routeEntrys;
+
+    /**
+     * <strong>example:</strong>
+     * <p>1</p>
+     */
+    @NameInMap("TotalCount")
+    public Integer totalCount;
 
     public static DescribeRouteEntryListResponseBody build(java.util.Map<String, ?> map) throws Exception {
         DescribeRouteEntryListResponseBody self = new DescribeRouteEntryListResponseBody();
@@ -56,6 +63,14 @@ public class DescribeRouteEntryListResponseBody extends TeaModel {
     }
     public DescribeRouteEntryListResponseBodyRouteEntrys getRouteEntrys() {
         return this.routeEntrys;
+    }
+
+    public DescribeRouteEntryListResponseBody setTotalCount(Integer totalCount) {
+        this.totalCount = totalCount;
+        return this;
+    }
+    public Integer getTotalCount() {
+        return this.totalCount;
     }
 
     public static class DescribeRouteEntryListResponseBodyRouteEntrysRouteEntryNextHopsNextHopNextHopRelatedInfo extends TeaModel {

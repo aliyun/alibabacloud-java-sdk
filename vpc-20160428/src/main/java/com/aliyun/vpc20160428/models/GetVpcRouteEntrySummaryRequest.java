@@ -12,7 +12,7 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
 
     /**
      * <p>The ID of the region where the route table resides.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,12 +31,12 @@ public class GetVpcRouteEntrySummaryRequest extends TeaModel {
      * <p>The type of the route. Valid values:</p>
      * <ul>
      * <li><strong>all</strong>: all route types.</li>
-     * <li><strong>custom</strong>: custom route.</li>
-     * <li><strong>system</strong>: system route.</li>
-     * <li><strong>bgp</strong>: BGP route.</li>
-     * <li><strong>cen</strong>: Cloud Enterprise Network (CEN) route.</li>
-     * <li><strong>type_vpn_bgp_internal</strong>: VPN BGP route.</li>
-     * <li><strong>ECR</strong>: Express Connect Router (ECR) route.</li>
+     * <li><strong>custom</strong>: custom routes.</li>
+     * <li><strong>system</strong>: system routes.</li>
+     * <li><strong>bgp</strong>: BGP routes.</li>
+     * <li><strong>cen</strong>: Cloud Enterprise Network (CEN) routes.</li>
+     * <li><strong>type_vpn_bgp_internal</strong>: BGP routes of VPN.</li>
+     * <li><strong>ECR</strong>: Express Connect Router (ECR) routes.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

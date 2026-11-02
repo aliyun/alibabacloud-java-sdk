@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateVpnRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The timestamp when the destination route was created. Unit: milliseconds.</p>
-     * <p>The timestamp follows the UNIX timestamp format, which represents the total number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC to the time when the destination route was created.</p>
+     * <p>The timestamp is in the UNIX format, which represents the total duration from 00:00:00 on January 1, 1970 (UTC) to the time when the destination route was created.</p>
      * 
      * <strong>example:</strong>
      * <p>1492747187000</p>
@@ -33,7 +33,7 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling).</p>
+     * <p>The tunnel protocol. Set the value to <strong>Ipsec</strong> (IPsec tunnel protocol).</p>
      * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
@@ -42,7 +42,7 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
     public String overlayMode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>5BE01CD7-5A50-472D-AC14-CA181C5C03BE</p>
@@ -60,11 +60,11 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
     public String routeDest;
 
     /**
-     * <p>The publish status of the destination route.</p>
+     * <p>The publish status of the destination route. Valid values:</p>
      * <ul>
-     * <li><p><strong>published</strong>: The destination route is published to the VPC route table.</p>
+     * <li><p><strong>published</strong>: The destination route is published to the route table of the VPC.</p>
      * </li>
-     * <li><p><strong>normal</strong>: The destination route is not published to the VPC route table.</p>
+     * <li><p><strong>normal</strong>: The destination route is not published to the route table of the VPC.</p>
      * </li>
      * </ul>
      * 
@@ -86,8 +86,8 @@ public class CreateVpnRouteEntryResponseBody extends TeaModel {
     /**
      * <p>The weight of the destination route. Valid values:</p>
      * <ul>
-     * <li><strong>100</strong>: The destination route has a high priority.</li>
-     * <li><strong>0</strong>: The destination route has a low priority.</li>
+     * <li><strong>100</strong>: The destination route has a higher priority.</li>
+     * <li><strong>0</strong>: The destination route has a lower priority.</li>
      * </ul>
      * 
      * <strong>example:</strong>

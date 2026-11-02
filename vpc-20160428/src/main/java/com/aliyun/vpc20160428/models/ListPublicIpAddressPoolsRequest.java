@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListPublicIpAddressPoolsRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without querying available IP address pool information. The system checks whether the required parameters are specified, whether the request format is valid, and whether business restrictions are met. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: prechecks the request without querying available IP address pools. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,13 +20,13 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <ul>
-     * <li><p><strong>BGP</strong> (default): BGP (multi-ISP) line.</p>
+     * <li><p><strong>BGP</strong> (default): BGP (Multi-ISP) line.</p>
      * </li>
-     * <li><p><strong>BGP_PRO</strong>: BGP (multi-ISP) Pro line.</p>
+     * <li><p><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro line.</p>
      * </li>
      * </ul>
-     * <p>For more information about BGP (multi-ISP) lines and BGP (multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
-     * <p>If you are a whitelist user of single-ISP bandwidth, you can also select the following types:</p>
+     * <p>For more information about BGP (Multi-ISP) and BGP (Multi-ISP) Pro lines, see <a href="https://help.aliyun.com/document_detail/32321.html">EIP line types</a>.</p>
+     * <p>If you are a single-ISP bandwidth whitelist user, you can also select the following types:</p>
      * <ul>
      * <li><strong>ChinaTelecom</strong>: China Telecom</li>
      * <li><strong>ChinaUnicom</strong>: China Unicom</li>
@@ -35,7 +35,7 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
      * <li><strong>ChinaUnicom_L2</strong>: China Unicom L2</li>
      * <li><strong>ChinaMobile_L2</strong>: China Mobile L2</li>
      * </ul>
-     * <p>If you are a China (Hangzhou) Finance Cloud user, this field is required. Set the value to <strong>BGP_FinanceCloud</strong>.</p>
+     * <p>If you are an Alibaba Finance Cloud user in the China (Hangzhou) region, this parameter is required. Set the value to <strong>BGP_FinanceCloud</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>BGP</p>
@@ -44,7 +44,7 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     public String isp;
 
     /**
-     * <p>The maximum number of entries to return in this request. Valid values: <strong>10</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The maximum number of entries to return for a single request. Valid values: <strong>10</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -53,7 +53,7 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The name of the IP address pool instance.</p>
+     * <p>The name of the IP address pool.</p>
      * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -63,10 +63,10 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The pagination token that is used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request or if no subsequent request is to be sent.</li>
-     * <li>If a subsequent request is to be sent, set the value to the NextToken value returned in the previous API call.</li>
+     * <li>Leave this parameter empty for the first request and when no subsequent request is required.</li>
+     * <li>For subsequent requests, set this parameter to the NextToken value returned from the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -82,15 +82,15 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The list of IP address pool instance IDs.</p>
-     * <p>You can specify up to 100 IP address pool instance IDs.</p>
+     * <p>The list of IP address instance IDs.</p>
+     * <p>You can enter up to 100 IP address instance IDs.</p>
      */
     @NameInMap("PublicIpAddressPoolIds")
     public java.util.List<String> publicIpAddressPoolIds;
 
     /**
-     * <p>The region ID of the IP address pool that you want to query.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
+     * <p>The region ID of the IP address pool.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -117,8 +117,8 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable Anti-DDoS (Enhanced). Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: disabled.</li>
-     * <li><strong>true</strong>: enabled.</li>
+     * <li><strong>false</strong>: disables Anti-DDoS (Enhanced).</li>
+     * <li><strong>true</strong>: enables Anti-DDoS (Enhanced).</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,11 +128,11 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
     public Boolean securityProtectionEnabled;
 
     /**
-     * <p>The instance status of the IPAM pool. Valid values:</p>
+     * <p>The instance status of the IP address pool. Valid values:</p>
      * <ul>
-     * <li><strong>Created</strong>: active.</li>
-     * <li><strong>Deleting</strong>: being deleted.</li>
-     * <li><strong>Modifying</strong>: being modified.</li>
+     * <li><strong>Created</strong>: available.</li>
+     * <li><strong>Deleting</strong>: delete in progress.</li>
+     * <li><strong>Modifying</strong>: modify in progress.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -274,8 +274,8 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
 
     public static class ListPublicIpAddressPoolsRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -284,8 +284,8 @@ public class ListPublicIpAddressPoolsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

@@ -17,7 +17,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page in paging query.</p>
+     * <p>The number of entries per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,9 +35,9 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>true</strong>: The call was successful.</li>
      * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 
@@ -48,7 +48,7 @@ public class DescribeFlowLogsResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of flow logs returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

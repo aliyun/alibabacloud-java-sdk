@@ -7,9 +7,9 @@ public class PublishVpcRouteEntriesRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without publishing route entries. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
+     * <li><p><strong>true</strong>: performs a dry run without publishing routes. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a normal request. If the check succeeds, a 2xx HTTP status code is returned and the resource status is queried.</p>
+     * <li><p><strong>false</strong> (default): sends a Normal request. After the check succeeds, a 2xx HTTP status code is returned and the route publishing operation is performed.</p>
      * </li>
      * </ul>
      * 
@@ -42,12 +42,13 @@ public class PublishVpcRouteEntriesRequest extends TeaModel {
 
     /**
      * <p>The list of route entries to publish. You can specify up to 50 routes.</p>
+     * <p>This parameter is required.</p>
      */
     @NameInMap("RouteEntries")
     public java.util.List<PublishVpcRouteEntriesRequestRouteEntries> routeEntries;
 
     /**
-     * <p>The publish route entry target instance ID.</p>
+     * <p>The target instance ID for route publishing.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

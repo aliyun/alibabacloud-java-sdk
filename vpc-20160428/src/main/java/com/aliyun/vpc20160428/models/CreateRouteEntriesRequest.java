@@ -6,8 +6,8 @@ import com.aliyun.tea.*;
 public class CreateRouteEntriesRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <p><strong>true</strong>: performs a dry run without creating routes. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</p>
-     * <p><strong>false</strong> (default): sends a Normal request. If the check passes, a 2xx HTTP status code is returned and the routes are created.</p>
+     * <p><strong>true</strong>: performs a dry run without creating routes. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check passes, the error code <code>DryRunOperation</code> is returned.</p>
+     * <p><strong>false</strong> (default): performs a normal request and sends the request. If the check passes, a 2xx HTTP status code is returned and the routes are created.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
@@ -19,8 +19,8 @@ public class CreateRouteEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the route table.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The ID of the region where the route table resides.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class CreateRouteEntriesRequest extends TeaModel {
 
     public static class CreateRouteEntriesRequestRouteEntries extends TeaModel {
         /**
-         * <p>The description of the custom route entry. You can specify a maximum of 50 descriptions.</p>
+         * <p>The description of the custom route entry. You can specify up to 50 descriptions.</p>
          * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -115,9 +115,9 @@ public class CreateRouteEntriesRequest extends TeaModel {
         public String description;
 
         /**
-         * <p>The destination CIDR block of the custom route entry. Both IPv4 and IPv6 destination CIDR blocks are supported. You can specify a maximum of 50 destination CIDR blocks. The following requirements must be met:</p>
+         * <p>The destination CIDR block of the custom route entry. Both IPv4 and IPv6 destination CIDR blocks are supported. You can specify up to 50 destination CIDR blocks. The following requirements must be met:</p>
          * <ul>
-         * <li><p>The destination CIDR block cannot point to or be contained by 100.64.0.0/10.  </p>
+         * <li><p>The destination CIDR block cannot point to 100.64.0.0/10 or be contained by 100.64.0.0/10.  </p>
          * </li>
          * <li><p>The destination CIDR blocks of different route entries in the same route table must be unique.</p>
          * </li>
@@ -131,7 +131,7 @@ public class CreateRouteEntriesRequest extends TeaModel {
         public String dstCidrBlock;
 
         /**
-         * <p>The version of the IP protocol. You can specify a maximum of 50 IP protocol versions. Valid values:</p>
+         * <p>The version of the IP protocol. You can specify up to 50 IP protocol versions. Valid values:</p>
          * <ul>
          * <li><strong>4</strong>: IPv4.</li>
          * <li><strong>6</strong>: IPv6.</li>
@@ -144,7 +144,7 @@ public class CreateRouteEntriesRequest extends TeaModel {
         public Integer ipVersion;
 
         /**
-         * <p>The name of the custom route entry to add. You can specify a maximum of 50 names.</p>
+         * <p>The name of the custom route entry to add. You can specify up to 50 names.</p>
          * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -154,9 +154,9 @@ public class CreateRouteEntriesRequest extends TeaModel {
         public String name;
 
         /**
-         * <p>The ID of the next hop instance for the custom route entry. You can specify a maximum of 50 instance IDs.</p>
+         * <p>The ID of the next hop instance of the custom route entry. You can specify up to 50 instance IDs.</p>
          * <blockquote>
-         * <p>If NextHopType is set to ECR, you can call <a href="https://help.aliyun.com/document_detail/2712069.html">DescribeExpressConnectRouterAssociation</a> to obtain the AssociationId as the next hop ID.</p>
+         * <p>If NextHopType is set to ECR, you can call the <a href="https://help.aliyun.com/document_detail/2712069.html">DescribeExpressConnectRouterAssociation</a> operation to obtain the AssociationId as the next hop ID.</p>
          * </blockquote>
          * <p>This parameter is required.</p>
          * 
@@ -167,9 +167,9 @@ public class CreateRouteEntriesRequest extends TeaModel {
         public String nextHop;
 
         /**
-         * <p>The type of the next hop for the custom route entry. You can specify a maximum of 50 next hop types. Valid values: </p>
+         * <p>The type of the next hop of the custom route entry. You can specify up to 50 next hop types. Valid values: </p>
          * <ul>
-         * <li><p><strong>Instance</strong> (default): ECS instance. Forwards traffic to an ECS instance.</p>
+         * <li><p><strong>Instance</strong> (default): ECS instance.</p>
          * </li>
          * <li><p><strong>HaVip</strong>: high-availability virtual IP address.  </p>
          * </li>
@@ -183,7 +183,7 @@ public class CreateRouteEntriesRequest extends TeaModel {
          * </li>
          * <li><p><strong>NatGateway</strong>: NAT gateway.</p>
          * </li>
-         * <li><p><strong>Attachment</strong>: transit router. Forwards traffic to a transit router.</p>
+         * <li><p><strong>Attachment</strong>: forward router.</p>
          * </li>
          * <li><p><strong>VpcPeer</strong>: VPC peering connection.</p>
          * </li>
@@ -191,13 +191,13 @@ public class CreateRouteEntriesRequest extends TeaModel {
          * </li>
          * <li><p><strong>GatewayEndpoint</strong>: gateway endpoint.</p>
          * </li>
-         * <li><p><strong>CenBasic</strong>: CEN that does not support transit routers.</p>
+         * <li><p><strong>CenBasic</strong>: CEN that does not support forward routers.</p>
          * </li>
          * <li><p><strong>Ecr</strong>: Express Connect Router (ECR).</p>
          * </li>
          * <li><p><strong>GatewayLoadBalancerEndpoint</strong>: Gateway Load Balancer endpoint (GWLBe).</p>
          * </li>
-         * <li><p><strong>RouteTargetGroup</strong>: routing target group.</p>
+         * <li><p><strong>RouteTargetGroup</strong>: route target group.</p>
          * </li>
          * </ul>
          * <p>This parameter is required.</p>
@@ -209,7 +209,7 @@ public class CreateRouteEntriesRequest extends TeaModel {
         public String nextHopType;
 
         /**
-         * <p>The ID of the route table to which you want to add the custom route entry. You can specify a maximum of 50 route table IDs.</p>
+         * <p>The ID of the route table to which you want to add custom route entries. You can specify up to 50 route table IDs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

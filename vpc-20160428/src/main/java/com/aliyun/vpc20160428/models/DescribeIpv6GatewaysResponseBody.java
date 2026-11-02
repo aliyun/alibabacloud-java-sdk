@@ -8,7 +8,7 @@ public class DescribeIpv6GatewaysResponseBody extends TeaModel {
     public DescribeIpv6GatewaysResponseBodyIpv6Gateways ipv6Gateways;
 
     /**
-     * <p>The current page number.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

@@ -14,22 +14,35 @@ public class CreateNatGatewayRequest extends TeaModel {
     public CreateNatGatewayRequestAccessMode accessMode;
 
     /**
-     * <p>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
+     * <p>Subscription Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
+     * <blockquote>
+     * <p>Notice:  This parameter is deprecated.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
-     * <p>无效参数</p>
+     * <p>false</p>
      */
     @NameInMap("AutoPay")
     public Boolean autoPay;
 
+    /**
+     * <p>The disaster recovery type of the NAT gateway. Valid values:</p>
+     * <ul>
+     * <li><strong>CrossAZ</strong>: cross-zone disaster recovery.</li>
+     * <li><strong>SingleAZ</strong>: single-zone disaster recovery.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>CrossAZ</p>
+     */
     @NameInMap("AvailabilityMode")
     public String availabilityMode;
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -40,7 +53,7 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * <p>The description of the NAT gateway.</p>
-     * <p>The description can be empty or 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description can be left empty or be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>testnat</p>
@@ -49,20 +62,20 @@ public class CreateNatGatewayRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
+     * <p>Subscription Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
      * 
      * <strong>example:</strong>
-     * <p>无效参数</p>
+     * <p>Invalid parameter</p>
      */
     @NameInMap("Duration")
     public String duration;
 
     /**
-     * <p>The EIP binding pattern of the NAT gateway. Valid values:</p>
+     * <p>The EIP binding mode of the NAT gateway. Valid values:</p>
      * <ul>
-     * <li><strong>MULTI_BINDED</strong> (default): multi-EIP network interface controller (NIC)-visible pattern.</li>
-     * <li><strong>NAT</strong>: EIP normal pattern, compatible with IPv4 gateways.<blockquote>
-     * <p>When the EIP binding pattern of the NAT gateway is set to EIP normal pattern, each EIP occupies a private IP address in the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. If no idle private IP addresses are available in the vSwitch, new EIPs cannot be attached. In EIP normal pattern, a maximum of 50 EIPs can be attached to the NAT gateway.</p>
+     * <li><strong>MULTI_BINDED</strong> (default): multi-EIP NIC-visible mode.</li>
+     * <li><strong>NAT</strong>: NAT mode, which is compatible with IPv4 gateways.<blockquote>
+     * <p>When the EIP binding mode of the NAT gateway is set to NAT mode, the EIP occupies a private IP address of the vSwitch to which the NAT gateway belongs. Make sure that the vSwitch has sufficient private IP addresses. If the vSwitch to which the NAT gateway belongs does not have available idle private IP addresses, you cannot bind new EIPs. When the EIP binding mode of the NAT gateway is set to NAT mode, the NAT gateway supports a maximum of 50 EIPs.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -76,8 +89,8 @@ public class CreateNatGatewayRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable ICMP echo reply. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): Enabled.</li>
-     * <li><strong>false</strong>: Disabled.</li>
+     * <li><strong>true</strong> (default): enables ICMP echo reply.</li>
+     * <li><strong>false</strong>: disables ICMP echo reply.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,7 +102,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     /**
      * <p>The billing method of the NAT gateway. Valid values:</p>
      * <p><strong>PostPaid</strong> (default): pay-as-you-go.</p>
-     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Billing of Internet NAT gateways</a> and <a href="https://help.aliyun.com/document_detail/270913.html">Billing of VPC NAT gateways</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/48126.html">Internet NAT gateway billing</a> and <a href="https://help.aliyun.com/document_detail/270913.html">VPC NAT gateway billing</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>PostPaid</p>
@@ -98,7 +111,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     public String instanceChargeType;
 
     /**
-     * <p>The metering method of the NAT gateway. Valid values: <strong>PayByLcu</strong>: pay-by-data-transfer.</p>
+     * <p>The metering method of the NAT gateway. Set the value to <strong>PayByLcu</strong>, which specifies pay-by-LCU.</p>
      * 
      * <strong>example:</strong>
      * <p>PayByLcu</p>
@@ -107,7 +120,10 @@ public class CreateNatGatewayRequest extends TeaModel {
     public String internetChargeType;
 
     /**
-     * <p>The IP prefix CIDR block used to create NAT IP addresses in batches. Specify an unassigned reserved CIDR block from the vSwitch to which the NAT gateway belongs.</p>
+     * <p>The IP prefix CIDR block that is used to create NAT IP addresses in batches. Use an unallocated reserved CIDR block in the vSwitch to which the NAT gateway belongs.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only for VPC NAT gateways.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/28</p>
@@ -117,8 +133,8 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * <p>The name of the NAT gateway.</p>
-     * <p>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
-     * <p>If you do not specify this parameter, the system assigns a default name to the NAT gateway.</p>
+     * <p>The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character, and can contain digits, underscores (_), and hyphens (-).</p>
+     * <p>If you do not specify this parameter, the system generates a default name for the NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>fortest</p>
@@ -127,7 +143,10 @@ public class CreateNatGatewayRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The private IP address occupied by the NAT gateway. Specify an unallocated IP address from the vSwitch CIDR block to which the NAT gateway belongs. If this parameter is left empty, a random IP address is allocated.</p>
+     * <p>The private IP address that is allocated to the NAT gateway. Use an unallocated IP address in the vSwitch CIDR block of the NAT gateway. If this parameter is left empty, an IP address is randomly allocated.</p>
+     * <blockquote>
+     * <p>This parameter takes effect only for VPC NAT gateways.</p>
+     * </blockquote>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.2</p>
@@ -136,7 +155,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     public String natIp;
 
     /**
-     * <p>The type of the NAT gateway. Valid values: <strong>Enhanced</strong>: enhanced NAT gateway.</p>
+     * <p>The type of the NAT gateway. Set the value to <strong>Enhanced</strong>, which specifies an enhanced NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>Enhanced</p>
@@ -145,7 +164,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     public String natType;
 
     /**
-     * <p>The type of NAT gateway to create. Valid values:</p>
+     * <p>The type of the NAT gateway that you want to create. Valid values:</p>
      * <ul>
      * <li><p><strong>internet</strong>: Internet NAT gateway.</p>
      * </li>
@@ -166,10 +185,10 @@ public class CreateNatGatewayRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
+     * <p>Subscription Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
      * 
      * <strong>example:</strong>
-     * <p>无效参数</p>
+     * <p>Invalid parameter</p>
      */
     @NameInMap("PricingCycle")
     public String pricingCycle;
@@ -177,9 +196,9 @@ public class CreateNatGatewayRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable PrivateLink. Valid values:</p>
      * <ul>
-     * <li><p>true: Enabled.</p>
+     * <li><p>true: enables PrivateLink.</p>
      * </li>
-     * <li><p>false (default): Disabled.</p>
+     * <li><p>false (default): disables PrivateLink.</p>
      * </li>
      * </ul>
      * 
@@ -191,7 +210,7 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * <p>The region ID of the NAT gateway.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -209,7 +228,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the firewall feature. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): Disabled.<blockquote>
+     * <li><strong>false</strong> (default): disables the firewall feature.<blockquote>
      * <p>Notice:  This parameter is deprecated.</p>
      * </blockquote>
      * </li>
@@ -223,10 +242,10 @@ public class CreateNatGatewayRequest extends TeaModel {
     public Boolean securityProtectionEnabled;
 
     /**
-     * <p>Subscription-based Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
+     * <p>Subscription Internet NAT gateways are no longer available for purchase. This parameter is no longer used.</p>
      * 
      * <strong>example:</strong>
-     * <p>无效参数</p>
+     * <p>Invalid parameter</p>
      */
     @NameInMap("Spec")
     public String spec;
@@ -242,11 +261,11 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     /**
      * <p>The ID of the vSwitch to which the NAT gateway belongs.</p>
-     * <p>When you create a NAT gateway, you must specify the vSwitch to which the NAT gateway belongs. The system allocates an available private IP address from the vSwitch to the NAT gateway.</p>
+     * <p>When you create a NAT gateway, you must specify the vSwitch to which the NAT gateway belongs. The system allocates an idle private IP address from the vSwitch to the NAT gateway.</p>
      * <ul>
-     * <li><p>To create a NAT gateway in an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways and the vSwitch has active IP addresses.</p>
+     * <li><p>If you want to create a NAT gateway in an existing vSwitch, make sure that the zone to which the vSwitch belongs supports NAT gateways and the vSwitch has available IP addresses.</p>
      * </li>
-     * <li><p>If you have not created a vSwitch, create a vSwitch in a zone that supports NAT gateways first, and then specify the vSwitch for the NAT gateway.</p>
+     * <li><p>If you have not created a vSwitch, create a vSwitch in a zone that supports NAT gateways, and then specify the vSwitch to which the NAT gateway belongs.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -260,7 +279,7 @@ public class CreateNatGatewayRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC in which you want to create the NAT gateway.</p>
+     * <p>The ID of the VPC where you want to create the NAT gateway.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -513,10 +532,10 @@ public class CreateNatGatewayRequest extends TeaModel {
         /**
          * <p>The tunnel mode type. Valid values:</p>
          * <ul>
-         * <li><strong>geneve</strong>: Geneve type.</li>
+         * <li><strong>geneve</strong>: Geneve.</li>
          * </ul>
          * <blockquote>
-         * <p>This value takes effect only when the access mode is tunnel mode.</p>
+         * <p>This value is valid only when the access mode is set to tunnel mode.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -550,7 +569,7 @@ public class CreateNatGatewayRequest extends TeaModel {
 
     public static class CreateNatGatewayRequestTag extends TeaModel {
         /**
-         * <p>The tag key. Specify this parameter in the Tag.N.Key format. N is the index of the tag, with valid values from 1 to 20. The tag key cannot be an empty string. The tag key can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag key. You can use the Tag.N.Key format when you call API operations. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag key can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestKey</p>
@@ -559,7 +578,7 @@ public class CreateNatGatewayRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value. Specify this parameter in the Tag.N.Value format. N is the index of the tag, with valid values from 1 to 20. The tag value cannot be an empty string. The tag value can be up to 128 characters in length and cannot start with aliyun or acs:. It cannot contain http:// or https://.</p>
+         * <p>The tag value. You can use the Tag.N.Value format when you call API operations. Valid values of N: 1 to 20. If you specify this parameter, it cannot be an empty string. The tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>TestValue</p>

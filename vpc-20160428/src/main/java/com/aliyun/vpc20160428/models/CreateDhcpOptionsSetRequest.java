@@ -39,7 +39,7 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
 
     /**
      * <p>The hostname suffix. Example: example.com.</p>
-     * <p>After the DHCP options set is used to associate VPC, the hostname suffix is automatically synchronized to the ECS instances in the VPC.</p>
+     * <p>After you associate VPC with the DHCP options set, the hostname suffix is automatically synchronized to the ECS instances in the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -50,7 +50,7 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     /**
      * <p>The IP addresses of DNS servers. You can specify up to four DNS server IP addresses. Separate multiple IP addresses with commas (,).</p>
      * <blockquote>
-     * <p>If you do not specify DNS server IP addresses, ECS instances use the DNS server IP addresses provided by Alibaba Cloud (100.100.2.136 and 100.100.2.138) by default.</p>
+     * <p>If you do not specify DNS server IP addresses, ECS instances use the DNS server IP addresses provided by Alibaba Cloud by default (100.100.2.136 and 100.100.2.138).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,9 +73,9 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     /**
      * <p>The lease time of the IPv6 DHCP options set.</p>
      * <ul>
-     * <li><p>If the lease time is in hours, the unit is h. Valid values: <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>24h</strong>.</p>
+     * <li><p>If the lease time is set in hours, the unit is h. Valid values: <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>24h</strong>.</p>
      * </li>
-     * <li><p>If the lease time is in days, the unit is d. Valid values: <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>1d</strong>.</p>
+     * <li><p>If the lease time is set in days, the unit is d. Valid values: <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>1d</strong>.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -91,9 +91,9 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     /**
      * <p>The lease time of the IPv4 DHCP options set.</p>
      * <ul>
-     * <li><p>If the lease time is in hours, the unit is h. Valid values: <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</p>
+     * <li><p>If the lease time is set in hours, the unit is h. Valid values: <strong>24h to 1176h</strong> and <strong>87600h to 175200h</strong>. Default value: <strong>87600h</strong>.</p>
      * </li>
-     * <li><p>If the lease time is in days, the unit is d. Valid values: <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</p>
+     * <li><p>If the lease time is set in days, the unit is d. Valid values: <strong>1d to 49d</strong> and <strong>3650d to 7300d</strong>. Default value: <strong>3650d</strong>.</p>
      * </li>
      * </ul>
      * <blockquote>
@@ -113,7 +113,7 @@ public class CreateDhcpOptionsSetRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region in which the DHCP options set resides.</p>
+     * <p>The region where the DHCP options set resides.</p>
      * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 

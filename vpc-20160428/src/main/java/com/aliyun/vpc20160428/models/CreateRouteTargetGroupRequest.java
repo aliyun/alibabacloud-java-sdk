@@ -27,7 +27,7 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
     public String configMode;
 
     /**
-     * <p>The region ID of the route target group. You can call the DescribeRegions operation to query the region ID.</p>
+     * <p>The region ID of the route target group. You can call the DescribeRegions operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -47,8 +47,7 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The description of the route target group.
-     * The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
+     * <p>The description of the route target group. The description must be 1 to 256 characters in length and cannot start with http:// or https://.</p>
      * 
      * <strong>example:</strong>
      * <p>myRouteTargetGroupDescription</p>
@@ -67,7 +66,7 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
     public String routeTargetGroupName;
 
     /**
-     * <p>The member list of the route target group.</p>
+     * <p>The list of members in the route target group.</p>
      * <p>In active/standby mode, the following limits apply to route target group members:</p>
      * <ol>
      * <li>The number of route target group members must be 2.</li>
@@ -183,12 +182,12 @@ public class CreateRouteTargetGroupRequest extends TeaModel {
         public String memberId;
 
         /**
-         * <p>The member type of the route target group.</p>
+         * <p>The type of the route target group member.</p>
          * <p>Supported type:</p>
          * <ul>
          * <li><strong>GatewayLoadBalancerEndpoint</strong></li>
          * </ul>
-         * <p>In active/standby mode, all members of the route target group must be of the same type.</p>
+         * <p>In active/standby mode, all members in the route target group must be of the same type.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

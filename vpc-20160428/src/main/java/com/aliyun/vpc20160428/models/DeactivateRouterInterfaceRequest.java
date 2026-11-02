@@ -8,8 +8,7 @@ public class DeactivateRouterInterfaceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the router interface is located.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>The region where the router interface resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
     /**
-     * <p>The certificate ID.</p>
+     * <p>The ID of the certificate.</p>
      * <blockquote>
      * <p>The certificate ID refers to the ID generated after the SSL certificate is associated with the VPN gateway, not the ID of the SSL certificate itself.
      * &lt;props=&quot;china&quot;&gt;You can call the <a href="https://help.aliyun.com/document_detail/2521961.html">ListVpnCertificateAssociations</a> operation to query the certificate ID.</p>
@@ -19,7 +19,7 @@ public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
     public String certificateId;
 
     /**
-     * <p>The certificate type. Valid values:</p>
+     * <p>The type of the certificate. Valid values:</p>
      * <ul>
      * <li><p><strong>Encryption</strong>: encryption certificate.</p>
      * </li>
@@ -36,9 +36,9 @@ public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, and you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -48,11 +48,11 @@ public class DissociateVpnGatewayWithCertificateRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without performing the actual request. The system checks the request for potential issues, including required parameters, request format, and instance status. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the error code <code>DryRunOperation</code> is returned.</p>
+     * <li><p><strong>true</strong>: Performs only a dry run and does not perform the dissociation operation. The system checks whether required parameters are specified, the request format is valid, and the instance status is valid. If the request fails the dry run, an error is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, the VPN gateway is dissociated from the SSL certificate.</p>
+     * <li><p><strong>false</strong> (default): Sends a normal request. If the request passes the dry run, the VPN gateway is dissociated from the SSL certificate.</p>
      * </li>
      * </ul>
      * 

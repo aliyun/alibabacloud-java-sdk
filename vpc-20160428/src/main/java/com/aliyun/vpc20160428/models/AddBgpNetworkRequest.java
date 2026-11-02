@@ -5,10 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddBgpNetworkRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +17,7 @@ public class AddBgpNetworkRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The CIDR block of the VPC or vSwitch that needs to be interconnected with the on-premises data center.</p>
+     * <p>The CIDR block of the VPC or vSwitch to be connected to the on-premises data center.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,8 +33,7 @@ public class AddBgpNetworkRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the VBR group resides.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the VBR group. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +49,7 @@ public class AddBgpNetworkRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the vRouter associated with the router interface.</p>
+     * <p>The ID of the router associated with the router interface.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

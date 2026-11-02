@@ -9,9 +9,9 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
      * <p>&lt;props=&quot;intl&quot;&gt;<ph>Default value range: <strong>1</strong> to <strong>1000</strong>. Default value: <strong>1</strong>.</ph></p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
-     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, which indicates that the billing method of the Internet Shared Bandwidth instance is pay-by-bandwidth, the default value range of <strong>Bandwidth</strong> is <strong>2</strong> to <strong>20000</strong>.</li>
-     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>, which indicates that the billing method of the Internet Shared Bandwidth instance is enhanced 95th percentile billing, the default value range of <strong>Bandwidth</strong> is <strong>200</strong> to <strong>20000</strong>.</li>
-     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByDominantTraffic</strong>, which indicates that the billing method of the Internet Shared Bandwidth instance is pay-by-dominant-traffic, the default value range of <strong>Bandwidth</strong> is <strong>1</strong> to <strong>2000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByBandwidth</strong>, which indicates the billing method is pay-by-bandwidth, the default value range of <strong>Bandwidth</strong> is <strong>2</strong> to <strong>20000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>, which indicates the billing method is enhanced 95th percentile, the default value range of <strong>Bandwidth</strong> is <strong>200</strong> to <strong>20000</strong>.</li>
+     * <li>If <strong>InternetChargeType</strong> is set to <strong>PayByDominantTraffic</strong>, which indicates the billing method is pay-by-dominant-traffic, the default value range of <strong>Bandwidth</strong> is <strong>1</strong> to <strong>2000</strong>.</li>
      * </ul>
      * <p> Default value: <strong>1000</strong>.</p>
      * <p>This parameter is required.</p>
@@ -48,8 +48,8 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     /**
      * <p>The line type. Valid values:</p>
      * <ul>
-     * <li><strong>BGP</strong> (default): BGP (multi-ISP) lines. BGP (multi-ISP) lines are supported in all regions.</li>
-     * <li><strong>BGP_PRO</strong>: BGP (multi-ISP) premium lines. Currently, BGP (multi-ISP) premium Internet Shared Bandwidth instances are supported only in the Hong Kong (China), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions.</li>
+     * <li><strong>BGP</strong> (default): BGP (multi-ISP) lines. All regions support BGP (multi-ISP) lines.</li>
+     * <li><strong>BGP_PRO</strong>: BGP (Multi-ISP) Pro lines. Currently, only Hong Kong (China), Singapore, Japan (Tokyo), Philippines (Manila), Malaysia (Kuala Lumpur), Indonesia (Jakarta), and Thailand (Bangkok) regions support BGP (Multi-ISP) Pro Internet Shared Bandwidth instances.</li>
      * </ul>
      * <p>If you are a single-ISP bandwidth whitelist user, you can also select the following types:</p>
      * <ul>
@@ -60,7 +60,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
      * <li><strong>ChinaUnicom_L2</strong>: China Unicom L2</li>
      * <li><strong>ChinaMobile_L2</strong>: China Mobile L2</li>
      * </ul>
-     * <p>If you are an Alibaba Finance Cloud user in Hangzhou, this parameter is required. Set the value to <strong>BGP_FinanceCloud</strong>.</p>
+     * <p>If you are a China (Hangzhou) Finance Cloud user, this field is required. Set the value to <strong>BGP_FinanceCloud</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>BGP</p>
@@ -74,12 +74,12 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <ul>
      * <li><strong>PayByBandwidth</strong> (default): pay-by-bandwidth.</li>
-     * <li><strong>PayBy95</strong>: pay-by-enhanced-95th-percentile.</li>
+     * <li><strong>PayBy95</strong>: enhanced 95th percentile.</li>
      * <li><strong>PayByDominantTraffic</strong>: pay-by-dominant-traffic.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>中国站示例值：PayByBandwidth，国际站示例值：PayByTraffic</p>
+     * <p>For China site: PayByBandwidth, for International site: PayByTraffic</p>
      */
     @NameInMap("InternetChargeType")
     public String internetChargeType;
@@ -104,7 +104,7 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
      * <p>The minimum bandwidth commitment percentage of the Internet Shared Bandwidth instance. Set the value to <strong>20</strong>.</p>
      * <p> &lt;props=&quot;china&quot;&gt;<ph>This parameter is required when <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>.</ph></p>
      * <blockquote>
-     * <p>This parameter is supported only on the China site.</p>
+     * <p>Only the China site supports this parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -140,17 +140,17 @@ public class CreateCommonBandwidthPackageRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The edition of Anti-DDoS.</p>
+     * <p>The security protection level.</p>
      * <ul>
-     * <li><p>If you leave this parameter empty, Anti-DDoS Origin Basic is used by default.</p>
+     * <li><p>If you do not set this parameter, Anti-DDoS Origin Basic is used by default.</p>
      * </li>
      * <li><p>If you set this parameter to <strong>AntiDDoS_Enhanced</strong>, Anti-DDoS Origin Enhanced is used.</p>
      * </li>
      * </ul>
-     * <p>&lt;props=&quot;china&quot;&gt;<ph>You can set this parameter when <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>.</ph></p>
-     * <p>You can add up to 10 security protection levels.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;<ph>This parameter can be configured when <strong>InternetChargeType</strong> is set to <strong>PayBy95</strong>.</ph></p>
+     * <p>You can specify up to 10 security protection levels.</p>
      * <blockquote>
-     * <p>This parameter is deprecated.</p>
+     * <p><strong>[Deprecated]</strong> This parameter is deprecated.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

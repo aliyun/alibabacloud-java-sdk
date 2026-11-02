@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateVirtualBorderRouterRequest extends TeaModel {
     /**
-     * <p>The bandwidth of the VBR instance. Unit: Mbit/s.</p>
+     * <p>The bandwidth value of the VBR instance. Unit: Mbit/s.</p>
      * <ul>
      * <li>When you create a VBR instance for a dedicated Express Connect circuit, valid values are <strong>50</strong>, <strong>100</strong>, <strong>200</strong>, <strong>300</strong>, <strong>400</strong>, <strong>500</strong>, <strong>1000</strong>, <strong>2048</strong>, <strong>5120</strong>, <strong>8192</strong>, <strong>10240</strong>, <strong>20480</strong>, <strong>40960</strong>, <strong>50120</strong>, <strong>61440</strong>, and <strong>102400</strong>.</li>
-     * <li>When you create a VBR instance for shared Express Connect circuits, you do not need to configure this parameter. The bandwidth of the VBR is the bandwidth of the shared Express Connect circuits that is specified in Settings when the shared Express Connect circuits are created.</li>
+     * <li>When you create a VBR instance for shared Express Connect circuits, you do not need to configure this parameter. The bandwidth of the VBR is the bandwidth of the shared Express Connect circuits that was specified in Settings when the shared Express Connect circuits were created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -189,7 +189,7 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
 
     /**
      * <p>The account ID of the VBR instance owner.</p>
-     * <p>The default value is the Alibaba Cloud account ID used for logon.</p>
+     * <p>The default value is the Alibaba Cloud account ID used to logon.</p>
      * 
      * <strong>example:</strong>
      * <p>168811111****</p>
@@ -394,7 +394,7 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
     public static class CreateVirtualBorderRouterRequestTags extends TeaModel {
         /**
          * <p>The tag key of the resource. You must specify at least 1 tag key and can specify at most 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -404,7 +404,7 @@ public class CreateVirtualBorderRouterRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify at most 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

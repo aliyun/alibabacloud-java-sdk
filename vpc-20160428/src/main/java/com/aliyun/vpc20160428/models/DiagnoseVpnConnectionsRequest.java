@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DiagnoseVpnConnectionsRequest extends TeaModel {
     /**
-     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DiagnoseVpnConnectionsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paging query. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -37,19 +37,19 @@ public class DiagnoseVpnConnectionsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The list of tunnel IDs.</p>
+     * <p>The IDs of the tunnels.</p>
      */
     @NameInMap("TunnelIds")
     public java.util.List<String> tunnelIds;
 
     /**
-     * <p>The list of IPsec-VPN connection IDs.</p>
+     * <p>The IDs of the IPsec-VPN connections.</p>
      */
     @NameInMap("VpnConnectionIds")
     public java.util.List<String> vpnConnectionIds;
 
     /**
-     * <p>The instance ID of the VPN gateway.</p>
+     * <p>The VPN gateway instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpn-bp10hz6b0mbp39flt****</p>

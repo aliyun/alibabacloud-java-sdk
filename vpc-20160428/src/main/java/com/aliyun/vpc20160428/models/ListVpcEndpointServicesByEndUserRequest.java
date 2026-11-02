@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     /**
-     * <p>The number of entries per page in a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The maximum number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -16,8 +16,8 @@ public class ListVpcEndpointServicesByEndUserRequest extends TeaModel {
     /**
      * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>Leave this parameter empty for the first query or if no next query exists.</li>
-     * <li>If a next query exists, set this parameter to the NextToken value returned in the previous API call.</li>
+     * <li>Leave this parameter empty for the first query or when no subsequent query is required.</li>
+     * <li>If a subsequent query is required, set the value to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>

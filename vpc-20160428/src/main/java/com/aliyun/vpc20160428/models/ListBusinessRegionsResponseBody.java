@@ -14,7 +14,7 @@ public class ListBusinessRegionsResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The list of regions where Express Connect circuits are available for purchase.</p>
+     * <p>The list of regions where Express Connect circuits can be purchased.</p>
      */
     @NameInMap("GeographicSubRegions")
     public java.util.List<ListBusinessRegionsResponseBodyGeographicSubRegions> geographicSubRegions;
@@ -59,16 +59,16 @@ public class ListBusinessRegionsResponseBody extends TeaModel {
 
     public static class ListBusinessRegionsResponseBodyGeographicSubRegions extends TeaModel {
         /**
-         * <p>The name of the region where Express Connect circuits are available for purchase.</p>
+         * <p>The name of the region where Express Connect circuits can be purchased.</p>
          * 
          * <strong>example:</strong>
-         * <p>华东1(杭州)</p>
+         * <p>China (Hangzhou)</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
-         * <p>The region ID where Express Connect circuits are available for purchase.</p>
+         * <p>The ID of the region where Express Connect circuits can be purchased.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>

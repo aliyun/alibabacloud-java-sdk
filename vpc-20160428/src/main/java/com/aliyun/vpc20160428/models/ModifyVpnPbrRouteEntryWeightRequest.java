@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can generate the parameter value from your client to ensure that the value is unique across different requests. The client token supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> of each API request is different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -20,8 +20,8 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     /**
      * <p>The new weight of the policy-based route. Valid values:</p>
      * <ul>
-     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</li>
-     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</li>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the current policy-based route is the active link.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the current policy-based route is the standby link.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -42,7 +42,7 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling protocol).</p>
+     * <p>The tunnel protocol. Valid value: <strong>Ipsec</strong> (IPsec tunnel protocol).</p>
      * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
@@ -59,10 +59,10 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     /**
      * <p>Policy priority of the policy-based route.</p>
      * <ul>
-     * <li><p>If no priority was previously configured for the policy-based route, you do not need to specify this parameter.</p>
+     * <li><p>If the policy-based route does not have a priority, you do not need to specify this parameter.</p>
      * </li>
-     * <li><p>If a priority was previously configured for the policy-based route, this parameter is optional.</p>
-     * <p> If you specify this parameter, enter policy priority that was previously configured for the policy-based route. If you enter a different value, the operation fails.</p>
+     * <li><p>If the policy-based route has a priority, you can specify or leave this parameter empty.</p>
+     * <p> If you specify this parameter, you must set it to policy priority that is already configured for the policy-based route. If you set it to another value, the call to this operation fails.</p>
      * </li>
      * </ul>
      * 
@@ -73,7 +73,7 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The region ID of the VPN gateway instance. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>The region ID of the VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -121,8 +121,8 @@ public class ModifyVpnPbrRouteEntryWeightRequest extends TeaModel {
     /**
      * <p>The original weight of the policy-based route. Valid values:</p>
      * <ul>
-     * <li><strong>100</strong>: The IPsec-VPN connection associated with the policy-based route serves as the active connection.</li>
-     * <li><strong>0</strong>: The IPsec-VPN connection associated with the policy-based route serves as the standby connection.</li>
+     * <li><strong>100</strong>: The IPsec-VPN connection associated with the current policy-based route is the active link.</li>
+     * <li><strong>0</strong>: The IPsec-VPN connection associated with the current policy-based route is the standby link.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

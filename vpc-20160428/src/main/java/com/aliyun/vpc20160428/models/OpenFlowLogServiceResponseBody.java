@@ -14,7 +14,7 @@ public class OpenFlowLogServiceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The message returned when the flow log service is activated.</p>
+     * <p>The message returned when the flow log feature is activated.</p>
      * 
      * <strong>example:</strong>
      * <p>successful</p>

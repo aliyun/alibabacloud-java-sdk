@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateIPv6TranslatorRequest extends TeaModel {
     /**
-     * <p>Specifies whether automatic payment is enabled for the subscription bill. Valid values: <strong>true|false</strong>.</p>
+     * <p>Specifies whether automatic payment is enabled for subscription bills. Valid values: <strong>true</strong> and <strong>false</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -14,7 +14,7 @@ public class CreateIPv6TranslatorRequest extends TeaModel {
     public Boolean autoPay;
 
     /**
-     * <p>The billing bandwidth of the IPv6 Translation Service instance, in Mbit/s. Valid values: <strong>1</strong> to <strong>200</strong>. If you do not set the bandwidth for translation mapping entries, the mapping entries in the instance share this bandwidth. </p>
+     * <p>The bandwidth of the IPv6 Translation Service instance. Unit: Mbit/s. Valid values: <strong>1</strong> to <strong>200</strong>. If you do not specify the bandwidth for an IPv6 translation mapping entry, all IPv6 translation mapping entries in the instance share this bandwidth. </p>
      * <blockquote>
      * <p>If you do not specify the bandwidth, the default value is 10 Mbit/s.</p>
      * </blockquote>
@@ -26,7 +26,7 @@ public class CreateIPv6TranslatorRequest extends TeaModel {
     public Integer bandwidth;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. The client token must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. The client token must be unique across different requests and can contain a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>sha111</p>
@@ -38,7 +38,7 @@ public class CreateIPv6TranslatorRequest extends TeaModel {
      * <p>The subscription duration. Valid values:</p>
      * <ul>
      * <li>If the billing cycle is <strong>Month</strong>, valid values are <strong>1</strong> to <strong>9</strong>.  </li>
-     * <li>If the billing cycle is <strong>Year</strong>, the value is <strong>3</strong>.</li>
+     * <li>If the billing cycle is <strong>Year</strong>, the valid value is <strong>3</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class CreateIPv6TranslatorRequest extends TeaModel {
     public Integer duration;
 
     /**
-     * <p>The name of the IPv6 Translation Service instance. The name defaults to the instance ID. The name must be 2 to 100 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-), but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the IPv6 Translation Service instance. Default value: the instance ID. The name must be 2 to 100 characters in length, and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6_1</p>
@@ -63,7 +63,7 @@ public class CreateIPv6TranslatorRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The payment method of the IPv6 Translation Service instance. Valid values: </p>
+     * <p>The billing method of the IPv6 Translation Service instance. Valid values: </p>
      * <ul>
      * <li><p><strong>PREPAY</strong>: subscription.</p>
      * </li>
@@ -78,11 +78,11 @@ public class CreateIPv6TranslatorRequest extends TeaModel {
     public String payType;
 
     /**
-     * <p>The billing cycle for subscription. Valid values: </p>
+     * <p>The billing cycle of the subscription instance. Valid values: </p>
      * <ul>
-     * <li><p><strong>Month</strong> (default): monthly subscription.</p>
+     * <li><p><strong>Month</strong> (default): billed on a monthly basis.</p>
      * </li>
-     * <li><p><strong>Year</strong>: yearly subscription.</p>
+     * <li><p><strong>Year</strong>: billed on a yearly basis.</p>
      * </li>
      * </ul>
      * 
@@ -109,7 +109,7 @@ public class CreateIPv6TranslatorRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The specification of the IPv6 Translation Service instance. Valid values: <strong>small</strong>.</p>
+     * <p>The specification of the IPv6 Translation Service instance. Valid value: <strong>small</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>small</p>

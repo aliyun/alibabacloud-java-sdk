@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel {
     /**
-     * <p>The detailed information about the data.</p>
+     * <p>The data details.</p>
      */
     @NameInMap("Data")
     public CreatePhysicalConnectionOccupancyOrderResponseBodyData data;
@@ -42,7 +42,7 @@ public class CreatePhysicalConnectionOccupancyOrderResponseBody extends TeaModel
 
     public static class CreatePhysicalConnectionOccupancyOrderResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the order.</p>
+         * <p>The ID of the created order.</p>
          * 
          * <strong>example:</strong>
          * <p>50187055895****</p>

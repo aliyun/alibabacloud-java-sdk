@@ -17,8 +17,8 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable IPv6 for the vSwitch. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enables IPv6. The VPC to which the vSwitch belongs must have IPv6 enabled. You must also specify Ipv6CidrBlock to assign an IPv6 CIDR block to the vSwitch.</li>
-     * <li><strong>false</strong> (default): disables IPv6. When you disable IPv6 for the vSwitch, make sure that no IPv6 addresses are in use. You cannot specify Ipv6CidrBlock at the same time.</li>
+     * <li><strong>true</strong>: Enables IPv6. IPv6 must be enabled for the VPC to which the vSwitch belongs. You must also specify Ipv6CidrBlock to allocate an IPv6 CIDR block to the vSwitch.</li>
+     * <li><strong>false</strong> (default): Disables IPv6. Before you disable IPv6 for the vSwitch, make sure that no IPv6 addresses are in use. You cannot specify Ipv6CidrBlock at the same time.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,13 +29,25 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
 
     /**
      * <p>The last 8 bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.</p>
-     * <p>You can specify this parameter only when the VPC to which the vSwitch belongs has IPv6 enabled. This parameter is used to assign an IPv6 CIDR block to the vSwitch. After the IPv6 CIDR block is allocated, it cannot be changed to another CIDR block. Make sure that the CIDR block does not overlap with those of other vSwitches in the same VPC.</p>
+     * <p>You can set this parameter only when IPv6 is enabled for the VPC to which the vSwitch belongs. This parameter allows you to allocate an IPv6 CIDR block to the vSwitch. After the IPv6 CIDR block is allocated, it cannot be changed to another CIDR block. Make sure that the CIDR block does not overlap with those of other vSwitches in the same VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
      */
     @NameInMap("Ipv6CidrBlock")
     public Integer ipv6CidrBlock;
+
+    /**
+     * <p>The IPv6 CIDR block mask of the vSwitch. You can set this parameter only when IPv6 is enabled for the VPC to which the vSwitch belongs.</p>
+     * <blockquote>
+     * <p>Only 64 is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>64</p>
+     */
+    @NameInMap("Ipv6CidrMask")
+    public Integer ipv6CidrMask;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -115,6 +127,14 @@ public class ModifyVSwitchAttributeRequest extends TeaModel {
     }
     public Integer getIpv6CidrBlock() {
         return this.ipv6CidrBlock;
+    }
+
+    public ModifyVSwitchAttributeRequest setIpv6CidrMask(Integer ipv6CidrMask) {
+        this.ipv6CidrMask = ipv6CidrMask;
+        return this;
+    }
+    public Integer getIpv6CidrMask() {
+        return this.ipv6CidrMask;
     }
 
     public ModifyVSwitchAttributeRequest setOwnerAccount(String ownerAccount) {

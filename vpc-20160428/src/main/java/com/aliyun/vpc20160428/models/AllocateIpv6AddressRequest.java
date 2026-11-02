@@ -7,8 +7,8 @@ public class AllocateIpv6AddressRequest extends TeaModel {
     /**
      * <p>The type of the IPv6 address. Valid values:</p>
      * <ul>
-     * <li>IPv6Address (default): The instance is a single IPv6 address.</li>
-     * <li>IPv6Prefix: The instance is an IPv6 CIDR block.</li>
+     * <li>IPv6Address: single IPv6 address. This is the default value.</li>
+     * <li>IPv6Prefix: IPv6 CIDR block.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class AllocateIpv6AddressRequest extends TeaModel {
     public String addressType;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,11 +30,11 @@ public class AllocateIpv6AddressRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><p>true: performs a dry run. The system checks the required parameters, request syntax, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the DryRunOperation error code is returned.</p>
+     * <li><p>true: prechecks the request without querying the resource status. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the DryRunOperation error code is returned.</p>
      * </li>
-     * <li><p>false (default): performs a dry run and sends the request. If the check succeeds, an HTTP 2xx status code is returned and the operation is performed.</p>
+     * <li><p>false: sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed. This is the default value.</p>
      * </li>
      * </ul>
      * 
@@ -45,7 +45,7 @@ public class AllocateIpv6AddressRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The IPv6 address to allocate. The specified IPv6 address must be an idle address within the CIDR block of the vSwitch.</p>
+     * <p>Specifies the IPv6 address to apply for. The specified IPv6 address must be an available IP address within the CIDR block of the vSwitch.</p>
      * 
      * <strong>example:</strong>
      * <p>2408:XXXX:153:3921:851c:c435:7b12:1c5f</p>
@@ -54,7 +54,7 @@ public class AllocateIpv6AddressRequest extends TeaModel {
     public String ipv6Address;
 
     /**
-     * <p>The description of the IPv6 address instance.</p>
+     * <p>The description of the IPv6 address.</p>
      * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -64,7 +64,7 @@ public class AllocateIpv6AddressRequest extends TeaModel {
     public String ipv6AddressDescription;
 
     /**
-     * <p>The name of the IPv6 address instance.</p>
+     * <p>The name of the IPv6 address.</p>
      * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -90,7 +90,7 @@ public class AllocateIpv6AddressRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource group ID. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</p>
+     * <p>The ID of the resource group. For more information about resource groups, see <a href="https://help.aliyun.com/document_detail/2381067.html">What is a resource group?</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4ph****</p>
@@ -105,7 +105,7 @@ public class AllocateIpv6AddressRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The tags of the resource.</p>
+     * <p>The list of tags for the resource.</p>
      */
     @NameInMap("Tag")
     public java.util.List<AllocateIpv6AddressRequestTag> tag;
@@ -239,8 +239,8 @@ public class AllocateIpv6AddressRequest extends TeaModel {
 
     public static class AllocateIpv6AddressRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key. You can specify up to 20 tag keys. Do not enter an empty string if you specify this parameter.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -249,8 +249,8 @@ public class AllocateIpv6AddressRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. You can specify an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain http:// or https://.</p>
+         * <p>The tag value. You can specify up to 20 tag values. You can enter an empty string if you specify this parameter.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with aliyun or acs:, and cannot contain http:// or https://.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

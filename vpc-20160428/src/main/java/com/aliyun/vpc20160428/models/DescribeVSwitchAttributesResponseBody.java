@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVSwitchAttributesResponseBody extends TeaModel {
     /**
-     * <p>The number of active IP addresses.</p>
+     * <p>The active IP address count.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>

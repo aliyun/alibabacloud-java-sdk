@@ -18,7 +18,7 @@ public class ModifyFlowLogAttributeResponseBody extends TeaModel {
      * <ul>
      * <li><p><strong>true</strong>: The operation is successful.</p>
      * </li>
-     * <li><p><strong>false</strong>: The operation failed.</p>
+     * <li><p><strong>false</strong>: The operation fails.</p>
      * </li>
      * </ul>
      * 

@@ -447,7 +447,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         /**
          * <p>The Alibaba Cloud account ID to which the network ACL belongs.</p>
          * <blockquote>
-         * <p>Notice: This value is of the Long type. Precision loss may occur in certain languages. Use this value with caution.</p>
+         * <p>Notice: This value is of the Long type. Precision loss may occur in some programming languages. Use it with caution.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -471,9 +471,9 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         /**
          * <p>The status of the associated resource. Valid values:</p>
          * <ul>
-         * <li><p><strong>Available</strong>: available.</p>
+         * <li><p><strong>Available</strong>: The resource is available.</p>
          * </li>
-         * <li><p><strong>Modifying</strong>: being modified.</p>
+         * <li><p><strong>Modifying</strong>: The resource is being configured.</p>
          * </li>
          * </ul>
          * 
@@ -487,7 +487,7 @@ public class DescribeNetworkAclAttributesResponseBody extends TeaModel {
         public DescribeNetworkAclAttributesResponseBodyNetworkAclAttributeTags tags;
 
         /**
-         * <p>The ID of the VPC associated with the network ACL.</p>
+         * <p>The ID of the virtual private cloud (VPC) associated with the network ACL.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-a2d33rfpl72k5defr****</p>

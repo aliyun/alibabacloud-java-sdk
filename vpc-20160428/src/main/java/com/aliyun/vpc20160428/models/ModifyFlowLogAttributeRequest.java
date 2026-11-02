@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyFlowLogAttributeRequest extends TeaModel {
     /**
-     * <p>The new sampling interval of the flow log. Unit: minutes. Valid values: <strong>1</strong>, <strong>5</strong>, and <strong>10</strong>.</p>
+     * <p>The sampling interval of the flow log. Unit: minutes. Valid values: <strong>1</strong>, <strong>5</strong>, and <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,8 +14,8 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     public Integer aggregationInterval;
 
     /**
-     * <p>The new description of the flow log.</p>
-     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the flow log.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is my Flowlog.</p>
@@ -34,8 +34,8 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
     public String flowLogId;
 
     /**
-     * <p>The new name of the flow log.</p>
-     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the flow log.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>myFlowlog</p>
@@ -63,7 +63,7 @@ public class ModifyFlowLogAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the flow log.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

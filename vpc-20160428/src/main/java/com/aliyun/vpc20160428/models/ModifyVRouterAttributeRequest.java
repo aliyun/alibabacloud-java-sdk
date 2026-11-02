@@ -21,8 +21,8 @@ public class ModifyVRouterAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the vRouter to modify.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the vRouter that you want to modify.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

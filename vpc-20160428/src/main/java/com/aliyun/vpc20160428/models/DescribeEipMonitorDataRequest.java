@@ -15,8 +15,7 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public String allocationId;
 
     /**
-     * <p>The end time of the data to retrieve. Specify the time in UTC in the ISO 8601 standard format: <code>YYYY-MM-DDThh:mm:ssZ</code>. For example, <code>2013-01-10T12:00:00Z</code> represents 20:00:00 (UTC+8) on January 10, 2013.</p>
-     * <p>If the specified time is not on the minute, the end time is automatically rounded up to the next minute.</p>
+     * <p>The end time of the data query. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC. For example, 20:00:00 on January 10, 2013 (UTC+8) is specified as <code>2013-01-10T12:00:00Z</code>. If the specified time is not an exact minute, the next minute is automatically used as the end time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,10 +31,10 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The duration of each monitoring data entry. Unit: seconds. Valid values: <strong>60</strong> (default), <strong>300</strong>, <strong>900</strong>, or <strong>3600</strong>.</p>
+     * <p>The time interval of each monitoring data point. Unit: seconds. Valid values: <strong>60</strong> (default), <strong>300</strong>, <strong>900</strong>, and <strong>3600</strong>.</p>
      * <ul>
-     * <li>If (<strong>EndTime</strong> – <strong>StartTime</strong>) / <strong>Period</strong> is less than or equal to 400, all monitoring data from the start time to the end time is returned.</li>
-     * <li>If (<strong>EndTime</strong> – <strong>StartTime</strong>) / <strong>Period</strong> is greater than 400, monitoring data cannot be returned.</li>
+     * <li>If the value of (<strong>EndTime</strong> - <strong>StartTime</strong>) / <strong>Period</strong> is less than or equal to 400, all monitoring data between the start time and the end time is returned.</li>
+     * <li>If the value of (<strong>EndTime</strong> - <strong>StartTime</strong>) / <strong>Period</strong> is greater than 400, monitoring data cannot be returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,8 +44,7 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public Integer period;
 
     /**
-     * <p>The region ID of the EIP.
-     * You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>The region ID of the EIP. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -61,8 +59,7 @@ public class DescribeEipMonitorDataRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The start time of the data to retrieve. Specify the time in UTC in the ISO 8601 standard format: <code>YYYY-MM-DDThh:mm:ssZ</code>. For example, <code>2013-01-10T12:00:00Z</code> represents 20:00:00 (UTC+8) on January 10, 2013.</p>
-     * <p>If the specified time is not on the minute, the start time is automatically rounded up to the next minute.</p>
+     * <p>The start time of the data query. Specify the time in the ISO 8601 standard in the <code>YYYY-MM-DDThh:mm:ssZ</code> format. The time must be in UTC. For example, 20:00:00 on January 10, 2013 (UTC+8) is specified as <code>2013-01-10T12:00:00Z</code>. If the specified time is not an exact minute, the next minute is automatically used as the start time.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

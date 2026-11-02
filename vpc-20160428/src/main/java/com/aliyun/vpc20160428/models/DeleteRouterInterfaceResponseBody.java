@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteRouterInterfaceResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>54B48E3D-DF70-471B-AA93-08E683A1B45</p>

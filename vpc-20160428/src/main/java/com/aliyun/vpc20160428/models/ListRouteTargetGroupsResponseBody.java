@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListRouteTargetGroupsResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>50</p>
@@ -14,7 +14,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. If NextToken is empty, no next page exists. If a value is returned for NextToken, the value indicates the token for the next query.</p>
+     * <p>The token used to retrieve the next page of results. If NextToken is empty, no subsequent query is required. If NextToken is returned, the value indicates the token for the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>FFmyTO70tTpLG6I3FmYAXGKPd****</p>
@@ -38,7 +38,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
     public java.util.List<ListRouteTargetGroupsResponseBodyRouteTargetGroups> routeTargetGroups;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -93,12 +93,12 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
 
     public static class ListRouteTargetGroupsResponseBodyRouteTargetGroupsRouteTargetMemberList extends TeaModel {
         /**
-         * <p>The enable status of the route target group member. Valid values:</p>
+         * <p>The enablement status of the member in the route target group. Valid values:</p>
          * <ul>
          * <li><strong>Enable</strong>: Enabled.</li>
          * <li><strong>Disable</strong>: Disabled.</li>
          * </ul>
-         * <p>Only members in the Disable state can be modified to other instances. Members in the Enable state cannot be modified.</p>
+         * <p>Only members in the Disabled state can be changed to other instances. Members in the Enabled state cannot be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -107,7 +107,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String enableStatus;
 
         /**
-         * <p>The health check status of the route target group member. Valid values:</p>
+         * <p>The health check status of the member in the route target group. Valid values:</p>
          * <ul>
          * <li><strong>Normal</strong>: Normal.</li>
          * <li><strong>Abnormal</strong>: Abnormal.</li>
@@ -120,7 +120,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String healthCheckStatus;
 
         /**
-         * <p>The routing target group member instance ID.</p>
+         * <p>The member instance ID of the routing target group.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-xxxx</p>
@@ -142,10 +142,10 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String memberType;
 
         /**
-         * <p>The weight of the route target group member. Valid values:</p>
+         * <p>The weight of the member in the route target group. Valid values:</p>
          * <ul>
-         * <li><strong>100</strong>: The member is the active instance.</li>
-         * <li><strong>0</strong>: The member is the standby instance.</li>
+         * <li><strong>100</strong>: The member is the primary instance.</li>
+         * <li><strong>0</strong>: The member is the secondary instance.</li>
          * </ul>
          * <p>The weight can only be set during creation and cannot be modified.</p>
          * 
@@ -213,8 +213,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string. A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>8</p>
@@ -249,7 +248,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         /**
          * <p>The configuration mode of the route target group. Valid values:</p>
          * <ul>
-         * <li><strong>Active-Standby</strong>: active/standby mode.</li>
+         * <li><strong>Active-Standby</strong>: Active/standby mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -259,7 +258,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String configMode;
 
         /**
-         * <p>The time when the route target group was created.</p>
+         * <p>The time when the route target group was created. The time follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time is displayed in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2025-12-30T06:40:50Z</p>
@@ -269,7 +268,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
 
         /**
          * <p>The region ID of the VPC to which the route target group belongs.</p>
-         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+         * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -296,7 +295,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String routeTargetGroupDescription;
 
         /**
-         * <p>The routing target group instance ID.</p>
+         * <p>The instance ID of the routing target group.</p>
          * 
          * <strong>example:</strong>
          * <p>rtg-xxxx</p>
@@ -322,13 +321,13 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         /**
          * <p>The status of the routing target group. Valid values:</p>
          * <ul>
-         * <li><strong>Recovering</strong>: The active/standby switchback is in progress.</li>
-         * <li><strong>Switched</strong>: The active/standby switchover is complete.</li>
-         * <li><strong>Available</strong>: Available.</li>
-         * <li><strong>Abnormal</strong>: The standby instance has instance failures.</li>
-         * <li><strong>Pending</strong>: Being created.</li>
-         * <li><strong>Switching</strong>: The active/standby switchover is in progress.</li>
-         * <li><strong>Deleting</strong>: Being deleted.</li>
+         * <li><strong>Recovering</strong>: Switching back to the primary instance.</li>
+         * <li><strong>Switched</strong>: Primary/secondary switchover completed.</li>
+         * <li><strong>Available</strong>: active.</li>
+         * <li><strong>Abnormal</strong>: Secondary instance failures.</li>
+         * <li><strong>Pending</strong>: Creating.</li>
+         * <li><strong>Switching</strong>: Performing primary/secondary switchover.</li>
+         * <li><strong>Deleting</strong>: delete.</li>
          * <li><strong>Unavailable</strong>: Both primary and secondary instances have instance failures.</li>
          * </ul>
          * 
@@ -339,8 +338,7 @@ public class ListRouteTargetGroupsResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string. A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListRouteTargetGroupsResponseBodyRouteTargetGroupsTags> tags;

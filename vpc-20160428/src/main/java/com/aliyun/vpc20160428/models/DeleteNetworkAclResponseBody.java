@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNetworkAclResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>4B48E3D-DF70-471B-AA83-089E83A1B45</p>

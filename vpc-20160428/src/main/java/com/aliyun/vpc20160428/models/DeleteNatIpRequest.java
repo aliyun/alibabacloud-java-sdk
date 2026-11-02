@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DeleteNatIpRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class DeleteNatIpRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without deleting the NAT IP address. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: The system performs a dry run on the request without deleting the NAT IP address. The system checks whether your AccessKey pair is valid, whether the authorization of the Resource Access Management (RAM) user is valid, and whether the required parameters are specified. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the <code>DryRunOperation</code> error code.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a Normal request. After the check succeeds, a 2xx HTTP status code is returned and the NAT IP address is deleted.</p>
+     * <li><p><strong>false</strong> (default): The system sends a normal request. If the request passes the dry run, the system returns a 2xx HTTP status code and deletes the NAT IP address.</p>
      * </li>
      * </ul>
      * 
@@ -33,7 +33,7 @@ public class DeleteNatIpRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The IP prefix address to delete.</p>
+     * <p>The IP prefix to be deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.0.0/28</p>
@@ -42,7 +42,7 @@ public class DeleteNatIpRequest extends TeaModel {
     public String ipv4Prefix;
 
     /**
-     * <p>The instance ID of the NAT gateway to which the IP prefix belongs. This parameter is required when you delete an IP prefix.</p>
+     * <p>The instance ID of the NAT gateway to which the IP prefix to be deleted belongs. This parameter is required when you delete an IP prefix.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-gw8v16wgvtq26vh59****</p>
@@ -51,7 +51,7 @@ public class DeleteNatIpRequest extends TeaModel {
     public String natGatewayId;
 
     /**
-     * <p>The instance ID of the NAT IP address to delete.</p>
+     * <p>The instance ID of the NAT IP address to be deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>vpcnatip-gw8y7q3cpk3fggs87****</p>
@@ -66,8 +66,8 @@ public class DeleteNatIpRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the NAT gateway instance to which the NAT IP address belongs.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> to query the region ID.</p>
+     * <p>The region ID of the NAT gateway to which the NAT IP address to be deleted belongs.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

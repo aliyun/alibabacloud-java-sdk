@@ -14,11 +14,11 @@ public class DescribeVpcsRequest extends TeaModel {
     public String dhcpOptionsSetId;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform a dry run for the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run. The system checks the request for potential issues, including invalid AccessKey pairs, unauthorized Resource Access Management (RAM) users, and missing parameter values. If the request fails the dry run, the corresponding error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: Sends a check request and does not query the resource status. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user has authorization, and whether required parameters are specified. If the check fails, the system returns an error. If the check succeeds, the system returns the <code>DryRunOperation</code> error code.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a Normal request, and the resource status is directly queried after the request passes the authorization check. An HTTP 2xx status code is returned.</p>
+     * <li><p><strong>false</strong> (default): Sends a normal request and queries the resource status after the check succeeds and an HTTP 2xx status code is returned.</p>
      * </li>
      * </ul>
      * 
@@ -29,10 +29,10 @@ public class DescribeVpcsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>Specifies whether to query VPCs that have IPv6 CIDR blocks enabled in the specified region. The default value is empty, which means no filtering is performed based on IPv6 enablement. Valid values:</p>
+     * <p>Specifies whether to query VPCs for which IPv6 CIDR blocks are enabled in the specified region. By default, this parameter is empty, which means VPCs are not filtered based on whether IPv6 CIDR blocks are enabled. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong>: IPv6 is not enabled.</li>
-     * <li><strong>true</strong>: IPv6 is enabled.</li>
+     * <li><strong>false</strong>: IPv6 CIDR blocks are not enabled.</li>
+     * <li><strong>true</strong>: IPv6 CIDR blocks are enabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,7 +66,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -75,7 +75,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in paging queries. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -85,7 +85,7 @@ public class DescribeVpcsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class DescribeVpcsRequest extends TeaModel {
     public String vpcName;
 
     /**
-     * <p>The Alibaba Cloud account ID that owns the VPC.</p>
+     * <p>The Alibaba Cloud account ID of the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>253460731706911258</p>
@@ -278,8 +278,8 @@ public class DescribeVpcsRequest extends TeaModel {
 
     public static class DescribeVpcsRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -288,8 +288,8 @@ public class DescribeVpcsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

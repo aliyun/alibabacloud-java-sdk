@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteGlobalAccelerationInstanceRequest extends TeaModel {
     /**
-     * <p>The ID of the Alibaba Cloud Global Accelerator (GA) instance.</p>
+     * <p>The ID of the Global Accelerator instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,8 +21,7 @@ public class DeleteGlobalAccelerationInstanceRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the Alibaba Cloud Global Accelerator (GA) instance is located. </p>
-     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to obtain the region ID.</p>
+     * <p>The region where the Global Accelerator instance resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

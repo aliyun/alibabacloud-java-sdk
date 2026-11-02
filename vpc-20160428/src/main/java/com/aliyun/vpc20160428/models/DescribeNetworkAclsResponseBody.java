@@ -8,7 +8,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
     public DescribeNetworkAclsResponseBodyNetworkAcls networkAcls;
 
     /**
-     * <p>The page number of the list.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -17,7 +17,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
     public String pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Paging is used to return results.</p>
+     * <p>The number of entries per page for a paging query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -35,7 +35,7 @@ public class DescribeNetworkAclsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of ACLs in the list.</p>
+     * <p>The total number of network ACLs.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeHighDefinitionMonitorLogAttributeRequest extends TeaModel {
     /**
-     * <p>The instance ID for which you want to query high-precision second-level monitoring.</p>
+     * <p>The instance ID for which to query high-precision second-level monitoring.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

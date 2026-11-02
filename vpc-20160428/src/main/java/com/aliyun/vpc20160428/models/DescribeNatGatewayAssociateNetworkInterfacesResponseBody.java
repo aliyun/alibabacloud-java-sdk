@@ -17,7 +17,7 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public Integer count;
 
     /**
-     * <p>The number of entries per page for a paginated query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -35,11 +35,11 @@ public class DescribeNatGatewayAssociateNetworkInterfacesResponseBody extends Te
     public String natGatewayId;
 
     /**
-     * <p>The pagination token. Valid values:</p>
+     * <p>The token that is used for the next query. Valid values:</p>
      * <ul>
-     * <li><p>If <strong>NextToken</strong> is empty, no subsequent query exists.</p>
+     * <li><p>If <strong>NextToken</strong> is empty, no next query is to be sent.</p>
      * </li>
-     * <li><p>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</p>
+     * <li><p>If <strong>NextToken</strong> is returned, the value indicates the token that is used for the next query.</p>
      * </li>
      * </ul>
      * 

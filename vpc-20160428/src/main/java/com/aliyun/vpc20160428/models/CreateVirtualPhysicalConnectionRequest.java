@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>The description of the shared Express Connect circuits.</p>
-     * <p>The description must be 2 to 256 characters in length and must start with a letter or a Chinese character, but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 2 to 256 characters in length, and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -15,10 +15,10 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only dry run the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without creating the shared Express Connect circuits. The system checks required parameters, request format, and instance status. If the check fails, the corresponding error is returned. If the check passes, <code>DRYRUN.SUCCESS</code> is returned.</li>
-     * <li><strong>false</strong> (default): sends a Normal request. After the check passes, the shared Express Connect circuits are created.</li>
+     * <li><strong>true</strong>: The system performs a dry run on the request without creating the shared Express Connect circuits. The system checks whether the required parameters are specified, the request format, and the instance status. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, <code>DRYRUN.SUCCESS</code> is returned.</li>
+     * <li><strong>false</strong> (default): The system sends a Normal request. After the request passes the dry run, the shared Express Connect circuits are created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +29,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The name of the shared Express Connect circuits.</p>
-     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-), but cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-). It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -38,11 +38,11 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The payer of the shared Express Connect circuits. Valid values:</p>
+     * <p>Specifies the payer of the shared Express Connect circuits. Valid values:</p>
      * <ul>
-     * <li><strong>PayByPhysicalConnectionOwner</strong>: The partner pays.</li>
-     * <li><strong>PayByVirtualPhysicalConnectionOwner</strong>: The tenant pays.<blockquote>
-     * <p>Default value: PayByVirtualPhysicalConnectionOwner (tenant pays).</p>
+     * <li><strong>PayByPhysicalConnectionOwner</strong>: The partner pays the bills.</li>
+     * <li><strong>PayByVirtualPhysicalConnectionOwner</strong>: The tenant pays the bills.<blockquote>
+     * <p>Default value: PayByVirtualPhysicalConnectionOwner. The tenant pays the bills.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -57,7 +57,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>The ID of the Express Connect circuit associated with the shared Express Connect circuits.</p>
      * <blockquote>
-     * <p>The Express Connect circuit must be in the Enabled state and must be an Express Connect circuit (shared Express Connect circuits IDs are not supported). Otherwise, ResourceNotFound.PhysicalConnectionId or IncorrectStatus.PhysicalConnection is returned. You can invoke DescribePhysicalConnections to query the status of the Express Connect circuit. The caller must be the account (partner) that owns the Express Connect circuit.</p>
+     * <p>The Express Connect circuit must be in the Enabled state and must be a physical Express Connect circuit. You cannot specify the ID of a shared Express Connect circuit. Otherwise, the ResourceNotFound.PhysicalConnectionId or IncorrectStatus.PhysicalConnection error is returned. You can invoke the DescribePhysicalConnections operation to query the status of the Express Connect circuit. The caller must be the account (partner) to which the Express Connect circuit belongs.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -69,7 +69,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The region ID of the shared Express Connect circuits.</p>
-     * <p>You can invoke <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,17 +88,17 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The bandwidth value of the shared Express Connect circuits.</p>
+     * <p>The bandwidth of the shared Express Connect circuits.</p>
      * <p>Valid values: <strong>50M</strong>, <strong>100M</strong>, <strong>200M</strong>, <strong>300M</strong>, <strong>400M</strong>, <strong>500M</strong>, <strong>1G</strong>, <strong>2G</strong>, <strong>5G</strong>, <strong>8G</strong>, and <strong>10G</strong>.</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p>The bandwidth values <strong>2G</strong>, <strong>5G</strong>, <strong>8G</strong>, and <strong>10G</strong> are not available by default. To use these values, contact your account manager.</p>
+     * <p>By default, the bandwidth values of <strong>2G</strong>, <strong>5G</strong>, <strong>8G</strong>, and <strong>10G</strong> are not available. To use these values, contact your account manager.</p>
      * </blockquote>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p>The bandwidth values <strong>2G</strong>, <strong>5G</strong>, <strong>8G</strong>, and <strong>10G</strong> are not available by default. To use these values, contact your account manager.</p>
+     * <p>By default, the bandwidth values of <strong>2G</strong>, <strong>5G</strong>, <strong>8G</strong>, and <strong>10G</strong> are not available. To use these values, contact your account manager.</p>
      * </blockquote>
-     * <p>Unit: <strong>M</strong> indicates Mbit/s and <strong>G</strong> indicates Gbit/s.</p>
+     * <p>Unit: <strong>M</strong> indicates Mbit/s, and <strong>G</strong> indicates Gbit/s.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -115,9 +115,9 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,8 +129,8 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>The VLAN ID of the shared Express Connect circuits. Valid values: <strong>0</strong> to <strong>2999</strong>.</p>
      * <ul>
-     * <li>If the VLAN ID is <strong>0</strong>, the physical switch port of the Virtual Border Router (VBR) does not use VLAN mode but uses Layer 3 routing interface mode. In Layer 3 routing interface mode, each Express Connect circuit corresponds to one VBR.</li>
-     * <li>If the VLAN ID is <strong>1</strong> to <strong>2999</strong>, the physical switch port of the VBR uses VLAN-based Layer 3 sub-interfaces. In Layer 3 sub-interface mode, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can connect to VPCs under multiple accounts. VBRs in different VLANs have network isolation at Layer 2 and cannot communicate with each other.</li>
+     * <li>If the VLAN ID is <strong>0</strong>, the physical vSwitch port of the vRouter (Virtual Border Router) does not use the VLAN pattern, but uses the Layer 3 routing interface pattern. In the Layer 3 routing interface pattern, each Express Connect circuit corresponds to one VBR.</li>
+     * <li>If the VLAN ID is <strong>1</strong> to <strong>2999</strong>, the physical vSwitch port of the VBR uses a VLAN-based Layer 3 sub-interface. In the Layer 3 sub-interface pattern, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can be connected to VPCs under multiple accounts. VBRs in different VLANs have Layer 2 network isolation and cannot communicate with each other.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -141,7 +141,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     public Long vlanId;
 
     /**
-     * <p>The ID of the tenant\&quot;s Alibaba Cloud account.</p>
+     * <p>The ID of the Alibaba Cloud account (primary account) of the tenant.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -254,7 +254,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
     public static class CreateVirtualPhysicalConnectionRequestTag extends TeaModel {
         /**
          * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 64 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key can be up to 64 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -264,7 +264,7 @@ public class CreateVirtualPhysicalConnectionRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value can be up to 128 characters in length, and can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

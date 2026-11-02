@@ -30,13 +30,13 @@ public class ModifyRouteEntryRequest extends TeaModel {
     /**
      * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <p><strong>true</strong>: performs a dry run without modifying the route. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
-     * <p><strong>false</strong> (default): sends a Normal request. If the check succeeds, a 2xx HTTP status code is returned and the route is modified.</p>
+     * <p><strong>false</strong> (default): sends a normal request. If the check succeeds, a 2xx HTTP status code is returned and the route is modified.</p>
      */
     @NameInMap("DryRun")
     public Boolean dryRun;
 
     /**
-     * <p>The new next hop instance ID of the route entry.</p>
+     * <p>The instance ID of the new next hop of the route entry.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-bp17y37ytsenqyim****</p>
@@ -53,7 +53,7 @@ public class ModifyRouteEntryRequest extends TeaModel {
      * </li>
      * <li><p><strong>RouterInterface</strong>: vRouter interface.</p>
      * </li>
-     * <li><p><strong>NetworkInterface</strong>: elastic network interfaces (ENIs).</p>
+     * <li><p><strong>NetworkInterface</strong>: elastic network interface (ENI).</p>
      * </li>
      * <li><p><strong>VpnGateway</strong>: VPN gateway.</p>
      * </li>
@@ -61,7 +61,7 @@ public class ModifyRouteEntryRequest extends TeaModel {
      * </li>
      * <li><p><strong>NatGateway</strong>: NAT gateway.</p>
      * </li>
-     * <li><p><strong>Attachment</strong>: forward router.</p>
+     * <li><p><strong>Attachment</strong>: transit router.</p>
      * </li>
      * <li><p><strong>VpcPeer</strong>: VPC peering connection.</p>
      * </li>

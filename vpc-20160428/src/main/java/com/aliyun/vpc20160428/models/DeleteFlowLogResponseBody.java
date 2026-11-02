@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteFlowLogResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F7DDDC17-FA06-4AC2-8F35-59D2470FCFC1</p>
@@ -14,9 +14,9 @@ public class DeleteFlowLogResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call is successful. Valid values:</p>
+     * <p>Indicates whether the call was successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The call is successful.</li>
+     * <li><strong>true</strong>: The call was successful.</li>
      * <li><strong>false</strong>: The call failed.</li>
      * </ul>
      * 

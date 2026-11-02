@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: prechecks the request without modifying the configuration of the traffic mirror session. The system checks whether the required parameters are specified, the request format, and the service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the configuration of the traffic mirror session is modified.</p>
+     * <li><p><strong>false</strong> (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the configuration of the traffic mirror session is modified.</p>
      * </li>
      * </ul>
      * 
@@ -35,7 +35,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the traffic mirror session. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): does not enable the traffic mirror session.</p>
+     * <li><p><strong>false</strong> (default): disables the traffic mirror session.</p>
      * </li>
      * <li><p><strong>true</strong>: enables the traffic mirror session.</p>
      * </li>
@@ -54,11 +54,11 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The maximum length of the mirrored original packet, excluding the VXLAN header. Default value: <strong>1500</strong>. Valid values: <strong>64</strong> to <strong>8500</strong>. Unit: bytes.</p>
+     * <p>The length of the original packet to be mirrored, excluding the length of the VXLAN packet. Default value: <strong>1500</strong>. Valid values: <strong>64</strong> to <strong>8500</strong>. Unit: bytes.</p>
      * <ul>
-     * <li><p>The value of this parameter affects the length of packets received at the traffic mirror destination. For more information, see the mirrored packet length and MTU limits in <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
+     * <li><p>The value of this parameter affects the length of the packet received by the traffic mirror destination. For more information, see the mirrored packet length and MTU limits in <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
      * </li>
-     * <li><p>This parameter is available only in specific regions. For more information, see the mirrored packet length parameter description in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirror sessions</a>.</p>
+     * <li><p>This parameter is available only in specific regions. For more information, see the description of the mirrored packet length parameter in <a href="https://help.aliyun.com/document_detail/207514.html">Create and manage traffic mirroring</a>.</p>
      * </li>
      * </ul>
      * 
@@ -69,7 +69,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     public Integer packetLength;
 
     /**
-     * <p>The new priority of traffic mirror session. Valid values: <strong>1</strong> to <strong>32766</strong>.
+     * <p>The priority of the traffic mirror session. Valid values: <strong>1</strong> to <strong>32766</strong>.
      * A smaller value indicates a higher priority. The priorities of traffic mirror sessions created by the same account in the same region must be unique.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The region ID of the traffic mirror session. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list. For information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
+     * <p>The region ID of the traffic mirror session. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The instance ID of the new traffic mirror filter.</p>
+     * <p>The instance ID of the traffic mirror filter.</p>
      * 
      * <strong>example:</strong>
      * <p>tmf-j6cmls82xnc86vtpe****</p>
@@ -104,7 +104,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     public String trafficMirrorFilterId;
 
     /**
-     * <p>The new description of the traffic mirror session.</p>
+     * <p>The description of the traffic mirror session.</p>
      * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -114,7 +114,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     public String trafficMirrorSessionDescription;
 
     /**
-     * <p>The instance ID of the traffic mirror session to modify.</p>
+     * <p>The instance ID of the traffic mirror session.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     public String trafficMirrorSessionId;
 
     /**
-     * <p>The new name of the traffic mirror session.</p>
+     * <p>The name of the traffic mirror session.</p>
      * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -134,7 +134,7 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     public String trafficMirrorSessionName;
 
     /**
-     * <p>The instance ID of the new traffic mirror destination.</p>
+     * <p>The instance ID of the traffic mirror destination.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-j6c2fp57q8rr47rp*****</p>
@@ -143,11 +143,11 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     public String trafficMirrorTargetId;
 
     /**
-     * <p>The new traffic mirror destination type. Valid values:</p>
+     * <p>The destination type of the traffic mirror destination. Valid values:</p>
      * <ul>
      * <li><p><strong>NetworkInterface</strong>: network interface controller (NIC).</p>
      * </li>
-     * <li><p><strong>SLB</strong>: private network load balancing instance.</p>
+     * <li><p><strong>SLB</strong>: internal-facing SLB instance.</p>
      * </li>
      * </ul>
      * 
@@ -158,8 +158,8 @@ public class UpdateTrafficMirrorSessionAttributeRequest extends TeaModel {
     public String trafficMirrorTargetType;
 
     /**
-     * <p>The new VXLAN network identifier (VNI) that is used to distinguish mirrored data from different traffic mirror sessions. Valid values: <strong>0</strong> to <strong>16777215</strong>.
-     * You can use the VNI to identify mirrored data from different sessions at the traffic mirror destination. You can specify a custom VNI or use a system-allocated value. If you want the system to randomly allocate a VNI, do not configure this parameter.</p>
+     * <p>The VXLAN network identifier (VNI) that is used to distinguish different mirrored traffic. Valid values: <strong>0</strong> to <strong>16777215</strong>.
+     * You can use the VNI to distinguish the mirrored traffic of different sessions at the traffic mirror destination. You can specify a custom VNI or let the system randomly allocate one. If the system randomly allocates the VNI, you do not need to configure this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -15,7 +15,7 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
 
     /**
      * <p>The name of the DHCP options set.</p>
-     * <p>The name must be 1 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
+     * <p>The name must be 1 to 128 characters in length, and must start with an English letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -25,7 +25,7 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
 
     /**
      * <p>The hostname suffix, such as example.com.</p>
-     * <p>After the DHCP options set is associated with a VPC, the hostname suffix is automatically synchronized to the ECS instances in the associated VPC.</p>
+     * <p>After you associate VPC with a DHCP options set, the system performs synchronization of the hostname suffix to the ECS instances in the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -34,7 +34,7 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -43,10 +43,10 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If this is the first query or no subsequent query is required, leave this parameter empty.</li>
-     * <li>If a subsequent query is required, set the value to the <strong>NextToken</strong> value returned in the previous API call.</li>
+     * <li>For the first query or when no subsequent query is required, leave this parameter empty.</li>
+     * <li>For a subsequent query, set this parameter to the <strong>NextToken</strong> value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -62,8 +62,8 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the DHCP options sets that you want to query.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The ID of the region where the DHCP options sets reside.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -196,8 +196,8 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
 
     public static class ListDhcpOptionsSetsRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot enter an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -206,8 +206,8 @@ public class ListDhcpOptionsSetsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can enter an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

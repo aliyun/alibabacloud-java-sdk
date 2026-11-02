@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckCanAllocateVpcPrivateIpAddressResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the private IP address is available. Valid values:</p>
+     * <p>Indicates whether the queried private IP address is available. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The private IP address is not occupied in the specified vSwitch and can be used.</li>
-     * <li><strong>false</strong>: The private IP address is already occupied in the specified vSwitch and cannot be used.</li>
+     * <li><strong>true</strong>: The private IP address is not in use in the specified vSwitch and is available.</li>
+     * <li><strong>false</strong>: The private IP address is already in use in the specified vSwitch and is unavailable.</li>
      * </ul>
      * 
      * <strong>example:</strong>

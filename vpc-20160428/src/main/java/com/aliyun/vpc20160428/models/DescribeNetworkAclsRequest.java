@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class DescribeNetworkAclsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeNetworkAclsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,7 +52,7 @@ public class DescribeNetworkAclsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -62,7 +62,7 @@ public class DescribeNetworkAclsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the network ACL. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -87,7 +87,10 @@ public class DescribeNetworkAclsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the associated instance. Valid values: <strong>VSwitch</strong>: virtual switch.</p>
+     * <p>The type of the associated instance. Valid values:</p>
+     * <ul>
+     * <li><strong>VSwitch</strong>: virtual switch.</li>
+     * </ul>
      * <p>The <strong>ResourceType</strong> and <strong>ResourceId</strong> parameters must be specified together to take effect.</p>
      * 
      * <strong>example:</strong>
@@ -97,13 +100,13 @@ public class DescribeNetworkAclsRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The tags.</p>
+     * <p>The list of tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<DescribeNetworkAclsRequestTags> tags;
 
     /**
-     * <p>The ID of the VPC associated with the network ACL.</p>
+     * <p>The ID of the VPC to which the network ACL is associated.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-m5ebpc2xh64mqm27e****</p>
@@ -230,8 +233,8 @@ public class DescribeNetworkAclsRequest extends TeaModel {
 
     public static class DescribeNetworkAclsRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -240,8 +243,8 @@ public class DescribeNetworkAclsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>, or contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

@@ -15,11 +15,11 @@ public class DeleteCommonBandwidthPackageRequest extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>Specifies whether to forcibly delete the Internet Shared Bandwidth instance. Valid values: </p>
+     * <p>The force delete option is enabled or disabled for the Internet Shared Bandwidth instance. Valid values: </p>
      * <ul>
-     * <li><p><strong>false</strong> (default): The Internet Shared Bandwidth instance is deleted only if it does not contain elastic IP addresses (EIPs).</p>
+     * <li><p><strong>false</strong> (default): Deletes only the Internet Shared Bandwidth instance that does not contain EIPs.</p>
      * </li>
-     * <li><p><strong>true</strong>: All EIPs are removed from the Internet Shared Bandwidth instance, and then the instance is deleted.</p>
+     * <li><p><strong>true</strong>: Removes all EIPs from the Internet Shared Bandwidth instance and then deletes the instance.</p>
      * </li>
      * </ul>
      * 
@@ -37,7 +37,7 @@ public class DeleteCommonBandwidthPackageRequest extends TeaModel {
 
     /**
      * <p>The region where the Internet Shared Bandwidth instance resides. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

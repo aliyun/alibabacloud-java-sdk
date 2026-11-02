@@ -20,7 +20,7 @@ public class DescribeRouteTableListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries to return per page during paging in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -30,7 +30,7 @@ public class DescribeRouteTableListRequest extends TeaModel {
 
     /**
      * <p>The region ID of the VPC to which the route table belongs.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,8 +118,8 @@ public class DescribeRouteTableListRequest extends TeaModel {
     public java.util.List<DescribeRouteTableListRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC to which the route table belongs.</p>
-     * <p>If you specify this parameter, the value of <strong>RouterType</strong> is automatically set to <strong>VRouter</strong>.</p>
+     * <p>The ID of the virtual private cloud (VPC) to which the route table belongs.</p>
+     * <p>If you specify this parameter, the value of the <strong>RouterType</strong> parameter is automatically set to <strong>VRouter</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp15zckdt37pq72****</p>
@@ -265,7 +265,7 @@ public class DescribeRouteTableListRequest extends TeaModel {
 
         /**
          * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

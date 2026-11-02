@@ -7,9 +7,9 @@ public class GetPublicIpAddressPoolServiceStatusResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the IP address pool feature is activated. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: activated.</p>
+     * <li><p><strong>true</strong>: Activated.</p>
      * </li>
-     * <li><p><strong>false</strong>: not activated. You can call the OpenPublicIpAddressPoolService operation to activate the IP address pool feature.</p>
+     * <li><p><strong>false</strong>: Not activated. You can call the OpenPublicIpAddressPoolService operation to activate the IP address pool feature.</p>
      * </li>
      * </ul>
      * 

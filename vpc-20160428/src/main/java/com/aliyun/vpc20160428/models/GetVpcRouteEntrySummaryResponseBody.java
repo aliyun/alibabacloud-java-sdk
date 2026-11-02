@@ -14,7 +14,7 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The information about all route tables returned.</p>
+     * <p>The information about all queried route tables.</p>
      */
     @NameInMap("RouteEntrySummarys")
     public java.util.List<GetVpcRouteEntrySummaryResponseBodyRouteEntrySummarys> routeEntrySummarys;
@@ -54,15 +54,15 @@ public class GetVpcRouteEntrySummaryResponseBody extends TeaModel {
          * <p>The type of the route. Valid values:</p>
          * <ul>
          * <li><strong>all</strong>: all route types.</li>
-         * <li><strong>custom</strong>: custom route.</li>
-         * <li><strong>system</strong>: system route.</li>
-         * <li><strong>bgp</strong>: BGP route.</li>
-         * <li><strong>cen</strong>: Cloud Enterprise Network (CEN) route.</li>
-         * <li><strong>type_vpn_bgp_internal</strong>: VPN BGP route.</li>
-         * <li><strong>ECR</strong>: Express Connect Router (ECR) route.</li>
+         * <li><strong>custom</strong>: custom routes.</li>
+         * <li><strong>system</strong>: system routes.</li>
+         * <li><strong>bgp</strong>: BGP routes.</li>
+         * <li><strong>cen</strong>: Cloud Enterprise Network (CEN) routes.</li>
+         * <li><strong>type_vpn_bgp_internal</strong>: BGP routes of VPN.</li>
+         * <li><strong>ECR</strong>: Express Connect Router (ECR) routes.</li>
          * </ul>
          * <blockquote>
-         * <p>The returned system routes are the system routes in the system route table.</p>
+         * <p>The returned system routes are the system routes under the system route table.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

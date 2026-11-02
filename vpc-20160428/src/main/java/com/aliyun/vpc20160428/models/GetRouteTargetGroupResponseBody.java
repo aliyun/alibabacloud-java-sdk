@@ -7,7 +7,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     /**
      * <p>The configuration mode of the route target group. Valid values:</p>
      * <ul>
-     * <li><strong>Active-Standby</strong>: active/standby mode.</li>
+     * <li><strong>Active-Standby</strong>: Active/standby mode.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -17,7 +17,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public String configMode;
 
     /**
-     * <p>The time when the route target group was created.</p>
+     * <p>The time when the route target group was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2025-12-30T06:40:50Z</p>
@@ -26,7 +26,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public String createTime;
 
     /**
-     * <p>The region ID of the VPC to which the route target group belongs. You can call the <a href="https://help.aliyun.com/document_detail/25609.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The ID of the region where the VPC to which the route target group belongs is deployed. You can call the DescribeRegions operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-qingdao</p>
@@ -62,7 +62,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public String routeTargetGroupDescription;
 
     /**
-     * <p>The instance ID of the routing target group.</p>
+     * <p>The routing target group instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rtg-xxxx</p>
@@ -80,7 +80,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     public String routeTargetGroupName;
 
     /**
-     * <p>The member list of the route target group.</p>
+     * <p>The members of the route target group.</p>
      */
     @NameInMap("RouteTargetMemberList")
     public java.util.List<GetRouteTargetGroupResponseBodyRouteTargetMemberList> routeTargetMemberList;
@@ -88,14 +88,14 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
     /**
      * <p>The status of the routing target group. Valid values:</p>
      * <ul>
-     * <li><strong>Recovering</strong>: The active/standby switchback is in progress.</li>
-     * <li><strong>Switched</strong>: The active/standby switchover is complete.</li>
+     * <li><strong>Recovering</strong>: The system is switching back to the primary instance.</li>
+     * <li><strong>Switched</strong>: The active/standby switchover is completed.</li>
      * <li><strong>Available</strong>: The routing target group is available.</li>
-     * <li><strong>Abnormal</strong>: The standby instance has instance failures.</li>
+     * <li><strong>Abnormal</strong>: Secondary instance failures.</li>
      * <li><strong>Pending</strong>: The routing target group is being created.</li>
-     * <li><strong>Switching</strong>: The active/standby switchover is in progress.</li>
+     * <li><strong>Switching</strong>: An active/standby switchover is in progress.</li>
      * <li><strong>Deleting</strong>: The routing target group is being deleted.</li>
-     * <li><strong>Unavailable</strong>: Both the primary and secondary instances have instance failures.</li>
+     * <li><strong>Unavailable</strong>: Both primary and secondary instances have instance failures.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -222,12 +222,12 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
 
     public static class GetRouteTargetGroupResponseBodyRouteTargetMemberList extends TeaModel {
         /**
-         * <p>The enable status of the route target group member. Valid values:</p>
+         * <p>The enabled status of the route target group member. Valid values:</p>
          * <ul>
          * <li><strong>Enable</strong>: Enabled.</li>
          * <li><strong>Disable</strong>: Disabled.</li>
          * </ul>
-         * <p>Only route target group members in the disabled state can be replaced with other instances. Route target group members in the enabled state cannot be modified.</p>
+         * <p>You can replace only a disabled route target group member with another instance. You cannot modify an enabled route target group member.</p>
          * 
          * <strong>example:</strong>
          * <p>Enable</p>
@@ -249,7 +249,7 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
         public String healthCheckStatus;
 
         /**
-         * <p>The instance ID of the routing target group member.</p>
+         * <p>The routing target group member instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ep-xxxx</p>
@@ -258,10 +258,9 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
         public String memberId;
 
         /**
-         * <p>The member type of the route target group.</p>
-         * <p>Currently supported types:</p>
+         * <p>The type of the route target group member. Valid values:</p>
          * <ul>
-         * <li><strong>GatewayLoadBalancerEndpoint</strong></li>
+         * <li><strong>GatewayLoadBalancerEndpoint</strong>: Gateway load balancer endpoint.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -273,10 +272,10 @@ public class GetRouteTargetGroupResponseBody extends TeaModel {
         /**
          * <p>The weight of the route target group member. Valid values:</p>
          * <ul>
-         * <li><strong>100</strong>: The member is the active instance.</li>
-         * <li><strong>0</strong>: The member is the standby instance.</li>
+         * <li><strong>100</strong>: The member is the primary instance.</li>
+         * <li><strong>0</strong>: The member is the secondary instance.</li>
          * </ul>
-         * <p>The weight can only be set during creation and cannot be modified.</p>
+         * <p>You can set the weight only when you create the member. The weight cannot be modified.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     /**
-     * <p>The time when the IPv4 gateway was created.</p>
+     * <p>The creation time.</p>
      * 
      * <strong>example:</strong>
      * <p>2022-02-24T09:02:36Z</p>
@@ -29,7 +29,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public Boolean enabled;
 
     /**
-     * <p>The description of the IPv4 gateway instance.</p>
+     * <p>The description of the IPv4 gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>new</p>
@@ -47,7 +47,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public String ipv4GatewayId;
 
     /**
-     * <p>The name of the IPv4 gateway instance.</p>
+     * <p>The name of the IPv4 gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -56,7 +56,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public String ipv4GatewayName;
 
     /**
-     * <p>The ID of the route table associated with the IPv4 gateway instance.</p>
+     * <p>The ID of the route table associated with the IPv4 gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>vtb-5ts0ohchwkp3dydt2****</p>
@@ -83,7 +83,7 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The status of the IPv4 gateway instance. Valid values:</p>
+     * <p>The status of the IPv4 gateway. Valid values:</p>
      * <ul>
      * <li><p><strong>Creating</strong>: The IPv4 gateway is being created.</p>
      * </li>
@@ -106,13 +106,13 @@ public class GetIpv4GatewayAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The tag list.</p>
+     * <p>The tags.</p>
      */
     @NameInMap("Tags")
     public java.util.List<GetIpv4GatewayAttributeResponseBodyTags> tags;
 
     /**
-     * <p>The ID of the VPC associated with the IPv4 gateway instance.</p>
+     * <p>The ID of the VPC associated with the IPv4 gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-5tsrxlw7dv074gci4****</p>

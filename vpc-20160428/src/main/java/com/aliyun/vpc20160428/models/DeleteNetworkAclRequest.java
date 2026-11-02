@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DeleteNetworkAclRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, and you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
      * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
@@ -18,10 +18,10 @@ public class DeleteNetworkAclRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run.</li>
-     * <li><strong>false</strong> (default): sends the request.</li>
+     * <li><strong>true</strong>: sends a precheck request.</li>
+     * <li><strong>false</strong> (default): sends a normal request.</li>
      * </ul>
      * 
      * <strong>example:</strong>

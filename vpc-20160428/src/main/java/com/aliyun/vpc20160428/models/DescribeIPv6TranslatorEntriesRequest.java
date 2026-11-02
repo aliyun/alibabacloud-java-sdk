@@ -16,8 +16,8 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable access control. Valid values:</p>
      * <ul>
-     * <li><strong>on</strong>: enabled.</li>
-     * <li><strong>off</strong>: disabled.</li>
+     * <li><strong>on</strong>: Enabled.</li>
+     * <li><strong>off</strong>: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,9 +29,9 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
     /**
      * <p>The type of the access control policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>white</strong>: allows the IPv6 addresses in the access control policy group to access backend services.</p>
+     * <li><p><strong>white</strong>: Allows IPv6 addresses in the access control policy group to access the backend service.</p>
      * </li>
-     * <li><p><strong>black</strong>: denies the IPv6 addresses in the access control policy group from accessing backend services.</p>
+     * <li><p><strong>black</strong>: Denies IPv6 addresses in the access control policy group from accessing the backend service.</p>
      * </li>
      * </ul>
      * 
@@ -42,7 +42,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
     public String aclType;
 
     /**
-     * <p>The IPv6 address allocated by the IPv6 Translation Service instance.</p>
+     * <p>The IPv6 address assigned to the IPv6 Translation Service instance.</p>
      * 
      * <strong>example:</strong>
      * <p>2400:3200:1600::XX</p>
@@ -51,7 +51,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
     public String allocateIpv6Addr;
 
     /**
-     * <p>The port used by the IPv6 address allocated by the IPv6 Translation Service instance.</p>
+     * <p>The port used by the IPv6 address assigned to the IPv6 Translation Service instance.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -79,7 +79,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>You can generate the parameter value from your client to ensure that the value is unique across different requests. The ClientToken parameter supports only ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>123e4567-e89b-12d3-a456-426655440000</p>
@@ -88,7 +88,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the IPv6 Translation mapping entry.</p>
+     * <p>The name of the IPv6 translation mapping entry.</p>
      * 
      * <strong>example:</strong>
      * <p>entryname</p>
@@ -97,9 +97,9 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
     public String entryName;
 
     /**
-     * <p>The ID of the IPv6 Translation mapping entry to query. </p>
+     * <p>The ID of the IPv6 translation mapping entry to query. </p>
      * <blockquote>
-     * <p>If both <strong>Ipv6TranslatorId</strong> and <strong>Ipv6TranslatorEntryId</strong> are empty, all IPv6 Translation mapping entries are returned. If only <strong>Ipv6TranslatorEntryId</strong> is empty, all IPv6 Translation mapping entries under the current IPv6 Translation Service instance are returned.</p>
+     * <p>If both the <strong>Ipv6TranslatorId</strong> and <strong>Ipv6TranslatorEntryId</strong> parameters are left empty, all IPv6 translation mapping entries are returned. If only the <strong>Ipv6TranslatorEntryId</strong> parameter is left empty, all IPv6 translation mapping entries under the current IPv6 Translation Service instance are returned.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -124,7 +124,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: 1.</p>
+     * <p>The page number of the list. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -133,7 +133,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page for a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -142,7 +142,7 @@ public class DescribeIPv6TranslatorEntriesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query region IDs.</p>
+     * <p>The region ID of the IPv6 Translation Service instance. You can call the <strong>DescribeRegions</strong> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

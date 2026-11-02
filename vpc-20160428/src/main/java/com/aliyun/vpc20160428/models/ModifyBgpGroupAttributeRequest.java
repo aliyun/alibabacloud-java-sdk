@@ -26,8 +26,8 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to clear the authentication key. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: Yes.</li>
-     * <li><strong>false</strong> (default): No.</li>
+     * <li><strong>true</strong>: yes.</li>
+     * <li><strong>false</strong> (default): no.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,9 +38,9 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,13 +60,13 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to use a fake ASN. Valid values:</p>
+     * <p>Specifies whether to use a fake AS number. Valid values:</p>
      * <ul>
-     * <li><strong>false</strong> (default): No.</li>
-     * <li><strong>true</strong>: Yes.</li>
+     * <li><strong>false</strong> (default): no.</li>
+     * <li><strong>true</strong>: yes.</li>
      * </ul>
      * <blockquote>
-     * <p>A router that runs BGP can belong to only one AS. When you need to replace an existing AS with a new one (for example, during AS migration or merger with another AS) and cannot immediately modify the BGP configuration due to business constraints, you can specify a fake ASN to establish a connection with the local end to ensure service continuity.</p>
+     * <p>A router that runs BGP typically belongs to only one AS. If you need to replace the original AS with a new AS (for example, when the AS needs to be migrated or merged with another AS) and cannot immediately modify the BGP configurations due to business or other objective factors, you can specify a fake AS number to establish a connection with the local end to ensure service continuity.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -76,14 +76,14 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     public Boolean isFakeAsn;
 
     /**
-     * <p>The custom Alibaba Cloud-side BGP autonomous system number (ASN). Valid values:</p>
+     * <p>The custom autonomous system (AS) number of Alibaba Cloud. Valid values:</p>
      * <ul>
      * <li><strong>45104</strong></li>
      * <li><strong>64512 to 65534</strong></li>
      * <li><strong>4200000000 to 4294967294</strong></li>
      * </ul>
      * <blockquote>
-     * <p><strong>65025</strong> is reserved by Alibaba Cloud. The Alibaba Cloud side uses <strong>45104</strong> as the default <strong>LocalAsn</strong> value. Using a custom <strong>LocalAsn</strong> value in multi-ISP access scenarios may cause BGP routing loops. Evaluate the risks before you use this feature.</p>
+     * <p><strong>65025</strong> is reserved by Alibaba Cloud. By default, Alibaba Cloud uses <strong>45104</strong> as the <strong>LocalAsn</strong>. If you use a custom <strong>LocalAsn</strong> in multi-line access scenarios, there may be a risk of BGP routing loops. Evaluate the risks before you use this feature.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -109,7 +109,7 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The ASN of the on-premises device.</p>
+     * <p>The AS number of the on-premises device.</p>
      * 
      * <strong>example:</strong>
      * <p>1****</p>
@@ -119,7 +119,7 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the BGP group. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -135,7 +135,7 @@ public class ModifyBgpGroupAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The maximum number of routes for a BGP peer. Unit: entries. Default value: <strong>110</strong>.</p>
+     * <p>The maximum number of route entries that can be received by the BGP peer. Unit: entries. Default value: <strong>110</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>110</p>

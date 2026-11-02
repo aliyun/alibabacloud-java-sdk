@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVpcGatewayEndpointsRequest extends TeaModel {
     /**
-     * <p>The endpoint instance ID of the gateway endpoint.</p>
+     * <p>The gateway endpoint instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vpce-bp1i1212ss2whuwyw****</p>
@@ -14,7 +14,7 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     public String endpointId;
 
     /**
-     * <p>The name of the gateway endpoint.</p>
+     * <p>The name of the VPC gateway endpoint.</p>
      * <p>The name must be 1 to 128 characters in length.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     public String endpointName;
 
     /**
-     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -33,10 +33,10 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>Specifies whether a next query token is available. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>Leave this parameter empty for the first query or when no more results are available.</li>
-     * <li>If more results are available, set this parameter to the NextToken value returned by the previous API call.</li>
+     * <li>If this is the first query or no subsequent query is required, leave this parameter empty.</li>
+     * <li>If a subsequent query is required, set the value to the NextToken value returned from the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -52,8 +52,8 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the gateway endpoint that you want to query.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the VPC gateway endpoint.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The ID of the resource group to which the gateway endpoint belongs.</p>
+     * <p>The ID of the resource group to which the VPC gateway endpoint belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxvfvazb4p****</p>
@@ -78,7 +78,7 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The service name of the endpoint service.</p>
+     * <p>The endpoint service name.</p>
      * 
      * <strong>example:</strong>
      * <p>com.aliyun.cn-hangzhou.oss</p>
@@ -93,7 +93,7 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
     public java.util.List<ListVpcGatewayEndpointsRequestTags> tags;
 
     /**
-     * <p>The ID of the VPC to which the gateway endpoint belongs.</p>
+     * <p>The ID of the VPC to which the VPC gateway endpoint belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1gsk7h12ew7oegk****</p>
@@ -212,8 +212,8 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
 
     public static class ListVpcGatewayEndpointsRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -222,8 +222,8 @@ public class ListVpcGatewayEndpointsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

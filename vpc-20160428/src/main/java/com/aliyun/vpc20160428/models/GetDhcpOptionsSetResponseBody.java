@@ -20,7 +20,7 @@ public class GetDhcpOptionsSetResponseBody extends TeaModel {
     public String creationTime;
 
     /**
-     * <p>The DHCP options configuration.</p>
+     * <p>The DHCP options configuration information.</p>
      */
     @NameInMap("DhcpOptions")
     public GetDhcpOptionsSetResponseBodyDhcpOptions dhcpOptions;

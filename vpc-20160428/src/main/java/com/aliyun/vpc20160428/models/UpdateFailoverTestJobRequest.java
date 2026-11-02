@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateFailoverTestJobRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class UpdateFailoverTestJobRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to only perform a dry run for the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: sends a request without updating the failover test node. The system checks the request for potential issues, including whether the AccessKey pair is valid, the authorization status of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check passes, the DryRunOperation error code is returned.                             </li>
-     * <li><strong>false</strong> (default): sends a Normal request, and the failover test node is updated after the check passes. A 2xx HTTP status code is returned.</li>
+     * <li><strong>true</strong>: The system performs a dry run without updating the failover test node. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, the system returns an error. If the request passes the dry run, the system returns the error code DryRunOperation.                             </li>
+     * <li><strong>false</strong> (default): The system sends a Normal request. If the request passes the dry run, the system returns a 2xx HTTP status code and updates the failover test node.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class UpdateFailoverTestJobRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The duration of the failover test job. Unit: minutes. Valid values: <strong>1 to 4320</strong>.</p>
+     * <p>The duration of the failover test job. Unit: minutes. Valid values: <strong>1</strong> to <strong>4320</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>60</p>
@@ -86,7 +86,7 @@ public class UpdateFailoverTestJobRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of failover test resource IDs. You can add up to 16 resources.</p>
+     * <p>The list of resource IDs for the failover test job. You can add up to 16 resources.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;

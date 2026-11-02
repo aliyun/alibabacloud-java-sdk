@@ -18,10 +18,10 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: sends a check request without creating the reserved CIDR block for a vSwitch. The system checks whether the required parameters are specified, the request format is valid, and the service limits are not exceeded. If the check fails, the corresponding error message is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends a Normal request. After the check passes, an HTTP 2xx status code is returned and the vSwitch reserved CIDR block for a vSwitch is created.</li>
+     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request format, and business restrictions. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a Normal request. If the check succeeds, an HTTP 2xx status code is returned and the reserved CIDR block for a vSwitch is created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,7 +46,7 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
      * <li><strong>IPv6</strong></li>
      * </ul>
      * <blockquote>
-     * <p>You do not need to specify this parameter when creating an IPv4 reserved CIDR block for a vSwitch. This parameter is required when creating an IPv6 reserved CIDR block for a vSwitch.</p>
+     * <p>You do not need to specify this parameter when you create an IPv4 reserved CIDR block for a vSwitch. This parameter is required when you create an IPv6 reserved CIDR block for a vSwitch.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -93,7 +93,7 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
      * <blockquote>
      * <ul>
      * <li>You must specify either the <strong>VSwitchCidrReservationMask</strong> parameter or the <strong>VSwitchCidrReservationCidr</strong> parameter.</li>
-     * <li>The reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch.</li>
+     * <li>The reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch to which it belongs.</li>
      * </ul>
      * </blockquote>
      * 
@@ -116,13 +116,13 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
     /**
      * <p>The mask of the reserved CIDR block for a vSwitch.</p>
      * <ul>
-     * <li>If <strong>IpVersion</strong> is set to <strong>IPv4</strong>, the mask length of the reserved CIDR block must be at least 2 bits longer than the IPv4 CIDR block mask of the vSwitch and cannot exceed 28.</li>
-     * <li>If <strong>IpVersion</strong> is set to <strong>IPv6</strong>, the mask length of the reserved CIDR block must be longer than the IPv6 CIDR block mask of the vSwitch and cannot exceed 80.</li>
+     * <li>If <strong>IpVersion</strong> is set to <strong>IPv4</strong>, the mask length of the reserved CIDR block for a vSwitch must be at least 2 bits longer than the mask of the IPv4 CIDR block of the vSwitch and cannot exceed 28.</li>
+     * <li>If <strong>IpVersion</strong> is set to <strong>IPv6</strong>, the mask length of the reserved CIDR block for a vSwitch must be longer than the mask of the IPv6 CIDR block of the vSwitch and cannot exceed 80.</li>
      * </ul>
      * <blockquote>
      * <ul>
      * <li>You must specify either the <strong>VSwitchCidrReservationMask</strong> parameter or the <strong>VSwitchCidrReservationCidr</strong> parameter.</li>
-     * <li>The reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch.</li>
+     * <li>The reserved CIDR block cannot contain the system reserved IP addresses of the vSwitch to which it belongs.</li>
      * </ul>
      * </blockquote>
      * 
@@ -145,7 +145,7 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
     /**
      * <p>The type of the reserved CIDR block for a vSwitch. Valid values: <strong>prefix</strong>, which indicates that IP addresses are allocated by CIDR block.</p>
      * <blockquote>
-     * <p>When users or cloud services automatically assign CIDR blocks to elastic network interfaces (ENIs), the CIDR blocks must be allocated from the reserved CIDR block for a vSwitch. If the IP addresses in the reserved CIDR block for a vSwitch are exhausted, the system returns an error.</p>
+     * <p>When users or cloud services automatically assign CIDR blocks to elastic network interface controllers (NICs), the CIDR blocks must be allocated from the reserved CIDR block. If the IP addresses in the reserved CIDR block are exhausted, the system returns an error.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -155,7 +155,7 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
     public String vSwitchCidrReservationType;
 
     /**
-     * <p>The ID of the vSwitch for which you want to create a reserved CIDR block for a vSwitch.</p>
+     * <p>The ID of the vSwitch to which the reserved CIDR block for a vSwitch belongs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -309,7 +309,7 @@ public class CreateVSwitchCidrReservationRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, the value can be an empty string.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The value can be an empty string.</p>
          * <p>The tag value can be up to 128 characters in length. It cannot start with aliyun or acs: and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

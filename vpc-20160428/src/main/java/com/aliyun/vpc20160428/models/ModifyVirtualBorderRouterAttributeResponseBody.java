@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyVirtualBorderRouterAttributeResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>980960B0-2969-40BF-8542-EBB34FD358AB</p>

@@ -20,11 +20,11 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>Indicates whether ClassicLink is enabled. Valid values:</p>
+     * <p>Indicates whether the ClassicLink feature is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: ClassicLink is enabled.</p>
+     * <li><p><strong>true</strong>: The ClassicLink feature is enabled.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): ClassicLink is not enabled.</p>
+     * <li><p><strong>false</strong> (default): The ClassicLink feature is disabled.</p>
      * </li>
      * </ul>
      * 
@@ -39,7 +39,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public DescribeVpcAttributeResponseBodyCloudResources cloudResources;
 
     /**
-     * <p>The creation time of the VPC.</p>
+     * <p>The time when the VPC was created. The time is displayed in UTC and follows the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format.</p>
      * 
      * <strong>example:</strong>
      * <p>2021-10-16T07:31:09Z</p>
@@ -68,13 +68,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the DHCP options set. Valid values:</p>
      * <ul>
-     * <li><p><strong>Available</strong>: active.</p>
+     * <li><p><strong>Available</strong>: The DHCP options set is available.</p>
      * </li>
-     * <li><p><strong>InUse</strong>: in use.</p>
+     * <li><p><strong>InUse</strong>: The DHCP options set is in use.</p>
      * </li>
-     * <li><p><strong>Deleted</strong>: deleted.</p>
+     * <li><p><strong>Deleted</strong>: The DHCP options set is deleted.</p>
      * </li>
-     * <li><p><strong>Pending</strong>: being configured.</p>
+     * <li><p><strong>Pending</strong>: The DHCP options set is being configured.</p>
      * </li>
      * </ul>
      * 
@@ -85,7 +85,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public String dhcpOptionsSetStatus;
 
     /**
-     * <p>Indicates whether DNS hostnames are enabled.</p>
+     * <p>Indicates whether the DNS hostname feature is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>DISABLED</p>
@@ -166,7 +166,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource group ID.</p>
+     * <p>The ID of the resource group.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmxazbvgb4ph****</p>
@@ -180,9 +180,9 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     /**
      * <p>The status of the VPC. Valid values:</p>
      * <ul>
-     * <li><p><strong>Available</strong>: active.</p>
+     * <li><p><strong>Available</strong>: The VPC is available.</p>
      * </li>
-     * <li><p><strong>Pending</strong>: being configured.</p>
+     * <li><p><strong>Pending</strong>: The VPC is being configured.</p>
      * </li>
      * </ul>
      * 
@@ -193,13 +193,13 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>Indicates whether the VPC operates in centralized control with IPv4 gateway mode.</p>
+     * <p>Indicates whether the VPC operates in the centralized control mode with the IPv4 gateway. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: The VPC operates in centralized control with IPv4 gateway mode, where Internet traffic is centrally managed by the IPv4 gateway (activated after the IPv4 gateway is created and routing is configured), or the VPC is a private network-only VPC (the IPv4 gateway is deleted in private mode).</li>
-     * <li><strong>false</strong>: The VPC operates in Direct Internet Access mode (access mode).</li>
+     * <li><strong>true</strong>: The VPC operates in the centralized control mode with the IPv4 gateway. Internet traffic is centrally managed by the IPv4 gateway (the IPv4 gateway is activated after it is created and routes are configured), or the VPC is a private network-only VPC (the IPv4 gateway is deleted in private mode).</li>
+     * <li><strong>false</strong>: Direct Internet Access mode.</li>
      * </ul>
      * <blockquote>
-     * <p>For details, see <a href="https://help.aliyun.com/document_detail/376445.html">IPv4 gateway</a>.</p>
+     * <p>For more information, see <a href="https://help.aliyun.com/document_detail/376445.html">IPv4 gateway</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class DescribeVpcAttributeResponseBody extends TeaModel {
     public DescribeVpcAttributeResponseBodyUserCidrs userCidrs;
 
     /**
-     * <p>The ID of the vRouter in the VPC.</p>
+     * <p>The ID of the vRouter of the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vrt-bp1jso6ng1at0ajsc****</p>

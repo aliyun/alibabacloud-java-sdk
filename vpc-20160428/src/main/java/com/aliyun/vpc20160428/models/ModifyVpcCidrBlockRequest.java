@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyVpcCidrBlockRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>Generate a parameter value from your client and ensure that the value is unique among different requests. The ClientToken parameter supports only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong> identifier. The <strong>RequestId</strong> of each API request is different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class ModifyVpcCidrBlockRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run for this request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without modifying the CIDR block of the virtual private cloud (VPC). The system checks the request for potential issues. If the check fails, the corresponding error is returned. If the check succeeds, the error code <code>DryRunOperation</code> is returned.</li>
-     * <li><strong>false</strong> (default): sends a Normal request. If the check succeeds, an HTTP 2xx status code is returned and the modification is performed.</li>
+     * <li><strong>true</strong>: The system sends a check request and does not modify the CIDR block of the virtual private cloud (VPC). If the check fails, the system returns the corresponding error. If the check succeeds, the system returns the error code <code>DryRunOperation</code>.</li>
+     * <li><strong>false</strong> (default): The system sends a normal request. After the request passes the check, the system returns an HTTP 2xx status code and directly performs the modification.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class ModifyVpcCidrBlockRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The CIDR block of the VPC to modify. Both primary and secondary CIDR blocks are supported.</p>
+     * <p>The CIDR block of the VPC that you want to modify. Both primary and secondary CIDR blocks are supported.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class ModifyVpcCidrBlockRequest extends TeaModel {
     public String originalCidrBlock;
 
     /**
-     * <p>The ID of the region where the VPC resides.</p>
+     * <p>The ID of the region where the VPC is deployed.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
@@ -52,7 +52,7 @@ public class ModifyVpcCidrBlockRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The new CIDR block for the VPC after modification.</p>
+     * <p>The target CIDR block of the VPC after the modification.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,7 +62,7 @@ public class ModifyVpcCidrBlockRequest extends TeaModel {
     public String targetCidrBlock;
 
     /**
-     * <p>The ID of the VPC to modify.</p>
+     * <p>The ID of the VPC that you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

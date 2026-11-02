@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     /**
-     * <p>The number of entries per page in a paged query.</p>
+     * <p>The maximum number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -14,10 +14,10 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     public Long maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The token for the next query.</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query is available.</li>
+     * <li>If <strong>NextToken</strong> has a value, the value is the token used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
     public java.util.List<ListVpcEndpointServicesByEndUserResponseBodyServices> services;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -106,7 +106,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         public String defaultPolicyDocument;
 
         /**
-         * <p>The domain name of the cloud service associated with the endpoint service in the queried region.</p>
+         * <p>The domain name of the Alibaba Cloud service to which the endpoint service belongs in the queried region.</p>
          * 
          * <strong>example:</strong>
          * <p>oss-admin.aliyuncs.com</p>
@@ -133,7 +133,7 @@ public class ListVpcEndpointServicesByEndUserResponseBody extends TeaModel {
         public String serviceName;
 
         /**
-         * <p>Indicates whether the endpoint service supports access policies. Valid values:</p>
+         * <p>Specifies whether the endpoint service supports access policies. Valid values:</p>
          * <ul>
          * <li><strong>false</strong>: Access policies are not supported.</li>
          * <li><strong>true</strong>: Access policies are supported.</li>

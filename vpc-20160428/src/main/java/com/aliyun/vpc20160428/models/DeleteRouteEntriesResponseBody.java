@@ -29,7 +29,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The number of route entries that were successfully deleted.</p>
+     * <p>The number of route entries that were deleted.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -85,7 +85,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         public String dstCidrBlock;
 
         /**
-         * <p>The error code of the failure.</p>
+         * <p>The error code returned for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC_ROUTER_ENTRY_NOT_EXIST</p>
@@ -94,7 +94,7 @@ public class DeleteRouteEntriesResponseBody extends TeaModel {
         public String failedCode;
 
         /**
-         * <p>The error message of the failure.</p>
+         * <p>The error message returned for the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>vRouterEntry not exists</p>

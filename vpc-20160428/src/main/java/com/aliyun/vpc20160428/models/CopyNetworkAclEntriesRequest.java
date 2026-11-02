@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CopyNetworkAclEntriesRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class CopyNetworkAclEntriesRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to precheck this request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run.</li>
-     * <li><strong>false</strong> (default): sends the request.</li>
+     * <li><strong>true</strong>: Prechecks the request.</li>
+     * <li><strong>false</strong> (default): Sends the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -47,7 +47,7 @@ public class CopyNetworkAclEntriesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the network ACL resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region where the network ACL resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -63,7 +63,7 @@ public class CopyNetworkAclEntriesRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the source network ACL from which rules are copied.</p>
+     * <p>The ID of the network ACL to be copied.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

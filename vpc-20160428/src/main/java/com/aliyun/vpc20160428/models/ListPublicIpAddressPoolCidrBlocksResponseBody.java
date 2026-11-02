@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     /**
-     * <p>The pagination token. Valid values:</p>
+     * <p>The token used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no subsequent query exists.</li>
-     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent requests are to be sent.</li>
+     * <li>If <strong>NextToken</strong> has a return value, the value indicates the token used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,7 +33,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries returned for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -89,7 +89,7 @@ public class ListPublicIpAddressPoolCidrBlocksResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The time when the CIDR block was created. The time is in the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
+         * <p>The creation time. The time follows the <code>YYYY-MM-DDThh:mm:ssZ</code> format.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-05-10T01:37:38Z</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class AssociateMacSecKeyRequest extends TeaModel {
     /**
-     * <p>The passphrase. Only hexadecimal characters are supported. Lowercase characters are automatically transformed to uppercase. When the encryption algorithm type is GCM-AES-128 or GCM-AES-XPN-128, the length must be 32 hexadecimal characters. When the encryption algorithm type is GCM-AES-256 or GCM-AES-XPN-256, the length must be 64 hexadecimal characters.</p>
+     * <p>The passphrase of the key. Only hexadecimal characters are supported, and lowercase letters are automatically transformed to uppercase letters. If the encryption algorithm type is GCM-AES-128 or GCM-AES-XPN-128, the length must be 32 hexadecimal characters. If the encryption algorithm type is GCM-AES-256 or GCM-AES-XPN-256, the length must be 64 hexadecimal characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class AssociateMacSecKeyRequest extends TeaModel {
     public String cipherSuite;
 
     /**
-     * <p>The key name. Only hexadecimal characters are supported. Lowercase characters are automatically transformed to uppercase. When the encryption algorithm type is GCM-AES-128 or GCM-AES-XPN-128, the length must be 32 hexadecimal characters. When the encryption algorithm type is GCM-AES-256 or GCM-AES-XPN-256, the length must be 64 hexadecimal characters.</p>
+     * <p>The name of the key. Only hexadecimal characters are supported, and lowercase letters are automatically transformed to uppercase letters. If the encryption algorithm type is GCM-AES-128 or GCM-AES-XPN-128, the length must be 32 hexadecimal characters. If the encryption algorithm type is GCM-AES-256 or GCM-AES-XPN-256, the length must be 64 hexadecimal characters.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class AssociateMacSecKeyRequest extends TeaModel {
     public String ckn;
 
     /**
-     * <p>The ID of the Express Connect circuit. The Express Connect circuit must be a dedicated circuit that has completed payment, supports MACsec, and is in the <strong>Enabled</strong> state. You can call DescribePhysicalConnections to query the current status and device capabilities.</p>
+     * <p>The ID of the Express Connect circuit. The Express Connect circuit must be a dedicated Express Connect circuit that has been paid for, is hosted on a device that supports MACsec, and is in the <strong>Enabled</strong> state. You can call the DescribePhysicalConnections operation to query the current state and device capabilities.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,8 +55,7 @@ public class AssociateMacSecKeyRequest extends TeaModel {
     public String physicalConnectionId;
 
     /**
-     * <p>The region ID of the Express Connect circuit.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query region IDs.</p>
+     * <p>The region ID of the Express Connect circuit. You can call the <a href="https://help.aliyun.com/document_detail/448570.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

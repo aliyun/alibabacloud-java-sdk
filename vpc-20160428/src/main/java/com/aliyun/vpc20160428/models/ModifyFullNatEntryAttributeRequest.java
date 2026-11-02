@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     /**
-     * <p>The backend domain name to be modified for FULLNAT address translation.</p>
+     * <p>The backend domain name for FULLNAT address translation.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx.com</p>
@@ -14,7 +14,7 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     public String accessDomain;
 
     /**
-     * <p>The backend IP address to be modified for FULLNAT address translation.</p>
+     * <p>The backend IP address for FULLNAT address translation.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -23,7 +23,7 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     public String accessIp;
 
     /**
-     * <p>The backend port to be modified for FULLNAT port mapping. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The backend port of the FULLNAT port mapping. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -33,9 +33,9 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -45,10 +45,10 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run for this request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without modifying the FULLNAT entry. The system checks the AccessKey pair, the authorization of the Resource Access Management (RAM) user, and the required parameters. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends a Normal request. If the check succeeds, a 2xx HTTP status code is returned and the FULLNAT entry is modified.</li>
+     * <li><strong>true</strong>: performs a dry run without modifying the FULLNAT entry. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends a Normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the FULLNAT entry is modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -59,7 +59,7 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
 
     /**
      * <p>The new description of the FULLNAT entry.</p>
-     * <p>The description can be empty or 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description can be left empty, or must be 2 to 256 characters in length. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>abcd</p>
@@ -68,7 +68,7 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     public String fullNatEntryDescription;
 
     /**
-     * <p>The ID of the FULLNAT entry to be modified.</p>
+     * <p>The ID of the FULLNAT entry that you want to modify.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
 
     /**
      * <p>The new name of the FULLNAT entry.</p>
-     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 2 to 128 characters in length, and must start with a letter or a Chinese character. It cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>modify</p>
@@ -88,7 +88,7 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     public String fullNatEntryName;
 
     /**
-     * <p>The ID of the FULLNAT table to which the FULLNAT entry belongs.</p>
+     * <p>The ID of the FULLNAT table.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -111,7 +111,7 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     public String ipProtocol;
 
     /**
-     * <p>The NAT IP address to be modified.</p>
+     * <p>The NAT IP address.</p>
      * 
      * <strong>example:</strong>
      * <p>192.168.XX.XX</p>
@@ -120,7 +120,7 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     public String natIp;
 
     /**
-     * <p>The frontend port to be modified for FULLNAT port mapping. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
+     * <p>The frontend port of the FULLNAT port mapping. Valid values: <strong>1</strong> to <strong>65535</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>80</p>
@@ -129,7 +129,7 @@ public class ModifyFullNatEntryAttributeRequest extends TeaModel {
     public String natIpPort;
 
     /**
-     * <p>The ID of the elastic network interfaces (ENIs), also known as the network interface controller (NIC), to be modified.</p>
+     * <p>The ID of the network interface controller (NIC) that you want to modify.</p>
      * 
      * <strong>example:</strong>
      * <p>eni-gw8g131ef2dnbu3k****</p>

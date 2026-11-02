@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ListNatIpsRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among multiple requests. The token can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses <strong>RequestId</strong> as <strong>ClientToken</strong>. The value of <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class ListNatIpsRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: The system prechecks the request without querying the NAT IP addresses. The system checks whether required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): The system sends a normal request. If the request passes the precheck, the system returns an HTTP 2xx status code and performs the operation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,13 +31,13 @@ public class ListNatIpsRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The origin of the NAT IP address to query. Valid values:</p>
+     * <p>The origin of the NAT IP addresses to query. Valid values:</p>
      * <ul>
-     * <li><p>prefix: a NAT IP address that belongs to an IP prefix.</p>
+     * <li><p>prefix: NAT IP addresses that belong to an IP prefix.</p>
      * </li>
-     * <li><p>cidr: a standalone NAT IP address that does not belong to any IP prefix.</p>
+     * <li><p>cidr: Standalone NAT IP addresses that do not belong to any IP prefix.</p>
      * </li>
-     * <li><p>Empty: queries all NAT IP addresses.</p>
+     * <li><p>Empty: All NAT IP addresses.</p>
      * </li>
      * </ul>
      * 
@@ -57,7 +57,7 @@ public class ListNatIpsRequest extends TeaModel {
     public String ipv4Prefix;
 
     /**
-     * <p>The number of entries per page for a paged query. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return on each page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -85,7 +85,7 @@ public class ListNatIpsRequest extends TeaModel {
     public String natIpCidr;
 
     /**
-     * <p>The instance ID of the NAT IP address to query. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
+     * <p>The instance IDs of the NAT IP addresses to query. Valid values of <strong>N</strong>: <strong>1</strong> to <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>vpcnatip-gw8a863sut1zijxh0****</p>
@@ -105,9 +105,9 @@ public class ListNatIpsRequest extends TeaModel {
     /**
      * <p>The status of the NAT IP addresses to query. Valid values:</p>
      * <ul>
-     * <li><strong>Available</strong>: available.</li>
-     * <li><strong>Deleting</strong>: being deleted.</li>
-     * <li><strong>Creating</strong>: being created.</li>
+     * <li><strong>Available</strong>: Available.</li>
+     * <li><strong>Deleting</strong>: Deleting.</li>
+     * <li><strong>Creating</strong>: Creating.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -117,10 +117,10 @@ public class ListNatIpsRequest extends TeaModel {
     public String natIpStatus;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token that is used to start the next query. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
-     * <li>If a next query exists, set the value to the NextToken value returned in the previous API call.</li>
+     * <li>If this is the first query or no next query is to be sent, ignore this parameter.</li>
+     * <li>If a next query is to be sent, set the value to the NextToken value returned in the last API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -137,7 +137,7 @@ public class ListNatIpsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the NAT gateway instance to which the NAT IP addresses belong.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

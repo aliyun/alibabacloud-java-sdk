@@ -30,7 +30,7 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page when paging is used. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -39,7 +39,7 @@ public class DescribeIPv6TranslatorAclListAttributesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region of the access control policy group.</p>
+     * <p>The region ID of the access control policy group.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

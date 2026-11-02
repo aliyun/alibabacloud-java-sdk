@@ -115,9 +115,9 @@ public class CreateFlowLogRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The type of the resource whose traffic you want to catch. Valid values:</p>
+     * <p>The type of the resource whose traffic you want to capture. Valid values:</p>
      * <ul>
-     * <li><p><strong>NetworkInterface</strong>: network interface controller (NIC).</p>
+     * <li><p><strong>NetworkInterface</strong>: network interface controllers (NICs).</p>
      * </li>
      * <li><p><strong>VSwitch</strong>: all network interface controllers (NICs) in a vSwitch.</p>
      * </li>
@@ -139,10 +139,18 @@ public class CreateFlowLogRequest extends TeaModel {
     public java.util.List<CreateFlowLogRequestTag> tag;
 
     /**
-     * <p>The traffic path to capture. Valid values:</p>
+     * <p>The traffic path to collect. Valid values:</p>
      * <ul>
-     * <li><strong>all</strong>: captures all traffic.</li>
-     * <li><strong>internetGateway</strong>: captures Internet traffic.</li>
+     * <li><strong>all</strong> (default): all scenarios.</li>
+     * <li><strong>internetGateway</strong>: traffic to access the Internet.</li>
+     * <li><strong>natGateway</strong>: traffic through NAT gateway.</li>
+     * <li><strong>vpnGateway</strong>: traffic through VPN gateway.</li>
+     * <li><strong>transitRouter</strong>: traffic through TR.</li>
+     * <li><strong>gatewayEndpoint</strong>: traffic through gateway endpoint to access Alibaba Cloud services.</li>
+     * <li><strong>vbr</strong>: traffic through Virtual Border Router (VBR) to access Express Connect circuits.</li>
+     * <li><strong>ecr</strong>: traffic through Express Connect Router (ECR).</li>
+     * <li><strong>ipv4Gateway</strong>: traffic through IPv4 gateway to access the Internet.</li>
+     * <li><strong>gatewayLoadBalancerEndpoint</strong>: traffic through Gateway Load Balancer endpoint (GWLBe).</li>
      * </ul>
      */
     @NameInMap("TrafficPath")
@@ -155,7 +163,7 @@ public class CreateFlowLogRequest extends TeaModel {
      * </li>
      * <li><p><strong>Allow</strong>: traffic allowed by access control.</p>
      * </li>
-     * <li><p><strong>Drop</strong>: traffic deny by access control.</p>
+     * <li><p><strong>Drop</strong>: traffic denied by access control.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -317,7 +325,7 @@ public class CreateFlowLogRequest extends TeaModel {
 
     public static class CreateFlowLogRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. Do not specify an empty string for this parameter.</p>
          * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -327,7 +335,7 @@ public class CreateFlowLogRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. You can specify an empty string.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
          * <p>The tag value can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>

@@ -23,7 +23,7 @@ public class CreateExpressConnectTrafficQosQueueResponseBody extends TeaModel {
     public String queueId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>4CF20CC7-D1FC-425B-A15B-DF7C8E2131A7</p>

@@ -32,7 +32,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The public IP address of the on-premises data center gateway device.</p>
+     * <p>The public IP address of the gateway device in the on-premises data center.</p>
      * 
      * <strong>example:</strong>
      * <p>139.32.XX.XX</p>
@@ -50,7 +50,7 @@ public class ModifyCustomerGatewayAttributeResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>8AA5CE21-2E6A-4530-BDF5-F055849476E6</p>

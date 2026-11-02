@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateVpcGatewayEndpointRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,11 +18,11 @@ public class CreateVpcGatewayEndpointRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to perform only a dry run on the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs a dry run without creating the gateway endpoint. The system checks the required parameters, request syntax, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned. The check items include whether the AccessKey pair is valid, whether the Resource Access Management (RAM) user has the required authorization, and whether the required parameters are specified.</p>
+     * <li><p><strong>true</strong>: performs only a dry run and does not create the gateway endpoint. The system checks whether your AccessKey pair is valid, the authorization of the Resource Access Management (RAM) user, and whether the required parameters are specified. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): sends a Normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the gateway endpoint is created.</p>
+     * <li><p><strong>false</strong> (default): sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the gateway endpoint is created.</p>
      * </li>
      * </ul>
      * 
@@ -60,12 +60,12 @@ public class CreateVpcGatewayEndpointRequest extends TeaModel {
 
     /**
      * <p>The access policy for the cloud service.</p>
-     * <p>For more information about the syntax and structure of access policies, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy structure and syntax</a>.</p>
+     * <p>For more information about the syntax and structure of access policies, see <a href="https://help.aliyun.com/document_detail/93739.html">Policy syntax and structure</a>.</p>
      * <blockquote>
      * <ul>
      * <li>This parameter is required if the selected endpoint service supports access policies.</li>
-     * <li>This parameter must be empty if the selected endpoint service does not support access policies.</li>
-     * <li>You can call the <a href="https://help.aliyun.com/document_detail/448920.html">ListVpcEndpointServicesByEndUser</a> operation to check whether an endpoint service supports access policies. A value of true for SupportPolicy indicates that access policies are supported.</li>
+     * <li>This parameter must be left empty if the selected endpoint service does not support access policies.</li>
+     * <li>You can call the <a href="https://help.aliyun.com/document_detail/448920.html">ListVpcEndpointServicesByEndUser</a> operation to check whether the endpoint service supports access policies. If the value of SupportPolicy is true, the endpoint service supports access policies. Otherwise, it does not.</li>
      * </ul>
      * </blockquote>
      * 
@@ -77,7 +77,7 @@ public class CreateVpcGatewayEndpointRequest extends TeaModel {
 
     /**
      * <p>The region ID of the gateway endpoint that you want to create.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class CreateVpcGatewayEndpointRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The service name of the endpoint service.</p>
+     * <p>The name of the endpoint service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -118,7 +118,7 @@ public class CreateVpcGatewayEndpointRequest extends TeaModel {
     public java.util.List<CreateVpcGatewayEndpointRequestTag> tag;
 
     /**
-     * <p>The ID of the VPC for which you want to create the gateway endpoint.</p>
+     * <p>The ID of the virtual private cloud (VPC) where you want to create the gateway endpoint.</p>
      * <p>The VPC must be in the same region as the gateway endpoint.</p>
      * <p>This parameter is required.</p>
      * 
@@ -247,8 +247,8 @@ public class CreateVpcGatewayEndpointRequest extends TeaModel {
 
     public static class CreateVpcGatewayEndpointRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
-         * <p>The tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
+         * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceDept</p>
@@ -257,8 +257,8 @@ public class CreateVpcGatewayEndpointRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class DescribeFlowLogsRequest extends TeaModel {
     /**
      * <p>The description of the flow log.</p>
-     * <p>The description must be 1 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 1 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is my Flowlog.</p>
@@ -25,7 +25,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
 
     /**
      * <p>The name of the flow log.</p>
-     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>myFlowlog</p>
@@ -34,7 +34,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public String flowLogName;
 
     /**
-     * <p>The name of the Logstore that stores the captured traffic.</p>
+     * <p>The Logstore that stores the captured traffic.</p>
      * 
      * <strong>example:</strong>
      * <p>FlowLogStore</p>
@@ -58,7 +58,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in paging query. Maximum value: <strong>50</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries per page for paging in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -67,7 +67,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The name of the project that manages the captured traffic.</p>
+     * <p>The Log Service project that manages the captured traffic.</p>
      * 
      * <strong>example:</strong>
      * <p>FlowLogProject</p>
@@ -77,7 +77,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
 
     /**
      * <p>The region ID of the flow log.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -113,11 +113,11 @@ public class DescribeFlowLogsRequest extends TeaModel {
     /**
      * <p>The resource type of the traffic to catch. Valid values:</p>
      * <ul>
-     * <li><p><strong>NetworkInterface</strong>: network interface controller (NIC).</p>
+     * <li><p><strong>NetworkInterface</strong>: elastic network interface controller (NIC).</p>
      * </li>
-     * <li><p><strong>VSwitch</strong>: all network interface controllers (NICs) in a vSwitch.</p>
+     * <li><p><strong>VSwitch</strong>: all elastic network interface controller (NIC) in a vSwitch.</p>
      * </li>
-     * <li><p><strong>VPC</strong>: all network interface controllers (NICs) in a virtual private cloud (VPC).</p>
+     * <li><p><strong>VPC</strong>: all elastic network interface controller (NIC) in a virtual private cloud (VPC).</p>
      * </li>
      * </ul>
      * 
@@ -130,11 +130,11 @@ public class DescribeFlowLogsRequest extends TeaModel {
     /**
      * <p>The status of the flow log. Valid values:</p>
      * <ul>
-     * <li><p><strong>Active</strong>: the flow log is active.</p>
+     * <li><p><strong>Active</strong>: The flow log is active.</p>
      * </li>
-     * <li><p><strong>Activating</strong>: the flow log is being created.</p>
+     * <li><p><strong>Activating</strong>: The flow log is being created.</p>
      * </li>
-     * <li><p><strong>Inactive</strong>: the flow log is inactive.</p>
+     * <li><p><strong>Inactive</strong>: The flow log is inactive.</p>
      * </li>
      * </ul>
      * 
@@ -151,13 +151,13 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public java.util.List<DescribeFlowLogsRequestTags> tags;
 
     /**
-     * <p>The traffic type to collect. Valid values:</p>
+     * <p>The traffic type to catch. Valid values:</p>
      * <ul>
      * <li><p><strong>All</strong>: all traffic.</p>
      * </li>
-     * <li><p><strong>Allow</strong>: traffic allowed by access control.</p>
+     * <li><p><strong>Allow</strong>: traffic that access control allows.</p>
      * </li>
-     * <li><p><strong>Drop</strong>: traffic deny by access control.</p>
+     * <li><p><strong>Drop</strong>: traffic that access control policies deny.</p>
      * </li>
      * </ul>
      * 
@@ -168,7 +168,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
     public String trafficType;
 
     /**
-     * <p>The ID of the VPC whose flow logs you want to query.</p>
+     * <p>The ID of the VPC for which you want to query flow logs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1nwd16gvo1wgs****</p>
@@ -335,7 +335,7 @@ public class DescribeFlowLogsRequest extends TeaModel {
 
     public static class DescribeFlowLogsRequestTags extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
          * <p>A tag key can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -345,8 +345,8 @@ public class DescribeFlowLogsRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>The tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length. It cannot start with <code>aliyun</code> or <code>acs:</code>, and cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>FinanceJoshua</p>

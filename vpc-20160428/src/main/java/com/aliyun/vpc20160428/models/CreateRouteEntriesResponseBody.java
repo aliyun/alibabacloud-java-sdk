@@ -29,7 +29,7 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The instance IDs returned for the successfully added custom route entries. The routing information is included.</p>
+     * <p>The routing instance IDs returned for the custom route entries that were successfully added.</p>
      */
     @NameInMap("RouteEntryIds")
     public java.util.List<String> routeEntryIds;
@@ -99,7 +99,7 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
         public String dstCidrBlock;
 
         /**
-         * <p>The error code.</p>
+         * <p>The error code of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>VPC_ROUTE_ENTRY_CIDR_BLOCK_DUPLICATE</p>
@@ -108,7 +108,7 @@ public class CreateRouteEntriesResponseBody extends TeaModel {
         public String failedCode;
 
         /**
-         * <p>The error message.</p>
+         * <p>The error message of the failure.</p>
          * 
          * <strong>example:</strong>
          * <p>Specified CIDR block is already exists, entry.cidrBlock=xxxx</p>

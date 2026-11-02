@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The destination IP address IPv4 CIDR block for traffic matching in the QoS rule.</p>
+     * <p>The IPv4 CIDR block of the destination IP address for the traffic to be matched by the QoS rule.</p>
      * <blockquote>
-     * <p>You cannot specify this parameter together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
+     * <p>You cannot specify this parameter together with the <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -30,9 +30,9 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     public String dstCidr;
 
     /**
-     * <p>The destination IP address IPv6 CIDR block for traffic matching in the QoS rule.</p>
+     * <p>The IPv6 CIDR block of the destination IP address for the traffic to be matched by the QoS rule.</p>
      * <blockquote>
-     * <p>You cannot specify this parameter together with <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
+     * <p>You cannot specify this parameter together with the <strong>SrcCidr</strong> or <strong>DstCidr</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     public String dstIPv6Cidr;
 
     /**
-     * <p>The destination port range for traffic matching in the QoS rule. Valid values: <strong>0</strong> to <strong>65535</strong>. Set the value to -1 if no matching is required. Currently, only a single port number can be specified. The start and end port numbers must be the same. The destination port range is fixed for each protocol type. Valid values:</p>
+     * <p>The destination port range to be matched by the QoS rule. Valid values: <strong>0</strong> to <strong>65535</strong>. Set the value to -1 if you do not want to match the destination port. Currently, you can specify only a single port number, which means the start port and end port must be the same. The destination port range varies based on the protocol type. Valid values:</p>
      * <ul>
      * <li><p><strong>ALL</strong>: -1/-1. Not editable.</p>
      * </li>
@@ -85,7 +85,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     public String dstPortRange;
 
     /**
-     * <p>The DSCP value for traffic matching in the QoS rule. Valid values: <strong>0</strong> to <strong>63</strong>. Set the value to -1 if no matching is required.</p>
+     * <p>The DSCP value of the traffic to be matched by the QoS rule. Valid values: <strong>0</strong> to <strong>63</strong>. Set the value to -1 if you do not want to match the DSCP value.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -100,7 +100,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The priority of the QoS rule. Valid values: <strong>1</strong> to <strong>9000</strong>. A larger value indicates a higher priority. The priority must be unique within the same QoS policy.</p>
+     * <p>The priority of the QoS rule. Valid values: <strong>1</strong> to <strong>9000</strong>. A larger value indicates a higher priority. The priority of a QoS rule must be unique within the same QoS policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -154,7 +154,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     public String protocol;
 
     /**
-     * <p>The QoS policy ID.</p>
+     * <p>The ID of the QoS policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -164,7 +164,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     public String qosId;
 
     /**
-     * <p>The QoS queue ID.</p>
+     * <p>The ID of the QoS queue.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -175,7 +175,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
 
     /**
      * <p>The region ID of the QoS policy.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -185,7 +185,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The new DSCP value to remark on the traffic. Valid values: <strong>0</strong> to <strong>63</strong>. Set the value to -1 if no remarking is required.</p>
+     * <p>The new DSCP value to be marked in the traffic. Valid values: <strong>0</strong> to <strong>63</strong>. Set the value to -1 if you do not want to modify the DSCP value.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -198,7 +198,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
 
     /**
      * <p>The description of the QoS rule.</p>
-     * <p>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 0 to 256 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-rule-test</p>
@@ -208,7 +208,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
 
     /**
      * <p>The name of the QoS rule.</p>
-     * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 0 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-rule-test</p>
@@ -217,9 +217,9 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     public String ruleName;
 
     /**
-     * <p>The source IPv4 CIDR block for traffic matching in the QoS rule.</p>
+     * <p>The source IPv4 CIDR block to be matched by the QoS rule.</p>
      * <blockquote>
-     * <p>You cannot specify this parameter together with <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong>.</p>
+     * <p>You cannot specify this parameter together with the <strong>SrcIPv6Cidr</strong> or <strong>DstIPv6Cidr</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -229,9 +229,9 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     public String srcCidr;
 
     /**
-     * <p>The source IPv6 CIDR block for traffic matching in the QoS rule.</p>
+     * <p>The source IPv6 CIDR block to be matched by the QoS rule.</p>
      * <blockquote>
-     * <p>You cannot specify this parameter together with <strong>SrcCidr</strong> or <strong>DstCidr</strong>.</p>
+     * <p>You cannot specify this parameter together with the <strong>SrcCidr</strong> or <strong>DstCidr</strong> parameter.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -241,7 +241,7 @@ public class CreateExpressConnectTrafficQosRuleRequest extends TeaModel {
     public String srcIPv6Cidr;
 
     /**
-     * <p>The source port range for traffic matching in the QoS rule. Valid values: <strong>0</strong> to <strong>65535</strong>. Set the value to -1 if no matching is required. Currently, only a single port number can be specified. The start and end port numbers must be the same.</p>
+     * <p>The source port range to be matched by the QoS rule. Valid values: <strong>0</strong> to <strong>65535</strong>. Set the value to -1 if you do not want to match the source port. Currently, you can specify only a single port number, which means the start port and end port must be the same.</p>
      * 
      * <strong>example:</strong>
      * <p>-1/-1</p>

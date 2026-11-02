@@ -7,8 +7,8 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     /**
      * <p>The type of the IPv6 address. Valid values:</p>
      * <ul>
-     * <li>IPv6Address (default): queries IPv6 instances with a single IPv6 IP address.</li>
-     * <li>IPv6Prefix: queries IPv6 instances with a prefix CIDR block.</li>
+     * <li>IPv6Address: queries an IPv6 instance of a single IPv6 address. This is the default value.</li>
+     * <li>IPv6Prefix: queries an IPv6 instance of an IPv6 prefix.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,33 +18,34 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public String addressType;
 
     /**
-     * <p>The instance ID associated with the IPv6 address that you want to query.</p>
+     * <p>The instance ID associated with the IPv6 address to query.</p>
      * 
      * <strong>example:</strong>
-     * <p>i-2ze72wuqj4y3jl4f****</p>
+     * <p>eni-2ze72wuqj4y3jl4f****</p>
      */
     @NameInMap("AssociatedInstanceId")
     public String associatedInstanceId;
 
     /**
-     * <p>The type of the instance associated with the IPv6 address that you want to query. Valid values:</p>
+     * <p>The type of the instance associated with the IPv6 address to query. Valid values:</p>
      * <ul>
      * <li><strong>EcsInstance</strong>: an ECS instance in a VPC.</li>
-     * <li><strong>NetworkInterface</strong>: a secondary elastic network interface (ENI) that serves as a network interface controller (NIC).</li>
+     * <li><strong>NetworkInterface</strong>: elastic network interface controller (NIC).</li>
      * </ul>
+     * <p>This parameter must be used together with AssociatedInstanceId.</p>
      * 
      * <strong>example:</strong>
-     * <p>EcsInstance</p>
+     * <p>NetworkInterface</p>
      */
     @NameInMap("AssociatedInstanceType")
     public String associatedInstanceType;
 
     /**
-     * <p>Specifies whether to include renewal data that has not taken effect. Valid values:</p>
+     * <p>Specifies whether to include inactive order data. Valid values:</p>
      * <ul>
-     * <li><p><strong>false</strong> (default): does not include renewal data that has not taken effect.</p>
+     * <li><p><strong>false</strong>: does not include inactive order data. This is the default value.</p>
      * </li>
-     * <li><p><strong>true</strong>: includes renewal data that has not taken effect.</p>
+     * <li><p><strong>true</strong>: includes inactive order data.</p>
      * </li>
      * </ul>
      * 
@@ -55,7 +56,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public Boolean includeReservationData;
 
     /**
-     * <p>The IPv6 address that you want to query.</p>
+     * <p>The IPv6 addresses to query.</p>
      * 
      * <strong>example:</strong>
      * <p>2408:XXXX:153:3921:851c:c435:7b12:1c5f</p>
@@ -64,7 +65,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public String ipv6Address;
 
     /**
-     * <p>The ID of the IPv6 address that you want to query. You can specify up to 20 IPv6 address IDs in each call. Separate multiple IDs with commas (,).</p>
+     * <p>The IDs of the IPv6 addresses to query. You can specify up to 20 IPv6 address IDs in each call. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6-2zen5j4axcp5l5qyy****</p>
@@ -73,7 +74,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public String ipv6AddressId;
 
     /**
-     * <p>The instance ID of the Internet bandwidth associated with the IPv6 address that you want to query. This parameter is available after public network bandwidth is enabled.</p>
+     * <p>The instance ID of the Internet bandwidth associated with the IPv6 address to query after Internet bandwidth is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>ipv6bw-uf6hcyzu65v98v3du****</p>
@@ -82,7 +83,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public String ipv6InternetBandwidthId;
 
     /**
-     * <p>The name of the IPv6 address that you want to query.</p>
+     * <p>The name of the IPv6 address to query.</p>
      * <p>The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
@@ -92,11 +93,11 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public String name;
 
     /**
-     * <p>The communication type of the IPv6 address that you want to query. Valid values:</p>
+     * <p>The network type of the IPv6 address to query. Valid values:</p>
      * <ul>
-     * <li><p><strong>Private</strong>: private communication.</p>
+     * <li><p><strong>Private</strong>: private network.</p>
      * </li>
-     * <li><p><strong>Public</strong>: public communication.</p>
+     * <li><p><strong>Public</strong>: public network.</p>
      * </li>
      * </ul>
      * 
@@ -113,7 +114,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number. Default value: <strong>1</strong>.</p>
+     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -122,7 +123,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging queries. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -131,7 +132,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the IPv6 addresses that you want to query. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region ID of the IPv6 addresses to query. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -161,7 +162,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
      * <li><strong>true</strong>: The instance is a managed instance.</li>
      * <li><strong>false</strong>: The instance is not a managed instance.</li>
      * </ul>
-     * <p>If you do not set this parameter, all instances are queried.</p>
+     * <p>If you do not specify this parameter, all instances are queried by default.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -170,13 +171,13 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public Boolean serviceManaged;
 
     /**
-     * <p>The list of tags. You can specify up to 20 tags.</p>
+     * <p>The list of tags. Maximum number of elements: 20.</p>
      */
     @NameInMap("Tag")
     public java.util.List<DescribeIpv6AddressesRequestTag> tag;
 
     /**
-     * <p>The ID of the vSwitch to which the IPv6 address that you want to query belongs.</p>
+     * <p>The ID of the vSwitch to which the IPv6 address to query belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-25navfgbue4g****</p>
@@ -185,7 +186,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The ID of the VPC to which the IPv6 address that you want to query belongs.</p>
+     * <p>The ID of the VPC to which the IPv6 address to query belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp15zckdt37pq72zv****</p>
@@ -368,7 +369,7 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
 
     public static class DescribeIpv6AddressesRequestTag extends TeaModel {
         /**
-         * <p>The tag key of the resource. You can specify up to 20 tag keys. The tag key cannot be an empty string.</p>
+         * <p>The tag key of the resource. You can specify up to 20 tag keys. If you specify this parameter, you cannot specify an empty string.</p>
          * <p>A tag key can be up to 128 characters in length and cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
@@ -378,8 +379,8 @@ public class DescribeIpv6AddressesRequest extends TeaModel {
         public String key;
 
         /**
-         * <p>The tag value of the resource. You can specify up to 20 tag values. The tag value can be an empty string.</p>
-         * <p>A tag value can be up to 128 characters in length and must start with a letter or Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code> and cannot contain <code>http://</code> or <code>https://</code>.</p>
+         * <p>The tag value of the resource. You can specify up to 20 tag values. If you specify this parameter, you can specify an empty string.</p>
+         * <p>A tag value can be up to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, periods (.), underscores (_), and hyphens (-). It cannot start with <code>aliyun</code> or <code>acs:</code>. It cannot contain <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>yunke</p>

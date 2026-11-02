@@ -5,21 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateVSwitchRequest extends TeaModel {
     /**
-     * <p>The CIDR block of the vSwitch. The following requirements apply: </p>
+     * <p>The CIDR block of the vSwitch. The vSwitch CIDR block must meet the following requirements: </p>
      * <ul>
      * <li><p>The mask length of the vSwitch CIDR block must be 16 to 29 bits.  </p>
      * </li>
-     * <li><p>The CIDR block of the vSwitch must be a subset of the CIDR block of the VPC to which the vSwitch belongs. </p>
+     * <li><p>The vSwitch CIDR block must be a subset of the CIDR block of the VPC to which the vSwitch belongs. </p>
      * </li>
-     * <li><p>The CIDR block of the vSwitch cannot be the same as the destination CIDR block of a route in the VPC, but can be a subset of the destination CIDR block. </p>
+     * <li><p>The vSwitch CIDR block cannot be the same as the destination CIDR block of a route entry in the VPC, but can be a subset of the destination CIDR block. </p>
      * </li>
-     * <li><p>The CIDR block of the vSwitch cannot be within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, or 224.0.0.0/4.</p>
+     * <li><p>The vSwitch CIDR block cannot be within the following reserved address ranges: 100.64.0.0/10, 127.0.0.0/8, 169.254.0.0/16, or 224.0.0.0/4.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <p>After a vSwitch is created, you cannot modify its CIDR block.</p>
      * </blockquote>
-     * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
      * <p>172.16.0.0/24</p>
@@ -28,10 +27,22 @@ public class CreateVSwitchRequest extends TeaModel {
     public String cidrBlock;
 
     /**
+     * <p>The mask length of the IPv4 CIDR block of the vSwitch.</p>
+     * <blockquote>
+     * <p>The mask length of the vSwitch IPv4 CIDR block must be 16 to 29 bits. You must specify at least one of CidrBlock and CidrMask.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>24</p>
+     */
+    @NameInMap("CidrMask")
+    public Integer cidrMask;
+
+    /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
      * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may vary for each API request.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -52,13 +63,25 @@ public class CreateVSwitchRequest extends TeaModel {
 
     /**
      * <p>The last 8 bits of the IPv6 CIDR block of the vSwitch. Valid values: <strong>0</strong> to <strong>255</strong>.
-     * You can specify this parameter only when the VPC to which the vSwitch belongs has IPv6 enabled. This allows you to assign an IPv6 CIDR block to the vSwitch. After the IPv6 CIDR block is allocated, it cannot be changed. Make sure that the CIDR block does not overlap with those of other vSwitches in the VPC.</p>
+     * You can specify this parameter to assign an IPv6 CIDR block to the vSwitch only when the VPC to which the vSwitch belongs has IPv6 enabled. After the IPv6 CIDR block is assigned, it cannot be changed to another CIDR block. Make sure that the CIDR block does not overlap with those of other vSwitches in the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>12</p>
      */
     @NameInMap("Ipv6CidrBlock")
     public Integer ipv6CidrBlock;
+
+    /**
+     * <p>The subnet mask of the IPv6 CIDR block of the vSwitch. You can specify this parameter to assign an IPv6 CIDR block to the vSwitch only when the VPC to which the vSwitch belongs has IPv6 enabled.</p>
+     * <blockquote>
+     * <p>Only 64 is supported.</p>
+     * </blockquote>
+     * 
+     * <strong>example:</strong>
+     * <p>64</p>
+     */
+    @NameInMap("Ipv6CidrMask")
+    public Integer ipv6CidrMask;
 
     @NameInMap("OwnerAccount")
     public String ownerAccount;
@@ -67,7 +90,7 @@ public class CreateVSwitchRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the vSwitch that you want to create.</p>
+     * <p>The region ID of the vSwitch to create.</p>
      * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * 
      * <strong>example:</strong>
@@ -141,6 +164,14 @@ public class CreateVSwitchRequest extends TeaModel {
         return this.cidrBlock;
     }
 
+    public CreateVSwitchRequest setCidrMask(Integer cidrMask) {
+        this.cidrMask = cidrMask;
+        return this;
+    }
+    public Integer getCidrMask() {
+        return this.cidrMask;
+    }
+
     public CreateVSwitchRequest setClientToken(String clientToken) {
         this.clientToken = clientToken;
         return this;
@@ -163,6 +194,14 @@ public class CreateVSwitchRequest extends TeaModel {
     }
     public Integer getIpv6CidrBlock() {
         return this.ipv6CidrBlock;
+    }
+
+    public CreateVSwitchRequest setIpv6CidrMask(Integer ipv6CidrMask) {
+        this.ipv6CidrMask = ipv6CidrMask;
+        return this;
+    }
+    public Integer getIpv6CidrMask() {
+        return this.ipv6CidrMask;
     }
 
     public CreateVSwitchRequest setOwnerAccount(String ownerAccount) {

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     /**
-     * <p>The number of entries returned in the current request.</p>
+     * <p>The number of entries returned for the current query.</p>
      * 
      * <strong>example:</strong>
      * <p>5</p>
@@ -14,7 +14,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     public Integer count;
 
     /**
-     * <p>The maximum number of entries queried in the current request.</p>
+     * <p>The maximum number of entries to return for the current request.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,10 +23,10 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The token that indicates whether a next query is available. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no subsequent query is available.</li>
+     * <li>If <strong>NextToken</strong> returns a value, the value indicates the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -45,7 +45,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -54,7 +54,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
     public String totalCount;
 
     /**
-     * <p>The details of traffic mirror filters.</p>
+     * <p>The details of the traffic mirror filters.</p>
      */
     @NameInMap("TrafficMirrorFilters")
     public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters> trafficMirrorFilters;
@@ -116,8 +116,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * <p>The collection policy of the outbound rule. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: collects network traffic.</li>
-         * <li><strong>drop</strong>: does not collect network traffic.</li>
+         * <li><strong>accept</strong>: Captures network traffic.</li>
+         * <li><strong>drop</strong>: Does not capture network traffic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -127,7 +127,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The destination CIDR block of network traffic for the outbound rule.</p>
+         * <p>The destination CIDR block of the network traffic for the outbound rule.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/24</p>
@@ -136,7 +136,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String destinationCidrBlock;
 
         /**
-         * <p>The destination port range of network traffic for the outbound rule.</p>
+         * <p>The destination port range of the network traffic for the outbound rule.</p>
          * 
          * <strong>example:</strong>
          * <p>22/40</p>
@@ -163,12 +163,12 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The protocol type used by the outbound network traffic to be mirrored. Valid values:</p>
+         * <p>The protocol type of the network traffic to be mirrored for the outbound rule. Valid values:</p>
          * <ul>
-         * <li><strong>ALL</strong>: all protocols.</li>
-         * <li><strong>ICMP</strong>: Internet Control Message Protocol.</li>
-         * <li><strong>TCP</strong>: Transmission Control Protocol.</li>
-         * <li><strong>UDP</strong>: User Datagram Protocol.</li>
+         * <li><strong>ALL</strong>: all protocols</li>
+         * <li><strong>ICMP</strong>: Internet Control Message Protocol</li>
+         * <li><strong>TCP</strong>: Transmission Control Protocol</li>
+         * <li><strong>UDP</strong>: User Datagram Protocol</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -178,7 +178,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The source CIDR block of network traffic for the outbound rule.</p>
+         * <p>The source CIDR block of the network traffic for the outbound rule.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/24</p>
@@ -187,7 +187,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String sourceCidrBlock;
 
         /**
-         * <p>The source port range of network traffic for the outbound rule.</p>
+         * <p>The source port range of the network traffic for the outbound rule.</p>
          * 
          * <strong>example:</strong>
          * <p>22/40</p>
@@ -196,11 +196,11 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String sourcePortRange;
 
         /**
-         * <p>The direction of network traffic. Valid values:</p>
+         * <p>The direction of the network traffic. Valid values:</p>
          * <ul>
-         * <li><p><strong>egress</strong>: outbound.</p>
+         * <li><p><strong>egress</strong>: outbound</p>
          * </li>
-         * <li><p><strong>ingress</strong>: inbound.</p>
+         * <li><p><strong>ingress</strong>: inbound</p>
          * </li>
          * </ul>
          * 
@@ -231,13 +231,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * <p>The status of the outbound rule. Valid values:</p>
          * <ul>
-         * <li><p><strong>Creating</strong>: being created.</p>
+         * <li><p><strong>Creating</strong>: creating</p>
          * </li>
-         * <li><p><strong>Created</strong>: created.</p>
+         * <li><p><strong>Created</strong>: created</p>
          * </li>
-         * <li><p><strong>Modifying</strong>: being modified.</p>
+         * <li><p><strong>Modifying</strong>: modifying</p>
          * </li>
-         * <li><p><strong>Deleting</strong>: being deleted.</p>
+         * <li><p><strong>Deleting</strong>: deleting</p>
          * </li>
          * </ul>
          * 
@@ -354,8 +354,8 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * <p>The collection policy of the inbound rule. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: collects network traffic.</li>
-         * <li><strong>drop</strong>: does not collect network traffic.</li>
+         * <li><strong>accept</strong>: Captures network traffic.</li>
+         * <li><strong>drop</strong>: Does not capture network traffic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -365,7 +365,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String action;
 
         /**
-         * <p>The destination CIDR block of network traffic for the inbound rule.</p>
+         * <p>The destination CIDR block of the network traffic for the inbound rule.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
@@ -374,7 +374,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String destinationCidrBlock;
 
         /**
-         * <p>The destination port range of network traffic for the inbound rule.</p>
+         * <p>The destination port range of the network traffic for the inbound rule.</p>
          * 
          * <strong>example:</strong>
          * <p>-1/-1</p>
@@ -401,12 +401,12 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public Integer priority;
 
         /**
-         * <p>The protocol type used by the inbound network traffic to be mirrored. Valid values:</p>
+         * <p>The protocol type of the network traffic to be mirrored for the inbound rule. Valid values:</p>
          * <ul>
-         * <li><strong>ALL</strong>: all protocols.</li>
-         * <li><strong>ICMP</strong>: Internet Control Message Protocol.</li>
-         * <li><strong>TCP</strong>: Transmission Control Protocol.</li>
-         * <li><strong>UDP</strong>: User Datagram Protocol.</li>
+         * <li><strong>ALL</strong>: all protocols</li>
+         * <li><strong>ICMP</strong>: Internet Control Message Protocol</li>
+         * <li><strong>TCP</strong>: Transmission Control Protocol</li>
+         * <li><strong>UDP</strong>: User Datagram Protocol</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -416,7 +416,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String protocol;
 
         /**
-         * <p>The source CIDR block of network traffic for the inbound rule.</p>
+         * <p>The source CIDR block of the network traffic for the inbound rule.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.0.0/0</p>
@@ -425,7 +425,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String sourceCidrBlock;
 
         /**
-         * <p>The destination port range of network traffic for the inbound rule.</p>
+         * <p>The destination port range of the network traffic for the inbound rule.</p>
          * 
          * <strong>example:</strong>
          * <p>-1/-1</p>
@@ -434,11 +434,11 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String sourcePortRange;
 
         /**
-         * <p>The direction of network traffic. Valid values:</p>
+         * <p>The direction of the network traffic. Valid values:</p>
          * <ul>
-         * <li><p><strong>egress</strong>: outbound.</p>
+         * <li><p><strong>egress</strong>: outbound</p>
          * </li>
-         * <li><p><strong>ingress</strong>: inbound.</p>
+         * <li><p><strong>ingress</strong>: inbound</p>
          * </li>
          * </ul>
          * 
@@ -469,13 +469,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * <p>The status of the inbound rule. Valid values:</p>
          * <ul>
-         * <li><p><strong>Creating</strong>: being created.</p>
+         * <li><p><strong>Creating</strong>: creating</p>
          * </li>
-         * <li><p><strong>Created</strong>: created.</p>
+         * <li><p><strong>Created</strong>: created</p>
          * </li>
-         * <li><p><strong>Modifying</strong>: being modified.</p>
+         * <li><p><strong>Modifying</strong>: modifying</p>
          * </li>
-         * <li><p><strong>Deleting</strong>: being deleted.</p>
+         * <li><p><strong>Deleting</strong>: deleting</p>
          * </li>
          * </ul>
          * 
@@ -632,7 +632,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
 
     public static class ListTrafficMirrorFiltersResponseBodyTrafficMirrorFilters extends TeaModel {
         /**
-         * <p>The time when the traffic mirror filter was created.</p>
+         * <p>The creation time of the traffic mirror filter. The time is displayed in UTC and follows the ISO 8601 standard. The time is accurate to minutes and in the YYYY-MM-DDThh:mmZ format.</p>
          * 
          * <strong>example:</strong>
          * <p>2023-09-05T15:26Z</p>
@@ -641,19 +641,19 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The details of outbound rules.</p>
+         * <p>The details of the outbound rules.</p>
          */
         @NameInMap("EgressRules")
         public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersEgressRules> egressRules;
 
         /**
-         * <p>The details of inbound rules.</p>
+         * <p>The details of the inbound rules.</p>
          */
         @NameInMap("IngressRules")
         public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersIngressRules> ingressRules;
 
         /**
-         * <p>The ID of the resource group to which the traffic mirroring filter belongs.</p>
+         * <p>The ID of the resource group to which the traffic mirroring belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-bp67acfmxazb4ph****</p>
@@ -662,7 +662,7 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The tags.</p>
+         * <p>The list of tags.</p>
          */
         @NameInMap("Tags")
         public java.util.List<ListTrafficMirrorFiltersResponseBodyTrafficMirrorFiltersTags> tags;
@@ -697,13 +697,13 @@ public class ListTrafficMirrorFiltersResponseBody extends TeaModel {
         /**
          * <p>The status of the traffic mirror filter. Valid values:</p>
          * <ul>
-         * <li><p><strong>Creating</strong>: being created.</p>
+         * <li><p><strong>Creating</strong>: creating</p>
          * </li>
-         * <li><p><strong>Created</strong>: created.</p>
+         * <li><p><strong>Created</strong>: created</p>
          * </li>
-         * <li><p><strong>Modifying</strong>: being modified.</p>
+         * <li><p><strong>Modifying</strong>: modifying</p>
          * </li>
-         * <li><p><strong>Deleting</strong>: being deleted.</p>
+         * <li><p><strong>Deleting</strong>: deleting</p>
          * </li>
          * </ul>
          * 

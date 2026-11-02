@@ -15,16 +15,17 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends TeaModel {
     public String bandwidthPackageId;
 
     /**
-     * <p>The description of the Internet Shared Bandwidth instance. The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the Internet Shared Bandwidth instance.<br>The description must be 0 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
-     * <p>描述</p>
+     * <p>Description</p>
      */
     @NameInMap("Description")
     public String description;
 
     /**
-     * <p>The name of the Internet Shared Bandwidth instance. The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the Internet Shared Bandwidth instance. 
+     * The name must be 0 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test123</p>
@@ -39,8 +40,8 @@ public class ModifyCommonBandwidthPackageAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region where the Internet Shared Bandwidth instance is located. </p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to obtain the region ID.</p>
+     * <p>The region where the Internet Shared Bandwidth instance resides. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

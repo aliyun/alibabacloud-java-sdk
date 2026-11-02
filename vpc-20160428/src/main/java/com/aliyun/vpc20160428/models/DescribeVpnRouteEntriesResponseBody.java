@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the list.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging queries.</p>
+     * <p>The number of entries returned per page for paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries in the list.</p>
+     * <p>The total number of entries returned.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -175,6 +175,9 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         @NameInMap("NextHopTunnelId")
         public String nextHopTunnelId;
 
+        @NameInMap("PrefixListId")
+        public String prefixListId;
+
         @NameInMap("RouteDest")
         public String routeDest;
 
@@ -236,6 +239,14 @@ public class DescribeVpnRouteEntriesResponseBody extends TeaModel {
         }
         public String getNextHopTunnelId() {
             return this.nextHopTunnelId;
+        }
+
+        public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setPrefixListId(String prefixListId) {
+            this.prefixListId = prefixListId;
+            return this;
+        }
+        public String getPrefixListId() {
+            return this.prefixListId;
         }
 
         public DescribeVpnRouteEntriesResponseBodyVpnRouteEntriesVpnRouteEntry setRouteDest(String routeDest) {

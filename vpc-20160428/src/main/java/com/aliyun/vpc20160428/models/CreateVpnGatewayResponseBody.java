@@ -15,8 +15,8 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
 
     /**
      * <p>The order ID.</p>
-     * <p>&lt;props=&quot;china&quot;&gt;If you did not enable automatic payment for the VPN gateway, go to <a href="https://usercenter2.aliyun.com/home">Expenses and Costs</a> to complete the payment.
-     * &lt;props=&quot;intl&quot;&gt;If you did not enable automatic payment for the VPN gateway, go to <a href="https://usercenter2-intl.aliyun.com/billing/#/account/overview">Expenses and Costs</a> to complete the payment.</p>
+     * <p>&lt;props=&quot;china&quot;&gt;If you do not enable automatic payment for the VPN gateway, go to the <a href="https://usercenter2.aliyun.com/home">Alibaba Cloud Expenses and Costs</a> console to complete the payment.
+     * &lt;props=&quot;intl&quot;&gt;If you do not enable automatic payment for the VPN gateway, go to the <a href="https://usercenter2-intl.aliyun.com/billing/#/account/overview">Alibaba Cloud Expenses and Costs</a> console to complete the payment.</p>
      * 
      * <strong>example:</strong>
      * <p>208240895400460</p>
@@ -34,7 +34,7 @@ public class CreateVpnGatewayResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The instance ID of the VPN gateway.</p>
+     * <p>The instance ID of the VPN gateway instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vpn-uf68lxhgr7ftbqr3p****</p>

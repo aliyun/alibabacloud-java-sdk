@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class RevokeInstanceFromVbrShrinkRequest extends TeaModel {
     /**
-     * <p>The scope of VBR instances for which the VPC-connected instance authorization is being revoked. Valid values:</p>
+     * <p>The scope of VBR instances from which the authorization of the VPC-connected instance is revoked. Valid values:</p>
      * <ul>
-     * <li><p><strong>ALL</strong>: Revokes the VPC-connected instance authorization for all VBR instances in the specified region. In this case, the <strong>VbrInstanceIds</strong> parameter can be left empty.</p>
+     * <li><p><strong>ALL</strong>: revokes the authorization between the VPC-connected instance and all VBR instances in the specified region. In this case, the <strong>VbrInstanceIds</strong> parameter can be left empty.</p>
      * </li>
-     * <li><p><strong>Specify</strong>: Revokes the VPC-connected instance authorization for the specified VBR instances. In this case, the <strong>VbrInstanceIds</strong> parameter is required.</p>
+     * <li><p><strong>Specify</strong>: revokes the authorization between the VPC-connected instance and the specified VBR instances. In this case, the <strong>VbrInstanceIds</strong> parameter is required.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -21,7 +21,7 @@ public class RevokeInstanceFromVbrShrinkRequest extends TeaModel {
     public String grantType;
 
     /**
-     * <p>The instance ID of the VPC-connected instance for which you want to revoke the authorization.</p>
+     * <p>The VPC-connected instance ID for which you want to revoke the authorization.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -31,8 +31,7 @@ public class RevokeInstanceFromVbrShrinkRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The region ID of the VPC-connected instance for which you want to revoke the authorization.</p>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the VPC-connected instance for which you want to revoke the authorization. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,13 +41,13 @@ public class RevokeInstanceFromVbrShrinkRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The list of VBR instance IDs for which the VPC-connected instance authorization is being revoked.</p>
+     * <p>The list of VBR instance IDs from which the authorization of the VPC-connected instance is revoked.</p>
      */
     @NameInMap("VbrInstanceIds")
     public String vbrInstanceIdsShrink;
 
     /**
-     * <p>The Alibaba Cloud account ID of the VBR instance for which the authorization is being revoked.</p>
+     * <p>The ID of the Alibaba Cloud account that owns the VBR instance from which the authorization is revoked.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -58,7 +57,7 @@ public class RevokeInstanceFromVbrShrinkRequest extends TeaModel {
     public String vbrOwnerUid;
 
     /**
-     * <p>The region ID of the VBR instance for which the VPC-connected instance authorization is being revoked.</p>
+     * <p>The region ID of the VBR instance from which the authorization of the VPC-connected instance is revoked.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -41,7 +41,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public Integer connections;
 
     /**
-     * <p>The time when the SSL-VPN server was created.</p>
+     * <p>The creation time of the SSL server.</p>
      * 
      * <strong>example:</strong>
      * <p>1492753580000</p>
@@ -52,9 +52,9 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     /**
      * <p>Indicates whether two-factor authentication is enabled.</p>
      * <ul>
-     * <li><p><strong>true</strong>: enabled.</p>
+     * <li><p><strong>true</strong>: Enabled.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): not enabled.</p>
+     * <li><p><strong>false</strong> (default): Disabled.</p>
      * </li>
      * </ul>
      * 
@@ -74,7 +74,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public String IDaaSApplicationId;
 
     /**
-     * <p>The instance ID of the IDaaS EIAM instance.</p>
+     * <p>The instance ID of the IDaaS EIAM.</p>
      * 
      * <strong>example:</strong>
      * <p>idaas-cn-hangzhou-****</p>
@@ -85,8 +85,8 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     /**
      * <p>The version of the IDaaS EIAM instance.</p>
      * <ul>
-     * <li>This parameter is returned only when the SSL server is bound to an IDaaS EIAM 2.0 instance. The value is <strong>EIAM 2.0</strong>.</li>
-     * <li>If the SSL server is bound to an IDaaS EIAM 1.0 instance, this parameter is not returned.</li>
+     * <li>This parameter is returned only when the SSL server is bound to an IDaaS EIAM 2.0 instance. Valid value: <strong>EIAM 2.0</strong>.</li>
+     * <li>This parameter is not returned if the SSL server is bound to an IDaaS EIAM 1.0 instance.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -123,7 +123,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public Integer maxConnections;
 
     /**
-     * <p>The name of the SSL-VPN server.</p>
+     * <p>The name of the SSL server.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -132,7 +132,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public String name;
 
     /**
-     * <p>The port of the SSL-VPN server.</p>
+     * <p>The port of the SSL server.</p>
      * 
      * <strong>example:</strong>
      * <p>1194</p>
@@ -141,7 +141,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The protocol used by the SSL-VPN server.</p>
+     * <p>The protocol used by the SSL server.</p>
      * 
      * <strong>example:</strong>
      * <p>UDP</p>
@@ -150,7 +150,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public String proto;
 
     /**
-     * <p>The region ID of the SSL-VPN server.</p>
+     * <p>The region ID of the SSL server.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -168,8 +168,8 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the SSL-VPN server belongs.</p>
-     * <p>The SSL-VPN server belongs to the same resource group as the associated VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
+     * <p>The ID of the resource group to which the SSL server belongs.</p>
+     * <p>The SSL server belongs to the same resource group as its associated VPN gateway. You can call the <a href="https://help.aliyun.com/document_detail/158855.html">ListResourceGroups</a> operation to query resource group information.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-acfmzs372yg****</p>
@@ -178,7 +178,7 @@ public class ModifySslVpnServerResponseBody extends TeaModel {
     public String resourceGroupId;
 
     /**
-     * <p>The ID of the SSL-VPN server.</p>
+     * <p>The ID of the SSL server.</p>
      * 
      * <strong>example:</strong>
      * <p>vss-bp18q7hzj6largv4v****</p>

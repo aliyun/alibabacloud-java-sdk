@@ -8,7 +8,7 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
      * <p>The bandwidth percentage of the QoS queue.</p>
      * <ul>
      * <li>If the QoS queue type is <strong>Medium</strong>, this parameter is required. Valid values: 1 to 100.</li>
-     * <li>If the QoS queue type is <strong>Default</strong>, this parameter is set to &quot;-&quot;.</li>
+     * <li>If the QoS queue type is <strong>Default</strong>, the value of this parameter is &quot;-&quot;.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -19,9 +19,9 @@ public class ModifyExpressConnectTrafficQosQueueRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must make sure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

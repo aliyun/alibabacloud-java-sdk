@@ -14,7 +14,7 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
     public String allocationId;
 
     /**
-     * <p>The IP address assigned to the specified EIP. This parameter is returned only when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
+     * <p>The IP address allocated to the specified EIP. This parameter is returned only if <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -24,8 +24,8 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
 
     /**
      * <p>The order ID.
-     * &lt;props=&quot;china&quot;&gt;This parameter is returned when InstanceChargeType (the billing method of the EIP) is set to PrePaid (subscription). If AutoPay is set to false, which means automatic payment is not enabled, go to the <a href="https://usercenter2.aliyun.com/order/list">Order Center</a> to complete the payment.
-     * &lt;props=&quot;intl&quot;&gt;This parameter is returned when InstanceChargeType (the billing method of the EIP) is set to PrePaid (subscription). If AutoPay is set to false, which means automatic payment is not enabled, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">Order Center</a> to complete the payment.</p>
+     * &lt;props=&quot;china&quot;&gt;This parameter is returned if InstanceChargeType (the billing method of the specified EIP) is set to PrePaid (subscription). If AutoPay is set to false, which means automatic payment is disabled, go to the <a href="https://usercenter2.aliyun.com/order/list">User Center</a> to complete the payment.
+     * &lt;props=&quot;intl&quot;&gt;This parameter is returned if InstanceChargeType (the billing method of the specified EIP) is set to PrePaid (subscription). If AutoPay is set to false, which means automatic payment is disabled, go to the <a href="https://usercenter2-intl.aliyun.com/order/list">User Center</a> to complete the payment.</p>
      * 
      * <strong>example:</strong>
      * <p>20190000</p>
@@ -43,7 +43,7 @@ public class AllocateEipAddressProResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The resource group ID. This parameter is returned only when <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
+     * <p>The resource group ID. This parameter is returned only if <strong>InstanceChargeType</strong> is set to <strong>PostPaid</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-resourcegroup****</p>

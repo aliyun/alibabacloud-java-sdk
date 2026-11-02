@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateTrafficMirrorSessionResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>0ED8D006-F706-4D23-88ED-E11ED28DCAC0</p>
@@ -14,7 +14,7 @@ public class CreateTrafficMirrorSessionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The ID of the resource group to which the traffic mirroring instance belongs.</p>
+     * <p>The ID of the resource group to which the traffic mirroring belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>rg-bp67acfmxazb4ph****</p>

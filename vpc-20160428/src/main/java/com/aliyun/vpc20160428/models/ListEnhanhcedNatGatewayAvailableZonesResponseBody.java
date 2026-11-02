@@ -14,7 +14,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
     public String requestId;
 
     /**
-     * <p>The list of zones.</p>
+     * <p>The zones.</p>
      */
     @NameInMap("Zones")
     public java.util.List<ListEnhanhcedNatGatewayAvailableZonesResponseBodyZones> zones;
@@ -45,7 +45,7 @@ public class ListEnhanhcedNatGatewayAvailableZonesResponseBody extends TeaModel 
          * <p>The zone name.</p>
          * 
          * <strong>example:</strong>
-         * <p>中东1 可用区A</p>
+         * <p>Middle East 1 Zone A</p>
          */
         @NameInMap("LocalName")
         public String localName;

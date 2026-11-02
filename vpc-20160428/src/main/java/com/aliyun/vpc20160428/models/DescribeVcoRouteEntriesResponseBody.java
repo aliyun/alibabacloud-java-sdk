@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
     /**
-     * <p>The page number of the list.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page for paging queries.</p>
+     * <p>The number of entries returned per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -129,7 +129,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
 
         /**
          * <p>The timestamp when the destination route was created.</p>
-         * <p>The timestamp is in the UNIX format and represents the number of milliseconds that have elapsed since January 1, 1970, 00:00:00 UTC.</p>
+         * <p>The timestamp follows the UNIX time format. It represents the total number of seconds that have elapsed since 00:00:00 UTC on January 1, 1970.</p>
          * 
          * <strong>example:</strong>
          * <p>1658217008000</p>
@@ -147,16 +147,25 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         public String nextHop;
 
         /**
-         * <p>The list of next-hop tunnels.</p>
+         * <p>The list of next hop tunnels.</p>
          * <blockquote>
          * <ul>
          * <li>This information is returned only for IPsec-VPN connections in dual-tunnel mode.</li>
-         * <li>Tunnel information is returned only when the tunnel status is <strong>Phase 2 negotiations succeeded</strong>.</li>
+         * <li>Tunnel information is returned only when the tunnel status is <strong>Phase 2 negotiation succeeded</strong>.</li>
          * </ul>
          * </blockquote>
          */
         @NameInMap("NextHopTunnelIdList")
         public java.util.List<String> nextHopTunnelIdList;
+
+        /**
+         * <p>The instance ID of the prefix list.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>pl-m5estsqsdqwg88hjf****</p>
+         */
+        @NameInMap("PrefixListId")
+        public String prefixListId;
 
         /**
          * <p>The destination CIDR block of the route.</p>
@@ -183,8 +192,8 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>The source of the BGP route.</p>
          * <ul>
-         * <li><strong>CLOUD</strong>: The BGP route is learned by the IPsec-VPN connection from the transit router.</li>
-         * <li><strong>VPN_BGP</strong>: The BGP route is learned by the IPsec-VPN connection from the on-premises data center.</li>
+         * <li><strong>CLOUD</strong>: The BGP route is learned by the IPsec-VPN connection from a transit router.</li>
+         * <li><strong>VPN_BGP</strong>: The BGP route is learned by the IPsec-VPN connection from an on-premises data center.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -196,7 +205,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>The status of the route.</p>
          * <ul>
-         * <li><strong>published</strong>: The destination route has been published to the transit router instance.</li>
+         * <li><strong>published</strong>: The destination route is published to the transit router.</li>
          * <li><strong>Active</strong>: The BGP route is available.</li>
          * </ul>
          * 
@@ -218,7 +227,7 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>The weight of the destination route.</p>
          * <blockquote>
-         * <p>This parameter is not in use.</p>
+         * <p>This parameter does not take effect.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -270,6 +279,14 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         }
         public java.util.List<String> getNextHopTunnelIdList() {
             return this.nextHopTunnelIdList;
+        }
+
+        public DescribeVcoRouteEntriesResponseBodyVcoRouteEntries setPrefixListId(String prefixListId) {
+            this.prefixListId = prefixListId;
+            return this;
+        }
+        public String getPrefixListId() {
+            return this.prefixListId;
         }
 
         public DescribeVcoRouteEntriesResponseBodyVcoRouteEntries setRouteDest(String routeDest) {
@@ -348,8 +365,8 @@ public class DescribeVcoRouteEntriesResponseBody extends TeaModel {
         /**
          * <p>The source of the BGP route.</p>
          * <ul>
-         * <li><strong>CLOUD</strong>: The BGP route is learned by the IPsec-VPN connection from the transit router.</li>
-         * <li><strong>VPN_BGP</strong>: The BGP route is learned by the IPsec-VPN connection from the on-premises data center.</li>
+         * <li><strong>CLOUD</strong>: The BGP route is learned by the IPsec-VPN connection from a transit router.</li>
+         * <li><strong>VPN_BGP</strong>: The BGP route is learned by the IPsec-VPN connection from an on-premises data center.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> value as the <strong>ClientToken</strong> value. The <strong>RequestId</strong> value is different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -44,7 +44,7 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     public String nextHop;
 
     /**
-     * <p>The tunneling protocol. Set the value to <strong>Ipsec</strong> (IPsec tunneling protocol).</p>
+     * <p>The tunnel protocol. Set the value to <strong>Ipsec</strong> (IPsec tunnel protocol).</p>
      * 
      * <strong>example:</strong>
      * <p>Ipsec</p>
@@ -59,7 +59,7 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the VPN gateway instance. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -95,7 +95,7 @@ public class ModifyVpnRouteEntryWeightRequest extends TeaModel {
     public String vpnGatewayId;
 
     /**
-     * <p>The original weight of the destination route. Valid values:</p>
+     * <p>The weight of the destination route before the modification. Valid values:</p>
      * <ul>
      * <li><p><strong>0</strong>: low priority.</p>
      * </li>

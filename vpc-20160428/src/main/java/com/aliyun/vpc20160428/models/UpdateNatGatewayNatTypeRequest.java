@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateNatGatewayNatTypeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,9 +18,9 @@ public class UpdateNatGatewayNatTypeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
-     * <p><strong>true</strong>: performs a dry run without upgrading the Internet NAT gateway type. The system checks whether your AccessKey pair is valid, whether Resource Access Management (RAM) users are granted permissions, and whether the required parameters are specified. If the check fails, the corresponding error is returned. If the check succeeds, the <code>DryRunOperation</code> error code is returned.</p>
-     * <p><strong>false</strong> (default): performs a dry run and sends the request. If the check succeeds, a 2xx HTTP status code is returned and the Internet NAT gateway type is upgraded.</p>
+     * <p>Specifies whether to only perform a dry run for this request. Valid values:</p>
+     * <p><strong>true</strong>: performs a dry run for the request without upgrading the Internet NAT gateway. The system checks whether your AccessKey pair is valid, whether the Resource Access Management (RAM) user has the required authorization, and whether the required parameters are specified. If the request fails the dry run, the corresponding error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <p><strong>false</strong> (default): sends a normal request. If the request passes the dry run, a 2xx HTTP status code is returned and the Internet NAT gateway is upgraded.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -56,7 +56,7 @@ public class UpdateNatGatewayNatTypeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the standard Internet NAT gateway that you want to upgrade.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -72,9 +72,9 @@ public class UpdateNatGatewayNatTypeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The vSwitch to which the enhanced Internet NAT gateway belongs after the upgrade.</p>
+     * <p>The ID of the vSwitch to which the enhanced Internet NAT gateway belongs after the upgrade.</p>
      * <blockquote>
-     * <p>If you do not set this parameter, the system randomly creates the enhanced Internet NAT gateway on any vSwitch in the VPC.</p>
+     * <p>If you do not specify this parameter, the system randomly assigns the enhanced Internet NAT gateway to a vSwitch in the VPC.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

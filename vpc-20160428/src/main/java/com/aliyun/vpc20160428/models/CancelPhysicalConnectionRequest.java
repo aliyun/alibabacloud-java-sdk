@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class CancelPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>The client generates the value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+     * <p>You can generate the value of this parameter on the client. Make sure that the value is unique across different requests and contains a maximum of 64 ASCII characters.</p>
      * 
      * <strong>example:</strong>
      * <p>02fb3da4-130e-11e9-8e44-0016e04115b</p>
@@ -31,8 +31,8 @@ public class CancelPhysicalConnectionRequest extends TeaModel {
     public String physicalConnectionId;
 
     /**
-     * <p>The region ID of the Express Connect circuit. </p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query region IDs.</p>
+     * <p>The ID of the region where the Express Connect circuit is located. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeactiveFlowLogRequest extends TeaModel {
     /**
-     * <p>The flow log ID.</p>
+     * <p>The ID of the flow log.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -21,7 +21,7 @@ public class DeactiveFlowLogRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the flow log. You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the region ID.</p>
+     * <p>The region ID of the flow log. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

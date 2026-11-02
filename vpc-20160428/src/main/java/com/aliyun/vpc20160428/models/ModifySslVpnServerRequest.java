@@ -5,15 +5,15 @@ import com.aliyun.tea.*;
 
 public class ModifySslVpnServerRequest extends TeaModel {
     /**
-     * <p>The encryption algorithm used by the SSL-VPN server. Valid values: </p>
+     * <p>The encryption algorithm used by SSL-VPN. Valid values: </p>
      * <ul>
-     * <li><p><strong>AES-128-CBC</strong> (default): AES-128-CBC algorithm.</p>
+     * <li><p><strong>AES-128-CBC</strong> (default): AES-128-CBC</p>
      * </li>
-     * <li><p><strong>AES-192-CBC</strong>: AES-192-CBC algorithm.</p>
+     * <li><p><strong>AES-192-CBC</strong>: AES-192-CBC</p>
      * </li>
-     * <li><p><strong>AES-256-CBC</strong>: AES-256-CBC algorithm.</p>
+     * <li><p><strong>AES-256-CBC</strong>: AES-256-CBC</p>
      * </li>
-     * <li><p><strong>none</strong>: no encryption algorithm is used.</p>
+     * <li><p><strong>none</strong>: No encryption algorithm is used.</p>
      * </li>
      * </ul>
      * 
@@ -25,16 +25,16 @@ public class ModifySslVpnServerRequest extends TeaModel {
 
     /**
      * <p>The client CIDR block.</p>
-     * <p>The client CIDR block is used to allocate IP addresses to virtual network interface controllers (NICs) of clients. It does not refer to the existing internal network CIDR block of the client.</p>
-     * <p>When a client accesses the local end through an SSL-VPN connection, the VPN gateway allocates an IP address from the specified client CIDR block to the client. The client uses the allocated IP address to access cloud resources.</p>
+     * <p>The client CIDR block is the CIDR block from which IP addresses are allocated to the virtual network interface controller (NIC) of the client. It is not the existing internal network CIDR block of the clients.</p>
+     * <p>When a client accesses the local network through an SSL-VPN connection, the VPN gateway allocates an IP address from the specified client CIDR block to the client. The client uses the allocated IP address to access cloud resources.</p>
      * <p>When you specify the client CIDR block, make sure that the number of IP addresses in the client CIDR block is at least four times the number of SSL connections supported by the VPN gateway.</p>
      * <details>
      * <summary>Click to view the reason.</summary>
-     * For example, if you specify 192.168.0.0/24 as the client CIDR block, the system first divides a subnet with a 30-bit subnet mask from the 192.168.0.0/24 CIDR block, such as 192.168.0.4/30, and then allocates one IP address from 192.168.0.4/30 to the client. The remaining three IP addresses are used by the system to ensure network communication. In this case, one client consumes four IP addresses. Therefore, to ensure that all clients can be allocated IP addresses, make sure that the number of IP addresses in the client CIDR block is at least four times the number of SSL connections supported by the VPN gateway.
+     * For example, if the specified client CIDR block is 192.168.0.0/24, the system first divides a subnet with a 30-bit subnet mask from the 192.168.0.0/24 CIDR block, such as 192.168.0.4/30. Then, the system allocates an IP address from 192.168.0.4/30 for the client to use. The remaining three IP addresses are occupied by the system to ensure network communication. In this case, one client consumes four IP addresses. Therefore, to ensure that all your clients can be allocated IP addresses, make sure that the number of IP addresses in the specified client CIDR block is at least four times the number of SSL connections supported by the VPN gateway.
      * </details>
      * 
      * <details>
-     * <summary>Click to view unsupported CIDR blocks.</summary>
+     * <summary>Click to view the CIDR blocks that are not supported.</summary>
      * 
      * <ul>
      * <li>100.64.0.0 to 100.127.255.255</li>
@@ -49,14 +49,14 @@ public class ModifySslVpnServerRequest extends TeaModel {
      * <summary>Click to view the recommended client CIDR blocks for each number of SSL connections.</summary>
      * 
      * <ul>
-     * <li>If the number of SSL connections is 5, the subnet mask of the client CIDR block must be 27 bits or less. For example, 10.0.0.0/27 or 10.0.0.0/26.</li>
-     * <li>If the number of SSL connections is 10, the subnet mask of the client CIDR block must be 26 bits or less. For example, 10.0.0.0/26 or 10.0.0.0/25.</li>
-     * <li>If the number of SSL connections is 20, the subnet mask of the client CIDR block must be 25 bits or less. For example, 10.0.0.0/25 or 10.0.0.0/24.</li>
-     * <li>If the number of SSL connections is 50, the subnet mask of the client CIDR block must be 24 bits or less. For example, 10.0.0.0/24 or 10.0.0.0/23.</li>
-     * <li>If the number of SSL connections is 100, the subnet mask of the client CIDR block must be 23 bits or less. For example, 10.0.0.0/23 or 10.0.0.0/22.</li>
-     * <li>If the number of SSL connections is 200, the subnet mask of the client CIDR block must be 22 bits or less. For example, 10.0.0.0/22 or 10.0.0.0/21.</li>
-     * <li>If the number of SSL connections is 500, the subnet mask of the client CIDR block must be 21 bits or less. For example, 10.0.0.0/21 or 10.0.0.0/20.</li>
-     * <li>If the number of SSL connections is 1000, the subnet mask of the client CIDR block must be 20 bits or less. For example, 10.0.0.0/20 or 10.0.0.0/19.</li>
+     * <li>If the number of SSL connections is 5, we recommend that the subnet mask of the client CIDR block be 27 bits or less. Example: 10.0.0.0/27 or 10.0.0.0/26.</li>
+     * <li>If the number of SSL connections is 10, we recommend that the subnet mask of the client CIDR block be 26 bits or less. Example: 10.0.0.0/26 or 10.0.0.0/25.</li>
+     * <li>If the number of SSL connections is 20, we recommend that the subnet mask of the client CIDR block be 25 bits or less. Example: 10.0.0.0/25 or 10.0.0.0/24.</li>
+     * <li>If the number of SSL connections is 50, we recommend that the subnet mask of the client CIDR block be 24 bits or less. Example: 10.0.0.0/24 or 10.0.0.0/23.</li>
+     * <li>If the number of SSL connections is 100, we recommend that the subnet mask of the client CIDR block be 23 bits or less. Example: 10.0.0.0/23 or 10.0.0.0/22.</li>
+     * <li>If the number of SSL connections is 200, we recommend that the subnet mask of the client CIDR block be 22 bits or less. Example: 10.0.0.0/22 or 10.0.0.0/21.</li>
+     * <li>If the number of SSL connections is 500, we recommend that the subnet mask of the client CIDR block be 21 bits or less. Example: 10.0.0.0/21 or 10.0.0.0/20.</li>
+     * <li>If the number of SSL connections is 1000, we recommend that the subnet mask of the client CIDR block be 20 bits or less. Example: 10.0.0.0/20 or 10.0.0.0/19.</li>
      * </ul>
      * </details>
      * 
@@ -64,8 +64,8 @@ public class ModifySslVpnServerRequest extends TeaModel {
      * <ul>
      * <li>The subnet mask of the client CIDR block must be 16 to 29 bits in length.</li>
      * <li>Make sure that the client CIDR block does not overlap with the local CIDR block, the VPC CIDR block, or any routing CIDR block associated with the client terminal.</li>
-     * <li>When you specify the client CIDR block, use 10.0.0.0/8, 172.16.0.0/12, 192.168.0.0/16, or their subnets. If you want to specify a public CIDR block as the client CIDR block, set the public CIDR block as a user CIDR block of the virtual private cloud (VPC) to ensure that the VPC can access the public CIDR block. For more information about user CIDR blocks, see <a href="https://help.aliyun.com/document_detail/185311.html">VPC FAQ</a>.</li>
-     * <li>After the SSL server is created, the system automatically adds the routing of the client CIDR block to the route table of the VPC instance. Do not manually add the routing of the client CIDR block to the route table of the VPC instance. Otherwise, SSL-VPN connection traffic may be abnormal.</li>
+     * <li>When you specify the client CIDR block, we recommend that you use the 10.0.0.0/8, 172.16.0.0/12, or 192.168.0.0/16 CIDR block and their subnets. If you need to specify a public CIDR block as the client CIDR block, you must configure the public CIDR block in the user CIDR block Settings of the VPC to ensure that the VPC can access the public CIDR block. For more information about user CIDR blocks, see <a href="https://help.aliyun.com/document_detail/185311.html">virtual private cloud (VPC) FAQ</a>.</li>
+     * <li>After you create an SSL server, the system automatically adds the routing of the client CIDR block to the route table of the VPC-connected instance. Do not manually add the routing of the client CIDR block to the route table of the VPC-connected instance. Otherwise, SSL-VPN connection traffic transmission exceptions may occur.</li>
      * </ul>
      * </blockquote>
      * 
@@ -77,9 +77,9 @@ public class ModifySslVpnServerRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The client token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, and you must ensure that the value is unique across different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -91,9 +91,9 @@ public class ModifySslVpnServerRequest extends TeaModel {
     /**
      * <p>Specifies whether to compress communication. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong> (default): Communication is compressed.</p>
+     * <li><p><strong>true</strong> (default): Compresses communication.</p>
      * </li>
-     * <li><p><strong>false</strong>: Communication is not compressed.</p>
+     * <li><p><strong>false</strong>: Does not compress communication.</p>
      * </li>
      * </ul>
      * 
@@ -103,14 +103,20 @@ public class ModifySslVpnServerRequest extends TeaModel {
     @NameInMap("Compress")
     public Boolean compress;
 
+    /**
+     * <p>The DNS server addresses configured for the client. You can specify at most two addresses, separated by commas (,).</p>
+     * 
+     * <strong>example:</strong>
+     * <p>223.5.5.5,114.114.114.114</p>
+     */
     @NameInMap("DnsServers")
     public String dnsServers;
 
     /**
-     * <p>Specifies whether to perform a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: sends a check request without modifying the SSL server configuration. The check items include whether required parameters are specified, the request format, and service limits. If the check fails, the corresponding error is returned. If the check passes, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): sends a Normal request. If the request passes the check, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: Prechecks the request without modifying the SSL server configurations. The system checks whether required parameters are specified, the request format, and service limits. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): Sends the request. If the request passes the precheck, an HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -122,16 +128,16 @@ public class ModifySslVpnServerRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable two-factor authentication. If you enable two-factor authentication, you must also configure <strong>IDaaSInstanceId</strong>, <strong>IDaaSRegionId</strong>, and <strong>IDaaSApplicationId</strong>. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: enabled.</p>
+     * <li><p><strong>true</strong>: Enables two-factor authentication.</p>
      * </li>
-     * <li><p><strong>false</strong>: not enabled.</p>
+     * <li><p><strong>false</strong>: Disables two-factor authentication.</p>
      * </li>
      * </ul>
      * <blockquote>
      * <ul>
-     * <li>If you use two-factor authentication for the first time, complete <a href="https://ram.console.aliyun.com/role/authorization?request=%7B%22Services%22%3A%5B%7B%22Service%22%3A%22VPN%22%2C%22Roles%22%3A%5B%7B%22RoleName%22%3A%22AliyunVpnAccessingIdaasRole%22%2C%22TemplateId%22%3A%22IdaasRole%22%7D%5D%7D%5D%2C%22ReturnUrl%22%3A%22https%3A%2F%2Fvpc.console.aliyun.com%2Fsslvpn%2Fcn-shanghai%2Fvpn-servers%22%7D">authorization</a> before creating the SSL server.</li>
+     * <li>If you use two-factor authentication for the first time, complete the <a href="https://ram.console.aliyun.com/role/authorization?request=%7B%22Services%22%3A%5B%7B%22Service%22%3A%22VPN%22%2C%22Roles%22%3A%5B%7B%22RoleName%22%3A%22AliyunVpnAccessingIdaasRole%22%2C%22TemplateId%22%3A%22IdaasRole%22%7D%5D%7D%5D%2C%22ReturnUrl%22%3A%22https%3A%2F%2Fvpc.console.aliyun.com%2Fsslvpn%2Fcn-shanghai%2Fvpn-servers%22%7D">authorization</a> before you create the SSL server.</li>
      * <li>When you create an SSL server in the UAE (Dubai) region, we recommend that you bind an IDaaS EIAM 2.0 instance in the Singapore region to reduce cross-region latency.</li>
-     * <li>IDaaS EIAM 1.0 instances are no longer available for purchase. If your Alibaba Cloud account has existing IDaaS EIAM 1.0 instances, you can still bind IDaaS EIAM 1.0 instances after enabling two-factor authentication. If your Alibaba Cloud account does not have IDaaS EIAM 1.0 instances, you can only bind IDaaS EIAM 2.0 instances after enabling two-factor authentication.</li>
+     * <li>IDaaS EIAM 1.0 instances are no longer available for purchase. If you have an IDaaS EIAM 1.0 instance in your Alibaba Cloud account, you can still bind the IDaaS EIAM 1.0 instance after you enable two-factor authentication. If you do not have an IDaaS EIAM 1.0 instance in your Alibaba Cloud account, you can only bind an IDaaS EIAM 2.0 instance after you enable two-factor authentication.</li>
      * </ul>
      * </blockquote>
      * 
@@ -144,8 +150,8 @@ public class ModifySslVpnServerRequest extends TeaModel {
     /**
      * <p>The ID of the IDaaS application.</p>
      * <ul>
-     * <li>If you bind an IDaaS EIAM 2.0 instance, you must enter the IDaaS application ID.</li>
-     * <li>If you bind an IDaaS EIAM 1.0 instance, you do not need to enter the IDaaS application ID.</li>
+     * <li>If you bind an IDaaS EIAM 2.0 instance, you must enter the ID of the IDaaS application.</li>
+     * <li>If you bind an IDaaS EIAM 1.0 instance, you do not need to enter the ID of the IDaaS application.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -155,7 +161,7 @@ public class ModifySslVpnServerRequest extends TeaModel {
     public String IDaaSApplicationId;
 
     /**
-     * <p>The instance ID of the IDaaS EIAM instance.</p>
+     * <p>The instance ID of the IDaaS EIAM.</p>
      * 
      * <strong>example:</strong>
      * <p>idaas-cn-hangzhou-****</p>
@@ -174,8 +180,8 @@ public class ModifySslVpnServerRequest extends TeaModel {
 
     /**
      * <p>The local CIDR block.</p>
-     * <p>The local CIDR block is the CIDR block that the client needs to access through the SSL-VPN connection.</p>
-     * <p>The local CIDR block can be the CIDR block of a VPC, the CIDR block of a vSwitch, the CIDR block of an on-premises data center that is connected to a VPC through an Express Connect circuit, or the CIDR block of a cloud service such as Object Storage Service (OSS).</p>
+     * <p>The local CIDR block is the CIDR block that the client wants to access through the SSL-VPN connection.</p>
+     * <p>The local CIDR block can be the CIDR block of a VPC, a vSwitch, an IDC connected to the VPC through an Express Connect circuit, or a cloud service such as Object Storage Service (OSS).</p>
      * <p>The subnet mask of the local CIDR block must be 8 to 32 bits in length. The following CIDR blocks cannot be specified as the local CIDR block:</p>
      * <ul>
      * <li>127.0.0.0 to 127.255.255.255</li>
@@ -191,8 +197,8 @@ public class ModifySslVpnServerRequest extends TeaModel {
     public String localSubnet;
 
     /**
-     * <p>The name of the SSL-VPN server.  </p>
-     * <p>The name must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name of the SSL server.  </p>
+     * <p>The name must be 1 to 100 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -207,7 +213,7 @@ public class ModifySslVpnServerRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The port used by the SSL-VPN server. Valid values: <strong>1</strong> to <strong>65535</strong>. Default value: <strong>1194</strong>.</p>
+     * <p>The port used by the SSL server. Valid values: <strong>1</strong> to <strong>65535</strong>. Default value: <strong>1194</strong>.</p>
      * <p>The following ports are not supported: <strong>22</strong>, <strong>2222</strong>, <strong>22222</strong>, <strong>9000</strong>, <strong>9001</strong>, <strong>9002</strong>, <strong>7505</strong>, <strong>80</strong>, <strong>443</strong>, <strong>53</strong>, <strong>68</strong>, <strong>123</strong>, <strong>4510</strong>, <strong>4560</strong>, <strong>500</strong>, and <strong>4500</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -217,11 +223,11 @@ public class ModifySslVpnServerRequest extends TeaModel {
     public Integer port;
 
     /**
-     * <p>The protocol used by the SSL-VPN server. Valid values:</p>
+     * <p>The protocol used by the SSL server. Valid values:</p>
      * <ul>
-     * <li><p><strong>TCP</strong> (default): TCP protocol.</p>
+     * <li><p><strong>TCP</strong> (default): TCP</p>
      * </li>
-     * <li><p><strong>UDP</strong>: UDP protocol.</p>
+     * <li><p><strong>UDP</strong>: UDP</p>
      * </li>
      * </ul>
      * 
@@ -249,7 +255,7 @@ public class ModifySslVpnServerRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The instance ID of the SSL-VPN server.</p>
+     * <p>The instance ID of the SSL server.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

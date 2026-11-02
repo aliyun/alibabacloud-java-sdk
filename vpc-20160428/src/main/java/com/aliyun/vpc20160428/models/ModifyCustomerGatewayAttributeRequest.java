@@ -5,8 +5,8 @@ import com.aliyun.tea.*;
 
 public class ModifyCustomerGatewayAttributeRequest extends TeaModel {
     /**
-     * <p>The authentication key of the BGP route routing protocol for the on-premises data center gateway device.</p>
-     * <p>The key must be 1 to 64 characters in length, can contain only ASCII characters, and cannot contain spaces, Chinese characters, or half-width question marks (?).</p>
+     * <p>The authentication key for the BGP routing protocol of the gateway device in the on-premises data center.</p>
+     * <p>The key must be 1 to 64 characters in length, and can contain only ASCII characters. It cannot contain spaces, Chinese characters, or half-width question marks (?).</p>
      * 
      * <strong>example:</strong>
      * <p>AuthKey****</p>
@@ -16,9 +16,9 @@ public class ModifyCustomerGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The ClientToken value can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may differ for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class ModifyCustomerGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The description of the customer gateway.  </p>
-     * <p>The description must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 1 to 100 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>desctest</p>
@@ -49,7 +49,7 @@ public class ModifyCustomerGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The name of the customer gateway.  </p>
-     * <p>The name must be 1 to 100 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 100 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>nametest</p>
@@ -65,7 +65,7 @@ public class ModifyCustomerGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the customer gateway. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

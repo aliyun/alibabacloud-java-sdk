@@ -11,7 +11,7 @@ public class DescribeVRoutersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -20,7 +20,7 @@ public class DescribeVRoutersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -29,8 +29,7 @@ public class DescribeVRoutersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the region where the vRouter resides.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the vRouter. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,7 +45,7 @@ public class DescribeVRoutersRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the vRouter to query.</p>
+     * <p>The ID of the vRouter.</p>
      * 
      * <strong>example:</strong>
      * <p>vrt-bp1lhl0taikrteen****</p>

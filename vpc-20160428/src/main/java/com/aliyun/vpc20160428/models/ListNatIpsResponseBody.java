@@ -11,10 +11,10 @@ public class ListNatIpsResponseBody extends TeaModel {
     public java.util.List<ListNatIpsResponseBodyNatIps> natIps;
 
     /**
-     * <p>The pagination token that is used in the next request to retrieve a new page of results. Valid values:</p>
+     * <p>The token that is used to start the next query. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query is available.</li>
+     * <li>If <strong>NextToken</strong> has a return value, the value indicates the token used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -89,11 +89,11 @@ public class ListNatIpsResponseBody extends TeaModel {
         public String ipv4Prefix;
 
         /**
-         * <p>Indicates whether the NAT IP address is the default one. Valid values:</p>
+         * <p>Specifies whether the NAT IP address is the default NAT IP address. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The NAT IP address is the default one.</p>
+         * <li><p><strong>true</strong>: The NAT IP address is the default NAT IP address.</p>
          * </li>
-         * <li><p><strong>false</strong>: The NAT IP address is not the default one.</p>
+         * <li><p><strong>false</strong>: The NAT IP address is not the default NAT IP address.</p>
          * </li>
          * </ul>
          * 
@@ -160,12 +160,12 @@ public class ListNatIpsResponseBody extends TeaModel {
         /**
          * <p>The status of the NAT IP address. Valid values:</p>
          * <ul>
-         * <li><strong>Available</strong>: available.</li>
-         * <li><strong>Deleted</strong>: deleted.</li>
-         * <li><strong>Deleting</strong>: being deleted.</li>
-         * <li><strong>Creating</strong>: being created.</li>
-         * <li><strong>Associated</strong>: associated with an SNAT or DNAT entry.</li>
-         * <li><strong>Associating</strong>: being associated with an SNAT or DNAT entry.</li>
+         * <li><strong>Available</strong>: Available.</li>
+         * <li><strong>Deleted</strong>: Deleted.</li>
+         * <li><strong>Deleting</strong>: Deleting.</li>
+         * <li><strong>Creating</strong>: Creating.</li>
+         * <li><strong>Associated</strong>: Associated with an SNAT or DNAT entry.</li>
+         * <li><strong>Associating</strong>: Being associated with an SNAT or DNAT entry.</li>
          * </ul>
          * 
          * <strong>example:</strong>

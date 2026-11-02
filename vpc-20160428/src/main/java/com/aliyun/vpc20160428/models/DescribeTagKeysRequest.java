@@ -23,10 +23,10 @@ public class DescribeTagKeysRequest extends TeaModel {
     public Integer maxResult;
 
     /**
-     * <p>The pagination token. Valid values:</p>
+     * <p>The pagination token for the next query. Valid values:</p>
      * <ul>
-     * <li>If this is the first query or no subsequent query exists, leave this parameter empty.</li>
-     * <li>If a subsequent query exists, set the value to the NextToken value returned by the previous API call.</li>
+     * <li>Leave this parameter empty for the first query or when no subsequent query is required.</li>
+     * <li>If a subsequent query is required, set this parameter to the NextToken value returned by the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -42,8 +42,7 @@ public class DescribeTagKeysRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the resource.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the resource. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to obtain the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -53,7 +52,7 @@ public class DescribeTagKeysRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The resource ID. You can specify up to 50 resource IDs.</p>
+     * <p>The resource IDs. You can specify up to 50 resource IDs.</p>
      */
     @NameInMap("ResourceId")
     public java.util.List<String> resourceId;
@@ -70,7 +69,7 @@ public class DescribeTagKeysRequest extends TeaModel {
      * <li><strong>VPC</strong>: virtual private cloud (VPC) instance.</li>
      * <li><strong>VSWITCH</strong>: vSwitch instance.</li>
      * <li><strong>ROUTETABLE</strong>: route table instance.</li>
-     * <li><strong>EIP</strong>: Elastic IP Address (EIP) instance.</li>
+     * <li><strong>EIP</strong>: EIP instance.</li>
      * <li><strong>VpnGateWay</strong>: VPN gateway instance.</li>
      * <li><strong>NATGATEWAY</strong>: NAT gateway instance.</li>
      * <li><strong>COMMONBANDWIDTHPACKAGE</strong>: Internet Shared Bandwidth instance.</li>

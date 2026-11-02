@@ -14,7 +14,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
     public String count;
 
     /**
-     * <p>The number of entries per page for paginated queries. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
+     * <p>The number of entries to return per page. Valid values: <strong>1</strong> to <strong>100</strong>. Default value: <strong>20</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -23,11 +23,11 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li><p>Leave this parameter empty for the first query or if no subsequent query is required.</p>
+     * <li><p>Leave empty for the first query or when no next query is required.</p>
      * </li>
-     * <li><p>If a next query is to be sent, set the value to the <strong>NextToken</strong> value returned in the previous API call.</p>
+     * <li><p>If a next query is required, set the value to the <strong>NextToken</strong> value returned by the previous API call.</p>
      * </li>
      * </ul>
      * 
@@ -136,11 +136,11 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         /**
          * <p>The status of the associated instance. Valid values:</p>
          * <ul>
-         * <li><p><strong>Normal</strong>: available.</p>
+         * <li><p><strong>Normal</strong>: The instance is available.</p>
          * </li>
-         * <li><p><strong>Configuring</strong>: being configured.</p>
+         * <li><p><strong>Configuring</strong>: The instance is being configured.</p>
          * </li>
-         * <li><p><strong>Deleting</strong>: being deleted.</p>
+         * <li><p><strong>Deleting</strong>: The instance is being deleted.</p>
          * </li>
          * </ul>
          * 
@@ -151,7 +151,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         public String instanceStatus;
 
         /**
-         * <p>The type of the associated instance. Valid values: <strong>PHYSICALCONNECTION</strong>: Express Connect circuit.</p>
+         * <p>The type of the associated instance. Valid value: <strong>PHYSICALCONNECTION</strong> (Express Connect circuit).</p>
          * 
          * <strong>example:</strong>
          * <p>PHYSICALCONNECTION</p>
@@ -204,7 +204,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
          * <ul>
          * <li><p>When the QoS queue type is <strong>Medium</strong>, this parameter is required. Valid values: <strong>1</strong> to <strong>100</strong>.</p>
          * </li>
-         * <li><p>When the QoS queue type is <strong>Default</strong>, this parameter is set to &quot;-&quot;.</p>
+         * <li><p>When the QoS queue type is <strong>Default</strong>, the value of this parameter is &quot;-&quot;.</p>
          * </li>
          * </ul>
          * 
@@ -215,7 +215,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         public String bandwidthPercent;
 
         /**
-         * <p>The QoS policy ID.</p>
+         * <p>The ID of the QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-pksbqfmotl5hzq****</p>
@@ -225,7 +225,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
 
         /**
          * <p>The description of the QoS queue.</p>
-         * <p>The description is <strong>0</strong> to <strong>256</strong> characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description must be <strong>0</strong> to <strong>256</strong> characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-queue-test</p>
@@ -234,7 +234,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         public String queueDescription;
 
         /**
-         * <p>The QoS queue ID.</p>
+         * <p>The ID of the QoS queue.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-queue-9nyx2u7n71s2rc****</p>
@@ -244,7 +244,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
 
         /**
          * <p>The name of the QoS queue.</p>
-         * <p>The name is <strong>0</strong> to <strong>128</strong> characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name must be <strong>0</strong> to <strong>128</strong> characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-queue-test</p>
@@ -253,17 +253,17 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         public String queueName;
 
         /**
-         * <p>The QoS queue type. Valid values:</p>
+         * <p>The type of the QoS queue. Valid values:</p>
          * <ul>
-         * <li><p><strong>High</strong>: high-priority queue.</p>
+         * <li><p><strong>High</strong>: High-priority queue.</p>
          * </li>
-         * <li><p><strong>Medium</strong>: medium-priority queue.</p>
+         * <li><p><strong>Medium</strong>: Medium-priority queue.</p>
          * </li>
-         * <li><p><strong>Default</strong>: default-priority queue.</p>
+         * <li><p><strong>Default</strong>: Default-priority queue.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>The default-priority queue cannot be created.</p>
+         * <p>You cannot create a default-priority queue.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -275,11 +275,11 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         /**
          * <p>The status of the QoS queue. Valid values:</p>
          * <ul>
-         * <li><p><strong>Normal</strong>: available.</p>
+         * <li><p><strong>Normal</strong>: The queue is available.</p>
          * </li>
-         * <li><p><strong>Configuring</strong>: being configured.</p>
+         * <li><p><strong>Configuring</strong>: The queue is being configured.</p>
          * </li>
-         * <li><p><strong>Deleting</strong>: being deleted.</p>
+         * <li><p><strong>Deleting</strong>: The queue is being deleted.</p>
          * </li>
          * </ul>
          * 
@@ -412,7 +412,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
 
         /**
          * <p>The description of the QoS policy. </p>
-         * <p>The description is <strong>0</strong> to <strong>256</strong> characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The description must be <strong>0</strong> to <strong>256</strong> characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-test</p>
@@ -421,7 +421,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         public String qosDescription;
 
         /**
-         * <p>The QoS policy ID.</p>
+         * <p>The ID of the QoS policy.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-pksbqfmotl5hzq****</p>
@@ -431,7 +431,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
 
         /**
          * <p>The name of the QoS policy. </p>
-         * <p>The name is <strong>0</strong> to <strong>128</strong> characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+         * <p>The name must be <strong>0</strong> to <strong>128</strong> characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
          * 
          * <strong>example:</strong>
          * <p>qos-test</p>
@@ -446,7 +446,7 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         public java.util.List<DescribeExpressConnectTrafficQosResponseBodyQosListQueueList> queueList;
 
         /**
-         * <p>The resource group ID.</p>
+         * <p>The ID of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-acfmz7vtyl4f***</p>
@@ -457,13 +457,13 @@ public class DescribeExpressConnectTrafficQosResponseBody extends TeaModel {
         /**
          * <p>The status of the QoS policy. Valid values:</p>
          * <ul>
-         * <li><p><strong>Normal</strong>: available.</p>
+         * <li><p><strong>Normal</strong>: The QoS policy is available.</p>
          * </li>
-         * <li><p><strong>Configuring</strong>: being configured.</p>
+         * <li><p><strong>Configuring</strong>: The QoS policy is being configured.</p>
          * </li>
          * </ul>
          * <blockquote>
-         * <p>A QoS policy in the Configuring state restricts most create, update, and delete operations on QoS policies, QoS queues, and QoS rules.</p>
+         * <p>When a QoS policy is in the Configuring state, most creation, update, and deletion operations for QoS policies, QoS queues, and QoS rules are restricted.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>

@@ -16,9 +16,9 @@ public class SecondApplyPhysicalConnectionLOARequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request. </p>
-     * <p>The client generates the value. Ensure that the value is unique among different requests. </p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. </p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the RequestId of the API request as the ClientToken. The RequestId may vary for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the RequestId of the API request as the ClientToken. The RequestId of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the company that accesses the Express Connect circuit.</p>
+     * <p>The name of the customer company that accesses the Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -38,7 +38,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends TeaModel {
     public String companyName;
 
     /**
-     * <p>The time when the construction company enters the site. The time is in the ISO 8601 standard and must be in UTC. Format: YYYY-MM-DDThh:mm:ssZ.</p>
+     * <p>The time when the construction company enters the site. Specify the time in the ISO 8601 standard in the YYYY-MM-DDThh:mm:ssZ format. The time must be in UTC.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -86,16 +86,16 @@ public class SecondApplyPhysicalConnectionLOARequest extends TeaModel {
     public java.util.List<SecondApplyPhysicalConnectionLOARequestPMInfo> PMInfo;
 
     /**
-     * <p>The geographical location where the Express Connect circuit is deployed.</p>
+     * <p>The geographic location where the Express Connect circuit is deployed.</p>
      * 
      * <strong>example:</strong>
-     * <p>杭州</p>
+     * <p>Hangzhou</p>
      */
     @NameInMap("PeerLocation")
     public String peerLocation;
 
     /**
-     * <p>The region where the Express Connect circuit is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region where the Express Connect circuit is deployed. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -111,11 +111,11 @@ public class SecondApplyPhysicalConnectionLOARequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The construction company of the Express Connect circuit.</p>
+     * <p>The construction company for the Express Connect circuit.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>阿里</p>
+     * <p>Alibaba</p>
      */
     @NameInMap("Si")
     public String si;
@@ -239,8 +239,8 @@ public class SecondApplyPhysicalConnectionLOARequest extends TeaModel {
 
     public static class SecondApplyPhysicalConnectionLOARequestPMInfo extends TeaModel {
         /**
-         * <p>The ID number of the construction engineer. You can specify an ID card number or a passport number.</p>
-         * <p>You can configure information for up to 16 construction engineers.</p>
+         * <p>The ID number of the construction engineer. You can enter an ID card number or an international passport number.</p>
+         * <p>You can configure the information of up to 16 construction engineers.</p>
          * 
          * <strong>example:</strong>
          * <p>5****************9</p>
@@ -252,7 +252,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends TeaModel {
          * <p>The type of the ID document of the construction engineer. Valid values:</p>
          * <ul>
          * <li><strong>IDCard</strong>: ID card.</li>
-         * <li><strong>Passport</strong>: passport.</li>
+         * <li><strong>Passport</strong>: international passport.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,7 +283,7 @@ public class SecondApplyPhysicalConnectionLOARequest extends TeaModel {
          * <p>The name of the construction engineer.</p>
          * 
          * <strong>example:</strong>
-         * <p>张三</p>
+         * <p>Zhang San</p>
          */
         @NameInMap("PMName")
         public String PMName;

@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>You can use the client to generate the token, but you must make sure that the token is unique among different requests. The token can contain only ASCII characters.</p>
+     * <p>You can use the client to generate the value, and you must ensure that the value is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The destination CIDR block of the network traffic for the inbound or outbound rule to be modified.</p>
+     * <p>The destination CIDR block of the network traffic for the inbound or outbound rule to be updated.</p>
      * 
      * <strong>example:</strong>
      * <p>10.0.0.0/24</p>
@@ -27,9 +27,9 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     public String destinationCidrBlock;
 
     /**
-     * <p>The destination port range of the network traffic for the inbound or outbound rule to be modified.</p>
+     * <p>The destination port range of the network traffic for the inbound or outbound rule to be updated.</p>
      * <blockquote>
-     * <p>If <strong>Protocol</strong> is set to <strong>ICMP</strong>, the port range cannot be modified.</p>
+     * <p>If <strong>Protocol</strong> is set to <strong>ICMP</strong>, you cannot update the port range.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -39,11 +39,11 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     public String destinationPortRange;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
+     * <li><p><strong>true</strong>: prechecks the request without updating the configuration of the inbound or outbound rule. The system checks whether the required parameters are specified, the request format is valid, and the service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</p>
      * </li>
-     * <li><p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is modified.</p>
+     * <li><p><strong>false</strong> (default): sends the request. If the request passes the precheck, a 2xx HTTP status code is returned and the configuration of the inbound or outbound rule is updated.</p>
      * </li>
      * </ul>
      * 
@@ -60,7 +60,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The priority of the inbound or outbound rule to be modified. A smaller value indicates a higher priority.</p>
+     * <p>The priority of the inbound or outbound rule to be updated. A smaller value indicates a higher priority.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -69,7 +69,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     public Integer priority;
 
     /**
-     * <p>The Protocol Type of the network traffic to be mirrored by the inbound or outbound rule. Valid values:</p>
+     * <p>The protocol type of the network traffic to be mirrored by the inbound or outbound rule to be updated. Valid values:</p>
      * <ul>
      * <li><p><strong>ALL</strong>: all protocols.</p>
      * </li>
@@ -89,7 +89,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the traffic mirror.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list. For more information about regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list. For more information about the regions that support traffic mirroring, see <a href="https://help.aliyun.com/document_detail/207513.html">Traffic mirroring overview</a>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -105,7 +105,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The collection policy of the inbound or outbound rule to be modified. Valid values:</p>
+     * <p>The collection policy of the inbound or outbound rule to be updated. Valid values:</p>
      * <ul>
      * <li><p><strong>accept</strong>: collects network traffic.</p>
      * </li>
@@ -120,7 +120,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     public String ruleAction;
 
     /**
-     * <p>The source CIDR block of the network traffic for the inbound or outbound rule to be modified.</p>
+     * <p>The source CIDR block of the network traffic for the inbound or outbound rule to be updated.</p>
      * 
      * <strong>example:</strong>
      * <p>0.0.0.0/0</p>
@@ -129,9 +129,9 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     public String sourceCidrBlock;
 
     /**
-     * <p>The source port range of the network traffic for the inbound or outbound rule to be modified.</p>
+     * <p>The source port range of the network traffic for the inbound or outbound rule to be updated.</p>
      * <blockquote>
-     * <p>If <strong>Protocol</strong> is set to <strong>ICMP</strong>, the port range cannot be modified.</p>
+     * <p>If <strong>Protocol</strong> is set to <strong>ICMP</strong>, you cannot update the port range.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -141,7 +141,7 @@ public class UpdateTrafficMirrorFilterRuleAttributeRequest extends TeaModel {
     public String sourcePortRange;
 
     /**
-     * <p>The instance ID of the inbound or outbound rule of the traffic mirroring filter.</p>
+     * <p>The instance ID of the inbound or outbound traffic mirroring rule.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

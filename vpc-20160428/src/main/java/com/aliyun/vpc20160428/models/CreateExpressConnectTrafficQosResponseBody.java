@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateExpressConnectTrafficQosResponseBody extends TeaModel {
     /**
-     * <p>The QoS policy ID.</p>
+     * <p>The ID of the QoS policy.</p>
      * 
      * <strong>example:</strong>
      * <p>qos-2giu0a6vd5x0mv****</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     /**
-     * <p>The type of the private IP address to check. Valid values:</p>
+     * <p>The IP version of the private IP address to be queried. Valid values:</p>
      * <ul>
-     * <li><strong>ipv4</strong>: IPv4. This parameter is optional when the private IP address is of the IPv4 type.</li>
-     * <li><strong>ipv6</strong>: IPv6. This parameter is required when the private IP address is of the IPv6 type.</li>
+     * <li><strong>ipv4</strong>: IPv4. This parameter is optional when the private IP address to be queried is an IPv4 address.</li>
+     * <li><strong>ipv6</strong>: IPv6. This parameter is required when the private IP address to be queried is an IPv6 address.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The private IP address to check. The private IP address must belong to the vSwitch specified by the <strong>VSwitchId</strong> parameter.</p>
+     * <p>The private IP address whose availability you want to check. The private IP address must belong to the vSwitch specified by the <strong>VSwitchId</strong> parameter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -34,8 +34,7 @@ public class CheckCanAllocateVpcPrivateIpAddressRequest extends TeaModel {
     public String privateIpAddress;
 
     /**
-     * <p>The region ID of the vSwitch to which the private IP address belongs.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to obtain the region ID.</p>
+     * <p>The region ID of the vSwitch to which the private IP address belongs. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

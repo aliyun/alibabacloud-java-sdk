@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UnassociateHaVipRequest extends TeaModel {
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, but you must make sure that the token is unique among different requests. The <code>ClientToken</code> value can contain only ASCII characters and cannot exceed 64 characters in length.</p>
+     * <p>Specifies the client token that is used to ensure the idempotence of the request. You can use the client to generate the value, and you must make sure that the value is unique among different requests. The <code>ClientToken</code> parameter can contain only ASCII characters and cannot exceed 64 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>0c593ea1-3bea-11e9-b96b-88e9fe63****</p>
@@ -14,15 +14,15 @@ public class UnassociateHaVipRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to forcefully disassociate HaVip from the ECS instance or network interface controller (NIC). Valid values:</p>
+     * <p>Specifies whether to forcibly disassociate HaVip from the associated ECS instance or elastic network interface controller (NIC). Valid values:</p>
      * <ul>
-     * <li><p><strong>True</strong>: forcefully disassociates the instance.</p>
+     * <li><p><strong>True</strong>: forcibly disassociates the instance or elastic network interface controller (NIC).</p>
      * </li>
-     * <li><p><strong>False</strong> (default): does not forcefully disassociate the instance.</p>
+     * <li><p><strong>False</strong> (default): does not forcibly disassociate the instance or elastic network interface controller (NIC).</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is set to <strong>False</strong>, the primary instance attached to the HaVip cannot be disassociated.</p>
+     * <p>If this parameter is set to <strong>False</strong>, you cannot disassociate the primary instance attached to the HaVip.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class UnassociateHaVipRequest extends TeaModel {
     public String haVipId;
 
     /**
-     * <p>The ID of the ECS instance or network interface controller (NIC) to disassociate HaVip from.</p>
+     * <p>The ID of the ECS instance or the elastic network interface controller (NIC) from which the HaVip is disassociated.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -52,15 +52,15 @@ public class UnassociateHaVipRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The type of the instance to disassociate HaVip from. Valid values:</p>
+     * <p>The type of the instance from which you want to disassociate HaVip. Valid values:</p>
      * <ul>
      * <li><p><strong>EcsInstance</strong>: ECS instance.</p>
      * </li>
-     * <li><p><strong>NetworkInterface</strong>: network interface controller (NIC) instance.</p>
+     * <li><p><strong>NetworkInterface</strong>: elastic network interface controller (NIC).</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>This parameter is required when the instance to be disassociated is a network interface controller (NIC) instance.</p>
+     * <p>This parameter is required when the instance to be disassociated is an elastic network interface controller (NIC).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

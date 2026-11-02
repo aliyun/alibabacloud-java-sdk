@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class UpdateVirtualPhysicalConnectionRequest extends TeaModel {
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only perform a dry run for the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without modifying the VLAN ID of the shared Express Connect circuit. The system checks whether required parameters are specified, whether the request format is valid, and whether the instance status is valid. If the check fails, the corresponding error is returned. If the check succeeds, the corresponding request ID is returned.</li>
-     * <li><strong>false</strong> (default): sends a normal request. After the request passes the check, the VLAN ID of the shared Express Connect circuit is modified.</li>
+     * <li><strong>true</strong>: The system performs a dry run without modifying the VLAN ID of the shared Express Connect circuit. The system checks whether the required parameters are specified, the request format, and the instance status. If the request fails the dry run, the corresponding error is returned. If the request passes the dry run, the corresponding request ID is returned.</li>
+     * <li><strong>false</strong> (default): The system sends a normal request. After the request passes the dry run, the VLAN ID of the shared Express Connect circuit is modified.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,17 +18,17 @@ public class UpdateVirtualPhysicalConnectionRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The expected bandwidth value of the shared Express Connect circuit. The bandwidth value takes effect only after payment is completed.</p>
+     * <p>The expected bandwidth of the shared Express Connect circuit. The bandwidth takes effect only after the payment is completed.</p>
      * <p>Valid values: <strong>50M</strong>, <strong>100M</strong>, <strong>200M</strong>, <strong>300M</strong>, <strong>400M</strong>, <strong>500M</strong>, <strong>1G</strong>, <strong>2G</strong>, <strong>5G</strong>, <strong>8G</strong>, and <strong>10G</strong>.</p>
      * <p>&lt;props=&quot;china&quot;&gt;</p>
      * <blockquote>
-     * <p>The bandwidth values <strong>2G</strong>, <strong>5G</strong>, <strong>8G</strong>, and <strong>10G</strong> are not available by default. To use these values, contact your account manager.</p>
+     * <p>The bandwidth values of <strong>2G</strong>, <strong>5G</strong>, <strong>8G</strong>, and <strong>10G</strong> are not available by default. To use these values, contact your account manager.</p>
      * </blockquote>
      * <p>&lt;props=&quot;intl&quot;&gt;</p>
      * <blockquote>
-     * <p>The bandwidth values <strong>2G</strong>, <strong>5G</strong>, <strong>8G</strong>, and <strong>10G</strong> are not available by default. To use these values, contact your account manager.</p>
+     * <p>The bandwidth values of <strong>2G</strong>, <strong>5G</strong>, <strong>8G</strong>, and <strong>10G</strong> are not available by default. To use these values, contact your account manager.</p>
      * </blockquote>
-     * <p>Unit: <strong>M</strong> indicates Mbit/s and <strong>G</strong> indicates Gbit/s.</p>
+     * <p>Unit: <strong>M</strong> indicates Mbps, and <strong>G</strong> indicates Gbps.</p>
      * 
      * <strong>example:</strong>
      * <p>50M</p>
@@ -48,7 +48,7 @@ public class UpdateVirtualPhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The region ID of the shared Express Connect circuit.</p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -59,9 +59,9 @@ public class UpdateVirtualPhysicalConnectionRequest extends TeaModel {
 
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>Generate a parameter value from your client to ensure uniqueness across different requests. ClientToken supports only ASCII characters.</p>
+     * <p>You can use the client to generate the value, but you must ensure that it is unique among different requests. The client token can contain only ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request may be different.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -73,8 +73,8 @@ public class UpdateVirtualPhysicalConnectionRequest extends TeaModel {
     /**
      * <p>The VLAN ID of the shared Express Connect circuit. Valid values: <strong>0</strong> to <strong>2999</strong>.</p>
      * <ul>
-     * <li>If the VLAN ID is <strong>0</strong>, the physical vSwitch port of the Virtual Border Router (VBR) does not use VLAN mode but uses Layer 3 vRouter interface mode. In Layer 3 vRouter interface mode, each Express Connect circuit corresponds to one VBR.</li>
-     * <li>If the VLAN ID is <strong>1</strong> to <strong>2999</strong>, the physical vSwitch port of the VBR uses VLAN-based Layer 3 subinterfaces. In Layer 3 subinterface mode, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can connect to VPCs under multiple accounts. VBRs in different VLANs have network isolation at Layer 2 and cannot communicate with each other.</li>
+     * <li>A value of <strong>0</strong> specifies that the physical vSwitch port of the Virtual Border Router (VBR), which acts as a vRouter, does not use the VLAN mode, but uses the Layer 3 routing interface mode. In the Layer 3 routing interface mode, each Express Connect circuit corresponds to one VBR.</li>
+     * <li>A value of <strong>1</strong> to <strong>2999</strong> specifies that the physical vSwitch port of the VBR uses a VLAN-based Layer 3 subinterface. In the Layer 3 subinterface mode, each VLAN ID corresponds to one VBR. In this case, the Express Connect circuit of the VBR can be used to connect VPCs that belong to different Alibaba Cloud accounts. Layer 2 network isolation is implemented for VBRs in different VLANs, and they cannot communicate with each other.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

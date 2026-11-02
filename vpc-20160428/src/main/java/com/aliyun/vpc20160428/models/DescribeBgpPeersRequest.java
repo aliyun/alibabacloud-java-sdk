@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeBgpPeersRequest extends TeaModel {
     /**
-     * <p>The ID of the BGP group to which the BGP peer that you want to query belongs.</p>
+     * <p>The ID of the BGP group to which the BGP peer belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>bgpg-2zev8h2wo414sfh****</p>
@@ -14,7 +14,7 @@ public class DescribeBgpPeersRequest extends TeaModel {
     public String bgpGroupId;
 
     /**
-     * <p>The ID of the BGP peer that you want to query.</p>
+     * <p>The ID of the BGP peer.</p>
      * 
      * <strong>example:</strong>
      * <p>bgp-2ze3un0ft1jd1xd****</p>
@@ -44,7 +44,7 @@ public class DescribeBgpPeersRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The page number of the list. Default value: <strong>1</strong>.</p>
+     * <p>The page number. Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,7 +53,7 @@ public class DescribeBgpPeersRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The number of entries per page in a paged query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The number of entries per page in a paging query. Maximum value: <strong>50</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -62,8 +62,8 @@ public class DescribeBgpPeersRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The region ID of the BGP group to which the BGP peer that you want to query belongs. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
+     * <p>The region ID of the BGP group to which the BGP peer belongs. </p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class DescribeBgpPeersRequest extends TeaModel {
     public Long resourceOwnerId;
 
     /**
-     * <p>The ID of the Virtual Border Router (VBR) associated with the BGP peer that you want to query.</p>
+     * <p>The ID of the Virtual Border Router (VBR) associated with the BGP peer.</p>
      * 
      * <strong>example:</strong>
      * <p>vbr-2zecmmvg5gvu8i4te****</p>

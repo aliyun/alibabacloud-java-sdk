@@ -6,7 +6,7 @@ import com.aliyun.tea.*;
 public class ModifyNatGatewayAttributeRequest extends TeaModel {
     /**
      * <p>The description of the NAT gateway that you want to modify.</p>
-     * <p>The description must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>Description</p>
@@ -15,15 +15,15 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The EIP attach pattern of the NAT gateway. Valid values: The value can be empty. If the value is not empty, only <strong>NAT</strong> is allowed, which indicates that the attach pattern is EIP Normal pattern.</p>
+     * <p>The EIP attach pattern of the NAT gateway. Valid values: You can leave this parameter empty. If you specify a value, only <strong>NAT</strong> is allowed, which indicates the standard EIP attach pattern.</p>
      * <blockquote>
      * <ul>
      * <li>You can only change the pattern from <strong>MULTI_BINDED</strong> to <strong>NAT</strong>. You cannot change the pattern from <strong>NAT</strong> to <strong>MULTI_BINDED</strong>. For more information about the <strong>MULTI_BINDED</strong> pattern, see <a href="https://help.aliyun.com/document_detail/120219.html">CreateNatGateway</a>.</li>
      * </ul>
      * </blockquote>
      * <ul>
-     * <li>During the EIP attach pattern switchover procedure, network connectivity may experience second-level transient connections (the transient connection duration increases as the number of EIPs increases. Currently, configuration changes are supported for NAT gateways with up to 5 EIPs attached). Execute the switchover during off-peak hours.</li>
-     * <li>After the EIP attach pattern is changed to <strong>NAT</strong>, the Internet NAT gateway is compatible with the IPv4 gateway. However, attaching a public EIP occupies a private IP in the vSwitch where the NAT gateway resides. Make sure that sufficient private IP addresses are available in the vSwitch. If no available idle private IP addresses exist in the vSwitch, new EIPs cannot be attached.</li>
+     * <li>During the EIP attach pattern switchover procedure, network connectivity may experience a transient connection at the second level (the duration of the transient connection increases with the number of EIPs. Currently, configuration changes are supported for NAT gateways with up to five EIPs attached), so execute the switchover operation during off-peak hours.</li>
+     * <li>After the EIP attach pattern is changed to <strong>NAT</strong>, the Internet NAT gateway becomes compatible with the IPv4 gateway. However, when you attach a public EIP, a private IP address in the vSwitch where the NAT gateway resides is occupied. Ensure that the vSwitch has sufficient private IP addresses. If no available private IP address exists in the vSwitch, you cannot attach a new EIP.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,11 +33,11 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
     public String eipBindMode;
 
     /**
-     * <p>Specifies whether to enable session logging. Valid values:</p>
+     * <p>Specifies whether to enable the session log feature. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Session logging is enabled.</p>
+     * <li><p><strong>true</strong>: enables the session log feature.</p>
      * </li>
-     * <li><p><strong>false</strong>: Session logging is disabled.</p>
+     * <li><p><strong>false</strong>: disables the session log feature.</p>
      * </li>
      * </ul>
      * 
@@ -50,8 +50,8 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable ICMP echo reply. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong> (default): Enabled.</li>
-     * <li><strong>false</strong>: Disabled.</li>
+     * <li><strong>true</strong> (default): enables ICMP echo reply.</li>
+     * <li><strong>false</strong>: disables ICMP echo reply.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -68,7 +68,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The name of the NAT gateway that you want to modify.</p>
-     * <p>The name must be 1 to 128 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The name must be 1 to 128 characters in length, and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>nat123</p>
@@ -94,7 +94,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
 
     /**
      * <p>The region ID of the NAT gateway that you want to modify. </p>
-     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -212,7 +212,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
 
     public static class ModifyNatGatewayAttributeRequestLogDelivery extends TeaModel {
         /**
-         * <p>The type of session log delivery. Valid values: <strong>sls</strong>, which indicates Simple Log Service.</p>
+         * <p>The session log delivery type. Valid values: <strong>sls</strong>, which indicates Simple Log Service.</p>
          * 
          * <strong>example:</strong>
          * <p>sls</p>
@@ -221,7 +221,7 @@ public class ModifyNatGatewayAttributeRequest extends TeaModel {
         public String logDeliveryType;
 
         /**
-         * <p>The destination address for session log delivery. Value: acs:log:${regionName}:${projectOwnerAliUid}:project/${projectName}/logstore/${logstoreName}</p>
+         * <p>The session log delivery destination. Valid values: acs:log:${regionName}:${projectOwnerAliUid}:project/${projectName}/logstore/${logstoreName}.</p>
          * 
          * <strong>example:</strong>
          * <p>acs:log:cn-hangzhou:0000:project/nat_session_log_project/logstore/session_log_test</p>

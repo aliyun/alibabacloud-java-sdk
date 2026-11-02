@@ -6,9 +6,9 @@ import com.aliyun.tea.*;
 public class UnassociateNetworkAclRequest extends TeaModel {
     /**
      * <p>The client token that is used to ensure the idempotence of the request.</p>
-     * <p>The client generates the value. The value must be unique among different requests and cannot exceed 64 ASCII characters in length.</p>
+     * <p>You can use the client to generate the token, but you must ensure that the token is unique among different requests. The token can contain a maximum of 64 ASCII characters.</p>
      * <blockquote>
-     * <p>If you do not specify this parameter, the system uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> may be different for each API request.</p>
+     * <p>If you do not specify this parameter, the system automatically uses the <strong>RequestId</strong> of the API request as the <strong>ClientToken</strong>. The <strong>RequestId</strong> of each API request is unique.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -18,10 +18,10 @@ public class UnassociateNetworkAclRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run. The system checks the request for potential issues without performing the actual operation.</li>
-     * <li><strong>false</strong> (default): performs the actual request.</li>
+     * <li><strong>true</strong>: prechecks the request.</li>
+     * <li><strong>false</strong> (default): sends the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,7 +31,7 @@ public class UnassociateNetworkAclRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The ID of the network ACL to disassociate from the associated resources.</p>
+     * <p>The ID of the network ACL from which you want to disassociate the resources.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -48,7 +48,7 @@ public class UnassociateNetworkAclRequest extends TeaModel {
 
     /**
      * <p>The region ID of the network ACL.</p>
-     * <p>You can call <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> to query the most recent region list.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query region IDs.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -148,7 +148,7 @@ public class UnassociateNetworkAclRequest extends TeaModel {
 
     public static class UnassociateNetworkAclRequestResource extends TeaModel {
         /**
-         * <p>The ID of the associated resource to disassociate.</p>
+         * <p>The ID of the associated resource to be disassociated.</p>
          * 
          * <strong>example:</strong>
          * <p>vsw-bp1de348lntdw****</p>
@@ -157,8 +157,8 @@ public class UnassociateNetworkAclRequest extends TeaModel {
         public String resourceId;
 
         /**
-         * <p>The type of the associated resource to disassociate. Set the value to <strong>VSwitch</strong>.</p>
-         * <p>Valid values of <strong>N</strong>: 0 to 29. You can disassociate up to 30 resources at a time.</p>
+         * <p>The type of the associated resource to be disassociated. Valid value: <strong>VSwitch</strong> (vSwitch).</p>
+         * <p>The value of <strong>N</strong> ranges from 0 to 29, indicating that you can disassociate a maximum of 30 resources.</p>
          * 
          * <strong>example:</strong>
          * <p>VSwitch</p>

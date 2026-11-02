@@ -14,10 +14,10 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
     public Long count;
 
     /**
-     * <p>The pagination token. Valid values:</p>
+     * <p>The token for the next query. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no subsequent query is required.</li>
-     * <li>If <strong>NextToken</strong> is returned, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
+     * <li>If <strong>NextToken</strong> has a return value, the value is the token for the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -175,12 +175,12 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         /**
          * <p>The association status of the prefix list. Valid values:</p>
          * <ul>
-         * <li><strong>Created</strong>: succeeded.</li>
-         * <li><strong>ModifyFailed</strong>: not associated with the latest version.</li>
-         * <li><strong>Creating</strong>: being created.</li>
-         * <li><strong>Modifying</strong>: being modified.</li>
-         * <li><strong>Deleting</strong>: being deleted.</li>
-         * <li><strong>Deleted</strong>: deleted.</li>
+         * <li><strong>Created</strong>: Succeeded.</li>
+         * <li><strong>ModifyFailed</strong>: Not associated with the latest version.</li>
+         * <li><strong>Creating</strong>: Being created.</li>
+         * <li><strong>Modifying</strong>: Being modified.</li>
+         * <li><strong>Deleting</strong>: Being deleted.</li>
+         * <li><strong>Deleted</strong>: Deleted.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,6 +188,15 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
          */
         @NameInMap("Status")
         public String status;
+
+        /**
+         * <p>The list of CIDR blocks in the prefix list that are not effective for the associated resource.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>192.124.0.0/16</p>
+         */
+        @NameInMap("SuppressedList")
+        public String suppressedList;
 
         public static GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation build(java.util.Map<String, ?> map) throws Exception {
             GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation self = new GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation();
@@ -264,6 +273,14 @@ public class GetVpcPrefixListAssociationsResponseBody extends TeaModel {
         }
         public String getStatus() {
             return this.status;
+        }
+
+        public GetVpcPrefixListAssociationsResponseBodyPrefixListAssociation setSuppressedList(String suppressedList) {
+            this.suppressedList = suppressedList;
+            return this;
+        }
+        public String getSuppressedList() {
+            return this.suppressedList;
         }
 
     }

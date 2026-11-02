@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
     /**
-     * <p>The token for the next query. Valid values:</p>
+     * <p>The token used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>If <strong>NextToken</strong> is empty, no next query exists.</li>
-     * <li>If <strong>NextToken</strong> has a value, the value indicates the token for the next query.</li>
+     * <li>If <strong>NextToken</strong> is empty, no more results are available.</li>
+     * <li>If <strong>NextToken</strong> is returned, the value is the token used to start the next query.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The list of route entry publish status information.</p>
+     * <p>The list of route publication status information.</p>
      */
     @NameInMap("RouteEntries")
     public java.util.List<ListVpcPublishedRouteEntriesResponseBodyRouteEntries> routeEntries;
@@ -63,7 +63,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
 
     public static class ListVpcPublishedRouteEntriesResponseBodyRouteEntriesRoutePublishTargets extends TeaModel {
         /**
-         * <p>The publish status of the route entry in the publish target.</p>
+         * <p>The publication status of the route at the publication target.</p>
          * 
          * <strong>example:</strong>
          * <p>Published</p>
@@ -72,7 +72,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         public String publishStatus;
 
         /**
-         * <p>The instance ID of the route publish target.</p>
+         * <p>The instance ID of the route publication target.</p>
          * 
          * <strong>example:</strong>
          * <p>ecr-xvuqdfma6x57ei****</p>
@@ -81,7 +81,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         public String publishTargetInstanceId;
 
         /**
-         * <p>The route publish target.</p>
+         * <p>The route publication target.</p>
          * 
          * <strong>example:</strong>
          * <p>ECR</p>
@@ -122,7 +122,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
 
     public static class ListVpcPublishedRouteEntriesResponseBodyRouteEntries extends TeaModel {
         /**
-         * <p>The destination CIDR block of the route entry.</p>
+         * <p>The destination CIDR block of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>10.0.0.0/24</p>
@@ -131,7 +131,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         public String destinationCidrBlock;
 
         /**
-         * <p>The ID of the route entry.</p>
+         * <p>The ID of the route.</p>
          * 
          * <strong>example:</strong>
          * <p>rte-bp1mnnr2al0naomnpv****</p>
@@ -140,7 +140,7 @@ public class ListVpcPublishedRouteEntriesResponseBody extends TeaModel {
         public String routeEntryId;
 
         /**
-         * <p>The list of publish status information for the route entry in publish targets.</p>
+         * <p>The list of publication status information of the route at the publication targets.</p>
          */
         @NameInMap("RoutePublishTargets")
         public java.util.List<ListVpcPublishedRouteEntriesResponseBodyRouteEntriesRoutePublishTargets> routePublishTargets;

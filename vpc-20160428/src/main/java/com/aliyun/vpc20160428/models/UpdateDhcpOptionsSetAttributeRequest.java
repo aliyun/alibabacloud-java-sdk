@@ -19,7 +19,7 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
 
     /**
      * <p>The description of the DHCP options set. </p>
-     * <p>The description can be empty or 2 to 256 characters in length. It must start with a letter or Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description can be empty or 2 to 256 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>description</p>
@@ -28,7 +28,7 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
     public String dhcpOptionsSetDescription;
 
     /**
-     * <p>The ID of the DHCP options set to modify.</p>
+     * <p>The ID of the DHCP options set to be modified.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
 
     /**
      * <p>The name of the DHCP options set.</p>
-     * <p>The name must be 2 to 128 characters in length and must start with a letter or Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
+     * <p>The name must be 2 to 128 characters in length and must start with a letter or a Chinese character. It can contain digits, underscores (_), and hyphens (-).</p>
      * 
      * <strong>example:</strong>
      * <p>name</p>
@@ -49,7 +49,7 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
 
     /**
      * <p>The hostname suffix, such as example.com.</p>
-     * <p>After you attach the DHCP options set to associate VPC, the hostname suffix is automatically subject to synchronization to ECS instances in the VPC.</p>
+     * <p>After the DHCP options set is associated with a VPC, the hostname suffix is automatically synchronized to the ECS instances in the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -58,9 +58,9 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
     public String domainName;
 
     /**
-     * <p>The IP addresses of DNS servers. You can specify up to four DNS server IP addresses, separated by commas (,).</p>
+     * <p>The IP addresses of DNS servers. You can specify up to four DNS server IP addresses. Separate multiple IP addresses with commas (,).</p>
      * <blockquote>
-     * <p>If you do not specify any DNS server IP addresses, ECS instances use the DNS server IP addresses provided by Alibaba Cloud (100.100.2.136 and 100.100.2.138) by default.</p>
+     * <p>If you do not specify any DNS server IP addresses, ECS instances use the DNS server IP addresses provided by Alibaba Cloud by default (100.100.2.136 and 100.100.2.138).</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -70,9 +70,9 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
     public String domainNameServers;
 
     /**
-     * <p>Specifies whether to perform only a dry run, without performing the actual request. Valid values:</p>
-     * <p><strong>true</strong>: performs only a dry run. The system checks the request for potential issues, including missing parameter values, incorrect request syntax, and service limits. If the request fails the dry run, an error code is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</p>
-     * <p><strong>false</strong> (default): performs a dry run and performs the actual request. If the request passes the dry run, an HTTP 2xx status code is returned and the DHCP options set configuration is modified.</p>
+     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p><strong>true</strong>: performs a dry run without modifying the DHCP options set configuration. The system checks the required parameters, request format, and limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the error code <code>DryRunOperation</code> is returned.</p>
+     * <p><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the DHCP options set configuration is modified.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>
@@ -123,7 +123,7 @@ public class UpdateDhcpOptionsSetAttributeRequest extends TeaModel {
     public Long ownerId;
 
     /**
-     * <p>The region ID of the DHCP options set to modify. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the most recent region list.</p>
+     * <p>The region where the DHCP options set to be modified resides. You can call the <a href="https://help.aliyun.com/document_detail/36063.html">DescribeRegions</a> operation to query the region ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

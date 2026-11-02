@@ -14,10 +14,10 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends TeaModel {
     public String cidrBlock;
 
     /**
-     * <p>Specifies whether to perform a dry run. Valid values:</p>
+     * <p>Specifies whether to only precheck the request. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: performs a dry run without querying the CIDR block information in the IP address pool. The system checks the required parameters, request format, and service limits. If the request fails the dry run, an error message is returned. If the request passes the dry run, the <code>DryRunOperation</code> error code is returned.</li>
-     * <li><strong>false</strong> (default): performs a dry run and sends the request. If the request passes the dry run, an HTTP 2xx status code is returned and the operation is performed.</li>
+     * <li><strong>true</strong>: prechecks the request without querying the CIDR blocks in the IP address pool. The system checks whether required parameters are specified, the request format is valid, and service limits are met. If the request fails the precheck, the corresponding error is returned. If the request passes the precheck, the <code>DryRunOperation</code> error code is returned.</li>
+     * <li><strong>false</strong> (default): sends the request. If the request passes the precheck, the HTTP 2xx status code is returned and the operation is performed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,7 +27,7 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The maximum number of entries to return. Valid values: <strong>10</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
+     * <p>The maximum number of entries to return for a single request. Valid values: <strong>10</strong> to <strong>100</strong>. Default value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -36,10 +36,10 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Valid values:</p>
+     * <p>The token used to retrieve the next page of results. Valid values:</p>
      * <ul>
-     * <li>You do not need to specify this parameter for the first request or if no subsequent query exists.</li>
-     * <li>If a subsequent query exists, set the value to the NextToken value returned in the previous API call.</li>
+     * <li>If this is your first request or no subsequent requests are to be sent, leave this parameter empty.</li>
+     * <li>If a subsequent request is to be sent, set the value to the NextToken value returned from the previous API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,7 +65,7 @@ public class ListPublicIpAddressPoolCidrBlocksRequest extends TeaModel {
     public String publicIpAddressPoolId;
 
     /**
-     * <p>The region ID of the CIDR block that you want to query.</p>
+     * <p>The region ID of the CIDR blocks to query.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -41,7 +41,7 @@ public class DescribePublicIpAddressResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The range of public IP addresses in a virtual private cloud (VPC) in the specified region.</p>
+     * <p>The range of public IP addresses in a virtual private cloud (VPC) within the specified region.</p>
      * 
      * <strong>example:</strong>
      * <p>110.11.1.0/24</p>
