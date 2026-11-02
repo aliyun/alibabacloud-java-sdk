@@ -5,7 +5,10 @@ import com.aliyun.tea.*;
 
 public class CreateDataAgentSkillMetaRequest extends TeaModel {
     /**
-     * <p>The skill description. This parameter is optional. If not specified, the backend parses the ZIP package specified by UploadLocation to obtain the skill description.</p>
+     * <p>The skill description.</p>
+     * <ul>
+     * <li>Optional by default. The backend parses the ZIP package specified by UploadLocation to obtain the skill description.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>This is a demo skill description.</p>
@@ -14,7 +17,10 @@ public class CreateDataAgentSkillMetaRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The skill ID. If you specify this parameter, the uploaded skill overwrites the existing skill and replaces the original skill content. Note: The name of the original skill and the newly uploaded skill must be identical.</p>
+     * <p>The skill ID. If you specify this parameter, the uploaded skill overwrites the existing skill, and the original skill content is replaced.</p>
+     * <ul>
+     * <li>Note: The original skill name and the newly uploaded skill name must match.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>ski-04pomiln*************j0</p>
@@ -23,7 +29,10 @@ public class CreateDataAgentSkillMetaRequest extends TeaModel {
     public String skillId;
 
     /**
-     * <p>The skill name. This parameter is optional. If not specified, the backend parses the ZIP package specified by UploadLocation to obtain the skill name.</p>
+     * <p>The skill name.</p>
+     * <ul>
+     * <li>Optional by default. The backend parses the ZIP package specified by UploadLocation to obtain the skill name.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>data-query-skill</p>
@@ -32,9 +41,9 @@ public class CreateDataAgentSkillMetaRequest extends TeaModel {
     public String skillName;
 
     /**
-     * <p>The full path for the skill ZIP file upload.</p>
+     * <p>The full path for uploading the skill ZIP file.</p>
      * <ul>
-     * <li>Format: The UploadDir field returned by the DescribeSkillFileUploadSignature operation concatenated with the file name.</li>
+     * <li>Format: Concatenate the UploadDir field returned by the DescribeSkillFileUploadSignature operation with the file name.</li>
      * <li>Example: ${UploadDir}/${Filename}</li>
      * </ul>
      */

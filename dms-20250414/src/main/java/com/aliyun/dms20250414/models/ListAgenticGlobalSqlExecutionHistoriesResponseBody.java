@@ -38,11 +38,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
     public String requestId;
 
     /**
-     * <p>Indicates whether the request is successful. Valid values:</p>
-     * <ul>
-     * <li>true: The request is successful.</li>
-     * <li>false: The request fails.</li>
-     * </ul>
+     * <p>Indicates whether the request is successful. Valid values: true and false.</p>
      */
     @NameInMap("Success")
     public Boolean success;
@@ -111,7 +107,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
 
     public static class ListAgenticGlobalSqlExecutionHistoriesResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the actor. A user ID starts with usr_, and an agent ID starts with agt_.</p>
+         * <p>The ID of the executor. User IDs start with usr_, and agent IDs start with agt_.</p>
          * 
          * <strong>example:</strong>
          * <p>usr_10001</p>
@@ -120,7 +116,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
         public String actorId;
 
         /**
-         * <p>The name of the actor.</p>
+         * <p>The name of the executor.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-user</p>
@@ -129,7 +125,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
         public String actorName;
 
         /**
-         * <p>The type of the actor. A value of HUMAN indicates a user, and a value of AGENT indicates an agent.</p>
+         * <p>The type of the executor. Valid values: HUMAN (user) and AGENT (agent).</p>
          * 
          * <strong>example:</strong>
          * <p>HUMAN</p>
@@ -156,7 +152,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
         public String agentOwnerId;
 
         /**
-         * <p>The catalog UUID to which the execution belongs.</p>
+         * <p>The Catalog UUID to which the current execution belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>mc-HZ-OfjcNc2z***</p>
@@ -165,7 +161,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
         public String catalogUuid;
 
         /**
-         * <p>The IP address of the client that initiates the execution, excluding the port. This parameter is empty in workflow scenarios or when the IP address is not recorded.</p>
+         * <p>The IP address of the client that initiates the execution, excluding the port. This parameter is empty in workflow scenarios or when not recorded.</p>
          * 
          * <strong>example:</strong>
          * <p>203.0.113.10</p>
@@ -192,7 +188,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
         public String databaseSearchName;
 
         /**
-         * <p>The database UUID to which the execution belongs.</p>
+         * <p>The Database UUID to which the current execution belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>md-HZ-fp9K7r***</p>
@@ -201,7 +197,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
         public String databaseUuid;
 
         /**
-         * <p>The error message returned when the execution fails.</p>
+         * <p>The error message when the execution fails.</p>
          * 
          * <strong>example:</strong>
          * <p>syntax error</p>
@@ -210,7 +206,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
         public String error;
 
         /**
-         * <p>The actual SQL statement that is executed.</p>
+         * <p>The actually executed SQL statement.</p>
          * 
          * <strong>example:</strong>
          * <p>SELECT 1</p>
@@ -219,12 +215,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
         public String executedSql;
 
         /**
-         * <p>The execution status. Valid values:</p>
-         * <ul>
-         * <li>SUCCESS: The execution is successful.</li>
-         * <li>FAILED: The execution fails.</li>
-         * <li>BLOCKED: The execution is blocked or not actually executed.</li>
-         * </ul>
+         * <p>The execution status. Valid values: SUCCESS, FAILED, and BLOCKED (intercepted or not actually executed).</p>
          * 
          * <strong>example:</strong>
          * <p>SUCCESS</p>
@@ -242,7 +233,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
         public String originalSql;
 
         /**
-         * <p>The query ID of the execution.</p>
+         * <p>The query ID of the current execution.</p>
          * 
          * <strong>example:</strong>
          * <p>trace-10001</p>
@@ -260,11 +251,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
         public Long returnedRows;
 
         /**
-         * <p>The execution scenario. Valid values:</p>
-         * <ul>
-         * <li>AGENT_QUERY: The agent directly executes the SQL statement.</li>
-         * <li>WORKFLOW_QUERY: The SQL statement is asynchronously executed through a workflow.</li>
-         * </ul>
+         * <p>The execution scenario. Valid values: AGENT_QUERY (the agent directly executes the SQL statement) and WORKFLOW_QUERY (the SQL statement is asynchronously executed through a workflow).</p>
          * 
          * <strong>example:</strong>
          * <p>AGENT_QUERY</p>
@@ -282,7 +269,7 @@ public class ListAgenticGlobalSqlExecutionHistoriesResponseBody extends TeaModel
         public String sqlType;
 
         /**
-         * <p>The start time of the execution. The time is in the yyyy-MM-dd HH:mm:ss format.</p>
+         * <p>The execution start time. Format: yyyy-MM-dd HH:mm:ss.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-01-01 00:00:00</p>

@@ -23,7 +23,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String DMSUnit;
 
     /**
-     * <p>The data source information. This parameter can be left empty. You can specify only one data source for this parameter. Use the DataSources parameter instead.</p>
+     * <p>The data source information. This parameter can be left empty. You can specify only one data source for this parameter. We recommend that you use the DataSources parameter instead.</p>
      * 
      * <strong>example:</strong>
      * <p>null</p>
@@ -48,16 +48,12 @@ public class SendChatMessageRequest extends TeaModel {
     public String message;
 
     /**
-     * <p>The message type. Default value: <code>primary</code>.  </p>
+     * <p>The message type. Default value: primary.</p>
      * <ul>
-     * <li><p>In normal interactions with the agent, the message type is <code>primary</code>.</p>
-     * </li>
-     * <li><p>When the message is a response to a human-in-the-loop question from the agent, the type must be <code>additional</code>.</p>
-     * </li>
-     * <li><p>When the message is intended to trigger report generation, the type must be <code>report</code>.</p>
-     * </li>
-     * <li><p>When the message is intended to cancel the current session, the type must be <code>cancel</code>.</p>
-     * </li>
+     * <li>In normal interactions with the agent, the message type is primary.</li>
+     * <li>When the message is a response to a human-in-the-loop question from the agent, the type must be additional.</li>
+     * <li>When the message is intended to trigger report generation, the type must be report.</li>
+     * <li>When the message is intended to cancel the current session, the type must be cancel.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +63,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String messageType;
 
     /**
-     * <p>The ID of the parent session.</p>
+     * <p>The parent session ID.</p>
      * 
      * <strong>example:</strong>
      * <p>20qrliuoo7p2vlsfg*****</p>
@@ -76,7 +72,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String parentSessionId;
 
     /**
-     * <p>Required when the message type is <code>additional</code>. Specifies the specific question asked by the agent to the user through human-in-the-loop.</p>
+     * <p>Required when the message type is additional. Specifies the specific question asked by the agent to the user through human-in-the-loop.</p>
      * 
      * <strong>example:</strong>
      * <p>Provide the calculation criteria for GMV</p>
@@ -85,7 +81,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String question;
 
     /**
-     * <p>The quoted content. This is typically used when interacting with the agent.</p>
+     * <p>The current quoted content. This is typically used during interactions with the agent.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;version&quot;:&quot;v0&quot;}</p>
@@ -95,7 +91,7 @@ public class SendChatMessageRequest extends TeaModel {
 
     /**
      * <p><strong>Important</strong></p>
-     * <p>When this message is a reply to an agent message, such as an agent asking for clarification through ASK_HUMAN, <code>reply_to</code> must exactly match the checkpoint sequence number carried by that agent message. If this message is not a targeted reply, such as requesting the agent to perform further in-depth analysis after the initial analysis is complete, you can leave <code>reply_to</code> empty or set it to &quot;0&quot;.  </p>
+     * <p>When this message is a reply to an agent message (such as the agent asking for clarification through ASK_HUMAN), reply_to must exactly match the Checkpoint sequence number carried by that agent message. If this message is not a targeted reply, such as requesting the agent to perform further in-depth analysis after the initial analysis is complete, you can leave reply_to empty or set it to 0.  </p>
      * <p>This field affects how the agent decides to process the message. Passing an incorrect value may lead to suboptimal analysis results.</p>
      * 
      * <strong>example:</strong>
@@ -105,7 +101,7 @@ public class SendChatMessageRequest extends TeaModel {
     public String replyTo;
 
     /**
-     * <p>The special configurations for the current session. For the same session, only the configurations specified in the first SendMessage call take effect.</p>
+     * <p>The special configurations for the current session. For the same session, only the configurations passed during the first SendMessage call take effect.</p>
      * 
      * <strong>if can be null:</strong>
      * <p>true</p>
@@ -114,11 +110,11 @@ public class SendChatMessageRequest extends TeaModel {
     public SendChatMessageRequestSessionConfig sessionConfig;
 
     /**
-     * <p>The session ID. This optional field is used for multi-turn sessions.</p>
+     * <p>The session ID. This is an optional field used for multi-turn sessions.</p>
      * <ul>
-     * <li>You can start a session without specifying this field. The response will include the session ID for the current session.</li>
-     * <li>You can also manually create a session ID by calling the CreateDataAgentSession operation and include the ID when initiating a session.</li>
-     * <li>If you need multi-turn conversations, such as follow-up questions or confirming execution plans, specify the session ID returned by the previous SendChatMessage operation in this operation.</li>
+     * <li>You can start a session without specifying this field, and the response will include the SessionID for the current session.</li>
+     * <li>You can also manually create a session ID by calling the CreateDataAgentSession operation and include the ID when initiating the session.</li>
+     * <li>If you need multi-turn conversations (such as follow-up questions or confirming execution plans), include the SessionID returned by the previous SendChatMessage operation in this API call.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -134,7 +130,7 @@ public class SendChatMessageRequest extends TeaModel {
     public SendChatMessageRequestTaskConfig taskConfig;
 
     /**
-     * <p>The Object Storage Service (OSS) bucket of the user. If this parameter is left empty, the analysis process is securely stored in the built-in storage.</p>
+     * <p>The Object Storage Service (OSS) bucket of the user. If you do not specify this parameter, the analysis process is securely stored in the built-in storage.</p>
      * 
      * <strong>example:</strong>
      * <p>my-bucket</p>
@@ -278,21 +274,21 @@ public class SendChatMessageRequest extends TeaModel {
 
     public static class SendChatMessageRequestDataSourcePermissionTables extends TeaModel {
         /**
-         * <p>The list of columns that are allowed to be queried in the current table. If you leave this field empty, all columns can be queried. If you specify this field, SQL statements that query columns beyond the allowed scope, such as <code>SELECT *</code>, will be blocked. To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include columns beyond the allowed scope. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</p>
+         * <p>The list of fields that are allowed to be queried in the current table. If you do not specify this parameter, all fields can be queried. If you specify this parameter, SQL statements that query fields outside the allowed range, such as the <code>SELECT *</code> syntax, will be blocked. To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include fields outside the allowed range. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</p>
          */
         @NameInMap("AllowedColumns")
         public java.util.List<String> allowedColumns;
 
         /**
-         * <p>The list of columns that are not allowed to be queried in the current table. If you leave this field empty, all columns <strong>can be queried</strong>. If you specify this field, SQL statements that query columns beyond the allowed scope, such as <code>SELECT *</code>, will be blocked.  </p>
-         * <p>If both the disallowed list and the allowed list are configured, the disallowed list takes precedence. For example, if Table 1 has columns A, B, C, and D, and you configure columns A and B as not allowed, while configuring columns B and C as allowed, only column C is ultimately allowed to be queried.</p>
-         * <p>To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include columns beyond the allowed scope. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</p>
+         * <p>The list of fields that are prohibited from being queried in the current table. If you do not specify this parameter, all fields <strong>can be queried</strong>. If you specify this parameter, SQL statements that query fields outside the allowed range, such as the <code>SELECT *</code> syntax, will be blocked.  </p>
+         * <p>If both the prohibited list and the allowed list are configured, the prohibited list takes precedence. For example, if Table 1 has columns A, B, C, and D, and you configure columns A and B as non-queryable while configuring columns B and C as queryable, only column C is ultimately queryable.</p>
+         * <p>To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include fields outside the allowed range. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</p>
          */
         @NameInMap("DisallowedColumns")
         public java.util.List<String> disallowedColumns;
 
         /**
-         * <p>The row filter condition that must be included for the current table. If you leave this field empty, it is ignored. If you specify this field, the system checks whether all SQL statements involving this table include the filter column and whether the WHERE clause meets the constraints. SQL statements that do not meet the constraints will be rejected. Pay attention to the format of the validation condition.</p>
+         * <p>The row filter condition that must be included for the current table. If you do not specify this parameter, it is ignored. If you specify this parameter, the system checks whether all SQL statements involving this table include the filter field and whether the WHERE condition meets the constraints. SQL statements that do not meet the constraints will be rejected. Pay attention to the format of the validation condition.</p>
          * 
          * <strong>example:</strong>
          * <p>region = \&quot;east\&quot;</p>
@@ -381,7 +377,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The data source type. Valid values: <code>remote_data_center</code> and <code>database</code>. <code>remote_data_center</code> indicates a file, and <code>database</code> indicates a database.</p>
+         * <p>The data source type. Valid values: remote_data_center and database, which indicate that the analysis target is a file or a database, respectively.</p>
          * 
          * <strong>example:</strong>
          * <p>remote_data_center</p>
@@ -426,7 +422,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String dmsInstanceId;
 
         /**
-         * <p>The database engine type.</p>
+         * <p>The type of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql</p>
@@ -435,7 +431,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String engine;
 
         /**
-         * <p>The ID of the file.</p>
+         * <p>The file ID.</p>
          * 
          * <strong>example:</strong>
          * <p>35****</p>
@@ -468,7 +464,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The list of names of the tables to be analyzed.</p>
+         * <p>The list of table names to be analyzed.</p>
          */
         @NameInMap("Tables")
         public java.util.List<String> tables;
@@ -595,21 +591,21 @@ public class SendChatMessageRequest extends TeaModel {
 
     public static class SendChatMessageRequestDataSourcesPermissionTables extends TeaModel {
         /**
-         * <p>The list of columns that are allowed to be queried in the current table. If this parameter is left empty, all columns can be queried. If this parameter is specified, SQL statements that query columns beyond the allowed scope, such as SELECT *, are prohibited. To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions of DataAgent do not include columns beyond the allowed scope. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</p>
+         * <p>The list of columns that are allowed to be queried in the current table. If you do not specify this parameter, all columns can be queried. If you specify this parameter, SQL statements that query columns beyond the allowed scope are blocked. For example, syntax such as SELECT * is blocked. To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions of DataAgent do not include columns beyond the allowed scope. Otherwise, unauthorized SQL statements are generated and blocked, which reduces the analysis speed and performance of DataAgent.</p>
          */
         @NameInMap("AllowedColumns")
         public java.util.List<String> allowedColumns;
 
         /**
-         * <p>The list of columns that are not allowed to be queried in the current table. If you leave this field empty, all columns <strong>can be queried</strong>. If you specify this field, SQL statements that query columns beyond the allowed scope, such as <code>SELECT *</code>, will be blocked.  </p>
-         * <p>If both the disallowed list and the allowed list are configured, the disallowed list takes precedence. For example, if Table 1 has columns A, B, C, and D, and you configure columns A and B as not allowed, while configuring columns B and C as allowed, only column C is ultimately allowed to be queried.</p>
-         * <p>To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include columns beyond the allowed scope. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</p>
+         * <p>The list of fields that are prohibited from being queried in the current table. If you do not specify this parameter, all fields <strong>can be queried</strong>. If you specify this parameter, SQL statements that query fields outside the allowed range, such as the <code>SELECT *</code> syntax, will be blocked.  </p>
+         * <p>If both the prohibited list and the allowed list are configured, the prohibited list takes precedence. For example, if Table 1 has columns A, B, C, and D, and you configure columns A and B as non-queryable while configuring columns B and C as queryable, only column C is ultimately queryable.</p>
+         * <p>To ensure the analysis performance of DataAgent, make sure that the prompts, knowledge, and instructions modules of DataAgent do not include fields outside the allowed range. Otherwise, unauthorized SQL statements may be generated and blocked, which degrades the analysis speed and performance of DataAgent.</p>
          */
         @NameInMap("DisallowedColumns")
         public java.util.List<String> disallowedColumns;
 
         /**
-         * <p>The row filter condition that must be included for the current table. If you leave this field empty, it is ignored. If you specify this field, the system checks whether all SQL statements involving this table include the filter column and whether the WHERE clause meets the constraints. SQL statements that do not meet the constraints will be rejected. Pay attention to the format of the validation condition.</p>
+         * <p>The row filter condition that must be included for the current table. If you do not specify this parameter, it is ignored. If you specify this parameter, the system checks whether all SQL statements involving this table include the filter field and whether the WHERE condition meets the constraints. SQL statements that do not meet the constraints will be rejected. Pay attention to the format of the validation condition.</p>
          * 
          * <strong>example:</strong>
          * <p>region = \&quot;east\&quot;</p>
@@ -698,7 +694,11 @@ public class SendChatMessageRequest extends TeaModel {
         public String dataSourceId;
 
         /**
-         * <p>The data source type. Valid values: remote_data_center and database, which indicate that the analysis is based on a file or a database, respectively.</p>
+         * <p>The data source type. Valid values:</p>
+         * <ul>
+         * <li>remote_data_center: The analysis is performed on a file.</li>
+         * <li>database: The analysis is performed on a database.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>remote_data_center</p>
@@ -743,7 +743,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String dmsInstanceId;
 
         /**
-         * <p>The database engine type.</p>
+         * <p>The type of the database.</p>
          * 
          * <strong>example:</strong>
          * <p>mysql</p>
@@ -785,7 +785,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The list of names of the tables to be analyzed.</p>
+         * <p>The list of table names to be analyzed.</p>
          */
         @NameInMap("Tables")
         public java.util.List<String> tables;
@@ -912,12 +912,10 @@ public class SendChatMessageRequest extends TeaModel {
 
     public static class SendChatMessageRequestSessionConfigPermissionConfig extends TeaModel {
         /**
-         * <p>The default behavior for table-level permissions. This parameter controls whether tables that are not configured in DataSources.[item].Permission can be queried. Valid values: <code>allow</code> and <code>deny</code>.</p>
+         * <p>The default behavior for table-level permissions. This parameter controls whether tables not configured in DataSources.[item].Permission can be queried. Valid values:</p>
          * <ul>
-         * <li><p><code>allow</code>: the default value. This value indicates that the blacklist mode is used. By default, all tables can be queried, and the actual permissions are subject to the permissions configured in DMS. Only when you configure <strong>row-level and column-level</strong> permissions in DataSources.[item].Permission, the row-level and column-level permissions are used for access control.</p>
-         * </li>
-         * <li><p><code>deny</code>: This value indicates that the whitelist mode is used. You must manually specify this value. By default, no tables can be queried. A table can be queried only when you configure permissions for the table in DataSources.[item].Permission. You can grant full access to a table by not configuring any row-level or column-level restrictions.</p>
-         * </li>
+         * <li>allow: Works in blacklist mode. This is the default value. By default, all tables can be queried, and the actual permissions are subject to the permissions configured in DMS. Only when you configure <strong>row- and column-level</strong> permissions in DataSources.[item].Permission will row- and column-level permissions be enforced.</li>
+         * <li>deny: Works in whitelist mode. You must manually specify this value. By default, no tables can be queried. A table can be queried only when you configure permissions for it in DataSources.[item].Permission. You can grant full access to a table by not configuring any row- or column-level restrictions.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -943,7 +941,7 @@ public class SendChatMessageRequest extends TeaModel {
 
     public static class SendChatMessageRequestSessionConfig extends TeaModel {
         /**
-         * <p>The ID of the custom agent. A custom agent is an entity used to customize the analysis process. You can create a custom agent in the DataAgent console or by calling the CreateCustomAgent operation. The ID of a custom agent must start with <code>ca-</code>.</p>
+         * <p>The custom agent ID. A custom agent is an entity used to customize the analysis process. You can create it in the DataAgent console or by calling the CreateCustomAgent operation. A custom agent ID must be a string starting with ca-.</p>
          * 
          * <strong>example:</strong>
          * <p>ca-asfkjhqwe***aesrfqa</p>
@@ -999,9 +997,9 @@ public class SendChatMessageRequest extends TeaModel {
         /**
          * <p>The mode. Valid values:</p>
          * <ul>
-         * <li><strong>ASK_DATA</strong>: the data query mode.</li>
-         * <li><strong>ANALYSIS</strong>: the analysis mode.</li>
-         * <li><strong>INSIGHT</strong>: the insight mode.</li>
+         * <li><strong>ASK_DATA</strong>: Data query mode.</li>
+         * <li><strong>ANALYSIS</strong>: Analysis mode.</li>
+         * <li><strong>INSIGHT</strong>: Insight mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1011,13 +1009,13 @@ public class SendChatMessageRequest extends TeaModel {
         public String mode;
 
         /**
-         * <p>The data permission settings at the session level. If you configure this parameter multiple times in multi-turn conversations within the same session, the last configuration prevails.</p>
+         * <p>The data permission settings at the session level. If configured multiple times in multi-turn conversations within the same session, the last configuration prevails.</p>
          */
         @NameInMap("PermissionConfig")
         public SendChatMessageRequestSessionConfigPermissionConfig permissionConfig;
 
         /**
-         * <p>Specifies whether to enable the plan feature. Valid values: <code>disable</code>, <code>enable</code>, and <code>force</code>. Default value: <code>enable</code>.</p>
+         * <p>Specifies whether to enable the plan feature. Valid values: disable, enable, and force. Default value: enable.</p>
          * 
          * <strong>example:</strong>
          * <p>disable</p>
@@ -1026,7 +1024,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String planMode;
 
         /**
-         * <p>The watermark text. You can enter up to 64 characters. The text is used to add a watermark to the generated PDF report.</p>
+         * <p>The text to be added as a watermark to the generated PDF report. The text can be up to 64 characters in length.</p>
          * 
          * <strong>example:</strong>
          * <p>sample-watermark</p>
@@ -1075,6 +1073,15 @@ public class SendChatMessageRequest extends TeaModel {
          */
         @NameInMap("UserSpecifiedSkillList")
         public java.util.List<String> userSpecifiedSkillList;
+
+        /**
+         * <p>The default report theme ID for the current session.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
+         */
+        @NameInMap("WebReportTheme")
+        public String webReportTheme;
 
         public static SendChatMessageRequestSessionConfig build(java.util.Map<String, ?> map) throws Exception {
             SendChatMessageRequestSessionConfig self = new SendChatMessageRequestSessionConfig();
@@ -1201,11 +1208,19 @@ public class SendChatMessageRequest extends TeaModel {
             return this.userSpecifiedSkillList;
         }
 
+        public SendChatMessageRequestSessionConfig setWebReportTheme(String webReportTheme) {
+            this.webReportTheme = webReportTheme;
+            return this;
+        }
+        public String getWebReportTheme() {
+            return this.webReportTheme;
+        }
+
     }
 
     public static class SendChatMessageRequestTaskConfigReportConfig extends TeaModel {
         /**
-         * <p>The prompt that must be followed for the current report.</p>
+         * <p>The prompt that the current report must follow.</p>
          * 
          * <strong>example:</strong>
          * <p>generate a report</p>
@@ -1214,7 +1229,7 @@ public class SendChatMessageRequest extends TeaModel {
         public String reportPrompt;
 
         /**
-         * <p>The report theme. Valid values: default, journal, legacy, and neobrutalism.</p>
+         * <p>The report theme. System themes include default, journal, legacy, and neobrutalism, which are globally available theme IDs. You can call the ListDataAgentTheme operation to obtain other available theme IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>default</p>
@@ -1223,7 +1238,12 @@ public class SendChatMessageRequest extends TeaModel {
         public String reportTheme;
 
         /**
-         * <p>The service type. Valid values: TextReport and WebReport, which indicate that the current task generates a text report or a web report, respectively. Only WebReport is supported.</p>
+         * <p>The service type. Valid values:</p>
+         * <ul>
+         * <li>TextReport: The task generates a text report.</li>
+         * <li>WebReport: The task generates a web report.
+         * Currently, only WebReport is supported.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>WebReport</p>

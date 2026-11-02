@@ -4426,7 +4426,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the SQL execution history within the current tenant and returns the results in descending order of execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</p>
+     * <p>Queries the SQL execution history within the current tenant, sorted in descending order by execution start time. Only includes AGENT_QUERY and WORKFLOW_QUERY.</p>
      * 
      * @param request ListAgenticGlobalSqlExecutionHistoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4502,7 +4502,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the SQL execution history within the current tenant and returns the results in descending order of execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</p>
+     * <p>Queries the SQL execution history within the current tenant, sorted in descending order by execution start time. Only includes AGENT_QUERY and WORKFLOW_QUERY.</p>
      * 
      * @param request ListAgenticGlobalSqlExecutionHistoriesRequest
      * @return ListAgenticGlobalSqlExecutionHistoriesResponse
@@ -4588,7 +4588,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</p>
+     * <p>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only includes AGENT_QUERY and WORKFLOW_QUERY.</p>
      * 
      * @param request ListAgenticSqlExecutionHistoriesRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -4664,7 +4664,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only AGENT_QUERY and WORKFLOW_QUERY are included.</p>
+     * <p>Queries the SQL execution history visible to the current caller, sorted in descending order by execution start time. Only includes AGENT_QUERY and WORKFLOW_QUERY.</p>
      * 
      * @param request ListAgenticSqlExecutionHistoriesRequest
      * @return ListAgenticSqlExecutionHistoriesResponse
@@ -7154,10 +7154,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>message_type</code> defaults to <code>primary</code>. When you need to append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
-     * <li>The <code>reply_to</code> field indicates which agent message this message is responding to. The default value is <code>0</code>.</li>
-     * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote previous user messages.</li>
+     * <li>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</li>
+     * <li>The reply_to field specifies the agent message to which this message responds. The default value is 0.</li>
+     * <li>When message_type is set to additional, the question field is required.</li>
+     * <li>You can use quoted_message to quote previous user messages.</li>
      * </ul>
      * 
      * <b>summary</b> : 
@@ -7269,10 +7269,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <h2>Request description</h2>
      * <ul>
-     * <li><code>message_type</code> defaults to <code>primary</code>. When you need to append information or cancel a session, set it to <code>additional</code> or <code>cancel</code>.</li>
-     * <li>The <code>reply_to</code> field indicates which agent message this message is responding to. The default value is <code>0</code>.</li>
-     * <li>When <code>message_type</code> is <code>additional</code>, the <code>question</code> field is required.</li>
-     * <li><code>quoted_message</code> can be used to quote previous user messages.</li>
+     * <li>The default value of message_type is primary. Set this parameter to additional or cancel when you need to append information or cancel the session.</li>
+     * <li>The reply_to field specifies the agent message to which this message responds. The default value is 0.</li>
+     * <li>When message_type is set to additional, the question field is required.</li>
+     * <li>You can use quoted_message to quote previous user messages.</li>
      * </ul>
      * 
      * <b>summary</b> : 

@@ -1,3 +1,7 @@
+2026-11-02 Version: 4.4.2
+- Update API SendChatMessage: add request parameters SessionConfig.WebReportTheme.
+
+
 2026-10-29 Version: 4.4.0
 - Support API ListAgenticSecurityPolicies.
 
