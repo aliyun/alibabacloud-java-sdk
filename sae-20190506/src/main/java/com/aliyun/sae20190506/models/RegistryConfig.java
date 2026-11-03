@@ -4,9 +4,15 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class RegistryConfig extends TeaModel {
+    /**
+     * <p>authConfig</p>
+     */
     @NameInMap("authConfig")
     public RegistryAuthConfig authConfig;
 
+    /**
+     * <p>certConfig</p>
+     */
     @NameInMap("certConfig")
     public RegistryCertConfig certConfig;
 

@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateSecretResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code or the error code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: The request failed.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: success.</li>
+     * <li><strong>3xx</strong>: redirection.</li>
+     * <li><strong>4xx</strong>: request error.</li>
+     * <li><strong>5xx</strong>: server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,19 +26,20 @@ public class CreateSecretResponseBody extends TeaModel {
     public CreateSecretResponseBodyData data;
 
     /**
-     * <p>The status code. Value values:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>If the request was successful, <strong>ErrorCode</strong> is not returned.</p>
-     * </li>
-     * <li><p>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned for the operation.</p>
+     * <p>The additional information about the call result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -60,12 +57,10 @@ public class CreateSecretResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the Secret was created. Valid values:</p>
+     * <p>Indicates whether the Secret instance was created successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The ConfigMap was created.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The ConfigMap failed to be created.</p>
-     * </li>
+     * <li><strong>true</strong>: The creation was successful.</li>
+     * <li><strong>false</strong>: The creation failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +70,7 @@ public class CreateSecretResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The trace ID used to query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -146,7 +141,7 @@ public class CreateSecretResponseBody extends TeaModel {
 
     public static class CreateSecretResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the created Secret.</p>
+         * <p>The instance ID of the created Secret.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>

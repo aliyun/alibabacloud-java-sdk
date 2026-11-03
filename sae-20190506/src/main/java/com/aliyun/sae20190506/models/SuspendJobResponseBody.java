@@ -40,6 +40,9 @@ public class SuspendJobResponseBody extends TeaModel {
      * <li><p>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> in this topic.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidAppId.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

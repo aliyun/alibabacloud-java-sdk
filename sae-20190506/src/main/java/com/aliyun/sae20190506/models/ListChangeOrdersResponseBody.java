@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListChangeOrdersResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code or the POP error code. Valid values:</p>
+     * <p>The HTTP status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: Success.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: Redirect.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: Request error.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: Server error.</p>
-     * </li>
+     * <li><strong>2xx</strong>: success</li>
+     * <li><strong>3xx</strong>: redirection</li>
+     * <li><strong>4xx</strong>: client error</li>
+     * <li><strong>5xx</strong>: server error</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,25 +20,26 @@ public class ListChangeOrdersResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The information about the change orders.</p>
+     * <p>The information about the change order list.</p>
      */
     @NameInMap("Data")
     public ListChangeOrdersResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. Take note of the following items:</p>
      * <ul>
-     * <li><p>This parameter is not returned on successful requests.</p>
-     * </li>
-     * <li><p>Returned if the request fails. For more information, see the <strong>error code</strong> list in this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the error codes in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Additional information about the response.</p>
+     * <p>The additional information about the call result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -60,12 +57,10 @@ public class ListChangeOrdersResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the list of change orders was retrieved. Valid values:</p>
+     * <p>Indicates whether the change order list was successfully queried. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The list was retrieved.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The list could not be retrieved.</p>
-     * </li>
+     * <li><strong>true</strong>: the query was successful</li>
+     * <li><strong>false</strong>: the query failed</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +70,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID used to query request details.</p>
+     * <p>The trace ID, which is used to accurately query the call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0bb6f815638568884597879d****</p>
@@ -166,10 +161,8 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         /**
          * <p>The batch type. Valid values:</p>
          * <ul>
-         * <li><p><strong>auto</strong>: Automatic.</p>
-         * </li>
-         * <li><p><strong>manual</strong>: Manual.</p>
-         * </li>
+         * <li><strong>auto</strong>: automatic</li>
+         * <li><strong>manual</strong>: manual</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -188,10 +181,10 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         public String changeOrderId;
 
         /**
-         * <p>The description of the change type code (<strong>CoTypeCode</strong>).</p>
+         * <p>The change type, which is the description of the <strong>CoTypeCode</strong>.</p>
          * 
          * <strong>example:</strong>
-         * <p>Create application</p>
+         * <p>Create Application</p>
          */
         @NameInMap("CoType")
         public String coType;
@@ -199,46 +192,26 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         /**
          * <p>The code of the change type. Valid values:</p>
          * <ul>
-         * <li><p><strong>CoBindSlb</strong>: Bind an SLB instance.</p>
-         * </li>
-         * <li><p><strong>CoUnbindSlb</strong>: Unbind an SLB instance.</p>
-         * </li>
-         * <li><p><strong>CoCreateApp</strong>: Create an application.</p>
-         * </li>
-         * <li><p><strong>CoDeleteApp</strong>: Delete an application.</p>
-         * </li>
-         * <li><p><strong>CoDeploy</strong>: Deploy an application.</p>
-         * </li>
-         * <li><p><strong>CoRestartApplication</strong>: Restart an application.</p>
-         * </li>
-         * <li><p><strong>CoRollback</strong>: Roll back an application.</p>
-         * </li>
-         * <li><p><strong>CoScaleIn</strong>: Scale in an application.</p>
-         * </li>
-         * <li><p><strong>CoScaleOut</strong>: Scale out an application.</p>
-         * </li>
-         * <li><p><strong>CoStartApplication</strong>: Start an application.</p>
-         * </li>
-         * <li><p><strong>CoStopApplication</strong>: Stop an application.</p>
-         * </li>
-         * <li><p><strong>CoRescaleApplicationVertically</strong>: Change the instance type.</p>
-         * </li>
-         * <li><p><strong>CoDeployHistroy</strong>: Roll back to a previous version.</p>
-         * </li>
-         * <li><p><strong>CoBindNas</strong>: Bind a NAS file system.</p>
-         * </li>
-         * <li><p><strong>CoUnbindNas</strong>: Unbind a NAS file system.</p>
-         * </li>
-         * <li><p><strong>CoBatchStartApplication</strong>: Start multiple applications.</p>
-         * </li>
-         * <li><p><strong>CoBatchStopApplication</strong>: Stop multiple applications.</p>
-         * </li>
-         * <li><p><strong>CoRestartInstances</strong>: Restart instances.</p>
-         * </li>
-         * <li><p><strong>CoDeleteInstances</strong>: Delete instances.</p>
-         * </li>
-         * <li><p><strong>CoScaleInAppWithInstances</strong>: Scale in an application by specifying instances.</p>
-         * </li>
+         * <li><strong>CoBindSlb</strong>: bind an SLB instance</li>
+         * <li><strong>CoUnbindSlb</strong>: unbind an SLB instance</li>
+         * <li><strong>CoCreateApp</strong>: create an application</li>
+         * <li><strong>CoDeleteApp</strong>: delete an application</li>
+         * <li><strong>CoDeploy</strong>: deploy an application</li>
+         * <li><strong>CoRestartApplication</strong>: restart an application</li>
+         * <li><strong>CoRollback</strong>: roll back an application</li>
+         * <li><strong>CoScaleIn</strong>: scale in an application</li>
+         * <li><strong>CoScaleOut</strong>: scale out an application</li>
+         * <li><strong>CoStartApplication</strong>: start an application</li>
+         * <li><strong>CoStopApplication</strong>: stop an application</li>
+         * <li><strong>CoRescaleApplicationVertically</strong>: change instance specifications</li>
+         * <li><strong>CoDeployHistroy</strong>: roll back to a historical version</li>
+         * <li><strong>CoBindNas</strong>: bind a NAS file system</li>
+         * <li><strong>CoUnbindNas</strong>: unbind a NAS file system</li>
+         * <li><strong>CoBatchStartApplication</strong>: start applications in batches</li>
+         * <li><strong>CoBatchStopApplication</strong>: stop applications in batches</li>
+         * <li><strong>CoRestartInstances</strong>: restart instances</li>
+         * <li><strong>CoDeleteInstances</strong>: delete instances</li>
+         * <li><strong>CoScaleInAppWithInstances</strong>: scale in specified instances</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -248,7 +221,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         public String coTypeCode;
 
         /**
-         * <p>The time the change order was created.</p>
+         * <p>The creation time.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-07-11 15:54:49</p>
@@ -269,13 +242,13 @@ public class ListChangeOrdersResponseBody extends TeaModel {
          * <p>The description.</p>
          * 
          * <strong>example:</strong>
-         * <p>Version: 1.0 | image name: nginx</p>
+         * <p>Version: 1.0 | Image name: nginx</p>
          */
         @NameInMap("Description")
         public String description;
 
         /**
-         * <p>The time the change order was completed.</p>
+         * <p>The end time.</p>
          * 
          * <strong>example:</strong>
          * <p>2019-07-11 20:12:58</p>
@@ -293,7 +266,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         public String groupId;
 
         /**
-         * <p>The source of the change order.</p>
+         * <p>The source of the change order operation.</p>
          * 
          * <strong>example:</strong>
          * <p>console</p>
@@ -304,26 +277,16 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         /**
          * <p>The status of the change order. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: Preparing.</p>
-         * </li>
-         * <li><p><strong>1</strong>: In progress.</p>
-         * </li>
-         * <li><p><strong>2</strong>: Succeeded.</p>
-         * </li>
-         * <li><p><strong>3</strong>: Failed.</p>
-         * </li>
-         * <li><p><strong>6</strong>: Aborted.</p>
-         * </li>
-         * <li><p><strong>8</strong>: Paused for manual confirmation.</p>
-         * </li>
-         * <li><p><strong>9</strong>: Paused for automatic confirmation.</p>
-         * </li>
-         * <li><p><strong>10</strong>: Failed due to a system exception.</p>
-         * </li>
-         * <li><p><strong>11</strong>: Pending approval.</p>
-         * </li>
-         * <li><p><strong>12</strong>: Approved and pending execution.</p>
-         * </li>
+         * <li><strong>0</strong>: preparing</li>
+         * <li><strong>1</strong>: executing</li>
+         * <li><strong>2</strong>: executed successfully</li>
+         * <li><strong>3</strong>: execution failed</li>
+         * <li><strong>6</strong>: terminated</li>
+         * <li><strong>8</strong>: waiting for manual batch confirmation</li>
+         * <li><strong>9</strong>: waiting for automatic batch confirmation</li>
+         * <li><strong>10</strong>: execution failed due to a system exception</li>
+         * <li><strong>11</strong>: waiting for approval</li>
+         * <li><strong>12</strong>: approved and waiting for execution</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -477,7 +440,7 @@ public class ListChangeOrdersResponseBody extends TeaModel {
         public Integer currentPage;
 
         /**
-         * <p>The page size.</p>
+         * <p>The number of entries per page.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>

@@ -15,6 +15,9 @@ public class ListIngressesRequest extends TeaModel {
 
     /**
      * <p>The current page number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("CurrentPage")
     public Integer currentPage;
@@ -30,7 +33,10 @@ public class ListIngressesRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>20</p>
      */
     @NameInMap("PageSize")
     public Integer pageSize;

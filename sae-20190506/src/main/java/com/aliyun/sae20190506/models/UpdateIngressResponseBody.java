@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateIngressResponseBody extends TeaModel {
     /**
-     * <p>API status or POP error code. Details are as follows:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: Success.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: Redirection.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: Request error.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: Server error.</p>
-     * </li>
+     * <li><strong>2xx</strong>: success.</li>
+     * <li><strong>3xx</strong>: redirection.</li>
+     * <li><strong>4xx</strong>: request error.</li>
+     * <li><strong>5xx</strong>: server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,30 +20,29 @@ public class UpdateIngressResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>Returned result.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public UpdateIngressResponseBodyData data;
 
     /**
-     * <p>Error code. Details are as follows:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</p>
-     * </li>
-     * <li><p>If the request failed, the <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error Codes</strong> list in this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Additional information. Details are as follows:</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>If the request is normal, <strong>success</strong> is returned.</p>
-     * </li>
-     * <li><p>If the request is abnormal, a specific abnormal error code is returned.</p>
-     * </li>
+     * <li>If the request is normal, <strong>success</strong> is returned.</li>
+     * <li>If the request is abnormal, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +52,7 @@ public class UpdateIngressResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -66,12 +61,10 @@ public class UpdateIngressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the Ingress instance configuration was successfully updated. Details are as follows:</p>
+     * <p>Indicates whether the Ingress instance configuration was updated successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The update was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The update failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The update was successful.</li>
+     * <li><strong>false</strong>: The update failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class UpdateIngressResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>Call chain ID.</p>
+     * <p>The trace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -152,7 +145,7 @@ public class UpdateIngressResponseBody extends TeaModel {
 
     public static class UpdateIngressResponseBodyData extends TeaModel {
         /**
-         * <p>Routing rule ID.</p>
+         * <p>The ID of the routing rule.</p>
          * 
          * <strong>example:</strong>
          * <p>87</p>

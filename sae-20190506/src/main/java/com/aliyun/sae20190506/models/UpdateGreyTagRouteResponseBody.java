@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateGreyTagRouteResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request is successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request is redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A client error occurred.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Client error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +20,7 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The grey tag route information.</p>
+     * <p>The canary release rule information.</p>
      */
     @NameInMap("Data")
     public UpdateGreyTagRouteResponseBodyData data;
@@ -32,17 +28,18 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
     /**
      * <p>The error code.</p>
      * <ul>
-     * <li><p>The <strong>ErrorCode</strong> parameter is not returned for successful requests.</p>
-     * </li>
-     * <li><p>The <strong>ErrorCode</strong> parameter is returned for failed requests. For more information, see the <strong>Error codes</strong> section of this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Additional information about the call result.</p>
+     * <p>The additional information about the call result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -60,12 +57,10 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the change order information was queried successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The query was successful.</li>
+     * <li><strong>false</strong>: The query failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +70,7 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID. You can use this ID to query the details of a call.</p>
+     * <p>The trace ID, which is used to accurately query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -146,7 +141,7 @@ public class UpdateGreyTagRouteResponseBody extends TeaModel {
 
     public static class UpdateGreyTagRouteResponseBodyData extends TeaModel {
         /**
-         * <p>The globally unique grey tag route ID.</p>
+         * <p>The globally unique canary release rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>

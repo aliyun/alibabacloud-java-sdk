@@ -4,24 +4,63 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel {
+    /**
+     * <p>The API status code or POP error code. Valid values: 2xx: Success. 3xx: Redirection. 4xx: Client error. 5xx: Server error.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>200</p>
+     */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned results.</p>
+     */
     @NameInMap("Data")
     public ListApplicationCenterServiceInstancesResponseBodyData data;
 
+    /**
+     * <p>The error code. If the request is successful, the ErrorCode parameter is not returned. If the request fails, the ErrorCode parameter is returned. For more information, see the Error codes section in this topic.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Empty</p>
+     */
     @NameInMap("ErrorCode")
     public String errorCode;
 
+    /**
+     * <p>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>success</p>
+     */
     @NameInMap("Message")
     public String message;
 
+    /**
+     * <p>Id of the request</p>
+     * 
+     * <strong>example:</strong>
+     * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
+     */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
+    /**
+     * <p>The trace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>0a981dd515966966104121683d****</p>
+     */
     @NameInMap("TraceId")
     public String traceId;
 
@@ -87,18 +126,48 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
     }
 
     public static class ListApplicationCenterServiceInstancesResponseBodyDataServiceInstances extends TeaModel {
+        /**
+         * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2025-10-28T02:18:51Z</p>
+         */
         @NameInMap("CreateTime")
         public String createTime;
 
+        /**
+         * <p>The instance name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>tftestacc54</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The service instance ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>si-2063aea4b23b4781a26b</p>
+         */
         @NameInMap("ServiceInstanceId")
         public String serviceInstanceId;
 
+        /**
+         * <p>The service name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user-service</p>
+         */
         @NameInMap("ServiceName")
         public String serviceName;
 
+        /**
+         * <p>The template name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Dify HA</p>
+         */
         @NameInMap("TemplateName")
         public String templateName;
 
@@ -150,6 +219,9 @@ public class ListApplicationCenterServiceInstancesResponseBody extends TeaModel 
     }
 
     public static class ListApplicationCenterServiceInstancesResponseBodyData extends TeaModel {
+        /**
+         * <p>The list of service instances.</p>
+         */
         @NameInMap("ServiceInstances")
         public java.util.List<ListApplicationCenterServiceInstancesResponseBodyDataServiceInstances> serviceInstances;
 

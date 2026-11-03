@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSecretRequest extends TeaModel {
     /**
-     * <p>The ID of the namespace where the Secret resides. If the namespace is the default namespace, you need to only enter the region ID, such as <code>cn-beijing</code>.</p>
+     * <p>The ID of the namespace to which the Secret instance belongs. If the namespace is the default namespace, specify only the RegionId, such as <code>cn-beijing</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeSecretRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The ID of the Secret instance to be queried. You can call the <a href="https://help.aliyun.com/document_detail/466929.html">ListSecrets</a> operation to view the IDs of Secrete instances.</p>
+     * <p>Instance ID of the Secret instance to query. You can call the <a href="https://help.aliyun.com/document_detail/466929.html">ListSecrets</a> operation to obtain instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

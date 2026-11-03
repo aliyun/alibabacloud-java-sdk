@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class GetChangeOrderMetricRequest extends TeaModel {
     /**
-     * <p>The ID of the application.</p>
+     * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
      */
     @NameInMap("AppId")
     public String appId;
 
     /**
-     * <p>The type of the SAE application.</p>
+     * <p>The type of the Serverless App Engine (SAE) application.</p>
      * <ul>
-     * <li><p><strong>micro_service</strong></p>
-     * </li>
-     * <li><p><strong>web</strong></p>
-     * </li>
-     * <li><p><strong>job</strong></p>
-     * </li>
+     * <li><strong>micro_service</strong></li>
+     * <li><strong>web</strong></li>
+     * <li><strong>job</strong></li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,18 +28,19 @@ public class GetChangeOrderMetricRequest extends TeaModel {
     public String appSource;
 
     /**
-     * <p>The type of the change order.</p>
+     * <p>The change order type.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>CoCreateApp</p>
      */
     @NameInMap("CoType")
     public String coType;
 
     /**
-     * <p>The CPU allocation policy.</p>
+     * <p>The CPU allocation strategy. Valid values:</p>
      * <ul>
-     * <li><p><strong>request</strong>: CPU is allocated only when a request is received.</p>
-     * </li>
-     * <li><p><strong>always</strong>: A fixed amount of CPU is always allocated.</p>
-     * </li>
+     * <li><strong>request</strong>: Allocates CPU resources only when requests are received.</li>
+     * <li><strong>always</strong>: Always allocates a fixed amount of CPU resources.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -49,7 +50,7 @@ public class GetChangeOrderMetricRequest extends TeaModel {
     public String cpuStrategy;
 
     /**
-     * <p>The start time when the change order was created.</p>
+     * <p>The start time of change order creation.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -69,7 +70,7 @@ public class GetChangeOrderMetricRequest extends TeaModel {
     public Long limit;
 
     /**
-     * <p>The field by which to sort the query results. The value of this parameter must be a field in the response parameters.</p>
+     * <p>The field used to sort the query results.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -79,7 +80,7 @@ public class GetChangeOrderMetricRequest extends TeaModel {
     public String orderBy;
 
     /**
-     * <p>The ID of the region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>

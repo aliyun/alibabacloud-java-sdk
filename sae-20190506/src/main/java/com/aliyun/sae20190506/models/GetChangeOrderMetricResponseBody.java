@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class GetChangeOrderMetricResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A client-side error occurred.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server-side error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Client error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,12 +26,10 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
     public java.util.List<GetChangeOrderMetricResponseBodyData> data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>Returns <strong>success</strong> if the request is successful.</p>
-     * </li>
-     * <li><p>Returns an error code if the request fails.</p>
-     * </li>
+     * <li>If the request is successful, <strong>success</strong> is returned.</li>
+     * <li>If the request fails, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -54,12 +48,10 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the service list was retrieved. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The service list was retrieved.</li>
+     * <li><strong>false</strong>: The retrieval failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -124,13 +116,13 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The average duration of a change order, in milliseconds.</p>
+         * <p>The average time consumed, in milliseconds.</p>
          */
         @NameInMap("AvgTimeCostMs")
         public Float avgTimeCostMs;
 
         /**
-         * <p>The number of failed change orders.</p>
+         * <p>The number of abnormal change orders.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -148,7 +140,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         public Float errorPercent;
 
         /**
-         * <p>The maximum duration, in milliseconds.</p>
+         * <p>The maximum time consumed, in milliseconds.</p>
          */
         @NameInMap("MaxTimeCostMs")
         public Float maxTimeCostMs;
@@ -178,7 +170,7 @@ public class GetChangeOrderMetricResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The average task duration, in milliseconds.</p>
+         * <p>The average time consumed by the task, in milliseconds.</p>
          */
         @NameInMap("TaskTimeCostMsAvg")
         public String taskTimeCostMsAvg;

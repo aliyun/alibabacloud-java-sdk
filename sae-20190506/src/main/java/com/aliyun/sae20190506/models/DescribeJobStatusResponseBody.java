@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeJobStatusResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The call was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: The call failed.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -30,24 +26,23 @@ public class DescribeJobStatusResponseBody extends TeaModel {
     public DescribeJobStatusResponseBodyData data;
 
     /**
-     * <p>The error code returned. Take note of the following rules:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>ErrorCode</strong> is not returned if the request succeeds.</p>
-     * </li>
-     * <li><p><strong>ErrorCode</strong> is returned if the request fails. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</p>
-     * </li>
+     * <li>Successful request: The <strong>ErrorCode</strong> field is not returned.</li>
+     * <li>Failed request: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section of this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidAppId.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. Take note of the following rules:</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>If the call is successful, <strong>success</strong> is returned.</p>
-     * </li>
-     * <li><p>If the call fails, an error code is returned.</p>
-     * </li>
+     * <li><strong>success</strong>: The request is successful.</li>
+     * <li>Specific error code: An exception occurred and a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -57,7 +52,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>53F15A18-8079-5992-810C-0211A5AE****</p>
@@ -66,12 +61,10 @@ public class DescribeJobStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Indicates whether the job status was queried successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The query was successful.</li>
+     * <li><strong>false</strong>: The query failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID used to accurately query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0b1639af16575057857241351e****</p>
@@ -161,7 +154,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         public Long active;
 
         /**
-         * <p>The time when the job was executed.</p>
+         * <p>The completion time of the job execution.</p>
          * 
          * <strong>example:</strong>
          * <p>1657522839</p>
@@ -170,7 +163,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         public Long completionTime;
 
         /**
-         * <p>The number of instances that failed to run.</p>
+         * <p>The number of instances that failed.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -179,7 +172,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         public Long failed;
 
         /**
-         * <p>The job ID.</p>
+         * <p>The ID of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>event-b798157b-40a2-4388-b578-71fb897103**-**</p>
@@ -188,12 +181,10 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         public String jobId;
 
         /**
-         * <p>The returned message. Take note of the following rules:</p>
+         * <p>The additional information. Valid values:</p>
          * <ul>
-         * <li><p>If the call is successful, <strong>success</strong> is returned.</p>
-         * </li>
-         * <li><p>If the call fails, an error code is returned.</p>
-         * </li>
+         * <li><strong>success</strong>: The request is successful.</li>
+         * <li>Specific error code: An exception occurred and a specific error code is returned.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -203,7 +194,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         public String message;
 
         /**
-         * <p>The time when the job was created.</p>
+         * <p>The creation time of the job.</p>
          * 
          * <strong>example:</strong>
          * <p>1657522800</p>
@@ -212,16 +203,12 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The status of the job. Valid values:</p>
+         * <p>The running status of the job. Valid values:</p>
          * <ul>
-         * <li><p><strong>0</strong>: The job is not executed.</p>
-         * </li>
-         * <li><p><strong>1</strong>: The job was executed.</p>
-         * </li>
-         * <li><p><strong>2</strong>: The job failed to be executed.</p>
-         * </li>
-         * <li><p><strong>3</strong>: The job is being executed.</p>
-         * </li>
+         * <li><strong>0</strong>: Not executed.</li>
+         * <li><strong>1</strong>: Succeeded.</li>
+         * <li><strong>2</strong>: Failed.</li>
+         * <li><strong>3</strong>: Running.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -231,7 +218,7 @@ public class DescribeJobStatusResponseBody extends TeaModel {
         public String state;
 
         /**
-         * <p>The number of instances that are successfully run.</p>
+         * <p>The number of instances that succeeded.</p>
          * 
          * <strong>example:</strong>
          * <p>3</p>

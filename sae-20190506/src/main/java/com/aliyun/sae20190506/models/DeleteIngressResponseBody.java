@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteIngressResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request is successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request is redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A client-side error occurred.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server-side error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,25 +20,26 @@ public class DeleteIngressResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DeleteIngressResponseBodyData data;
 
     /**
-     * <p>The error code that is returned if the request fails.</p>
+     * <p>The error code. Note the following:</p>
      * <ul>
-     * <li><p>This parameter is not returned if the request succeeds.</p>
-     * </li>
-     * <li><p>For a list of error codes, see the <strong>Error codes</strong> section.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The additional information about the call result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -60,12 +57,10 @@ public class DeleteIngressResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the ingress instance was deleted successfully. Valid values:</p>
+     * <p>Indicates whether the ingress instance was deleted. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The deletion was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The deletion failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The ingress instance was deleted.</li>
+     * <li><strong>false</strong>: The deletion failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +70,7 @@ public class DeleteIngressResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID for the request.</p>
+     * <p>The trace ID used to accurately query the call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -146,7 +141,7 @@ public class DeleteIngressResponseBody extends TeaModel {
 
     public static class DeleteIngressResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the deleted routing rule.</p>
+         * <p>The ID of the deleted ingress rule.</p>
          * 
          * <strong>example:</strong>
          * <p>87</p>

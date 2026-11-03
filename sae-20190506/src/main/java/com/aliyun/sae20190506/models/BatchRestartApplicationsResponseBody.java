@@ -5,8 +5,13 @@ import com.aliyun.tea.*;
 
 public class BatchRestartApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The API status or POP error code. Value description:</p>
-     * <p>2xx: The request was successful. 3xx: The request was redirected. 4xx: The request was invalid. 5xx: A server error occurred.</p>
+     * <p>The API status code or POP error code. Valid values:</p>
+     * <ul>
+     * <li>2xx: The request is successful.</li>
+     * <li>3xx: The request is redirected.</li>
+     * <li>4xx: A request error occurred.</li>
+     * <li>5xx: A server error occurred.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -15,21 +20,30 @@ public class BatchRestartApplicationsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public BatchRestartApplicationsResponseBodyData data;
 
     /**
-     * <p>The error code. Value description:</p>
-     * <p>If the request succeeds, this field is not returned. It is returned only if the request fails. For more information, see the &quot;Error codes&quot; section in this topic.</p>
+     * <p>The error code. Valid values:</p>
+     * <ul>
+     * <li>Successful request: The ErrorCode field is not returned.</li>
+     * <li>Failed request: The ErrorCode field is returned. For more information, see the error codes section in this topic.</li>
+     * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>System.Upgrading</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The additional information. Value description:</p>
-     * <p>If the request succeeds, a success message is returned. If the request fails, an error code is returned.</p>
+     * <p>The additional information. Valid values:</p>
+     * <ul>
+     * <li>success: The request is successful.</li>
+     * <li>Specific error code: The request is abnormal and a specific error code is returned.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -47,8 +61,11 @@ public class BatchRestartApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the applications were started. Valid values:</p>
-     * <p>true and false</p>
+     * <p>Indicates whether the applications are successfully restarted in batches. Valid values:</p>
+     * <ul>
+     * <li>true: The applications are successfully restarted in batches.</li>
+     * <li>false: The applications fail to be restarted in batches.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -57,7 +74,7 @@ public class BatchRestartApplicationsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace, which is used to query the exact call information.</p>
+     * <p>The trace ID used to accurately query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -128,7 +145,7 @@ public class BatchRestartApplicationsResponseBody extends TeaModel {
 
     public static class BatchRestartApplicationsResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the change process.</p>
+         * <p>The change order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>

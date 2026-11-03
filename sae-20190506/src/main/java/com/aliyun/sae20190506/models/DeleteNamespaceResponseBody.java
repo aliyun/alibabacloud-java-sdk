@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteNamespaceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A request error occurred.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Client error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,19 +20,20 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>If the request is successful, this parameter is not returned.</p>
-     * </li>
-     * <li><p>If the request fails, this parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidOperation.NamespaceClusterNotDeleted</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The additional information that is returned.</p>
+     * <p>The additional information about the call result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -54,12 +51,10 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the namespace was deleted. Valid values:</p>
+     * <p>Indicates whether the namespace is deleted. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The namespace was deleted.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The namespace failed to be deleted.</p>
-     * </li>
+     * <li><strong>true</strong>: The namespace is deleted.</li>
+     * <li><strong>false</strong>: The namespace is not deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -69,7 +64,7 @@ public class DeleteNamespaceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID. You can use this ID to query the details of a request.</p>
+     * <p>The trace ID used to accurately query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a981dd515966966104121683d****</p>

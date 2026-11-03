@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeJobRequest extends TeaModel {
     /**
-     * <p>The job template ID.</p>
+     * <p>The ID of the job template.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,7 +15,7 @@ public class DescribeJobRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The job ID.</p>
+     * <p>The ID of the job.</p>
      * 
      * <strong>example:</strong>
      * <p>event-b798157b-40a2-4388-b578-71fb897103**-**</p>

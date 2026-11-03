@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DisableArmsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A client error occurred.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Client error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,25 +20,26 @@ public class DisableArmsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DisableArmsResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</p>
-     * </li>
-     * <li><p>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>System.Upgrading</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The additional information about the call result.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -60,7 +57,7 @@ public class DisableArmsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>True</p>
@@ -69,7 +66,7 @@ public class DisableArmsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of a request.</p>
+     * <p>The trace ID used to precisely query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc3b4ad17412276398692303e4cb1</p>
@@ -140,7 +137,11 @@ public class DisableArmsResponseBody extends TeaModel {
 
     public static class DisableArmsResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether ARMS monitoring is enabled. Valid values:</p>
+         * <p>Specifies whether the feature is enabled. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Enabled.</li>
+         * <li><strong>false</strong>: Disabled.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>

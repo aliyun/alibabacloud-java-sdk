@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A client error occurred.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,30 +20,29 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListSwimmingLaneGroupTagsResponseBodyData> data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>This parameter is not returned if the request succeeds.</p>
-     * </li>
-     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
-     * </li>
+     * <li>Successful request: The <strong>ErrorCode</strong> field is not returned.</li>
+     * <li>Failed request: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
-     * </li>
-     * <li><p>If the request fails, an error message is returned.</p>
-     * </li>
+     * <li><strong>success</strong>: The request is successful.</li>
+     * <li>Specific error code: The request is abnormal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,12 +61,10 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of a request.</p>
+     * <p>The trace ID used to precisely query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622920113732501e****</p>
@@ -161,7 +154,7 @@ public class ListSwimmingLaneGroupTagsResponseBody extends TeaModel {
         public String metadata;
 
         /**
-         * <p>The swimming lane tag.</p>
+         * <p>The lane tag.</p>
          * 
          * <strong>example:</strong>
          * <p>g1</p>

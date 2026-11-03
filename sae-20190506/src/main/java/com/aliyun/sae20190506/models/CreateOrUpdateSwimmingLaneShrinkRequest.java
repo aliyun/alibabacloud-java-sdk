@@ -5,20 +5,20 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     /**
-     * <p>The configuration of the gateway route.</p>
+     * <p>The gateway routing configuration.</p>
      * <blockquote>
-     * <p>This parameter is required if the gateway entry application for the swimlane group is a Java application.</p>
+     * <p>This parameter is required when the gateway entry of the traffic lane group is Java.</p>
      * </blockquote>
      */
     @NameInMap("AppEntryRule")
     public String appEntryRuleShrink;
 
     /**
-     * <p>The end-to-end canary release mode.</p>
+     * <p>The end-to-end canary release mode. Valid values:</p>
      * <ul>
-     * <li><p><code>0</code>: content-based routing</p>
+     * <li><p>0: Routes traffic based on request content.</p>
      * </li>
-     * <li><p><code>1</code>: percentage-based routing</p>
+     * <li><p>1: Routes traffic based on proportion.</p>
      * </li>
      * </ul>
      * 
@@ -29,12 +29,10 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public Integer canaryModel;
 
     /**
-     * <p>The status of the swimlane.</p>
+     * <p>Specifies whether the traffic lane is enabled. Valid values:</p>
      * <ul>
-     * <li><p><code>true</code>: enabled</p>
-     * </li>
-     * <li><p><code>false</code>: disabled</p>
-     * </li>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -44,7 +42,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public Boolean enable;
 
     /**
-     * <p>The ID of the swimlane group.</p>
+     * <p>The ID of the traffic lane group to which the traffic lane belongs.</p>
      * 
      * <strong>example:</strong>
      * <p>b2a8a925-477a-eswa-b823-d5e22500****</p>
@@ -53,7 +51,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The ID of the swimlane.</p>
+     * <p>The ID of the traffic lane.</p>
      * 
      * <strong>example:</strong>
      * <p>13857</p>
@@ -62,7 +60,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public Long laneId;
 
     /**
-     * <p>The name of the swimlane.</p>
+     * <p>The name of the traffic lane.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -71,7 +69,7 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public String laneName;
 
     /**
-     * <p>The tag of the swimlane.</p>
+     * <p>The tag of the traffic lane.</p>
      * 
      * <strong>example:</strong>
      * <p>g1</p>
@@ -80,9 +78,9 @@ public class CreateOrUpdateSwimmingLaneShrinkRequest extends TeaModel {
     public String laneTag;
 
     /**
-     * <p>Configuration for the MSE gateway route.</p>
+     * <p>The MSE gateway routing configuration.</p>
      * <blockquote>
-     * <p>This parameter is required if the <strong>EntryAppType</strong> parameter is set to <strong>apig</strong> or <strong>mse-gw</strong>.</p>
+     * <p>This parameter is required when <strong>EntryAppType</strong> is set to <strong>apig</strong> or <strong>mse-gw</strong>.</p>
      * </blockquote>
      */
     @NameInMap("MseGatewayEntryRule")

@@ -14,7 +14,7 @@ public class ListJobsRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>The page number. The value starts from 1.</p>
+     * <p>The current page number. Valid values start from 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -23,12 +23,10 @@ public class ListJobsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The dimension by which to filter job templates. Valid values:</p>
+     * <p>The dimension used to filter job templates. Valid values:</p>
      * <ul>
-     * <li><p><strong>appName</strong>: The name of the job template.</p>
-     * </li>
-     * <li><p><strong>appIds</strong>: The ID of the job template.</p>
-     * </li>
+     * <li><strong>appName</strong>: the job template name</li>
+     * <li><strong>appIds</strong>: the job template ID</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -38,7 +36,7 @@ public class ListJobsRequest extends TeaModel {
     public String fieldType;
 
     /**
-     * <p>The name or ID of the target job template. This value corresponds to the dimension specified by <strong>FieldType</strong>.</p>
+     * <p>The value used to filter job templates based on the dimension specified by the <strong>FieldType</strong> parameter. Enter the job template name or job template ID.</p>
      * 
      * <strong>example:</strong>
      * <p>demo-app</p>
@@ -47,7 +45,7 @@ public class ListJobsRequest extends TeaModel {
     public String fieldValue;
 
     /**
-     * <p>The namespace ID.</p>
+     * <p>The ID of the namespace.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing:demo</p>
@@ -56,12 +54,10 @@ public class ListJobsRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The sorting method for the job templates. Valid values:</p>
+     * <p>The field used to sort job templates. Valid values:</p>
      * <ul>
-     * <li><p><strong>running</strong>: Sorts by the number of running instances.</p>
-     * </li>
-     * <li><p><strong>instances</strong>: Sorts by the number of destination instances.</p>
-     * </li>
+     * <li><strong>running</strong>: sort by the current number target instances</li>
+     * <li><strong>instances</strong>: sort by the target number target instances</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,12 +76,10 @@ public class ListJobsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>Specifies whether to sort the results in ascending or descending order based on the field specified by the <strong>OrderBy</strong> parameter. Valid values:</p>
+     * <p>Specifies whether to reverse the sort order based on the field specified by the <strong>OrderBy</strong> parameter. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: ascending order.</p>
-     * </li>
-     * <li><p><strong>false</strong>: descending order.</p>
-     * </li>
+     * <li><strong>true</strong>: sort in ascending order</li>
+     * <li><strong>false</strong>: sort in descending order</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -95,12 +89,10 @@ public class ListJobsRequest extends TeaModel {
     public Boolean reverse;
 
     /**
-     * <p>A list of tags. This is a JSON string. The value consists of the following parts:</p>
+     * <p>The list of tags. The value is a JSON string that contains the following fields:</p>
      * <ul>
-     * <li><p><strong>key</strong>: The tag key.</p>
-     * </li>
-     * <li><p><strong>value</strong>: The tag value.</p>
-     * </li>
+     * <li><strong>key</strong>: the tag key</li>
+     * <li><strong>value</strong>: the tag value</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -110,7 +102,7 @@ public class ListJobsRequest extends TeaModel {
     public String tags;
 
     /**
-     * <p>The workload. Set the value to <code>job</code>.</p>
+     * <p>The workload type. Set the value to <code>job</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>job</p>

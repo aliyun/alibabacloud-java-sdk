@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListNamespacedConfigMapsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A client error occurred.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,29 +20,29 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned by the request.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public ListNamespacedConfigMapsResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li></li>
-     * <li><p>This parameter is returned only if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
-     * </li>
+     * <li>Successful request: The <strong>ErrorCode</strong> field is not returned.</li>
+     * <li>Failed request: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The response message. Valid values:</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>Returns <strong>success</strong> if the request is successful.</p>
-     * </li>
-     * <li><p>Returns an error message if the request fails.</p>
-     * </li>
+     * <li><strong>success</strong>: The request is successful.</li>
+     * <li>Specific error code: An exception occurred during the request.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -65,12 +61,10 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the list of ConfigMap instances is successfully retrieved. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The list is successfully retrieved.</li>
+     * <li><strong>false</strong>: The list fails to be retrieved.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +74,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID. You can use this ID to trace the request.</p>
+     * <p>The trace ID used to query call details.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -193,7 +187,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
 
     public static class ListNamespacedConfigMapsResponseBodyDataConfigMaps extends TeaModel {
         /**
-         * <p>The ID of the ConfigMap instance.</p>
+         * <p>The ConfigMap instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -211,8 +205,9 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>The key-value pairs of the ConfigMap instance.</p>
-         * <p>For more information about the ConfigMap, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage and use configuration items</a>.</p>
+         * <p>The key-value pair data of the ConfigMap instance. The format is as follows:</p>
+         * <p>{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}</p>
+         * <p>k indicates the key, and v indicates the value. For more information about configuration items, see <a href="https://help.aliyun.com/document_detail/171326.html">Manage and use configuration items</a>.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;k1&quot;:&quot;v1&quot;,&quot;k2&quot;:&quot;v2&quot;}</p>
@@ -221,7 +216,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         public java.util.Map<String, ?> data;
 
         /**
-         * <p>The description of the instance.</p>
+         * <p>The description.</p>
          * 
          * <strong>example:</strong>
          * <p>test-desc</p>
@@ -230,7 +225,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The name of the instance.</p>
+         * <p>The ConfigMap instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>test-name</p>
@@ -254,7 +249,7 @@ public class ListNamespacedConfigMapsResponseBody extends TeaModel {
         public java.util.List<ListNamespacedConfigMapsResponseBodyDataConfigMapsRelateApps> relateApps;
 
         /**
-         * <p>The last update time.</p>
+         * <p>The update time.</p>
          * 
          * <strong>example:</strong>
          * <p>1593760185111</p>

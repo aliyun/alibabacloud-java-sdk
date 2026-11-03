@@ -21,7 +21,7 @@ public class SLSCollectConfig extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>文件采集日志</p>
+     * <p>file_log</p>
      */
     @NameInMap("LogType")
     public String logType;
@@ -36,7 +36,7 @@ public class SLSCollectConfig extends TeaModel {
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>my-logstore</p>
+     * <p>sag-shanghai</p>
      */
     @NameInMap("LogstoreName")
     public String logstoreName;
@@ -63,7 +63,7 @@ public class SLSCollectConfig extends TeaModel {
      * <p>The name of the SLS project.</p>
      * 
      * <strong>example:</strong>
-     * <p>log-service-1199085698835****-cn-neijing</p>
+     * <p>test</p>
      */
     @NameInMap("ProjectName")
     public String projectName;

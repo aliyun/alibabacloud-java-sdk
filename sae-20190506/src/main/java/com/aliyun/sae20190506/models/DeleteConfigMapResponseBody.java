@@ -37,6 +37,9 @@ public class DeleteConfigMapResponseBody extends TeaModel {
      * <li><p>Returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

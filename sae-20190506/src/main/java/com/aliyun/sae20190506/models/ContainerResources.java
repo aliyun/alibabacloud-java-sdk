@@ -18,7 +18,7 @@ public class ContainerResources extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>1000</p>
+     * <p>2</p>
      */
     @NameInMap("Cpu")
     public Integer cpu;

@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A request error occurred.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,24 +20,23 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error code. This parameter is returned only if the request fails. For more information, see the <strong>Error codes</strong> section of this topic.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</p>
-     * </li>
-     * <li><p>A failed request returns the <strong>ErrorCode</strong> field. For more information, see the <strong>error code</strong> list in this article.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message.</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p><strong>success</strong> is returned for a successful request.</p>
-     * </li>
-     * <li><p>An error code is returned for a failed request.</p>
-     * </li>
+     * <li><strong>success</strong>: The request is successful.</li>
+     * <li>A specific error code: The request is abnormal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,12 +55,10 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the deletion is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The swimming lane group was successfully deleted.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The swimming lane group was not deleted.</p>
-     * </li>
+     * <li><strong>true</strong>: The deletion is successful.</li>
+     * <li><strong>false</strong>: The deletion fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +68,7 @@ public class DeleteSwimmingLaneGroupResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID. Use this ID to query the details of a call.</p>
+     * <p>The trace ID used to query invocation details.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622920113732501e****</p>

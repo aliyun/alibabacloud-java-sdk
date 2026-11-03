@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AppStackTask extends TeaModel {
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1706518652</p>
      */
@@ -12,6 +14,8 @@ public class AppStackTask extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The end time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1706518652</p>
      */
@@ -19,6 +23,8 @@ public class AppStackTask extends TeaModel {
     public Long endTime;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-789y</p>
      */
@@ -26,6 +32,8 @@ public class AppStackTask extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The template ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>palworld</p>
      */
@@ -33,6 +41,8 @@ public class AppStackTask extends TeaModel {
     public String stackId;
 
     /**
+     * <p>The start time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1706518652</p>
      */
@@ -40,16 +50,23 @@ public class AppStackTask extends TeaModel {
     public Long startTime;
 
     /**
+     * <p>The task status.</p>
+     * 
      * <strong>example:</strong>
      * <p>WAIT</p>
      */
     @NameInMap("Status")
     public String status;
 
+    /**
+     * <p>The step list.</p>
+     */
     @NameInMap("Steps")
     public java.util.List<AppStackTaskSteps> steps;
 
     /**
+     * <p>The task ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>t-789y-deploy</p>
      */
@@ -127,6 +144,8 @@ public class AppStackTask extends TeaModel {
 
     public static class AppStackTaskSteps extends TeaModel {
         /**
+         * <p>The error code.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -134,6 +153,8 @@ public class AppStackTask extends TeaModel {
         public String code;
 
         /**
+         * <p>The step duration.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -141,6 +162,8 @@ public class AppStackTask extends TeaModel {
         public Long duration;
 
         /**
+         * <p>The end time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1706518652</p>
          */
@@ -148,6 +171,8 @@ public class AppStackTask extends TeaModel {
         public Long endTime;
 
         /**
+         * <p>The step ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>VPC_CREATE_NETWORK</p>
          */
@@ -155,6 +180,8 @@ public class AppStackTask extends TeaModel {
         public String id;
 
         /**
+         * <p>The error message.</p>
+         * 
          * <strong>example:</strong>
          * <p>OK</p>
          */
@@ -162,13 +189,17 @@ public class AppStackTask extends TeaModel {
         public String message;
 
         /**
+         * <p>The step name.</p>
+         * 
          * <strong>example:</strong>
-         * <p>初始化 VPC 网络</p>
+         * <p>Initialize VPC network</p>
          */
         @NameInMap("Name")
         public String name;
 
         /**
+         * <p>The start time.</p>
+         * 
          * <strong>example:</strong>
          * <p>1706518652</p>
          */
@@ -176,6 +207,8 @@ public class AppStackTask extends TeaModel {
         public Long startTime;
 
         /**
+         * <p>The step status.</p>
+         * 
          * <strong>example:</strong>
          * <p>WAIT</p>
          */

@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request is successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request is redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: The request is invalid.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: success.</li>
+     * <li><strong>3xx</strong>: redirection.</li>
+     * <li><strong>4xx</strong>: client error.</li>
+     * <li><strong>5xx</strong>: server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,29 +20,29 @@ public class UpdateJobResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data that is returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public UpdateJobResponseBodyData data;
 
     /**
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>This parameter is not returned if the request is successful.</p>
-     * </li>
-     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section of this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Application.MissingJdk</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p><strong>success</strong> if the request is successful.</p>
-     * </li>
-     * <li><p>An error code if the request fails.</p>
-     * </li>
+     * <li>If the request is successful, <strong>success</strong> is returned.</li>
+     * <li>If the request fails, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,10 +63,8 @@ public class UpdateJobResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the job template was updated. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The job template was updated.</li>
+     * <li><strong>false</strong>: The job template failed to be updated.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -80,7 +74,7 @@ public class UpdateJobResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that you can use to query the details of a request.</p>
+     * <p>The trace ID used to accurately query the call information.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622246421415014e****</p>
@@ -151,7 +145,7 @@ public class UpdateJobResponseBody extends TeaModel {
 
     public static class UpdateJobResponseBodyData extends TeaModel {
         /**
-         * <p>The job template ID.</p>
+         * <p>The ID of the job template.</p>
          * 
          * <strong>example:</strong>
          * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -160,7 +154,7 @@ public class UpdateJobResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The change order ID. You can use this ID to query the execution status of the job.</p>
+         * <p>The ID of the returned change order, which is used to query the job execution status.</p>
          * 
          * <strong>example:</strong>
          * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>

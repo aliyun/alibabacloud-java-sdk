@@ -15,7 +15,10 @@ public class EnableApplicationScalingRuleRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The name of the auto scaling policy.</p>
+     * <p>The elastic scaling policy name.</p>
+     * <blockquote>
+     * <p>An elastic policy has been created for this application.</p>
+     * </blockquote>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

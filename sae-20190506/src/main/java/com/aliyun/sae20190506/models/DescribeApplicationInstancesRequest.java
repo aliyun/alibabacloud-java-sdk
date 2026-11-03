@@ -15,7 +15,7 @@ public class DescribeApplicationInstancesRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class DescribeApplicationInstancesRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The ID of the application group. Call the <a href="https://help.aliyun.com/document_detail/126249.html">DescribeApplicationGroups</a> operation to get the ID.</p>
+     * <p>The application group ID. You can call the <a href="https://help.aliyun.com/document_detail/126249.html">DescribeApplicationGroups</a> operation to obtain the ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -43,7 +43,7 @@ public class DescribeApplicationInstancesRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The number of entries to return on each page. Default value: <strong>10</strong>. The value must be in the range (0, 1000000000).</p>
+     * <p>The paging Settings for the number of entries per page in a paged query. Default value: <strong>10</strong>. Valid values: (0, 1000000000).</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -52,7 +52,7 @@ public class DescribeApplicationInstancesRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The batch ID. Call the <a href="https://help.aliyun.com/document_detail/126617.html">DescribeChangeOrder</a> operation to get the ID.</p>
+     * <p>The batch ID. You can call the <a href="https://help.aliyun.com/document_detail/126617.html">DescribeChangeOrder</a> operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>85750d48-6cfc-4dbf-8ea0-840397******</p>
@@ -61,37 +61,24 @@ public class DescribeApplicationInstancesRequest extends TeaModel {
     public String pipelineId;
 
     /**
-     * <p>Specifies the sort order of the application instances. Instances are sorted first by running status, and then by instance ID. Valid values:</p>
+     * <p>Specifies the sorting order of application instances based on their running status. If the status is the same, the instances are sorted by instance ID. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The instances are sorted in descending order.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The instances are sorted in ascending order.</p>
-     * </li>
+     * <li><strong>true</strong>: Descending order.</li>
+     * <li><strong>false</strong>: Ascending order.</li>
      * </ul>
-     * <p>Instance statuses in ascending order:</p>
+     * <p>The following list shows the instance statuses in ascending order:</p>
      * <ol>
-     * <li><p><strong>Error</strong>: An error occurred during instance startup.</p>
-     * </li>
-     * <li><p><strong>CrashLoopBackOff</strong>: The container fails to start and enters a crash-restart loop.</p>
-     * </li>
-     * <li><p><strong>ErrImagePull</strong>: An error occurred while pulling the container image for the instance.</p>
-     * </li>
-     * <li><p><strong>ImagePullBackOff</strong>: The system is repeatedly trying and failing to pull the container image.</p>
-     * </li>
-     * <li><p><strong>Pending</strong>: The instance is waiting to be scheduled.</p>
-     * </li>
-     * <li><p><strong>Unknown</strong>: An unknown exception occurred.</p>
-     * </li>
-     * <li><p><strong>Terminating</strong>: The instance is being terminated.</p>
-     * </li>
-     * <li><p><strong>NotFound</strong>: The instance cannot be found.</p>
-     * </li>
-     * <li><p><strong>PodInitializing</strong>: The instance is being initialized.</p>
-     * </li>
-     * <li><p><strong>Init:0/1</strong>: The instance is being initialized.</p>
-     * </li>
-     * <li><p><strong>Running</strong>: The instance is running.</p>
-     * </li>
+     * <li><strong>Error</strong>: An error occurred during instance startup.</li>
+     * <li><strong>CrashLoopBackOff</strong>: The container failed to start. An error occurred during startup, and the error persisted after a restart.</li>
+     * <li><strong>ErrImagePull</strong>: An error occurred while pulling the container image for the instance.</li>
+     * <li><strong>ImagePullBackOff</strong>: The container image cannot be retrieved.</li>
+     * <li><strong>Pending</strong>: The instance is waiting to be scheduled.</li>
+     * <li><strong>Unknown</strong>: An unknown exception occurred.</li>
+     * <li><strong>Terminating</strong>: The instance is being terminated.</li>
+     * <li><strong>NotFound</strong>: The instance cannot be found.</li>
+     * <li><strong>PodInitializing</strong>: The instance is being initialized.</li>
+     * <li><strong>Init:0/1</strong>: The instance is initializing.</li>
+     * <li><strong>Running</strong>: The instance is running.</li>
      * </ol>
      * 
      * <strong>example:</strong>

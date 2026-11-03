@@ -28,7 +28,7 @@ public class WebApplication extends TeaModel {
      * <p>The time when the application was created.</p>
      * 
      * <strong>example:</strong>
-     * <p>2024-07-17T06:12:17Z</p>
+     * <p>2019-07-11 15:54:49</p>
      */
     @NameInMap("CreatedTime")
     public String createdTime;
@@ -64,7 +64,7 @@ public class WebApplication extends TeaModel {
      * <p>The time when the application was last modified.</p>
      * 
      * <strong>example:</strong>
-     * <p>2024-07-17T06:12:18Z</p>
+     * <p>2019-07-11 20:12:58</p>
      */
     @NameInMap("LastModifiedTime")
     public String lastModifiedTime;

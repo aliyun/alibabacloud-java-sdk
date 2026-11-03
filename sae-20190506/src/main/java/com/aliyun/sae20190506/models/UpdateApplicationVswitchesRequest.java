@@ -15,12 +15,10 @@ public class UpdateApplicationVswitchesRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Indicates whether to deploy the application immediately. Valid values:</p>
+     * <p>Specifies whether to deploy the application immediately. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Deploys the application immediately. This is the default.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The application is not deployed.</p>
-     * </li>
+     * <li><strong>true</strong>: Deploys the application immediately. This is the default value.</li>
+     * <li><strong>false</strong>: Deploys the application later.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -31,12 +29,18 @@ public class UpdateApplicationVswitchesRequest extends TeaModel {
 
     /**
      * <p>The minimum percentage of ready instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>-1</p>
      */
     @NameInMap("MinReadyInstanceRatio")
     public Integer minReadyInstanceRatio;
 
     /**
      * <p>The minimum number of ready instances.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>1</p>
      */
     @NameInMap("MinReadyInstances")
     public Integer minReadyInstances;

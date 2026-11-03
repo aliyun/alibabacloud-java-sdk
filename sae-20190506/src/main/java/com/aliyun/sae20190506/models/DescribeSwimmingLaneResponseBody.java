@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeSwimmingLaneResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code that is returned.</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: Success.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: Redirection.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: Client error.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: Server error.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirect.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,30 +20,29 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DescribeSwimmingLaneResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. </p>
      * <ul>
-     * <li><p>This parameter is returned only if the request fails.</p>
-     * </li>
-     * <li><p>For more information, see the <strong>Error codes</strong> section in this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned with the response.</p>
+     * <p>The additional information about the call result. </p>
      * <ul>
-     * <li><p><strong>success</strong> is returned if the request is successful.</p>
-     * </li>
-     * <li><p>An error code is returned if the request fails.</p>
-     * </li>
+     * <li>If the request is successful, <strong>success</strong> is returned.</li>
+     * <li>If the request is abnormal, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,12 +61,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The query was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The query failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The query is successful.</li>
+     * <li><strong>false</strong>: The query fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID. You can use this ID to query the details of a call.</p>
+     * <p>The trace ID used to precisely query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -152,7 +145,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
 
     public static class DescribeSwimmingLaneResponseBodyDataAppEntryRuleConditions extends TeaModel {
         /**
-         * <p>The match operator.</p>
+         * <p>The matching rule.</p>
          * 
          * <strong>example:</strong>
          * <p>==</p>
@@ -161,7 +154,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String condition;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The parameter name.</p>
          * 
          * <strong>example:</strong>
          * <p>t</p>
@@ -170,7 +163,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the parameter.</p>
+         * <p>The parameter type.</p>
          * 
          * <strong>example:</strong>
          * <p>Header</p>
@@ -179,7 +172,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value to match.</p>
+         * <p>The matching value of the condition.</p>
          * 
          * <strong>example:</strong>
          * <p>g1</p>
@@ -188,7 +181,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String value;
 
         /**
-         * <p>The values to match.</p>
+         * <p>The matching value of the condition.</p>
          */
         @NameInMap("Values")
         public java.util.List<String> values;
@@ -242,12 +235,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
 
     public static class DescribeSwimmingLaneResponseBodyDataAppEntryRule extends TeaModel {
         /**
-         * <p>The logical operator that joins conditions. Valid values:</p>
+         * <p>The logical connector between conditions. Valid values:</p>
          * <ul>
-         * <li><p><code>AND</code>: All conditions must be met.</p>
-         * </li>
-         * <li><p><code>OR</code>: At least one of the conditions must be met.</p>
-         * </li>
+         * <li>AND: All conditions must be met.</li>
+         * <li>OR: Any condition must be met.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -257,7 +248,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String conditionJoiner;
 
         /**
-         * <p>The match conditions.</p>
+         * <p>The matching conditions.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<DescribeSwimmingLaneResponseBodyDataAppEntryRuleConditions> conditions;
@@ -278,7 +269,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public java.util.List<String> paths;
 
         /**
-         * <p>The traffic percentage for percentage-based routing. Valid values: 0 to 100.</p>
+         * <p>The traffic percentage, which is used for percentage-based routing. Valid values: 0 to 100.</p>
          * 
          * <strong>example:</strong>
          * <p>50</p>
@@ -287,7 +278,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public Integer percentage;
 
         /**
-         * <p>An object that maps paths to traffic percentages.</p>
+         * <p>The traffic matching.</p>
          */
         @NameInMap("PercentageByPath")
         public java.util.Map<String, Integer> percentageByPath;
@@ -349,7 +340,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
 
     public static class DescribeSwimmingLaneResponseBodyDataApps extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6b4c0f64-f679-4580-8105-91eac4******</p>
@@ -358,7 +349,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The name of the application.</p>
+         * <p>The application name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -367,7 +358,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String appName;
 
         /**
-         * <p>The ID of the MSE instance.</p>
+         * <p>The MSE instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-cn-53y49******</p>
@@ -376,7 +367,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String mseAppId;
 
         /**
-         * <p>The name of the MSE instance.</p>
+         * <p>The MSE instance name.</p>
          * 
          * <strong>example:</strong>
          * <p>sae-test</p>
@@ -385,7 +376,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String mseAppName;
 
         /**
-         * <p>The ID of the MSE namespace.</p>
+         * <p>The MSE namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>6733e538-d52f-48e6-91a4-192f91******</p>
@@ -442,7 +433,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
 
     public static class DescribeSwimmingLaneResponseBodyDataMseGatewayEntryRuleConditions extends TeaModel {
         /**
-         * <p>The match operator.</p>
+         * <p>The matching rule.</p>
          * 
          * <strong>example:</strong>
          * <p>==</p>
@@ -451,7 +442,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String condition;
 
         /**
-         * <p>The name of the parameter.</p>
+         * <p>The parameter name.</p>
          * 
          * <strong>example:</strong>
          * <p>t</p>
@@ -460,7 +451,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String name;
 
         /**
-         * <p>The type of the parameter.</p>
+         * <p>The parameter type.</p>
          * 
          * <strong>example:</strong>
          * <p>Header</p>
@@ -469,7 +460,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The value to match.</p>
+         * <p>The matching value of the condition.</p>
          * 
          * <strong>example:</strong>
          * <p>g1</p>
@@ -527,7 +518,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The match type.</p>
+         * <p>The matching rule.</p>
          * 
          * <strong>example:</strong>
          * <p>Header</p>
@@ -560,7 +551,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
 
     public static class DescribeSwimmingLaneResponseBodyDataMseGatewayEntryRuleRoutesRoutePredicate extends TeaModel {
         /**
-         * <p>The path-based match rule.</p>
+         * <p>The path matching rule.</p>
          */
         @NameInMap("PathPredicate")
         public DescribeSwimmingLaneResponseBodyDataMseGatewayEntryRuleRoutesRoutePredicatePathPredicate pathPredicate;
@@ -591,7 +582,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public Long routeId;
 
         /**
-         * <p>The name of the route.</p>
+         * <p>The route name.</p>
          * 
          * <strong>example:</strong>
          * <p>demo</p>
@@ -600,7 +591,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String routeName;
 
         /**
-         * <p>The route predicate.</p>
+         * <p>The route rule.</p>
          */
         @NameInMap("RoutePredicate")
         public DescribeSwimmingLaneResponseBodyDataMseGatewayEntryRuleRoutesRoutePredicate routePredicate;
@@ -638,7 +629,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
 
     public static class DescribeSwimmingLaneResponseBodyDataMseGatewayEntryRule extends TeaModel {
         /**
-         * <p>The logical operator that joins conditions.</p>
+         * <p>The logical connector between conditions.</p>
          * 
          * <strong>example:</strong>
          * <p>AND</p>
@@ -647,7 +638,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String conditionJoiner;
 
         /**
-         * <p>The match conditions.</p>
+         * <p>The matching conditions.</p>
          */
         @NameInMap("Conditions")
         public java.util.List<DescribeSwimmingLaneResponseBodyDataMseGatewayEntryRuleConditions> conditions;
@@ -662,7 +653,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public Boolean independentPercentageEnable;
 
         /**
-         * <p>The traffic percentage for the rule.</p>
+         * <p>The path traffic percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>100</p>
@@ -671,19 +662,19 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public Integer percentage;
 
         /**
-         * <p>An object that maps route IDs to traffic percentages.</p>
+         * <p>The traffic configuration.</p>
          */
         @NameInMap("PercentageByRoute")
         public java.util.Map<String, Integer> percentageByRoute;
 
         /**
-         * <p>A list of route IDs.</p>
+         * <p>The list of route IDs.</p>
          */
         @NameInMap("RouteIds")
         public java.util.List<Long> routeIds;
 
         /**
-         * <p>The route configurations.</p>
+         * <p>The detailed configuration of the route rule.</p>
          */
         @NameInMap("Routes")
         public java.util.List<DescribeSwimmingLaneResponseBodyDataMseGatewayEntryRuleRoutes> routes;
@@ -759,18 +750,16 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public DescribeSwimmingLaneResponseBodyDataAppEntryRule appEntryRule;
 
         /**
-         * <p>A list of associated applications.</p>
+         * <p>The application information.</p>
          */
         @NameInMap("Apps")
         public java.util.List<DescribeSwimmingLaneResponseBodyDataApps> apps;
 
         /**
-         * <p>The mode for the end-to-end canary release. Valid values:</p>
+         * <p>The end-to-end canary release mode. Valid values:</p>
          * <ul>
-         * <li><p><code>0</code>: content-based routing</p>
-         * </li>
-         * <li><p><code>1</code>: percentage-based routing</p>
-         * </li>
+         * <li>0: Route by request content.</li>
+         * <li>1: Route by percentage.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -780,12 +769,10 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public Integer canaryModel;
 
         /**
-         * <p>Indicates whether the lane is enabled.</p>
+         * <p>The traffic lane status. Valid values:</p>
          * <ul>
-         * <li><p><code>true</code>: enabled</p>
-         * </li>
-         * <li><p><code>false</code>: disabled</p>
-         * </li>
+         * <li>true: Enabled.</li>
+         * <li>false: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -804,7 +791,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public Boolean enableRules;
 
         /**
-         * <p>The ID of the lane.</p>
+         * <p>The traffic lane ID.</p>
          * 
          * <strong>example:</strong>
          * <p>9488</p>
@@ -813,7 +800,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public Long laneId;
 
         /**
-         * <p>The name of the lane.</p>
+         * <p>The traffic lane group name.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-test</p>
@@ -822,7 +809,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String laneName;
 
         /**
-         * <p>The tag of the lane.</p>
+         * <p>The traffic lane tag.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;alicloud.service.tag&quot;:&quot;g1&quot;}</p>
@@ -831,7 +818,7 @@ public class DescribeSwimmingLaneResponseBody extends TeaModel {
         public String laneTag;
 
         /**
-         * <p>The entry rule for the MSE Gateway.</p>
+         * <p>The MSE gateway route.</p>
          */
         @NameInMap("MseGatewayEntryRule")
         public DescribeSwimmingLaneResponseBodyDataMseGatewayEntryRule mseGatewayEntryRule;

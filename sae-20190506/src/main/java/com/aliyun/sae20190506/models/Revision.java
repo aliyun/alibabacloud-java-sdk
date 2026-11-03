@@ -32,7 +32,7 @@ public class Revision extends TeaModel {
      * <p>The ID of the revision version.</p>
      * 
      * <strong>example:</strong>
-     * <p>1</p>
+     * <p>001</p>
      */
     @NameInMap("RevisionId")
     public String revisionId;
@@ -41,7 +41,7 @@ public class Revision extends TeaModel {
      * <p>The traffic weight of the version.</p>
      * 
      * <strong>example:</strong>
-     * <p>0.5</p>
+     * <p>100</p>
      */
     @NameInMap("Weight")
     public Float weight;

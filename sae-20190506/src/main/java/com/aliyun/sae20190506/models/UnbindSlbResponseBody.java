@@ -37,6 +37,9 @@ public class UnbindSlbResponseBody extends TeaModel {
      * <li><p>If the request fails, this parameter contains an error code. For more information, see the <strong>Error codes</strong> section in this topic.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidApplication.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

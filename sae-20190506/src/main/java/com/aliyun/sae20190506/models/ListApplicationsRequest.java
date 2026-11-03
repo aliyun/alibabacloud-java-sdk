@@ -62,6 +62,9 @@ public class ListApplicationsRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the application is stateful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsStateful")
     public String isStateful;
@@ -82,6 +85,9 @@ public class ListApplicationsRequest extends TeaModel {
      * <li>std: Standard Edition</li>
      * <li>pro: Professional Edition</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>pro</p>
      */
     @NameInMap("NewSaeVersion")
     public String newSaeVersion;
@@ -108,6 +114,10 @@ public class ListApplicationsRequest extends TeaModel {
     @NameInMap("PageSize")
     public Integer pageSize;
 
+    /**
+     * <strong>example:</strong>
+     * <p>java</p>
+     */
     @NameInMap("ProgrammingLanguage")
     public String programmingLanguage;
 

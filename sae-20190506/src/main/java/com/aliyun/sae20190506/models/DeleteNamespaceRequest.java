@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DeleteNamespaceRequest extends TeaModel {
     /**
-     * <p>The short-format ID of the namespace. You do not need to specify the region. We recommend that you use this parameter.</p>
+     * <p>The short namespace ID. This ID does not require a region prefix. Use this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,7 +14,7 @@ public class DeleteNamespaceRequest extends TeaModel {
     public String nameSpaceShortId;
 
     /**
-     * <p>The long-format ID of the namespace. If you specify this parameter, NameSpaceShortId is ignored. This parameter is for backward compatibility. We recommend that you use the short-format namespace ID.</p>
+     * <p>The long namespace ID. If specified, this parameter takes precedence and NameSpaceShortId is ignored. This parameter is retained for backward compatibility. Use the short namespace ID to simplify the request.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>

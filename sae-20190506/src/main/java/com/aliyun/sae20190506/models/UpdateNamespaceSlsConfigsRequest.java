@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateNamespaceSlsConfigsRequest extends TeaModel {
     /**
-     * <p>The short ID of the namespace. You do not need to include the region. This parameter is recommended.</p>
+     * <p>The short ID of the namespace. The region is not required. This parameter is recommended.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -23,29 +23,22 @@ public class UpdateNamespaceSlsConfigsRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The configuration for collecting logs to SLS.</p>
+     * <p>The configuration for collecting logs to Simple Log Service (SLS).</p>
      * <ul>
-     * <li><p>To use an SLS resource that is automatically created by SAE: <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</p>
-     * </li>
-     * <li><p>To use a custom SLS resource: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</p>
-     * </li>
+     * <li>To use SLS resources automatically created by Serverless App Engine (SAE): <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
+     * <li>To use custom SLS resources: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
      * </ul>
-     * <p>The parameters are described as follows:</p>
+     * <p>The parameter settings are as follows:</p>
      * <ul>
-     * <li><p><code>projectName</code>: The name of the SLS project.</p>
-     * </li>
-     * <li><p><code>logDir</code>: The log path.</p>
-     * </li>
-     * <li><p><code>logType</code>: The log type. A value of <code>stdout</code> specifies container standard output logs. You can specify only one <code>stdout</code> configuration. If you do not set this parameter, file logs are collected.</p>
-     * </li>
-     * <li><p><code>logstoreName</code>: The name of the SLS logstore.</p>
-     * </li>
-     * <li><p><code>logtailName</code>: The name of the Logtail. If you do not specify this parameter, a new Logtail is created.</p>
-     * </li>
+     * <li><strong>projectName</strong>: the name of the SLS project.  </li>
+     * <li><strong>logDir</strong>: the log path.</li>
+     * <li><strong>logType</strong>: the log type. <strong>stdout</strong> indicates container standard output logs. Only one stdout log can be set. If it is not set, file logs are collected.</li>
+     * <li><strong>logstoreName</strong>: the name of the SLS Logstore.</li>
+     * <li><strong>logtailName</strong>: the name of the SLS Logtail. If this parameter is not specified, a new Logtail is created.</li>
      * </ul>
-     * <p>If the SLS configuration remains the same across deployments, you can omit this parameter. To disable log collection to SLS, set the value of <code>SlsConfigs</code> to an empty string (&quot;&quot;).</p>
+     * <p>If the SLS collection configuration remains unchanged during multiple deployments, you do not need to set this parameter (that is, the <strong>SlsConfigs</strong> field is not required in the request). If you no longer need the SLS collection feature, you must set the value of this field to an empty string (that is, set the <strong>SlsConfigs</strong> field to &quot;&quot;) in the request.</p>
      * <blockquote>
-     * <p>SAE automatically deletes a project when you delete the task template used to create it. Therefore, when you select an existing project, do not select a project that was automatically created by SAE.</p>
+     * <p>A project automatically created with a job template is deleted when the job template is deleted. Therefore, when you select an existing project, you cannot select a project automatically created by SAE.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -55,7 +48,10 @@ public class UpdateNamespaceSlsConfigsRequest extends TeaModel {
     public String slsConfigs;
 
     /**
-     * <p>The SLS log tags.</p>
+     * <p>sls log tags</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("SlsLogEnvTags")
     public String slsLogEnvTags;

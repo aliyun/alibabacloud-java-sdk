@@ -37,6 +37,9 @@ public class ListAppEventsResponseBody extends TeaModel {
      * <li><p>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error Codes</strong> section.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>get.event.error</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

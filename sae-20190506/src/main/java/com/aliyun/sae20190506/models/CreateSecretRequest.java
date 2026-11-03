@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateSecretRequest extends TeaModel {
     /**
-     * <p>The ID of the namespace where the Secret resides. If the namespace is the default namespace, you need to only enter the region ID, such as <code>cn-beijing</code>.</p>
+     * <p>The ID of the namespace where the Secret instance resides. If the namespace is the default namespace, you only need to specify RegionId, such as <code>cn-beijing</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,14 +15,14 @@ public class CreateSecretRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The Secret data.</p>
+     * <p>The data of the Secret.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("SecretData")
     public CreateSecretRequestSecretData secretData;
 
     /**
-     * <p>The Secret name. The name can contain digits, letters, and underscores (_). The name must start with a letter.</p>
+     * <p>The name of the Secret instance. The name can contain digits, letters, and underscores (_), and must start with a letter.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -32,18 +32,9 @@ public class CreateSecretRequest extends TeaModel {
     public String secretName;
 
     /**
-     * <p>The supported Secret type. Valid values:</p>
+     * <p>The type of the Secret instance. Valid values:</p>
      * <ul>
-     * <li><strong>kubernetes.io/dockerconfigjson</strong>: the Secret for the username and password of the image repository. The Secret is used for authentication when images are pulled during application deployment.</li>
-     * </ul>
-     * <p>Valid values:</p>
-     * <ul>
-     * <li><p>Opaque</p>
-     * </li>
-     * <li><p>kubernetes.io/dockerconfigjson</p>
-     * </li>
-     * <li><p>kubernetes.io/tls</p>
-     * </li>
+     * <li><strong>kubernetes.io/dockerconfigjson</strong>: stores the username and password of an image repository. It is used for authentication when pulling images during deployment.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -92,9 +83,9 @@ public class CreateSecretRequest extends TeaModel {
 
     public static class CreateSecretRequestSecretData extends TeaModel {
         /**
-         * <p>The information about the key-value pairs of the Secret. This parameter is required. The following formats are supported:</p>
-         * <p>{&quot;Data&quot;:&quot;{&quot;k1&quot;:&quot;v1&quot;, &quot;k2&quot;:&quot;v2&quot;}&quot;}</p>
-         * <p>k specifies a key and v specifies a value.</p>
+         * <p>The key-value pair data of the Secret. This parameter is required. Format:</p>
+         * <p>{&quot;Data&quot;:&quot;{\&quot;k1\&quot;:\&quot;v1\&quot;, \&quot;k2\&quot;:\&quot;v2\&quot;}&quot;}</p>
+         * <p>k represents the key, and v represents the value.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

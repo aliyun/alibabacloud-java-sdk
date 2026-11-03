@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteApplicationScalingRuleResponseBody extends TeaModel {
     /**
-     * <p>The status of the API call or a POP error code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: success.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: redirection.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: request error.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: server error.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,24 +20,23 @@ public class DeleteApplicationScalingRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error code. The following rules apply:</p>
+     * <p>The error code. </p>
      * <ul>
-     * <li><p>This parameter is not returned if the request is successful.</p>
-     * </li>
-     * <li><p>This parameter is returned if the request fails. For more information, see the list of <strong>error codes</strong> in this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>System.Upgrading</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Additional information. The following values may be returned:</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p><strong>success</strong> is returned if the request is normal.</p>
-     * </li>
-     * <li><p>A specific error code is returned if the request is abnormal.</p>
-     * </li>
+     * <li><strong>success</strong>: The request is successful.</li>
+     * <li>A specific error code: The request fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,12 +55,10 @@ public class DeleteApplicationScalingRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the Auto Scaling policy was successfully deleted. Valid values:</p>
+     * <p>Indicates whether the application auto scaling policy is deleted successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The deletion was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The deletion failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The deletion is successful.</li>
+     * <li><strong>false</strong>: The deletion failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +68,7 @@ public class DeleteApplicationScalingRuleResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID. You can use this ID to query the details of a call.</p>
+     * <p>The trace ID used to accurately query invocation information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>

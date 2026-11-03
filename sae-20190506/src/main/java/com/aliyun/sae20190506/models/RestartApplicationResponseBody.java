@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class RestartApplicationResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The call was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: The call failed.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: success.</li>
+     * <li><strong>3xx</strong>: redirection.</li>
+     * <li><strong>4xx</strong>: request error.</li>
+     * <li><strong>5xx</strong>: server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,30 +20,29 @@ public class RestartApplicationResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public RestartApplicationResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed. Take note of the following rules:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>The <strong>ErrorCode</strong> parameter is not returned if the request succeeds.</p>
-     * </li>
-     * <li><p>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidApplication.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The additional information that is returned. Take note of the following rules:</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>success: If the call is successful, <strong>success</strong> is returned.</p>
-     * </li>
-     * <li><p>An error code: If the call fails, an error code is returned.</p>
-     * </li>
+     * <li>If the request is successful, <strong>success</strong> is returned.</li>
+     * <li>If the request fails, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,12 +61,10 @@ public class RestartApplicationResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the instance is successfully restarted. Take note of the following rules:</p>
+     * <p>Indicates whether the instance was restarted successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The instance was restarted successfully.</li>
+     * <li><strong>false</strong>: The instance failed to be restarted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class RestartApplicationResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID, which is used to query invocation details.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -152,7 +145,7 @@ public class RestartApplicationResponseBody extends TeaModel {
 
     public static class RestartApplicationResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the change process.</p>
+         * <p>The ID of the change order.</p>
          * 
          * <strong>example:</strong>
          * <p>4a815998-b468-4bea-b7d8-59f52a44****</p>

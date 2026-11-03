@@ -15,7 +15,7 @@ public class DeleteApplicationScalingRuleRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The name of the Auto Scaling policy.</p>
+     * <p>The name of the auto scaling policy.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -37,6 +37,9 @@ public class GetWebshellTokenResponseBody extends TeaModel {
      * <li><p>If the request failed, the <strong>ErrorCode</strong> parameter is returned. For more information, see <strong>Error codes</strong> section in this topic.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidApplication.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The call was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: The call failed.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +20,7 @@ public class DeleteJobResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result returned.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;msg&quot;: &quot;&quot;,&quot;code&quot;: 200,&quot;success&quot;: true}</p>
@@ -33,24 +29,23 @@ public class DeleteJobResponseBody extends TeaModel {
     public String data;
 
     /**
-     * <p>The error code that is returned. Take note of the following rules:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>The <strong>ErrorCode</strong> parameter is not returned if the request is successful.</p>
-     * </li>
-     * <li><p>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section of this topic.</p>
-     * </li>
+     * <li>Successful request: The <strong>ErrorCode</strong> field is not returned.</li>
+     * <li>Failed request: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidAppId.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The additional information that is returned. Valid values:</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>success: If the call is successful, <strong>success</strong> is returned.</p>
-     * </li>
-     * <li><p>An error code: If the call fails, an error code is returned.</p>
-     * </li>
+     * <li><strong>success</strong>: The request is successful.</li>
+     * <li>Specific error code: The request is abnormal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +55,7 @@ public class DeleteJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -69,12 +64,10 @@ public class DeleteJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the application is deleted. Valid values:</p>
+     * <p>Indicates whether the task template was deleted. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The namespaces were obtained.</p>
-     * </li>
-     * <li><p><strong>false</strong>: no</p>
-     * </li>
+     * <li><strong>true</strong>: The task template was deleted.</li>
+     * <li><strong>false</strong>: The task template failed to be deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +77,7 @@ public class DeleteJobResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID used to query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>

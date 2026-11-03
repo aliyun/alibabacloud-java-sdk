@@ -14,7 +14,7 @@ public class ListSwimmingLaneGatewayRoutesRequest extends TeaModel {
     public String gatewayUniqueId;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The namespace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>

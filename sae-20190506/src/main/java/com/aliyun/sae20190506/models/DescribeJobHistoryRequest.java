@@ -15,7 +15,7 @@ public class DescribeJobHistoryRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The number of the page to return.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class DescribeJobHistoryRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The number of entries to return on each page. Valid values: 0 to 10000.</p>
+     * <p>The number of entries per page in the paging Settings for a paged query. Valid values: 0 to 10000.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -33,16 +33,12 @@ public class DescribeJobHistoryRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The status of the job. Valid values:</p>
+     * <p>The running status of the job. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: The job is not executed.</p>
-     * </li>
-     * <li><p><strong>1</strong>: The job is executed.</p>
-     * </li>
-     * <li><p><strong>2</strong>: The job fails to be executed.</p>
-     * </li>
-     * <li><p><strong>3</strong>: The job is being executed.</p>
-     * </li>
+     * <li><strong>0</strong>: Not run.</li>
+     * <li><strong>1</strong>: Succeeded.</li>
+     * <li><strong>2</strong>: Failed.</li>
+     * <li><strong>3</strong>: Running.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteSecretResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The HTTP status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A request error.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirect.</li>
+     * <li><strong>4xx</strong>: Client error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,30 +20,29 @@ public class DeleteSecretResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public DeleteSecretResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>The <strong>ErrorCode</strong> parameter is not returned if the request is successful.</p>
-     * </li>
-     * <li><p>The <strong>ErrorCode</strong> parameter is returned if the request fails. For a list of error codes, see the <strong>Error codes</strong> section in this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p><strong>success</strong>: The request was successful.</p>
-     * </li>
-     * <li><p>If the request fails, an error message is returned.</p>
-     * </li>
+     * <li><strong>success</strong>: The request is successful.</li>
+     * <li>Specific error code: An exception occurred.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,12 +61,10 @@ public class DeleteSecretResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the secret was successfully deleted. Valid values:</p>
+     * <p>Indicates whether the secret instance was deleted. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The secret was deleted.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The secret was not deleted.</p>
-     * </li>
+     * <li><strong>true</strong>: The instance was deleted.</li>
+     * <li><strong>false</strong>: The instance failed to be deleted.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class DeleteSecretResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID used to trace the request.</p>
+     * <p>The trace ID used to query the call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -152,7 +145,7 @@ public class DeleteSecretResponseBody extends TeaModel {
 
     public static class DeleteSecretResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the deleted secret.</p>
+         * <p>The instance ID of the deleted secret instance.</p>
          * 
          * <strong>example:</strong>
          * <p>16</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateSecretRequest extends TeaModel {
     /**
-     * <p>The ID of the namespace where the Secret instance is located. If the instance is in the default namespace, specify only the region ID, such as <code>cn-beijing</code>.</p>
+     * <p>The ID of the namespace where the Secret instance resides. If the Secret instance resides in the default namespace, specify only the RegionId, such as <code>cn-beijing</code>.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -22,7 +22,7 @@ public class UpdateSecretRequest extends TeaModel {
     public UpdateSecretRequestSecretData secretData;
 
     /**
-     * <p>The ID of the Secret instance.</p>
+     * <p>The instance ID of the Secret.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -62,9 +62,9 @@ public class UpdateSecretRequest extends TeaModel {
 
     public static class UpdateSecretRequestSecretData extends TeaModel {
         /**
-         * <p>The key-value pairs of the Secret. This parameter is required. The value must be a JSON object.</p>
-         * <p>For more information about configuration items, see <a href="https://help.aliyun.com/document_detail/463383.html">Manage and use secrets</a>.</p>
-         * <p>k specifies a key and v specifies a value. For more information about configuration items, see <a href="https://help.aliyun.com/document_detail/463383.html">Manage and use secrets</a>.</p>
+         * <p>The key-value pair data of the Secret. This parameter is required. The format is as follows:</p>
+         * <p>{&quot;Data&quot;:&quot;{\&quot;k1\&quot;:\&quot;v1\&quot;, \&quot;k2\&quot;:\&quot;v2\&quot;}&quot;}</p>
+         * <p>k represents the key, and v represents the value. For more information about configuration items, see <a href="https://help.aliyun.com/document_detail/463383.html">Manage and use Secrets</a>.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

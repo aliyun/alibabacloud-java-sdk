@@ -7,14 +7,10 @@ public class DescribeApplicationNlbsResponseBody extends TeaModel {
     /**
      * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request is successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request is redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A client error occurred.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Client error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,25 +20,26 @@ public class DescribeApplicationNlbsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data returned in the response.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public DescribeApplicationNlbsResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>This parameter is returned only if the request fails.</p>
-     * </li>
-     * <li><p>For more information, see the <strong>Error codes</strong> section of this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidApplication.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. A value of <code>success</code> indicates a successful request; otherwise, an error code is returned.</p>
+     * <p>The additional information. If the request is successful, success is returned. If the request fails, a specific error code is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -60,12 +57,10 @@ public class DescribeApplicationNlbsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Specifies whether the binding is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The binding is successful.</li>
+     * <li><strong>false</strong>: The binding failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +70,7 @@ public class DescribeApplicationNlbsResponseBody extends TeaModel {
     public String success;
 
     /**
-     * <p>The trace ID used to query the details of the request.</p>
+     * <p>The trace ID used to query call details.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622246421415014e****</p>
@@ -146,7 +141,7 @@ public class DescribeApplicationNlbsResponseBody extends TeaModel {
 
     public static class DescribeApplicationNlbsResponseBodyData extends TeaModel {
         /**
-         * <p>A collection of instance details.</p>
+         * <p>The instance information.</p>
          */
         @NameInMap("Instances")
         public java.util.Map<String, DataInstancesValue> instances;

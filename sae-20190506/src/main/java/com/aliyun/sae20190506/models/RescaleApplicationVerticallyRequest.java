@@ -15,7 +15,7 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The CPU specifications, in millicores.</p>
+     * <p>The target CPU specifications, in millicores.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     public Boolean deploy;
 
     /**
-     * <p>The disk size for each node, in GB.</p>
+     * <p>The disk storage size per node, in GB.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -37,7 +37,7 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     public String diskSize;
 
     /**
-     * <p>The memory size, in MB.</p>
+     * <p>The target memory specifications, in MB.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -46,14 +46,24 @@ public class RescaleApplicationVerticallyRequest extends TeaModel {
     @NameInMap("Memory")
     public String memory;
 
+    /**
+     * <p>The type of resource used for vertical scaling of the application.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>haiguang9</p>
+     */
     @NameInMap("ResourceType")
     public String resourceType;
 
+    /**
+     * <strong>example:</strong>
+     * <p>vsw-bp1abcdefghijklmno</p>
+     */
     @NameInMap("VSwitchId")
     public String vSwitchId;
 
     /**
-     * <p>Specifies whether to automatically enable the auto scaling rule.</p>
+     * <p>Specifies whether to automatically enable the elastic scaling rule.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

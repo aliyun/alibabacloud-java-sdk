@@ -37,6 +37,9 @@ public class DescribeAppServiceDetailResponseBody extends TeaModel {
      * <li><p>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the list of <strong>error codes</strong> in this topic.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Micro.Service.MetaData.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code or the error code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: The request failed.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,19 +20,22 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned result.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public DowngradeApplicationApmServiceResponseBodyData data;
 
     /**
-     * <p>The status code.</p>
+     * <p>The error code.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>System.Upgrading</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message that is returned.</p>
+     * <p>The additional information.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -45,7 +44,7 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3****</p>
@@ -54,19 +53,17 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether ARMS advanced monitoring is disabled. Valid values:</p>
+     * <p>Indicates whether ARMS Premium Edition monitoring is successfully disabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: Disabled successfully.</li>
+     * <li><strong>false</strong>: Failed to disable.</li>
      * </ul>
      */
     @NameInMap("Success")
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The trace ID used to precisely query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -137,12 +134,10 @@ public class DowngradeApplicationApmServiceResponseBody extends TeaModel {
 
     public static class DowngradeApplicationApmServiceResponseBodyData extends TeaModel {
         /**
-         * <p>Indicates whether ARMS advanced monitoring is disabled. Valid values:</p>
+         * <p>Indicates whether ARMS Premium Edition monitoring is successfully disabled. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong></p>
-         * </li>
-         * <li><p><strong>false</strong></p>
-         * </li>
+         * <li><strong>true</strong>: Disabled successfully.</li>
+         * <li><strong>false</strong>: Failed to disable.</li>
          * </ul>
          * 
          * <strong>example:</strong>

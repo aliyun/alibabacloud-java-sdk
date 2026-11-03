@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DataInstancesValue extends TeaModel {
     /**
-     * <p>The DNS name.</p>
+     * <p>The DNS domain name.</p>
      * 
      * <strong>example:</strong>
      * <p>nlb-wb7r6dlwetvt5j****.cn-hangzhou.nlb.aliyuncs.com</p>
@@ -14,18 +14,16 @@ public class DataInstancesValue extends TeaModel {
     public String dnsName;
 
     /**
-     * <p>A collection of listener details.</p>
+     * <p>The listener information.</p>
      */
     @NameInMap("Listeners")
     public java.util.Map<String, DataInstancesValueListenersValue> listeners;
 
     /**
-     * <p>Indicates whether SAE created the instance. Valid values:</p>
+     * <p>Specifies whether the instance is purchased by Serverless App Engine (SAE). Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: SAE created the instance.</p>
-     * </li>
-     * <li><p><strong>false</strong>: SAE reused an existing instance.</p>
-     * </li>
+     * <li><strong>true</strong>: The instance is created by SAE on your behalf.</li>
+     * <li><strong>false</strong>: An existing instance is reused.</li>
      * </ul>
      * 
      * <strong>example:</strong>

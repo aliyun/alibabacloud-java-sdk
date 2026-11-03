@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchStartApplicationsRequest extends TeaModel {
     /**
-     * <p>The IDs of the applications that you want to start. Separate multiple IDs with commas (,).</p>
+     * <p>The application IDs. Separate multiple IDs with commas (,).</p>
      * 
      * <strong>example:</strong>
      * <p>00893b3a-0e24-45ed-be0c-1f20e07b****</p>
@@ -14,7 +14,7 @@ public class BatchStartApplicationsRequest extends TeaModel {
     public String appIds;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The namespace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,20 +5,14 @@ import com.aliyun.tea.*;
 
 public class ListNamespaceChangeOrdersRequest extends TeaModel {
     /**
-     * <p>The change order status. Valid values:</p>
+     * <p>The status of the change order. Valid values:</p>
      * <ul>
-     * <li><p><strong>0</strong>: Preparing.</p>
-     * </li>
-     * <li><p><strong>1</strong>: Executing.</p>
-     * </li>
-     * <li><p><strong>2</strong>: Succeeded.</p>
-     * </li>
-     * <li><p><strong>3</strong>: Failed.</p>
-     * </li>
-     * <li><p><strong>6</strong>: Terminated.</p>
-     * </li>
-     * <li><p><strong>10</strong>: System Error.</p>
-     * </li>
+     * <li><strong>0</strong>: preparing</li>
+     * <li><strong>1</strong>: executing</li>
+     * <li><strong>2</strong>: succeeded</li>
+     * <li><strong>3</strong>: failed</li>
+     * <li><strong>6</strong>: terminated</li>
+     * <li><strong>10</strong>: failed due to a system exception</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,12 +22,10 @@ public class ListNamespaceChangeOrdersRequest extends TeaModel {
     public String coStatus;
 
     /**
-     * <p>The change order type. Valid values:</p>
+     * <p>The type of the change order. Valid values:</p>
      * <ul>
-     * <li><p><strong>CoBatchStartApplication</strong>: Batch Start Application.</p>
-     * </li>
-     * <li><p><strong>CoBatchStopApplication</strong>: Batch Stop Application.</p>
-     * </li>
+     * <li><strong>CoBatchStartApplication</strong>: Starts applications in batches.</li>
+     * <li><strong>CoBatchStopApplication</strong>: Stops applications in batches.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -43,7 +35,7 @@ public class ListNamespaceChangeOrdersRequest extends TeaModel {
     public String coType;
 
     /**
-     * <p>The current page.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -52,7 +44,7 @@ public class ListNamespaceChangeOrdersRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>A keyword for a fuzzy search of change order descriptions. Change orders whose descriptions contain this <strong>key</strong> are returned.</p>
+     * <p>The keyword used for fuzzy matching of the change order description. All change orders whose descriptions contain this <strong>key</strong> are returned.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -71,7 +63,7 @@ public class ListNamespaceChangeOrdersRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The page size.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

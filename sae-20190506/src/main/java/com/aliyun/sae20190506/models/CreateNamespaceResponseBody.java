@@ -37,6 +37,9 @@ public class CreateNamespaceResponseBody extends TeaModel {
      * <li><p>If the request fails, this parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceExist.NamespaceId</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

@@ -15,7 +15,11 @@ public class DescribeApplicationMseServiceRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>Specifies whether to enable traffic limiting and degradation. Set to true to check traffic limiting and degradation permissions when accessing related APIs; set to false otherwise.</p>
+     * <p>Specifies whether the throttling and degradation feature is enabled. Set this parameter to true when you call API operations related to throttling and degradation. Otherwise, set this parameter to false. Valid values:</p>
+     * <ul>
+     * <li>true: Checks the permissions for throttling and degradation.</li>
+     * <li>false: Does not check the permissions for throttling and degradation.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

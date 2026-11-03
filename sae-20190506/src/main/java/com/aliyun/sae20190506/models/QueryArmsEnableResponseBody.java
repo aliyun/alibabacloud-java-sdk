@@ -27,6 +27,9 @@ public class QueryArmsEnableResponseBody extends TeaModel {
      * <li><p>For more information, see the <strong>Error codes</strong> section of this topic.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidApplication.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

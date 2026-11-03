@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateJobRequest extends TeaModel {
     /**
-     * <p>The Alibaba Cloud Resource Name (ARN) of the RAM role that is required to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</p>
+     * <p>The ARN of the RAM role required to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Implement cross-account authorization by using RAM roles</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::123456789012****:role/adminrole</p>
@@ -14,7 +14,7 @@ public class UpdateJobRequest extends TeaModel {
     public String acrAssumeRoleArn;
 
     /**
-     * <p>The ID of the Container Registry Enterprise Edition instance. This parameter is required if <strong>ImageUrl</strong> is set to an image in a Container Registry Enterprise Edition instance.</p>
+     * <p>The ACR Enterprise instance ID. This parameter is required when <strong>ImageUrl</strong> is a Container Registry Enterprise instance.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-xxxxxx</p>
@@ -43,6 +43,9 @@ public class UpdateJobRequest extends TeaModel {
 
     /**
      * <p>The BestEffort policy.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>besteffort</p>
      */
     @NameInMap("BestEffortType")
     public String bestEffortType;
@@ -55,7 +58,7 @@ public class UpdateJobRequest extends TeaModel {
      *       - &gt;
      *       - file0
      * </code></pre>
-     * <p>In this example, <code>Command=&quot;echo&quot; and CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
+     * <p>Based on the preceding example, <code>Command=&quot;echo&quot;</code> and <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>echo</p>
@@ -64,9 +67,9 @@ public class UpdateJobRequest extends TeaModel {
     public String command;
 
     /**
-     * <p>The arguments of the image startup <strong>Command</strong>. The value must be a JSON array that is converted to a string. Format:</p>
+     * <p>The arguments for the image startup command. These are the arguments required by the <strong>Command</strong> parameter. Format:</p>
      * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
-     * <p>In the preceding example, <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> array is converted to a string. This parameter is optional.</p>
+     * <p>In the preceding example, <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>. The <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> part must be converted to a string in JSON array format. If this parameter is not required, leave it empty.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;a&quot;,&quot;b&quot;]</p>
@@ -75,14 +78,11 @@ public class UpdateJobRequest extends TeaModel {
     public String commandArgs;
 
     /**
-     * <p>The policy of running concurrent jobs. Valid values:</p>
+     * <p>The concurrency policy of the job. Valid values:</p>
      * <ul>
-     * <li><p><strong>Forbid</strong>: A new job is not created if the previous job is not completed.</p>
-     * </li>
-     * <li><p><strong>Allow</strong>: Concurrent jobs are allowed.</p>
-     * </li>
-     * <li><p><strong>Replace</strong>: When the time to create a new job is reached, the new job replaces the previous job if the previous job is not completed.</p>
-     * </li>
+     * <li><strong>Forbid</strong>: Forbids concurrent execution. A new job is not created if the previous job is not completed.</li>
+     * <li><strong>Allow</strong>: Allows concurrent execution of jobs.</li>
+     * <li><strong>Replace</strong>: Replaces the previous job with a new job if the previous job is not completed when the new job is scheduled to be created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -92,15 +92,13 @@ public class UpdateJobRequest extends TeaModel {
     public String concurrencyPolicy;
 
     /**
-     * <p>The description of the <strong>ConfigMap</strong> instance that is mounted to the container. You can use the ConfigMap instance created on the Namespace Configurations page to inject configurations into the container. The value is a JSON string. The following fields are supported:</p>
+     * <p>The mount description of the <strong>ConfigMap</strong>. Use the ConfigMaps created on the namespace configuration item page to inject configuration information into the container. Parameter descriptions:</p>
      * <ul>
-     * <li><p><strong>configMapId</strong>: The ID of the ConfigMap instance. You can call the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the ID.</p>
-     * </li>
-     * <li><p><strong>key</strong>: The key of the key-value pair.</p>
-     * </li>
+     * <li><strong>congfigMapId</strong>: The instance ID of the ConfigMap instance. You can invoke the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the instance ID.</li>
+     * <li><strong>key</strong>: The key value.</li>
      * </ul>
      * <blockquote>
-     * <p>You can pass the <code>sae-sys-configmap-all</code> parameter to mount all key-value pairs.</p>
+     * <p>You can mount all keys by passing the <code>sae-sys-configmap-all</code> parameter.</p>
      * </blockquote>
      * <ul>
      * <li><strong>mountPath</strong>: The mount path.</li>
@@ -113,12 +111,10 @@ public class UpdateJobRequest extends TeaModel {
     public String configMapMountDesc;
 
     /**
-     * <p>The custom mapping between a hostname and an IP address in the container. The value is a JSON string. The following fields are supported:</p>
+     * <p>The custom host mappings in the container. Valid values:</p>
      * <ul>
-     * <li><p><strong>hostName</strong>: the domain name or hostname.</p>
-     * </li>
-     * <li><p><strong>ip</strong>: the IP address.</p>
-     * </li>
+     * <li><strong>hostName</strong>: The domain name or hostname.</li>
+     * <li><strong>ip</strong>: The IP address.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -128,7 +124,7 @@ public class UpdateJobRequest extends TeaModel {
     public String customHostAlias;
 
     /**
-     * <p>The version of the application runtime environment in High-speed Service Framework (HSF), such as an Ali-Tomcat container.</p>
+     * <p>The runtime environment version for the job in the HSF framework, such as the Ali-Tomcat container.</p>
      * 
      * <strong>example:</strong>
      * <p>3.5.3</p>
@@ -143,26 +139,18 @@ public class UpdateJobRequest extends TeaModel {
     public Boolean enableImageAccl;
 
     /**
-     * <p>The environment variables of the container. You can customize environment variables or reference variables from a ConfigMap. To reference a ConfigMap, you must create a ConfigMap instance first. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. The value is a JSON string. The following fields are supported:</p>
+     * <p>The environment variables for the container. You can specify custom environment variables or reference ConfigMaps. To reference a ConfigMap, you must create a ConfigMap instance first. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
      * <ul>
-     * <li><p>Custom variables</p>
-     * <ul>
-     * <li><p><strong>name</strong>: the name of the environment variable.</p>
-     * </li>
-     * <li><p><strong>value</strong>: the value of the environment variable.</p>
-     * </li>
+     * <li>Custom configuration<ul>
+     * <li><strong>name</strong>: The name of the environment variable.</li>
+     * <li><strong>value</strong>: The value of the environment variable.</li>
      * </ul>
      * </li>
-     * <li><p>Reference variables from a ConfigMap</p>
-     * <ul>
-     * <li><p><strong>name</strong>: The name of the environment variable. You can reference a single key-value pair or all key-value pairs. To reference all key-value pairs, set the value to <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>. Example: <code>sae-sys-configmap-all-test1</code>.</p>
-     * </li>
-     * <li><p><strong>valueFrom</strong>: the reference of the environment variable. Set the value to <code>configMapRef</code>.</p>
-     * </li>
-     * <li><p><strong>configMapId</strong>: the ID of the ConfigMap.</p>
-     * </li>
-     * <li><p><strong>key</strong>: The key of the key-value pair. If you want to reference all key-value pairs, do not configure this field.</p>
-     * </li>
+     * <li>Reference a ConfigMap<ul>
+     * <li><strong>name</strong>: The name of the environment variable. You can reference a single key or all keys. To reference all keys, enter <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>, for example, <code>sae-sys-configmap-all-test1</code>.</li>
+     * <li><strong>valueFrom</strong>: The reference of the environment variable. Set the value to <code>configMapRef</code>.</li>
+     * <li><strong>configMapId</strong>: The ID of the ConfigMap.</li>
+     * <li><strong>key</strong>: The key. If you reference all key-value pairs, do not set this field.</li>
      * </ul>
      * </li>
      * </ul>
@@ -174,7 +162,7 @@ public class UpdateJobRequest extends TeaModel {
     public String envs;
 
     /**
-     * <p>The ID of the secret.</p>
+     * <p>The ID of the corresponding secret.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -183,7 +171,7 @@ public class UpdateJobRequest extends TeaModel {
     public String imagePullSecrets;
 
     /**
-     * <p>The URL of the image. This parameter is required if <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
+     * <p>The URL of the image. This parameter is required when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
@@ -192,7 +180,7 @@ public class UpdateJobRequest extends TeaModel {
     public String imageUrl;
 
     /**
-     * <p>The arguments of the JAR package to start the application. The default startup command of the application is: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
+     * <p>The startup arguments for the JAR package job. Default job startup command: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
      * 
      * <strong>example:</strong>
      * <p>-Xms4G -Xmx4G</p>
@@ -201,7 +189,7 @@ public class UpdateJobRequest extends TeaModel {
     public String jarStartArgs;
 
     /**
-     * <p>The options of the JAR package to start the application. The default startup command of the application is: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
+     * <p>The startup options for the JAR package job. Default job startup command: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
      * 
      * <strong>example:</strong>
      * <p>custom-option</p>
@@ -210,20 +198,14 @@ public class UpdateJobRequest extends TeaModel {
     public String jarStartOptions;
 
     /**
-     * <p>The Java Development Kit (JDK) version that the deployment package depends on. The following versions are supported:</p>
+     * <p>The JDK version required by the deployment package. Valid values:</p>
      * <ul>
-     * <li><p><strong>Open JDK 8</strong></p>
-     * </li>
-     * <li><p><strong>Open JDK 7</strong></p>
-     * </li>
-     * <li><p><strong>Dragonwell 11</strong></p>
-     * </li>
-     * <li><p><strong>Dragonwell 8</strong></p>
-     * </li>
-     * <li><p><strong>openjdk-8u191-jdk-alpine3.9</strong></p>
-     * </li>
-     * <li><p><strong>openjdk-7u201-jdk-alpine3.9</strong></p>
-     * </li>
+     * <li><strong>Open JDK 8</strong></li>
+     * <li><strong>Open JDK 7</strong></li>
+     * <li><strong>Dragonwell 11</strong></li>
+     * <li><strong>Dragonwell 8</strong></li>
+     * <li><strong>openjdk-8u191-jdk-alpine3.9</strong></li>
+     * <li><strong>openjdk-7u201-jdk-alpine3.9</strong></li>
      * </ul>
      * <p>This parameter is not supported when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
      * 
@@ -234,7 +216,7 @@ public class UpdateJobRequest extends TeaModel {
     public String jdk;
 
     /**
-     * <p>The description of the NAS mount. If the configurations are not changed during a deployment, you do not need to configure this parameter. To clear the NAS configurations, set the value of this parameter to an empty string (<code>&quot;&quot;</code>) in the request.</p>
+     * <p>The description of the NAS mount. If the configuration remains unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>MountDesc</strong> field in the request. To clear the NAS configuration, you must set this field to an empty string in the request. That is, set the value of <strong>MountDesc</strong> to &quot;&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
@@ -243,7 +225,7 @@ public class UpdateJobRequest extends TeaModel {
     public String mountDesc;
 
     /**
-     * <p>The mount target of the NAS file system in the virtual private cloud (VPC) where the job template is located. If the configurations are not changed during a deployment, you do not need to configure this parameter. To clear the NAS configurations, set the value of this parameter to an empty string (<code>&quot;&quot;</code>).</p>
+     * <p>The mount target of the NAS file system in the VPC of the job template. If the configuration remains unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>MountHost</strong> field in the request. To clear the NAS configuration, you must set this field to an empty string in the request. That is, set the value of <strong>MountHost</strong> to &quot;&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>10d3b4bc9****.com</p>
@@ -252,13 +234,16 @@ public class UpdateJobRequest extends TeaModel {
     public String mountHost;
 
     /**
-     * <p>The configurations of mounting a NAS file system.</p>
+     * <p>The configuration for mounting the NAS file system.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;mountPath&quot;:&quot;/test1&quot;,&quot;readOnly&quot;:false,&quot;nasId&quot;:&quot;nasId1&quot;,&quot;mountDomain&quot;:&quot;nasId1.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;nasPath&quot;:&quot;/test1&quot;},{&quot;nasId&quot;:&quot;nasId2&quot;,&quot;mountDomain&quot;:&quot;nasId2.cn-shenzhen.nas.aliyuncs.com&quot;,&quot;readOnly&quot;:false,&quot;nasPath&quot;:&quot;/test2&quot;,&quot;mountPath&quot;:&quot;/test2&quot;}]</p>
      */
     @NameInMap("NasConfigs")
     public String nasConfigs;
 
     /**
-     * <p>The ID of the Apsara File Storage NAS file system. If the configurations are not changed during a deployment, you do not need to configure this parameter. To clear the NAS configurations, set the value of this parameter to an empty string (<code>&quot;&quot;</code>).</p>
+     * <p>The ID of the Apsara File Storage NAS file system. If the configuration remains unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>NasId</strong> field in the request. To clear the NAS configuration, you must set this field to an empty string in the request. That is, set the value of <strong>NasId</strong> to &quot;&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>10d3b4****</p>
@@ -267,7 +252,7 @@ public class UpdateJobRequest extends TeaModel {
     public String nasId;
 
     /**
-     * <p>The AccessKey ID that is used to read data from and write data to OSS.</p>
+     * <p>The AccessKey ID used to read and write OSS data.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
@@ -276,7 +261,7 @@ public class UpdateJobRequest extends TeaModel {
     public String ossAkId;
 
     /**
-     * <p>The AccessKey secret that is used to read data from and write data to OSS.</p>
+     * <p>The AccessKey Secret used to read and write OSS data.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
@@ -285,20 +270,14 @@ public class UpdateJobRequest extends TeaModel {
     public String ossAkSecret;
 
     /**
-     * <p>The description of the OSS mount. The value is a JSON string. The following parameters are supported:</p>
+     * <p>The OSS mount description. Parameter descriptions:</p>
      * <ul>
-     * <li><p><strong>bucketName</strong>: the name of the bucket.</p>
-     * </li>
-     * <li><p><strong>bucketPath</strong>: the directory or object that you created in OSS. An exception occurs if the specified OSS mount directory does not exist.</p>
-     * </li>
-     * <li><p><strong>mountPath</strong>: The path in the SAE container. If the path exists, the new path overwrites the existing one. If the path does not exist, a new path is created.</p>
-     * </li>
-     * <li><p><strong>readOnly</strong>: specifies whether a container has the read-only permission on the resources in the mount directory.</p>
-     * <ul>
-     * <li><p><strong>true</strong>: The container has the read-only permission.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The container has the read and write permissions.</p>
-     * </li>
+     * <li><strong>bucketName</strong>: The name of the bucket.</li>
+     * <li><strong>bucketPath</strong>: The folder or object that you created in OSS. If the OSS mount folder does not exist, an exception is triggered.</li>
+     * <li><strong>mountPath</strong>: The container path in SAE. If the path already exists, it overwrites the existing content. If the path does not exist, it is created.</li>
+     * <li><strong>readOnly</strong>: Specifies whether the container path has read permissions on the mount folder resources. Valid values:<ul>
+     * <li><strong>true</strong>: Read-only permissions.</li>
+     * <li><strong>false</strong>: Read and write permissions.</li>
      * </ul>
      * </li>
      * </ul>
@@ -310,7 +289,7 @@ public class UpdateJobRequest extends TeaModel {
     public String ossMountDescs;
 
     /**
-     * <p>The URL of the deployment package. This parameter is required if <strong>Package Type</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
+     * <p>The URL of the deployment package. This parameter is required when <strong>Package Type</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://myoss.oss-cn-hangzhou.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-hangzhou.aliyuncs.com/my-buc/2019-06-30/****.jar</a></p>
@@ -319,7 +298,7 @@ public class UpdateJobRequest extends TeaModel {
     public String packageUrl;
 
     /**
-     * <p>The version of the deployment package. This parameter is required if <strong>Package Type</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
+     * <p>The version number of the deployment package. This parameter is required when <strong>Package Type</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0.1</p>
@@ -328,7 +307,7 @@ public class UpdateJobRequest extends TeaModel {
     public String packageVersion;
 
     /**
-     * <p>The ID of the Container Registry Enterprise Edition instance.</p>
+     * <p>The ACR Enterprise instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-xxxxxx</p>
@@ -346,7 +325,7 @@ public class UpdateJobRequest extends TeaModel {
     public String phpConfig;
 
     /**
-     * <p>The path on which the PHP application startup configuration file is mounted. Make sure that the PHP server uses this configuration file to start the application.</p>
+     * <p>The mount path for the PHP job startup configuration. You must ensure that the PHP server uses this configuration file to start.</p>
      * 
      * <strong>example:</strong>
      * <p>/usr/local/etc/php/php.ini</p>
@@ -355,7 +334,7 @@ public class UpdateJobRequest extends TeaModel {
     public String phpConfigLocation;
 
     /**
-     * <p>The script that is executed after the container is started. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</code></p>
+     * <p>The script to execute after the container starts. A script is executed immediately after the container is created. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</code></p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</p>
@@ -364,7 +343,7 @@ public class UpdateJobRequest extends TeaModel {
     public String postStart;
 
     /**
-     * <p>The script that is executed before the container is stopped. Example: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</code></p>
+     * <p>The script to execute before the container stops. A script is executed before the container is deleted. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</code></p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;echo hello&quot;]}}</p>
@@ -373,7 +352,7 @@ public class UpdateJobRequest extends TeaModel {
     public String preStop;
 
     /**
-     * <p>The programming language. Supported values: <strong>java</strong>, <strong>php</strong>, <strong>python</strong>, and <strong>shell</strong>.</p>
+     * <p>The programming language. Valid values: <strong>java</strong>, <strong>php</strong>, <strong>python</strong>, and <strong>shell</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>java</p>
@@ -382,7 +361,7 @@ public class UpdateJobRequest extends TeaModel {
     public String programmingLanguage;
 
     /**
-     * <p>The Python environment. <strong>PYTHON 3.9.15</strong> is supported.</p>
+     * <p>The Python environment. Supported version: <strong>PYTHON 3.9.15</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>PYTHON 3.9.15</p>
@@ -391,7 +370,7 @@ public class UpdateJobRequest extends TeaModel {
     public String python;
 
     /**
-     * <p>The custom module dependencies. By default, the dependencies that are defined in the requirements.txt file in the root directory of the package are installed. If you do not configure this parameter or the package does not have a requirements.txt file, you can specify the dependencies that you want to install.</p>
+     * <p>The custom installation module dependencies. By default, the dependencies defined in the requirements.txt file in the root folder are installed. If the file is not configured or you use a custom software package, you can specify the dependencies to install.</p>
      * 
      * <strong>example:</strong>
      * <p>Flask==2.0</p>
@@ -400,7 +379,7 @@ public class UpdateJobRequest extends TeaModel {
     public String pythonModules;
 
     /**
-     * <p>The ID of the referenced application.</p>
+     * <p>The ID of the referenced job.</p>
      * 
      * <strong>example:</strong>
      * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -418,7 +397,7 @@ public class UpdateJobRequest extends TeaModel {
     public String replicas;
 
     /**
-     * <p>Enables job sharding.</p>
+     * <p>Specifies whether to enable job slicing.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -427,7 +406,7 @@ public class UpdateJobRequest extends TeaModel {
     public Boolean slice;
 
     /**
-     * <p>The parameters for job sharding.</p>
+     * <p>The job slicing parameters.</p>
      * 
      * <strong>example:</strong>
      * <p>[0,1,2]</p>
@@ -436,29 +415,22 @@ public class UpdateJobRequest extends TeaModel {
     public String sliceEnvs;
 
     /**
-     * <p>The configurations of collecting logs to Log Service.</p>
+     * <p>The configuration for collecting logs to Simple Log Service (SLS).</p>
      * <ul>
-     * <li><p>Use the Log Service resources that are automatically created by SAE: <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</p>
-     * </li>
-     * <li><p>Use a custom Log Service resource: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</p>
-     * </li>
+     * <li>To use SLS resources automatically created by Serverless App Engine (SAE): <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
+     * <li>To use custom SLS resources: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
      * </ul>
-     * <p>The following fields are supported:</p>
+     * <p>Parameter descriptions:</p>
      * <ul>
-     * <li><p><strong>projectName</strong>: The name of the Log Service project.</p>
-     * </li>
-     * <li><p><strong>logDir</strong>: The log path.</p>
-     * </li>
-     * <li><p><strong>logType</strong>: The log type. <strong>stdout</strong> indicates the standard output log of the container. You can specify only one standard output. If you do not configure this field, file logs are collected.</p>
-     * </li>
-     * <li><p><strong>logstoreName</strong>: The name of the Logstore in Log Service.</p>
-     * </li>
-     * <li><p><strong>logtailName</strong>: The name of the Logtail. If you do not specify this parameter, a new Logtail is created.</p>
-     * </li>
+     * <li><strong>projectName</strong>: The name of the SLS project.  </li>
+     * <li><strong>logDir</strong>: The log path.</li>
+     * <li><strong>logType</strong>: The log type. <strong>stdout</strong> indicates container standard output logs. Only one entry is allowed. If no entry is specified, file logs are collected.</li>
+     * <li><strong>logstoreName</strong>: The name of the SLS Logstore.</li>
+     * <li><strong>logtailName</strong>: The name of the SLS Logtail. If this parameter is not specified, a new Logtail is created.</li>
      * </ul>
-     * <p>If the SLS configuration is not changed during a deployment, you do not need to configure this parameter. To stop using the log collection feature, set the value of this parameter to an empty string (<code>&quot;&quot;</code>).</p>
+     * <p>If the SLS collection configuration remains unchanged during multiple deployments, you do not need to configure this parameter. That is, you do not need to include the <strong>SlsConfigs</strong> field in the request. If you no longer need the SLS collection feature, you must set the value of this field to an empty string in the request. That is, set the value of <strong>SlsConfigs</strong> to &quot;&quot;.</p>
      * <blockquote>
-     * <p>Projects that are automatically created with a job template are deleted when the job template is deleted. Therefore, when you select an existing project, do not select a project that is automatically created by SAE.</p>
+     * <p>The project automatically created with the job template is deleted when the job template is deleted. Therefore, when selecting an existing project, you cannot select a project automatically created by SAE.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -468,7 +440,7 @@ public class UpdateJobRequest extends TeaModel {
     public String slsConfigs;
 
     /**
-     * <p>The graceful timeout period. Default value: 30. Unit: seconds. Valid values: 1 to 300.</p>
+     * <p>The timeout period for graceful shutdown. Unit: seconds. Default value: 30. Valid values: 1 to 300.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -477,7 +449,7 @@ public class UpdateJobRequest extends TeaModel {
     public Integer terminationGracePeriodSeconds;
 
     /**
-     * <p>The timeout period for the job. Unit: seconds.</p>
+     * <p>The timeout period of the job. Unit: seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>3600</p>
@@ -495,18 +467,13 @@ public class UpdateJobRequest extends TeaModel {
     public String timezone;
 
     /**
-     * <p>The configurations of the Tomcat file. If you set this parameter to &quot;&quot; or &quot;{}&quot;, the configurations are deleted. The value is a JSON string. The following fields are supported:</p>
+     * <p>The Tomcat file configuration. Set the value to &quot;&quot; or &quot;{}&quot; to delete the configuration. Valid values:</p>
      * <ul>
-     * <li><p><strong>port</strong>: The port number. Valid values: 1024 to 65535. The root permission is required to perform operations on ports whose number is smaller than 1024. The container is configured with the administrator permission. Therefore, specify a port whose number is greater than 1024. If you do not configure this field, the default port 8080 is used.</p>
-     * </li>
-     * <li><p><strong>contextPath</strong>: The context path. Default value: /.</p>
-     * </li>
-     * <li><p><strong>maxThreads</strong>: The maximum number of connections in the connection pool. Default value: 400.</p>
-     * </li>
-     * <li><p><strong>uriEncoding</strong>: The URI encoding scheme in Tomcat. Supported values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and <strong>GB2312</strong>. If you do not set this parameter, the default value <strong>ISO-8859-1</strong> is used.</p>
-     * </li>
-     * <li><p><strong>useBodyEncodingForUri</strong>: Specifies whether to use <strong>BodyEncoding for URL</strong>. Default value: <strong>true</strong>.</p>
-     * </li>
+     * <li><strong>port</strong>: The port number. Valid values: 1024 to 65535. Ports smaller than 1024 require root permissions. Because the container is configured with admin permissions, specify a port greater than 1024. Default value: 8080.</li>
+     * <li><strong>contextPath</strong>: The access path. Default value: the root directory &quot;/&quot;.</li>
+     * <li><strong>maxThreads</strong>: The maximum number of connections in the connection pool. Default value: 400.</li>
+     * <li><strong>uriEncoding</strong>: The encoding format of Tomcat. Valid values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and <strong>GB2312</strong>. Default value: <strong>ISO-8859-1</strong>.</li>
+     * <li><strong>useBodyEncoding</strong>: Specifies whether to use <strong>BodyEncoding for URL</strong>. Default value: <strong>true</strong>.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -519,7 +486,7 @@ public class UpdateJobRequest extends TeaModel {
     public String triggerConfig;
 
     /**
-     * <p>The startup command for the application that is deployed in a WAR package. The procedure is the same as that for configuring the startup command for an image. For more information, see <a href="https://help.aliyun.com/document_detail/96677.html">Set a startup command</a>.</p>
+     * <p>The startup command for the WAR package deployment job. The procedure is the same as configuring the startup command for image deployment. For more information, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure a startup command</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</p>
@@ -528,12 +495,10 @@ public class UpdateJobRequest extends TeaModel {
     public String warStartOptions;
 
     /**
-     * <p>The Tomcat version that the deployment package depends on. The following versions are supported:</p>
+     * <p>The Tomcat version required by the deployment package. Valid values:</p>
      * <ul>
-     * <li><p><strong>apache-tomcat-7.0.91</strong></p>
-     * </li>
-     * <li><p><strong>apache-tomcat-8.5.42</strong></p>
-     * </li>
+     * <li><strong>apache-tomcat-7.0.91</strong></li>
+     * <li><strong>apache-tomcat-8.5.42</strong></li>
      * </ul>
      * <p>This parameter is not supported when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
      * 

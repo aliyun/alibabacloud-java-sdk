@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code.</p>
+     * <p>The HTTP status code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: Indicates a client error.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: Indicates a server error.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,30 +20,29 @@ public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of gateway routes.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public java.util.List<ListSwimmingLaneGatewayRoutesResponseBodyData> data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>This parameter is returned only if the request fails.</p>
-     * </li>
-     * <li><p>For more information, see the <strong>Error codes</strong> section of this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned for the request.</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
-     * </li>
-     * <li><p>If the request fails, an error message is returned.</p>
-     * </li>
+     * <li>If the request is successful, <strong>success</strong> is returned.</li>
+     * <li>If an exception occurs, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,12 +61,10 @@ public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: Successful.</li>
+     * <li><strong>false</strong>: Failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID of the request.</p>
+     * <p>The trace ID used to query exact call information.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622246421415014e****</p>
@@ -161,7 +154,7 @@ public class ListSwimmingLaneGatewayRoutesResponseBody extends TeaModel {
         public String path;
 
         /**
-         * <p>The type of the rule.</p>
+         * <p>The rule type.</p>
          * 
          * <strong>example:</strong>
          * <p>Header</p>

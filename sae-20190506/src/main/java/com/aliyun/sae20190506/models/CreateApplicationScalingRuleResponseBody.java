@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A client error occurred.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: success.</li>
+     * <li><strong>3xx</strong>: redirection.</li>
+     * <li><strong>4xx</strong>: request error.</li>
+     * <li><strong>5xx</strong>: server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +20,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public CreateApplicationScalingRuleResponseBodyData data;
@@ -32,22 +28,21 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     /**
      * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>This parameter is not returned if the request is successful.</p>
-     * </li>
-     * <li><p>An error code is returned if the request fails. For more information, see the <strong>Error codes</strong> section in this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InstanceExist.ScalingRuleName</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The response message. Valid values:</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>Returns <strong>success</strong> if the request is successful.</p>
-     * </li>
-     * <li><p>Returns an error message if the request fails.</p>
-     * </li>
+     * <li>If the request is normal, <strong>success</strong> is returned.</li>
+     * <li>If the request is abnormal, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,12 +61,10 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful. Valid values:</p>
+     * <p>Indicates whether the application instance is restarted successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The API call was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The API call failed.</p>
-     * </li>
+     * <li><strong>true</strong>: restarted successfully.</li>
+     * <li><strong>false</strong>: failed to restart.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID. You can use this ID to query the details of a request.</p>
+     * <p>The trace ID, which is used to accurately query the call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -152,26 +145,17 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
     public static class CreateApplicationScalingRuleResponseBodyDataMetricMetrics extends TeaModel {
         /**
-         * <p>The target value for the metric.</p>
+         * <p>The target value of the monitoring metric.</p>
          * <ul>
-         * <li><p>The target CPU utilization, in percentage.</p>
-         * </li>
-         * <li><p>The target memory utilization, in percentage.</p>
-         * </li>
-         * <li><p>The target QPS.</p>
-         * </li>
-         * <li><p>The target response time, in milliseconds.</p>
-         * </li>
-         * <li><p>The target average number of active TCP connections per second.</p>
-         * </li>
-         * <li><p>The target QPS for a public-facing SLB instance.</p>
-         * </li>
-         * <li><p>The target response time for a public-facing SLB instance, in milliseconds.</p>
-         * </li>
-         * <li><p>The target QPS for an internal-facing SLB instance.</p>
-         * </li>
-         * <li><p>The target response time for an internal-facing SLB instance, in milliseconds.</p>
-         * </li>
+         * <li>Target CPU utilization, in percentage.</li>
+         * <li>Target memory utilization, in percentage.</li>
+         * <li>QPS.</li>
+         * <li>Response time, in milliseconds.</li>
+         * <li>Average number of active TCP connections, in connections per second.</li>
+         * <li>Public-Internet-facing SLB QPS.</li>
+         * <li>Public-Internet-facing SLB response time, in milliseconds.</li>
+         * <li>Private network SLB QPS.</li>
+         * <li>Private network SLB response time, in milliseconds.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -181,26 +165,17 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public Integer metricTargetAverageUtilization;
 
         /**
-         * <p>The type of the metric that triggers the auto scaling policy. Valid values:</p>
+         * <p>The trigger condition for the monitoring metric. Valid values:</p>
          * <ul>
-         * <li><p><strong>CPU</strong>: CPU utilization.</p>
-         * </li>
-         * <li><p><strong>MEMORY</strong>: memory utilization.</p>
-         * </li>
-         * <li><p><strong>QPS</strong>: The average QPS per instance over 1 minute for a Java application.</p>
-         * </li>
-         * <li><p><strong>RT</strong>: The average response time across all service endpoints over 1 minute for a Java application.</p>
-         * </li>
-         * <li><p><strong>tcpActiveConn</strong>: The average number of TCP active connections per instance over 30 seconds.</p>
-         * </li>
-         * <li><p><strong>SLB_QPS</strong>: The average QPS per instance for a public SLB instance, measured over 15 seconds.</p>
-         * </li>
-         * <li><p><strong>SLB_RT</strong>: The average response time for a public SLB instance, measured over 15 seconds.</p>
-         * </li>
-         * <li><p><strong>INTRANET_SLB_QPS</strong>: The average QPS per instance for an internal-facing SLB instance, measured over 15 seconds.</p>
-         * </li>
-         * <li><p><strong>INTRANET_SLB_RT</strong>: The average response time for an internal-facing SLB instance, measured over 15 seconds.</p>
-         * </li>
+         * <li><strong>CPU</strong>: CPU utilization.</li>
+         * <li><strong>MEMORY</strong>: memory utilization.</li>
+         * <li><strong>QPS</strong>: the average QPS of a single instance of a Java application within 1 minute.</li>
+         * <li><strong>RT</strong>: the average RT of all service interfaces of a Java application within 1 minute.</li>
+         * <li><strong>tcpActiveConn</strong>: the average number of active TCP connections of a single instance within 30 seconds.</li>
+         * <li><strong>SLB_QPS</strong>: the average public-Internet-facing SLB QPS of a single instance within 15 seconds.</li>
+         * <li><strong>SLB_RT</strong>: the average public-Internet-facing SLB response time within 15 seconds.</li>
+         * <li><strong>INTRANET_SLB_QPS</strong>: the average private network SLB QPS of a single instance within 15 seconds.</li>
+         * <li><strong>INTRANET_SLB_RT</strong>: the average private network SLB response time within 15 seconds.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -210,7 +185,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public String metricType;
 
         /**
-         * <p>The ID of the SLB instance.</p>
+         * <p>The SLB instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-xxx</p>
@@ -219,7 +194,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public String slbId;
 
         /**
-         * <p>The Log Service Logstore for SLB access logs.</p>
+         * <p>The Simple Log Service Logstore for SLB access logs.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -228,7 +203,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public String slbLogstore;
 
         /**
-         * <p>The Log Service project for SLB access logs.</p>
+         * <p>The Simple Log Service project for SLB access logs.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -237,7 +212,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public String slbProject;
 
         /**
-         * <p>The port of the SLB instance.</p>
+         * <p>The SLB port.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -311,7 +286,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public Integer maxReplicas;
 
         /**
-         * <p>An array of objects that define the metrics for the metric-based auto scaling policy.</p>
+         * <p>The list of monitoring metric-based elastic scaling configurations.</p>
          */
         @NameInMap("Metrics")
         public java.util.List<CreateApplicationScalingRuleResponseBodyDataMetricMetrics> metrics;
@@ -358,7 +333,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
     public static class CreateApplicationScalingRuleResponseBodyDataTimerSchedules extends TeaModel {
         /**
-         * <p>The trigger time. The format is <strong>HH:mm</strong>.</p>
+         * <p>The time point. Format: <strong>HH:mm</strong>.</p>
          * 
          * <strong>example:</strong>
          * <p>08:00</p>
@@ -434,12 +409,10 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
     public static class CreateApplicationScalingRuleResponseBodyDataTimer extends TeaModel {
         /**
-         * <p>The start date of the scheduled auto scaling policy.</p>
+         * <p>The short-term start date of the scheduled elastic scaling policy.</p>
          * <ul>
-         * <li><p>If both <strong>BeginDate</strong> and <strong>EndDate</strong> are <strong>null</strong>, the policy is a long-term policy. This is the default.</p>
-         * </li>
-         * <li><p>For example, if you set <strong>BeginDate</strong> to 2021-03-25 and <strong>EndDate</strong> to 2021-04-25, the policy is active for one month.</p>
-         * </li>
+         * <li>If both <strong>BeginDate</strong> and <strong>EndDate</strong> are <strong>null</strong>, the policy is executed on a long-term basis. This is the default value.</li>
+         * <li>If specific dates are specified, for example, <strong>BeginDate</strong> is 2021-03-25 and <strong>EndDate</strong> is 2021-04-25, the validity period is one month.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -449,12 +422,10 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public String beginDate;
 
         /**
-         * <p>The end date of the scheduled auto scaling policy.</p>
+         * <p>The short-term end date of the scheduled elastic scaling policy.</p>
          * <ul>
-         * <li><p>If both <strong>BeginDate</strong> and <strong>EndDate</strong> are <strong>null</strong>, the policy is a long-term policy. This is the default.</p>
-         * </li>
-         * <li><p>For example, if you set <strong>BeginDate</strong> to 2021-03-25 and <strong>EndDate</strong> to 2021-04-25, the policy is active for one month.</p>
-         * </li>
+         * <li>If both <strong>BeginDate</strong> and <strong>EndDate</strong> are <strong>null</strong>, the policy is executed on a long-term basis. This is the default value.</li>
+         * <li>If specific dates are specified, for example, <strong>BeginDate</strong> is 2021-03-25 and <strong>EndDate</strong> is 2021-04-25, the validity period is one month.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -464,29 +435,22 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public String endDate;
 
         /**
-         * <p>The recurrence pattern for the scheduled auto scaling policy. Valid values:</p>
+         * <p>The epoch for executing the scheduled elastic scaling policy. Valid values:</p>
          * <ul>
-         * <li><p><em><em>\</em> \</em> \***: The policy is executed at a specified time every day.</p>
+         * <li><p><em><em>\</em> \</em> \***: executes the scheduled policy at the specified time every day.</p>
          * </li>
-         * <li><p><em><em>\</em> \</em> Fri,Mon**: The policy is executed at a specified time on specific days of the week. You can select multiple days. The time is in the GMT+8 time zone. Valid values:</p>
+         * <li><p><em><em>\</em> \</em> Fri,Mon**: executes the scheduled policy at the specified time on the specified days of every week. Multiple days are supported. The time zone is GMT+8. Valid values: </p>
          * <ul>
-         * <li><p><strong>Sun</strong>: Sunday</p>
-         * </li>
-         * <li><p><strong>Mon</strong>: Monday</p>
-         * </li>
-         * <li><p><strong>Tue</strong>: Tuesday</p>
-         * </li>
-         * <li><p><strong>Wed</strong>: Wednesday</p>
-         * </li>
-         * <li><p><strong>Thu</strong>: Thursday</p>
-         * </li>
-         * <li><p><strong>Fri</strong>: Friday</p>
-         * </li>
-         * <li><p><strong>Sat</strong>: Saturday</p>
-         * </li>
+         * <li><strong>Sun</strong>: Sunday</li>
+         * <li><strong>Mon</strong>: Monday</li>
+         * <li><strong>Tue</strong>: Tuesday</li>
+         * <li><strong>Wed</strong>: Wednesday</li>
+         * <li><strong>Thu</strong>: Thursday</li>
+         * <li><strong>Fri</strong>: Friday</li>
+         * <li><strong>Sat</strong>: Saturday</li>
          * </ul>
          * </li>
-         * <li><p><em><em>1,2,3,28,31 \</em> \</em>**: The policy is executed at a specified time on specific days of a month. You can select multiple days. The value can be from 1 to 31. If a specified day does not exist in a given month (for example, the 31st), the policy is not executed on that day.</p>
+         * <li><p><em><em>1,2,3,28,31 \</em> \</em>**: executes the scheduled policy at the specified time on the specified days of every month. Multiple days are supported. Valid values: [1,31\]. If the current month does not have the 31st day, the scheduled policy is skipped on that day.</p>
          * </li>
          * </ul>
          * 
@@ -497,7 +461,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public String period;
 
         /**
-         * <p>The trigger points for the scheduled auto scaling policy.</p>
+         * <p>The trigger time points within a single day.</p>
          */
         @NameInMap("Schedules")
         public java.util.List<CreateApplicationScalingRuleResponseBodyDataTimerSchedules> schedules;
@@ -543,7 +507,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
 
     public static class CreateApplicationScalingRuleResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the application.</p>
+         * <p>The application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -552,7 +516,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public String appId;
 
         /**
-         * <p>The time when the policy was created, in milliseconds.</p>
+         * <p>The creation time of the elastic scaling policy. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1616642248938</p>
@@ -561,13 +525,13 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public Long createTime;
 
         /**
-         * <p>Indicates whether idle mode is enabled.</p>
+         * <p>Indicates whether the idle mode is enabled.</p>
          */
         @NameInMap("EnableIdle")
         public Boolean enableIdle;
 
         /**
-         * <p>The time when the auto scaling policy was last disabled, in milliseconds.</p>
+         * <p>The time when the elastic scaling policy was last disabled.</p>
          * 
          * <strong>example:</strong>
          * <p>1641882854484</p>
@@ -576,18 +540,16 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public Long lastDisableTime;
 
         /**
-         * <p>The configurations for the metric-based auto scaling policy.</p>
+         * <p>The monitoring metric-based elastic scaling configuration.</p>
          */
         @NameInMap("Metric")
         public CreateApplicationScalingRuleResponseBodyDataMetric metric;
 
         /**
-         * <p>Indicates whether the auto scaling policy is enabled. Valid values:</p>
+         * <p>Indicates whether the elastic scaling policy is enabled. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The policy is enabled.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The policy is disabled.</p>
-         * </li>
+         * <li><strong>true</strong>: enabled.</li>
+         * <li><strong>false</strong>: disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -597,7 +559,7 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public Boolean scaleRuleEnabled;
 
         /**
-         * <p>The name of the auto scaling policy.</p>
+         * <p>The name of the elastic scaling policy.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -606,14 +568,11 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public String scaleRuleName;
 
         /**
-         * <p>The type of the auto scaling policy. Valid values:</p>
+         * <p>The type of the elastic scaling policy. Valid values:</p>
          * <ul>
-         * <li><p><strong>timing</strong>: scheduled auto scaling.</p>
-         * </li>
-         * <li><p><strong>metric</strong>: metric-based auto scaling.</p>
-         * </li>
-         * <li><p><strong>mix</strong>: mixed auto scaling.</p>
-         * </li>
+         * <li><strong>timing</strong>: scheduled elastic scaling.</li>
+         * <li><strong>metric</strong>: monitoring metric-based elastic scaling.</li>
+         * <li><strong>mix</strong>: hybrid elastic scaling.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -623,13 +582,13 @@ public class CreateApplicationScalingRuleResponseBody extends TeaModel {
         public String scaleRuleType;
 
         /**
-         * <p>The configurations for the scheduled auto scaling policy.</p>
+         * <p>The scheduled elastic scaling configuration.</p>
          */
         @NameInMap("Timer")
         public CreateApplicationScalingRuleResponseBodyDataTimer timer;
 
         /**
-         * <p>The time when the policy was last updated, in milliseconds.</p>
+         * <p>The update time of the elastic scaling policy. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1616642248938</p>

@@ -14,7 +14,10 @@ public class UpdateAppModeRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The application IDs.</p>
+     * <p>The application ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****,7802c49a-67bc-4167-8369-9a9c003c****</p>
      */
     @NameInMap("AppIds")
     public String appIds;
@@ -28,11 +31,18 @@ public class UpdateAppModeRequest extends TeaModel {
     @NameInMap("EnableIdle")
     public Boolean enableIdle;
 
+    /**
+     * <strong>example:</strong>
+     * <p>[{&quot;startTime&quot;:&quot;1:00&quot;,&quot;endTime&quot;:&quot;16:00&quot;}]</p>
+     */
     @NameInMap("IdleHour")
     public String idleHour;
 
     /**
      * <p>The namespace ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-shanghai</p>
      */
     @NameInMap("NamespaceId")
     public String namespaceId;

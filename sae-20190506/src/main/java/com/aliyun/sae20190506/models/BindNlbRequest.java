@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class BindNlbRequest extends TeaModel {
     /**
-     * <p>The address type of the NLB instance.</p>
+     * <p>The address type. Valid values:</p>
      * <ul>
-     * <li><p><code>Internet</code>: a public IP address.</p>
-     * </li>
-     * <li><p><code>Intranet</code>: a private IP address.</p>
-     * </li>
+     * <li>Internet: public network address.</li>
+     * <li>Intranet: private network address.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,7 +18,7 @@ public class BindNlbRequest extends TeaModel {
     public String addressType;
 
     /**
-     * <p>The ID of the target application.</p>
+     * <p>The ID of the application.</p>
      * 
      * <strong>example:</strong>
      * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
@@ -29,17 +27,20 @@ public class BindNlbRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The listeners, specified as a JSON-formatted string. Each listener object contains the following fields:</p>
+     * <p>The JSON array string of the listeners to be configured. The structure of each listener is as follows:</p>
      * <ul>
-     * <li><p><strong>Port</strong>: Integer. Required. The listener port. Valid values: 0 to 65535.</p>
+     * <li><p><strong>Port</strong>: Integer type, required. The load balancing listener port. Valid values: 0 to 65535.</p>
      * </li>
-     * <li><p><strong>TargetPort</strong>: Integer. Required. The port on the application instance that receives traffic. Valid values: 0 to 65535.</p>
+     * <li><p><strong>TargetPort</strong>: Integer type, required. The listening port of the container in the instance. Valid values: 0 to 65535.</p>
      * </li>
-     * <li><p><strong>Protocol</strong>: String. Required. The listener protocol. Valid values: <code>TCP</code>, <code>UDP</code>, and <code>TCPSSL</code>.</p>
+     * <li><p><strong>Protocol</strong>: String type, required. The listening protocol. Valid values: TCP, UDP, and TCPSSL.</p>
      * </li>
-     * <li><p><strong>CertIds</strong>: String. Optional. The server certificate IDs. This parameter is required only for <code>TCPSSL</code> listeners.</p>
+     * <li><p><strong>CertIds</strong>: String type, optional. The list of server certificates. This parameter takes effect only for TCPSSL listeners.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>[{&quot;Port&quot;:80,&quot;TargetPort&quot;:8080,&quot;Protocol&quot;:&quot;TCP&quot;}]</p>
      */
     @NameInMap("Listeners")
     public String listeners;
@@ -54,11 +55,11 @@ public class BindNlbRequest extends TeaModel {
     public String nlbId;
 
     /**
-     * <p>The mappings between zones and vSwitches, specified as a JSON-formatted string. You can add up to 10 zones. If the current region supports two or more zones, you must specify at least two zones. Each <code>ZoneMapping</code> object contains the following fields:</p>
+     * <p>The JSON string of the zone and vSwitch mapping list. You can add up to 10 zones. If the current region supports two or more zones, you must add at least two zones. The structure of a ZoneMapping is as follows:</p>
      * <ul>
-     * <li><p><strong>VSwitchId</strong>: String. The ID of the vSwitch in the specified zone. Each zone can have only one vSwitch and one subnet.</p>
+     * <li><p>VSwitchId: String type. The vSwitch corresponding to the zone. Each zone can use only one vSwitch and one subnet.</p>
      * </li>
-     * <li><p>ZoneId, String, the zone ID of the Network Load Balancer instance.</p>
+     * <li><p>ZoneId: String type. The zone ID of the Network Load Balancer (NLB) instance.</p>
      * </li>
      * </ul>
      * 

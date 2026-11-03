@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class AppStackInstance extends TeaModel {
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1706518652</p>
      */
     @NameInMap("CreateTime")
     public Long createTime;
 
+    /**
+     * <p>The endpoints.</p>
+     */
     @NameInMap("Endpoints")
     public java.util.List<AppStackInstanceEndpoints> endpoints;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-789y</p>
      */
@@ -22,16 +29,23 @@ public class AppStackInstance extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The instance name.</p>
+     * 
      * <strong>example:</strong>
      * <p>palworld</p>
      */
     @NameInMap("InstanceName")
     public String instanceName;
 
+    /**
+     * <p>The instance parameters.</p>
+     */
     @NameInMap("Parameters")
     public java.util.List<AppStackInstanceParameters> parameters;
 
     /**
+     * <p>The stack ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>palworld</p>
      */
@@ -39,6 +53,8 @@ public class AppStackInstance extends TeaModel {
     public String stackId;
 
     /**
+     * <p>The instance status.</p>
+     * 
      * <strong>example:</strong>
      * <p>WAIT</p>
      */
@@ -46,6 +62,8 @@ public class AppStackInstance extends TeaModel {
     public String status;
 
     /**
+     * <p>The update time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1706518652</p>
      */
@@ -123,6 +141,8 @@ public class AppStackInstance extends TeaModel {
 
     public static class AppStackInstanceEndpoints extends TeaModel {
         /**
+         * <p>The address and port.</p>
+         * 
          * <strong>example:</strong>
          * <p>127.0.0.1:8211</p>
          */
@@ -130,6 +150,8 @@ public class AppStackInstance extends TeaModel {
         public String address;
 
         /**
+         * <p>The endpoint name.</p>
+         * 
          * <strong>example:</strong>
          * <p>game</p>
          */
@@ -137,6 +159,8 @@ public class AppStackInstance extends TeaModel {
         public String name;
 
         /**
+         * <p>The endpoint protocol.</p>
+         * 
          * <strong>example:</strong>
          * <p>UDP</p>
          */
@@ -176,6 +200,8 @@ public class AppStackInstance extends TeaModel {
 
     public static class AppStackInstanceParameters extends TeaModel {
         /**
+         * <p>The parameter name.</p>
+         * 
          * <strong>example:</strong>
          * <p>regionId</p>
          */
@@ -183,6 +209,8 @@ public class AppStackInstance extends TeaModel {
         public String name;
 
         /**
+         * <p>The parameter value.</p>
+         * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
          */

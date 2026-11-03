@@ -15,7 +15,7 @@ public class RestartInstancesRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The ID of the instance to be restarted. Separate multiple instance IDs with commas (,).</p>
+     * <p>The IDs of the instances to be restarted. Separate multiple instance IDs with commas (,).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

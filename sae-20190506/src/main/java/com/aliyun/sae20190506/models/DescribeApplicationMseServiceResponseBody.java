@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeApplicationMseServiceResponseBody extends TeaModel {
     /**
-     * <p>The API status or POP error code. Valid values: 2xx: The request was successful. 3xx: The request was redirected. 4xx: The request was invalid. 5xx: A server error occurred.</p>
+     * <p>The API status code or POP error code. Valid values: 2xx: success. 3xx: redirection. 4xx: request error. 5xx: server error.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -14,30 +14,29 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The application information.</p>
+     * <p>The MSE microservice governance application information.</p>
      */
     @NameInMap("Data")
     public DescribeApplicationMseServiceResponseBodyData data;
 
     /**
-     * <p>The error code. Value description:</p>
+     * <p>The error code. Details:</p>
      * <ul>
-     * <li><p>If the request succeeds, this field is not returned.</p>
-     * </li>
-     * <li><p>For more information, see the <strong>Error codes</strong> section of this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>System.Upgrading</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The additional information. Value description:</p>
+     * <p>The additional information. Details:</p>
      * <ul>
-     * <li><p>If the request was successful, <strong>success</strong> is returned.</p>
-     * </li>
-     * <li><p>If the request failed, an error code is returned.</p>
-     * </li>
+     * <li>If the request is normal, <strong>success</strong> is returned.</li>
+     * <li>If the request is abnormal, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -56,12 +55,10 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the application instance groups were obtained successfully. Valid values:</p>
+     * <p>Indicates whether the application instance group was retrieved successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The application instance group was retrieved successfully.</li>
+     * <li><strong>false</strong>: The application instance group failed to be retrieved.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -71,7 +68,7 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace, which is used to query the exact call information.</p>
+     * <p>The trace ID, which is used to precisely query trace information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -142,7 +139,7 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
 
     public static class DescribeApplicationMseServiceResponseBodyData extends TeaModel {
         /**
-         * <p>The application ID.</p>
+         * <p>The MSE microservice governance application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>mse-cn-hvm47******</p>
@@ -151,7 +148,7 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
         public String mseAppId;
 
         /**
-         * <p>The application name.</p>
+         * <p>The MSE microservice governance application name.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -160,7 +157,7 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
         public String mseAppName;
 
         /**
-         * <p>The namespace.</p>
+         * <p>The MSE microservice governance namespace.</p>
          * 
          * <strong>example:</strong>
          * <p>sae-ent</p>
@@ -169,18 +166,13 @@ public class DescribeApplicationMseServiceResponseBody extends TeaModel {
         public String mseAppNameSpace;
 
         /**
-         * <p>The application status. Valid values:</p>
+         * <p>The MSE microservice governance application status. Valid values:</p>
          * <ul>
-         * <li><p>EXPIRED</p>
-         * </li>
-         * <li><p>REBOOTING</p>
-         * </li>
-         * <li><p>WAITING</p>
-         * </li>
-         * <li><p>FAIL</p>
-         * </li>
-         * <li><p>NULL/SUCCESS</p>
-         * </li>
+         * <li>EXPIRED: The feature has expired or is not activated.</li>
+         * <li>REBOOTING: The application is restarting.</li>
+         * <li>WAITING: Waiting for the application to restart.</li>
+         * <li>FAIL: The activation failed.</li>
+         * <li>NULL/SUCCESS: The activation succeeded.</li>
          * </ul>
          * 
          * <strong>example:</strong>

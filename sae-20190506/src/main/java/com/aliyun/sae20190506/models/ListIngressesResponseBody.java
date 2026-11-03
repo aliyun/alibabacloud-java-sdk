@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class ListIngressesResponseBody extends TeaModel {
     /**
-     * <p>The status of the API call or a POP error code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The call was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A client error occurred.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirect.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,30 +20,29 @@ public class ListIngressesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result.</p>
+     * <p>The returned results.</p>
      */
     @NameInMap("Data")
     public ListIngressesResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>This parameter is not returned if the request is successful.</p>
-     * </li>
-     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section of this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The response message.</p>
+     * <p>The additional information. The value is described as follows:</p>
      * <ul>
-     * <li><p><strong>success</strong> is returned if the call is successful.</p>
-     * </li>
-     * <li><p>An error code is returned if the call fails.</p>
-     * </li>
+     * <li>If the request is successful, <strong>success</strong> is returned.</li>
+     * <li>If the request fails, the specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,12 +61,10 @@ public class ListIngressesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the call was successful. Valid values:</p>
+     * <p>Specifies whether the ingress list was successfully retrieved. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The call failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The ingress list was successfully retrieved.</li>
+     * <li><strong>false</strong>: The ingress list failed to be retrieved.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class ListIngressesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID. You can use it to query the details of a call.</p>
+     * <p>The trace ID used to query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -152,43 +145,66 @@ public class ListIngressesResponseBody extends TeaModel {
 
     public static class ListIngressesResponseBodyDataIngressListCorsConfig extends TeaModel {
         /**
-         * <p>Indicates whether credentials can be carried.</p>
+         * <p>Specifies whether credentials are allowed.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>on</p>
          */
         @NameInMap("AllowCredentials")
         public String allowCredentials;
 
         /**
          * <p>The allowed headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_123</p>
          */
         @NameInMap("AllowHeaders")
         public String allowHeaders;
 
         /**
          * <p>The allowed methods.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>GET</p>
          */
         @NameInMap("AllowMethods")
         public String allowMethods;
 
         /**
          * <p>The allowed origins.</p>
+         * 
+         * <strong>example:</strong>
+         * <ul>
+         * <li></li>
+         * </ul>
          */
         @NameInMap("AllowOrigin")
         public String allowOrigin;
 
         /**
-         * <p>Indicates whether cross-domain access is enabled.</p>
+         * <p>Specifies whether the feature is enabled.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>false</p>
          */
         @NameInMap("Enable")
         public String enable;
 
         /**
          * <p>The allowed exposed headers.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>test_123</p>
          */
         @NameInMap("ExposeHeaders")
         public String exposeHeaders;
 
         /**
-         * <p>The time-to-live (TTL).</p>
+         * <p>The max age.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1000</p>
          */
         @NameInMap("MaxAge")
         public String maxAge;
@@ -259,24 +275,36 @@ public class ListIngressesResponseBody extends TeaModel {
     public static class ListIngressesResponseBodyDataIngressListDefaultRule extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-app</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The backend protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         @NameInMap("BackendProtocol")
         public String backendProtocol;
 
         /**
          * <p>The container port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("ContainerPort")
         public Integer containerPort;
@@ -323,12 +351,18 @@ public class ListIngressesResponseBody extends TeaModel {
     public static class ListIngressesResponseBodyDataIngressListRulesRuleActions extends TeaModel {
         /**
          * <p>The action configuration.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{\&quot;host\&quot;:\&quot;<a href="http://www.example.com%5C%5C%22,%5C%5C%22path%5C%5C%22:%5C%5C%22/example/text%5C%5C%22,%5C%5C%22query%5C%5C%22:%5C%5C%22x=1%5C%5C%22%7D">www.example.com\\&quot;,\\&quot;path\\&quot;:\\&quot;/example/text\\&quot;,\\&quot;query\\&quot;:\\&quot;x=1\\&quot;}</a></p>
          */
         @NameInMap("ActionConfig")
         public String actionConfig;
 
         /**
          * <p>The action type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>rewrite</p>
          */
         @NameInMap("ActionType")
         public String actionType;
@@ -359,42 +393,63 @@ public class ListIngressesResponseBody extends TeaModel {
     public static class ListIngressesResponseBodyDataIngressListRules extends TeaModel {
         /**
          * <p>The application ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>7171a6ca-d1cd-4928-8642-7d5cfe69****</p>
          */
         @NameInMap("AppId")
         public String appId;
 
         /**
          * <p>The application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>demo-app</p>
          */
         @NameInMap("AppName")
         public String appName;
 
         /**
          * <p>The backend protocol.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>http</p>
          */
         @NameInMap("BackendProtocol")
         public String backendProtocol;
 
         /**
          * <p>The container port.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>8080</p>
          */
         @NameInMap("ContainerPort")
         public Integer containerPort;
 
         /**
          * <p>The domain name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>edas.site</p>
          */
         @NameInMap("Domain")
         public String domain;
 
         /**
          * <p>The path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/Path</p>
          */
         @NameInMap("Path")
         public String path;
 
         /**
-         * <p>The rewritten path.</p>
+         * <p>The rewrite path.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>/${1}</p>
          */
         @NameInMap("RewritePath")
         public String rewritePath;
@@ -478,7 +533,7 @@ public class ListIngressesResponseBody extends TeaModel {
 
     public static class ListIngressesResponseBodyDataIngressList extends TeaModel {
         /**
-         * <p>The ID of the Classic Load Balancer (CLB) certificate.</p>
+         * <p>The <strong>CLB</strong> certificate ID.</p>
          * 
          * <strong>example:</strong>
          * <p>13624*<strong><strong>73809_16f8e549a20_1175189789_12</strong></strong>3210</p>
@@ -487,7 +542,7 @@ public class ListIngressesResponseBody extends TeaModel {
         public String certId;
 
         /**
-         * <p>The IDs of the Application Load Balancer (ALB) certificates.</p>
+         * <p>The <strong>ALB</strong> certificate IDs.</p>
          * 
          * <strong>example:</strong>
          * <p>87<em><strong>35-cn-hangzhou,812</strong></em>3-cn-hangzhou</p>
@@ -496,13 +551,16 @@ public class ListIngressesResponseBody extends TeaModel {
         public String certIds;
 
         /**
-         * <p>The cross-domain configuration.</p>
+         * <p>The CORS configuration.</p>
          */
         @NameInMap("CorsConfig")
         public ListIngressesResponseBodyDataIngressListCorsConfig corsConfig;
 
         /**
          * <p>The creation time.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1593746835111</p>
          */
         @NameInMap("CreateTime")
         public Long createTime;
@@ -514,7 +572,7 @@ public class ListIngressesResponseBody extends TeaModel {
         public ListIngressesResponseBodyDataIngressListDefaultRule defaultRule;
 
         /**
-         * <p>The name of the Ingress rule.</p>
+         * <p>The name of the routing rule.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -523,7 +581,7 @@ public class ListIngressesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the routing rule.</p>
+         * <p>The routing rule ID.</p>
          * 
          * <strong>example:</strong>
          * <p>18</p>
@@ -532,13 +590,16 @@ public class ListIngressesResponseBody extends TeaModel {
         public Long id;
 
         /**
-         * <p>The connection idle timeout period.</p>
+         * <p>The idle connection timeout period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>3</p>
          */
         @NameInMap("IdleTimeout")
         public Long idleTimeout;
 
         /**
-         * <p>The listening port of the SLB instance.</p>
+         * <p>The SLB listener port.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -547,14 +608,12 @@ public class ListIngressesResponseBody extends TeaModel {
         public String listenerPort;
 
         /**
-         * <p>The forwarding protocol of the SLB instance. Valid values:</p>
+         * <p>The request forwarding protocol supported by the load balancing SLB. Valid values:</p>
          * <ul>
-         * <li><p><strong>HTTP</strong>: suitable for applications that need to identify data content.</p>
-         * </li>
-         * <li><p><strong>HTTPS</strong>: suitable for applications that require encrypted transmission.</p>
-         * </li>
+         * <li><strong>HTTP</strong>: Applicable to applications that need to identify data content.</li>
+         * <li><strong>HTTPS</strong>: Applicable to applications that require encrypted transmission.</li>
          * </ul>
-         * <p>This parameter is optional for the <strong>CreateIngress</strong> and <strong>UpdateIngress</strong> operations. If you do not set this parameter when you create or update a gateway routing rule, this parameter is not returned.</p>
+         * <p>This parameter is optional in <strong>CreateIngress</strong> and <strong>UpdateIngress</strong>. If you do not specify this parameter when you create or update a gateway routing rule, this parameter is not returned when you invoke this API.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -563,12 +622,10 @@ public class ListIngressesResponseBody extends TeaModel {
         public String listenerProtocol;
 
         /**
-         * <p>The type of the SLB instance. Valid values:</p>
+         * <p>The type of the load balancing SLB. Valid values:</p>
          * <ul>
-         * <li><p><strong>clb</strong>: Classic Load Balancer.</p>
-         * </li>
-         * <li><p><strong>alb</strong>: Application Load Balancer.</p>
-         * </li>
+         * <li><strong>clb</strong>: Classic Load Balancer (CLB), formerly known as SLB.</li>
+         * <li><strong>alb</strong>: Application Load Balancer (ALB).</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -578,7 +635,7 @@ public class ListIngressesResponseBody extends TeaModel {
         public String loadBalanceType;
 
         /**
-         * <p>The ID of the MSE cloud-native gateway instance.</p>
+         * <p>The MSE cloud-native gateway instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>gw-d5df01a1bae748f1a7c4e325d2fd****</p>
@@ -587,7 +644,7 @@ public class ListIngressesResponseBody extends TeaModel {
         public String mseGatewayId;
 
         /**
-         * <p>The port that corresponds to the service.</p>
+         * <p>The port corresponding to the service.</p>
          * 
          * <strong>example:</strong>
          * <p>80</p>
@@ -596,12 +653,10 @@ public class ListIngressesResponseBody extends TeaModel {
         public String mseGatewayPort;
 
         /**
-         * <p>The forwarding protocol supported by the MSE cloud-native gateway. Valid values:</p>
+         * <p>The request forwarding protocol supported by the MSE cloud-native gateway. Valid values:</p>
          * <ul>
-         * <li><p><strong>HTTP</strong>: suitable for applications that need to identify data content.</p>
-         * </li>
-         * <li><p><strong>HTTPS</strong>: suitable for applications that require encrypted transmission.</p>
-         * </li>
+         * <li><strong>HTTP</strong>: Applicable to applications that need to identify data content.</li>
+         * <li><strong>HTTPS</strong>: Applicable to applications that require encrypted transmission.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -630,6 +685,9 @@ public class ListIngressesResponseBody extends TeaModel {
 
         /**
          * <p>The request timeout period.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>60</p>
          */
         @NameInMap("RequestTimeout")
         public Long requestTimeout;
@@ -641,7 +699,7 @@ public class ListIngressesResponseBody extends TeaModel {
         public java.util.List<ListIngressesResponseBodyDataIngressListRules> rules;
 
         /**
-         * <p>The ID of the Server Load Balancer (SLB) instance.</p>
+         * <p>The SLB ID.</p>
          * 
          * <strong>example:</strong>
          * <p>lb-uf62****6d13tq2u5</p>
@@ -650,12 +708,10 @@ public class ListIngressesResponseBody extends TeaModel {
         public String slbId;
 
         /**
-         * <p>The type of the SLB instance. Valid values:</p>
+         * <p>The SLB type. Valid values:</p>
          * <ul>
-         * <li><p><strong>internet</strong>: public network.</p>
-         * </li>
-         * <li><p><strong>intranet</strong>: private network.</p>
-         * </li>
+         * <li><strong>internet</strong>: Internet.</li>
+         * <li><strong>intranet</strong>: Internal network.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -833,7 +889,10 @@ public class ListIngressesResponseBody extends TeaModel {
 
     public static class ListIngressesResponseBodyData extends TeaModel {
         /**
-         * <p>The current page.</p>
+         * <p>The current page number.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
          */
         @NameInMap("CurrentPage")
         public Integer currentPage;
@@ -846,12 +905,18 @@ public class ListIngressesResponseBody extends TeaModel {
 
         /**
          * <p>The number of entries per page.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("PageSize")
         public Integer pageSize;
 
         /**
-         * <p>The total number of entries found.</p>
+         * <p>The total number of queried entries.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>10</p>
          */
         @NameInMap("TotalSize")
         public Integer totalSize;

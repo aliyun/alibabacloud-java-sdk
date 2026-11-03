@@ -11,7 +11,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     public java.util.List<String> appIds;
 
     /**
-     * <p>The unique ID of the gateway.</p>
+     * <p>The unique ID of the corresponding gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>gw-ea43f648ac46485aa8c894ba1b******</p>
@@ -20,13 +20,13 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     public String entryAppId;
 
     /**
-     * <p>The type of the gateway that acts as the application\&quot;s entry point.</p>
+     * <p>The application entry type (gateway type). Valid values:</p>
      * <ul>
-     * <li><p><strong>apig:</strong> cloud-native API gateway</p>
+     * <li><p><strong>apig</strong>: Cloud-native API gateway.</p>
      * </li>
-     * <li><p><strong>mse:</strong> java service gateway</p>
+     * <li><p><strong>mse</strong>: Java service gateway.</p>
      * </li>
-     * <li><p><strong>mse-gw:</strong> MSE Cloud Native Gateway</p>
+     * <li><p><strong>mse-gw</strong>: MSE cloud-native gateway.</p>
      * </li>
      * </ul>
      * 
@@ -37,7 +37,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     public String entryAppType;
 
     /**
-     * <p>The ID of the swimming lane group. This parameter is required when you update a swimming lane group.</p>
+     * <p>The ID of the traffic lane group. Required when updating a traffic lane group.</p>
      * 
      * <strong>example:</strong>
      * <p>110272</p>
@@ -46,7 +46,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     public Long groupId;
 
     /**
-     * <p>The name of the swimming lane group.</p>
+     * <p>The name of the traffic lane group.</p>
      * 
      * <strong>example:</strong>
      * <p>mse-test</p>
@@ -55,7 +55,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The ID of the namespace.</p>
+     * <p>The namespace ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>
@@ -64,7 +64,7 @@ public class CreateOrUpdateSwimmingLaneGroupRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The version of the end-to-end canary release. Valid values: 0 and 2. The value 2 is recommended.</p>
+     * <p>The end-to-end canary release version. Valid values: 0 and 2 (recommended).</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>

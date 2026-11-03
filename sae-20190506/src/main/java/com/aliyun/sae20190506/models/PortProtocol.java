@@ -4,12 +4,30 @@ package com.aliyun.sae20190506.models;
 import com.aliyun.tea.*;
 
 public class PortProtocol extends TeaModel {
+    /**
+     * <p>The port number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
+     */
     @NameInMap("Port")
     public Integer port;
 
+    /**
+     * <p>The protocol.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>TCP</p>
+     */
     @NameInMap("Protocol")
     public String protocol;
 
+    /**
+     * <p>The destination port number.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>8080</p>
+     */
     @NameInMap("TargetPort")
     public Integer targetPort;
 

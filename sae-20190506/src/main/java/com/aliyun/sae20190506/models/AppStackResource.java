@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class AppStackResource extends TeaModel {
     /**
+     * <p>The creation time.</p>
+     * 
      * <strong>example:</strong>
      * <p>1706518652000</p>
      */
@@ -12,6 +14,8 @@ public class AppStackResource extends TeaModel {
     public Long createTime;
 
     /**
+     * <p>The instance ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>i-78yt</p>
      */
@@ -19,6 +23,8 @@ public class AppStackResource extends TeaModel {
     public String instanceId;
 
     /**
+     * <p>The product.</p>
+     * 
      * <strong>example:</strong>
      * <p>VPC</p>
      */
@@ -26,6 +32,8 @@ public class AppStackResource extends TeaModel {
     public String productCode;
 
     /**
+     * <p>The resource ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-qwe112233</p>
      */
@@ -33,6 +41,8 @@ public class AppStackResource extends TeaModel {
     public String resourceId;
 
     /**
+     * <p>The resource name.</p>
+     * 
      * <strong>example:</strong>
      * <p>vsw-palworld-a</p>
      */
@@ -40,6 +50,8 @@ public class AppStackResource extends TeaModel {
     public String resourceName;
 
     /**
+     * <p>The resource type.</p>
+     * 
      * <strong>example:</strong>
      * <p>VSWITCH</p>
      */
@@ -47,6 +59,8 @@ public class AppStackResource extends TeaModel {
     public String resourceType;
 
     /**
+     * <p>The stack ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>palworld</p>
      */
@@ -54,6 +68,8 @@ public class AppStackResource extends TeaModel {
     public String stackId;
 
     /**
+     * <p>The resource status.</p>
+     * 
      * <strong>example:</strong>
      * <p>NORMAL</p>
      */

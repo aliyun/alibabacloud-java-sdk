@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: A client error occurred.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,30 +20,29 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The data object returned by the operation.</p>
+     * <p>The application information.</p>
      */
     @NameInMap("Data")
     public CreateOrUpdateSwimmingLaneGroupResponseBodyData data;
 
     /**
-     * <p>The error code.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>This parameter is not returned if the request is successful.</p>
-     * </li>
-     * <li><p>This parameter is returned if the request fails. For more information, see the <strong>Error codes</strong> section of this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The response message:</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p><strong>success</strong>: The request was successful.</p>
-     * </li>
-     * <li><p>An error code is returned if the request fails.</p>
-     * </li>
+     * <li>If the request is successful, <strong>success</strong> is returned.</li>
+     * <li>If the request fails, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,12 +61,10 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful:</p>
+     * <p>Indicates whether the traffic lane group is created. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The request failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The traffic lane group is created.</li>
+     * <li><strong>false</strong>: The traffic lane group fails to be created.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID, which you can use to query the details of the request.</p>
+     * <p>The trace ID used to query invocation details.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -152,7 +145,7 @@ public class CreateOrUpdateSwimmingLaneGroupResponseBody extends TeaModel {
 
     public static class CreateOrUpdateSwimmingLaneGroupResponseBodyData extends TeaModel {
         /**
-         * <p>The ID of the swimming lane group.</p>
+         * <p>The ID of the traffic lane group.</p>
          * 
          * <strong>example:</strong>
          * <p>110272</p>

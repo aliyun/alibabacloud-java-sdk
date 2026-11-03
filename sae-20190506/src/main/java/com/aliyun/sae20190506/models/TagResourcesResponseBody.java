@@ -40,6 +40,9 @@ public class TagResourcesResponseBody extends TeaModel {
      * <li><p>For more information, see the <strong>Error codes</strong> section in this topic.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Duplicate.TagKey</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

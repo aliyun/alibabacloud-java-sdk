@@ -15,7 +15,7 @@ public class DeleteInstancesRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The IDs of the application instances to delete.</p>
+     * <p>The instance IDs to be deleted.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

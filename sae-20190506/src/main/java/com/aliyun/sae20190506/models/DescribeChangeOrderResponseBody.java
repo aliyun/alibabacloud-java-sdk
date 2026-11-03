@@ -37,6 +37,9 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
      * <li><p>If the request fails, this parameter is returned. For more information, see the <strong>error codes</strong> section of this topic.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -320,6 +323,9 @@ public class DescribeChangeOrderResponseBody extends TeaModel {
 
         /**
          * <p>The update strategy for the application.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>{&quot;type&quot;:&quot;GrayBatchUpdate&quot;,&quot;batchUpdate&quot;:{&quot;batch&quot;:2,&quot;releaseType&quot;:&quot;auto&quot;,&quot;batchWaitTime&quot;:1},&quot;grayUpdate&quot;:{&quot;gray&quot;:1}}</p>
          */
         @NameInMap("ApplicationUpdateStrategy")
         public String applicationUpdateStrategy;

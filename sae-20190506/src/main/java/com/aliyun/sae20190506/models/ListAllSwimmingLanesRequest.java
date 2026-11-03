@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ListAllSwimmingLanesRequest extends TeaModel {
     /**
-     * <p>The swimming lane group ID.</p>
+     * <p>The traffic lane group ID.</p>
      * 
      * <strong>example:</strong>
      * <p>2074</p>

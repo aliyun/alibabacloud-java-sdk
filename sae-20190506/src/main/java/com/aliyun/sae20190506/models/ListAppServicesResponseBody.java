@@ -37,6 +37,9 @@ public class ListAppServicesResponseBody extends TeaModel {
      * <li><p>Failed requests return the <strong>ErrorCode</strong> field. For more information, see the <strong>error code</strong> list in this topic.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Micro.Service.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

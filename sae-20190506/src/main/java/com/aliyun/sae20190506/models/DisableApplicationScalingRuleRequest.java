@@ -15,7 +15,7 @@ public class DisableApplicationScalingRuleRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The name of the Auto Scaling policy.</p>
+     * <p>The elastic scaling policy name.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

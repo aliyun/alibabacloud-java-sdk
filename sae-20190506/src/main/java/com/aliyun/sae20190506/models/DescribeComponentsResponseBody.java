@@ -37,6 +37,9 @@ public class DescribeComponentsResponseBody extends TeaModel {
      * <li><p>If the request fails, the <strong>ErrorCode</strong> parameter indicates an error code. For more information, see the <strong>Error codes</strong> section in this topic.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidComponentType.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

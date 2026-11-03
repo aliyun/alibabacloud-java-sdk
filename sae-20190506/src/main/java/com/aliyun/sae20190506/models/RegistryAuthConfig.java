@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class RegistryAuthConfig extends TeaModel {
     /**
+     * <p>password</p>
+     * 
      * <strong>example:</strong>
      * <p>abc***</p>
      */
@@ -12,6 +14,8 @@ public class RegistryAuthConfig extends TeaModel {
     public String password;
 
     /**
+     * <p>role to get c</p>
+     * 
      * <strong>example:</strong>
      * <p>acs:ram::142xxxx:role/xxxxxx</p>
      */
@@ -19,6 +23,8 @@ public class RegistryAuthConfig extends TeaModel {
     public String role;
 
     /**
+     * <p>userName</p>
+     * 
      * <strong>example:</strong>
      * <p>admin</p>
      */

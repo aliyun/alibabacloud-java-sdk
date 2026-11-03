@@ -40,6 +40,9 @@ public class ListApplicationsResponseBody extends TeaModel {
      * <li>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</li>
      * <li>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>Illegal.argument</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -367,6 +370,9 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -868,6 +874,9 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         /**
          * <p>The resource type.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>default</p>
          */
         @NameInMap("ResourceType")
         public String resourceType;
@@ -889,6 +898,9 @@ public class ListApplicationsResponseBody extends TeaModel {
 
         /**
          * <p>VPC ID。</p>
+         * 
+         * <strong>example:</strong>
+         * <p>vpc-2ze0i263cnn311nvj****</p>
          */
         @NameInMap("VpcId")
         public String vpcId;

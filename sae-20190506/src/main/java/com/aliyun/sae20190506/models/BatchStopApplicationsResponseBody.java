@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class BatchStopApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The call was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: The call failed.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,25 +20,30 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The ID of the change order.</p>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public BatchStopApplicationsResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed. Take note of the following rules:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>The ErrorCode parameter is not returned if the request succeeds.</p>
-     * </li>
-     * <li><p>If the call fails, the ErrorCode parameter is returned. For more information, see the &quot;Error codes&quot; section of this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>System.Upgrading</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The ID of the trace. It can be used to query the details of a request.</p>
+     * <p>The additional information. Valid values:</p>
+     * <ul>
+     * <li>If the request is successful, <strong>success</strong> is returned.</li>
+     * <li>If the request is abnormal, the specific error code is returned.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -51,13 +52,7 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The returned message.</p>
-     * <ul>
-     * <li><p><strong>success</strong> is returned when the request succeeds.</p>
-     * </li>
-     * <li><p>An error code is returned when the request fails.</p>
-     * </li>
-     * </ul>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>7BD8F4C7-D84C-4D46-9885-8212997E****</p>
@@ -66,12 +61,10 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the application is created. Valid values</p>
+     * <p>Indicates whether the applications were stopped successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The applications were stopped successfully.</li>
+     * <li><strong>false</strong>: The applications failed to be stopped.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The trace ID used to query call information accurately.</p>
      * 
      * <strong>example:</strong>
      * <p>0bc3b6e215637275918588187d****</p>
@@ -152,13 +145,7 @@ public class BatchStopApplicationsResponseBody extends TeaModel {
 
     public static class BatchStopApplicationsResponseBodyData extends TeaModel {
         /**
-         * <p>The error code.</p>
-         * <ul>
-         * <li><p>If the request is successful, this parameter is not returned.\<em>\</em>\<em>\</em></p>
-         * </li>
-         * <li><p>This parameter is returned only if the request failed.\<em>\</em>\<em>\</em> For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</p>
-         * </li>
-         * </ul>
+         * <p>The change order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>4a815998-b468-4bea-b7d8-59f52a44****</p>

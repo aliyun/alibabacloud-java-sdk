@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: The request was invalid.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirect.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,30 +20,29 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The response data.</p>
+     * <p>The response result.</p>
      */
     @NameInMap("Data")
     public DescribeNamespaceResourcesResponseBodyData data;
 
     /**
-     * <p>The error code. This parameter is returned only if the request fails. For more information, see the <strong>Error codes</strong> section of this topic.</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>A successful request does not return the <strong>ErrorCode</strong> field.</p>
-     * </li>
-     * <li><p>A failed request returns the <strong>ErrorCode</strong> field. For more information, see the list of <strong>error codes</strong> in this topic.</p>
-     * </li>
+     * <li>Successful request: The <strong>ErrorCode</strong> field is not returned.</li>
+     * <li>Failed request: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.Obviously</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned message. Valid values:</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>If the request is successful, <strong>success</strong> is returned.</p>
-     * </li>
-     * <li><p>If the request fails, an error code is returned.</p>
-     * </li>
+     * <li><strong>success</strong>: The request is normal.</li>
+     * <li>Specific error code: The request is abnormal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -66,12 +61,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the namespace resources were queried successfully.</p>
+     * <p>Indicates whether the namespace resource information was queried successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The query was successful.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The query failed.</p>
-     * </li>
+     * <li><strong>true</strong>: The query was successful.</li>
+     * <li><strong>false</strong>: The query failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID. You can use this ID to query the details of the call.</p>
+     * <p>The trace ID, which is used to accurately query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -153,6 +146,9 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
     public static class DescribeNamespaceResourcesResponseBodyData extends TeaModel {
         /**
          * <p>The version of the APM Java agent.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>2.5.0</p>
          */
         @NameInMap("ApmJavaAgentVersion")
         public String apmJavaAgentVersion;
@@ -167,7 +163,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public Long appCount;
 
         /**
-         * <p>The region of the namespace.</p>
+         * <p>The region to which the namespace belongs.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai</p>
@@ -176,7 +172,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String belongRegion;
 
         /**
-         * <p>The description of the namespace.</p>
+         * <p>The namespace description.</p>
          * 
          * <strong>example:</strong>
          * <p>decs</p>
@@ -185,7 +181,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The ID of the jump server application.</p>
+         * <p>The jump server application ID.</p>
          * 
          * <strong>example:</strong>
          * <p>5ec46468-6b26-4a3c-9f7c-bf88761a****</p>
@@ -203,7 +199,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String jumpServerIp;
 
         /**
-         * <p>The release order ID.</p>
+         * <p>The change order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>afedb3c4-63f8-4a3d-aaa3-2c30363f****</p>
@@ -212,12 +208,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String lastChangeOrderId;
 
         /**
-         * <p>Indicates whether a release order is running in the namespace. Valid values:</p>
+         * <p>Indicates whether a change order is running in the namespace. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: A release order is running.</p>
-         * </li>
-         * <li><p><strong>false</strong>: No release order is running.</p>
-         * </li>
+         * <li><strong>true</strong>: A change order is running.</li>
+         * <li><strong>false</strong>: No change order is running.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -227,28 +221,18 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public Boolean lastChangeOrderRunning;
 
         /**
-         * <p>The status of the last release order. Valid values:</p>
+         * <p>The status of the latest change order. Valid values:</p>
          * <ul>
-         * <li><p><strong>READY</strong>: The release order is ready.</p>
-         * </li>
-         * <li><p><strong>RUNNING</strong>: The release order is running.</p>
-         * </li>
-         * <li><p><strong>SUCCESS</strong>: The release order was successful.</p>
-         * </li>
-         * <li><p><strong>FAIL</strong>: The release order failed.</p>
-         * </li>
-         * <li><p><strong>ABORT</strong>: The release order was aborted.</p>
-         * </li>
-         * <li><p><strong>WAIT_BATCH_CONFIRM</strong>: The release order is waiting for manual batch confirmation.</p>
-         * </li>
-         * <li><p><strong>AUTO_BATCH_WAIT</strong>: The release order is in an automatic batch-wait state.</p>
-         * </li>
-         * <li><p><strong>SYSTEM_FAIL</strong>: A system error occurred.</p>
-         * </li>
-         * <li><p><strong>WAIT_APPROVAL</strong>: The release order is pending approval.</p>
-         * </li>
-         * <li><p><strong>APPROVED</strong>: The release order is approved and pending execution.</p>
-         * </li>
+         * <li><strong>READY</strong>: The latest change order is ready.</li>
+         * <li><strong>RUNNING</strong>: The latest change order is running.</li>
+         * <li><strong>SUCCESS</strong>: The latest change order is successful.</li>
+         * <li><strong>FAIL</strong>: The latest change order failed.</li>
+         * <li><strong>ABORT</strong>: The latest change order is aborted.</li>
+         * <li><strong>WAIT_BATCH_CONFIRM</strong>: The latest change order is waiting for manual batch confirmation.</li>
+         * <li><strong>AUTO_BATCH_WAIT</strong>: The latest change order is in the automatic batch waiting state.</li>
+         * <li><strong>SYSTEM_FAIL</strong>: A system fault occurred.</li>
+         * <li><strong>WAIT_APPROVAL</strong>: The latest change order is waiting for approval.</li>
+         * <li><strong>APPROVED</strong>: The latest change order is approved and waiting to be executed.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -258,7 +242,7 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String lastChangeOrderStatus;
 
         /**
-         * <p>The short-format namespace ID.</p>
+         * <p>The short namespace ID.</p>
          * 
          * <strong>example:</strong>
          * <p>test</p>
@@ -285,12 +269,10 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String namespaceName;
 
         /**
-         * <p>Indicates whether the notification for the release order has expired. Valid values:</p>
+         * <p>Indicates whether the change order notification has expired. Valid values:</p>
          * <ul>
-         * <li><p><strong>true</strong>: The notification has expired.</p>
-         * </li>
-         * <li><p><strong>false</strong>: The notification has not expired.</p>
-         * </li>
+         * <li><strong>true</strong>: The change order notification has expired.</li>
+         * <li><strong>false</strong>: The change order notification has not expired.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -309,27 +291,23 @@ public class DescribeNamespaceResourcesResponseBody extends TeaModel {
         public String securityGroupId;
 
         /**
-         * <p>The configuration for collecting logs to Simple Log Service (SLS).</p>
+         * <p>The configurations for collecting logs to Simple Log Service (SLS).</p>
          * <ul>
-         * <li><p>To use SLS resources that are automatically created by SAE: <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</p>
-         * </li>
-         * <li><p>To use custom SLS resources: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</p>
-         * </li>
+         * <li>To use SLS resources through automatic creation by SAE: <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
+         * <li>To use custom SLS resources: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
          * </ul>
-         * <p>The configuration includes the following parameters:</p>
+         * <p>Metric description:</p>
          * <ul>
-         * <li><p><strong>projectName</strong>: The project name in SLS.</p>
-         * </li>
-         * <li><p><strong>logDir</strong>: The log path.</p>
-         * </li>
-         * <li><p><strong>logType</strong>: The log type. <strong>stdout</strong> indicates the standard output of the container. Only one stdout entry is allowed. If you omit this parameter, file logs are collected.</p>
-         * </li>
-         * <li><p><strong>logstoreName</strong>: The Logstore name in SLS.</p>
-         * </li>
-         * <li><p><strong>logtailName</strong>: The Logtail name in SLS. If you omit this parameter, SAE creates a Logtail.</p>
-         * </li>
+         * <li><strong>projectName</strong>: The name of the SLS project.  </li>
+         * <li><strong>logDir</strong>: The log path.</li>
+         * <li><strong>logType</strong>: The log type. <strong>stdout</strong> indicates container standard output logs. You can configure only one such log in the Settings. If you do not configure it, file logs are collected.</li>
+         * <li><strong>logstoreName</strong>: The name of the SLS Logstore.</li>
+         * <li><strong>logtailName</strong>: The name of the SLS Logtail. If this parameter is not specified, a new Logtail is created.</li>
          * </ul>
-         * <p>You do not need to set this parameter if the SLS log collection configuration is unchanged for subsequent deployments. To disable log collection, set this parameter to an empty string (&quot;&quot;).</p>
+         * <p>If the SLS collection configurations remain unchanged during multiple deployments, you do not need to modify the Settings for this parameter (that is, the <strong>SlsConfigs</strong> field is not required in the request). If you no longer need to use the SLS collection feature, you must change the Settings of this field to an empty character string in the request (that is, the value of the <strong>SlsConfigs</strong> field is &quot;&quot;).</p>
+         * 
+         * <strong>example:</strong>
+         * <p>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</p>
          */
         @NameInMap("SlsConfigs")
         public String slsConfigs;

@@ -15,7 +15,7 @@ public class DescribeApplicationGroupsRequest extends TeaModel {
     public String appId;
 
     /**
-     * <p>The page number to return.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -24,7 +24,7 @@ public class DescribeApplicationGroupsRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The page size.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

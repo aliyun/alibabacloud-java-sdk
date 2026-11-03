@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
     /**
-     * <p>The API status code or POP error code. Valid values: 2xx (success), 3xx (redirect), 4xx (client error), 5xx (server error).</p>
+     * <p>The API status code or POP error code. Valid values: 2xx: success. 3xx: redirection. 4xx: request error. 5xx: server error.</p>
      * 
      * <strong>example:</strong>
      * <p>200</p>
@@ -16,17 +16,18 @@ public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
     /**
      * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>If the request is successful, the response does not include the <code>ErrorCode</code> parameter.</p>
-     * </li>
-     * <li><p>If the request fails, the response includes the <code>ErrorCode</code> parameter. For more information, see the <strong>Error codes</strong> section of this topic.</p>
-     * </li>
+     * <li>Successful request: The <strong>ErrorCode</strong> field is not returned.</li>
+     * <li>Failed request: The <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidNamespaceId.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>Additional information.</p>
+     * <p>The additional information.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -35,7 +36,11 @@ public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Indicates whether the namespace\&quot;s SLS configuration was successfully updated. A value of <code>true</code> indicates success, while <code>false</code> indicates failure.</p>
+     * <p>Indicates whether the SLS configuration for the namespace was updated successfully. Valid values:</p>
+     * <ul>
+     * <li>true: The configuration was updated successfully.</li>
+     * <li>false: The configuration failed to be updated.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -44,7 +49,7 @@ public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID for the request. You can use this ID to query the details of the request.</p>
+     * <p>The trace ID used to precisely query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -53,7 +58,7 @@ public class UpdateNamespaceSlsConfigsResponseBody extends TeaModel {
     public String traceId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>Id of the request</p>
      * 
      * <strong>example:</strong>
      * <p>AD0286B2-F4A4-5D43-9329-97DEF1019F06</p>

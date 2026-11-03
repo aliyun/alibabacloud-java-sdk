@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeleteHistoryJobResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The call was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: The call failed.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Request error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,7 +20,7 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The result returned.</p>
+     * <p>The returned result.</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;msg&quot;: &quot;&quot;,&quot;code&quot;: 200,&quot;success&quot;: true}</p>
@@ -35,22 +31,21 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
     /**
      * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>If the call is successful, the <strong>ErrorCode</strong> parameter is not returned.</p>
-     * </li>
-     * <li><p>If the call fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidAppId.NotFound</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned information. Valid values:</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>success: If the call is successful, <strong>success</strong> is returned.</p>
-     * </li>
-     * <li><p>An error code: If the call fails, an error code is returned.</p>
-     * </li>
+     * <li>If the request is successful, <strong>success</strong> is returned.</li>
+     * <li>If the request fails, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -60,7 +55,7 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -69,12 +64,11 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the job was deleted. Valid values:</p>
+     * <p>Indicates whether the job is deleted successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The job was deleted.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The job failed to be deleted.</p>
-     * </li>
+     * <li><strong>true</strong>: The job is deleted.</li>
+     * <li><strong>false</strong>: The deletion failed.
+     * [_single.error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -84,7 +78,7 @@ public class DeleteHistoryJobResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID that is used to query the details of the request.</p>
+     * <p>The trace ID used to query invocation details.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>

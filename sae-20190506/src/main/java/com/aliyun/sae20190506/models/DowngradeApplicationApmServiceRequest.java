@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DowngradeApplicationApmServiceRequest extends TeaModel {
     /**
-     * <p>The ID of the interactive messaging application.</p>
+     * <p>The application ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

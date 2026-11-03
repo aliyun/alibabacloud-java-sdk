@@ -37,6 +37,9 @@ public class ListAllSwimmingLaneGroupsResponseBody extends TeaModel {
      * <li><p>For a list of error codes, see the &quot;<strong>Error codes</strong>&quot; section in this topic.</p>
      * </li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;

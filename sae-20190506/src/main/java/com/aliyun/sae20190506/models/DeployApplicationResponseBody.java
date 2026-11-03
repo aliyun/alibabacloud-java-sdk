@@ -5,12 +5,12 @@ import com.aliyun.tea.*;
 
 public class DeployApplicationResponseBody extends TeaModel {
     /**
-     * <p>The API status or POP error code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><strong>2xx</strong>: success.</li>
-     * <li><strong>3xx</strong>: redirection.</li>
-     * <li><strong>4xx</strong>: request error.</li>
-     * <li><strong>5xx</strong>: server error.</li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Client error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,12 +28,12 @@ public class DeployApplicationResponseBody extends TeaModel {
     /**
      * <p>The error code. Valid values:</p>
      * <ul>
-     * <li>If the request is successful, the <strong>ErrorCode</strong> field is not returned.</li>
-     * <li>If the request fails, the <strong>ErrorCode</strong> field is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
      * 
      * <strong>example:</strong>
-     * <p>空</p>
+     * <p>Application.MissingJdk</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
@@ -41,8 +41,8 @@ public class DeployApplicationResponseBody extends TeaModel {
     /**
      * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li>If the request is successful, <strong>success</strong> is returned.</li>
-     * <li>If the request fails, a specific error code is returned.</li>
+     * <li>If the request is normal, <strong>success</strong> is returned.</li>
+     * <li>If the request is abnormal, a specific error code is returned.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -63,8 +63,8 @@ public class DeployApplicationResponseBody extends TeaModel {
     /**
      * <p>Indicates whether the application deployment is successful. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: the deployment is successful.</li>
-     * <li><strong>false</strong>: the deployment failed.</li>
+     * <li><strong>true</strong>: The deployment is successful.</li>
+     * <li><strong>false</strong>: The deployment fails.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -74,7 +74,7 @@ public class DeployApplicationResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The trace ID, which is used to query the details of a request.</p>
+     * <p>The trace ID, which is used to accurately query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622246421415014e****</p>
@@ -163,10 +163,10 @@ public class DeployApplicationResponseBody extends TeaModel {
         public String changeOrderId;
 
         /**
-         * <p>Indicates whether the change published by a Resource Access Management (RAM) user requires approval. Valid values:</p>
+         * <p>Specifies whether the change publish by a Resource Access Management (RAM) user requires approval. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: approval is required.</li>
-         * <li><strong>false</strong>: approval is not required.</li>
+         * <li><strong>true</strong>: Approval is required.</li>
+         * <li><strong>false</strong>: Approval is not required.</li>
          * </ul>
          * 
          * <strong>example:</strong>

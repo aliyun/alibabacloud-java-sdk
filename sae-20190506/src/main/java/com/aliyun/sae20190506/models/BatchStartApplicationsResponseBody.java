@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class BatchStartApplicationsResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code. Take note of the following rules:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The call was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The call was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: The call failed.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirect.</li>
+     * <li><strong>4xx</strong>: Client error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,31 +20,30 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error code.</p>
-     * <ul>
-     * <li><p>If the request is successful, this parameter is not returned.\<em>\</em>\<em>\</em></p>
-     * </li>
-     * <li><p>This parameter is returned only if the request failed.\<em>\</em>\<em>\</em> For more information, see <strong>Error codes</strong> in this topic.</p>
-     * </li>
-     * </ul>
+     * <p>The returned result.</p>
      */
     @NameInMap("Data")
     public BatchStartApplicationsResponseBodyData data;
 
     /**
-     * <p>The error code returned if the request failed. Take note of the following rules:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>The ErrorCode parameter is not returned if the request succeeds.</p>
-     * </li>
-     * <li><p>If the call fails, the ErrorCode parameter is returned. For more information, see the &quot;Error codes&quot; section of this topic.</p>
-     * </li>
+     * <li>If the request is successful, the <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>If the request fails, the <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>System.Upgrading</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The returned data.</p>
+     * <p>The additional information. Valid values:</p>
+     * <ul>
+     * <li>If the request is successful, <strong>success</strong> is returned.</li>
+     * <li>If an exception occurs, a specific error code is returned.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -57,7 +52,7 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The ID of the trace. It is used to query the details of a request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>91F93257-7A4A-4BD3-9A7E-2F6EAE6D****</p>
@@ -66,12 +61,10 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the application deployment is successful. Take note of the following rules:</p>
+     * <p>Indicates whether the applications were started successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong>: The applications were started successfully.</li>
+     * <li><strong>false</strong>: The applications failed to start.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -81,7 +74,7 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the change order.</p>
+     * <p>The trace ID used to query call information.</p>
      * 
      * <strong>example:</strong>
      * <p>0a98a02315955564772843261e****</p>
@@ -152,17 +145,7 @@ public class BatchStartApplicationsResponseBody extends TeaModel {
 
     public static class BatchStartApplicationsResponseBodyData extends TeaModel {
         /**
-         * <p>The HTTP status code. Valid values:</p>
-         * <ul>
-         * <li><p><strong>2xx</strong>: indicates that the request was successful.</p>
-         * </li>
-         * <li><p><strong>3xx</strong>: indicates that the request was redirected.</p>
-         * </li>
-         * <li><p><strong>4xx</strong>: indicates that the request was invalid.</p>
-         * </li>
-         * <li><p><strong>5xx</strong>: indicates that a server error occurred.</p>
-         * </li>
-         * </ul>
+         * <p>The change order ID.</p>
          * 
          * <strong>example:</strong>
          * <p>01db03d3-3ee9-48b3-b3d0-dfce2d88****</p>

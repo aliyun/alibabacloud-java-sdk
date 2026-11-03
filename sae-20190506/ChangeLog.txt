@@ -1,3 +1,7 @@
+2026-11-03 Version: 2.13.6
+- Update API DescribeApplicationConfig: add response parameters Body.Data.SidecarContainersConfig.$.SlsConfigs.
+
+
 2026-07-10 Version: 2.13.5
 - Update API CreateApplication: add request parameters RaspConfig.
 - Update API DeployApplication: add request parameters RaspConfig.

@@ -15,7 +15,7 @@ public class AbortChangeOrderRequest extends TeaModel {
     public String changeOrderId;
 
     /**
-     * <p>Specifies whether to roll back the change order.</p>
+     * <p>Specifies whether to roll back.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>

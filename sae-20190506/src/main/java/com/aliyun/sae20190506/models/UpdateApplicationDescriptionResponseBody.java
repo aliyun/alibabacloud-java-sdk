@@ -5,16 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateApplicationDescriptionResponseBody extends TeaModel {
     /**
-     * <p>The HTTP status code or the error code. Valid values:</p>
+     * <p>The API status code or POP error code. Valid values:</p>
      * <ul>
-     * <li><p><strong>2xx</strong>: The request was successful.</p>
-     * </li>
-     * <li><p><strong>3xx</strong>: The request was redirected.</p>
-     * </li>
-     * <li><p><strong>4xx</strong>: The request failed.</p>
-     * </li>
-     * <li><p><strong>5xx</strong>: A server error occurred.</p>
-     * </li>
+     * <li><strong>2xx</strong>: Success.</li>
+     * <li><strong>3xx</strong>: Redirection.</li>
+     * <li><strong>4xx</strong>: Client error.</li>
+     * <li><strong>5xx</strong>: Server error.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -24,24 +20,23 @@ public class UpdateApplicationDescriptionResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The error code returned if the call failed. Value values:</p>
+     * <p>The error code. Valid values:</p>
      * <ul>
-     * <li><p>If the request was successful, <strong>ErrorCode</strong> is not returned.</p>
-     * </li>
-     * <li><p>If the request failed, <strong>ErrorCode</strong> is returned. For more information, see <strong>Error codes</strong> in this topic.</p>
-     * </li>
+     * <li>Successful request: The <strong>ErrorCode</strong> parameter is not returned.</li>
+     * <li>Failed request: The <strong>ErrorCode</strong> parameter is returned. For more information, see the <strong>Error codes</strong> section in this topic.</li>
      * </ul>
+     * 
+     * <strong>example:</strong>
+     * <p>InvalidParameter.NotEmpty</p>
      */
     @NameInMap("ErrorCode")
     public String errorCode;
 
     /**
-     * <p>The message returned. The following limits are imposed on the ID:</p>
+     * <p>The additional information. Valid values:</p>
      * <ul>
-     * <li><p>If the request was successful, <strong>success</strong> is returned.</p>
-     * </li>
-     * <li><p>An error code is returned when a request failed.</p>
-     * </li>
+     * <li><strong>success</strong>: The request is successful.</li>
+     * <li>Specific error code: The request is abnormal.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -51,7 +46,7 @@ public class UpdateApplicationDescriptionResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>Request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>01CF26C7-00A3-4AA6-BA76-7E95F2A3***</p>
@@ -60,12 +55,10 @@ public class UpdateApplicationDescriptionResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the application was deployed. Valid values:</p>
+     * <p>Indicates whether the application is deployed successfully. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: The application was deployed.</p>
-     * </li>
-     * <li><p><strong>false</strong>: The application failed to be deployed.</p>
-     * </li>
+     * <li><strong>true</strong>: The deployment is successful.</li>
+     * <li><strong>false</strong>: The deployment failed.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -75,7 +68,7 @@ public class UpdateApplicationDescriptionResponseBody extends TeaModel {
     public Boolean success;
 
     /**
-     * <p>The ID of the trace. The ID is used to query the details of a request.</p>
+     * <p>The trace ID used to query invocation details.</p>
      * 
      * <strong>example:</strong>
      * <p>ac1a0b2215622246421415014e****</p>

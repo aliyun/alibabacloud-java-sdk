@@ -5,14 +5,12 @@ import com.aliyun.tea.*;
 
 public class UpdateNamespaceRequest extends TeaModel {
     /**
-     * <p>Indicates whether to enable SAE built-in registry:</p>
+     * <p>Specifies whether to enable the built-in registry of SAE. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong></p>
-     * </li>
-     * <li><p><strong>false</strong></p>
-     * </li>
+     * <li><strong>true</strong></li>
+     * <li><strong>false</strong></li>
      * </ul>
-     * <p>If you set this parameter to true, a shared registry is created for the namespace. The registry cannot be disabled after it is created.</p>
+     * <p>If you set this parameter to true, a shared registry and related information are created for the namespace. After the shared registry is created, it cannot be disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -21,7 +19,7 @@ public class UpdateNamespaceRequest extends TeaModel {
     public Boolean enableMicroRegistration;
 
     /**
-     * <p>The short ID of the namespace. You do not need to specify a region ID. We recommend that you configure this parameter. The value of this parameter can be up to 20 characters in length and can contain only lowercase letters and digits.</p>
+     * <p>The short namespace ID. You do not need to include the region ID. The value can contain only lowercase letters and digits and cannot exceed 20 characters in length. We recommend that you use this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -30,7 +28,7 @@ public class UpdateNamespaceRequest extends TeaModel {
     public String nameSpaceShortId;
 
     /**
-     * <p>The description of the namespace. The description cannot exceed 100 characters in length.</p>
+     * <p>The namespace description. The value cannot exceed 100 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -39,7 +37,7 @@ public class UpdateNamespaceRequest extends TeaModel {
     public String namespaceDescription;
 
     /**
-     * <p>The long ID of the namespace. If you configure this parameter, the long ID take effects and the value of the NameSpaceShortId parameter is ignored. To ensure compatibility, we recommend that you specify a short namespace ID. A long namespace ID follows the <code>&lt;RegionId&gt;:&lt;NamespaceId&gt;</code> format. The <code>NamespaceId</code> variable can contain only lowercase letters and digits. Example: <code>cn-beijing:test</code>. The value of the Namespaceid variable cannot exceed 32 characters in length. For more information about <strong>RegionId</strong>, you can call the <a href="https://help.aliyun.com/document_detail/2834842.html">DescribeRegions</a> operation to obtain the IDs of regions supported by SAE.</p>
+     * <p>The long namespace ID. If you specify this parameter, it takes effect and NameSpaceShortId is ignored. This parameter is retained for backward compatibility. We recommend that you use the short namespace ID. The format is <code>&lt;RegionId&gt;:&lt;NamespaceId&gt;</code>. <code>NamespaceId</code> can contain only lowercase letters and digits, such as <code>cn-beijing:test</code>. The value cannot exceed 32 characters in length. For more information about the <strong>RegionId</strong> values supported by SAE, see <a href="https://help.aliyun.com/document_detail/2834842.html">DescribeRegions</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>
@@ -48,7 +46,7 @@ public class UpdateNamespaceRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The name of the namespace. The name cannot exceed 64 characters in length.</p>
+     * <p>The namespace name. The value cannot exceed 64 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

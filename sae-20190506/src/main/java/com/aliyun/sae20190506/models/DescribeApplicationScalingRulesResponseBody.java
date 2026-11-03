@@ -1077,6 +1077,9 @@ public class DescribeApplicationScalingRulesResponseBody extends TeaModel {
 
         /**
          * <p>The time zone.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>Asia/Shanghai</p>
          */
         @NameInMap("TimeZone")
         public String timeZone;

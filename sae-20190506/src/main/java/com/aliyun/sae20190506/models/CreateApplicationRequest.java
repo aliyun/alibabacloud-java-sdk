@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApplicationRequest extends TeaModel {
     /**
-     * <p>The ARN of the RAM role required for cross-account image pulling. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Grant permissions across Alibaba Cloud accounts by using a RAM role</a>.</p>
+     * <p>The ARN of the RAM role required to pull images across accounts. For more information, see <a href="https://help.aliyun.com/document_detail/223585.html">Use RAM roles to authorize access across Alibaba Cloud accounts</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>acs:ram::123456789012****:role/adminrole</p>
@@ -14,7 +14,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String acrAssumeRoleArn;
 
     /**
-     * <p>The instance ID of the Container Registry Enterprise instance. This parameter is required when <strong>ImageUrl</strong> is set to a Container Registry Enterprise Edition image.</p>
+     * <p>The Container Registry ACR Enterprise instance ID. This parameter is required when <strong>ImageUrl</strong> is set to a Container Registry Enterprise instance image.</p>
      * 
      * <strong>example:</strong>
      * <p>cri-xxxxxx</p>
@@ -23,7 +23,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String acrInstanceId;
 
     /**
-     * <p>The AliyunAgent version.</p>
+     * <p>The Aliyun Agent version.</p>
      * 
      * <strong>example:</strong>
      * <p>4.4.2</p>
@@ -32,7 +32,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String agentVersion;
 
     /**
-     * <p>The application description. The description can be up to 1024 characters in length.</p>
+     * <p>The description of the application. The description can be up to 1,024 characters in length.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a test description.</p>
@@ -41,7 +41,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String appDescription;
 
     /**
-     * <p>The application name. The name can contain digits, letters, and hyphens (-). The name must start with a letter and cannot end with a hyphen (-). The name can be up to 36 characters in length.</p>
+     * <p>The name of the application. The name can contain digits, letters, and hyphens (-). It must start with a letter and cannot end with a hyphen (-). The name can be up to 36 characters in length.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -51,7 +51,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String appName;
 
     /**
-     * <p>Set this parameter to micro_service to create a microservice application.</p>
+     * <p>The source of the application. A value of micro_service indicates a microservice application.</p>
      * 
      * <strong>example:</strong>
      * <p>micro_service</p>
@@ -60,10 +60,10 @@ public class CreateApplicationRequest extends TeaModel {
     public String appSource;
 
     /**
-     * <p>Specifies whether to associate an EIP. Valid values:</p>
+     * <p>Specifies whether to associate an elastic IP address (EIP). Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: associate an EIP.</li>
-     * <li><strong>false</strong>: do not associate an EIP.</li>
+     * <li><strong>true</strong>: associates an EIP.</li>
+     * <li><strong>false</strong>: does not associate an EIP.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +79,7 @@ public class CreateApplicationRequest extends TeaModel {
      * <li><strong>false</strong>: SAE manually configures the network environment when the application is created.</li>
      * </ul>
      * <blockquote>
-     * <p>If this parameter is set to <strong>true</strong>, any other <strong>NamespaceId</strong> value that is passed is ignored.</p>
+     * <p>If you set this parameter to <strong>true</strong>, other <strong>NamespaceId</strong> values passed are ignored.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -89,7 +89,7 @@ public class CreateApplicationRequest extends TeaModel {
     public Boolean autoConfig;
 
     /**
-     * <p>The base application ID.</p>
+     * <p>The ID of the base application.</p>
      * 
      * <strong>example:</strong>
      * <p>ee99cce6-1c8e-4bfa-96c3-3e2fa9de8a41</p>
@@ -98,16 +98,16 @@ public class CreateApplicationRequest extends TeaModel {
     public String baseAppId;
 
     /**
-     * <p>The command that is used to start the image. The command must be an executable object in the container. Example:</p>
+     * <p>The startup command of the image. The command must be an executable object that exists in the container. Example:</p>
      * <pre><code>command:
      *       - echo
      *       - abc
      *       - &gt;
      *       - file0
      * </code></pre>
-     * <p>In the preceding example, <code>Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>.</p>
+     * <p>Based on the preceding example, Command=&quot;echo&quot;, CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;].</p>
      * <blockquote>
-     * <p>Notice: This parameter is required when PackageType is set to DotnetZip.</p>
+     * <p>Notice: This parameter is required when PackageType is set to DotnetZip.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -117,12 +117,10 @@ public class CreateApplicationRequest extends TeaModel {
     public String command;
 
     /**
-     * <p>The arguments of the image startup command. These are the arguments required by the startup command specified in <strong>Command</strong>. Format:</p>
+     * <p>The arguments for the image startup command, which are required by the startup command <strong>Command</strong>. The format is as follows:</p>
      * <p><code>[&quot;a&quot;,&quot;b&quot;]</code></p>
-     * <p>In the preceding example, <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>, where <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be converted to the String type. The internal format is a JSON array. If this parameter is not required, leave it empty.</p>
-     * <blockquote>
-     * <p>Notice: This parameter is required when PackageType is set to DotnetZip.</p>
-     * </blockquote>
+     * <p>In the preceding example, <code>CommandArgs=[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code>, where <code>[&quot;abc&quot;, &quot;&gt;&quot;, &quot;file0&quot;]</code> must be converted to a string in JSON array format. If no arguments are required, leave this parameter empty.
+     * <notice>This parameter is required when PackageType is set to DotnetZip.</notice></p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;a&quot;,&quot;b&quot;]</p>
@@ -131,13 +129,13 @@ public class CreateApplicationRequest extends TeaModel {
     public String commandArgs;
 
     /**
-     * <p>The <strong>ConfigMap</strong> mount description. Use a ConfigMap created on the namespace configuration items page to inject configuration information into the container. Parameter description:</p>
+     * <p>The mount description of the <strong>ConfigMap</strong>. Uses the configuration item created on the configuration item page of the namespace to inject configuration information into the container. Parameter description:</p>
      * <ul>
-     * <li><strong>configMapId</strong>: the ConfigMap instance ID. You can obtain the ID by invoking the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation.</li>
-     * <li><strong>key</strong>: the key.</li>
+     * <li><strong>configMapId</strong>: instance ID of the ConfigMap instance. You can invoke the <a href="https://help.aliyun.com/document_detail/176917.html">ListNamespacedConfigMaps</a> operation to obtain the instance ID.</li>
+     * <li><strong>key</strong>: the key value.</li>
      * </ul>
      * <blockquote>
-     * <p>You can mount all keys by passing the <code>sae-sys-configmap-all</code> parameter.</p>
+     * <p>You can mount all keys by passing the sae-sys-configmap-all parameter.</p>
      * </blockquote>
      * <ul>
      * <li><strong>mountPath</strong>: the mount path.</li>
@@ -150,7 +148,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String configMapMountDesc;
 
     /**
-     * <p>The CPU specifications required for each instance, in millicores. This parameter cannot be set to 0. Only the following defined specifications are supported:</p>
+     * <p>The number of CPU cores required for each instance. Unit: millicore. The value cannot be 0. Only the following defined specifications are supported:</p>
      * <ul>
      * <li><strong>500</strong></li>
      * <li><strong>1000</strong></li>
@@ -181,10 +179,10 @@ public class CreateApplicationRequest extends TeaModel {
     public String customHostAlias;
 
     /**
-     * <p>The custom image type. Set this parameter to an empty string if the image is not a custom image:</p>
+     * <p>The custom image type. If the image is not a custom image, set this parameter to an empty string:</p>
      * <ul>
-     * <li>internet: public image</li>
-     * <li>intranet: private image</li>
+     * <li>internet: public network image.</li>
+     * <li>intranet: private network image.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -194,10 +192,10 @@ public class CreateApplicationRequest extends TeaModel {
     public String customImageNetworkType;
 
     /**
-     * <p>Specifies whether to immediately deploy the application. Valid values:</p>
+     * <p>Specifies whether to deploy the application immediately. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: default value. The application is deployed immediately.</li>
-     * <li><strong>false</strong>: the application is deployed later.</li>
+     * <li><strong>true</strong>: deploys the application immediately. This is the default value.</li>
+     * <li><strong>false</strong>: deploys the application later.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -216,7 +214,7 @@ public class CreateApplicationRequest extends TeaModel {
     public Integer diskSize;
 
     /**
-     * <p>The version of the .NET framework:</p>
+     * <p>The version number of the .NET framework:</p>
      * <ul>
      * <li>.NET 3.1</li>
      * <li>.NET 5.0</li>
@@ -232,7 +230,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String dotnet;
 
     /**
-     * <p>The version of the application runtime environment in the HSF framework, such as the Ali-Tomcat container.</p>
+     * <p>The version of the application runtime environment in the High-Speed Service Framework (HSF), such as the Ali-Tomcat container.</p>
      * 
      * <strong>example:</strong>
      * <p>3.5.3</p>
@@ -252,8 +250,8 @@ public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable the CPU Burst feature:</p>
      * <ul>
-     * <li>true: Enabled.</li>
-     * <li>false: Disabled.</li>
+     * <li>true: enables the feature.</li>
+     * <li>false: disables the feature.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -265,8 +263,8 @@ public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable application monitoring for non-Java applications based on eBPF technology. Valid values:</p>
      * <ul>
-     * <li><strong>true</strong>: enabled.</li>
-     * <li><strong>false</strong>: disabled. This is the default value.</li>
+     * <li><strong>true</strong>: enables the feature.</li>
+     * <li><strong>false</strong>: disables the feature. This is the default value.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -285,7 +283,7 @@ public class CreateApplicationRequest extends TeaModel {
     public Boolean enableNamespaceAgentVersion;
 
     /**
-     * <p>Specifies whether to reuse the namespace SLS log configuration.</p>
+     * <p>Specifies whether to reuse the namespace Simple Log Service (SLS) log configuration.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -294,10 +292,10 @@ public class CreateApplicationRequest extends TeaModel {
     public Boolean enableNamespaceSlsConfig;
 
     /**
-     * <p>Specifies whether to enable the new ARMS feature:</p>
+     * <p>Specifies whether to enable the new Application Real-Time Monitoring Service (ARMS) features:</p>
      * <ul>
-     * <li>true: Enabled.</li>
-     * <li>false: Disabled.</li>
+     * <li>true: enables the features.</li>
+     * <li>false: disables the features.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -318,8 +316,8 @@ public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>Specifies whether to enable sidecar resource isolation:</p>
      * <ul>
-     * <li>true: Isolated.</li>
-     * <li>false: Not isolated.</li>
+     * <li>true: enables isolation.</li>
+     * <li>false: disables isolation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -329,18 +327,18 @@ public class CreateApplicationRequest extends TeaModel {
     public Boolean enableSidecarResourceIsolated;
 
     /**
-     * <p>The container environment variable parameters. You can customize environment variables or reference a ConfigMap. To reference a ConfigMap, create a ConfigMap instance first. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
+     * <p>The environment variables of the container. You can customize environment variables or reference ConfigMaps. To reference a ConfigMap, you must create a ConfigMap instance first. For more information, see <a href="https://help.aliyun.com/document_detail/176914.html">CreateConfigMap</a>. Valid values:</p>
      * <ul>
      * <li>Custom configuration<ul>
      * <li><strong>name</strong>: the name of the environment variable.</li>
-     * <li><strong>value</strong>: the value of the environment variable. This takes priority over valueFrom.</li>
+     * <li><strong>value</strong>: the value of the environment variable. The priority of this parameter is higher than that of valueFrom.</li>
      * </ul>
      * </li>
      * <li>Reference a ConfigMap (valueFrom)<ul>
-     * <li><strong>name</strong>: the name of the environment variable. You can reference a single key or all keys. To reference all keys, enter <code>sae-sys-configmap-all-&lt;ConfigMap name&gt;</code>, such as <code>sae-sys-configmap-all-test1</code>.</li>
-     * <li><strong>valueFrom</strong>: the environment variable reference. Set the value to <code>configMapRef</code>.<ul>
-     * <li><strong>configMapId</strong>: the ConfigMap ID.</li>
-     * <li><strong>key</strong>: the key. If you reference all keys, do not set this field.</li>
+     * <li><strong>name</strong>: the name of the environment variable. You can reference a single key or all keys. To reference all keys, enter sae-sys-configmap-all-<ConfigMap name>, for example, sae-sys-configmap-all-test1.</li>
+     * <li><strong>valueFrom</strong>: the reference of the environment variable. Set the value to configMapRef.<ul>
+     * <li><strong>configMapId</strong>: the ID of the ConfigMap.</li>
+     * <li><strong>key</strong>: the key. If you reference all key-value pairs, do not set this field.</li>
      * </ul>
      * </li>
      * </ul>
@@ -376,14 +374,20 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Envs")
     public String envs;
 
+    /**
+     * <p>The GPU configuration.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\n\&quot;gpuType\&quot;:\&quot;PPU810E\&quot;,\n\&quot;gpuCount\&quot;:\&quot;1\&quot;\n}</p>
+     */
     @NameInMap("GpuConfig")
     public String gpuConfig;
 
     /**
-     * <p>The K8s Headless Service-based service registration and discovery.</p>
+     * <p>The Kubernetes headless service registration and discovery configuration.</p>
      * <ul>
-     * <li>serviceName: the service name.</li>
-     * <li>namespaceId: the namespace ID.</li>
+     * <li>serviceName: The service name.</li>
+     * <li>namespaceId: The namespace ID.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -393,7 +397,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String headlessPvtzDiscoverySvc;
 
     /**
-     * <p>The Nginx version.</p>
+     * <p>The NGINX version. Valid values:</p>
      * <ul>
      * <li>nginx 1.20</li>
      * <li>nginx 1.22</li>
@@ -409,7 +413,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String html;
 
     /**
-     * <p>The corresponding secret ID.</p>
+     * <p>The ID of the corresponding Secret.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -418,7 +422,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String imagePullSecrets;
 
     /**
-     * <p>The image address. This parameter is required when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
+     * <p>The URL of the image. This parameter is required when <strong>PackageType</strong> is set to <strong>Image</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>registry.cn-hangzhou.aliyuncs.com/sae_test/ali_sae_test:0.0.1</p>
@@ -434,12 +438,15 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>Specifies whether the application is stateful.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>true</p>
      */
     @NameInMap("IsStateful")
     public Boolean isStateful;
 
     /**
-     * <p>The arguments for starting the JAR package application. The default startup command for the application: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
+     * <p>The startup arguments for the JAR package. Default startup command: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
      * 
      * <strong>example:</strong>
      * <p>custom-args</p>
@@ -448,7 +455,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String jarStartArgs;
 
     /**
-     * <p>The options for starting the JAR package application. The default startup command for the application: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
+     * <p>The startup options for the JAR package. Default startup command: <code>$JAVA_HOME/bin/java $JarStartOptions -jar $CATALINA_OPTS &quot;$package_path&quot; $JarStartArgs</code></p>
      * 
      * <strong>example:</strong>
      * <p>-Xms4G -Xmx4G</p>
@@ -466,7 +473,7 @@ public class CreateApplicationRequest extends TeaModel {
      * <li><strong>openjdk-8u191-jdk-alpine3.9</strong></li>
      * <li><strong>openjdk-7u201-jdk-alpine3.9</strong></li>
      * </ul>
-     * <p>This parameter is not supported when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
+     * <p>This parameter is not supported when <strong>PackageType</strong> is set to <strong>Image</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>Open JDK 8</p>
@@ -475,11 +482,11 @@ public class CreateApplicationRequest extends TeaModel {
     public String jdk;
 
     /**
-     * <p>The summary of configurations for log collection to Kafka. Valid values:</p>
+     * <p>The summary configuration for collecting logs to Kafka. Valid values:</p>
      * <ul>
      * <li><strong>kafkaEndpoint</strong>: the service registration address of the Kafka API.</li>
      * <li><strong>kafkaInstanceId</strong>: the Kafka instance ID.</li>
-     * <li><strong>kafkaConfigs</strong>: the summary of configurations for one or more log entries. For more information about the valid values, see the <strong>kafkaConfigs</strong> request parameter in this topic.</li>
+     * <li><strong>kafkaConfigs</strong>: the summary configuration for one or more logs. For value description, see the <strong>kafkaConfigs</strong> request parameter in this topic.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -488,30 +495,33 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("KafkaConfigs")
     public String kafkaConfigs;
 
+    /**
+     * <p>The application labels. Both keys and values are strings.</p>
+     */
     @NameInMap("Labels")
     public java.util.Map<String, String> labels;
 
     /**
-     * <p>The container health check. Containers that fail the health check are shutdown and recovered. The following methods are supported:</p>
+     * <p>The liveness probe of the container. A container that failed the health check undergoes shutdown and recovers. The following methods are supported:</p>
      * <ul>
-     * <li><strong>exec</strong>: for example, <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat/home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</code></li>
-     * <li><strong>httpGet</strong>: for example, <code>{&quot;httpGet&quot;:{&quot;path&quot;:&quot;/&quot;,&quot;port&quot;:18091,&quot;scheme&quot;:&quot;HTTP&quot;,&quot;isContainKeyWord&quot;:true,&quot;keyWord&quot;:&quot;SAE&quot;},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</code></li>
-     * <li><strong>tcpSocket</strong>: for example, <code>{&quot;tcpSocket&quot;:{&quot;port&quot;:18091},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</code></li>
+     * <li><strong>exec</strong>: for example, {&quot;exec&quot;:{&quot;command&quot;:[&quot;sh&quot;,&quot;-c&quot;,&quot;cat/home/admin/start.sh&quot;]},&quot;initialDelaySeconds&quot;:30,&quot;periodSeconds&quot;:30,&quot;timeoutSeconds&quot;:2}</li>
+     * <li><strong>httpGet</strong>: for example, {&quot;httpGet&quot;:{&quot;path&quot;:&quot;/&quot;,&quot;port&quot;:18091,&quot;scheme&quot;:&quot;HTTP&quot;,&quot;isContainKeyWord&quot;:true,&quot;keyWord&quot;:&quot;SAE&quot;},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</li>
+     * <li><strong>tcpSocket</strong>: for example, {&quot;tcpSocket&quot;:{&quot;port&quot;:18091},&quot;initialDelaySeconds&quot;:11,&quot;periodSeconds&quot;:10,&quot;timeoutSeconds&quot;:1}</li>
      * </ul>
      * <blockquote>
-     * <p>You can use only one method for health checks.</p>
+     * <p>You can select only one method for the health check.</p>
      * </blockquote>
      * <p>Parameter description:</p>
      * <ul>
-     * <li><strong>exec.command</strong>: the health check command.</li>
+     * <li><strong>exec.command</strong>: Settings for the health check command.</li>
      * <li><strong>httpGet.path</strong>: the access path.</li>
      * <li><strong>httpGet.scheme</strong>: <strong>HTTP</strong> or <strong>HTTPS</strong>.</li>
-     * <li><strong>httpGet.isContainKeyWord</strong>: <strong>true</strong> indicates that the keyword is included. <strong>false</strong> indicates that the keyword is not included. If this field is missing, the advanced feature is not used.</li>
-     * <li><strong>httpGet.keyWord</strong>: the custom keyword. The <strong>isContainKeyWord</strong> field must be present when this field is used.</li>
+     * <li><strong>httpGet.isContainKeyWord</strong>: <strong>true</strong> indicates that the keyword is included, and <strong>false</strong> indicates that the keyword is not included. If this field is missing, the advanced feature is not used.</li>
+     * <li><strong>httpGet.keyWord</strong>: the custom keyword. The <strong>isContainKeyWord</strong> field is required when this field is used.</li>
      * <li><strong>tcpSocket.port</strong>: the port for TCP connection detection.</li>
-     * <li><strong>initialDelaySeconds</strong>: the health check delay detection time. Default value: 10. Unit: seconds.</li>
-     * <li><strong>periodSeconds</strong>: the health check period. Default value: 30. Unit: seconds.</li>
-     * <li><strong>timeoutSeconds</strong>: the health check timeout period. Default value: 1. Unit: seconds. If this parameter is set to 0 or is not set, the default timeout period is 1 second.</li>
+     * <li><strong>initialDelaySeconds</strong>: Settings for the delay before the health check starts. Default value: 10. Unit: seconds.</li>
+     * <li><strong>periodSeconds</strong>: Settings for the health check epoch. Default value: 30. Unit: seconds.</li>
+     * <li><strong>timeoutSeconds</strong>: Settings for the timeout period of the health check. Default value: 1. Unit: seconds. If this parameter is set to 0 or not set, the default timeout period is 1 second.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -520,22 +530,28 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("Liveness")
     public String liveness;
 
+    /**
+     * <p>LokiConfigs</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
+     */
     @NameInMap("LokiConfigs")
     public String lokiConfigs;
 
     /**
-     * <p>The memory required for each instance, in MB. This parameter cannot be set to 0. The memory has a one-to-one mapping with CPU. Only the following defined specifications are supported:</p>
+     * <p>The memory size required for each instance. Unit: MB. The value cannot be 0. The memory size has a one-to-one correspondence with the number of CPU cores. Only the following defined specifications are supported:</p>
      * <ul>
-     * <li><strong>1024</strong>: corresponds to 500 and 1000 millicores of CPU.</li>
-     * <li><strong>2048</strong>: corresponds to 500, 1000, and 2000 millicores of CPU.</li>
-     * <li><strong>4096</strong>: corresponds to 1000, 2000, and 4000 millicores of CPU.</li>
-     * <li><strong>8192</strong>: corresponds to 2000, 4000, and 8000 millicores of CPU.</li>
-     * <li><strong>12288</strong>: corresponds to 12000 millicores of CPU.</li>
-     * <li><strong>16384</strong>: corresponds to 4000, 8000, and 16000 millicores of CPU.</li>
-     * <li><strong>24576</strong>: corresponds to 12000 millicores of CPU.</li>
-     * <li><strong>32768</strong>: corresponds to 16000 millicores of CPU.</li>
-     * <li><strong>65536</strong>: corresponds to 8000, 16000, and 32000 millicores of CPU.</li>
-     * <li><strong>131072</strong>: corresponds to 32000 millicores of CPU.</li>
+     * <li><strong>1024</strong>: corresponds to 500 and 1,000 millicores.</li>
+     * <li><strong>2048</strong>: corresponds to 500, 1,000, and 2,000 millicores.</li>
+     * <li><strong>4096</strong>: corresponds to 1,000, 2,000, and 4,000 millicores.</li>
+     * <li><strong>8192</strong>: corresponds to 2,000, 4,000, and 8,000 millicores.</li>
+     * <li><strong>12288</strong>: corresponds to 12,000 millicores.</li>
+     * <li><strong>16384</strong>: corresponds to 4,000, 8,000, and 16,000 millicores.</li>
+     * <li><strong>24576</strong>: corresponds to 12,000 millicores.</li>
+     * <li><strong>32768</strong>: corresponds to 16,000 millicores.</li>
+     * <li><strong>65536</strong>: corresponds to 8,000, 16,000, and 32,000 millicores.</li>
+     * <li><strong>131072</strong>: corresponds to 32,000 millicores.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -545,11 +561,11 @@ public class CreateApplicationRequest extends TeaModel {
     public Integer memory;
 
     /**
-     * <p>Specifies the Nacos registry. Valid values:</p>
+     * <p>The Nacos registry. Valid values:</p>
      * <ul>
-     * <li><strong>0</strong>: SAE built-in Nacos.</li>
-     * <li><strong>1</strong>: self-managed Nacos.</li>
-     * <li><strong>2</strong>: MSE commercial edition Nacos.</li>
+     * <li><strong>0</strong>: the built-in Nacos of SAE.</li>
+     * <li><strong>1</strong>: a self-managed Nacos.</li>
+     * <li><strong>2</strong>: Microservices Engine (MSE) Nacos.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -559,7 +575,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String microRegistration;
 
     /**
-     * <p>The registry configuration.</p>
+     * <p>The configuration of the registry.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;instanceId\&quot;:\&quot;mse-cn-zvp2bh6h70r\&quot;,\&quot;namespace\&quot;:\&quot;4c0aa74f-57cb-423c-b6af-5d9f2d0e3dbd\&quot;}</p>
@@ -568,26 +584,18 @@ public class CreateApplicationRequest extends TeaModel {
     public String microRegistrationConfig;
 
     /**
-     * <p>Configures the microservice governance feature.</p>
+     * <p>Configures microservice governance features.</p>
      * <ul>
-     * <li><p>Specifies whether to enable microservice governance (enable):</p>
-     * <ul>
-     * <li><p>true: Enabled.</p>
-     * </li>
-     * <li><p>false: Disabled.</p>
-     * </li>
+     * <li>enable: Specifies whether to enable microservice governance. Valid values:<ul>
+     * <li>true: Enabled.</li>
+     * <li>false: Disabled.</li>
      * </ul>
      * </li>
-     * <li><p>Configures lossless online/offline (mseLosslessRule):</p>
-     * <ul>
-     * <li><p>delayTime: the delay time.</p>
-     * </li>
-     * <li><p>enable: specifies whether to enable the lossless online feature. true indicates enabled. false indicates disabled.</p>
-     * </li>
-     * <li><p>notice: specifies whether to enable the notification feature. true indicates enabled. false indicates disabled.</p>
-     * </li>
-     * <li><p>warmupTime: the warm-up duration for traffic ramping, in seconds.</p>
-     * </li>
+     * <li>mseLosslessRule: Configures lossless online and offline rules.<ul>
+     * <li>delayTime: The delay time.</li>
+     * <li>enable: Specifies whether to enable the lossless online feature. Valid values: true (enabled) and false (disabled).</li>
+     * <li>notice: Specifies whether to enable the notification feature. Valid values: true (enabled) and false (disabled).</li>
+     * <li>warmupTime: The warm-up duration for low traffic, in seconds.</li>
      * </ul>
      * </li>
      * </ul>
@@ -599,7 +607,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String microserviceEngineConfig;
 
     /**
-     * <p>We recommend that you do not set this parameter. Set <strong>NasConfigs</strong> instead. The NAS mount description. If the configuration does not change during deployment, you do not need to set this parameter (that is, the <strong>MountDesc</strong> field does not need to be included in the request). To clear the NAS configuration, set the value of this field to an empty string (that is, set the value of the <strong>MountDesc</strong> field to &quot;&quot; in the request).</p>
+     * <p>Do not configure this field. Configure <strong>NasConfigs</strong> instead. The mount description of the NAS file system. If the configuration remains unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>MountDesc</strong> field in the request. If you need to clear the NAS configuration, set the value of this field to an empty string in the request. That is, set the <strong>MountDesc</strong> field to &quot;&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>[{mountPath: &quot;/tmp&quot;, nasPath: &quot;/&quot;}]</p>
@@ -608,7 +616,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String mountDesc;
 
     /**
-     * <p>We recommend that you do not set this parameter. Set <strong>NasConfigs</strong> instead. The mount target of the NAS file system in the VPC of the application. If the configuration does not change during deployment, you do not need to set this parameter (that is, the <strong>MountHost</strong> field does not need to be included in the request). To clear the NAS configuration, set the value of this field to an empty string (that is, set the value of the <strong>MountHost</strong> field to &quot;&quot; in the request).</p>
+     * <p>Do not configure this field. Configure <strong>NasConfigs</strong> instead. The mount target of the NAS file system in the VPC of the application. If the configuration remains unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>MountHost</strong> field in the request. If you need to clear the NAS configuration, set the value of this field to an empty string in the request. That is, set the <strong>MountHost</strong> field to &quot;&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>example.com</p>
@@ -617,8 +625,8 @@ public class CreateApplicationRequest extends TeaModel {
     public String mountHost;
 
     /**
-     * <p>The SAE namespace ID. Only namespaces whose names contain lowercase letters and hyphens (-) are supported. The name must start with a letter.
-     * You can obtain namespaces by calling the <a href="https://help.aliyun.com/document_detail/126547.html">DescribeNamespaceList</a> operation.</p>
+     * <p>The ID of the Serverless App Engine (SAE) namespace. Only namespaces whose names contain lowercase letters and hyphens (-) are supported. The name must start with a letter.
+     * You can obtain the namespace by calling the <a href="https://help.aliyun.com/document_detail/126547.html">DescribeNamespaceList</a> operation.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing:test</p>
@@ -627,13 +635,13 @@ public class CreateApplicationRequest extends TeaModel {
     public String namespaceId;
 
     /**
-     * <p>The NAS mount configuration. Valid values:</p>
+     * <p>The configuration for mounting the NAS file system. Valid values:</p>
      * <ul>
-     * <li><strong>mountPath</strong>: the container mount path.</li>
-     * <li><strong>readOnly</strong>: set to <strong>false</strong> to grant read and write permission.</li>
-     * <li><strong>nasId</strong>: the NAS ID.</li>
-     * <li><strong>mountDomain</strong>: the container mount target address. For more information, see <a href="https://help.aliyun.com/document_detail/62626.html">DescribeMountTargets</a>.</li>
-     * <li><strong>nasPath</strong>: the NAS relative file directory.</li>
+     * <li><strong>mountPath</strong>: the mount path of the container.</li>
+     * <li><strong>readOnly</strong>: A value of <strong>false</strong> indicates read and write permissions.</li>
+     * <li><strong>nasId</strong>: the ID of the NAS file system.</li>
+     * <li><strong>mountDomain</strong>: the mount target address of the container. For more information, see <a href="https://help.aliyun.com/document_detail/62626.html">DescribeMountTargets</a>.</li>
+     * <li><strong>nasPath</strong>: the relative file directory of the NAS file system.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -643,8 +651,8 @@ public class CreateApplicationRequest extends TeaModel {
     public String nasConfigs;
 
     /**
-     * <p>We recommend that you do not set this parameter. Set <strong>NasConfigs</strong> instead. The ID of the mounted NAS file system. The NAS file system must be in the same region as the cluster. The NAS file system must have available mount target creation quota, or its mount target must already be on a vSwitch in the VPC. If this parameter is left empty and the <strong>mountDescs</strong> field exists, a NAS file system is automatically purchased and mounted to a vSwitch in the VPC.</p>
-     * <p>If the configuration does not change during deployment, you do not need to set this parameter (that is, the <strong>NASId</strong> field does not need to be included in the request). To clear the NAS configuration, set the value of this field to an empty string (that is, set the value of the <strong>NASId</strong> field to &quot;&quot; in the request).</p>
+     * <p>Do not configure this field. Configure <strong>NasConfigs</strong> instead. The ID of the mounted Apsara File Storage NAS file system. The NAS file system must reside in the same region as the cluster. It must have an available quota for creating mount targets, or its mount targets must already exist on a vSwitch in the VPC. If you do not specify this parameter and the <strong>mountDescs</strong> field exists, a NAS file system is automatically purchased and mounted to a vSwitch in the VPC by default.</p>
+     * <p>If the configuration remains unchanged during deployment, you do not need to set this parameter. That is, you do not need to include the <strong>NASId</strong> field in the request. If you need to clear the NAS configuration, set the value of this field to an empty string in the request. That is, set the <strong>NASId</strong> field to &quot;&quot;.</p>
      * 
      * <strong>example:</strong>
      * <p>KSAK****</p>
@@ -653,11 +661,11 @@ public class CreateApplicationRequest extends TeaModel {
     public String nasId;
 
     /**
-     * <p>The application version:</p>
+     * <p>The application version. Valid values:</p>
      * <ul>
-     * <li>lite: Lite Edition</li>
-     * <li>std: Standard Edition</li>
-     * <li>pro: Professional Edition</li>
+     * <li>lite: Lite Edition.</li>
+     * <li>std: Standard Edition.</li>
+     * <li>pro: Professional Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -667,9 +675,9 @@ public class CreateApplicationRequest extends TeaModel {
     public String newSaeVersion;
 
     /**
-     * <p>Specifies the RAM role for identity authentication.</p>
+     * <p>The RAM role for the identity authentication service.</p>
      * <blockquote>
-     * <p>Create an OIDC identity provider and an identity provider role in the same region in advance. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ram/developer-reference/api-ims-2019-08-15-createoidcprovider">CreateOIDCProvider</a> and <a href="https://www.alibabacloud.com/help/en/ram/developer-reference/api-ims-2019-08-15-createsamlprovider">CreateSAMLProvider</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/ram/developer-reference/api-ims-2019-08-15-createoidcprovider">CreateOIDCProvider</a> and <a href="https://www.alibabacloud.com/help/zh/ram/developer-reference/api-ims-2019-08-15-createsamlprovider">CreateSAMLProvider</a>.</p>
+     * <p>You must create an OIDC identity provider and an identity provider role in the same region in advance. For more information, see &lt;props=&quot;china&quot;&gt;<a href="https://www.alibabacloud.com/help/en/ram/developer-reference/api-ims-2019-08-15-createoidcprovider">Create an OIDC identity provider</a> and <a href="https://www.alibabacloud.com/help/en/ram/developer-reference/api-ims-2019-08-15-createsamlprovider">Create a role-based SSO identity provider</a>&lt;props=&quot;intl&quot;&gt;<a href="https://www.alibabacloud.com/help/zh/ram/developer-reference/api-ims-2019-08-15-createoidcprovider">Create an OIDC identity provider</a> and <a href="https://www.alibabacloud.com/help/zh/ram/developer-reference/api-ims-2019-08-15-createsamlprovider">Create a role-based SSO identity provider</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -679,7 +687,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String oidcRoleName;
 
     /**
-     * <p>The AccessKey ID for OSS read and write operations.</p>
+     * <p>The AccessKey ID used to read and write OSS data.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
@@ -688,7 +696,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String ossAkId;
 
     /**
-     * <p>The AccessKey Secret for OSS read and write operations.</p>
+     * <p>The AccessKey Secret used to read and write OSS data.</p>
      * 
      * <strong>example:</strong>
      * <p>xxxxxx</p>
@@ -699,12 +707,12 @@ public class CreateApplicationRequest extends TeaModel {
     /**
      * <p>The OSS mount description. Parameter description:</p>
      * <ul>
-     * <li><strong>bucketName</strong>: the bucket name.</li>
+     * <li><strong>bucketName</strong>: the name of the bucket.</li>
      * <li><strong>bucketPath</strong>: the folder or object that you created in OSS. If the OSS mount folder does not exist, an exception is triggered.</li>
-     * <li><strong>mountPath</strong>: the container path in SAE. If the path already exists, it is an overwrite relationship. If the path does not exist, it is created.</li>
-     * <li><strong>readOnly</strong>: specifies whether the container path has read-only permission on the mounted folder resources. Valid values:<ul>
-     * <li><strong>true</strong>: read-only permission.</li>
-     * <li><strong>false</strong>: read and write permission.</li>
+     * <li><strong>mountPath</strong>: the container path in SAE. If the path already exists, it will overwrite the existing content. If the path does not exist, it is created.</li>
+     * <li><strong>readOnly</strong>: specifies whether the container path has read permissions on the mounted folder resources. Valid values:<ul>
+     * <li><strong>true</strong>: read-only permissions.</li>
+     * <li><strong>false</strong>: read and write permissions.</li>
      * </ul>
      * </li>
      * </ul>
@@ -716,11 +724,11 @@ public class CreateApplicationRequest extends TeaModel {
     public String ossMountDescs;
 
     /**
-     * <p>The type of the application deployment package. Valid values:</p>
+     * <p>The type of the application package. Valid values:</p>
      * <ul>
-     * <li><p>If you use Java for deployment, <strong>FatJar</strong>, <strong>War</strong>, and <strong>Image</strong> are supported.</p>
+     * <li><p>When you deploy the application by using Java, <strong>FatJar</strong>, <strong>War</strong>, and <strong>Image</strong> are supported.</p>
      * </li>
-     * <li><p>If you use PHP for deployment, the following types are supported:</p>
+     * <li><p>When you deploy the application by using PHP, the following types are supported:</p>
      * <ul>
      * <li><strong>PhpZip</strong></li>
      * <li><strong>IMAGE_PHP_5_4</strong></li>
@@ -739,11 +747,11 @@ public class CreateApplicationRequest extends TeaModel {
      * <li><strong>IMAGE_PHP_7_3_ALPINE</strong></li>
      * </ul>
      * </li>
-     * <li><p>If you use Python for deployment, <strong>PythonZip</strong> and <strong>Image</strong> are supported.</p>
+     * <li><p>When you deploy the application by using Python, <strong>PythonZip</strong> and <strong>Image</strong> are supported.</p>
      * </li>
-     * <li><p>If you use .NET Core for deployment, <strong>DotnetZip</strong> and <strong>Image</strong> are supported.</p>
+     * <li><p>When you deploy the application by using .NET Core, <strong>DotnetZip</strong> and <strong>Image</strong> are supported.</p>
      * <blockquote>
-     * <p>When DotnetZip is selected, Dotnet specifies the version of the .NET Core runtime. .NET 3.1, .NET 5.0, .NET 6.0, .NET 7.0, and .NET 8.0 are supported. The Dotnet, Command, and CommandArgs parameters are required.</p>
+     * <p>If you select DotnetZip, Dotnet specifies the version number of the .NET Core environment. .NET 3.1, .NET 5.0, .NET 6.0, .NET 7.0, and .NET 8.0 are supported. In this case, the Dotnet, Command, and CommandArgs parameters are required.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -756,7 +764,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String packageType;
 
     /**
-     * <p>The address of the deployment package. This parameter is required when <strong>Package Type</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
+     * <p>The URL of the deployment package. This parameter is required when <strong>PackageType</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p><a href="http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar">http://myoss.oss-cn-****.aliyuncs.com/my-buc/2019-06-30/****.jar</a></p>
@@ -765,7 +773,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String packageUrl;
 
     /**
-     * <p>The version of the deployment package. This parameter is required when <strong>Package Type</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
+     * <p>The version number of the deployment package. This parameter is required when <strong>PackageType</strong> is set to <strong>FatJar</strong>, <strong>War</strong>, or <strong>PythonZip</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>1.0.0</p>
@@ -774,7 +782,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String packageVersion;
 
     /**
-     * <p>The PHP version on which the deployment package depends. Not supported for images.</p>
+     * <p>The PHP version on which the PHP deployment package depends. Images are not supported.</p>
      * 
      * <strong>example:</strong>
      * <p>PHP-FPM 7.0</p>
@@ -783,8 +791,8 @@ public class CreateApplicationRequest extends TeaModel {
     public String php;
 
     /**
-     * <p>The mount path for PHP application monitoring. Make sure that the PHP server loads the configuration file from this path.
-     * You do not need to manage the configuration content. SAE automatically renders the correct configuration file.</p>
+     * <p>The mount path for PHP application monitoring. You must ensure that the PHP server loads the configuration file in this path.
+     * You do not need to pay attention to the configuration content. SAE automatically renders the correct configuration file.</p>
      * 
      * <strong>example:</strong>
      * <p>/usr/local/etc/php/conf.d/arms.ini</p>
@@ -802,7 +810,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String phpConfig;
 
     /**
-     * <p>The mount path for the PHP application startup configuration. Make sure that the PHP server uses this configuration file to start.</p>
+     * <p>The mount path for the PHP application startup configuration. You must ensure that the PHP server uses this configuration file to start.</p>
      * 
      * <strong>example:</strong>
      * <p>/usr/local/etc/php/php.ini</p>
@@ -811,7 +819,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String phpConfigLocation;
 
     /**
-     * <p>The script that is run after the container is started. A script is triggered and run immediately after the container is created. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</code></p>
+     * <p>The script to execute after the container starts. A script is triggered and executed immediately after the container is created. Format: {&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
@@ -820,7 +828,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String postStart;
 
     /**
-     * <p>The script that is run before the container is stopped. A script is triggered and run before the container is deleted. Format: <code>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</code></p>
+     * <p>The script to execute before the container stops. A script is triggered and executed before the container is deleted. Format: {&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
      * 
      * <strong>example:</strong>
      * <p>{&quot;exec&quot;:{&quot;command&quot;:[&quot;cat&quot;,&quot;/etc/group&quot;]}}</p>
@@ -829,7 +837,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String preStop;
 
     /**
-     * <p>The programming language of the technology stack used to create the application. Valid values:</p>
+     * <p>The programming language used to create the application. Valid values:</p>
      * <ul>
      * <li><strong>java</strong>: Java.</li>
      * <li><strong>php</strong>: PHP.</li>
@@ -845,13 +853,13 @@ public class CreateApplicationRequest extends TeaModel {
     public String programmingLanguage;
 
     /**
-     * <p>Enables K8s Service-based service registration and discovery. Valid values:</p>
+     * <p>Enables Kubernetes Service registration and discovery. Valid values:</p>
      * <ul>
-     * <li><strong>serviceName</strong>: the service name. Format: <code>custom name-namespace ID</code>. The suffix <code>-namespace ID</code> cannot be customized and must be set based on the namespace of the application. For example, if you select the default namespace in the China (Beijing) region, the suffix is <code>-cn-beijing-default</code>.</li>
-     * <li><strong>namespaceId</strong>: the namespace ID.</li>
-     * <li><strong>portProtocols</strong>: the port and protocol. Valid port values: [1,65535]. Valid protocol values: <strong>TCP</strong> and <strong>UDP</strong>.</li>
-     * <li><strong>portAndProtocol</strong>: the port and protocol. Valid port values: [1,65535]. Valid protocol values: <strong>TCP</strong> and <strong>UDP</strong>. <strong>portProtocols is recommended. If portProtocols is set, only portProtocols takes effect</strong>.</li>
-     * <li><strong>enable</strong>: enables K8s Service-based service registration and discovery.</li>
+     * <li><strong>serviceName</strong>: the service name. The format is custom-namespace ID. The suffix -namespace ID cannot be customized and must be filled in based on the namespace where the application resides. For example, if you select the default namespace in the China (Beijing) region, the value is -cn-beijing-default.</li>
+     * <li><strong>namespaceId</strong>: the ID of the namespace.</li>
+     * <li><strong>portProtocols</strong>: the port and protocol. The port value ranges from 1 to 65535. The protocol supports <strong>TCP</strong> and <strong>UDP</strong>.</li>
+     * <li><strong>portAndProtocol</strong>: the port and protocol. The port value ranges from 1 to 65535. The protocol supports <strong>TCP</strong> and <strong>UDP</strong>. <strong>We recommend that you use portProtocols. If portProtocols Settings are configured, only portProtocols takes effect</strong>.</li>
+     * <li><strong>enable</strong>: enables Kubernetes Service registration and discovery.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -870,7 +878,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String python;
 
     /**
-     * <p>The custom installation module dependencies. By default, the dependencies defined in the requirements.txt file in the root folder are installed. If the file is not configured or you need custom packages, specify the dependencies to install.</p>
+     * <p>The custom installation module dependencies. By default, the dependencies defined in the requirements.txt file in the root folder are installed. If no dependencies are configured or custom software packages are used, you can specify the dependencies to install.</p>
      * 
      * <strong>example:</strong>
      * <p>Flask==2.0</p>
@@ -878,13 +886,16 @@ public class CreateApplicationRequest extends TeaModel {
     @NameInMap("PythonModules")
     public String pythonModules;
 
+    /**
+     * <p>The application runtime security protection (RASP) configuration.</p>
+     */
     @NameInMap("RaspConfig")
     public CreateApplicationRequestRaspConfig raspConfig;
 
     /**
-     * <p>The application startup status check. Containers that fail multiple health checks are shut down and restarted. Containers that do not pass the health check do not receive SLB traffic. The <strong>exec</strong>, <strong>httpGet</strong>, and <strong>tcpSocket</strong> methods are supported. For specific examples, see the <strong>Liveness</strong> parameter.</p>
+     * <p>The readiness probe of the application. A container that fails multiple health checks is stopped and restarted. Traffic from Server Load Balancer (SLB) is not routed to containers that fail the health check. The <strong>exec</strong>, <strong>httpGet</strong>, and <strong>tcpSocket</strong> methods are supported. For specific examples, see the <strong>Liveness</strong> parameter.</p>
      * <blockquote>
-     * <p>You can use only one method for health checks.</p>
+     * <p>You can select only one method for the health check.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -904,7 +915,7 @@ public class CreateApplicationRequest extends TeaModel {
     public Integer replicas;
 
     /**
-     * <p>The resource type. Valid values: NULL (default), default, and haiguang (Hygon server).</p>
+     * <p>The resource type. Valid values: NULL (default), default (default), and haiguang (Hygon servers).</p>
      * 
      * <strong>example:</strong>
      * <p>NULL</p>
@@ -926,13 +937,13 @@ public class CreateApplicationRequest extends TeaModel {
     public String saeVersion;
 
     /**
-     * <p>The <strong>Secret</strong> mount description. Use a secret created on the namespace secrets page to inject sensitive information into the container. Parameter description:</p>
+     * <p>The mount description of the <strong>Secret</strong>. Uses the Secret created on the Secret page of the namespace to inject confidential information into the container. Parameter description:</p>
      * <ul>
-     * <li><strong>secretId</strong>: the secret instance ID. You can obtain the ID by calling the ListSecrets operation.</li>
-     * <li><strong>key</strong>: the key.</li>
+     * <li><strong>secretId</strong>: instance ID of the Secret instance. You can obtain the instance ID by invoking the ListSecrets operation.</li>
+     * <li><strong>key</strong>: the key value.</li>
      * </ul>
      * <blockquote>
-     * <p>You can mount all keys by passing the <code>sae-sys-secret-all</code> parameter.</p>
+     * <p>You can mount all keys by passing the sae-sys-secret-all parameter.</p>
      * </blockquote>
      * <ul>
      * <li><strong>mountPath</strong>: the mount path.</li>
@@ -945,7 +956,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String secretMountDesc;
 
     /**
-     * <p>The security group ID.</p>
+     * <p>The ID of the security group.</p>
      * 
      * <strong>example:</strong>
      * <p>sg-wz969ngg2e49q5i4****</p>
@@ -963,28 +974,28 @@ public class CreateApplicationRequest extends TeaModel {
     public String serviceTags;
 
     /**
-     * <p>The sidecar container configuration.</p>
+     * <p>The container configuration.</p>
      */
     @NameInMap("SidecarContainersConfig")
     public java.util.List<SidecarContainerConfig> sidecarContainersConfig;
 
     /**
-     * <p>The configurations for log collection to Simple Log Service.</p>
+     * <p>The configuration for collecting logs to Simple Log Service (SLS).</p>
      * <ul>
-     * <li>Use SLS resources that are automatically created by SAE: <code>[{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}]</code>.</li>
-     * <li>Use custom SLS resources: <code>[{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}]</code>.</li>
+     * <li>Use SLS resources from automatic creation by SAE: [{&quot;logDir&quot;:&quot;&quot;,&quot;logType&quot;:&quot;stdout&quot;},{&quot;logDir&quot;:&quot;/tmp/a.log&quot;}].</li>
+     * <li>Use custom SLS resources: [{&quot;projectName&quot;:&quot;test-sls&quot;,&quot;logType&quot;:&quot;stdout&quot;,&quot;logDir&quot;:&quot;&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;},{&quot;projectName&quot;:&quot;test&quot;,&quot;logDir&quot;:&quot;/tmp/a.log&quot;,&quot;logstoreName&quot;:&quot;sae&quot;,&quot;logtailName&quot;:&quot;&quot;}].</li>
      * </ul>
      * <p>Parameter description:</p>
      * <ul>
-     * <li><strong>projectName</strong>: the Project name in Simple Log Service.  </li>
+     * <li><strong>projectName</strong>: the name of the SLS project.  </li>
      * <li><strong>logDir</strong>: the log path.</li>
-     * <li><strong>logType</strong>: the log type. <strong>stdout</strong> indicates container standard output logs. You can configure only one entry for this type. If this parameter is not set, file logs are collected.</li>
-     * <li><strong>logstoreName</strong>: the Logstore name in Simple Log Service.</li>
-     * <li><strong>logtailName</strong>: the Logtail name in Simple Log Service. If this parameter is not specified, a new Logtail is created.</li>
+     * <li><strong>logType</strong>: the log type. <strong>stdout</strong> indicates container standard output logs. Only one stdout log Settings can be configured. If Settings are not specified, file logs are collected.</li>
+     * <li><strong>logstoreName</strong>: the name of the SLS Logstore.</li>
+     * <li><strong>logtailName</strong>: the name of the SLS Logtail. If this parameter is not specified, a new Logtail is created.</li>
      * </ul>
-     * <p>If the SLS collection configuration does not change during multiple deployments, you do not need to set this parameter (that is, the <strong>SlsConfigs</strong> field does not need to be included in the request). If you no longer need the SLS collection feature, set the value of this field to an empty string (that is, set the value of the <strong>SlsConfigs</strong> field to &quot;&quot; in the request).</p>
+     * <p>If the SLS collection configuration remains unchanged during multiple deployments, you do not need to set this parameter. That is, you do not need to include the <strong>SlsConfigs</strong> field in the request. If you no longer need the SLS collection feature, you must set the value of this field to an empty string in the request. That is, set the <strong>SlsConfigs</strong> field to &quot;&quot;.</p>
      * <blockquote>
-     * <p>Projects that are automatically created with the application are deleted when the application is deleted. Therefore, do not select a project that is automatically created by SAE when you select an existing project.</p>
+     * <p>Projects from automatic creation with the application are deleted when the application is deleted. Therefore, when selecting an existing project, you cannot select a project from automatic creation by SAE.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -995,18 +1006,21 @@ public class CreateApplicationRequest extends TeaModel {
 
     /**
      * <p>sls log tags</p>
+     * 
+     * <strong>example:</strong>
+     * <p>[]</p>
      */
     @NameInMap("SlsLogEnvTags")
     public String slsLogEnvTags;
 
     /**
-     * <p>Enables the application startup probe.</p>
+     * <p>Enables application startup probes.</p>
      * <ul>
-     * <li>Check succeeded: indicates that the application started successfully. If you configured Liveness and Readiness checks, they are performed after the application starts successfully.</li>
-     * <li>Check failed: indicates that the application failed to start. An exception is reported and the application is automatically restarted.<blockquote>
+     * <li>Success: Indicates that the application is started. If you configure liveness and readiness probes, the liveness and readiness probes are executed after the application is started.</li>
+     * <li>Failure: Indicates that the application fails to start. An exception is reported and the application is automatically restarted.<blockquote>
      * <ul>
-     * <li>The exec, httpGet, and tcpSocket methods are supported. For specific examples, see the Liveness parameter.</li>
-     * <li>You can use only one method for health checks.</li>
+     * <li>The exec, httpGet, and tcpSocket methods are supported. For specific examples, refer to the Liveness parameter.</li>
+     * <li>You can select only one method for health checks.</li>
      * </ul>
      * </blockquote>
      * </li>
@@ -1037,12 +1051,12 @@ public class CreateApplicationRequest extends TeaModel {
     public String timezone;
 
     /**
-     * <p>The Tomcat configuration. Set this parameter to &quot;&quot; or &quot;{}&quot; to delete the configuration:</p>
+     * <p>The Tomcat file configuration. Set the value to &quot;&quot; or &quot;{}&quot; to delete the configuration:</p>
      * <ul>
-     * <li><strong>port</strong>: the port number. Valid values: 1024 to 65535. Ports less than 1024 require root permissions. Because the container is configured with admin permissions, specify a port greater than 1024. Default value: 8080.</li>
-     * <li><strong>contextPath</strong>: the access path. Default value: root directory &quot;/&quot;.</li>
-     * <li><strong>maxThreads</strong>: the maximum number of connections in the connection pool. Default value: 400.</li>
-     * <li><strong>uriEncoding</strong>: the encoding format of Tomcat. Valid values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and <strong>GB2312</strong>. Default value: <strong>ISO-8859-1</strong>.</li>
+     * <li><strong>port</strong>: the port range is 1024 to 65535. Ports smaller than 1024 require root permissions. Because the container is configured with admin permissions, specify a port greater than 1024. If this parameter is not configured, the default value is 8080.</li>
+     * <li><strong>contextPath</strong>: the access path. The default value is the root directory &quot;/&quot;.</li>
+     * <li><strong>maxThreads</strong>: the maximum number of connections in the connection pool. The default value is 400.</li>
+     * <li><strong>uriEncoding</strong>: the encoding format of Tomcat. Valid values: <strong>UTF-8</strong>, <strong>ISO-8859-1</strong>, <strong>GBK</strong>, and <strong>GB2312</strong>. If this parameter is not set, the default value is <strong>ISO-8859-1</strong>.</li>
      * <li><strong>useBodyEncodingForUri</strong>: specifies whether to use <strong>BodyEncoding for URL</strong>. Default value: <strong>true</strong>.</li>
      * </ul>
      * 
@@ -1053,7 +1067,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String tomcatConfig;
 
     /**
-     * <p>The vSwitch where the elastic network interface controller (NIC) of the application instance resides. The vSwitch must be in the specified VPC. The vSwitch also has a binding relationship with the SAE namespace. If you leave this parameter empty, the vSwitch attached to the namespace is used by default.</p>
+     * <p>The ID of the vSwitch to which the elastic network interface controllers (NICs) of the application instance belong. The vSwitch must reside in the preceding VPC. The vSwitch is also attached to the SAE namespace. If you do not specify this parameter, the ID of the vSwitch attached to the namespace is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>vsw-bp12mw1f8k3jgygk9****</p>
@@ -1062,7 +1076,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String vSwitchId;
 
     /**
-     * <p>The VPC that corresponds to the SAE namespace. In SAE, a namespace can correspond to only one VPC, and the mapping cannot be modified. The binding relationship is established when the first SAE application is created in the namespace. Multiple namespaces can correspond to the same VPC. If you leave this parameter empty, the VPC bound to the namespace is used by default.</p>
+     * <p>The ID of the virtual private cloud (VPC) that corresponds to the SAE namespace. In SAE, a namespace can correspond to only one VPC, and the correspondence cannot be modified. The binding relationship is established when you create the first SAE application in the namespace. Multiple namespaces can correspond to one VPC. If you do not specify this parameter, the ID of the VPC bound to the namespace is used by default.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp1aevy8sofi8mh1q****</p>
@@ -1071,7 +1085,7 @@ public class CreateApplicationRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The startup command for deploying a WAR package application. The configuration procedure is the same as that for the startup command of an image deployment. For more information, see <a href="https://help.aliyun.com/document_detail/96677.html">Configure a startup command</a>.</p>
+     * <p>The startup command for the application deployed by using a WAR package. The procedure is the same as that for configuring the startup command for image deployment. For more information, see <a href="https://help.aliyun.com/document_detail/96677.html">Set a startup command</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>CATALINA_OPTS=\&quot;$CATALINA_OPTS $Options\&quot; catalina.sh run</p>
@@ -1080,12 +1094,12 @@ public class CreateApplicationRequest extends TeaModel {
     public String warStartOptions;
 
     /**
-     * <p>The version of Tomcat on which the WebContainer deployment package depends. Valid values:</p>
+     * <p>The Tomcat version on which the WebContainer deployment package depends. Valid values:</p>
      * <ul>
      * <li><strong>apache-tomcat-7.0.91</strong></li>
      * <li><strong>apache-tomcat-8.5.42</strong></li>
      * </ul>
-     * <p>This parameter is not supported when <strong>Package Type</strong> is set to <strong>Image</strong>.</p>
+     * <p>This parameter is not supported when <strong>PackageType</strong> is set to <strong>Image</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>apache-tomcat-7.0.91</p>
@@ -1803,12 +1817,27 @@ public class CreateApplicationRequest extends TeaModel {
     }
 
     public static class CreateApplicationRequestRaspConfig extends TeaModel {
+        /**
+         * <p>Specifies whether the application runtime security protection (RASP) is enabled.</p>
+         */
         @NameInMap("EnableRasp")
         public Boolean enableRasp;
 
+        /**
+         * <p>The RASP application key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>key-1</p>
+         */
         @NameInMap("RaspAppKey")
         public String raspAppKey;
 
+        /**
+         * <p>The RASP application name.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>sae-test</p>
+         */
         @NameInMap("RaspAppName")
         public String raspAppName;
 
