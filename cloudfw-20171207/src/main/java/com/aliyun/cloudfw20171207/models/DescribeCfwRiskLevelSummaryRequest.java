@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCfwRiskLevelSummaryRequest extends TeaModel {
     /**
-     * <p>The instance type. Valid value:</p>
+     * <p>The instance type. Valid values:</p>
      * <ul>
      * <li><strong>ecs</strong></li>
      * </ul>
@@ -17,13 +17,10 @@ public class DescribeCfwRiskLevelSummaryRequest extends TeaModel {
     public String instanceType;
 
     /**
-     * <p>The language of the response.</p>
-     * <p>Valid values:</p>
+     * <p>The language in which messages are received. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -33,9 +30,9 @@ public class DescribeCfwRiskLevelSummaryRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the region where Cloud Firewall is deployed.</p>
+     * <p>The region ID of Cloud Firewall.</p>
      * <blockquote>
-     * <p>For more information about the regions where Cloud Firewall is available, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

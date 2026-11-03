@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     /**
-     * <p>The destination IP address of the intrusion event.</p>
+     * <p>The destination IP address of the intrusion prevention event.</p>
      * 
      * <strong>example:</strong>
      * <p>203.0.113.1</p>
@@ -14,7 +14,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     public String dstIP;
 
     /**
-     * <p>The destination port of the intrusion event.</p>
+     * <p>The destination port of the intrusion prevention event.</p>
      * 
      * <strong>example:</strong>
      * <p>8080</p>
@@ -23,7 +23,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     public Integer dstPort;
 
     /**
-     * <p>The destination VPC ID of the intrusion event.</p>
+     * <p>The destination VPC ID of the intrusion prevention event.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-bp10w5nb30r4jzfyc****</p>
@@ -32,7 +32,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     public String dstVpcId;
 
     /**
-     * <p>Type of the hit.</p>
+     * <p>The type of the hit content.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -41,7 +41,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     public Integer hitContentType;
 
     /**
-     * <p>The position where the hit ends.</p>
+     * <p>The end position of the hit content.</p>
      * 
      * <strong>example:</strong>
      * <p>67</p>
@@ -50,7 +50,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     public Integer hitTo;
 
     /**
-     * <p>Hit payload.</p>
+     * <p>The parsed payload of the hit content.</p>
      * 
      * <strong>example:</strong>
      * <p>2f636f6d706f7365722f73656e645f656d61696c3f746f3d6d61667740776f66736f7961792675726c3d687474703a2f2f302e302e302e303a31323334352f692f6431366530312f313664622f673670772f</p>
@@ -59,7 +59,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     public String parsedContent;
 
     /**
-     * <p>The attack payload of the intrusion event.</p>
+     * <p>The attack payload of the intrusion prevention event.</p>
      * 
      * <strong>example:</strong>
      * <p>302902010004067075626c6963a01c0204036a5f43020100020100300e300c06082b060102010101000500</p>
@@ -68,7 +68,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     public String payload;
 
     /**
-     * <p>The length of the attack payload of the intrusion event.</p>
+     * <p>The length of the attack payload in the intrusion prevention event.</p>
      * 
      * <strong>example:</strong>
      * <p>457</p>
@@ -77,7 +77,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     public Integer payloadLen;
 
     /**
-     * <p>The protocol type of intrusion event. Valid values:</p>
+     * <p>The protocol type of the intrusion prevention attack event. Valid values:</p>
      * <ul>
      * <li><strong>TCP</strong></li>
      * <li><strong>UDP</strong></li>
@@ -99,7 +99,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     public String realIp;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>68055BA4-D8BD-5611-AC49-C651E619A12E</p>
@@ -108,7 +108,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The source IP address of the intrusion event.</p>
+     * <p>The source IP address of the intrusion prevention event.</p>
      * 
      * <strong>example:</strong>
      * <p>203.0.113.2</p>
@@ -117,7 +117,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     public String srcIP;
 
     /**
-     * <p>The source port of the intrusion event.</p>
+     * <p>The source port of the intrusion prevention event.</p>
      * 
      * <strong>example:</strong>
      * <p>54360</p>
@@ -126,7 +126,7 @@ public class DescribeRiskEventPayloadResponseBody extends TeaModel {
     public Integer srcPort;
 
     /**
-     * <p>The source VPC ID of the intrusion event.</p>
+     * <p>The source VPC ID of the intrusion prevention event.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-t4nlt09olhpazpoeg****</p>

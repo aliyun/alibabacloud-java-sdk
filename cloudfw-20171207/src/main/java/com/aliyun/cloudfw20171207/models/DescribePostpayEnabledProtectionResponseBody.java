@@ -14,7 +14,7 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
     public Long disabledDays;
 
     /**
-     * <p>The type of asset for which protection is disabled.</p>
+     * <p>The type of protection that is disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>nat</p>
@@ -32,7 +32,7 @@ public class DescribePostpayEnabledProtectionResponseBody extends TeaModel {
     public Boolean isEnabledProtection;
 
     /**
-     * <p>Indicates whether the protection feature is activated but currently disabled.</p>
+     * <p>Indicates whether the protection feature is activated but disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

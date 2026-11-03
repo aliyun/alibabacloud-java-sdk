@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallSwitchStatusRequest extends TeaModel {
     /**
-     * <p>The status of the virtual private cloud (VPC) firewall. Valid values:</p>
+     * <p>Settings for the switch status of virtual private cloud (VPC) firewalls at the border. Valid values:</p>
      * <ul>
-     * <li><p><strong>open</strong>: Enable.</p>
+     * <li><p><strong>open</strong>: enabled.</p>
      * </li>
-     * <li><p><strong>close</strong>: Disable.</p>
+     * <li><p><strong>close</strong>: shutdown.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -21,7 +21,7 @@ public class ModifyVpcFirewallSwitchStatusRequest extends TeaModel {
     public String firewallSwitch;
 
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><p><strong>zh</strong> (default): Chinese.</p>
      * </li>
@@ -36,7 +36,7 @@ public class ModifyVpcFirewallSwitchStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member account of the current Alibaba Cloud account.</p>
+     * <p>The UID of the member accounts of the current Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -45,9 +45,9 @@ public class ModifyVpcFirewallSwitchStatusRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewalls at the border.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance ID of the VPC firewall.</p>
+     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance ID of the virtual private cloud (VPC) firewalls at the border.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

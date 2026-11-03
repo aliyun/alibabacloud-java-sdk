@@ -11,7 +11,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
     public java.util.List<ListTlsInspectCACertificatesResponseBodyCertificates> certificates;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>CBF1E9B7-D6A0-4E9E-AD3E-******837D</p>
@@ -63,7 +63,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
          * <ul>
          * <li><strong>RSA</strong>: RSA algorithm.</li>
          * <li><strong>ECC</strong>: ECC algorithm.</li>
-         * <li><strong>SM2</strong>: SM2 (Chinese national cryptographic) algorithm.</li>
+         * <li><strong>SM2</strong>: SM2 algorithm.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -73,7 +73,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String algorithm;
 
         /**
-         * <p>The certificate alias.</p>
+         * <p>The alias of the certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>rsa_ml_***_root</p>
@@ -82,7 +82,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String aliasName;
 
         /**
-         * <p>The CA certificate ID.</p>
+         * <p>The ID of the CA certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>2732BB48-2969-5716-B5D9-******CA85</p>
@@ -104,7 +104,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String caCertType;
 
         /**
-         * <p>The certificate chain expiration timestamp.</p>
+         * <p>The expiration timestamp of the certificate chain.</p>
          * 
          * <strong>example:</strong>
          * <p>1934***149</p>
@@ -131,7 +131,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public Integer keySize;
 
         /**
-         * <p>The parent CA certificate ID.</p>
+         * <p>The ID of the parent CA certificate.</p>
          * 
          * <strong>example:</strong>
          * <p>340BB48-2969-5716-B5D9-****ACA85</p>
@@ -149,7 +149,7 @@ public class ListTlsInspectCACertificatesResponseBody extends TeaModel {
         public String signAlgorithm;
 
         /**
-         * <p>The certificate status. Valid values:</p>
+         * <p>The status of the certificate. Valid values:</p>
          * <ul>
          * <li><strong>ISSUE</strong>: Enabled.</li>
          * <li><strong>REVOKE</strong>: Revoked.</li>

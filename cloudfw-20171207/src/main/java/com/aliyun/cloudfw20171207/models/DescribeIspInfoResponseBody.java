@@ -59,7 +59,7 @@ public class DescribeIspInfoResponseBody extends TeaModel {
 
     public static class DescribeIspInfoResponseBodyDataList extends TeaModel {
         /**
-         * <p>The ID of the ISP.</p>
+         * <p>The ISP ID.</p>
          * 
          * <strong>example:</strong>
          * <p>isp-dhyw2lxfpc****</p>
@@ -68,7 +68,7 @@ public class DescribeIspInfoResponseBody extends TeaModel {
         public Integer ispId;
 
         /**
-         * <p>The name of the ISP.</p>
+         * <p>The ISP name.</p>
          * 
          * <strong>example:</strong>
          * <p>telecom</p>

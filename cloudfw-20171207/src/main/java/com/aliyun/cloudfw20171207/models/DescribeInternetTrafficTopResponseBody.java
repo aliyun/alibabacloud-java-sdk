@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeInternetTrafficTopResponseBody extends TeaModel {
     /**
-     * <p>The number of traffic data entries.</p>
+     * <p>The number of traffic data records.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,13 +14,13 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
     public Integer dataCount;
 
     /**
-     * <p>The list of traffic data.</p>
+     * <p>The traffic data list.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeInternetTrafficTopResponseBodyDataList> dataList;
 
     /**
-     * <p>The type of traffic data.</p>
+     * <p>The traffic data type.</p>
      * 
      * <strong>example:</strong>
      * <p>in_src_ip</p>
@@ -29,7 +29,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
     public String dataType;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>15FCCC52-1E23-57AE-B5EF-3E00A3******</p>
@@ -76,7 +76,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
 
     public static class DescribeInternetTrafficTopResponseBodyDataList extends TeaModel {
         /**
-         * <p>The name of the country.</p>
+         * <p>The country name.</p>
          * 
          * <strong>example:</strong>
          * <p>US</p>
@@ -85,7 +85,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         public String dataName;
 
         /**
-         * <p>The inbound traffic percentage.</p>
+         * <p>The inbound percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>47.12</p>
@@ -94,7 +94,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         public String dataValue;
 
         /**
-         * <p>Indicates whether the data is subscribed.</p>
+         * <p>Indicates whether the item is subscribed.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -103,7 +103,7 @@ public class DescribeInternetTrafficTopResponseBody extends TeaModel {
         public Boolean isSubscribed;
 
         /**
-         * <p>The list of labels.</p>
+         * <p>The label list.</p>
          */
         @NameInMap("LabelList")
         public java.util.List<String> labelList;

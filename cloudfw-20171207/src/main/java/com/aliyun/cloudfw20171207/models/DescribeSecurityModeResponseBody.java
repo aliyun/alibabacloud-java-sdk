@@ -24,9 +24,9 @@ public class DescribeSecurityModeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The security mode. Valid values:</p>
-     * <p><strong>0</strong>: disabled.</p>
-     * <p><strong>1</strong>: enabled.</p>
+     * <p>The safe mode pattern. Valid values:</p>
+     * <p><strong>0</strong>: shutdown</p>
+     * <p><strong>1</strong>: enabled</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

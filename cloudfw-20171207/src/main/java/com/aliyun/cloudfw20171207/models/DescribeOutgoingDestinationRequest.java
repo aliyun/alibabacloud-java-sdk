@@ -32,7 +32,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String categoryId;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -43,7 +43,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     /**
      * <p>The legacy destination IP parameter.</p>
      * <blockquote>
-     * <p>The POP gateway passes this parameter through, but the backend of this operation does not read it. Specifying this parameter has no filtering effect. To filter by IP address, use PublicIP or PrivateIP. If only DstIP is specified, the operation returns MissingParameter.IpFilter (-340415) because no valid IP filtering parameter is provided.</p>
+     * <p>The POP gateway passes through this parameter, but the backend of this API operation does not read it. Passing this parameter does not produce any filtering effect. To filter by IP address, use PublicIP or PrivateIP. If only DstIP is provided, the MissingParameter.IpFilter (-340415) error is returned because a valid IP filter parameter is missing.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -53,7 +53,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String dstIP;
 
     /**
-     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
+     * <p>Specifies the end time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -110,7 +110,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     /**
      * <p>The private IP address.</p>
      * <blockquote>
-     * <p>At least one of PublicIP and PrivateIP must be specified.</p>
+     * <p>You must specify at least one of PublicIP and PrivateIP.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -122,7 +122,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     /**
      * <p>The public IP address.</p>
      * <blockquote>
-     * <p>At least one of PublicIP and PrivateIP must be specified.</p>
+     * <p>You must specify at least one of PublicIP and PrivateIP.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -132,7 +132,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String publicIP;
 
     /**
-     * <p>The security policy for the Outbound Domain.</p>
+     * <p>The security policy for the outbound domain.</p>
      * 
      * <strong>example:</strong>
      * <p>pass</p>
@@ -160,7 +160,7 @@ public class DescribeOutgoingDestinationRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
+     * <p>Specifies the start time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

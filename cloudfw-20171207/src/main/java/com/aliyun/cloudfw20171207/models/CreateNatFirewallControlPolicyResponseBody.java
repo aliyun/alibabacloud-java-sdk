@@ -7,7 +7,7 @@ public class CreateNatFirewallControlPolicyResponseBody extends TeaModel {
     /**
      * <p>The unique ID of the access control policy.</p>
      * <blockquote>
-     * <p>To modify an access control policy, you must provide its unique ID. You can call the <code>DescribeNatFirewallControlPolicy</code> operation to obtain this ID.</p>
+     * <p>To modify an access control policy, you must provide the unique ID of the policy. You can call the DescribeNatFirewallControlPolicy operation to obtain the ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

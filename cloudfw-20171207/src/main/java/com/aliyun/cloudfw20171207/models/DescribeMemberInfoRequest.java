@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeMemberInfoRequest extends TeaModel {
     /**
-     * <p>The UID of the member account.</p>
+     * <p>The UID of the member accounts.</p>
      * 
      * <strong>example:</strong>
      * <p>150795602499****</p>

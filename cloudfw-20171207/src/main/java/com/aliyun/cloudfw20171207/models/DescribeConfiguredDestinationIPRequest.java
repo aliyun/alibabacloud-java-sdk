@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeConfiguredDestinationIPRequest extends TeaModel {
     /**
-     * <p>The page number of the returned page.</p>
+     * <p>The page number.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -61,7 +61,7 @@ public class DescribeConfiguredDestinationIPRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The language of the response.</p>
+     * <p>The language for receiving messages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -70,7 +70,7 @@ public class DescribeConfiguredDestinationIPRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -79,7 +79,7 @@ public class DescribeConfiguredDestinationIPRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The trace code.</p>
+     * <p>The tracing code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

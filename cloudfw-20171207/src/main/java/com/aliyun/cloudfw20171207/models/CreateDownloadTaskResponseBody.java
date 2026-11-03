@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateDownloadTaskResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E7F333E0-7B70-54DA-A307-4B2B49DEE923</p>
@@ -16,16 +16,12 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
     /**
      * <p>The task status. Valid values:</p>
      * <ul>
-     * <li><p>finish: The task is completed. You can call a task query operation to obtain the download URL of the task file.</p>
-     * </li>
-     * <li><p>start: The task has started.</p>
-     * </li>
-     * <li><p>error: The task failed.</p>
-     * </li>
-     * <li><p>expire: The task has expired. The task file is no longer valid and cannot be downloaded.</p>
-     * </li>
+     * <li>finish: The task is completed. You can query the task to obtain the download URL of the task file.</li>
+     * <li>start: The task is started.</li>
+     * <li>error: The task failed.</li>
+     * <li>expire: The task has expired. The task file is invalid and cannot be downloaded.</li>
      * </ul>
-     * <p>This field is returned only under specific conditions, such as when the task is completed synchronously. In regular responses, only RequestId is returned. Use a task query operation to obtain the real-time status.</p>
+     * <p>Note: This field is returned only under specific conditions, such as when the task is completed synchronously. A standard response returns only RequestId. To query the real-time status, call a task query operation.</p>
      * 
      * <strong>example:</strong>
      * <p>start</p>
@@ -34,7 +30,7 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The task ID, which uniquely identifies the task. This field is returned only under specific conditions, such as when the task is completed synchronously. In regular responses, only RequestId is returned. Use a task query operation to obtain the task status and download URL.</p>
+     * <p>The unique identifier of the task. Note: This field is returned only under specific conditions, such as when the task is completed synchronously. A standard response returns only RequestId. To obtain the task status and download URL, call a task query operation.</p>
      * 
      * <strong>example:</strong>
      * <p>132</p>
@@ -43,7 +39,7 @@ public class CreateDownloadTaskResponseBody extends TeaModel {
     public Long taskId;
 
     /**
-     * <p>The name of the file download task. This field is returned only under specific conditions, such as when the task is completed synchronously. In regular responses, only RequestId is returned.</p>
+     * <p>The name of the file download task. Note: This field is returned only under specific conditions, such as when the task is completed synchronously. A standard response returns only RequestId.</p>
      * 
      * <strong>example:</strong>
      * <p>test-IPv4</p>

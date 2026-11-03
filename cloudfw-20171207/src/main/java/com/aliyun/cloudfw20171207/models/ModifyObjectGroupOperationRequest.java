@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyObjectGroupOperationRequest extends TeaModel {
     /**
-     * <p>The remarks for the operation.</p>
+     * <p>The comment for the operation.</p>
      * 
      * <strong>example:</strong>
      * <p>test</p>
@@ -14,13 +14,10 @@ public class ModifyObjectGroupOperationRequest extends TeaModel {
     public String comment;
 
     /**
-     * <p>The traffic direction that is controlled by the access control policy.</p>
-     * <p>Valid values:</p>
+     * <p>The traffic direction controlled by the access control policy. Valid values:</p>
      * <ul>
-     * <li><p><strong>in</strong>: Inbound traffic.</p>
-     * </li>
-     * <li><p><strong>out</strong>: Outbound traffic.</p>
-     * </li>
+     * <li><strong>in</strong>: Inbound traffic.</li>
+     * <li><strong>out</strong>: Outbound traffic.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -31,12 +28,10 @@ public class ModifyObjectGroupOperationRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language for receiving messages. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -46,23 +41,19 @@ public class ModifyObjectGroupOperationRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The list of objects.</p>
+     * <p>The list of objects to operate on.</p>
      * <p>This parameter is required.</p>
      */
     @NameInMap("ObjectList")
     public java.util.List<String> objectList;
 
     /**
-     * <p>The operation to perform. Valid values:</p>
+     * <p>The operation to perform on the object, such as adding to or removing from a whitelist, or subscribing to or unsubscribing from the object. Valid values:</p>
      * <ul>
-     * <li><p><strong>subscribe</strong>: Follows the object.</p>
-     * </li>
-     * <li><p><strong>unsubscribe</strong>: Unfollows the object.</p>
-     * </li>
-     * <li><p><strong>ignore</strong>: Adds the object to the whitelist.</p>
-     * </li>
-     * <li><p><strong>cancelIgnore</strong>: Removes the object from the whitelist.</p>
-     * </li>
+     * <li><strong>subscribe</strong>: Subscribes to the object.</li>
+     * <li><strong>unsubscribe</strong>: Unsubscribes from the object.</li>
+     * <li><strong>ignore</strong>: Adds the object to the whitelist.</li>
+     * <li><strong>cancelIgnore</strong>: Removes the object from the whitelist.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -73,17 +64,12 @@ public class ModifyObjectGroupOperationRequest extends TeaModel {
     public String objectOperation;
 
     /**
-     * <p>The type of object to add to the whitelist or follow.</p>
-     * <p>Valid values:</p>
+     * <p>The type of the outbound connection whitelist or subscription. Valid values:</p>
      * <ul>
-     * <li><p><strong>assetsIp</strong>: Asset IP address.</p>
-     * </li>
-     * <li><p><strong>destinationIp</strong>: Destination IP address.</p>
-     * </li>
-     * <li><p><strong>destinationPort</strong>: Destination port.</p>
-     * </li>
-     * <li><p><strong>destinationDomain</strong>: Destination domain name.</p>
-     * </li>
+     * <li><strong>assetsIp</strong>: Asset IP address.</li>
+     * <li><strong>destinationIp</strong>: Destination IP address.</li>
+     * <li><strong>destinationPort</strong>: Destination port.</li>
+     * <li><strong>destinationDomain</strong>: Destination domain name.</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 

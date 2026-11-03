@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeIPSRulesRequest extends TeaModel {
     /**
-     * <p>The application targeted by the attack.</p>
+     * <p>The attacked application.</p>
      * 
      * <strong>example:</strong>
      * <p>SMB</p>
@@ -14,19 +14,19 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String attackApp;
 
     /**
-     * <p>The categories of applications targeted by attacks.</p>
+     * <p>The list of categories of the attacked applications. Specify the value in the [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;] format.</p>
      */
     @NameInMap("AttackAppCategory")
     public java.util.List<String> attackAppCategory;
 
     /**
-     * <p>The applications targeted by attacks.</p>
+     * <p>The list of attacked applications.</p>
      */
     @NameInMap("AttackApps")
     public java.util.List<String> attackApps;
 
     /**
-     * <p>The attack type.</p>
+     * <p>The attack application type.</p>
      * 
      * <strong>example:</strong>
      * <p>Web attack</p>
@@ -44,7 +44,7 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String cve;
 
     /**
-     * <p>The status of the rule.</p>
+     * <p>The enabling status.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -53,7 +53,7 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String defaultAction;
 
     /**
-     * <p>The type of firewall.</p>
+     * <p>The Cloud Firewall type.</p>
      * 
      * <strong>example:</strong>
      * <p>VpcFirewall</p>
@@ -62,7 +62,7 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String firewallType;
 
     /**
-     * <p>The language of the request and response.</p>
+     * <p>The language of the request message.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -71,7 +71,7 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The sort order.</p>
+     * <p>The sorting order.</p>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -80,7 +80,7 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The page number.</p>
+     * <p>The current page number.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,7 +100,7 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>Indicates whether to retrieve only modified rules.</p>
+     * <p>Specifies whether the rule has been modified.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -118,7 +118,7 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String ruleAction;
 
     /**
-     * <p>The inspection mode.</p>
+     * <p>The supported engine mode.</p>
      * 
      * <strong>example:</strong>
      * <p>dropStrict</p>
@@ -164,7 +164,7 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String ruleType;
 
     /**
-     * <p>The field to sort by.</p>
+     * <p>The sorting method.</p>
      * 
      * <strong>example:</strong>
      * <p>UpdateTime</p>
@@ -173,7 +173,7 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>8.139.222.XXX</p>
@@ -182,7 +182,7 @@ public class DescribeIPSRulesRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The instance ID of the VPC firewall.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewalls.</p>
      * 
      * <strong>example:</strong>
      * <p>cen-rnbkqx4a8er21a****</p>

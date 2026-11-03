@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePostpayBillRequest extends TeaModel {
     /**
-     * <p>The page number of the current page in a paged query.</p>
+     * <p>The Settings for the page number of the current page during paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,7 +14,7 @@ public class DescribePostpayBillRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The end time of the bill query, expressed as a second-level UNIX timestamp. The value must be later than StartTime.</p>
+     * <p>The end time of the bill query. The time is a UNIX timestamp accurate to seconds and must be later than StartTime.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,10 +24,10 @@ public class DescribePostpayBillRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>Specifies the time interval for querying data. This is an enumeration value. This parameter is required. If this parameter is not specified, ERR_PARAMS_INVALID is returned. Valid values:</p>
+     * <p>The time interval for querying data. This parameter is required. If this parameter is not specified, ERR_PARAMS_INVALID is returned. Valid values:</p>
      * <ul>
-     * <li>3600: queries hourly data.</li>
-     * <li>86400: queries daily data.</li>
+     * <li>3600: hourly data.</li>
+     * <li>86400: daily data.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -37,9 +37,12 @@ public class DescribePostpayBillRequest extends TeaModel {
     public Integer interval;
 
     /**
-     * <p>The language. This is an enumeration value.
-     * Default value: zh.
-     * Valid value: en.</p>
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li>en: English.</li>
+     * <li>zh: Chinese.
+     * Default value: zh.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -48,7 +51,7 @@ public class DescribePostpayBillRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries per page in a paged query. Default value: 10.</p>
+     * <p>The maximum number of entries to return per page during paging in a paged query. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -57,7 +60,7 @@ public class DescribePostpayBillRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The start time of the bill query, expressed as a second-level UNIX timestamp.</p>
+     * <p>The start time of the bill query. The time is a UNIX timestamp accurate to seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingAssetListResponseBody extends TeaModel {
     /**
-     * <p>The list of assets.</p>
+     * <p>The asset list.</p>
      */
     @NameInMap("AssetList")
     public java.util.List<DescribeOutgoingAssetListResponseBodyAssetList> assetList;
@@ -77,7 +77,7 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String assetInstanceName;
 
         /**
-         * <p>The region ID.</p>
+         * <p>The region.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -113,7 +113,7 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public Long ipsHitCnt;
 
         /**
-         * <p>The ID of the NAT Gateway.</p>
+         * <p>The NAT gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-bp1utx6wj4x9qu9tl****</p>
@@ -122,7 +122,7 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
-         * <p>The name of the NAT Gateway.</p>
+         * <p>The name of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-test</p>
@@ -140,7 +140,7 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
-         * <p>The number of outbound domains.</p>
+         * <p>The number of outbound domain names.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -149,7 +149,7 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public Long outgoingDomainCnt;
 
         /**
-         * <p>The number of outbound destination IP addresses.</p>
+         * <p>The number of outbound IP addresses.</p>
          * 
          * <strong>example:</strong>
          * <p>12</p>
@@ -167,7 +167,7 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String privateIP;
 
         /**
-         * <p>The list of private IP addresses.</p>
+         * <p>The private IP address list.</p>
          */
         @NameInMap("PrivateIPList")
         public java.util.List<String> privateIPList;
@@ -200,7 +200,7 @@ public class DescribeOutgoingAssetListResponseBody extends TeaModel {
         public String securityRisk;
 
         /**
-         * <p>The number of sessions.</p>
+         * <p>The number of accesses.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

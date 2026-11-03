@@ -5,11 +5,11 @@ import com.aliyun.tea.*;
 
 public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     /**
-     * <p>The status of the basic policies feature. Valid values:</p>
+     * <p>Indicates whether Basic Policies are enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: enabled</p>
+     * <li><p><strong>1</strong>: Enabled.</p>
      * </li>
-     * <li><p><strong>0</strong>: disabled</p>
+     * <li><p><strong>0</strong>: shutdown.</p>
      * </li>
      * </ul>
      * 
@@ -20,11 +20,11 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     public Integer basicRules;
 
     /**
-     * <p>The status of the threat intelligence feature. Valid values:</p>
+     * <p>Indicates whether threat intelligence is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: enabled</p>
+     * <li><p><strong>1</strong>: Enabled.</p>
      * </li>
-     * <li><p><strong>0</strong>: disabled</p>
+     * <li><p><strong>0</strong>: Disabled.</p>
      * </li>
      * </ul>
      * 
@@ -35,7 +35,7 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     public Integer ctiRules;
 
     /**
-     * <p>The maximum daily traffic that can be scanned for sensitive data.</p>
+     * <p>The daily traffic limit for sensitive data detection.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -44,11 +44,11 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     public Long maxSdl;
 
     /**
-     * <p>The status of the virtual patching feature. Valid values:</p>
+     * <p>Indicates whether virtual patches are enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: enabled</p>
+     * <li><p><strong>1</strong>: Enabled.</p>
      * </li>
-     * <li><p><strong>0</strong>: disabled</p>
+     * <li><p><strong>0</strong>: Disabled.</p>
      * </li>
      * </ul>
      * 
@@ -59,7 +59,7 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     public Integer patchRules;
 
     /**
-     * <p>The ID of the request.</p>
+     * <p>The request ID.</p>
      * 
      * <strong>example:</strong>
      * <p>133173B9-8010-5DF5-8B93-********</p>
@@ -68,13 +68,13 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The strictness level of the intrusion prevention system (IPS) rules. Valid values:</p>
+     * <p>The IPS rules group. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Loose</p>
+     * <li><p><strong>1</strong>: Loose rule group.</p>
      * </li>
-     * <li><p><strong>2</strong>: Medium</p>
+     * <li><p><strong>2</strong>: Medium rule group.</p>
      * </li>
-     * <li><p><strong>3</strong>: Strict</p>
+     * <li><p><strong>3</strong>: Strict rule group.</p>
      * </li>
      * </ul>
      * 
@@ -85,11 +85,11 @@ public class DescribeDefaultIPSConfigResponseBody extends TeaModel {
     public Integer ruleClass;
 
     /**
-     * <p>The mode of the IPS. Valid values:</p>
+     * <p>The IPS defense mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Block Mode</p>
+     * <li><p><strong>1</strong>: Block mode.</p>
      * </li>
-     * <li><p><strong>0</strong>: Monitor Mode</p>
+     * <li><p><strong>0</strong>: Monitor mode.</p>
      * </li>
      * </ul>
      * 

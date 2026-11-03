@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeNatFirewallPolicyPriorUsedResponseBody extends TeaModel {
     /**
-     * <p>The lowest priority of the access control policy.</p>
+     * <p>The minimum valid priority value for the access control policy.</p>
      * 
      * <strong>example:</strong>
      * <p>28</p>
@@ -23,7 +23,7 @@ public class DescribeNatFirewallPolicyPriorUsedResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The highest priority of the access control policy.</p>
+     * <p>The maximum valid priority value for the access control policy.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

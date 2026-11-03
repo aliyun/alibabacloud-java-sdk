@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
@@ -51,7 +51,7 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The IP address list.</p>
+         * <p>The list of IP addresses.</p>
          */
         @NameInMap("IpAddrList")
         public java.util.List<String> ipAddrList;
@@ -66,7 +66,7 @@ public class DescribeControlPolicyDomainResolveResponseBody extends TeaModel {
         public Integer ipVersion;
 
         /**
-         * <p>The update time. The value is a UNIX timestamp in seconds, which represents the number of seconds that have elapsed since January 1, 1970 (UTC).</p>
+         * <p>The update time. The value is a UNIX timestamp in seconds, which indicates the number of seconds that have elapsed since January 1, 1970 (UTC).</p>
          * 
          * <strong>example:</strong>
          * <p>1579091739</p>

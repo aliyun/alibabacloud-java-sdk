@@ -51,7 +51,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String tagKey;
 
         /**
-         * <p>The ECS tag value.</p>
+         * <p>The ECS tag key.</p>
          * 
          * <strong>example:</strong>
          * <p>tfTestAcc0</p>
@@ -86,9 +86,9 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         /**
          * <p>The action that Cloud Firewall performs on the traffic in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>accept</strong>: Allow.</li>
-         * <li><strong>drop</strong>: Deny.</li>
-         * <li><strong>log</strong>: Monitor.</li>
+         * <li><strong>accept</strong>: allows the traffic.</li>
+         * <li><strong>drop</strong>: blocks the traffic.</li>
+         * <li><strong>log</strong>: monitors the traffic.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -107,7 +107,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String aclUuid;
 
         /**
-         * <p>The addresses in the address book.</p>
+         * <p>The list of addresses in the address book.</p>
          */
         @NameInMap("AddressList")
         public java.util.List<String> addressList;
@@ -122,7 +122,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public Integer addressListCount;
 
         /**
-         * <p>The application ID of the traffic in the access control policy.</p>
+         * <p>The ID of the application for the traffic in the access control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>HTTP</p>
@@ -150,7 +150,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
          * <li><strong>VNC</strong></li>
          * </ul>
          * <blockquote>
-         * <p>The supported application types depend on the protocol type (Proto). When Proto is set to TCP, ApplicationNameList supports all the preceding application types. When both ApplicationNameList and ApplicationName are specified, ApplicationNameList takes precedence.</p>
+         * <p>The valid values of the application type depend on the protocol type specified by Proto. If Proto is set to TCP, ApplicationNameList supports all the preceding application types. If both ApplicationNameList and ApplicationName are specified, ApplicationNameList takes precedence.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -160,13 +160,13 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String applicationName;
 
         /**
-         * <p>The application types supported by the access control policy.</p>
+         * <p>The list of application types supported by the access control policy.</p>
          */
         @NameInMap("ApplicationNameList")
         public java.util.List<String> applicationNameList;
 
         /**
-         * <p>Indicates whether the public IP addresses of newly matched ECS instances (newly purchased ECS instances with configured tags or ECS instances with modified tags) are automatically added to the address book.</p>
+         * <p>Specifies whether to automatically add the public IP addresses of newly tagged ECS instances to the address book. Newly tagged ECS instances include newly purchased ECS instances with tags configured and ECS instances with modified tags.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -175,7 +175,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public Integer autoAddTagEcs;
 
         /**
-         * <p>The time when the policy was created. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the policy was created. The value is a UNIX timestamp measured in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1761062400</p>
@@ -193,7 +193,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The destination port of traffic in the access control policy.</p>
+         * <p>The destination port of the traffic in the access control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>22/22</p>
@@ -202,10 +202,10 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String destPort;
 
         /**
-         * <p>The type of destination port in the access control policy. Valid values:</p>
+         * <p>The type of the destination port in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>port</strong>: Port.</li>
-         * <li><strong>group</strong>: Port address book.</li>
+         * <li><strong>port</strong>: port</li>
+         * <li><strong>group</strong>: port address book</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -215,16 +215,16 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String destPortGroup;
 
         /**
-         * <p>The ports in the destination port address book.</p>
+         * <p>The list of ports in the destination port address book.</p>
          */
         @NameInMap("DestPortGroupPorts")
         public java.util.List<String> destPortGroupPorts;
 
         /**
-         * <p>The type of destination port in the access control policy. Valid values:</p>
+         * <p>The type of the destination port in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>port</strong>: Port.</li>
-         * <li><strong>group</strong>: Port address book.</li>
+         * <li><strong>port</strong>: port</li>
+         * <li><strong>group</strong>: port address book</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -234,19 +234,15 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String destPortType;
 
         /**
-         * <p>The destination address in the access control policy. Fuzzy queries are supported. The value varies depending on the value of DestinationType.</p>
+         * <p>The destination address in the access control policy. Fuzzy match is supported. The value of this parameter varies based on the destination type (DestinationType).</p>
          * <ul>
-         * <li><p>If DestinationType is set to <code>net</code>, the destination address is a CIDR block. Example: 10.0.3.0/24.</p>
-         * </li>
-         * <li><p>If DestinationType is set to <code>domain</code>, the destination address is a domain name. Example: aliyun.</p>
-         * </li>
-         * <li><p>If DestinationType is set to <code>group</code>, the destination address is the name of an address book. Example: db_group.</p>
-         * </li>
-         * <li><p>If DestinationType is set to <code>location</code>, the destination address is a region name. For specific region location codes, see AddControlPolicy. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</p>
-         * </li>
+         * <li>If DestinationType is set to <code>net</code>, the value is a CIDR block. Example: 10.0.3.0/24.</li>
+         * <li>If DestinationType is set to <code>domain</code>, the value is a domain name. Example: aliyun.</li>
+         * <li>If DestinationType is set to <code>group</code>, the value is the name of an address book. Example: db_group.</li>
+         * <li>If DestinationType is set to <code>location</code>, the value is an area name. For more information about the area positional encoding, see AddControlPolicy. Example: [&quot;BJ11&quot;, &quot;ZB&quot;].</li>
          * </ul>
          * <blockquote>
-         * <p>If you do not set this parameter, destination addresses of all types are queried.</p>
+         * <p>If the Settings for this parameter are not specified, all types of destination addresses are queried.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -256,24 +252,19 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String destination;
 
         /**
-         * <p>The CIDR blocks in the destination address book of the access control policy.</p>
+         * <p>The list of CIDR blocks in the destination address book of the access control policy.</p>
          */
         @NameInMap("DestinationGroupCidrs")
         public java.util.List<String> destinationGroupCidrs;
 
         /**
-         * <p>The type of destination address book in the access control policy. Valid values:</p>
+         * <p>The type of the destination address book in the access control policy. Valid values:</p>
          * <ul>
-         * <li><p><strong>ip</strong>: IP address book, which contains one or more IP address ranges.</p>
-         * </li>
-         * <li><p><strong>tag</strong>: ECS tag-based address book, which contains the IP addresses of ECS instances with one or more specific tags.</p>
-         * </li>
-         * <li><p><strong>domain</strong>: Domain address book, which contains one or more domain addresses.</p>
-         * </li>
-         * <li><p><strong>threat</strong>: Threat intelligence address book, which contains one or more malicious IP addresses or domain names.</p>
-         * </li>
-         * <li><p><strong>backsrc</strong>: Back-to-origin address book, which contains the back-to-origin addresses of one or more Anti-DDoS or WAF instances.</p>
-         * </li>
+         * <li><strong>ip</strong>: IP address book that contains one or more CIDR blocks</li>
+         * <li><strong>tag</strong>: ECS tag-based address book that contains the IP addresses of one or more ECS tags</li>
+         * <li><strong>domain</strong>: domain name address book that contains one or more domain names</li>
+         * <li><strong>threat</strong>: threat intelligence address book that contains one or more malicious IP addresses or domain names</li>
+         * <li><strong>backsrc</strong>: back-to-origin address book that contains the back-to-origin addresses of one or more Anti-DDoS or WAF instances</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -283,12 +274,11 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String destinationGroupType;
 
         /**
-         * <p>The type of destination address in the access control policy.</p>
-         * <p>Valid values:</p>
+         * <p>The type of the destination address in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>net</strong>: Destination CIDR block.</li>
-         * <li><strong>group</strong>: Destination address book.</li>
-         * <li><strong>domain</strong>: Destination domain name.</li>
+         * <li><strong>net</strong>: destination CIDR block</li>
+         * <li><strong>group</strong>: destination address book</li>
+         * <li><strong>domain</strong>: destination domain name</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -298,11 +288,10 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String destinationType;
 
         /**
-         * <p>The direction of traffic controlled by the access control policy.</p>
-         * <p>Valid values:</p>
+         * <p>The traffic direction controlled by the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>in</strong>: Inbound traffic.</li>
-         * <li><strong>out</strong>: Outbound traffic.</li>
+         * <li><strong>in</strong>: inbound traffic</li>
+         * <li><strong>out</strong>: outbound traffic</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -321,7 +310,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String dnsResult;
 
         /**
-         * <p>The timestamp of DNS resolution. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The timestamp of the DNS resolution. The value is a UNIX timestamp measured in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1579261141</p>
@@ -330,11 +319,11 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public Long dnsResultTime;
 
         /**
-         * <p>The domain name resolution method of the access control policy. Valid values:</p>
+         * <p>The domain name resolution mode of the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>FQDN</strong>: FQDN-based resolution.</li>
-         * <li><strong>DNS</strong>: DNS-based dynamic resolution.</li>
-         * <li><strong>FQDN_AND_DNS</strong>: FQDN and DNS-based dynamic resolution.</li>
+         * <li><strong>FQDN</strong>: FQDN-based resolution</li>
+         * <li><strong>DNS</strong>: DNS-based dynamic resolution</li>
+         * <li><strong>FQDN_AND_DNS</strong>: FQDN- and DNS-based dynamic resolution</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -344,7 +333,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public Integer domainResolveType;
 
         /**
-         * <p>The end time of the query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The end time of the query. The value is a UNIX timestamp measured in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1752754426</p>
@@ -364,18 +353,12 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         /**
          * <p>The type of the address book. Valid values:</p>
          * <ul>
-         * <li><p><strong>ip</strong>: IP address book.</p>
-         * </li>
-         * <li><p><strong>domain</strong>: Domain address book.</p>
-         * </li>
-         * <li><p><strong>port</strong>: Port address book.</p>
-         * </li>
-         * <li><p><strong>tag</strong>: ECS tag-based address book.</p>
-         * </li>
-         * <li><p><strong>allCloud</strong>: Cloud service address book.</p>
-         * </li>
-         * <li><p><strong>threat</strong>: Threat intelligence address book.</p>
-         * </li>
+         * <li><strong>ip</strong>: IP address book</li>
+         * <li><strong>domain</strong>: domain name address book</li>
+         * <li><strong>port</strong>: port address book</li>
+         * <li><strong>tag</strong>: ECS tag-based address book</li>
+         * <li><strong>allCloud</strong>: cloud service address book</li>
+         * <li><strong>threat</strong>: threat intelligence address book</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -387,7 +370,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         /**
          * <p>The unique ID of the address book.</p>
          * <blockquote>
-         * <p>You can call <a href="~~DescribeAddressBook~~">DescribeAddressBook</a> to query the ID.</p>
+         * <p>Value source: <a href="~~DescribeAddressBook~~">List address books</a>.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -397,7 +380,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String groupUuid;
 
         /**
-         * <p>The timestamp of the last hit. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The timestamp of the latest time of hits. The value is in the UNIX timestamp format measured in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1579261141</p>
@@ -406,7 +389,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public Long hitLastTime;
 
         /**
-         * <p>The number of hits on the access control policy.</p>
+         * <p>The number of hits of the access control policy.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -417,7 +400,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         /**
          * <p>The IP version of the asset protected by Cloud Firewall. Valid values:</p>
          * <ul>
-         * <li><strong>4</strong> (default): IPv4.</li>
+         * <li><strong>4</strong>: IPv4 (default).</li>
          * <li><strong>6</strong>: IPv6.</li>
          * </ul>
          * 
@@ -428,7 +411,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public Integer ipVersion;
 
         /**
-         * <p>The time when the policy was last modified. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the policy was last modified. The value is a UNIX timestamp measured in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1761062400</p>
@@ -446,8 +429,8 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
-         * <p>The priority of the access control policy.</p>
-         * <p>Priority values start from 1 and increase sequentially. A smaller value indicates a higher priority.</p>
+         * <p>The priority of the access control policy.
+         * The priority starts from 1 and increases in ascending order. A smaller priority number indicates a higher priority.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -456,13 +439,13 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public Integer order;
 
         /**
-         * <p>The protocol type of traffic in the access control policy. Valid values:</p>
+         * <p>The protocol type of the traffic in the access control policy. Valid values:</p>
          * <ul>
          * <li><strong>TCP</strong></li>
          * <li><strong>UDP</strong></li>
          * <li><strong>ICMP</strong></li>
-         * <li><strong>ANY</strong>: All protocol types.<blockquote>
-         * <p>If you do not set this parameter, all protocol types are queried.</p>
+         * <li><strong>ANY</strong>: all protocol types<blockquote>
+         * <p>If this parameter is not specified, all protocol types are queried.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -483,10 +466,10 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public Integer referenceCount;
 
         /**
-         * <p>The status of the access control policy. By default, the policy is enabled after it is created. Valid values:</p>
+         * <p>The status of the access control policy. By default, a policy is enabled after it is created. Valid values:</p>
          * <ul>
-         * <li><strong>true</strong>: Enable the access control policy.</li>
-         * <li><strong>false</strong>: Disable the access control policy.</li>
+         * <li><strong>true</strong>: The policy is enabled.</li>
+         * <li><strong>false</strong>: The policy is disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -496,18 +479,15 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String release;
 
         /**
-         * <p>The recurrence days of the validity period of the access control policy.</p>
+         * <p>The set of recurrence days for the Policy Validity Period of the access control policy.</p>
          * <ul>
-         * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is an empty collection.
-         * Example: []</li>
-         * <li>If RepeatType is set to Weekly, RepeatDays must not be empty.
-         * Example: [0, 6]<blockquote>
-         * <p>When RepeatType is set to Weekly, RepeatDays must not contain duplicate values.</p>
+         * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is an empty set. Example: [].</li>
+         * <li>If RepeatType is set to <code>Weekly</code>, RepeatDays cannot be empty. Example: [0, 6].<blockquote>
+         * <p>If the Settings for RepeatType are <code>Weekly</code>, the values in RepeatDays cannot be duplicate.</p>
          * </blockquote>
          * </li>
-         * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays must not be empty.
-         * Example: [1, 31]<blockquote>
-         * <p>When RepeatType is set to Monthly, RepeatDays must not contain duplicate values.</p>
+         * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays cannot be empty. Example: [1, 31].<blockquote>
+         * <p>If the Settings for RepeatType are <code>Monthly</code>, the values in RepeatDays cannot be duplicate.</p>
          * </blockquote>
          * </li>
          * </ul>
@@ -516,9 +496,9 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public java.util.List<Long> repeatDays;
 
         /**
-         * <p>The recurrence end time of the validity period of the policy. The value is in HH:mm format using the 24-hour clock, such as 23:30. The value must be on the hour or half hour, and must be at least 30 minutes later than the recurrence start time.</p>
+         * <p>The recurrence end time of the policy validity period. The time must be in the 24-hour HH:mm format, such as 23:30. It must be on the hour or half hour, and at least 30 minutes later than the recurrence start time.</p>
          * <blockquote>
-         * <p>When RepeatType is set to Permanent or None, RepeatEndTime is empty. When RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime is required.</p>
+         * <p>If RepeatType is set to <code>Permanent</code> or <code>None</code>, RepeatEndTime is empty. If RepeatType is set to <code>Daily</code>, <code>Weekly</code>, or <code>Monthly</code>, RepeatEndTime must be specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -528,9 +508,9 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String repeatEndTime;
 
         /**
-         * <p>The recurrence start time of the validity period of the policy. The value is in HH:mm format using the 24-hour clock, such as 08:00. The value must be on the hour or half hour, and must be at least 30 minutes earlier than the recurrence end time.</p>
+         * <p>The recurrence start time of the policy validity period. The time must be in the 24-hour HH:mm format, such as 08:00. It must be on the hour or half hour, and at least 30 minutes earlier than the recurrence end time.</p>
          * <blockquote>
-         * <p>When RepeatType is set to Permanent or None, RepeatStartTime is empty. When RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime is required.</p>
+         * <p>If RepeatType is set to <code>Permanent</code> or <code>None</code>, RepeatStartTime is empty. If RepeatType is set to <code>Daily</code>, <code>Weekly</code>, or <code>Monthly</code>, RepeatStartTime must be specified.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -540,13 +520,13 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String repeatStartTime;
 
         /**
-         * <p>The recurrence type of the validity period of the access control policy. Valid values:</p>
+         * <p>The recurrence type of the Policy Validity Period for the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>Permanent</strong> (default): Always.</li>
-         * <li><strong>None</strong>: One-time.</li>
-         * <li><strong>Daily</strong>: Daily.</li>
-         * <li><strong>Weekly</strong>: Weekly.</li>
-         * <li><strong>Monthly</strong>: Monthly.</li>
+         * <li><strong>Permanent</strong>: always (default)</li>
+         * <li><strong>None</strong>: specified single time</li>
+         * <li><strong>Daily</strong>: every day</li>
+         * <li><strong>Weekly</strong>: every week</li>
+         * <li><strong>Monthly</strong>: every month</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -556,15 +536,10 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String repeatType;
 
         /**
-         * <p>The source address in the access control policy.</p>
-         * <p>Valid values:</p>
+         * <p>The source address in the access control policy. Valid values:</p>
          * <ul>
-         * <li><p>If <strong>SourceType</strong> is set to <code>net</code>, Source is the source CIDR block.</p>
-         * <p>Example: 10.2.4.0/24</p>
-         * </li>
-         * <li><p>If <strong>SourceType</strong> is set to <code>group</code>, Source is the name of the source address book.</p>
-         * <p>Example: db_group</p>
-         * </li>
+         * <li>If <strong>SourceType</strong> is set to <code>net</code>, the value is a source CIDR block. Example: 10.2.4.0/24.</li>
+         * <li>If <strong>SourceType</strong> is set to <code>group</code>, the value is the name of a source address book. Example: db_group.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -574,24 +549,19 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String source;
 
         /**
-         * <p>The CIDR blocks in the source address book of the access control policy.</p>
+         * <p>The list of CIDR blocks in the source address book of the access control policy.</p>
          */
         @NameInMap("SourceGroupCidrs")
         public java.util.List<String> sourceGroupCidrs;
 
         /**
-         * <p>The type of source address book in the access control policy. Valid values:</p>
+         * <p>The type of the source address book in the access control policy. Valid values:</p>
          * <ul>
-         * <li><p><strong>ip</strong>: IP address book, which contains one or more IP address ranges.</p>
-         * </li>
-         * <li><p><strong>tag</strong>: ECS tag-based address book, which contains the IP addresses of ECS instances with one or more specific tags.</p>
-         * </li>
-         * <li><p><strong>domain</strong>: Domain address book, which contains one or more domain addresses.</p>
-         * </li>
-         * <li><p><strong>threat</strong>: Threat intelligence address book, which contains one or more malicious IP addresses or domain names.</p>
-         * </li>
-         * <li><p><strong>backsrc</strong>: Back-to-origin address book, which contains the back-to-origin addresses of one or more Anti-DDoS or WAF instances.</p>
-         * </li>
+         * <li><strong>ip</strong>: IP address book that contains one or more CIDR blocks</li>
+         * <li><strong>tag</strong>: ECS tag-based address book that contains the IP addresses of one or more ECS tags</li>
+         * <li><strong>domain</strong>: domain name address book that contains one or more domain names</li>
+         * <li><strong>threat</strong>: threat intelligence address book that contains one or more malicious IP addresses or domain names</li>
+         * <li><strong>backsrc</strong>: back-to-origin address book that contains the back-to-origin addresses of one or more Anti-DDoS or WAF instances</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -601,11 +571,11 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String sourceGroupType;
 
         /**
-         * <p>The type of source address in the access control policy. Valid values:</p>
+         * <p>The type of the source address in the access control policy. Valid values:</p>
          * <ul>
-         * <li><strong>net</strong>: Source CIDR block.</li>
-         * <li><strong>group</strong>: Source address book.</li>
-         * <li><strong>location</strong>: Source region.</li>
+         * <li><strong>net</strong>: source CIDR block</li>
+         * <li><strong>group</strong>: source address book</li>
+         * <li><strong>location</strong>: source region</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -615,8 +585,8 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String sourceType;
 
         /**
-         * <p>The number of access control policy specifications consumed, which is the cumulative count of specifications consumed by each policy.
-         * Specifications consumed by a single policy = Number of source CIDR blocks × Number of destination addresses (IP CIDR blocks, regions, or domain names) × Number of applications × Number of port ranges.</p>
+         * <p>The number of access control policy quotas consumed. This value is the sum of the quotas consumed by each policy.
+         * The number of quotas consumed by a single policy = Number of source CIDR blocks × Number of destination addresses (number of CIDR blocks, regions, or domain names) × Number of applications × Number of port ranges.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -625,7 +595,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public Integer spreadCnt;
 
         /**
-         * <p>The start time of the query. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The start time of the query. The value is a UNIX timestamp measured in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1736130347</p>
@@ -634,13 +604,13 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The ECS tags.</p>
+         * <p>The list of ECS tags.</p>
          */
         @NameInMap("TagList")
         public java.util.List<UpdateAclCheckDetailStatusResponseBodyCheckRecordAclsAclTagList> tagList;
 
         /**
-         * <p>The logical relationship among multiple ECS tags.</p>
+         * <p>The relationship between multiple ECS tags.</p>
          * 
          * <strong>example:</strong>
          * <p>and</p>
@@ -649,7 +619,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String tagRelation;
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The instance ID of the border virtual private cloud (VPC) firewalls.</p>
          * 
          * <strong>example:</strong>
          * <p>cen-cw4z051hr8x53qniv5</p>
@@ -1056,7 +1026,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public UpdateAclCheckDetailStatusResponseBodyCheckRecordAclsAcl acl;
 
         /**
-         * <p>The assessment details of this ACL policy.</p>
+         * <p>The assessment details of the ACL policy.</p>
          * 
          * <strong>example:</strong>
          * <p>No traffic hit policy.</p>
@@ -1112,28 +1082,18 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public java.util.List<UpdateAclCheckDetailStatusResponseBodyCheckRecordAcls> acls;
 
         /**
-         * <p>The ACL check name. Valid values:</p>
+         * <p>The name of the ACL check. Valid values:</p>
          * <ul>
-         * <li><p><strong>PolicyHitCountZero</strong>: Policies with no traffic hits.</p>
-         * </li>
-         * <li><p><strong>PolicySourceDestinationSame</strong>: Invalid policies with the same source and destination.</p>
-         * </li>
-         * <li><p><strong>PolicyDuplicate</strong>: Duplicate redundant policies.</p>
-         * </li>
-         * <li><p><strong>PolicyConflict</strong>: Business conflict policies.</p>
-         * </li>
-         * <li><p><strong>DefaultPolicyNotDeny</strong>: Default policy is not Deny All allowlist mechanism.</p>
-         * </li>
-         * <li><p><strong>PolicyPortHighRisk</strong>: Policies that allow traffic through high-risk ports.</p>
-         * </li>
-         * <li><p><strong>PolicyTooLoose</strong>: Overly permissive control policies.</p>
-         * </li>
-         * <li><p><strong>AddressBookIpSeparated</strong>: Duplicate, overlapping, or scattered IP address books.</p>
-         * </li>
-         * <li><p><strong>AddressBookPortSeparated</strong>: Duplicate, overlapping, or scattered port address books.</p>
-         * </li>
-         * <li><p><strong>AddressBookDomainValid</strong>: Domain address book validity check.</p>
-         * </li>
+         * <li><strong>PolicyHitCountZero</strong>: policies with no traffic hits</li>
+         * <li><strong>PolicySourceDestinationSame</strong>: Invalid policy with the same source and destination</li>
+         * <li><strong>PolicyDuplicate</strong>: Duplicate or redundant policy</li>
+         * <li><strong>PolicyConflict</strong>: Policy that conflicts with business</li>
+         * <li><strong>DefaultPolicyNotDeny</strong>: default policy that does not use the Deny All whitelist mechanism</li>
+         * <li><strong>PolicyPortHighRisk</strong>: policies that allow traffic on high-risk ports</li>
+         * <li><strong>PolicyTooLoose</strong>: overly loose control policy</li>
+         * <li><strong>AddressBookIpSeparated</strong>: duplicate, overlapping, or scattered IP address books</li>
+         * <li><strong>AddressBookPortSeparated</strong>: duplicate, overlapping, or scattered port address books</li>
+         * <li><strong>AddressBookDomainValid</strong>: validity check for domain name address books</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -1143,7 +1103,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String checkName;
 
         /**
-         * <p>The rule description.</p>
+         * <p>The description of the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>dwd_mysql_lingwan_faxing_chat_config_di</p>
@@ -1152,7 +1112,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String description;
 
         /**
-         * <p>The timestamp of the last check. Unit: seconds.</p>
+         * <p>The timestamp of the last check. The value is a UNIX timestamp measured in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1724982259</p>
@@ -1179,7 +1139,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public Long policyTotalCount;
 
         /**
-         * <p>The assessment details of this ACL check record.</p>
+         * <p>The assessment details of the ACL check record.</p>
          * 
          * <strong>example:</strong>
          * <p>Due to business offline or other reasons, the number of hits of the object policy in a period of time is 0.</p>
@@ -1188,7 +1148,7 @@ public class UpdateAclCheckDetailStatusResponseBody extends TeaModel {
         public String recordAssessmentDetail;
 
         /**
-         * <p>The ACL check task ID.</p>
+         * <p>The ID of the ACL check task.</p>
          * 
          * <strong>example:</strong>
          * <p>task-c92d4544ef7b6a42</p>

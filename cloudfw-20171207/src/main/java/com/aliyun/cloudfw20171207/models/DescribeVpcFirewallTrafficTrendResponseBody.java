@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
     /**
-     * <p>The average inbound network throughput. Unit: bit/s.</p>
+     * <p>The average network throughput in the inbound direction. Unit: bit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>1264110</p>
@@ -14,7 +14,7 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
     public Long avgInBps;
 
     /**
-     * <p>The average outbound network throughput. Unit: bit/s.</p>
+     * <p>The average network throughput in the outbound direction. Unit: bit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>68915</p>
@@ -41,13 +41,13 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
     public Long avgTotalBps;
 
     /**
-     * <p>The data list.</p>
+     * <p>The list of returned data.</p>
      */
     @NameInMap("DataList")
     public java.util.List<DescribeVpcFirewallTrafficTrendResponseBodyDataList> dataList;
 
     /**
-     * <p>The timestamp when the peak bandwidth occurred. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The timestamp when the peak bandwidth was reached. The value is a UNIX timestamp in seconds.</p>
      * 
      * <strong>example:</strong>
      * <p>1768008060</p>
@@ -56,7 +56,7 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
     public Long maxBandwidthTime;
 
     /**
-     * <p>The peak inbound network throughput. Unit: bit/s.</p>
+     * <p>The peak network throughput in the inbound direction. Unit: bit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>1436</p>
@@ -65,7 +65,7 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
     public Long maxInBps;
 
     /**
-     * <p>The peak outbound network throughput. Unit: bit/s.</p>
+     * <p>The peak network throughput in the outbound direction. Unit: bit/s.</p>
      * 
      * <strong>example:</strong>
      * <p>2128</p>
@@ -110,7 +110,7 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
     public Long totalBytes;
 
     /**
-     * <p>The total inbound network throughput. Unit: bytes.</p>
+     * <p>The total network traffic in the inbound direction. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>2659635037</p>
@@ -119,7 +119,7 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
     public Long totalInBytes;
 
     /**
-     * <p>The total outbound network throughput. Unit: bytes.</p>
+     * <p>The total network traffic in the outbound direction. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>399762701</p>
@@ -308,7 +308,7 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         public Long outBps;
 
         /**
-         * <p>The total outbound network throughput. Unit: bytes.</p>
+         * <p>The total network traffic in the outbound direction. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>230</p>
@@ -335,7 +335,7 @@ public class DescribeVpcFirewallTrafficTrendResponseBody extends TeaModel {
         public Long sessionCount;
 
         /**
-         * <p>The time when the traffic occurred. The value is a UNIX timestamp. Unit: seconds.</p>
+         * <p>The time when the traffic was generated. The value is a UNIX timestamp in seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1758470400</p>

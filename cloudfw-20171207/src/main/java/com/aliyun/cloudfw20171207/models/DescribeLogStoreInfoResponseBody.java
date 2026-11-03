@@ -11,7 +11,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public java.util.List<DescribeLogStoreInfoResponseBodyInfoList> infoList;
 
     /**
-     * <p>The number of times the log storage mode can be changed.</p>
+     * <p>The number of times the user can switch the log mode.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -20,7 +20,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public Integer logModifyQuota;
 
     /**
-     * <p>The name of the SLS Logstore.</p>
+     * <p>The name of the Simple Log Service Logstore.</p>
      * 
      * <strong>example:</strong>
      * <p>xxx-logstore</p>
@@ -29,7 +29,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public String logStoreName;
 
     /**
-     * <p>The log version. 1: indicates one Logstore. 2: indicates two Logstores.</p>
+     * <p>The log version. Valid values: 1: one Logstore. 2: two Logstores.</p>
      * 
      * <strong>example:</strong>
      * <p>2</p>
@@ -47,7 +47,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public String projectName;
 
     /**
-     * <p>The available log storage capacity, in bytes.</p>
+     * <p>The available log storage capacity. Unit: bytes.</p>
      * 
      * <strong>example:</strong>
      * <p>50000000</p>
@@ -56,7 +56,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public Long quota;
 
     /**
-     * <p>The ID of the region where logs are delivered.</p>
+     * <p>The region ID for log delivery.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-shanghai</p>
@@ -65,7 +65,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>C6C3B72B********E95FB0A161</p>
@@ -83,7 +83,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public String taskId;
 
     /**
-     * <p>The total purchased log storage capacity, in bytes.</p>
+     * <p>The total log storage capacity purchased by the user.</p>
      * 
      * <strong>example:</strong>
      * <p>50000000</p>
@@ -92,7 +92,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public Long totalQuota;
 
     /**
-     * <p>The storage duration of logs, in days.</p>
+     * <p>The storage duration of logs. Unit: days.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -101,9 +101,9 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
     public Integer ttl;
 
     /**
-     * <p>The used storage capacity, in bytes.</p>
+     * <p>The used storage capacity. Unit: bytes.</p>
      * <blockquote>
-     * <p>Statistics from Simple Log Service may be delayed by up to two hours.</p>
+     * <p>The statistics of Simple Log Service have a delay of about two hours.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -215,7 +215,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
 
     public static class DescribeLogStoreInfoResponseBodyInfoList extends TeaModel {
         /**
-         * <p>The name of the SLS Logstore.</p>
+         * <p>The name of the Logstore.</p>
          * 
          * <strong>example:</strong>
          * <p>xxx-logstore</p>
@@ -224,7 +224,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public String logStoreName;
 
         /**
-         * <p>The maximum number of shards supported for scaling.</p>
+         * <p>The maximum number of shards supported for elastic scaling.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>
@@ -242,7 +242,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public String projectName;
 
         /**
-         * <p>The storage capacity threshold, in bytes.</p>
+         * <p>The storage capacity threshold. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>50000000</p>
@@ -260,7 +260,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The number of shards in use.</p>
+         * <p>The number of shards currently in use.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -269,7 +269,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public Integer shard;
 
         /**
-         * <p>The location of the Logstore. Valid values: \<code>cn\\</code> for the Chinese mainland and \<code>intl\\</code> for regions outside the Chinese mainland.</p>
+         * <p>The site to which the Logstore belongs. Valid values: cn: the Chinese mainland. intl: outside the Chinese mainland.</p>
          * 
          * <strong>example:</strong>
          * <p>cn</p>
@@ -278,7 +278,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public String site;
 
         /**
-         * <p>The storage duration of logs, in days.</p>
+         * <p>The storage duration of logs. Unit: days.</p>
          * 
          * <strong>example:</strong>
          * <p>180</p>
@@ -287,7 +287,7 @@ public class DescribeLogStoreInfoResponseBody extends TeaModel {
         public Integer ttl;
 
         /**
-         * <p>The amount of stored logs, in bytes.</p>
+         * <p>The volume of stored logs. Unit: bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>21852955752</p>

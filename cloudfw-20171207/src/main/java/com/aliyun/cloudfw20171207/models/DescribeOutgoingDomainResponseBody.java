@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class DescribeOutgoingDomainResponseBody extends TeaModel {
     /**
-     * <p>The list of outbound domains.</p>
+     * <p>The list of outbound domain names.</p>
      */
     @NameInMap("DomainList")
     public java.util.List<DescribeOutgoingDomainResponseBodyDomainList> domainList;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>F0F82705-CFC7-5F83-86C8-A063892F****</p>
@@ -20,7 +20,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of outbound domains.</p>
+     * <p>The total number of outbound domain names.</p>
      * 
      * <strong>example:</strong>
      * <p>132</p>
@@ -101,7 +101,12 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDomainResponseBodyDomainListTagList extends TeaModel {
         /**
-         * <p>The categorization of the intelligence label. Valid values:</p>
+         * <p>The category of the intelligence label. Valid values:</p>
+         * <ul>
+         * <li><strong>Suspicious</strong>: Suspicious.</li>
+         * <li><strong>Malicious</strong>: Malicious.</li>
+         * <li><strong>Trusted</strong>: Trusted.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Trusted</p>
@@ -111,6 +116,11 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
 
         /**
          * <p>The risk assessment level. Valid values:</p>
+         * <ul>
+         * <li><strong>1</strong>: Low risk.</li>
+         * <li><strong>2</strong>: Medium risk.</li>
+         * <li><strong>3</strong>: High risk.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>3</p>
@@ -119,7 +129,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public Integer riskLevel;
 
         /**
-         * <p>The tag description.</p>
+         * <p>The description of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-describe</p>
@@ -128,7 +138,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public String tagDescribe;
 
         /**
-         * <p>The intelligence label ID.</p>
+         * <p>The ID of the intelligence label.</p>
          * 
          * <strong>example:</strong>
          * <p>AliYun</p>
@@ -137,7 +147,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public String tagId;
 
         /**
-         * <p>The tag name.</p>
+         * <p>The name of the tag.</p>
          * 
          * <strong>example:</strong>
          * <p>tag-name</p>
@@ -194,7 +204,11 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
 
     public static class DescribeOutgoingDomainResponseBodyDomainList extends TeaModel {
         /**
-         * <p>Indicates whether the access control policy provides coverage. Valid values:</p>
+         * <p>Indicates whether the domain name is covered by an access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>Uncovered</strong>: Not covered.</li>
+         * <li><strong>FullCoverage</strong>: Covered.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Uncovered</p>
@@ -203,7 +217,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public String aclCoverage;
 
         /**
-         * <p>The ACL recommendation details.</p>
+         * <p>The details of the ACL recommendation.</p>
          * 
          * <strong>example:</strong>
          * <p>RecommendedRelease</p>
@@ -213,6 +227,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
 
         /**
          * <p>The health status of the access control policy. Valid values:</p>
+         * <ul>
+         * <li><strong>Normal</strong>: Healthy.</li>
+         * <li><strong>Abnormal</strong>: Unhealthy.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Normal</p>
@@ -246,12 +264,15 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
 
         /**
          * <p>The list of application ports.</p>
+         * <blockquote>
+         * <p>The list displays only the first 99 application ports. If there are more than 99 ports, only the first 99 are returned.</p>
+         * </blockquote>
          */
         @NameInMap("ApplicationPortList")
         public java.util.List<DescribeOutgoingDomainResponseBodyDomainListApplicationPortList> applicationPortList;
 
         /**
-         * <p>The total number of assets with outbound connections.</p>
+         * <p>The total number of assets that initiate outbound connections.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -260,7 +281,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public Long assetCount;
 
         /**
-         * <p>The website business.</p>
+         * <p>The website service.</p>
          * 
          * <strong>example:</strong>
          * <p>Aliyun</p>
@@ -269,7 +290,12 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public String business;
 
         /**
-         * <p>The categorization of the intelligence label. Valid values:</p>
+         * <p>The category of the intelligence label. Valid values:</p>
+         * <ul>
+         * <li><strong>Suspicious</strong>: Suspicious.</li>
+         * <li><strong>Malicious</strong>: Malicious.</li>
+         * <li><strong>Trusted</strong>: Trusted.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Trusted</p>
@@ -278,7 +304,11 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public String categoryClassId;
 
         /**
-         * <p>The product category ID. Valid values:</p>
+         * <p>The category ID of the product. Valid values:</p>
+         * <ul>
+         * <li><strong>Aliyun</strong>: Alibaba Cloud product.</li>
+         * <li><strong>NotAliyun</strong>: Non-Alibaba Cloud product.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>Aliyun</p>
@@ -288,15 +318,19 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
 
         /**
          * <p>The category name of the product. Valid values:</p>
+         * <ul>
+         * <li><strong>Alibaba Cloud product</strong></li>
+         * <li><strong>Non-Alibaba Cloud product</strong></li>
+         * </ul>
          * 
          * <strong>example:</strong>
-         * <p>Alibaba Cloud Product</p>
+         * <p>Alibaba Cloud product</p>
          */
         @NameInMap("CategoryName")
         public String categoryName;
 
         /**
-         * <p>The domain name of the outbound connections.</p>
+         * <p>The domain name for outbound connections.</p>
          * 
          * <strong>example:</strong>
          * <p><a href="http://www.aliyundoc.com">www.aliyundoc.com</a></p>
@@ -305,7 +339,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public String domain;
 
         /**
-         * <p>The group name of the rule.</p>
+         * <p>The name of the group in the rule.</p>
          * 
          * <strong>example:</strong>
          * <p>group-name</p>
@@ -315,6 +349,10 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
 
         /**
          * <p>Indicates whether an ACL covers the management of this domain name. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -323,7 +361,11 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public String hasAcl;
 
         /**
-         * <p>Indicates whether an ACL recommendation exists. Valid values:</p>
+         * <p>Indicates whether an ACL is recommended. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Yes.</li>
+         * <li><strong>false</strong>: No.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -341,7 +383,11 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public Long inBytes;
 
         /**
-         * <p>Indicates whether the outbound domain is marked as normal. Valid values:</p>
+         * <p>Indicates whether the outbound domain name is marked as normal. Valid values:</p>
+         * <ul>
+         * <li><strong>true</strong>: Normal.</li>
+         * <li><strong>false</strong>: Abnormal.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -350,7 +396,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public Boolean isMarkNormal;
 
         /**
-         * <p>The organization name.</p>
+         * <p>The name of the organization.</p>
          * 
          * <strong>example:</strong>
          * <p>Alibaba Cloud Computing Limited</p>
@@ -368,7 +414,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public Long outBytes;
 
         /**
-         * <p>The total number of private network assets with outbound connections.</p>
+         * <p>The total number of private network assets that initiate outbound connections.</p>
          * 
          * <strong>example:</strong>
          * <p>20</p>
@@ -377,7 +423,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public Long privateAssetCount;
 
         /**
-         * <p>The ACL rule ID.</p>
+         * <p>The ID of the ACL rule.</p>
          * 
          * <strong>example:</strong>
          * <p>add-dfadf-f****</p>
@@ -386,7 +432,7 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public String ruleId;
 
         /**
-         * <p>The ACL rule name.</p>
+         * <p>The name of the ACL rule.</p>
          * 
          * <strong>example:</strong>
          * <p>acl-name</p>
@@ -404,7 +450,12 @@ public class DescribeOutgoingDomainResponseBody extends TeaModel {
         public String securityReason;
 
         /**
-         * <p>The security policy for the Outbound Domain. Valid values:</p>
+         * <p>The security policy for outbound domains. Valid values:</p>
+         * <ul>
+         * <li><strong>pass</strong>: Allow.</li>
+         * <li><strong>alert</strong>: Monitor.</li>
+         * <li><strong>drop</strong>: Deny.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>pass</p>

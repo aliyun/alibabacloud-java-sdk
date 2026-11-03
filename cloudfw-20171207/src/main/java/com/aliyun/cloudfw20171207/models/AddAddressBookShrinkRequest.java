@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class AddAddressBookShrinkRequest extends TeaModel {
     /**
-     * <p>The ACK cluster connector ID. You can obtain the value from the following operation:</p>
+     * <p>The ID of the ACK cluster connector. You can obtain the value from the following operation:</p>
      * <ul>
-     * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Lists ACK cluster connectors.</li>
+     * <li><a href="~~DescribeAckClusterConnectors~~">DescribeAckClusterConnectors</a>: Queries the list of ACK cluster connectors.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -35,7 +35,7 @@ public class AddAddressBookShrinkRequest extends TeaModel {
     public java.util.List<String> ackNamespaces;
 
     /**
-     * <p>The addresses in the address book. Separate multiple addresses with commas (,). Use a space to separate an address from its description within a single address element.</p>
+     * <p>The list of addresses in the address book. Separate multiple addresses with commas (,). For each address element, separate the address and the description with a space.</p>
      * <blockquote>
      * <p>This parameter is required when GroupType is set to <code>ip</code>, <code>port</code>, or <code>domain</code>.</p>
      * </blockquote>
@@ -61,13 +61,13 @@ public class AddAddressBookShrinkRequest extends TeaModel {
     public String assetMemberUidsShrink;
 
     /**
-     * <p>The list of regions and resource types for the asset address book.</p>
+     * <p>The asset address book, region, and resource type list.</p>
      */
     @NameInMap("AssetRegionResourceTypes")
     public String assetRegionResourceTypesShrink;
 
     /**
-     * <p>Indicates whether to automatically add the public IP addresses of Elastic Compute Service (ECS) instances that match the specified tags to the address book.</p>
+     * <p>Specifies whether the address book is automatically updated to include the public IP addresses of Elastic Compute Service (ECS) instances that match new labels.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -106,7 +106,7 @@ public class AddAddressBookShrinkRequest extends TeaModel {
     public String groupType;
 
     /**
-     * <p>The language type of the address book description.</p>
+     * <p>The language of the address book description.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -115,7 +115,7 @@ public class AddAddressBookShrinkRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -125,13 +125,13 @@ public class AddAddressBookShrinkRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The ECS tag list.</p>
+     * <p>The list of ECS tags.</p>
      */
     @NameInMap("TagList")
     public java.util.List<AddAddressBookShrinkRequestTagList> tagList;
 
     /**
-     * <p>The logical relationship among multiple ECS tags to match.</p>
+     * <p>The relationship between multiple ECS tags to be matched.</p>
      * 
      * <strong>example:</strong>
      * <p>and</p>

@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class AddControlPolicyRequest extends TeaModel {
     /**
-     * <p>The action configured in the access control policy for the traffic that passes through Cloud Firewall. Valid values:</p>
+     * <p>The action that Cloud Firewall performs on traffic that matches the access control policy. Valid values:</p>
      * <ul>
      * <li><strong>accept</strong>: allows the traffic.</li>
-     * <li><strong>drop</strong>: denies the traffic.</li>
+     * <li><strong>drop</strong>: blocks the traffic.</li>
      * <li><strong>log</strong>: monitors the traffic.</li>
      * </ul>
      * <p>This parameter is required.</p>
@@ -20,7 +20,7 @@ public class AddControlPolicyRequest extends TeaModel {
     public String aclAction;
 
     /**
-     * <p>The application type supported by the access control policy. Valid values:</p>
+     * <p>The Protocol Type supported by the access control policy. Valid values:</p>
      * <ul>
      * <li><strong>FTP</strong></li>
      * <li><strong>HTTP</strong></li>
@@ -37,10 +37,10 @@ public class AddControlPolicyRequest extends TeaModel {
      * <li><strong>SSL_No_Cert</strong></li>
      * <li><strong>SSL</strong></li>
      * <li><strong>VNC</strong></li>
-     * <li><strong>ANY</strong> (all application types)</li>
+     * <li><strong>ANY</strong>: all Protocol Types.</li>
      * </ul>
      * <blockquote>
-     * <p>The supported application types depend on the value of the protocol type (Proto). If Proto is set to TCP, ApplicationName can be set to any of the preceding application types. If Proto is set to UDP, ICMP, or ANY, ApplicationName can be set only to ANY. You must specify either ApplicationNameList or ApplicationName. You cannot leave both of them empty.</p>
+     * <p>The valid values of ApplicationName depend on the value of Proto. If Proto is set to TCP, ApplicationName can be set to any of the preceding Protocol Types. If Proto is set to UDP, ICMP, or ANY, ApplicationName can only be set to ANY. You must specify ApplicationNameList or ApplicationName. You cannot leave both parameters empty.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class AddControlPolicyRequest extends TeaModel {
     public java.util.List<String> applicationNameList;
 
     /**
-     * <p>The idempotence token.</p>
+     * <p>The client token that is used to ensure idempotence.</p>
      * 
      * <strong>example:</strong>
      * <p>ddadxefexxxx</p>
@@ -76,21 +76,21 @@ public class AddControlPolicyRequest extends TeaModel {
     public String description;
 
     /**
-     * <p>The destination port in the access control policy. Valid values:</p>
+     * <p>The destination port for traffic in the access control policy. Valid values:</p>
      * <ul>
-     * <li>If the protocol type is ICMP, the value of DestPort is empty.</li>
+     * <li>When the Protocol Type is ICMP, leave DestPort empty.</li>
      * </ul>
      * <blockquote>
-     * <p>If the protocol type is ICMP, access control on the destination port is not supported.</p>
+     * <p>When the protocol type is ICMP, access control on destination ports is not supported.</p>
      * </blockquote>
      * <ul>
-     * <li>If the protocol type is TCP, UDP, or ANY, and the destination port type (DestPortType) is group, the value of DestPort is empty.</li>
+     * <li>When the Protocol Type is TCP, UDP, or ANY, and DestPortType is set to group, leave DestPort empty.</li>
      * </ul>
      * <blockquote>
-     * <p>If the destination port type of the access control policy is set to group (port address book), you do not need to specify a destination port number. All ports that the access control policy manages are included in the port address book.</p>
+     * <p>When you select group (destination port address book) for the destination port type of the access control policy, you do not need to configure the Settings for specific destination port numbers. All ports that you want to manage by using this access control policy are included in the destination port address book.</p>
      * </blockquote>
      * <ul>
-     * <li>If the protocol type is TCP, UDP, or ANY, and the destination port type (DestPortType) is port, the value of DestPort is the destination port number.</li>
+     * <li>When the Protocol Type is TCP, UDP, or ANY, and DestPortType is set to port, set DestPort to the destination port number.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -102,7 +102,7 @@ public class AddControlPolicyRequest extends TeaModel {
     /**
      * <p>The name of the destination port address book in the access control policy.</p>
      * <blockquote>
-     * <p>If DestPortType is set to group, you must specify the destination port address book name.</p>
+     * <p>If DestPortType is set to group, you must specify the name of the destination port address book.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -129,21 +129,21 @@ public class AddControlPolicyRequest extends TeaModel {
      * <p>The destination address in the access control policy.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>If DestinationType is set to net, the value of Destination is a destination CIDR block.</p>
+     * <li><p>If DestinationType is set to net, set Destination to the destination CIDR block.</p>
      * <p>Example: 1.2.XX.XX/24</p>
      * </li>
-     * <li><p>If DestinationType is set to group, the value of Destination is a destination address book name.</p>
+     * <li><p>If DestinationType is set to group, set Destination to the name of the destination address book.</p>
      * <p>Example: db_group</p>
      * </li>
-     * <li><p>If DestinationType is set to domain, the value of Destination is a destination domain name.</p>
+     * <li><p>If DestinationType is set to domain, set Destination to the destination domain name.</p>
      * <p>Example: *.aliyuncs.com</p>
      * </li>
-     * <li><p>If DestinationType is set to location, the value of Destination is a destination region.</p>
+     * <li><p>If DestinationType is set to location, set Destination to the destination region.</p>
      * <p>Example: [&quot;BJ11&quot;, &quot;ZB&quot;\]</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If Destination is set to a destination region, for more information, see <a href="https://help.aliyun.com/document_detail/2854161.html">Region codes</a>.</p>
+     * <p>For more information about destination regions, see <a href="https://help.aliyun.com/document_detail/2854161.html">Region codes</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -159,7 +159,7 @@ public class AddControlPolicyRequest extends TeaModel {
      * <li><strong>net</strong>: destination CIDR block</li>
      * <li><strong>group</strong>: destination address book</li>
      * <li><strong>domain</strong>: destination domain name</li>
-     * <li><strong>location</strong>: destination region</li>
+     * <li><strong>location</strong>: destination area</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -172,8 +172,8 @@ public class AddControlPolicyRequest extends TeaModel {
     /**
      * <p>The traffic direction of the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>in</strong>: inbound traffic access control</li>
-     * <li><strong>out</strong>: outbound traffic access control</li>
+     * <li><strong>in</strong>: inbound traffic</li>
+     * <li><strong>out</strong>: outbound traffic</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -184,11 +184,11 @@ public class AddControlPolicyRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The domain name resolution method of the access control policy. Valid values:</p>
+     * <p>The domain name resolution mode of the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>FQDN</strong>: FQDN-based</li>
+     * <li><strong>FQDN</strong>: FQDN-based resolution</li>
      * <li><strong>DNS</strong>: DNS-based dynamic resolution</li>
-     * <li><strong>FQDN_AND_DNS</strong>: FQDN and DNS-based dynamic resolution</li>
+     * <li><strong>FQDN_AND_DNS</strong>: FQDN- and DNS-based dynamic resolution</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -204,9 +204,9 @@ public class AddControlPolicyRequest extends TeaModel {
     public Boolean dryRun;
 
     /**
-     * <p>The end time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The value must be on the hour or half hour and must be at least 30 minutes later than the start time.</p>
+     * <p>The end time of the Policy Validity Period for the access control policy. It is expressed in the format of a UNIX timestamp accurate to seconds. The time must be on the hour or half hour, and must be at least 30 minutes later than the start time.</p>
      * <blockquote>
-     * <p>If RepeatType is set to Permanent, EndTime is empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime must have a value.</p>
+     * <p>If RepeatType is set to Permanent, leave EndTime empty. If RepeatType is set to None, Daily, Weekly, or Monthly, EndTime is required, and you must configure the Settings for the end time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -216,7 +216,7 @@ public class AddControlPolicyRequest extends TeaModel {
     public Long endTime;
 
     /**
-     * <p>The IP address version supported.</p>
+     * <p>The IP address version.</p>
      * <p>Valid values:</p>
      * <ul>
      * <li><p><strong>4</strong>: IPv4</p>
@@ -245,7 +245,7 @@ public class AddControlPolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The priority of the access control policy. The priority value starts from 1. A smaller priority value indicates a higher priority.</p>
+     * <p>The priority of the access control policy. The priority value starts from 1 and increases sequentially. A smaller value indicates a higher priority.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -255,15 +255,15 @@ public class AddControlPolicyRequest extends TeaModel {
     public String newOrder;
 
     /**
-     * <p>The protocol type in the access control policy. Valid values:</p>
+     * <p>The protocol type of traffic in the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>ANY</strong></li>
+     * <li><strong>ANY</strong>: all protocols</li>
      * <li><strong>TCP</strong></li>
      * <li><strong>UDP</strong></li>
      * <li><strong>ICMP</strong></li>
      * </ul>
      * <blockquote>
-     * <p>If the traffic direction is outbound and the destination address is a threat intelligence address book or cloud service address book of the domain type, only TCP is supported. The application type can be set to HTTP, HTTPS, SMTP, SMTPS, or SSL.</p>
+     * <p>If the traffic direction is outbound and the destination address is a threat intelligence address book or a cloud service address book of the domain name type, you can only set Proto to TCP. In this case, you can set the application type to HTTP, HTTPS, SMTP, SMTPS, or SSL.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -274,11 +274,11 @@ public class AddControlPolicyRequest extends TeaModel {
     public String proto;
 
     /**
-     * <p>Specifies whether to enable the access control policy. The policy is enabled by default after it is created. Valid values:</p>
+     * <p>Specifies whether to enable the access control policy. By default, the policy is enabled after it is created. Valid values:</p>
      * <ul>
      * <li><p><strong>true</strong>: enables the access control policy.</p>
      * </li>
-     * <li><p><strong>false</strong>: disables the access control policy.</p>
+     * <li><p><strong>false</strong>: does not enable the access control policy.</p>
      * </li>
      * </ul>
      * 
@@ -289,18 +289,18 @@ public class AddControlPolicyRequest extends TeaModel {
     public String release;
 
     /**
-     * <p>The days of the recurrence for the policy validity period of the access control policy.</p>
+     * <p>The set of recurrence days for the Policy Validity Period of the access control policy.</p>
      * <ul>
-     * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, RepeatDays is an empty collection.
+     * <li>If RepeatType is set to <code>Permanent</code>, <code>None</code>, or <code>Daily</code>, leave RepeatDays empty.
      * Example: []</li>
      * <li>If RepeatType is set to Weekly, RepeatDays cannot be empty.
      * Example: [0, 6]<blockquote>
-     * <p>If RepeatType is set to Weekly, values in RepeatDays cannot be repeated.</p>
+     * <p>When the RepeatType Settings is Weekly, the values in RepeatDays cannot be duplicate.</p>
      * </blockquote>
      * </li>
      * <li>If RepeatType is set to <code>Monthly</code>, RepeatDays cannot be empty.
      * Example: [1, 31]<blockquote>
-     * <p>If RepeatType is set to Monthly, values in RepeatDays cannot be repeated.</p>
+     * <p>When the RepeatType Settings is Monthly, the values in RepeatDays cannot be duplicate.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -309,9 +309,9 @@ public class AddControlPolicyRequest extends TeaModel {
     public java.util.List<Long> repeatDays;
 
     /**
-     * <p>The recurrence end time of the policy validity period for the access control policy. Example: 23:30. The value must be on the hour or half hour and must be at least 30 minutes later than the recurrence start time.</p>
+     * <p>The recurrence end time of the Policy Validity Period for the access control policy. Example: 23:30. The time must be on the hour or half hour, and must be at least 30 minutes later than the recurrence start time.</p>
      * <blockquote>
-     * <p>If RepeatType is set to Permanent or None, RepeatEndTime is empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime must have a value.
+     * <p>If RepeatType is set to Permanent or None, leave RepeatEndTime empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatEndTime is required, and you must configure the Settings for the recurrence end time.
      * The time is in the HH:mm format (24-hour clock). Example: 08:00 or 23:30.</p>
      * </blockquote>
      * 
@@ -322,9 +322,9 @@ public class AddControlPolicyRequest extends TeaModel {
     public String repeatEndTime;
 
     /**
-     * <p>The recurrence start time of the policy validity period for the access control policy. Example: 08:00. The value must be on the hour or half hour and must be at least 30 minutes earlier than the recurrence end time.</p>
+     * <p>The recurrence start time of the Policy Validity Period for the access control policy. Example: 08:00. The time must be on the hour or half hour, and must be at least 30 minutes earlier than the recurrence end time.</p>
      * <blockquote>
-     * <p>If RepeatType is set to Permanent or None, RepeatStartTime is empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime must have a value.
+     * <p>If RepeatType is set to Permanent or None, leave RepeatStartTime empty. If RepeatType is set to Daily, Weekly, or Monthly, RepeatStartTime is required, and you must configure the Settings for the recurrence start time.
      * The time is in the HH:mm format (24-hour clock). Example: 08:00 or 23:30.</p>
      * </blockquote>
      * 
@@ -335,13 +335,13 @@ public class AddControlPolicyRequest extends TeaModel {
     public String repeatStartTime;
 
     /**
-     * <p>The recurrence type of the policy validity period for the access control policy. Valid values:</p>
+     * <p>The recurrence type of the Policy Validity Period for the access control policy. Valid values:</p>
      * <ul>
-     * <li><strong>Permanent</strong> (default): The policy is always valid.</li>
-     * <li><strong>None</strong>: The policy is valid for a specified single time period.</li>
-     * <li><strong>Daily</strong>: The policy is valid on a daily basis.</li>
-     * <li><strong>Weekly</strong>: The policy is valid on a weekly basis.</li>
-     * <li><strong>Monthly</strong>: The policy is valid on a monthly basis.</li>
+     * <li><strong>Permanent</strong> (default): always</li>
+     * <li><strong>None</strong>: specified single time</li>
+     * <li><strong>Daily</strong>: every day</li>
+     * <li><strong>Weekly</strong>: every week</li>
+     * <li><strong>Monthly</strong>: every month</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -353,18 +353,18 @@ public class AddControlPolicyRequest extends TeaModel {
     /**
      * <p>The source address in the access control policy. Valid values:</p>
      * <ul>
-     * <li><p>If SourceType is set to net, the value of Source is a source CIDR block.</p>
+     * <li><p>If SourceType is set to net, set Source to the source CIDR block.</p>
      * <p>Example: 1.1.XX.XX/24</p>
      * </li>
-     * <li><p>If SourceType is set to group, the value of Source is a source address book name.</p>
+     * <li><p>If SourceType is set to group, set Source to the name of the source address book.</p>
      * <p>Example: db_group</p>
      * </li>
-     * <li><p>If SourceType is set to location, the value of Source is a source region.</p>
+     * <li><p>If SourceType is set to location, set Source to the source region.</p>
      * <p>Example: [&quot;BJ11&quot;, &quot;ZB&quot;\]</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>If Source is set to a source region, for more information, see <a href="https://help.aliyun.com/document_detail/2854161.html">Region codes</a>.</p>
+     * <p>For more information about source regions, see <a href="https://help.aliyun.com/document_detail/2854161.html">Region codes</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -375,7 +375,7 @@ public class AddControlPolicyRequest extends TeaModel {
     public String source;
 
     /**
-     * <p>The source IP address of the request.</p>
+     * <p>The source IP address of the requester.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -385,11 +385,11 @@ public class AddControlPolicyRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The type of the source address in the access control policy. Valid values:</p>
+     * <p>The source address type in the access control policy. Valid values:</p>
      * <ul>
      * <li><strong>net</strong>: source CIDR block</li>
      * <li><strong>group</strong>: source address book</li>
-     * <li><strong>location</strong>: source region</li>
+     * <li><strong>location</strong>: source location</li>
      * </ul>
      * <p>This parameter is required.</p>
      * 
@@ -400,9 +400,9 @@ public class AddControlPolicyRequest extends TeaModel {
     public String sourceType;
 
     /**
-     * <p>The start time of the policy validity period for the access control policy. The value is a UNIX timestamp in seconds. The value must be on the hour or half hour and must be at least 30 minutes earlier than the end time.</p>
+     * <p>The start time of the Policy Validity Period for the access control policy. It is expressed in the format of a UNIX timestamp accurate to seconds. The time must be on the hour or half hour, and must be at least 30 minutes earlier than the end time.</p>
      * <blockquote>
-     * <p>If RepeatType is set to Permanent, StartTime is empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime must have a value.</p>
+     * <p>If RepeatType is set to Permanent, leave StartTime empty. If RepeatType is set to None, Daily, Weekly, or Monthly, StartTime is required, and you must configure the Settings for the start time.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

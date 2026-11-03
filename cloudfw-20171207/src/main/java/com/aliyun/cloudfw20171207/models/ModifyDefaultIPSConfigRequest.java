@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class ModifyDefaultIPSConfigRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable Basic Policies. Valid values:</p>
+     * <p>Specifies whether Basic Policies are enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Enable.</p>
+     * <li><p><strong>1</strong>: Enabled.</p>
      * </li>
      * <li><p><strong>0</strong>: shutdown.</p>
      * </li>
@@ -20,11 +20,11 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     public Integer basicRules;
 
     /**
-     * <p>Specifies whether to enable threat intelligence. Valid values:</p>
+     * <p>Specifies whether threat intelligence is enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Enable.</p>
+     * <li><p><strong>1</strong>: Enabled.</p>
      * </li>
-     * <li><p><strong>0</strong>: Disable.</p>
+     * <li><p><strong>0</strong>: Disabled.</p>
      * </li>
      * </ul>
      * 
@@ -35,7 +35,7 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     public Integer ctiRules;
 
     /**
-     * <p>The language type of the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><p><strong>zh</strong> (default): Chinese.</p>
      * </li>
@@ -50,7 +50,7 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The daily traffic limit for sensitive data detection.</p>
+     * <p>The maximum daily traffic limit for sensitive data detection.</p>
      * 
      * <strong>example:</strong>
      * <p>100</p>
@@ -59,11 +59,11 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     public Long maxSdl;
 
     /**
-     * <p>Specifies whether to enable virtual patches. Valid values:</p>
+     * <p>Specifies whether virtual patches are enabled. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Enable.</p>
+     * <li><p><strong>1</strong>: Enabled.</p>
      * </li>
-     * <li><p><strong>0</strong>: Disable.</p>
+     * <li><p><strong>0</strong>: Disabled.</p>
      * </li>
      * </ul>
      * 
@@ -93,9 +93,9 @@ public class ModifyDefaultIPSConfigRequest extends TeaModel {
     /**
      * <p>The IPS defense mode. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Block Mode.</p>
+     * <li><p><strong>1</strong>: Block mode.</p>
      * </li>
-     * <li><p><strong>0</strong>: monitor mode.</p>
+     * <li><p><strong>0</strong>: Monitor mode.</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

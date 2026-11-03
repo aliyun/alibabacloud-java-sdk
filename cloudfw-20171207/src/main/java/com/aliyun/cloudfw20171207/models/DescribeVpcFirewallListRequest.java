@@ -5,12 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallListRequest extends TeaModel {
     /**
-     * <p>The subtype of the connection. Valid values:</p>
+     * <p>The connection subtype. Valid values:</p>
      * <ul>
-     * <li><p><strong>vpc2vpc</strong>: Express Connect.</p>
-     * </li>
-     * <li><p><strong>vpcpeer</strong>: peering connection.</p>
-     * </li>
+     * <li><strong>vpc2vpc</strong>: Express Connect.</li>
+     * <li><strong>vpcpeer</strong>: VPC peering connection.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -20,8 +18,8 @@ public class DescribeVpcFirewallListRequest extends TeaModel {
     public String connectSubType;
 
     /**
-     * <p>The page number.</p>
-     * <p>Default value: <strong>1</strong>.</p>
+     * <p>The page number Settings for a paging query.</p>
+     * <p>Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -30,19 +28,15 @@ public class DescribeVpcFirewallListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The status of the VPC firewall. Valid values:</p>
+     * <p>The status of the virtual private cloud (VPC) border firewall. Valid values:</p>
      * <ul>
-     * <li><p><strong>opened</strong>: The firewall is enabled.</p>
-     * </li>
-     * <li><p><strong>closed</strong>: The firewall is disabled.</p>
-     * </li>
-     * <li><p><strong>notconfigured</strong>: The firewall is not configured.</p>
-     * </li>
-     * <li><p><strong>configured</strong>: The firewall is configured.</p>
-     * </li>
+     * <li><strong>opened</strong>: Enabled.</li>
+     * <li><strong>closed</strong>: Disabled.</li>
+     * <li><strong>notconfigured</strong>: The virtual private cloud (VPC) border firewall is not configured.</li>
+     * <li><strong>configured</strong>: The virtual private cloud (VPC) border firewall is configured.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not specify this parameter, VPC firewalls in all states are queried.</p>
+     * <p>If you do not specify the Settings for this parameter, virtual private cloud (VPC) border firewalls in all states are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -54,10 +48,8 @@ public class DescribeVpcFirewallListRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -67,7 +59,7 @@ public class DescribeVpcFirewallListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The UID of the member account.</p>
+     * <p>The UID of the member accounts of the current Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -76,7 +68,7 @@ public class DescribeVpcFirewallListRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number Settings of virtual private cloud (VPC) border firewalls per page for a paging query.</p>
      * <p>Default value: <strong>10</strong>. Maximum value: <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -97,7 +89,7 @@ public class DescribeVpcFirewallListRequest extends TeaModel {
     /**
      * <p>The region ID of the VPC.</p>
      * <blockquote>
-     * <p>For more information about the regions where Cloud Firewall is supported, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -107,7 +99,7 @@ public class DescribeVpcFirewallListRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The instance ID of the VPC firewall.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) border firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-m5e7dbc4y****</p>
@@ -116,7 +108,7 @@ public class DescribeVpcFirewallListRequest extends TeaModel {
     public String vpcFirewallId;
 
     /**
-     * <p>The instance name of the VPC firewall.</p>
+     * <p>The instance name of the virtual private cloud (VPC) border firewall.</p>
      * 
      * <strong>example:</strong>
      * <p>test-vpc-firewall</p>

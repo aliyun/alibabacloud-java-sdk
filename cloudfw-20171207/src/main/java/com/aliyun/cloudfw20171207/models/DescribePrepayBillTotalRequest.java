@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribePrepayBillTotalRequest extends TeaModel {
     /**
-     * <p>The bill type of the user. This parameter is required in practice. An error is returned if this parameter is not specified. Valid values:</p>
+     * <p>The bill type. This parameter is required. If it is not specified, an error is returned. Valid values:</p>
      * <ul>
-     * <li>elastic_traffic: elastic traffic</li>
-     * <li>sdl: sensitive data leak detection traffic</li>
+     * <li>elastic_traffic: elastic traffic.</li>
+     * <li>sdl: sensitive data leak detection traffic.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public String billType;
 
     /**
-     * <p>The page number in a paged query. Default value: 1.</p>
+     * <p>The page number for paging. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -27,9 +27,9 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public Long currentPage;
 
     /**
-     * <p>The end time. Specify a UNIX timestamp in seconds.</p>
+     * <p>The end time. Use a UNIX timestamp accurate to seconds.</p>
      * <blockquote>
-     * <p>Because billing data is aggregated at the daily granularity, the timestamp must correspond to 00:00:00 of the day in CST (UTC+8). If the timestamp is not aligned to the start of the day, no data may be returned.</p>
+     * <p>Because billing data is aggregated on a daily basis, this timestamp must correspond to 00:00:00 of the day in the CST (UTC+8) time zone. If the time is not aligned with midnight, no data may be returned.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -40,9 +40,12 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public String endTime;
 
     /**
-     * <p>The language. Enumerated value.
-     * Default value: zh.
-     * Valid value: en.</p>
+     * <p>The language. Valid values:</p>
+     * <ul>
+     * <li>zh</li>
+     * <li>en
+     * Default value: zh.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -51,7 +54,7 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries per page. Default value: 10.</p>
+     * <p>The number of entries to return on each page. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -60,9 +63,9 @@ public class DescribePrepayBillTotalRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The start time of the query. Specify a UNIX timestamp in seconds.</p>
+     * <p>The start time of the query. Use a UNIX timestamp accurate to seconds.</p>
      * <blockquote>
-     * <p>Because billing data is aggregated at the daily granularity, the timestamp must correspond to 00:00:00 of the day in CST (UTC+8). If the timestamp is not aligned to the start of the day, no data may be returned.</p>
+     * <p>Because billing data is aggregated on a daily basis, this timestamp must correspond to 00:00:00 of the day in the CST (UTC+8) time zone. If the time is not aligned with midnight, no data may be returned.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

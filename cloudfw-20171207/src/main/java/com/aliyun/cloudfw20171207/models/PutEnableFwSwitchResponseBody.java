@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class PutEnableFwSwitchResponseBody extends TeaModel {
     /**
-     * <p>The status information list for assets that are not synchronized.</p>
+     * <p>The list of status information when assets are not synchronized.</p>
      */
     @NameInMap("AbnormalResourceStatusList")
     public java.util.List<PutEnableFwSwitchResponseBodyAbnormalResourceStatusList> abnormalResourceStatusList;
 
     /**
-     * <p>Indicates whether this response is a dry run success response. A value of true indicates that only the dry run was completed and no actual changes were made. This field is not returned or is set to false for actual calls.</p>
+     * <p>Indicates whether the response is a successful dry run precheck. A value of true indicates that only the precheck is completed and no actual changes are made. This field is not returned or is set to false for actual calls.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -61,7 +61,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
         /**
          * <p>The message when the asset is not synchronized. Valid values:</p>
          * <ul>
-         * <li>cloudfirewall do not sync this ip address: Cloud Firewall did not synchronize this asset IP address.</li>
+         * <li>cloudfirewall do not sync this ip address: Cloud Firewall does not synchronize this asset IP address.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -71,7 +71,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
         public String msg;
 
         /**
-         * <p>The asset IP address.</p>
+         * <p>The IP address of the asset.</p>
          * 
          * <strong>example:</strong>
          * <p>203.0.113.0</p>
@@ -82,7 +82,7 @@ public class PutEnableFwSwitchResponseBody extends TeaModel {
         /**
          * <p>The status when the asset is not synchronized. Valid values:</p>
          * <ul>
-         * <li>ip_not_sync: the asset is not synchronized.</li>
+         * <li>ip_not_sync: The asset is not synchronized.</li>
          * </ul>
          * 
          * <strong>example:</strong>

@@ -5,9 +5,9 @@ import com.aliyun.tea.*;
 
 public class DescribeSlsAnalyzeOpenStatusResponseBody extends TeaModel {
     /**
-     * <p>The enabled status of SLS. Valid values:</p>
-     * <p><strong>true</strong>: enabled.</p>
-     * <p><strong>false</strong>: disabled.</p>
+     * <p>The enabling status of SLS. Valid values:</p>
+     * <p><strong>true</strong>: Enabled.</p>
+     * <p><strong>false</strong>: Disabled.</p>
      * 
      * <strong>example:</strong>
      * <p>false</p>

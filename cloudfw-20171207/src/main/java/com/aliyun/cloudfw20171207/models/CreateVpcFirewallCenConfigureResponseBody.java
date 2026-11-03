@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateVpcFirewallCenConfigureResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>850A84D6-0DE4-4797-A1E8-00090125h4j6</p>
@@ -14,7 +14,7 @@ public class CreateVpcFirewallCenConfigureResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewalls at the border.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-m5e7dbc4y****</p>

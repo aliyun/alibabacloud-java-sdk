@@ -23,7 +23,7 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String domain;
 
     /**
-     * <p>The end time. This value is a UNIX timestamp in seconds.</p>
+     * <p>The end time. The value is a UNIX timestamp accurate to seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String IP;
 
     /**
-     * <p>Specifies whether to collect only the traffic that accesses AI services. This parameter is required. Set this parameter to &quot;true&quot;. Otherwise, a parameter error is returned.</p>
+     * <p>Specifies whether to query only the traffic that accesses AI services. This parameter is required. You must set this parameter to &quot;true&quot;. Otherwise, a parameter error is returned.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -51,10 +51,10 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String isAITraffic;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -64,12 +64,11 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The sort field. Valid values:</p>
+     * <p>The field by which to sort the results. Default value: TotalBytes. Valid values:</p>
      * <ul>
-     * <li>TotalBytes: sorts by total traffic.</li>
-     * <li>SessionCount: sorts by session count.</li>
+     * <li><strong>TotalBytes</strong>: sorts the results by total traffic.</li>
+     * <li><strong>SessionCount</strong>: sorts the results by the number of sessions.</li>
      * </ul>
-     * <p>Default value: TotalBytes.</p>
      * 
      * <strong>example:</strong>
      * <p>SessionCount</p>
@@ -78,7 +77,7 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return on each page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -87,7 +86,11 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The sort order. Valid values: asc, desc.</p>
+     * <p>The sort order. Valid values:</p>
+     * <ul>
+     * <li><strong>asc</strong>: ascending order.</li>
+     * <li><strong>desc</strong>: descending order.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>desc</p>
@@ -96,7 +99,7 @@ public class DescribeVpcFirewallTrafficAssetListRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The start time. This value is a UNIX timestamp in seconds.</p>
+     * <p>The start time. The value is a UNIX timestamp accurate to seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

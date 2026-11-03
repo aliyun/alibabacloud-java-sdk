@@ -20,7 +20,7 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
     public String module;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>09A2D6F1-EA1B-56D9-977D-74878405****</p>
@@ -94,7 +94,7 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
         public String domainName;
 
         /**
-         * <p>Indicates whether the domain name is malicious. Valid values: <code>0</code> (not malicious) and <code>1</code> (malicious).</p>
+         * <p>Indicates whether the domain name is one of the malicious domain names. Valid values: 0: Not malicious. 1: Malicious.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -103,7 +103,7 @@ public class DescribeConfiguredDomainNamesResponseBody extends TeaModel {
         public Boolean isMalicious;
 
         /**
-         * <p>The time of the operation, specified as a Unix timestamp in seconds. Example: <code>1672502400</code>.</p>
+         * <p>The operation time. The value is a UNIX timestamp accurate to seconds, such as 1672502400.</p>
          * 
          * <strong>example:</strong>
          * <p>1534408189</p>

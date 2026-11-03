@@ -36,10 +36,8 @@ public class ModifyTrFirewallV2RoutePolicyScopeRequest extends TeaModel {
     /**
      * <p>Specifies whether to restore the traffic redirection configuration. Valid values:</p>
      * <ul>
-     * <li><p>true: Route rollback.</p>
-     * </li>
-     * <li><p>false: Route withdrawal.</p>
-     * </li>
+     * <li>true: Rolls back the route.</li>
+     * <li>false: Revokes the route.</li>
      * </ul>
      * 
      * <strong>example:</strong>

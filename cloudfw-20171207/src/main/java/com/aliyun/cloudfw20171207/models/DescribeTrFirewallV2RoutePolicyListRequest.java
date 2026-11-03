@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTrFirewallV2RoutePolicyListRequest extends TeaModel {
     /**
-     * <p>The page number in a paged query. Default value: 1. For more information about paging, see the corresponding parameter descriptions.</p>
+     * <p>The page number for a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,10 +14,7 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends TeaModel {
     public Integer currentPage;
 
     /**
-     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
-     * <blockquote>
-     * <p>FirewallId is required. If this parameter is not specified, the ErrorParameters (400) error is returned. You can call DescribeTrFirewallsV2List to obtain the FirewallId. Prerequisites: CEN Enterprise Edition with a transit router and VPC mount are configured, and the FirewallId is obtained by calling DescribeTrFirewallsV2List.</p>
-     * </blockquote>
+     * <p>The ID of the virtual private cloud (VPC) firewall instance. This parameter is required. If this parameter is not specified, an ErrorParameters (400) error is returned. You can call the DescribeTrFirewallsV2List operation to obtain the ID.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-d5ba592ac6c84aff****</p>
@@ -26,10 +23,10 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +36,7 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The maximum number of entries per page in a paged query. Default value: 10. For more information about paging, see the corresponding parameter descriptions.</p>
+     * <p>The maximum number of entries to return per page for a paged query. Default value: 10.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -48,7 +45,7 @@ public class DescribeTrFirewallV2RoutePolicyListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The ID of the firewall routing policy.</p>
+     * <p>The ID of the firewall route policy.</p>
      * 
      * <strong>example:</strong>
      * <p>policy-7b66257c14e141fb****</p>

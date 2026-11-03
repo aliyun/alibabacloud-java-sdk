@@ -7,8 +7,8 @@ public class CreateSecurityProxyRequest extends TeaModel {
     /**
      * <p>The deployment mode of the firewall service. Valid values:</p>
      * <ul>
-     * <li><strong>PrimaryStandby</strong>: primary/standby mode.</li>
-     * <li><strong>MultiPrimary</strong>: active-active mode.</li>
+     * <li>PrimaryStandby: primary/secondary mode</li>
+     * <li>MultiPrimary: active-active mode</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -26,8 +26,8 @@ public class CreateSecurityProxyRequest extends TeaModel {
     /**
      * <p>The security protection switch. Valid values:</p>
      * <ul>
-     * <li><strong>open</strong>: Enabled.</li>
-     * <li><strong>close</strong>: Disabled.</li>
+     * <li><strong>open</strong>: enable</li>
+     * <li><strong>close</strong>: disable</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -112,7 +112,7 @@ public class CreateSecurityProxyRequest extends TeaModel {
     public Integer strictMode;
 
     /**
-     * <p>The ID of the VPC.</p>
+     * <p>The VPC-connected instance ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -125,11 +125,11 @@ public class CreateSecurityProxyRequest extends TeaModel {
      * <p>Specifies whether to use the automatic mode for the vSwitch. Valid values:</p>
      * <ul>
      * <li><strong>true</strong>: automatic mode.</li>
-     * <li><strong>false</strong>: manual mode.</li>
-     * </ul>
-     * <blockquote>
+     * <li><strong>false</strong>: manual mode.<blockquote>
      * <p>Default value: true. If VswitchAuto is set to true, VswitchCidr is required and must be a valid CIDR block. If VswitchAuto is set to false, VswitchId is required.</p>
      * </blockquote>
+     * </li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -284,7 +284,7 @@ public class CreateSecurityProxyRequest extends TeaModel {
         public String destinationCidr;
 
         /**
-         * <p>The next hop of the original NAT gateway.</p>
+         * <p>The next hop address of the original NAT gateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -294,7 +294,7 @@ public class CreateSecurityProxyRequest extends TeaModel {
         public String nextHopId;
 
         /**
-         * <p>The network type of the next hop. Valid value: NatGateway.</p>
+         * <p>The network type of the next hop. Valid values: NatGateway.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>
@@ -304,7 +304,7 @@ public class CreateSecurityProxyRequest extends TeaModel {
         public String nextHopType;
 
         /**
-         * <p>The ID of the route table to which the default route of the NAT gateway belongs.</p>
+         * <p>The route table to which the default route of the NAT gateway belongs.</p>
          * <p>This parameter is required.</p>
          * 
          * <strong>example:</strong>

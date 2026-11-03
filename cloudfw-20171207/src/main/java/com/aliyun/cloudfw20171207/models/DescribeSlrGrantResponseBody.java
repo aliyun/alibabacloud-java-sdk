@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlrGrantResponseBody extends TeaModel {
     /**
-     * <p>Indicates whether the authorization is successful.</p>
+     * <p>Indicates whether the authorization was successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -23,7 +23,7 @@ public class DescribeSlrGrantResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The type of the account.</p>
+     * <p>The account type.</p>
      * 
      * <strong>example:</strong>
      * <p>sub</p>

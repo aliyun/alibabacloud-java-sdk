@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLocationInfoRequest extends TeaModel {
     /**
-     * <p>The language of the response.</p>
+     * <p>The language type.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>
@@ -14,7 +14,7 @@ public class DescribeLocationInfoRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The source tracking code.</p>
+     * <p>The tracing code.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

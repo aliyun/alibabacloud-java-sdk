@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
     /**
-     * <p>The number of the page to return. Default value: 1.</p>
+     * <p>The page number of the current page returned for a paged query. Default value: 1.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,12 +14,10 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The configuration status of the VPC boundary firewall. Valid values:</p>
+     * <p>The configuration status of the VPC firewall. Valid values:</p>
      * <ul>
-     * <li><p><strong>configured</strong>: The VPC boundary firewall is configured.</p>
-     * </li>
-     * <li><p>If you omit this parameter, the operation queries the access control policies for all VPC boundary firewalls.</p>
-     * </li>
+     * <li><strong>configured</strong>: The virtual private cloud (VPC) firewalls at the border are configured (that is, the firewalls are created).</li>
+     * <li>Empty: queries the access control policy of all virtual private cloud (VPC) firewalls at the border.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +27,7 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
     public String firewallConfigureStatus;
 
     /**
-     * <p>The instance ID of the VPC boundary firewall.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewalls at the border.</p>
      * 
      * <strong>example:</strong>
      * <p>vfw-tr-5b202e7f0be64611****</p>
@@ -38,12 +36,10 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language of the response message. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -53,7 +49,7 @@ public class DescribeVpcFirewallAclGroupListRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. The maximum value is 50.</p>
+     * <p>The maximum number of entries to return on each page for a paged query. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribePostpayBillResponseBody extends TeaModel {
     /**
-     * <p>The aggregated Internet traffic, in GB.</p>
+     * <p>The aggregated Internet traffic. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -14,7 +14,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
     public Float aggregateInternetTraffic;
 
     /**
-     * <p>The aggregated NAT traffic, in GB.</p>
+     * <p>The aggregated NAT traffic. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
     public Float aggregateNatTraffic;
 
     /**
-     * <p>The aggregated sensitive data detection traffic, in GB.</p>
+     * <p>The aggregated sensitive data detection traffic. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -32,7 +32,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
     public Float aggregateSdlTraffic;
 
     /**
-     * <p>The aggregated total traffic, in GB.</p>
+     * <p>The aggregated total traffic. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>40</p>
@@ -41,7 +41,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
     public Float aggregateTotalTraffic;
 
     /**
-     * <p>The aggregated VPC traffic, in GB.</p>
+     * <p>The aggregated VPC traffic. Unit: GB.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -50,7 +50,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
     public Float aggregateVpcTraffic;
 
     /**
-     * <p>The bill list.</p>
+     * <p>The list of bills.</p>
      */
     @NameInMap("BillList")
     public java.util.List<DescribePostpayBillResponseBodyBillList> billList;
@@ -144,7 +144,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
 
     public static class DescribePostpayBillResponseBodyBillList extends TeaModel {
         /**
-         * <p>The end time, expressed as a second-level UNIX timestamp. The value is on the hour or on the day.</p>
+         * <p>The end time. The time is a UNIX timestamp accurate to seconds, representing a full hour or a full day.</p>
          * 
          * <strong>example:</strong>
          * <p>1733710015</p>
@@ -162,7 +162,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Long internetInstanceCnt;
 
         /**
-         * <p>The Internet traffic, in GB.</p>
+         * <p>The Internet traffic. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>10</p>
@@ -171,9 +171,9 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Float internetTraffic;
 
         /**
-         * <p>Indicates whether the bill is deducted. A value of 0 indicates that the bill is not deducted. Any value greater than 0 indicates that the bill is deducted. If the bill is deducted, it is not charged.</p>
+         * <p>Indicates whether the fee is reduced. A value of 0 indicates that the fee is not reduced. A value greater than 0 indicates that the fee is reduced. If the fee is reduced, no bill is generated.</p>
          * <blockquote>
-         * <p>This field is meaningful only when you query hourly data.</p>
+         * <p>This parameter is valid only when you query hourly data.</p>
          * </blockquote>
          * 
          * <strong>example:</strong>
@@ -183,7 +183,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Integer isDerated;
 
         /**
-         * <p>The log service usage duration, in T × h.</p>
+         * <p>The usage duration of Simple Log Service. Unit: TB × h.</p>
          * 
          * <strong>example:</strong>
          * <p>24</p>
@@ -201,7 +201,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Long natInstanceCnt;
 
         /**
-         * <p>The NAT traffic, in GB.</p>
+         * <p>The NAT traffic. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -210,7 +210,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Float natTraffic;
 
         /**
-         * <p>The data leak detection usage duration, in hours.</p>
+         * <p>The usage duration of sensitive data leak detection. Unit: h.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -219,7 +219,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Long sdl;
 
         /**
-         * <p>The sensitive data detection traffic, in GB.</p>
+         * <p>The sensitive data detection traffic. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -228,7 +228,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Float sdlTraffic;
 
         /**
-         * <p>The start time, expressed as a second-level UNIX timestamp. The value is on the hour or on the day.</p>
+         * <p>The start time. The time is a UNIX timestamp accurate to seconds, representing a full hour or a full day.</p>
          * 
          * <strong>example:</strong>
          * <p>1710206070000</p>
@@ -237,7 +237,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Long startTime;
 
         /**
-         * <p>The threat intelligence usage duration, in hours.</p>
+         * <p>The usage duration of threat intelligence. Unit: h.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -255,7 +255,7 @@ public class DescribePostpayBillResponseBody extends TeaModel {
         public Long vpcInstanceCnt;
 
         /**
-         * <p>The VPC traffic, in GB.</p>
+         * <p>The VPC traffic. Unit: GB.</p>
          * 
          * <strong>example:</strong>
          * <p>4</p>

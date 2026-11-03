@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRiskEventGroupRequest extends TeaModel {
     /**
-     * <p>A list of names of the attacked applications. Use the <code>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</code> format.</p>
+     * <p>The list of names of the attacked applications. Specify the value in the <code>[&quot;AttackApp1&quot;,&quot;AttackApp2&quot;]</code> format.</p>
      * 
      * <strong>example:</strong>
      * <p>[&quot;MySql&quot;,&quot;DNS&quot;]</p>
@@ -14,43 +14,30 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public java.util.List<String> attackApp;
 
     /**
-     * <p>A list of categories of the attacked applications. Use the [&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;] format.</p>
+     * <p>The list of categories of the attacked applications. Specify the value in the <code>[&quot;AttackAppCategory1&quot;,&quot;AttackAppCategory2&quot;]</code> format.</p>
      */
     @NameInMap("AttackAppCategory")
     public java.util.List<String> attackAppCategory;
 
     /**
-     * <p>The type of the attack. Valid values:</p>
+     * <p>The attack type of the intrusion prevention events. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: abnormal connection</p>
-     * </li>
-     * <li><p><strong>2</strong>: command execution</p>
-     * </li>
-     * <li><p><strong>3</strong>: brute-force attack</p>
-     * </li>
-     * <li><p><strong>4</strong>: scan</p>
-     * </li>
-     * <li><p><strong>5</strong>: other</p>
-     * </li>
-     * <li><p><strong>6</strong>: information leakage</p>
-     * </li>
-     * <li><p><strong>7</strong>: DoS attack</p>
-     * </li>
-     * <li><p><strong>8</strong>: overflow attack</p>
-     * </li>
-     * <li><p><strong>9</strong>: web attack</p>
-     * </li>
-     * <li><p><strong>10</strong>: backdoor trojan</p>
-     * </li>
-     * <li><p><strong>11</strong>: virus or worm</p>
-     * </li>
-     * <li><p><strong>12</strong>: mining behavior</p>
-     * </li>
-     * <li><p><strong>13</strong>: reverse shell</p>
-     * </li>
+     * <li><strong>1</strong>: abnormal connection.</li>
+     * <li><strong>2</strong>: command execute.</li>
+     * <li><strong>3</strong>: brute-force attacks.</li>
+     * <li><strong>4</strong>: scan.</li>
+     * <li><strong>5</strong>: other.</li>
+     * <li><strong>6</strong>: information leak.</li>
+     * <li><strong>7</strong>: DoS attack.</li>
+     * <li><strong>8</strong>: overflow attack.</li>
+     * <li><strong>9</strong>: web attack.</li>
+     * <li><strong>10</strong>: trojan backdoor.</li>
+     * <li><strong>11</strong>: virus worm.</li>
+     * <li><strong>12</strong>: mining behavior.</li>
+     * <li><strong>13</strong>: reverse shell.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not set this parameter, events of all attack types are queried.</p>
+     * <p>If the Settings for this parameter are not specified, events of all attack types are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -60,16 +47,12 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String attackType;
 
     /**
-     * <p>The edition of Cloud Firewall. Valid values:</p>
+     * <p>The purchased edition. Valid values:</p>
      * <ul>
-     * <li><p><strong>2</strong>: Premium Edition</p>
-     * </li>
-     * <li><p><strong>3</strong>: Enterprise Edition</p>
-     * </li>
-     * <li><p><strong>4</strong>: Ultimate Edition</p>
-     * </li>
-     * <li><p><strong>10</strong>: pay-as-you-go</p>
-     * </li>
+     * <li><strong>2</strong>: Premium Edition.</li>
+     * <li><strong>3</strong>: Enterprise Edition.</li>
+     * <li><strong>4</strong>: Ultimate Edition.</li>
+     * <li><strong>10</strong>: Pay-as-you-go Edition.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -79,7 +62,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public Long buyVersion;
 
     /**
-     * <p>The page number of the returned data.
+     * <p>The paging Settings for the page number to return in a paged query.
      * Default value: <strong>1</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -89,8 +72,10 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The type of the risk event.<br>
-     * Set the value to <strong>session</strong>, which indicates intrusion prevention events.<br></p>
+     * <p>The risk event type. Valid value:  </p>
+     * <ul>
+     * <li><strong>session</strong>: intrusion prevention event.</li>
+     * </ul>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -100,15 +85,13 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String dataType;
 
     /**
-     * <p>The traffic direction of the intrusion prevention event. Valid values:</p>
+     * <p>The traffic direction of the intrusion prevention events. Valid values:</p>
      * <ul>
-     * <li><p><strong>in</strong>: inbound</p>
-     * </li>
-     * <li><p><strong>out</strong>: outbound</p>
-     * </li>
+     * <li><strong>in</strong>: inbound.</li>
+     * <li><strong>out</strong>: outbound.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not set this parameter, events in all traffic directions are queried.</p>
+     * <p>If this parameter is not specified, events in all traffic directions are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -118,7 +101,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String direction;
 
     /**
-     * <p>The destination IP address to query. If you set this parameter, only intrusion prevention events that contain the specified destination IP address are queried.</p>
+     * <p>The destination IP address to query. If you specify this parameter, intrusion prevention events that involve the specified destination IP address are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -127,9 +110,9 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String dstIP;
 
     /**
-     * <p>The ID of the destination VPC.</p>
+     * <p>The instance ID of the destination VPC-connected instance.</p>
      * <blockquote>
-     * <p>This parameter is required only when \<code>FirewallType\\</code> is set to \<code>VpcFirewall\\</code>.</p>
+     * <p>This parameter is required only when the FirewallType Settings is VpcFirewall.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -139,7 +122,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String dstNetworkInstanceId;
 
     /**
-     * <p>The end of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The end time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -158,12 +141,10 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String eventName;
 
     /**
-     * <p>The type of the firewall. Valid values:</p>
+     * <p>The type of the cloud firewall. Valid values:</p>
      * <ul>
-     * <li><p><strong>VpcFirewall</strong>: VPC firewall</p>
-     * </li>
-     * <li><p><strong>InternetFirewall</strong> (default): Internet firewall</p>
-     * </li>
+     * <li><strong>VpcFirewall</strong>: virtual private cloud (VPC) firewalls.</li>
+     * <li><strong>InternetFirewall</strong> (default): the Internet Border firewall.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -173,7 +154,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String firewallType;
 
     /**
-     * <p>Specifies whether to query only the data that is traced to private IP addresses.</p>
+     * <p>Specifies whether to query only the data for which private IP tracing is completed.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -184,10 +165,8 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     /**
      * <p>The language of the request and response. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese.</p>
-     * </li>
-     * <li><p><strong>en</strong>: English.</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -197,12 +176,10 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>Specifies whether to query the IP address location information. Valid values:</p>
+     * <p>Specifies whether to query IP geolocation information. Valid values:</p>
      * <ul>
-     * <li><p><strong>true</strong>: Does not query the IP geolocation information.</p>
-     * </li>
-     * <li><p><strong>false</strong> (default): Queries the IP geolocation information.</p>
-     * </li>
+     * <li><strong>true</strong>: IP geolocation information is not queried.</li>
+     * <li><strong>false</strong> (default): IP geolocation information is queried.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -212,11 +189,11 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String noLocation;
 
     /**
-     * <p>The sorting order. Valid values:</p>
+     * <p>The sort order. Valid values:</p>
      * <ul>
-     * <li><p><strong>asc</strong>: ascending</p>
+     * <li><p><strong>asc</strong>: ascending order.</p>
      * </li>
-     * <li><p><strong>desc</strong> (default): descending</p>
+     * <li><p><strong>desc</strong> (default): descending order.</p>
      * </li>
      * </ul>
      * 
@@ -227,7 +204,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String order;
 
     /**
-     * <p>The number of entries to return on each page.</p>
+     * <p>The paging Settings for the number of entries to return on each page in a paged query.</p>
      * <p>Default value: <strong>6</strong>. Maximum value: <strong>10</strong>.</p>
      * 
      * <strong>example:</strong>
@@ -237,15 +214,13 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The handling status of Cloud Firewall. Valid values:</p>
+     * <p>The defense status of Cloud Firewall. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: Alert</p>
-     * </li>
-     * <li><p><strong>2</strong>: Block</p>
-     * </li>
+     * <li><strong>1</strong>: alert.</li>
+     * <li><strong>2</strong>: block.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not set this parameter, events in all handling statuses are queried.</p>
+     * <p>If this parameter is not specified, events in all defense statuses are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -255,17 +230,14 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String ruleResult;
 
     /**
-     * <p>The source of the rule that is used to detect the intrusion prevention event. Valid values:</p>
+     * <p>The source of the detection rule for the intrusion prevention events. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: basic protection</p>
-     * </li>
-     * <li><p><strong>2</strong>: virtual patching</p>
-     * </li>
-     * <li><p><strong>4</strong>: threat intelligence</p>
-     * </li>
+     * <li><strong>1</strong>: basic protection.</li>
+     * <li><strong>2</strong>: virtual patches.</li>
+     * <li><strong>4</strong>: threat intelligence.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not set this parameter, events detected based on all types of rules are queried.</p>
+     * <p>If this parameter is not specified, events detected by rules from all sources are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -275,11 +247,11 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String ruleSource;
 
     /**
-     * <p>The field to use for sorting. Valid values:</p>
+     * <p>The field by which to sort the results. Valid values:</p>
      * <ul>
-     * <li><p><strong>VulLevel</strong> (default): Sorts by risk level.</p>
+     * <li><p><strong>VulLevel</strong> (default): sort by severity level.</p>
      * </li>
-     * <li><p><strong>LastTime</strong>: Sorts by the most recent occurrence time.</p>
+     * <li><p><strong>LastTime</strong>: sort by the most recent occurrence time.</p>
      * </li>
      * </ul>
      * 
@@ -290,7 +262,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String sort;
 
     /**
-     * <p>The source IP address to query. If you set this parameter, only intrusion prevention events that contain the specified source IP address are queried.</p>
+     * <p>The source IP address to query. If you specify this parameter, intrusion prevention events that involve the specified source IP address are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>192.0.XX.XX</p>
@@ -299,9 +271,9 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String srcIP;
 
     /**
-     * <p>The ID of the source VPC.</p>
+     * <p>The instance ID of the source VPC-connected instance.</p>
      * <blockquote>
-     * <p>This parameter is required only when \<code>FirewallType\\</code> is set to \<code>VpcFirewall\\</code>.</p>
+     * <p>This parameter is required only when the FirewallType Settings is VpcFirewall.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -311,7 +283,7 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String srcNetworkInstanceId;
 
     /**
-     * <p>The start of the time range to query. The value is a UNIX timestamp. Unit: seconds.</p>
+     * <p>The start time of the query. The value is a UNIX timestamp in seconds.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -321,17 +293,14 @@ public class DescribeRiskEventGroupRequest extends TeaModel {
     public String startTime;
 
     /**
-     * <p>The risk level of the intrusion prevention event. Valid values:</p>
+     * <p>The severity level of the intrusion prevention events. Valid values:</p>
      * <ul>
-     * <li><p><strong>1</strong>: low</p>
-     * </li>
-     * <li><p><strong>2</strong>: medium</p>
-     * </li>
-     * <li><p><strong>3</strong>: high</p>
-     * </li>
+     * <li><strong>1</strong>: low.</li>
+     * <li><strong>2</strong>: medium.</li>
+     * <li><strong>3</strong>: high.</li>
      * </ul>
      * <blockquote>
-     * <p>If you do not set this parameter, events of all risk levels are queried.</p>
+     * <p>If this parameter is not specified, events at all severity levels are queried.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>

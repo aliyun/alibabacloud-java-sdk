@@ -23,13 +23,13 @@ public class ModifyAddressBookShrinkRequest extends TeaModel {
     public java.util.List<String> ackNamespaces;
 
     /**
-     * <p>The list of addresses in the address book. Separate multiple addresses with commas (,). For each address element, separate the address and the description with a space. You must specify this parameter when GroupType is set to <strong>ip</strong>, <strong>port</strong>, or <strong>domain</strong>.</p>
+     * <p>The list of addresses in the address book. Separate multiple addresses with commas (,). Separate the address and description of an address element with a space. You must configure this parameter when GroupType is set to <strong>ip</strong>, <strong>port</strong>, or <strong>domain</strong>.</p>
      * <ul>
-     * <li><p>If GroupType is set to <strong>ip</strong>, enter IP addresses in the address list. Example: 1.2.XX.XX/32 Development CIDR block,10.0.0.X/24,1.2.XX.XX/24 Test CIDR block.</p>
+     * <li><p>When GroupType is set to <strong>ip</strong>, enter IP addresses in the address list. Example: 1.2.XX.XX/32 Development CIDR block,10.0.0.X/24,1.2.XX.XX/24 Test CIDR block.</p>
      * </li>
-     * <li><p>If GroupType is set to <strong>port</strong>, enter ports or port ranges in the address list. Example: 80/80 HTTP port,100/200,3306 Database port.</p>
+     * <li><p>When GroupType is set to <strong>port</strong>, enter ports or port ranges in the address list. Example: 80/80 HTTP port,100/200,3306 Database port.</p>
      * </li>
-     * <li><p>If GroupType is set to <strong>domain</strong>, enter domain names in the address list. Example: demo1.aliyun.com Test domain name,demo2.aliyun.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</p>
+     * <li><p>When GroupType is set to <strong>domain</strong>, enter domain names in the address list. Example: demo1.aliyun.com Test domain name,demo2.aliyun.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</p>
      * </li>
      * </ul>
      * 
@@ -46,13 +46,13 @@ public class ModifyAddressBookShrinkRequest extends TeaModel {
     public String assetMemberUidsShrink;
 
     /**
-     * <p>The asset address book, region, and resource type list.</p>
+     * <p>The asset address book, regions, and resource types.</p>
      */
     @NameInMap("AssetRegionResourceTypes")
     public String assetRegionResourceTypesShrink;
 
     /**
-     * <p>Specifies if the automatic addition of the public IP addresses of Elastic Compute Service (ECS) instances that match the new labels to the address book is enabled.</p>
+     * <p>Specifies whether the public IP addresses of Elastic Compute Service (ECS) instances that match a new tag are automatically added to the address book.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -96,9 +96,9 @@ public class ModifyAddressBookShrinkRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The UUID of the address book.</p>
+     * <p>The unique ID of the address book.</p>
      * <blockquote>
-     * <p>To obtain the value, call the <a href="~~DescribeAddressBook~~">DescribeAddressBook</a> operation.</p>
+     * <p>Value source: <a href="~~DescribeAddressBook~~">List address books</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -120,8 +120,8 @@ public class ModifyAddressBookShrinkRequest extends TeaModel {
     /**
      * <p>The modification mode.</p>
      * <blockquote>
-     * <p>If GroupType is set to <strong>ip</strong>, <strong>ipv6</strong>, <strong>port</strong>, or <strong>domain</strong> and this parameter is not specified, the <strong>Cover</strong> mode is used by default to modify the address book.
-     * Notice: If GroupType is set to <strong>tag</strong>, this parameter must be left empty.</notice></p>
+     * <p>When GroupType is set to <strong>ip</strong>, <strong>ipv6</strong>, <strong>port</strong>, or <strong>domain</strong>, if you do not configure this parameter, the <strong>Cover</strong> mode is used by default to modify the address book.
+     * <notice>When GroupType is set to <strong>tag</strong>, this parameter must be left empty.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>

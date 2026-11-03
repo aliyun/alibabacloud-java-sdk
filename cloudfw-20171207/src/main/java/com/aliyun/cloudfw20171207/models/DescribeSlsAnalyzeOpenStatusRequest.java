@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeSlsAnalyzeOpenStatusRequest extends TeaModel {
     /**
-     * <p>The language of the response messages. Valid values:</p>
+     * <p>The language type for receiving messages. Valid values:</p>
      * <ul>
      * <li><p><strong>zh</strong> (default): Chinese.</p>
      * </li>

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyTrFirewallV2RoutePolicyScopeResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>E7D4D635-0C70-5CEB-A609-851E94D51FBB</p>

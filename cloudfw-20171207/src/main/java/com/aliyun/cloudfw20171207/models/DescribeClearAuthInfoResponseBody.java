@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeClearAuthInfoResponseBody extends TeaModel {
     /**
-     * <p>The UNIX timestamp when the authorization expires.</p>
+     * <p>The expiration timestamp.</p>
      * 
      * <strong>example:</strong>
      * <p>1755964800</p>
@@ -14,7 +14,7 @@ public class DescribeClearAuthInfoResponseBody extends TeaModel {
     public Integer endTime;
 
     /**
-     * <p>The number of remaining clears.</p>
+     * <p>The number of remaining clearances.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

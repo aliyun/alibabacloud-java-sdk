@@ -7,16 +7,16 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
     /**
      * <p>The list of secondary traffic redirection instances.</p>
      * <blockquote>
-     * <p>DestCandidateList is required. If this parameter is not specified, ErrorParameters(400) is returned.</p>
+     * <p>DestCandidateList is required. If this parameter is not specified, an ErrorParameters(400) error is returned.</p>
      * </blockquote>
      */
     @NameInMap("DestCandidateList")
     public java.util.List<CreateTrFirewallV2RoutePolicyRequestDestCandidateList> destCandidateList;
 
     /**
-     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+     * <p>The instance ID of the virtual private cloud (VPC) firewalls at the border.</p>
      * <blockquote>
-     * <p>FirewallId is required. If this parameter is not specified, ErrorParameters(400) is returned. You can call DescribeTrFirewallsV2List to obtain instance ID.</p>
+     * <p>FirewallId is required. If this parameter is not specified, an ErrorParameters(400) error is returned. You can call the DescribeTrFirewallsV2List operation to obtain instance ID.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -26,10 +26,10 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
     public String firewallId;
 
     /**
-     * <p>The language of the content within the response. Valid values:</p>
+     * <p>The language in which you want to receive messages. Valid values:</p>
      * <ul>
-     * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English</li>
+     * <li><strong>zh</strong> (default): Chinese.</li>
+     * <li><strong>en</strong>: English.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -39,7 +39,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The description of the traffic redirection scenario.</p>
+     * <p>The description of the traffic redirection policy.</p>
      * 
      * <strong>example:</strong>
      * <p>Singapore Point to Multipoint</p>
@@ -48,7 +48,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
     public String policyDescription;
 
     /**
-     * <p>The name of the traffic redirection scenario.</p>
+     * <p>The name of the traffic redirection policy.</p>
      * 
      * <strong>example:</strong>
      * <p>Singapore Point to Multipoint</p>
@@ -57,15 +57,15 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
     public String policyName;
 
     /**
-     * <p>The traffic redirection scenario type for the virtual private cloud (VPC) firewall for a CEN Enterprise Edition transit router. Valid values:</p>
+     * <p>The type of the traffic redirection scenario for virtual private cloud (VPC) firewalls at the border in the Enterprise Edition Cloud Enterprise Network (CEN). Valid values:</p>
      * <ul>
-     * <li><p><strong>fullmesh</strong>: multi-point interconnection</p>
+     * <li><p><strong>fullmesh</strong>: Multi-point interconnection.</p>
      * </li>
-     * <li><p><strong>one_to_one</strong>: point-to-point</p>
+     * <li><p><strong>one_to_one</strong>: Point-to-point.</p>
      * </li>
-     * <li><p><strong>end_to_end</strong>: point-to-multipoint</p>
+     * <li><p><strong>end_to_end</strong>: Point-to-multipoint.</p>
      * <blockquote>
-     * <p>PolicyType is required. If this parameter is not specified, ErrorParameters(400) is returned.</p>
+     * <p>PolicyType is required. If this parameter is not specified, an ErrorParameters(400) error is returned.</p>
      * </blockquote>
      * </li>
      * </ul>
@@ -79,7 +79,7 @@ public class CreateTrFirewallV2RoutePolicyRequest extends TeaModel {
     /**
      * <p>The list of primary traffic redirection instances.</p>
      * <blockquote>
-     * <p>SrcCandidateList is required. If this parameter is not specified, ErrorParameters(400) is returned.</p>
+     * <p>SrcCandidateList is required. If this parameter is not specified, an ErrorParameters(400) error is returned.</p>
      * </blockquote>
      */
     @NameInMap("SrcCandidateList")

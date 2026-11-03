@@ -14,11 +14,11 @@ public class DescribePostpayUserVpcStatusResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the Cloud Firewall VPC firewall switch module. Valid values:</p>
+     * <p>The status of the VPC firewall switch module in Cloud Firewall. Valid values:</p>
      * <ul>
      * <li><strong>open</strong>: The module is enabled.</li>
      * <li><strong>init</strong>: The module is being enabled.</li>
-     * <li><strong>closed</strong>: The module is not enabled.</li>
+     * <li><strong>closed</strong>: The module is disabled.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -28,7 +28,7 @@ public class DescribePostpayUserVpcStatusResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The number of days during which protection is not enabled. This parameter is valid only when the module is enabled.</p>
+     * <p>The number of days that protection is disabled. This parameter is valid only when the module is enabled.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>

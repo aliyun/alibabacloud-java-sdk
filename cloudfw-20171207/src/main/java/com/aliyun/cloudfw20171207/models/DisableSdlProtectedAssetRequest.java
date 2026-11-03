@@ -11,7 +11,7 @@ public class DisableSdlProtectedAssetRequest extends TeaModel {
     public java.util.List<String> ipList;
 
     /**
-     * <p>The language of the response message.</p>
+     * <p>The language type for receiving messages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

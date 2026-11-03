@@ -20,9 +20,9 @@ public class DescribeVpcListLiteRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the region where the VPC resides.</p>
+     * <p>The region ID of the VPC.</p>
      * <blockquote>
-     * <p>For more information about the regions that Cloud Firewall supports, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
+     * <p>For more information about the regions supported by Cloud Firewall, see <a href="https://help.aliyun.com/document_detail/195657.html">Supported regions</a>.</p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -32,7 +32,7 @@ public class DescribeVpcListLiteRequest extends TeaModel {
     public String regionNo;
 
     /**
-     * <p>The source IP address of the requester.</p>
+     * <p>The source IP address of the caller.</p>
      * 
      * <strong>example:</strong>
      * <p>58.34.174.194</p>
@@ -41,7 +41,7 @@ public class DescribeVpcListLiteRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The instance ID of the VPC.</p>
+     * <p>The instance ID of the VPC-connected instance.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-8vbwbo90rq0anm6t****</p>
@@ -50,7 +50,7 @@ public class DescribeVpcListLiteRequest extends TeaModel {
     public String vpcId;
 
     /**
-     * <p>The instance name of the VPC.</p>
+     * <p>The name of the VPC.</p>
      * 
      * <strong>example:</strong>
      * <p>vpc-shanghai</p>

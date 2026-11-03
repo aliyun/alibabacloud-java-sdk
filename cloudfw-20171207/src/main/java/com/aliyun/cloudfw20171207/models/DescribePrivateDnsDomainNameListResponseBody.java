@@ -29,7 +29,7 @@ public class DescribePrivateDnsDomainNameListResponseBody extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>822B9125-6E1A-551C-8EAF-6E7AE74****</p>

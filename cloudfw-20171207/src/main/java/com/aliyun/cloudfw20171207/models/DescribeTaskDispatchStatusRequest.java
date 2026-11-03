@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeTaskDispatchStatusRequest extends TeaModel {
     /**
-     * <p>The task ID, which is the unique identifier of the log configuration modification task. Obtain this value from the TaskId response parameter of the ModifySlsDispatchConfig operation.</p>
+     * <p>The task ID, which is the unique identifier of the log configuration update task. You can obtain it from the TaskId parameter in the response of the ModifySlsDispatchConfig operation.</p>
      * 
      * <strong>example:</strong>
      * <p>65db4ce2418b44b3be7c3xxxxx</p>

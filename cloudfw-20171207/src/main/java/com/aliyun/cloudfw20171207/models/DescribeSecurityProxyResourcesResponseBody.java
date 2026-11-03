@@ -51,7 +51,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         public String destinationCidr;
 
         /**
-         * <p>The ID of the next hop.</p>
+         * <p>The next hop instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-2zey0w2u02u1x584m****</p>
@@ -118,7 +118,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
 
     public static class DescribeSecurityProxyResourcesResponseBodyResourceListVpcListNatGateways extends TeaModel {
         /**
-         * <p>The status of the NAT Gateway.</p>
+         * <p>The status of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -127,7 +127,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         public String detail;
 
         /**
-         * <p>The ID of the NAT Gateway.</p>
+         * <p>The NAT gateway ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-bp1bm0k2t8i6ooxu****</p>
@@ -136,7 +136,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         public String natGatewayId;
 
         /**
-         * <p>The name of the NAT Gateway.</p>
+         * <p>The name of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>ngw-test</p>
@@ -151,7 +151,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         public java.util.List<DescribeSecurityProxyResourcesResponseBodyResourceListVpcListNatGatewaysNatRouteEntryList> natRouteEntryList;
 
         /**
-         * <p>The status of the NAT Gateway.</p>
+         * <p>The status of the NAT gateway.</p>
          * 
          * <strong>example:</strong>
          * <p>Available</p>
@@ -217,7 +217,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         public String cidrBlock;
 
         /**
-         * <p>The UID of the member account.</p>
+         * <p>The UID of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>157862808111****</p>
@@ -232,7 +232,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         public java.util.List<DescribeSecurityProxyResourcesResponseBodyResourceListVpcListNatGateways> natGateways;
 
         /**
-         * <p>The ID of the VPC.</p>
+         * <p>The VPC-connected instance ID.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-8vbuzirdl3w1r7exw****</p>
@@ -241,7 +241,7 @@ public class DescribeSecurityProxyResourcesResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The name of the VPC.</p>
+         * <p>The name of the VPC-connected instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz94a4q37rgl7g****</p>

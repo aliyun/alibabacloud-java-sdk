@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeLocationInfoResponseBody extends TeaModel {
     /**
-     * <p>The number of regions in China.</p>
+     * <p>The number of regions in the Chinese mainland.</p>
      * 
      * <strong>example:</strong>
      * <p>340</p>
@@ -14,19 +14,19 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
     public Integer cnCount;
 
     /**
-     * <p>The list of regions in China.</p>
+     * <p>The list of regions in the Chinese mainland.</p>
      */
     @NameInMap("CnList")
     public java.util.List<DescribeLocationInfoResponseBodyCnList> cnList;
 
     /**
-     * <p>The information about provinces and cities in China.</p>
+     * <p>The province and city information in the Chinese mainland.</p>
      */
     @NameInMap("CnProvinceList")
     public java.util.List<DescribeLocationInfoResponseBodyCnProvinceList> cnProvinceList;
 
     /**
-     * <p>The number of regions outside China.</p>
+     * <p>The number of regions outside the Chinese mainland.</p>
      * 
      * <strong>example:</strong>
      * <p>238</p>
@@ -35,7 +35,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
     public Integer overseasCount;
 
     /**
-     * <p>The list of regions outside China.</p>
+     * <p>The list of regions outside the Chinese mainland.</p>
      */
     @NameInMap("OverseasList")
     public java.util.List<DescribeLocationInfoResponseBodyOverseasList> overseasList;
@@ -104,7 +104,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
 
     public static class DescribeLocationInfoResponseBodyCnList extends TeaModel {
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>3301</p>
@@ -113,7 +113,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         public String locId;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
          * 
          * <strong>example:</strong>
          * <p>Hangzhou City</p>
@@ -146,7 +146,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
 
     public static class DescribeLocationInfoResponseBodyCnProvinceListCities extends TeaModel {
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>123</p>
@@ -155,7 +155,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         public String locId;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
          * 
          * <strong>example:</strong>
          * <p>Hangzhou</p>
@@ -194,7 +194,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         public java.util.List<DescribeLocationInfoResponseBodyCnProvinceListCities> cities;
 
         /**
-         * <p>The name of the province.</p>
+         * <p>The province name.</p>
          * 
          * <strong>example:</strong>
          * <p>Zhejiang</p>
@@ -227,7 +227,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
 
     public static class DescribeLocationInfoResponseBodyOverseasList extends TeaModel {
         /**
-         * <p>The ID of the region.</p>
+         * <p>The region ID.</p>
          * 
          * <strong>example:</strong>
          * <p>US</p>
@@ -236,7 +236,7 @@ public class DescribeLocationInfoResponseBody extends TeaModel {
         public String locId;
 
         /**
-         * <p>The name of the region.</p>
+         * <p>The region name.</p>
          * 
          * <strong>example:</strong>
          * <p>United States</p>

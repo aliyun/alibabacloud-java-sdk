@@ -42,7 +42,7 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
 
     public static class DescribeVpcListLiteResponseBodyVpcList extends TeaModel {
         /**
-         * <p>The ID of the region to which the VPC belongs.</p>
+         * <p>The region ID of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-hangzhou</p>
@@ -51,7 +51,7 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The instance ID of the VPC.</p>
+         * <p>The instance ID of the VPC-connected instance.</p>
          * 
          * <strong>example:</strong>
          * <p>vpc-wz9dqhljd10fk0b4eh885</p>
@@ -60,7 +60,7 @@ public class DescribeVpcListLiteResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The instance name of the VPC.</p>
+         * <p>The name of the VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>Cloud_Firewall_VPC</p>

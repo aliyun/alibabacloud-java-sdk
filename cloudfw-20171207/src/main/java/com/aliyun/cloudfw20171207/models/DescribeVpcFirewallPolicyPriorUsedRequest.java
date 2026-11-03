@@ -19,14 +19,14 @@ public class DescribeVpcFirewallPolicyPriorUsedRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The ID of the policy group for the VPC firewall. Call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</p>
+     * <p>The ID of the access control policy group for the VPC border firewall. You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain the ID.</p>
      * <p>Valid values:</p>
      * <ul>
-     * <li><p>If the VPC firewall protects a Cloud Enterprise Network (CEN) instance, set this parameter to the ID of the CEN instance.</p>
-     * <p>Example: cen-ervw0g12b5jbw\<em>\</em>\<em>\</em></p>
+     * <li><p>When a VPC border firewall protects a Cloud Enterprise Network (CEN) instance, the policy group ID is the instance ID of the CEN instance.</p>
+     * <p>Example: cen-ervw0g12b5jbw*\<em>\</em>\*</p>
      * </li>
-     * <li><p>If the VPC firewall protects an Express Connect circuit, set this parameter to the ID of the VPC firewall instance.</p>
-     * <p>Example: vfw-a42bbb7b887148c9\<em>\</em>\<em>\</em></p>
+     * <li><p>When a VPC border firewall protects an Express Connect circuit, the policy group ID is the instance ID of the VPC border firewall.</p>
+     * <p>Example: vfw-a42bbb7b887148c9*\<em>\</em>\*</p>
      * </li>
      * </ul>
      * <p>This parameter is required.</p>

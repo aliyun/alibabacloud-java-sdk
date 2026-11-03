@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeVpcFirewallListResponseBody extends TeaModel {
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>850A84D6-0DE4-4797-A1E8-00090125k8g2</p>
@@ -14,7 +14,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of VPC firewalls.</p>
+     * <p>The total number of virtual private cloud (VPC) border firewalls.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -23,7 +23,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
     public Integer totalCount;
 
     /**
-     * <p>The details of the VPC firewalls.</p>
+     * <p>The details of the virtual private cloud (VPC) border firewalls.</p>
      */
     @NameInMap("VpcFirewalls")
     public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewalls> vpcFirewalls;
@@ -59,12 +59,10 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig extends TeaModel {
         /**
-         * <p>Indicates whether to enable strict mode. Valid values:</p>
+         * <p>Specifies whether strict mode is enabled. Valid values:</p>
          * <ul>
-         * <li><p>1: enabled</p>
-         * </li>
-         * <li><p>0: disabled</p>
-         * </li>
+         * <li><strong>1</strong>: Enabled. </li>
+         * <li><strong>0</strong>: Disabled.</li>
          * </ul>
          * <p>This parameter is required.</p>
          * 
@@ -91,12 +89,10 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsIpsConfig extends TeaModel {
         /**
-         * <p>The status of the basic policies. Valid values:</p>
+         * <p>The switch for Basic Policies. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: enabled.</p>
-         * </li>
-         * <li><p><strong>0</strong>: disabled.</p>
-         * </li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -106,12 +102,10 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public Integer basicRules;
 
         /**
-         * <p>The status of virtual patching. Valid values:</p>
+         * <p>The switch for virtual patches. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: enabled.</p>
-         * </li>
-         * <li><p><strong>0</strong>: disabled.</p>
-         * </li>
+         * <li><strong>1</strong>: Enabled.</li>
+         * <li><strong>0</strong>: Disabled.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -121,13 +115,13 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public Integer enableAllPatch;
 
         /**
-         * <p>The IPS rule group. Valid values:</p>
+         * <p>The IPS rules group. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: Loose.</p>
+         * <li><p><strong>1</strong>: Loose rule group.</p>
          * </li>
-         * <li><p><strong>2</strong>: Medium.</p>
+         * <li><p><strong>2</strong>: Medium rule group.</p>
          * </li>
-         * <li><p><strong>3</strong>: Strict.</p>
+         * <li><p><strong>3</strong>: Strict rule group.</p>
          * </li>
          * </ul>
          * 
@@ -138,12 +132,10 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public Integer ruleClass;
 
         /**
-         * <p>The IPS mode. Valid values:</p>
+         * <p>The IPS defense mode. Valid values:</p>
          * <ul>
-         * <li><p><strong>1</strong>: Block Mode.</p>
-         * </li>
-         * <li><p><strong>0</strong>: Monitor mode.</p>
-         * </li>
+         * <li><strong>1</strong>: Block mode.</li>
+         * <li><strong>0</strong>: Monitor mode.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -202,7 +194,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String destinationCidr;
 
         /**
-         * <p>The ID of the next hop instance for the local VPC.</p>
+         * <p>The next hop instance ID of the local VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vrt-m5eb5me6c3l5sezae****</p>
@@ -235,13 +227,13 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList extends TeaModel {
         /**
-         * <p>The route entries of the local VPC.</p>
+         * <p>The routing entry list of the local VPC.</p>
          */
         @NameInMap("RouteEntryList")
         public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableListRouteEntryList> routeEntryList;
 
         /**
-         * <p>The ID of the route table for the local VPC.</p>
+         * <p>The ID of the route table of the local VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-1234</p>
@@ -274,7 +266,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpc extends TeaModel {
         /**
-         * <p>The authorization status of the local VPC. The value is fixed as authorized.</p>
+         * <p>The authorization status of the local VPC. Valid values: <strong>authorized</strong>, which indicates that the VPC is authorized.</p>
          * 
          * <strong>example:</strong>
          * <p>authorized</p>
@@ -301,7 +293,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The CIDR blocks of the local VPC.</p>
+         * <p>The CIDR block list of the local VPC.</p>
          */
         @NameInMap("VpcCidrTableList")
         public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpcVpcCidrTableList> vpcCidrTableList;
@@ -316,7 +308,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The instance name of the local VPC.</p>
+         * <p>The name of the local VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>test-vpc1</p>
@@ -390,7 +382,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String destinationCidr;
 
         /**
-         * <p>The ID of the next hop instance for the peer VPC.</p>
+         * <p>The next hop instance ID of the peer VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vrt-m5eb5me6c3l5sezae****</p>
@@ -423,13 +415,13 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableList extends TeaModel {
         /**
-         * <p>The route entries of the peer VPC.</p>
+         * <p>The routing entry list of the peer VPC.</p>
          */
         @NameInMap("RouteEntryList")
         public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableListRouteEntryList> routeEntryList;
 
         /**
-         * <p>The ID of the route table for the peer VPC.</p>
+         * <p>The ID of the route table of the peer VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>vtb-1256</p>
@@ -462,7 +454,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpc extends TeaModel {
         /**
-         * <p>The authorization status of the peer VPC. The value is fixed as <strong>authorized</strong>.</p>
+         * <p>The authorization status of the peer VPC. Valid values: <strong>authorized</strong>, which indicates that the VPC is authorized.</p>
          * 
          * <strong>example:</strong>
          * <p>authorized</p>
@@ -489,7 +481,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String regionNo;
 
         /**
-         * <p>The CIDR blocks of the peer VPC.</p>
+         * <p>The CIDR block list of the peer VPC.</p>
          */
         @NameInMap("VpcCidrTableList")
         public java.util.List<DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpcVpcCidrTableList> vpcCidrTableList;
@@ -504,7 +496,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String vpcId;
 
         /**
-         * <p>The instance name of the peer VPC.</p>
+         * <p>The name of the peer VPC.</p>
          * 
          * <strong>example:</strong>
          * <p>test-vpc2</p>
@@ -569,13 +561,13 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
 
     public static class DescribeVpcFirewallListResponseBodyVpcFirewalls extends TeaModel {
         /**
-         * <p>The mode of the access control list (ACL) engine.</p>
+         * <p>The ACL engine mode.</p>
          */
         @NameInMap("AclConfig")
         public DescribeVpcFirewallListResponseBodyVpcFirewallsAclConfig aclConfig;
 
         /**
-         * <p>The bandwidth of the Express Connect circuit. Unit: Mbps.</p>
+         * <p>The bandwidth of the Express Connect circuit. Unit: Mbit/s.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -584,12 +576,10 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public Integer bandwidth;
 
         /**
-         * <p>The subtype of the connection. Valid values:</p>
+         * <p>The connection subtype. Valid values:</p>
          * <ul>
-         * <li><p><strong>vpc2vpc</strong>: Express Connect.</p>
-         * </li>
-         * <li><p><strong>vpcpeer</strong>: peering connection.</p>
-         * </li>
+         * <li><strong>vpc2vpc</strong>: Express Connect.</li>
+         * <li><strong>vpcpeer</strong>: VPC peering connection.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -599,7 +589,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String connectSubType;
 
         /**
-         * <p>The type of connection for the VPC firewall. The value is fixed as <strong>expressconnect</strong>, which indicates an Express Connect circuit.</p>
+         * <p>The interconnection type of the virtual private cloud (VPC) border firewall. Valid values: <strong>expressconnect</strong>, which indicates Express Connect.</p>
          * 
          * <strong>example:</strong>
          * <p>expressconnect</p>
@@ -608,14 +598,11 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String connectType;
 
         /**
-         * <p>The status of the VPC firewall. Valid values:</p>
+         * <p>The switch status of the virtual private cloud (VPC) border firewall. Valid values:</p>
          * <ul>
-         * <li><p><strong>opened</strong>: The firewall is enabled.</p>
-         * </li>
-         * <li><p><strong>closed</strong>: The firewall is disabled.</p>
-         * </li>
-         * <li><p><strong>notconfigured</strong>: The firewall is not configured.</p>
-         * </li>
+         * <li><strong>opened</strong>: Enabled.</li>
+         * <li><strong>closed</strong>: Disabled.</li>
+         * <li><strong>notconfigured</strong>: The virtual private cloud (VPC) border firewall is not configured.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -625,7 +612,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String firewallSwitchStatus;
 
         /**
-         * <p>The configuration of the intrusion prevention system (IPS).</p>
+         * <p>The IPS configuration.</p>
          */
         @NameInMap("IpsConfig")
         public DescribeVpcFirewallListResponseBodyVpcFirewallsIpsConfig ipsConfig;
@@ -637,7 +624,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public DescribeVpcFirewallListResponseBodyVpcFirewallsLocalVpc localVpc;
 
         /**
-         * <p>The UID of the member account.</p>
+         * <p>The UID of the member accounts.</p>
          * 
          * <strong>example:</strong>
          * <p>258039427902****</p>
@@ -652,12 +639,10 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public DescribeVpcFirewallListResponseBodyVpcFirewallsPeerVpc peerVpc;
 
         /**
-         * <p>The status of the region. Valid values:</p>
+         * <p>The availability status of the region. Valid values:</p>
          * <ul>
-         * <li><p><strong>enable</strong>: The region is available. You can create a VPC firewall in this region.</p>
-         * </li>
-         * <li><p><strong>disable</strong>: The region is unavailable. You cannot create a VPC firewall in this region.</p>
-         * </li>
+         * <li><strong>enable</strong>: Available. The region supports virtual private cloud (VPC) border firewalls.</li>
+         * <li><strong>disable</strong>: Unavailable. The region does not support virtual private cloud (VPC) border firewalls.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -667,14 +652,11 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String regionStatus;
 
         /**
-         * <p>The result code of the VPC firewall creation. Valid values:</p>
+         * <p>The operation result code when you create a VPC border firewall. Valid values:</p>
          * <ul>
-         * <li><p><strong>Unauthorized</strong>: An unauthorized VPC exists. You cannot create a VPC firewall.</p>
-         * </li>
-         * <li><p><strong>RegionDisable</strong>: The VPC is in a region where VPC firewalls are not supported. You cannot create a VPC firewall.</p>
-         * </li>
-         * <li><p><strong>An empty string</strong>: You can create a VPC firewall for the network instance.</p>
-         * </li>
+         * <li><strong>Unauthorized</strong>: Indicates that a VPC without authorization exists, and you are not allowed to create a VPC border firewall.</li>
+         * <li><strong>RegionDisable</strong>: Indicates that the region where the VPC resides does not support VPC border firewalls, and you are not allowed to create a VPC border firewall.</li>
+         * <li><strong>Empty string</strong>: Indicates that you can normally create a VPC border firewall for this network instance.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -684,7 +666,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String resultCode;
 
         /**
-         * <p>The instance ID of the VPC firewall.</p>
+         * <p>The instance ID of the virtual private cloud (VPC) border firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>vfw-m5e7dbc4y****</p>
@@ -693,7 +675,7 @@ public class DescribeVpcFirewallListResponseBody extends TeaModel {
         public String vpcFirewallId;
 
         /**
-         * <p>The instance name of the VPC firewall.</p>
+         * <p>The instance name of the virtual private cloud (VPC) border firewall.</p>
          * 
          * <strong>example:</strong>
          * <p>test-firewall</p>

@@ -14,10 +14,10 @@ public class UpdatePostpayUserInternetStatusRequest extends TeaModel {
     public String instanceId;
 
     /**
-     * <p>The language of the response message. Valid values:</p>
+     * <p>The language of the message. Valid values:</p>
      * <ul>
      * <li><strong>zh</strong> (default): Chinese</li>
-     * <li><strong>en</strong>: English.</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -27,9 +27,9 @@ public class UpdatePostpayUserInternetStatusRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The operation type. Currently, only the activation operation is supported.</p>
+     * <p>The operation type. Currently, only the activation operation is supported. Valid values:</p>
      * <ul>
-     * <li>open: activation.</li>
+     * <li>open: activate</li>
      * </ul>
      * 
      * <strong>example:</strong>

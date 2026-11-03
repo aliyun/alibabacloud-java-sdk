@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class ModifyVpcFirewallConfigureRequest extends TeaModel {
     /**
-     * <p>The language of the content within the request and response. Valid values:</p>
+     * <p>The language of the request and response. Valid values:</p>
      * <ul>
      * <li><p><strong>zh</strong> (default): Chinese.</p>
      * </li>
@@ -20,15 +20,15 @@ public class ModifyVpcFirewallConfigureRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The CIDR block information of the local VPC, in JSON format. The following parameters are included:</p>
+     * <p>The CIDR block information of the local VPC, in JSON format. This parameter includes the following fields:</p>
      * <ul>
-     * <li><p><strong>RouteTableId</strong>: the routing table ID of the local VPC.</p>
+     * <li><p><strong>RouteTableId</strong>: the route table ID of the local VPC.</p>
      * </li>
-     * <li><p><strong>RouteEntryList</strong>: specified in JSON format and contains DestinationCidr (the destination CIDR block of the local VPC) and NextHopInstanceId (the next hop instance ID of the local VPC).</p>
+     * <li><p><strong>RouteEntryList</strong>: a JSON array that includes DestinationCidr (the destination CIDR block of the local VPC) and NextHopInstanceId (the instance ID of the next hop for the local VPC).</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR block information of the local VPC for the virtual private cloud (VPC) firewall.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR block information of the local VPC for the VPC border firewall.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -39,7 +39,7 @@ public class ModifyVpcFirewallConfigureRequest extends TeaModel {
     public String localVpcCidrTableList;
 
     /**
-     * <p>The UID of the member accounts of the current Alibaba Cloud account.</p>
+     * <p>The UID of the member account associated with the current Alibaba Cloud account.</p>
      * 
      * <strong>example:</strong>
      * <p>258039427902****</p>
@@ -48,15 +48,15 @@ public class ModifyVpcFirewallConfigureRequest extends TeaModel {
     public String memberUid;
 
     /**
-     * <p>The CIDR block information of the peer VPC, in JSON format. The following parameters are included:</p>
+     * <p>The CIDR block information of the peer VPC, in JSON format. This parameter includes the following fields:</p>
      * <ul>
-     * <li><p><strong>RouteTableId</strong>: the routing table ID of the peer VPC.</p>
+     * <li><p><strong>RouteTableId</strong>: the route table ID of the peer VPC.</p>
      * </li>
-     * <li><p><strong>RouteEntryList</strong>: specified in JSON format and contains DestinationCidr (the destination CIDR block of the peer VPC) and NextHopInstanceId (the next hop instance ID of the peer VPC).</p>
+     * <li><p><strong>RouteEntryList</strong>: a JSON array that includes DestinationCidr (the destination CIDR block of the peer VPC) and NextHopInstanceId (the instance ID of the next hop for the peer VPC).</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR block information of the peer VPC for the virtual private cloud (VPC) firewall.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/342892.html">DescribeVpcFirewallDetail</a> operation to query the CIDR block information of the peer VPC for the VPC border firewall.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -67,9 +67,9 @@ public class ModifyVpcFirewallConfigureRequest extends TeaModel {
     public String peerVpcCidrTableList;
 
     /**
-     * <p>The instance ID of the virtual private cloud (VPC) firewall.</p>
+     * <p>The instance ID of the VPC border firewall.</p>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance ID of the virtual private cloud (VPC) firewall.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/342932.html">DescribeVpcFirewallList</a> operation to query the instance ID of the VPC border firewall.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -80,7 +80,7 @@ public class ModifyVpcFirewallConfigureRequest extends TeaModel {
     public String vpcFirewallId;
 
     /**
-     * <p>The instance name of the virtual private cloud (VPC) firewall.</p>
+     * <p>The instance name of the VPC border firewall.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

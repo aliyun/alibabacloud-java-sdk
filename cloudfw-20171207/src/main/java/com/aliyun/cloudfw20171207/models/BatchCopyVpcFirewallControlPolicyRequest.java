@@ -30,15 +30,15 @@ public class BatchCopyVpcFirewallControlPolicyRequest extends TeaModel {
     public String sourceIp;
 
     /**
-     * <p>The ID of the access control policy group for the source virtual private cloud (VPC) firewall of this operation. Valid values:</p>
+     * <p>The ID of the access control policy group for the source virtual private cloud (VPC) border firewall. Valid values:</p>
      * <ul>
-     * <li><p>If the VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) instance (network instances include VPCs, VBRs, and CCNs) and a specified VPC, the policy group ID is the CEN instance ID.</p>
+     * <li><p>If the VPC border firewall protects traffic between network instances (including VPCs, VBRs, and CCNs) in a Cloud Enterprise Network (CEN) instance and a specified VPC, set the value to the ID of the CEN instance.</p>
      * </li>
-     * <li><p>If the VPC firewall protects traffic between two VPCs that are connected through Express Connect, the policy group ID is the VPC firewall instance ID.</p>
+     * <li><p>If the VPC border firewall protects traffic between two VPCs that are connected by using Express Connect, set the value to the ID of the VPC border firewall instance.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain this ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -49,15 +49,15 @@ public class BatchCopyVpcFirewallControlPolicyRequest extends TeaModel {
     public String sourceVpcFirewallId;
 
     /**
-     * <p>The ID of the access control policy group for the destination virtual private cloud (VPC) firewall of this operation. Valid values:</p>
+     * <p>The ID of the access control policy group for the destination virtual private cloud (VPC) border firewall. Valid values:</p>
      * <ul>
-     * <li><p>If the VPC firewall protects traffic between a network instance in a Cloud Enterprise Network (CEN) instance (network instances include VPCs, VBRs, and CCNs) and a specified VPC, the policy group ID is the CEN instance ID.</p>
+     * <li><p>If the VPC border firewall protects traffic between network instances (including VPCs, VBRs, and CCNs) in a CEN instance and a specified VPC, set the value to the ID of the CEN instance.</p>
      * </li>
-     * <li><p>If the VPC firewall protects traffic between two VPCs that are connected through Express Connect, the policy group ID is the VPC firewall instance ID.</p>
+     * <li><p>If the VPC border firewall protects traffic between two VPCs that are connected by using Express Connect, set the value to the ID of the VPC border firewall instance.</p>
      * </li>
      * </ul>
      * <blockquote>
-     * <p>You can invoke the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to obtain this ID.</p>
+     * <p>You can call the <a href="https://help.aliyun.com/document_detail/159760.html">DescribeVpcFirewallAclGroupList</a> operation to query the ID.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 

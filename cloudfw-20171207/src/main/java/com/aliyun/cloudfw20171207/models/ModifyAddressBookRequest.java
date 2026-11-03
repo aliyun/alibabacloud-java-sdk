@@ -23,13 +23,13 @@ public class ModifyAddressBookRequest extends TeaModel {
     public java.util.List<String> ackNamespaces;
 
     /**
-     * <p>The list of addresses in the address book. Separate multiple addresses with commas (,). For each address element, separate the address and the description with a space. You must specify this parameter when GroupType is set to <strong>ip</strong>, <strong>port</strong>, or <strong>domain</strong>.</p>
+     * <p>The list of addresses in the address book. Separate multiple addresses with commas (,). Separate the address and description of an address element with a space. You must configure this parameter when GroupType is set to <strong>ip</strong>, <strong>port</strong>, or <strong>domain</strong>.</p>
      * <ul>
-     * <li><p>If GroupType is set to <strong>ip</strong>, enter IP addresses in the address list. Example: 1.2.XX.XX/32 Development CIDR block,10.0.0.X/24,1.2.XX.XX/24 Test CIDR block.</p>
+     * <li><p>When GroupType is set to <strong>ip</strong>, enter IP addresses in the address list. Example: 1.2.XX.XX/32 Development CIDR block,10.0.0.X/24,1.2.XX.XX/24 Test CIDR block.</p>
      * </li>
-     * <li><p>If GroupType is set to <strong>port</strong>, enter ports or port ranges in the address list. Example: 80/80 HTTP port,100/200,3306 Database port.</p>
+     * <li><p>When GroupType is set to <strong>port</strong>, enter ports or port ranges in the address list. Example: 80/80 HTTP port,100/200,3306 Database port.</p>
      * </li>
-     * <li><p>If GroupType is set to <strong>domain</strong>, enter domain names in the address list. Example: demo1.aliyun.com Test domain name,demo2.aliyun.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</p>
+     * <li><p>When GroupType is set to <strong>domain</strong>, enter domain names in the address list. Example: demo1.aliyun.com Test domain name,demo2.aliyun.com,<a href="http://www.aliyun.com">www.aliyun.com</a> Alibaba Cloud official website.</p>
      * </li>
      * </ul>
      * 
@@ -46,13 +46,13 @@ public class ModifyAddressBookRequest extends TeaModel {
     public java.util.List<Long> assetMemberUids;
 
     /**
-     * <p>The asset address book, region, and resource type list.</p>
+     * <p>The asset address book, regions, and resource types.</p>
      */
     @NameInMap("AssetRegionResourceTypes")
     public java.util.List<ModifyAddressBookRequestAssetRegionResourceTypes> assetRegionResourceTypes;
 
     /**
-     * <p>Specifies if the automatic addition of the public IP addresses of Elastic Compute Service (ECS) instances that match the new labels to the address book is enabled.</p>
+     * <p>Specifies whether the public IP addresses of Elastic Compute Service (ECS) instances that match a new tag are automatically added to the address book.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -96,9 +96,9 @@ public class ModifyAddressBookRequest extends TeaModel {
     public String groupName;
 
     /**
-     * <p>The UUID of the address book.</p>
+     * <p>The unique ID of the address book.</p>
      * <blockquote>
-     * <p>To obtain the value, call the <a href="~~DescribeAddressBook~~">DescribeAddressBook</a> operation.</p>
+     * <p>Value source: <a href="~~DescribeAddressBook~~">List address books</a>.</p>
      * </blockquote>
      * <p>This parameter is required.</p>
      * 
@@ -120,8 +120,8 @@ public class ModifyAddressBookRequest extends TeaModel {
     /**
      * <p>The modification mode.</p>
      * <blockquote>
-     * <p>If GroupType is set to <strong>ip</strong>, <strong>ipv6</strong>, <strong>port</strong>, or <strong>domain</strong> and this parameter is not specified, the <strong>Cover</strong> mode is used by default to modify the address book.
-     * Notice: If GroupType is set to <strong>tag</strong>, this parameter must be left empty.</notice></p>
+     * <p>When GroupType is set to <strong>ip</strong>, <strong>ipv6</strong>, <strong>port</strong>, or <strong>domain</strong>, if you do not configure this parameter, the <strong>Cover</strong> mode is used by default to modify the address book.
+     * <notice>When GroupType is set to <strong>tag</strong>, this parameter must be left empty.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -333,7 +333,7 @@ public class ModifyAddressBookRequest extends TeaModel {
 
     public static class ModifyAddressBookRequestAssetRegionResourceTypesResourceTypeIpv4 extends TeaModel {
         /**
-         * <p>The asset type: AIGatewayEIP.</p>
+         * <p>The AIGatewayEIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -342,7 +342,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean aiGatewayEIP;
 
         /**
-         * <p>The asset type: AlbEIP.</p>
+         * <p>The AlbEIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -351,7 +351,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean albEIP;
 
         /**
-         * <p>The asset type: ApigEIP.</p>
+         * <p>The ApigEIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -360,7 +360,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean apiGatewayEIP;
 
         /**
-         * <p>The asset type: BastionHostEgressIP.</p>
+         * <p>The BastionHostEgressIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -369,7 +369,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean bastionHostEgressIP;
 
         /**
-         * <p>The asset type: BastionHostIP.</p>
+         * <p>The BastionHostIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -378,7 +378,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean bastionHostIP;
 
         /**
-         * <p>The asset type: BastionHostIngressIP.</p>
+         * <p>The BastionHostIngressIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -387,7 +387,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean bastionHostIngressIP;
 
         /**
-         * <p>The asset type: EIP.</p>
+         * <p>The EIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -396,7 +396,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean EIP;
 
         /**
-         * <p>The asset type: EcsEIP.</p>
+         * <p>The EcsEIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -405,7 +405,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean ecsEIP;
 
         /**
-         * <p>The asset type: EcsPublicIP.</p>
+         * <p>The EcsPublicIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -414,7 +414,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean ecsPublicIP;
 
         /**
-         * <p>The asset type: EniEIP.</p>
+         * <p>The EniEIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -423,7 +423,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean eniEIP;
 
         /**
-         * <p>The asset type: GaEIP.</p>
+         * <p>The GaEIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -432,7 +432,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean gaEIP;
 
         /**
-         * <p>The asset type: HAVIP.</p>
+         * <p>The HAVIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -441,7 +441,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean HAVIP;
 
         /**
-         * <p>The asset type: NatEIP.</p>
+         * <p>The NatEIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -450,7 +450,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean natEIP;
 
         /**
-         * <p>The asset type: NatPublicIP.</p>
+         * <p>The NatPublicIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -459,7 +459,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean natPublicIP;
 
         /**
-         * <p>The asset type: NlbEIP.</p>
+         * <p>The NlbEIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -468,7 +468,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean nlbEIP;
 
         /**
-         * <p>The asset type: SlbEIP.</p>
+         * <p>The SlbEIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -477,7 +477,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean slbEIP;
 
         /**
-         * <p>The asset type: SlbPublicIP.</p>
+         * <p>The SlbPublicIP asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -630,7 +630,7 @@ public class ModifyAddressBookRequest extends TeaModel {
 
     public static class ModifyAddressBookRequestAssetRegionResourceTypesResourceTypeIpv6 extends TeaModel {
         /**
-         * <p>The asset type: AIGatewayEIPv6.</p>
+         * <p>The AIGatewayEIPv6 asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -639,7 +639,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean aiGatewayEIPv6;
 
         /**
-         * <p>The asset type: AlbIPv6.</p>
+         * <p>The AlbIPv6 asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -648,7 +648,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean albIPv6;
 
         /**
-         * <p>The asset type: ApigEIPv6.</p>
+         * <p>The ApigEIPv6 asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -657,7 +657,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean apiGatewayEIPv6;
 
         /**
-         * <p>The asset type: EcsIPv6.</p>
+         * <p>The EcsIPv6 asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -666,7 +666,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean ecsIPv6;
 
         /**
-         * <p>The asset type: EniEIPv6.</p>
+         * <p>The EniEIPv6 asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -675,7 +675,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean eniEIPv6;
 
         /**
-         * <p>The asset type: GaEIPv6.</p>
+         * <p>The GaEIPv6 asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -684,7 +684,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean gaEIPv6;
 
         /**
-         * <p>The asset type: NlbIPv6.</p>
+         * <p>The NlbIPv6 asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -693,7 +693,7 @@ public class ModifyAddressBookRequest extends TeaModel {
         public Boolean nlbIPv6;
 
         /**
-         * <p>The asset type: SlbIPv6.</p>
+         * <p>The SlbIPv6 asset type.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -810,7 +810,7 @@ public class ModifyAddressBookRequest extends TeaModel {
 
     public static class ModifyAddressBookRequestAssetRegionResourceTypes extends TeaModel {
         /**
-         * <p>The asset region ID.</p>
+         * <p>The ID of the asset region.</p>
          * 
          * <strong>example:</strong>
          * <p>all</p>

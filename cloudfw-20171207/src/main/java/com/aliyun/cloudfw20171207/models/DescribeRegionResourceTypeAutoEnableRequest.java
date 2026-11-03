@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeRegionResourceTypeAutoEnableRequest extends TeaModel {
     /**
-     * <p>The language of the response message.</p>
+     * <p>The language type for receiving messages.</p>
      * 
      * <strong>example:</strong>
      * <p>zh</p>

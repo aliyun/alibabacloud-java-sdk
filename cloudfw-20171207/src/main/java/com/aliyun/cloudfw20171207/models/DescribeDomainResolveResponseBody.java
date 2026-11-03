@@ -14,7 +14,7 @@ public class DescribeDomainResolveResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The result of the domain name resolution.</p>
+     * <p>The DNS resolution results for the domain name.</p>
      */
     @NameInMap("ResolveResult")
     public DescribeDomainResolveResponseBodyResolveResult resolveResult;
@@ -42,7 +42,7 @@ public class DescribeDomainResolveResponseBody extends TeaModel {
 
     public static class DescribeDomainResolveResponseBodyResolveResult extends TeaModel {
         /**
-         * <p>The resolution result of the domain name. Multiple IP addresses are separated by commas (,).</p>
+         * <p>The DNS resolution results for the domain name. Multiple IP addresses are separated by commas (,).</p>
          * 
          * <strong>example:</strong>
          * <p>11.1.X.X,12.1.X.X</p>

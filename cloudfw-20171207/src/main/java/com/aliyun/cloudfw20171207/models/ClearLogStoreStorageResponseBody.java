@@ -14,7 +14,7 @@ public class ClearLogStoreStorageResponseBody extends TeaModel {
     public Integer httpStatusCode;
 
     /**
-     * <p>The request ID.</p>
+     * <p>The ID of the request.</p>
      * 
      * <strong>example:</strong>
      * <p>21C27710-2DB1-5F2A-8588-72D0541B****</p>
@@ -23,7 +23,11 @@ public class ClearLogStoreStorageResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>Indicates whether the request was successful.</p>
+     * <p>Indicates whether the request is successful. Valid values:</p>
+     * <ul>
+     * <li>true: The request is successful.</li>
+     * <li>false: The request failed.</li>
+     * </ul>
      * 
      * <strong>example:</strong>
      * <p>true</p>

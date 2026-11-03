@@ -5,7 +5,8 @@ import com.aliyun.tea.*;
 
 public class DescribeDownloadTaskTypeRequest extends TeaModel {
     /**
-     * <p>The page number. The default value is <strong>1</strong>.</p>
+     * <p>The page number of the page to return in a paged query.
+     * Default value: <strong>1</strong>, which indicates the first page.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -14,12 +15,10 @@ public class DescribeDownloadTaskTypeRequest extends TeaModel {
     public String currentPage;
 
     /**
-     * <p>The language of the response. Valid values:</p>
+     * <p>The language in which messages are received. Valid values:</p>
      * <ul>
-     * <li><p><strong>zh</strong> (default): Chinese</p>
-     * </li>
-     * <li><p><strong>en</strong>: English</p>
-     * </li>
+     * <li><strong>zh</strong> (default): Chinese</li>
+     * <li><strong>en</strong>: English</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -29,7 +28,7 @@ public class DescribeDownloadTaskTypeRequest extends TeaModel {
     public String lang;
 
     /**
-     * <p>The number of entries to return on each page. Default value: 10. Maximum value: 50.</p>
+     * <p>The maximum number of entries to return on each page in a paged query. Default value: 10. Maximum value: 50.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -38,7 +37,7 @@ public class DescribeDownloadTaskTypeRequest extends TeaModel {
     public String pageSize;
 
     /**
-     * <p>The type of the task.</p>
+     * <p>The task type.</p>
      * 
      * <strong>example:</strong>
      * <p>InternetFirewallAsset</p>
