@@ -5,10 +5,10 @@ import com.aliyun.tea.*;
 
 public class DescribeCenterPolicyListRequest extends TeaModel {
     /**
-     * <p>Specifies whether to enable the academic proxy feature. Valid values:</p>
+     * <p>學術代理功能開關。取值範圍：</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li>on：開啟。</li>
+     * <li>off：關閉。</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -18,7 +18,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public String academicProxy;
 
     /**
-     * <p>The business type.</p>
+     * <p>業務類型。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,10 +28,10 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public Integer businessType;
 
     /**
-     * <p>Specifies whether to enable the model library feature. Valid values:</p>
+     * <p>模型庫功能開關。取值範圍：</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li>on：開啟。</li>
+     * <li>off：關閉。</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -41,7 +41,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public String modelLibrary;
 
     /**
-     * <p>The page number of the current page in a paged query. This parameter implements paging.<br>Default value: 1.</p>
+     * <p>分頁查詢時，當前頁的頁碼。<br>預設值：1。</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -50,7 +50,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of rows per page in a paged query. This parameter implements paging.</p>
+     * <p>分頁查詢時，每頁最大行數。</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -59,16 +59,16 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The list of Cloud Desktop policy IDs.</p>
+     * <p>雲端電腦策略ID清單。</p>
      */
     @NameInMap("PolicyGroupId")
     public java.util.List<String> policyGroupId;
 
     /**
-     * <p>Specifies whether to enable the port proxy feature. Valid values:</p>
+     * <p>連接埠代理功能開關。取值範圍：</p>
      * <ul>
-     * <li>on: Enabled.</li>
-     * <li>off: Disabled.</li>
+     * <li>on：開啟。</li>
+     * <li>off：關閉。</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -78,7 +78,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public String portProxy;
 
     /**
-     * <p>The resource type.</p>
+     * <p>資源類型。</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -88,7 +88,7 @@ public class DescribeCenterPolicyListRequest extends TeaModel {
     public String resourceType;
 
     /**
-     * <p>The effective scope of the Cloud Desktop policy.</p>
+     * <p>雲端電腦策略的生效範圍。</p>
      * 
      * <strong>example:</strong>
      * <p>GLOBAL</p>

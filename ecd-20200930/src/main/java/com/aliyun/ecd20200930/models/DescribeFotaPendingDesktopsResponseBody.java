@@ -14,7 +14,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     public String code;
 
     /**
-     * <p>The list of cloud computers that can be upgraded to the image version corresponding to <code>TaskUid</code> but have not been upgraded.</p>
+     * <p>The list of cloud desktops that can be upgraded to the image version corresponding to <code>TaskUid</code> but have not been upgraded.</p>
      */
     @NameInMap("FotaPendingDesktops")
     public java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops> fotaPendingDesktops;
@@ -29,7 +29,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
     public String message;
 
     /**
-     * <p>The pagination token for the next query. If NextToken is empty, no more results are available.</p>
+     * <p>The pagination token for the next query. An empty <code>NextToken</code> indicates that no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -118,7 +118,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
 
     public static class DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktops extends TeaModel {
         /**
-         * <p>The current image version of the cloud computer.</p>
+         * <p>The current image version of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>0.0.1-D-20220513.143129</p>
@@ -127,7 +127,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         public String currentAppVersion;
 
         /**
-         * <p>The ID of the cloud computer.</p>
+         * <p>The cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-bvdtu3jn97o1r****</p>
@@ -136,7 +136,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The name of the cloud computer.</p>
+         * <p>The name of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>demo-computer</p>
@@ -156,7 +156,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         public String fotaProject;
 
         /**
-         * <p>The ID of the office network.</p>
+         * <p>The office network ID.</p>
          * 
          * <strong>example:</strong>
          * <p>cn-shanghai+dir-428216****</p>
@@ -171,7 +171,7 @@ public class DescribeFotaPendingDesktopsResponseBody extends TeaModel {
         public java.util.List<DescribeFotaPendingDesktopsResponseBodyFotaPendingDesktopsSessions> sessions;
 
         /**
-         * <p>The status of the cloud computer.</p>
+         * <p>The status of the cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>

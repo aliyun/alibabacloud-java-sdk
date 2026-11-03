@@ -11,7 +11,7 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
     public java.util.List<DescribePrinterEventsResponseBodyEvents> events;
 
     /**
-     * <p>The pagination token for the next query. If NextToken is empty, no more results exist.</p>
+     * <p>The token for the next query. If NextToken is empty, no more results are available.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6nmB7qrRFJ8vmttjxPL****</p>
@@ -59,7 +59,7 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
 
     public static class DescribePrinterEventsResponseBodyEvents extends TeaModel {
         /**
-         * <p>The cloud computer ID.</p>
+         * <p>The cloud desktop ID.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-8fupvkhg0aayu****</p>
@@ -68,7 +68,7 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The cloud computer name.</p>
+         * <p>The cloud desktop name.</p>
          * 
          * <strong>example:</strong>
          * <p>desktop-001</p>
@@ -104,7 +104,7 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
         public String printerDriver;
 
         /**
-         * <p>The number of copies to print.</p>
+         * <p>The number of printed copies.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -140,7 +140,7 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
         public Integer printerJobPrintedPages;
 
         /**
-         * <p>The print job size, in bytes.</p>
+         * <p>The print job size in bytes.</p>
          * 
          * <strong>example:</strong>
          * <p>2632446</p>
@@ -149,7 +149,7 @@ public class DescribePrinterEventsResponseBody extends TeaModel {
         public Long printerJobSize;
 
         /**
-         * <p>The print job time, in millisecond-precision UNIX timestamp.</p>
+         * <p>The print job time in milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1706140800000</p>

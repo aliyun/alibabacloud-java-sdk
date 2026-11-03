@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CopyImageRequest extends TeaModel {
     /**
-     * <p>The description of the image in the destination region. The description must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
+     * <p>The description of the destination region for the copied image. It must be 2 to 256 characters in length and cannot start with <code>http://</code> or <code>https://</code>.</p>
      * 
      * <strong>example:</strong>
      * <p>This is a test.</p>
@@ -14,7 +14,7 @@ public class CopyImageRequest extends TeaModel {
     public String destinationDescription;
 
     /**
-     * <p>The name of the new image. The name must be 2 to 128 characters in length. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), and hyphens (-).</p>
+     * <p>The name of the new image. The name must be 2 to 128 characters in length and can contain letters or Chinese characters. It must start with a letter or a Chinese character and cannot start with <code>http://</code> or <code>https://</code>. It can contain digits, colons (:), underscores (_), or hyphens (-).</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,7 +24,7 @@ public class CopyImageRequest extends TeaModel {
     public String destinationImageName;
 
     /**
-     * <p>The ID of the destination region. The destination region must be different from the current region of the image. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The ID of the destination region. The destination region must be different from the source region. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

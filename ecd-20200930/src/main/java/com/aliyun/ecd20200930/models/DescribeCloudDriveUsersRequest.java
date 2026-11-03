@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class DescribeCloudDriveUsersRequest extends TeaModel {
     /**
-     * <p>The ID of the enterprise network drive.</p>
+     * <p>The ID of the enterprise drive.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -15,8 +15,7 @@ public class DescribeCloudDriveUsersRequest extends TeaModel {
     public String cdsId;
 
     /**
-     * <p>The end user ID.</p>
-     * <p>If specified, the query returns only the personal drive of that user. If left empty, the query returns the personal drives of all users.</p>
+     * <p>The ID of the end user. If this parameter is not empty, only the personal drive of the specified user is queried. If this parameter is empty, the personal drives of all users are queried.</p>
      * 
      * <strong>example:</strong>
      * <p>alice</p>
@@ -25,12 +24,10 @@ public class DescribeCloudDriveUsersRequest extends TeaModel {
     public String endUserId;
 
     /**
-     * <p>The number of entries per page.</p>
+     * <p>The number of entries to return per page in a paged query. This parameter is used for paging.</p>
      * <ul>
-     * <li><p>Maximum: 100.</p>
-     * </li>
-     * <li><p>Default: 10.</p>
-     * </li>
+     * <li>Maximum value: 100.</li>
+     * <li>Default value: 10.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -40,7 +37,7 @@ public class DescribeCloudDriveUsersRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next page of results. This is the <code>NextToken</code> value from the previous response. Leave this parameter empty for the first request.</p>
+     * <p>The pagination token. Set the value to the <code>NextToken</code> value returned in the last call to this operation. You do not need to specify this parameter for the first call.</p>
      * 
      * <strong>example:</strong>
      * <p>aGN4YzAxQGNuLWhhbmd6aG91LjExNzU5NTMyNjgzMTQ1****</p>
@@ -49,7 +46,7 @@ public class DescribeCloudDriveUsersRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The region ID. To obtain a list of supported regions, call <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a>.</p>
+     * <p>The region ID. You can call the <a href="https://help.aliyun.com/document_detail/196646.html">DescribeRegions</a> operation to query the list of regions supported by Wuying Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

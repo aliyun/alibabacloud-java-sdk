@@ -18,13 +18,13 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public String businessChannel;
 
     /**
-     * <p>The list of cloud computer policy IDs to exclude from the query results.</p>
+     * <p>The IDs of the cloud desktop policies to exclude from the query results.</p>
      */
     @NameInMap("ExternalPolicyGroupIds")
     public java.util.List<String> externalPolicyGroupIds;
 
     /**
-     * <p>The number of entries per page for a paged query.</p>
+     * <p>The number of entries to return per page when paging in a paged query.</p>
      * <ul>
      * <li>Maximum value: 100.</li>
      * <li>Default value: 10.</li>
@@ -37,7 +37,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The pagination token. Set this parameter to the value of NextToken that was returned from the last call to this operation. You do not need to set this parameter for the first request.</p>
+     * <p>The query token. Set the value to the NextToken value returned from the last call to this operation. You do not need to specify this parameter for the first call.</p>
      * 
      * <strong>example:</strong>
      * <p>caeba0bbb2be03f84eb48b699f0a4883</p>
@@ -46,7 +46,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The page number of the current page for a paged query.</p>
+     * <p>The current page number when paging in a paged query.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -55,7 +55,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public Integer pageNumber;
 
     /**
-     * <p>The maximum number of entries per page for a paged query.<br>Default value: 20.</p>
+     * <p>The maximum number of entries to return per page when paging in a paged query.<br>Default value: 20.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -64,7 +64,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
-     * <p>The list of cloud computer policy IDs.</p>
+     * <p>The IDs of the cloud desktop policies.</p>
      * 
      * <strong>example:</strong>
      * <p>system-all-enabled-policy</p>
@@ -73,7 +73,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public java.util.List<String> policyGroupId;
 
     /**
-     * <p>The region ID. You can call <a href="~~DescribeRegions~~">DescribeRegions</a> to query the regions supported by WUYING Workspace.</p>
+     * <p>The region ID. You can call the <a href="~~DescribeRegions~~">DescribeRegions</a> operation to query the list of regions supported by Wuying Workspace.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -83,7 +83,7 @@ public class DescribePolicyGroupsRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The effective scope of the cloud computer policy.</p>
+     * <p>The effective scope of the cloud desktop policies.</p>
      * 
      * <strong>example:</strong>
      * <p>GLOBAL</p>

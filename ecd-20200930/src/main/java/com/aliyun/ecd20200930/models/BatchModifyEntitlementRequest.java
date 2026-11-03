@@ -12,7 +12,7 @@ public class BatchModifyEntitlementRequest extends TeaModel {
     public java.util.List<String> desktopId;
 
     /**
-     * <p>The user IDs, which are the usernames.</p>
+     * <p>The IDs of the users, which are the usernames.</p>
      */
     @NameInMap("EndUserId")
     public java.util.List<String> endUserId;
@@ -45,7 +45,7 @@ public class BatchModifyEntitlementRequest extends TeaModel {
     public Boolean preview;
 
     /**
-     * <p>The region ID. You can call DescribeRegions to query the regions supported by Elastic Desktop Service.</p>
+     * <p>The region ID. You can call the DescribeRegions operation to query the regions supported by Elastic Desktop Service.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -55,10 +55,10 @@ public class BatchModifyEntitlementRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The policy used when proportional matching is not possible. Valid values:</p>
+     * <p>The matching policy used when proportional matching is not possible. Valid values:</p>
      * <ul>
-     * <li>AVERAGE: Prioritizes assigning cloud desktops to each user. When the number of selected cloud desktops and users cannot be matched proportionally, cloud desktops are assigned to each user first.</li>
-     * <li>CENTRAL: Prioritizes assigning a specified number of cloud desktops to users. When the number of selected cloud desktops and users cannot be matched proportionally, the specified number of cloud desktops are assigned to users first.</li>
+     * <li>AVERAGE: Assigns cloud desktops to each user first. When the number of selected cloud desktops and the number of users cannot be matched proportionally, cloud desktops are assigned to each user first.</li>
+     * <li>CENTRAL: Assigns a specified number of cloud desktops to users first. When the number of selected cloud desktops and the number of users cannot be matched proportionally, the specified number of cloud desktops are assigned to users first.</li>
      * </ul>
      * 
      * <strong>example:</strong>

@@ -59,7 +59,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
 
     public static class DescribeGlobalDesktopRecordsResponseBodySessionsResourceGroups extends TeaModel {
         /**
-         * <p>The enterprise resource group ID.</p>
+         * <p>The ID of the enterprise resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>rg-f3s3dgt8dtb0vlqc8</p>
@@ -68,7 +68,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String resourceGroupId;
 
         /**
-         * <p>The resource group name.</p>
+         * <p>The name of the resource group.</p>
          * 
          * <strong>example:</strong>
          * <p>dms_test</p>
@@ -101,7 +101,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
 
     public static class DescribeGlobalDesktopRecordsResponseBodySessionsSessions extends TeaModel {
         /**
-         * <p>The end user ID.</p>
+         * <p>The ID of the end user.</p>
          * 
          * <strong>example:</strong>
          * <p>TestUser</p>
@@ -110,7 +110,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String endUserId;
 
         /**
-         * <p>The time when the session was created. The time is in the ISO 8601 standard (UTC): yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The creation time of the session. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2022-08-31T06:56:45Z</p>
@@ -161,7 +161,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public Integer cpu;
 
         /**
-         * <p>The time when the cloud desktop was created. The time is in the ISO 8601 standard (UTC).</p>
+         * <p>The creation time of the cloud desktop. The time follows the ISO 8601 standard in UTC.</p>
          * 
          * <strong>example:</strong>
          * <p>2020-11-06T08:28Z</p>
@@ -170,7 +170,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String creationTime;
 
         /**
-         * <p>The shared cloud desktop ID.</p>
+         * <p>The ID of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>dg-iaqu3bi2xtie****</p>
@@ -179,7 +179,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String desktopGroupId;
 
         /**
-         * <p>The shared cloud desktop name.</p>
+         * <p>The name of the shared cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoCCGroup</p>
@@ -188,7 +188,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String desktopGroupName;
 
         /**
-         * <p>The cloud desktop ID.</p>
+         * <p>The ID of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>ecd-g6t1ukbaea****</p>
@@ -197,7 +197,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String desktopId;
 
         /**
-         * <p>The cloud desktop name.</p>
+         * <p>The name of the cloud computer.</p>
          * 
          * <strong>example:</strong>
          * <p>DemoComputer</p>
@@ -215,7 +215,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String desktopStatus;
 
         /**
-         * <p>The end user ID.</p>
+         * <p>The ID of the end user.</p>
          * 
          * <strong>example:</strong>
          * <p>TestUser</p>
@@ -239,7 +239,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String gpuSpec;
 
         /**
-         * <p>The duration of the most recent connection to the cloud desktop. Unit: seconds.</p>
+         * <p>The duration of the most recent connection to the cloud computer. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -248,7 +248,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public Long latestConnectionTime;
 
         /**
-         * <p>The latest end time of the current session. The time is in the ISO 8601 standard (UTC): yyyy-MM-ddTHH:mm:ssZ.</p>
+         * <p>The latest end time of the current session. The time follows the ISO 8601 standard in UTC: yyyy-MM-ddTHH:mm:ssZ.</p>
          * 
          * <strong>example:</strong>
          * <p>2026-09-14T05:01:12Z</p>
@@ -257,7 +257,13 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String latestSessionEndTime;
 
         /**
-         * <p>The memory of the cloud desktop. Unit: MiB.</p>
+         * <p>The desktop management status.</p>
+         */
+        @NameInMap("ManagementFlags")
+        public java.util.List<String> managementFlags;
+
+        /**
+         * <p>The memory of the cloud computer. Unit: MiB.</p>
          * 
          * <strong>example:</strong>
          * <p>4096</p>
@@ -275,7 +281,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String officeSiteId;
 
         /**
-         * <p>The office network name.</p>
+         * <p>The name of the office network.</p>
          * 
          * <strong>example:</strong>
          * <p>TestOfficeSite</p>
@@ -306,7 +312,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String osType;
 
         /**
-         * <p>The specific operating system version.</p>
+         * <p>The specific operating system model.</p>
          * 
          * <strong>example:</strong>
          * <p>Windows 10</p>
@@ -337,13 +343,13 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public String regionId;
 
         /**
-         * <p>The enterprise resource group names.</p>
+         * <p>The name of the enterprise resource group.</p>
          */
         @NameInMap("ResourceGroups")
         public java.util.List<DescribeGlobalDesktopRecordsResponseBodySessionsResourceGroups> resourceGroups;
 
         /**
-         * <p>The session idle duration. Unit: minutes.</p>
+         * <p>The idle duration of the session. Unit: minutes.</p>
          * 
          * <strong>example:</strong>
          * <p>120</p>
@@ -358,7 +364,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public java.util.List<DescribeGlobalDesktopRecordsResponseBodySessionsSessions> sessions;
 
         /**
-         * <p>The UNIX timestamp when the cloud desktop status changed. Unit: milliseconds.</p>
+         * <p>The UNIX timestamp of the time when the cloud computer status changed. Unit: milliseconds.</p>
          * 
          * <strong>example:</strong>
          * <p>1760583xxxx</p>
@@ -367,11 +373,11 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public Long statusChangeTime;
 
         /**
-         * <p>The billing method of the cloud desktop. Valid values:</p>
+         * <p>The billing method of the cloud computer. Valid values:</p>
          * <ul>
-         * <li>prePaid: monthly subscription with unlimited usage duration.</li>
-         * <li>postPaid: pay-as-you-go.</li>
-         * <li>monthPackage: monthly duration package.</li>
+         * <li>prePaid: monthly subscription with unlimited duration</li>
+         * <li>postPaid: pay-as-you-go</li>
+         * <li>monthPackage: monthly time package</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -390,7 +396,7 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         public Long totalConnectionTime;
 
         /**
-         * <p>The cloud desktop uptime. Unit: seconds.</p>
+         * <p>The uptime of the cloud computer. Unit: seconds.</p>
          * 
          * <strong>example:</strong>
          * <p>86400</p>
@@ -505,6 +511,14 @@ public class DescribeGlobalDesktopRecordsResponseBody extends TeaModel {
         }
         public String getLatestSessionEndTime() {
             return this.latestSessionEndTime;
+        }
+
+        public DescribeGlobalDesktopRecordsResponseBodySessions setManagementFlags(java.util.List<String> managementFlags) {
+            this.managementFlags = managementFlags;
+            return this;
+        }
+        public java.util.List<String> getManagementFlags() {
+            return this.managementFlags;
         }
 
         public DescribeGlobalDesktopRecordsResponseBodySessions setMemory(Long memory) {

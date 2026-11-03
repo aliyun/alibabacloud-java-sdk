@@ -18,7 +18,7 @@ public class DescribeResourceByCenterPolicyIdRequest extends TeaModel {
     public Integer maxResults;
 
     /**
-     * <p>The token for the next query.</p>
+     * <p>The token that is used to start the next query.</p>
      * 
      * <strong>example:</strong>
      * <p>AAAAAV3MpHK1AP0pfERHZN5pu6l69tQX7yFxx6/4dbooBAOc</p>
@@ -53,6 +53,15 @@ public class DescribeResourceByCenterPolicyIdRequest extends TeaModel {
      */
     @NameInMap("ResourceId")
     public String resourceId;
+
+    /**
+     * <p>The resource name.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>testName</p>
+     */
+    @NameInMap("ResourceName")
+    public String resourceName;
 
     public static DescribeResourceByCenterPolicyIdRequest build(java.util.Map<String, ?> map) throws Exception {
         DescribeResourceByCenterPolicyIdRequest self = new DescribeResourceByCenterPolicyIdRequest();
@@ -97,6 +106,14 @@ public class DescribeResourceByCenterPolicyIdRequest extends TeaModel {
     }
     public String getResourceId() {
         return this.resourceId;
+    }
+
+    public DescribeResourceByCenterPolicyIdRequest setResourceName(String resourceName) {
+        this.resourceName = resourceName;
+        return this;
+    }
+    public String getResourceName() {
+        return this.resourceName;
     }
 
 }

@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class BatchModifyEntitlementResponseBody extends TeaModel {
     /**
-     * <p>The entitlements collection.</p>
+     * <p>The entitlement collection.</p>
      */
     @NameInMap("Entitlements")
     public BatchModifyEntitlementResponseBodyEntitlements entitlements;
@@ -57,7 +57,7 @@ public class BatchModifyEntitlementResponseBody extends TeaModel {
         public java.util.List<String> endUserIds;
 
         /**
-         * <p>The assignment result for a single cloud desktop.</p>
+         * <p>The assignment result of a single cloud desktop.</p>
          * 
          * <strong>example:</strong>
          * <p>FINISHED</p>

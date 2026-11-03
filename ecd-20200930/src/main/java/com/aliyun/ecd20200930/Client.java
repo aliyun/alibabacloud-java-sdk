@@ -1020,7 +1020,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>The cloud desktop must be in the Running state.</li>
-     * <li>This operation returns a result immediately. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <code>ManagementFlags</code> response parameter to determine whether the assignment is complete. A value of <code>ASSIGNING</code> indicates that the assignment is in progress. Any other value indicates that the assignment is complete.</li>
+     * <li>This operation returns a result immediately. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the ManagementFlags response parameter to determine whether the assignment is complete. A value of ASSIGNING indicates that the assignment is in progress. Any other value indicates that the assignment is complete.</li>
      * <li>Check the assignment status every 2 to 5 seconds, up to a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</li>
      * </ul>
      * 
@@ -1083,7 +1083,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
      * <b>description</b> :
      * <ul>
      * <li>The cloud desktop must be in the Running state.</li>
-     * <li>This operation returns a result immediately. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the <code>ManagementFlags</code> response parameter to determine whether the assignment is complete. A value of <code>ASSIGNING</code> indicates that the assignment is in progress. Any other value indicates that the assignment is complete.</li>
+     * <li>This operation returns a result immediately. To check whether the assignment is successful, call <a href="https://help.aliyun.com/document_detail/436815.html">DescribeDesktops</a> and check the ManagementFlags response parameter to determine whether the assignment is complete. A value of ASSIGNING indicates that the assignment is in progress. Any other value indicates that the assignment is complete.</li>
      * <li>Check the assignment status every 2 to 5 seconds, up to a maximum of 50 seconds. In most cases, the assignment is completed within 1 to 5 seconds.</li>
      * </ul>
      * 
@@ -1724,7 +1724,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies an image to another region. To share an image across regions, call this operation to copy the image to the destination region before sharing it.</p>
+     * <p>Copies an image to another region. To share an image across regions, you can call this operation to copy the image to the destination region before sharing it.</p>
      * 
      * @param request CopyImageRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -1772,7 +1772,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Copies an image to another region. To share an image across regions, call this operation to copy the image to the destination region before sharing it.</p>
+     * <p>Copies an image to another region. To share an image across regions, you can call this operation to copy the image to the destination region before sharing it.</p>
      * 
      * @param request CopyImageRequest
      * @return CopyImageResponse
@@ -2518,7 +2518,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a region-independent Cloud Desktop policy.</p>
+     * <p>Creates a region-independent cloud desktop policy.</p>
      * 
      * @param request CreateCenterPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -2547,6 +2547,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppContentProtection", request.appContentProtection);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appScreenshotBuckets)) {
+            query.put("AppScreenshotBuckets", request.appScreenshotBuckets);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.authorizeAccessPolicyRule)) {
             query.put("AuthorizeAccessPolicyRule", request.authorizeAccessPolicyRule);
         }
@@ -2557,6 +2561,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoReconnect)) {
             query.put("AutoReconnect", request.autoReconnect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoSaveAppScreenshot)) {
+            query.put("AutoSaveAppScreenshot", request.autoSaveAppScreenshot);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
@@ -2757,6 +2765,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxReconnectTime)) {
             query.put("MaxReconnectTime", request.maxReconnectTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpService)) {
+            query.put("McpService", request.mcpService);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.memoryDownGradeDuration)) {
@@ -3118,7 +3130,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a region-independent Cloud Desktop policy.</p>
+     * <p>Creates a region-independent cloud desktop policy.</p>
      * 
      * @param request CreateCenterPolicyRequest
      * @return CreateCenterPolicyResponse
@@ -3370,7 +3382,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a Cloud Desktop center.</p>
+     * <p>Creates a configuration group. The configuration group contains the configuration information of scheduled tasks for cloud desktops.</p>
      * 
      * @param request CreateConfigGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -3422,7 +3434,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Creates a configuration group. A configuration group contains the configuration information of scheduled tasks in a Cloud Desktop center.</p>
+     * <p>Creates a configuration group. The configuration group contains the configuration information of scheduled tasks for cloud desktops.</p>
      * 
      * @param request CreateConfigGroupRequest
      * @return CreateConfigGroupResponse
@@ -7973,7 +7985,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of regionless policies.</p>
+     * <p>查詢無地域策略的詳細資訊。</p>
      * 
      * @param request DescribeCenterPolicyListRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8037,7 +8049,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of regionless policies.</p>
+     * <p>查詢無地域策略的詳細資訊。</p>
      * 
      * @param request DescribeCenterPolicyListRequest
      * @return DescribeCenterPolicyListResponse
@@ -8425,7 +8437,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of personal drives and their basic information for all users in an enterprise network drive.</p>
+     * <p>Queries the list and basic information of all personal drives in an enterprise drive.</p>
      * 
      * @param request DescribeCloudDriveUsersRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -8473,7 +8485,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves a list of personal drives and their basic information for all users in an enterprise network drive.</p>
+     * <p>Queries the list and basic information of all personal drives in an enterprise drive.</p>
      * 
      * @param request DescribeCloudDriveUsersRequest
      * @return DescribeCloudDriveUsersResponse
@@ -9505,7 +9517,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a cloud computer.</p>
+     * <p>Queries the details of one or more cloud desktops.</p>
      * 
      * @param request DescribeDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -9697,7 +9709,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of a cloud computer.</p>
+     * <p>Queries the details of one or more cloud desktops.</p>
      * 
      * @param request DescribeDesktopsRequest
      * @return DescribeDesktopsResponse
@@ -10189,7 +10201,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the information about cloud computers that can be upgraded to a specified image version but have not been upgraded.</p>
+     * <p>Retrieves the information about cloud desktops that can be upgraded to the image of a specified version but have not been upgraded.</p>
      * 
      * @param request DescribeFotaPendingDesktopsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10245,7 +10257,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Retrieves the information about cloud computers that can be upgraded to a specified image version but have not been upgraded.</p>
+     * <p>Retrieves the information about cloud desktops that can be upgraded to the image of a specified version but have not been upgraded.</p>
      * 
      * @param request DescribeFotaPendingDesktopsRequest
      * @return DescribeFotaPendingDesktopsResponse
@@ -10326,14 +10338,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>China site users must select Shanghai as the site. International site users must select Singapore.</li>
-     * <li>By default, both deleted and non-deleted cloud desktops are queried.</li>
-     * <li>Deleted cloud desktops can only be queried if they were deleted within the last three months.</li>
-     * <li>Sort conditions cannot be used together with other conditions.</li>
+     * <li>Users on the Chinese site select Shanghai, and users on the international site select Singapore.</li>
+     * <li>By default, you can query all cloud computers, including both deleted and undeleted ones.</li>
+     * <li>For deleted cloud computers, you can only query those that were deleted within the last three months.</li>
+     * <li>Sorting conditions cannot be used together with other conditions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</p>
+     * <p>Queries the basic information of all recent cloud computers and their corresponding usage duration records.</p>
      * 
      * @param request DescribeGlobalDesktopRecordsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -10380,6 +10392,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.orderBy)) {
             query.put("OrderBy", request.orderBy);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.orgIdList)) {
+            query.put("OrgIdList", request.orgIdList);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.pageNumber)) {
@@ -10438,14 +10454,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
     /**
      * <b>description</b> :
      * <ul>
-     * <li>China site users must select Shanghai as the site. International site users must select Singapore.</li>
-     * <li>By default, both deleted and non-deleted cloud desktops are queried.</li>
-     * <li>Deleted cloud desktops can only be queried if they were deleted within the last three months.</li>
-     * <li>Sort conditions cannot be used together with other conditions.</li>
+     * <li>Users on the Chinese site select Shanghai, and users on the international site select Singapore.</li>
+     * <li>By default, you can query all cloud computers, including both deleted and undeleted ones.</li>
+     * <li>For deleted cloud computers, you can only query those that were deleted within the last three months.</li>
+     * <li>Sorting conditions cannot be used together with other conditions.</li>
      * </ul>
      * 
      * <b>summary</b> : 
-     * <p>Queries the basic information about all recent cloud desktops and the corresponding usage duration records.</p>
+     * <p>Queries the basic information of all recent cloud computers and their corresponding usage duration records.</p>
      * 
      * @param request DescribeGlobalDesktopRecordsRequest
      * @return DescribeGlobalDesktopRecordsResponse
@@ -11789,7 +11805,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of cloud computer policies.</p>
+     * <p>Queries the details of cloud desktop policies.</p>
      * 
      * @param request DescribePolicyGroupsRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -11853,7 +11869,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries the details of cloud computer policies.</p>
+     * <p>Queries the details of cloud desktop policies.</p>
      * 
      * @param request DescribePolicyGroupsRequest
      * @return DescribePolicyGroupsResponse
@@ -12153,7 +12169,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Security alerts are classified into two dimensions: alerts and anomalies. A security alert contains multiple anomaly events.</p>
+     * <p>Security alerts are divided into two dimensions: alerts and exceptions. A single security alert contains multiple exception events.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries printer event information.</p>
@@ -12232,7 +12248,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>description</b> :
-     * <p>Security alerts are classified into two dimensions: alerts and anomalies. A security alert contains multiple anomaly events.</p>
+     * <p>Security alerts are divided into two dimensions: alerts and exceptions. A single security alert contains multiple exception events.</p>
      * 
      * <b>summary</b> : 
      * <p>Queries printer event information.</p>
@@ -12678,6 +12694,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.resourceId)) {
             query.put("ResourceId", request.resourceId);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.resourceName)) {
+            query.put("ResourceName", request.resourceName);
         }
 
         com.aliyun.teaopenapi.models.OpenApiRequest req = com.aliyun.teaopenapi.models.OpenApiRequest.build(TeaConverter.buildMap(
@@ -16539,7 +16559,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a region-free policy.</p>
+     * <p>Modifies the configuration of a regionless policy.</p>
      * 
      * @param request ModifyCenterPolicyRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -16568,6 +16588,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
             query.put("AppContentProtection", request.appContentProtection);
         }
 
+        if (!com.aliyun.teautil.Common.isUnset(request.appScreenshotBuckets)) {
+            query.put("AppScreenshotBuckets", request.appScreenshotBuckets);
+        }
+
         if (!com.aliyun.teautil.Common.isUnset(request.authorizeAccessPolicyRule)) {
             query.put("AuthorizeAccessPolicyRule", request.authorizeAccessPolicyRule);
         }
@@ -16578,6 +16602,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.autoReconnect)) {
             query.put("AutoReconnect", request.autoReconnect);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.autoSaveAppScreenshot)) {
+            query.put("AutoSaveAppScreenshot", request.autoSaveAppScreenshot);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.businessChannel)) {
@@ -16774,6 +16802,10 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.maxReconnectTime)) {
             query.put("MaxReconnectTime", request.maxReconnectTime);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.mcpService)) {
+            query.put("McpService", request.mcpService);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.memoryDownGradeDuration)) {
@@ -17147,7 +17179,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the configuration of a region-free policy.</p>
+     * <p>Modifies the configuration of a regionless policy.</p>
      * 
      * @param request ModifyCenterPolicyRequest
      * @return ModifyCenterPolicyResponse
@@ -19852,7 +19884,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the settings of a configuration group, such as scheduled task configurations.</p>
+     * <p>Modifies the specific settings of a configuration group, such as the configuration of scheduled tasks.</p>
      * 
      * @param request ModifyTimerGroupRequest
      * @param runtime runtime options for this request RuntimeOptions
@@ -19900,7 +19932,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Modifies the settings of a configuration group, such as scheduled task configurations.</p>
+     * <p>Modifies the specific settings of a configuration group, such as the configuration of scheduled tasks.</p>
      * 
      * @param request ModifyTimerGroupRequest
      * @return ModifyTimerGroupResponse
