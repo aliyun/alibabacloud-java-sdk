@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApiKeyQuotaShrinkRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>

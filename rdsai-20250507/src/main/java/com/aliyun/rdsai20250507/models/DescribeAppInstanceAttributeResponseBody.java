@@ -23,7 +23,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String appType;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -32,7 +32,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String branchName;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -41,13 +41,13 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String branchingEnabled;
 
     /**
-     * <p>The list of components.</p>
+     * <p>The component list.</p>
      */
     @NameInMap("Components")
     public java.util.List<DescribeAppInstanceAttributeResponseBodyComponents> components;
 
     /**
-     * <p>The instance ID of the RDS PostgreSQL database instance connected to the AI application.</p>
+     * <p>The instance ID of the RDS PostgreSQL database instance associated with the AI application.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-2ze49qv594vi****</p>
@@ -56,7 +56,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The instance ID of the EIP.</p>
+     * <p>The EIP instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>eip-wz9sfo01afag4hxc0utq0</p>
@@ -110,7 +110,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -119,13 +119,22 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String loginToken;
 
     /**
-     * <p>The minor versions of individual components of the RDS AI application instance.</p>
+     * <p>The minor versions of each component in the RDS AI application instance.</p>
      * 
      * <strong>example:</strong>
      * <p>{\&quot;studio\&quot;:\&quot;20260602r1\&quot;,\&quot;storage\&quot;:\&quot;v1.48.9\&quot;,\&quot;auth\&quot;:\&quot;v2.188.1\&quot;,\&quot;kong\&quot;:\&quot;3.9.0\&quot;,\&quot;rest\&quot;:\&quot;v12.2.12\&quot;,\&quot;meta\&quot;:\&quot;v0.89.3\&quot;,\&quot;realtime-dev\&quot;:\&quot;v2.34.47\&quot;,\&quot;postgres\&quot;:\&quot;rds_postgres_1700_20260830\&quot;}</p>
      */
     @NameInMap("MinorVersionDetail")
     public String minorVersionDetail;
+
+    /**
+     * <p>The release notes for the minor version of the RDS AI application instance.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>{\&quot;20260915\&quot;:\&quot;realtime：1xxx；auth：2xxx；storage：3xxx\&quot;,\&quot;20260917\&quot;:\&quot;studio：4xxx；auth：5xxx\&quot;}</p>
+     */
+    @NameInMap("MinorVersionReleaseNotes")
+    public String minorVersionReleaseNotes;
 
     /**
      * <p>The creator of the NAT gateway.</p>
@@ -137,7 +146,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String natCreatedBy;
 
     /**
-     * <p>The NAT gateway ID.</p>
+     * <p>The ID of the NAT gateway.</p>
      * 
      * <strong>example:</strong>
      * <p>ngw-bp1l82hw87m2y77ci1hie</p>
@@ -182,7 +191,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -191,7 +200,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String retentionHours;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -200,7 +209,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String sqlExtendMoInstanceId;
 
     /**
-     * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance status</a>.</p>
+     * <p>The instance status. For more information, see <a href="https://help.aliyun.com/document_detail/2623972.html">Instance status table</a>.</p>
      * 
      * <strong>example:</strong>
      * <p>Running</p>
@@ -209,7 +218,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>Reserved parameter</p>
@@ -218,7 +227,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     public String uploadKey;
 
     /**
-     * <p>A reserved parameter.</p>
+     * <p>The reserved parameter.</p>
      */
     @NameInMap("UploadKeyList")
     public java.util.List<DescribeAppInstanceAttributeResponseBodyUploadKeyList> uploadKeyList;
@@ -365,6 +374,14 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
     }
     public String getMinorVersionDetail() {
         return this.minorVersionDetail;
+    }
+
+    public DescribeAppInstanceAttributeResponseBody setMinorVersionReleaseNotes(String minorVersionReleaseNotes) {
+        this.minorVersionReleaseNotes = minorVersionReleaseNotes;
+        return this;
+    }
+    public String getMinorVersionReleaseNotes() {
+        return this.minorVersionReleaseNotes;
     }
 
     public DescribeAppInstanceAttributeResponseBody setNatCreatedBy(String natCreatedBy) {
@@ -523,7 +540,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
 
     public static class DescribeAppInstanceAttributeResponseBodyUploadKeyList extends TeaModel {
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -532,7 +549,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         public Boolean isSystemKey;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -541,7 +558,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         public String remark;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -550,7 +567,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         public Long slsStorageBytes;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>
@@ -559,7 +576,7 @@ public class DescribeAppInstanceAttributeResponseBody extends TeaModel {
         public String status;
 
         /**
-         * <p>A reserved parameter.</p>
+         * <p>The reserved parameter.</p>
          * 
          * <strong>example:</strong>
          * <p>Reserved parameter</p>

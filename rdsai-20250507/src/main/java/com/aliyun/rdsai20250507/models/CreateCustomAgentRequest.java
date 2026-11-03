@@ -14,10 +14,10 @@ public class CreateCustomAgentRequest extends TeaModel {
     public Boolean enableTools;
 
     /**
-     * <p>The name of the agent.</p>
+     * <p>The name of the custom agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>QueryInstanceListAgent</p>
+     * <p>Instance List Query Agent</p>
      */
     @NameInMap("Name")
     public String name;
@@ -33,7 +33,7 @@ public class CreateCustomAgentRequest extends TeaModel {
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
-     * <p>I am your dedicated agent for querying instance lists</p>
+     * <p>I am your custom agent for querying the instance list</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;

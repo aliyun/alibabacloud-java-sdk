@@ -4,6 +4,12 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
+    /**
+     * <p>A reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>A reserved parameter</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
@@ -72,13 +78,13 @@ public class DescribeInstanceStorageConfigResponseBody extends TeaModel {
         /**
          * <p>The name of the configuration item. Valid values:</p>
          * <ul>
-         * <li><strong>AWS_SESSION_TOKEN</strong>: the temporary access token (Session Token) of OSS.</li>
-         * <li><strong>AWS_ACCESS_KEY_ID</strong>: the AccessKey ID of OSS.</li>
-         * <li><strong>AWS_SECRET_ACCESS_KEY</strong>: the AccessKey Secret of OSS.</li>
-         * <li><strong>GLOBAL_S3_BUCKET</strong>: the bucket name of OSS.</li>
-         * <li><strong>TENANT_ID</strong>: the tenant ID of the OSS prefix (prefix or directory).</li>
-         * <li><strong>GLOBAL_S3_ENDPOINT</strong>: the endpoint of OSS.</li>
-         * <li><strong>REGION</strong>: the region of OSS.</li>
+         * <li><strong>AWS_SESSION_TOKEN</strong>: The temporary access token (session token) for OSS.</li>
+         * <li><strong>AWS_ACCESS_KEY_ID</strong>: The AccessKey ID for OSS.</li>
+         * <li><strong>AWS_SECRET_ACCESS_KEY</strong>: The AccessKey secret for OSS.</li>
+         * <li><strong>GLOBAL_S3_BUCKET</strong>: The name of the OSS bucket.</li>
+         * <li><strong>TENANT_ID</strong>: The tenant ID of the OSS prefix (prefix or directory).</li>
+         * <li><strong>GLOBAL_S3_ENDPOINT</strong>: The endpoint of OSS.</li>
+         * <li><strong>REGION</strong>: The region of OSS.</li>
          * </ul>
          * 
          * <strong>example:</strong>

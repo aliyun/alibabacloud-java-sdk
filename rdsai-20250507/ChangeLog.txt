@@ -1,3 +1,7 @@
+2026-11-03 Version: 3.10.1
+- Update API DescribeAppInstanceAttribute: add response parameters Body.MinorVersionReleaseNotes.
+
+
 2026-10-13 Version: 3.10.0
 - Support API AddContextDatabaseSyncJobExclusion.
 - Support API CancelContextDatabaseSyncDiscovery.

@@ -4,6 +4,9 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class RestartInstanceRequest extends TeaModel {
+    /**
+     * <p>Reserved parameter.</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
@@ -18,7 +21,7 @@ public class RestartInstanceRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

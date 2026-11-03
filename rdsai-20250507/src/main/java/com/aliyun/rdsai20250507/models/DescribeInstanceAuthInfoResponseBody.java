@@ -5,16 +5,22 @@ import com.aliyun.tea.*;
 
 public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
     /**
-     * <p>API Keys。</p>
+     * <p>The API keys.</p>
      */
     @NameInMap("ApiKeys")
     public DescribeInstanceAuthInfoResponseBodyApiKeys apiKeys;
 
+    /**
+     * <p>Reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
     /**
-     * <p>The list of authentication configurations.</p>
+     * <p>The list of authentication information.</p>
      */
     @NameInMap("ConfigList")
     public java.util.List<DescribeInstanceAuthInfoResponseBodyConfigList> configList;
@@ -156,17 +162,17 @@ public class DescribeInstanceAuthInfoResponseBody extends TeaModel {
         /**
          * <p>The name of the configuration item. Valid values:</p>
          * <ul>
-         * <li><strong>GOTRUE_EXTERNAL_EMAIL_ENABLED</strong>: Specifies whether external email is allowed.</li>
+         * <li><strong>GOTRUE_EXTERNAL_EMAIL_ENABLED</strong>: Specifies whether external emails are allowed.</li>
          * <li><strong>GOTRUE_SITE_URL</strong>: The website URL displayed when the AI application sends emails.</li>
-         * <li><strong>GOTRUE_SMTP_PORT</strong>: The port of the SMTP provider.</li>
+         * <li><strong>GOTRUE_SMTP_PORT</strong>: The port of the SMTP service provider.</li>
          * <li><strong>GOTRUE_SMTP_SENDER_NAME</strong>: The name of the email sender.</li>
-         * <li><strong>GOTRUE_SMTP_USER</strong>: The username of the SMTP provider.</li>
-         * <li><strong>GOTRUE_SMTP_PASS</strong>: The secret key of the SMTP provider.</li>
-         * <li><strong>GOTRUE_SMTP_ADMIN_EMAIL</strong>: The email address of the SMTP provider.</li>
-         * <li><strong>GOTRUE_SMTP_HOST</strong>: The host address of the SMTP provider.</li>
+         * <li><strong>GOTRUE_SMTP_USER</strong>: The username of the SMTP service provider.</li>
+         * <li><strong>GOTRUE_SMTP_PASS</strong>: The password of the SMTP service provider.</li>
+         * <li><strong>GOTRUE_SMTP_ADMIN_EMAIL</strong>: The email address of the SMTP service provider.</li>
+         * <li><strong>GOTRUE_SMTP_HOST</strong>: The host address of the SMTP service provider.</li>
          * <li><strong>GOTRUE_MAILER_AUTOCONFIRM</strong>: Specifies whether automatic confirmation is enabled.</li>
          * <li><strong>GOTRUE_MAILER_OTP_EXP</strong>: The validity period of the one-time password (OTP). Unit: seconds.</li>
-         * <li><strong>GOTRUE_MAILER_OTP_LENGTH</strong>: The length of the one-time password (OTP) verification code. The value must be an integer greater than or equal to 6.</li>
+         * <li><strong>GOTRUE_MAILER_OTP_LENGTH</strong>: The length of the one-time password (OTP). The value must be an integer greater than or equal to 6.</li>
          * </ul>
          * 
          * <strong>example:</strong>

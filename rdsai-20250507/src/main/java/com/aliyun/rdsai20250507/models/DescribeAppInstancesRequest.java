@@ -14,7 +14,7 @@ public class DescribeAppInstancesRequest extends TeaModel {
     public String appType;
 
     /**
-     * <p>The instance ID of the ApsaraDB RDS for PostgreSQL database that is connected to the AI application. If you specify this parameter, the AI application instances associated with the specified ApsaraDB RDS for PostgreSQL instance are queried.</p>
+     * <p>The instance ID of the RDS PostgreSQL database to which the AI application is connected. If you specify this parameter, the API queries the AI application instances associated with the specified RDS PostgreSQL instance.</p>
      * 
      * <strong>example:</strong>
      * <p>pgm-2ze49qv594vi****</p>
@@ -23,7 +23,7 @@ public class DescribeAppInstancesRequest extends TeaModel {
     public String DBInstanceName;
 
     /**
-     * <p>The page number. Valid values: a value greater than 0 that does not exceed the maximum value of Integer.</p>
+     * <p>The page number. Valid values: integers greater than 0 and up to the maximum value of the Integer type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>
@@ -32,7 +32,7 @@ public class DescribeAppInstancesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of entries per page. Valid values: <strong>1 to 50</strong>.</p>
+     * <p>The number of entries per page. Valid values: <strong>1</strong> to <strong>50</strong>.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -41,7 +41,7 @@ public class DescribeAppInstancesRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

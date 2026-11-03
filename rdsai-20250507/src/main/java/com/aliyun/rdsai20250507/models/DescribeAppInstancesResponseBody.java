@@ -11,7 +11,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
     public java.util.List<DescribeAppInstancesResponseBodyInstances> instances;
 
     /**
-     * <p>A reserved parameter. You can ignore this parameter.</p>
+     * <p>A reserved parameter. You can ignore it.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -47,7 +47,7 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of entries returned.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -109,9 +109,15 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
     }
 
     public static class DescribeAppInstancesResponseBodyInstancesComponents extends TeaModel {
+        /**
+         * <p>The component status.</p>
+         */
         @NameInMap("Status")
         public String status;
 
+        /**
+         * <p>The component type.</p>
+         */
         @NameInMap("Type")
         public String type;
 
@@ -157,11 +163,14 @@ public class DescribeAppInstancesResponseBody extends TeaModel {
         @NameInMap("AppType")
         public String appType;
 
+        /**
+         * <p>The list of components.</p>
+         */
         @NameInMap("Components")
         public java.util.List<DescribeAppInstancesResponseBodyInstancesComponents> components;
 
         /**
-         * <p>The instance ID of the ApsaraDB RDS for PostgreSQL database that is connected to the AI application.</p>
+         * <p>The instance ID of the RDS PostgreSQL database to which the AI application is connected.</p>
          * 
          * <strong>example:</strong>
          * <p>pgm-2ze49qv594vi****</p>

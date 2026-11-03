@@ -32,10 +32,10 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     public String id;
 
     /**
-     * <p>The name of the agent.</p>
+     * <p>The name of the custom agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>QueryInstanceListAgent</p>
+     * <p>Instance List Query Agent</p>
      */
     @NameInMap("Name")
     public String name;
@@ -49,6 +49,9 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of associated skill details.</p>
+     */
     @NameInMap("Skills")
     public java.util.List<CreateCustomAgentResponseBodySkills> skills;
 
@@ -56,7 +59,7 @@ public class CreateCustomAgentResponseBody extends TeaModel {
      * <p>The system prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>I am your dedicated agent for querying instance lists</p>
+     * <p>I am your custom agent for querying the instance list</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;
@@ -137,15 +140,39 @@ public class CreateCustomAgentResponseBody extends TeaModel {
     }
 
     public static class CreateCustomAgentResponseBodySkills extends TeaModel {
+        /**
+         * <p>The skill description.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL query optimization skill</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The unique identifier of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82cf3d62-0add-47bd-869f-877131f7****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query-optimization</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("SkillType")
         public String skillType;
 

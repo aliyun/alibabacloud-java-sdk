@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateApiKeyQuotaRequest extends TeaModel {
     /**
-     * <p>The instance ID.</p>
+     * <p>The instance name.</p>
      * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>
@@ -51,6 +51,8 @@ public class UpdateApiKeyQuotaRequest extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The daily quota of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>100000000</p>
          */
@@ -58,7 +60,7 @@ public class UpdateApiKeyQuotaRequest extends TeaModel {
         public Long dailyTokenQuota;
 
         /**
-         * <p>The throttling ratio. This parameter is required when type is set to ratio.</p>
+         * <p>The rate limit ratio. This parameter is required when the limit type is set to ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -67,11 +69,11 @@ public class UpdateApiKeyQuotaRequest extends TeaModel {
         public Double limitRate;
 
         /**
-         * <p>The quota type. Valid values:</p>
+         * <p>The quota limit type. Valid values:</p>
          * <ul>
-         * <li>ratio: by ratio.</li>
-         * <li>fixed: by fixed value.</li>
-         * <li>auto: automatic allocation of EPS resource.</li>
+         * <li>ratio: Proportional limit.</li>
+         * <li>fixed: Fixed value.</li>
+         * <li>auto: Automatic allocation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -81,7 +83,7 @@ public class UpdateApiKeyQuotaRequest extends TeaModel {
         public String limitType;
 
         /**
-         * <p>The fixed throttling value. This parameter is required when type is set to fixed.</p>
+         * <p>The fixed rate limit value. This parameter is required when the limit type is set to fixed.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>

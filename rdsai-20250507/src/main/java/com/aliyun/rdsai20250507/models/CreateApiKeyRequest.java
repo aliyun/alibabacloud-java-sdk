@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class CreateApiKeyRequest extends TeaModel {
     /**
-     * <p>The daily quota of the API key.</p>
+     * <p>The daily token quota for the API key.</p>
      * 
      * <strong>example:</strong>
      * <p>1000000000</p>
@@ -14,7 +14,7 @@ public class CreateApiKeyRequest extends TeaModel {
     public Long dailyTokenQuota;
 
     /**
-     * <p>The instance name.</p>
+     * <p>The instance ID.</p>
      * 
      * <strong>example:</strong>
      * <p>rds_copilot***_public_cn-*********6</p>
@@ -32,7 +32,7 @@ public class CreateApiKeyRequest extends TeaModel {
     public String keyName;
 
     /**
-     * <p>The quota percentage.</p>
+     * <p>The quota limit percentage.</p>
      * 
      * <strong>example:</strong>
      * <p>0.2</p>
@@ -41,11 +41,11 @@ public class CreateApiKeyRequest extends TeaModel {
     public Double limitRate;
 
     /**
-     * <p>The quota type. Valid values:</p>
+     * <p>The quota limit type. Valid values:</p>
      * <ul>
-     * <li>ratio: by percentage.</li>
-     * <li>fixed: by fixed value.</li>
-     * <li>auto: automatic allocation.</li>
+     * <li>ratio: Percentage-based.</li>
+     * <li>fixed: Fixed value.</li>
+     * <li>auto: Automatic allocation.</li>
      * </ul>
      * 
      * <strong>example:</strong>
@@ -70,7 +70,7 @@ public class CreateApiKeyRequest extends TeaModel {
     public String roleName;
 
     /**
-     * <p>The quota limit for the current key.</p>
+     * <p>The token quota for the current key.</p>
      * 
      * <strong>example:</strong>
      * <p>100000</p>

@@ -4,6 +4,12 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class GetModelOperatorOrderRequest extends TeaModel {
+    /**
+     * <p>The region ID.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>cn-beijing</p>
+     */
     @NameInMap("Region")
     public String region;
 

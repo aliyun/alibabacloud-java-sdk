@@ -5,13 +5,13 @@ import com.aliyun.tea.*;
 
 public class UpdateApiKeyQuotaResponseBody extends TeaModel {
     /**
-     * <p>The response data.</p>
+     * <p>The returned data.</p>
      */
     @NameInMap("Data")
     public UpdateApiKeyQuotaResponseBodyData data;
 
     /**
-     * <p>The response message.</p>
+     * <p>The returned message.</p>
      * 
      * <strong>example:</strong>
      * <p>success</p>
@@ -29,7 +29,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The request result.</p>
+     * <p>Indicates whether the request is successful.</p>
      * 
      * <strong>example:</strong>
      * <p>true</p>
@@ -85,6 +85,8 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         public String apiKey;
 
         /**
+         * <p>The daily quota of the API key.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000000</p>
          */
@@ -92,7 +94,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         public Long dailyTokenQuota;
 
         /**
-         * <p>The quota ratio.</p>
+         * <p>The quota limit ratio.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -101,11 +103,11 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         public Float limitRate;
 
         /**
-         * <p>The quota type. Valid values:</p>
+         * <p>The quota limit type. Valid values:</p>
          * <ul>
-         * <li>ratio: by ratio.</li>
-         * <li>fixed: by fixed value.</li>
-         * <li>auto: automatic allocation of EPS resource.</li>
+         * <li>ratio: Proportional limit.</li>
+         * <li>fixed: Fixed value.</li>
+         * <li>auto: Automatic allocation.</li>
          * </ul>
          * 
          * <strong>example:</strong>
@@ -115,7 +117,7 @@ public class UpdateApiKeyQuotaResponseBody extends TeaModel {
         public String limitType;
 
         /**
-         * <p>The quota of the current key.</p>
+         * <p>The quota limit of the current key.</p>
          * 
          * <strong>example:</strong>
          * <p>10000</p>

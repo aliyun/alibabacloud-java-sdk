@@ -5,6 +5,8 @@ import com.aliyun.tea.*;
 
 public class ListContextDatabaseSyncRunLogsRequest extends TeaModel {
     /**
+     * <p>The page number, starting from 1.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -12,6 +14,8 @@ public class ListContextDatabaseSyncRunLogsRequest extends TeaModel {
     public Integer page;
 
     /**
+     * <p>The number of entries per page.</p>
+     * 
      * <strong>example:</strong>
      * <p>20</p>
      */
@@ -19,6 +23,7 @@ public class ListContextDatabaseSyncRunLogsRequest extends TeaModel {
     public Integer pageSize;
 
     /**
+     * <p>The run ID, which is a system-generated UUID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -28,6 +33,7 @@ public class ListContextDatabaseSyncRunLogsRequest extends TeaModel {
     public String runId;
 
     /**
+     * <p>The workspace ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

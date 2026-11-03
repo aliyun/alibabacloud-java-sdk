@@ -4,6 +4,9 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSSLRequest extends TeaModel {
+    /**
+     * <p>Reserved parameter.</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 

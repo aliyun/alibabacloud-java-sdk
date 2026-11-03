@@ -4,11 +4,17 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeInstanceSSLResponseBody extends TeaModel {
+    /**
+     * <p>Reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
     /**
-     * <p>The certificate type. The value is <strong>custom</strong>, which indicates that a custom certificate is used.</p>
+     * <p>The certificate type. A value of <strong>custom</strong> indicates that a custom certificate is used.</p>
      * 
      * <strong>example:</strong>
      * <p>custom</p>
@@ -51,7 +57,7 @@ public class DescribeInstanceSSLResponseBody extends TeaModel {
     public String SSLExpiredTime;
 
     /**
-     * <p>The custom certificate content.</p>
+     * <p>The content of the custom certificate.</p>
      * 
      * <strong>example:</strong>
      * <p>-----BEGIN CERTIFICATE-----MIID*****QqEP-----END CERTIFICATE-----</p>

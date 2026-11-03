@@ -4,6 +4,9 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class EnableAgentRuntimeRequest extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
@@ -36,11 +39,11 @@ public class EnableAgentRuntimeRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The security group ID. This parameter is used to create an endpoint.</p>
-     * <p><strong>If this parameter is not specified</strong>: The system performs automatic creation of a security group named <strong>sg-aliyun-rds-created-supabase-sandbox</strong> in the VPC where the instance resides. No manual operation is required.</p>
-     * <p><strong>If this parameter is specified</strong>: Make sure that the specified security group allows traffic from the CIDR block of the VPC where the Supabase instance resides in both the inbound and outbound directions. Otherwise, network connectivity issues may occur.</p>
+     * <p>The security group ID used to create an endpoint.</p>
+     * <p><strong>If not specified</strong>: The system automatically creates a security group named <strong>sg-aliyun-rds-created-supabase-sandbox</strong> in the VPC where the instance resides. No manual operation is required.</p>
+     * <p><strong>If manually specified</strong>: Make sure that the specified security group allows traffic from the CIDR block of the VPC where the Supabase instance resides in both the inbound and outbound directions. Otherwise, network connectivity may fail.</p>
      * <blockquote>
-     * <p>Notice: An endpoint is created only once. When the first Supabase instance in a VPC enables the sandbox and Edge Routine function capabilities, the system performs automatic creation of the endpoint. When subsequent Supabase instances in the same VPC enable these capabilities, the existing endpoint is reused and no new endpoint is created.</p>
+     * <p>Notice: The endpoint is created only once. When the first Supabase instance in a VPC enables the sandbox and Edge Routine capabilities, the system automatically creates an endpoint. When other Supabase instances in the same VPC enable these capabilities later, the existing endpoint is reused and not created again.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>
@@ -50,9 +53,9 @@ public class EnableAgentRuntimeRequest extends TeaModel {
     public String securityGroupId;
 
     /**
-     * <p>The vSwitch ID. This parameter is used to create an endpoint. If this parameter is not specified, the vSwitch of the Supabase instance is used by default.</p>
+     * <p>The vSwitch ID used to create an endpoint. If this parameter is not specified, the vSwitch of the Supabase instance is used by default.</p>
      * <blockquote>
-     * <p>Notice: An endpoint is created only once. When the first Supabase instance in a VPC enables the sandbox and Edge Routine function capabilities, the system performs automatic creation of the endpoint. When subsequent Supabase instances in the same VPC enable these capabilities, the existing endpoint is reused and no new endpoint is created.</p>
+     * <p>Notice: The endpoint is created only once. When the first Supabase instance in a VPC enables the sandbox and Edge Routine capabilities, the system automatically creates an endpoint. When other Supabase instances in the same VPC enable these capabilities later, the existing endpoint is reused and not created again.</notice></p>
      * </blockquote>
      * 
      * <strong>example:</strong>

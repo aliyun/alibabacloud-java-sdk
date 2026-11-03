@@ -4,11 +4,14 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyAppInstanceShrinkRequest extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
     /**
-     * <p>The idempotency parameter.</p>
+     * <p>The client token that is used to ensure idempotence.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -22,9 +25,19 @@ public class ModifyAppInstanceShrinkRequest extends TeaModel {
     @NameInMap("Components")
     public String componentsShrink;
 
+    /**
+     * <strong>example:</strong>
+     * <p>pgm-2ze49qv594vi****</p>
+     */
     @NameInMap("DBInstanceName")
     public String DBInstanceName;
 
+    /**
+     * <p>The instance type. Currently, only <strong>rdsai.supabase.basic</strong> is supported.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>rdsai.supabase.basic</p>
+     */
     @NameInMap("InstanceClass")
     public String instanceClass;
 

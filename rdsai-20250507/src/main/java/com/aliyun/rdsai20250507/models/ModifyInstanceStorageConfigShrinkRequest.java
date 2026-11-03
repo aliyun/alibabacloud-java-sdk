@@ -4,11 +4,14 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceStorageConfigShrinkRequest extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
     /**
-     * <p>The client token that is used to ensure the idempotence of the request. You can use the client to generate the token, which prevents repeated submissions of requests.</p>
+     * <p>The client token that is used to ensure the idempotence of the request and prevent duplicate submissions. You can generate the value on the client.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>

@@ -38,7 +38,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -56,7 +56,7 @@ public class DescribeEventsListResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The total number of records.</p>
+     * <p>The total number of entries.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -194,6 +194,12 @@ public class DescribeEventsListResponseBody extends TeaModel {
         @NameInMap("RecoveryTime")
         public String recoveryTime;
 
+        /**
+         * <p>The region ID.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>cn-beijing</p>
+         */
         @NameInMap("RegionId")
         public String regionId;
 

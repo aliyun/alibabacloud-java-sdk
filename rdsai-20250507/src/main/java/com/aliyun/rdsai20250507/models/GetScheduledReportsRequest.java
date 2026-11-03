@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class GetScheduledReportsRequest extends TeaModel {
     /**
-     * <p>The end time for filtering. Format: YYYY-MM-DDTHH:mm:ssZ. If this parameter is not specified, no end time filter is applied.</p>
+     * <p>The end time for filtering. Format: YYYY-MM-DDTHH:mm:ssZ. If you do not specify this parameter, no filtering is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-25T02:02:00Z</p>
@@ -32,7 +32,7 @@ public class GetScheduledReportsRequest extends TeaModel {
     public Long pageSize;
 
     /**
-     * <p>The inspection task ID.</p>
+     * <p>The ID of the scheduled task.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -42,7 +42,7 @@ public class GetScheduledReportsRequest extends TeaModel {
     public String scheduledId;
 
     /**
-     * <p>The start time for filtering. Format: YYYY-MM-DDTHH:mm:ssZ. If this parameter is not specified, no start time filter is applied.</p>
+     * <p>The start time for filtering. Format: YYYY-MM-DDTHH:mm:ssZ. If you do not specify this parameter, no filtering is applied.</p>
      * 
      * <strong>example:</strong>
      * <p>2026-01-25T01:02:00Z</p>

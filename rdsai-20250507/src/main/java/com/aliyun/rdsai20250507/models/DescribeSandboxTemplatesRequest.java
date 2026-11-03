@@ -4,6 +4,9 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class DescribeSandboxTemplatesRequest extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
@@ -18,7 +21,7 @@ public class DescribeSandboxTemplatesRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>A reserved parameter. You can ignore this parameter.</p>
+     * <p>The backup parameter. You can ignore this parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>None</p>
@@ -45,7 +48,7 @@ public class DescribeSandboxTemplatesRequest extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -64,7 +67,7 @@ public class DescribeSandboxTemplatesRequest extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The sandbox template name.</p>
+     * <p>The name of the sandbox template.</p>
      * 
      * <strong>example:</strong>
      * <p>code-interpreter</p>

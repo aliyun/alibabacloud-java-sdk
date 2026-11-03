@@ -5,7 +5,7 @@ import com.aliyun.tea.*;
 
 public class UpdateCustomAgentShrinkRequest extends TeaModel {
     /**
-     * <p>AgentId。</p>
+     * <p>The agent ID.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>
@@ -24,14 +24,17 @@ public class UpdateCustomAgentShrinkRequest extends TeaModel {
     public Boolean enableTools;
 
     /**
-     * <p>The name of the dedicated agent.</p>
+     * <p>The name of the custom agent.</p>
      * 
      * <strong>example:</strong>
-     * <p>Query Instance List Agent</p>
+     * <p>Query instance list agent</p>
      */
     @NameInMap("Name")
     public String name;
 
+    /**
+     * <p>The list of associated skill IDs.</p>
+     */
     @NameInMap("SkillIds")
     public String skillIdsShrink;
 
@@ -39,7 +42,7 @@ public class UpdateCustomAgentShrinkRequest extends TeaModel {
      * <p>The system prompt.</p>
      * 
      * <strong>example:</strong>
-     * <p>I am your dedicated Agent for querying instance lists</p>
+     * <p>I am your custom agent for querying the instance list</p>
      */
     @NameInMap("SystemPrompt")
     public String systemPrompt;

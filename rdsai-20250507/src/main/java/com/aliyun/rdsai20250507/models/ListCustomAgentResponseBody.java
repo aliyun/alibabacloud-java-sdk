@@ -20,7 +20,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
     public Long pageNumber;
 
     /**
-     * <p>The number of records per page.</p>
+     * <p>The number of entries per page.</p>
      * 
      * <strong>example:</strong>
      * <p>10</p>
@@ -37,11 +37,14 @@ public class ListCustomAgentResponseBody extends TeaModel {
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>The list of associated skill details.</p>
+     */
     @NameInMap("Skills")
     public java.util.List<ListCustomAgentResponseBodySkills> skills;
 
     /**
-     * <p>The total number of data records that meet the request conditions. This parameter is optional and is not returned by default.</p>
+     * <p>The total number of entries that meet the request conditions. This parameter is optional and is not returned by default.</p>
      * 
      * <strong>example:</strong>
      * <p>20</p>
@@ -113,7 +116,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public String createdAt;
 
         /**
-         * <p>Indicates whether tools are enabled.</p>
+         * <p>Specifies whether tools are enabled.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -122,7 +125,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
         public Boolean enableTools;
 
         /**
-         * <p>AgentId。</p>
+         * <p>The agent ID.</p>
          * 
          * <strong>example:</strong>
          * <p>d1b7d639-f34e-44c7-8231-987da14d****</p>
@@ -134,7 +137,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
          * <p>The name of the dedicated agent.</p>
          * 
          * <strong>example:</strong>
-         * <p>Log Analysis Agent</p>
+         * <p>Log analysis agent</p>
          */
         @NameInMap("Name")
         public String name;
@@ -143,7 +146,7 @@ public class ListCustomAgentResponseBody extends TeaModel {
          * <p>The system prompt.</p>
          * 
          * <strong>example:</strong>
-         * <p>I am your dedicated agent for querying instance lists</p>
+         * <p>I am your dedicated agent for querying the instance list</p>
          */
         @NameInMap("SystemPrompt")
         public String systemPrompt;
@@ -227,15 +230,39 @@ public class ListCustomAgentResponseBody extends TeaModel {
     }
 
     public static class ListCustomAgentResponseBodySkills extends TeaModel {
+        /**
+         * <p>The description of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>SQL query optimization skill</p>
+         */
         @NameInMap("Description")
         public String description;
 
+        /**
+         * <p>The unique identifier of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>82cf3d62-0add-47bd-869f-877131f7****</p>
+         */
         @NameInMap("Id")
         public String id;
 
+        /**
+         * <p>The name of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>query-optimization</p>
+         */
         @NameInMap("Name")
         public String name;
 
+        /**
+         * <p>The type of the skill.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>user</p>
+         */
         @NameInMap("SkillType")
         public String skillType;
 

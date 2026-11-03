@@ -4,11 +4,14 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceConfigRequest extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
     /**
-     * <p>The idempotence parameter.</p>
+     * <p>The idempotency parameter.</p>
      * 
      * <strong>example:</strong>
      * <p>ETnLKlblzczshOTUbOCz****</p>
@@ -17,7 +20,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String clientToken;
 
     /**
-     * <p>The name of the configuration item to modify. This parameter is used together with ConfigValue.</p>
+     * <p>The name of the configuration item to modify. This parameter must be used together with ConfigValue.</p>
      * 
      * <strong>example:</strong>
      * <p>eip、nat</p>
@@ -26,7 +29,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String configName;
 
     /**
-     * <p>The value of the configuration item to modify. This parameter is used together with ConfigName.</p>
+     * <p>The value of the configuration item to modify. This parameter must be used together with ConfigName.</p>
      * 
      * <strong>example:</strong>
      * <p>on、off</p>
@@ -35,7 +38,7 @@ public class ModifyInstanceConfigRequest extends TeaModel {
     public String configValue;
 
     /**
-     * <p>The instance ID of the AI application.</p>
+     * <p>The ID of the AI application instance.</p>
      * <p>This parameter is required.</p>
      * 
      * <strong>example:</strong>

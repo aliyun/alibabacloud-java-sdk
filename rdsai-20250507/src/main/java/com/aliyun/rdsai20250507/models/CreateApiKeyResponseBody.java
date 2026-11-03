@@ -85,7 +85,10 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public String apiKey;
 
         /**
-         * <p>The daily quota of the API key.</p>
+         * <p>The daily token quota for the API key.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>0</p>
          */
         @NameInMap("DailyTokenQuota")
         public Long dailyTokenQuota;
@@ -100,7 +103,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public String keyName;
 
         /**
-         * <p>The quota percentage.</p>
+         * <p>The quota limit percentage.</p>
          * 
          * <strong>example:</strong>
          * <p>0.2</p>
@@ -109,11 +112,11 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public Float limitRate;
 
         /**
-         * <p>The quota type. Valid values:</p>
+         * <p>The quota limit type. Valid values:</p>
          * <ul>
-         * <li><p><strong>fixed</strong>: By fixed value.</p>
+         * <li><p><strong>fixed</strong>: Fixed value.</p>
          * </li>
-         * <li><p><strong>ratio</strong>: By percentage.</p>
+         * <li><p><strong>ratio</strong>: Percentage-based.</p>
          * </li>
          * <li><p><strong>auto</strong>: Automatic allocation.</p>
          * </li>
@@ -129,7 +132,7 @@ public class CreateApiKeyResponseBody extends TeaModel {
         public String roleArn;
 
         /**
-         * <p>The quota limit for the current key.</p>
+         * <p>The token quota for the current key.</p>
          * 
          * <strong>example:</strong>
          * <p>100000</p>

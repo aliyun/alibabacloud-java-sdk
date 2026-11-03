@@ -5,16 +5,23 @@ import com.aliyun.tea.*;
 
 public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
     /**
+     * <p>The error code.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("Code")
     public String code;
 
+    /**
+     * <p>The returned data.</p>
+     */
     @NameInMap("Data")
     public ListContextDatabaseSyncRunLogsResponseBodyData data;
 
     /**
+     * <p>The HTTP status code.</p>
+     * 
      * <strong>example:</strong>
      * <p>1</p>
      */
@@ -22,19 +29,26 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
     public Long httpStatusCode;
 
     /**
+     * <p>The message.</p>
+     * 
      * <strong>example:</strong>
-     * <p>示例值</p>
+     * <p>Sample value</p>
      */
     @NameInMap("Message")
     public String message;
 
     /**
+     * <p>The request ID.</p>
+     * 
      * <strong>example:</strong>
      * <p>id-001</p>
      */
     @NameInMap("RequestId")
     public String requestId;
 
+    /**
+     * <p>Indicates whether the request is successful.</p>
+     */
     @NameInMap("Success")
     public Boolean success;
 
@@ -93,6 +107,8 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
 
     public static class ListContextDatabaseSyncRunLogsResponseBodyDataLogs extends TeaModel {
         /**
+         * <p>The creation time.</p>
+         * 
          * <strong>example:</strong>
          * <p>2026-09-23T10:00:00+08:00</p>
          */
@@ -100,13 +116,17 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
         public String createdAt;
 
         /**
+         * <p>The details.</p>
+         * 
          * <strong>example:</strong>
-         * <p>同步完成，已上传 12 个文档</p>
+         * <p>Synchronization completed. 12 documents uploaded</p>
          */
         @NameInMap("Detail")
         public String detail;
 
         /**
+         * <p>The run ID.</p>
+         * 
          * <strong>example:</strong>
          * <p>1000000000000000</p>
          */
@@ -114,6 +134,8 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
         public Long id;
 
         /**
+         * <p>The log level. Valid values: debug, info, warn, and error.</p>
+         * 
          * <strong>example:</strong>
          * <p>info</p>
          */
@@ -121,8 +143,10 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
         public String level;
 
         /**
+         * <p>The response message.</p>
+         * 
          * <strong>example:</strong>
-         * <p>操作成功</p>
+         * <p>Operation successful</p>
          */
         @NameInMap("Message")
         public String message;
@@ -176,13 +200,17 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
 
     public static class ListContextDatabaseSyncRunLogsResponseBodyData extends TeaModel {
         /**
+         * <p>The list of logs.</p>
+         * 
          * <strong>example:</strong>
-         * <p>[{&quot;Id&quot;:1000000000000000, &quot;Level&quot;:&quot;info&quot;, &quot;Message&quot;:&quot;操作成功&quot;, &quot;Detail&quot;:&quot;同步完成，已上传 12 个文档&quot;}]</p>
+         * <p>[{&quot;Id&quot;:1000000000000000, &quot;Level&quot;:&quot;info&quot;, &quot;Message&quot;:&quot;Operation successful&quot;, &quot;Detail&quot;:&quot;Synchronization completed. 12 documents uploaded.&quot;}]</p>
          */
         @NameInMap("Logs")
         public java.util.List<ListContextDatabaseSyncRunLogsResponseBodyDataLogs> logs;
 
         /**
+         * <p>The page number, starting from 1.</p>
+         * 
          * <strong>example:</strong>
          * <p>1</p>
          */
@@ -190,6 +218,8 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
         public Integer page;
 
         /**
+         * <p>The number of entries per page.</p>
+         * 
          * <strong>example:</strong>
          * <p>20</p>
          */
@@ -197,6 +227,8 @@ public class ListContextDatabaseSyncRunLogsResponseBody extends TeaModel {
         public Integer pageSize;
 
         /**
+         * <p>The total number of entries.</p>
+         * 
          * <strong>example:</strong>
          * <p>100</p>
          */

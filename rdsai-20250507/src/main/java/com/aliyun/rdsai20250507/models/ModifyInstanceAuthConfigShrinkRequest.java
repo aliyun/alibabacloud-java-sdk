@@ -4,6 +4,9 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceAuthConfigShrinkRequest extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
@@ -23,7 +26,7 @@ public class ModifyInstanceAuthConfigShrinkRequest extends TeaModel {
     public String instanceName;
 
     /**
-     * <p>The region.</p>
+     * <p>The region ID.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-beijing</p>

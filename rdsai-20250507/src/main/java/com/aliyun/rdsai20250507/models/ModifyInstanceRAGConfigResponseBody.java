@@ -4,6 +4,12 @@ package com.aliyun.rdsai20250507.models;
 import com.aliyun.tea.*;
 
 public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
+    /**
+     * <p>The reserved parameter.</p>
+     * 
+     * <strong>example:</strong>
+     * <p>Reserved parameter</p>
+     */
     @NameInMap("BranchName")
     public String branchName;
 
@@ -26,7 +32,7 @@ public class ModifyInstanceRAGConfigResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The RAG Agent status.</p>
+     * <p>The status of the RAG Agent.</p>
      * <ul>
      * <li><strong>true</strong>: Enabled.</li>
      * <li><strong>false</strong>: Disabled.</li>
