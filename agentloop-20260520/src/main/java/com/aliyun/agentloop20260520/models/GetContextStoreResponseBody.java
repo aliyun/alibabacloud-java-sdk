@@ -38,7 +38,7 @@ public class GetContextStoreResponseBody extends TeaModel {
     public String contextType;
 
     /**
-     * <p>The time when the context store was created, in ISO 8601 UTC format.</p>
+     * <p>The creation time of the context store in ISO 8601 UTC format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -57,7 +57,7 @@ public class GetContextStoreResponseBody extends TeaModel {
     public String description;
 
     /**
-     * <p>The ID of the region where the context store is located.</p>
+     * <p>The ID of the region where the context store resides.</p>
      * 
      * <strong>example:</strong>
      * <p>cn-hangzhou</p>
@@ -66,7 +66,7 @@ public class GetContextStoreResponseBody extends TeaModel {
     public String regionId;
 
     /**
-     * <p>The request ID used to locate the request during troubleshooting.</p>
+     * <p>The request ID, which is used to locate the request for troubleshooting.</p>
      * 
      * <strong>example:</strong>
      * <p>9ACFB10A-1B2C-3D4E-5F6G-7H8I9J0K1L2M</p>
@@ -75,7 +75,7 @@ public class GetContextStoreResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The status of the context store, such as ACTIVE, INITIALIZING, or FAILED.</p>
+     * <p>The status of the context store. Valid values: ACTIVE, INITIALIZING, and FAILED.</p>
      * 
      * <strong>example:</strong>
      * <p>ACTIVE</p>
@@ -84,7 +84,7 @@ public class GetContextStoreResponseBody extends TeaModel {
     public String status;
 
     /**
-     * <p>The time when the context store was last updated, in ISO 8601 UTC format.</p>
+     * <p>The last update time of the context store in ISO 8601 UTC format.</p>
      * <p>Use the UTC time format: yyyy-MM-ddTHH:mm:ssZ</p>
      * 
      * <strong>example:</strong>
@@ -180,7 +180,7 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigAudit extends TeaModel {
         /**
-         * <p>Specifies whether to write item events for dropped recall candidates. Default value: false.</p>
+         * <p>Specifies whether to write item events for dropped candidates during retrieval. Default value: false.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -189,7 +189,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public Boolean droppedCandidates;
 
         /**
-         * <p>The recording mode for recall queries. Valid values: raw (plaintext) and hash (HMAC only). Default value: raw.</p>
+         * <p>The recording mode for retrieval queries. Valid values: raw (plaintext) and hash (HMAC only). Default value: raw.</p>
          * 
          * <strong>example:</strong>
          * <p>raw</p>
@@ -237,9 +237,51 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     }
 
+    public static class GetContextStoreResponseBodyConfigAuditLogStore extends TeaModel {
+        /**
+         * <p>The name of the Logstore for the experience library audit logs.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>experience_audit</p>
+         */
+        @NameInMap("logstore")
+        public String logstore;
+
+        /**
+         * <p>The name of the user SLS project where the experience library audit logs are stored.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>agentloop-xxx</p>
+         */
+        @NameInMap("project")
+        public String project;
+
+        public static GetContextStoreResponseBodyConfigAuditLogStore build(java.util.Map<String, ?> map) throws Exception {
+            GetContextStoreResponseBodyConfigAuditLogStore self = new GetContextStoreResponseBodyConfigAuditLogStore();
+            return TeaModel.build(map, self);
+        }
+
+        public GetContextStoreResponseBodyConfigAuditLogStore setLogstore(String logstore) {
+            this.logstore = logstore;
+            return this;
+        }
+        public String getLogstore() {
+            return this.logstore;
+        }
+
+        public GetContextStoreResponseBodyConfigAuditLogStore setProject(String project) {
+            this.project = project;
+            return this;
+        }
+        public String getProject() {
+            return this.project;
+        }
+
+    }
+
     public static class GetContextStoreResponseBodyConfigExtractionPoliciesModel extends TeaModel {
         /**
-         * <p>The name of the extraction model. Currently, only qwen3.8-flash is supported. Internal platform credentials are used.</p>
+         * <p>The name of the extraction model. Currently, only qwen3.8-flash is supported. The platform uses internal credentials.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3.8-flash</p>
@@ -264,6 +306,8 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigExtractionPoliciesStoragePolicy extends TeaModel {
         /**
+         * <p>The allowed storage actions. Default value: all actions (ADD, UPDATE, MERGE, and DELETE).</p>
+         * 
          * <strong>example:</strong>
          * <p>[&quot;ADD&quot;,&quot;UPDATE&quot;,&quot;MERGE&quot;,&quot;DELETE&quot;]</p>
          */
@@ -271,6 +315,8 @@ public class GetContextStoreResponseBody extends TeaModel {
         public java.util.List<String> allowedActions;
 
         /**
+         * <p>Specifies whether to enable deduplication in event mode. Default value: true.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -278,6 +324,8 @@ public class GetContextStoreResponseBody extends TeaModel {
         public Boolean dedupe;
 
         /**
+         * <p>Specifies whether to enable human edit protection. Default value: true. When enabled, automatic extraction does not overwrite manually modified memories.</p>
+         * 
          * <strong>example:</strong>
          * <p>true</p>
          */
@@ -285,6 +333,8 @@ public class GetContextStoreResponseBody extends TeaModel {
         public Boolean humanEditProtection;
 
         /**
+         * <p>The merge key for upsert operations. Valid values: factKey, semantic, and both. Default value: semantic.</p>
+         * 
          * <strong>example:</strong>
          * <p>semantic</p>
          */
@@ -292,6 +342,8 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String mergeKey;
 
         /**
+         * <p>The storage mode. Valid values: event (event append) and upsert (merge update). Default value: upsert.</p>
+         * 
          * <strong>example:</strong>
          * <p>upsert</p>
          */
@@ -299,6 +351,8 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String mode;
 
         /**
+         * <p>The similarity threshold for semantic merging. Valid values: 0 to 1. Default value: 0.4.</p>
+         * 
          * <strong>example:</strong>
          * <p>0.4</p>
          */
@@ -306,6 +360,8 @@ public class GetContextStoreResponseBody extends TeaModel {
         public Double similarityThreshold;
 
         /**
+         * <p>The number of days before memories expire. A value of 0 indicates that memories do not expire.</p>
+         * 
          * <strong>example:</strong>
          * <p>0</p>
          */
@@ -395,7 +451,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String customInstructions;
 
         /**
-         * <p>Specifies whether to apply this policy to new inputs. Default value: true. Disabling the policy does not delete historical memories.</p>
+         * <p>Specifies whether to execute this policy for new input. Default value: true. Disabling the policy does not delete historical memories.</p>
          * 
          * <strong>example:</strong>
          * <p>true</p>
@@ -404,7 +460,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public Boolean enabled;
 
         /**
-         * <p>The list of exclusion rules. Content that matches these rules is not extracted.</p>
+         * <p>The list of exclusion rules. Content that matches the rules is not extracted.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;Password&quot;,&quot;ID number&quot;]</p>
@@ -436,6 +492,9 @@ public class GetContextStoreResponseBody extends TeaModel {
         @NameInMap("preset")
         public String preset;
 
+        /**
+         * <p>The independent storage rules for this policy. If omitted, the original value is retained. New policies use the default value. Repeatedly confirmed memories refresh the validity period by default.</p>
+         */
         @NameInMap("storagePolicy")
         public GetContextStoreResponseBodyConfigExtractionPoliciesStoragePolicy storagePolicy;
 
@@ -530,7 +589,7 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigExtractionPolicyModel extends TeaModel {
         /**
-         * <p>The name of the extraction model. Currently, only qwen3.8-flash is supported. Internal platform credentials are used.</p>
+         * <p>The name of the extraction model. Currently, only qwen3.8-flash is supported. The platform uses internal credentials.</p>
          * 
          * <strong>example:</strong>
          * <p>qwen3.8-flash</p>
@@ -573,7 +632,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String customInstructions;
 
         /**
-         * <p>The list of exclusion rules. Content that matches these rules is not extracted.</p>
+         * <p>The list of exclusion rules. Content that matches the rules is not extracted.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;Password&quot;,&quot;ID number&quot;]</p>
@@ -654,7 +713,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String logstore;
 
         /**
-         * <p>The name of the SLS project.</p>
+         * <p>The name of the Simple Log Service (SLS) project.</p>
          * 
          * <strong>example:</strong>
          * <p>agentloop-xxx</p>
@@ -705,7 +764,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String eventsLogstore;
 
         /**
-         * <p>The Simple Log Service (SLS) project to which both belong, which is bound to the AgentSpace.</p>
+         * <p>The Simple Log Service (SLS) project where both resources are located, which is the project bound to the AgentSpace.</p>
          * 
          * <strong>example:</strong>
          * <p>agentloop-xxx</p>
@@ -746,7 +805,7 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigOutputDataset extends TeaModel {
         /**
-         * <p>The AgentSpace to which the dataset belongs.</p>
+         * <p>The AgentSpace where the dataset is located.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
@@ -773,7 +832,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String schemaContract;
 
         /**
-         * <p>The schema version.</p>
+         * <p>The version of the schema.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -822,7 +881,7 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigScopePolicy extends TeaModel {
         /**
-         * <p>Specifies that at least one of the scope fields must be non-empty. Valid values: userId, agentId, appId, and runId.</p>
+         * <p>At least one of the scope fields must be non-empty. Valid values for the elements: userId, agentId, appId, and runId.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;userId&quot;]</p>
@@ -847,7 +906,7 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigSourceDatasetCustomFields extends TeaModel {
         /**
-         * <p>The description of the field. This parameter is required when usage is extraction-input and is appended to the extraction prompt.</p>
+         * <p>The description of the field. This parameter is required when usage is set to extraction-input, and it is appended to the extraction prompt.</p>
          * 
          * <strong>example:</strong>
          * <p>Customer tier</p>
@@ -874,7 +933,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String sourceField;
 
         /**
-         * <p>The target path for writing, such as metadata.customerTier.</p>
+         * <p>The write target path, such as metadata.customerTier.</p>
          * 
          * <strong>example:</strong>
          * <p>metadata.customerTier</p>
@@ -940,7 +999,7 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigSourceDatasetFilter extends TeaModel {
         /**
-         * <p>The subset of the pipeline where clause, which is pushed down to SQL.</p>
+         * <p>The subset of the pipeline where clause that is pushed down to SQL.</p>
          * 
          * <strong>example:</strong>
          * <p>appId = \&quot;crm-service\&quot;</p>
@@ -965,7 +1024,11 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigSourceDatasetVersionPolicy extends TeaModel {
         /**
-         * <p>The consumption mode. Valid values: follow (incremental consumption based on __dataset_seq) and fixed (full consumption of the specified ACTIVE version at once).</p>
+         * <p>The version consumption mode. Valid values:</p>
+         * <ul>
+         * <li>follow: consumes data incrementally based on __dataset_seq.</li>
+         * <li>fixed: consumes the specified ACTIVE version in full at once.</li>
+         * </ul>
          * 
          * <strong>example:</strong>
          * <p>follow</p>
@@ -1030,7 +1093,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public java.util.List<GetContextStoreResponseBodyConfigSourceDatasetCustomFields> customFields;
 
         /**
-         * <p>The name of the dataset in the same AgentSpace. This parameter cannot be modified after creation.</p>
+         * <p>The name of the dataset in the same AgentSpace. This parameter cannot be changed after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>trajectory-with-crm-profile</p>
@@ -1039,7 +1102,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String datasetName;
 
         /**
-         * <p>The row filter condition.</p>
+         * <p>The row filter conditions.</p>
          */
         @NameInMap("filter")
         public GetContextStoreResponseBodyConfigSourceDatasetFilter filter;
@@ -1054,7 +1117,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public Integer pollIntervalSeconds;
 
         /**
-         * <p>The row schema contract of the dataset. In the current phase, this parameter is fixed to MemorySourceV1.</p>
+         * <p>The row schema contract of the dataset. The value is fixed to MemorySourceV1 in the current phase.</p>
          * 
          * <strong>example:</strong>
          * <p>MemorySourceV1</p>
@@ -1125,7 +1188,7 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigSourceTrajectoryFilter extends TeaModel {
         /**
-         * <p>The list of agent names. An explicit empty list returns a 400 error.</p>
+         * <p>The list of agent names. An explicitly empty list returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;sales-copilot&quot;]</p>
@@ -1134,7 +1197,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public java.util.List<String> agentNames;
 
         /**
-         * <p>Specifies whether to exclude degraded trajectories. Default value: false (includes degraded trajectories).</p>
+         * <p>Specifies whether to exclude degraded trajectories. Default value: false, which includes degraded trajectories.</p>
          * 
          * <strong>example:</strong>
          * <p>false</p>
@@ -1143,7 +1206,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public Boolean excludeDegraded;
 
         /**
-         * <p>The minimum step count, which must be greater than or equal to 0.</p>
+         * <p>The minimum number of steps. The value must be greater than or equal to 0.</p>
          * 
          * <strong>example:</strong>
          * <p>2</p>
@@ -1152,7 +1215,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public Integer minStepCount;
 
         /**
-         * <p>The native Simple Log Service (SLS) query statement. This statement is combined with the preceding conditions using the AND operator.</p>
+         * <p>The native Simple Log Service (SLS) query statement. This statement is combined with the preceding conditions using AND.</p>
          * 
          * <strong>example:</strong>
          * <p>tool_names:&quot;search_order&quot;</p>
@@ -1161,7 +1224,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String query;
 
         /**
-         * <p>The list of service names. A single trailing asterisk (*) is supported. An explicit empty list returns a 400 error.</p>
+         * <p>The list of service names. A single trailing asterisk (*) is supported. An explicitly empty list returns a 400 error.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;crm-service&quot;,&quot;app-*&quot;]</p>
@@ -1294,13 +1357,13 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigSourceTrajectory extends TeaModel {
         /**
-         * <p>The trajectory filter condition. Multiple conditions are combined with AND, and conditions within a list are combined with OR.</p>
+         * <p>The trajectory filter conditions. Conditions are combined with AND, and items within a list are combined with OR.</p>
          */
         @NameInMap("filter")
         public GetContextStoreResponseBodyConfigSourceTrajectoryFilter filter;
 
         /**
-         * <p>The name of the trajectory Logstore. Default value: agent-trajectory. This parameter cannot be modified after creation.</p>
+         * <p>The name of the trajectory Logstore. Default value: agent-trajectory. The value cannot be changed after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>agent-trajectory</p>
@@ -1391,7 +1454,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String mode;
 
         /**
-         * <p>The initial consumed append sequence number. The value is a decimal string of a non-negative int64 integer. Default value: 0. The __dataset_seq field is used, and the business timestamp is not used as the consumption checkpoint.</p>
+         * <p>The initial consumed append sequence number. The value is a decimal string of a non-negative int64 integer. Default value: 0. The __dataset_seq parameter is used, and the business timestamp is not used as the consumption checkpoint.</p>
          * 
          * <strong>example:</strong>
          * <p>0</p>
@@ -1424,7 +1487,7 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigSource extends TeaModel {
         /**
-         * <p>The AgentSpace to which the trace data source belongs, which is the same as the AgentSpace to which it belonged when it was created.</p>
+         * <p>The AgentSpace where the trace data source is located, which is the same as the AgentSpace to which it belonged when it was created.</p>
          * 
          * <strong>example:</strong>
          * <p>my-agent-space</p>
@@ -1442,7 +1505,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public java.util.Map<String, ?> binding;
 
         /**
-         * <p>The data source configuration for the memory type dataset. This parameter is required when the type is memory and source.type is dataset.</p>
+         * <p>The dataset data source configuration for the memory type. This parameter is required when the memory type is used and source.type is set to dataset.</p>
          */
         @NameInMap("dataset")
         public GetContextStoreResponseBodyConfigSourceDataset dataset;
@@ -1457,7 +1520,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String datasetName;
 
         /**
-         * <p>The input format of the dataset. For the experience base dataset, the source is atif.</p>
+         * <p>The input format of the dataset. The source of the experience base dataset is atif.</p>
          * 
          * <strong>example:</strong>
          * <p>atif</p>
@@ -1485,13 +1548,13 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String startTime;
 
         /**
-         * <p>The data source configuration for the memory type trajectory. This parameter is required when the type is memory and source.type is trajectory.</p>
+         * <p>The trajectory datasource config for the memory type. This parameter is required when the type is memory and source.type is trajectory.</p>
          */
         @NameInMap("trajectory")
         public GetContextStoreResponseBodyConfigSourceTrajectory trajectory;
 
         /**
-         * <p>The source type, which can be trajectory or dataset. For experience, if not specified, the trajectory configuration is used. For Dataset, the datasetName, format, and binding at the current level are used. The default mode is manual. If versionPolicy.mode is set to follow, continuous processing is performed and automatically applied to the experience library. For memory, if not specified, the mode is manual (only written by AddContexts). Otherwise, the trajectory or dataset sub-configuration with the same name is used. This parameter cannot be modified after creation.</p>
+         * <p>The source type. Valid values: trajectory and dataset. For the experience type, if this parameter is not specified, trajectory is used. For datasets, the datasetName, format, and binding parameters at the current level are used. The default mode is manual. If versionPolicy.mode is set to follow, data is continuously processed and automatically applied to the experience base. For the memory type, if this parameter is not specified, manual is used, meaning data is written only through AddContexts. Otherwise, the trajectory or dataset sub-configuration with the same name is used. The value cannot be changed after creation.</p>
          * 
          * <strong>example:</strong>
          * <p>dataset</p>
@@ -1500,7 +1563,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String type;
 
         /**
-         * <p>The continuous consumption configuration for the native experience library Dataset. The default mode is manual. The follow mode only allows binding.selection.mode to be set to all, and consumes data by append sequence number. This parameter cannot be modified after creation.</p>
+         * <p>The continuous consumption configuration for the native experience base dataset. The default mode is manual. The follow mode only allows binding.selection.mode to be set to all, and data is consumed based on the append sequence number. The value cannot be changed after creation.</p>
          */
         @NameInMap("versionPolicy")
         public GetContextStoreResponseBodyConfigSourceVersionPolicy versionPolicy;
@@ -1594,13 +1657,13 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigSourceStatus extends TeaModel {
         /**
-         * <p>The processing progress. For memory trajectory, the format is {processTimeNs, watermarkMs}. For dataset, the format is {seq}. For manual, the format is {}. For experience Dataset follow, the seq field uses an exact int64 decimal string.</p>
+         * <p>The processing progress. For memory trajectory, the format is {processTimeNs, watermarkMs}. For dataset, the format is {seq}. For manual, the format is {}. For the experience dataset in follow mode, the seq value is an exact int64 decimal string.</p>
          */
         @NameInMap("checkpoint")
         public java.util.Map<String, ?> checkpoint;
 
         /**
-         * <p>The current reserved sequence window for experience Dataset follow, in the format of {after, until, runId}. All sequence numbers are decimal strings. If a failure occurs, the submitted checkpoint is not advanced.</p>
+         * <p>The current scheduled sequence window for the experience dataset in follow mode. The format is {after, until, runId}. All sequence numbers are decimal strings. If a failure occurs, the submitted checkpoint is not advanced.</p>
          */
         @NameInMap("currentWindow")
         public java.util.Map<String, String> currentWindow;
@@ -1615,7 +1678,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String lastError;
 
         /**
-         * <p>The run ID of the last successful automatic application to the native experience library. This field is for audit purposes only.</p>
+         * <p>The run ID of the last successful automatic application to the native experience store, for audit purposes only.</p>
          * 
          * <strong>example:</strong>
          * <p>opr-example</p>
@@ -1715,7 +1778,7 @@ public class GetContextStoreResponseBody extends TeaModel {
 
     public static class GetContextStoreResponseBodyConfigStoragePolicy extends TeaModel {
         /**
-         * <p>The allowed storage actions. Default value: all actions. Valid values: ADD, UPDATE, MERGE, and DELETE.</p>
+         * <p>The allowed storage actions. Default value: all actions (ADD, UPDATE, MERGE, and DELETE).</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;ADD&quot;,&quot;UPDATE&quot;,&quot;MERGE&quot;,&quot;DELETE&quot;]</p>
@@ -1742,7 +1805,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public Boolean humanEditProtection;
 
         /**
-         * <p>The merge key for upsert operations. Default value: semantic. Valid values: factKey, semantic, and both.</p>
+         * <p>The merge key for upsert operations. Valid values: factKey, semantic, and both. Default value: semantic.</p>
          * 
          * <strong>example:</strong>
          * <p>semantic</p>
@@ -1751,7 +1814,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String mergeKey;
 
         /**
-         * <p>The storage mode. Default value: upsert. Valid values: event (event append) and upsert (merge update).</p>
+         * <p>The storage mode. Valid values: event (event append) and upsert (merge update). Default value: upsert.</p>
          * 
          * <strong>example:</strong>
          * <p>upsert</p>
@@ -1848,25 +1911,31 @@ public class GetContextStoreResponseBody extends TeaModel {
         public GetContextStoreResponseBodyConfigAudit audit;
 
         /**
+         * <p>The Simple Log Service (SLS) audit log location for the experience library user. The console reads the logs by using the existing GetLogs permission.</p>
+         */
+        @NameInMap("auditLogStore")
+        public GetContextStoreResponseBodyConfigAuditLogStore auditLogStore;
+
+        /**
          * <p>The extraction policies. You can configure 1 to 10 policies. The strategyVersion parameter indicates the snapshot version of the entire library configuration.</p>
          */
         @NameInMap("extractionPolicies")
         public java.util.List<GetContextStoreResponseBodyConfigExtractionPolicies> extractionPolicies;
 
         /**
-         * <p>The extraction policy for the memory type.</p>
+         * <p>The extraction policy of the memory type.</p>
          */
         @NameInMap("extractionPolicy")
         public GetContextStoreResponseBodyConfigExtractionPolicy extractionPolicy;
 
         /**
-         * <p>The system-assigned coordinates of the event Logstore for the memory type. The Logstore is located in the Simple Log Service (SLS) project bound to the AgentSpace.</p>
+         * <p>The system-assigned event Logstore coordinates for the memory type, located in the Simple Log Service (SLS) project bound to the AgentSpace.</p>
          */
         @NameInMap("innerSource")
         public GetContextStoreResponseBodyConfigInnerSource innerSource;
 
         /**
-         * <p>The metadata field mapping. The key is the business field and the value is the storage field.</p>
+         * <p>The metadata field mapping, where the key is the business field and the value is the storage field.</p>
          * 
          * <strong>example:</strong>
          * <p>{&quot;userId&quot;:&quot;user_id&quot;,&quot;sessionId&quot;:&quot;session_id&quot;}</p>
@@ -1875,7 +1944,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public java.util.Map<String, String> metadataField;
 
         /**
-         * <p>The interval for experience mining. Valid values: 1h, 6h, 12h, and 1d. Default value: 1d.</p>
+         * <p>The experience mining interval. Valid values: 1h, 6h, 12h, and 1d. Default value: 1d.</p>
          * 
          * <strong>example:</strong>
          * <p>1d</p>
@@ -1884,7 +1953,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String miningInterval;
 
         /**
-         * <p>The name of the internal running task associated with the server. For continuous libraries, it is used to view consumption records in read-only mode. For manual libraries, it can run limited mining. It is not inferred by the client and cannot replace the ingestion and recall criteria of the native experience library.</p>
+         * <p>The name of the internal running task associated with the server. Continuous libraries are used for read-only viewing of consumption records, and manual libraries can run limited mining. This value is not inferred by the client and cannot replace the ingestion and recall criteria of the native experience library.</p>
          * 
          * <strong>example:</strong>
          * <p>experience-review-library</p>
@@ -1893,16 +1962,31 @@ public class GetContextStoreResponseBody extends TeaModel {
         public String miningTaskName;
 
         /**
-         * <p>The observability resource coordinates (memory type).</p>
+         * <p>The observability resource coordinates for the memory type.</p>
          */
         @NameInMap("observability")
         public GetContextStoreResponseBodyConfigObservability observability;
 
         /**
-         * <p>The location of the memory output dataset (memory type).</p>
+         * <p>The location of the memory output dataset for the memory type.</p>
          */
         @NameInMap("outputDataset")
         public GetContextStoreResponseBodyConfigOutputDataset outputDataset;
+
+        /**
+         * <p>Specifies whether runtime recall is allowed for the experience library. This parameter is returned only for the experience type.</p>
+         */
+        @NameInMap("runtimeRecallEnabled")
+        public Boolean runtimeRecallEnabled;
+
+        /**
+         * <p>The version of the runtime recall property, which is read-only. When you update the switch, a concurrency check is performed by using expectedRuntimeRecallRevision.</p>
+         * 
+         * <strong>example:</strong>
+         * <p>1</p>
+         */
+        @NameInMap("runtimeRecallRevision")
+        public Long runtimeRecallRevision;
 
         /**
          * <p>The scope constraint policy.</p>
@@ -1911,7 +1995,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public GetContextStoreResponseBodyConfigScopePolicy scopePolicy;
 
         /**
-         * <p>The list of service names used to locate the trace data source together with source.agentSpace. This parameter cannot be modified in the current phase.</p>
+         * <p>The list of service names, which are used together with source.agentSpace to locate the trace data source. This parameter cannot be changed in the current phase.</p>
          * 
          * <strong>example:</strong>
          * <p>[&quot;order-service&quot;,&quot;payment-service&quot;]</p>
@@ -1920,17 +2004,20 @@ public class GetContextStoreResponseBody extends TeaModel {
         public java.util.List<String> serviceNames;
 
         /**
-         * <p>The data source configuration provided by the user, which serves only as the root identifier of the data source.</p>
+         * <p>The data source configuration passed by the user, which serves only as the root identity of the data source.</p>
          */
         @NameInMap("source")
         public GetContextStoreResponseBodyConfigSource source;
 
         /**
-         * <p>The running status of the data source, applicable to the memory type and experience Dataset follow mode. The experience library submits a checkpoint only after it is published and automatically applied successfully. Pausing and restarting retain the checkpoint.</p>
+         * <p>The running status of the data source. This applies to the memory type and the experience dataset in follow mode. The experience base submits a checkpoint only after it is published and automatically applied. Pausing and restarting retain the checkpoint.</p>
          */
         @NameInMap("sourceStatus")
         public GetContextStoreResponseBodyConfigSourceStatus sourceStatus;
 
+        /**
+         * <p>The actual storage modes for each policy. A hybrid store includes event and upsert.</p>
+         */
         @NameInMap("storageModes")
         public java.util.List<String> storageModes;
 
@@ -1941,7 +2028,7 @@ public class GetContextStoreResponseBody extends TeaModel {
         public GetContextStoreResponseBodyConfigStoragePolicy storagePolicy;
 
         /**
-         * <p>The currently effective strategy version number for the memory type.</p>
+         * <p>The version number of the currently effective policy for the memory type.</p>
          * 
          * <strong>example:</strong>
          * <p>1</p>
@@ -1960,6 +2047,14 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
         public GetContextStoreResponseBodyConfigAudit getAudit() {
             return this.audit;
+        }
+
+        public GetContextStoreResponseBodyConfig setAuditLogStore(GetContextStoreResponseBodyConfigAuditLogStore auditLogStore) {
+            this.auditLogStore = auditLogStore;
+            return this;
+        }
+        public GetContextStoreResponseBodyConfigAuditLogStore getAuditLogStore() {
+            return this.auditLogStore;
         }
 
         public GetContextStoreResponseBodyConfig setExtractionPolicies(java.util.List<GetContextStoreResponseBodyConfigExtractionPolicies> extractionPolicies) {
@@ -2024,6 +2119,22 @@ public class GetContextStoreResponseBody extends TeaModel {
         }
         public GetContextStoreResponseBodyConfigOutputDataset getOutputDataset() {
             return this.outputDataset;
+        }
+
+        public GetContextStoreResponseBodyConfig setRuntimeRecallEnabled(Boolean runtimeRecallEnabled) {
+            this.runtimeRecallEnabled = runtimeRecallEnabled;
+            return this;
+        }
+        public Boolean getRuntimeRecallEnabled() {
+            return this.runtimeRecallEnabled;
+        }
+
+        public GetContextStoreResponseBodyConfig setRuntimeRecallRevision(Long runtimeRecallRevision) {
+            this.runtimeRecallRevision = runtimeRecallRevision;
+            return this;
+        }
+        public Long getRuntimeRecallRevision() {
+            return this.runtimeRecallRevision;
         }
 
         public GetContextStoreResponseBodyConfig setScopePolicy(GetContextStoreResponseBodyConfigScopePolicy scopePolicy) {

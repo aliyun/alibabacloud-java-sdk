@@ -14,7 +14,7 @@ public class CreateContextStoreResponseBody extends TeaModel {
     public String requestId;
 
     /**
-     * <p>The version number of the currently effective strategy (memory type).</p>
+     * <p>The version number of the effective strategy for the memory type.</p>
      * 
      * <strong>example:</strong>
      * <p>1</p>

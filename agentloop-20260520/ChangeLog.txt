@@ -1,3 +1,20 @@
+2026-11-03 Version: 2.4.3
+- Update API GetContextStore: add response parameters Body.config.auditLogStore.
+- Update API GetContextStore: add response parameters Body.config.runtimeRecallEnabled.
+- Update API GetContextStore: add response parameters Body.config.runtimeRecallRevision.
+- Update API SearchContext: add response parameters Body.callId.
+- Update API SearchContext: add response parameters Body.diagnostics.
+- Update API SearchContext: add response parameters Body.mode.
+- Update API SearchContext: add response parameters Body.relevance.
+- Update API SearchContext: add response parameters Body.rewrittenQueries.
+- Update API SearchContext: add response parameters Body.status.
+- Update API SearchContext: add response parameters Body.strategyVersion.
+- Update API UpdateContextStore: add request parameters body.expectedRuntimeRecallRevision.
+- Update API UpdateContextStore: add request parameters body.reason.
+- Update API UpdateContextStore: add request parameters body.config.runtimeRecallEnabled.
+- Update API UpdateContextStore: add response parameters Body.config.
+
+
 2026-10-27 Version: 2.4.2
 - Update API CreateContextStore: add request parameters body.config.extractionPolicies.
 - Update API GetContextStore: add response parameters Body.config.extractionPolicies.

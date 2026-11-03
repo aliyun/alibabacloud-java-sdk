@@ -41,7 +41,7 @@ public class ListContextStoresRequest extends TeaModel {
     public String nextToken;
 
     /**
-     * <p>The memory data source type used for filtering, such as manual, trajectory, or dataset. If this parameter is not specified, no filtering is performed.</p>
+     * <p>The data source type of the memory context store used for filtering. Valid values: manual, trajectory, and dataset. If this parameter is not specified, no filtering is performed.</p>
      * 
      * <strong>example:</strong>
      * <p>trajectory</p>

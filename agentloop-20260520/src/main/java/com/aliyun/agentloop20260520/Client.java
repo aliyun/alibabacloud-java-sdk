@@ -1729,7 +1729,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a context store.</p>
+     * <p>Queries the context store.</p>
      * 
      * @param request GetContextStoreRequest
      * @param headers map
@@ -1757,7 +1757,7 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
     /**
      * <b>summary</b> : 
-     * <p>Queries a context store.</p>
+     * <p>Queries the context store.</p>
      * 
      * @param request GetContextStoreRequest
      * @return GetContextStoreResponse
@@ -3689,6 +3689,14 @@ public class Client extends com.aliyun.teaopenapi.Client {
 
         if (!com.aliyun.teautil.Common.isUnset(request.description)) {
             body.put("description", request.description);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.expectedRuntimeRecallRevision)) {
+            body.put("expectedRuntimeRecallRevision", request.expectedRuntimeRecallRevision);
+        }
+
+        if (!com.aliyun.teautil.Common.isUnset(request.reason)) {
+            body.put("reason", request.reason);
         }
 
         if (!com.aliyun.teautil.Common.isUnset(request.status)) {
